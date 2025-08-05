@@ -15,12 +15,17 @@ class MarketDataStore:
             self.data[ticker] = load_market_data(ticker)
 
     def _find_row_by_datetime(self, ticker, date_time):
-        """Pomocnicza funkcja do znajdowania wiersza po dacie"""
-        for row in self.data[ticker]:
+        """Znajduje wiersz dokładnie dla daty lub najbliższą wcześniejszą."""
+        rows = self.data[ticker]
+        # parsujemy wszystkie daty
+        closest_row = None
+        for row in rows:
             row_datetime = datetime.strptime(row['Datetime'], "%Y-%m-%d %H:%M:%S")
-            if row_datetime == date_time:
-                return row
-        return None
+            if row_datetime <= date_time:
+                if closest_row is None or row_datetime > datetime.strptime(closest_row['Datetime'],
+                                                                           "%Y-%m-%d %H:%M:%S"):
+                    closest_row = row
+        return closest_row
 
     def get_data_for_day(self, date_time):
         """Pobiera dane dla wszystkich tickerów na konkretną datę i godzinę"""
@@ -31,10 +36,3 @@ class MarketDataStore:
         """Pobiera cenę zamknięcia dla konkretnego tickera i daty"""
         row = self._find_row_by_datetime(ticker, date_time)
         return float(row['Close']) if row else None
-
-    def get_length(self):
-        return len(next(iter(self.data.values())))
-
-    def get_dates(self):
-        return [datetime.strptime(row["Datetime"], "%Y-%m-%d %H:%M:%S")
-                for row in self.data["AAPL"]]

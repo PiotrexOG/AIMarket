@@ -1,6 +1,6 @@
 from app.core.user_simulator import UserSimulator
 from app.core.market_data_store import MarketDataStore
-from app.config import TICKERS
+from app.config import TICKERS, START_DATE, END_DATE
 from app.models.user_models import UserDTO, UserDetailDTO, PositionDetail
 from typing import Dict
 from datetime import datetime
@@ -10,8 +10,8 @@ class SimulationService:
     users: Dict[str, UserSimulator] = {}
     market_data: MarketDataStore = MarketDataStore(
         tickers=TICKERS.keys(),
-        start_date="2023-10-01",
-        end_date="2023-12-31"
+        start_date=START_DATE,
+        end_date=END_DATE
     )
 
     @classmethod

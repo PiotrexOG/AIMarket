@@ -3,3 +3,6 @@ TICKERS = {
     "TSLA": 90,
     "NVDA": 70
 }
+
+START_DATE="2023-10-01"
+END_DATE="2023-12-31"
