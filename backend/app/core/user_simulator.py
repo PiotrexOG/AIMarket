@@ -1,9 +1,6 @@
-import time
-
+from app.core import market_hours
 from app.core.portfolio import Portfolio
 from app.core.decision_maker import DecisionMaker
-
-
 
 class UserSimulator:
     def __init__(self, user_id, starting_cash, tickers, market_data_store, use_model=False, with_explanation=False):
@@ -15,18 +12,6 @@ class UserSimulator:
         self.history = []
         self._stop_event = False
 
-        self.run_simulation()
-
-    def run_simulation(self):
-        date_times = self.market_data_store.get_dates()
-
-        for date_time in date_times:
-            if self._stop_event:
-                break
-            self.process_day(date_time)
-            # time.sleep(0.1)
-
-        print(f"✅ Symulacja użytkownika {self.user_id} zakończona.")
 
     def process_day(self, date_time):
         day_data = self.market_data_store.get_data_for_day(date_time)
@@ -35,11 +20,12 @@ class UserSimulator:
         pre_shares = dict(self.portfolio.shares)
 
         for ticker, data in day_data.items():
-            decision, num, explanation = self.decision_maker.make_decision(
-                ticker, data, self.portfolio, self.with_explanation
-            )
-            self.execute_decision(ticker, decision, num, float(data['Close']))
-            print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+            if market_hours.is_market_open_by_exchange(ticker, date_time):
+                decision, num, explanation = self.decision_maker.make_decision(
+                    ticker, data, self.portfolio, self.with_explanation
+                )
+                self.execute_decision(ticker, decision, num, float(data['Close']))
+                print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
 
         if self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares:
             self.portfolio.evaluate(date_time)

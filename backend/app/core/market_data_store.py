@@ -1,7 +1,6 @@
 import os
-import csv
-import yfinance as yf
-from datetime import datetime
+
+import pandas as pd
 from app.core.data_loader import fetch_data, load_market_data
 
 class MarketDataStore:
@@ -15,16 +14,21 @@ class MarketDataStore:
             self.data[ticker] = load_market_data(ticker)
 
     def _find_row_by_datetime(self, ticker, date_time):
-        """Znajduje wiersz dokładnie dla daty lub najbliższą wcześniejszą."""
-        rows = self.data[ticker]
-        # parsujemy wszystkie daty
+        """Znajduje wiersz dla podanej daty (ze strefą czasową) lub najbliższą wcześniejszą."""
         closest_row = None
-        for row in rows:
-            row_datetime = datetime.strptime(row['Datetime'], "%Y-%m-%d %H:%M:%S")
+        for row in self.data[ticker]:
+            if 'Datetime' not in row:
+                continue
+
+            # Parsowanie z uwzględnieniem strefy czasowej (np. "2023-10-02 09:30:00-04:00")
+            row_datetime = pd.to_datetime(row['Datetime'], utc=True)  # parsuj jako czas z czasem UTC
+            row_datetime = row_datetime.tz_convert(date_time.tzinfo)  # przekonwertuj do strefy date_time
+
             if row_datetime <= date_time:
-                if closest_row is None or row_datetime > datetime.strptime(closest_row['Datetime'],
-                                                                           "%Y-%m-%d %H:%M:%S"):
+                if closest_row is None or row_datetime > pd.to_datetime(closest_row['Datetime'], utc=True).tz_convert(
+                        date_time.tzinfo):
                     closest_row = row
+
         return closest_row
 
     def get_data_for_day(self, date_time):

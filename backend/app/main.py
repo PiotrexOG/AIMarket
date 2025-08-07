@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="Stock Simulator API")
 
 SimulationService.initialize_users()
+SimulationService.start_simulation()
 
 app.include_router(users.router, prefix="/users", tags=["Users"])
 

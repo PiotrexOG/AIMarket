@@ -1,9 +1,10 @@
 from app.core.user_simulator import UserSimulator
 from app.core.market_data_store import MarketDataStore
-from app.config import TICKERS, START_DATE, END_DATE
+from app.config import TICKERS, START_DATE, END_DATE, start_time, end_time
 from app.models.user_models import UserDTO, UserDetailDTO, PositionDetail
 from typing import Dict
-from datetime import datetime
+from datetime import datetime, timedelta
+
 
 # Stan aplikacji
 class SimulationService:
@@ -25,6 +26,18 @@ class SimulationService:
                 market_data_store=cls.market_data,
                 use_model=False
             )
+
+    @classmethod
+    def start_simulation(cls):
+        current_time = start_time
+
+        while current_time <= end_time:
+            for user_id, user_simulator in cls.users.items():
+                user_simulator.process_day(current_time)
+
+            current_time += timedelta(hours=1)
+
+        print(f"✅ Symulacja zakończona.")
 
     @classmethod
     def get_user(cls, user_id: str, date_time_str: str) -> UserDetailDTO | None:
