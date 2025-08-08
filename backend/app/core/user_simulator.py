@@ -1,44 +1,45 @@
 from app.core import market_hours
 from app.core.portfolio import Portfolio
 from app.core.decision_maker import DecisionMaker
+from datetime import datetime
+
 
 class UserSimulator:
-    def __init__(self, user_id, starting_cash, tickers, market_data_store, use_model=False, with_explanation=False):
+    def __init__(self, user_id: int, starting_cash: float, market_data_store, use_model: bool = False, with_explanation: bool = False):
         self.user_id = user_id
-        self.portfolio = Portfolio(starting_cash, tickers)
+        self.portfolio = Portfolio(starting_cash)
         self.decision_maker = DecisionMaker(use_model)
         self.market_data_store = market_data_store
         self.with_explanation = with_explanation
-        self.history = []
-        self._stop_event = False
 
+    def process_day(self, date_time: datetime) -> None:
+        if not market_hours.is_market_open_by_exchange("AAPL", date_time):
+            return  # Skip if market is closed (using AAPL as proxy)
 
-    def process_day(self, date_time):
         day_data = self.market_data_store.get_data_for_day(date_time)
-
         pre_cash = self.portfolio.cash
         pre_shares = dict(self.portfolio.shares)
 
         for ticker, data in day_data.items():
-            if market_hours.is_market_open_by_exchange(ticker, date_time):
-                decision, num, explanation = self.decision_maker.make_decision(
-                    ticker, data, self.portfolio, self.with_explanation
-                )
-                self.execute_decision(ticker, decision, num, float(data['Close']))
-                print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+            if not market_hours.is_market_open_by_exchange(ticker, date_time):
+                continue
 
-        if self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares:
+            decision, num, explanation = self.decision_maker.make_decision(
+                ticker, data, self.portfolio, self.with_explanation
+            )
+            self.execute_decision(ticker, decision, num, float(data["Close"]))
+            self._print_decision(ticker, decision, num, date_time)
+
+        if self._portfolio_changed(pre_cash, pre_shares):
             self.portfolio.evaluate(date_time)
 
-
-    def execute_decision(self, ticker, decision, num, price):
+    def execute_decision(self, ticker: str, decision: str, num: int, price: float) -> None:
         if decision == "KUPUJ":
             self.portfolio.buy(ticker, num, price)
         elif decision == "SPRZEDAJ":
             self.portfolio.sell(ticker, num, price)
 
-    def calculate_portfolio_details(self, date_time) -> dict:
-        """Calculates all portfolio details for given date"""
+    def calculate_portfolio_details(self, date_time: datetime) -> dict | None:
         portfolio_state = self.portfolio.get_portfolio_state(date_time)
         if not portfolio_state:
             return None
@@ -48,7 +49,7 @@ class UserSimulator:
 
         prices = {
             ticker: self.market_data_store.get_price(ticker, date_time)
-            for ticker in shares.keys()
+            for ticker in shares
         }
 
         positions = []
@@ -72,5 +73,8 @@ class UserSimulator:
             "date_time": date_time
         }
 
-    def stop(self):
-        self._stop_event = True
+    def _portfolio_changed(self, pre_cash: float, pre_shares: dict) -> bool:
+        return self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares
+
+    def _print_decision(self, ticker: str, decision: str, num: int, date_time: datetime) -> None:
+        print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")

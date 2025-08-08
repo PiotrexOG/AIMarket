@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Dict, List
 
 class UserDTO(BaseModel):
-    user_id: str
+    user_id: int
     cash: float
     shares: Dict[str, int]
     portfolio_value: float
@@ -16,7 +16,7 @@ class PositionDetail(BaseModel):
 
 
 class UserDetailDTO(BaseModel):
-    user_id: str
+    user_id: int
     cash: float
     portfolio_value: float
     positions: List[PositionDetail]

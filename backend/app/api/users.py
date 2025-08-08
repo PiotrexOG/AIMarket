@@ -9,7 +9,7 @@ router = APIRouter()
 
 
 @router.get("/{user_id}/{day_str}", response_model=UserDetailDTO)
-def get_user(user_id: str, day_str: str):
+def get_user(user_id: int, day_str: str):
     user = SimulationService.get_user(user_id, day_str)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")

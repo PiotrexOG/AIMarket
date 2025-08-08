@@ -39,7 +39,7 @@ class DecisionMaker:
             if num == 0:
                 decision = "TRZYMAJ"
         elif decision == "SPRZEDAJ":
-            num = random.randint(1, portfolio.shares[ticker]) if portfolio.shares[ticker] > 0 else 0
+            num = random.randint(1, portfolio.shares[ticker]) if portfolio.shares.get(ticker, 0) > 0 else 0
             if num == 0:
                 decision = "TRZYMAJ"
         else:

@@ -1,7 +1,10 @@
+from collections import defaultdict
+
+
 class Portfolio:
-    def __init__(self, cash, tickers):
+    def __init__(self, cash):
         self.cash = cash
-        self.shares = dict(tickers)
+        self.shares = defaultdict(int)
         self.history = []
 
     def buy(self, ticker, amount, price):
@@ -45,6 +48,4 @@ class Portfolio:
             'shares': closest_entry['shares'].copy()  # Zwracamy kopię, aby uniknąć modyfikacji oryginału
         }
 
-    def get_history(self):
-        return self.history
 

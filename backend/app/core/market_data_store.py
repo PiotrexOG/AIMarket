@@ -1,42 +1,78 @@
-import os
-
+import sqlite3
 import pandas as pd
-from app.core.data_loader import fetch_data, load_market_data
+from app.core.data_loader import fetch_data_to_sqlite
 
 class MarketDataStore:
-    def __init__(self, tickers, start_date, end_date):
+    def __init__(self, tickers, start_date, end_date, db_path="market_data.db"):
         self.tickers = tickers
-        self.data = {}
+        self.db_path = db_path
+        self._ensure_data(tickers, start_date, end_date)
+
+    def _ensure_data(self, tickers, start_date, end_date):
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+
+            # 🛡️ Tworzymy tabelę tylko jeśli nie istnieje
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS market_data (
+                    Datetime TEXT,
+                    Ticker TEXT,
+                    Open REAL,
+                    High REAL,
+                    Low REAL,
+                    Close REAL,
+                    Volume REAL
+                )
+            """)
+            conn.commit()
+
         for ticker in tickers:
-            file_name = f"{ticker}.csv"
-            if not os.path.exists(file_name):
-                fetch_data(start_date, end_date, ticker, "1h")
-            self.data[ticker] = load_market_data(ticker)
+            with sqlite3.connect(self.db_path) as conn:
+                try:
+                    result = pd.read_sql_query(
+                        "SELECT COUNT(*) FROM market_data WHERE Ticker = ?",
+                        conn,
+                        params=(ticker,)
+                    )
+                except Exception as e:
+                    print(f"❌ Błąd SQL dla {ticker}: {e}")
+                    return
 
-    def _find_row_by_datetime(self, ticker, date_time):
-        """Znajduje wiersz dla podanej daty (ze strefą czasową) lub najbliższą wcześniejszą."""
-        closest_row = None
-        for row in self.data[ticker]:
-            if 'Datetime' not in row:
-                continue
+                if result.iloc[0, 0] == 0:
+                    print(f"⬇️ Brak danych dla {ticker}, pobieram...")
+                    fetch_data_to_sqlite(start_date, end_date, ticker, "1h", db_path=self.db_path)
 
-            # Parsowanie z uwzględnieniem strefy czasowej (np. "2023-10-02 09:30:00-04:00")
-            row_datetime = pd.to_datetime(row['Datetime'], utc=True)  # parsuj jako czas z czasem UTC
-            row_datetime = row_datetime.tz_convert(date_time.tzinfo)  # przekonwertuj do strefy date_time
-
-            if row_datetime <= date_time:
-                if closest_row is None or row_datetime > pd.to_datetime(closest_row['Datetime'], utc=True).tz_convert(
-                        date_time.tzinfo):
-                    closest_row = row
-
-        return closest_row
 
     def get_data_for_day(self, date_time):
-        """Pobiera dane dla wszystkich tickerów na konkretną datę i godzinę"""
-        return {ticker: self._find_row_by_datetime(ticker, date_time)
-                for ticker in self.tickers}
+        result = {}
+        with sqlite3.connect(self.db_path) as conn:
+            for ticker in self.tickers:
+                df = pd.read_sql_query(
+                    """
+                    SELECT * FROM market_data
+                    WHERE Ticker = ?
+                    AND Datetime <= ?
+                    ORDER BY Datetime DESC
+                    LIMIT 1
+                    """,
+                    conn,
+                    params=(ticker, date_time.isoformat())
+                )
+                if not df.empty:
+                    result[ticker] = df.iloc[0].to_dict()
+        return result
 
     def get_price(self, ticker, date_time):
-        """Pobiera cenę zamknięcia dla konkretnego tickera i daty"""
-        row = self._find_row_by_datetime(ticker, date_time)
-        return float(row['Close']) if row else None
+        with sqlite3.connect(self.db_path) as conn:
+            df = pd.read_sql_query(
+                """
+                SELECT Close FROM market_data
+                WHERE Ticker = ?
+                AND Datetime <= ?
+                ORDER BY Datetime DESC
+                LIMIT 1
+                """,
+                conn,
+                params=(ticker, date_time.isoformat())
+            )
+            return float(df.iloc[0]['Close']) if not df.empty else None
