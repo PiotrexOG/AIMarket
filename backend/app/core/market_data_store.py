@@ -15,7 +15,7 @@ class MarketDataStore:
             # 🛡️ Tworzymy tabelę tylko jeśli nie istnieje
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS market_data (
-                    Datetime TEXT,
+                    Datetime DATETIME,
                     Ticker TEXT,
                     Open REAL,
                     High REAL,
@@ -42,10 +42,13 @@ class MarketDataStore:
                     print(f"⬇️ Brak danych dla {ticker}, pobieram...")
                     fetch_data_to_sqlite(start_date, end_date, ticker, "1h", db_path=self.db_path)
 
-
     def get_data_for_day(self, date_time):
+        """Pobiera najnowsze dane dla wszystkich tickerów na lub przed podaną datą/godziną"""
         result = {}
         with sqlite3.connect(self.db_path) as conn:
+            # Format daty w formacie SQLite DATETIME (YYYY-MM-DD HH:MM:SS)
+            formatted_date = date_time.strftime('%Y-%m-%d %H:%M:%S')
+
             for ticker in self.tickers:
                 df = pd.read_sql_query(
                     """
@@ -56,14 +59,22 @@ class MarketDataStore:
                     LIMIT 1
                     """,
                     conn,
-                    params=(ticker, date_time.isoformat())
+                    params=(ticker, formatted_date)
                 )
+
                 if not df.empty:
-                    result[ticker] = df.iloc[0].to_dict()
+                # Konwersja daty z powrotem do obiektu datetime
+                    record = df.iloc[0].to_dict()
+                record['Datetime'] = pd.to_datetime(record['Datetime'])
+                result[ticker] = record
+
         return result
 
     def get_price(self, ticker, date_time):
         with sqlite3.connect(self.db_path) as conn:
+            # Format daty w formacie SQLite DATETIME
+            formatted_date = date_time.strftime('%Y-%m-%d %H:%M:%S')
+
             df = pd.read_sql_query(
                 """
                 SELECT Close FROM market_data
@@ -73,6 +84,6 @@ class MarketDataStore:
                 LIMIT 1
                 """,
                 conn,
-                params=(ticker, date_time.isoformat())
+                params=(ticker, formatted_date)
             )
             return float(df.iloc[0]['Close']) if not df.empty else None

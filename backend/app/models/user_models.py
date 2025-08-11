@@ -20,3 +20,10 @@ class UserDetailDTO(BaseModel):
     cash: float
     portfolio_value: float
     positions: List[PositionDetail]
+
+class UserDetail2DTO(BaseModel):
+    user_id: int
+    date: str
+    cash: float
+    portfolio_value: float
+    positions: List[PositionDetail]

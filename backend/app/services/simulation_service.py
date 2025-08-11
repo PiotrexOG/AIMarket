@@ -1,12 +1,11 @@
 from datetime import datetime, timedelta
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 from dateutil.parser import isoparse
 
 from app.core.user_simulator import UserSimulator
 from app.core.market_data_store import MarketDataStore
 from app.config import TICKERS, start_time, end_time
-from app.models.user_models import UserDTO, UserDetailDTO, PositionDetail
-
+from app.models.user_models import UserDTO, UserDetailDTO, PositionDetail, UserDetail2DTO
 
 
 class SimulationService:
@@ -41,13 +40,13 @@ class SimulationService:
             user_simulator.process_day(current_time)
 
     @classmethod
-    def get_user(cls, user_id: int, date_time_str: str) -> Optional[UserDetailDTO]:
+    def get_user_daily_portfolio(cls, user_id: int, date_str: str) -> Optional[UserDetailDTO]:
         simulator = cls.users.get(user_id)
         if not simulator:
             return None
 
         try:
-            date_time = isoparse(date_time_str)
+            date_time = isoparse(date_str)
         except (ValueError, TypeError):
             return None
 
@@ -63,6 +62,47 @@ class SimulationService:
             portfolio_value=portfolio_details["total_value"],
             positions=positions_dto
         )
+
+    @classmethod
+    def get_user_portfolio_history(cls, user_id: int) -> List[dict]:
+        simulator = cls.users.get(user_id)
+        if not simulator:
+            return []
+
+        history_data = []
+        for entry in simulator.portfolio.history:
+            date_time = entry['datetime']
+            portfolio_details = simulator.calculate_portfolio_details(date_time)
+            if portfolio_details:
+                history_data.append({
+                    "timestamp": portfolio_details["date_time"],
+                    "portfolio_value": portfolio_details["total_value"]
+                })
+
+        return history_data
+
+    @classmethod
+    def get_user_full_portfolio_history(cls, user_id: int) -> List[UserDetail2DTO]:
+        """Get complete portfolio history with positions for all dates"""
+        simulator = cls.users.get(user_id)
+        if not simulator:
+            return []
+
+        history_data = []
+        for entry in simulator.portfolio.history:
+            date_time = entry['datetime']
+            portfolio_details = simulator.calculate_portfolio_details(date_time)
+            if portfolio_details:
+                positions_dto = cls._create_position_details(portfolio_details["positions"])
+                history_data.append(UserDetail2DTO(
+                    user_id=user_id,
+                    date=date_time.isoformat(),  # Dodajemy datę do DTO
+                    cash=portfolio_details["cash"],
+                    portfolio_value=portfolio_details["total_value"],
+                    positions=positions_dto
+                ))
+
+        return history_data
 
     @staticmethod
     def _create_position_details(positions: list[dict]) -> list[PositionDetail]:
