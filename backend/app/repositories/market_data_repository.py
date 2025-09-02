@@ -24,3 +24,7 @@ class MarketDataRepository:
             .limit(limit)
             .all()
         )
+
+    def delete_all(self):
+        self.db.query(MarketData).delete()
+        self.db.commit()

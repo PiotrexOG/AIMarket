@@ -23,3 +23,9 @@ class UserService:
         Pobiera listę wszystkich użytkowników.
         """
         return self.repo.get_all()
+
+    def delete_all(self):
+        """
+        Usuwa wszystkich użytkowników.
+        """
+        self.repo.delete_all()

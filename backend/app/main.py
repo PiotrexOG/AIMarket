@@ -1,4 +1,5 @@
 # app/main.py
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import threading
@@ -16,15 +17,15 @@ app.add_middleware(
 )
 
 # Rejestracja routerów
-from app.routers import users_router, market_data_router
+from app.routers import users_router, market_data_router, portfolio_router
 app.include_router(users_router.router)
 app.include_router(market_data_router.router)
+app.include_router(portfolio_router.router)
 
 # -------------------------------
 # Funkcja uruchamiająca symulację
 # -------------------------------
 def run_simulation():
-    print("✅ Symulacja zakończona.")
     db = SessionLocal()
     try:
         simulation_service = SimulationService(
@@ -33,11 +34,19 @@ def run_simulation():
             start_time=START_TIME,
             end_time=END_TIME
         )
-        simulation_service.fetch_market_data(interval="1h")
-        simulation_service.initialize_users(no_users=NO_USERS, starting_cash=STARTING_CASH)
+        reset_flag = True
+        if reset_flag:
+            print("⚠️ RESET_DB=True → czyszczę wszystkie tabele...")
+            simulation_service.market_data_service.delete_all()
+            simulation_service.portfolio_service.delete_all()
+            simulation_service.user_service.delete_all()
+
+            simulation_service.fetch_market_data(interval="1h")
+            simulation_service.initialize_users(no_users=NO_USERS, starting_cash=STARTING_CASH)
         simulation_service.run_simulation()
     finally:
         db.close()
 
 # Uruchamiamy w tle przy starcie serwera
 threading.Thread(target=run_simulation, daemon=True).start()
+uvicorn.run(app, host="0.0.0.0", port=8000)

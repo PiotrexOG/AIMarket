@@ -44,3 +44,9 @@ class PortfolioRepository:
         self.db.commit()
         self.db.refresh(history_obj)
         return history_obj
+
+    def delete_all(self):
+        self.db.query(PortfolioShare).delete()
+        self.db.query(PortfolioHistory).delete()
+        self.db.query(Portfolio).delete()
+        self.db.commit()

@@ -17,3 +17,9 @@ class MarketDataService:
         Pobiera ostatnie rekordy dla podanego tickera.
         """
         return self.repo.get_by_ticker(ticker, limit)
+
+    def delete_all(self):
+        """
+        Usuwa wszystkie rekordy z tabeli MarketData.
+        """
+        self.repo.delete_all()

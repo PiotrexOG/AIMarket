@@ -3,6 +3,9 @@ from typing import Dict
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
+from app.schemas.market_data import MarketDataCreate
+from app.schemas.portfolio import PortfolioCreate
+from app.schemas.user import UserCreate
 from app.services.market_data_service import MarketDataService
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
@@ -24,6 +27,7 @@ class SimulationService:
 
     # ---- Krok 1: Pobierz dane z Yahoo i zapisz do bazy ----
     def fetch_market_data(self, interval: str = "1h"):
+
         for ticker in self.tickers:
             df = self.yahoo_client.fetch_history(ticker, self.start_time, self.end_time, interval)
             if df.empty:
@@ -32,15 +36,15 @@ class SimulationService:
 
             for _, row in df.iterrows():
                 self.market_data_service.add_market_data(
-                    {
-                        "datetime": row["Datetime"],
-                        "ticker": row["Ticker"],
-                        "open": row["Open"],
-                        "high": row["High"],
-                        "low": row["Low"],
-                        "close": row["Close"],
-                        "volume": row["Volume"]
-                    }
+                    MarketDataCreate(
+                        datetime = row["Datetime"],
+                        ticker = row["Ticker"],
+                        open = row["Open"],
+                        high = row["High"],
+                        low = row["Low"],
+                        close = row["Close"],
+                        volume = row["Volume"]
+                    )
                 )
             print(f"✅ Dane dla {ticker} zapisane do bazy")
 
@@ -48,13 +52,13 @@ class SimulationService:
     def initialize_users(self, no_users: int, starting_cash: float):
         for user_id in range(1, no_users + 1):
             # Tworzymy użytkownika w bazie
-            user = self.user_service.create_user({"name": f"User {user_id}"})
+            user = self.user_service.create_user(UserCreate(name = f"User {user_id}"))
 
             # Tworzymy portfel w bazie
-            portfolio = self.portfolio_service.create_portfolio({
-                "name": f"Portfolio {user_id}",
-                "user_id": user.id
-            })
+            self.portfolio_service.create_portfolio(PortfolioCreate(
+                name=f"Portfolio {user_id}",
+                user_id=user.id
+            ))
 
             # Tworzymy symulator użytkownika
             self.users[user.id] = UserSimulator(
