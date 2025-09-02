@@ -15,5 +15,7 @@ for ticker_symbol in TICKERS:
 STARTING_CASH = 10000.0
 NO_USERS = 2
 
-START_TIME = datetime(2023, 10, 2, 9, 30, tzinfo=pytz.timezone("America/New_York"))
-END_TIME = datetime(2023, 12, 31, 23, 59, tzinfo=pytz.timezone("America/New_York"))
+tz = pytz.timezone("America/New_York")
+START_TIME = tz.localize(datetime(2023, 10, 2, 9, 30))
+END_TIME = tz.localize(datetime(2023, 12, 31, 23, 59))
+

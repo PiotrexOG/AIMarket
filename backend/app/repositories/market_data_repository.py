@@ -1,3 +1,6 @@
+from datetime import datetime
+from typing import Optional
+
 from sqlalchemy.orm import Session
 from app.models.market_data import MarketData
 from app.schemas.market_data import MarketDataCreate
@@ -23,6 +26,20 @@ class MarketDataRepository:
             .order_by(MarketData.datetime.desc())
             .limit(limit)
             .all()
+        )
+
+    def get_price_at_date(self, ticker: str, date_time: datetime) -> Optional[MarketData]:
+        """
+        Pobiera najnowsze dane rynkowe (np. close price) do danego dnia.
+        """
+        return (
+            self.db.query(MarketData)
+            .filter(
+                MarketData.ticker == ticker,
+                MarketData.datetime <= date_time
+            )
+            .order_by(MarketData.datetime.desc())
+            .first()
         )
 
     def delete_all(self):

@@ -1,4 +1,7 @@
-from sqlalchemy.orm import Session
+from datetime import datetime
+from typing import Optional
+
+from sqlalchemy.orm import Session, joinedload
 from app.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
 from app.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 
@@ -22,6 +25,22 @@ class PortfolioRepository:
 
     def get_user_portfolios(self, user_id: int):
         return self.db.query(Portfolio).filter(Portfolio.user_id == user_id).all()
+
+    def get_state_at_date(self, portfolio_id: int, date_time: datetime) -> Optional[PortfolioHistory]:
+        """
+        Pobiera najnowszy stan portfela (PortfolioHistory) na dany dzień.
+        Ładujemy od razu powiązane udziały (PortfolioShare).
+        """
+        return (
+            self.db.query(PortfolioHistory)
+            .options(joinedload(PortfolioHistory.shares))
+            .filter(
+                PortfolioHistory.portfolio_id == portfolio_id,
+                PortfolioHistory.datetime <= date_time
+            )
+            .order_by(PortfolioHistory.datetime.desc())
+            .first()
+        )
 
     # ---- Portfolio History ----
     def add_history(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:

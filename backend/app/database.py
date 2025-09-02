@@ -9,6 +9,9 @@ DATABASE_URL = "postgresql+psycopg2://postgres:postgres@localhost:5432/stock_sim
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 
+# Usuń wszystkie tabele
+Base.metadata.drop_all(bind=engine)
+
 # Tworzymy wszystkie tabele
 Base.metadata.create_all(bind=engine)
 

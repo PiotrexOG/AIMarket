@@ -72,6 +72,7 @@ class SimulationService:
     # ---- Krok 3: Symulacja krok po kroku ----
     def run_simulation(self):
         current_time = self.start_time
+        print(current_time)
         while current_time <= self.end_time:
             self._simulate_time_step(current_time)
             current_time += timedelta(hours=1)
