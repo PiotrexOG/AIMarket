@@ -7,6 +7,7 @@ from app.schemas.market_data import MarketDataCreate
 from app.schemas.portfolio import PortfolioCreate
 from app.schemas.user import UserCreate
 from app.services.market_data_service import MarketDataService
+from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.models.portfolio import PortfolioShare
@@ -22,6 +23,7 @@ class SimulationService:
         self.market_data_service = MarketDataService(db)
         self.user_service = UserService(db)
         self.portfolio_service = PortfolioService(db)
+        self.valuation_service = PortfolioValuationService(self.portfolio_service, self.market_data_service)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -66,6 +68,7 @@ class SimulationService:
                 starting_cash=starting_cash,
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
+                valuation_service=self.valuation_service,
                 use_model=False
             )
 

@@ -19,7 +19,8 @@ class PortfolioHistory(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
     datetime = Column(DateTime, index=True, nullable=False)
-    cash = Column(Float, nullable=False)
+    cash = Column(Float)
+    total_value = Column(Float)
 
     portfolio = relationship("Portfolio", back_populates="history")
     shares = relationship("PortfolioShare", back_populates="portfolio_history", cascade="all, delete-orphan")

@@ -2,8 +2,11 @@ from datetime import datetime
 from typing import Optional
 
 from sqlalchemy.orm import Session
+
+from app.models.portfolio import PortfolioShare, PortfolioHistory
 from app.repositories.portfolio_repository import PortfolioRepository
 from app.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
+
 
 class PortfolioService:
     def __init__(self, db: Session):
@@ -28,11 +31,7 @@ class PortfolioService:
         """
         return self.repo.get_user_portfolios(user_id)
 
-    # ---- Historia ----
-    def add_portfolio_history(self, portfolio_id: int, history_data: PortfolioHistoryCreate):
-        """
-        Dodaje wpis historii do portfela wraz z akcjami.
-        """
+    def evaluate(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
         return self.repo.add_history(portfolio_id, history_data)
 
     def get_portfolio_state(self, portfolio_id: int, date_time: datetime) -> Optional[dict]:

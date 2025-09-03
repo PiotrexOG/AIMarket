@@ -4,9 +4,8 @@ from app.services.portfolio_service import PortfolioService
 from app.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 
 class Portfolio:
-    def __init__(self, portfolio_id: int, starting_cash: float, portfolio_service: PortfolioService):
+    def __init__(self, portfolio_id: int, starting_cash: float):
         self.portfolio_id = portfolio_id
-        self.portfolio_service = portfolio_service
         self.cash = starting_cash
         self.shares = defaultdict(int)
 
@@ -26,19 +25,3 @@ class Portfolio:
             return True
         return False
 
-    # ---- Zapis historii do bazy ----
-    def evaluate(self, date_time: datetime):
-        # Tworzymy wpis historii
-        history_data = PortfolioHistoryCreate(
-            datetime=date_time,
-            cash=self.cash,
-            shares=[
-                PortfolioShareCreate(ticker=t, amount=a)
-                for t, a in self.shares.items()
-            ]
-        )
-        self.portfolio_service.add_portfolio_history(self.portfolio_id, history_data)
-
-    # ---- Pobranie stanu portfela w określonym czasie ----
-    # W tej wersji baza trzyma pełną historię, więc metoda może pobierać z repo
-    # Możemy też trzymać ostatni snapshot w pamięci, jeśli chcemy przyspieszyć symulację

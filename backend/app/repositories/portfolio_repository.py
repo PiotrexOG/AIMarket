@@ -44,13 +44,16 @@ class PortfolioRepository:
 
     # ---- Portfolio History ----
     def add_history(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
+        print(">>> Zapis historii portfela", history_data)
+
         history_obj = PortfolioHistory(
             portfolio_id=portfolio_id,
             datetime=history_data.datetime,
-            cash=history_data.cash
+            cash=history_data.cash,
+            total_value=history_data.total_value  # <--- prosto z DTO
         )
         self.db.add(history_obj)
-        self.db.flush()  # aby mieć id przed dodaniem shares
+        self.db.flush()
 
         for share in history_data.shares:
             share_obj = PortfolioShare(
@@ -61,6 +64,8 @@ class PortfolioRepository:
             self.db.add(share_obj)
 
         self.db.commit()
+        print(">>> Zapisano z ID:", history_obj.id)
+
         self.db.refresh(history_obj)
         return history_obj
 
