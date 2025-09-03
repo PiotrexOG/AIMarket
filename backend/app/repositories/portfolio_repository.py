@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 from sqlalchemy.orm import Session, joinedload
 from app.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
@@ -26,6 +26,17 @@ class PortfolioRepository:
     def get_user_portfolios(self, user_id: int):
         return self.db.query(Portfolio).filter(Portfolio.user_id == user_id).all()
 
+    # ---- Historia portfela ----
+    def get_portfolio_history(self, portfolio_id: int) -> List[PortfolioHistory]:
+        """ Pobiera całą historię portfela (łącznie z udziałami). """
+        return (
+            self.db.query(PortfolioHistory)
+            .options(joinedload(PortfolioHistory.shares))
+            .filter(PortfolioHistory.portfolio_id == portfolio_id)
+            .order_by(PortfolioHistory.datetime.asc())
+            .all()
+        )
+
     def get_state_at_date(self, portfolio_id: int, date_time: datetime) -> Optional[PortfolioHistory]:
         """
         Pobiera najnowszy stan portfela (PortfolioHistory) na dany dzień.
@@ -44,8 +55,6 @@ class PortfolioRepository:
 
     # ---- Portfolio History ----
     def add_history(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
-        print(">>> Zapis historii portfela", history_data)
-
         history_obj = PortfolioHistory(
             portfolio_id=portfolio_id,
             datetime=history_data.datetime,
@@ -64,7 +73,6 @@ class PortfolioRepository:
             self.db.add(share_obj)
 
         self.db.commit()
-        print(">>> Zapisano z ID:", history_obj.id)
 
         self.db.refresh(history_obj)
         return history_obj

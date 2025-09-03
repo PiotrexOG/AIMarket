@@ -18,7 +18,7 @@ class PortfolioHistory(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
-    datetime = Column(DateTime, index=True, nullable=False)
+    datetime = Column(DateTime(timezone=True), index=True, nullable=False)
     cash = Column(Float)
     total_value = Column(Float)
 

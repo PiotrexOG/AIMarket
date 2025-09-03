@@ -23,7 +23,7 @@ class SimulationService:
         self.market_data_service = MarketDataService(db)
         self.user_service = UserService(db)
         self.portfolio_service = PortfolioService(db)
-        self.valuation_service = PortfolioValuationService(self.portfolio_service, self.market_data_service)
+        self.valuation_service = PortfolioValuationService(self.market_data_service)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 

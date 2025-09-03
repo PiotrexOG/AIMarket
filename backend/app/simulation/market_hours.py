@@ -38,35 +38,40 @@ EXCHANGE_HOURS = {
     }
 }
 
-def is_market_open_by_exchange(ticker_str: str, dt: datetime) -> bool:
+def is_market_open_by_exchange(ticker_str: str, dt_utc: datetime) -> bool:
     """
     Sprawdza, czy instrument (określony przez exchange z Yahoo Finance) jest otwarty w danym momencie.
 
     Parametry:
     - ticker_str: np. "AAPL", "TSLA"
-    - dt: obiekt datetime z przypisaną strefą czasową (tzinfo)
+    - dt_utc: obiekt datetime w UTC (musi mieć tzinfo=UTC)
 
     Zwraca:
     - True jeśli giełda otwarta, False jeśli zamknięta
     """
+    if dt_utc.tzinfo is None:
+        raise ValueError("Parametr dt_utc musi mieć przypisaną strefę czasową (UTC)")
+
+    if dt_utc.tzinfo != pytz.UTC:
+        raise ValueError("Parametr dt_utc musi być w UTC")
+
     exchange = TICKERS_EXCHANGE_NAME.get(ticker_str)
-
-    if dt.tzinfo is None:
-        raise ValueError("Parametr dt musi mieć przypisaną strefę czasową (tzinfo)")
-
     if exchange not in EXCHANGE_HOURS:
         raise ValueError(f"Nieznana giełda: {exchange}")
 
     market = EXCHANGE_HOURS[exchange]
     market_tz = market["tz"]
-    dt_local = dt.astimezone(market_tz)
 
+    # konwersja z UTC -> lokalna strefa giełdy
+    dt_local = dt_utc.astimezone(market_tz)
+
+    # sprawdzanie świąt i weekendów
     if market["holidays"] and dt_local.date() in market["holidays"]:
         return False
 
     if dt_local.weekday() >= 5 and market["holidays"] is not None:
-        return False  # weekend (dla giełd zamkniętych)
+        return False  # weekend (tylko dla giełd z przerwami)
 
+    # sprawdzanie godzin
     current_time = dt_local.time()
-    is_open = market["open"] <= current_time <= market["close"]
-    return is_open
+    return market["open"] <= current_time <= market["close"]

@@ -19,17 +19,23 @@ class PortfolioService:
         """
         return self.repo.create_portfolio(data)
 
-    def get_portfolio(self, portfolio_id: int):
-        """
-        Pobiera szczegóły portfela.
-        """
-        return self.repo.get_portfolio(portfolio_id)
+        # ---- Portfele ----
 
-    def get_user_portfolios(self, user_id: int):
-        """
-        Pobiera wszystkie portfele danego użytkownika.
-        """
-        return self.repo.get_user_portfolios(user_id)
+    def get_user_portfolio(self, user_id: int):
+        """ Ponieważ każdy user ma 1 portfolio """
+        portfolios = self.repo.get_user_portfolios(user_id)
+        return portfolios[0] if portfolios else None
+
+        # ---- Historia ----
+
+    def get_portfolio_history(self, portfolio_id: int):
+        """ Zwraca całą historię (cash, shares, total_value). """
+        return self.repo.get_portfolio_history(portfolio_id)
+
+    def get_portfolio_summary(self, portfolio_id: int):
+        """ Zwraca tylko datę i total_value dla historii. """
+        history = self.repo.get_portfolio_history(portfolio_id)
+        return [{"datetime": h.datetime, "total_value": h.total_value} for h in history]
 
     def evaluate(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
         return self.repo.add_history(portfolio_id, history_data)

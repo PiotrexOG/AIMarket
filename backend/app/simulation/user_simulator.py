@@ -25,9 +25,9 @@ class UserSimulator:
         # Pobieramy dane rynkowe dla wszystkich tickerów i łączymy w jeden słownik
         day_data = {}
         for ticker in TICKERS:  # zakładamy, że serwis ma listę tickerów
-            ticker_data = self.market_data_service.get_recent_data(ticker, limit=1)  # 1 rekord najnowszy
+            ticker_data = self.market_data_service.get_recent_data(ticker, date_time, limit=3)  # 1 rekord najnowszy
             if ticker_data:
-                day_data[ticker] = ticker_data[0]  # get_recent_data zwraca listę słowników
+                day_data[ticker] = ticker_data  # get_recent_data zwraca listę słowników
 
         pre_cash = self.portfolio.cash
         pre_shares = dict(self.portfolio.shares)
@@ -39,25 +39,26 @@ class UserSimulator:
             decision, num, explanation = self.decision_maker.make_decision(
                 ticker, data, self.portfolio, self.with_explanation
             )
-            self.execute_decision(ticker, decision, num, float(data.close))
+
+            self.execute_decision(ticker, decision, num, float(data[0].close))
             self._print_decision(ticker, decision, num, date_time)
 
-        # Zapisujemy stan portfela do bazy jeśli zaszły zmiany
+        # Jeśli coś się zmieniło -> policz z pamięci i zapisz
         if self._portfolio_changed(pre_cash, pre_shares):
-            print("siema")
             details = self.valuation_service.calculate_portfolio_details(
-                self.portfolio.portfolio_id, date_time
+                cash=self.portfolio.cash,
+                shares=dict(self.portfolio.shares),
+                date_time=date_time
             )
 
-            if details:  # budujemy DTO na podstawie valuation
-                print("halo")
+            if details is not None:
                 history_data = PortfolioHistoryCreate(
                     datetime=date_time,
                     cash=details["cash"],
                     total_value=details["total_value"],
                     shares=[
-                        PortfolioShareCreate(ticker=p["ticker"], amount=p["shares"])
-                        for p in details["positions"]
+                        PortfolioShareCreate(ticker=t, amount=a)
+                        for t, a in self.portfolio.shares.items()
                     ]
                 )
                 self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)

@@ -5,7 +5,7 @@ class MarketData(Base):
     __tablename__ = "market_data"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    datetime = Column(DateTime, index=True, nullable=False)
+    datetime = Column(DateTime(timezone=True), index=True, nullable=False)
     ticker = Column(String, index=True, nullable=False)
     open = Column(Float, nullable=False)
     high = Column(Float, nullable=False)

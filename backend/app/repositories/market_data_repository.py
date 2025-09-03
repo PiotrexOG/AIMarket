@@ -19,10 +19,13 @@ class MarketDataRepository:
         self.db.refresh(db_obj)
         return db_obj
 
-    def get_by_ticker(self, ticker: str, limit: int = 100):
+    def get_by_ticker_until_date(self, ticker: str, date_time: datetime, limit: int = 1):
         return (
             self.db.query(MarketData)
-            .filter(MarketData.ticker == ticker)
+            .filter(
+                MarketData.ticker == ticker,
+                MarketData.datetime <= date_time
+            )
             .order_by(MarketData.datetime.desc())
             .limit(limit)
             .all()

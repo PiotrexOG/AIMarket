@@ -15,11 +15,11 @@ class MarketDataService:
         """
         return self.repo.create(data)
 
-    def get_recent_data(self, ticker: str, limit: int = 100):
+    def get_recent_data(self, ticker: str, date_time: datetime, limit: int = 1):
         """
-        Pobiera ostatnie rekordy dla podanego tickera.
+        Pobiera ostatnie rekordy dla podanego tickera do wskazanej daty.
         """
-        return self.repo.get_by_ticker(ticker, limit)
+        return self.repo.get_by_ticker_until_date(ticker, date_time, limit)
 
     def get_price(self, ticker: str, date_time: datetime) -> Optional[float]:
         """

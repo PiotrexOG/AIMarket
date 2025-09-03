@@ -31,7 +31,7 @@ class DecisionMaker:
     def _random_decision(self, ticker, market_data, portfolio):
         possible_actions = ["KUPUJ", "SPRZEDAJ", "TRZYMAJ"]
         decision = random.choice(possible_actions)
-        close = float(market_data.close)
+        close = float(market_data[0].close)
 
         if decision == "KUPUJ":
             max_affordable = int(portfolio.cash // close)

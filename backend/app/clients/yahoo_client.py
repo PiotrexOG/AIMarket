@@ -1,10 +1,12 @@
 from datetime import datetime, timedelta
+
+import pytz
 import yfinance as yf
 import pandas as pd
 
 class YahooClient:
-    def __init__(self, timezone: str = "America/New_York"):
-        self.timezone = timezone
+    def __init__(self):
+        self.timezone = pytz.UTC
 
     def fetch_history(
         self,
@@ -32,8 +34,7 @@ class YahooClient:
 
         # Wybór kolumn i formatowanie
         df = df[['Datetime', 'Ticker', 'Open', 'High', 'Low', 'Close', 'Volume']]
-        df['Datetime'] = pd.to_datetime(df['Datetime']).dt.tz_convert(self.timezone)
-        df['Datetime'] = df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
+        df['Datetime'] = pd.to_datetime(df['Datetime']).dt.tz_convert("UTC")
         df[['Open', 'High', 'Low', 'Close']] = df[['Open', 'High', 'Low', 'Close']].round(2)
 
         return df

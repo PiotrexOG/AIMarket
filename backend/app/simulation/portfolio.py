@@ -11,7 +11,7 @@ class Portfolio:
 
     # ---- Operacje na portfelu ----
     def buy(self, ticker: str, amount: int, price: float) -> bool:
-        cost = amount * price
+        cost = round(amount * price, 2)
         if cost <= self.cash:
             self.cash -= cost
             self.shares[ticker] += amount
@@ -20,7 +20,7 @@ class Portfolio:
 
     def sell(self, ticker: str, amount: int, price: float) -> bool:
         if amount <= self.shares.get(ticker, 0):
-            self.cash += amount * price
+            self.cash += round(amount * price, 2)
             self.shares[ticker] -= amount
             return True
         return False
