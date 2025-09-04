@@ -54,8 +54,8 @@ class UserSimulator:
             if details is not None:
                 history_data = PortfolioHistoryCreate(
                     datetime=date_time,
-                    cash=details["cash"],
-                    total_value=details["total_value"],
+                    cash=details.cash,
+                    total_value=details.total_value,
                     shares=[
                         PortfolioShareCreate(ticker=t, amount=a)
                         for t, a in self.portfolio.shares.items()

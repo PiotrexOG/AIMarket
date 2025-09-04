@@ -1,16 +1,19 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 from sqlalchemy.orm import Session
 
+from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail
 from app.models.portfolio import PortfolioShare, PortfolioHistory
 from app.repositories.portfolio_repository import PortfolioRepository
 from app.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
+from app.services.portfolio_valuation_service import PortfolioValuationService
 
 
 class PortfolioService:
-    def __init__(self, db: Session):
+    def __init__(self, db: Session, portfolio_valuation_service: PortfolioValuationService):
         self.repo = PortfolioRepository(db)
+        self.portfolio_valuation_service = portfolio_valuation_service
 
     # ---- Portfele ----
     def create_portfolio(self, data: PortfolioCreate):
@@ -19,117 +22,62 @@ class PortfolioService:
         """
         return self.repo.create_portfolio(data)
 
-        # ---- Portfele ----
-
-    def get_user_portfolio(self, user_id: int):
-        """ Ponieważ każdy user ma 1 portfolio """
-        portfolios = self.repo.get_user_portfolios(user_id)
-        return portfolios[0] if portfolios else None
-
-        # ---- Historia ----
-
-    def get_portfolio_history(self, portfolio_id: int):
-        """ Zwraca całą historię (cash, shares, total_value). """
-        return self.repo.get_portfolio_history(portfolio_id)
-
-    def get_portfolio_summary(self, portfolio_id: int):
-        """ Zwraca tylko datę i total_value dla historii. """
-        history = self.repo.get_portfolio_history(portfolio_id)
-        return [{"datetime": h.datetime, "total_value": h.total_value} for h in history]
-
     def evaluate(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
         return self.repo.add_history(portfolio_id, history_data)
 
-    def get_portfolio_state(self, portfolio_id: int, date_time: datetime) -> Optional[dict]:
-        """
-        Zwraca słownik {cash, shares{ticker: amount}} dla portfela na dany dzień.
-        """
-        history = self.repo.get_state_at_date(portfolio_id, date_time)
-        if not history:
-            return None
 
-        return {
-            "cash": history.cash,
-            "shares": {share.ticker: share.amount for share in history.shares}
-        }
+    def get_portfolio_history(self, portfolio_id: int) -> List[PortfolioStateDTO]:
+        """Pobiera całą historię portfela w formacie DTO"""
+        history = self.repo.get_portfolio_history(portfolio_id)
+        return [self._convert_to_state_dto(history_item) for history_item in history]
+
+    def get_portfolio_summary(self, portfolio_id: int) -> List[PortfolioSummaryDTO]:
+        """Pobiera uproszczoną historię (tylko data i wartość)"""
+        history = self.repo.get_portfolio_history(portfolio_id)
+        return [
+            PortfolioSummaryDTO(
+                date=history_item.datetime.isoformat(),
+                portfolio_value=history_item.total_value
+            )
+            for history_item in history
+        ]
+
+    def get_portfolio_state(self, portfolio_id: int, date: datetime) -> Optional[PortfolioStateDTO]:
+        """Pobiera stan portfela na konkretną datę"""
+        state = self.repo.get_state_at_date(portfolio_id, date)
+        if state:
+            return self._convert_to_state_dto(state)
+        return None
+
+    def _convert_to_state_dto(self, history_item: PortfolioHistory) -> PortfolioStateDTO:
+        """Konwertuje PortfolioHistory na PortfolioStateDTO"""
+        # Konwersja shares na dict dla valuation_service
+        shares_dict = {share.ticker: share.amount for share in history_item.shares}
+
+        # Użycie istniejącego serwisu!
+        valuation = self.portfolio_valuation_service.calculate_portfolio_details(
+            cash=history_item.cash,
+            shares=shares_dict,
+            date_time=history_item.datetime
+        )
+
+        return PortfolioStateDTO(
+            user_id=history_item.portfolio.user_id,
+            date=history_item.datetime.isoformat(),
+            cash=valuation.cash,
+            portfolio_value=valuation.total_value,
+            positions=[
+                PositionDetail(
+                    ticker=position.ticker,
+                    shares=position.shares,
+                    price=position.price,
+                    value=position.value
+                ) for position in valuation.positions  # ← atrybut obiektu
+            ]
+        )
 
     def delete_all(self):
         """
         Usuwa wszystkie portfele, historię i udziały.
         """
         self.repo.delete_all()
-
-    # def get_user_daily_portfolio(cls, user_id: int, date_str: str) -> Optional[UserDetailDTO]:
-    #     simulator = cls.users.get(user_id)
-    #     if not simulator:
-    #         return None
-    #
-    #     try:
-    #         date_time = isoparse(date_str)
-    #     except (ValueError, TypeError):
-    #         return None
-    #
-    #     portfolio_details = simulator.calculate_portfolio_details(date_time)
-    #     if not portfolio_details:
-    #         return None
-    #
-    #     positions_dto = cls._create_position_details(portfolio_details["positions"])
-    #
-    #     return UserDetailDTO(
-    #         user_id=user_id,
-    #         cash=portfolio_details["cash"],
-    #         portfolio_value=portfolio_details["total_value"],
-    #         positions=positions_dto
-    #     )
-    #
-    # @classmethod
-    # def get_user_portfolio_history(cls, user_id: int) -> List[dict]:
-    #     simulator = cls.users.get(user_id)
-    #     if not simulator:
-    #         return []
-    #
-    #     history_data = []
-    #     for entry in simulator.portfolio.history:
-    #         date_time = entry['datetime']
-    #         portfolio_details = simulator.calculate_portfolio_details(date_time)
-    #         if portfolio_details:
-    #             history_data.append({
-    #                 "timestamp": portfolio_details["date_time"],
-    #                 "portfolio_value": portfolio_details["total_value"]
-    #             })
-    #
-    #     return history_data
-    #
-    # @classmethod
-    # def get_user_full_portfolio_history(cls, user_id: int) -> List[UserDetail2DTO]:
-    #     """Get complete portfolio history with positions for all dates"""
-    #     simulator = cls.users.get(user_id)
-    #     if not simulator:
-    #         return []
-    #
-    #     history_data = []
-    #     for entry in simulator.portfolio.history:
-    #         date_time = entry['datetime']
-    #         portfolio_details = simulator.calculate_portfolio_details(date_time)
-    #         if portfolio_details:
-    #             positions_dto = cls._create_position_details(portfolio_details["positions"])
-    #             history_data.append(UserDetail2DTO(
-    #                 user_id=user_id,
-    #                 date=date_time.isoformat(),  # Dodajemy datę do DTO
-    #                 cash=portfolio_details["cash"],
-    #                 portfolio_value=portfolio_details["total_value"],
-    #                 positions=positions_dto
-    #             ))
-    #
-    #     return history_data
-    #
-    # @staticmethod
-    # def _create_position_details(positions: list[dict]) -> list[PositionDetail]:
-    #     return [
-    #         PositionDetail(
-    #             ticker=pos["ticker"],
-    #             shares=pos["shares"],
-    #             price=pos["price"],
-    #             value=pos["value"]
-    #         ) for pos in positions
-    #     ]
