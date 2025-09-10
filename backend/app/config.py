@@ -11,6 +11,9 @@ for ticker_symbol in TICKERS:
     exchange = ticker.info.get("fullExchangeName", "Unknown Exchange")  # Domyślna wartość, jeśli brak danych
     TICKERS_EXCHANGE_NAME[ticker_symbol] = exchange
 
+DEBUG_RESET = True
+FIRST_RUN = False
+LOCALLY = True
 
 STARTING_CASH = 10000.0
 NO_USERS = 2

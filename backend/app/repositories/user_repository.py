@@ -1,3 +1,4 @@
+from sqlalchemy import text
 from sqlalchemy.orm import Session
 from app.models.user import User
 from app.schemas.user import UserCreate
@@ -24,4 +25,5 @@ class UserRepository:
 
     def delete_all(self):
         self.db.query(User).delete()
+        self.db.execute(text("ALTER SEQUENCE users_id_seq RESTART WITH 1"))
         self.db.commit()

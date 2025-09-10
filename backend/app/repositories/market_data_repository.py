@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
+from sqlalchemy import text
 from sqlalchemy.orm import Session
 from app.models.market_data import MarketData
 from app.schemas.market_data import MarketDataCreate
@@ -47,4 +48,5 @@ class MarketDataRepository:
 
     def delete_all(self):
         self.db.query(MarketData).delete()
+     #   self.db.execute(text("ALTER SEQUENCE market_data_id_seq RESTART WITH 1"))
         self.db.commit()

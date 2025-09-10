@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import threading
 from app.services.simulation_service_new import SimulationService
 from app.database import SessionLocal
-from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS
+from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, FIRST_RUN, DEBUG_RESET
 
 app = FastAPI(title="Stock Simulator API")
 
@@ -34,15 +34,21 @@ def run_simulation():
             start_time=START_TIME,
             end_time=END_TIME
         )
-        reset_flag = True
-        if reset_flag:
+
+        if DEBUG_RESET:
             print("⚠️ RESET_DB=True → czyszczę wszystkie tabele...")
-            simulation_service.market_data_service.delete_all()
+
+            if FIRST_RUN:
+                simulation_service.market_data_service.delete_all()
+                simulation_service.fetch_market_data(interval="1h")
+
+
+
             simulation_service.portfolio_service.delete_all()
             simulation_service.user_service.delete_all()
 
-            simulation_service.fetch_market_data(interval="1h")
             simulation_service.initialize_users(no_users=NO_USERS, starting_cash=STARTING_CASH)
+
         simulation_service.run_simulation()
     finally:
         db.close()
