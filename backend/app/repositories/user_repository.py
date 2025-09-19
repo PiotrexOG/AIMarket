@@ -1,7 +1,6 @@
-from sqlalchemy import text
 from sqlalchemy.orm import Session
-from app.models.user import User
-from app.schemas.user import UserCreate
+from app.db.models.user import User
+from app.db.schemas.user import UserCreate
 
 class UserRepository:
     def __init__(self, db: Session):
@@ -22,8 +21,3 @@ class UserRepository:
 
     def get_all(self):
         return self.db.query(User).all()
-
-    def delete_all(self):
-        self.db.query(User).delete()
-        self.db.execute(text("ALTER SEQUENCE users_id_seq RESTART WITH 1"))
-        self.db.commit()

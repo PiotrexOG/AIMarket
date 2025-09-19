@@ -3,7 +3,7 @@ from typing import Optional
 
 from sqlalchemy.orm import Session
 from app.repositories.market_data_repository import MarketDataRepository
-from app.schemas.market_data import MarketDataCreate
+from app.db.schemas.market_data import MarketDataCreate
 
 class MarketDataService:
     def __init__(self, db: Session):
@@ -28,8 +28,3 @@ class MarketDataService:
         market_data = self.repo.get_price_at_date(ticker, date_time)
         return market_data.close if market_data else None
 
-    def delete_all(self):
-        """
-        Usuwa wszystkie rekordy z tabeli MarketData.
-        """
-        self.repo.delete_all()

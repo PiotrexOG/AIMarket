@@ -1,7 +1,5 @@
-from datetime import datetime
 from collections import defaultdict
-from app.services.portfolio_service import PortfolioService
-from app.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
+
 
 class Portfolio:
     def __init__(self, portfolio_id: int, starting_cash: float):

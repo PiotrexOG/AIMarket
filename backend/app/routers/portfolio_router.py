@@ -1,12 +1,8 @@
-from datetime import datetime
-
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from typing import List, Optional
-from app.schemas.portfolio import PortfolioCreate, PortfolioRead, PortfolioHistoryCreate
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
-from app.database import get_db
+from app.db.database import get_db
 from datetime import datetime
 
 from app.services.portfolio_valuation_service import PortfolioValuationService

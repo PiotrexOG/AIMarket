@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from app.repositories.user_repository import UserRepository
-from app.schemas.user import UserCreate
+from app.db.schemas.user import UserCreate
 
 class UserService:
     def __init__(self, db: Session):
@@ -23,9 +23,3 @@ class UserService:
         Pobiera listę wszystkich użytkowników.
         """
         return self.repo.get_all()
-
-    def delete_all(self):
-        """
-        Usuwa wszystkich użytkowników.
-        """
-        self.repo.delete_all()

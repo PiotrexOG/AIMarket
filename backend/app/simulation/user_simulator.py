@@ -1,11 +1,12 @@
 from datetime import datetime
+from time import sleep
 
 from app.config import TICKERS
-from app.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
-from app.services.portfolio_valuation_service import PortfolioValuationService
+from app.db.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
 from app.simulation.portfolio import Portfolio
-from app.simulation.decision_maker import DecisionMaker
-from app.simulation import market_hours  # Twój moduł sprawdzania godzin giełdowych
+from app.core.decision_maker import DecisionMaker
+from app.core import market_hours
+
 
 class UserSimulator:
     def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, use_model: bool = False, with_explanation: bool = False):
@@ -21,7 +22,7 @@ class UserSimulator:
         # Sprawdzamy czy giełda jest otwarta dla przykładowego tickera
         if not market_hours.is_market_open_by_exchange("AAPL", date_time):
             return  # Skip if market closed
-
+        print("halo")
         # Pobieramy dane rynkowe dla wszystkich tickerów i łączymy w jeden słownik
         day_data = {}
         for ticker in TICKERS:  # zakładamy, że serwis ma listę tickerów
@@ -55,7 +56,7 @@ class UserSimulator:
                 history_data = PortfolioHistoryCreate(
                     datetime=date_time,
                     cash=details.cash,
-                    total_value=details.total_value,
+                    total_value=details.portfolio_value,
                     shares=[
                         PortfolioShareCreate(ticker=t, amount=a)
                         for t, a in self.portfolio.shares.items()

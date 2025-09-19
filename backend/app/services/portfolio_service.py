@@ -4,9 +4,9 @@ from typing import Optional, List
 from sqlalchemy.orm import Session
 
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail
-from app.models.portfolio import PortfolioShare, PortfolioHistory
+from app.db.models.portfolio import PortfolioHistory
 from app.repositories.portfolio_repository import PortfolioRepository
-from app.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
+from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 from app.services.portfolio_valuation_service import PortfolioValuationService
 
 
@@ -75,9 +75,3 @@ class PortfolioService:
                 ) for position in valuation.positions  # ← atrybut obiektu
             ]
         )
-
-    def delete_all(self):
-        """
-        Usuwa wszystkie portfele, historię i udziały.
-        """
-        self.repo.delete_all()

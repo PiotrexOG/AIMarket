@@ -1,16 +1,16 @@
 from datetime import datetime, timedelta
+from time import sleep
 from typing import Dict
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.schemas.market_data import MarketDataCreate
-from app.schemas.portfolio import PortfolioCreate
-from app.schemas.user import UserCreate
+from app.db.schemas.market_data import MarketDataCreate
+from app.db.schemas.portfolio import PortfolioCreate
+from app.db.schemas.user import UserCreate
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
-from app.models.portfolio import PortfolioShare
 from app.simulation.user_simulator import UserSimulator
 
 class SimulationService:
@@ -83,5 +83,7 @@ class SimulationService:
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
+        sleep(2)
+        print("czekam")
         for user_simulator in self.users.values():
             user_simulator.process_day(current_time)

@@ -1,10 +1,9 @@
 from datetime import datetime
 from typing import Optional, List
 
-from sqlalchemy import text
 from sqlalchemy.orm import Session, joinedload
-from app.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
-from app.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
+from app.db.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
+from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 
 class PortfolioRepository:
     def __init__(self, db: Session):
@@ -77,12 +76,3 @@ class PortfolioRepository:
 
         self.db.refresh(history_obj)
         return history_obj
-
-    def delete_all(self):
-        self.db.query(PortfolioShare).delete()
-        self.db.query(PortfolioHistory).delete()
-        self.db.query(Portfolio).delete()
-        self.db.execute(text("ALTER SEQUENCE portfolios_id_seq RESTART WITH 1"))
-        self.db.execute(text("ALTER SEQUENCE portfolio_shares_id_seq RESTART WITH 1"))
-        self.db.execute(text("ALTER SEQUENCE portfolio_history_id_seq RESTART WITH 1"))
-        self.db.commit()

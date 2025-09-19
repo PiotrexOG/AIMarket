@@ -3,9 +3,16 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import threading
-from app.services.simulation_service_new import SimulationService
-from app.database import SessionLocal
-from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, FIRST_RUN, DEBUG_RESET
+
+from sqlalchemy import desc
+
+from app.db.models.market_data import MarketData
+from app.db.models.portfolio import PortfolioHistory
+from app.db.models.portfolio import Portfolio
+from app.db.models.user import User
+from app.simulation.simulation_service import SimulationService
+from app.db.database import SessionLocal
+from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET
 
 app = FastAPI(title="Stock Simulator API")
 
@@ -28,25 +35,36 @@ app.include_router(portfolio_router.router)
 def run_simulation():
     db = SessionLocal()
     try:
+
+        with SessionLocal() as session:
+            market_data_exists = session.query(MarketData).first() is not None
+            portfolios = session.query(Portfolio).first() is not None
+            users = session.query(User).first() is not None
+            latest_record = session.query(PortfolioHistory) \
+                .order_by(desc(PortfolioHistory.datetime)) \
+                .first()
+
+            if latest_record:
+                latest_datetime = latest_record.datetime
+                print("Zaczynamy od daty bo juz cos bylo " + str(latest_datetime))
+            else:
+                latest_datetime = START_TIME
+                print("Zaczynamy od daty poczatkowej " + str(latest_datetime))
+
         simulation_service = SimulationService(
             db=db,
             tickers=TICKERS,
-            start_time=START_TIME,
+            start_time=latest_datetime,
             end_time=END_TIME
         )
 
-        if DEBUG_RESET:
-            print("⚠️ RESET_DB=True → czyszczę wszystkie tabele...")
+        if not market_data_exists:
+            simulation_service.fetch_market_data(interval="1h")
+        else:
+            print("Dane rynkowe już istnieją, pomijam pobieranie")
 
-            if FIRST_RUN:
-                simulation_service.market_data_service.delete_all()
-                simulation_service.fetch_market_data(interval="1h")
-
-
-
-            simulation_service.portfolio_service.delete_all()
-            simulation_service.user_service.delete_all()
-
+        if not users or not portfolios:
+            print("zrobilem uizytkownikow i portoflio")
             simulation_service.initialize_users(no_users=NO_USERS, starting_cash=STARTING_CASH)
 
         simulation_service.run_simulation()
