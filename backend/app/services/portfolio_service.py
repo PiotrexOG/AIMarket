@@ -17,23 +17,29 @@ class PortfolioService:
 
     # ---- Portfele ----
     def create_portfolio(self, data: PortfolioCreate):
-        """
-        Tworzy nowy portfel dla użytkownika.
-        """
-        return self.repo.create_portfolio(data)
+        """Tworzy nowy portfel dla użytkownika."""
+        return self.repo.create(data)
+
+    def get_by_user_id(self, user_id: int):
+        """Pobiera portfel przypisany do użytkownika."""
+        return self.repo.get_by_user(user_id)
+
+    def get_latest_history(self, portfolio_id: int) -> Optional[PortfolioHistory]:
+        """Pobiera najnowszy wpis historii dla danego portfela."""
+        return self.repo.get_latest_history(portfolio_id)
 
     def evaluate(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
+        """Dodaje nowy wpis historii portfela."""
         return self.repo.add_history(portfolio_id, history_data)
 
-
     def get_portfolio_history(self, portfolio_id: int) -> List[PortfolioStateDTO]:
-        """Pobiera całą historię portfela w formacie DTO"""
-        history = self.repo.get_portfolio_history(portfolio_id)
+        """Pobiera całą historię portfela w formacie DTO."""
+        history = self.repo.get_history(portfolio_id)
         return [self._convert_to_state_dto(history_item) for history_item in history]
 
     def get_portfolio_summary(self, portfolio_id: int) -> List[PortfolioSummaryDTO]:
-        """Pobiera uproszczoną historię (tylko data i wartość)"""
-        history = self.repo.get_portfolio_history(portfolio_id)
+        """Pobiera uproszczoną historię (tylko data i wartość)."""
+        history = self.repo.get_history(portfolio_id)
         return [
             PortfolioSummaryDTO(
                 date=history_item.datetime.isoformat(),
@@ -43,7 +49,7 @@ class PortfolioService:
         ]
 
     def get_portfolio_state(self, portfolio_id: int, date: datetime) -> Optional[PortfolioStateDTO]:
-        """Pobiera stan portfela na konkretną datę"""
+        """Pobiera stan portfela na konkretną datę."""
         state = self.repo.get_state_at_date(portfolio_id, date)
         if state:
             return self._convert_to_state_dto(state)
@@ -51,10 +57,8 @@ class PortfolioService:
 
     def _convert_to_state_dto(self, history_item: PortfolioHistory) -> PortfolioStateDTO:
         """Konwertuje PortfolioHistory na PortfolioStateDTO"""
-        # Konwersja shares na dict dla valuation_service
         shares_dict = {share.ticker: share.amount for share in history_item.shares}
 
-        # Użycie istniejącego serwisu!
         valuation = self.portfolio_valuation_service.calculate_portfolio_details(
             cash=history_item.cash,
             shares=shares_dict,
@@ -72,6 +76,7 @@ class PortfolioService:
                     shares=position.shares,
                     price=position.price,
                     value=position.value
-                ) for position in valuation.positions  # ← atrybut obiektu
+                ) for position in valuation.positions
             ]
         )
+

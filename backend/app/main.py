@@ -1,18 +1,16 @@
 # app/main.py
+from datetime import timedelta, datetime
+
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import threading
 
 from sqlalchemy import desc
-
-from app.db.models.market_data import MarketData
 from app.db.models.portfolio import PortfolioHistory
-from app.db.models.portfolio import Portfolio
-from app.db.models.user import User
 from app.simulation.simulation_service import SimulationService
 from app.db.database import SessionLocal
-from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET
+from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET, REAL_TIME
 
 app = FastAPI(title="Stock Simulator API")
 
@@ -29,48 +27,52 @@ app.include_router(users_router.router)
 app.include_router(market_data_router.router)
 app.include_router(portfolio_router.router)
 
-# -------------------------------
-# Funkcja uruchamiająca symulację
-# -------------------------------
-def run_simulation():
-    db = SessionLocal()
-    try:
 
-        with SessionLocal() as session:
-            market_data_exists = session.query(MarketData).first() is not None
-            portfolios = session.query(Portfolio).first() is not None
-            users = session.query(User).first() is not None
-            latest_record = session.query(PortfolioHistory) \
-                .order_by(desc(PortfolioHistory.datetime)) \
-                .first()
+def get_start_datetime(real_time: bool) -> datetime:
+    """Określa datę rozpoczęcia symulacji na podstawie flagi i danych w bazie."""
+    if real_time:
+        now = datetime.now().replace(minute=0, second=0, microsecond=0)
+        print(f"🔄 Tryb REAL_TIME: zaczynamy od {now}")
+        return now
 
-            if latest_record:
-                latest_datetime = latest_record.datetime
-                print("Zaczynamy od daty bo juz cos bylo " + str(latest_datetime))
-            else:
-                latest_datetime = START_TIME
-                print("Zaczynamy od daty poczatkowej " + str(latest_datetime))
-
-        simulation_service = SimulationService(
-            db=db,
-            tickers=TICKERS,
-            start_time=latest_datetime,
-            end_time=END_TIME
+    with SessionLocal() as session:
+        latest_record = (
+            session.query(PortfolioHistory)
+            .order_by(desc(PortfolioHistory.datetime))
+            .first()
         )
 
-        if not market_data_exists:
-            simulation_service.fetch_market_data(interval="1h")
-        else:
-            print("Dane rynkowe już istnieją, pomijam pobieranie")
+        start_time = (
+            latest_record.datetime + timedelta(hours=1)
+            if latest_record
+            else START_TIME
+        )
 
-        if not users or not portfolios:
-            print("zrobilem uizytkownikow i portoflio")
-            simulation_service.initialize_users(no_users=NO_USERS, starting_cash=STARTING_CASH)
+    mode = "Kontynuacja" if latest_record else "Start"
+    print(f"{'⏩' if latest_record else '▶'} {mode} od {start_time}")
+    return start_time
 
+
+def run_simulation():
+    start_datetime = get_start_datetime(REAL_TIME)
+
+    with SessionLocal() as session:
+        simulation_service = SimulationService(
+            db=session,
+            tickers=TICKERS,
+            start_time=start_datetime,
+            end_time=END_TIME,
+        )
+
+        simulation_service.fetch_market_data(interval="1h")
+        simulation_service.initialize_users(
+            no_users=NO_USERS,
+            starting_cash=STARTING_CASH,
+        )
         simulation_service.run_simulation()
-    finally:
-        db.close()
 
-# Uruchamiamy w tle przy starcie serwera
+
+# Uruchomienie w tle
 threading.Thread(target=run_simulation, daemon=True).start()
 uvicorn.run(app, host="0.0.0.0", port=8000)
+

@@ -1,5 +1,6 @@
 from datetime import datetime
 from time import sleep
+from typing import Dict
 
 from app.config import TICKERS
 from app.db.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
@@ -9,20 +10,26 @@ from app.core import market_hours
 
 
 class UserSimulator:
-    def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, use_model: bool = False, with_explanation: bool = False):
+    def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, shares: Dict[str, int] = None, use_model: bool = False, with_explanation: bool = False):
         self.user_id = user_id
-        self.portfolio = Portfolio(portfolio_id=user_id, starting_cash=starting_cash)
+        self.portfolio = Portfolio(
+            portfolio_id=user_id,
+            starting_cash=starting_cash,
+            shares=shares
+        )
         self.decision_maker = DecisionMaker(use_model)
         self.portfolio_service = portfolio_service
         self.market_data_service = market_data_service
         self.valuation_service = valuation_service
         self.with_explanation = with_explanation
 
+
     def process_day(self, date_time: datetime) -> None:
         # Sprawdzamy czy giełda jest otwarta dla przykładowego tickera
         if not market_hours.is_market_open_by_exchange("AAPL", date_time):
             return  # Skip if market closed
-        print("halo")
+        sleep(2)
+        print("czekam")
         # Pobieramy dane rynkowe dla wszystkich tickerów i łączymy w jeden słownik
         day_data = {}
         for ticker in TICKERS:  # zakładamy, że serwis ma listę tickerów

@@ -1,11 +1,12 @@
 from collections import defaultdict
+from typing import Dict
 
 
 class Portfolio:
-    def __init__(self, portfolio_id: int, starting_cash: float):
+    def __init__(self, portfolio_id: int, starting_cash: float, shares: Dict[str, int] = None):
         self.portfolio_id = portfolio_id
         self.cash = starting_cash
-        self.shares = defaultdict(int)
+        self.shares = defaultdict(int, shares or {})
 
     # ---- Operacje na portfelu ----
     def buy(self, ticker: str, amount: int, price: float) -> bool:

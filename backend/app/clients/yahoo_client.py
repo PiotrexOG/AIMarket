@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import pytz
 import yfinance as yf
@@ -6,7 +6,7 @@ import pandas as pd
 
 class YahooClient:
     def __init__(self):
-        self.timezone = pytz.UTC
+        self.timezone = timezone.utc
 
     def fetch_history(
         self,

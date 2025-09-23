@@ -32,6 +32,6 @@ class PortfolioShare(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     portfolio_history_id = Column(Integer, ForeignKey("portfolio_history.id"), nullable=False)
     ticker = Column(String, nullable=False)
-    amount = Column(Float, nullable=False)
+    amount = Column(Integer, nullable=False)
 
     portfolio_history = relationship("PortfolioHistory", back_populates="shares")

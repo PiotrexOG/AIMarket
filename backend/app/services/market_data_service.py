@@ -28,3 +28,10 @@ class MarketDataService:
         market_data = self.repo.get_price_at_date(ticker, date_time)
         return market_data.close if market_data else None
 
+    def has_data_in_range(self, ticker: str, start: datetime, end: datetime) -> bool:
+        """
+        Sprawdza, czy istnieją dane rynkowe dla danego tickera w podanym zakresie.
+        """
+        return self.repo.exists_in_range(ticker, start, end)
+
+

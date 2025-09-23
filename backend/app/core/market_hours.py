@@ -4,7 +4,8 @@ import holidays
 
 from app.config import TICKERS_EXCHANGE_NAME
 
-# Mapa exchange (z yfinance.info["exchange"]) -> godziny handlu i strefy czasowe
+from datetime import timezone
+
 EXCHANGE_HOURS = {
     "NasdaqGS": {
         "open": time(9, 30),
@@ -27,32 +28,26 @@ EXCHANGE_HOURS = {
     "CCC": {  # Crypto (BTC-USD itd.)
         "open": time(0, 0),
         "close": time(23, 59),
-        "tz": pytz.UTC,
-        "holidays": None  # 24/7
+        "tz": timezone.utc,  # ZMIANA: timezone.utc zamiast pytz.UTC
+        "holidays": None
     },
     "CCY": {  # Forex
         "open": time(0, 0),
         "close": time(23, 59),
-        "tz": pytz.UTC,
-        "holidays": None  # 24/5
+        "tz": timezone.utc,  # ZMIANA: timezone.utc zamiast pytz.UTC
+        "holidays": None
     }
 }
 
 def is_market_open_by_exchange(ticker_str: str, dt_utc: datetime) -> bool:
     """
-    Sprawdza, czy instrument (określony przez exchange z Yahoo Finance) jest otwarty w danym momencie.
-
-    Parametry:
-    - ticker_str: np. "AAPL", "TSLA"
-    - dt_utc: obiekt datetime w UTC (musi mieć tzinfo=UTC)
-
-    Zwraca:
-    - True jeśli giełda otwarta, False jeśli zamknięta
+    Sprawdza, czy instrument jest otwarty w danym momencie.
     """
     if dt_utc.tzinfo is None:
         raise ValueError("Parametr dt_utc musi mieć przypisaną strefę czasową (UTC)")
 
-    if dt_utc.tzinfo != pytz.UTC:
+    # ZMIANA: Używaj timezone.utc zamiast pytz.UTC
+    if dt_utc.tzinfo != timezone.utc:
         raise ValueError("Parametr dt_utc musi być w UTC")
 
     exchange = TICKERS_EXCHANGE_NAME.get(ticker_str)

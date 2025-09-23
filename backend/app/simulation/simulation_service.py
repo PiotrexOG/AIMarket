@@ -4,6 +4,7 @@ from typing import Dict
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
+from app.config import DEBUG_RESET
 from app.db.schemas.market_data import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate
 from app.db.schemas.user import UserCreate
@@ -29,9 +30,25 @@ class SimulationService:
 
     # ---- Krok 1: Pobierz dane z Yahoo i zapisz do bazy ----
     def fetch_market_data(self, interval: str = "1h"):
-
+        """
+        Pobiera dane rynkowe dla wszystkich tickerów,
+        ale tylko jeśli w bazie jeszcze ich nie ma.
+        """
         for ticker in self.tickers:
-            df = self.yahoo_client.fetch_history(ticker, self.start_time, self.end_time, interval)
+            # sprawdzenie, czy są już dane dla tego tickera w zakresie dat
+            existing = self.market_data_service.has_data_in_range(
+                ticker=ticker,
+                start=self.start_time,
+                end=self.end_time
+            )
+
+            if existing:
+                print(f"⏭ Dane dla {ticker} już istnieją w bazie, pomijam pobieranie")
+                continue
+
+            df = self.yahoo_client.fetch_history(
+                ticker, self.start_time, self.end_time, interval
+            )
             if df.empty:
                 print(f"⚠️ Brak danych dla {ticker}")
                 continue
@@ -39,37 +56,54 @@ class SimulationService:
             for _, row in df.iterrows():
                 self.market_data_service.add_market_data(
                     MarketDataCreate(
-                        datetime = row["Datetime"],
-                        ticker = row["Ticker"],
-                        open = row["Open"],
-                        high = row["High"],
-                        low = row["Low"],
-                        close = row["Close"],
-                        volume = row["Volume"]
+                        datetime=row["Datetime"],
+                        ticker=row["Ticker"],
+                        open=row["Open"],
+                        high=row["High"],
+                        low=row["Low"],
+                        close=row["Close"],
+                        volume=row["Volume"],
                     )
                 )
             print(f"✅ Dane dla {ticker} zapisane do bazy")
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
     def initialize_users(self, no_users: int, starting_cash: float):
-        for user_id in range(1, no_users + 1):
-            # Tworzymy użytkownika w bazie
-            user = self.user_service.create_user(UserCreate(name = f"User {user_id}"))
+        existing_users = self.user_service.list_users()
+        users_to_init = []
 
-            # Tworzymy portfel w bazie
-            self.portfolio_service.create_portfolio(PortfolioCreate(
-                name=f"Portfolio {user_id}",
-                user_id=user.id
-            ))
+        if DEBUG_RESET or not existing_users:
+            # 🔄 czysta inicjalizacja
+            for user_id in range(1, no_users + 1):
+                user = self.user_service.create_user(UserCreate(name=f"User {user_id}"))
+                self.portfolio_service.create_portfolio(PortfolioCreate(
+                    name=f"Portfolio {user_id}", user_id=user.id
+                ))
+                users_to_init.append((user, starting_cash, {}))  # shares puste
+        else:
+            # 📥 odtwarzanie stanu z bazy
+            for user in existing_users:
+                portfolio = self.portfolio_service.get_by_user_id(user.id)
+                latest_history = self.portfolio_service.get_latest_history(portfolio.id)
 
-            # Tworzymy symulator użytkownika
+                if latest_history:
+                    cash = latest_history.cash
+                    shares = {s.ticker: s.amount for s in latest_history.shares}
+                else:
+                    cash = starting_cash
+                    shares = {}
+
+                users_to_init.append((user, cash, shares))
+
+        # 🚀 Wspólna logika budowania UserSimulatorów
+        for user, cash, shares in users_to_init:
             self.users[user.id] = UserSimulator(
                 user_id=user.id,
-                starting_cash=starting_cash,
+                starting_cash=cash,
+                shares=shares,
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
-                use_model=False
             )
 
     # ---- Krok 3: Symulacja krok po kroku ----
@@ -83,7 +117,5 @@ class SimulationService:
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
-        sleep(2)
-        print("czekam")
         for user_simulator in self.users.values():
             user_simulator.process_day(current_time)

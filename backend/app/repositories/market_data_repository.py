@@ -44,3 +44,16 @@ class MarketDataRepository:
             .order_by(MarketData.datetime.desc())
             .first()
         )
+
+    def exists_in_range(self, ticker: str, start: datetime, end: datetime) -> bool:
+        return (
+                self.db.query(MarketData.id)
+                .filter(
+                    MarketData.ticker == ticker,
+                    MarketData.datetime >= start,
+                    MarketData.datetime <= end,
+                )
+                .first()
+                is not None
+        )
+
