@@ -22,4 +22,4 @@ NO_USERS = 2
 START_TIME = datetime(2023, 10, 2, 13, 30, tzinfo=timezone.utc)
 
 # NY 2023-10-03 23:59 -> UTC 2023-10-04 03:59
-END_TIME = datetime(2023, 10, 4, 3, 59, tzinfo=timezone.utc)
+END_TIME = datetime(2023, 12, 4, 20, 30, tzinfo=timezone.utc)

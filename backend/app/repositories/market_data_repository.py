@@ -46,14 +46,19 @@ class MarketDataRepository:
         )
 
     def exists_in_range(self, ticker: str, start: datetime, end: datetime) -> bool:
-        return (
-                self.db.query(MarketData.id)
-                .filter(
-                    MarketData.ticker == ticker,
-                    MarketData.datetime >= start,
-                    MarketData.datetime <= end,
-                )
-                .first()
-                is not None
-        )
+        """
+           Sprawdza czy cały zakres od start do end jest pokryty danymi w bazie.
+           """
+        # Sprawdź czy istnieją dane na początku i na końcu zakresu
+        has_start = self.db.query(MarketData.id).filter(
+            MarketData.ticker == ticker,
+            MarketData.datetime == start
+        ).first() is not None
+
+        has_end = self.db.query(MarketData.id).filter(
+            MarketData.ticker == ticker,
+            MarketData.datetime == end
+        ).first() is not None
+
+        return has_start and has_end
 

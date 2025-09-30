@@ -69,7 +69,7 @@ class PortfolioService:
             user_id=history_item.portfolio.user_id,
             date=history_item.datetime.isoformat(),
             cash=valuation.cash,
-            portfolio_value=valuation.total_value,
+            portfolio_value=valuation.portfolio_value,
             positions=[
                 PositionDetail(
                     ticker=position.ticker,

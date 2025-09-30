@@ -28,8 +28,6 @@ class UserSimulator:
         # Sprawdzamy czy giełda jest otwarta dla przykładowego tickera
         if not market_hours.is_market_open_by_exchange("AAPL", date_time):
             return  # Skip if market closed
-        sleep(2)
-        print("czekam")
         # Pobieramy dane rynkowe dla wszystkich tickerów i łączymy w jeden słownik
         day_data = {}
         for ticker in TICKERS:  # zakładamy, że serwis ma listę tickerów

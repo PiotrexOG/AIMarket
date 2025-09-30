@@ -9,12 +9,13 @@ function App() {
   return (
     <div className="App">
       <h1>Portfolio History Viewer</h1>
+
       <PortfolioChart onPointClick={setSelectedPoint} />
 
       {selectedPoint && (
         <PortfolioDetails
           userId={2}
-          timestamp={selectedPoint.timestamp}
+          timestamp={selectedPoint.date}
           onClose={() => setSelectedPoint(null)}
         />
       )}
