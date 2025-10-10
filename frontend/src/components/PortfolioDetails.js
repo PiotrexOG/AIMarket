@@ -5,7 +5,7 @@ function PortfolioDetails({ userId, timestamp, onClose }) {
 
   useEffect(() => {
     const encodedTime = encodeURIComponent(timestamp);
-    fetch(`http://localhost:8000/portfolios/${userId}/state?date=${encodedTime}`)
+    fetch(`http://localhost:8000/portfolios/${userId}/state?date=${encodedTime}&detailed=True`)
       .then((res) => res.json())
       .then((json) => setDetails(json))
       .catch((err) => console.error("DEBUG — fetch error:", err));
