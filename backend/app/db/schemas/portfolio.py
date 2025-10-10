@@ -24,7 +24,6 @@ class PortfolioShareRead(PortfolioShareBase):
 class PortfolioHistoryBase(BaseModel):
     datetime: datetime
     cash: float
-    total_value: float
 
 
 class PortfolioHistoryCreate(PortfolioHistoryBase):

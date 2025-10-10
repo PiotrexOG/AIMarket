@@ -29,7 +29,7 @@ class SimulationService:
         self.users: Dict[int, UserSimulator] = {}
 
     # ---- Krok 1: Pobierz dane z Yahoo i zapisz do bazy ----
-    def fetch_market_data(self, interval: str = "1h"):
+    def fetch_market_data(self, interval: str):
         """
         Pobiera dane rynkowe dla wszystkich tickerów,
         ale tylko jeśli w bazie jeszcze ich nie ma.

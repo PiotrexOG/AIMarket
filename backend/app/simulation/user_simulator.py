@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from time import sleep
 from typing import Dict
 
@@ -51,17 +51,10 @@ class UserSimulator:
 
         # Jeśli coś się zmieniło -> policz z pamięci i zapisz
         if self._portfolio_changed(pre_cash, pre_shares):
-            details = self.valuation_service.calculate_portfolio_details(
-                cash=self.portfolio.cash,
-                shares=dict(self.portfolio.shares),
-                date_time=date_time
-            )
 
-            if details is not None:
                 history_data = PortfolioHistoryCreate(
                     datetime=date_time,
-                    cash=details.cash,
-                    total_value=details.portfolio_value,
+                    cash=self.portfolio.cash,
                     shares=[
                         PortfolioShareCreate(ticker=t, amount=a)
                         for t, a in self.portfolio.shares.items()

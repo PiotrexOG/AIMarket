@@ -14,8 +14,8 @@ SessionLocal = sessionmaker(bind=engine)
 if DEBUG_RESET:
     for table in reversed(Base.metadata.sorted_tables):
         if table.name != "market_data":
-            table.drop(engine)
-Base.metadata.create_all(bind=engine)
+            table.drop(engine, checkfirst=True)
+    Base.metadata.create_all(bind=engine)
 
 
 # Dependency do FastAPI

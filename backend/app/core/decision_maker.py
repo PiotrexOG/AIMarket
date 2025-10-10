@@ -29,7 +29,7 @@ class DecisionMaker:
         return self._parse_response(reply, with_explanation)
 
     def _random_decision(self, ticker, market_data, portfolio):
-        possible_actions = ["KUPUJ", "SPRZEDAJ", "TRZYMAJ"]
+        possible_actions = ["KUPUJ", "SPRZEDAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ"]
         decision = random.choice(possible_actions)
         close = float(market_data[0].close)
 

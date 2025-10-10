@@ -13,7 +13,7 @@ class YahooClient:
         ticker: str,
         start: datetime,
         end: datetime,
-        interval: str = "1h"
+        interval: str
     ) -> pd.DataFrame:
         """
         Pobiera dane historyczne z Yahoo Finance dla danego tickera.

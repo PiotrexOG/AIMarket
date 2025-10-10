@@ -1,7 +1,3 @@
-from datetime import datetime
-from typing import Optional, List
-
-from sqlalchemy.orm import Session, joinedload
 from app.db.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 
@@ -81,8 +77,7 @@ class PortfolioRepository:
         history_obj = PortfolioHistory(
             portfolio_id=portfolio_id,
             datetime=history_data.datetime,
-            cash=history_data.cash,
-            total_value=history_data.total_value,
+            cash=history_data.cash
         )
         self.db.add(history_obj)
         self.db.flush()  # żeby mieć ID przed dodaniem shares

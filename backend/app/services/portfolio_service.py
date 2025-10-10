@@ -1,13 +1,45 @@
-from datetime import datetime
-from typing import Optional, List
+from datetime import datetime, timedelta
+from typing import List, Optional, Literal
+from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail
-from app.db.models.portfolio import PortfolioHistory
 from app.repositories.portfolio_repository import PortfolioRepository
-from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 from app.services.portfolio_valuation_service import PortfolioValuationService
+from app.db.schemas.portfolio import PortfolioCreate
+from app.db.models.portfolio import PortfolioHistory
+
+# Definicja dostępnych interwałów
+INTERVAL_MAP = {
+    "30m": timedelta(minutes=30),
+    "1h": timedelta(hours=1),
+    "1d": timedelta(days=1),
+}
+
+# ---- Funkcje pomocnicze poza klasą ----
+def _create_valuation_dto(valuation, user_id: int = None, detailed: bool = False):
+    """Tworzy DTO na podstawie wyceny i flagi detailed."""
+    if detailed:
+        return PortfolioStateDTO(
+            user_id=user_id,
+            date=valuation.date.isoformat(),
+            cash=valuation.cash,
+            portfolio_value=valuation.portfolio_value,
+            positions=[
+                PositionDetail(
+                    ticker=p.ticker,
+                    shares=p.shares,
+                    price=p.price,
+                    value=p.value
+                ) for p in valuation.positions
+            ],
+        )
+    else:
+        return PortfolioSummaryDTO(
+            date=valuation.date.isoformat(),
+            portfolio_value=valuation.portfolio_value,
+        )
 
 
 class PortfolioService:
@@ -15,68 +47,86 @@ class PortfolioService:
         self.repo = PortfolioRepository(db)
         self.portfolio_valuation_service = portfolio_valuation_service
 
-    # ---- Portfele ----
+    # ---- Podstawowe operacje ----
     def create_portfolio(self, data: PortfolioCreate):
-        """Tworzy nowy portfel dla użytkownika."""
         return self.repo.create(data)
 
     def get_by_user_id(self, user_id: int):
-        """Pobiera portfel przypisany do użytkownika."""
         return self.repo.get_by_user(user_id)
 
     def get_latest_history(self, portfolio_id: int) -> Optional[PortfolioHistory]:
-        """Pobiera najnowszy wpis historii dla danego portfela."""
         return self.repo.get_latest_history(portfolio_id)
 
-    def evaluate(self, portfolio_id: int, history_data: PortfolioHistoryCreate) -> PortfolioHistory:
-        """Dodaje nowy wpis historii portfela."""
+    def evaluate(self, portfolio_id: int, history_data):
         return self.repo.add_history(portfolio_id, history_data)
 
-    def get_portfolio_history(self, portfolio_id: int) -> List[PortfolioStateDTO]:
-        """Pobiera całą historię portfela w formacie DTO."""
-        history = self.repo.get_history(portfolio_id)
-        return [self._convert_to_state_dto(history_item) for history_item in history]
+    def _create_dto_from_history_entry(self, history_entry, detailed: bool = True):
+        """Tworzy DTO na podstawie pojedynczego wpisu historii portfela."""
+        shares_dict = {share.ticker: share.amount for share in history_entry.shares}
+        valuation = self.portfolio_valuation_service.calculate_portfolio_details(
+            cash=history_entry.cash,
+            shares=shares_dict,
+            date_time=history_entry.datetime,
+        )
+        return _create_valuation_dto(
+            valuation=valuation,
+            user_id=history_entry.portfolio.user_id,
+            detailed=detailed
+        )
 
-    def get_portfolio_summary(self, portfolio_id: int) -> List[PortfolioSummaryDTO]:
-        """Pobiera uproszczoną historię (tylko data i wartość)."""
+    def get_portfolio_history(self, portfolio_id: int, detailed: bool = True):
+        """Zwraca historię portfela zapisaną w bazie (PortfolioHistory)."""
         history = self.repo.get_history(portfolio_id)
+        if not history:
+            return []
+
         return [
-            PortfolioSummaryDTO(
-                date=history_item.datetime.isoformat(),
-                portfolio_value=history_item.total_value
-            )
-            for history_item in history
+            self._create_dto_from_history_entry(h, detailed)
+            for h in history
         ]
 
-    def get_portfolio_state(self, portfolio_id: int, date: datetime) -> Optional[PortfolioStateDTO]:
-        """Pobiera stan portfela na konkretną datę."""
+    def compute_portfolio_state_at_date(
+            self,
+            portfolio_id: int,
+            date: datetime,
+            detailed: bool
+    ):
+        """Pobiera stan portfela z repo i wylicza jego bieżącą wartość rynkową."""
         state = self.repo.get_state_at_date(portfolio_id, date)
-        if state:
-            return self._convert_to_state_dto(state)
-        return None
+        if not state:
+            return None
 
-    def _convert_to_state_dto(self, history_item: PortfolioHistory) -> PortfolioStateDTO:
-        """Konwertuje PortfolioHistory na PortfolioStateDTO"""
-        shares_dict = {share.ticker: share.amount for share in history_item.shares}
+        return self._create_dto_from_history_entry(state, detailed)
 
-        valuation = self.portfolio_valuation_service.calculate_portfolio_details(
-            cash=history_item.cash,
-            shares=shares_dict,
-            date_time=history_item.datetime
-        )
+    # ---- Wycena (valuation) w przedziale czasu ----
+    def get_portfolio_valuation_in_range(
+            self,
+            portfolio_id: int,
+            start: datetime,
+            end: datetime,
+            interval: Literal["30m", "1h", "1d"],
+            detailed: bool = False,
+    ) -> List[dict]:
+        """Zwraca wycenę portfela w zadanym zakresie, z aktualnym stanem dla każdej chwili."""
+        step = INTERVAL_MAP.get(interval)
+        if not step:
+            raise ValueError(f"Unsupported interval: {interval}")
 
-        return PortfolioStateDTO(
-            user_id=history_item.portfolio.user_id,
-            date=history_item.datetime.isoformat(),
-            cash=valuation.cash,
-            portfolio_value=valuation.portfolio_value,
-            positions=[
-                PositionDetail(
-                    ticker=position.ticker,
-                    shares=position.shares,
-                    price=position.price,
-                    value=position.value
-                ) for position in valuation.positions
-            ]
-        )
+        valuations = []
+        current = start
 
+        while current <= end:
+            dto = self.compute_portfolio_state_at_date(
+                portfolio_id=portfolio_id,
+                date=current,
+                detailed=detailed
+            )
+            if dto:
+                valuations.append(dto)
+
+            current += step
+
+        if not valuations:
+            raise HTTPException(status_code=404, detail="No valuation data in range")
+
+        return valuations

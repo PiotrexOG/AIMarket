@@ -1,3 +1,5 @@
+from typing import Literal
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.services.market_data_service import MarketDataService
@@ -9,35 +11,51 @@ from app.services.portfolio_valuation_service import PortfolioValuationService
 
 router = APIRouter(prefix="/portfolios", tags=["Portfolios"])
 
-# ---- Historia całego portfela (pełna) ----
+
+def get_service(db: Session):
+    return PortfolioService(db, PortfolioValuationService(MarketDataService(db)))
+
+
+# ---- 1️⃣ Historia z bazy ----
 @router.get("/{portfolio_id}/history")
-def get_portfolio_history(portfolio_id: int, db: Session = Depends(get_db)):
-    portfolio_valuation_service = PortfolioValuationService(MarketDataService(db))
-    portfolio_service = PortfolioService(db, portfolio_valuation_service)
-    history = portfolio_service.get_portfolio_history(portfolio_id)
+def get_portfolio_history(
+    portfolio_id: int,
+    detailed: bool = Query(True, description="Czy zwrócić szczegółową historię?"),
+    db: Session = Depends(get_db)
+):
+    service = get_service(db)
+    history = service.get_portfolio_history(portfolio_id, detailed)
     if not history:
         raise HTTPException(status_code=404, detail="No history for this portfolio")
     return history
 
-# ---- Historia uproszczona (tylko datetime + total_value) ----
-@router.get("/{portfolio_id}/history/summary")
-def get_portfolio_history_summary(portfolio_id: int, db: Session = Depends(get_db)):
-    portfolio_valuation_service = PortfolioValuationService(MarketDataService(db))
-    portfolio_service = PortfolioService(db, portfolio_valuation_service)
-    return portfolio_service.get_portfolio_summary(portfolio_id)
+
+# ---- 2️⃣ Symulowana wycena (valuation) ----
+@router.get("/{portfolio_id}/valuation")
+def get_portfolio_valuation(
+    portfolio_id: int,
+    start: datetime = Query(..., description="Początek zakresu dat"),
+    end: datetime = Query(..., description="Koniec zakresu dat"),
+    interval: Literal["30m", "1h", "1d"] = Query("1h", description="Interwał czasowy"),
+    detailed: bool = Query(False, description="Czy zwrócić szczegółową historię?"),
+    db: Session = Depends(get_db)
+):
+    service = get_service(db)
+    return service.get_portfolio_valuation_in_range(portfolio_id, start, end, interval, detailed)
 
 
-# ---- Stan portfela na dany dzień (po portfolio_id) ----
+# ---- Stan portfela na dany dzień ----
 @router.get("/{portfolio_id}/state")
 def get_portfolio_state_on_date(
     portfolio_id: int,
     date: datetime = Query(..., description="Data w formacie YYYY-MM-DD"),
     db: Session = Depends(get_db),
+    detailed: bool = Query(False, description="Czy zwrócić szczegółowe informacje?")
 ):
-    portfolio_valuation_service = PortfolioValuationService(MarketDataService(db))
-    portfolio_service = PortfolioService(db, portfolio_valuation_service)
-    state = portfolio_service.get_portfolio_state(portfolio_id, date)
+    service = get_service(db)
+    state = service.compute_portfolio_state_at_date(portfolio_id, date, detailed)
     if not state:
         raise HTTPException(status_code=404, detail="No state for given date")
     return state
+
 
