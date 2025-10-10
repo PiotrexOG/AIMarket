@@ -13,7 +13,7 @@ import {
 function PortfolioChart({ onPointClick }) {
   const [data, setData] = useState([]);
   const [range, setRange] = useState("1M"); // domyślnie 1 miesiąc
-  const userId = 2; // przykładowy user
+  const userId = 1; // przykładowy user
 
   // 🔹 Ustalony pełny zakres symulacji
   const totalStart = new Date("2024-10-02T13:30:00Z");
@@ -60,13 +60,33 @@ function PortfolioChart({ onPointClick }) {
     };
   };
 
+   // 🔹 funkcja do ustalania interwału na podstawie zakresu
+  const getIntervalForRange = (range) => {
+    switch (range) {
+      case "1D":
+      case "1W":
+        return "1h";
+      case "1M":
+        return "4h";
+      case "3M":
+      case "6M":
+        return "1d";
+      case "YTD":
+      case "1Y":
+        return "1w";
+      default:
+        return "1h";
+    }
+  };
+
 
   // 🔹 pobieranie danych z backendu
   const fetchValuation = () => {
     const { start, end } = getRangeDates(range);
+    const interval = getIntervalForRange(range);
     const url = `http://localhost:8000/portfolios/${userId}/valuation?start=${encodeURIComponent(
       start
-    )}&end=${encodeURIComponent(end)}&interval=1d&detailed=false`;
+    )}&end=${encodeURIComponent(end)}&interval=${interval}&detailed=false`;
 
     fetch(url)
       .then((res) => res.json())

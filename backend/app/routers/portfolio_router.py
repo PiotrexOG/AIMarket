@@ -36,7 +36,7 @@ def get_portfolio_valuation(
     portfolio_id: int,
     start: datetime = Query(..., description="Początek zakresu dat"),
     end: datetime = Query(..., description="Koniec zakresu dat"),
-    interval: Literal["30m", "1h", "1d"] = Query("1h", description="Interwał czasowy"),
+    interval: Literal["1h", "4h", "1d", "1w"] = Query("1h", description="Interwał czasowy"),
     detailed: bool = Query(False, description="Czy zwrócić szczegółową historię?"),
     db: Session = Depends(get_db)
 ):

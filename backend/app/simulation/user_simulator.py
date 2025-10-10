@@ -62,6 +62,7 @@ class UserSimulator:
                 )
                 self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)
 
+
     def execute_decision(self, ticker: str, decision: str, num: int, price: float):
         if decision == "KUPUJ":
             self.portfolio.buy(ticker, num, price)

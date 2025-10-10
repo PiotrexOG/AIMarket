@@ -12,9 +12,10 @@ from app.db.models.portfolio import PortfolioHistory
 
 # Definicja dostępnych interwałów
 INTERVAL_MAP = {
-    "30m": timedelta(minutes=30),
     "1h": timedelta(hours=1),
+    "4h": timedelta(hours=4),
     "1d": timedelta(days=1),
+    "1w": timedelta(days=7),
 }
 
 # ---- Funkcje pomocnicze poza klasą ----
@@ -60,13 +61,13 @@ class PortfolioService:
     def evaluate(self, portfolio_id: int, history_data):
         return self.repo.add_history(portfolio_id, history_data)
 
-    def _create_dto_from_history_entry(self, history_entry, detailed: bool = True):
+    def _create_dto_from_history_entry(self, history_entry, date: datetime, detailed: bool = True):
         """Tworzy DTO na podstawie pojedynczego wpisu historii portfela."""
         shares_dict = {share.ticker: share.amount for share in history_entry.shares}
         valuation = self.portfolio_valuation_service.calculate_portfolio_details(
             cash=history_entry.cash,
             shares=shares_dict,
-            date_time=history_entry.datetime,
+            date_time=date,
         )
         return _create_valuation_dto(
             valuation=valuation,
@@ -81,7 +82,7 @@ class PortfolioService:
             return []
 
         return [
-            self._create_dto_from_history_entry(h, detailed)
+            self._create_dto_from_history_entry(h, h.datetime, detailed)
             for h in history
         ]
 
@@ -96,7 +97,7 @@ class PortfolioService:
         if not state:
             return None
 
-        return self._create_dto_from_history_entry(state, detailed)
+        return self._create_dto_from_history_entry(state, date, detailed)
 
     # ---- Wycena (valuation) w przedziale czasu ----
     def get_portfolio_valuation_in_range(

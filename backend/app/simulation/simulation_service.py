@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.clients.yahoo_client import YahooClient
 from app.config import DEBUG_RESET
 from app.db.schemas.market_data import MarketDataCreate
-from app.db.schemas.portfolio import PortfolioCreate
+from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
@@ -105,6 +105,17 @@ class SimulationService:
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
             )
+
+            if DEBUG_RESET or not existing_users or not shares:
+                history_data = PortfolioHistoryCreate(
+                    datetime=self.start_time,
+                    cash=cash,
+                    shares=[
+                        PortfolioShareCreate(ticker=t, amount=a)
+                        for t, a in shares.items()
+                    ]
+                )
+                self.portfolio_service.evaluate(user.id, history_data)
 
     # ---- Krok 3: Symulacja krok po kroku ----
     def run_simulation(self):
