@@ -1,59 +1,358 @@
-.App {
+/* ===================================
+   🌐 GLOBAL LAYOUT & TYPOGRAPHY
+=================================== */
+
+body {
+  background-color: #f3f4f6;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.app-header {
   text-align: center;
+  margin: 60px 0 40px;
+}
+
+.app-header h1 {
+  font-size: 2.4rem;
+  color: #111827;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.app-header h2 {
+  font-size: 1.1rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ===================================
+   🧱 PAGE CONTAINER
+=================================== */
+
+.page-container {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #f8f9fa;
-  min-height: 100vh;
+  font-family: "Inter", sans-serif;
 }
 
-h1 {
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #333;
+
+/* ===================================
+   📊 PORTFOLIO CHART LAYOUT
+=================================== */
+
+.portfolio-chart-container {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.chart-container {
+.portfolio-chart-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.chart-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  width: 100%;
+}
+
+/* 🔹 Wykres */
+.chart-section {
+  flex: 3;
+  min-width: 0; /* zapobiega przeskakiwaniu */
+  min-height: 450px;
+}
+
+/* 🔹 Panel boczny */
+.sidebar-section {
+  flex: 1;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .chart-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .sidebar-section {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+/* ===================================
+   💬 TOOLTIP (dla wykresu)
+=================================== */
+
+.custom-tooltip {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-date {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.tooltip-time {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.tooltip-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.tooltip-cash {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ===================================
+   📄 PORTFOLIO DETAILS
+=================================== */
+
+.details-wrapper {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
 }
 
 .details-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 35px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.details-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
 .details-container h2 {
+  color: #111827;
   margin-top: 0;
-  color: #444;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
+
 .details-container h3 {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 1.2rem;
-  color: #555;
+  color: #374151;
 }
+
+.details-container p {
+  margin: 6px 0;
+  color: #374151;
+}
+
 .details-container button {
-  background: #007bff;
-  color: white;
+  background: #2563eb;
   border: none;
+  color: white;
   padding: 8px 14px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
   margin-bottom: 15px;
-  transition: background 0.2s ease-in-out;
+  font-weight: 500;
 }
+
 .details-container button:hover {
-  background: #0056b3;
+  background: #1e40af;
 }
-.details-container ul {
+
+.details-container .close-btn {
+  float: right;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6b7280;
+  transition: color 0.2s ease-in-out;
+}
+
+.details-container .close-btn:hover {
+  color: #000;
+}
+
+.timestamp-info {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===================================
+   📊 POSITION LIST
+=================================== */
+
+.position-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin-top: 10px;
 }
-.details-container li {
-  padding: 5px 0;
-  border-bottom: 1px solid #eee;
+
+.position-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.95rem;
+}
+
+.position-item span {
+  flex: 1;
+  text-align: center;
+}
+
+.position-item .ticker {
+  font-weight: bold;
+  color: #111827;
+}
+
+.position-item .value {
+  color: #2563eb;
+}
+
+/* ===================================
+   🔘 RANGE BUTTONS (compact version)
+=================================== */
+
+.range-controls {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.range-btn {
+  padding: 6px 10px;         /* było 8px 14px → mniejsze */
+  border-radius: 6px;        /* delikatnie mniejsze zaokrąglenie */
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 0.85rem;        /* było 0.95rem → mniejszy font */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  min-width: 44px;           /* żeby nie były za wąskie */
+}
+
+.range-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.range-btn.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border-color: #2563eb;
+}
+
+/* ===================================
+   📈 PORTFOLIO CHANGE DISPLAY
+=================================== */
+
+.portfolio-change-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.change-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.change-value.positive {
+  color: #16c784;
+}
+
+.change-value.negative {
+  color: #ea3943;
+}
+
+.change-label {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+/* ===================================
+   ✨ ANIMATIONS & STATES
+=================================== */
+
+.details-container.loading,
+.chart-loading {
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  padding: 40px;
+}
+
+.details-container.empty {
+  color: #9ca3af;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

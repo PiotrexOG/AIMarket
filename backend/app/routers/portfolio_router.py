@@ -8,6 +8,7 @@ from app.db.database import get_db
 from datetime import datetime
 
 from app.services.portfolio_valuation_service import PortfolioValuationService
+from app.shared.types import ValuationInterval
 
 router = APIRouter(prefix="/portfolios", tags=["Portfolios"])
 
@@ -36,7 +37,7 @@ def get_portfolio_valuation(
     portfolio_id: int,
     start: datetime = Query(..., description="Początek zakresu dat"),
     end: datetime = Query(..., description="Koniec zakresu dat"),
-    interval: Literal["1h", "4h", "1d", "1w"] = Query("1h", description="Interwał czasowy"),
+    interval: ValuationInterval = Query("1h", description="Interwał czasowy"),
     detailed: bool = Query(False, description="Czy zwrócić szczegółową historię?"),
     db: Session = Depends(get_db)
 ):

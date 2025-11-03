@@ -123,7 +123,7 @@ class SimulationService:
         print(current_time)
         while current_time <= self.end_time:
             self._simulate_time_step(current_time)
-            current_time += timedelta(hours=1)
+            current_time += timedelta(minutes=30)
         print("✅ Symulacja zakończona.")
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----

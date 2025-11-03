@@ -9,14 +9,8 @@ from app.repositories.portfolio_repository import PortfolioRepository
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.db.schemas.portfolio import PortfolioCreate
 from app.db.models.portfolio import PortfolioHistory
+from app.shared.types import ValuationInterval, INTERVAL_MAP
 
-# Definicja dostępnych interwałów
-INTERVAL_MAP = {
-    "1h": timedelta(hours=1),
-    "4h": timedelta(hours=4),
-    "1d": timedelta(days=1),
-    "1w": timedelta(days=7),
-}
 
 # ---- Funkcje pomocnicze poza klasą ----
 def _create_valuation_dto(valuation, user_id: int = None, detailed: bool = False):
@@ -105,9 +99,9 @@ class PortfolioService:
             portfolio_id: int,
             start: datetime,
             end: datetime,
-            interval: Literal["30m", "1h", "1d"],
+            interval: ValuationInterval,
             detailed: bool = False,
-    ) -> List[dict]:
+    ) -> dict:
         """Zwraca wycenę portfela w zadanym zakresie, z aktualnym stanem dla każdej chwili."""
         step = INTERVAL_MAP.get(interval)
         if not step:
@@ -130,4 +124,15 @@ class PortfolioService:
         if not valuations:
             raise HTTPException(status_code=404, detail="No valuation data in range")
 
-        return valuations
+        # Oblicz zmiany procentowe
+        start_value = valuations[0].portfolio_value if hasattr(valuations[0], 'portfolio_value') else valuations[0][
+            'portfolio_value']
+        end_value = valuations[-1].portfolio_value if hasattr(valuations[-1], 'portfolio_value') else valuations[-1][
+            'portfolio_value']
+        absolute_change = end_value - start_value
+        percent_change = (absolute_change / start_value * 100) if start_value != 0 else 0.0
+
+        return {
+            "percent_change": round(percent_change, 2),
+            "history": valuations
+        }
