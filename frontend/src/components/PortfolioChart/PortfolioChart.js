@@ -8,45 +8,60 @@ import { fetchValuation } from "./utils/fetchUtils";
 import "../../App.css";
 
 
-function PortfolioChart({ onPointClick }) {
-  const [data, setData] = useState([]);
+function PortfolioChart({ onPointClick, userIds }) {
+  const [dataSets, setDataSets] = useState([]); // wiele wykresów
   const [range, setRange] = useState("1M");
-  const userId = 2;
 
-  // pełny zakres symulacji
   const totalStart = new Date("2024-10-02T13:30:00Z");
   const totalEnd = new Date("2024-12-04T20:30:00Z");
 
   useEffect(() => {
+    if (userIds.length === 0) {
+      setDataSets([]);
+      return;
+    }
+
     const { start, end } = getRangeDates(range, totalStart, totalEnd);
     const interval = getIntervalForRange(range);
 
-    fetchValuation(userId, start, end, interval)
-      .then((json) => setData(json))
-      .catch((err) => console.error("Fetch valuation error:", err));
-  }, [range, userId]);
+    const fetchAll = async () => {
+      try {
+        const results = await Promise.all(
+          userIds.map((id) => fetchValuation(id, start, end, interval))
+        );
+
+        const merged = results.map((data, idx) => ({
+          userId: userIds[idx],
+          data,
+        }));
+        setDataSets(merged);
+      } catch (err) {
+        console.error("Fetch valuation error:", err);
+      }
+    };
+
+    fetchAll();
+  }, [range, userIds]);
 
   const handlePointClick = (point) => {
     if (onPointClick) onPointClick(point);
   };
 
-return (
-  <div className="portfolio-chart-container">
-    <div className="chart-layout">
-      {/* 🔹 Lewa sekcja: wykres */}
-      <div className="chart-section">
-        <ChartView data={data} range={range} onPointClick={handlePointClick} />
-      </div>
+  return (
+    <div className="portfolio-chart-container">
+      <div className="chart-layout">
+        <div className="chart-section">
+          <ChartView dataSets={dataSets} range={range} onPointClick={handlePointClick} />
+        </div>
 
-      {/* 🔹 Prawa sekcja: zmiana i przyciski */}
-      <div className="sidebar-section">
-        <PortfolioChangeDisplay data={data} />
-        <ChartRangeButtons range={range} onChange={setRange} />
+        <div className="sidebar-section">
+          <PortfolioChangeDisplay dataSets={dataSets} />
+          <ChartRangeButtons range={range} onChange={setRange} />
+        </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 }
+
 
 export default PortfolioChart;

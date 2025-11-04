@@ -10,6 +10,10 @@ const CustomTooltip = ({ active, payload }) => {
     const formattedTime = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
+    // 🔹 Bezpieczna konwersja na liczby
+    const portfolioValue = Number(data?.portfolio_value ?? 0);
+    const cashValue = Number(data?.cash ?? 0);
+
     return (
       <div className="custom-tooltip">
         <div className="tooltip-date">{formattedDate}</div>
@@ -17,11 +21,11 @@ const CustomTooltip = ({ active, payload }) => {
           {formattedTime} ({timeZone})
         </div>
         <div className="tooltip-value">
-          Portfolio Value: <strong>${data.portfolio_value.toFixed(2)}</strong>
+          Portfolio Value: <strong>${portfolioValue.toFixed(2)}</strong>
         </div>
-        {data.cash && (
+        {data.cash !== undefined && (
           <div className="tooltip-cash">
-            Cash: <strong>${data.cash.toFixed(2)}</strong>
+            Cash: <strong>${cashValue.toFixed(2)}</strong>
           </div>
         )}
       </div>

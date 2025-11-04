@@ -13,27 +13,27 @@ body {
 
 .app-header {
   text-align: center;
-  margin: 60px 0 40px;
+  margin: 10px;  
 }
 
 .app-header h1 {
   font-size: 2.4rem;
   color: #111827;
-  margin-bottom: 8px;
   font-weight: 600;
+  margin: 0;               /* usuwa domyślny odstęp */
 }
 
 .app-header h2 {
   font-size: 1.1rem;
   color: #6b7280;
   font-weight: 400;
+  margin: 0;               /* usuwa domyślny odstęp */
 }
 
 .app-main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
 }
 
 /* ===================================
@@ -41,9 +41,7 @@ body {
 =================================== */
 
 .page-container {
-  max-width: 1600px;
   margin: 0 auto;
-  padding: 20px;
   font-family: "Inter", sans-serif;
 }
 
@@ -55,15 +53,16 @@ body {
 .portfolio-chart-container {
   background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
   border-radius: 20px;
-  padding: 40px 60px;
+  padding: 50px 20px 70px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 1600px;
-  margin: 40px auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
 .portfolio-chart-container:hover {
@@ -75,15 +74,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 80px;
   width: 100%;
 }
 
 /* 🔹 Wykres */
 .chart-section {
   flex: 3;
-  min-width: 0; /* zapobiega przeskakiwaniu */
+  min-width: 0;
   min-height: 450px;
+  padding-bottom: 40px;
 }
 
 /* 🔹 Panel boczny */
@@ -108,6 +107,109 @@ body {
     max-width: 100%;
     flex-direction: row;
     justify-content: center;
+  }
+}
+
+
+/* ===================================
+   🔘 RANGE BUTTONS (compact version)
+=================================== */
+
+.range-controls {
+  margin-top: 16px;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px; /* ⬅ dodaje odstęp pod przyciskami (między nimi a wykresem) */
+}
+
+.range-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  min-width: 44px;
+}
+
+.range-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.range-btn.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border-color: #2563eb;
+}
+
+
+
+
+
+
+/* ===================================
+   📈 PORTFOLIO CHANGE DISPLAY
+=================================== */
+
+.portfolio-change-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.change-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.change-value.positive {
+  color: #16c784;
+}
+
+.change-value.negative {
+  color: #ea3943;
+}
+
+.change-label {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+/* ===================================
+   ✨ ANIMATIONS & STATES
+=================================== */
+
+.details-container.loading,
+.chart-loading {
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  padding: 40px;
+}
+
+.details-container.empty {
+  color: #9ca3af;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -263,96 +365,29 @@ body {
 }
 
 /* ===================================
-   🔘 RANGE BUTTONS (compact version)
+   👤 USER SELECT DROPDOWN
 =================================== */
 
-.range-controls {
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
+.header-top {
+  position: absolute;
+  top: 20px;
+  left: 30px;
 }
 
-.range-btn {
-  padding: 6px 10px;         /* było 8px 14px → mniejsze */
-  border-radius: 6px;        /* delikatnie mniejsze zaokrąglenie */
-  border: 1px solid #e5e7eb;
+.user-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
   background-color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f2937;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  font-weight: 500;
-  font-size: 0.85rem;        /* było 0.95rem → mniejszy font */
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  min-width: 44px;           /* żeby nie były za wąskie */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.range-btn:hover {
+.user-select:hover {
   background-color: #f3f4f6;
-}
-
-.range-btn.active {
-  background-color: #2563eb;
-  color: white;
-  font-weight: 600;
-  border-color: #2563eb;
-}
-
-/* ===================================
-   📈 PORTFOLIO CHANGE DISPLAY
-=================================== */
-
-.portfolio-change-display {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.change-value {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.change-value.positive {
-  color: #16c784;
-}
-
-.change-value.negative {
-  color: #ea3943;
-}
-
-.change-label {
-  color: #666;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-
-
-/* ===================================
-   ✨ ANIMATIONS & STATES
-=================================== */
-
-.details-container.loading,
-.chart-loading {
-  color: #6b7280;
-  text-align: center;
-  font-style: italic;
-  padding: 40px;
-}
-
-.details-container.empty {
-  color: #9ca3af;
-  text-align: center;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-color: #9ca3af;
 }

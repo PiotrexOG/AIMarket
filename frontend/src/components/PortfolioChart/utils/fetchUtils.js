@@ -8,3 +8,12 @@ export const fetchValuation = async (userId, start, end, interval) => {
   if (!response.ok) throw new Error("Failed to fetch valuation");
   return response.json();
 };
+
+// --- 🔹 nowa funkcja do pobierania listy użytkowników ---
+export const fetchUsers = async () => {
+  const url = "http://localhost:8000/users/";
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error("Failed to fetch users");
+  return response.json();
+};

@@ -1,4 +1,4 @@
-// src/components/PortfolioChart/utils/chartUtils.js
+// src/components/PortfolioChart/utils/chartClickUtils.js
 
 export const handleChartClick = (e, data, onPointClick) => {
   if (!e) return;
