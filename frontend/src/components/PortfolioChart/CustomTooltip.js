@@ -3,16 +3,12 @@ import React from "react";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload?.length) {
-    const data = payload[0].payload;
-    const date = new Date(data.date);
+    const baseData = payload[0].payload;
+    const date = new Date(baseData.date);
 
     const formattedDate = date.toLocaleDateString("en-CA");
     const formattedTime = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    // 🔹 Bezpieczna konwersja na liczby
-    const portfolioValue = Number(data?.portfolio_value ?? 0);
-    const cashValue = Number(data?.cash ?? 0);
 
     return (
       <div className="custom-tooltip">
@@ -20,14 +16,15 @@ const CustomTooltip = ({ active, payload }) => {
         <div className="tooltip-time">
           {formattedTime} ({timeZone})
         </div>
+
+        {/* 🔹 Iterujemy po wszystkich liniach */}
         <div className="tooltip-value">
-          Portfolio Value: <strong>${portfolioValue.toFixed(2)}</strong>
+          {payload.map((entry) => (
+            <div key={entry.dataKey} style={{ color: entry.color }}>
+              {entry.name}: <strong>${Number(entry.value).toFixed(2)}</strong>
+            </div>
+          ))}
         </div>
-        {data.cash !== undefined && (
-          <div className="tooltip-cash">
-            Cash: <strong>${cashValue.toFixed(2)}</strong>
-          </div>
-        )}
       </div>
     );
   }

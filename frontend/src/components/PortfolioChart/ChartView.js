@@ -13,7 +13,7 @@ import { handleChartClick } from "./utils/chartClickUtils";
 import { formatXAxisTick, getXAxisInterval } from "./utils/intervalUtils";
 import CustomTooltip from "./CustomTooltip";
 
-function ChartView({ dataSets = [], range, onPointClick }) {
+function ChartView({ dataSets = [], range, onPointClick, colorPalette }) {
   // 🔹 Zbierz wspólne dane (po dacie)
   const mergedData =
     dataSets.length > 0 && Array.isArray(dataSets[0].data?.history)
@@ -31,16 +31,6 @@ function ChartView({ dataSets = [], range, onPointClick }) {
           return mergedPoint;
         })
       : [];
-
-  const colorPalette = [
-    "#4a90e2",
-    "#34d399",
-    "#f59e0b",
-    "#ef4444",
-    "#8b5cf6",
-    "#ec4899",
-    "#10b981",
-  ];
 
   return (
     <ResponsiveContainer width="100%" aspect={2.6}>

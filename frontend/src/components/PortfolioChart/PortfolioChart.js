@@ -8,7 +8,7 @@ import { fetchValuation } from "./utils/fetchUtils";
 import "../../App.css";
 
 
-function PortfolioChart({ onPointClick, userIds }) {
+function PortfolioChart({ onPointClick, userIds, colorPalette }) {
   const [dataSets, setDataSets] = useState([]); // wiele wykresów
   const [range, setRange] = useState("1M");
 
@@ -16,32 +16,35 @@ function PortfolioChart({ onPointClick, userIds }) {
   const totalEnd = new Date("2024-12-04T20:30:00Z");
 
   useEffect(() => {
-    if (userIds.length === 0) {
-      setDataSets([]);
-      return;
-    }
-
-    const { start, end } = getRangeDates(range, totalStart, totalEnd);
-    const interval = getIntervalForRange(range);
-
-    const fetchAll = async () => {
-      try {
-        const results = await Promise.all(
-          userIds.map((id) => fetchValuation(id, start, end, interval))
-        );
-
-        const merged = results.map((data, idx) => ({
-          userId: userIds[idx],
-          data,
-        }));
-        setDataSets(merged);
-      } catch (err) {
-        console.error("Fetch valuation error:", err);
+      if (userIds.length === 0) {
+        setDataSets([]);
+        return;
       }
-    };
 
-    fetchAll();
-  }, [range, userIds]);
+      const { start, end } = getRangeDates(range, totalStart, totalEnd);
+      const interval = getIntervalForRange(range);
+
+      const fetchAll = async () => {
+        try {
+          const results = await Promise.all(
+            userIds.map((id) => fetchValuation(id, start, end, interval))
+          );
+
+          // 🔹 Przypisujemy kolor każdemu userowi
+          const merged = results.map((data, idx) => ({
+            userId: userIds[idx],
+            data,
+            color: colorPalette[idx % colorPalette.length],
+          }));
+
+          setDataSets(merged);
+        } catch (err) {
+          console.error("Fetch valuation error:", err);
+        }
+      };
+
+      fetchAll();
+  }, [range, userIds, colorPalette]);
 
   const handlePointClick = (point) => {
     if (onPointClick) onPointClick(point);
@@ -51,7 +54,7 @@ function PortfolioChart({ onPointClick, userIds }) {
     <div className="portfolio-chart-container">
       <div className="chart-layout">
         <div className="chart-section">
-          <ChartView dataSets={dataSets} range={range} onPointClick={handlePointClick} />
+          <ChartView dataSets={dataSets} range={range} onPointClick={handlePointClick} colorPalette={colorPalette} />
         </div>
 
         <div className="sidebar-section">

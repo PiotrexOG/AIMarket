@@ -1,4 +1,3 @@
-// src/components/PortfolioChart/PortfolioChangeDisplay.js
 import React from "react";
 
 function PortfolioChangeDisplay({ dataSets }) {
@@ -10,23 +9,33 @@ function PortfolioChangeDisplay({ dataSets }) {
     );
   }
 
+  // 🔹 Sortowanie malejąco po procentowej zmianie
+  const sortedData = [...dataSets].sort((a, b) => {
+    const aChange = Number(a.data?.percent_change ?? 0);
+    const bChange = Number(b.data?.percent_change ?? 0);
+    return bChange - aChange;
+  });
+
   return (
     <div className="portfolio-change-display">
       <h3 style={{ marginBottom: "8px" }}>Changes by user</h3>
-      {dataSets.map((set) => {
+
+      {sortedData.map((set) => {
         const change = Number(set.data?.percent_change ?? 0);
-        const safeChange = isNaN(change) ? 0 : change; // fallback na 0
+        const safeChange = isNaN(change) ? 0 : change;
+        const sign = safeChange >= 0 ? "+" : "";
         const isPositive = safeChange >= 0;
-        const sign = isPositive ? "+" : "";
-        const colorClass = isPositive ? "positive" : "negative";
 
         return (
-          <p key={set.userId} className={`change-value ${colorClass}`}>
-            User {set.userId}: {`${sign}${safeChange.toFixed(2)}%`}
+          <p
+            key={set.userId}
+            className={`change-value ${isPositive ? "positive" : "negative"}`}
+          >
+            <span style={{ color: set.color }}>User {set.userId}:</span>{" "}
+            {`${sign}${safeChange.toFixed(2)}%`}
           </p>
         );
       })}
-
     </div>
   );
 }
