@@ -1,0 +1,84 @@
+.transactions-view {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.month-group {
+  margin-top: 25px;
+}
+
+.month-header {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.date-group {
+  margin-left: 30px; /* 📌 wcięcie dla dni */
+  margin-top: 15px;
+}
+
+.date-header {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.user-columns {
+  display: flex;
+  gap: 16px;
+  margin-left: 50px; /* 📌 wcięcie kolumn względem daty */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.user-column {
+  flex: 1;
+  min-width: 200px;
+  border: 3px solid;
+  border-radius: 10px;
+  background-color: #fafafa;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 3px 0;
+  font-family: monospace;
+  font-size: 0.95em;
+}
+
+.tx-type.buy {
+  color: green;
+}
+
+.tx-type.sell {
+  color: red;
+}
+
+.no-tx {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  padding: 10px;
+}
+
+.empty-info {
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: center;
+}

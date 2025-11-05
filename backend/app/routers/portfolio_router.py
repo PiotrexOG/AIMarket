@@ -2,11 +2,14 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
+
+from app.db.schemas.portfolio import PortfolioTransactionRead
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
 from app.db.database import get_db
 from datetime import datetime
 
+from app.services.portfolio_transaction_service import PortfolioTransactionService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.shared.types import ValuationInterval
 
@@ -58,5 +61,17 @@ def get_portfolio_state_on_date(
     if not state:
         raise HTTPException(status_code=404, detail="No state for given date")
     return state
+
+@router.get("/{portfolio_id}/transactions", response_model=list[PortfolioTransactionRead])
+def get_portfolio_transactions(portfolio_id: int, db: Session = Depends(get_db)):
+    """Zwraca listę wszystkich transakcji dla danego portfela."""
+    service = PortfolioTransactionService(db)
+    transactions = service.get_transactions(portfolio_id)
+
+    if not transactions:
+        raise HTTPException(status_code=404, detail="No transactions found for this portfolio")
+
+    return transactions
+
 
 

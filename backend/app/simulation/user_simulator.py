@@ -10,7 +10,7 @@ from app.core import market_hours
 
 
 class UserSimulator:
-    def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, shares: Dict[str, int] = None, use_model: bool = False, with_explanation: bool = False):
+    def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, transaction_service, shares: Dict[str, int] = None, use_model: bool = False, with_explanation: bool = False):
         self.user_id = user_id
         self.portfolio = Portfolio(
             portfolio_id=user_id,
@@ -21,6 +21,7 @@ class UserSimulator:
         self.portfolio_service = portfolio_service
         self.market_data_service = market_data_service
         self.valuation_service = valuation_service
+        self.transaction_service = transaction_service
         self.with_explanation = with_explanation
 
 
@@ -46,8 +47,7 @@ class UserSimulator:
                 ticker, data, self.portfolio, self.with_explanation
             )
 
-            self.execute_decision(ticker, decision, num, float(data[0].close))
-            self._print_decision(ticker, decision, num, date_time)
+            self.execute_decision(ticker, decision, num, float(data[0].close), date_time)
 
         # Jeśli coś się zmieniło -> policz z pamięci i zapisz
         if self._portfolio_changed(pre_cash, pre_shares):
@@ -63,14 +63,25 @@ class UserSimulator:
                 self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)
 
 
-    def execute_decision(self, ticker: str, decision: str, num: int, price: float):
-        if decision == "KUPUJ":
-            self.portfolio.buy(ticker, num, price)
-        elif decision == "SPRZEDAJ":
-            self.portfolio.sell(ticker, num, price)
+    def execute_decision(self, ticker: str, decision: str, num: int, price: float, date_time: datetime):
+        if decision in ["BUY", "SELL"]:
+            if decision == "BUY":
+                self.portfolio.buy(ticker, num, price)
+            elif decision == "SELL":
+                self.portfolio.sell(ticker, num, price)
+
+            print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+
+            self.transaction_service.record_transaction(
+                portfolio_id=self.portfolio.portfolio_id,
+                ticker=ticker,
+                type_=decision,
+                quantity=num,
+                price=price,
+                datetime_=date_time,
+            )
 
     def _portfolio_changed(self, pre_cash: float, pre_shares: dict) -> bool:
         return self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares
 
-    def _print_decision(self, ticker: str, decision: str, num: int, date_time: datetime):
-        print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+

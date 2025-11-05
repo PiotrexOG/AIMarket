@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum
 from sqlalchemy.orm import relationship
 from .base import Base
 
@@ -11,6 +11,11 @@ class Portfolio(Base):
 
     user = relationship("User", back_populates="portfolios")
     history = relationship("PortfolioHistory", back_populates="portfolio", cascade="all, delete-orphan")
+    transactions = relationship(
+        "PortfolioTransaction",
+        back_populates="portfolio",
+        cascade="all, delete-orphan"
+    )
 
 
 class PortfolioHistory(Base):
@@ -34,3 +39,19 @@ class PortfolioShare(Base):
     amount = Column(Integer, nullable=False)
 
     portfolio_history = relationship("PortfolioHistory", back_populates="shares")
+
+
+class PortfolioTransaction(Base):
+    __tablename__ = "portfolio_transactions"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
+    datetime = Column(DateTime(timezone=True), index=True, nullable=False)
+    ticker = Column(String, nullable=False)
+    type = Column(Enum("BUY", "SELL", name="transaction_type"), nullable=False)
+    quantity = Column(Integer, nullable=False)
+    price = Column(Float, nullable=False)
+    total_value = Column(Float, nullable=False)
+
+    portfolio = relationship("Portfolio", back_populates="transactions")
+

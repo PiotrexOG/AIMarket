@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
 from time import sleep
 from typing import Dict
+
+from sqlalchemy import Transaction
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
@@ -10,6 +12,7 @@ from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, Po
 from app.db.schemas.user import UserCreate
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
+from app.services.portfolio_transaction_service import PortfolioTransactionService
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
@@ -25,6 +28,7 @@ class SimulationService:
         self.user_service = UserService(db)
         self.valuation_service = PortfolioValuationService(self.market_data_service)
         self.portfolio_service = PortfolioService(db, self.valuation_service)
+        self.transaction_service  = PortfolioTransactionService(db)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -104,6 +108,7 @@ class SimulationService:
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
+                transaction_service=self.transaction_service
             )
 
             if DEBUG_RESET or not existing_users or not shares:

@@ -16,7 +16,7 @@ REAL_TIME = False
 LOCALLY = True
 
 STARTING_CASH = 10000.0
-NO_USERS = 5
+NO_USERS = 3
 
 # NY 2023-10-02 09:30 -> UTC 2023-10-02 13:30
 START_TIME = datetime(2024, 10, 2, 13, 30, tzinfo=timezone.utc)

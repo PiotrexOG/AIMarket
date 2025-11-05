@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 # ---- Portfolio Share ----
@@ -53,3 +53,17 @@ class PortfolioRead(PortfolioBase):
 
     class Config:
         from_attributes = True
+
+
+class PortfolioTransactionRead(BaseModel):
+    datetime: datetime
+    decision: str = Field(alias="type")  # mapujemy kolumnę SQLAlchemy 'type' → API 'decision'
+    ticker: str
+    quantity: float
+    price: float
+    total_value: float
+
+    model_config = {
+        "from_attributes": True,
+        "populate_by_name": True,  # pozwala aliasom działać dwukierunkowo
+    }

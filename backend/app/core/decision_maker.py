@@ -29,19 +29,19 @@ class DecisionMaker:
         return self._parse_response(reply, with_explanation)
 
     def _random_decision(self, ticker, market_data, portfolio):
-        possible_actions = ["KUPUJ", "SPRZEDAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ", "TRZYMAJ"]
+        possible_actions = ["BUY", "SELL", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD"]
         decision = random.choice(possible_actions)
         close = float(market_data[0].close)
 
-        if decision == "KUPUJ":
+        if decision == "BUY":
             max_affordable = int(portfolio.cash // close)
             num = random.randint(1, max(1, max_affordable)) if max_affordable > 0 else 0
             if num == 0:
-                decision = "TRZYMAJ"
-        elif decision == "SPRZEDAJ":
+                decision = "HOLD"
+        elif decision == "SELL":
             num = random.randint(1, portfolio.shares[ticker]) if portfolio.shares.get(ticker, 0) > 0 else 0
             if num == 0:
-                decision = "TRZYMAJ"
+                decision = "HOLD"
         else:
             num = 0
 
@@ -62,14 +62,14 @@ class DecisionMaker:
 
         if len(lines) >= 1:
             decision_line = lines[0].strip().upper()
-            if decision_line.startswith("KUPUJ"):
-                decision = "KUPUJ"
+            if decision_line.startswith("BUY"):
+                decision = "BUY"
                 num = self._extract_number(decision_line)
-            elif decision_line.startswith("SPRZEDAJ"):
-                decision = "SPRZEDAJ"
+            elif decision_line.startswith("SELL"):
+                decision = "SELL"
                 num = self._extract_number(decision_line)
-            elif decision_line.startswith("TRZYMAJ"):
-                decision = "TRZYMAJ"
+            elif decision_line.startswith("HOLD"):
+                decision = "HOLD"
                 num = 0
 
             if with_explanation and len(lines) >= 2:
