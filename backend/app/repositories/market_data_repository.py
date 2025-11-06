@@ -62,3 +62,9 @@ class MarketDataRepository:
 
         return has_start and has_end
 
+    def get_unique_tickers(self) -> list[str]:
+        """
+        Zwraca listę unikalnych tickerów z tabeli market_data.
+        """
+        results = self.db.query(MarketData.ticker).distinct().all()
+        return [r[0] for r in results]

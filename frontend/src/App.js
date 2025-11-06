@@ -4,6 +4,8 @@ import PortfolioChart from "./components/PortfolioChart/PortfolioChart";
 import PortfolioDetails from "./components/PortfolioDetails/PortfolioDetails";
 import UserSelector from "./components/UserSelector/UserSelector";
 import TransactionsView from "./components/TransactionsView/TransactionsView";
+import StockList from "./components/StockList/StockList";
+import StockChart from "./components/StockChart/StockChart";
 import "./App.css";
 
 function App() {
@@ -35,16 +37,16 @@ function App() {
 
           <h3>Portfolio History Viewer</h3>
 
-          {/* 🔹 Proste menu zakładek */}
+          {/* 🔹 Menu zakładek */}
           <nav style={{ marginTop: "10px" }}>
             <Link to="/" style={{ marginRight: "15px" }}>📈 Portfolio</Link>
-            <Link to="/transactions">💹 Transactions</Link>
+            <Link to="/transactions" style={{ marginRight: "15px" }}>💹 Transactions</Link>
+            <Link to="/stocks">📊 Stocks</Link>
           </nav>
         </header>
 
-        {/* 🔹 Routing */}
         <Routes>
-          {/* Strona główna */}
+          {/* 🔹 Strona główna (portfolio) */}
           <Route
             path="/"
             element={
@@ -54,7 +56,6 @@ function App() {
                   onPointClick={setSelectedPoint}
                   colorPalette={colorPalette}
                 />
-
                 {selectedPoint && (
                   <div className="details-wrapper">
                     <div className="timestamp-header">
@@ -69,7 +70,6 @@ function App() {
                         ({Intl.DateTimeFormat().resolvedOptions().timeZone})
                       </div>
                     </div>
-
                     <div className="details-grid">
                       {selectedUserIds.map((id, idx) => (
                         <PortfolioDetails
@@ -87,7 +87,7 @@ function App() {
             }
           />
 
-          {/* 🔹 Strona transakcji – dostaje te same userIds */}
+          {/* 🔹 Transakcje */}
           <Route
             path="/transactions"
             element={
@@ -97,6 +97,12 @@ function App() {
               />
             }
           />
+
+          {/* 🔹 Lista spółek */}
+          <Route path="/stocks" element={<StockList />} />
+
+          {/* 🔹 Wykres konkretnej spółki */}
+          <Route path="/stocks/:ticker" element={<StockChart />} />
         </Routes>
       </div>
     </Router>

@@ -3,7 +3,8 @@ from typing import Optional
 
 from sqlalchemy.orm import Session
 from app.repositories.market_data_repository import MarketDataRepository
-from app.db.schemas.market_data import MarketDataCreate
+from app.db.schemas.market_data import MarketDataCreate, TickerListDTO
+
 
 class MarketDataService:
     def __init__(self, db: Session):
@@ -33,5 +34,12 @@ class MarketDataService:
         Sprawdza, czy istnieją dane rynkowe dla danego tickera w podanym zakresie.
         """
         return self.repo.exists_in_range(ticker, start, end)
+
+    def get_all_tickers(self) -> TickerListDTO:
+        """
+        Zwraca listę wszystkich unikalnych tickerów.
+        """
+        tickers = self.repo.get_unique_tickers()
+        return TickerListDTO(tickers=tickers)
 
 

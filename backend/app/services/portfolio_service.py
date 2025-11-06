@@ -108,18 +108,29 @@ class PortfolioService:
             raise ValueError(f"Unsupported interval: {interval}")
 
         valuations = []
-        current = start
 
-        while current <= end:
+        # Zawsze dodaj start
+        dates_to_calculate = [start]
+
+        # Dodaj punkty pośrednie
+        current = start + step
+        while current < end:  # '<' zamiast '<=', żeby uniknąć duplikatu z końcem
+            dates_to_calculate.append(current)
+            current += step
+
+        # Zawsze dodaj end (chyba że jest taki sam jak start)
+        if end != start:
+            dates_to_calculate.append(end)
+
+        # Oblicz wartości dla wszystkich dat
+        for date in dates_to_calculate:
             dto = self.compute_portfolio_state_at_date(
                 portfolio_id=portfolio_id,
-                date=current,
+                date=date,
                 detailed=detailed
             )
             if dto:
                 valuations.append(dto)
-
-            current += step
 
         if not valuations:
             raise HTTPException(status_code=404, detail="No valuation data in range")

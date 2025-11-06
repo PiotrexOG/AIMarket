@@ -20,3 +20,7 @@ class MarketDataRead(MarketDataBase):
 
     class Config:
         from_attributes = True
+
+
+class TickerListDTO(BaseModel):
+    tickers: list[str]
