@@ -1,0 +1,114 @@
+/* ===================================
+   📅 CUSTOM RANGE SELECTION PANEL
+=================================== */
+
+.range-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding-bottom: 16px;
+}
+
+.range-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  min-width: 44px;
+}
+
+.range-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.range-btn.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border-color: #2563eb;
+}
+
+/* ===================================
+   🧭 CUSTOM RANGE SECTION
+=================================== */
+
+.custom-range {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 12px;
+  width: 100%;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.custom-range label {
+  font-size: 0.8rem;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.custom-range input[type="date"],
+.custom-range select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  color: #111827;
+  background-color: #fff;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.custom-range input[type="date"]:focus,
+.custom-range select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.custom-range button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-range button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Animacja pojawienia się sekcji */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .custom-range {
+    padding: 12px;
+  }
+
+  .custom-range input[type="date"],
+  .custom-range select {
+    width: 100%;
+  }
+}

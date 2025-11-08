@@ -2,23 +2,29 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ChartView from "../PortfolioChart/ChartView";
 import ChartRangeButtons from "../PortfolioChart/ChartRangeButtons";
-import { getRangeDates, getIntervalForRange } from "../PortfolioChart/utils/intervalUtils";
 import { fetchStockPrices } from "./utils/fetchUtils";
+import { useChartRange } from "../common/useChartRange";
 import "../../App.css";
 
 function StockChart() {
   const { ticker } = useParams();
-  const [dataSet, setDataSet] = useState(null);
-  const [range, setRange] = useState("1M");
-
   const totalStart = new Date("2024-10-02T13:30:00Z");
   const totalEnd = new Date("2024-12-04T20:30:00Z");
+
+  const {
+    range,
+    customRange,
+    handleRangeChange,
+    handleCustomRangeChange,
+    getEffectiveRange,
+  } = useChartRange(totalStart, totalEnd);
+
+  const [dataSet, setDataSet] = useState(null);
 
   useEffect(() => {
     if (!ticker) return;
 
-    const { start, end } = getRangeDates(range, totalStart, totalEnd);
-    const interval = getIntervalForRange(range);
+    const { start, end, interval } = getEffectiveRange();
 
     const fetchData = async () => {
       try {
@@ -34,7 +40,7 @@ function StockChart() {
     };
 
     fetchData();
-  }, [ticker, range]);
+  }, [ticker, range, customRange]);
 
   return (
     <div className="portfolio-chart-container">
@@ -68,7 +74,11 @@ function StockChart() {
             )}
           </div>
 
-          <ChartRangeButtons range={range} onChange={setRange} />
+          <ChartRangeButtons
+            range={range}
+            onChange={handleRangeChange}
+            onCustomRangeChange={handleCustomRangeChange}
+          />
         </div>
       </div>
     </div>

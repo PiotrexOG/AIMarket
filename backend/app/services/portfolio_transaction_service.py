@@ -1,14 +1,18 @@
 from datetime import datetime
 from typing import List
+
+from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app.db.schemas.portfolio import PortfolioTransactionRead
+from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
 from app.repositories.portfolio_transaction_repository import PortfolioTransactionRepository
+from app.services.portfolio_service import PortfolioService
 
 
 class PortfolioTransactionService:
-    def __init__(self, db: Session):
+    def __init__(self, db: Session, portfolio_service: PortfolioService):
         self.repo = PortfolioTransactionRepository(db)
+        self.portfolio_service = portfolio_service
 
     def record_transaction(
         self,
@@ -40,3 +44,53 @@ class PortfolioTransactionService:
             PortfolioTransactionRead.model_validate(tx, from_attributes=True)
             for tx in txs
         ]
+
+    def get_ticker_transactions(
+            self,
+            portfolio_id: int,
+            ticker: str,
+            start: datetime = None,
+            end: datetime = None
+    ) -> List["PortfolioTickerTransactionRead"]:
+        """Zwraca transakcje dla danego tickera z ratio historycznym, opcjonalnie w zakresie dat."""
+        txs = self.repo.get_by_portfolio_and_ticker(
+            portfolio_id=portfolio_id,
+            ticker=ticker,
+            start=start,
+            end=end
+        )
+        if not txs:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No transactions found for ticker '{ticker}' in this portfolio"
+            )
+
+        result = []
+        for tx in txs:
+            portfolio_state = self.portfolio_service.compute_portfolio_state_at_date(
+                portfolio_id=portfolio_id,
+                date=tx.datetime,
+                detailed=False
+            )
+            if not portfolio_state or portfolio_state.portfolio_value == 0:
+                continue
+
+            sign = 1 if tx.type == "buy" else -1
+            total_value = tx.quantity * tx.price
+            ratio = sign * (total_value / portfolio_state.portfolio_value)
+
+            result.append(
+                PortfolioTickerTransactionRead(
+                    datetime=tx.datetime,
+                    quantity=sign * tx.quantity,
+                    ratio=ratio
+                )
+            )
+
+        if not result:
+            raise HTTPException(
+                status_code=404,
+                detail="No valid transaction data (portfolio state missing for transaction dates)"
+            )
+
+        return result

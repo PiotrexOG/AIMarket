@@ -67,3 +67,12 @@ class PortfolioTransactionRead(BaseModel):
         "from_attributes": True,
         "populate_by_name": True,  # pozwala aliasom działać dwukierunkowo
     }
+
+class PortfolioTickerTransactionRead(BaseModel):
+    datetime: datetime
+    quantity: float  # ze znakiem
+    ratio: float     # (total_value / portfolio_total_value) ze znakiem
+
+    model_config = {
+        "from_attributes": True,
+    }

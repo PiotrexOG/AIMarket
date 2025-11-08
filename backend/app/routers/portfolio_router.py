@@ -1,9 +1,9 @@
-from typing import Literal
+from typing import Literal, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
-from app.db.schemas.portfolio import PortfolioTransactionRead
+from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
 from app.db.database import get_db
@@ -18,6 +18,13 @@ router = APIRouter(prefix="/portfolios", tags=["Portfolios"])
 
 def get_service(db: Session):
     return PortfolioService(db, PortfolioValuationService(MarketDataService(db)))
+
+def get_transaction_service(db: Session) -> PortfolioTransactionService:
+    market_data_service = MarketDataService(db)
+    valuation_service = PortfolioValuationService(market_data_service)
+    portfolio_service = PortfolioService(db, valuation_service)
+    return PortfolioTransactionService(db, portfolio_service)
+
 
 
 # ---- 1️⃣ Historia z bazy ----
@@ -65,13 +72,30 @@ def get_portfolio_state_on_date(
 @router.get("/{portfolio_id}/transactions", response_model=list[PortfolioTransactionRead])
 def get_portfolio_transactions(portfolio_id: int, db: Session = Depends(get_db)):
     """Zwraca listę wszystkich transakcji dla danego portfela."""
-    service = PortfolioTransactionService(db)
-    transactions = service.get_transactions(portfolio_id)
+    tx_service = get_transaction_service(db)
+    transactions = tx_service.get_transactions(portfolio_id)
 
     if not transactions:
         raise HTTPException(status_code=404, detail="No transactions found for this portfolio")
 
     return transactions
+
+@router.get("/{portfolio_id}/transactions/{ticker}", response_model=list[PortfolioTickerTransactionRead])
+def get_portfolio_ticker_transactions(
+    portfolio_id: int,
+    ticker: str,
+    start: Optional[datetime] = Query(None, description="Początek zakresu dat"),
+    end: Optional[datetime] = Query(None, description="Koniec zakresu dat"),
+    db: Session = Depends(get_db),
+):
+    """Zwraca transakcje dla danego portfela i konkretnego tickera (z ratio historycznym), opcjonalnie w zakresie dat."""
+    tx_service = get_transaction_service(db)
+    return tx_service.get_ticker_transactions(
+        portfolio_id=portfolio_id,
+        ticker=ticker,
+        start=start,
+        end=end
+    )
 
 
 
