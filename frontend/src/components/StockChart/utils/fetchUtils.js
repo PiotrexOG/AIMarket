@@ -15,3 +15,13 @@ export const fetchTickers = async () => {
   if (!response.ok) throw new Error("Failed to fetch tickers");
   return response.json();
 };
+
+export const fetchTransactionsForTicker = async (portfolioId, ticker, start, end) => {
+  const url = `http://localhost:8000/portfolios/${portfolioId}/transactions/${ticker}?start=${encodeURIComponent(
+    start
+  )}&end=${encodeURIComponent(end)}`;
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error("Failed to fetch transaction data");
+  return response.json(); // lista obiektów { datetime, quantity, ratio }
+};
