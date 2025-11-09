@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getRangeDates, getIntervalForRange } from "../PortfolioChart/utils/intervalUtils";
 
 /**
- * Hook do zarządzania zakresem wykresu (1D, 1W, 1M, Własne)
+ * Hook do zarządzania zakresem wykresu (1D, 1W, 1M, Custom)
  * Używany zarówno w PortfolioChart, jak i StockChart.
  */
 export function useChartRange(totalStart, totalEnd, onRangeChange) {
@@ -14,15 +14,15 @@ export function useChartRange(totalStart, totalEnd, onRangeChange) {
     setRange(newRange);
   };
 
-  // 📅 Obsługa własnego zakresu (z kalendarza)
+  // 📅 Obsługa Customgo zakresu (z kalendarza)
   const handleCustomRangeChange = (customValues) => {
     setCustomRange(customValues);
-    setRange("Własne");
+    setRange("Custom");
   };
 
   // 📦 Zwraca faktyczny zakres (start, end, interval)
   const getEffectiveRange = () => {
-    if (range === "Własne" && customRange) {
+    if (range === "Custom" && customRange) {
       return {
         start: customRange.start,
         end: customRange.end,

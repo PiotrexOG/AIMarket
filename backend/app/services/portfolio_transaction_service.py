@@ -75,7 +75,7 @@ class PortfolioTransactionService:
             if not portfolio_state or portfolio_state.portfolio_value == 0:
                 continue
 
-            sign = 1 if tx.type == "buy" else -1
+            sign = 1 if tx.type == "BUY" else -1
             total_value = tx.quantity * tx.price
             ratio = sign * (total_value / portfolio_state.portfolio_value)
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ChartView from "./ChartView";
-import ChartRangeButtons from "./ChartRangeButtons";
+import PortfolioChartView from "./PortfolioChartView";
+import ChartRangeButtons from "../common/ChartRangeButtons";
 import PortfolioChangeDisplay from "./PortfolioChangeDisplay";
 import { fetchValuation } from "./utils/fetchUtils";
 import { useChartRange } from "../common/useChartRange";
@@ -21,7 +21,7 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
   const [dataSets, setDataSets] = useState([]);
 
   useEffect(() => {
-    if (userIds.length === 0) {
+    if (!userIds.length) {
       setDataSets([]);
       return;
     }
@@ -33,11 +33,13 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
         const results = await Promise.all(
           userIds.map((id) => fetchValuation(id, start, end, interval))
         );
+
         const merged = results.map((data, idx) => ({
           userId: userIds[idx],
           data,
           color: colorPalette[idx % colorPalette.length],
         }));
+
         setDataSets(merged);
       } catch (err) {
         console.error("Fetch valuation error:", err);
@@ -51,7 +53,7 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
     <div className="portfolio-chart-container">
       <div className="chart-layout">
         <div className="chart-section">
-          <ChartView
+          <PortfolioChartView
             dataSets={dataSets}
             range={range}
             onPointClick={onPointClick}
