@@ -36,6 +36,27 @@ body {
   align-items: center;
 }
 
+.details-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.transaction-details-panel {
+  background: #f8fafc;
+  border-top: 2px solid #e2e8f0;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+.transaction-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+}
+
+
 /* ===================================
    🧱 PAGE CONTAINER
 =================================== */

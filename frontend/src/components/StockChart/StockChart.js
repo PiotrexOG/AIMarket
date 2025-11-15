@@ -6,73 +6,84 @@ import { fetchStockPrices, fetchTransactionsForTicker } from "./utils/fetchUtils
 import { useChartRange } from "../common/useChartRange";
 import "../../App.css";
 
-function StockChart() {
+function StockChart({ onTransactionsSelect, selectedUserIds = [], colorPalette = [] }) {
   const { ticker } = useParams();
-  const portfolioId = 1; // możesz później dynamicznie podać z kontekstu
-
   const totalStart = new Date("2024-10-02T13:30:00Z");
   const totalEnd = new Date("2024-12-04T20:30:00Z");
-
-  const {
-    range,
-    customRange,
-    handleRangeChange,
-    handleCustomRangeChange,
-    getEffectiveRange,
+  
+  const { 
+    range, 
+    customRange, 
+    handleRangeChange, 
+    handleCustomRangeChange, 
+    getEffectiveRange 
   } = useChartRange(totalStart, totalEnd);
 
   const [dataSets, setDataSets] = useState([]);
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    if (!ticker) return;
+    if (!ticker || selectedUserIds.length === 0) {
+      setDataSets([]);
+      setTransactions([]);
+      return;
+    }
 
     const { start, end, interval } = getEffectiveRange();
-
-    const fetchData = async () => {
+    
+    const fetchAll = async () => {
       try {
-        const [priceData, transactionData] = await Promise.all([
-          fetchStockPrices(ticker, start, end, interval),
-          fetchTransactionsForTicker(portfolioId, ticker, start, end),
-        ]);
+        // 🔹 1. Fetch ceny akcji (raz, wspólne)
+        const priceData = await fetchStockPrices(ticker, start, end, interval);
+        
+        // 🔹 2. Fetch transakcji dla każdego usera osobno
+        const allTransactions = await Promise.all(
+          selectedUserIds.map((userId) => 
+            fetchTransactionsForTicker(userId, ticker, start, end)
+          )
+        );
 
-        setDataSets([
-          {
-            ticker,
-            data: priceData,
-            color: "#4a90e2",
-          },
-        ]);
-        setTransactions(transactionData);
+        // 🔹 3. Połącz dane użytkowników z kolorami
+        const userTransactions = selectedUserIds.map((userId, idx) => ({
+          userId,
+          color: colorPalette[idx % colorPalette.length],
+          transactions: allTransactions[idx],
+        }));
+
+        setDataSets([{ ticker, data: priceData, color: "#4a90e2" }]);
+        setTransactions(userTransactions);
       } catch (err) {
         console.error("Error fetching stock or transaction data:", err);
       }
     };
 
-    fetchData();
-  }, [ticker, range, customRange]);
+    fetchAll();
+  }, [ticker, range, customRange, selectedUserIds]);
+
+const handleMarkerClick = (transactions = []) => {
+    onTransactionsSelect?.(transactions);
+};
+
 
   return (
     <div className="portfolio-chart-container">
       <h2 style={{ textAlign: "center", marginBottom: "10px" }}>
         {ticker?.toUpperCase()} — Stock Price History
       </h2>
-
       <div className="chart-layout">
         <div className="chart-section">
-          <StockChartView
-            dataSets={dataSets}
-            range={range}
-            transactions={transactions}
-            disableClicks
+          <StockChartView 
+            dataSets={dataSets} 
+            range={range} 
+            transactionsByUser={transactions} 
+            onMarkerClick={handleMarkerClick} 
           />
         </div>
-
         <div className="sidebar-section">
-          <ChartRangeButtons
-            range={range}
-            onChange={handleRangeChange}
-            onCustomRangeChange={handleCustomRangeChange}
+          <ChartRangeButtons 
+            range={range} 
+            onChange={handleRangeChange} 
+            onCustomRangeChange={handleCustomRangeChange} 
           />
         </div>
       </div>

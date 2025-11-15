@@ -11,15 +11,17 @@ import "./App.css";
 function App() {
   const [selectedPoint, setSelectedPoint] = useState(null);
   const [selectedUserIds, setSelectedUserIds] = useState([]);
+  const [selectedTransactions, setSelectedTransactions] = useState(null);
+
 
   const colorPalette = [
-    "#4a90e2",
-    "#34d399",
-    "#f59e0b",
-    "#ef4444",
     "#8b5cf6",
+    "#ef4444",
+    "#f59e0b",
+    "#34d399",
     "#ec4899",
     "#10b981",
+    "#4a90e2",
   ];
 
   const handleSelectionChange = (updated) => {
@@ -102,9 +104,34 @@ function App() {
           <Route path="/stocks" element={<StockList />} />
 
           {/* 🔹 Wykres konkretnej spółki */}
-          <Route path="/stocks/:ticker" element={<StockChart />} />
+          <Route
+            path="/stocks/:ticker"
+            element={
+              <StockChart
+                onTransactionsSelect={setSelectedTransactions}
+                selectedUserIds={selectedUserIds}
+                colorPalette={colorPalette}
+              />
+            }
+          />
+
         </Routes>
       </div>
+
+        {selectedTransactions && selectedTransactions.length > 0 && (
+          <div className="transaction-details-panel">
+            <h3>📋 Selected Transactions</h3>
+              {selectedTransactions.map((t, i) => (
+                <div key={i} className="transaction-item" style={{borderLeft:`4px solid ${t.color}`}}>
+                  <strong>User {t.userId}</strong> <br />
+                  <span>{new Date(t.datetime).toLocaleString()}</span>
+                  <div>Quantity: {t.quantity}</div>
+                  <div>Ratio: {(t.ratio * 100).toFixed(2)}%</div>
+                </div>
+            ))}
+        </div>
+      )}
+
     </Router>
   );
 }
