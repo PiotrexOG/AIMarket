@@ -13,7 +13,7 @@ import { handleChartClick } from "./utils/chartClickUtils";
 import { formatXAxisTick, getXAxisInterval } from "./utils/intervalUtils";
 import CustomTooltip from "./CustomTooltip";
 
-function PortfolioChartView({ dataSets = [], range, onPointClick, colorPalette = [] }) {
+function PortfolioChartView({ dataSets = [], range, selectedUsers, onPointClick, colorPalette = [] }) {
   if (!dataSets || dataSets.length === 0 || !Array.isArray(dataSets[0]?.data?.history)) {
     return <p style={{ textAlign: "center" }}>No data available</p>;
   }
@@ -53,6 +53,7 @@ function PortfolioChartView({ dataSets = [], range, onPointClick, colorPalette =
         {dataSets.map((set, idx) => {
           const key = `user_${set.userId}`;
           const color = colorPalette[idx % colorPalette.length] || set.color || "#4a90e2";
+          const userName = selectedUsers[set.userId] || `User ${set.userId}`;
 
           return (
             <Line
@@ -66,7 +67,7 @@ function PortfolioChartView({ dataSets = [], range, onPointClick, colorPalette =
                 r: 7,
                 onClick: (event, payload) => payload?.payload && onPointClick(payload.payload),
               }}
-              name={`User ${set.userId}`}
+              name={userName} // Używamy nazwy użytkownika zamiast "User {id}"
             />
           );
         })}

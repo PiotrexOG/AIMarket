@@ -29,8 +29,9 @@ class DecisionMaker:
         return self._parse_response(reply, with_explanation)
 
     def _random_decision(self, ticker, market_data, portfolio):
-        possible_actions = ["BUY", "SELL", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD", "HOLD"]
-        decision = random.choice(possible_actions)
+        possible_actions = ["BUY", "SELL", "HOLD"]
+        weights = [1, 1, 11]
+        decision = random.choices(possible_actions, weights=weights, k=1)[0]
         close = float(market_data[0].close)
 
         if decision == "BUY":

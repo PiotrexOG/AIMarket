@@ -1,50 +1,42 @@
 import React, { useEffect, useState } from "react";
 import "./TransactionsView.css";
 
-function TransactionsView({ selectedUserIds, colorPalette }) {
+function TransactionsView({ selectedUsers, colorPalette }) {
   const [transactions, setTransactions] = useState([]);
   const [groupedData, setGroupedData] = useState({});
-  const [userNames, setUserNames] = useState({});
 
-  // 🔹 Pobierz transakcje + nazwy użytkowników
+  // 🔹 Pobierz transakcje
   useEffect(() => {
+    const selectedUserIds = Object.keys(selectedUsers);
+    
     if (selectedUserIds.length === 0) {
       setTransactions([]);
-      setUserNames({});
       return;
     }
 
     const fetchAll = async () => {
       const all = [];
-      const names = {};
 
       for (const userId of selectedUserIds) {
         try {
           // 1️⃣ Transakcje
           const txRes = await fetch(`http://localhost:8000/portfolios/${userId}/transactions`);
           const txData = await txRes.json();
-          all.push({ userId, transactions: txData });
-
-          // 2️⃣ Dane użytkownika (jeśli masz np. /users/:id)
-          const userRes = await fetch(`http://localhost:8000/users/${userId}`);
-          if (userRes.ok) {
-            const user = await userRes.json();
-            names[userId] = user.name || `User ${userId}`;
-          } else {
-            names[userId] = `User ${userId}`;
-          }
+          all.push({ 
+            userId: parseInt(userId), 
+            userName: selectedUsers[userId],
+            transactions: txData 
+          });
         } catch (err) {
           console.error("Fetch error:", err);
-          names[userId] = `User ${userId}`;
         }
       }
 
       setTransactions(all);
-      setUserNames(names);
     };
 
     fetchAll();
-  }, [selectedUserIds]);
+  }, [selectedUsers]);
 
   // 🔹 Grupowanie po miesiącu → dniu → użytkowniku
   useEffect(() => {
@@ -71,6 +63,11 @@ function TransactionsView({ selectedUserIds, colorPalette }) {
     setGroupedData(grouped);
   }, [transactions]);
 
+  // 🔹 Posortowane ID użytkowników (numerycznie)
+  const sortedUserIds = Object.keys(selectedUsers)
+    .map(id => parseInt(id))
+    .sort((a, b) => a - b);
+
   return (
     <div className="transactions-view">
       <h2>💹 Transactions History</h2>
@@ -87,9 +84,10 @@ function TransactionsView({ selectedUserIds, colorPalette }) {
                 <h4 className="date-header">{date}</h4>
 
                 <div className="user-columns">
-                  {selectedUserIds.map((userId, idx) => {
+                  {sortedUserIds.map((userId, idx) => {
                     const color = colorPalette[idx % colorPalette.length];
                     const userTxs = users[userId] || [];
+                    const userName = selectedUsers[userId] || `User ${userId}`;
 
                     return (
                       <div
@@ -97,36 +95,38 @@ function TransactionsView({ selectedUserIds, colorPalette }) {
                         className="user-column"
                         style={{ borderColor: color }}
                       >
-                        <div
-                          className="user-name"
-                          style={{
-                            backgroundColor: color,
-                            color: "#fff",
-                          }}
-                        >
-                          {userNames[userId] || `User ${userId}`}
+                        <div className="user-name" style={{ backgroundColor: color, color: "#fff" }}>
+                          {userName}
                         </div>
 
-                        {userTxs.length === 0 ? (
-                          <div className="no-tx">—</div>
-                        ) : (
-                          userTxs
-                            .sort((a, b) => new Date(a.datetime) - new Date(b.datetime))
-                            .map((tx, i) => (
-                              <div key={i} className="transaction-item">
-                                <div className="tx-time">{tx.time}</div>
-                                <div className="tx-ticker">{tx.ticker}</div>
-                                <div className="tx-qty">{tx.quantity}</div>
-                                <div
-                                  className={`tx-type ${
-                                    tx.type === "BUY" ? "buy" : "sell"
-                                  }`}
-                                >
-                                  {tx.type === "BUY" ? "➕" : "➖"}
+                        {/* 🔹 Nowy: nagłówki tak jak w StockTransactionPanel */}
+                        <div className="header-row">
+                          <div className="col-time">Time</div>
+                          <div className="col-ticker">Ticker</div>
+                          <div className="col-qty">Quantity</div>
+                          <div className="col-type">Type</div>
+                        </div>
+
+                        <div className="user-column-content">
+                          {userTxs.length === 0 ? (
+                            <div className="no-tx">—</div>
+                          ) : (
+                            userTxs
+                              .sort((a, b) => new Date(a.datetime) - new Date(b.datetime))
+                              .map((tx, i) => (
+                                <div key={i} className="txn-row">
+                                  <div className="col-time">{tx.time}</div>
+                                  <div className="col-ticker">{tx.ticker}</div>
+                                  <div className="col-qty">{tx.quantity}</div>
+                                  <div className={`col-type ${tx.type === "BUY" ? "buy" : "sell"}`}>
+                                    {tx.type === "BUY" ? "➕" : "➖"}
+                                  </div>
                                 </div>
-                              </div>
-                            ))
-                        )}
+                              ))
+                          )}
+
+                        </div>
+
                       </div>
                     );
                   })}

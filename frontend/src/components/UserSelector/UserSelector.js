@@ -4,11 +4,10 @@ import "./UserSelector.css";
 
 function UserSelector({ onSelectionChange }) {
   const [users, setUsers] = useState([]);
-  const [selectedUserIds, setSelectedUserIds] = useState([]);
+  const [selectedUsers, setSelectedUsers] = useState({}); // {id: name, id: name, ...}
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // 🔹 Pobranie użytkowników
   useEffect(() => {
     const loadUsers = async () => {
       try {
@@ -21,7 +20,6 @@ function UserSelector({ onSelectionChange }) {
     loadUsers();
   }, []);
 
-  // 🔹 Klik poza dropdownem — zamknij
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -32,24 +30,33 @@ function UserSelector({ onSelectionChange }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // 🔹 Zmiana wyboru użytkownika
-  const handleCheckboxChange = (userId) => {
-    setSelectedUserIds((prev) => {
-      const updated = prev.includes(userId)
-        ? prev.filter((id) => id !== userId)
-        : [...prev, userId];
+  const handleCheckboxChange = (user) => {
+    setSelectedUsers((prev) => {
+      const updated = { ...prev };
+      
+      if (updated[user.id]) {
+        // Usuń użytkownika
+        delete updated[user.id];
+      } else {
+        // Dodaj użytkownika
+        updated[user.id] = user.name;
+      }
+      
+      // Przekaż posortowany słownik do komponentu nadrzędnego
       onSelectionChange(updated);
+      
       return updated;
     });
   };
 
-  // 🔹 Tekst przycisku
+  // Tekst przycisku
+  const selectedCount = Object.keys(selectedUsers).length;
   const buttonLabel =
-    selectedUserIds.length === 0
+    selectedCount === 0
       ? "Select users"
-      : selectedUserIds.length === 1
-      ? users.find((u) => u.id === selectedUserIds[0])?.name
-      : `${selectedUserIds.length} users selected`;
+      : selectedCount === 1
+      ? Object.values(selectedUsers)[0]
+      : `${selectedCount} users selected`;
 
   return (
     <div className="user-selector-wrapper" ref={dropdownRef}>
@@ -63,8 +70,8 @@ function UserSelector({ onSelectionChange }) {
             <label key={user.id} className="user-item">
               <input
                 type="checkbox"
-                checked={selectedUserIds.includes(user.id)}
-                onChange={() => handleCheckboxChange(user.id)}
+                checked={!!selectedUsers[user.id]}
+                onChange={() => handleCheckboxChange(user)}
               />
               {user.name}
             </label>

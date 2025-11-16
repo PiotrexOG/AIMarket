@@ -77,13 +77,15 @@ class PortfolioTransactionService:
 
             sign = 1 if tx.type == "BUY" else -1
             total_value = tx.quantity * tx.price
-            ratio = sign * (total_value / portfolio_state.portfolio_value)
+            ratio = round(sign * (total_value / portfolio_state.portfolio_value), 4)
 
             result.append(
                 PortfolioTickerTransactionRead(
                     datetime=tx.datetime,
                     quantity=sign * tx.quantity,
-                    ratio=ratio
+                    ratio=ratio,
+                    price=tx.price,
+                    total_value=tx.total_value
                 )
             )
 

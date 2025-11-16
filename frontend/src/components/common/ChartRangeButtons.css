@@ -9,6 +9,8 @@
   gap: 6px;
   margin-top: 12px;
   padding-bottom: 16px;
+  text-align: center; /* Dodane - wyśrodkowanie zawartości */
+  width: 100%; /* Dodane - zajmuje całą szerokość */
 }
 
 .range-btn {
@@ -22,6 +24,7 @@
   font-size: 0.85rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
   min-width: 44px;
+  text-align: center; /* Dodane - wyśrodkowanie tekstu w przyciskach */
 }
 
 .range-btn:hover {
@@ -35,6 +38,7 @@
   border-color: #2563eb;
 }
 
+
 /* ===================================
    🧭 CUSTOM RANGE SECTION
 =================================== */
@@ -47,12 +51,15 @@
   margin-top: 12px;
   width: 100%;
   animation: fadeIn 0.2s ease-in-out;
+  text-align: center; /* Dodane - to wycentruje zawartość custom range */
 }
 
 .custom-range label {
   font-size: 0.8rem;
   color: #374151;
   margin-bottom: 4px;
+  display: block; /* Dodane dla lepszego wyśrodkowania */
+  text-align: center; /* Dodane */
 }
 
 .custom-range input[type="date"],
@@ -64,6 +71,7 @@
   color: #111827;
   background-color: #fff;
   transition: border-color 0.2s ease-in-out;
+  text-align: center; /* Dodane - wycentruje tekst wewnątrz inputów */
 }
 
 .custom-range input[type="date"]:focus,
@@ -83,6 +91,9 @@
   cursor: pointer;
   margin-top: 8px;
   transition: background-color 0.2s ease;
+  display: block; /* Dodane - aby przycisk był na środku */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .custom-range button:hover {

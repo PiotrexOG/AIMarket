@@ -4,9 +4,10 @@ import StockChartView from "./StockChartView";
 import ChartRangeButtons from "../common/ChartRangeButtons";
 import { fetchStockPrices, fetchTransactionsForTicker } from "./utils/fetchUtils";
 import { useChartRange } from "../common/useChartRange";
+import StockChangeDisplay from "./StockChangeDisplay";
 import "../../App.css";
 
-function StockChart({ onTransactionsSelect, selectedUserIds = [], colorPalette = [] }) {
+function StockChart({ onTransactionsSelect, selectedUsers = {}, colorPalette = [] }) {
   const { ticker } = useParams();
   const totalStart = new Date("2024-10-02T13:30:00Z");
   const totalEnd = new Date("2024-12-04T20:30:00Z");
@@ -22,10 +23,14 @@ function StockChart({ onTransactionsSelect, selectedUserIds = [], colorPalette =
   const [dataSets, setDataSets] = useState([]);
   const [transactions, setTransactions] = useState([]);
 
+  // 🔹 Posortowane ID użytkowników (numerycznie)
+  const sortedUserIds = Object.keys(selectedUsers)
+    .map(id => parseInt(id))
+    .sort((a, b) => a - b);
+
   useEffect(() => {
-    if (!ticker || selectedUserIds.length === 0) {
+    if (!ticker) {
       setDataSets([]);
-      setTransactions([]);
       return;
     }
 
@@ -38,14 +43,15 @@ function StockChart({ onTransactionsSelect, selectedUserIds = [], colorPalette =
         
         // 🔹 2. Fetch transakcji dla każdego usera osobno
         const allTransactions = await Promise.all(
-          selectedUserIds.map((userId) => 
+          sortedUserIds.map((userId) => 
             fetchTransactionsForTicker(userId, ticker, start, end)
           )
         );
 
-        // 🔹 3. Połącz dane użytkowników z kolorami
-        const userTransactions = selectedUserIds.map((userId, idx) => ({
+        // 🔹 3. Połącz dane użytkowników z kolorami i nazwami
+        const userTransactions = sortedUserIds.map((userId, idx) => ({
           userId,
+          userName: selectedUsers[userId] || `User ${userId}`,
           color: colorPalette[idx % colorPalette.length],
           transactions: allTransactions[idx],
         }));
@@ -58,12 +64,11 @@ function StockChart({ onTransactionsSelect, selectedUserIds = [], colorPalette =
     };
 
     fetchAll();
-  }, [ticker, range, customRange, selectedUserIds]);
+  }, [ticker, range, customRange, selectedUsers]);
 
-const handleMarkerClick = (transactions = []) => {
+  const handleMarkerClick = (transactions = []) => {
     onTransactionsSelect?.(transactions);
-};
-
+  };
 
   return (
     <div className="portfolio-chart-container">
@@ -80,6 +85,7 @@ const handleMarkerClick = (transactions = []) => {
           />
         </div>
         <div className="sidebar-section">
+          <StockChangeDisplay dataSets={dataSets} />
           <ChartRangeButtons 
             range={range} 
             onChange={handleRangeChange} 

@@ -1,24 +1,21 @@
-// src/components/PortfolioDetails/PositionList.js
 import React from "react";
 
 function PositionList({ positions }) {
   if (!positions || positions.length === 0) {
-    return <p>No open positions.</p>;
+    return <div className="no-positions">No open positions.</div>;
   }
 
   return (
-    <ul className="position-list">
+    <div className="positions-list">
       {positions.map((p, i) => (
-        <li key={i} className="position-item">
-          <span className="ticker">{p.ticker}</span>
-          <span className="shares">{p.shares}</span>
-          <span className="symbol">@</span>
-          <span className="price">${p.price.toFixed(2)}</span>
-          <span className="symbol">=</span>
-          <span className="value">${p.value.toFixed(2)}</span>
-        </li>
+        <div key={i} className="position-row">
+          <div className="col-ticker">{p.ticker}</div>
+          <div className="col-shares">{p.shares}</div>
+          <div className="col-price">${p.price.toFixed(2)}</div>
+          <div className="col-value">${p.value.toFixed(2)}</div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 

@@ -6,9 +6,14 @@ import { fetchValuation } from "./utils/fetchUtils";
 import { useChartRange } from "../common/useChartRange";
 import "../../App.css";
 
-function PortfolioChart({ onPointClick, userIds, colorPalette }) {
+function PortfolioChart({ onPointClick, selectedUsers, colorPalette }) {
   const totalStart = new Date("2024-10-02T13:30:00Z");
   const totalEnd = new Date("2024-12-04T20:30:00Z");
+  
+  // 🔹 Posortowane ID użytkowników (numerycznie)
+  const sortedUserIds = Object.keys(selectedUsers)
+    .map(id => parseInt(id))
+    .sort((a, b) => a - b);
 
   const {
     range,
@@ -21,7 +26,7 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
   const [dataSets, setDataSets] = useState([]);
 
   useEffect(() => {
-    if (!userIds.length) {
+    if (!sortedUserIds.length) {
       setDataSets([]);
       return;
     }
@@ -31,11 +36,12 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
     const fetchAll = async () => {
       try {
         const results = await Promise.all(
-          userIds.map((id) => fetchValuation(id, start, end, interval))
+          sortedUserIds.map((id) => fetchValuation(id, start, end, interval))
         );
 
         const merged = results.map((data, idx) => ({
-          userId: userIds[idx],
+          userId: sortedUserIds[idx],
+          userName: selectedUsers[sortedUserIds[idx]] || `User ${sortedUserIds[idx]}`,
           data,
           color: colorPalette[idx % colorPalette.length],
         }));
@@ -47,7 +53,7 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
     };
 
     fetchAll();
-  }, [range, customRange, userIds, colorPalette]);
+  }, [range, customRange, selectedUsers, colorPalette]);
 
   return (
     <div className="portfolio-chart-container">
@@ -57,12 +63,16 @@ function PortfolioChart({ onPointClick, userIds, colorPalette }) {
             dataSets={dataSets}
             range={range}
             onPointClick={onPointClick}
+            selectedUsers={selectedUsers}
             colorPalette={colorPalette}
           />
         </div>
 
         <div className="sidebar-section">
-          <PortfolioChangeDisplay dataSets={dataSets} />
+          <PortfolioChangeDisplay 
+            dataSets={dataSets} 
+            selectedUsers={selectedUsers}
+          />
           <ChartRangeButtons
             range={range}
             onChange={handleRangeChange}

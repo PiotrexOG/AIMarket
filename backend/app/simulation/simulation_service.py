@@ -6,7 +6,7 @@ from sqlalchemy import Transaction
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.config import DEBUG_RESET
+from app.config import DEBUG_RESET, USER_NAMES
 from app.db.schemas.market_data import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
@@ -79,7 +79,7 @@ class SimulationService:
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
             for user_id in range(1, no_users + 1):
-                user = self.user_service.create_user(UserCreate(name=f"User {user_id}"))
+                user = self.user_service.create_user(UserCreate(name=USER_NAMES[user_id-1]))
                 self.portfolio_service.create_portfolio(PortfolioCreate(
                     name=f"Portfolio {user_id}", user_id=user.id
                 ))

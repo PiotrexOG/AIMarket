@@ -1,6 +1,6 @@
 import React from "react";
 
-function PortfolioChangeDisplay({ dataSets }) {
+function PortfolioChangeDisplay({ dataSets, selectedUsers }) {
   if (!dataSets || dataSets.length === 0) {
     return (
       <div className="portfolio-change-display">
@@ -25,13 +25,14 @@ function PortfolioChangeDisplay({ dataSets }) {
         const safeChange = isNaN(change) ? 0 : change;
         const sign = safeChange >= 0 ? "+" : "";
         const isPositive = safeChange >= 0;
+        const userName = selectedUsers[set.userId] || `User ${set.userId}`;
 
         return (
           <p
             key={set.userId}
             className={`change-value ${isPositive ? "positive" : "negative"}`}
           >
-            <span style={{ color: set.color }}>User {set.userId}:</span>{" "}
+            <span style={{ color: set.color }}>{userName}:</span>{" "}
             {`${sign}${safeChange.toFixed(2)}%`}
           </p>
         );

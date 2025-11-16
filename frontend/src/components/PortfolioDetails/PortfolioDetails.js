@@ -4,7 +4,7 @@ import PositionList from "./PositionList";
 import { formatTimestamp } from "./utils/formatUtils";
 import "../../App.css";
 
-function PortfolioDetails({ userId, timestamp, onClose, color }) {
+function PortfolioDetails({ userId, timestamp, userName, onClose, color }) {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
@@ -21,16 +21,33 @@ function PortfolioDetails({ userId, timestamp, onClose, color }) {
 
   return (
     <div className="portfolio-details-container" style={{ border: `3px solid ${color}` }}>
-      <h2>User {userId}</h2>
-
-      <div className="summary">
-        <p><strong>📊 Portfolio Value:</strong> ${details.portfolio_value.toFixed(2)}</p>
-        <p><strong>💵 Cash:</strong> ${details.cash.toFixed(2)}</p>
+      <div className="user-label" style={{ backgroundColor: color }}>
+        {userName}
       </div>
 
-      <h3>Positions</h3>
+      <div className="user-summary">
+        <div className="summary-row">
+          <div className="summary-label">Portfolio Value</div>
+          <div className="summary-value">${details.portfolio_value.toFixed(2)}</div>
+        </div>
+
+        <div className="summary-row">
+          <div className="summary-label">Cash</div>
+          <div className="summary-value">${details.cash.toFixed(2)}</div>
+        </div>
+      </div>
+
+
+      <div className="header-row positions-header">
+        <div>Ticker</div>
+        <div>Shares</div>
+        <div>Avg Price</div>
+        <div>Value</div>
+      </div>
+
       <PositionList positions={details.positions} />
     </div>
+
   );
 }
 

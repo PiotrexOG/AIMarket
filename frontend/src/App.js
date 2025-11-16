@@ -6,13 +6,13 @@ import UserSelector from "./components/UserSelector/UserSelector";
 import TransactionsView from "./components/TransactionsView/TransactionsView";
 import StockList from "./components/StockList/StockList";
 import StockChart from "./components/StockChart/StockChart";
+import StockTransactionPanel from "./components/StockTransactionPanel/StockTransactionPanel";
 import "./App.css";
 
 function App() {
   const [selectedPoint, setSelectedPoint] = useState(null);
-  const [selectedUserIds, setSelectedUserIds] = useState([]);
+  const [selectedUsers, setSelectedUsers] = useState({});
   const [selectedTransactions, setSelectedTransactions] = useState(null);
-
 
   const colorPalette = [
     "#8b5cf6",
@@ -24,9 +24,17 @@ function App() {
     "#4a90e2",
   ];
 
-  const handleSelectionChange = (updated) => {
-    const sorted = [...updated].sort((a, b) => a - b);
-    setSelectedUserIds(sorted);
+  const handleSelectionChange = (usersDict) => {
+    // Posortuj słownik według ID (kluczy)
+    const sortedDict = Object.keys(usersDict)
+      .sort((a, b) => parseInt(a) - parseInt(b))
+      .reduce((acc, key) => {
+        acc[key] = usersDict[key];
+        return acc;
+      }, {});
+    
+    console.log("Selected users (sorted):", sortedDict);
+    setSelectedUsers(sortedDict);
   };
 
   return (
@@ -54,7 +62,7 @@ function App() {
             element={
               <>
                 <PortfolioChart
-                  userIds={selectedUserIds}
+                  selectedUsers={selectedUsers}
                   onPointClick={setSelectedPoint}
                   colorPalette={colorPalette}
                 />
@@ -70,13 +78,14 @@ function App() {
                           minute: "2-digit",
                         })}{" "}
                         ({Intl.DateTimeFormat().resolvedOptions().timeZone})
-                      </div>
+                      </div>  
                     </div>
                     <div className="details-grid">
-                      {selectedUserIds.map((id, idx) => (
+                      {Object.keys(selectedUsers).map((id, idx) => (
                         <PortfolioDetails
                           key={id}
                           userId={id}
+                          userName={selectedUsers[id]}
                           timestamp={selectedPoint.date}
                           color={colorPalette[idx % colorPalette.length]}
                           onClose={() => setSelectedPoint(null)}
@@ -94,7 +103,7 @@ function App() {
             path="/transactions"
             element={
               <TransactionsView
-                selectedUserIds={selectedUserIds}
+                selectedUsers={selectedUsers}
                 colorPalette={colorPalette}
               />
             }
@@ -107,30 +116,31 @@ function App() {
           <Route
             path="/stocks/:ticker"
             element={
-              <StockChart
-                onTransactionsSelect={setSelectedTransactions}
-                selectedUserIds={selectedUserIds}
-                colorPalette={colorPalette}
-              />
+              <>
+                <StockChart
+                  onTransactionsSelect={setSelectedTransactions}
+                  selectedUsers={selectedUsers}
+                  colorPalette={colorPalette}
+                />
+
+                {selectedTransactions && (
+                  <div className="details-wrapper">
+                    <StockTransactionPanel
+                      transactions={selectedTransactions}
+                      onClose={() => setSelectedTransactions(null)}
+                      selectedUsers={selectedUsers}
+                      colorPalette={colorPalette}
+                    />
+                  </div>
+                )}
+              </>
             }
           />
+
 
         </Routes>
       </div>
 
-        {selectedTransactions && selectedTransactions.length > 0 && (
-          <div className="transaction-details-panel">
-            <h3>📋 Selected Transactions</h3>
-              {selectedTransactions.map((t, i) => (
-                <div key={i} className="transaction-item" style={{borderLeft:`4px solid ${t.color}`}}>
-                  <strong>User {t.userId}</strong> <br />
-                  <span>{new Date(t.datetime).toLocaleString()}</span>
-                  <div>Quantity: {t.quantity}</div>
-                  <div>Ratio: {(t.ratio * 100).toFixed(2)}%</div>
-                </div>
-            ))}
-        </div>
-      )}
 
     </Router>
   );

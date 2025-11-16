@@ -16,6 +16,7 @@ REAL_TIME = False
 LOCALLY = True
 
 STARTING_CASH = 10000.0
+USER_NAMES = ["Piotr", "Adam", "Jerzy"]
 NO_USERS = 3
 
 # NY 2023-10-02 09:30 -> UTC 2023-10-02 13:30

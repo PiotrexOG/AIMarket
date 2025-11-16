@@ -1,0 +1,114 @@
+/* 🔹 NEW: wrapper that enforces narrower width */
+.stock-panel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.stock-panel {
+  width: 100%;
+  max-width: 1600px;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-family: "Inter", sans-serif;
+  margin-bottom: 30px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+/* USERS LAYOUT */
+.users-columns {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-column {
+  flex: 1;
+  min-width: 400px; /* 👈 zwiększone dla 6 kolumn */
+  border: 3px solid;
+  border-radius: 12px;
+  background: #fafafa;
+  padding: 10px;
+}
+
+/* USER NAME */
+.user-label {
+  text-align: center;
+  padding: 6px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* HEADERS (inside each user box) - 6 kolumn z równym rozmieszczeniem */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 3px 8px;
+  font-family: monospace;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+}
+
+/* TRANSACTION LIST */
+.txn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* TRANSACTION ROW - 6 kolumn z tym samym rozmieszczeniem co nagłówki */
+.txn-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 3px 8px;
+  font-family: monospace;
+  font-size: 0.95em;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e3e3e3;
+  align-items: center;
+}
+
+/* Wersja z równymi kolumnami */
+.header-row > div,
+.txn-row > div {
+  flex: 1; /* 👈 wszystkie mają taką samą szerokość */
+  text-align: center;
+  min-width: 0;
+}
+
+/* Tylko wyrównanie dla pierwszej i ostatniej kolumny */
+.header-row > div:first-child,
+.txn-row > div:first-child {
+  text-align: left;
+}
+
+.header-row > div:last-child,
+.txn-row > div:last-child {
+  text-align: right;
+}
+

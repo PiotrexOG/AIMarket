@@ -72,6 +72,8 @@ class PortfolioTickerTransactionRead(BaseModel):
     datetime: datetime
     quantity: float  # ze znakiem
     ratio: float     # (total_value / portfolio_total_value) ze znakiem
+    price: float
+    total_value: float
 
     model_config = {
         "from_attributes": True,

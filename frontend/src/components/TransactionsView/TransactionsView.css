@@ -3,6 +3,8 @@
   font-family: "Inter", sans-serif;
 }
 
+/* --- GRUPOWANIE --- */
+
 .month-group {
   margin-top: 25px;
 }
@@ -15,7 +17,7 @@
 }
 
 .date-group {
-  margin-left: 30px; /* 📌 wcięcie dla dni */
+  margin-left: 30px;
   margin-top: 15px;
 }
 
@@ -26,20 +28,27 @@
   margin-bottom: 8px;
 }
 
+/* --- KOLUMNY UŻYTKOWNIKÓW --- */
+
 .user-columns {
   display: flex;
-  gap: 16px;
-  margin-left: 50px; /* 📌 wcięcie kolumn względem daty */
-  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 16px;
+  margin-left: 50px;
+  align-items: stretch;
 }
 
 .user-column {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 200px;
+
+  /* >>> SZARE TŁO JAK W STOCK PANEL <<< */
+  background-color: #fafafa;
+
   border: 3px solid;
   border-radius: 10px;
-  background-color: #fafafa;
   padding: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -52,15 +61,79 @@
   margin-bottom: 8px;
 }
 
-.transaction-item {
+/* --- WNĘTRZE KOLUMNY (BIAŁE TŁO) --- */
+
+.user-column-content {
+  flex: 1;
+  background: #fafafa;     /* >>> BIAŁE POLE W ŚRODKU <<< */
+  border-radius: 6px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* --- NAGŁÓWKI (identycznie jak w StockTransactionPanel) --- */
+
+.header-row {
   display: flex;
   justify-content: space-between;
   margin: 5px 0;
-  padding: 3px 0;
+  padding: 3px 8px;
   font-family: monospace;
   font-size: 0.95em;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ddd;
 }
 
+.header-row > div {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.header-row > div:first-child {
+  text-align: left;
+}
+
+.header-row > div:last-child {
+  text-align: right;
+}
+
+/* --- POJEDYNCZA TRANSAKCJA (białe kartowe tło) --- */
+
+.transaction-item {
+  background: white;               /* >>> JASNA KARTA TRANSKCJI <<< */
+  border-radius: 6px;
+  border: 1px solid #e3e3e3;
+  padding: 3px 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: monospace;
+  font-size: 0.95em;
+
+  margin: 5px 0;
+}
+
+.transaction-item > div {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.transaction-item > div:first-child {
+  text-align: left;
+}
+
+.transaction-item > div:last-child {
+  text-align: right;
+}
+
+/* Kolorowanie typu transakcji */
 .tx-type.buy {
   color: green;
 }
@@ -69,11 +142,14 @@
   color: red;
 }
 
+/* Gdy brak transakcji */
 .no-tx {
+  margin-top: auto;
+  margin-bottom: auto;
   text-align: center;
   color: #aaa;
   font-style: italic;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .empty-info {
