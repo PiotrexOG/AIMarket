@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
+from app.services.analytical_service import AnalyticalService
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
 from app.db.database import get_db
@@ -25,7 +26,8 @@ def get_transaction_service(db: Session) -> PortfolioTransactionService:
     portfolio_service = PortfolioService(db, valuation_service)
     return PortfolioTransactionService(db, portfolio_service)
 
-
+def get_analytical_service() -> AnalyticalService:
+    return AnalyticalService()
 
 # ---- 1️⃣ Historia z bazy ----
 @router.get("/{portfolio_id}/history")

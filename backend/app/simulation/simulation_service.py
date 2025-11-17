@@ -6,10 +6,11 @@ from sqlalchemy import Transaction
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, USER_NAMES
+from app.config import DEBUG_RESET, USER_NAMES, USERS, STARTING_CASH
 from app.db.schemas.market_data import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
+from app.services.analytical_service import AnalyticalService
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.portfolio_transaction_service import PortfolioTransactionService
@@ -72,18 +73,22 @@ class SimulationService:
             print(f"✅ Dane dla {ticker} zapisane do bazy")
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
-    def initialize_users(self, no_users: int, starting_cash: float):
+    def initialize_users(self):
         existing_users = self.user_service.list_users()
         users_to_init = []
+        starting_cash = STARTING_CASH
+        user_names = list(USERS.keys())
 
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
-            for user_id in range(1, no_users + 1):
-                user = self.user_service.create_user(UserCreate(name=USER_NAMES[user_id-1]))
+            for name in user_names:
+                user = self.user_service.create_user(UserCreate(name=name))
                 self.portfolio_service.create_portfolio(PortfolioCreate(
-                    name=f"Portfolio {user_id}", user_id=user.id
+                    name=f"Portfolio {name}",
+                    user_id=user.id
                 ))
-                users_to_init.append((user, starting_cash, {}))  # shares puste
+
+                users_to_init.append((user, starting_cash, {}))
         else:
             # 📥 odtwarzanie stanu z bazy
             for user in existing_users:
@@ -101,10 +106,14 @@ class SimulationService:
 
         # 🚀 Wspólna logika budowania UserSimulatorów
         for user, cash, shares in users_to_init:
+            decision_maker_factory = USERS[user.name]
+            decision_maker = decision_maker_factory()
+
             self.users[user.id] = UserSimulator(
                 user_id=user.id,
                 starting_cash=cash,
                 shares=shares,
+                decision_maker=decision_maker,
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
@@ -128,7 +137,7 @@ class SimulationService:
         print(current_time)
         while current_time <= self.end_time:
             self._simulate_time_step(current_time)
-            current_time += timedelta(minutes=30)
+            current_time += timedelta(hours=1)
         print("✅ Symulacja zakończona.")
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----

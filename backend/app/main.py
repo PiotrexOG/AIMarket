@@ -10,7 +10,7 @@ from sqlalchemy import desc
 from app.db.models.portfolio import PortfolioHistory
 from app.simulation.simulation_service import SimulationService
 from app.db.database import SessionLocal
-from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET, REAL_TIME
+from app.config import START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET, REAL_TIME, USERS
 
 app = FastAPI(title="Stock Simulator API")
 
@@ -65,10 +65,7 @@ def run_simulation():
         )
 
         simulation_service.fetch_market_data(interval="1h")
-        simulation_service.initialize_users(
-            no_users=NO_USERS,
-            starting_cash=STARTING_CASH,
-        )
+        simulation_service.initialize_users()
         simulation_service.run_simulation()
 
 

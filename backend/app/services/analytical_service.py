@@ -1,0 +1,105 @@
+import numpy as np
+import pandas as pd
+
+class AnalyticalService:
+    """
+    Serwis liczący wskaźniki techniczne na żądanie.
+    Nie zapisuje niczego do bazy – działa na przekazanym DataFrame.
+    """
+
+    def __init__(self):
+        pass
+
+    # -------------------------
+    # GŁÓWNY INTERFEJS
+    # -------------------------
+
+    def compute_all(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Wzbogaca dataframe o komplet wskaźników technicznych.
+        """
+        df = df.copy()
+
+        df = self.sma(df, 20)
+        df = self.sma(df, 50)
+        df = self.sma(df, 200)
+
+        df = self.ema(df, 20)
+        df = self.ema(df, 50)
+
+        df = self.rsi(df, 14)
+        df = self.macd(df)
+        df = self.atr(df, 14)
+
+        df = self.volume_ratio(df, 20)
+
+        df = self.support_resistance(df, 20)
+
+        df = self.price_vs_sma(df, 20)
+        df = self.roc(df, 10)
+
+        return df
+
+    # -------------------------
+    # WSKAŹNIKI
+    # -------------------------
+
+    def sma(self, df: pd.DataFrame, period: int) -> pd.DataFrame:
+        df[f"SMA_{period}"] = df["Close"].rolling(period).mean()
+        return df
+
+    def ema(self, df: pd.DataFrame, period: int) -> pd.DataFrame:
+        df[f"EMA_{period}"] = df["Close"].ewm(span=period, adjust=False).mean()
+        return df
+
+    def rsi(self, df: pd.DataFrame, period: int = 14) -> pd.DataFrame:
+        delta = df["Close"].diff()
+        gain = delta.clip(lower=0)
+        loss = -delta.clip(upper=0)
+
+        avg_gain = gain.rolling(period).mean()
+        avg_loss = loss.rolling(period).mean()
+
+        rs = avg_gain / avg_loss
+        df[f"RSI_{period}"] = 100 - (100 / (1 + rs))
+        return df
+
+    def macd(self, df: pd.DataFrame) -> pd.DataFrame:
+        ema12 = df["Close"].ewm(span=12, adjust=False).mean()
+        ema26 = df["Close"].ewm(span=26, adjust=False).mean()
+
+        df["MACD"] = ema12 - ema26
+        df["MACD_signal"] = df["MACD"].ewm(span=9, adjust=False).mean()
+        df["MACD_hist"] = df["MACD"] - df["MACD_signal"]
+
+        return df
+
+    def atr(self, df: pd.DataFrame, period: int = 14) -> pd.DataFrame:
+        tr1 = df["High"] - df["Low"]
+        tr2 = abs(df["High"] - df["Close"].shift(1))
+        tr3 = abs(df["Low"] - df["Close"].shift(1))
+
+        tr = np.maximum(tr1, np.maximum(tr2, tr3))
+        df[f"ATR_{period}"] = tr.rolling(period).mean()
+
+        return df
+
+    def volume_ratio(self, df: pd.DataFrame, period: int = 20) -> pd.DataFrame:
+        df[f"Vol_SMA_{period}"] = df["Volume"].rolling(period).mean()
+        df[f"Vol_Ratio_{period}"] = df["Volume"] / df[f"Vol_SMA_{period}"]
+        return df
+
+    def support_resistance(self, df: pd.DataFrame, period: int = 20) -> pd.DataFrame:
+        df[f"Support_{period}"] = df["Low"].rolling(period).min()
+        df[f"Resistance_{period}"] = df["High"].rolling(period).max()
+        return df
+
+    def price_vs_sma(self, df: pd.DataFrame, period: int = 20) -> pd.DataFrame:
+        sma_col = f"SMA_{period}"
+        if sma_col in df:
+            df[f"Price_vs_SMA_{period}"] = df["Close"] / df[sma_col] - 1
+        return df
+
+    def roc(self, df: pd.DataFrame, period: int = 10) -> pd.DataFrame:
+        df[f"ROC_{period}"] = df["Close"].pct_change(periods=period)
+        return df

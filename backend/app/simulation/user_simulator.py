@@ -1,23 +1,21 @@
 from datetime import datetime, timezone
-from time import sleep
 from typing import Dict
 
 from app.config import TICKERS
 from app.db.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
 from app.simulation.portfolio import Portfolio
-from app.core.decision_maker import DecisionMaker
 from app.core import market_hours
 
 
 class UserSimulator:
-    def __init__(self, user_id: int, starting_cash: float, portfolio_service, market_data_service, valuation_service, transaction_service, shares: Dict[str, int] = None, use_model: bool = False, with_explanation: bool = False):
+    def __init__(self, user_id: int, starting_cash: float, decision_maker, portfolio_service, market_data_service, valuation_service, transaction_service, shares: Dict[str, int] = None, use_model: bool = False, with_explanation: bool = False):
         self.user_id = user_id
         self.portfolio = Portfolio(
             portfolio_id=user_id,
             starting_cash=starting_cash,
             shares=shares
         )
-        self.decision_maker = DecisionMaker(use_model)
+        self.decision_maker = decision_maker
         self.portfolio_service = portfolio_service
         self.market_data_service = market_data_service
         self.valuation_service = valuation_service
@@ -63,6 +61,7 @@ class UserSimulator:
                 self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)
 
 
+
     def execute_decision(self, ticker: str, decision: str, num: int, price: float, date_time: datetime):
         if decision in ["BUY", "SELL"]:
             if decision == "BUY":
@@ -70,7 +69,7 @@ class UserSimulator:
             elif decision == "SELL":
                 self.portfolio.sell(ticker, num, price)
 
-            print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+            #print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
 
             self.transaction_service.record_transaction(
                 portfolio_id=self.portfolio.portfolio_id,
