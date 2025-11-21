@@ -1,22 +1,20 @@
 import google.generativeai as genai
-import re
 from datetime import datetime
+import os
 
-genai.configure(api_key=API_KEY)
+APIKey = os.environ.get("API_KEY")
 
 
 class LLMGEMINIDM:
     def __init__(self):
-        # Konfiguracja Gemini
-        genai.configure(api_key=API_KEY)
-        self.model = genai.GenerativeModel('gemini-2.5-flash-lite')
-        self.history = []
+        genai.configure(api_key=APIKey)
+        self.model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
-    def make_decision(self, tickers_data, portfolio, with_explanation):
-        """
-        tickers_data: słownik {ticker: market_data} dla wszystkich analizowanych spółek
-        portfolio: aktualny portfel
-        """
+    # ============================================================
+    # PUBLIC METHOD
+    # ============================================================
+    def make_decision(self, tickers_data, portfolio, with_explanation=False):
+
         prompt = self._create_prompt(tickers_data, portfolio, with_explanation)
 
         print("=== PROMPT ===")
@@ -24,189 +22,177 @@ class LLMGEMINIDM:
         print("==============")
 
         try:
-            # Wysyłanie wiadomości do Gemini
             response = self.model.generate_content(prompt)
+            raw_text = response.text.strip()
 
-            reply = response.text.strip()
+            print("=== RAW RESPONSE ===")
+            print(raw_text)
+            print("====================")
 
-            print("=== RESPONSE ===")
-            print(reply)
-            print("================")
+            decisions = self._parse_multi_ticker_response(raw_text)
 
-            # Zwracamy również prompt i response dla endpointu
-            decision, quantity, ticker, explanation = self._parse_response(reply, with_explanation)
+            return decisions
 
-            return {
-                "decision": decision,
-                "quantity": quantity,
-                "ticker": ticker,
-                "explanation": explanation,
-                "prompt": prompt,
-                "response": reply,
-                "timestamp": datetime.now()
-            }
 
         except Exception as e:
-            print(f"Błąd Gemini: {e}")
-            return {
-                "decision": "HOLD",
-                "quantity": 0,
-                "ticker": "",
-                "explanation": f"Error: {str(e)}",
-                "prompt": prompt,
-                "response": "",
-                "timestamp": datetime.now()
+            print("Gemini error:", e)
+
+            fallback = {
+                ticker: {
+                    "DECISION": "HOLD",
+                    "NUMBER": 0,
+                    "REASON": "error"
+                }
+                for ticker in tickers_data
             }
 
+            return fallback
+
+    # ============================================================
+    # PROMPT GENERATION
+    # ============================================================
     def _create_prompt(self, tickers_data, portfolio, with_explanation):
-        # Formatowanie danych dla wszystkich spółek
-        all_tickers_analysis = []
 
-        for ticker, market_data in tickers_data.items():
-            if market_data:
-                latest = market_data  # Najnowsze dane
+        # ----------------------------------------------------------
+        # BUILD FULL TECHNICAL ANALYSIS BLOCK
+        # ----------------------------------------------------------
+        analysis_lines = []
 
-                # Obliczanie sygnałów technicznych
-                rsi_signal = "OVERSOLD" if latest.get('RSI_14', 50) < 30 else "OVERBOUGHT" if latest.get('RSI_14',
-                                                                                                         50) > 70 else "NEUTRAL"
-                macd_signal = "BULLISH" if latest.get('MACD', 0) > latest.get('MACD_signal', 0) else "BEARISH"
-                price_vs_sma = "ABOVE_20MA" if latest.get('Price_vs_SMA_20', 0) > 0 else "BELOW_20MA"
+        for ticker, latest in tickers_data.items():
+            if not latest:
+                continue
 
-                ticker_analysis = [
-                    f"=== {ticker} ===",
-                    f"Price: {latest.get('Close', 'N/A')}",
-                    f"RSI: {latest.get('RSI_14', 'N/A')} ({rsi_signal})",
-                    f"MACD: {latest.get('MACD', 'N/A')} vs Signal: {latest.get('MACD_signal', 'N/A')} ({macd_signal})",
-                    f"Trend vs SMA20: {latest.get('Price_vs_SMA_20', 'N/A')} ({price_vs_sma})",
-                    f"Support: {latest.get('Support_20', 'N/A')}, Resistance: {latest.get('Resistance_20', 'N/A')}",
-                    f"Momentum (ROC_10): {latest.get('ROC_10', 'N/A')}",
-                    f"Volume Ratio: {latest.get('Vol_Ratio_20', 'N/A')}",
-                    f"Current Position: {portfolio.shares.get(ticker, 0)} shares",
-                    ""
-                ]
-                all_tickers_analysis.extend(ticker_analysis)
-
-        analysis_text = "\n".join(all_tickers_analysis)
-
-        # Informacje o portfelu
-        total_value = portfolio.cash
-        portfolio_details = []
-
-        for ticker_name, shares in portfolio.shares.items():
-            if shares > 0 and ticker_name in tickers_data:
-                market_data = tickers_data[ticker_name]
-                if market_data:
-                    current_price = market_data[-1].get('Close', 0)
-                    position_value = shares * current_price
-                    total_value += position_value
-                    portfolio_details.append(
-                        f"{ticker_name}: {shares} shares, Current Value: {position_value:.2f}"
-                    )
-
-        portfolio_summary = "\n".join(portfolio_details) if portfolio_details else "No positions"
-        portfolio_summary += f"\nCash: {portfolio.cash:.2f}"
-        portfolio_summary += f"\nTotal Portfolio Value: {total_value:.2f}"
-
-        header = (
-            "Maximize 1-year profit. Compare all available stocks and make the BEST investment decision.\n\n"
-            "TECHNICAL INDICATORS GUIDE:\n"
-            "- RSI_14: >70 = overbought (consider sell), <30 = oversold (consider buy)\n"
-            "- MACD: Above signal line = bullish, Below = bearish\n"
-            "- Price_vs_SMA_20: >0 = above 20-day average (bullish), <0 = below (bearish)\n"
-            "- ROC_10: Positive = upward momentum, Negative = downward momentum\n"
-            "- Support/Resistance: Key price levels for entry/exit\n"
-            "- Vol_Ratio_20: >1 = higher volume than average (confirms moves)\n\n"
-            "PRIORITIZE:\n"
-            "1. Stocks with strong technical signals (RSI oversold + MACD bullish + above SMA20)\n"
-            "2. Risk management and position sizing\n"
-            "3. Portfolio diversification\n"
-            "4. Profit-taking on overbought positions\n"
-        )
-
-        if with_explanation:
-            instruction = (
-                "Return EXACTLY in this format:\n"
-                "DECISION: BUY [TICKER] [QUANTITY] or SELL [TICKER] [QUANTITY] or HOLD 0\n"
-                "REASON: <brief comparison explaining why this is the best decision>"
+            # SIGNALS
+            rsi = latest.get("RSI_14", 50)
+            rsi_signal = (
+                "OVERSOLD" if rsi < 30 else
+                "OVERBOUGHT" if rsi > 70 else
+                "NEUTRAL"
             )
-        else:
-            instruction = "Return ONLY: BUY [TICKER] [QUANTITY] or SELL [TICKER] [QUANTITY] or HOLD 0"
 
-        prompt = (
-            f"{header}\n\n"
-            f"CURRENT PORTFOLIO:\n{portfolio_summary}\n\n"
-            f"TECHNICAL ANALYSIS OF AVAILABLE STOCKS:\n"
-            f"{analysis_text}\n"
-            f"AVAILABLE CASH: {portfolio.cash:.2f}\n\n"
-            f"BEST DECISION (considering all stocks):\n"
-            f"{instruction}"
+            macd = latest.get("MACD", 0)
+            macd_sig = latest.get("MACD_signal", 0)
+            macd_signal = "BULLISH" if macd > macd_sig else "BEARISH"
+
+            sma = latest.get("Price_vs_SMA_20", 0)
+            price_vs_sma = "ABOVE_20MA" if sma > 0 else "BELOW_20MA"
+
+            support = latest.get("Support_20", "N/A")
+            resistance = latest.get("Resistance_20", "N/A")
+
+            roc = latest.get("ROC_10", "N/A")
+            vol = latest.get("Vol_Ratio_20", "N/A")
+            price = latest.get("Close", "N/A")
+            position = portfolio.shares.get(ticker, 0)
+
+            # MULTILINE STRUCTURED BLOCK
+            analysis_lines.append(
+                f"=== {ticker} ===\n"
+                f"Price: {price}\n"
+                f"RSI: {rsi} ({rsi_signal})\n"
+                f"MACD: {macd} vs {macd_sig} ({macd_signal})\n"
+                f"Trend vs SMA20: {sma} ({price_vs_sma})\n"
+                f"Support: {support}, Resistance: {resistance}\n"
+                f"Momentum ROC_10: {roc}\n"
+                f"Volume Ratio: {vol}\n"
+                f"Current Position: {position}\n"
+            )
+
+        analysis_block = "\n".join(analysis_lines)
+
+        # ----------------------------------------------------------
+        # PORTFOLIO SUMMARY
+        # ----------------------------------------------------------
+        portfolio_summary = "\n".join(
+            f"{ticker}: {shares} shares"
+            for ticker, shares in portfolio.shares.items()
         )
 
-        return prompt
+        # ----------------------------------------------------------
+        # FIXED HEADER + INSTRUCTIONS
+        # ----------------------------------------------------------
+        header = (
+            "Your task is to generate EXACT trading actions for ALL tickers.\n"
+            "Your analysis must ALWAYS aim to MAXIMIZE total portfolio profit over the next 1 year.\n"
+            "Decisions MUST strictly follow the technical indicators and current portfolio positions.\n"
+            "\n"
+            "TECHNICAL INDICATORS GUIDE:\n"
+            "- RSI_14: >70 = overbought (sell), <30 = oversold (buy)\n"
+            "- MACD: Above signal = bullish, below signal = bearish\n"
+            "- Price_vs_SMA_20: >0 = bullish trend, <0 = bearish trend\n"
+            "- ROC_10: positive = upward momentum, negative = downward momentum\n"
+            "- Support/Resistance: key turning levels for price action\n"
+            "- Volume Ratio (Vol_Ratio_20): >1 confirms the strength of market moves\n"
+            "\n"
+            "PRIORITIZE:\n"
+            "1) Strong bullish setups → BUY\n"
+            "2) Overbought, weakening, or bearish setups → SELL\n"
+            "3) No strong signal → HOLD\n"
+            "4) Allocate capital effectively\n"
+            "5) Protect the downside to maximize long-term 1-year performance\n"
+            "\n"
+            "RISK & PORTFOLIO CONSTRAINTS (MANDATORY):\n"
+            "- You may SELL a stock only up to the number of shares currently held.\n"
+            "- You may NEVER SELL more shares than the portfolio owns.\n"
+            "- BUY decisions must consider available cash.\n"
+            "\n"
+            "OUTPUT FORMAT RULES (STRICT):\n"
+            "- One line *per ticker*\n"
+            "- Format:\n"
+            "  DECISION TICKER NUMBER REASON\n"
+            "- DECISION ∈ {BUY, SELL, HOLD}\n"
+            "- NUMBER = integer\n"
+            "- For HOLD: NUMBER must be 0\n"
+            "- TICKER must always appear\n"
+            "- REASON = short phrase (no markdown, no lists)\n"
+            "- DO NOT output anything besides the list of decision lines\n"
+            "\n"
+            "EXAMPLE:\n"
+            "BUY AAPL 20 strong bullish setup\n"
+            "HOLD TSLA 0 neutral indicators\n"
+            "SELL NVDA 15 overbought\n"
+            "\n"
+            "NOW ANALYZE THE DATA BELOW AND OUTPUT DECISIONS:\n"
+        )
 
-    def _parse_response(self, reply, with_explanation):
-        lines = reply.strip().splitlines()
-        if not lines:
-            return "HOLD", 0, "", "No response"
+        return (
+            f"{header}\n"
+            f"AVAILABLE CASH: {portfolio.cash}\n\n"
+            f"PORTFOLIO:\n{portfolio_summary}\n\n"
+            f"TECHNICAL ANALYSIS:\n{analysis_block}"
+        )
 
-        # Szukaj linii z decyzją
-        decision_line = None
+    # ============================================================
+    # RESPONSE PARSER
+    # ============================================================
+    def _parse_multi_ticker_response(self, text):
+
+        decisions = {}
+        lines = text.split("\n")
+
         for line in lines:
-            if any(keyword in line.upper() for keyword in ["BUY", "SELL", "HOLD", "DECISION:"]):
-                decision_line = line.upper()
-                break
+            line = line.strip()
+            if not line:
+                continue
 
-        if not decision_line:
-            decision_line = lines[0].upper()
+            parts = line.split(" ")
+            if len(parts) < 4:
+                continue
 
-        # domyślne wartości
-        decision = "HOLD"
-        ticker = ""
-        quantity = 0
-        explanation = "No explanation"
+            decision = parts[0].upper()
+            ticker = parts[1].upper()
 
-        # Parsowanie decyzji z tickerem
-        if "BUY" in decision_line:
-            decision = "BUY"
-            # Szukaj tickera i quantity
-            parts = decision_line.split()
-            for i, part in enumerate(parts):
-                if part == "BUY" and i + 2 < len(parts):
-                    ticker = parts[i + 1]
-                    try:
-                        quantity = int(parts[i + 2])
-                    except ValueError:
-                        quantity = 0
-                    break
-        elif "SELL" in decision_line:
-            decision = "SELL"
-            parts = decision_line.split()
-            for i, part in enumerate(parts):
-                if part == "SELL" and i + 2 < len(parts):
-                    ticker = parts[i + 1]
-                    try:
-                        quantity = int(parts[i + 2])
-                    except ValueError:
-                        quantity = 0
-                    break
-        elif "HOLD" in decision_line:
-            decision = "HOLD"
+            try:
+                qty = int(parts[2])
+            except:
+                qty = 0
 
-        # uzasadnienie
-        if with_explanation:
-            for line in lines:
-                if line.upper().startswith("REASON:") or line.upper().startswith("EXPLANATION:"):
-                    explanation = line.strip()
-                    break
-                elif "REASON:" in line.upper():
-                    explanation = line.strip()
-                    break
+            reason = " ".join(parts[3:])
 
-            # Jeśli nie znaleziono reason, weź drugą linię (jeśli istnieje)
-            if explanation == "No explanation" and len(lines) > 1:
-                for line in lines[1:]:
-                    if line.strip() and not any(x in line.upper() for x in ["BUY", "SELL", "HOLD", "DECISION:"]):
-                        explanation = line.strip()
-                        break
+            decisions[ticker] = {
+                "DECISION": decision,
+                "NUMBER": qty,
+                "REASON": reason,
+            }
 
-        return decision, quantity, ticker, explanation
+        return decisions

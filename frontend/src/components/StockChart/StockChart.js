@@ -9,8 +9,8 @@ import "../../App.css";
 
 function StockChart({ onTransactionsSelect, selectedUsers = {}, colorPalette = [] }) {
   const { ticker } = useParams();
-  const totalStart = new Date("2024-10-02T13:30:00Z");
-  const totalEnd = new Date("2024-12-04T20:30:00Z");
+  const totalStart = new Date("2024-10-01T13:30:00Z");
+  const totalEnd = new Date("2025-10-01T20:30:00Z");
   
   const { 
     range, 

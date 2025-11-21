@@ -17,14 +17,28 @@ class AnalyticalService:
     def resample_to_daily(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Agreguje świece godzinowe do dziennych OHLCV.
+        ZAWSZE pomija bieżący dzień - używa tylko pełnych, zamkniętych dni.
         Zakłada, że df['Datetime'] jest typu datetime.
         """
 
         df = df.copy()
+
+        # Dodaj kolumnę z datą (bez czasu)
         df["Date"] = df["Datetime"].dt.date
         df["Date"] = pd.to_datetime(df["Date"])  # normalizacja
 
-        daily = df.groupby("Date").agg({
+        # Znajdź najnowszą datę w danych
+        latest_date = df["Date"].max()
+
+        # Filtruj - usuń wszystkie wiersze z najnowszą datą (bieżący dzień)
+        df_previous_days = df[df["Date"] < latest_date]
+
+        # Jeśli nie ma danych historycznych, zwróć pusty DataFrame
+        if df_previous_days.empty:
+            return pd.DataFrame()
+
+        # Agreguj do dziennych OHLCV tylko dla poprzednich dni
+        daily = df_previous_days.groupby("Date").agg({
             "Open": "first",
             "High": "max",
             "Low": "min",
@@ -44,26 +58,39 @@ class AnalyticalService:
         """
         df = df.copy()
 
+        # Zapisz najnowszy wiersz przed resamplingiem
+        latest_row = df.iloc[-1].copy() if not df.empty else None
+
         if use_daily:
             df = self.resample_to_daily(df)
 
+        if df.empty:
+            return pd.DataFrame()
+
+        # Oblicz wskaźniki na danych dziennych
         df = self.sma(df, 20)
         df = self.sma(df, 50)
         df = self.sma(df, 200)
-
         df = self.ema(df, 20)
         df = self.ema(df, 50)
-
         df = self.rsi(df, 14)
         df = self.macd(df)
         df = self.atr(df, 14)
-
         df = self.volume_ratio(df, 20)
-
         df = self.support_resistance(df, 20)
-
         df = self.price_vs_sma(df, 20)
         df = self.roc(df, 10)
+
+        # Jeśli mamy najnowszy wiersz, nadpisz OHLCV w ostatnim wierszu wynikowym
+        if latest_row is not None:
+            # Usuń strefę czasową – dopasuj do dataframe
+            latest_row['Datetime'] = pd.to_datetime(latest_row['Datetime']).tz_localize(None)
+
+            df.iloc[-1, df.columns.get_indexer(['Datetime', 'Open', 'High', 'Low', 'Close', 'Volume'])] = [
+                latest_row['Datetime'],
+                latest_row['Open'], latest_row['High'], latest_row['Low'],
+                latest_row['Close'], latest_row['Volume']
+            ]
 
         return df
 

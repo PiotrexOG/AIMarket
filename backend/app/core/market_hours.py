@@ -2,9 +2,16 @@ from datetime import datetime, time
 import pytz
 import holidays
 
-from app.config import TICKERS_EXCHANGE_NAME
-
 from datetime import timezone
+import yfinance as yf
+
+from app.config import TICKERS
+
+TICKERS_EXCHANGE_NAME = {}
+for ticker_symbol in TICKERS:
+    ticker = yf.Ticker(ticker_symbol)
+    exchange = ticker.info.get("fullExchangeName", "Unknown Exchange")  # Domyślna wartość, jeśli brak danych
+    TICKERS_EXCHANGE_NAME[ticker_symbol] = exchange
 
 EXCHANGE_HOURS = {
     "NasdaqGS": {

@@ -8,9 +8,9 @@ const intervals = ["30m", "1h", "4h", "1d", "1w"];
 function ChartRangeButtons({ range, onChange, onCustomRangeChange }) {
   const [showCustom, setShowCustom] = useState(false);
 
-  const [customStart, setCustomStart] = useState("2024-10-02");
-  const [customEnd, setCustomEnd] = useState("2024-12-04");
-  const [customInterval, setCustomInterval] = useState("1h");
+  const [customStart, setCustomStart] = useState("2024-10-01");
+  const [customEnd, setCustomEnd] = useState("2025-10-01");
+  const [customInterval, setCustomInterval] = useState("1d");
 
   const handleRangeClick = (r) => {
     onChange(r);

@@ -1,16 +1,13 @@
 from datetime import datetime, timedelta
-from time import sleep
 from typing import Dict
 
-from sqlalchemy import Transaction
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, USER_NAMES, USERS, STARTING_CASH
+from app.config import DEBUG_RESET, USERS, STARTING_CASH
 from app.db.schemas.market_data import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
-from app.services.analytical_service import AnalyticalService
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.portfolio_transaction_service import PortfolioTransactionService
@@ -138,10 +135,10 @@ class SimulationService:
         print(current_time)
         while current_time <= self.end_time:
             self._simulate_time_step(current_time)
-            current_time += timedelta(hours=1)
+            current_time += timedelta(weeks=1)
         print("✅ Symulacja zakończona.")
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
         for user_simulator in self.users.values():
-            user_simulator.process_dayGEM(current_time)
+            user_simulator.process_day(current_time)

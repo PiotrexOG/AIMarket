@@ -5,7 +5,14 @@ import "./StockTransactionPanel.css";
 function StockTransactionPanel({ transactions, onClose, selectedUsers = {}, colorPalette = [] }) {
   if (!transactions || transactions.length === 0) return null;
 
-  const grouped = transactions.reduce((acc, tx) => {
+  // 🔹 Filtruj transakcje tylko dla wybranych użytkowników
+  const filteredTransactions = transactions.filter(tx => 
+    selectedUsers.hasOwnProperty(tx.userId)
+  );
+
+  if (filteredTransactions.length === 0) return null;
+
+  const grouped = filteredTransactions.reduce((acc, tx) => {
     if (!acc[tx.userId]) acc[tx.userId] = [];
     acc[tx.userId].push(tx);
     return acc;
@@ -27,8 +34,8 @@ function StockTransactionPanel({ transactions, onClose, selectedUsers = {}, colo
         <div className="users-columns">
           {sortedUserIds.map((userId, idx) => {
             const userTx = grouped[userId];
-            const color = colorPalette[idx % colorPalette.length] || "#888888ff";
-            const userName = selectedUsers[userId] || `User ${userId}`;
+            const color = transactions[idx].color;
+            const userName = selectedUsers[userId];
 
             return (
               <div key={userId} className="user-column" style={{ borderColor: color }}>

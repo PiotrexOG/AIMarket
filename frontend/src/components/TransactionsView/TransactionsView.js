@@ -60,6 +60,21 @@ function TransactionsView({ selectedUsers, colorPalette }) {
       });
     });
 
+    // 🔹 Sortowanie dni chronologicznie w każdym miesiącu
+    Object.keys(grouped).forEach(month => {
+      const days = grouped[month];
+      const sortedDays = {};
+      
+      // Sortuj daty chronologicznie
+      Object.keys(days)
+        .sort((a, b) => new Date(a) - new Date(b))
+        .forEach(date => {
+          sortedDays[date] = days[date];
+        });
+      
+      grouped[month] = sortedDays;
+    });
+
     setGroupedData(grouped);
   }, [transactions]);
 

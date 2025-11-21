@@ -10,7 +10,7 @@ from sqlalchemy import desc
 from app.db.models.portfolio import PortfolioHistory
 from app.simulation.simulation_service import SimulationService
 from app.db.database import SessionLocal
-from app.config import ZERO_TIME, START_TIME, END_TIME, NO_USERS, STARTING_CASH, TICKERS, DEBUG_RESET, REAL_TIME, USERS
+from app.config import ZERO_TIME, START_TIME, END_TIME, STARTING_CASH, TICKERS, DEBUG_RESET, REAL_TIME, USERS
 
 app = FastAPI(title="Stock Simulator API")
 
