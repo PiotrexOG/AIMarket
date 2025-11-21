@@ -1,8 +1,10 @@
 from datetime import datetime
 from typing import Optional
 
+import numpy as np
 import pandas as pd
 from sqlalchemy.orm import Session
+
 from app.repositories.market_data_repository import MarketDataRepository
 from app.db.schemas.market_data import MarketDataCreate, TickerListDTO
 from app.services.analytical_service import AnalyticalService
@@ -69,15 +71,22 @@ class MarketDataService:
 
         return df
 
-    def get_indicators(self, ticker: str, date_time: datetime, limit: int = 200):
+    def get_indicators(self, ticker: str, date_time: datetime, use_daily=True) -> pd.DataFrame:
+        limit = 200
+        if use_daily:
+            limit = 200 * 8
+
         df = self.get_recent_df(ticker, date_time, limit)
         if df.empty:
             return {}
 
         analytical = AnalyticalService()
-        df = analytical.compute_all(df)
+        df = analytical.compute_all(df, use_daily)
 
-        # zwróć ostatni wiersz jako dict do promptu
-        return df.iloc[-1].to_dict()
+        df = df.round(3)
+
+        last = df.iloc[-1].replace({np.nan: None, np.inf: None, -np.inf: None})
+        return last.to_dict()
+
 
 

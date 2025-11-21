@@ -3,9 +3,6 @@ import time
 from openai import OpenAI
 import re
 
-MODEL = "gpt-4o-mini"
-API_KEY = "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"
-rpm_limit = 3
 
 class LLMDecisionMaker:
     def __init__(self):

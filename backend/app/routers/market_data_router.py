@@ -30,11 +30,12 @@ def get_stock_valuation(
 @router.get("/{ticker}/indicators")
 def get_stock_indicators(
     ticker: str,
+    use_daily: bool,
     date_time: datetime = Query(..., description="Data"),
     db: Session = Depends(get_db)
 ):
     service = MarketDataService(db)
-    return service.get_indicators(ticker, date_time)
+    return service.get_indicators(ticker, date_time, use_daily=use_daily)
 
 @router.get("/tickers")
 def get_all_tickers(db: Session = Depends(get_db)):

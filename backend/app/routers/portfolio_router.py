@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
+from app.decisionMakers.LLMGEMINIDM import LLMGEMINIDM
 from app.services.analytical_service import AnalyticalService
 from app.services.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
@@ -100,4 +101,60 @@ def get_portfolio_ticker_transactions(
     )
 
 
+@router.get("/{portfolio_id}/llm-analysis")
+def get_llm_analysis(
+        portfolio_id: int,
+        analysis_date: datetime = Query(..., description="Data analizy"),
+        db: Session = Depends(get_db)
+):
+    """
+    Zwraca analizę LLM dla portfela w określonym dniu
+    """
+    try:
+        # Pobierz dane portfela
+        service = get_service(db)
+        portfolio = service.get_portfolio(portfolio_id)
 
+        if not portfolio:
+            raise HTTPException(status_code=404, detail="Portfolio not found")
+
+        # Pobierz dostępne tickery z portfela lub zdefiniuj domyślne
+        tickers = list(portfolio.shares.keys()) if portfolio.shares else ["AAPL", "GOOGL", "MSFT", "NVDA"]
+
+        # Pobierz dane rynkowe dla każdego tickera
+        market_service = MarketDataService(db)
+        tickers_data = {}
+
+        for ticker in tickers:
+            try:
+                indicators = market_service.get_indicators(ticker, analysis_date, use_daily=True)
+                if indicators:
+                    tickers_data[ticker] = indicators
+            except Exception as e:
+                print(f"Error getting data for {ticker}: {e}")
+                continue
+
+        if not tickers_data:
+            raise HTTPException(status_code=404, detail="No market data available for the specified date")
+
+        # Wykonaj analizę LLM
+        decision_maker = LLMGEMINIDM()
+        result = decision_maker.make_decision(tickers_data, portfolio, with_explanation=True)
+
+        return {
+            "portfolio_id": portfolio_id,
+            "analysis_date": analysis_date,
+            "decision": result["decision"],
+            "ticker": result["ticker"],
+            "quantity": result["quantity"],
+            "explanation": result["explanation"],
+            "prompt": result["prompt"],
+            "response": result["response"],
+            "timestamp": result["timestamp"],
+            "analyzed_tickers": list(tickers_data.keys())
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Analysis error: {str(e)}")

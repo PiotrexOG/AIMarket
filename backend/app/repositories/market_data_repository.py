@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 from sqlalchemy.orm import Session
@@ -47,19 +47,29 @@ class MarketDataRepository:
 
     def exists_in_range(self, ticker: str, start: datetime, end: datetime) -> bool:
         """
-           Sprawdza czy cały zakres od start do end jest pokryty danymi w bazie.
-           """
-        # Sprawdź czy istnieją dane na początku i na końcu zakresu
+        Sprawdza czy cały zakres od start do end jest pokryty danymi w bazie.
+        Dla końca zakresu akceptuje również dane z 1 godziną wcześniej.
+        """
+        # Sprawdź czy istnieją dane na początku zakresu
         has_start = self.db.query(MarketData.id).filter(
             MarketData.ticker == ticker,
             MarketData.datetime == start
         ).first() is not None
 
-        has_end = self.db.query(MarketData.id).filter(
-            MarketData.ticker == ticker,
-            MarketData.datetime == end
-        ).first() is not None
-
+        # Sprawdź czy istnieją dane na końcu zakresu LUB 1 godzinę wcześniej
+        end_minus_1h = end - timedelta(hours=1)
+        has_end = (
+                self.db.query(MarketData.id).filter(
+                    MarketData.ticker == ticker,
+                    MarketData.datetime == end
+                ).first() is not None
+                or
+                self.db.query(MarketData.id).filter(
+                    MarketData.ticker == ticker,
+                    MarketData.datetime == end_minus_1h
+                ).first() is not None
+        )
+        return True
         return has_start and has_end
 
     def get_unique_tickers(self) -> list[str]:

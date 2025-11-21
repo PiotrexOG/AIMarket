@@ -14,11 +14,38 @@ class AnalyticalService:
     # GŁÓWNY INTERFEJS
     # -------------------------
 
-    def compute_all(self, df: pd.DataFrame) -> pd.DataFrame:
+    def resample_to_daily(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Agreguje świece godzinowe do dziennych OHLCV.
+        Zakłada, że df['Datetime'] jest typu datetime.
+        """
+
+        df = df.copy()
+        df["Date"] = df["Datetime"].dt.date
+        df["Date"] = pd.to_datetime(df["Date"])  # normalizacja
+
+        daily = df.groupby("Date").agg({
+            "Open": "first",
+            "High": "max",
+            "Low": "min",
+            "Close": "last",
+            "Volume": "sum",
+            "Ticker": "first"
+        })
+
+        daily.reset_index(drop=False, inplace=True)
+        daily.rename(columns={"Date": "Datetime"}, inplace=True)
+
+        return daily
+
+    def compute_all(self, df: pd.DataFrame, use_daily=True) -> pd.DataFrame:
         """
         Wzbogaca dataframe o komplet wskaźników technicznych.
         """
         df = df.copy()
+
+        if use_daily:
+            df = self.resample_to_daily(df)
 
         df = self.sma(df, 20)
         df = self.sma(df, 50)

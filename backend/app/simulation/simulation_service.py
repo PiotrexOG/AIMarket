@@ -19,9 +19,10 @@ from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 
 class SimulationService:
-    def __init__(self, db: Session, tickers: list[str], start_time: datetime, end_time: datetime):
+    def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime):
         self.db = db
         self.tickers = tickers
+        self.zero_time = zero_time
         self.start_time = start_time
         self.end_time = end_time
 
@@ -43,7 +44,7 @@ class SimulationService:
             # sprawdzenie, czy są już dane dla tego tickera w zakresie dat
             existing = self.market_data_service.has_data_in_range(
                 ticker=ticker,
-                start=self.start_time,
+                start=self.zero_time,
                 end=self.end_time
             )
 
@@ -52,7 +53,7 @@ class SimulationService:
                 continue
 
             df = self.yahoo_client.fetch_history(
-                ticker, self.start_time, self.end_time, interval
+                ticker, self.zero_time, self.end_time, interval
             )
             if df.empty:
                 print(f"⚠️ Brak danych dla {ticker}")
@@ -143,4 +144,4 @@ class SimulationService:
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
         for user_simulator in self.users.values():
-            user_simulator.process_day(current_time)
+            user_simulator.process_dayGEM(current_time)
