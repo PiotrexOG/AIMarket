@@ -5,6 +5,7 @@ from app.config import TICKERS
 from app.db.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
+from app.testy.compute import data_valuation
 
 
 class UserSimulator:
@@ -16,6 +17,7 @@ class UserSimulator:
         portfolio_service,
         market_data_service,
         valuation_service,
+        fundamental_service,
         transaction_service,
         shares: Dict[str, int] = None,
         with_explanation: bool = False,
@@ -33,6 +35,7 @@ class UserSimulator:
         self.valuation_service = valuation_service
         self.transaction_service = transaction_service
         self.with_explanation = with_explanation
+        self.fundamental_service = fundamental_service
 
 
 
@@ -48,6 +51,11 @@ class UserSimulator:
         tickers_data = self._fetch_ticker_data(date_time)
         if not tickers_data:
             return
+
+        tickers_fundamentals_data = self._fetch_ticker_fundaments(date_time)
+        tickers_valuation_data = self._fetch_ticker_valuations(tickers_fundamentals_data, tickers_data)
+
+        print("ticker data", tickers_fundamentals_data, tickers_valuation_data)
 
         pre_cash = self.portfolio.cash
         pre_shares = dict(self.portfolio.shares)
@@ -82,6 +90,26 @@ class UserSimulator:
     # ---------------------------------------------------------
     # Wspomagające funkcje
     # ---------------------------------------------------------
+
+    def _fetch_ticker_valuations(self, fundamentals: dict, ticker_data: dict) -> Dict[str, Dict[str, Any]]:
+        result = {}
+        for ticker in TICKERS:
+            data = data_valuation.calculate(fundamentals[ticker], ticker_data[ticker]["Close"])
+            if data:
+                result[ticker] = data
+        return result
+
+    def _fetch_ticker_fundaments(self, date_time: datetime) -> Dict[str, Dict[str, Any]]:
+        result = {}
+        for ticker in TICKERS:
+            data = self.fundamental_service.get_latest(
+                ticker,
+                date_time
+            )
+            if data:
+                result[ticker] = data
+        return result
+
     def _fetch_ticker_data(self, date_time: datetime) -> Dict[str, Dict[str, Any]]:
         result = {}
         for ticker in TICKERS:

@@ -15,12 +15,11 @@ from app.services.portfolio_transaction_service import PortfolioTransactionServi
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
-from app.testy.compute import fundamentals, quarter_helper
+from app.testy.compute import data_fundamentals, quarter_helper
 
 
 class SimulationService:
     def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime):
-        self.fundamental_snapshot_service = FundamentalSnapshotService(db)
         self.db = db
         self.tickers = tickers
         self.zero_time = zero_time
@@ -32,6 +31,7 @@ class SimulationService:
         self.valuation_service = PortfolioValuationService(self.market_data_service)
         self.portfolio_service = PortfolioService(db, self.valuation_service)
         self.transaction_service  = PortfolioTransactionService(db, self.portfolio_service)
+        self.fundamental_snapshot_service = FundamentalSnapshotService(db)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -43,7 +43,7 @@ class SimulationService:
 
         for ticker in self.tickers:
             for year, quarter in quarters:
-                funds = fundamentals.calculate(
+                funds = data_fundamentals.calculate(
                     symbol=ticker,
                     current_year=year,
                     current_quarter=quarter,
@@ -131,7 +131,8 @@ class SimulationService:
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
-                transaction_service=self.transaction_service
+                transaction_service=self.transaction_service,
+                fundamental_service=self.fundamental_snapshot_service
             )
 
             if DEBUG_RESET or not existing_users or not shares:

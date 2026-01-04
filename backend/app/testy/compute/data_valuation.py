@@ -1,19 +1,21 @@
 # =========================
 # Valuation (REQUIRES PRICE)
 # =========================
+from app.db.schemas.layers.fundamentals_snapshot_scheme import FundamentalSnapshotCreate
+
 
 def compute_valuation_metrics(
-    fundamentals: dict,
+    fundamentals: FundamentalSnapshotCreate,
     price: float
 ) -> dict:
 
-    shares = fundamentals["shares_outstanding"]
-    equity = fundamentals["equity"]
-    debt = fundamentals["total_debt"]
-    cash = fundamentals["cash_and_equivalents"]
+    shares = fundamentals.shares_outstanding
+    equity = fundamentals.equity
+    debt = fundamentals.total_debt
+    cash = fundamentals.cash_and_equivalents
 
-    revenue_ttm = fundamentals["revenue_ttm"]
-    eps_ttm = fundamentals["eps_ttm"]
+    revenue_ttm = fundamentals.revenue_ttm
+    eps_ttm = fundamentals.eps_ttm
 
     market_cap = price * shares
     enterprise_value = market_cap + debt - cash
@@ -30,7 +32,7 @@ def compute_valuation_metrics(
     }
 
 
-def calculate(fundamentals: dict, price: float) -> dict:
+def calculate(fundamentals: FundamentalSnapshotCreate, price: float) -> dict:
     valuation = compute_valuation_metrics(
         fundamentals=fundamentals,
         price=price
