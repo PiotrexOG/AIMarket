@@ -1,15 +1,8 @@
-from datetime import datetime
-
-from fastapi import APIRouter
-
 from app.services.stock_service import StockService
-from app.shared.types import ValuationInterval
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-from app.db.schemas.portfolio import PortfolioTransactionRead
-from app.services.market_data_service import MarketDataService
-from app.services.portfolio_service import PortfolioService
+from app.services.layers.market_data_service import MarketDataService
 from app.db.database import get_db
 from datetime import datetime
 from app.shared.types import ValuationInterval

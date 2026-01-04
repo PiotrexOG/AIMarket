@@ -5,18 +5,22 @@ from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
 from app.config import DEBUG_RESET, USERS, STARTING_CASH
-from app.db.schemas.market_data import MarketDataCreate
+from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
-from app.services.market_data_service import MarketDataService
+from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
+from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.portfolio_transaction_service import PortfolioTransactionService
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
+from app.testy.compute import fundamentals, quarter_helper
+
 
 class SimulationService:
     def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime):
+        self.fundamental_snapshot_service = FundamentalSnapshotService(db)
         self.db = db
         self.tickers = tickers
         self.zero_time = zero_time
@@ -31,44 +35,56 @@ class SimulationService:
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
-    # ---- Krok 1: Pobierz dane z Yahoo i zapisz do bazy ----
+
+    # Rozszerzona wersja Twojej metody
+    def fetch_data_fundaments(self):
+
+        quarters = quarter_helper.get_required_quarters(self.start_time, self.end_time)
+
+        for ticker in self.tickers:
+            for year, quarter in quarters:
+                funds = fundamentals.calculate(
+                    symbol=ticker,
+                    current_year=year,
+                    current_quarter=quarter,
+                )
+
+                raw = funds.copy()
+                as_of_date = datetime.fromisoformat(raw.pop("date"))
+
+                self.fundamental_snapshot_service.save(
+                    ticker=ticker,
+                    date_time=as_of_date,
+                    data=raw,
+                )
+
+    # Rozszerzona wersja Twojej metody
     def fetch_market_data(self, interval: str):
         """
-        Pobiera dane rynkowe dla wszystkich tickerów,
-        ale tylko jeśli w bazie jeszcze ich nie ma.
+        Pobiera historię cen oraz dane kontekstowe.
         """
+        # Pobieranie OHLCV (to co już masz)
         for ticker in self.tickers:
-            # sprawdzenie, czy są już dane dla tego tickera w zakresie dat
             existing = self.market_data_service.has_data_in_range(
-                ticker=ticker,
-                start=self.zero_time,
-                end=self.end_time
+                ticker=ticker, start=self.zero_time, end=self.end_time
             )
 
-            if existing:
-                print(f"⏭ Dane dla {ticker} już istnieją w bazie, pomijam pobieranie")
-                continue
-
-            df = self.yahoo_client.fetch_history(
-                ticker, self.zero_time, self.end_time, interval
-            )
-            if df.empty:
-                print(f"⚠️ Brak danych dla {ticker}")
-                continue
-
-            for _, row in df.iterrows():
-                self.market_data_service.add_market_data(
-                    MarketDataCreate(
-                        datetime=row["Datetime"],
-                        ticker=row["Ticker"],
-                        open=row["Open"],
-                        high=row["High"],
-                        low=row["Low"],
-                        close=row["Close"],
-                        volume=row["Volume"],
+            if not existing:
+                df = self.yahoo_client.fetch_history(ticker, self.zero_time, self.end_time, interval)
+                for _, row in df.iterrows():
+                    self.market_data_service.add_market_data(
+                        MarketDataCreate(
+                            datetime=row["Datetime"],
+                            ticker=row["Ticker"],
+                            open=row["Open"],
+                            high=row["High"],
+                            low=row["Low"],
+                            close=row["Close"],
+                            volume=row["Volume"],
+                        )
                     )
-                )
-            print(f"✅ Dane dla {ticker} zapisane do bazy")
+                print(f"✅ Historia OHLCV dla {ticker} zapisana")
+
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
     def initialize_users(self):

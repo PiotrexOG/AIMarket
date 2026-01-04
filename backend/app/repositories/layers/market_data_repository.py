@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, List
 
 from sqlalchemy.orm import Session
 from app.db.models.market_data import MarketData
-from app.db.schemas.market_data import MarketDataCreate
+from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 
 class MarketDataRepository:
     def __init__(self, db: Session):
@@ -18,6 +18,12 @@ class MarketDataRepository:
         self.db.commit()
         self.db.refresh(db_obj)
         return db_obj
+
+    def bulk_create(self, data_list: List[MarketDataCreate]):
+        """Szybki zapis wielu rekordów naraz."""
+        db_objs = [MarketData(**(d if isinstance(d, dict) else d.dict())) for d in data_list]
+        self.db.add_all(db_objs)
+        self.db.commit()
 
     def get_by_ticker_until_date(self, ticker: str, date_time: datetime, limit: int = 1):
         return (
@@ -69,7 +75,7 @@ class MarketDataRepository:
                     MarketData.datetime == end_minus_1h
                 ).first() is not None
         )
-        return True
+        #return True
         return has_start and has_end
 
     def get_unique_tickers(self) -> list[str]:

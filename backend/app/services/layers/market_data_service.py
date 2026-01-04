@@ -5,9 +5,9 @@ import numpy as np
 import pandas as pd
 from sqlalchemy.orm import Session
 
-from app.repositories.market_data_repository import MarketDataRepository
-from app.db.schemas.market_data import MarketDataCreate, TickerListDTO
-from app.services.analytical_service import AnalyticalService
+from app.repositories.layers.market_data_repository import MarketDataRepository
+from app.db.schemas.layers.market_data_scheme import MarketDataCreate, TickerListDTO
+from app.services.layers.analytical_service import AnalyticalService
 
 
 class MarketDataService:

@@ -1,7 +1,7 @@
 from datetime import datetime
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
-from app.services.market_data_service import MarketDataService
+from app.services.layers.market_data_service import MarketDataService
 from app.shared.types import ValuationInterval, INTERVAL_MAP
 
 

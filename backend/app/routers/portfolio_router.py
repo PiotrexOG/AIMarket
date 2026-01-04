@@ -1,12 +1,11 @@
-from typing import Literal, Optional
+from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
-from app.decisionMakers.LLMGEMINIDM import LLMGEMINIDM
-from app.services.analytical_service import AnalyticalService
-from app.services.market_data_service import MarketDataService
+from app.services.layers.analytical_service import AnalyticalService
+from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
 from app.db.database import get_db
 from datetime import datetime

@@ -1,8 +1,7 @@
 from datetime import datetime
-from typing import List
 
 from app.dto.portfolio_dto import PortfolioValuation, PositionDetail
-from app.services.market_data_service import MarketDataService
+from app.services.layers.market_data_service import MarketDataService
 
 
 class PortfolioValuationService:
