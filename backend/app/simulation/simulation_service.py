@@ -8,6 +8,8 @@ from app.config import DEBUG_RESET, USERS, STARTING_CASH
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
+from app.services.layers.analyst_grades_service import AnalystGradesService
+from app.services.layers.company_news_service import CompanyNewsService
 from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
 from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
@@ -16,6 +18,8 @@ from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals, quarter_helper
+from app.testy.scrap.analyst_grades import fetch_analyst_grades
+from app.testy.scrap.company_news import fetch_all_company_news
 
 
 class SimulationService:
@@ -32,6 +36,8 @@ class SimulationService:
         self.portfolio_service = PortfolioService(db, self.valuation_service)
         self.transaction_service  = PortfolioTransactionService(db, self.portfolio_service)
         self.fundamental_snapshot_service = FundamentalSnapshotService(db)
+        self.analyst_grades_service = AnalystGradesService(db)
+        self.company_news_service = CompanyNewsService(db)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -57,6 +63,60 @@ class SimulationService:
                     date_time=as_of_date,
                     data=raw,
                 )
+            print(f"✅ Fundaments dla {ticker} zapisana")
+
+    # Rozszerzona wersja Twojej metody
+    def fetch_company_news(self):
+
+        for ticker in self.tickers:
+            news = fetch_all_company_news(
+                symbol=ticker,
+                from_date=self.start_time,
+                to_date=self.end_time,
+            )
+
+            for g in news:
+                as_of_date = datetime.fromisoformat(g["datetime"])
+
+                payload = {
+                    "headline": g.get("headline"),
+                    "summary": g.get("summary")
+                }
+
+                self.company_news_service.save(
+                    ticker=ticker,
+                    date_time=as_of_date,
+                    data=payload,
+                )
+            print(f"✅ Company news dla {ticker} zapisana")
+
+    # Rozszerzona wersja Twojej metody
+    def fetch_analyst_grades(self):
+
+        for ticker in self.tickers:
+            grades = fetch_analyst_grades(
+                symbol=ticker,
+                start_date=self.start_time,
+                end_date=self.end_time,
+            )
+
+            for g in grades:
+                as_of_date = datetime.fromisoformat(g["date"])
+
+                payload = {
+                    "analystRatingsStrongBuy": g.get("analystRatingsStrongBuy"),
+                    "analystRatingsBuy": g.get("analystRatingsBuy"),
+                    "analystRatingsHold": g.get("analystRatingsHold"),
+                    "analystRatingsSell": g.get("analystRatingsSell"),
+                    "analystRatingsStrongSell": g.get("analystRatingsStrongSell"),
+                }
+
+                self.analyst_grades_service.save(
+                    ticker=ticker,
+                    date_time=as_of_date,
+                    data=payload,
+                )
+            print(f"✅ Analyst grades dla {ticker} zapisana")
 
     # Rozszerzona wersja Twojej metody
     def fetch_market_data(self, interval: str):
