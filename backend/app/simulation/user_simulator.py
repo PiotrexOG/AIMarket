@@ -3,6 +3,7 @@ from typing import Dict, Any
 
 from app.config import TICKERS
 from app.db.schemas.portfolio import PortfolioShareCreate, PortfolioHistoryCreate
+from app.decisionMakers.LLMGEMINIDM import LLMGEMINIDM
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
 from app.testy.compute import data_valuation
@@ -19,6 +20,7 @@ class UserSimulator:
         valuation_service,
         fundamental_service,
         transaction_service,
+        analyst_service,
         shares: Dict[str, int] = None,
         with_explanation: bool = False,
     ):
@@ -36,91 +38,77 @@ class UserSimulator:
         self.transaction_service = transaction_service
         self.with_explanation = with_explanation
         self.fundamental_service = fundamental_service
+        self.analyst_service = analyst_service
+
+        self.llm_models = {ticker: LLMGEMINIDM(ticker) for ticker in TICKERS}
 
 
+    def get_crucial_indicators(self, date_time: datetime):
+        if not market_hours.is_market_open_by_exchange("AAPL", date_time):
+            return
+
+        results = {}
+
+        for ticker in TICKERS:
+            analyst_grades = self.analyst_service.get_latest(ticker, date_time, 2)
+            fundamentals  = self.fundamental_service.get_latest(
+                ticker,
+                date_time
+            )
+            ohlcv = self.market_data_service.get_indicators(
+                ticker,
+                date_time,
+                use_daily=True
+            )
+
+            current_valuation = data_valuation.calculate(fundamentals, ohlcv["Close"])
+
+            results[ticker] = self.llm_models[ticker].create_prompt(analyst_grades, fundamentals, ohlcv, current_valuation)
+
+        return results
 
     # ---------------------------------------------------------
     # Główny proces jednego dnia
     # ---------------------------------------------------------
     def process_day(self, date_time: datetime) -> None:
-        # Giełda zamknięta → nic nie robimy
-        if not market_hours.is_market_open_by_exchange("AAPL", date_time):
-            return
 
-        # Pobranie danych wskaźników rynkowych
-        tickers_data = self._fetch_ticker_data(date_time)
-        if not tickers_data:
-            return
+        crucial_indicators = self.get_crucial_indicators(date_time)
 
-        tickers_fundamentals_data = self._fetch_ticker_fundaments(date_time)
-        tickers_valuation_data = self._fetch_ticker_valuations(tickers_fundamentals_data, tickers_data)
+        print(crucial_indicators)
 
-        print("ticker data", tickers_fundamentals_data, tickers_valuation_data)
-
-        pre_cash = self.portfolio.cash
-        pre_shares = dict(self.portfolio.shares)
-
-        # Decyzja
-        try:
-            decisions = self.decision_maker.make_decision(
-                tickers_data,
-                self.portfolio,
-                self.with_explanation
-            )
-
-            # Wykonanie decyzji
-            self._execute_decisions(decisions, tickers_data, date_time)
-
-        except Exception as e:
-            print(f"[LLM] Error in decision: {e}")
-
-        # Jeżeli portfel się zmienił → historia
-        if self._portfolio_changed(pre_cash, pre_shares):
-            history_data = PortfolioHistoryCreate(
-                datetime=date_time,
-                cash=self.portfolio.cash,
-                shares=[
-                    PortfolioShareCreate(ticker=t, amount=a)
-                    for t, a in self.portfolio.shares.items()
-                ]
-            )
-            self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)
+        # pre_cash = self.portfolio.cash
+        # pre_shares = dict(self.portfolio.shares)
+        #
+        # # Decyzja
+        # try:
+        #     decisions = self.decision_maker.make_decision(
+        #         crucial_indicators,
+        #         self.portfolio,
+        #         self.with_explanation
+        #     )
+        #
+        #     # Wykonanie decyzji
+        #     self._execute_decisions(decisions, crucial_indicators, date_time)
+        #
+        # except Exception as e:
+        #     print(f"[LLM] Error in decision: {e}")
+        #
+        # # Jeżeli portfel się zmienił → historia
+        # if self._portfolio_changed(pre_cash, pre_shares):
+        #     history_data = PortfolioHistoryCreate(
+        #         datetime=date_time,
+        #         cash=self.portfolio.cash,
+        #         shares=[
+        #             PortfolioShareCreate(ticker=t, amount=a)
+        #             for t, a in self.portfolio.shares.items()
+        #         ]
+        #     )
+        #     self.portfolio_service.evaluate(self.portfolio.portfolio_id, history_data)
 
 
     # ---------------------------------------------------------
     # Wspomagające funkcje
     # ---------------------------------------------------------
-
-    def _fetch_ticker_valuations(self, fundamentals: dict, ticker_data: dict) -> Dict[str, Dict[str, Any]]:
-        result = {}
-        for ticker in TICKERS:
-            data = data_valuation.calculate(fundamentals[ticker], ticker_data[ticker]["Close"])
-            if data:
-                result[ticker] = data
-        return result
-
-    def _fetch_ticker_fundaments(self, date_time: datetime) -> Dict[str, Dict[str, Any]]:
-        result = {}
-        for ticker in TICKERS:
-            data = self.fundamental_service.get_latest(
-                ticker,
-                date_time
-            )
-            if data:
-                result[ticker] = data
-        return result
-
-    def _fetch_ticker_data(self, date_time: datetime) -> Dict[str, Dict[str, Any]]:
-        result = {}
-        for ticker in TICKERS:
-            data = self.market_data_service.get_indicators(
-                ticker,
-                date_time,
-                use_daily=True
-            )
-            if data:
-                result[ticker] = data
-        return result
 
     def _execute_decisions(self, decisions, tickers_data, date_time):
         for ticker, d in decisions.items():

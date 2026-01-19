@@ -16,16 +16,19 @@ class AnalystGradesService:
         obj = self.repo.create(payload)
         return AnalystGradesDTO.model_validate(obj)
 
+    from typing import List, Optional
+
     def get_latest(
             self,
             ticker: str,
-            date_time: datetime
-    ) -> AnalystGradesDTO | None:
-        obj = self.repo.get_latest(ticker=ticker, date_time=date_time)
+            date_time: datetime,
+            limit: int = 1
+    ) -> Optional[List[AnalystGradesDTO]]:
+        objs = self.repo.get_latest(ticker=ticker, date_time=date_time, limit=limit)
 
-        if obj is None:
+        if not objs:
             return None
 
-        return AnalystGradesDTO.model_validate(obj)
+        return [AnalystGradesDTO.model_validate(obj) for obj in objs]
 
 

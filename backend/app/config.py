@@ -24,5 +24,5 @@ USERS = {
 
 ZERO_TIME = datetime(2025, 2, 1, 13, 30, tzinfo=timezone.utc)
 START_TIME = datetime(2025, 2, 10, 13, 30, tzinfo=timezone.utc)
-END_TIME = datetime(2025, 2, 28, 20, 30, tzinfo=timezone.utc)
+END_TIME = datetime(2025, 4, 28, 20, 30, tzinfo=timezone.utc)
 

@@ -17,7 +17,7 @@ class AnalystGradesRepository:
         self.db.refresh(obj)
         return obj
 
-    def get_latest(self, ticker: str, date_time: datetime):
+    def get_latest(self, ticker: str, date_time: datetime, limit: int = 1):
         return (
             self.db.query(AnalystGrades)
             .filter(
@@ -25,7 +25,8 @@ class AnalystGradesRepository:
                 AnalystGrades.as_of_date <= date_time
             )
             .order_by(AnalystGrades.as_of_date.desc())
-            .first()
+            .limit(limit)
+            .all()
         )
 
 

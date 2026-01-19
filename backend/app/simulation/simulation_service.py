@@ -192,7 +192,9 @@ class SimulationService:
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
                 transaction_service=self.transaction_service,
-                fundamental_service=self.fundamental_snapshot_service
+                fundamental_service=self.fundamental_snapshot_service,
+                analyst_service=self.analyst_grades_service
+
             )
 
             if DEBUG_RESET or not existing_users or not shares:
