@@ -74,7 +74,11 @@ class UserSimulator:
 
         crucial_indicators = self.get_crucial_indicators(date_time)
 
-        print(crucial_indicators)
+        if crucial_indicators is not None:
+            print(date_time)
+            for ticker, dic in crucial_indicators.items():
+                for key, value in dic.items():
+                    print(f"{key}: {value}")
 
         # pre_cash = self.portfolio.cash
         # pre_shares = dict(self.portfolio.shares)

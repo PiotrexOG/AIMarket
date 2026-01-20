@@ -25,7 +25,7 @@ class AnalystConsensusBuilder:
         summary = {
             "consensus_state": self._consensus_state(cur),
             "conviction_level": self._conviction_level(cur),
-            "momentum": self._sentiment_momentum(cur, prev),
+            "sentiment": self._sentiment_momentum(cur, prev),
             "polarization": self._polarization_state(cur, prev)
         }
 
@@ -68,31 +68,31 @@ class AnalystConsensusBuilder:
 
     def _consensus_state(self, cur: Optional[dict]) -> str:
         if not cur:
-            return "CONSENSUS_UNKNOWN"
+            return "UNKNOWN"
 
         if cur["bullish"] >= 65:
-            return "STRONGLY_BULLISH_CONSENSUS"
+            return "STRONGLY_BULLISH"
         if cur["bullish"] >= 50:
-            return "BULLISH_CONSENSUS"
+            return "BULLISH"
         if cur["bearish"] >= 50:
-            return "BEARISH_CONSENSUS"
+            return "BEARISH"
         if cur["bearish"] >= 65:
-            return "STRONGLY_BEARISH_CONSENSUS"
+            return "STRONGLY_BEARISH"
 
-        return "MIXED_CONSENSUS"
+        return "MIXED"
 
     def _conviction_level(self, cur: Optional[dict]) -> str:
         if not cur:
-            return "CONVICTION_UNKNOWN"
+            return "UNKNOWN"
 
         strong_total = cur["strong_buy"] + cur["strong_sell"]
 
         if strong_total >= 35:
-            return "HIGH_CONVICTION"
+            return "HIGH"
         if strong_total >= 20:
-            return "MODERATE_CONVICTION"
+            return "MODERATE"
 
-        return "LOW_CONVICTION"
+        return "LOW"
 
     def _sentiment_momentum(
             self,
@@ -100,19 +100,19 @@ class AnalystConsensusBuilder:
             prev: Optional[dict]
     ) -> str:
         if not cur or not prev:
-            return "MOMENTUM_UNKNOWN"
+            return "UNKNOWN"
 
         bullish_delta = cur["bullish"] - prev["bullish"]
         bearish_delta = cur["bearish"] - prev["bearish"]
 
         if bullish_delta > 3 and bearish_delta < 0:
-            return "SENTIMENT_IMPROVING"
+            return "IMPROVING"
         if bullish_delta < -3 and bearish_delta > 0:
-            return "SENTIMENT_DETERIORATING"
+            return "DETERIORATING"
         if abs(bullish_delta) < 2 and abs(bearish_delta) < 2:
-            return "SENTIMENT_STABLE"
+            return "STABLE"
 
-        return "SENTIMENT_MIXED"
+        return "MIXED"
 
     def _polarization_state(
             self,
@@ -120,7 +120,7 @@ class AnalystConsensusBuilder:
             prev: Optional[dict]
     ) -> str:
         if not cur or not prev:
-            return "POLARIZATION_UNKNOWN"
+            return "UNKNOWN"
 
         cur_extreme = cur["strong_buy"] + cur["strong_sell"]
         prev_extreme = prev["strong_buy"] + prev["strong_sell"]
@@ -128,8 +128,8 @@ class AnalystConsensusBuilder:
         delta = cur_extreme - prev_extreme
 
         if delta > 3:
-            return "INCREASING_POLARIZATION"
+            return "INCREASING"
         if delta < -3:
-            return "DECREASING_POLARIZATION"
+            return "DECREASING"
 
-        return "POLARIZATION_STABLE"
+        return "STABLE"

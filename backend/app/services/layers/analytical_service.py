@@ -81,6 +81,9 @@ class AnalyticalService:
         df = self.price_vs_sma(df, 20)
         df = self.roc(df, 10)
 
+        df = self.bollinger_bands(df, 20, 2)  # Obiektywna miara "tanio/drogo"
+        df = self.yearly_high_low(df)  # Kontekst długoterminowy
+
         # Jeśli mamy najnowszy wiersz, nadpisz OHLCV w ostatnim wierszu wynikowym
         if latest_row is not None:
             # Usuń strefę czasową – dopasuj do dataframe
@@ -97,6 +100,21 @@ class AnalyticalService:
     # -------------------------
     # WSKAŹNIKI
     # -------------------------
+
+    def bollinger_bands(self, df: pd.DataFrame, period: int = 20, std_dev: int = 2) -> pd.DataFrame:
+        sma = df["Close"].rolling(period).mean()
+        std = df["Close"].rolling(period).std()
+        df["BB_Upper"] = sma + (std * std_dev)
+        df["BB_Lower"] = sma - (std * std_dev)
+        # %B - Gdzie jesteśmy w kanale (0 = dolna wstęga, 1 = górna)
+        df["BB_Pct_B"] = (df["Close"] - df["BB_Lower"]) / (df["BB_Upper"] - df["BB_Lower"])
+        return df
+
+    def yearly_high_low(self, df: pd.DataFrame) -> pd.DataFrame:
+        # 252 dni handlowe to ok. rok kalendarzowy
+        df["Year_High"] = df["High"].rolling(252).max()
+        df["Year_Low"] = df["Low"].rolling(252).min()
+        return df
 
     def sma(self, df: pd.DataFrame, period: int) -> pd.DataFrame:
         df[f"SMA_{period}"] = df["Close"].rolling(period).mean()

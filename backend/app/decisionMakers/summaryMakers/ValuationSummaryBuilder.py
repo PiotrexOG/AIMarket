@@ -1,99 +1,130 @@
 class ValuationSummaryBuilder:
     """
-    Zamienia bieżącą wycenę rynkową (price-based)
-    na semantyczny, LLM-friendly summary valuation.
+    Zamienia słownik z danymi wyceny na opis semantyczny z wbudowanymi liczbami.
+    Dzięki temu LLM otrzymuje kontekst (np. 'PREMIUM') oraz precyzję (np. 'P/E: 35.5').
     """
 
     def build(self, valuation: dict) -> dict:
-        if not valuation:
+        v = valuation
+        if not v:
             return {"valuation": "NO_DATA"}
 
-        return {
-            "valuation_level": self._valuation_level(valuation),
-            "valuation_risk": self._valuation_risk(valuation),
-            "growth_expectation_embedded": self._growth_expectation(valuation),
-            "price_sensitivity": self._price_sensitivity(valuation),
-            "raw_snapshot": self._raw_snapshot(valuation)
+        summary = {
+            "pricing_multiples": self._valuation_level(v),
+            "asset_risk_assessment": self._valuation_risk(v),
+            "implied_growth": self._growth_expectation(v),
+            "structure_sensitivity": self._capital_structure_impact(v)
         }
+
+        return summary
+
+    # -------------------------
+    # HELPERS
+    # -------------------------
+    def _fmt(self, val, prefix="", suffix=""):
+        if val is None: return ""
+        return f"{prefix}{round(val, 2)}{suffix}"
 
     # -------------------------
     # INTERPRETACJE
     # -------------------------
 
     def _valuation_level(self, v: dict) -> str:
+        """
+        Ocena czy jest 'tanio' czy 'drogo' na podstawie zysków i przychodów.
+        """
         pe = v.get("pe_ratio_ttm")
         ps = v.get("ps_ratio_ttm")
 
-        if pe is None or ps is None:
-            return "VALUATION_UNKNOWN"
+        if pe is None or ps is None: return "UNKNOWN"
 
-        if pe > 30 or ps > 8:
-            return "PREMIUM_VALUATION"
-        if pe < 15 and ps < 3:
-            return "DISCOUNT_VALUATION"
+        label = "FAIR_VALUATION"
+        if pe > 40 or ps > 12:
+            label = "HYPER_PREMIUM_PRICED"  # Nvidia-like levels
+        elif pe > 25 or ps > 8:
+            label = "PREMIUM_VALUATION"
+        elif pe < 12 and ps < 2:
+            label = "DEEP_VALUE_DISCOUNT"
+        elif pe < 18 and ps < 4:
+            label = "MODERATE_DISCOUNT"
 
-        return "FAIR_VALUATION"
+        # Inline: P/E i P/S (Kluczowe mnożniki ceny)
+        metrics = f" (P/E: {self._fmt(pe)}, P/S: {self._fmt(ps)})"
+        return label + metrics
 
     def _valuation_risk(self, v: dict) -> str:
-        pe = v.get("pe_ratio_ttm")
+        """
+        Ocena ryzyka 'przepłacenia' za aktywa (Book Value) oraz bufor bezpieczeństwa (Dywidenda).
+        """
         pb = v.get("pb_ratio")
+        div_y = v.get("dividend_yield")  # Wartość ułamkowa np. 0.02 = 2%
 
-        if pe is None or pb is None:
-            return "VALUATION_RISK_UNKNOWN"
+        if pb is None: return "RISK_UNKNOWN"
 
-        if pe > 30 and pb > 20:
-            return "HIGH_MULTIPLE_RISK"
-        if pe < 18:
-            return "LOW_VALUATION_RISK"
+        label = "MODERATE_ASSET_VALUATION"
+        if pb > 20:
+            label = "EXTREME_MULTIPLE_RISK"  # Płacisz głównie za 'goodwill'
+        elif pb > 8:
+            label = "HIGH_MULTIPLE_RISK"
+        elif pb < 1.5:
+            label = "ASSET_BACKED_SAFETY"  # Cena bliska wartości księgowej
+        elif pb < 1.0:
+            label = "TRADING_BELOW_BOOK_VALUE"
 
-        return "MODERATE_VALUATION_RISK"
+        # Inline: P/B i Dividend Yield (Yield działa jak poduszka powietrzna)
+        div_str = f", DivYld: {self._fmt(div_y * 100, suffix='%')}" if div_y else ""
+        metrics = f" (P/B: {self._fmt(pb)}{div_str})"
+
+        return label + metrics
 
     def _growth_expectation(self, v: dict) -> str:
-        pe = v.get("pe_ratio_ttm")
-        ps = v.get("ps_ratio_ttm")
-
-        if pe is None or ps is None:
-            return "GROWTH_EXPECTATION_UNKNOWN"
-
-        if pe > 30 and ps > 7:
-            return "AGGRESSIVE_GROWTH_PRICED_IN"
-        if pe < 18 and ps < 4:
-            return "LIMITED_GROWTH_PRICED_IN"
-
-        return "MODERATE_GROWTH_EXPECTATION"
-
-    def _price_sensitivity(self, v: dict) -> str:
-        pe = v.get("pe_ratio_ttm")
-        ev = v.get("enterprise_value")
-        mc = v.get("market_cap")
-
-        if pe is None or ev is None or mc is None:
-            return "PRICE_SENSITIVITY_UNKNOWN"
-
-        if pe > 30:
-            return "HIGH_SENSITIVITY_TO_EARNINGS"
-        if abs(ev - mc) / mc > 0.1:
-            return "SENSITIVE_TO_BALANCE_SHEET"
-
-        return "NORMAL_PRICE_SENSITIVITY"
-
-    def _raw_snapshot(self, v: dict) -> dict:
         """
-        Zbiór kluczowych mnożników wyceny.
-        Pomaga LLM zrozumieć strukturę kapitałową i realną cenę aktywów.
+        Co rynek 'wycenia' w obecnej cenie? Wysokie P/E = Oczekiwanie wysokiego wzrostu.
+        """
+        pe = v.get("pe_ratio_ttm")
+        # PEG ratio byłoby tu idealne, ale bazujemy na tym co mamy w wejściu
+
+        if pe is None: return "UNKNOWN"
+
+        label = "MODERATE_GROWTH_PRICED_IN"
+        if pe > 50:
+            label = "AGGRESSIVE_GROWTH_REQUIRED"  # Firma musi rosnąć, żeby uzasadnić cenę
+        elif pe > 30:
+            label = "HIGH_GROWTH_EXPECTED"
+        elif pe < 10:
+            label = "NO_GROWTH_OR_DECLINE_PRICED_IN"
+        elif pe < 15:
+            label = "LIMITED_GROWTH_EXPECTED"
+
+        # Inline: P/E jako proxy oczekiwań
+        metrics = f" (Implied by P/E: {self._fmt(pe)})"
+        return label + metrics
+
+    def _capital_structure_impact(self, v: dict) -> str:
+        """
+        Zastępuje _price_sensitivity.
+        Mówi o tym, czy wycena rynkowa (Market Cap) różni się drastycznie od wyceny przejęcia (EV).
         """
         ev = v.get("enterprise_value")
         mc = v.get("market_cap")
 
-        # Obliczamy dźwignię (EV/MC) - jeśli > 1, spółka ma dług netto
-        ev_mc_ratio = round(ev / mc, 2) if ev and mc else None
+        if ev is None or mc is None or mc == 0: return "UNKNOWN"
 
-        return {
-            "pe_ttm": round(v.get("pe_ratio_ttm", 0), 2),
-            "ps_ttm": round(v.get("ps_ratio_ttm", 0), 2),
-            "pb_ratio": round(v.get("pb_ratio", 0), 2),
-            "forward_pe": round(v.get("forward_pe", 0), 2) if v.get("forward_pe") else "N/A",
-            "ev_to_market_cap": ev_mc_ratio,
-            "dividend_yield": round(v.get("dividend_yield", 0), 3) if v.get("dividend_yield") else 0,
-            "peg_ratio": round(v.get("peg_ratio", 0), 2) if v.get("peg_ratio") else "N/A"
-        }
+        # EV/MC Ratio
+        # > 1.0: EV większe (Dług netto dodaje ciężaru)
+        # < 1.0: EV mniejsze (Gotówka netto odejmuje ciężar)
+        ratio = ev / mc
+
+        label = "NEUTRAL_STRUCTURE"
+        if ratio > 1.5:
+            label = "HEAVILY_LEVERAGED_VALUATION"  # EV dużo wyższe przez dług
+        elif ratio > 1.1:
+            label = "DEBT_SENSITIVE"
+        elif ratio < 0.8:
+            label = "CASH_RICH_DISCOUNT"  # EV niższe przez gotówkę
+        elif ratio < 0.95:
+            label = "NET_CASH_POSITION"
+
+        # Inline: EV/MC (Pokazuje mnożnik dźwigni finansowej na wycenie)
+        metrics = f" (EV/MC: {self._fmt(ratio)}x)"
+        return label + metrics

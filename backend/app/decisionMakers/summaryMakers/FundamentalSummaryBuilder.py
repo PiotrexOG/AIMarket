@@ -3,129 +3,169 @@ from app.db.schemas.layers.fundamentals_snapshot_scheme import FundamentalSnapsh
 
 class FundamentalSummaryBuilder:
     """
-    Zamienia FundamentalSnapshot (TTM / kwartalne)
-    na semantyczny, LLM-friendly summary fundamentów.
+    Zamienia FundamentalSnapshot na opis semantyczny z wbudowanymi
+    kluczowymi liczbami (inline metrics), ułatwiając pracę LLM.
     """
 
     def build(self, snapshot: "FundamentalSnapshotCreate") -> dict:
         if snapshot is None:
             return {"fundamentals": "NO_DATA"}
 
-        return {
+        summary = {
             "business_quality": self._business_quality(snapshot),
             "financial_health": self._financial_health(snapshot),
             "cash_generation": self._cash_generation(snapshot),
             "growth_profile": self._growth_profile(snapshot),
-            "company_maturity": self._company_maturity(snapshot),
-            "raw_snapshot": self._raw_snapshot(snapshot)
+            "company_scale": self._company_maturity(snapshot)
         }
 
+        return summary
+
     # -------------------------
-    # INTERPRETACJE
+    # HELPERS FORMATOWANIA
+    # -------------------------
+
+    def _fmt_pct(self, val, decimals=1):
+        """0.15 -> 15.0%"""
+        if val is None: return ""
+        return f"{round(val * 100, decimals)}%"
+
+    def _fmt_money(self, val):
+        """1_500_000_000 -> $1.5B"""
+        if val is None: return ""
+        abs_val = abs(val)
+        if abs_val >= 1e9: return f"${val / 1e9}B"
+        if abs_val >= 1e6: return f"${val / 1e6}M"
+        return f"${round(val, 2)}"
+
+    # -------------------------
+    # INTERPRETACJE Z LICZBAMI
     # -------------------------
 
     def _business_quality(self, s) -> str:
-        if s.gross_margin_ttm is None or s.operating_margin_ttm is None:
-            return "BUSINESS_QUALITY_UNKNOWN"
+        gm, om = s.gross_margin_ttm, s.operating_margin_ttm
 
-        if s.gross_margin_ttm > 0.5 and s.operating_margin_ttm > 0.3:
-            return "EXCEPTIONAL_MARGIN_BUSINESS"
-        if s.gross_margin_ttm > 0.4 and s.operating_margin_ttm > 0.25:
-            return "HIGH_MARGIN_BUSINESS"
-        if s.operating_margin_ttm < 0.1:
-            return "LOW_MARGIN_BUSINESS"
+        # Logika semantyczna
+        label = "UNKNOWN"
+        if gm is not None and om is not None:
+            if gm > 0.5 and om > 0.3:
+                label = "EXCEPTIONAL_MARGIN_BUSINESS"  # Moat?
+            elif gm > 0.4 and om > 0.2:
+                label = "HIGH_MARGIN_BUSINESS"
+            elif om < 0.08:
+                label = "LOW_MARGIN_BUSINESS_THIN"
+            else:
+                label = "AVERAGE_MARGIN_BUSINESS"
 
-        return "AVERAGE_MARGIN_BUSINESS"
+        # Inline Metrics: GM i OM to serce jakości biznesu
+        metrics = f" (Gross: {self._fmt_pct(gm)}, Oper: {self._fmt_pct(om)})"
+        return label + metrics
 
     def _financial_health(self, s) -> str:
-        if s.total_debt is None or s.cash_and_equivalents is None:
-            return "FINANCIAL_HEALTH_UNKNOWN"
+        debt = s.total_debt
+        cash = s.cash_and_equivalents
+        equity = s.equity
+        fcf = s.free_cash_flow_ttm
 
-        net_debt = s.total_debt - s.cash_and_equivalents
+        if debt is None or cash is None:
+            return "UNKNOWN"
 
+        net_debt = debt - cash
+
+        # --- 1. LOGIKA SEMANTYCZNA (bez zmian, bo jest dobra) ---
+        label = "MODERATE_LEVERAGE"
         if net_debt <= 0:
-            return "NET_CASH_POSITION"
-        if s.equity and net_debt > s.equity:
-            return "BALANCE_SHEET_STRESSED"
-        if s.equity and net_debt < s.equity * 0.5:
-            return "HEALTHY_BALANCE_SHEET"
+            label = "NET_CASH_FORTRESS"
+        elif equity and net_debt > equity:
+            label = "BALANCE_SHEET_STRESSED"
+        elif equity and net_debt < equity * 0.4:
+            label = "HEALTHY_BALANCE_SHEET"
 
-        return "MODERATE_LEVERAGE"
+        # --- 2. INLINE METRICS (Zamiast nominali -> relacje) ---
+        metrics_parts = []
+
+        # A. Dźwignia (Net Debt vs Equity)
+        # Mówi: Jak bardzo firma jest zadłużona względem własnego majątku?
+        if equity and equity > 0:
+            nd_eq_ratio = abs(net_debt) / equity
+            # Jeśli Net Debt ujemny (Cash), pokazujemy NetCash/Eq
+            prefix = "NetCash/Eq" if net_debt < 0 else "NetDebt/Eq"
+            metrics_parts.append(f"{prefix}: {round(nd_eq_ratio, 2)}x")
+
+        # B. Pokrycie (Net Debt vs FCF) - O TO PYTAŁEŚ
+        # Mówi: Ile lat zajmie spłata długu netto z wolnych przepływów?
+        # Liczymy to tylko, gdy firma ma realny dług (Net Debt > 0)
+        if net_debt > 0 and fcf and fcf > 0:
+            years_to_repay = net_debt / fcf
+            metrics_parts.append(f"YrsToPay: {round(years_to_repay, 1)}x")
+
+        # Jeśli firma ma dług, ale pali gotówkę (ujemne FCF), to jest krytyczne info
+        elif net_debt > 0 and fcf and fcf < 0:
+            metrics_parts.append("YrsToPay: IMPOSSIBLE (Neg FCF)")
+
+        metrics_str = ", ".join(metrics_parts)
+        return f"{label} ({metrics_str})"
 
     def _cash_generation(self, s) -> str:
-        if s.free_cash_flow_ttm is None or s.revenue_ttm is None:
-            return "CASH_GENERATION_UNKNOWN"
+        fcf = s.free_cash_flow_ttm
+        rev = s.revenue_ttm
 
-        fcf_margin = s.free_cash_flow_ttm / s.revenue_ttm
+        if fcf is None or rev is None or rev == 0: return "UNKNOWN"
+
+        fcf_margin = fcf / rev
+        label = "MODERATE_CASH_GEN"
 
         if fcf_margin > 0.25:
-            return "EXCELLENT_CASH_GENERATION"
-        if fcf_margin > 0.15:
-            return "STRONG_CASH_GENERATOR"
-        if fcf_margin < 0.05:
-            return "WEAK_CASH_GENERATION"
+            label = "CASH_COW_EXCELLENT"
+        elif fcf_margin > 0.15:
+            label = "STRONG_CASH_GENERATION"
+        elif fcf_margin < 0.0:
+            label = "CASH_BURNER_NEGATIVE_FCF"  # Uwaga, pali gotówkę!
+        elif fcf_margin < 0.05:
+            label = "WEAK_CASH_CONVERSION"
 
-        return "MODERATE_CASH_GENERATION"
+        # Inline Metrics: FCF Margin (Ile gotówki zostaje z każdego dolara sprzedaży)
+        metrics = f" (FCF Mgn: {self._fmt_pct(fcf_margin)})"
+        return label + metrics
 
     def _growth_profile(self, s) -> str:
-        if s.revenue_growth_ttm_yoy is None or s.eps_growth_ttm_yoy is None:
-            return "GROWTH_PROFILE_UNKNOWN"
+        rev_g = s.revenue_growth_ttm_yoy
+        eps_g = s.eps_growth_ttm_yoy
 
-        if s.revenue_growth_ttm_yoy > 0.15 and s.eps_growth_ttm_yoy > 0.15:
-            return "STRONG_GROWTH"
-        if s.revenue_growth_ttm_yoy < 0.05 and s.eps_growth_ttm_yoy < 0:
-            return "SLOW_GROWTH_WITH_EARNINGS_PRESSURE"
-        if s.revenue_growth_ttm_yoy < 0:
-            return "REVENUE_CONTRACTION"
+        if rev_g is None: return "UNKNOWN"
 
-        return "MODERATE_GROWTH"
+        label = "MODERATE_GROWTH"
+
+        # Logika Growth vs Value trap
+        if eps_g is not None:
+            if rev_g > 0.20 and eps_g > 0.20:
+                label = "HYPER_GROWTH"
+            elif rev_g > 0.10 and eps_g > 0.10:
+                label = "STRONG_STABLE_GROWTH"
+            elif rev_g < 0.05 and eps_g < 0:
+                label = "STAGNATION_WITH_PROFIT_ISSUES"
+            elif rev_g < 0:
+                label = "REVENUE_CONTRACTION"
+        else:
+            # Fallback gdy brak danych o EPS growth
+            if rev_g > 0.15: label = "STRONG_TOPLINE_GROWTH"
+
+        # Inline Metrics: Rev i EPS (Wzrost przychodów vs zysków)
+        metrics = f" (Rev: {self._fmt_pct(rev_g)}, EPS: {self._fmt_pct(eps_g)})"
+        return label + metrics
 
     def _company_maturity(self, s) -> str:
-        if s.revenue_ttm is None:
-            return "COMPANY_SIZE_UNKNOWN"
+        rev = s.revenue_ttm
+        if rev is None: return "SIZE_UNKNOWN"
 
-        if s.revenue_ttm > 200_000_000_000:
-            return "MEGA_CAP_MATURE"
-        if s.revenue_ttm > 50_000_000_000:
-            return "LARGE_CAP_ESTABLISHED"
+        label = "MID_CAP_OR_GROWTH"
+        if rev > 100_000_000_000:
+            label = "MEGA_CAP_TITAN"
+        elif rev > 20_000_000_000:
+            label = "LARGE_CAP_ESTABLISHED"
+        elif rev < 1_000_000_000:
+            label = "SMALL_CAP_SPECULATIVE"
 
-        return "MID_CAP_OR_GROWTH_STAGE"
-
-    def _raw_snapshot(self, s) -> dict:
-        """
-        Zbiór twardych danych finansowych.
-        Konwertuje wartości nominalne na czytelne dla LLM formaty.
-        """
-        net_debt = (s.total_debt or 0) - (s.cash_and_equivalents or 0)
-
-        # Bezpieczne dzielenie dla marż i wskaźników
-        def safe_ratio(nom, den, round_to=4):
-            if not nom or not den or den == 0:
-                return None
-            return round(nom / den, round_to)
-
-        return {
-            # Rentowność (w ujęciu ułamkowym, np. 0.15 = 15%)
-            "margins": {
-                "gross": safe_ratio(s.gross_margin_ttm, 1),  # Zakładając że s.gross_margin_ttm to float 0-1
-                "operating": safe_ratio(s.operating_margin_ttm, 1),
-                "fcf_margin": safe_ratio(s.free_cash_flow_ttm, s.revenue_ttm)
-            },
-            # Dynamika wzrostu YoY
-            "growth_yoy": {
-                "revenue": round(s.revenue_growth_ttm_yoy, 4) if s.revenue_growth_ttm_yoy is not None else None,
-                "eps": round(s.eps_growth_ttm_yoy, 4) if s.eps_growth_ttm_yoy is not None else None
-            },
-            # Bilans i zadłużenie
-            "balance_sheet": {
-                "net_debt_nominal": net_debt,
-                "cash_and_equivalents": s.cash_and_equivalents,
-                "debt_to_equity": safe_ratio(s.total_debt, s.equity),
-                "current_ratio": round(s.current_ratio, 2) if hasattr(s, 'current_ratio') else None
-            },
-            # Wielkość skali (w milionach dla czytelności, jeśli dane są w jednostkach podstawowych)
-            "scale": {
-                "revenue_ttm_mln": round(s.revenue_ttm / 1_000_000, 2) if s.revenue_ttm else None,
-                "fcf_ttm_mln": round(s.free_cash_flow_ttm / 1_000_000, 2) if s.free_cash_flow_ttm else None
-            }
-        }
+        # Inline Metrics: Skala przychodów (żeby odróżnić Apple od start-upu)
+        metrics = f" (Rev TTM: {self._fmt_money(rev)})"
+        return label + metrics
