@@ -27,4 +27,15 @@ class FundamentalSnapshotRepository:
             .first()
         )
 
+    def get_next(self, ticker: str, date_time: datetime):
+        return (
+            self.db.query(FundamentalSnapshot)
+            .filter(
+                FundamentalSnapshot.ticker == ticker,
+                FundamentalSnapshot.as_of_date <= date_time
+            )
+            .order_by(FundamentalSnapshot.as_of_date.desc())
+            .first()
+        )
+
 

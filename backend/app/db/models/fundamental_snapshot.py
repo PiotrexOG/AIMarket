@@ -17,6 +17,9 @@ class FundamentalSnapshot(Base):
     free_cash_flow_ttm = Column(BigInteger)
 
     eps_ttm = Column(Float)
+    eps = Column(Float)
+    eps_est_for_next = Column(Float)
+    eps_est_from_previous = Column(Float)
     gross_margin_ttm = Column(Float)
     operating_margin_ttm = Column(Float)
     net_margin_ttm = Column(Float)

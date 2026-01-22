@@ -7,10 +7,13 @@ from pathlib import Path
 API_KEY = os.environ.get("FMP_API_KEY")
 BASE_URL = "https://financialmodelingprep.com/stable"
 
-INPUT_DIR = Path("../financial_data")
-INPUT_DIR.mkdir(exist_ok=True)
-OUTPUT_DIR = Path("../quarterly_compact")
-OUTPUT_DIR.mkdir(exist_ok=True)
+CURRENT_FILE_PATH = Path(__file__).resolve().parent
+
+INPUT_DIR = CURRENT_FILE_PATH.parent / "financial_data"
+INPUT_DIR.mkdir(exist_ok=True, parents=True)
+
+OUTPUT_DIR = CURRENT_FILE_PATH.parent / "quarterly_compact"
+OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
 def fetch_and_save(symbol: str, period: str, limit: int = 5):
     if period not in {"Q1", "Q2", "Q3", "Q4"}:

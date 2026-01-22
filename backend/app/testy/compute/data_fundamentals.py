@@ -103,6 +103,10 @@ def compute_fundamentals_from_8q(quarters: List[dict]) -> dict:
         "eps_ttm": float(round(cur["eps"], 6)),
         "free_cash_flow_ttm": cur["freeCashFlow"],
 
+        "eps": latest.get("eps"),
+        "eps_est_from_previous": latest.get("eps_est_from_previous"),
+        "eps_est_for_next": latest.get("eps_est_for_next"),
+
         # profitability (ZAOKRĄGLONE I ZAWSZE FLOAT)
         "gross_margin_ttm": safe_ratio(
             cur["grossProfit"], revenue_ttm

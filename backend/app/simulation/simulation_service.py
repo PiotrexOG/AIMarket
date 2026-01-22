@@ -20,6 +20,8 @@ from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals, quarter_helper
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
 from app.testy.scrap.company_news import fetch_all_company_news
+import app.testy.scrap.quarterly as quarterly
+import app.testy.scrap.financial as financial
 
 
 class SimulationService:
@@ -44,10 +46,16 @@ class SimulationService:
 
     # Rozszerzona wersja Twojej metody
     def fetch_data_fundaments(self):
-
         quarters = quarter_helper.get_required_quarters(self.start_time, self.end_time)
 
         for ticker in self.tickers:
+            #financial.create(ticker)
+            first_year, first_q = quarters[0]
+            last_year, last_q = quarters[-1]
+            print(first_year, first_q)
+            print(last_year, last_q)
+            #quarterly.create(ticker, first_year, f"Q{first_q}", last_year, f"Q{last_q}")
+
             for year, quarter in quarters:
                 funds = data_fundamentals.calculate(
                     symbol=ticker,
@@ -56,7 +64,12 @@ class SimulationService:
                 )
 
                 raw = funds.copy()
-                as_of_date = datetime.fromisoformat(raw.pop("date"))
+
+                date_value = raw.pop("date")
+                if isinstance(date_value, str):
+                    as_of_date = datetime.fromisoformat(date_value)
+                else:
+                    as_of_date = date_value
 
                 self.fundamental_snapshot_service.save(
                     ticker=ticker,
