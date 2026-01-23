@@ -51,32 +51,31 @@ class MarketDataRepository:
             .first()
         )
 
-    def exists_in_range(self, ticker: str, start: datetime, end: datetime) -> bool:
+    def exists_in_range(self, ticker: str, start: datetime, end: datetime, tolerance_days: int = 4) -> bool:
         """
-        Sprawdza czy cały zakres od start do end jest pokryty danymi w bazie.
-        Dla końca zakresu akceptuje również dane z 1 godziną wcześniej.
+        Sprawdza, czy w bazie istnieją dane blisko punktu startowego i końcowego.
+        tolerance_days: jak daleko od daty możemy szukać (domyślnie 4 dni, by pokryć długie weekendy).
         """
-        # Sprawdź czy istnieją dane na początku zakresu
+
+        # 1. Szukamy najbliższego rekordu w oknie [start - tol, start + tol]
+        # To załatwia problem świąt, weekendów i zmian godzin otwarcia.
         has_start = self.db.query(MarketData.id).filter(
             MarketData.ticker == ticker,
-            MarketData.datetime == start
+            MarketData.datetime >= start - timedelta(days=tolerance_days),
+            MarketData.datetime <= start + timedelta(days=tolerance_days)
         ).first() is not None
 
-        # Sprawdź czy istnieją dane na końcu zakresu LUB 1 godzinę wcześniej
-        end_minus_1h = end - timedelta(hours=1)
-        has_end = (
-                self.db.query(MarketData.id).filter(
-                    MarketData.ticker == ticker,
-                    MarketData.datetime == end
-                ).first() is not None
-                or
-                self.db.query(MarketData.id).filter(
-                    MarketData.ticker == ticker,
-                    MarketData.datetime == end_minus_1h
-                ).first() is not None
-        )
-        #return True
-        return has_start and has_end
+        if not has_start:
+            return False
+
+        # 2. Szukamy najbliższego rekordu w oknie [end - tol, end + tol]
+        has_end = self.db.query(MarketData.id).filter(
+            MarketData.ticker == ticker,
+            MarketData.datetime >= end - timedelta(days=tolerance_days),
+            MarketData.datetime <= end + timedelta(days=tolerance_days)
+        ).first() is not None
+
+        return has_end
 
     def get_unique_tickers(self) -> list[str]:
         """

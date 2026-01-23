@@ -17,11 +17,12 @@ from app.services.portfolio_transaction_service import PortfolioTransactionServi
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
-from app.testy.compute import data_fundamentals, quarter_helper
+from app.testy.compute import data_fundamentals
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
 from app.testy.scrap.company_news import fetch_all_company_news
 import app.testy.scrap.quarterly as quarterly
 import app.testy.scrap.financial as financial
+import app.testy.scrap.earning_dates as earning_dates
 
 
 class SimulationService:
@@ -46,9 +47,12 @@ class SimulationService:
 
     # Rozszerzona wersja Twojej metody
     def fetch_data_fundaments(self):
-        quarters = quarter_helper.get_required_quarters(self.start_time, self.end_time)
+
 
         for ticker in self.tickers:
+            #earning_dates.save_earnings_by_date(ticker, self.start_time, self.end_time)
+            quarters = earning_dates.get_years_and_quarters_from_json(ticker)
+
             #financial.create(ticker)
             first_year, first_q = quarters[0]
             last_year, last_q = quarters[-1]

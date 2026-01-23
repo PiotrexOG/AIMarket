@@ -65,7 +65,7 @@ def run_simulation():
             end_time=END_TIME,
         )
 
-        #simulation_service.fetch_market_data(interval="1h")
+        simulation_service.fetch_market_data(interval="1h")
         #simulation_service.fetch_analyst_grades()
         simulation_service.fetch_data_fundaments()
         # simulation_service.fetch_company_news()

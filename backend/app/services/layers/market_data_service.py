@@ -74,7 +74,7 @@ class MarketDataService:
     def get_indicators(self, ticker: str, date_time: datetime, use_daily=True) -> pd.DataFrame:
         limit = 200
         if use_daily:
-            limit = 200 * 8
+            limit = 200 * 7
 
         df = self.get_recent_df(ticker, date_time, limit)
         if df.empty:

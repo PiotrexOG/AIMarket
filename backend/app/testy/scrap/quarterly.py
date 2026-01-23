@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from app.testy.scrap.earning_dates import save_earnings_fiscal
+
 
 CURRENT_FILE_PATH = Path(__file__).resolve().parent
 
@@ -115,30 +115,35 @@ def build_quarter_file(symbol: str, year: int, quarter: str):
 
 
 def create(symbol: str, start_year: int, start_quarter: str, end_year: int, end_quarter: str):
-    save_earnings_fiscal(symbol, start_year, start_quarter, end_year, end_quarter)
-
     QUARTERS = ["Q1", "Q2", "Q3", "Q4"]
 
     try:
-        start_q_index = QUARTERS.index(start_quarter)
-        end_q_index = QUARTERS.index(end_quarter)
+        # Indeksy 0-3 odpowiadają Q1-Q4
+        start_q_idx = QUARTERS.index(start_quarter)
+        end_q_idx = QUARTERS.index(end_quarter)
     except ValueError:
         print("❌ Błąd: Nieprawidłowy format kwartału. Użyj: Q1, Q2, Q3, Q4")
         return
 
-    print(f"--- Generowanie plików dla {symbol} ({start_year} {start_quarter} -> {end_year} {end_quarter}) ---")
+    # 1. Przeliczamy punkt startowy na "absolutną liczbę kwartałów"
+    # start_year * 4 + start_q_idx daje nam unikalny numer porządkowy kwartału w czasie
+    start_absolute = (start_year * 4) + start_q_idx
 
-    for year in range(start_year-2, end_year + 1):
-        # Logika zakresów kwartałów
-        if year == start_year and year == end_year:
-            quarters_range = QUARTERS[start_q_index:end_q_index + 1]
-        elif year == start_year:
-            quarters_range = QUARTERS[start_q_index:]
-        elif year == end_year:
-            quarters_range = QUARTERS[:end_q_index + 1]
-        else:
-            quarters_range = QUARTERS
+    # Odejmowanie 7, aby dostać łącznie 8 kwartałów (bieżący + 7 poprzednich)
+    effective_start_abs = start_absolute - 7
 
-        for quarter in quarters_range:
-            build_quarter_file(symbol, year, quarter)
+    # 2. Przeliczamy punkt końcowy
+    end_absolute = (end_year * 4) + end_q_idx
+
+    print(f"--- Generowanie plików dla {symbol} ---")
+    print(f"Zakres: od {effective_start_abs // 4} Q{(effective_start_abs % 4) + 1} "
+          f"do {end_year} {end_quarter} (łącznie {end_absolute - effective_start_abs + 1} kwartałów)")
+
+    # 3. Iterujemy po wszystkich kwartałach w wyliczonym zakresie
+    for current_abs in range(effective_start_abs, end_absolute + 1):
+        year = current_abs // 4
+        q_idx = current_abs % 4
+        quarter = QUARTERS[q_idx]
+
+        build_quarter_file(symbol, year, quarter)
 
