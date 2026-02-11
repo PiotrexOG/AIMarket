@@ -71,18 +71,31 @@ class AnalyticalService:
         df = self.sma(df, 20)
         df = self.sma(df, 50)
         df = self.sma(df, 200)
-        df = self.ema(df, 20)
-        df = self.ema(df, 50)
-        df = self.rsi(df, 14)
-        df = self.macd(df)
-        df = self.atr(df, 14)
-        df = self.volume_ratio(df, 20)
+
+        df = self.st_dev(df, 50)
+        df = self.st_dev(df, 200)
+
         df = self.support_resistance(df, 20)
         df = self.price_vs_sma(df, 20)
+
+        df = self.support_resistance(df, 50)
+        df = self.price_vs_sma(df, 50)
+
+        df = self.support_resistance(df, 200)
+        df = self.price_vs_sma(df, 200)
+
+        df = self.volume_ratio(df, 20)
+
+
+
+        df = self.rsi(df, 14)
+        df = self.macd(df)
+        df = self.atr(df, 14, 50)
+
+
         df = self.roc(df, 10)
 
-        df = self.bollinger_bands(df, 20, 2)  # Obiektywna miara "tanio/drogo"
-        df = self.yearly_high_low(df)  # Kontekst długoterminowy
+        df = self.bollinger_bands(df, 20, 2)
 
         # Jeśli mamy najnowszy wiersz, nadpisz OHLCV w ostatnim wierszu wynikowym
         if latest_row is not None:
@@ -120,6 +133,10 @@ class AnalyticalService:
         df[f"SMA_{period}"] = df["Close"].rolling(period).mean()
         return df
 
+    def st_dev(self, df: pd.DataFrame, period: int) -> pd.DataFrame:
+        df[f"Std_{period}"] = df["Close"].rolling(period).std()
+        return df
+
     def ema(self, df: pd.DataFrame, period: int) -> pd.DataFrame:
         df[f"EMA_{period}"] = df["Close"].ewm(span=period, adjust=False).mean()
         return df
@@ -144,15 +161,23 @@ class AnalyticalService:
         df["MACD_signal"] = df["MACD"].ewm(span=9, adjust=False).mean()
         df["MACD_hist"] = df["MACD"] - df["MACD_signal"]
 
+        df["MACD_hist_prev"] = df["MACD_hist"].shift(1, fill_value=0)
+
         return df
 
-    def atr(self, df: pd.DataFrame, period: int = 14) -> pd.DataFrame:
+    def atr(self, df: pd.DataFrame, period_1: int = 14, period_2: int = 50) -> pd.DataFrame:
+        # 1. Obliczamy bazowy True Range
         tr1 = df["High"] - df["Low"]
         tr2 = abs(df["High"] - df["Close"].shift(1))
         tr3 = abs(df["Low"] - df["Close"].shift(1))
-
         tr = np.maximum(tr1, np.maximum(tr2, tr3))
-        df[f"ATR_{period}"] = tr.rolling(period).mean()
+
+        # 2. ATR 14 (standardowa zmienność krótkoterminowa)
+        df[f"ATR_{period_1}"] = tr.rolling(window=period_1).mean()
+
+        # 3. ATR_SMA_50 (benchmark zmienności - "normalna" zmienność dla tej spółki)
+        # Najpierw liczymy ATR 14, a potem wyciągamy z niego średnią z 50 sesji
+        df[f"ATR_SMA_{period_2}"] = df[f"ATR_{period_1}"].rolling(window=period_2).mean()
 
         return df
 

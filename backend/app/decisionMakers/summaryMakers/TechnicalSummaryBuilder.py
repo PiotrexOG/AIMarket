@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from app.db.schemas.layers.fundamentals_snapshot_scheme import FundamentalSnapshotDTO
 
 
@@ -27,7 +26,7 @@ class TechnicalSummaryBuilder:
                 "price": r.get("Close", 0),
                 "volatility_context": self._volatility_detailed_context(r),
                 "volume_dynamics": self._volume_detailed_context(r),
-                "sr_landscape": self._sr_detailed_context(r)
+                "sr_landscape": self._sr_landscape(r)
             },
         }
 
@@ -52,11 +51,16 @@ class TechnicalSummaryBuilder:
     # HORYZONT KRÓTKI (14-20 dni)
     # -------------------------
     def _analyze_short_term(self, r) -> dict:
-        """Fokus: Momentum, RSI, BB PctB, ROC."""
+        """
+        Fokus: Momentum, RSI, BB PctB, ROC + SMA20 Context + S/R 20 Range.
+        Horyzont: 14-20 sesji.
+        """
 
-        # 1. Analiza Świecowa (Bez zmian logiki)
+        # 1. Analiza Świecowa (Twoja bazowa logika)
         candle_type = "NEUTRAL"
-        o, h, l, c = r["Open"], r["High"], r["Low"], r["Close"]
+        o, h, l, c = r.get("Open", 0), r.get("High", 0), r.get("Low", 0), r.get("Close", 0)
+        atr = r.get("ATR_14")
+        atr_pct = (atr / c) if (pd.notna(atr) and c > 0) else 0.02  # fallback 2%
         body = abs(c - o)
         range_ = h - l
 
@@ -76,7 +80,7 @@ class TechnicalSummaryBuilder:
             elif upper_wick > body * 2:
                 candle_type = "SHOOTING_STAR_BEARISH"
 
-        # 2. RSI Context
+        # 2. RSI Context (Twoja bazowa logika)
         rsi = r.get("RSI_14")
         rsi_state = "RSI_UNKNOWN"
         if pd.notna(rsi):
@@ -90,11 +94,9 @@ class TechnicalSummaryBuilder:
                 rsi_state = "OVERBOUGHT_EXTREME"
             elif rsi > 60:
                 rsi_state = "BULLISH_ZONE_STRONG"
-
-        # Dodajemy wartość inline
         rsi_state += self._fmt(rsi, 1)
 
-        # 3. Bollinger Bands (%B)
+        # 3. Bollinger Bands (%B) (Twoja bazowa logika)
         bb_pct = r.get("BB_Pct_B")
         bb_state = "BB_UNKNOWN"
         if pd.notna(bb_pct):
@@ -106,179 +108,264 @@ class TechnicalSummaryBuilder:
                 bb_state = "PANIC_DUMP_BELOW_LOWER_BAND"
             elif bb_pct < 0.05:
                 bb_state = "TESTING_LOWER_BAND"
-            elif 0.45 < bb_pct < 0.55:
-                bb_state = "EQUILIBRIUM_MID_BAND"
             else:
                 bb_state = "WITHIN_NORMAL_BANDS"
-
-        # Dodajemy wartość inline
         bb_state += self._fmt(bb_pct, 2)
 
-        # 4. ROC (Velocity)
+        # 4. ROC (Velocity) - STANDARYZACJA
+        # Zamiast 0.15 (15%), używamy krotności ATR.
         roc = r.get("ROC_10", 0)
+        # 10-dniowy ruch 'normalny' to np. 2 x ATR_14
         velocity = "NORMAL"
-        if roc > 0.15:
+        if roc > (atr_pct * 3):  # Ruch silniejszy niż 3-krotność dziennej zmienności
             velocity = "EXPLOSIVE_UP"
-        elif roc < -0.15:
+        elif roc < -(atr_pct * 3):
             velocity = "IMPLOSIVE_DOWN"
-        elif abs(roc) < 0.02:
+        elif abs(roc) < (atr_pct * 0.5):
             velocity = "STAGNANT"
-
-        # Dodajemy wartość inline (jako procent dla czytelności)
         velocity += self._fmt(roc, 2, is_pct=True)
+
+        # 5. Price vs SMA 20 - STANDARYZACJA
+        p_vs_sma20_val = r.get("Price_vs_SMA_20")
+        sma20_context = "STABLE_NEAR_BASE"
+
+        if pd.notna(p_vs_sma20_val):
+            # Tutaj progi adaptacyjne:
+            # Bardzo mocne odchylenie to np. 2.5 * ATR
+            if p_vs_sma20_val > (atr_pct * 2.5):
+                sma20_context = "EXTENDED_BULLISH_OVERSTRETCHED"
+            elif p_vs_sma20_val < -(atr_pct * 2.5):
+                sma20_context = "EXTENDED_BEARISH_OVERSTRETCHED"
+            elif abs(p_vs_sma20_val) < (atr_pct * 0.3):
+                sma20_context = "HUGGING_SMA20_CONSOLIDATION"
+
+        sma20_context += self._fmt(p_vs_sma20_val, 2, is_pct=True)
+
+        # 6. S/R 20 (Wsparcie/Opór) - STANDARYZACJA
+        sup20 = r.get("Support_20")
+        res20 = r.get("Resistance_20")
+        sr_status = "IN_MIDDLE_OF_RANGE"
+
+        if pd.notna(sup20) and pd.notna(res20):
+            dist_to_sup = (c - sup20) / c
+            dist_to_res = (res20 - c) / c
+
+            # 'Bliskość' to teraz 0.5 * ATR, a nie sztywne 1.5%
+            near_threshold = atr_pct * 0.5
+
+            if abs(dist_to_sup) < near_threshold:
+                sr_status = "AT_CRITICAL_SUPPORT_20"
+            elif abs(dist_to_res) < near_threshold:
+                sr_status = "AT_CRITICAL_RESISTANCE_20"
+            elif c > res20:
+                sr_status = "BREAKOUT_ABOVE_20D_HIGH"
+            elif c < sup20:
+                sr_status = "BREAKDOWN_BELOW_20D_LOW"
+
+        # Inline info o zakresie
+        sr_status += f" [Range: {round(sup20, 2) if sup20 else '?'}-{round(res20, 2) if res20 else '?'}]"
 
         return {
             "candle_pattern": candle_type,
             "momentum_rsi_14": rsi_state,
             "mean_reversion_bb": bb_state,
-            "velocity_roc_10": velocity
+            "velocity_roc_10": velocity,
+            "trend_base_sma20": sma20_context,
+            "range_levels_20": sr_status
         }
 
     # -------------------------
     # HORYZONT ŚREDNI (50 dni)
     # -------------------------
     def _analyze_medium_term(self, r) -> dict:
-        """Fokus: Relacja średnich, MACD Hist, Dystans do SMA50."""
-        close = r["Close"]
-        sma20, sma50 = r.get("SMA_20"), r.get("SMA_50")
+        """
+        Fokus: Struktura trendu (Z-Score), Dynamika MACD, oraz S/R 50 oparte na ATR.
+        Horyzont: ~50 sesji (ok. 2-3 miesiące).
+        """
+        close = r.get("Close", 0)
+        sma20 = r.get("SMA_20")
+        sma50 = r.get("SMA_50")
+        atr = r.get("ATR_14")
 
-        # 1. Struktura Trendu (Spread %)
+        # Miara zmienności bazowej (jako % ceny)
+        atr_pct = (atr / close) if (pd.notna(atr) and close > 0) else 0.02
+
+        # --- 1. STRUKTURA TRENDU (Spread SMA20 vs SMA50) ---
+        # Używamy ATR do określenia, czy "rozjazd" średnich jest istotny
         trend_structure = "STRUCTURE_UNCLEAR"
         spread_val = None
 
         if pd.notna(sma20) and pd.notna(sma50):
-            spread_val = (sma20 - sma50) / sma50  # Spread między średnimi
-            ma_diff_abs = abs(spread_val)
+            spread_val = (sma20 - sma50) / sma50
+            # Próg silnego trendu: spread większy niż 1.5-krotność dziennej zmienności
+            strong_trend_threshold = atr_pct * 1.5
 
-            if ma_diff_abs < 0.03:
+            if abs(spread_val) < (atr_pct * 0.5):
                 trend_structure = "CONSOLIDATION_COMPRESSED_MAS"
-            elif sma20 > sma50:
-                trend_structure = "BULLISH_SMA20_GT_SMA50"
+            elif spread_val > strong_trend_threshold:
+                trend_structure = "BULLISH_EXPANDING_MOMENTUM"
+            elif spread_val < -strong_trend_threshold:
+                trend_structure = "BEARISH_EXPANDING_MOMENTUM"
+            elif spread_val > 0:
+                trend_structure = "BULLISH_GRADUAL_ASCENT"
             else:
-                trend_structure = "BEARISH_SMA20_LT_SMA50"
+                trend_structure = "BEARISH_GRADUAL_DESCENT"
 
-        # Inline: spread w procentach
         trend_structure += self._fmt(spread_val, 2, is_pct=True)
 
-        # 2. MACD Cycle (Histogram value)
+        # --- 2. MACD CYCLE (Analiza Pochodnej Histogramu) ---
         macd, signal, hist = r.get("MACD"), r.get("MACD_signal"), r.get("MACD_hist")
+        hist_prev = r.get("MACD_hist_prev")
         macd_state = "MACD_UNKNOWN"
 
-        if pd.notna(macd) and pd.notna(signal):
+        if pd.notna(macd) and pd.notna(signal) and pd.notna(hist):
+            # Sprawdzamy kierunek zmian histogramu (pęd)
+            is_accelerating = abs(hist) > abs(hist_prev)
+
             if hist > 0:
-                if hist > hist * 1.1:
-                    macd_state = "BULLISH_ACCELERATING"
-                else:
-                    macd_state = "BULLISH_FADING"
+                macd_state = "BULLISH_ACCELERATING" if is_accelerating else "BULLISH_FADING"
             else:
-                if hist < hist * 1.1:
-                    macd_state = "BEARISH_ACCELERATING"
-                else:
-                    macd_state = "BEARISH_RECOVERING"
+                macd_state = "BEARISH_ACCELERATING" if is_accelerating else "BEARISH_RECOVERING"
 
-            if abs(macd - signal) / abs(signal) < 0.05:
-                macd_state += "_POTENTIAL_CROSS"
+            # Sygnały przecięcia (Crosses)
+            if hist > 0 and hist_prev <= 0:
+                macd_state = "BULLISH_ZERO_CROSS_CONFIRMED"
+            elif hist < 0 and hist_prev >= 0:
+                macd_state = "BEARISH_ZERO_CROSS_CONFIRMED"
 
-        # Inline: wartość histogramu (siła pędu)
         macd_state += self._fmt(hist, 4)
 
-        # 3. Pozycja względem SMA50
+        # --- 3. POZYCJA STATYSTYCZNA (Z-Score vs SMA50) ---
+        # To mówi LLM: "Czy ta cena jest nienaturalnie wysoko/nisko?"
+        std50 = r.get("Std_50")
+        z_score = (close - sma50) / std50 if (pd.notna(std50) and std50 > 0) else None
         pos_vs_50 = "AT_SMA50"
-        dist_50 = None
-        if pd.notna(sma50):
-            dist_50 = (close - sma50) / sma50
-            if dist_50 > 0.05:
-                pos_vs_50 = "EXTENDED_ABOVE_SMA50"
-            elif dist_50 < -0.05:
-                pos_vs_50 = "EXTENDED_BELOW_SMA50"
-            elif abs(dist_50) < 0.015:
-                pos_vs_50 = "TESTING_SUPPORT_RESISTANCE_SMA50"
 
-        # Inline: dystans do bazy trendu w %
-        pos_vs_50 += self._fmt(dist_50, 2, is_pct=True)
+        if z_score is not None:
+            if z_score > 2.2:
+                pos_vs_50 = "OVEREXTENDED_BULLISH_STAT_OUTLIER"  # Wykupienie > 98% przypadków
+            elif z_score < -2.2:
+                pos_vs_50 = "OVEREXTENDED_BEARISH_STAT_OUTLIER"  # Wyprzedanie > 98% przypadków
+            elif 0.5 > z_score > -0.5:
+                pos_vs_50 = "MEAN_REVERSION_HEALTHY_BASE"
+            elif z_score > 0:
+                pos_vs_50 = "BULLISH_TREND_POSITION"
+            else:
+                pos_vs_50 = "BEARISH_TREND_POSITION"
+
+        pos_vs_50 += f" (Z:{round(z_score, 2)})" if z_score is not None else ""
+
+        # --- 4. POZIOMY S/R 50 (Strefy Adaptacyjne) ---
+        sup50 = r.get("Support_50")
+        res50 = r.get("Resistance_50")
+        sr_50_status = "INSIDE_MONTHLY_RANGE"
+
+        if pd.notna(sup50) and pd.notna(res50):
+            dist_to_sup = (close - sup50) / close
+            dist_to_res = (res50 - close) / close
+
+            # Bufor strefy to 0.75 * ATR (dla mid-term szukamy 'obszaru', nie punktu)
+            zone_buffer = atr_pct * 0.75
+
+            if abs(dist_to_sup) < zone_buffer:
+                sr_50_status = "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE"
+            elif abs(dist_to_res) < zone_buffer:
+                sr_50_status = "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE"
+            elif close > res50:
+                sr_50_status = "MONTHLY_BREAKOUT_ABOVE_RANGE"
+            elif close < sup50:
+                sr_50_status = "MONTHLY_BREAKDOWN_BELOW_RANGE"
+
+        sr_50_status += f" [Zone: {round(sup50, 2)}-{round(res50, 2)}]"
 
         return {
             "trend_alignment": trend_structure,
             "cycle_macd": macd_state,
-            "position_sma50": pos_vs_50
+            "position_sma50_zscore": pos_vs_50,
+            "range_levels_50": sr_50_status
         }
 
     # -------------------------
     # HORYZONT DŁUGI (200 dni)
     # -------------------------
     def _analyze_long_term(self, r) -> dict:
-        """Fokus: Dystans do SMA200, Dystans do Year High/Low."""
-        close = r["Close"]
+        """
+        Fokus: Reżim rynkowy (SMA200), struktura cyklu (Crosses)
+        oraz pozycja w 200-sesyjnym kanale (zamiast sztywnego roku).
+        """
+        close = r.get("Close", 0)
         sma50, sma200 = r.get("SMA_50"), r.get("SMA_200")
-        year_high, year_low = r.get("Year_High"), r.get("Year_Low")
+        sup200 = r.get("Support_200")
+        res200 = r.get("Resistance_200")
 
-        # 1. Reżim Rynku (Dystans do SMA200)
+        # 1. Reżim Rynku (Bazujący na Price_vs_SMA_200)
+        # To mówi nam, czy w skali roku jesteśmy w trendzie wzrostowym czy spadkowym.
+        p_vs_sma200 = r.get("Price_vs_SMA_200")
         regime = "REGIME_UNKNOWN"
-        dist_200 = None
 
-        if pd.notna(sma200):
-            dist_200 = (close - sma200) / sma200
-            if close > sma200:
-                if sma50 and sma50 > sma200:
+        if pd.notna(p_vs_sma200):
+            if p_vs_sma200 > 0:
+                # Jeśli 50 jest nad 200, to silna hossa (Secular Bull)
+                if pd.notna(sma50) and sma50 > sma200:
                     regime = "SECULAR_BULL_MARKET"
                 else:
-                    regime = "BULL_MARKET_CORRECTION_PHASE"
+                    regime = "BULL_MARKET_CORRECTION"
             else:
-                if sma50 and sma50 < sma200:
+                # Jeśli 50 jest pod 200, to silna bessa (Secular Bear)
+                if pd.notna(sma50) and sma50 < sma200:
                     regime = "SECULAR_BEAR_MARKET"
                 else:
                     regime = "BEAR_MARKET_RELIEF_RALLY"
 
-        # Inline: Dystans do głównej średniej (kluczowe dla inwestora)
-        regime += self._fmt(dist_200, 2, is_pct=True)
+        regime += self._fmt(p_vs_sma200, 2, is_pct=True)
 
-        # 2. Golden/Death Cross gap
+        # 2. Golden/Death Cross Gap
+        # Mierzy dystans między 50-tką a 200-tką (tzw. "rozstęp trendu").
         cross_signal = "NO_MAJOR_CROSS"
         cross_gap = None
         if pd.notna(sma50) and pd.notna(sma200):
             cross_gap = (sma50 - sma200) / sma200
-            if -0.02 < cross_gap < 0.02:
-                cross_signal = "CROSS_IMMINENT_OR_HAPPENING"
-            elif cross_gap > 0.15:
-                cross_signal = "ESTABLISHED_BULL_GAP"
-            elif cross_gap < -0.15:
-                cross_signal = "ESTABLISHED_BEAR_GAP"
+            if abs(cross_gap) < 0.015:
+                cross_signal = "CROSS_IMMINENT_POTENTIAL_PIVOT"
+            elif cross_gap > 0.18:
+                cross_signal = "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK"
+            elif cross_gap > 0:
+                cross_signal = "HEALTHY_GOLDEN_CROSS_STRUCTURE"
+            elif cross_gap < -0.18:
+                cross_signal = "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY"
+            else:
+                cross_signal = "DEATH_CROSS_STRUCTURE"
 
-        # Inline: Rozwarcie między 50 a 200 (siła trendu długoterminowego)
         cross_signal += self._fmt(cross_gap, 2, is_pct=True)
 
-        # 3. Yearly Range Position
-        yearly_ctx = "RANGE_UNKNOWN"
-        dist_extr = None  # Dystans do najbliższego ekstremum
+        # 3. Pozycja w Zakresie 200-sesyjnym (Zastępuje Yearly Range)
+        # Wykorzystujemy Support_200 i Resistance_200 jako ekstrema trendu.
+        range_ctx = "RANGE_UNKNOWN"
 
-        if pd.notna(year_high) and pd.notna(year_low):
-            range_len = year_high - year_low
-            if range_len > 0:
-                curr_pos = (close - year_low) / range_len
+        # Zamiast skomplikowanych ifów dla dystansu, dodaj czytelny wskaźnik pozycji:
+        if pd.notna(sup200) and pd.notna(res200):
+            total_range = res200 - sup200
+            if total_range > 0:
+                relative_pos = (close - sup200) / total_range
 
-                if close >= year_high * 0.98:
-                    yearly_ctx = "BREAKOUT_ALL_TIME/YEARLY_HIGHS"
-                    dist_extr = (close - year_high) / year_high  # Ile ponad szczyt
-                elif close <= year_low * 1.02:
-                    yearly_ctx = "BREAKDOWN_YEARLY_LOWS"
-                    dist_extr = (close - year_low) / year_low  # Ile pod dołkiem
-                elif curr_pos > 0.8:
-                    yearly_ctx = "TRADING_NEAR_HIGHS_DISTRIBUTION"
-                    dist_extr = (close - year_high) / year_high  # Ile brakuje do szczytu
-                elif curr_pos < 0.2:
-                    yearly_ctx = "TRADING_NEAR_LOWS_ACCUMULATION"
-                    dist_extr = (close - year_low) / year_low  # Ile brakuje do dołka
+                # Klasyfikacja dystrybucji/akumulacji
+                if relative_pos > 0.90:
+                    range_ctx = "ATH_OR_TOP_OF_CYCLE"  # Podażowa ściana
+                elif relative_pos < 0.10:
+                    range_ctx = "MULTI_MONTH_LOW_ACCUMULATION"  # Popytowa strefa
+                elif relative_pos > 0.65:
+                    range_ctx = "BULLISH_UPPER_QUADRANT"
+                elif relative_pos < 0.35:
+                    range_ctx = "BEARISH_LOWER_QUADRANT"
                 else:
-                    yearly_ctx = "STUCK_IN_YEARLY_RANGE"
-                    # Dla środka zakresu nie dajemy dystansu, bo jest nieistotny
+                    range_ctx = "MID_CYCLE_NEUTRAL_ZONE"
 
-        # Inline: Dystans do ekstremum (tylko jeśli blisko)
-        yearly_ctx += self._fmt(dist_extr, 2, is_pct=True)
+                range_ctx += f" [Pos: {round(relative_pos * 100, 1)}%]"
 
         return {
             "market_regime": regime,
             "major_crosses": cross_signal,
-            "yearly_range_pos": yearly_ctx
+            "long_term_range_pos": range_ctx
         }
 
     # -------------------------
@@ -286,23 +373,40 @@ class TechnicalSummaryBuilder:
     # -------------------------
 
     def _volatility_detailed_context(self, r) -> str:
-        atr, close = r.get("ATR_14"), r.get("Close")
-        if not atr or not close: return "VOL_UNKNOWN"
+        """
+        Łączy zmienność nominalną (% ceny) z relatywną (obecny ATR vs średni ATR).
+        """
+        atr = r.get("ATR_14")
+        close = r.get("Close", 0)
+        # Średni ATR z 50 sesji pozwala wykryć 'skoki' zmienności
+        avg_atr = r.get("ATR_SMA_50")
+
+        if not atr or not close or close == 0:
+            return "VOL_UNKNOWN"
 
         atr_pct = atr / close
+        # rel_vol > 1.0 oznacza, że zmienność rośnie
+        rel_vol = (atr / avg_atr) if (avg_atr and avg_atr > 0) else 1.0
 
-        ctx = "NORMAL_HEALTHY"
-        if atr_pct > 0.08:
-            ctx = "EXTREME_CRASH_OR_PUMP_RISK"
-        elif atr_pct > 0.05:
-            ctx = "HIGH_EXPANDED"
-        elif atr_pct < 0.01:
-            ctx = "DEAD_STAGNATION"
-        elif atr_pct < 0.02:
-            ctx = "SQUEEZE_POTENTIAL_EXPLOSION"
+        # A. Charakterystyka waloru (Regime)
+        if atr_pct > 0.05:
+            regime = "HIGH_VOLATILITY_ASSET"  # np. NewConnect / Crypto
+        elif atr_pct < 0.015:
+            regime = "LOW_VOLATILITY_ASSET"  # np. Blue Chip / Dividend
+        else:
+            regime = "MODERATE_VOLATILITY"
 
-        # Inline: ATR jako procent ceny (np. 3.5%) - LLM wie ile 'ruchu' oczekiwać dziennie
-        return ctx + self._fmt(atr_pct, 2, is_pct=True)
+        # B. Obecna dynamika (Event)
+        if rel_vol > 1.8:
+            event = "VOLATILITY_EXPLOSION_UNSTABLE"
+        elif rel_vol > 1.3:
+            event = "EXPANDING_RANGE"
+        elif rel_vol < 0.7:
+            event = "VOLATILITY_SQUEEZE_COMPRESSION"
+        else:
+            event = "STABLE_NORMAL_FLUX"
+
+        return f"{event} | {regime} (ATR: {self._fmt(atr_pct, 2, is_pct=True)})"
 
     def _volume_detailed_context(self, r) -> str:
         vol_ratio = r.get("Vol_Ratio_20")
@@ -321,38 +425,73 @@ class TechnicalSummaryBuilder:
         # Inline: Ratio (np. 1.8x)
         return ctx + self._fmt(vol_ratio, 2)
 
-    def _sr_detailed_context(self, r) -> str:
-        close = r["Close"]
-        sup20, res20 = r.get("Support_20"), r.get("Resistance_20")
-        y_high, y_low = r.get("Year_High"), r.get("Year_Low")
+    def _sr_landscape(self, r) -> dict:
+        close = r.get("Close", 0)
+        atr_pct = (r.get("ATR_14") / close) if (r.get("ATR_14") and close > 0) else 0.02
 
-        ctx = "NO_IMMEDIATE_KEY_LEVELS"
-        level_val = None  # Wartość poziomu do wyświetlenia
+        # Mapowanie dla skrócenia nazw w raporcie
+        short_names = {
+            "Short-term (20d)": "20d",
+            "Medium-term (50d)": "50d",
+            "Institutional (200d)": "200d",
+            "Major Cycle (200d)": "200d"
+        }
 
-        # Logika SR
-        if y_high and close >= y_high * 0.99:
-            ctx = "CRITICAL_RESISTANCE_YEAR_HIGH"
-            level_val = y_high
-        elif y_low and close <= y_low * 1.01:
-            ctx = "CRITICAL_SUPPORT_YEAR_LOW"
-            level_val = y_low
-        elif pd.notna(sup20) and pd.notna(res20):
-            range_ = res20 - sup20
-            if range_ > 0:
-                if close < sup20:
-                    ctx = "BREAKDOWN_MONTHLY_SUPPORT"
-                    level_val = sup20
-                elif close > res20:
-                    ctx = "BREAKOUT_MONTHLY_RESISTANCE"
-                    level_val = res20
-                elif (close - sup20) / range_ < 0.15:
-                    ctx = "TESTING_MONTHLY_SUPPORT"
-                    level_val = sup20
-                elif (res20 - close) / range_ < 0.15:
-                    ctx = "TESTING_MONTHLY_RESISTANCE"
-                    level_val = res20
+        levels = [
+            {"n": "20d", "v": r.get("Support_20"), "t": "sup"},
+            {"n": "50d", "v": r.get("Support_50"), "t": "sup"},
+            {"n": "200d", "v": r.get("Support_200"), "t": "sup"},
+            {"n": "20d", "v": r.get("Resistance_20"), "t": "res"},
+            {"n": "50d", "v": r.get("Resistance_50"), "t": "res"},
+            {"n": "200d", "v": r.get("Resistance_200"), "t": "res"},
+        ]
 
-        # Inline: podajemy konkretną cenę poziomu, żeby LLM wiedział gdzie stawiać Stop Loss
-        if level_val:
-            return f"{ctx} (Level: {round(level_val, 2)})"
-        return ctx
+        valid = [l for l in levels if pd.notna(l["v"])]
+        sups = sorted([l for l in valid if l["t"] == "sup" and l["v"] <= close], key=lambda x: x["v"], reverse=True)
+        resis = sorted([l for l in valid if l["t"] == "res" and l["v"] > close], key=lambda x: x["v"])
+
+        # 1. Funkcja pomocnicza do zwięzłych opisów
+        def get_brief_prox(price, level_val):
+            if not level_val: return ""
+            d = abs(price - level_val) / price
+            if d < (atr_pct * 0.5): return "TESTING"
+            if d < atr_pct: return "NEAR"
+            return "DISTANT"
+
+        # 2. Logika "Power Zones" - zamiast listy par, po prostu zliczamy zagęszczenie
+        valid_vals = sorted([l["v"] for l in valid])
+        clusters = 0
+        for i in range(len(valid_vals) - 1):
+            if abs(valid_vals[i + 1] - valid_vals[i]) / valid_vals[i] < (atr_pct * 0.8):
+                clusters += 1
+
+        structure = "CLEAN"
+        if clusters > 0:
+            structure = f"POWER_ZONE_CONFLUENCE({clusters})"
+
+        gap = (resis[0]["v"] - sups[0]["v"]) / close if (sups and resis) else 1.0
+        if gap < (atr_pct * 2.5): structure = "TIGHT_SQUEEZE"
+
+        # 3. Formatowanie wyjścia - maksymalnie konkretnie
+        s_top = sups[0] if sups else None
+        r_top = resis[0] if resis else None
+
+        floor_info = f"{get_brief_prox(close, s_top['v'])} @{s_top['n']}" if s_top else "NO_FLOOR"
+        ceil_info = f"{get_brief_prox(close, r_top['v'])} @{r_top['n']}" if r_top else "BLUE_SKY"
+
+        # Bias
+        all_res = [l["v"] for l in valid if l["t"] == "res"]
+        all_sup = [l["v"] for l in valid if l["t"] == "sup"]
+
+        bias = "RANGE"
+        if all_res and close > max(all_res):
+            bias = "UNCONFINED_BULLISH"
+        elif all_sup and close < min(all_sup):
+            bias = "HEAVY_BEARISH"
+
+        return {
+            "barriers": f"F:{floor_info} | C:{ceil_info}",
+            "structure": structure,
+            "bias": bias
+        }
+
