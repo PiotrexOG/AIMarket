@@ -37,6 +37,9 @@ class FundamentalSnapshotDTO(BaseModel):
     free_cash_flow_ttm: int | None
 
     eps_ttm: float | None
+    eps: float | None = None
+    eps_est_for_next: float | None = None
+    eps_est_from_previous: float | None = None
     gross_margin_ttm: float | None
     operating_margin_ttm: float | None
     net_margin_ttm: float | None

@@ -78,27 +78,37 @@ class ValuationSummaryBuilder:
         return label + metrics
 
     def _growth_expectation(self, v: dict) -> str:
-        """
-        Co rynek 'wycenia' w obecnej cenie? Wysokie P/E = Oczekiwanie wysokiego wzrostu.
-        """
         pe = v.get("pe_ratio_ttm")
-        # PEG ratio byłoby tu idealne, ale bazujemy na tym co mamy w wejściu
+        growth = v.get("eps_growth_ttm_yoy")
+        peg = v.get("peg_ratio")
 
-        if pe is None: return "UNKNOWN"
+        if pe is None or growth is None:
+            return "UNKNOWN (missing P/E or growth data)"
 
-        label = "MODERATE_GROWTH_PRICED_IN"
-        if pe > 50:
-            label = "AGGRESSIVE_GROWTH_REQUIRED"  # Firma musi rosnąć, żeby uzasadnić cenę
-        elif pe > 30:
-            label = "HIGH_GROWTH_EXPECTED"
-        elif pe < 10:
-            label = "NO_GROWTH_OR_DECLINE_PRICED_IN"
-        elif pe < 15:
-            label = "LIMITED_GROWTH_EXPECTED"
+        if growth < 0:
+            if pe > 25:
+                label = "EXTREMELY_RISKY_DECLINING_EARNINGS"
+            else:
+                label = "DECLINING_EARNINGS"
+            return f"{label} (Growth: {self._fmt(growth)}%)"
 
-        # Inline: P/E jako proxy oczekiwań
-        metrics = f" (Implied by P/E: {self._fmt(pe)})"
-        return label + metrics
+        # Jeśli growth > 0 ale PEG nie został obliczony (brak danych)
+        if peg is None:
+            return f"GROWTH_POSITIVE ({self._fmt(growth)}%)"
+
+        # Klasyfikacja na podstawie gotowego PEG
+        if peg < 0.7:
+            label = "GROWTH_UNDERRATED"
+        elif peg < 1.0:
+            label = "ATTRACTIVE_GROWTH_PRICING"
+        elif peg > 2.0:
+            label = "GROWTH_OVERPRICED"
+        elif peg > 1.5:
+            label = "EXPENSIVE_VS_GROWTH"
+        else:
+            label = "FAIR_GROWTH_PRICING"
+
+        return f"{label} (PEG: {self._fmt(peg)})"
 
     def _capital_structure_impact(self, v: dict) -> str:
         """
@@ -128,3 +138,8 @@ class ValuationSummaryBuilder:
         # Inline: EV/MC (Pokazuje mnożnik dźwigni finansowej na wycenie)
         metrics = f" (EV/MC: {self._fmt(ratio)}x)"
         return label + metrics
+
+
+
+
+

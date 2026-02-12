@@ -76,9 +76,7 @@ class UserSimulator:
 
         if crucial_indicators is not None:
             print(date_time)
-            for ticker, dic in crucial_indicators.items():
-                for key, value in dic.items():
-                    print(f"{key}: {value}")
+            self._print_nested_dict(crucial_indicators, indent=0)
 
         # pre_cash = self.portfolio.cash
         # pre_shares = dict(self.portfolio.shares)
@@ -150,3 +148,17 @@ class UserSimulator:
     def _portfolio_changed(self, pre_cash, pre_shares) -> bool:
         return self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares
 
+
+    def _print_nested_dict(self, data, indent=0):
+        """Rekurencyjnie wypisuje słownik z wcięciami."""
+        indent_str = "  " * indent
+
+        if isinstance(data, dict):
+            for key, value in data.items():
+                if isinstance(value, dict):
+                    print(f"{indent_str}{key}:")
+                    self._print_nested_dict(value, indent + 1)
+                else:
+                    print(f"{indent_str}{key}: {value}")
+        else:
+            print(f"{indent_str}{data}")

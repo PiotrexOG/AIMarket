@@ -12,11 +12,12 @@ class FundamentalSummaryBuilder:
             return {"fundamentals": "NO_DATA"}
 
         summary = {
-            "business_quality": self._business_quality(snapshot),
-            "financial_health": self._financial_health(snapshot),
-            "cash_generation": self._cash_generation(snapshot),
-            "growth_profile": self._growth_profile(snapshot),
-            "company_scale": self._company_maturity(snapshot)
+            "business_quality_ttm": self._business_quality(snapshot),
+            "financial_health_ttm": self._financial_health(snapshot),
+            "cash_generation_ttm": self._cash_generation(snapshot),
+            "company_scale_ttm": self._company_maturity(snapshot),
+            "growth_profile_ttm": self._growth_profile(snapshot),
+            "earnings_momentum_quarterly": self._earnings_momentum(snapshot),
         }
 
         return summary
@@ -43,22 +44,30 @@ class FundamentalSummaryBuilder:
     # -------------------------
 
     def _business_quality(self, s) -> str:
-        gm, om = s.gross_margin_ttm, s.operating_margin_ttm
+        gm, om, nm = s.gross_margin_ttm, s.operating_margin_ttm, s.net_margin_ttm
 
-        # Logika semantyczna
-        label = "UNKNOWN"
-        if gm is not None and om is not None:
-            if gm > 0.5 and om > 0.3:
-                label = "EXCEPTIONAL_MARGIN_BUSINESS"  # Moat?
-            elif gm > 0.4 and om > 0.2:
-                label = "HIGH_MARGIN_BUSINESS"
-            elif om < 0.08:
-                label = "LOW_MARGIN_BUSINESS_THIN"
-            else:
-                label = "AVERAGE_MARGIN_BUSINESS"
+        # Domyślny label jeśli brakuje danych
+        if any(m is None for m in [gm, om, nm]):
+            return f"INSUFFICIENT_DATA (G:{self._fmt_pct(gm)} O:{self._fmt_pct(om)} N:{self._fmt_pct(nm)})"
 
-        # Inline Metrics: GM i OM to serce jakości biznesu
-        metrics = f" (Gross: {self._fmt_pct(gm)}, Oper: {self._fmt_pct(om)})"
+        # Logika klasyfikacji
+        if gm > 0.60 and om > 0.35 and nm > 0.25:
+            label = "ULTRA_ELITE_MOAT"  # Poziom wizji, software, luksus
+        elif gm > 0.45 and om > 0.25 and nm > 0.15:
+            label = "HIGH_EFFICIENCY_CASH_MACHINE"
+        elif gm > 0.30 and om > 0.15 and nm > 0.10:
+            label = "SOLID_CORE_BUSINESS"
+        elif nm < 0.02 and om > 0.10:
+            label = "DEBT_OR_TAX_STRANGLED"  # Dobra operacja, ale zysk zjada dług
+        elif om < 0.05 or nm < 0.03:
+            label = "THIN_MARGIN_COMMODITY"  # Przemysł ciężki, handel detaliczny
+        elif nm < 0:
+            label = "UNPROFITABLE_OPERATION"
+        else:
+            label = "AVERAGE_INDUSTRIAL_STANDARD"
+
+        # Inline Metrics dla szybkiego wglądu
+        metrics = f" (GM: {self._fmt_pct(gm)} | OM: {self._fmt_pct(om)} | NM: {self._fmt_pct(nm)})"
         return label + metrics
 
     def _financial_health(self, s) -> str:
@@ -167,5 +176,41 @@ class FundamentalSummaryBuilder:
             label = "SMALL_CAP_SPECULATIVE"
 
         # Inline Metrics: Skala przychodów (żeby odróżnić Apple od start-upu)
-        metrics = f" (Rev TTM: {self._fmt_money(rev)})"
+        metrics = f" (Rev: {self._fmt_money(rev)})"
         return label + metrics
+
+    def _earnings_momentum(self, s) -> str:
+        eps = s.eps
+        est_prev = s.eps_est_from_previous  # Co analitycy przewidywali na ten kwartał
+        est_next = s.eps_est_for_next  # Co przewidują na kolejny kwartał
+
+        if any(v is None for v in [eps, est_prev, est_next]):
+            return "MOMENTUM_UNKNOWN"
+
+        # 1. Obliczamy niespodziankę (Earnings Surprise)
+        # Formuła: (Raportowany EPS - Przewidywany EPS) / abs(Przewidywany EPS)
+        surprise = (eps - est_prev) / abs(est_prev) if est_prev != 0 else 0
+
+        # 2. Obliczamy prognozowany wzrost (Forward Outlook)
+        # Porównujemy prognozę na przyszły kwartał do obecnego wyniku
+        fwd_growth = (est_next - eps) / abs(eps) if eps != 0 else 0
+
+        label = "Q_"
+
+        # Klasyfikacja Momentum
+        if surprise > 0.05 and fwd_growth > 0.05:
+            label += "ACCELERATING_GROWTH"  # Bije oczekiwania i podnosi poprzeczkę
+        elif surprise > 0 and fwd_growth <= 0:
+            label += "PEAK_PERFORMANCE_SKEPTIC"  # Dobre wyniki teraz, ale pesymizm na przyszłość
+        elif surprise < 0 and fwd_growth > 0.10:
+            label += "TEMPORARY_STUMBLE"  # Potknięcie teraz, ale analitycy wierzą w odbicie
+        elif surprise < -0.05 and fwd_growth < 0:
+            label += "EARNINGS_DETERIORATION"  # Rozczarowanie i obniżanie prognoz (flaga ostrzegawcza)
+        else:
+            label += "STABLE_EXPECTATIONS"
+
+
+
+        # Detale do zwrócenia
+        details = f" (Curr Q Surprise: {self._fmt_pct(surprise)}, Next Q Est Growth: {self._fmt_pct(fwd_growth)})"
+        return label + details
