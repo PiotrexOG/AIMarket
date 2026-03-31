@@ -5,20 +5,28 @@ import "./ChartRangeButtons.css";
 const ranges = ["1D", "1W", "1M", "3M", "6M", "YTD", "1Y", "Custom"];
 const intervals = ["30m", "1h", "4h", "1d", "1w"];
 
-function ChartRangeButtons({ range, onChange, onCustomRangeChange }) {
+function ChartRangeButtons({ 
+  totalStart,
+  totalEnd,
+  range,
+  onChange,
+  onCustomRangeChange
+}) {
   const [showCustom, setShowCustom] = useState(false);
 
-  const [customStart, setCustomStart] = useState("2024-10-01");
-  const [customEnd, setCustomEnd] = useState("2025-10-01");
-  const [customInterval, setCustomInterval] = useState("1d");
+  const [customStart, setCustomStart] = useState(
+    totalStart.toISOString().slice(0,10)
+  );
+
+  const [customEnd, setCustomEnd] = useState(
+    totalEnd.toISOString().slice(0,10)
+  );
+
+   const [customInterval, setCustomInterval] = useState("1d");
 
   const handleRangeClick = (r) => {
     onChange(r);
-    if (r === "Custom") {
-      setShowCustom(true);
-    } else {
-      setShowCustom(false);
-    }
+    setShowCustom(r === "Custom");
   };
 
   const handleApplyCustom = () => {

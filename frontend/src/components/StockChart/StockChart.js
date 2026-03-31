@@ -7,11 +7,15 @@ import { useChartRange } from "../common/useChartRange";
 import StockChangeDisplay from "./StockChangeDisplay";
 import "../../App.css";
 
-function StockChart({ onTransactionsSelect, selectedUsers = {}, colorPalette = [] }) {
+function StockChart({ 
+  totalStart,
+  totalEnd,
+  onTransactionsSelect,
+  selectedUsers = {},
+  colorPalette = []
+}) {
   const { ticker } = useParams();
-  const totalStart = new Date("2024-10-01T13:30:00Z");
-  const totalEnd = new Date("2025-10-01T20:30:00Z");
-  
+
   const { 
     range, 
     customRange, 
@@ -22,6 +26,7 @@ function StockChart({ onTransactionsSelect, selectedUsers = {}, colorPalette = [
 
   const [dataSets, setDataSets] = useState([]);
   const [transactions, setTransactions] = useState([]);
+
 
   // 🔹 Posortowane ID użytkowników (numerycznie)
   const sortedUserIds = Object.keys(selectedUsers)
@@ -87,6 +92,8 @@ function StockChart({ onTransactionsSelect, selectedUsers = {}, colorPalette = [
         <div className="sidebar-section">
           <StockChangeDisplay dataSets={dataSets} />
           <ChartRangeButtons 
+            totalStart={totalStart}
+            totalEnd={totalEnd}
             range={range} 
             onChange={handleRangeChange} 
             onCustomRangeChange={handleCustomRangeChange} 

@@ -153,7 +153,9 @@ def get_last_8_quarters_simple(current_year, current_quarter):
 
 def calculate(symbol: str, current_year: int, current_quarter: int):
     files = get_last_8_quarters_simple(current_year, current_quarter)
-    base_path =  Path(__file__).parent.parent / "quarterly_compact" / symbol
+
+
+    base_path =  Path("fundaments") / "quarterly_compact" / symbol
 
     quarters = []
     for f in files:

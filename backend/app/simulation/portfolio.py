@@ -3,10 +3,11 @@ from typing import Dict
 
 
 class Portfolio:
-    def __init__(self, portfolio_id: int, starting_cash: float, shares: Dict[str, int] = None):
+    def __init__(self, portfolio_id: int, starting_cash: float, user_profile: dict, shares: Dict[str, int] = None):
         self.portfolio_id = portfolio_id
         self.cash = starting_cash
         self.shares = defaultdict(int, shares or {})
+        self.user_profile = user_profile
 
     # ---- Operacje na portfelu ----
     def buy(self, ticker: str, amount: int, price: float) -> bool:

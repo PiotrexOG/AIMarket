@@ -6,11 +6,14 @@ import { fetchValuation } from "./utils/fetchUtils";
 import { useChartRange } from "../common/useChartRange";
 import "../../App.css";
 
-function PortfolioChart({ onPointClick, selectedUsers, colorPalette }) {
-  const totalStart = new Date("2024-12-01T13:30:00Z");
-  const totalEnd = new Date("2025-10-01T20:30:00Z");
-  
-  // 🔹 Posortowane ID użytkowników (numerycznie)
+function PortfolioChart({ 
+  totalStart,
+  totalEnd,
+  onPointClick,
+  selectedUsers,
+  colorPalette 
+}) {
+
   const sortedUserIds = Object.keys(selectedUsers)
     .map(id => parseInt(id))
     .sort((a, b) => a - b);
@@ -22,6 +25,7 @@ function PortfolioChart({ onPointClick, selectedUsers, colorPalette }) {
     handleCustomRangeChange,
     getEffectiveRange,
   } = useChartRange(totalStart, totalEnd);
+
 
   const [dataSets, setDataSets] = useState([]);
 
@@ -74,6 +78,8 @@ function PortfolioChart({ onPointClick, selectedUsers, colorPalette }) {
             selectedUsers={selectedUsers}
           />
           <ChartRangeButtons
+            totalStart={totalStart}
+            totalEnd={totalEnd}
             range={range}
             onChange={handleRangeChange}
             onCustomRangeChange={handleCustomRangeChange}

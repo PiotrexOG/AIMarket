@@ -13,8 +13,10 @@ SessionLocal = sessionmaker(bind=engine)
 
 if DEBUG_RESET:
     for table in reversed(Base.metadata.sorted_tables):
-        if table.name != "market_data":
+        if table.name not in ["market_data", "analyst_grades", "fundamental_snapshot", "company_daily_summary"]:
             table.drop(engine, checkfirst=True)
+        # if table.name in ["analyst_grades", "fundamental_snapshot", "company_news", "company_daily_summary"] and GENERATE_NEW:
+        #     table.drop(engine, checkfirst=True)
     Base.metadata.create_all(bind=engine)
 
 

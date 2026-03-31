@@ -7,12 +7,12 @@ from pathlib import Path
 API_KEY = os.environ.get("FMP_API_KEY")
 BASE_URL = "https://financialmodelingprep.com/stable"
 
-CURRENT_FILE_PATH = Path(__file__).resolve().parent
+BASE_DATA_PATH = Path("fundaments")
 
-INPUT_DIR = CURRENT_FILE_PATH.parent / "financial_data"
+INPUT_DIR = BASE_DATA_PATH / "financial_data"
 INPUT_DIR.mkdir(exist_ok=True, parents=True)
 
-OUTPUT_DIR = CURRENT_FILE_PATH.parent / "quarterly_compact"
+OUTPUT_DIR = BASE_DATA_PATH / "quarterly_compact"
 OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
 def fetch_and_save(symbol: str, period: str, limit: int = 5):

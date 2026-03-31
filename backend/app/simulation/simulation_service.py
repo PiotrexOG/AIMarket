@@ -1,4 +1,6 @@
-from datetime import datetime, timedelta
+import json
+from datetime import datetime, timedelta, date
+from pathlib import Path
 from typing import Dict
 
 from sqlalchemy.orm import Session
@@ -9,7 +11,7 @@ from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
 from app.services.layers.analyst_grades_service import AnalystGradesService
-from app.services.layers.company_news_service import CompanyNewsService
+from app.services.layers.company_daily_summary import CompanyDailySummaryService
 from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
 from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
@@ -19,7 +21,7 @@ from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
-from app.testy.scrap.company_news import fetch_all_company_news
+from app.testy.scrap.company_news import fetch_all_company_news, save_company_news
 import app.testy.scrap.quarterly as quarterly
 import app.testy.scrap.financial as financial
 import app.testy.scrap.earning_dates as earning_dates
@@ -40,7 +42,7 @@ class SimulationService:
         self.transaction_service  = PortfolioTransactionService(db, self.portfolio_service)
         self.fundamental_snapshot_service = FundamentalSnapshotService(db)
         self.analyst_grades_service = AnalystGradesService(db)
-        self.company_news_service = CompanyNewsService(db)
+        self.company_daily_summary_service = CompanyDailySummaryService(db)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -53,12 +55,12 @@ class SimulationService:
             #earning_dates.save_earnings_by_date(ticker, self.start_time, self.end_time)
             quarters = earning_dates.get_years_and_quarters_from_json(ticker)
 
-            #financial.create(ticker)
+            financial.create(ticker)
             first_year, first_q = quarters[0]
             last_year, last_q = quarters[-1]
             print(first_year, first_q)
             print(last_year, last_q)
-            #quarterly.create(ticker, first_year, f"Q{first_q}", last_year, f"Q{last_q}")
+            quarterly.create(ticker, first_year, f"Q{first_q}", last_year, f"Q{last_q}")
 
             for year, quarter in quarters:
                 funds = data_fundamentals.calculate(
@@ -92,20 +94,47 @@ class SimulationService:
                 to_date=self.end_time,
             )
 
-            for g in news:
-                as_of_date = datetime.fromisoformat(g["datetime"])
+            save_company_news(ticker, news)
 
-                payload = {
-                    "headline": g.get("headline"),
-                    "summary": g.get("summary")
-                }
-
-                self.company_news_service.save(
-                    ticker=ticker,
-                    date_time=as_of_date,
-                    data=payload,
-                )
             print(f"✅ Company news dla {ticker} zapisana")
+
+    # Rozszerzona wersja Twojej metody
+    def fetch_company_news_summary(self):
+        # Zmieniono na katalog z danymi ocenionymi (scored)
+        DATA_DIR = Path("data/company_news_scored")
+
+        for ticker in self.tickers:
+            ticker_dir = DATA_DIR / ticker
+
+            # Szukamy plików news_scored.json (lub wzorca, jeśli masz ich więcej)
+            for file in ticker_dir.glob("*.json"):
+                with open(file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                for entry in data:
+                    # Parsowanie daty
+                    news_date = datetime.strptime(
+                        entry["date"],
+                        "%Y-%m-%d"
+                    ).date()
+
+                    # Wscored newsach 'daily_summary' to zazwyczaj string,
+                    # ale robimy zabezpieczenie na wypadek listy
+                    summary_raw = entry.get("daily_summary", "")
+                    summary = " ".join(summary_raw) if isinstance(summary_raw, list) else summary_raw
+
+                    # Pobieramy oceny (default 0.0)
+                    importance = float(entry.get("importance", 0.0))
+
+                    # Zapisujemy do bazy przez serwis
+                    self.company_daily_summary_service.save(
+                        ticker=ticker,
+                        date=news_date,
+                        summary=summary,
+                        importance=importance,
+                    )
+
+            print(f"✅ Przetworzono i zapisano scored news dla: {ticker}")
 
     # Rozszerzona wersja Twojej metody
     def fetch_analyst_grades(self):
@@ -197,20 +226,18 @@ class SimulationService:
 
         # 🚀 Wspólna logika budowania UserSimulatorów
         for user, cash, shares in users_to_init:
-            decision_maker_factory = USERS[user.name]
-            decision_maker = decision_maker_factory()
-
             self.users[user.id] = UserSimulator(
                 user_id=user.id,
                 starting_cash=cash,
                 shares=shares,
-                decision_maker=decision_maker,
+                decision_maker=USERS[user.name],
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,
                 transaction_service=self.transaction_service,
                 fundamental_service=self.fundamental_snapshot_service,
-                analyst_service=self.analyst_grades_service
+                analyst_service=self.analyst_grades_service,
+                company_daily_summary_service=self.company_daily_summary_service
 
             )
 
@@ -228,13 +255,47 @@ class SimulationService:
     # ---- Krok 3: Symulacja krok po kroku ----
     def run_simulation(self):
         current_time = self.start_time
-        print(current_time)
         while current_time <= self.end_time:
+            # Sprawdzamy warunek daty i konkretnej godziny
+            if current_time.date() > date(2025, 11, 1):
+                if current_time.hour == 13 and current_time.minute == 30:
+                    current_time += timedelta(hours=1)
+
+            print(f"Symulacja dla: {current_time}")
             self._simulate_time_step(current_time)
+
+            # Przejście do kolejnego tygodnia
             current_time += timedelta(weeks=1)
+
         print("✅ Symulacja zakończona.")
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
+
+        # 1️⃣ bierzemy jednego usera tylko do wygenerowania danych
+        first_user = next(iter(self.users.values()))
+
+        crucial_indicators = first_user.fetch_or_load_indicators(current_time)
+
+        if not crucial_indicators:
+            return
+
+        # 2️⃣ CROSS SECTION – tylko raz
+        cross_section_result = first_user.perform_cross_section_once(
+            current_time,
+            crucial_indicators
+        )
+
+        if not cross_section_result:
+            return
+
+        # 3️⃣ każdy user podejmuje własną decyzję
         for user_simulator in self.users.values():
-            user_simulator.process_day(current_time)
+            user_simulator.process_day(
+                current_time,
+                crucial_indicators,
+                cross_section_result
+            )
+
+
+

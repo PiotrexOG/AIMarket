@@ -22,10 +22,11 @@ app.add_middleware(
 )
 
 # Rejestracja routerów
-from app.routers import users_router, market_data_router, portfolio_router
+from app.routers import users_router, market_data_router, portfolio_router, simulation_router
 app.include_router(users_router.router)
 app.include_router(market_data_router.router)
 app.include_router(portfolio_router.router)
+app.include_router(simulation_router.router)
 
 
 def get_start_datetime(real_time: bool) -> datetime:
@@ -65,10 +66,11 @@ def run_simulation():
             end_time=END_TIME,
         )
 
-        simulation_service.fetch_market_data(interval="1h")
-        simulation_service.fetch_analyst_grades()
-        simulation_service.fetch_data_fundaments()
+        # simulation_service.fetch_market_data(interval="1h")
+        # simulation_service.fetch_analyst_grades()
+        # simulation_service.fetch_data_fundaments()
         # simulation_service.fetch_company_news()
+        # simulation_service.fetch_company_news_summary()
         simulation_service.initialize_users()
         simulation_service.run_simulation()
 
