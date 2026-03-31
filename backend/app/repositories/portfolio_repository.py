@@ -28,7 +28,7 @@ class PortfolioRepository:
             self.db.query(PortfolioHistory)
             .options(joinedload(PortfolioHistory.shares))
             .filter(PortfolioHistory.portfolio_id == portfolio_id)
-            .order_by(PortfolioHistory.datetime.desc())
+            .order_by(PortfolioHistory.datetime.desc(), PortfolioHistory.id.desc())
             .first()
         )
 
@@ -65,7 +65,7 @@ class PortfolioRepository:
                 PortfolioHistory.portfolio_id == portfolio_id,
                 PortfolioHistory.datetime <= date_time,
             )
-            .order_by(PortfolioHistory.datetime.desc())
+            .order_by(PortfolioHistory.datetime.desc(), PortfolioHistory.id.desc())
             .first()
         )
 

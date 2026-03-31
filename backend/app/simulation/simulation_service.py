@@ -190,6 +190,8 @@ class SimulationService:
                         )
                     )
                 print(f"✅ Historia OHLCV dla {ticker} zapisana")
+            else:
+                print(f"✅ Historia OHLCV dla {ticker} jest już w bazie")
 
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
