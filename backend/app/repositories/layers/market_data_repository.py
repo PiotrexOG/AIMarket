@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from typing import Optional, List
 
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -51,31 +52,37 @@ class MarketDataRepository:
             .first()
         )
 
-    def exists_in_range(self, ticker: str, start: datetime, end: datetime, tolerance_days: int = 4) -> bool:
+    def check_data_coverage(
+            self, ticker: str, start: datetime, end: datetime, tolerance_days: int = 4
+    ) -> tuple[bool, bool]:
         """
-        Sprawdza, czy w bazie istnieją dane blisko punktu startowego i końcowego.
-        tolerance_days: jak daleko od daty możemy szukać (domyślnie 4 dni, by pokryć długie weekendy).
+        Zwraca:
+        (has_start, has_end)
         """
 
-        # 1. Szukamy najbliższego rekordu w oknie [start - tol, start + tol]
-        # To załatwia problem świąt, weekendów i zmian godzin otwarcia.
         has_start = self.db.query(MarketData.id).filter(
             MarketData.ticker == ticker,
             MarketData.datetime >= start - timedelta(days=tolerance_days),
             MarketData.datetime <= start + timedelta(days=tolerance_days)
         ).first() is not None
 
-        if not has_start:
-            return False
-
-        # 2. Szukamy najbliższego rekordu w oknie [end - tol, end + tol]
         has_end = self.db.query(MarketData.id).filter(
             MarketData.ticker == ticker,
             MarketData.datetime >= end - timedelta(days=tolerance_days),
             MarketData.datetime <= end + timedelta(days=tolerance_days)
         ).first() is not None
 
-        return has_end
+        return has_start, has_end
+
+    def get_data_range(self, ticker: str):
+        result = self.db.query(
+            func.min(MarketData.datetime),
+            func.max(MarketData.datetime)
+        ).filter(
+            MarketData.ticker == ticker
+        ).first()
+
+        return result  # (min_date, max_date)
 
     def get_unique_tickers(self) -> list[str]:
         """

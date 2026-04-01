@@ -171,27 +171,56 @@ class SimulationService:
         """
         # Pobieranie OHLCV (to co już masz)
         for ticker in self.tickers:
-            existing = self.market_data_service.has_data_in_range(
-                ticker=ticker, start=self.zero_time, end=self.end_time
+
+            has_start, has_end = self.market_data_service.check_data_coverage(
+                ticker=ticker,
+                start=self.zero_time,
+                end=self.end_time
             )
 
-            if not existing:
-                df = self.yahoo_client.fetch_history(ticker, self.zero_time, self.end_time, interval)
-                for _, row in df.iterrows():
-                    self.market_data_service.add_market_data(
-                        MarketDataCreate(
-                            datetime=row["Datetime"],
-                            ticker=row["Ticker"],
-                            open=row["Open"],
-                            high=row["High"],
-                            low=row["Low"],
-                            close=row["Close"],
-                            volume=row["Volume"],
-                        )
-                    )
-                print(f"✅ Historia OHLCV dla {ticker} zapisana")
+            if not has_start and not has_end:
+                # 🔴 brak wszystkiego → pobierz całość
+                fetch_start = self.zero_time
+                fetch_end = self.end_time
+
             else:
-                print(f"✅ Historia OHLCV dla {ticker} jest już w bazie")
+                db_start, db_end = self.market_data_service.get_data_range(ticker)
+
+                if has_start and has_end:
+                    print(f"✅ Dane dla {ticker} kompletne")
+                    continue
+
+                elif has_start and not has_end:
+                    # 🟡 brakuje końca
+                    fetch_start = db_end + timedelta(days=1)
+                    fetch_end = self.end_time
+
+                elif not has_start and has_end:
+                    # 🟡 brakuje początku
+                    fetch_start = self.zero_time
+                    fetch_end = db_start - timedelta(days=2)
+
+            # 📥 pobieranie
+            df = self.yahoo_client.fetch_history(
+                ticker, fetch_start, fetch_end, interval
+            )
+
+            print(f"pobieram od {fetch_start} to {fetch_end}")
+
+            for _, row in df.iterrows():
+                self.market_data_service.add_market_data(
+                    MarketDataCreate(
+                        datetime=row["Datetime"],
+                        ticker=row["Ticker"],
+                        open=row["Open"],
+                        high=row["High"],
+                        low=row["Low"],
+                        close=row["Close"],
+                        volume=row["Volume"],
+                    )
+                )
+
+            print(f"📥 Uzupełniono dane dla {ticker}: {fetch_start} → {fetch_end}")
 
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
