@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta, date, timezone
 from pathlib import Path
 from typing import Dict
 
@@ -52,14 +52,16 @@ class SimulationService:
 
 
         for ticker in self.tickers:
-            #earning_dates.save_earnings_by_date(ticker, self.start_time, self.end_time)
+            earning_dates.save_earnings_by_date(ticker, self.start_time, self.end_time) #comment
             quarters = earning_dates.get_years_and_quarters_from_json(ticker)
 
-            financial.create(ticker)
             first_year, first_q = quarters[0]
             last_year, last_q = quarters[-1]
             print(first_year, first_q)
             print(last_year, last_q)
+
+            financial.create(ticker)#
+
             quarterly.create(ticker, first_year, f"Q{first_q}", last_year, f"Q{last_q}")
 
             for year, quarter in quarters:
@@ -147,7 +149,7 @@ class SimulationService:
             )
 
             for g in grades:
-                as_of_date = datetime.fromisoformat(g["date"])
+                as_of_date = datetime.fromisoformat(g["date"]).replace(tzinfo=timezone.utc)
 
                 payload = {
                     "analystRatingsStrongBuy": g.get("analystRatingsStrongBuy"),

@@ -21,6 +21,8 @@ GENERATE_NEW_INDIVIDUAL = False
 
 GENERATE_NEW_CROSS = False
 
+FETCH_NEW_DATA = False
+
 STARTING_CASH = 100000.0
 
 ZERO_TIME = datetime(2024, 3, 15, 13, 30, tzinfo=timezone.utc)

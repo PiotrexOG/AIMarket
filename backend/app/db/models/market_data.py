@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, DateTime, String, Float
+from sqlalchemy import Column, Integer, DateTime, String, Float, UniqueConstraint
 from .base import Base
 
 class MarketData(Base):
@@ -12,3 +12,7 @@ class MarketData(Base):
     low = Column(Float, nullable=False)
     close = Column(Float, nullable=False)
     volume = Column(Float, nullable=False)
+
+    __table_args__ = (
+        UniqueConstraint("ticker", "datetime"),
+    )

@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.db.models.analyst_grades import AnalystGrades
@@ -10,12 +11,17 @@ class AnalystGradesRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create(self, data: AnalystGradesCreate) -> AnalystGrades:
+    def create(self, data: AnalystGradesCreate) -> AnalystGrades | None:
         obj = AnalystGrades(**data.dict())
         self.db.add(obj)
-        self.db.commit()
-        self.db.refresh(obj)
-        return obj
+
+        try:
+            self.db.commit()
+            self.db.refresh(obj)
+            return obj
+        except IntegrityError:
+            self.db.rollback()
+            return None  # rekord już istnieje
 
     def get_latest(self, ticker: str, date_time: datetime, limit: int = 1):
         return (
