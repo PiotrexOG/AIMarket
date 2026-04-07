@@ -1,4 +1,5 @@
 from datetime import datetime
+from sqlalchemy.exc import IntegrityError
 
 from sqlalchemy.orm import Session
 from app.db.models.fundamental_snapshot import FundamentalSnapshot
@@ -9,12 +10,16 @@ class FundamentalSnapshotRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create(self, data: FundamentalSnapshotCreate) -> FundamentalSnapshot:
+    def create(self, data: FundamentalSnapshotCreate) -> FundamentalSnapshot | None:
         obj = FundamentalSnapshot(**data.dict())
         self.db.add(obj)
-        self.db.commit()
-        self.db.refresh(obj)
-        return obj
+        try:
+            self.db.commit()
+            self.db.refresh(obj)
+            return obj
+        except IntegrityError:
+            self.db.rollback()
+            return None  # rekord już istnieje
 
     def get_latest(self, ticker: str, date_time: datetime):
         return (

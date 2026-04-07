@@ -13,6 +13,8 @@ class FundamentalSnapshotService:
     def save(self, ticker: str, date_time: datetime, data: dict):
         payload = FundamentalSnapshotCreate(ticker=ticker, as_of_date=date_time, **data)
         obj = self.repo.create(payload)
+        if obj is None:
+            return None
         return FundamentalSnapshotDTO.model_validate(obj)
 
     def get_latest(

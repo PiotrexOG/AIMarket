@@ -107,7 +107,6 @@ def build_quarter_file(symbol: str, year: int, quarter: str):
     try:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
-        print(f"✔ Utworzono: {output_path.name}")
     except Exception as e:
         print(f"❌ Błąd zapisu {output_path}: {e}")
 

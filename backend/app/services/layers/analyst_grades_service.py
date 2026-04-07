@@ -14,6 +14,8 @@ class AnalystGradesService:
     def save(self, ticker: str, date_time: datetime, data: dict):
         payload = AnalystGradesCreate(ticker=ticker, as_of_date=date_time, **data)
         obj = self.repo.create(payload)
+        if obj is None:
+            return None
         return AnalystGradesDTO.model_validate(obj)
 
     from typing import List, Optional

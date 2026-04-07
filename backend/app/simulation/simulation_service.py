@@ -57,10 +57,8 @@ class SimulationService:
 
             first_year, first_q = quarters[0]
             last_year, last_q = quarters[-1]
-            print(first_year, first_q)
-            print(last_year, last_q)
 
-            financial.create(ticker)#
+            financial.create(ticker, last_year, last_q)#
 
             quarterly.create(ticker, first_year, f"Q{first_q}", last_year, f"Q{last_q}")
 
