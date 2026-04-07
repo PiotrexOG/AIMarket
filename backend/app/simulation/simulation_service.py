@@ -10,6 +10,7 @@ from app.config import DEBUG_RESET, USERS, STARTING_CASH
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
+from app.models.proccess import process_news_range
 from app.services.layers.analyst_grades_service import AnalystGradesService
 from app.services.layers.company_daily_summary import CompanyDailySummaryService
 from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
@@ -21,7 +22,8 @@ from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
-from app.testy.scrap.company_news import fetch_all_company_news, save_company_news
+from app.testy.scrap.company_news import fetch_all_company_news, get_last_saved_datetime, save_company_news_incremental, \
+    get_next_available_date
 import app.testy.scrap.quarterly as quarterly
 import app.testy.scrap.financial as financial
 import app.testy.scrap.earning_dates as earning_dates
@@ -88,18 +90,55 @@ class SimulationService:
     def fetch_company_news(self):
 
         for ticker in self.tickers:
+
+            last_dt = get_last_saved_datetime(ticker)
+
+            if last_dt:
+                from_date = last_dt
+                print(f"📌 Aktualizuję {ticker} od {from_date}")
+            else:
+                from_date = self.start_time
+                print(f"🆕 Pobieram wszystko dla {ticker}")
+
             news = fetch_all_company_news(
                 symbol=ticker,
-                from_date=self.start_time,
+                from_date=from_date,
                 to_date=self.end_time,
             )
 
-            save_company_news(ticker, news)
+            save_company_news_incremental(ticker, news)
 
-            print(f"✅ Company news dla {ticker} zapisana")
+            print(f"✅ Company news dla {ticker} zapisane")
+
+    def fetch_company_news_summarize(self):
+
+        for ticker in self.tickers:
+
+            next_dt = get_next_available_date(ticker)
+
+            if next_dt:
+                from_date = next_dt.date() if isinstance(next_dt, datetime) else next_dt
+                print(f"📌 Streszczam {ticker} od {from_date}")
+            else:
+                from_date = self.start_time.date() if isinstance(self.start_time, datetime) else self.start_time
+                print(f"🆕 Streszczam wszystko dla {ticker}")
+
+            # Konwersja do string 'YYYY-MM-DD' dla process_news_range
+            from_date_str = from_date.strftime("%Y-%m-%d") if isinstance(from_date, (datetime, date)) else str(
+                from_date)
+            to_date_str = self.end_time.strftime("%Y-%m-%d")  # końcowa data = dzisiaj
+
+            # Wywołanie funkcji z przekazanymi stringami
+            process_news_range(
+                start_date=from_date_str,
+                end_date=to_date_str,
+                TICKER=ticker,
+            )
+
+            print(f"✅ Company news summarize dla {ticker} zapisane")
 
     # Rozszerzona wersja Twojej metody
-    def fetch_company_news_summary(self):
+    def fetch_company_news_summary_with_score(self):
         # Zmieniono na katalog z danymi ocenionymi (scored)
         DATA_DIR = Path("data/company_news_scored")
 

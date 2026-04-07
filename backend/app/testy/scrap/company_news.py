@@ -3,9 +3,9 @@ import os
 import time
 
 import requests
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from collections import defaultdict
 
 import json
@@ -21,6 +21,7 @@ FINNHUB_URL = "https://finnhub.io/api/v1/company-news"
 
 BASE_DATA_PATH = Path("data")
 COMPANY_NEWS_PATH = BASE_DATA_PATH / "company_news"
+COMPANY_NEWS_SUMMARIZED_PATH = BASE_DATA_PATH / "company_news_summarized"
 
 
 
@@ -64,6 +65,76 @@ def import_daily_summaries(
                     summary=summary
                 )
 
+
+
+def get_next_available_date(symbol: str) -> Optional[datetime]:
+    ticker_path = COMPANY_NEWS_SUMMARIZED_PATH / symbol
+
+    if not ticker_path.exists():
+        return None
+
+    files = list(ticker_path.glob("summarized_*.json"))
+    if not files:
+        return None
+
+    # Poprawiony parser dla nazw: summarized_MM_YYYY.json
+    def parse_file_name(path):
+        # path.stem to np. "summarized_03_2026"
+        parts = path.stem.split("_")
+        month = int(parts[1])
+        year = int(parts[2])
+        return year, month
+
+    # Szukamy najnowszego pliku (najwyższy rok, potem miesiąc)
+    latest_file = max(files, key=parse_file_name)
+
+    try:
+        with open(latest_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, FileNotFoundError):
+        return None
+
+    if not data:
+        return None
+
+    # Wyciągamy daty z pola "date" i znajdujemy najnowszą
+    # Używamy isoformat, bo Twoje daty to "YYYY-MM-DD"
+    dates = [datetime.fromisoformat(item["date"]) for item in data if "date" in item]
+
+    if not dates:
+        return None
+
+    latest_dt = max(dates)
+
+    # Zwracamy następny dzień
+    return latest_dt + timedelta(days=1)
+
+def get_last_saved_datetime(symbol: str) -> Optional[datetime]:
+    ticker_path = COMPANY_NEWS_PATH / symbol
+
+    if not ticker_path.exists():
+        return None
+
+    files = list(ticker_path.glob("*.json"))
+    if not files:
+        return None
+
+    # sortowanie po roku i miesiącu z nazwy pliku
+    def parse_file_name(path):
+        month, year = path.stem.split("_")
+        return int(year), int(month)
+
+    latest_file = max(files, key=parse_file_name)
+
+    with open(latest_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if not data:
+        return None
+
+    latest_dt = max(datetime.fromisoformat(item["datetime"]) for item in data)
+
+    return latest_dt
 
 def fetch_all_company_news(
     symbol: str,
@@ -157,7 +228,11 @@ def fetch_all_company_news(
 
     return sorted(results.values(), key=lambda x: x["datetime"])
 
-def save_company_news(symbol: str, news: List[Dict]):
+
+def save_company_news_incremental(symbol: str, news: List[Dict]):
+
+    ticker_path = COMPANY_NEWS_PATH / symbol
+    ticker_path.mkdir(parents=True, exist_ok=True)
 
     monthly_news = defaultdict(list)
 
@@ -166,13 +241,24 @@ def save_company_news(symbol: str, news: List[Dict]):
         key = (dt.year, dt.month)
         monthly_news[key].append(item)
 
-    ticker_path = COMPANY_NEWS_PATH / symbol
-    ticker_path.mkdir(parents=True, exist_ok=True)
-
-    for (year, month), news_list in monthly_news.items():
+    for (year, month), new_items in monthly_news.items():
 
         file_name = f"{month:02d}_{year}.json"
         file_path = ticker_path / file_name
 
+        existing_items = []
+
+        if file_path.exists():
+            with open(file_path, "r", encoding="utf-8") as f:
+                existing_items = json.load(f)
+
+        #  deduplikacja po timestamp
+        existing_map = {item["datetime"]: item for item in existing_items}
+
+        for item in new_items:
+            existing_map[item["datetime"]] = item
+
+        merged = sorted(existing_map.values(), key=lambda x: x["datetime"])
+
         with open(file_path, "w", encoding="utf-8") as f:
-            json.dump(news_list, f, indent=2, ensure_ascii=False)
+            json.dump(merged, f, indent=2, ensure_ascii=False)

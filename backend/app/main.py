@@ -71,8 +71,9 @@ def run_simulation():
             # simulation_service.fetch_market_data(interval="1h")
             # simulation_service.fetch_analyst_grades()
             # simulation_service.fetch_data_fundaments()
-            simulation_service.fetch_company_news()
-            # simulation_service.fetch_company_news_summary()
+            #simulation_service.fetch_company_news()
+            simulation_service.fetch_company_news_summarize()
+            #simulation_service.fetch_company_news_summary_with_score()
         simulation_service.initialize_users()
         simulation_service.run_simulation()
 
