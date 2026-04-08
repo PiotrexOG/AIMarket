@@ -146,9 +146,89 @@ def extract_json(text):
     raise json.JSONDecodeError("No JSON found", text, 0)
 
 
-if __name__ == "__main__":
-    scorer = NewsImportanceScorer(batch_size=40)
+def process_importance_range(
+    start_date,
+    end_date,
+    ticker,
+    scorer,
+    base_input_folder=Path("data/company_news_summarized"),
+    base_output_folder=Path("data/company_news_scored"),
+):
+    from datetime import datetime
 
-    for ticker in TICKERS:
-        print(f"--- Processing {ticker} ---")
-        scorer.process_ticker(ticker)
+    if isinstance(start_date, str):
+        start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
+
+    if isinstance(end_date, str):
+        end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
+
+    INPUT_FOLDER = base_input_folder / ticker
+    OUTPUT_FOLDER = base_output_folder / ticker
+
+    OUTPUT_FOLDER.mkdir(parents=True, exist_ok=True)
+
+    if not INPUT_FOLDER.exists():
+        print(f"Brak danych summarized dla {ticker}")
+        return
+
+    files = sorted(INPUT_FOLDER.glob("summarized_*.json"))
+
+    for file_path in files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        # 🔹 filtr po dacie
+        filtered = [
+            item for item in data
+            if "date" in item and start_date <= datetime.fromisoformat(item["date"]).date() <= end_date
+        ]
+
+        if not filtered:
+            continue
+
+        # 🔹 przygotuj dane do scorera
+        news_for_scoring = []
+        for item in filtered:
+            summaries = item.get("daily_summary", [])
+            if summaries:
+                news_for_scoring.append({
+                    "date": item["date"],
+                    "summary": summaries[0],
+                    "original_data": item
+                })
+
+        # 🔹 batch scoring
+        results = []
+        for batch in scorer.batch_iter(news_for_scoring):
+            scored = scorer.score_batch(batch)
+
+            for s in scored:
+                idx = s["id"]
+                importance = s["importance"]
+
+                base_item = batch[idx]["original_data"].copy()
+                base_item["importance"] = importance
+
+                results.append(base_item)
+
+        # 🔹 merge z istniejącym plikiem
+        output_file = OUTPUT_FOLDER / file_path.name.replace("summarized_", "scored_")
+
+        if output_file.exists():
+            with open(output_file, "r", encoding="utf-8") as f:
+                try:
+                    existing = json.load(f)
+                except json.JSONDecodeError:
+                    existing = []
+        else:
+            existing = []
+
+        existing_by_date = {item["date"]: item for item in existing}
+
+        for item in results:
+            existing_by_date[item["date"]] = item
+
+        merged = sorted(existing_by_date.values(), key=lambda x: x["date"])
+
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(merged, f, indent=2, ensure_ascii=False)

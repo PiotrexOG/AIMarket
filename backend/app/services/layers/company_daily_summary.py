@@ -19,7 +19,7 @@ class CompanyDailySummaryService:
         date: date,
         summary: str | None,
         importance: float
-    ) -> CompanyDailySummaryDTO:
+    ) -> CompanyDailySummaryDTO | None:
 
         payload = CompanyDailySummaryCreate(
             ticker=ticker,
@@ -29,6 +29,9 @@ class CompanyDailySummaryService:
         )
 
         obj = self.repo.create(payload)
+
+        if obj is None:
+            return None
 
         return CompanyDailySummaryDTO.model_validate(obj)
 

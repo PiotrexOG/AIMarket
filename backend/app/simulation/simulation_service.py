@@ -21,9 +21,9 @@ from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals
+from app.testy.compute.news_score import NewsImportanceScorer, process_importance_range
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
-from app.testy.scrap.company_news import fetch_all_company_news, get_last_saved_datetime, save_company_news_incremental, \
-    get_next_available_date
+from app.testy.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
 import app.testy.scrap.quarterly as quarterly
 import app.testy.scrap.financial as financial
 import app.testy.scrap.earning_dates as earning_dates
@@ -91,7 +91,8 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            last_dt = get_last_saved_datetime(ticker)
+            base_path = Path("data") / "company_news" / ticker
+            last_dt = get_latest_datetime(base_path, ticker, "*.json", "datetime", False)
 
             if last_dt:
                 from_date = last_dt
@@ -114,7 +115,8 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            next_dt = get_next_available_date(ticker)
+            base_path = Path("data") / "company_news_summarized" / ticker
+            next_dt = get_latest_datetime(base_path, ticker, "summarized_*.json", "date", True)
 
             if next_dt:
                 from_date = next_dt.date() if isinstance(next_dt, datetime) else next_dt
@@ -136,6 +138,34 @@ class SimulationService:
             )
 
             print(f"✅ Company news summarize dla {ticker} zapisane")
+
+    def fetch_company_news_importance(self):
+        scorer = NewsImportanceScorer(batch_size=40)
+
+        for ticker in self.tickers:
+
+            base_path = Path("data") / "company_news_scored" / ticker
+            next_dt = get_latest_datetime(base_path, ticker, "scored_*.json", "date", True)
+
+            if next_dt:
+                from_date = next_dt.date() if isinstance(next_dt, datetime) else next_dt
+                print(f"📌 Scoring importance dla {ticker} od {from_date}")
+            else:
+                from_date = self.start_time.date() if isinstance(self.start_time, datetime) else self.start_time
+                print(f"🆕 Scoring wszystkiego dla {ticker}")
+
+            from_date_str = from_date.strftime("%Y-%m-%d") if isinstance(from_date, (datetime, date)) else str(
+                from_date)
+            to_date_str = self.end_time.strftime("%Y-%m-%d")
+
+            process_importance_range(
+                start_date=from_date_str,
+                end_date=to_date_str,
+                ticker=ticker,
+                scorer=scorer
+            )
+
+            print(f"✅ Importance scoring dla {ticker} zapisany")
 
     # Rozszerzona wersja Twojej metody
     def fetch_company_news_summary_with_score(self):

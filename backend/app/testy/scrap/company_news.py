@@ -1,10 +1,8 @@
-import json
 import os
 import time
 
 import requests
-from datetime import datetime, timezone, timedelta
-from pathlib import Path
+from datetime import timezone, timedelta
 from typing import List, Dict, Optional
 from collections import defaultdict
 
@@ -12,80 +10,35 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-from sqlalchemy.orm import Session
-
-from app.services.layers.company_daily_summary import CompanyDailySummaryService
 
 API_KEY = os.environ.get("FIN_API_KEY")
 FINNHUB_URL = "https://finnhub.io/api/v1/company-news"
 
 BASE_DATA_PATH = Path("data")
 COMPANY_NEWS_PATH = BASE_DATA_PATH / "company_news"
-COMPANY_NEWS_SUMMARIZED_PATH = BASE_DATA_PATH / "company_news_summarized"
 
 
+def get_latest_datetime(
+    base_path: Path,
+    symbol: str,
+    regex: str,
+    date_key: str = "date",
+    add_day: bool = False,
+) -> Optional[datetime]:
 
-
-
-DATA_DIR = Path("data/company_news_summarized")
-
-
-def import_daily_summaries(
-    db: Session,
-    tickers: list[str],
-):
-    service = CompanyDailySummaryService(db)
-
-    for ticker in tickers:
-
-        ticker_dir = DATA_DIR / ticker
-
-        if not ticker_dir.exists():
-            continue
-
-        for file in ticker_dir.glob("summarized_*.json"):
-
-            with open(file) as f:
-                data = json.load(f)
-
-            for entry in data:
-
-                date = datetime.strptime(
-                    entry["date"],
-                    "%Y-%m-%d"
-                ).date()
-
-                summaries = entry.get("daily_summary", [])
-
-                summary = " ".join(summaries) if summaries else None
-
-                service.save(
-                    ticker=ticker,
-                    date=date,
-                    summary=summary
-                )
-
-
-
-def get_next_available_date(symbol: str) -> Optional[datetime]:
-    ticker_path = COMPANY_NEWS_SUMMARIZED_PATH / symbol
+    ticker_path = base_path / symbol
 
     if not ticker_path.exists():
         return None
 
-    files = list(ticker_path.glob("summarized_*.json"))
+    files = list(ticker_path.glob(regex))
     if not files:
         return None
 
-    # Poprawiony parser dla nazw: summarized_MM_YYYY.json
     def parse_file_name(path):
-        # path.stem to np. "summarized_03_2026"
         parts = path.stem.split("_")
-        month = int(parts[1])
-        year = int(parts[2])
-        return year, month
+        return int(parts[-1]), int(parts[-2])  # year, month
 
-    # Szukamy najnowszego pliku (najwyższy rok, potem miesiąc)
     latest_file = max(files, key=parse_file_name)
 
     try:
@@ -97,44 +50,19 @@ def get_next_available_date(symbol: str) -> Optional[datetime]:
     if not data:
         return None
 
-    # Wyciągamy daty z pola "date" i znajdujemy najnowszą
-    # Używamy isoformat, bo Twoje daty to "YYYY-MM-DD"
-    dates = [datetime.fromisoformat(item["date"]) for item in data if "date" in item]
+    dates = [
+        datetime.fromisoformat(item[date_key])
+        for item in data
+        if date_key in item
+    ]
 
     if not dates:
         return None
 
     latest_dt = max(dates)
 
-    # Zwracamy następny dzień
-    return latest_dt + timedelta(days=1)
+    return latest_dt + timedelta(days=1) if add_day else latest_dt
 
-def get_last_saved_datetime(symbol: str) -> Optional[datetime]:
-    ticker_path = COMPANY_NEWS_PATH / symbol
-
-    if not ticker_path.exists():
-        return None
-
-    files = list(ticker_path.glob("*.json"))
-    if not files:
-        return None
-
-    # sortowanie po roku i miesiącu z nazwy pliku
-    def parse_file_name(path):
-        month, year = path.stem.split("_")
-        return int(year), int(month)
-
-    latest_file = max(files, key=parse_file_name)
-
-    with open(latest_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    if not data:
-        return None
-
-    latest_dt = max(datetime.fromisoformat(item["datetime"]) for item in data)
-
-    return latest_dt
 
 def fetch_all_company_news(
     symbol: str,

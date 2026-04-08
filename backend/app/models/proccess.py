@@ -47,11 +47,6 @@ def process_news_range(
 
     os.makedirs(base_output_folder, exist_ok=True)
 
-
-    print(f"\n==============================")
-    print(f"Processing ticker: {TICKER}")
-    print(f"==============================")
-
     INPUT_FOLDER = os.path.join(base_input_folder, TICKER)
     OUTPUT_FOLDER = os.path.join(base_output_folder, TICKER)
 
@@ -66,8 +61,6 @@ def process_news_range(
 
     for file_name in sorted(files_to_process):
         # ... reszta logiki bez zmian, ale przetworzy tylko to co trzeba ...
-
-        print(f"\n--- Processing file: {file_name} ---")
 
         file_path = os.path.join(INPUT_FOLDER, file_name)
 
@@ -98,13 +91,30 @@ def process_news_range(
                 "daily_summary": summary
             })
 
-            print(f"Date: {date_str} | Summary: {summary}")
-
         # zapis tylko jeśli coś jest
         if all_days_summarized:
             output_path = os.path.join(OUTPUT_FOLDER, f"summarized_{file_name}")
 
-            with open(output_path, "w", encoding="utf-8") as f:
-                json.dump(all_days_summarized, f, indent=2, ensure_ascii=False)
+            # 🔹 1. Wczytaj istniejące dane (jeśli plik już istnieje)
+            if os.path.exists(output_path):
+                with open(output_path, "r", encoding="utf-8") as f:
+                    try:
+                        existing_data = json.load(f)
+                    except json.JSONDecodeError:
+                        existing_data = []
+            else:
+                existing_data = []
 
-    print("\nProcessing complete!")
+            # 🔹 2. Zamień na dict po dacie (żeby uniknąć duplikatów)
+            existing_by_date = {item["date"]: item for item in existing_data}
+
+            # 🔹 3. Dodaj / nadpisz nowe dni
+            for item in all_days_summarized:
+                existing_by_date[item["date"]] = item
+
+            # 🔹 4. Posortuj po dacie
+            merged_data = sorted(existing_by_date.values(), key=lambda x: x["date"])
+
+            # 🔹 5. Zapisz całość
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(merged_data, f, indent=2, ensure_ascii=False)

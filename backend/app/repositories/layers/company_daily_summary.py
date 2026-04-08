@@ -1,6 +1,7 @@
 from datetime import timedelta
 from operator import and_
 
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 
@@ -16,9 +17,13 @@ class CompanyDailySummaryRepository:
     def create(self, payload: CompanyDailySummaryCreate):
         obj = CompanyDailySummary(**payload.model_dump())
         self.db.add(obj)
-        self.db.commit()
-        self.db.refresh(obj)
-        return obj
+        try:
+            self.db.commit()
+            self.db.refresh(obj)
+            return obj
+        except IntegrityError:
+            self.db.rollback()
+            return None  # rekord już istnieje
 
     def get(self, ticker: str, date):
         stmt = select(CompanyDailySummary).where(
