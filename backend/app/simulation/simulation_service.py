@@ -91,15 +91,13 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news" / ticker
+            base_path = Path("data") / "company_news"
             last_dt = get_latest_datetime(base_path, ticker, "*.json", "datetime", False)
 
             if last_dt:
                 from_date = last_dt
-                print(f"📌 Aktualizuję {ticker} od {from_date}")
             else:
                 from_date = self.start_time
-                print(f"🆕 Pobieram wszystko dla {ticker}")
 
             news = fetch_all_company_news(
                 symbol=ticker,
@@ -115,7 +113,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news_summarized" / ticker
+            base_path = Path("data") / "company_news_summarized"
             next_dt = get_latest_datetime(base_path, ticker, "summarized_*.json", "date", True)
 
             if next_dt:
@@ -144,7 +142,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news_scored" / ticker
+            base_path = Path("data") / "company_news_scored"
             next_dt = get_latest_datetime(base_path, ticker, "scored_*.json", "date", True)
 
             if next_dt:

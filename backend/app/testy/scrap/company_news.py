@@ -65,23 +65,36 @@ def get_latest_datetime(
 
 
 def fetch_all_company_news(
-    symbol: str,
-    from_date: datetime,
-    to_date: datetime,
+        symbol: str,
+        from_date: datetime,
+        to_date: datetime,
 ) -> List[Dict]:
-
     assert from_date.tzinfo is not None
     assert to_date.tzinfo is not None
 
+    if from_date > to_date:
+        return []
+
+    print(f"Zaczynam pobieranie newsów dla {symbol} od {from_date.isoformat()} do {to_date.isoformat()}")
+
     results: Dict[int, Dict] = {}
     current_to = to_date
-
-    print("zaczynam pobieranie company news od " + from_date.isoformat() + " to " + to_date.isoformat())
-
-    last_request_url = None
-    same_request_count = 0
+    last_to_date = None  # Przechowuje wartość current_to z poprzedniej iteracji
 
     while True:
+        # --- MECHANIZM UNIKANIA PĘTLI ---
+        # Jeśli po poprzedniej iteracji data current_to nie uległa zmianie (lub jest późniejsza),
+        # wymuszamy cofnięcie o 1 dzień, aby "przeskoczyć" martwy punkt w API.
+        if last_to_date is not None and current_to.date() >= last_to_date.date():
+            current_to = last_to_date - timedelta(days=1)
+            print(f"Brak postępu w datach. Ręczne cofnięcie okna do: {current_to.date().isoformat()}")
+
+        # Jeśli po korekcie wyszliśmy przed datę początkową, kończymy
+        if current_to < from_date:
+            break
+
+        # Zapisujemy obecną datę przed wykonaniem zapytania
+        last_to_date = current_to
 
         params = {
             "symbol": symbol,
@@ -90,22 +103,21 @@ def fetch_all_company_news(
             "token": API_KEY,
         }
 
+        # --- OBSŁUGA ZAPYTANIA HTTP ---
         while True:
             try:
                 resp = requests.get(FINNHUB_URL, params=params)
-
-                print(f"Wysyłanie zapytania pod adres: {resp.url}")
-
-                resp.raise_for_status()
-                break
-
-            except requests.exceptions.HTTPError:
+                print(f"Wysyłanie zapytania: {resp.url}")
 
                 if resp.status_code == 429:
                     print("Finnhub rate limit (429). Sleep 2s...")
                     time.sleep(2)
                     continue
 
+                resp.raise_for_status()
+                break
+            except requests.exceptions.RequestException as e:
+                print(f"Błąd połączenia: {e}")
                 raise
 
         batch = resp.json()
@@ -113,32 +125,25 @@ def fetch_all_company_news(
         if not batch:
             break
 
-        # liczymy tylko requesty które zwróciły dane
-        if resp.url == last_request_url:
-            same_request_count += 1
-        else:
-            same_request_count = 0
-            last_request_url = resp.url
-
-        if same_request_count >= 3:
-            print("Ten sam request z wynikami wykonany 3 razy – przerywam pobieranie.")
-            break
-
+        # --- SORTOWANIE I FILTROWANIE (CLEAN BATCH) ---
         batch = sorted(batch, key=lambda x: x["datetime"], reverse=True)
 
-        newest_ts = batch[0]["datetime"]
+        clean_batch = []
+        if batch:
+            clean_batch.append(batch[0])
+            for i in range(1, len(batch)):
+                gap = batch[i - 1]["datetime"] - batch[i]["datetime"]
+                # Jeśli dziura między newsami jest większa niż 5 dni, przerywamy spójną paczkę
+                if gap > (5 * 24 * 3600):
+                    break
+                clean_batch.append(batch[i])
 
-        batch = [
-            item for item in batch
-            if newest_ts - item["datetime"] <= 30 * 24 * 3600
-        ]
-
-        if not batch:
+        if not clean_batch:
             break
 
-        for item in batch:
+        # --- ZAPISYWANIE WYNIKÓW ---
+        for item in clean_batch:
             ts = item["datetime"]
-
             results[ts] = {
                 "category": item.get("category", ""),
                 "datetime": datetime.fromtimestamp(ts, tz=timezone.utc).isoformat(),
@@ -146,14 +151,15 @@ def fetch_all_company_news(
                 "summary": item.get("summary", ""),
             }
 
-        oldest_ts = batch[-1]["datetime"]
-        oldest_dt = datetime.fromtimestamp(oldest_ts, tz=timezone.utc)
+        # Pobieramy datę najstarszego newsa z przetworzonej paczki
+        oldest_ts = clean_batch[-1]["datetime"]
+        current_to = datetime.fromtimestamp(oldest_ts, tz=timezone.utc)
 
-        if oldest_dt <= from_date:
+        # Jeśli dotarliśmy do (lub za) from_date, kończymy
+        if current_to <= from_date:
             break
 
-        current_to = oldest_dt
-
+    # Zwracamy posortowane wyniki chronologicznie
     return sorted(results.values(), key=lambda x: x["datetime"])
 
 
