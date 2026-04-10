@@ -1,9 +1,11 @@
 import os
 import json
+from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
-BASE_DIR = r"C:\Users\pwwesolo\PycharmProjects\AIMARKET\AIMarket\backend\data\company_news"
+BASE_DIR = Path(__file__).resolve().parents[3] / "data" / "company_news"
 
 def process_ticker(ticker_path, ticker_name):
     all_data = []
@@ -42,13 +44,35 @@ def process_ticker(ticker_path, ticker_name):
 
     daily_counts = daily_counts.reindex(full_range.date, fill_value=0)
 
-    # wykres
     plt.figure(figsize=(12, 6))
     plt.plot(daily_counts.index, daily_counts.values)
+
     plt.title(f"News count per day - {ticker_name}")
     plt.xlabel("Date")
     plt.ylabel("Number of articles")
+
+    # ustawienie każdej daty na osi X
+    ax = plt.gca()
+    interval = max(1, len(daily_counts) // 20)
+    ax.xaxis.set_major_locator(mdates.DayLocator(interval=interval))
     plt.xticks(rotation=45)
+
+    zero_days_sequences = []
+    current_sequence = []
+
+    for date, val in daily_counts.items():
+        if val == 0:
+            current_sequence.append(str(date))
+        else:
+            if len(current_sequence) >= 5:
+                zero_days_sequences.append(current_sequence)
+            current_sequence = []
+
+    # sprawdzenie ostatniej sekwencji (jeśli kończy się zerami)
+    if len(current_sequence) >= 5:
+        zero_days_sequences.append(current_sequence)
+
+    plt.tight_layout()
 
     plt.tight_layout()
 
@@ -56,6 +80,10 @@ def process_ticker(ticker_path, ticker_name):
     output_file = f"{ticker_name}_news_plot.png"
     plt.savefig(output_file)
     plt.close()
+
+    print(f"{ticker_name} - dni bez newsów:")
+    for d in zero_days_sequences:
+        print(d)
 
     print(f"Zapisano wykres: {output_file}")
 
