@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-BASE_DIR = Path(__file__).resolve().parents[3] / "data" / "company_news"
+BASE_DIR = Path(__file__).resolve().parents[3] / "data" / "news" / "company_news"
 
 def process_ticker(ticker_path, ticker_name):
     all_data = []
@@ -64,12 +64,12 @@ def process_ticker(ticker_path, ticker_name):
         if val == 0:
             current_sequence.append(str(date))
         else:
-            if len(current_sequence) >= 5:
+            if len(current_sequence) >= 3:
                 zero_days_sequences.append(current_sequence)
             current_sequence = []
 
     # sprawdzenie ostatniej sekwencji (jeśli kończy się zerami)
-    if len(current_sequence) >= 5:
+    if len(current_sequence) >= 3:
         zero_days_sequences.append(current_sequence)
 
     plt.tight_layout()

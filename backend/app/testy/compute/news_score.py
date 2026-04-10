@@ -48,7 +48,7 @@ class NewsImportanceScorer:
         )
 
     def load_news(self, ticker):
-        base_path = project_root / "data" / "company_news_summarized" / ticker
+        base_path = project_root / "data" / "news" / "company_news_summarized" / ticker
         all_news = []
 
         # Sortujemy pliki, żeby zachować chronologię
@@ -124,7 +124,7 @@ class NewsImportanceScorer:
         self.save_results(ticker, files_to_save)
 
     def save_results(self, ticker, grouped_data):
-        output_dir = project_root / "data" / "company_news_scored" / ticker
+        output_dir = project_root / "data" / "news" / "company_news_scored" / ticker
         output_dir.mkdir(parents=True, exist_ok=True)
 
         for filename, entries in grouped_data.items():
@@ -151,8 +151,8 @@ def process_importance_range(
     end_date,
     ticker,
     scorer,
-    base_input_folder=Path("data/company_news_summarized"),
-    base_output_folder=Path("data/company_news_scored"),
+    base_input_folder=Path("data/news/company_news_summarized"),
+    base_output_folder=Path("data/news/company_news_scored"),
 ):
     from datetime import datetime
 
@@ -177,43 +177,16 @@ def process_importance_range(
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        # 🔹 filtr po dacie
+        # 1. Filtracja po dacie
         filtered = [
             item for item in data
             if "date" in item and start_date <= datetime.fromisoformat(item["date"]).date() <= end_date
         ]
-
         if not filtered:
             continue
 
-        # 🔹 przygotuj dane do scorera
-        news_for_scoring = []
-        for item in filtered:
-            summaries = item.get("daily_summary", [])
-            if summaries:
-                news_for_scoring.append({
-                    "date": item["date"],
-                    "summary": summaries[0],
-                    "original_data": item
-                })
-
-        # 🔹 batch scoring
-        results = []
-        for batch in scorer.batch_iter(news_for_scoring):
-            scored = scorer.score_batch(batch)
-
-            for s in scored:
-                idx = s["id"]
-                importance = s["importance"]
-
-                base_item = batch[idx]["original_data"].copy()
-                base_item["importance"] = importance
-
-                results.append(base_item)
-
-        # 🔹 merge z istniejącym plikiem
+        # 2. Wczytanie istniejących wyników
         output_file = OUTPUT_FOLDER / file_path.name.replace("summarized_", "scored_")
-
         if output_file.exists():
             with open(output_file, "r", encoding="utf-8") as f:
                 try:
@@ -225,10 +198,46 @@ def process_importance_range(
 
         existing_by_date = {item["date"]: item for item in existing}
 
+        # 3. Znalezienie tylko tych, których brakuje
+        missing = [item for item in filtered if item["date"] not in existing_by_date]
+        if not missing:
+            continue
+
+        # 4. Przygotowanie brakujących i kontekstu (ostatnie 20)
+        missing_prepared = []
+        for item in missing:
+            summaries = item.get("daily_summary", [])
+            if summaries:
+                missing_prepared.append({"date": item["date"], "summary": summaries[0], "original_data": item})
+
+        context_size = 20
+        context = existing[-context_size:] if len(existing) > context_size else existing
+        context_prepared = []
+        for item in context:
+            summaries = item.get("daily_summary", [])
+            if summaries:
+                context_prepared.append({"date": item["date"], "summary": summaries[0], "original_data": item})
+
+        # 5. Scoring (Kontekst + Braki)
+        news_for_scoring = context_prepared + missing_prepared
+        results = []
+        missing_dates = {item["date"] for item in missing_prepared}
+
+        for batch in scorer.batch_iter(news_for_scoring):
+            scored = scorer.score_batch(batch)
+            for s in scored:
+                idx = s["id"]
+                base_item = batch[idx]["original_data"].copy()
+                base_item["importance"] = s["importance"]
+
+                # Zapisujemy tylko to, czego nie było
+                if base_item["date"] in missing_dates:
+                    results.append(base_item)
+
+        # 6. Merge i zapis
         for item in results:
             existing_by_date[item["date"]] = item
 
         merged = sorted(existing_by_date.values(), key=lambda x: x["date"])
-
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(merged, f, indent=2, ensure_ascii=False)

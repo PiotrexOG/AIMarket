@@ -12,7 +12,7 @@ class TickerDataSerializer:
     Struktura: {base_path}/{ticker}/{datetime}/{mode}.json
     """
 
-    def __init__(self, base_path: Union[str, Path] = "data"):
+    def __init__(self, base_path: Union[str, Path] = "data/ticker_master"):
         """
         Args:
             base_path: Główny katalog na dane (domyślnie 'data')

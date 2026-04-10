@@ -1,5 +1,6 @@
 import os
 import json
+import random
 from pathlib import Path
 from datetime import datetime
 from tqdm import tqdm
@@ -30,8 +31,8 @@ def process_news_range(
     start_date,
     end_date,
     TICKER,
-    base_input_folder=Path("data/company_news"),
-    base_output_folder=Path("data/company_news_summarized"),
+    base_input_folder=Path("data/news/company_news"),
+    base_output_folder=Path("data/news/company_news_summarized"),
 ):
     """
     start_date, end_date: 'YYYY-MM-DD' lub datetime
@@ -81,7 +82,7 @@ def process_news_range(
             news_batch = daily_data[date_str]
 
             if len(news_batch) > 50:
-                news_batch = news_batch[:50]
+                news_batch = random.sample(news_batch, 50)
 
             prompt = build_summary_prompt(TICKER, date_str, news_batch)
             summary = generate_summary(prompt)

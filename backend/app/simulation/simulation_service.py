@@ -91,7 +91,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news"
+            base_path = Path("data") / "news" / "company_news"
             last_dt = get_latest_datetime(base_path, ticker, "*.json", "datetime", False)
 
             if last_dt:
@@ -113,7 +113,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news_summarized"
+            base_path = Path("data") / "news" / "company_news_summarized"
             next_dt = get_latest_datetime(base_path, ticker, "summarized_*.json", "date", True)
 
             if next_dt:
@@ -142,7 +142,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "company_news_scored"
+            base_path = Path("data") / "news" / "company_news_scored"
             next_dt = get_latest_datetime(base_path, ticker, "scored_*.json", "date", True)
 
             if next_dt:
@@ -168,7 +168,7 @@ class SimulationService:
     # Rozszerzona wersja Twojej metody
     def fetch_company_news_summary_with_score(self):
         # Zmieniono na katalog z danymi ocenionymi (scored)
-        DATA_DIR = Path("data/company_news_scored")
+        DATA_DIR = Path("data/news/company_news_scored")
 
         for ticker in self.tickers:
             ticker_dir = DATA_DIR / ticker
