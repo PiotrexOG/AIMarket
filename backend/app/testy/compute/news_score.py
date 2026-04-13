@@ -1,243 +1,154 @@
 import os
 import json
 import re
-from collections import defaultdict
 from pathlib import Path
 
-import google.generativeai as genai
-from google.generativeai.types import GenerationConfig
+from google import genai
+from google.genai import types
 
-from app.config import TICKERS
-
-APIKey = os.environ.get("API_KEY")
-
-current_dir = Path(__file__).resolve().parent
-
-project_root = current_dir.parents[2]
-
-
-SYSTEM_PROMPT = """
-You are a financial analyst.
-Evaluate each news summary for its importance to the company's valuation and operations.
-
-Return:
-importance (0.0 - 10.0)
-Scale:
-0 = noise
-5.0 = relevant development
-10.0 = industry changing / existential
-
-Use increments of 0.5 (e.g., 7.0, 7.5, 8.0).
-Be consistent across the batch. Use the full scale.
-
-Return ONLY JSON.
-"""
-
+BASE_DIR = Path(__file__).resolve().parents[3]  # backend/
 
 class NewsImportanceScorer:
-    def __init__(self, batch_size=40):
-        genai.configure(api_key=APIKey)
+    def __init__(self, batch_size: int = 20):
         self.batch_size = batch_size
-        self.model = genai.GenerativeModel(
-            model_name="gemini-2.5-flash-lite",
-            generation_config=GenerationConfig(
-                temperature=0.1,
-                top_p=0.9,
-                top_k=20
-            )
+
+        # Konfiguracja nowego klienta
+        self.client = genai.Client(api_key=os.environ.get("API_KEY"))
+
+        self.model = "gemini-2.5-flash-lite"
+
+        self.config = types.GenerateContentConfig(
+            temperature=0.1,
+            response_mime_type="application/json",
+            system_instruction="""
+                        You are a financial analyst. Evaluate news importance (0.0-10.0).
+                        Return ONLY a JSON list of objects: [{"date": "YYYY-MM-DD", "importance": float}]
+                    """
         )
 
-    def load_news(self, ticker):
-        base_path = project_root / "data" / "news" / "company_news_summarized" / ticker
-        all_news = []
+    def _extract_json(self, text: str) -> dict:
+        """Wyciąga dane JSON z odpowiedzi modelu."""
+        try:
+            match = re.search(r'\[.*\]', text, re.DOTALL)
+            if match:
+                results = json.loads(match.group())
+                return {res['date']: res['importance'] for res in results if 'date' in res}
+        except Exception as e:
+            print(f"❌ Błąd parsowania JSON: {e}")
+        return {}
 
-        # Sortujemy pliki, żeby zachować chronologię
-        for file_path in sorted(base_path.glob("summarized_*.json")):
+    def _load_ticker_data(self, input_dir: Path) -> list:
+        """Wczytuje i sortuje wszystkie dostępne podsumowania dla tickera."""
+        all_data = []
+        files = sorted(input_dir.glob("summarized_*.json"))
+        for file_path in files:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
+                all_data.extend(data)
+        return sorted(all_data, key=lambda x: x["date"])
 
-            for item in data:
-                summaries = item.get("daily_summary", [])
-                if summaries:
-                    summary = summaries[0]
-                    all_news.append({
-                        "date": item["date"],
-                        "summary": summary,
-                        "original_file": file_path.name,  # Zapamiętujemy nazwę pliku
-                        "original_data": item  # Zachowujemy resztę pól (np. linki itp.)
-                    })
-                else:
-                    print(f"Ostrzeżenie: Brak podsumowania w {file_path.name} dla daty {item.get('date')}")
+    def _get_existing_scores(self, output_dir: Path) -> dict:
+        """Sprawdza, które daty mają już przypisane oceny w folderze wynikowym."""
+        existing = {}
+        if not output_dir.exists():
+            return existing
+        for f_path in output_dir.glob("scored_*.json"):
+            with open(f_path, "r", encoding="utf-8") as f:
+                for item in json.load(f):
+                    if "importance" in item:
+                        existing[item["date"]] = item["importance"]
+        return existing
 
-        return all_news
+    def _score_batch(self, batch: list) -> dict:
+        """Komunikuje się z API Gemini w celu oceny paczki newsów."""
+        news_block = [f"Date: {i['date']} | Summary: {i['summary']}" for i in batch]
+        user_prompt = "Score these summaries:\n" + "\n".join(news_block)
 
-    def batch_iter(self, items):
-        for i in range(0, len(items), self.batch_size):
-            yield items[i:i + self.batch_size]
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=user_prompt,
+            config=self.config
+        )
 
-    def score_batch(self, batch):
-        news_block = [f"{i}: {item['summary']}" for i, item in enumerate(batch)]
+        return self._extract_json(response.text)
 
-        user_prompt = f"""
-        Score the following news summaries based on importance.
-        {chr(10).join(news_block)}
+    def _save_merged_results(self, input_dir: Path, output_dir: Path, new_scores: dict, existing_scores: dict):
+        """Łączy nowe oceny ze starymi i zapisuje do odpowiednich plików."""
+        output_dir.mkdir(parents=True, exist_ok=True)
 
-        Return JSON list like:
-        [
-          {{ "id": 0, "importance": 7.5 }},
-          ...
-        ]
-        """
-        response = self.model.generate_content([
-            {"role": "user", "parts": [SYSTEM_PROMPT]},
-            {"role": "user", "parts": [user_prompt]}
-        ])
+        for input_file in input_dir.glob("summarized_*.json"):
+            with open(input_file, "r", encoding="utf-8") as f:
+                items = json.load(f)
 
-        return extract_json(response.text)
+            for item in items:
+                d = item["date"]
+                # KLUCZOWA LOGIKA:
+                # 1. Jeśli data była już oceniona wcześniej - zachowaj starą ocenę (PRIORYTET)
+                if d in existing_scores:
+                    item["importance"] = existing_scores[d]
+                # 2. Jeśli data jest nowo oceniona w tym przebiegu - dodaj nową
+                elif d in new_scores:
+                    item["importance"] = new_scores[d]
 
-    def process_ticker(self, ticker):
-        news = self.load_news(ticker)
-        if not news:
+            output_path = output_dir / input_file.name.replace("summarized_", "scored_")
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(items, f, indent=2, ensure_ascii=False)
+
+    def process_ticker(self, ticker: str, start_date: str, end_date: str):
+        """Główna orkiestracja procesu dla danego tickera."""
+        input_dir = BASE_DIR / "data" / "news" / "company_news_summarized" / ticker
+        output_dir = BASE_DIR / "data"  / "news" / "company_news_scored" / ticker
+
+        # 1. Dane i status
+        all_data = self._load_ticker_data(input_dir)
+        if not all_data:
             print(f"Brak danych dla {ticker}")
             return
 
-        # Słownik do grupowania wyników z powrotem do plików
-        files_to_save = defaultdict(list)
+        existing_scores = self._get_existing_scores(output_dir)
+        all_dates = [d["date"] for d in all_data]
 
-        for batch in self.batch_iter(news):
-            print(f"Scoring batch of {len(batch)} items...")
-            scored_data = self.score_batch(batch)
+        # 2. Znalezienie punktu startu (od końca)
+        try:
+            current_idx = next(i for i, d in enumerate(reversed(all_dates)) if d <= end_date)
+            current_idx = len(all_dates) - 1 - current_idx
+        except StopIteration:
+            return
 
-            for item in scored_data:
-                idx = item["id"]
-                importance = item["importance"]
+        # 3. Iteracja wsteczna (Tworzenie batchy)
+        new_scores = {}
+        processed_until = all_dates[current_idx]
 
-                source_item = batch[idx]
-                filename = source_item["original_file"]
+        while processed_until >= start_date:
+            start_idx = max(0, current_idx - self.batch_size + 1)
+            window_dates = all_dates[start_idx: current_idx + 1]
 
-                # Budujemy finalny obiekt zachowując oryginalne pola i dodając score
-                final_entry = source_item["original_data"].copy()
-                final_entry["importance"] = importance
+            # Budujemy batch
+            batch = []
+            needs_scoring = False
+            for d in window_dates:
+                item = next((item for item in all_data if item["date"] == d), None)
 
-                files_to_save[filename].append(final_entry)
+                if not item or not item.get("daily_summary"):
+                    continue
 
-        self.save_results(ticker, files_to_save)
+                summary = item["daily_summary"][0]
+                batch.append({"date": d, "summary": summary})
+                if d not in existing_scores:
+                    needs_scoring = True
 
-    def save_results(self, ticker, grouped_data):
-        output_dir = project_root / "data" / "news" / "company_news_scored" / ticker
-        output_dir.mkdir(parents=True, exist_ok=True)
+            # 4. Scoring jeśli potrzeba
+            if needs_scoring:
+                print(f"🚀 {ticker} | Scoring: {window_dates[0]} - {window_dates[-1]}")
+                batch_results = self._score_batch(batch)
+                new_scores.update(batch_results)
+            else:
+                print(f"⏭️ {ticker} | Skipping: {window_dates[0]} - {window_dates[-1]}")
 
-        for filename, entries in grouped_data.items():
-            # Zmieniamy nazwę z summarized_... na scored_...
-            new_filename = filename.replace("summarized_", "scored_")
-            save_path = output_dir / new_filename
+            current_idx = start_idx - 1
+            if current_idx < 0: break
+            processed_until = all_dates[current_idx]
 
-            with open(save_path, "w", encoding="utf-8") as f:
-                json.dump(entries, f, indent=2, ensure_ascii=False)
-            print(f"Saved: {save_path}")
-
-
-def extract_json(text):
-    text = re.sub(r'```json\s*|\s*```', '', text)
-    start = text.find('[')
-    end = text.rfind(']')
-    if start != -1 and end != -1:
-        return json.loads(text[start:end + 1])
-    raise json.JSONDecodeError("No JSON found", text, 0)
-
-
-def process_importance_range(
-    start_date,
-    end_date,
-    ticker,
-    scorer,
-    base_input_folder=Path("data/news/company_news_summarized"),
-    base_output_folder=Path("data/news/company_news_scored"),
-):
-    from datetime import datetime
-
-    if isinstance(start_date, str):
-        start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
-
-    if isinstance(end_date, str):
-        end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
-
-    INPUT_FOLDER = base_input_folder / ticker
-    OUTPUT_FOLDER = base_output_folder / ticker
-
-    OUTPUT_FOLDER.mkdir(parents=True, exist_ok=True)
-
-    if not INPUT_FOLDER.exists():
-        print(f"Brak danych summarized dla {ticker}")
-        return
-
-    files = sorted(INPUT_FOLDER.glob("summarized_*.json"))
-
-    for file_path in files:
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        # 1. Filtracja po dacie
-        filtered = [
-            item for item in data
-            if "date" in item and start_date <= datetime.fromisoformat(item["date"]).date() <= end_date
-        ]
-        if not filtered:
-            continue
-
-        # 2. Wczytanie istniejących wyników
-        output_file = OUTPUT_FOLDER / file_path.name.replace("summarized_", "scored_")
-        if output_file.exists():
-            with open(output_file, "r", encoding="utf-8") as f:
-                try:
-                    existing = json.load(f)
-                except json.JSONDecodeError:
-                    existing = []
-        else:
-            existing = []
-
-        existing_by_date = {item["date"]: item for item in existing}
-
-        # 3. Znalezienie tylko tych, których brakuje
-        missing = [item for item in filtered if item["date"] not in existing_by_date]
-        if not missing:
-            continue
-
-        # 4. Przygotowanie brakujących i kontekstu (ostatnie 20)
-        missing_prepared = []
-        for item in missing:
-            summaries = item.get("daily_summary", [])
-            if summaries:
-                missing_prepared.append({"date": item["date"], "summary": summaries[0], "original_data": item})
-
-        context_size = 20
-        context = existing[-context_size:] if len(existing) > context_size else existing
-        context_prepared = []
-        for item in context:
-            summaries = item.get("daily_summary", [])
-            if summaries:
-                context_prepared.append({"date": item["date"], "summary": summaries[0], "original_data": item})
-
-        # 5. Scoring (Kontekst + Braki)
-        news_for_scoring = context_prepared + missing_prepared
-        results = []
-        missing_dates = {item["date"] for item in missing_prepared}
-
-        for batch in scorer.batch_iter(news_for_scoring):
-            scored = scorer.score_batch(batch)
-            for s in scored:
-                idx = s["id"]
-                base_item = batch[idx]["original_data"].copy()
-                base_item["importance"] = s["importance"]
-
-                # Zapisujemy tylko to, czego nie było
-                if base_item["date"] in missing_dates:
-                    results.append(base_item)
-
-        # 6. Merge i zapis
-        for item in results:
-            existing_by_date[item["date"]] = item
-
-        merged = sorted(existing_by_date.values(), key=lambda x: x["date"])
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(merged, f, indent=2, ensure_ascii=False)
+        # 5. Zapis
+        self._save_merged_results(input_dir, output_dir, new_scores, existing_scores)
+        print(f"✅ Gotowe: {ticker}")

@@ -13,4 +13,4 @@ def delete_files(base_path: str):
             file.unlink()
 
 if __name__ == "__main__":
-    delete_files(r"C:\Users\pwwesolo\PycharmProjects\AIMARKET\AIMarket\backend\data\news\company_news_scored")
+    delete_files(r"C:\Users\user\Desktop\magisterka\AIMarket\backend\data\news\company_news_scored")

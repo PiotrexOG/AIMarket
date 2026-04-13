@@ -21,12 +21,15 @@ from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService
 from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals
-from app.testy.compute.news_score import NewsImportanceScorer, process_importance_range
+
+from app.testy.compute.news_score import NewsImportanceScorer
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
 from app.testy.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
 import app.testy.scrap.quarterly as quarterly
 import app.testy.scrap.financial as financial
 import app.testy.scrap.earning_dates as earning_dates
+
+BASE_DIR = Path(__file__).resolve().parents[2]  # backend/
 
 
 class SimulationService:
@@ -90,8 +93,7 @@ class SimulationService:
     def fetch_company_news(self):
 
         for ticker in self.tickers:
-
-            base_path = Path("data") / "news" / "company_news"
+            base_path = BASE_DIR / "data" / "news" / "company_news"
             last_dt = get_latest_datetime(base_path, ticker, "*.json", "datetime", False)
 
             if last_dt:
@@ -113,7 +115,7 @@ class SimulationService:
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "news" / "company_news_summarized"
+            base_path = BASE_DIR / "data" / "news" / "company_news_summarized"
             next_dt = get_latest_datetime(base_path, ticker, "summarized_*.json", "date", True)
 
             if next_dt:
@@ -138,11 +140,12 @@ class SimulationService:
             print(f"✅ Company news summarize dla {ticker} zapisane")
 
     def fetch_company_news_importance(self):
-        scorer = NewsImportanceScorer(batch_size=40)
+        scorer = NewsImportanceScorer(batch_size=30)
 
         for ticker in self.tickers:
 
-            base_path = Path("data") / "news" / "company_news_scored"
+
+            base_path = BASE_DIR / "data" / "news" / "company_news_scored"
             next_dt = get_latest_datetime(base_path, ticker, "scored_*.json", "date", True)
 
             if next_dt:
@@ -156,12 +159,7 @@ class SimulationService:
                 from_date)
             to_date_str = self.end_time.strftime("%Y-%m-%d")
 
-            process_importance_range(
-                start_date=from_date_str,
-                end_date=to_date_str,
-                ticker=ticker,
-                scorer=scorer
-            )
+            scorer.process_ticker(ticker, from_date_str, to_date_str)
 
             print(f"✅ Importance scoring dla {ticker} zapisany")
 

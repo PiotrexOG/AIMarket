@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-BASE_DATA_PATH = Path("fundaments")
+BASE_DATA_PATH = Path("data") / "fundaments"
 
 INPUT_DIR = BASE_DATA_PATH / "financial_data"
 INPUT_DIR.mkdir(exist_ok=True, parents=True)

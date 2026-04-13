@@ -8,7 +8,7 @@ import requests
 API_KEY = os.environ.get("FMP_API_KEY")
 BASE_URL = "https://financialmodelingprep.com/stable"
 
-BASE_DATA_PATH = Path("fundaments")
+BASE_DATA_PATH = Path("data") / "fundaments"
 
 INPUT_DIR = BASE_DATA_PATH / "financial_data"
 INPUT_DIR.mkdir(exist_ok=True, parents=True)
