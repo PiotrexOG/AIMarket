@@ -1,9 +1,10 @@
-from typing import Optional
+from typing import Optional, List
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.db.schemas.portfolio import PortfolioTransactionRead, PortfolioTickerTransactionRead
+from app.dto.portfolio_dto import PortfolioPerformanceSummaryDTO
 from app.services.layers.analytical_service import AnalyticalService
 from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_service import PortfolioService
@@ -56,6 +57,26 @@ def get_portfolio_valuation(
     service = get_service(db)
     return service.get_portfolio_valuation_in_range(portfolio_id, start, end, interval, detailed)
 
+@router.get("/performance-summary", response_model=List[PortfolioPerformanceSummaryDTO])
+def get_all_portfolios_performance(
+    start: datetime = Query(..., description="Początek okresu do analizy"),
+    end: datetime = Query(..., description="Koniec okresu do analizy"),
+    db: Session = Depends(get_db)
+):
+
+    service = get_service(db)
+    return service.get_all_portfolios_performance_summary(start, end)
+
+@router.get("/{portfolio_id}/performance-summary", response_model=PortfolioPerformanceSummaryDTO)
+def get_portfolio_performance_summary(
+    portfolio_id: int,
+    start: datetime = Query(..., description="Początek okresu do analizy"),
+    end: datetime = Query(..., description="Koniec okresu do analizy"),
+    db: Session = Depends(get_db)
+):
+
+    service = get_service(db)
+    return service.get_portfolio_performance_summary(portfolio_id, start, end)
 
 # ---- Stan portfela na dany dzień ----
 @router.get("/{portfolio_id}/state")

@@ -4,7 +4,7 @@ from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
-from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail
+from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, PortfolioPerformanceSummaryDTO
 from app.repositories.portfolio_repository import PortfolioRepository
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.db.schemas.portfolio import PortfolioCreate
@@ -147,3 +147,74 @@ class PortfolioService:
             "percent_change": round(percent_change, 2),
             "history": valuations
         }
+
+    def _build_portfolio_summary(
+        self,
+        portfolio,
+        start: datetime,
+        end: datetime
+    ) -> Optional[PortfolioPerformanceSummaryDTO]:
+
+        start_state = self.compute_portfolio_state_at_date(portfolio.id, start, detailed=False)
+        end_state = self.compute_portfolio_state_at_date(portfolio.id, end, detailed=False)
+
+        if not start_state or not end_state:
+            return None
+
+        start_val = start_state.portfolio_value
+        end_val = end_state.portfolio_value
+
+        percent_change = ((end_val - start_val) / start_val * 100) if start_val != 0 else 0.0
+
+        mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
+
+        return PortfolioPerformanceSummaryDTO(
+            id=portfolio.id,
+            name=portfolio.name,
+            archetype_key=portfolio.archetype_key,
+            short_term_weight=portfolio.short_term_weight,
+            medium_term_weight=portfolio.medium_term_weight,
+            long_term_weight=portfolio.long_term_weight,
+            risk_tolerance=portfolio.risk_tolerance,
+            rebalance_threshold=portfolio.rebalance_threshold,
+            min_score_threshold=portfolio.min_score_threshold,
+            softmax_temp=portfolio.softmax_temp,
+            metric_weights=mw_dict,
+            start_value=round(start_val, 2),
+            end_value=round(end_val, 2),
+            percent_change=round(percent_change, 2)
+        )
+
+    def get_portfolio_performance_summary(
+            self,
+            portfolio_id: int,
+            start: datetime,
+            end: datetime
+    ) -> PortfolioPerformanceSummaryDTO:
+
+        portfolio = self.repo.get_by_id(portfolio_id)
+        if not portfolio:
+            raise HTTPException(status_code=404, detail="Portfolio not found")
+
+        summary = self._build_portfolio_summary(portfolio, start, end)
+
+        if not summary:
+            raise HTTPException(status_code=404, detail="Incomplete history for the selected range")
+
+        return summary
+
+    def get_all_portfolios_performance_summary(
+            self,
+            start: datetime,
+            end: datetime
+    ) -> List[PortfolioPerformanceSummaryDTO]:
+
+        all_portfolios = self.repo.get_all()
+
+        summaries = [
+            summary
+            for portfolio in all_portfolios
+            if (summary := self._build_portfolio_summary(portfolio, start, end)) is not None
+        ]
+
+        return sorted(summaries, key=lambda x: x.percent_change, reverse=True)

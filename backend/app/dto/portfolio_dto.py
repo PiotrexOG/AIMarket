@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List
+from typing import List, Dict
 
 from pydantic import BaseModel
 
@@ -25,3 +25,27 @@ class PortfolioValuation(BaseModel):
     cash: float
     portfolio_value: float
     positions: List[PositionDetail]
+
+
+class PortfolioPerformanceSummaryDTO(BaseModel):
+    # Dane identyfikacyjne
+    id: int
+    name: str
+    archetype_key: str
+
+    # Konfiguracja (metryki)
+    short_term_weight: float
+    medium_term_weight: float
+    long_term_weight: float
+    risk_tolerance: float
+    rebalance_threshold: float
+    min_score_threshold: float
+    softmax_temp: float
+    metric_weights: Dict[str, float]  # Sformatowane jako słownik dla czytelności
+
+    # Wyniki finansowe
+    start_value: float
+    end_value: float
+    percent_change: float
+
+    model_config = {"from_attributes": True}

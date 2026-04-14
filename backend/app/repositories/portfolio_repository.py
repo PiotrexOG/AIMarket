@@ -34,6 +34,17 @@ class PortfolioRepository:
         self.db.refresh(db_portfolio)
         return db_portfolio
 
+    def get_by_id(self, portfolio_id: int) -> Portfolio:
+        return self.db.query(Portfolio).get(portfolio_id)
+
+    def get_all(self) -> List[Portfolio]:
+        """Pobiera wszystkie portfele wraz z ich wagami metryk."""
+        return (
+            self.db.query(Portfolio)
+            .options(joinedload(Portfolio.metric_weights))
+            .all()
+        )
+
     def get_latest_history(self, portfolio_id: int) -> Optional[PortfolioHistory]:
         """Pobiera najnowszy wpis historii dla danego portfela."""
         return (

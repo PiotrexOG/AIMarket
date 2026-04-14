@@ -23,11 +23,12 @@ app.add_middleware(
 )
 
 # Rejestracja routerów
-from app.routers import users_router, market_data_router, portfolio_router, simulation_router
+from app.routers import users_router, market_data_router, portfolio_router, simulation_router, archetype_router
 app.include_router(users_router.router)
 app.include_router(market_data_router.router)
 app.include_router(portfolio_router.router)
 app.include_router(simulation_router.router)
+app.include_router(archetype_router.router)
 
 
 def get_start_datetime(real_time: bool) -> datetime:
