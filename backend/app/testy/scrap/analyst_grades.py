@@ -27,8 +27,6 @@ def fetch_analyst_grades(
     # 1. Sortujemy od najstarszych do najnowszych
     sorted_data = sorted(data, key=lambda x: x["date"])
 
-    print(f"FETCHED ANALYST: {symbol}")
-
     results = []
     # Lista na dwa ostatnie elementy przed zakresem
     before_start_buffer = []

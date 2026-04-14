@@ -39,7 +39,6 @@ def find_earnings_record(data: list, year: int, quarter: str) -> dict:
         if record.get("year") == year and record.get("quarter") == quarter:
             return record
 
-    print(f"ℹ Brak danych earnings (estymacji) dla {year} {quarter}")
     return {}
 
 
@@ -132,7 +131,6 @@ def create(symbol: str, start_year: int, start_quarter: str, end_year: int, end_
     # 2. Przeliczamy punkt końcowy
     end_absolute = (end_year * 4) + end_q_idx
 
-    print(f"--- Generowanie plików dla {symbol} ---")
     print(f"Zakres: od {effective_start_abs // 4} Q{(effective_start_abs % 4) + 1} "
           f"do {end_year} {end_quarter} (łącznie {end_absolute - effective_start_abs + 1} kwartałów)")
 

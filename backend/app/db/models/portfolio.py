@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum, JSON
 from sqlalchemy.orm import relationship
 from .base import Base
 
@@ -7,7 +7,22 @@ class Portfolio(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    archetype_key = Column(String, nullable=False)
     name = Column(String, nullable=False)
+
+    short_term_weight = Column(Float)
+    medium_term_weight = Column(Float)
+    long_term_weight = Column(Float)
+    metric_weights = relationship(
+        "PortfolioMetricWeight",
+        back_populates="portfolio",
+        cascade="all, delete-orphan",
+        lazy="joined"  # Automatycznie ładuj wagi przy pobieraniu portfela
+    )
+    risk_tolerance = Column(Float)
+    rebalance_threshold = Column(Float)
+    min_score_threshold = Column(Float)
+    softmax_temp = Column(Float)
 
     user = relationship("User", back_populates="portfolios")
     history = relationship("PortfolioHistory", back_populates="portfolio", cascade="all, delete-orphan")
@@ -16,6 +31,16 @@ class Portfolio(Base):
         back_populates="portfolio",
         cascade="all, delete-orphan"
     )
+
+class PortfolioMetricWeight(Base):
+    __tablename__ = "portfolio_metric_weights"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
+    metric_name = Column(String, nullable=False)  # np. "revenue_growth"
+    weight = Column(Float, nullable=False)        # np. 0.5
+
+    portfolio = relationship("Portfolio", back_populates="metric_weights")
 
 
 class PortfolioHistory(Base):

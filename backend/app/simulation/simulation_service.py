@@ -6,7 +6,7 @@ from typing import Dict
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, USERS, STARTING_CASH
+from app.config import DEBUG_RESET, USERS, STARTING_CASH, USER_PROFILES
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
@@ -137,8 +137,6 @@ class SimulationService:
                 TICKER=ticker,
             )
 
-            print(f"✅ Company news summarize dla {ticker} zapisane")
-
     def fetch_company_news_importance(self):
         scorer = NewsImportanceScorer(batch_size=30)
 
@@ -161,17 +159,13 @@ class SimulationService:
 
             scorer.process_ticker(ticker, from_date_str, to_date_str)
 
-            print(f"✅ Importance scoring dla {ticker} zapisany")
-
     # Rozszerzona wersja Twojej metody
     def fetch_company_news_summary_with_score(self):
-        # Zmieniono na katalog z danymi ocenionymi (scored)
         DATA_DIR = Path("data/news/company_news_scored")
 
         for ticker in self.tickers:
             ticker_dir = DATA_DIR / ticker
 
-            # Szukamy plików news_scored.json (lub wzorca, jeśli masz ich więcej)
             for file in ticker_dir.glob("*.json"):
                 with open(file, "r", encoding="utf-8") as f:
                     data = json.load(f)
@@ -183,15 +177,22 @@ class SimulationService:
                         "%Y-%m-%d"
                     ).date()
 
-                    # Wscored newsach 'daily_summary' to zazwyczaj string,
-                    # ale robimy zabezpieczenie na wypadek listy
-                    summary_raw = entry.get("daily_summary", "")
-                    summary = " ".join(summary_raw) if isinstance(summary_raw, list) else summary_raw
+                    # Pobranie summary
+                    summary_raw = entry.get("daily_summary")
+                    if isinstance(summary_raw, list):
+                        summary = " ".join(summary_raw)
+                    else:
+                        summary = summary_raw
 
-                    # Pobieramy oceny (default 0.0)
-                    importance = float(entry.get("importance", 0.0))
+                    # Pobranie importance
+                    importance = entry.get("importance")
 
-                    # Zapisujemy do bazy przez serwis
+                    if not summary or importance is None:
+                        continue
+
+                    importance = float(importance)
+
+                    # Zapis do bazy
                     self.company_daily_summary_service.save(
                         ticker=ticker,
                         date=news_date,
@@ -270,8 +271,6 @@ class SimulationService:
                 ticker, fetch_start, fetch_end, interval
             )
 
-            print(f"pobieram od {fetch_start} to {fetch_end}")
-
             for _, row in df.iterrows():
                 self.market_data_service.add_market_data(
                     MarketDataCreate(
@@ -298,10 +297,23 @@ class SimulationService:
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
             for name in user_names:
+                config = USER_PROFILES[name]
+
                 user = self.user_service.create_user(UserCreate(name=name))
+
+                # Tworzymy portfel przekazując wszystkie parametry z konfiguracji
                 self.portfolio_service.create_portfolio(PortfolioCreate(
                     name=f"Portfolio {name}",
-                    user_id=user.id
+                    archetype_key=config.get("archetype_key", "benchmark"),
+                    user_id=user.id,
+                    short_term_weight=config.get("time_weights", {}).get("short_term_14d", 0.0),
+                    medium_term_weight=config.get("time_weights", {}).get("medium_term_50d", 0.0),
+                    long_term_weight=config.get("time_weights", {}).get("long_term_200d", 0.0),
+                    risk_tolerance=config.get("risk_tolerance", 0.0),
+                    rebalance_threshold=config.get("rebalance_threshold", 0.0),
+                    min_score_threshold=config.get("min_score_threshold", 0.0),
+                    softmax_temp=config.get("softmax_temp", 0.0),
+                    metric_weights=config.get("metric_weights", {})
                 ))
 
                 users_to_init.append((user, starting_cash, {}))

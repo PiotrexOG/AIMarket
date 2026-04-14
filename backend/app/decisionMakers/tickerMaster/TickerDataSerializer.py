@@ -12,7 +12,7 @@ class TickerDataSerializer:
     Struktura: {base_path}/{ticker}/{datetime}/{mode}.json
     """
 
-    def __init__(self, base_path: Union[str, Path] = "data/ticker_master"):
+    def __init__(self, base_path: Union[str, Path] = "data"):
         """
         Args:
             base_path: Główny katalog na dane (domyślnie 'data')
@@ -37,36 +37,18 @@ class TickerDataSerializer:
             return obj.isoformat()
         raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
 
-    def _get_file_path(self, ticker: str, date_time: datetime, mode: str) -> Path:
-        """
-        Generuje ścieżkę do pliku.
+    def _get_file_path(self, path: str, date_time: datetime, mode: str) -> Path:
 
-        Args:
-            ticker: Nazwa tickera (np. 'AAPL')
-            date_time: Data i czas
-            mode: 'structured_input' lub 'llm_output'
-        """
         date_str = date_time.strftime("%Y%m%d_%H%M%S")
-        return self.base_path / ticker / date_str / f"{mode}.json"
+        return self.base_path / path / date_str / f"{mode}.json"
 
-    def serialize(self, ticker: str, date_time: datetime,
+    def serialize(self, path: str, date_time: datetime,
                   mode: str, data: Dict) -> str:
-        """
-        Zapisuje dane do pliku.
 
-        Args:
-            ticker: Nazwa tickera
-            date_time: Data i czas
-            mode: 'structured_input' lub 'llm_output'
-            data: Dane do zapisania
-
-        Returns:
-            Ścieżka do zapisanego pliku
-        """
         if mode not in ['structured_input', 'llm_output', 'llm_ranker']:
             raise ValueError(f"Mode must be 'structured_input' or 'llm_output' or 'llm_ranker', got {mode}")
 
-        file_path = self._get_file_path(ticker, date_time, mode)
+        file_path = self._get_file_path(path, date_time, mode)
         self._ensure_directory(file_path)
 
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -74,7 +56,7 @@ class TickerDataSerializer:
 
         return str(file_path)
 
-    def deserialize(self, ticker: str, date_time: datetime, mode: str) -> Dict:
+    def deserialize(self, path: str, date_time: datetime, mode: str) -> Dict:
         """
         Odczytuje dane z pliku.
 
@@ -89,7 +71,7 @@ class TickerDataSerializer:
         if mode not in ['structured_input', 'llm_output', 'llm_ranker']:
             raise ValueError(f"Mode must be 'structured_input' or 'llm_output' or 'llm_ranker', got {mode}")
 
-        file_path = self._get_file_path(ticker, date_time, mode)
+        file_path = self._get_file_path(path, date_time, mode)
 
         if not file_path.exists():
             raise FileNotFoundError(f"Plik nie istnieje: {file_path}")

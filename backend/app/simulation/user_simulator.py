@@ -105,17 +105,18 @@ class UserSimulator:
     def fetch_or_load_indicators(self, date_time: datetime) -> dict:
         crucial_indicators = {}
         for ticker in TICKERS:
+            path = "ticker_master/" + ticker
             if GENERATE_NEW_INDIVIDUAL:
                 data = self.get_crucial_indicators(date_time, ticker)
                 if data and "structured_input" in data and "llm_output" in data:
                     crucial_indicators[ticker] = data
-                    self.serializer.serialize(ticker, date_time, "structured_input", data["structured_input"])
-                    self.serializer.serialize(ticker, date_time, "llm_output", data["llm_output"])
+                    self.serializer.serialize(path, date_time, "structured_input", data["structured_input"])
+                    self.serializer.serialize(path, date_time, "llm_output", data["llm_output"])
             else:
                 try:
                     crucial_indicators[ticker] = {
-                        "structured_input": self.serializer.deserialize(ticker, date_time, "structured_input"),
-                        "llm_output": self.serializer.deserialize(ticker, date_time, "llm_output")
+                        "structured_input": self.serializer.deserialize(path, date_time, "structured_input"),
+                        "llm_output": self.serializer.deserialize(path, date_time, "llm_output")
                     }
                 except FileNotFoundError:
                     continue

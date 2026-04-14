@@ -151,4 +151,3 @@ class NewsImportanceScorer:
 
         # 5. Zapis
         self._save_merged_results(input_dir, output_dir, new_scores, existing_scores)
-        print(f"✅ Gotowe: {ticker}")

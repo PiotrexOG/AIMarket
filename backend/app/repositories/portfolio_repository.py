@@ -1,4 +1,4 @@
-from app.db.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare
+from app.db.models.portfolio import Portfolio, PortfolioHistory, PortfolioShare, PortfolioMetricWeight
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate
 
 from typing import List, Optional
@@ -11,16 +11,28 @@ class PortfolioRepository:
 
     # ---- Portfolio ----
     def create(self, data: PortfolioCreate) -> Portfolio:
-        """Tworzy nowy portfel dla użytkownika."""
-        if isinstance(data, dict):
-            db_obj = Portfolio(**data)
-        else:
-            db_obj = Portfolio(**data.dict())
+        """Tworzy nowy portfel wraz z jego wagami metryk."""
+        # 1. Konwersja danych na słownik i wyciągnięcie metryk
+        data_dict = data.model_dump() if hasattr(data, "model_dump") else data.dict()
+        metric_weights_dict = data_dict.pop("metric_weights", {})
 
-        self.db.add(db_obj)
+        # 2. Tworzenie głównego obiektu Portfolio
+        db_portfolio = Portfolio(**data_dict)
+        self.db.add(db_portfolio)
+        self.db.flush()  # Pobieramy ID portfela przed commitem
+
+        # 3. Tworzenie wpisów wag metryk
+        for m_name, m_weight in metric_weights_dict.items():
+            mw_obj = PortfolioMetricWeight(
+                portfolio_id=db_portfolio.id,
+                metric_name=m_name,
+                weight=m_weight
+            )
+            self.db.add(mw_obj)
+
         self.db.commit()
-        self.db.refresh(db_obj)
-        return db_obj
+        self.db.refresh(db_portfolio)
+        return db_portfolio
 
     def get_latest_history(self, portfolio_id: int) -> Optional[PortfolioHistory]:
         """Pobiera najnowszy wpis historii dla danego portfela."""
@@ -33,9 +45,10 @@ class PortfolioRepository:
         )
 
     def get_by_user(self, user_id: int) -> Portfolio:
-        """Pobiera wszystkie portfele danego użytkownika."""
+        """Pobiera portfel wraz z wagami metryk (dzięki lazy='joined')."""
         return (
             self.db.query(Portfolio)
+            .options(joinedload(Portfolio.metric_weights))  # Jawne upewnienie się o załadowaniu wag
             .filter(Portfolio.user_id == user_id)
             .first()
         )
