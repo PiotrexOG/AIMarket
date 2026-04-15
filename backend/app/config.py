@@ -17,7 +17,7 @@ TICKERS = [
 ]
 
 
-DEBUG_RESET = False
+DEBUG_RESET = True
 
 GENERATE_NEW_INDIVIDUAL = False
 
@@ -38,7 +38,7 @@ END_TIME = datetime(2026, 4, 13, 20, 30, tzinfo=timezone.utc)
 USER_PROFILES = {}
 
 for arc_name in ARCHETYPES.keys():
-    USER_PROFILES.update(generate_users(arc_name, 3))
+    USER_PROFILES.update(generate_users(arc_name, 1))
 
 USERS = {name: name for name in USER_PROFILES.keys()}
 

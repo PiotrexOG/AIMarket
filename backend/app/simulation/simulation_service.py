@@ -161,10 +161,10 @@ class SimulationService:
 
     # Rozszerzona wersja Twojej metody
     def fetch_company_news_summary_with_score(self):
-        DATA_DIR = Path("data/news/company_news_scored")
+        base_path = BASE_DIR / "data" / "news" / "company_news_scored"
 
         for ticker in self.tickers:
-            ticker_dir = DATA_DIR / ticker
+            ticker_dir = base_path / ticker
 
             for file in ticker_dir.glob("*.json"):
                 with open(file, "r", encoding="utf-8") as f:
