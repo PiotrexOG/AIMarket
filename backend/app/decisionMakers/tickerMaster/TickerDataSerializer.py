@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional, Union
 import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parents[3]  # backend/
 
 class TickerDataSerializer:
     """
@@ -17,7 +18,7 @@ class TickerDataSerializer:
         Args:
             base_path: Główny katalog na dane (domyślnie 'data')
         """
-        self.base_path = Path(base_path)
+        self.base_path = BASE_DIR / base_path
 
     def _ensure_directory(self, path: Path) -> None:
         """Tworzy katalog jeśli nie istnieje"""
