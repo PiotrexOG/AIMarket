@@ -164,7 +164,7 @@ class PortfolioService:
         start_val = start_state.portfolio_value
         end_val = end_state.portfolio_value
 
-        percent_change = ((end_val - start_val) / start_val * 100) if start_val != 0 else 0.0
+        change_ratio = ((end_val - start_val) / start_val) if start_val != 0 else 0.0
 
         mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
 
@@ -180,9 +180,7 @@ class PortfolioService:
             min_score_threshold=portfolio.min_score_threshold,
             softmax_temp=portfolio.softmax_temp,
             metric_weights=mw_dict,
-            start_value=round(start_val, 2),
-            end_value=round(end_val, 2),
-            percent_change=round(percent_change, 2)
+            change_ratio=round(change_ratio, 4)
         )
 
     def get_portfolio_performance_summary(
@@ -217,4 +215,4 @@ class PortfolioService:
             if (summary := self._build_portfolio_summary(portfolio, start, end)) is not None
         ]
 
-        return sorted(summaries, key=lambda x: x.percent_change, reverse=True)
+        return sorted(summaries, key=lambda x: x.change_ratio, reverse=True)

@@ -44,8 +44,6 @@ class PortfolioPerformanceSummaryDTO(BaseModel):
     metric_weights: Dict[str, float]  # Sformatowane jako słownik dla czytelności
 
     # Wyniki finansowe
-    start_value: float
-    end_value: float
-    percent_change: float
+    change_ratio: float
 
     model_config = {"from_attributes": True}

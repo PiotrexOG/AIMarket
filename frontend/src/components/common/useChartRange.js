@@ -6,8 +6,8 @@ import { getRangeDates, getIntervalForRange } from "../PortfolioChart/utils/inte
  * Używany zarówno w PortfolioChart, jak i StockChart.
  */
 export function useChartRange(totalStart, totalEnd, onRangeChange) {
-  const [range, setRange] = useState("1M");
-  const [customRange, setCustomRange] = useState(null);
+  const [range, setRange] = useState("All");
+  const [customRange, setCustomRange] = useState("1w");
 
   // 🔄 Ustawienie nowego zakresu (np. "1W", "6M")
   const handleRangeChange = (newRange) => {

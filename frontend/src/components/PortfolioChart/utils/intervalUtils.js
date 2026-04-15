@@ -15,7 +15,12 @@ export const getRangeDates = (range, totalStart, totalEnd) => {
     case "1Y": start.setFullYear(end.getFullYear() - 1); break;
   }
 
+  if(range != "All"){
   start = clampDate(start, totalStart, totalEnd);
+  }
+  else{
+    start = totalStart;
+  }
   return { start: start.toISOString(), end: end.toISOString() };
 };
 
@@ -27,7 +32,8 @@ export const getIntervalForRange = (range) => {
     case "3M":
     case "6M": return "1d";
     case "YTD":
-    case "1Y": return "1w";
+    case "1Y":
+    case "All": return "1w";
     default: return "1h";
   }
 };
@@ -52,7 +58,8 @@ export const getXAxisInterval = (range) => {
     case "3M": return 3;
     case "6M": return 6;
     case "YTD":
-    case "1Y": return "preserveStartEnd";
+    case "1Y":
+    case "All": return "preserveStartEnd";
     default: return "preserveStartEnd";
   }
 };

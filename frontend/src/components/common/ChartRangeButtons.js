@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./ChartRangeButtons.css";
 
-const ranges = ["1D", "1W", "1M", "3M", "6M", "YTD", "1Y", "Custom"];
+const ranges = ["1D", "1W", "1M", "3M", "6M", "YTD", "1Y", "All", "Custom"];
 const intervals = ["30m", "1h", "4h", "1d", "1w"];
 
 function ChartRangeButtons({ 
@@ -55,7 +55,7 @@ function ChartRangeButtons({
           </button>
         ))}
       </div>
-
+      
       {/* sekcja Customgo zakresu */}
       {showCustom && (
         <div className="custom-range bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col gap-3 mt-2">

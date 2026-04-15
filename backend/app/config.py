@@ -17,7 +17,7 @@ TICKERS = [
 ]
 
 
-DEBUG_RESET = True
+DEBUG_RESET = False
 
 GENERATE_NEW_INDIVIDUAL = False
 
@@ -29,6 +29,7 @@ STARTING_CASH = 100000.0
 
 ZERO_TIME = datetime(2024, 3, 15, 13, 30, tzinfo=timezone.utc)
 START_TIME = datetime(2025, 3, 19, 13, 30, tzinfo=timezone.utc)
+#START_TIME = datetime(2026, 4, 8, 13, 30, tzinfo=timezone.utc)
 #START_TIME = datetime(2026, 3, 11, 14, 30, tzinfo=timezone.utc)
 END_TIME = datetime(2026, 4, 13, 20, 30, tzinfo=timezone.utc)
 
@@ -37,7 +38,7 @@ END_TIME = datetime(2026, 4, 13, 20, 30, tzinfo=timezone.utc)
 USER_PROFILES = {}
 
 for arc_name in ARCHETYPES.keys():
-    USER_PROFILES.update(generate_users(arc_name, 1))
+    USER_PROFILES.update(generate_users(arc_name, 3))
 
 USERS = {name: name for name in USER_PROFILES.keys()}
 

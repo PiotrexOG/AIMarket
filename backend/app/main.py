@@ -79,7 +79,7 @@ def run_simulation():
             simulation_service.fetch_company_news_summary_with_score()
 
         simulation_service.initialize_users()
-        simulation_service.run_simulation()
+        #simulation_service.run_simulation()
 
 
 # Uruchomienie w tle

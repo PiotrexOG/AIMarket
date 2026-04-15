@@ -8,10 +8,15 @@ import TransactionsView from "./components/TransactionsView/TransactionsView";
 import StockList from "./components/StockList/StockList";
 import StockChart from "./components/StockChart/StockChart";
 import StockTransactionPanel from "./components/StockTransactionPanel/StockTransactionPanel";
+import GlobalResults from "./components/GlobalResults/GlobalResults";
+import AllResults from "./components/GlobalResults/AllResults";
 
 import { fetchSimulationConfig } from "./api/fetchSimulationConfig";
+import {generateDistinctColors} from "./components/common/utils";
 
 import "./App.css";
+
+
 
 function App() {
 
@@ -21,15 +26,9 @@ function App() {
 
   const [simulationConfig, setSimulationConfig] = useState(null);
 
-  const colorPalette = [
-    "#8b5cf6",
-    "#ef4444",
-    "#f59e0b",
-    "#34d399",
-    "#ec4899",
-    "#10b981",
-    "#4a90e2",
-  ];
+  const numberOfUsers = Object.keys(selectedUsers).length;
+  const colorPalette = generateDistinctColors(numberOfUsers);
+
 
   // 🔹 pobranie konfiguracji symulacji z backendu
   useEffect(() => {
@@ -89,7 +88,9 @@ function App() {
           <nav style={{ marginTop: "10px" }}>
             <Link to="/" style={{ marginRight: "15px" }}>📈 Portfolio</Link>
             <Link to="/transactions" style={{ marginRight: "15px" }}>💹 Transactions</Link>
-            <Link to="/stocks">📊 Stocks</Link>
+            <Link to="/stocks"style={{ marginRight: "15px" }}>📊 Stocks</Link>
+            <Link to="/global-results"style={{ marginRight: "15px" }}>🌍 Archetype Results</Link>
+            <Link to="/all-results"style={{ marginRight: "15px" }}>🌍 All Results</Link>
           </nav>
 
         </header>
@@ -196,6 +197,26 @@ function App() {
                 )}
 
               </>
+            }
+          />
+
+          <Route
+            path="/global-results"
+            element={
+              <GlobalResults
+                totalStart={totalStart}
+                totalEnd={totalEnd}
+              />
+            }
+          />
+
+          <Route
+            path="/all-results"
+            element={
+              <AllResults
+                totalStart={totalStart}
+                totalEnd={totalEnd}
+              />
             }
           />
 
