@@ -75,6 +75,7 @@ class TickerDataSerializer:
         file_path = self._get_file_path(path, date_time, mode)
 
         if not file_path.exists():
+            print(f"Plik nie istnieje: {file_path}")
             raise FileNotFoundError(f"Plik nie istnieje: {file_path}")
 
         with open(file_path, 'r', encoding='utf-8') as f:

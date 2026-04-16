@@ -6,7 +6,7 @@ from typing import Dict
 from sqlalchemy.orm import Session
 
 from app.clients.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, USERS, STARTING_CASH, USER_PROFILES
+from app.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
@@ -18,11 +18,13 @@ from app.services.layers.market_data_service import MarketDataService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.portfolio_transaction_service import PortfolioTransactionService
 from app.services.user_service import UserService
-from app.services.portfolio_service import PortfolioService
+from app.services.portfolio_service import PortfolioService, _build_portfolio_base
 from app.simulation.user_simulator import UserSimulator
+from app.testy.archetypes import ARCHETYPES
 from app.testy.compute import data_fundamentals
 
 from app.testy.compute.news_score import NewsImportanceScorer
+from app.testy.random_users import generate_users
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
 from app.testy.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
 import app.testy.scrap.quarterly as quarterly
@@ -292,14 +294,21 @@ class SimulationService:
         existing_users = self.user_service.list_users()
         users_to_init = []
         starting_cash = STARTING_CASH
-        user_names = list(USERS.keys())
 
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
-            for name in user_names:
-                config = USER_PROFILES[name]
+            # users_profiles = {"benchmark": {"name": "benchmark", "start_time": START_TIME, "risk_tolerance": 1.0}}
+            users_profiles = {}
 
-                user = self.user_service.create_user(UserCreate(name=name))
+            for arc_name in ARCHETYPES.keys():
+                users_profiles.update(generate_users(arc_name, USERS_PER_ARCHETYPE))
+
+            for name in users_profiles.keys():
+                user = self.user_service.create_user(
+                    UserCreate(name=name)
+                )
+
+                config = users_profiles[name]
 
                 # Tworzymy portfel przekazując wszystkie parametry z konfiguracji
                 self.portfolio_service.create_portfolio(PortfolioCreate(
@@ -334,11 +343,12 @@ class SimulationService:
 
         # 🚀 Wspólna logika budowania UserSimulatorów
         for user, cash, shares in users_to_init:
+            user_profile = _build_portfolio_base(self.portfolio_service.get_by_user_id(user.id))
             self.users[user.id] = UserSimulator(
                 user_id=user.id,
                 starting_cash=cash,
                 shares=shares,
-                decision_maker=USERS[user.name],
+                profile=user_profile,
                 portfolio_service=self.portfolio_service,
                 market_data_service=self.market_data_service,
                 valuation_service=self.valuation_service,

@@ -4,7 +4,8 @@ from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
-from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, PortfolioPerformanceSummaryDTO
+from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, \
+    PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
 from app.repositories.portfolio_repository import PortfolioRepository
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.db.schemas.portfolio import PortfolioCreate
@@ -35,6 +36,27 @@ def _create_valuation_dto(valuation, user_id: int = None, detailed: bool = False
             date=valuation.date.isoformat(),
             portfolio_value=valuation.portfolio_value,
         )
+
+
+def _build_portfolio_base(
+        portfolio,
+) -> Optional[PortfolioPerformanceBaseDTO]:
+
+    mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
+
+    return PortfolioPerformanceBaseDTO(
+        id=portfolio.id,
+        name=portfolio.name,
+        archetype_key=portfolio.archetype_key,
+        short_term_weight=portfolio.short_term_weight,
+        medium_term_weight=portfolio.medium_term_weight,
+        long_term_weight=portfolio.long_term_weight,
+        risk_tolerance=portfolio.risk_tolerance,
+        rebalance_threshold=portfolio.rebalance_threshold,
+        min_score_threshold=portfolio.min_score_threshold,
+        softmax_temp=portfolio.softmax_temp,
+        metric_weights=mw_dict,
+    )
 
 
 class PortfolioService:

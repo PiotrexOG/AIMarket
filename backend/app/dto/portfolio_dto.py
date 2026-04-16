@@ -27,7 +27,7 @@ class PortfolioValuation(BaseModel):
     positions: List[PositionDetail]
 
 
-class PortfolioPerformanceSummaryDTO(BaseModel):
+class PortfolioPerformanceBaseDTO(BaseModel):
     # Dane identyfikacyjne
     id: int
     name: str
@@ -41,9 +41,11 @@ class PortfolioPerformanceSummaryDTO(BaseModel):
     rebalance_threshold: float
     min_score_threshold: float
     softmax_temp: float
-    metric_weights: Dict[str, float]  # Sformatowane jako słownik dla czytelności
-
-    # Wyniki finansowe
-    change_ratio: float
+    metric_weights: Dict[str, float]
 
     model_config = {"from_attributes": True}
+
+
+class PortfolioPerformanceSummaryDTO(PortfolioPerformanceBaseDTO):
+    # rozszerzenie o wynik
+    change_ratio: float

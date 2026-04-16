@@ -5,7 +5,7 @@ from typing import Dict
 import numpy as np
 from sqlalchemy import Boolean
 
-from app.config import TICKERS, USER_PROFILES, GENERATE_NEW_INDIVIDUAL, GENERATE_NEW_CROSS
+from app.config import TICKERS, GENERATE_NEW_INDIVIDUAL, GENERATE_NEW_CROSS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
 from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
@@ -22,7 +22,7 @@ class UserSimulator:
         self,
         user_id: int,
         starting_cash: float,
-        decision_maker,
+        profile,
         portfolio_service,
         market_data_service,
         valuation_service,
@@ -37,11 +37,10 @@ class UserSimulator:
         self.portfolio = Portfolio(
             portfolio_id=user_id,
             starting_cash=starting_cash,
-            user_profile=USER_PROFILES[decision_maker],
+            user_profile=profile,
             shares=shares
         )
 
-        self.decision_maker = decision_maker
         self.portfolio_service = portfolio_service
         self.market_data_service = market_data_service
         self.valuation_service = valuation_service
