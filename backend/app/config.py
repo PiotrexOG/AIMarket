@@ -8,7 +8,7 @@ TICKERS = [
 ]
 
 
-DEBUG_RESET = True
+DEBUG_RESET = False
 
 GENERATE_NEW_INDIVIDUAL = False
 
@@ -18,7 +18,7 @@ FETCH_NEW_DATA = False
 
 STARTING_CASH = 100000.0
 
-USERS_PER_ARCHETYPE = 1
+USERS_PER_ARCHETYPE = 5
 
 ZERO_TIME = datetime(2024, 3, 15, 13, 30, tzinfo=timezone.utc)
 START_TIME = datetime(2025, 3, 19, 13, 30, tzinfo=timezone.utc)

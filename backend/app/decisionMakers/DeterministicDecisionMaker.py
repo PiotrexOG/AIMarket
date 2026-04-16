@@ -2,19 +2,14 @@ import math
 
 import numpy as np
 
+from app.config import START_TIME
+
 
 class DeterministicDecisionMaker:
     def __init__(self, valuation_service):
         self.valuation_service = valuation_service
 
-    def benchmark_equal_weight_buy(self, market_scores, portfolio, date_time, start_time):
-
-        if portfolio.user_profile.get("name") != "benchmark":
-            return None
-
-        # tylko pierwszy dzień (ignorujemy godzinę)
-        if date_time.date() != start_time.date():
-            return None
+    def benchmark_equal_weight_buy(self, market_scores, portfolio, date_time):
 
         # zbierz tickery
         all_tickers = set()
@@ -82,13 +77,14 @@ class DeterministicDecisionMaker:
         profile = portfolio.user_profile
 
         if profile.get("name") == "benchmark":
-            decisions = self.benchmark_equal_weight_buy(
-                market_scores,
-                portfolio,
-                date_time,
-                profile.get("start_time")
-            )
-            return decisions or {}
+            if date_time.date() == START_TIME.date():
+                decisions = self.benchmark_equal_weight_buy(
+                    market_scores,
+                    portfolio,
+                    date_time
+                )
+                return decisions
+            return {}
 
         min_score_threshold = profile.get("min_score_threshold", 4.5)
         softmax_temp = profile.get("softmax_temp", 1.0)

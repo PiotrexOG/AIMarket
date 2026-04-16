@@ -3,15 +3,15 @@ from datetime import datetime
 from typing import Dict
 
 import numpy as np
-from sqlalchemy import Boolean
 
 from app.config import TICKERS, GENERATE_NEW_INDIVIDUAL, GENERATE_NEW_CROSS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
 from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
 from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
+from app.services.layers import news_narrative_service
 from app.services.layers.news_narrative_service import NewsNarrativeService
-from app.simulation.DeterministicDecisionMaker import  DeterministicDecisionMaker
+from app.decisionMakers.DeterministicDecisionMaker import  DeterministicDecisionMaker
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
 from app.testy.compute import data_valuation
@@ -30,6 +30,11 @@ class UserSimulator:
         transaction_service,
         analyst_service,
         company_daily_summary_service,
+        gemini_master,
+        gemini_horizon,
+        ticker_serializer,
+        decision_maker,
+        news_narrative_service,
         shares: Dict[str, int] = None,
         with_explanation: bool = False,
     ):
@@ -44,18 +49,17 @@ class UserSimulator:
         self.portfolio_service = portfolio_service
         self.market_data_service = market_data_service
         self.valuation_service = valuation_service
-        self.engine = DeterministicDecisionMaker(self.valuation_service)
+        self.decision_maker = decision_maker
         self.company_daily_summary_service=company_daily_summary_service
-        self.news_narrative_service = NewsNarrativeService(company_daily_summary_service)
+        self.news_narrative_service = news_narrative_service
         self.transaction_service = transaction_service
         self.with_explanation = with_explanation
         self.fundamental_service = fundamental_service
         self.analyst_service = analyst_service
 
-        self.llm_models = {ticker: GEMINI_MASTER() for ticker in TICKERS}
-        self.horizon_master = GEMINI_HORIZON()
-
-        self.serializer = TickerDataSerializer()
+        self.gemini_master = gemini_master,
+        self.gemini_horizon = gemini_horizon,
+        self.ticker_serializer = ticker_serializer
 
     def get_crucial_indicators(self, date_time: datetime, ticker: str):
         if not market_hours.is_market_open_by_exchange(ticker, date_time):
@@ -81,7 +85,7 @@ class UserSimulator:
 
         news_narrative = self.news_narrative_service.get_narrative_context(ticker, date_time.date())
 
-        llm_result = self.llm_models[ticker].analyze(
+        llm_result = self.gemini_master.analyze(
             ticker,
             analyst_grades,
             fundamentals,
@@ -109,13 +113,13 @@ class UserSimulator:
                 data = self.get_crucial_indicators(date_time, ticker)
                 if data and "structured_input" in data and "llm_output" in data:
                     crucial_indicators[ticker] = data
-                    self.serializer.serialize(path, date_time, "structured_input", data["structured_input"])
-                    self.serializer.serialize(path, date_time, "llm_output", data["llm_output"])
+                    self.ticker_serializer.serialize(path, date_time, "structured_input", data["structured_input"])
+                    self.ticker_serializer.serialize(path, date_time, "llm_output", data["llm_output"])
             else:
                 try:
                     crucial_indicators[ticker] = {
-                        "structured_input": self.serializer.deserialize(path, date_time, "structured_input"),
-                        "llm_output": self.serializer.deserialize(path, date_time, "llm_output")
+                        "structured_input": self.ticker_serializer.deserialize(path, date_time, "structured_input"),
+                        "llm_output": self.ticker_serializer.deserialize(path, date_time, "llm_output")
                     }
                 except FileNotFoundError:
                     continue
@@ -155,7 +159,7 @@ class UserSimulator:
         if not GENERATE_NEW_CROSS:
             try:
                 return {
-                    "llm_ranker": self.serializer.deserialize(
+                    "llm_ranker": self.ticker_serializer.deserialize(
                         "CROSS_SECTION", date_time, "llm_ranker"
                     )
                 }
@@ -177,7 +181,7 @@ class UserSimulator:
             if len(group_data) < 3:
                 continue
 
-            result = self.horizon_master.analyze(date_time, group_data)
+            result = self.gemini_horizon.analyze(date_time, group_data)
 
             if result and "llm_ranker" in result:
                 group_results.append(result["llm_ranker"])
@@ -187,7 +191,7 @@ class UserSimulator:
 
         merged = self.merge_group_results(group_results)
 
-        self.serializer.serialize(
+        self.ticker_serializer.serialize(
             "CROSS_SECTION",
             date_time,
             "llm_ranker",
@@ -236,7 +240,7 @@ class UserSimulator:
         return merged
 
     def _execute_trading_logic(self, analysis_result: dict, date_time: datetime) -> None:
-        decisions = self.engine.make_decision(analysis_result["llm_ranker"], self.portfolio, date_time)
+        decisions = self.decision_maker.make_decision(analysis_result["llm_ranker"], self.portfolio, date_time)
 
         pre_state = (self.portfolio.cash, dict(self.portfolio.shares))
         self._execute_decisions(decisions, date_time)
@@ -283,7 +287,7 @@ class UserSimulator:
             elif decision == "SELL":
                 self.portfolio.sell(ticker, num, price)
 
-            print(f"{self.user_id} ➤ {date_time} ➤ {ticker} ➤ {decision} {num}")
+            print(f"{self.user_id} ➤ {ticker} ➤ {decision} {num}")
 
             self.transaction_service.record_transaction(
                 portfolio_id=self.portfolio.portfolio_id,

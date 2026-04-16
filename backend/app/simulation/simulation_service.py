@@ -5,16 +5,21 @@ from typing import Dict
 
 from sqlalchemy.orm import Session
 
-from app.clients.yahoo_client import YahooClient
+from app.core.yahoo_client import YahooClient
 from app.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
+from app.decisionMakers.DeterministicDecisionMaker import DeterministicDecisionMaker
+from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
+from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
+from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
 from app.models.proccess import process_news_range
 from app.services.layers.analyst_grades_service import AnalystGradesService
 from app.services.layers.company_daily_summary import CompanyDailySummaryService
 from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
 from app.services.layers.market_data_service import MarketDataService
+from app.services.layers.news_narrative_service import NewsNarrativeService
 from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.portfolio_transaction_service import PortfolioTransactionService
 from app.services.user_service import UserService
@@ -297,8 +302,7 @@ class SimulationService:
 
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
-            # users_profiles = {"benchmark": {"name": "benchmark", "start_time": START_TIME, "risk_tolerance": 1.0}}
-            users_profiles = {}
+            users_profiles = {"benchmark": {"name": "benchmark", "start_time": self.start_time, "risk_tolerance": 1.0}}
 
             for arc_name in ARCHETYPES.keys():
                 users_profiles.update(generate_users(arc_name, USERS_PER_ARCHETYPE))
@@ -312,7 +316,7 @@ class SimulationService:
 
                 # Tworzymy portfel przekazując wszystkie parametry z konfiguracji
                 self.portfolio_service.create_portfolio(PortfolioCreate(
-                    name=f"Portfolio {name}",
+                    name=name,
                     archetype_key=config.get("archetype_key", "benchmark"),
                     user_id=user.id,
                     short_term_weight=config.get("time_weights", {}).get("short_term_14d", 0.0),
@@ -342,6 +346,13 @@ class SimulationService:
                 users_to_init.append((user, cash, shares))
 
         # 🚀 Wspólna logika budowania UserSimulatorów
+
+        gemini_master = GEMINI_MASTER()
+        gemini_horizon = GEMINI_HORIZON()
+        ticker_serializer = TickerDataSerializer()
+        decision_maker = DeterministicDecisionMaker(self.valuation_service)
+        news_narrative_service =  NewsNarrativeService(self.company_daily_summary_service)
+
         for user, cash, shares in users_to_init:
             user_profile = _build_portfolio_base(self.portfolio_service.get_by_user_id(user.id))
             self.users[user.id] = UserSimulator(
@@ -355,7 +366,12 @@ class SimulationService:
                 transaction_service=self.transaction_service,
                 fundamental_service=self.fundamental_snapshot_service,
                 analyst_service=self.analyst_grades_service,
-                company_daily_summary_service=self.company_daily_summary_service
+                company_daily_summary_service=self.company_daily_summary_service,
+                decision_maker=decision_maker,
+                news_narrative_service = news_narrative_service,
+                gemini_master= gemini_master,
+                gemini_horizon = gemini_horizon,
+                ticker_serializer = ticker_serializer
 
             )
 
