@@ -4,6 +4,10 @@ from app.testy.archetypes import ARCHETYPES
 
 
 def generate_users(archetype_key, count):
+
+    if archetype_key == "benchmark":
+        return {"benchmark": {"name": "benchmark"}}
+
     generated_users = {}
     arc = ARCHETYPES[archetype_key]
 

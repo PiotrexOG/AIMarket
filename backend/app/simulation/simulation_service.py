@@ -302,7 +302,7 @@ class SimulationService:
 
         if DEBUG_RESET or not existing_users:
             # 🔄 czysta inicjalizacja
-            users_profiles = {"benchmark": {"name": "benchmark", "start_time": self.start_time, "risk_tolerance": 1.0}}
+            users_profiles = {}
 
             for arc_name in ARCHETYPES.keys():
                 users_profiles.update(generate_users(arc_name, USERS_PER_ARCHETYPE))
@@ -385,6 +385,8 @@ class SimulationService:
                     ]
                 )
                 self.portfolio_service.evaluate(user.id, history_data)
+
+        print("Users initialized")
 
     # ---- Krok 3: Symulacja krok po kroku ----
     def run_simulation(self):

@@ -27,6 +27,11 @@ class PortfolioValuation(BaseModel):
     positions: List[PositionDetail]
 
 
+class PortfolioArchetypeDTO(BaseModel):
+    date: str
+    portfolio_value: float
+
+
 class PortfolioPerformanceBaseDTO(BaseModel):
     # Dane identyfikacyjne
     id: int
@@ -34,13 +39,13 @@ class PortfolioPerformanceBaseDTO(BaseModel):
     archetype_key: str
 
     # Konfiguracja (metryki)
-    short_term_weight: float
-    medium_term_weight: float
-    long_term_weight: float
-    risk_tolerance: float
-    rebalance_threshold: float
-    min_score_threshold: float
-    softmax_temp: float
+    short_term_weight: float| str
+    medium_term_weight: float| str
+    long_term_weight: float| str
+    risk_tolerance: float| str
+    rebalance_threshold: float| str
+    min_score_threshold: float| str
+    softmax_temp: float | str
     metric_weights: Dict[str, float]
 
     model_config = {"from_attributes": True}

@@ -8,6 +8,7 @@ class ArchetypeService:
     RAW_DATA = ARCHETYPES # Twoja zmienna z promptu
 
     DESCRIPTIONS = {
+        "benchmark": "Kup po równo i trzymaj",
         "conservative_grandpa": "Skrajnie bezpieczny, tylko long-term",
         "value_hunter": "Szuka niedoszacowanych perełek",
         "degen_trader": "Agresywny, techniczny, krótkoterminowy",

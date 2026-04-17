@@ -1,4 +1,10 @@
 ARCHETYPES = {
+    "benchmark": {  # Kup po równo i trzymaj
+        "time_weights": {"short": (0, 0), "medium": (0, 0), "long": (0, 0)},
+        "metric_weights": {"tech": (0, 0), "fund": (0, 0), "val": (0, 0), "risk": (0, 0), "conv": (0, 0), "asym": (0, 0)},
+        "risk_tolerance": (0, 0), "min_score": (0, 0), "temp": (0, 0),
+        "rebalance_range": (0, 0)
+    },
     "conservative_grandpa": {  # Skrajnie bezpieczny, tylko long-term
         "time_weights": {"short": (0.0, 0.05), "medium": (0.1, 0.2), "long": (0.75, 0.9)},
         "metric_weights": {"tech": (0.0, 0.05), "fund": (0.4, 0.6), "val": (0.3, 0.4), "risk": (0.1, 0.2), "conv": (0.0, 0.05), "asym": (0.0, 0.05)},

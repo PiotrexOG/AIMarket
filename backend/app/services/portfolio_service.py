@@ -170,6 +170,10 @@ class PortfolioService:
             "history": valuations
         }
 
+    def _zero_to_NaN(self, value: float):
+        """Jeśli wartość = 0 → zwróć pusty dict"""
+        return "NaN" if value == 0 else value
+
     def _build_portfolio_summary(
         self,
         portfolio,
@@ -194,13 +198,16 @@ class PortfolioService:
             id=portfolio.id,
             name=portfolio.name,
             archetype_key=portfolio.archetype_key,
-            short_term_weight=portfolio.short_term_weight,
-            medium_term_weight=portfolio.medium_term_weight,
-            long_term_weight=portfolio.long_term_weight,
-            risk_tolerance=portfolio.risk_tolerance,
-            rebalance_threshold=portfolio.rebalance_threshold,
-            min_score_threshold=portfolio.min_score_threshold,
-            softmax_temp=portfolio.softmax_temp,
+
+            short_term_weight=self._zero_to_NaN(portfolio.short_term_weight),
+            medium_term_weight=self._zero_to_NaN(portfolio.medium_term_weight),
+            long_term_weight=self._zero_to_NaN(portfolio.long_term_weight),
+
+            risk_tolerance=self._zero_to_NaN(portfolio.risk_tolerance),
+            rebalance_threshold=self._zero_to_NaN(portfolio.rebalance_threshold),
+            min_score_threshold=self._zero_to_NaN(portfolio.min_score_threshold),
+            softmax_temp=self._zero_to_NaN(portfolio.softmax_temp),
+
             metric_weights=mw_dict,
             change_ratio=round(change_ratio, 4)
         )
