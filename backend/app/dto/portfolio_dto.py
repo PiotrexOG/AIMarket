@@ -46,7 +46,7 @@ class PortfolioPerformanceBaseDTO(BaseModel):
     rebalance_threshold: float| str
     min_score_threshold: float| str
     softmax_temp: float | str
-    metric_weights: Dict[str, float]
+    metric_weights: Dict[str, float] | Dict[str, str]
 
     model_config = {"from_attributes": True}
 

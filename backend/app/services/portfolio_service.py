@@ -192,7 +192,7 @@ class PortfolioService:
 
         change_ratio = ((end_val - start_val) / start_val) if start_val != 0 else 0.0
 
-        mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
+        mw_dict = {mw.metric_name: self._zero_to_NaN(mw.weight) for mw in portfolio.metric_weights}
 
         return PortfolioPerformanceSummaryDTO(
             id=portfolio.id,

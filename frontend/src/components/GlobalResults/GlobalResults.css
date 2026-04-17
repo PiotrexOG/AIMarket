@@ -40,9 +40,7 @@
     min-width: 1400px;
     font-size: 12px;
   }
-  
-  .col-name { width: 170px; }
-  .col-equal { width: calc((100% - 170px) / 14); }
+
   
   /* cells */
   .results-table th,
@@ -88,6 +86,7 @@
   
   /* sticky kolumna */
   .sticky-col {
+    width: 150px;
     position: sticky;
     left: 0;
     background: #fff;
@@ -106,6 +105,15 @@
   }
   .performance.positive { color: #27ae60; }
   .performance.negative { color: #e74c3c; }
+
+
+  .benchmark {
+    font-weight: bold;
+    text-align: right;
+    background: #f0fff4;
+  }
+  .benchmark.positive { color: #27ae60; }
+  .benchmark.negative { color: #e74c3c; }
   
   .std-dev {
     display: block;
@@ -153,6 +161,28 @@
     color: #333;
   }
   
+  
+  .date-wrapper {
+    background: #f5f5f5;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    
+    /* Dodaj te linie: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .date-range-text {
+    color: #333;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+
   @media (max-width: 900px) {
     .chart-container {
       flex: 1 1 100%;

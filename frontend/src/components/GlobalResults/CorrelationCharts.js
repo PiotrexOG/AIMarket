@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   ScatterChart,
   Scatter,
@@ -8,10 +8,20 @@ import {
   Tooltip,
   ResponsiveContainer,
   Label,
-  Cell
+  Cell,
+  ReferenceLine
 } from "recharts";
 
 const CorrelationCharts = ({ data, archColorMap }) => {
+
+  const benchmarkValue = useMemo(() => {
+    const benchmarkPortfolios = data.filter(p => p.archetype_key === "benchmark");
+    if (benchmarkPortfolios.length === 0) return null;
+    
+    const avgChangeRatio = benchmarkPortfolios.reduce((sum, p) => sum + p.change_ratio, 0) / benchmarkPortfolios.length;
+    return avgChangeRatio * 100; // na procenty
+  }, [data]);
+
   // Lista parametrów do zmapowania (klucz z danych -> etykieta na wykresie)
   const metrics = [
     { label: "Short Term Weight", key: "short_term_weight" },
@@ -51,7 +61,13 @@ const CorrelationCharts = ({ data, archColorMap }) => {
   };
 
   return (
-    <div className="correlation-grid">
+    <div className="correlation-grid"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)', // zmień 3 na dowolną liczbę N
+      gap: '20px'
+    }}
+    >
       {metrics.map((m) => {
         // Przygotowanie danych pod konkretny wykres
         const chartData = data.map((p) => ({
@@ -83,6 +99,24 @@ const CorrelationCharts = ({ data, archColorMap }) => {
                     fontSize={11}
                   />
                   <Tooltip content={<CustomTooltip />} />
+
+                      {/* 🔥 DODAJEMY POZIOMĄ LINIĘ BENCHMARKU */}
+                  {benchmarkValue !== null && (
+                    <ReferenceLine
+                      y={benchmarkValue}
+                      stroke="#ff4d4f"
+                      strokeDasharray="5 5"
+                      strokeWidth={2}
+                      label={{
+                        position: "insideTopRight",
+                        value: `Benchmark`,
+                        fill: "#ff4d4f",
+                        fontSize: 9,
+                        fontWeight: "bold"
+                      }}
+                    />
+                  )}
+                  
                   <Scatter name={m.label} data={chartData}>
                     {chartData.map((entry, index) => (
                       <Cell 

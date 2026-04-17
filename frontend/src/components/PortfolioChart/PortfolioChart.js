@@ -84,6 +84,12 @@ function PortfolioChart({
             onChange={handleRangeChange}
             onCustomRangeChange={handleCustomRangeChange}
           />
+
+          <div className="date-wrapper">
+            <span className="date-range-text">
+              {new Date(getEffectiveRange().start).toLocaleDateString('pl-PL')} - {new Date(getEffectiveRange().end).toLocaleDateString('pl-PL')}
+            </span>
+          </div>
         </div>
       </div>
     </div>

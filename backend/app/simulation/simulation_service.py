@@ -326,7 +326,14 @@ class SimulationService:
                     rebalance_threshold=config.get("rebalance_threshold", 0.0),
                     min_score_threshold=config.get("min_score_threshold", 0.0),
                     softmax_temp=config.get("softmax_temp", 0.0),
-                    metric_weights=config.get("metric_weights", {})
+                    metric_weights=config.get("metric_weights", {
+                                                "relative_technical_strength": 0.0,
+                                                "relative_fundamental_support": 0.0,
+                                                "relative_valuation_sustainability": 0.0,
+                                                "relative_structural_risk": 0.0,
+                                                "relative_conviction": 0.0,
+                                                "relative_asymmetry_profile": 0.0,
+                                            })
                 ))
 
                 users_to_init.append((user, starting_cash, {}))
