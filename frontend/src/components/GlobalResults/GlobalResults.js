@@ -81,7 +81,7 @@ function GlobalResults({ totalStart, totalEnd }) {
     return { avg, std };
   };
 
-  const renderStatsCell = (data, path, isPercent = true, decimals = 1) => {
+  const renderStatsCell = (data, path, isPercent = true, decimals = 2) => {
     const { avg, std } = calculateStats(data, path);
     const multiplier = isPercent ? 100 : 1;
     const unit = isPercent ? "%" : "";
