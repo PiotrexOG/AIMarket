@@ -1,6 +1,9 @@
 import os
 import json
+import random
 import re
+import time
+
 from google import genai
 from google.genai import types  # Import typów dla konfiguracji
 
@@ -81,34 +84,46 @@ class GEMINI_MASTER:
         Return valid JSON only.
         """
 
-        try:
-            # Wywołanie modelu
-            response = self.client.models.generate_content(
-                model=self.model_id,
-                contents=user_prompt,
-                config=self.config
-            )
+        MAX_RETRIES = 5
 
-            raw_text = response.text.strip()
-            parsed = extract_json(raw_text)
+        for attempt in range(MAX_RETRIES):
+            try:
+                print(f"❌ Attempt {attempt + 1} for {ticker}:")
+                response = self.client.models.generate_content(
+                    model=self.model_id,
+                    contents=user_prompt,
+                    config=self.config
+                )
 
-            # Aktualizacja rolling state
-            self.last_state[ticker] = {
-                "input": current_input,
-                "output": parsed
-            }
+                raw_text = response.text.strip()
+                parsed = extract_json(raw_text)
 
-            return {
-                "input": current_input,
-                "output": parsed
-            }
+                self.last_state[ticker] = {
+                    "input": current_input,
+                    "output": parsed
+                }
 
-        except Exception as e:
-            return {
-                "input": current_input,
-                "output": getattr(response, 'text', "No response text") if 'response' in locals() else "Request failed",
-                "error": f"Failed to process or parse JSON: {str(e)}"
-            }
+                return {
+                    "input": current_input,
+                    "output": parsed
+                }
+
+            except Exception as e:
+                print(f"❌ Attempt {attempt + 1} failed for {ticker}: {e}")
+
+                # jeśli ostatnia próba → zwróć błąd
+                if attempt == MAX_RETRIES - 1:
+                    return {
+                        "input": current_input,
+                        "output": None,
+                        "error": f"Failed after {MAX_RETRIES} attempts: {str(e)}"
+                    }
+
+                # exponential backoff + jitter
+                sleep_time = (2 ** attempt) + random.uniform(0, 1)
+                time.sleep(sleep_time)
+                continue
+        return None
 
 
 def extract_json(text):

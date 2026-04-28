@@ -1,6 +1,9 @@
 import os
 import json
+import random
 import re
+import time
+
 from google import genai
 from google.genai import types  # Importujemy typy dla konfiguracji
 
@@ -27,17 +30,7 @@ class GEMINI_HORIZON:
         )
 
     def analyze(self, date_time, cross_section_data: dict):
-        """
-        cross_section_data format:
-        {
-            "AAPL": {
-                "short_term_14d": {...},
-                "medium_term_50d": {...},
-                "long_term_200d": {...}
-            },
-            "NVDA": {...}
-        }
-        """
+
         if len(cross_section_data) < 3:
             raise ValueError("Cross-sectional analysis requires at least 3 tickers")
 
@@ -47,40 +40,55 @@ class GEMINI_HORIZON:
         }
 
         user_prompt = f"""
-CURRENT_INPUT:
-{json.dumps(current_input, indent=2)}
+    CURRENT_INPUT:
+    {json.dumps(current_input, indent=2)}
 
-Task:
-1. Compare all tickers cross-sectionally.
-2. Produce relative scores for each horizon.
-3. Maintain internal scoring consistency.
-4. Return valid JSON only.
-"""
+    Task:
+    1. Compare all tickers cross-sectionally.
+    2. Produce relative scores for each horizon.
+    3. Maintain internal scoring consistency.
+    4. Return valid JSON only.
+    """
 
-        # Wywołanie zgodne z nowym SDK
-        try:
-            response = self.client.models.generate_content(
-                model=self.model_id,
-                contents=user_prompt,
-                config=self.config
-            )
+        MAX_RETRIES = 5
 
-            raw_text = response.text.strip()
+        for attempt in range(MAX_RETRIES):
+            try:
+                print(f"🔁 Attempt {attempt + 1} for {date_time}:")
+                response = self.client.models.generate_content(
+                    model=self.model_id,
+                    contents=user_prompt,
+                    config=self.config
+                )
 
-            # Próba wyciągnięcia JSONa (twój pomocnik extract_json nadal się przyda jako fallback)
-            parsed = extract_json(raw_text)
+                raw_text = response.text.strip()
+                parsed = extract_json(raw_text)
 
-            return {
-                "structured_input": current_input,
-                "llm_ranker": parsed
-            }
+                # dodatkowe zabezpieczenie
+                if not isinstance(parsed, dict):
+                    raise ValueError("Parsed output is not a dict")
 
-        except Exception as e:
-            return {
-                "structured_input": current_input,
-                "llm_ranker": getattr(response, 'text', "No response text"),
-                "error": f"Failed to process or parse JSON: {str(e)}"
-            }
+                return {
+                    "structured_input": current_input,
+                    "llm_ranker": parsed
+                }
+
+            except Exception as e:
+                print(f"❌ Cross-section attempt {attempt + 1} failed: {e}")
+
+                # ostatnia próba → zwracamy kontrolowany błąd
+                if attempt == MAX_RETRIES - 1:
+                    return {
+                        "structured_input": current_input,
+                        "llm_ranker": None,  # 🔴 kluczowe (nie string!)
+                        "error": f"Failed after {MAX_RETRIES} attempts: {str(e)}"
+                    }
+
+                # exponential backoff + jitter
+                sleep_time = (2 ** attempt) + random.uniform(0, 1)
+                time.sleep(sleep_time)
+                continue
+        return None
 
 
 def extract_json(text):

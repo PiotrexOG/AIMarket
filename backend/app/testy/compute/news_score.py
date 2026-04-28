@@ -1,6 +1,8 @@
 import os
 import json
+import random
 import re
+import time
 from pathlib import Path
 
 from google import genai
@@ -61,16 +63,38 @@ class NewsImportanceScorer:
 
     def _score_batch(self, batch: list) -> dict:
         """Komunikuje się z API Gemini w celu oceny paczki newsów."""
+
         news_block = [f"Date: {i['date']} | Summary: {i['summary']}" for i in batch]
         user_prompt = "Score these summaries:\n" + "\n".join(news_block)
 
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=user_prompt,
-            config=self.config
-        )
+        MAX_RETRIES = 5
 
-        return self._extract_json(response.text)
+        for attempt in range(MAX_RETRIES):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model,
+                    contents=user_prompt,
+                    config=self.config
+                )
+
+                if not response.text:
+                    raise ValueError("Empty response from model")
+
+                return self._extract_json(response.text.strip())
+
+
+            except Exception as e:
+                print(f"❌ Batch scoring attempt {attempt + 1} failed: {e}")
+
+                # ostatnia próba → fallback
+                if attempt == MAX_RETRIES - 1:
+                    return {}  # 🔴 ważne: zawsze dict
+
+                # exponential backoff + jitter
+                sleep_time = (2 ** attempt) + random.uniform(0, 1)
+                time.sleep(sleep_time)
+                continue
+        return {}
 
     def _save_merged_results(self, input_dir: Path, output_dir: Path, new_scores: dict, existing_scores: dict):
         """Łączy nowe oceny ze starymi i zapisuje do odpowiednich plików."""

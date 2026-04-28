@@ -67,7 +67,7 @@ def should_fetch_quarter(symbol: str, period: str, target_year: int, target_q: i
         latest_val = year_quarter_to_int(latest_year+1, latest_q)
 
         # jeśli choć jeden statement jest nieaktualny → fetch
-        if latest_val < target_val:
+        if latest_val <= target_val:
             return True
 
     return False

@@ -6,12 +6,6 @@ import numpy as np
 
 from app.config import TICKERS, GENERATE_NEW_INDIVIDUAL, GENERATE_NEW_CROSS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
-from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
-from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
-from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
-from app.services.layers import news_narrative_service
-from app.services.layers.news_narrative_service import NewsNarrativeService
-from app.decisionMakers.DeterministicDecisionMaker import  DeterministicDecisionMaker
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
 from app.testy.compute import data_valuation
@@ -57,8 +51,8 @@ class UserSimulator:
         self.fundamental_service = fundamental_service
         self.analyst_service = analyst_service
 
-        self.gemini_master = gemini_master,
-        self.gemini_horizon = gemini_horizon,
+        self.gemini_master = gemini_master
+        self.gemini_horizon = gemini_horizon
         self.ticker_serializer = ticker_serializer
 
     def get_crucial_indicators(self, date_time: datetime, ticker: str):
@@ -107,22 +101,34 @@ class UserSimulator:
 
     def fetch_or_load_indicators(self, date_time: datetime) -> dict:
         crucial_indicators = {}
+
         for ticker in TICKERS:
-            path = "ticker_master/" + ticker
-            if GENERATE_NEW_INDIVIDUAL:
+            path = f"ticker_master/{ticker}"
+
+            def generate_and_save():
                 data = self.get_crucial_indicators(date_time, ticker)
                 if data and "structured_input" in data and "llm_output" in data:
-                    crucial_indicators[ticker] = data
                     self.ticker_serializer.serialize(path, date_time, "structured_input", data["structured_input"])
                     self.ticker_serializer.serialize(path, date_time, "llm_output", data["llm_output"])
-            else:
-                try:
-                    crucial_indicators[ticker] = {
-                        "structured_input": self.ticker_serializer.deserialize(path, date_time, "structured_input"),
-                        "llm_output": self.ticker_serializer.deserialize(path, date_time, "llm_output")
-                    }
-                except FileNotFoundError:
-                    continue
+                    return data
+                return None
+
+            if GENERATE_NEW_INDIVIDUAL:
+                data = generate_and_save()
+                if data:
+                    crucial_indicators[ticker] = data
+                continue
+
+            try:
+                crucial_indicators[ticker] = {
+                    "structured_input": self.ticker_serializer.deserialize(path, date_time, "structured_input"),
+                    "llm_output": self.ticker_serializer.deserialize(path, date_time, "llm_output"),
+                }
+            except FileNotFoundError:
+                data = generate_and_save()
+                if data:
+                    crucial_indicators[ticker] = data
+
         return crucial_indicators
 
     def process_day(self, date_time: datetime, crucial_indicators, cross_section_result) -> None:
@@ -146,7 +152,6 @@ class UserSimulator:
         ]
 
     def perform_cross_section_once(self, date_time: datetime, indicators: dict) -> dict:
-
         cross_section = {
             t: d["llm_output"]["horizons"]
             for t, d in indicators.items()
@@ -156,6 +161,39 @@ class UserSimulator:
         if len(cross_section) < 2:
             return None
 
+        def generate_and_save():
+            groups = self.build_overlapping_groups()
+            group_results = []
+
+            for group in groups:
+                group_data = {
+                    t: cross_section[t]
+                    for t in group
+                    if t in cross_section
+                }
+
+                if len(group_data) < 3:
+                    continue
+
+                result = self.gemini_horizon.analyze(date_time, group_data)
+
+                if result and "llm_ranker" in result:
+                    group_results.append(result["llm_ranker"])
+
+            if not group_results:
+                return None
+
+            merged = self.merge_group_results(group_results)
+
+            self.ticker_serializer.serialize(
+                "CROSS_SECTION",
+                date_time,
+                "llm_ranker",
+                merged
+            )
+
+            return {"llm_ranker": merged}
+
         if not GENERATE_NEW_CROSS:
             try:
                 return {
@@ -164,41 +202,9 @@ class UserSimulator:
                     )
                 }
             except FileNotFoundError:
-                return None
+                return generate_and_save()
 
-        groups = self.build_overlapping_groups()
-
-        group_results = []
-
-        for group in groups:
-
-            group_data = {
-                t: cross_section[t]
-                for t in group
-                if t in cross_section
-            }
-
-            if len(group_data) < 3:
-                continue
-
-            result = self.gemini_horizon.analyze(date_time, group_data)
-
-            if result and "llm_ranker" in result:
-                group_results.append(result["llm_ranker"])
-
-        if not group_results:
-            return None
-
-        merged = self.merge_group_results(group_results)
-
-        self.ticker_serializer.serialize(
-            "CROSS_SECTION",
-            date_time,
-            "llm_ranker",
-            merged
-        )
-
-        return {"llm_ranker": merged}
+        return generate_and_save()
 
     def merge_group_results(self, group_results):
 
