@@ -4,7 +4,7 @@ from typing import Dict
 
 import numpy as np
 
-from app.config import TICKERS, GENERATE_NEW_INDIVIDUAL, GENERATE_NEW_CROSS
+from app.config import TICKERS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
@@ -113,12 +113,6 @@ class UserSimulator:
                     return data
                 return None
 
-            if GENERATE_NEW_INDIVIDUAL:
-                data = generate_and_save()
-                if data:
-                    crucial_indicators[ticker] = data
-                continue
-
             try:
                 crucial_indicators[ticker] = {
                     "structured_input": self.ticker_serializer.deserialize(path, date_time, "structured_input"),
@@ -159,7 +153,7 @@ class UserSimulator:
         }
 
         if len(cross_section) < 2:
-            return None
+            return {}
 
         def generate_and_save():
             groups = self.build_overlapping_groups()
@@ -194,17 +188,14 @@ class UserSimulator:
 
             return {"llm_ranker": merged}
 
-        if not GENERATE_NEW_CROSS:
-            try:
-                return {
-                    "llm_ranker": self.ticker_serializer.deserialize(
-                        "CROSS_SECTION", date_time, "llm_ranker"
-                    )
-                }
-            except FileNotFoundError:
-                return generate_and_save()
-
-        return generate_and_save()
+        try:
+            return {
+                "llm_ranker": self.ticker_serializer.deserialize(
+                    "CROSS_SECTION", date_time, "llm_ranker"
+                )
+            }
+        except FileNotFoundError:
+            return generate_and_save()
 
     def merge_group_results(self, group_results):
 
