@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.46)",
+        "velocity_roc_10": "NORMAL (-1.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.35-118.36]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.88%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.027)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 105.53-118.36]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.0%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.37%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 112.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.78%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.9, P/S: 1.47)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.85)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon wants government guarantees for Mozmbique LNG project. Based on the provided data, the following event meets the criteria of having a direct impact on XOM: - Ex xon wants government guar antees for Moz mbique LNG proj ect.",
+      "Exxon \u041cobal approves $6.8B investment in Guyana's Hammerheads development. - Technip F MC secures major contracts from XOM and Petrobas worth >$1.2B.",
+      "Italian regulatory ruling fines Exxon \u041cobal's Es\u0441\u043e and Eni \u20ac936 million for alleged fuel price cartel. - Technip F MC secures $25o M-$5oo M subsea contract for Hammer Head Project from Exx\u043e\u043d\u041c\u043ebil Guyana."
+    ],
+    "medium_term_50d": [
+      "Exxon wants government guarantees for Mozmbique LNG project. Based on the provided data, the following event meets the criteria of having a direct impact on XOM: - Ex xon wants government guar antees for Moz mbique LNG proj ect.",
+      "Exxon \u041cobal approves $6.8B investment in Guyana's Hammerheads development. - Technip F MC secures major contracts from XOM and Petrobas worth >$1.2B.",
+      "Exxon and Petrobras express concerns over Saipem and Subsea7 merger. - Chevron anticipates $20o-$400million Q3 impact from H ess deal. * Exxon expands Guyana operations with 11Billion barrels find. - Technip F MC awards contracts worth $25o-$"
+    ],
+    "long_term_200d": [
+      "Exxon \u041cobal starts production from Hammerheadproject in Guyana (Q2 2o29) - Ex xon \u041cobal makes final investment decisionfor Hammerheaddevelopment(2022) - Guyana governmentannouncesfirstoilfrom Exxon'sm Hammerheadd Project(Q2202g)",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM signs major solar energy partnership.",
+      "Exxon \u041cobal approves $6.8B investment in Guyana's Hammerheads development. - Technip F MC secures major contracts from XOM and Petrobas worth >$1.2B."
+    ]
+  }
+}

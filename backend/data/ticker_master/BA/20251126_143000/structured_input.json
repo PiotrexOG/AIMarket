@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (18.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "NORMAL (-6.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 176.77-221.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.77%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.024)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.62)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-226.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-9.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.22%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 186.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -17.07)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.33x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "BAE Systems receives $22M contract for Boeing' VLS canisters. - BAE Systems wins $736M+ contracts for Boeing VLS can ISTERs (potential).",
+      "Boeing secures up to 205 new aircraft orders at Dubai Air Show.",
+      "Flydubia orders 7 fifth Boeing \ufffd37 MAX planes - Flydubja signs Mo U for 73 seventh Boeing \u05d637 MAX airplanes - Booeing wins $13bn Flydubaj order for 7 thirty-seven MAX planes"
+    ],
+    "medium_term_50d": [
+      "Boeing secures up to 205 new aircraft orders at Dubai Air Show.",
+      "BAE Systems receives $22M contract for Boeing' VLS canisters. - BAE Systems wins $736M+ contracts for Boeing VLS can ISTERs (potential).",
+      "Flydubia orders 7 fifth Boeing \ufffd37 MAX planes - Flydubja signs Mo U for 73 seventh Boeing \u05d637 MAX airplanes - Booeing wins $13bn Flydubaj order for 7 thirty-seven MAX planes"
+    ],
+    "long_term_200d": [
+      "Boeing secures up to 205 new aircraft orders at Dubai Air Show.",
+      "Flydubia orders 7 fifth Boeing \ufffd37 MAX planes - Flydubja signs Mo U for 73 seventh Boeing \u05d637 MAX airplanes - Booeing wins $13bn Flydubaj order for 7 thirty-seven MAX planes",
+      "Emiratesorders 135 Boeling 77 seventh-9s and 13o GE Aeroengine sforpower - Ethiopian Airlinescommits toorder 11Boeling 73MAXairplanes - Air Senegalcommits tofirst Boeing \ufffd37 MAXorder(9aircrafts)"
+    ]
+  }
+}

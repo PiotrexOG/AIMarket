@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.06)",
+        "velocity_roc_10": "NORMAL (-3.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 193.46-208.47]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.42%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.452)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-214.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-12.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.12%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 197.06,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.08%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.23, P/S: 7.54)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 44.72)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netherlands court rules Appleabused App Storedominance ($50m fine) - US courdenies Apple\u2019srequest to dismissantitrust caseconcerning i Cloud - Apple supplier Jabilplans $50o Mventureto build AI datacenters",
+      "Dutch court confirs Apple abuseddominant position in datingapps. - Market Chatter :Apple may face New EU chargesfor non-compliancewith Digital Markets Act.",
+      "Apple overhauls supply chain to produce i Phons for US in India - Apple's iphones top China's smartphone sales with massive discounts - Nearly all India-made i Phones exported to US due to tariffs"
+    ],
+    "medium_term_50d": [
+      "Apple reveals \"Liquid Glasst\" interface for i OS 26 - Apple integrates Chat GPT in new AI features - Apple's AI event underperforms, share price slips - Apple details AI implementation in smartphones - Apple introduces foundation models for developers - Apple partners with Microsoft for AI capabilities - Apple announces major upgrade to Sir",
+      "Netherlands court rules Appleabused App Storedominance ($50m fine) - US courdenies Apple\u2019srequest to dismissantitrust caseconcerning i Cloud - Apple supplier Jabilplans $50o Mventureto build AI datacenters",
+      "Dutch court confirs Apple abuseddominant position in datingapps. - Market Chatter :Apple may face New EU chargesfor non-compliancewith Digital Markets Act."
+    ],
+    "long_term_200d": [
+      "Apple reveals \"Liquid Glasst\" interface for i OS 26 - Apple integrates Chat GPT in new AI features - Apple's AI event underperforms, share price slips - Apple details AI implementation in smartphones - Apple introduces foundation models for developers - Apple partners with Microsoft for AI capabilities - Apple announces major upgrade to Sir",
+      "European Commission finds Apple breaches DMA with steering practices. Note: Based on event number 12, but focusing specifically on the regulatory ruling mentioned within.",
+      "Netherlands court rules Appleabused App Storedominance ($50m fine) - US courdenies Apple\u2019srequest to dismissantitrust caseconcerning i Cloud - Apple supplier Jabilplans $50o Mventureto build AI datacenters"
+    ]
+  }
+}

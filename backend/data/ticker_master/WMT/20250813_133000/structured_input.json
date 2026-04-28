@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (85.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.4%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 94.43-104.72]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.11%)",
+        "cycle_macd": "BULLISH_FADING (0.703)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 93.43-104.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.15%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 102.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.56%))",
+      "volume_dynamics": "ELEVATED (1.25)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 43.59, P/S: 1.26)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.17)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.64)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart pays $5. six million settlement for overcharging customers in California. - Consumers trade down from beefto chicken due to economic pressures.",
+      "Walmart pays $5. six million overcharging settled in California.",
+      "Asda's IT transition at WMT delayed by six months. If there are no direct material events affecting WMT on August 10, 20 twenty-five, output should be: NONE"
+    ],
+    "medium_term_50d": [
+      "Walmart pays $5. six million settlement for overcharging customers in California. - Consumers trade down from beefto chicken due to economic pressures.",
+      "Walmart pays $5. six million overcharging settled in California.",
+      "Walmart betters on AI with 'super agent' strategy - Wal Mart hires Instacart exec as head ofglobal AI efforts"
+    ],
+    "long_term_200d": [
+      "Walmart betters on AI with 'super agent' strategy - Wal Mart hires Instacart exec as head ofglobal AI efforts",
+      "Walmart expande AI leadership, intoduces 4 \u2018Super Agents\u2019 - Wal mart appoints Daniel Dankar as EVP of AI accelaration, product anddesign - Wal Mart shifts toward Super Agents in play to upgrade AI strategy - Walmat bets on ai 'super agents\u2019 to boost ecommerce growth",
+      "India investigates Walmart'sfashion arm Myntrabreaches foreign investment rules. - India files new $2oo M case against Walmart\u2019sfashion arm Myntraviolingforeigninvestmentrules."
+    ]
+  }
+}

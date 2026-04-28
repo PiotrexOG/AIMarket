@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has weakened. The bullish candle pattern is absent, RSI has retreated to 46.1, and the SMA20 trend base has turned negative (-1.0%). Velocity (ROC 10) remains stagnant at 0.8%. The price is still in the middle of the 20-day range (85.49-98.89), but the technical signals are no longer supportive of a bullish reversal. W: News flow is mixed, with some positive initiatives like protein cold foam and raises, but also ongoing competition and labor issues. The absence of strong technical signals reduces conviction. O: A sustained break above the 98.89 resistance level, supported by positive news and a clear shift in momentum indicators, is needed to re-establish a bullish short-term outlook. T: Downside risk has increased due to the deterioration in short-term technicals and stagnant volume dynamics (0.49). Structural confidence has decreased as short-term signals are now less aligned with a positive outlook."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment has shifted to negative consolidation (-0.9%), and the MACD is now fading (0.018), indicating a loss of bullish momentum. The position relative to the 50-day SMA has deteriorated significantly to a bearish trend position (Z:-1.23). The price remains within the monthly range (85.49-98.89). W: The fading MACD and the shift to a bearish SMA position are significant negative developments. News regarding tariffs and competition persists, contributing to the negative outlook. O: A decisive break below the 85.49 support level, coupled with sustained bearish MACD momentum and negative fundamental catalysts, would confirm a strong medium-term bearish trend. T: Downside risk has increased due to the deteriorating medium-term technicals and the shift to a bearish trend position. Structural confidence has decreased as the medium-term technicals are now less aligned with a bullish outlook. The previous positive score is no longer justified."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime remains in a SECULAR_BEAR_MARKET (-4.2%), and the DEATH_CROSS_STRUCTURE (-2.36%) persists, indicating a challenging macro environment. The long-term range position has also deteriorated to 35.4% in the mid-cycle neutral zone. W: Fundamental growth remains stagnant with deteriorating EPS, and the balance sheet is still stressed. Valuation remains premium with extremely risky implied growth. News flow continues to highlight strategic re-evaluation of the China business and coffee tariffs, adding to long-term uncertainty. O: A sustained shift in the broader market regime to a clear bull market, a significant turnaround in fundamental growth and profitability, and a definitive resolution of strategic uncertainties at favorable terms are necessary for a robust long-term recovery. T: Downside risk remains elevated due to the persistent secular bear market, stressed fundamentals, premium valuation, and ongoing operational concerns. Structural confidence has decreased due to the deterioration in the long-term range position and persistent macro headwinds. The previous score is still somewhat justified due to ongoing structural issues."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 121.05-130.1]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.96%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.321)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.07)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 109.81-134.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.27%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 122.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.27%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.48)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "MOMENTUM_UNKNOWN"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 50.93, P/S: 1.46)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.89)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart-backed Phone Pe pauses IPO plans. - Build-A-Bear launches new product lines at Walmart. - Coca-Cola launches exclusive new soda at Walmart. - Walmart's international business shows strong sales growth. - Walmart raises dividend payout to $0.99 per share. - Walmart exclusive brands target higher margins.",
+      "Amazon launches 1-hour shipping to challenge Walmart. - Walmart closes stores to test new shopper perks. - General Mills La Tiara taco shells exclusive at Walmart.",
+      "Walmart's Flipkart shifts holding company to India."
+    ],
+    "medium_term_50d": [
+      "Walmart-backed Phone Pe pauses IPO plans. - Build-A-Bear launches new product lines at Walmart. - Coca-Cola launches exclusive new soda at Walmart. - Walmart's international business shows strong sales growth. - Walmart raises dividend payout to $0.99 per share. - Walmart exclusive brands target higher margins.",
+      "Amazon launches 1-hour shipping to challenge Walmart. - Walmart closes stores to test new shopper perks. - General Mills La Tiara taco shells exclusive at Walmart.",
+      "Walmart opens new Supercenter, rolls out new formats. - Walmart partners with new consumer brands. - Walmart appoints new Executive VP of Global Governance."
+    ],
+    "long_term_200d": [
+      "Walmart-backed Phone Pe pauses IPO plans. - Build-A-Bear launches new product lines at Walmart. - Coca-Cola launches exclusive new soda at Walmart. - Walmart's international business shows strong sales growth. - Walmart raises dividend payout to $0.99 per share. - Walmart exclusive brands target higher margins.",
+      "Walmart insider sale by Walton Family Holdings Trust. - Walmart rolls out digital pricing with AI. - Walmart partners with Google on Universal Commerce Protocol. - SPAM and Bachan's collaboration available at Walmart. - Brite by Scotch-Brite available at Walmart.",
+      "Walmart faces $100M FTC settlement over driver pay. - Walmart's Sam's Club sales rise, e-commerce surges. - Walton Family sells $220 million in Walmart stock. - Levanta unifies creator programs across Walmart."
+    ]
+  }
+}

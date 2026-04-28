@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.58)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 118.02-128.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.54%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.022)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.0)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 115.49-134.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.03%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 124.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.05%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "MOMENTUM_UNKNOWN"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.54, P/S: 1.47)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.03)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.05)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart closes Illinois facility, cutting jobs. - Walmart's Rx Transfer adoption across 4,800 locations. - Walmart signal warns of slowing economy. - Sam's Club raising annual membership prices in May.",
+      "Walmart Mexico expands Vusion partnership for Edge Sense. - Walmart Mexico deploys connected store platform across stores.",
+      "Walmart acquires Vizio for $2.3 billion. - Walmart reports strong US e-commerce growth. - Walmart announces $30 billion share repurchase. - Walmart implements new AI tools for e-commerce. - Walmart CEO Doug Mc Millon cites AI for departure. - The Brand Agency named to Fast Company's Most Innovative list."
+    ],
+    "medium_term_50d": [
+      "Walmart acquires Vizio for $2.3 billion. - Walmart reports strong US e-commerce growth. - Walmart announces $30 billion share repurchase. - Walmart implements new AI tools for e-commerce. - Walmart CEO Doug Mc Millon cites AI for departure. - The Brand Agency named to Fast Company's Most Innovative list.",
+      "Walmart closes Illinois facility, cutting jobs. - Walmart's Rx Transfer adoption across 4,800 locations. - Walmart signal warns of slowing economy. - Sam's Club raising annual membership prices in May.",
+      "Walmart Mexico expands Vusion partnership for Edge Sense. - Walmart Mexico deploys connected store platform across stores."
+    ],
+    "long_term_200d": [
+      "Walmart acquires Vizio for $2.3 billion. - Walmart reports strong US e-commerce growth. - Walmart announces $30 billion share repurchase. - Walmart implements new AI tools for e-commerce. - Walmart CEO Doug Mc Millon cites AI for departure. - The Brand Agency named to Fast Company's Most Innovative list.",
+      "Walmart closes Illinois facility, cutting jobs. - Walmart's Rx Transfer adoption across 4,800 locations. - Walmart signal warns of slowing economy. - Sam's Club raising annual membership prices in May.",
+      "Walmart-backed Phone Pe pauses IPO plans. - Build-A-Bear launches new product lines at Walmart. - Coca-Cola launches exclusive new soda at Walmart. - Walmart's international business shows strong sales growth. - Walmart raises dividend payout to $0.99 per share. - Walmart exclusive brands target higher margins."
+    ]
+  }
+}

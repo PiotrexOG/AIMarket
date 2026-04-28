@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 95.93-115.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.78%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.065)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.25)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 95.93-118.59]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.23%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 101.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.47%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 35.8% | OM: 13.0% | NM: 5.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 5.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $91.361B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 2.8%, EPS: 110.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -82.5%, Next Q Est Growth: 384.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.27, P/S: 2.02)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.83)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.34)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney leases private island for cruises. - Disappointing performance of latest Disney film. - CBS files request to dismiss complaint over Harris interview. NONE",
+      "Disney faces backlash over new Snow White movie. - DIS investor proposes withdrawal from LGBTQ+ index rejected. - New tech and plans for 7 more cruise ships announced.",
+      "Disney and Universal prepare for theme park brawl. - Disney investors reject proposal to withdrawfrom HRC'sdiversity index. - Shareholdersrejectpush to burn LGBTQscorecard."
+    ],
+    "medium_term_50d": [
+      "Disney faces backlash over new Snow White movie. - DIS investor proposes withdrawal from LGBTQ+ index rejected. - New tech and plans for 7 more cruise ships announced.",
+      "Disney and Universal prepare for theme park brawl. - Disney investors reject proposal to withdrawfrom HRC'sdiversity index. - Shareholdersrejectpush to burn LGBTQscorecard.",
+      "Disney leases private island for cruises. - Disappointing performance of latest Disney film. - CBS files request to dismiss complaint over Harris interview. NONE"
+    ],
+    "long_term_200d": [
+      "Disney faces backlash over new Snow White movie. - DIS investor proposes withdrawal from LGBTQ+ index rejected. - New tech and plans for 7 more cruise ships announced.",
+      "Disney and Universal prepare for theme park brawl. - Disney investors reject proposal to withdrawfrom HRC'sdiversity index. - Shareholdersrejectpush to burn LGBTQscorecard.",
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for its medical division. - DOJ drops antitrust investigation against DIS. - Apple and DIS announce partnership on streaming services. -DIS reports significant production increase in semiconductors. -Disney"
+    ]
+  }
+}

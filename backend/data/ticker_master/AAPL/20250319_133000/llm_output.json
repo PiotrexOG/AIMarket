@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The 14-day horizon exhibits extreme oversold conditions (RSI 24.0), suggesting potential for a short-term bounce. Candle patterns are STRONG_BULLISH, and velocity (ROC -9.9%) indicates a sharp decline that may be nearing exhaustion. W: Despite bullish signals, the price is extended below the 20-day SMA (-8.5%), indicating significant short-term weakness. News flow is negative, with antitrust and tariff concerns creating headwinds. O: A short-term relief rally is possible if oversold conditions are capitulated. T: Significant downside risk remains due to negative news and technical overextension, with volatility likely to persist."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The 50-day horizon shows consolidation with compressed moving averages, indicating a pause in the bearish trend. MACD is recovering from bearish territory, and the price is within the monthly range, suggesting a potential stabilization. W: The stock remains below its 50-day SMA (Z:-1.69), indicating a bearish trend position. Earnings momentum is mixed, with a significant current quarter miss, although future estimates show strong growth. O: A potential shift from consolidation to a more constructive trend could occur if the stock can break above key moving averages. T: Valuation remains a concern, and the balance sheet shows stress, which could limit upside potential and increase risk if market sentiment deteriorates."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term view presents a mixed picture. A healthy Golden Cross structure (2.45%) suggests underlying bullish technicals, and the stock is in a mid-cycle neutral zone. Business quality (GM: 46.2%, OM: 31.5%) and cash generation (FCF Mgn: 27.8%) remain exceptionally strong. W: Growth profile shows stagnation (Rev: 2.0%, EPS: -1.1%), and the current valuation is premium (P/E: 35.66, P/S: 8.46) with extreme multiple risk (P/B: 58.12). Financial health is stressed (NetDebt/Eq: 1.56x). O: The strong business fundamentals and technical structure provide a foundation for recovery, especially if growth concerns are addressed. T: The significant valuation risk and stressed balance sheet are key vulnerabilities that could lead to increased downside if earnings expectations are not met or if market sentiment shifts unfavorably."
+    }
+  }
+}

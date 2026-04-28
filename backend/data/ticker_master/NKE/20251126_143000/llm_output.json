@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 5.0,
+        "risk": 5.8
+      },
+      "synthesis": "S: The short-term momentum has improved with RSI moving to 55.1, indicating a shift from neutral to a slightly bullish zone. The price is now stable near the 20-day SMA (+1.1%), and the Bollinger Bands are widening (0.62), suggesting increased volatility. The ROC has slowed but remains positive (0.9%). W: The candle pattern has shifted to neutral, and the ROC velocity has stagnated, indicating a loss of immediate upward thrust. The price remains in the middle of the 20-day range. O: The improved RSI and stabilization near the 20-day SMA suggest potential for a short-term upward move, possibly testing the upper range of the 20-day band. The widening Bollinger Bands could facilitate this move if momentum re-accelerates. T: The primary risk is the stagnation in ROC velocity and the neutral candle pattern, which could lead to a failure to break out of the current range. The news regarding Moody's downgrade and institutional selling introduces headwinds. Score increased slightly due to improved RSI, while risk increased due to widening bands and negative news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The MACD has accelerated to the upside (0.25), suggesting a strengthening bullish signal within the medium term. The Z-score relative to the 50-day SMA has improved to -0.7, indicating less bearish positioning. W: The overall trend alignment remains bearish with expanding momentum (-5.89%), and the price is still below the 50-day SMA. The bullish MACD signal is still within the context of a larger bearish trend. O: The accelerating bullish MACD offers a potential for a sustained bounce, possibly challenging the 50-day SMA. This could lead to a re-evaluation of the medium-term trend if sustained. T: The persistent bearish trend alignment and the fact that the price is still below the 50-day SMA are significant risks. The conviction remains moderate due to the conflicting signals of a strengthening MACD within a bearish trend. Score has decreased due to the worsening trend alignment, while risk has increased due to the persistent bearish trend and negative news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The long-term range position has moved slightly higher to 39.9%, indicating a more neutral stance within the cycle. Fundamentals remain robust with strong business quality and financial health. W: The market regime remains a secular bear market (-6.6%), and a significant \"Death Cross\" structure has formed (-1.86%), indicating a bearish long-term technical outlook. Growth profile continues to show stagnation and profit issues. O: The stable fundamentals provide a degree of resilience. The slight improvement in long-term range position offers a minor positive offset to the bearish technical structure. T: The \"Death Cross\" structure represents a significant structural deterioration, increasing long-term risk substantially. The stagnant growth profile and the ongoing secular bear market regime are persistent headwinds. The news regarding Moody's downgrade and institutional selling further exacerbates downside risk. Score has decreased due to the formation of the Death Cross and negative news, while risk has increased significantly."
+    }
+  }
+}

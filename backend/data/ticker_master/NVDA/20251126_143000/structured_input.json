@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.13)",
+        "velocity_roc_10": "NORMAL (-8.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-7.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 169.55-212.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (2.55%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.957)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 168.41-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.82%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 179.59,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (5.27%))",
+      "volume_dynamics": "ELEVATED (1.36)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 69.88, P/S: 39.28)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 67.51)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.3)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Meta in talks with Google for billions in AI chip deals. - Google may rent chips to Meta as early as 20 twenty-seven.",
+      "Nvidia allowed to sell H20ai chips to China. (Reports) - Google's Alphabet hits $4 trillon valuation. - Google releases new AI model, Gemini 2, causing stock surge.",
+      "Trump administration contemplates allowing Nvidia to trade H20AI chips with China - NVIDIA cuts sales outlook for Cloud Infrastructure Business, CRWV slides - Ongoing debates regarding potential change in Nvidias export control status to China"
+    ],
+    "medium_term_50d": [
+      "Trump administration contemplates allowing Nvidia to trade H20AI chips with China - NVIDIA cuts sales outlook for Cloud Infrastructure Business, CRWV slides - Ongoing debates regarding potential change in Nvidias export control status to China",
+      "Nvidia allowed to sell H20ai chips to China. (Reports) - Google's Alphabet hits $4 trillon valuation. - Google releases new AI model, Gemini 2, causing stock surge.",
+      "Nvidia posts blockbuster earnings, stock rallies but later reverses course. - Foxconn increases AI investments, expects to manufacture 1,ooo racks weekly. - Open AI partners with Foxconn to design and manufacturers AI hardware in US."
+    ],
+    "long_term_200d": [
+      "Trump blocks Nvidia AI chip exports to China.",
+      "Nvidia secures exclusive access to Taiwan Semiconductors' next-gen super-chip. - South Korea places giant order for Nvidias Blackwell Ch IPS. - Amazon adds to the chorous of large cloud companies stating demand for AIcapacity outstrips supplies. - Partnershiptaimed at creating aglobally distributed AIcloud infrastructure using NVIDI",
+      "Trump administration contemplates allowing Nvidia to trade H20AI chips with China - NVIDIA cuts sales outlook for Cloud Infrastructure Business, CRWV slides - Ongoing debates regarding potential change in Nvidias export control status to China"
+    ]
+  }
+}

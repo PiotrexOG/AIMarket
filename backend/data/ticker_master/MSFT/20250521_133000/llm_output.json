@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Momentum indicators remain extremely overbought (RSI 95.2), but velocity has normalized (ROC 5.8%). The price is still extended above the 20-day SMA (7.3%) and testing critical resistance within the 20-day range. W: The neutral candle pattern and normalized velocity suggest a loss of immediate upward thrust. The extreme overbought condition (RSI 95.2) and proximity to resistance increase the probability of a short-term pullback. O: Recent news flow highlights AI initiatives and partnerships, which could provide underlying support if a consolidation occurs. T: Increased risk due to the extreme overbought condition and resistance test. Volatility remains moderate (ATR 2.17%), but the overextended price action poses a downside risk if momentum falters."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Trend alignment shows expanding bullish momentum (7.11%), and the price is in a bullish trend position relative to the 50-day SMA (Z:1.88). The price is strengthening at the monthly resistance zone. W: The MACD is fading (2.387), indicating a potential loss of medium-term bullish conviction. The expanding momentum is occurring at a resistance zone, increasing the risk of consolidation or a reversal. O: Continued strength in Azure and strategic AI positioning provide fundamental support. The business quality and financial health remain robust. T: Risk has increased due to the price testing resistance at the 50-day horizon and the fading MACD. While the trend is still bullish, the confluence of resistance and weakening momentum signals a higher probability of a sideways or corrective move. Valuation remains a long-term concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term market regime remains a bull market correction (10.4%), with the price near its all-time high (96.8% of range). Fundamental strengths in business quality, financial health, and cash generation remain intact. W: The death cross structure (-3.9%) persists as a technical overhang, suggesting potential long-term structural weakness despite the current price action. The hyper-premium valuation multiples (P/E 37.47, P/S 13.4) and implied growth (PEG 2.14) continue to present significant long-term risk. O: Secular growth drivers from cloud computing and AI remain strong. The company's scale and business quality offer resilience against broader market downturns. T: The primary long-term risk remains the elevated valuation, which is highly sensitive to growth expectations and market sentiment. The persistent death cross structure, though less severe than previously, still indicates a potential for a longer-term trend shift if market conditions deteriorate."
+    }
+  }
+}

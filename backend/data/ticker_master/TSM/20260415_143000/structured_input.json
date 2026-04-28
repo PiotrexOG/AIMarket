@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.1)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.02)",
+        "velocity_roc_10": "EXPLOSIVE_UP (20.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 313.8-382.16]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.9%)",
+        "cycle_macd": "BULLISH_ACCELERATING (5.144)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 313.8-390.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.18%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 380.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.44%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.9% | OM: 50.8% | NM: 45.1%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.31x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3818.940591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.9%, EPS: 48.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3202.0%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.14, P/S: 0.52)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.36)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.14x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC faces AI silicon shortage, capacity sold out into 2027. - TSMC Q1 revenue growth driven by AI and memory demand.",
+      "Taiwan Semiconductor beats Q1 revenue estimates with 35.1% Yo Y jump. - AI demand drives Taiwan Semiconductor revenue surge. - TSMC strength lifts global chip stocks amid AI trends.",
+      "TSMC forecasts 38% Q1 revenue growth, strong AI demand. - TSMC raises FY26 Cap Ex for advanced nodes. - US chip supply chain risk involves Taiwan packaging."
+    ],
+    "medium_term_50d": [
+      "TSMC faces AI silicon shortage, capacity sold out into 2027. - TSMC Q1 revenue growth driven by AI and memory demand.",
+      "Taiwan Semiconductor beats Q1 revenue estimates with 35.1% Yo Y jump. - AI demand drives Taiwan Semiconductor revenue surge. - TSMC strength lifts global chip stocks amid AI trends.",
+      "TSMC forecasts 38% Q1 revenue growth, strong AI demand. - TSMC raises FY26 Cap Ex for advanced nodes. - US chip supply chain risk involves Taiwan packaging."
+    ],
+    "long_term_200d": [
+      "TSMC faces AI silicon shortage, capacity sold out into 2027. - TSMC Q1 revenue growth driven by AI and memory demand.",
+      "Taiwan Semiconductor beats Q1 revenue estimates with 35.1% Yo Y jump. - AI demand drives Taiwan Semiconductor revenue surge. - TSMC strength lifts global chip stocks amid AI trends.",
+      "TSMC capacity sells out through 2028."
+    ]
+  }
+}

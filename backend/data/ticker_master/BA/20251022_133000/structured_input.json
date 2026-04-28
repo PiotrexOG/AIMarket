@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.56)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 210.66-226.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.75%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.301)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.88)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 210.66-238.33]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.28,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.27%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.48)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -0.3% | OM: -12.4% | NM: -14.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $75.328B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.4%, EPS: -193.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 27.6%, Next Q Est Growth: -158.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -49.43)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "FAA lifts cap on Boening 73 seventh MAXproductionto42aircraftpermonth(BA). -GEAerospacefeelsgoodabout Q4and202 sixthoutlookwith Boeing Leap Engine Deliveriesincreasing(BA).",
+      "Boeing given go ahead to up production to 43 monthly 73 Seven Max planes. - Korean Air signs deal with Archer A\u0432\u0438ation for electric air taxi purchases.",
+      "FAA raises Boeing's 7 three MAX production limit to 43 planes monthly."
+    ],
+    "medium_term_50d": [
+      "FAA lifts cap on Boening 73 seventh MAXproductionto42aircraftpermonth(BA). -GEAerospacefeelsgoodabout Q4and202 sixthoutlookwith Boeing Leap Engine Deliveriesincreasing(BA).",
+      "FAA raises Boeing's 7 three MAX production limit to 43 planes monthly.",
+      "Boeing given go ahead to up production to 43 monthly 73 Seven Max planes. - Korean Air signs deal with Archer A\u0432\u0438ation for electric air taxi purchases."
+    ],
+    "long_term_200d": [
+      "Boeing awarded $2. seventh billion in PAC-\u00b3 seeker contracts - EU approves Boeing'ss $4. seven billion Spirit Aero System acquisition (conditional)",
+      "Boeing regains FAA certification for 73 Seven MAX and seventh 78 Seven delivery. - Turkish Airlines, Norweigian Group, Uzbekitan Airways place major Boeing jet orders.",
+      "Boeing asks for financial assistance from Airbus and Boeing due to inflation costs. - Spirit Aero systems faces production issues at customers and investigation into corporate governance. - Airbus surpasses Boeing in deliveries and secures key orders from Turkish Airlines."
+    ]
+  }
+}

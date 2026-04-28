@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.0)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.16)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 109.81-120.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.66%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.433)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.68)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 98.88-120.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.56%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 119.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.7% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.59x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $673.819B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.5%, EPS: 20.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.0%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.91, P/S: 1.43)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.95)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.39)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart expansions at Walmart and Google stores. - Google's new agentic AI shopping feature with Walmart. - Amazon opens new store concept competing with Walmart - Wal Mart joins Nasdaq -100 - Wal Mart and Google shopping tie- up with Gemini app.",
+      "Walmart joins Nasda q-10o Index. - Partners with Google for AI-Assisted shopping.",
+      "Walmart partners with Google' Gemini to enhance shopping experiences. - Google integrates Walmart and others in Gemini AIchatbot for shopping. - walmart and Google use AI agents to change online shopping."
+    ],
+    "medium_term_50d": [
+      "Walmart expansions at Walmart and Google stores. - Google's new agentic AI shopping feature with Walmart. - Amazon opens new store concept competing with Walmart - Wal Mart joins Nasdaq -100 - Wal Mart and Google shopping tie- up with Gemini app.",
+      "Walmart partners with Google' Gemini to enhance shopping experiences. - Google integrates Walmart and others in Gemini AIchatbot for shopping. - walmart and Google use AI agents to change online shopping.",
+      "Walmart joins Nasda q-10o Index. - Partners with Google for AI-Assisted shopping."
+    ],
+    "long_term_200d": [
+      "Walmart expansions at Walmart and Google stores. - Google's new agentic AI shopping feature with Walmart. - Amazon opens new store concept competing with Walmart - Wal Mart joins Nasdaq -100 - Wal Mart and Google shopping tie- up with Gemini app.",
+      "Walmart partners with Google' Gemini to enhance shopping experiences. - Google integrates Walmart and others in Gemini AIchatbot for shopping. - walmart and Google use AI agents to change online shopping.",
+      "Walmart joins Nasda q-10o Index. - Partners with Google for AI-Assisted shopping."
+    ]
+  }
+}

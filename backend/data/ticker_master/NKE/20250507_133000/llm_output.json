@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.0,
+        "risk": 5.2
+      },
+      "synthesis": "S: The RSI has moved to 58.9, still in a neutral zone but indicating a slight cooling from previous bullishness. The price is now stable near the 20-day SMA (1.1%), suggesting continued consolidation. Bollinger Bands remain within normal limits (0.59), indicating no overextension. The price is in the middle of a narrower 20-day range [52.28-59.55]. W: The candle pattern has shifted to neutral, indicating a lack of clear direction. The velocity ROC is stagnant (-0.1%), failing to confirm any sustained trend. News narrative is mixed, with senior leadership changes and requests for tariff exemptions, but also a downgrade from Wells Fargo citing turnaround time and sector pressures. O: The consolidation near the 20-day SMA and the stable RSI suggest a pause in momentum. The narrower range indicates reduced volatility. The previous bullish conviction is tempered by the neutral candle and stagnant ROC. T: Risk has slightly increased due to the stagnant ROC and the neutral candle pattern, suggesting a potential for sideways movement or a minor pullback. The downgrade from Wells Fargo introduces a new negative catalyst. However, the price remains within normal Bollinger Bands and the ATR has compressed to 3.08%, mitigating extreme downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 5.8
+      },
+      "synthesis": "S: The MACD has faded to 0.716, indicating a loss of bullish momentum. The price is at Z:-0.71 on the 50-day SMA, showing a less bearish position than before but still below the average. The price remains within the monthly range [52.28-82.44]. W: Trend alignment remains bearishly expanding momentum (-13.43%), a significant drag on the fading MACD signal. The downgrade from Wells Fargo and the leadership changes introduce uncertainty. The news narrative is dominated by analyst downgrades and internal restructuring. O: The fading MACD signal, coupled with persistent bearish trend alignment, suggests a weakening medium-term outlook. The improved SMA Z-score offers minimal support. The previous bullish MACD acceleration is now reversing. T: Risk has increased due to the fading MACD, the continued bearish trend alignment, and the negative analyst sentiment from the Wells Fargo downgrade. The leadership changes also add an element of operational uncertainty. While the price is less bearishly positioned relative to the 50-day SMA, the overall trend and momentum indicators point to higher downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.2,
+        "conv": 3.0,
+        "risk": 7.2
+      },
+      "synthesis": "S: The secular bear market regime has slightly worsened to -23.6%, indicating a more pronounced downturn. The death cross structure has widened to -12.69%, reinforcing long-term bearishness. The long-term range position has moved to the bearish lower quadrant at 16.4%, suggesting continued weakness and potential for further declines. W: The fundamental picture remains unchanged, with stable business quality, financial health, and cash generation, but moderate growth. The previous negative Q3 2025 financial results and the current analyst downgrade from Wells Fargo continue to weigh on the long-term outlook. The news narrative highlights past sales declines and current analyst concerns. O: The shift to a bearish lower quadrant in the long-term range position is a negative sign, indicating a lack of accumulation at current levels. The widening death cross structure and the worsening secular bear market regime remain significant headwinds. The negative analyst sentiment further dampens long-term conviction. T: Risk remains high, driven by the widening death cross structure, the worsening secular bear market, and the negative analyst sentiment. The bearish positioning in the long-term range indicates elevated downside risk. The stable volatility context provides limited mitigation against the strong structural bearish signals."
+    }
+  }
+}

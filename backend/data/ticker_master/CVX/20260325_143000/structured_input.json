@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (86.8)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 181.76-209.79]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.96%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.836)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.05)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 160.71-209.79]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (29.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.89%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.1%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: 9.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.94, P/S: 2.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.21)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron plans to buy oil from Sable for California refinery. - Chevron CEO warns markets haven't priced in supply shock. - Chevron CEO says energy markets should be more worried. - Chevron highlights Middle East supply strain, mispriced oil risks.",
+      "Chevron weighs Gulf damage costs against higher oil price support. - Chevron CEO discusses demand, oil prices, and production growth.",
+      "HSBC upgrades CVX on Middle East supply shock. - Chevron stock jumps into top 20 most valuable companies."
+    ],
+    "medium_term_50d": [
+      "Chevron plans to buy oil from Sable for California refinery. - Chevron CEO warns markets haven't priced in supply shock. - Chevron CEO says energy markets should be more worried. - Chevron highlights Middle East supply strain, mispriced oil risks.",
+      "HSBC upgrades CVX on Middle East supply shock. - Chevron stock jumps into top 20 most valuable companies.",
+      "Chevron weighs Gulf damage costs against higher oil price support. - Chevron CEO discusses demand, oil prices, and production growth."
+    ],
+    "long_term_200d": [
+      "Chevron plans to buy oil from Sable for California refinery. - Chevron CEO warns markets haven't priced in supply shock. - Chevron CEO says energy markets should be more worried. - Chevron highlights Middle East supply strain, mispriced oil risks.",
+      "Chevron completes Hess Corporation acquisition. - Chevron enters exclusive talks for Iraq oilfield. - Chevron explores Venezuela production expansion. - Chevron stock priced for $100 oil environment.",
+      "HSBC upgrades CVX on Middle East supply shock. - Chevron stock jumps into top 20 most valuable companies."
+    ]
+  }
+}

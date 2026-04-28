@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (31.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-12.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 107.51-124.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.64%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.592)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.08)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 107.51-126.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-2.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.94%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 108.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.28%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 44.17, P/S: 10.87)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.17)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.22)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix in talks to license video podcasters from i Heart Media. - Potential exclusive deals for full podcast episodes, excluding You Tube. - i Heart Media sees stock surge following reports of negotiations.",
+      "Netflix explores potential acquisition of WARNER BROS. DISCOVERY's studioand streaming assets.",
+      "Netflix announces a ten-for- one stock split. - Netflix explores potential acquisition of Warner Bros Discovery's studios and streaming business."
+    ],
+    "medium_term_50d": [
+      "Netflix explores potential acquisition of WARNER BROS. DISCOVERY's studioand streaming assets.",
+      "Netflix announces a ten-for- one stock split. - Netflix explores potential acquisition of Warner Bros Discovery's studios and streaming business.",
+      "Netflix in talks to license video podcasters from i Heart Media. - Potential exclusive deals for full podcast episodes, excluding You Tube. - i Heart Media sees stock surge following reports of negotiations."
+    ],
+    "long_term_200d": [
+      "Netflix explores potential acquisition of WARNER BROS. DISCOVERY's studioand streaming assets.",
+      "Netflix announces a ten-for- one stock split. - Netflix explores potential acquisition of Warner Bros Discovery's studios and streaming business.",
+      "Netflix announces new original series partnership. - Regulator approves Netflix merger with rival streamer. - Major production setback causes delay in NFLX releases. - Lawsuit filed against Netflix alleges copyright infringement. - NFLX reveals significant increase in subscriber numbers. - New regulatory ruling impacts Netflix pricing structure. - Announcement of major acquisition"
+    ]
+  }
+}

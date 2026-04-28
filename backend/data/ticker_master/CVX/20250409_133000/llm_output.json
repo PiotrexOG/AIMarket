@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The price has experienced an \"IMPLOSIVE_DOWN\" (-17.5%) velocity and is now \"EXTENDED_BEARISH_OVERSTRETCHED\" (-14.1%) below the 20-day SMA, forming a \"SHOOTING_STAR_BEARISH\" candle pattern. The RSI is \"OVERSOLD_EXTREME\" (16.1) and the price is \"PANIC_DUMP_BELOW_LOWER_BAND\" (-0.08) of the Bollinger Bands, indicating extreme short-term bearishness. W: The \"HEAVY_BEARISH\" bias in the SR landscape and \"ELEVATED\" volume (1.35) suggest strong selling pressure. The \"NO_FLOOR\" barrier indicates a lack of immediate support. O: The \"CRITICAL_SUPPORT_20\" level at 134.87 is being tested. A break below this level would confirm a significant bearish trend continuation. News of job cuts and environmental fines add to short-term headwinds. T: The market regime has shifted to a \"BEAR_MARKET_RELIEF_RALLY\" context, and the \"DETERIORATING\" sentiment, despite \"HIGH\" conviction, points to increased downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The trend alignment shows \"CONSOLIDATION_COMPRESSED_MAS\" (1.69%), but the MACD is \"BEARISH_ACCELERATING\" (-3.417). The price is an \"OVEREXTENDED_BEARISH_STAT_OUTLIER\" (Z:-3.3) relative to the 50-day SMA. The price is \"STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE\" [134.87-168.96]. W: The \"HEAVY_BEARISH\" bias and \"ELEVATED\" volume suggest a strong downward trend. The \"BEARISH_ACCELERATING\" MACD indicates increasing downside momentum. O: While the price is at a support zone, the overall technical picture is bearish. A failure to rebound decisively from this support could lead to a further decline towards the lower end of the 50-day range. The ongoing cancellation of Venezuelan oil export authorizations remains a medium-term concern. T: The \"BEAR_MARKET_RELIEF_RALLY\" regime context suggests that any upward moves may be short-lived. The fundamental growth profile remains stagnant, which is a drag on medium-term prospects."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The market regime is now characterized as a \"BEAR_MARKET_RELIEF_RALLY\" (-10.4%), a significant shift from the previous secular bull market. The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" (2.51%) remains, but its significance is diminished in the current regime. The price is at a \"MULTI_MONTH_LOW_ACCUMULATION\" [Pos: -0.7%]. W: The \"BEAR_MARKET_RELIEF_RALLY\" regime implies increased volatility and potential for further downside. The \"NO_FLOOR\" barrier in the SR landscape is a significant long-term risk. The \"DECLINING_EARNINGS\" implied growth remains a fundamental concern. O: Despite the bearish regime, the \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" and \"HEALTHY_BALANCE_SHEET\" provide some underlying support. However, the \"STAGNATION_WITH_PROFIT_ISSUES\" in the growth profile and the \"MODERATE_ASSET_VALUATION\" suggest limited upside potential in the long term. T: The \"POWER_ZONE_CONFLUENCE(4)\" and \"HEAVY_BEARISH\" bias indicate a strong bearish trend. The news regarding Venezuelan oil export cancellations and tariffs continues to pose long-term operational risks."
+    }
+  }
+}

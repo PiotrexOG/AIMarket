@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.17)",
+        "velocity_roc_10": "NORMAL (-5.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 284.04-315.12]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.61%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.101)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 284.04-316.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.2%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.43%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 295.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.03%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.02, P/S: 7.16)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.73)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Saudia orders 39 planes with GE's Genx-\u2081B engines.",
+      "GE invests $53\u041c to upgrade West Jefferson facility.",
+      "GE Aersospace secures $27o billion worth of engine deals in Saudi Arabia. - \u0413\u0415 invests $\u2081\u2084 million into India manufacturing facility expansion."
+    ],
+    "medium_term_50d": [
+      "GE Aersospace secures $27o billion worth of engine deals in Saudi Arabia. - \u0413\u0415 invests $\u2081\u2084 million into India manufacturing facility expansion.",
+      "Saudia orders 39 planes with GE's Genx-\u2081B engines.",
+      "GE Arospeace receives orders from Emirates and flydub ai for 190 GE engines and long-term service agreements. - Emirates grows Boeing seventhree-9 fleet with 13o GE9 X engines. - flydub ais first widebody fle et powered by 60 Genx-1b"
+    ],
+    "long_term_200d": [
+      "GE Aersospace secures $27o billion worth of engine deals in Saudi Arabia. - \u0413\u0415 invests $\u2081\u2084 million into India manufacturing facility expansion.",
+      "GE Arospeace receives orders from Emirates and flydub ai for 190 GE engines and long-term service agreements. - Emirates grows Boeing seventhree-9 fleet with 13o GE9 X engines. - flydub ais first widebody fle et powered by 60 Genx-1b",
+      "Saudia orders 39 planes with GE's Genx-\u2081B engines."
+    ]
+  }
+}

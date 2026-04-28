@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.3,
+        "conv": 6.3,
+        "risk": 6.7
+      },
+      "synthesis": "S: Short-term momentum remains in a strong bullish zone (RSI 67.6), and the price is holding near the 20-day SMA (3.9%). However, the appearance of a Doji candle pattern indicates indecision. Velocity has normalized (ROC 3.9%), and the price is within normal Bollinger Bands (0.7). W: The short-term range has widened slightly, and the price is still in the middle of this range. The news narrative has shifted to include a significant toy partnership, which is positive, but also a lawsuit and mixed earnings reports from tech giants, introducing some noise. O: The short-term outlook is cautiously bullish. While momentum is still strong, the indecision candle and the price's position in the middle of the range suggest a pause. The score has slightly decreased from 7.5 to 7.3 to reflect this indecision. Conviction has decreased from 6.5 to 6.3 due to the mixed signals. Risk has increased from 6.5 to 6.7 due to the expanding volatility context and the price's position in the middle of a wider range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 5.8,
+        "risk": 5.7
+      },
+      "synthesis": "S: Medium-term trend alignment continues to show expanding momentum (4.71%), but the MACD is further fading (0.511), suggesting a loss of upward thrust. The price remains in a bullish trend position relative to the 50-day SMA (Z:1.57) and within the monthly range. W: The positive trend alignment is still present, but the continued fading of the MACD is a concern for sustained upward momentum. The news narrative remains focused on past corporate milestones and operational expansions, offering little new impetus. O: The medium-term outlook is cautiously bullish, with a slight decrease in score from 7.0 to 6.8. The fading MACD is a key driver for this reduction. Conviction has decreased from 6.0 to 5.8 as the bullish signals are becoming less clear. Risk has increased slightly from 5.5 to 5.7 due to the expanding volatility context and the lower Z-score relative to the 50-day SMA."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.3,
+        "conv": 7.3,
+        "risk": 4.7
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market (22.8%), and the golden cross structure is healthy. The price is positioned in the upper quadrant of its long-term range (85.2%), indicating strong sustained performance. W: The long-term technical picture remains robust, supported by a favorable market regime and price action in the upper portion of its historical range. The news narrative continues to focus on significant corporate achievements and strategic expansions, reinforcing the long-term bullish view. O: The long-term outlook remains strongly bullish, with a slight decrease in score from 8.5 to 8.3. This adjustment reflects the price moving slightly further from the absolute peak of its range. Conviction remains high at 7.3. Risk has increased slightly from 4.5 to 4.7 due to the expanding volatility context and the price's position in the upper quadrant, which can be more sensitive to pullbacks."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.48)",
+        "velocity_roc_10": "NORMAL (-4.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 71.15-79.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.31%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.566)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 59.19-79.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 77.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.09, P/S: 2.32)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.33)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.14)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike files $127.6M lawsuit against Cl ot founder Edis ON Chen.",
+      "Maersk raises full-yearprofit forecast due to strong containerdemand. - Nordstrom opens Nike Runningpop-upshopin New York City.",
+      "Nike faces potential tariffs on footwear imports. - Adidas projected to gain market share at Nike's expense. - Tariffs impact: Nike,Deckers,On Running face pressure."
+    ],
+    "medium_term_50d": [
+      "Nike files $127.6M lawsuit against Cl ot founder Edis ON Chen.",
+      "Nike faces potential tariffs on footwear imports. - Adidas projected to gain market share at Nike's expense. - Tariffs impact: Nike,Deckers,On Running face pressure.",
+      "Nike projects new tariff costs of $1 billion. - Maggie Gaugar leaves Nike to lead Athleta."
+    ],
+    "long_term_200d": [
+      "Nike faces potential tariffs on footwear imports. - Adidas projected to gain market share at Nike's expense. - Tariffs impact: Nike,Deckers,On Running face pressure.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "NIKE dropped from multiple indices: Russell Top 10oo Growth, Russell 3ooo E Growth, Russel 10oooo Growth, and Russell 1ooo Value-Defensivo. - Net income and revenue decreased in Q4FY25 (-86% net income, -12% revenue). - Prices"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI falling to 41.1 and ROC turning negative. The price has moved back within the 20-day range, below the SMA20, and is no longer exhibiting mean reversion signals. Volume dynamics are average, indicating a lack of conviction. W: The price is now in the middle of its 20-day range, with the previous resistance level acting as a potential new support. The shift from a blow-off top to within normal bands suggests a loss of upward momentum. O: The resolution of the YouTube TV dispute is a positive development, potentially alleviating some short-term pressure. T: The previous bullish signal at resistance has reversed, and the current price action suggests a potential for further downside if support levels break."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment has turned bearish, with the price now significantly below the 50-day SMA (Z-score of -2.14). MACD has accelerated bearishly, confirming a shift in momentum. The price is strengthening at monthly support, but this is within a context of overall trend weakness. W: The bearish MACD crossover and negative Z-score indicate a strong downward bias in the medium term. The price is consolidating at support, but this could be a precursor to a breakdown. O: The resolution of the YouTube TV dispute is a positive fundamental catalyst that could provide some support to the price, but it is currently overshadowed by the bearish technicals. T: The risk has increased due to the deteriorating trend and the potential for further downside. The previous bullish signal has been invalidated."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Long-term technicals show a mixed picture. While the golden cross structure remains intact, the market regime has shifted to a bear market relief rally, and the price is now in a neutral mid-cycle zone. The previous bullish positioning in the upper quadrant has reversed. W: The deterioration in the market regime and the shift to a neutral range position increase the risk profile. The fundamental earnings momentum, particularly the sharp decline in next quarter's estimated EPS growth, remains a significant concern, despite a slight improvement in current quarter surprise. O: The resolution of the YouTube TV dispute is a positive fundamental development that mitigates some of the news-driven risk. Valuation remains attractive on a PEG basis, offering some support. T: The risk has increased due to the changing market regime and persistent earnings concerns. The previous strong long-term score has been tempered by these factors."
+    }
+  }
+}

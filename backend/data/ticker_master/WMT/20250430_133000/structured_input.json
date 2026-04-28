@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (78.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "STAGNANT (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 79.81-96.6]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.05%)",
+        "cycle_macd": "BULLISH_FADING (0.657)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.81)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-104.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.33%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 95.55,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.25%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.43)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.4% | OM: 4.2% | NM: 2.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.61x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $648.125B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 33.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.6%, Next Q Est Growth: -14.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 49.61, P/S: 1.19)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.23)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.47)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new product line for Walmart stores. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart supplier. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart headquarters to discuss collaboration. - Regulator",
+      "Walmart and Target resume business withsome Chinese factories. - walmartopens 1M-\\ square-foot Sam\u2019s Clubdistributioncenterin Florida.",
+      "Walmart expansions in Walmart Market Place with Skypad's analytics platform. - Function of Beautys expansion to Walmart stores."
+    ],
+    "medium_term_50d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new product line for Walmart stores. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart supplier. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart headquarters to discuss collaboration. - Regulator",
+      "Trump administration pushes for inclusion of Amazon and Wal Mart in India's $1 twenty five billion ecommerce Market. - Household goods makers ease U.S price increases due to tariffs concerns. - Supermarket and hardwarestore CEOs warn Trumpabout potentialempty shelvesfromtariffs. - Nintendo Switch2preorderscrash Game Stopandotherretailers",
+      "Walmart faces potential disruptions in key consumer products due to US-Chinese trade war. - walmart grows gas station business, ties in with membership program and \u0435-commerce services.\""
+    ],
+    "long_term_200d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new product line for Walmart stores. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart supplier. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart headquarters to discuss collaboration. - Regulator",
+      "Trump imposes new tariffs on imported goods, affecting WMT supply chain costs. - WMT announces major expansion into renewable energy sector. - Lawsuit filed against WMT over labor practices reaches settlement. - New partnership with tech giant boosts WMT e-commerce capabilities. - Significant production delay announced for key product line. - FDA appro",
+      "Trump administration pushes for inclusion of Amazon and Wal Mart in India's $1 twenty five billion ecommerce Market. - Household goods makers ease U.S price increases due to tariffs concerns. - Supermarket and hardwarestore CEOs warn Trumpabout potentialempty shelvesfromtariffs. - Nintendo Switch2preorderscrash Game Stopandotherretailers"
+    ]
+  }
+}

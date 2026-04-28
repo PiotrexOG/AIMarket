@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.34)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 26.44-28.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.96%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.088)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 25.26-28.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.25%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 27.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "AVERAGE (0.61)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 70.3% | OM: 24.7% | NM: 12.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.77x, YrsToPay: 7.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.579B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.6%, EPS: -3.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -150.9%, Next Q Est Growth: 348.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.86, P/S: 2.46)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.78)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -3.85%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer accelerates transformation with Seagen, Metsera acquisitions. - Pfizer deals with lower COVID revenues, halts vaccine trial. - Pfizer advances m RNA and Lyme vaccine programs. - Pfizer reports over 100 pipeline candidates. - Pfizer implements cost cutting and balance sheet adjustments.",
+      "Trellus Health extends Pfizer IBD digital application licensing agreement. - Trellus Health signs renewal of licensing deal with Pfizer.",
+      "Pfizer pauses updated COVID-19 vaccine trial. - Pfizer stock drops amid trial pause."
+    ],
+    "medium_term_50d": [
+      "Pfizer accelerates transformation with Seagen, Metsera acquisitions. - Pfizer deals with lower COVID revenues, halts vaccine trial. - Pfizer advances m RNA and Lyme vaccine programs. - Pfizer reports over 100 pipeline candidates. - Pfizer implements cost cutting and balance sheet adjustments.",
+      "Pfizer pauses updated COVID-19 vaccine trial. - Pfizer stock drops amid trial pause.",
+      "Pfizer wins \u20ac1.9 billion COVID vaccine case with Poland, Romania. - Pfizer and Bio NTech stop U.S. COVID vaccine study. - Pfizer pulls back from South San Francisco. - Pfizer halts COVID shot trial due to low enrollment."
+    ],
+    "long_term_200d": [
+      "Pfizer accelerates transformation with Seagen, Metsera acquisitions. - Pfizer deals with lower COVID revenues, halts vaccine trial. - Pfizer advances m RNA and Lyme vaccine programs. - Pfizer reports over 100 pipeline candidates. - Pfizer implements cost cutting and balance sheet adjustments.",
+      "Pfizer wins \u20ac1.9 billion COVID vaccine case with Poland, Romania. - Pfizer and Bio NTech stop U.S. COVID vaccine study. - Pfizer pulls back from South San Francisco. - Pfizer halts COVID shot trial due to low enrollment.",
+      "Pfizer gets first obesity drug approval in China. - Pfizer expands metabolic disease therapy presence via deals. - Pfizer drug PADCEV shows positive Phase 3 results. - Pfizer drug BRAFTOVI combination gets FDA full approval."
+    ]
+  }
+}

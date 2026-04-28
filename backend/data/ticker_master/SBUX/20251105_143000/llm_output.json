@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Indecision Doji candle pattern suggests a pause in the current trend. RSI at 38.9 indicates bearish momentum, but within a normal Bollinger Band range (0.18). Velocity ROC of -7.3% is normal. T: The news narrative is mixed, with some positive Q4 earnings mentions but also significant structural changes in China operations. W: Bearish RSI and indecision candle point to potential short-term weakness. O: The market is in a range-bound state, offering limited upside potential. T: Elevated volume (1.44) with a stable volatility context (ATR 2.69%) suggests underlying market interest despite mixed signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The trend alignment is consolidating (MA -1.32%), and MACD is bearish and accelerating (-0.437). The Z-score of -1.84 relative to the 50-day SMA indicates a bearish trend position. W: The current price is testing monthly support zones (77.99-89.99), which could offer a floor but also signals underlying weakness. O: The joint venture news in China introduces significant structural change, creating uncertainty. T: The combination of bearish technicals and fundamental shifts in a key market presents elevated risk, with limited conviction in a near-term recovery."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term regime is characterized by a secular bear market (-13.3%) and a death cross structure (-8.34%), indicating significant structural headwinds. W: The company's financial health is stressed (YrsToPay: 10.5x), and growth profiles show stagnation with profit issues (EPS: -35.2%). Valuation remains premium (P/E: 34.28) despite declining earnings, implying high valuation risk. O: The China joint venture represents a significant strategic shift, the long-term implications of which are uncertain but potentially dilutive. T: The combination of a bearish long-term technical structure, stressed financials, negative earnings momentum, and premium valuation results in a high-risk profile with low conviction for long-term upside."
+    }
+  }
+}

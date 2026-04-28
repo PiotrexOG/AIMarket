@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The strong bullish candle pattern persists, and RSI has moved into a strong bullish zone (68.9), indicating improved upward momentum. The price is now 1.4% above the 20-day SMA, confirming a stable near-term trend. W: The velocity (ROC 10) has normalized to 3.7%, down from explosive levels, suggesting a moderation in the pace of the rally. The price remains in the middle of its 20-day range, and the news narrative has shifted significantly negative with allegations of fraud and regulatory issues. O: Despite the normalization of momentum, the strong RSI and continued bullish candle pattern suggest potential for further upside, but the negative news flow introduces significant uncertainty. T: The risk score has increased due to the negative news narrative and the shift from explosive to normal velocity, indicating increased potential for downside. Volatility remains moderate (ATR: 2.36%), but the structural bias is still range-bound."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The MACD is showing signs of fading bullish momentum (1.554), and the price has moved to a bearish trend position relative to the 50-day SMA (Z-score: -0.7). W: Trend alignment has deteriorated further into expanding bearish momentum (-6.38%). The news narrative has become overwhelmingly negative, with indictments, lawsuits, and regulatory concerns dominating the medium-term outlook. O: The combination of fading MACD, bearish trend position, and severe negative news flow suggests a significant shift in the medium-term outlook, moving from a potential recovery to a more cautious stance. T: The risk score has increased substantially due to the deteriorating trend alignment, the bearish positioning relative to the 50-day SMA, and the severe negative news impacting structural confidence. The presence of significant legal and regulatory headwinds poses a considerable downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure remain intact, providing a supportive long-term backdrop. Business quality and growth profile continue to be strong fundamentals. W: The long-term range position has moved to a mid-cycle neutral zone (61.6%), indicating less immediate upside potential compared to the previous period. The news narrative has become significantly negative with allegations of fraud and regulatory issues, which could impact long-term investor confidence and business operations. O: While the core business fundamentals and market regime are still positive, the severe negative news and legal challenges introduce a significant overhang that could dampen long-term performance and increase structural risk. T: The risk score has increased due to the negative news narrative and the shift to a neutral long-term range position, which reduces the conviction in continued strong upside. The fundamental strength provides some resilience, but the legal and regulatory concerns are a growing risk factor."
+    }
+  }
+}

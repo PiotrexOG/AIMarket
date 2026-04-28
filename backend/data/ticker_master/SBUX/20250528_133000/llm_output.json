@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook shows a shift to a STRONG_BEARISH candle pattern, despite RSI remaining in a strong bullish zone (60.4). Mean reversion bands are tightening (0.84), and velocity (ROC 10) has slowed to 1.6%. The price remains in the middle of the 20-day range (75.5-87.78), with the SMA20 base showing stable upward support (3.5%). W: The bearish candle pattern and slowing velocity suggest potential for a short-term pullback. News regarding guidance withdrawal and competitor actions introduces near-term uncertainty. O: A sustained move above the 20-day range resistance at 87.78, coupled with positive news flow, could reignite bullish momentum. T: The bearish candle pattern and recent negative news suggest increased downside risk, potentially testing the lower end of the 20-day range. Volatility remains moderate, but the structural weakness in news flow warrants caution."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment has improved slightly to a BEARISH_GRADUAL_DESCENT (-3.86%), indicating a less severe downtrend. The MACD is now BULLISH_ACCELERATING (0.527), and the price position relative to the 50-day SMA has moved to a HEALTHY_BASE (Z:-0.15), suggesting a potential stabilization. W: Despite technical improvements, the overall trend remains bearish, and the company's fundamental growth profile (Rev: -1.5%, EPS: -17.6%) and earnings momentum (Next Q Est Growth: -5.8%) remain weak. The news narrative continues to highlight uncertainty around guidance and competitive pressures. O: A sustained break above the 50-day SMA and a positive shift in earnings estimates would be required for a more robust medium-term recovery. T: The persistent bearish trend and weak fundamental outlook continue to pose significant risks. The premium valuation (P/E: 27.88) amplifies downside risk if the expected negative earnings trend materializes. The proximity to the upper bound of the 50-day range (99.91) offers limited upside without fundamental catalysts."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The company's scale and business quality remain stable at average industrial standards. The long-term range position has slightly improved to 27.4% from 26.2%, indicating a marginal move away from the absolute lows. W: The secular bear market regime persists (-9.1%), and the death cross structure (-8.65%) remains a significant technical impediment. Fundamental growth is stagnant (Rev: -1.5%) with declining EPS (-17.6%), and financial health is stressed (YrsToPay: 7.6x). Valuation remains premium (P/E: 27.88) with extremely risky implied growth (-17.55%), creating significant fragility. O: A fundamental turnaround characterized by sustained positive earnings growth and a shift in the broader market regime are necessary for long-term upside. T: The combination of a bearish macro environment, structural technical weakness, deteriorating fundamentals, and stretched valuation continues to present substantial downside risk. The debt sensitivity (EV/MC: 1.23x) adds to the fragility, and the news regarding guidance withdrawal further exacerbates long-term concerns."
+    }
+  }
+}

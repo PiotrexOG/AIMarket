@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 75.01-86.47]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.56%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.22)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.78)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.01-97.33]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-29.4%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-21.52%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 11.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 81.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.27%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.61, P/S: 7.82)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.28)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.15)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Regulatory and political scrutiny puts Netflix Warner Brs deal under review. - Paramount submits higher offer for Warner Brs Discovery.",
+      "DOJ investigates potential antitrust issues in Netflix-Warner merger. - Net\ufb02ix vs. Byte Dance: Net\ufb02ix threats litigation over copyrighted content use. - DOJ examines Netflix's market power in Warner deal. Note: There seems to be an ongoing investigation regarding Netflix's potential acquisition of Warner, which may significantly impact",
+      "Netflix in acquisition contest with Paramount for Warner Bros.Discovery, regulatory review ongoing. - Netflix grants Warner Bros Discovery seven day wavier to consider improved Paramount offer. - Activist investors urge Warner Bros shareholders to favorthe Paramount proposal. - Uncertainty surrounds final outcome of Warner Bros acquisition."
+    ],
+    "medium_term_50d": [
+      "DOJ investigates potential antitrust issues in Netflix-Warner merger. - Net\ufb02ix vs. Byte Dance: Net\ufb02ix threats litigation over copyrighted content use. - DOJ examines Netflix's market power in Warner deal. Note: There seems to be an ongoing investigation regarding Netflix's potential acquisition of Warner, which may significantly impact",
+      "Regulatory and political scrutiny puts Netflix Warner Brs deal under review. - Paramount submits higher offer for Warner Brs Discovery.",
+      "Netflix in acquisition contest with Paramount for Warner Bros.Discovery, regulatory review ongoing. - Netflix grants Warner Bros Discovery seven day wavier to consider improved Paramount offer. - Activist investors urge Warner Bros shareholders to favorthe Paramount proposal. - Uncertainty surrounds final outcome of Warner Bros acquisition."
+    ],
+    "long_term_200d": [
+      "DOJ investigates potential antitrust issues in Netflix-Warner merger. - Net\ufb02ix vs. Byte Dance: Net\ufb02ix threats litigation over copyrighted content use. - DOJ examines Netflix's market power in Warner deal. Note: There seems to be an ongoing investigation regarding Netflix's potential acquisition of Warner, which may significantly impact",
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Expanded DOJ scrutiny over Netflix's $82b Warner Bros acquisition raising antitrust concerns. - Senate hearings assessing impact of merger on competition and choice in streaming market."
+    ]
+  }
+}

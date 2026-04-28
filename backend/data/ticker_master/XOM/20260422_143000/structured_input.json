@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (21.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-9.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 141.97-176.41]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.24%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.824)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.91)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.97-176.41]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.46%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 148.68,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.79%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -9.6%, Next Q Est Growth: -34.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.32, P/S: 1.95)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.43)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil outlines multi-billion dollar plan for Nigeria. - Supreme Court rules environmental lawsuits in federal court. - Exxon Mobil's Uaru project to use more subsea tiebacks.",
+      "Exxon Mobil urges shareholders to vote against governance proposals. - Exxon Mobil faces governance clashes amid Middle East turmoil. - Exxon Mobil's stock price drops over 10% from highs.",
+      "Exxon Mobil faces US$5b environmental fine in Kazakhstan. - Exxon Mobil withdraws LNG cargoes due to Golden Pass start-up issues."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobil gains influence as Hormuz blockade disrupts oil trade. - Exxon Mobil sees higher realized oil prices and export demand. - Institutional investors prioritize Exxon Mobil due to high oil prices. - Exxon Mobil & Partners plan deepwater drilling offshore Greece.",
+      "Exxon Mobil withdraws offer to sell initial LNG cargoes. - Exxon Mobil shares trading lower after Strait of Hormuz news. - Exxon Mobil stock dropped Friday due to Iran war ending. - Exxon Mobil stock pared losses after diving to multimonth lows. - Exxon Mobil among companies taking US SPR oil loans. - Exxon Mobil receives US Supreme Court backing in lawsuits. - XOM boosts Permian output to record levels.",
+      "Exxon Mobil outlines multi-billion dollar plan for Nigeria. - Supreme Court rules environmental lawsuits in federal court. - Exxon Mobil's Uaru project to use more subsea tiebacks."
+    ],
+    "long_term_200d": [
+      "Exxon Mobil gains influence as Hormuz blockade disrupts oil trade. - Exxon Mobil sees higher realized oil prices and export demand. - Institutional investors prioritize Exxon Mobil due to high oil prices. - Exxon Mobil & Partners plan deepwater drilling offshore Greece.",
+      "Exxon Mobil announces major oil find in Guyana.",
+      "Exxon Mobil expects Q1 production decline due to Middle East attacks. - Middle East conflict impacts Exxon Mobil Q1 earnings by $400-800M. - Exxon Mobil reports 6% output loss from Iran war disruptions."
+    ]
+  }
+}

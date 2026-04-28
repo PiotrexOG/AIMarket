@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term exhibits a strong bullish candle pattern, but the RSI has moved into oversold territory (26.9), indicating potential for a bounce. Price is testing the lower Bollinger Band and is stable near the 20-day SMA, albeit with a slight negative deviation (-5.1%). W: The shift to oversold conditions and testing the lower band suggests a loss of immediate upward momentum, despite the bullish candle. The velocity remains negative, and the price is still within the middle of the 20-day range. T: News flow is mixed, with pressure for accelerated AI chip output and supply chain impacts, alongside continued Nvidia demand. O: A sustained move above the 20-day SMA, coupled with a rising RSI from oversold levels, could signal a short-term reversal. Conversely, a break below the lower band would increase downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend alignment has moderated to a gradual ascent (2.13%), and the Z-score relative to the 50-day SMA is now negative (-0.25), indicating a healthy base formation after a pullback. W: The MACD has accelerated its bearish trend (-2.796), suggesting a loss of medium-term momentum. The trend alignment growth has also slowed significantly. T: The news narrative remains supportive with ongoing AI chip demand from major players like Nvidia and Elon Musk. O: A recovery in the MACD signal and a move back towards positive trend alignment growth are crucial for sustaining the medium-term bullish outlook. Continued strong demand for advanced chips will be a key driver."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 8.0,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, anchored by a secular bull market regime and exceptionally strong fundamental metrics. Business quality, financial health, and cash generation are top-tier. W: The 'extreme bullish stretch exhaustion risk' has slightly increased, and the long-term range position has decreased marginally, suggesting a potential for consolidation or minor retracement. T: Valuation multiples continue to offer a deep value discount, with implied growth still appearing underrated. O: Sustained technological leadership in advanced semiconductor manufacturing, particularly driven by AI, continues to underpin the long-term thesis. The current valuation provides a significant margin of safety and potential upside, despite minor increases in long-term risk indicators."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "NORMAL (-7.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 195.28-218.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.74%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.199)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.34)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 152.0-218.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.25%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 199.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.74%))",
+      "volume_dynamics": "AVERAGE (0.61)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -45.15)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing faces opposition from key Senators over FAA administration nominee. - Taiwan's Chiang Kai Shek International Airport cancels Boeing seventharrier delivery due to 78 Seven Delays. - US safety board finds inadequate actions by Boeing, FAAduring 73 Seven MAX 9 door-plug blowout incident.",
+      "Indian aviation safetywatchdog starts Air India audit after deadly crash. - NTSB meets on door plug inspection of terrifying Alaska Airlines flight. - Air India faces intensive scrutiny after deadly plane crash.",
+      "[\"Pomerantz law firm investigates BA securities fraud claim\"]"
+    ],
+    "medium_term_50d": [
+      "Boeing faces opposition from key Senators over FAA administration nominee. - Taiwan's Chiang Kai Shek International Airport cancels Boeing seventharrier delivery due to 78 Seven Delays. - US safety board finds inadequate actions by Boeing, FAAduring 73 Seven MAX 9 door-plug blowout incident.",
+      "Indian aviation safetywatchdog starts Air India audit after deadly crash. - NTSB meets on door plug inspection of terrifying Alaska Airlines flight. - Air India faces intensive scrutiny after deadly plane crash.",
+      "Air India Boeling 788-8 Dreamler crashes aftertakeoff - Boening issues statementabout Air India Flight171 - Over 20o people killedin Air Indiaplane crash - Boeing in contactwith Air Indiaregarding Flight1 seventh - UKPrimer Minister Starmercommentson Air Ind"
+    ],
+    "long_term_200d": [
+      "Boeing faces opposition from key Senators over FAA administration nominee. - Taiwan's Chiang Kai Shek International Airport cancels Boeing seventharrier delivery due to 78 Seven Delays. - US safety board finds inadequate actions by Boeing, FAAduring 73 Seven MAX 9 door-plug blowout incident.",
+      "Air India Boeling 788-8 Dreamler crashes aftertakeoff - Boening issues statementabout Air India Flight171 - Over 20o people killedin Air Indiaplane crash - Boeing in contactwith Air Indiaregarding Flight1 seventh - UKPrimer Minister Starmercommentson Air Ind",
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 488.7-518.29]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.14%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.831)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.42)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 448.74-518.29]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.37%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 513.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.2%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 42.18, P/S: 15.08)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.33)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.41)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft Q4 preview: AI fuels growthand rising EPS - Tevogen reaffirms commitment to AI innovation in healthcare - Microsoft's Azure growth positions MSFT forstrong Q4results",
+      "Microsoft signs Mo U with Esri and Space4\u00b2 to launch \"Map Africa Initiative\", producing most comprehensive basematof Africa. - Advanced talks for Microsoft to secure ongoingaccessto Open AItechnology.",
+      "Microsoft reports earnings. - Federal Reserve interest-ratedecision. - Major tech companies, including Microsoft, report earnings."
+    ],
+    "medium_term_50d": [
+      "Microsoft Q4 preview: AI fuels growthand rising EPS - Tevogen reaffirms commitment to AI innovation in healthcare - Microsoft's Azure growth positions MSFT forstrong Q4results",
+      "Microsoft reports earnings. - Federal Reserve interest-ratedecision. - Major tech companies, including Microsoft, report earnings.",
+      "Microsoft signs Mo U with Esri and Space4\u00b2 to launch \"Map Africa Initiative\", producing most comprehensive basematof Africa. - Advanced talks for Microsoft to secure ongoingaccessto Open AItechnology."
+    ],
+    "long_term_200d": [
+      "Microsoft Q4 preview: AI fuels growthand rising EPS - Tevogen reaffirms commitment to AI innovation in healthcare - Microsoft's Azure growth positions MSFT forstrong Q4results",
+      "Microsoft reports earnings. - Federal Reserve interest-ratedecision. - Major tech companies, including Microsoft, report earnings.",
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has weakened. The STRONG_BEARISH candle pattern signals a potential reversal, despite RSI moving slightly higher to 59.0. ROC has increased to 2.8%, but the price is now in the middle of the range (114.61-121.8), indicating less directional conviction. W: The bearish candle pattern and neutral range position reduce conviction. The previous upward momentum is being challenged, leading to a lower score. O: News flow is mixed, with a corporate plan outlook update but also mentions of Chevron's production issues and unclear geopolitical impacts, adding uncertainty. T: Volatility has decreased slightly (ATR: 1.51%), but the increased bearish technical signals and the price being at the upper end of the range increase downside risk. The risk metric is elevated due to the bearish technicals and range position."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 6.8,
+        "risk": 4.2
+      },
+      "synthesis": "S: The medium-term trend remains bullish, with a gradual ascent (0.99%) and accelerating MACD (0.308). The SMA50 Z-score has slightly improved to 1.65, reinforcing the bullish trend. The price is currently inside the monthly range (111.98-121.8). W: Conviction remains moderate to high due to the sustained bullish trend alignment and improving MACD. The previous strong bullish signal is still largely intact, though the acceleration in MACD suggests potential for a near-term peak. O: News flow continues to support the medium-term outlook with contract wins and updated corporate plans, reinforcing operational strength and strategic direction. T: Volatility is stable, and the balance sheet remains healthy. While the price is nearing the upper boundary of the monthly range, the underlying trend strength and positive news mitigate immediate valuation risk. The risk metric is slightly elevated due to the price approaching range resistance."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.3,
+        "risk": 3.8
+      },
+      "synthesis": "S: The long-term regime remains a strong SECULAR_BULL_MARKET (8.4%), with the HEALTHY_GOLDEN_CROSS structure still in place (4.66%). The price position has slightly retreated to 93.5% of the cycle top, indicating sustained long-term strength. W: Conviction in the long-term score remains high, supported by the persistent secular bull market and robust technical structure. The fundamental growth profile remains a long-term concern, but the current market environment and company strategy continue to provide support. O: News flow reinforces the long-term strategic direction, with updated corporate plans and accelerated growth initiatives. The focus on core energy assets and updated financial targets continues to underpin the long-term outlook. T: Volatility remains stable, and the balance sheet is healthy, contributing to a low risk profile. The primary long-term risk remains the inherent cyclicality of the energy sector, but this is not currently indicated by market signals. The current valuation, while high relative to historical growth, is supported by the strong market regime and operational execution."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (37.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "NORMAL (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 318.0-344.26]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.08%)",
+        "cycle_macd": "BULLISH_FADING (0.561)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-355.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.71%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 330.92,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 32.28, P/S: 16.67)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.77)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa enhances stablecoin payment infrastructure in CEMEA region. - Diginex acquires Plan A AI platform for comprehensive ESG and carbon management.",
+      "Visa partnerswith Aquanow for stablecoin settlement in CEEMEA. - Amazon and Visa collaborate on agentic commerce tools.",
+      "Visa expands stablecoin settlement in CEEMEA through Aquanow partnership."
+    ],
+    "medium_term_50d": [
+      "Visa partnerswith Aquanow for stablecoin settlement in CEEMEA. - Amazon and Visa collaborate on agentic commerce tools.",
+      "Visa expands stablecoin settlement in CEEMEA through Aquanow partnership.",
+      "Visa partnerswith Aquanowto expand stablecoin setttlements across CEMEARegion."
+    ],
+    "long_term_200d": [
+      "Mastercard and Visa propose settling antitrustlitigationwithmerchants,affectingpaymentfeesandacceptancerules.",
+      "Visa pilots direct stablecoinpayouts to digitalwallets. - Visaand Mastercardlaunchfiat-to-(reversible)stablecoincpaymentsolutions. --Circleexploresreversiblestablecointransactionson Arcplatform. ---Visaintegratesstablecoinstackforpaymentshyperscaling.",
+      "Visa,Mastercard reach legalpactwithmerchants(settlementonfees) - Visaa Mastercardagreeseto settlenanticompetitivelawsuit - Visaind Mastercardlowerfeesforretailers(USdispute)"
+    ]
+  }
+}

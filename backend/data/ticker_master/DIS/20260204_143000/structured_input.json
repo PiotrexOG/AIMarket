@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.8)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.14)",
+        "velocity_roc_10": "NORMAL (-5.6%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 102.34-115.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.42%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.914)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.6)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.89-116.03]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.84%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 59.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 107.78,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 105.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.69, P/S: 2.07)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.78)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.1)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Elizabeth Warren warns against Disney's NFL Network deal acquisition. - Josh D'Amaro named as Disney's new CEO.",
+      "Disney boards votes to pick Parks With Chief Josh D\u2019Aamaro as next CEO. - DIS reports better-than-$expectated Q1 results with double-digit Y/ Y growth in FY2 six Adj E PS.",
+      "Disney CEO Bob Iger steps down, successor voted next week. - Disneys board meets to elect new CEO beforecontractends."
+    ],
+    "medium_term_50d": [
+      "Disney CEO Bob Iger steps down, successor voted next week. - Disneys board meets to elect new CEO beforecontractends.",
+      "Disney boards votes to pick Parks With Chief Josh D\u2019Aamaro as next CEO. - DIS reports better-than-$expectated Q1 results with double-digit Y/ Y growth in FY2 six Adj E PS.",
+      "Disney CEO Bob IGER plans to leave role before contract expires. - Board meeting scheduled next week to elect new CEO."
+    ],
+    "long_term_200d": [
+      "Disney CEO Bob Iger steps down, successor voted next week. - Disneys board meets to elect new CEO beforecontractends.",
+      "Disney CEO Bob IGER plans to leave role before contract expires. - Board meeting scheduled next week to elect new CEO.",
+      "Disney boards votes to pick Parks With Chief Josh D\u2019Aamaro as next CEO. - DIS reports better-than-$expectated Q1 results with double-digit Y/ Y growth in FY2 six Adj E PS."
+    ]
+  }
+}

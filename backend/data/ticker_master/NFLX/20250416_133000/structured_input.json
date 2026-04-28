@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 82.11-99.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.56%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.504)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.29)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.11-106.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.65%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.51,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (5.1%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.1% | OM: 26.7% | NM: 22.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 17.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.000966B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 66.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 4.8%, Next Q Est Growth: 29.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.03, P/S: 10.95)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.25)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.73)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "China halts Boeing jetdeliveries from US. - Netflix aims to double revenue and reach $1 trillon market cap by 2o30.",
+      "Netflix sets $1 trillon market cap goal by 21030 (The Wall Street Journal) - Netflix aims to double revenue, tripe operating income by 2o30 (internal strategy meeting)",
+      "Netflix reports Q1 earnings beat and raises full year guidance. - New partnership announced between NFLX and major studio. - Significant production delay for upcoming Netflix original series. - Lawsuit filed against NFLX over streaming rights dispute. - Major announcement regarding NFLX' entry into new market."
+    ],
+    "medium_term_50d": [
+      "Netflix sets $1 trillon market cap goal by 21030 (The Wall Street Journal) - Netflix aims to double revenue, tripe operating income by 2o30 (internal strategy meeting)",
+      "China halts Boeing jetdeliveries from US. - Netflix aims to double revenue and reach $1 trillon market cap by 2o30.",
+      "Netflix reports Q1 earnings beat and raises full year guidance. - New partnership announced between NFLX and major studio. - Significant production delay for upcoming Netflix original series. - Lawsuit filed against NFLX over streaming rights dispute. - Major announcement regarding NFLX' entry into new market."
+    ],
+    "long_term_200d": [
+      "Netflix sets $1 trillon market cap goal by 21030 (The Wall Street Journal) - Netflix aims to double revenue, tripe operating income by 2o30 (internal strategy meeting)",
+      "China halts Boeing jetdeliveries from US. - Netflix aims to double revenue and reach $1 trillon market cap by 2o30.",
+      "Netflix reports Q1 earnings beat and raises full year guidance. - New partnership announced between NFLX and major studio. - Significant production delay for upcoming Netflix original series. - Lawsuit filed against NFLX over streaming rights dispute. - Major announcement regarding NFLX' entry into new market."
+    ]
+  }
+}

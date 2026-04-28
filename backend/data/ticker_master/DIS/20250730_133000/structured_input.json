@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 118.88-124.61]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.88%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.473)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 108.78-124.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 119.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.31%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.7, P/S: 2.35)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.13)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.43)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney integrates AI video toolsfrom Runway AI into content production workflows. - Go Nood\u043b\u0435announcesnewexecutivesforgrowthinpartnershipsandcontentdevelopment. - Mena Massoudstarsof Aladdintoheadroleinbiblicaldrama Daniel.",
+      "Disney announces major acquisition of biotech firm. - FDA approves new DIS drug for market release. Note: These examples are hypothetical and do not reflect actual information about DIS or its activities on July 26, 2035.",
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision."
+    ],
+    "medium_term_50d": [
+      "Disney announces major acquisition of biotech firm. - FDA approves new DIS drug for market release. Note: These examples are hypothetical and do not reflect actual information about DIS or its activities on July 26, 2035.",
+      "Disney integrates AI video toolsfrom Runway AI into content production workflows. - Go Nood\u043b\u0435announcesnewexecutivesforgrowthinpartnershipsandcontentdevelopment. - Mena Massoudstarsof Aladdintoheadroleinbiblicaldrama Daniel.",
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision."
+    ],
+    "long_term_200d": [
+      "Disney announces major acquisition of biotech firm. - FDA approves new DIS drug for market release. Note: These examples are hypothetical and do not reflect actual information about DIS or its activities on July 26, 2035.",
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision.",
+      "Disney integrates AI video toolsfrom Runway AI into content production workflows. - Go Nood\u043b\u0435announcesnewexecutivesforgrowthinpartnershipsandcontentdevelopment. - Mena Massoudstarsof Aladdintoheadroleinbiblicaldrama Daniel."
+    ]
+  }
+}

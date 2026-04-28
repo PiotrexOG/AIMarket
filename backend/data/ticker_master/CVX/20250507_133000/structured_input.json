@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "STAGNANT (-1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 132.04-147.47]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.52%)",
+        "cycle_macd": "BULLISH_FADING (0.555)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.25)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 132.04-168.96]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.69%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 7.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 134.9,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.5%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.4, P/S: 1.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.58)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron sticks to production growth plans despite declining profits and softening oil prices. - Shell and BP plan merger to boost scale and capture synergies.",
+      "Shell considers acquiring BP, potentially impacting CVX through industry competition. -Chevron continues investing despite lower oil prices, affects dividends payout.",
+      "Venezuela cancels cargo shipments to Chev Ron, reducing oil exports by 20%. - Chevron arbitration dispute with Exxon over Hess acquisition delay. - Last Chev Ron-chartered tanker returns Venezuelan crude cargo."
+    ],
+    "medium_term_50d": [
+      "Shell considers acquiring BP, potentially impacting CVX through industry competition. -Chevron continues investing despite lower oil prices, affects dividends payout.",
+      "Chevron sticks to production growth plans despite declining profits and softening oil prices. - Shell and BP plan merger to boost scale and capture synergies.",
+      "Venezuela cancels cargo shipments to Chev Ron, reducing oil exports by 20%. - Chevron arbitration dispute with Exxon over Hess acquisition delay. - Last Chev Ron-chartered tanker returns Venezuelan crude cargo."
+    ],
+    "long_term_200d": [
+      "Shell considers acquiring BP, potentially impacting CVX through industry competition. -Chevron continues investing despite lower oil prices, affects dividends payout.",
+      "Chevron sticks to production growth plans despite declining profits and softening oil prices. - Shell and BP plan merger to boost scale and capture synergies.",
+      "Tankerschartered by Chevrontomove Venezuelancrude seekotherbusinessafter PDVSAcancelloadingpermitsandorderedreturnofcargoesamidpaymentuncertaintyrelatedtosanctions."
+    ]
+  }
+}

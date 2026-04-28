@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum remains positive with RSI in a strong bullish zone (69.9) and ROC showing normal velocity (4.2%). The price is trading near the 20-day SMA (3.6%), indicating stability within the current trend. W: A bearish shooting star candle pattern has formed, suggesting potential for a short-term reversal or consolidation. The price is now in the middle of the 20-day range, indicating a lack of strong directional bias. O: The strong RSI suggests underlying bullish sentiment, but the shooting star pattern and mid-range position introduce caution. The average volume (0.73) indicates a lack of strong conviction behind the recent price action. T: Risk has slightly increased due to the bearish candle pattern and the price moving into the middle of its short-term range. While the RSI remains strong, the shooting star pattern warrants attention for potential downside. The previous 'blow-off top' risk has subsided as the price is now within normal bands."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.2,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term trend shows signs of consolidation, with the MACD bullish momentum fading (1.418) and trend alignment compressed (-0.54%). However, the price remains in a bullish position relative to the 50-day SMA (Z:1.08), indicating some residual upward strength. W: The bullish MACD signal is weakening, and the price is now inside the monthly range, suggesting a potential pause in the upward trend. The previous strength at monthly resistance has now transitioned to being inside the range. O: The fading bullish momentum and consolidation suggest a period of indecision. The strong Z-score relative to the 50-day SMA provides some support, but the overall trend is losing steam. T: Risk has decreased slightly as the price is no longer pushing against resistance and the previous 'blow-off top' concern has passed. The consolidation within the range reduces immediate downside pressure, but the fading MACD suggests a lack of strong upside conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.3,
+        "conv": 3.8,
+        "risk": 6.2
+      },
+      "synthesis": "S: The long-term range position has slightly decreased to 44.8% in the mid-cycle neutral zone, indicating a marginal shift towards a less favorable position. The secular bear market regime remains in place, with a slight improvement in its decline rate (-5.8%). W: The death cross structure persists (-8.6%), and the overall market regime remains bearish. Fundamental growth continues to stagnate, and valuation multiples remain elevated, contributing to higher risk. O: The slight decrease in long-term range position and the persistent bearish technical structure present a cautious long-term outlook. While the secular bear market is not worsening, it is not showing signs of a significant reversal. T: Risk has slightly increased due to the marginal decrease in long-term range position and the continued presence of the death cross. The premium valuation multiples, coupled with stagnant growth, remain significant downside risks. The previous risk of stretched valuations has been maintained, with no significant improvement in fundamentals."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "NORMAL (4.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 150.09-169.37]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.3%)",
+        "cycle_macd": "BULLISH_FADING (0.407)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.12)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 146.49-169.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.01%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 169.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.75%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.83, P/S: 1.63)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.62)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron amasses largest fleet in almost a year to ship Venezuelanapi oil - Che vron ramps Up Venezuelan api oil shipments - Chevrond deploys fifteen vessels to ship Venezolan oil -Chevron ships at least twenty thousand barrels aday Venezuelan oili These bullets represent material events directly affecting",
+      "Chevron executives debating investment in Venezuelan oil infrastructure (up to $1 hundred billion required).",
+      "Chevron signs MOU with Libya\u2019s NOC for oil and gas exploration. - Kazakhstan\u2018s Tengitz oilfield recovers less than half output by Feb 7. - Iraq pushes back against Chevron for improved terms on West Qurnah 2 oilfield takeover. - Thomas W.Horton joines Che"
+    ],
+    "medium_term_50d": [
+      "Chevron amasses largest fleet in almost a year to ship Venezuelanapi oil - Che vron ramps Up Venezuelan api oil shipments - Chevrond deploys fifteen vessels to ship Venezolan oil -Chevron ships at least twenty thousand barrels aday Venezuelan oili These bullets represent material events directly affecting",
+      "Chevron executives debating investment in Venezuelan oil infrastructure (up to $1 hundred billion required).",
+      "Chevron makes FID on Lavianthan expansion project."
+    ],
+    "long_term_200d": [
+      "Chevron amasses largest fleet in almost a year to ship Venezuelanapi oil - Che vron ramps Up Venezuelan api oil shipments - Chevrond deploys fifteen vessels to ship Venezolan oil -Chevron ships at least twenty thousand barrels aday Venezuelan oili These bullets represent material events directly affecting",
+      "Trump urges oil companies to spend $10o billion in Venezuela. (CVX mentioned) - Che vron sees path to grow Venezuelaproduction by 5o%. (Directimpact) - Exxon evaluates potential return to Venezuela. (Direct impact)",
+      "Chevrons expected expansion of Venezuela license from USD government. - SLB seeking contracts under Trump's Venezuelan revival plan. -Chev\u0440\u043e\u043d receives expanded Venezuela license according to sources."
+    ]
+  }
+}

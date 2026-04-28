@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.0,
+        "risk": 7.2
+      },
+      "synthesis": "S: The short-term technicals have weakened significantly. A bearish shooting star candle pattern has emerged, and RSI has moved to a neutral zone (51.8), indicating a loss of bullish momentum. Velocity has turned negative (-1.1%), and the price is consolidating near the SMA20, which is now flat. W: The bearish candle pattern and negative velocity suggest immediate downside risk. The shift from a bullish RSI to neutral indicates a loss of conviction in the upward trend. O: Short-term news remains mixed, with positive developments in China offset by ongoing legal disputes and production delays. T: The score has decreased from 5.5 to 4.8 due to the bearish technical signals and neutral momentum. Conviction has slightly decreased as the bullish RSI signal has faded. Risk has increased from 6.8 to 7.2, driven by the bearish candle pattern, negative velocity, and the neutral RSI, all pointing to increased downside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 6.2
+      },
+      "synthesis": "S: The medium-term trend alignment shows expanding momentum (2.81%), which is a positive sign. However, the MACD has turned bearish and is accelerating (-0.151), indicating a shift in momentum. The Z-score relative to the 50-day SMA has decreased to 0.75, suggesting a less robust trend position. W: The accelerating bearish MACD is a significant concern, contradicting the expanding momentum signal. The lower Z-score indicates a weakening trend. O: Medium-term news is mixed, with positive China engagement and AI investments countered by ongoing legal challenges. T: The score has decreased from 6.5 to 5.8 due to the bearish MACD signal, which overrides the positive trend alignment. Conviction has slightly decreased as the conflicting signals (bullish trend alignment vs. bearish MACD) reduce clarity. Risk has increased from 5.8 to 6.2, reflecting the bearish MACD acceleration and the mixed news flow, which introduces uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.4,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term market regime remains in a bull market correction (2.1%), showing some stability. The proximity to potential pivot points on major crosses has slightly widened (-0.63%), indicating a stable technical picture. The long-term range position has slightly decreased to the upper quadrant (73.8%). W: While long-term technicals are stable, the fundamental growth profile remains moderate, and business quality is average. The long-term impact of AI partnerships on earnings is still speculative, and the market regime is still in correction. O: The strategic investment in AI and IP licensing deals remain significant long-term catalysts, leveraging intellectual property. However, the competitive landscape in streaming, as indicated by the long-term news regarding potential M&A in the sector, presents ongoing structural challenges. T: The score has slightly decreased from 6.6 to 6.4 due to the slight decrease in long-term range position and the persistent moderate growth profile. Conviction has slightly decreased as the long-term outlook faces ongoing competitive pressures and speculative AI impacts. Risk remains stable at 5.5, reflecting the consistent long-term outlook with persistent, albeit unchanged, fundamental growth concerns and the ongoing market regime correction."
+    }
+  }
+}

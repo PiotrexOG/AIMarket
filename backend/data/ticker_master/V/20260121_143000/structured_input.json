@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (23.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.05)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-7.9%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-5.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 321.56-358.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.21%)",
+        "cycle_macd": "BEARISH_RECOVERING (-3.584)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.8%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 35.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 326.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.27%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.8, P/S: 16.42)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.52)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.3)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US retail groups urge legislators to reform creditcard swipfees, potentiallyaffecting V'spass-throughtransactions.",
+      "Air Transat launches new loyalty program with Desjards and Visa. - Trump proposes 10\\% cap on creditcard interest rates, potential impact on Visa.",
+      "UK regulator caps Visa and Mastercard cross-border card fees. - Argentina launches Bitcoin-back Visa credit cards. - Trump targets Visa and Masterscard with Credit Card Competitions Act."
+    ],
+    "medium_term_50d": [
+      "UK regulator caps Visa and Mastercard cross-border card fees. - Argentina launches Bitcoin-back Visa credit cards. - Trump targets Visa and Masterscard with Credit Card Competitions Act.",
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "US retail groups urge legislators to reform creditcard swipfees, potentiallyaffecting V'spass-throughtransactions."
+    ],
+    "long_term_200d": [
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "President Trump imposes 10\\% credit card rate cap, potentially affecting Visa and Mastercard.",
+      "UK regulator caps Visa and Mastercard cross-border card fees. - Argentina launches Bitcoin-back Visa credit cards. - Trump targets Visa and Masterscard with Credit Card Competitions Act."
+    ]
+  }
+}

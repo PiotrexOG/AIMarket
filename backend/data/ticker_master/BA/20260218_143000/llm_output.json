@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.8,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term momentum has improved, with RSI moving into the neutral zone at 49.3. Velocity ROC has turned positive at 4.7%, and the price is consolidating near the 20-day SMA with a slight positive bias (0.9%). W: Confidence is moderate, as the strong bearish candle pattern persists, and the price remains within the middle of its 20-day range. The shift in RSI and ROC is a positive development, but it lacks decisive bullish confirmation. O: News flow is mixed, with a partnership on an open data platform and new GE engine orders for United Airlines providing some positive catalysts. However, the FTC finalizing consent orders on the Spirit Aero Systems acquisition and job shifts to South Carolina introduce minor uncertainties. T: Downside risk has slightly decreased due to the improved momentum indicators and stabilization near the SMA. Volatility remains moderate (ATR 3.21%), but the persistent bearish candle pattern and range-bound price action suggest continued choppiness."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.3,
+        "conv": 4.2,
+        "risk": 7.6
+      },
+      "synthesis": "S: Medium-term trend alignment shows a slight deceleration in momentum (5.97% vs 8.1%), but the MACD is recovering further into bearish territory (-0.733 vs -1.174). The price is holding above the 50-day SMA with a slightly improved Z-score of 0.8. W: Conviction in a sustained upward trend is tempered by the MACD still being in bearish territory and the price within a broad monthly range. The improving MACD is a positive sign, but it requires further confirmation to overcome the current range bias. O: Recent news highlights significant U.S. Air Force contracts and a new 737 MAX assembly line, which are supportive. However, the absence of major new order announcements in the short-term news cycle, compared to the previous period, slightly reduces the immediate positive impact. T: Downside risk remains elevated due to the stressed balance sheet and negative FCF, which are structural issues. While the MACD is improving, the overall risk profile is still high given the persistent operational challenges and the potential for price reversion within the longer-term range. The slight widening of the 50-day range (198.05-254.35) indicates increased volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 5.3,
+        "risk": 6.7
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market (12.7%), and the healthy golden cross structure (5.34%) is intact and strengthening. The price has moved higher within the long-term range to 83.4%. W: Conviction in the long-term bullish trend is moderate, supported by the overarching market regime and technical structure. The hyper-premium valuation multiples (P/E: 101.89, P/S: 2.15) and extreme multiple risk (P/B: 35.21) continue to be a significant overhang, capping upside potential. O: The hyper-growth profile (Rev: 34.5%, EPS: 112.9%) and an attractive PEG ratio (0.9) remain supportive long-term factors. The continued large orders and the completion of the Spirit Aero Systems acquisition are positive structural developments. T: Downside risk has slightly decreased due to the improved long-term range position and continued positive news flow regarding orders and strategic acquisitions. However, the extremely stretched valuation multiples and the stressed balance sheet with negative FCF remain significant structural risks that increase fragility and limit long-term conviction."
+    }
+  }
+}

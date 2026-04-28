@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 253.68-280.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.45%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.991)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 243.42-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.78%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 260.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.35%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 34.77, P/S: 9.38)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 52.93)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.52)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple boosts i Phone manufacturing share in India to 25%. - Apple now makes about 25% of i Phones in India. - Apple quietly rewires its i Phone supply chain. - German publishers urge antitrust action against Apple. - German publishers reject Apple's revised app tracking rules. - Chai AI announces upcoming rollout of Apple age verification APIs.",
+      "Apple unveils AI-powered Macs and Mac Book Neo. - Apple TV joins Roku. - Apple launches Mac Book Neo, entry-level i Phone 17e. - Apple refreshes i Pad Air.",
+      "Apple launches cheaper Mac Book Neo and i Phone 17e. - Apple becomes exclusive Formula 1 streaming partner."
+    ],
+    "medium_term_50d": [
+      "Apple unveils AI-powered Macs and Mac Book Neo. - Apple TV joins Roku. - Apple launches Mac Book Neo, entry-level i Phone 17e. - Apple refreshes i Pad Air.",
+      "Apple launches low-cost i Phone 17e and M4 i Pad Air. - Apple unveils $599 i Phone 17e, kicks off product launches. - Apple announces new i Phone and i Pad Air as launch week begins. - Apple introduces low-cost i Phone 17e and upgraded i Pad Air.",
+      "Apple launches $599 Mac Book Neo targeting low-cost market. - Apple uses low prices to attack rivals during chip crunch. - Apple unveils Mac Book Neo, challenging Chromebooks, Windows PCs. - Apple's new Mac Book Neo available for pre-order today."
+    ],
+    "long_term_200d": [
+      "Apple launches low-cost i Phone 17e and M4 i Pad Air. - Apple unveils $599 i Phone 17e, kicks off product launches. - Apple announces new i Phone and i Pad Air as launch week begins. - Apple introduces low-cost i Phone 17e and upgraded i Pad Air.",
+      "Apple launches $599 Mac Book Neo targeting low-cost market. - Apple uses low prices to attack rivals during chip crunch. - Apple unveils Mac Book Neo, challenging Chromebooks, Windows PCs. - Apple's new Mac Book Neo available for pre-order today.",
+      "Apple launches new Mac Books with M5 chips. - Apple refreshes Mac Book computers and Studio Display. - Apple rolls out 14, 16-inch Mac Book Pro. - Apple launches new i Phone."
+    ]
+  }
+}

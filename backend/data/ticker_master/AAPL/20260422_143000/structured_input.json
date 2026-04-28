@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "NORMAL (5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 245.51-274.27]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.73%)",
+        "cycle_macd": "BULLISH_FADING (1.733)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 245.51-280.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.99%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 272.4,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "ELEVATED (1.34)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 4.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.42, P/S: 9.82)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 55.43)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.",
+      "Tim Cook steps down as Apple CEO, John Ternus appointed successor. - Apple combines hardware teams under Johny Srouji. - ACCC granted leave to intervene in Epic v Apple proceedings.",
+      "Apple i Phone shipments surge 20% in China. - Apple gains market share in China. - E-commerce discounts, subsidies boost Apple sales."
+    ],
+    "medium_term_50d": [
+      "Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.",
+      "Tim Cook steps down as Apple CEO, John Ternus appointed successor. - Apple combines hardware teams under Johny Srouji. - ACCC granted leave to intervene in Epic v Apple proceedings.",
+      "Apple marketing chief for Watch, Air Pods, Health retires. - Apple faces key leadership change in Devices Team. - Apple's Wearables Shakeup And AI Security Push Shape Long Term Story. - Apple defeats bid for new Apple Watch import ban. - Apple i Phone shipments jump 20% in China. - Apple stock rises as i Phone shipments surge 20% in China. - Apple continues to gain market share in China. - Apple upgrade hinges on cost advantage shift. - Apple stands out as AI volatility rises. - Independently commissioned studies support PFAS class action challenging Apple Sports Bands."
+    ],
+    "long_term_200d": [
+      "Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.",
+      "Tim Cook steps down as Apple CEO, John Ternus appointed successor. - Apple combines hardware teams under Johny Srouji. - ACCC granted leave to intervene in Epic v Apple proceedings.",
+      "Amazon agrees to buy Globalstar for $11.57 billion. - Amazon deal with Globalstar expands Apple satellite tie-up. - Amazon to buy Globalstar, powering Apple's emergency SOS. - Apple and Amazon partner on satellite deal. - Apple's fiscal Q2 earnings could beat Street consensus. - Globalstar agrees to Amazon takeover. - Nike shares rise as Apple's Tim Cook buys more stock. - Xiao-I stock sinks after patent win against Apple."
+    ]
+  }
+}

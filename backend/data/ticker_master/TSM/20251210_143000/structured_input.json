@@ -1,0 +1,72 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (74.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.0)",
+        "velocity_roc_10": "NORMAL (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 266.82-304.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.53%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.001)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.46)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 266.82-311.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (27.5%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 304.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.94%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.0% | OM: 49.5% | NM: 43.3%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3631.425B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 37.0%, EPS: 51.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3215.6%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.0, P/S: 0.43)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.32)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC expands partnerships due to overwhelming AI chip demand. - Nvidia causes increased demand for TSMS advanced Co Wo S packaging.",
+      "Taiwan Semiconductors doubles down on 2nm chips production, invests $28\u0411 in new f Abs. - Mass production at 2nm facilties targeted for 20 twenty-six. - Global expansion planned."
+    ],
+    "medium_term_50d": [
+      "TSMC expands partnerships due to overwhelming AI chip demand. - Nvidia causes increased demand for TSMS advanced Co Wo S packaging.",
+      "Taiwan Semiconductors doubles down on 2nm chips production, invests $28\u0411 in new f Abs. - Mass production at 2nm facilties targeted for 20 twenty-six. - Global expansion planned.",
+      "Elon Musks pressures TS MC and Samsung to accelerate AI chip output."
+    ],
+    "long_term_200d": [
+      "TSMC expands partnerships due to overwhelming AI chip demand. - Nvidia causes increased demand for TSMS advanced Co Wo S packaging.",
+      "Taiwan Semiconductors doubles down on 2nm chips production, invests $28\u0411 in new f Abs. - Mass production at 2nm facilties targeted for 20 twenty-six. - Global expansion planned.",
+      "Nvidia secures exclusive access to TSMC's next-gen super-chip."
+    ]
+  }
+}

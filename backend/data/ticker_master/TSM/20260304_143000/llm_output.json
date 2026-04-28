@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term technicals have normalized significantly. The bearish candle pattern has resolved into a neutral one, RSI is back in the neutral zone (45.0), and the price is now within normal Bollinger Bands (0.36). The 20-day SMA is stable near its base (-2.5%), and the price is in the middle of its 20-day range. W: The shift from overbought and resistance testing to a neutral stance suggests a pause in previous directional pressure. The lack of extreme readings indicates a less defined short-term path. T: Short-term news is now dominated by increased competition from ASML and Nvidia's investments, geopolitical tensions disrupting US supply, and ongoing US-China AI chip controversy. This introduces new competitive and geopolitical headwinds. O: The score is decreased from 6.0 to 5.0 due to the normalization of technicals and the introduction of new competitive and geopolitical risks in the news. Conviction is reduced from 4.5 to 4.0 as the neutral technicals offer less clarity. Risk is decreased from 7.5 to 6.5 as the extreme overbought conditions and resistance testing have subsided, although new news-driven risks are present."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains bullish (7.4%), but the MACD has turned bearish and is accelerating (-2.13). The Z-score relative to the 50-day SMA has decreased to 0.86, indicating a less extended bullish trend position. The price is now inside the monthly range. W: The divergence between bullish trend alignment and a bearish MACD suggests a potential shift in momentum. The reduced Z-score indicates the trend is less stretched, which could precede a consolidation or a more significant pullback. T: Medium-term news highlights increased competition in AI chip packaging and geopolitical disruptions, alongside the ongoing US-China controversy. These factors introduce significant headwinds to future growth and supply chain stability. O: The score is decreased from 7.5 to 6.0 due to the bearish MACD signal and the price moving inside the monthly range, indicating a loss of upward momentum. Conviction is reduced from 5.5 to 4.5 as the conflicting technical signals and negative news flow reduce confidence. Risk is increased from 6.0 to 7.0 due to the bearish MACD, the less extended but still bullish trend position at risk, and the introduction of significant competitive and geopolitical news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The secular bull market regime is still present but has decreased in strength (28.4%). The 'extreme bullish stretch exhaustion risk' has slightly increased to 22.58%. The price is now in the upper quadrant of its long-term range (85.1%). W: The company's strong fundamental metrics (business quality, financial health, cash generation) remain intact, providing a solid base. However, the increased exhaustion risk and the price moving from ATH to the upper quadrant suggest a potential for a significant correction from previous highs. T: Long-term news is mixed, with ongoing geopolitical tensions and increased competition in AI chip markets, contrasting with continued AI demand narratives. The US-China AI chip controversy and supply chain disruptions pose significant long-term risks. O: The score is decreased from 7.0 to 6.5 due to the price moving from the absolute top of its cycle to the upper quadrant and the slight increase in exhaustion risk, indicating a less favorable risk-reward at these levels. Conviction is reduced from 6.8 to 6.0 as the increased exhaustion risk and new geopolitical/competitive headwinds temper long-term optimism. Risk is increased from 6.0 to 6.5 due to the elevated exhaustion risk, the price being in the upper range, and the introduction of significant long-term geopolitical and competitive threats."
+    }
+  }
+}

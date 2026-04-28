@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.15)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 259.95-281.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.84%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.711)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.48)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 232.24-281.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.59%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 264.58,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.41%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.9% | OM: 19.1% | NM: 18.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.48x, YrsToPay: 1.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 13.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.609B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -11.0%, EPS: 69.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 33.6%, Next Q Est Growth: -23.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.59, P/S: 6.78)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.75)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.53)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE Applicances invests $3 billion for US manufacturing expansion, creating 10oo jobs.",
+      "General Electric and United Nuclear agree to clean up uraniummine waste (est. cost $63M)."
+    ],
+    "medium_term_50d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE announces major restructuring plan. - Boeing cancels orders for GE engines due to regulatory issues. - General Electric sells significant stake in Baker Hughes. - New product launch: GE unveils advanced wind turbine technology. - Court rules against GE in multi-billion dollar lawsuit. - United Technologies acquires key",
+      "GE Applicances invests $3 billion for US manufacturing expansion, creating 10oo jobs."
+    ],
+    "long_term_200d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE announces major restructuring plan. - Boeing cancels orders for GE engines due to regulatory issues. - General Electric sells significant stake in Baker Hughes. - New product launch: GE unveils advanced wind turbine technology. - Court rules against GE in multi-billion dollar lawsuit. - United Technologies acquires key",
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.8)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "NORMAL (2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 23.06-25.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.53%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.035)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.29)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 21.87-25.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.89%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.19,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.61%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.14, P/S: 2.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "House committee sub poenas former Pfzer executive over alleged COVD vaccine delay - Pfzer expands collaboration with X\u0442\u0430\u043b \u041f\u0438 to enhance drug discovery platform",
+      "Pfzer enters cannabis industry with $6+ billion deal. - RFK Jr. proposes overhaul of vaccine injury program. - Improves Pharma begins SLN research and development. -PFZE COVID-1 ninjaform_submit_button{background-color:#4CAF50;border:none;color:white;padding:",
+      "Pfizer faces major lawsuit over side effects of drug X. - FDA issues warning letter to Pfizer regarding plant Y. - Merck announces partnership with Pfizer on project Z. - Hurricane damages Pfizer manufacturing facility in NC. - New FDA approval boosts Pfizer's Q3 earnings forecast. - Delay in launch of Pfizer'"
+    ],
+    "medium_term_50d": [
+      "House committee sub poenas former Pfzer executive over alleged COVD vaccine delay - Pfzer expands collaboration with X\u0442\u0430\u043b \u041f\u0438 to enhance drug discovery platform",
+      "Pfizer'sb HAEMOPHILIA treatment meets Phase III goal. - Positive Phase III results for Pfizer'ssickle CELL DISEASE treatment.",
+      "Pfizer'sbleeding disorder therapy, Hypmvazi, meets key goals in Phase 3study. - Positivetopline results from Phase 3 BASIS study for Hypmvazihemophiliatreatment."
+    ],
+    "long_term_200d": [
+      "House committee sub poenas former Pfzer executive over alleged COVD vaccine delay - Pfzer expands collaboration with X\u0442\u0430\u043b \u041f\u0438 to enhance drug discovery platform",
+      "Pfizer'sb HAEMOPHILIA treatment meets Phase III goal. - Positive Phase III results for Pfizer'ssickle CELL DISEASE treatment.",
+      "Pfizer'sbleeding disorder therapy, Hypmvazi, meets key goals in Phase 3study. - Positivetopline results from Phase 3 BASIS study for Hypmvazihemophiliatreatment."
+    ]
+  }
+}

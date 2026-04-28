@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "STAGNANT (-1.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 270.79-331.88]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.2%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.209)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 270.79-348.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.75%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 308.97,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.38%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 66.4%, Next Q Est Growth: -33.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.77, P/S: 7.18)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.65)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.07)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace faces shareholder vote on defense sales. - GE Aerospace engine supply delays impact India's fighter program.",
+      "GE Aerospace faces shareholder vote on Israel defense contracts.",
+      "GE Aerospace ramps up manufacturing capacity investments."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace faces shareholder vote on defense sales. - GE Aerospace engine supply delays impact India's fighter program.",
+      "GE Aerospace ramps up manufacturing capacity investments.",
+      "GE Aerospace faces shareholder vote on Israel defense contracts."
+    ],
+    "long_term_200d": [
+      "GE Aerospace stock outperforms competitors.",
+      "GE Vernova reports 54% jump in gas turbine orders. - GE Aerospace expands AI partnership with Palantir. - GE makes new energy partnerships and capacity investments.",
+      "GE Aerospace investing $55 million in Limestone County plant. - GE Aerospace to invest about $15 million in Terre Haute plant. - GE Aerospace to invest another $1B across US operations. - GE Aerospace boosts investment in U.S. with $1 billion announcement."
+    ]
+  }
+}

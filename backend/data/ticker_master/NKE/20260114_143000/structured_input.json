@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (80.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (8.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 56.99-68.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.47%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.54)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.04)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-69.14]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.42%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 66.19,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.99%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.52)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.99, P/S: 2.06)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.05)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike insiders buying shares. - Major brands incorporate next generation natural fibers, including Nike.",
+      "Nike shuts down RTKFT, sells virtual sneaker business.",
+      "Nike downgraded by Needham. - Needham removes Nike from Conviction list."
+    ],
+    "medium_term_50d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike downgraded by Needham. - Needham removes Nike from Conviction list.",
+      "Nike shuts down RTKFT, sells virtual sneaker business."
+    ],
+    "long_term_200d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike reports fiscal second-quad earnings after the market closes. - Investors expect new product innovions and third quarter guidance."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term momentum has decelerated significantly, with ROC at 1.4% and RSI at 71.0, still overbought but lower than before. The price is stable near the 20-day SMA (5.0%) and within the middle of the range [59.19-77.5]. The candle pattern has shifted to a SHOOTING_STAR_BEARISH, indicating potential downward pressure. W: The bearish shooting star pattern, combined with stagnant momentum and a bearish analyst sentiment, suggests a potential reversal. The price is still within normal Bollinger Bands (0.63), but the shift in candle pattern is a key bearish signal. O: Positive news includes a partnership with Special Olympics and a new CEO for Converse. However, concerns about tariff-driven price increases and restructuring across brands are present. T: The score has decreased from 7.0 to 6.0 due to the bearish shooting star, stagnant momentum, and the shift from an overstretched to a stable position near the SMA. Conviction has decreased from 6.5 to 5.5 as the bearish signal introduces uncertainty. Risk has increased from 5.5 to 6.0 due to the bearish candle pattern and the overbought RSI, despite the price stabilizing near the SMA."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment shows expanding momentum (6.85%), and the price is in a bullish trend position above the 50-day SMA (Z:1.39). The MACD is bullish but fading significantly (0.024), indicating a potential loss of upward force. The price remains inside the monthly range [56.79-77.5]. W: The fading MACD is a primary concern, suggesting that the expanding momentum may not be sustainable. The price being within the monthly range indicates a lack of strong directional conviction at this level. O: News regarding restructuring, sluggish sales growth, and mounting competition are negative. However, the partnership with Special Olympics and the appointment of a new Converse CEO offer some positive operational developments. T: The score has increased slightly from 6.0 to 6.5, driven by the expanding momentum and bullish trend position, despite the fading MACD. Conviction has decreased from 5.5 to 5.0 due to the significant fading of the MACD, which undermines the durability of the bullish trend. Risk has increased from 5.0 to 5.5 due to the fading MACD and the potential for a trend reversal, as well as the ongoing negative news regarding sales and competition."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime remains in a BULL_MARKET_CORRECTION (1.0%), and the price is positioned in the mid-cycle neutral zone (51.8%) of the long-term range. The death cross structure persists (-9.99%), indicating ongoing structural weakness. W: The persistent death cross structure remains a significant overhang, and the price's position in the neutral zone suggests a lack of long-term bullish conviction. The fundamental data continues to show revenue contraction, which is a concern for long-term growth. O: Negative news regarding regulatory investigations, factory fires, and product recalls continue to weigh on the long-term outlook. The previous reports of index drops and significant earnings declines also contribute to the bearish long-term narrative. T: The score remains unchanged at 4.0 as the price has moved slightly lower within the neutral zone, and the fundamental concerns persist. Conviction has decreased from 3.5 to 3.0 due to the persistent death cross and the lack of positive fundamental catalysts, despite the slightly improved market regime. Risk has increased from 6.0 to 6.5 due to the persistent death cross, ongoing negative news, and the continued revenue contraction, which increases fragility."
+    }
+  }
+}

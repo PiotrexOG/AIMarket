@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (13.0)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.05)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-12.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-9.1%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 55.39-68.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.9%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.78)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.78)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 55.39-68.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-16.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.53%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 2.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 55.97,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.73%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.59, P/S: 1.75)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.96)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike's channel reset could decide its next five years.",
+      "Nike launches major restructuring, workforce reductions. - Nike explores divestment options for Converse division.",
+      "Nike announces $300 million restructuring charge for job cuts. - Nike plans leaner model with job cuts and cost realignment. - Nike CEO Elliott Hill leads new operational streamlining initiative."
+    ],
+    "medium_term_50d": [
+      "Nike's channel reset could decide its next five years.",
+      "Nike launches major restructuring, workforce reductions. - Nike explores divestment options for Converse division.",
+      "Nike preparing major restructuring amid business pressures. - Nike CEO Elliott Hill arrives with turnaround plan. - Nike faces weak consumer demand and elevated inventory. - Nike faces tougher competition in core categories. - Nike distributors in China issue profit warnings."
+    ],
+    "long_term_200d": [
+      "Nike preparing major restructuring amid business pressures. - Nike CEO Elliott Hill arrives with turnaround plan. - Nike faces weak consumer demand and elevated inventory. - Nike faces tougher competition in core categories. - Nike distributors in China issue profit warnings.",
+      "Nike preparing major restructuring amid weak demand. - Nike rescheduling earnings report, signaling corporate changes. - New CEO Elliott Hill rolling out turnaround plan. - Nike faces pressure from China distributors' profit warnings.",
+      "Nike launches major restructuring, workforce reductions. - Nike explores divestment options for Converse division."
+    ]
+  }
+}

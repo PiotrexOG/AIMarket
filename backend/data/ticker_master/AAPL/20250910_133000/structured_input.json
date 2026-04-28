@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 223.78-241.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.51%)",
+        "cycle_macd": "BULLISH_FADING (0.026)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.73)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 199.26-241.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.75%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 228.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.81%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 35.48, P/S: 8.58)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 51.42)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL.",
+      "IQE seeks sale due to lower earnings guidance and weak wireless markets. - Apple faces regulatory scrutiny over $26bn Google deal.",
+      "Apple unveils i Phone \u2081\u4e03 with potential price increases due to tariffs. - Oracle reports earnings. - US Bureau of Labour Statistics releases labour revisions."
+    ],
+    "medium_term_50d": [
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL.",
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "EU regulator rules against forced sale of Google Chrome but requires sharing of search and advertisingdata with rivals. - Apple wins as Google avoids splitting Chrome and Android businesses. - Google ordered to share search and advertising Data with rivals in antit trust case."
+    ],
+    "long_term_200d": [
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL.",
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "Musk su ES Apple and Open AI, alleging anti-competitive collusion. - Musk files antitrust LAWSUIT against Apple and Open AI. - Elon Musks x AI su ES Appleand Open AI for alleged antitrust violation S."
+    ]
+  }
+}

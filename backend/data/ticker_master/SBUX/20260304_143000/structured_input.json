@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (1.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 91.29-101.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.31%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.223)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.97)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 83.02-104.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.5%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.39,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.7%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 241.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.38, P/S: 2.99)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.72)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks enters partnership with Schlotzsky's for self-order technology. -Starbucks introduces new trendy drinks line in grocery, convinience stores.",
+      "Starbucks faces 15\\% global tariff, causing 3.5\\% share price drop.",
+      "Starbucks opens Nashville area offices for expansion. - Company relocates supply-chain workers to new location."
+    ],
+    "medium_term_50d": [
+      "Starbcks CEO Howard Sch ULTZ announces Chapters 11 filing for company.",
+      "Starbucks faces 15\\% global tariff, causing 3.5\\% share price drop.",
+      "Starbucks enters partnership with Schlotzsky's for self-order technology. -Starbucks introduces new trendy drinks line in grocery, convinience stores."
+    ],
+    "long_term_200d": [
+      "Starbcks CEO Howard Sch ULTZ announces Chapters 11 filing for company.",
+      "Starbucks presents global growth and China overhaul plan. - Announces expansion in US, China, and growth markets. - Forms joint venture with Chinese partner Boyu Capital. - Moves towards asset light model for China operations.",
+      "Starbucks releases long-term financial targets and share details on turnaroundplan at investor presentation (Investor Day). - Starbuks revamps tiered loyaltyprogram with Green,Goldand Reservelevels,offeringnewbenefitstomembers(January29)."
+    ]
+  }
+}

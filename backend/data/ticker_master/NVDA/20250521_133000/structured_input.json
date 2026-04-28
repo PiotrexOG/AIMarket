@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (89.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.84)",
+        "velocity_roc_10": "EXPLOSIVE_UP (18.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (13.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 102.02-136.31]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (4.65%)",
+        "cycle_macd": "BULLISH_FADING (2.315)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.99)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 86.63-136.31]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.59%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 134.09,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (3.19%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 110.54, P/S: 54.81)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 77.69)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.19)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Foxconn plans large Taiwan AI data Center with Nvid IA - NVIDIA: Roaring into Q1 earnings release - Billionaire adds to Tiger Global's NVIDIA stake These events appear to meet the criteria of having a direct impact on NVIDIA.",
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in",
+      "Nvidia investing in quantum computing Startup Psi Quant UM. - Foxconn builds AI factory in partnership with Nvidia and Taiwan. - Jensen Hu ANG to showcase AI tech at Computex. - Advanced talks between Nvidia for investment in Psi Quantum confirmed. - David Sacks hails Trump'S AI strategy in Middle East as power"
+    ],
+    "medium_term_50d": [
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in",
+      "Foxconn plans large Taiwan AI data Center with Nvid IA - NVIDIA: Roaring into Q1 earnings release - Billionaire adds to Tiger Global's NVIDIA stake These events appear to meet the criteria of having a direct impact on NVIDIA.",
+      "Nvidia investing in quantum computing Startup Psi Quant UM. - Foxconn builds AI factory in partnership with Nvidia and Taiwan. - Jensen Hu ANG to showcase AI tech at Computex. - Advanced talks between Nvidia for investment in Psi Quantum confirmed. - David Sacks hails Trump'S AI strategy in Middle East as power"
+    ],
+    "long_term_200d": [
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in",
+      "Nvidia takes a $5._5 billion hit from export controls. - Trade tensions cause $25o billion market cap loss for Nvidia.",
+      "Nvidia imposes $5. fifth billion charge dueto US export restrictions on AI chips to China and other countries (event type: Production or supplychain change). - NVIDIA CEO Jensen Huang meets with Chinese trade body head during Beijing visit after latest China export curb(event type: Strategic decision or partnership). - Some Chinesecustomersnot"
+    ]
+  }
+}

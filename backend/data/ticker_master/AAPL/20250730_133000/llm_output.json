@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 5.5,
+        "risk": 5.8
+      },
+      "synthesis": "S: The short-term outlook has stabilized from the previous bearish candle pattern, now showing a neutral candle and RSI (50.8) in the neutral zone. Price action is consolidating, hugging the 20-day SMA (-0.1%) within the current 20-day range. W: While the immediate bearish pressure has subsided, the neutral RSI and lack of clear directional momentum indicate a lack of conviction. The price remains within the middle of its range, suggesting indecision. O: The shift from a bearish candle to neutral action suggests a pause in selling pressure. However, the absence of strong bullish signals means the upside potential is limited, and the previous conviction has waned. T: Risk has slightly increased due to the neutral momentum and the price hugging the SMA, which can precede a breakdown if support fails. The previous increase in risk from the bearish candle is now tempered by stabilization, but the lack of a clear upward trend keeps risk elevated."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend shows a mixed picture. Trend alignment is improving with expanding momentum (3.01%), but the MACD has confirmed a bearish zero cross (-0.086). The Z-score relative to the 50-day SMA has decreased to 0.88, indicating less bullish conviction. W: The confirmed bearish MACD cross is a significant structural concern, overriding the positive trend alignment. The decreasing Z-score suggests waning institutional support for the upward move. O: The conflicting signals between trend alignment and MACD create uncertainty. While the price is still above the 50-day SMA, the bearish technical signal from the MACD suggests potential for a trend reversal. T: Risk has increased notably due to the confirmed bearish MACD cross, which signals a potential shift in trend. The previous slight increase in risk is now amplified by this bearish technical development, indicating a higher probability of downside movement."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.2,
+        "conv": 3.7,
+        "risk": 6.3
+      },
+      "synthesis": "S: The long-term outlook remains unchanged, with the secular bear market regime persisting (-4.8%) and the death cross structure intact (-7.42%). The long-term range position has seen a marginal decrease to 45.6%. W: The persistent bearish technical structure (death cross) and the overall market regime continue to be significant headwinds. Fundamental growth remains stagnant, and valuation multiples are still elevated, contributing to structural risk. O: The slight decrease in long-term range position offers no positive indication against the backdrop of a bearish technical structure and stagnant fundamentals. The core long-term risks remain, with no significant improvement in the underlying business or market conditions. T: Risk has slightly increased due to the continued bearish technical structure and the marginal decrease in range position, which keeps valuation risk elevated. The previous concerns regarding the death cross and stagnant growth profile are maintained, with no mitigating factors emerging."
+    }
+  }
+}

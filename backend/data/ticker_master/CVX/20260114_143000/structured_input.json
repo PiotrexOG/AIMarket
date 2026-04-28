@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 146.49-166.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.62%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.268)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.34)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 146.49-166.13]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.92%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 166.81,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.13%))",
+      "volume_dynamics": "ELEVATED (1.23)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.43, P/S: 1.6)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron in talks to expand oil license in Venezuela. - Two oil tank ERS hit by dr ONES at major Black Sea terminal, disrupting exports. - Trump urges US oil industry leaders, including Chevron and Exxon Mobil, to invest $10o billion in Venezuela.",
+      "Trump threatensto sideline Exx CVX from Venezuelan oil: \"They'replayingtoo cute\". - Chevrondelivers Venezuelancrude to ease storagebottlenecks. - Carlyle,Chevron- Quantum partnership among contendersfor Lukoiloasis.",
+      "Trump urges oil companies to spend $10o billion in Venezuela. (CVX mentioned) - Che vron sees path to grow Venezuelaproduction by 5o%. (Directimpact) - Exxon evaluates potential return to Venezuela. (Direct impact)"
+    ],
+    "medium_term_50d": [
+      "Chevron in talks to expand oil license in Venezuela. - Two oil tank ERS hit by dr ONES at major Black Sea terminal, disrupting exports. - Trump urges US oil industry leaders, including Chevron and Exxon Mobil, to invest $10o billion in Venezuela.",
+      "Trump urges oil companies to spend $10o billion in Venezuela. (CVX mentioned) - Che vron sees path to grow Venezuelaproduction by 5o%. (Directimpact) - Exxon evaluates potential return to Venezuela. (Direct impact)",
+      "Trump announces $10o billion investment from oil majors in Venezuela. (CVX included) - White House gathers CVX, Exx ON, Conoco Philips for Venezuela discussions. - Trump cancels second wave of Venezuela attacks, promises investment."
+    ],
+    "long_term_200d": [
+      "Trump urges oil companies to spend $10o billion in Venezuela. (CVX mentioned) - Che vron sees path to grow Venezuelaproduction by 5o%. (Directimpact) - Exxon evaluates potential return to Venezuela. (Direct impact)",
+      "Chevron in talks to expand oil license in Venezuela. - Two oil tank ERS hit by dr ONES at major Black Sea terminal, disrupting exports. - Trump urges US oil industry leaders, including Chevron and Exxon Mobil, to invest $10o billion in Venezuela.",
+      "Trump announces $10o billion investment from oil majors in Venezuela. (CVX included) - White House gathers CVX, Exx ON, Conoco Philips for Venezuela discussions. - Trump cancels second wave of Venezuela attacks, promises investment."
+    ]
+  }
+}

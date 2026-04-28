@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "NORMAL (2.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 292.81-322.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.27%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.387)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.54-322.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.03%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 308.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.33%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.26, P/S: 3.11)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.4)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.23)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.88x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JP Morgan aims to double Swissprivate banking business by203o. - New Chase Sapphires Lounge opens at Harry Reid International Airportin Las Vegas.",
+      "JPMorgan heads financial sector with top G-SIb ranking. - Trump announces decision on Fed chair replacement, favoring Kevin Hassett.",
+      "JPMorgan announces urgent call for December rate cuts. - regulatory ruling: Fed monetary policy decision."
+    ],
+    "medium_term_50d": [
+      "JPMorgan announces urgent call for December rate cuts. - regulatory ruling: Fed monetary policy decision.",
+      "JPMorgan executive contacted in Epstein inquiry. - Cyberattacks potentially reached JPMorgan data.",
+      "JPMorgan announces intention to build new three- million sq ft tower in London - J PMorgan planning to build London's biggest office block - Jpmorgan intends to construct \u00a33 billion megatower HQ at Canary Wharflondon - JP Morgan predicts shock December rate cut after dovish pivot"
+    ],
+    "long_term_200d": [
+      "JPMorgan receives congressional sub poenas related to Jeffrey Epsteins accounts. - Regulator scrutiny places focus on JPMorgan's compliance procedures.",
+      "JPMorgan announces urgent call for December rate cuts. - regulatory ruling: Fed monetary policy decision.",
+      "JPMorgan executive contacted in Epstein inquiry. - Cyberattacks potentially reached JPMorgan data."
+    ]
+  }
+}

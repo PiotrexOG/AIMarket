@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "NORMAL (-5.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 171.73-197.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.51%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.848)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.78)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 171.03-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.05%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 54.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 180.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.87%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 60.61, P/S: 34.08)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 56.06)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia partners with 6 US energy giants. - Nvidia stock faces China sales issue. - Super Micro co-founder indicted for smuggling Nvidia chips.",
+      "HP Z8 Fury supports NVIDIA RTX PRO GPUs.",
+      "Salesforce and NVIDIA partner for enterprise AI agents."
+    ],
+    "medium_term_50d": [
+      "Coupang, NVIDIA collaborate on AI factory. - Nvidia CEO comments drive Chinese AI stock gains. - Cisco joins alliance defining 400G optical standards. - Tesla rivals BYD, Geely adopt Nvidia self-driving tech. - Samsung partners with Nvidia on AI infrastructure. - Nvidia highlights Open Claw as next AI platform. - Nvidia's Jensen Huang predicts inference takes over.",
+      "Compal showcases AI server solution based on NVIDIA HGX Rubin NVL8. - Nvidia partners with robotics leaders, unveils Isaac and Cosmos frameworks. - Nvidia stock rises as GTC event 2026 kicks off. - Nvidia integrates AI technologies with Lyft. - Nvidia launches Vera CPU for agentic AI.",
+      "Nvidia GTC conference to reveal AI products and partnerships. - Byte Dance to use Nvidia Blackwell systems in Malaysia. - Palantir partners with Nvidia for AI platforms. - Nvidia GTC to focus on AI chip pivot, CPUs. - Nvidia partner Synopsys accelerates shift to electronic systems."
+    ],
+    "long_term_200d": [
+      "Nvidia makes two new AI investment bets. - Nvidia announces Q4 blowout, data center revenue up 75%. - Nvidia secures $95B+ in supply commitments. - Nvidia launches Vera Rubin GPUs.",
+      "Nvidia GTC conference to reveal AI products and partnerships. - Byte Dance to use Nvidia Blackwell systems in Malaysia. - Palantir partners with Nvidia for AI platforms. - Nvidia GTC to focus on AI chip pivot, CPUs. - Nvidia partner Synopsys accelerates shift to electronic systems.",
+      "Coupang, NVIDIA collaborate on AI factory. - Nvidia CEO comments drive Chinese AI stock gains. - Cisco joins alliance defining 400G optical standards. - Tesla rivals BYD, Geely adopt Nvidia self-driving tech. - Samsung partners with Nvidia on AI infrastructure. - Nvidia highlights Open Claw as next AI platform. - Nvidia's Jensen Huang predicts inference takes over."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 293.89-319.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.56%)",
+        "cycle_macd": "BULLISH_FADING (1.491)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.21)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-332.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.79%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 24.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 309.66,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.96%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 60.0% | NM: 50.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 53.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.0B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.3%, EPS: 4.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.6%, Next Q Est Growth: 18.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.33, P/S: 15.06)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.89)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.29)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa and Tik Tok launch creator debit card in UK. - Visa joins Backbone coalition to support credit unions. - Visa expands stablecoin infrastructure for payments.",
+      "Visa involved in proposed settlement over interchange fees.",
+      "Visa launches own validator node on Tempo blockchain. - Visa partners with payabl. on Click to Pay launch. - Visa, Mastercard settle merchant claims over swipe fees. - Visa and Marriott Bonvoy launch joint FIFA World Cup campaign."
+    ],
+    "medium_term_50d": [
+      "Visa launches own validator node on Tempo blockchain. - Visa partners with payabl. on Click to Pay launch. - Visa, Mastercard settle merchant claims over swipe fees. - Visa and Marriott Bonvoy launch joint FIFA World Cup campaign.",
+      "Visa and Tik Tok launch creator debit card in UK. - Visa joins Backbone coalition to support credit unions. - Visa expands stablecoin infrastructure for payments.",
+      "Visa involved in proposed settlement over interchange fees."
+    ],
+    "long_term_200d": [
+      "Visa launches own validator node on Tempo blockchain. - Visa partners with payabl. on Click to Pay launch. - Visa, Mastercard settle merchant claims over swipe fees. - Visa and Marriott Bonvoy launch joint FIFA World Cup campaign.",
+      "FTC probes debanking practices at Visa. - Ramp and Visa expand partnership with AI integration. - Visa defines next era of commerce with AI. - Visa announces new value-added Subscription Manager solution. - Visa rolls out six AI-powered dispute tools. - Visa's new AI dispute tools target fraud costs.",
+      "Visa launches Intelligent Commerce Connect for AI-driven shopping. - Visa expands collaboration with Owl Ting Group for USDC transactions. - Visa's AI Commerce and USDC push weighed against valuation upside. - Visa to announce fiscal second quarter 2026 financial results."
+    ]
+  }
+}

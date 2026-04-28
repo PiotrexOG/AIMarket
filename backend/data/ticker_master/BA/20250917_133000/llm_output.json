@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Short-term momentum has severely deteriorated. The RSI is now in extreme oversold territory (17.7), and velocity has imploded (-9.4%). The price is testing the lower band of the Bollinger Bands (0.03) and is at critical support for the 20-day range. The 20-day SMA has also moved significantly lower (-5.7%). W: The \"DOJI_INDECISION\" candle pattern at critical support suggests potential for a bounce, but the overwhelming bearish technicals and the sharp decline indicate significant downside risk. The conviction in any short-term signal is low given the extreme conditions. O: News regarding Viet Jet's first 737 MAX delivery and GE Aviation services contract provide minor positive offsets, but are dwarfed by the FAA proposing a $3 million fine for safety violations and ongoing worker strikes, which increase operational risk. T: Risk has escalated significantly due to the extreme oversold conditions, testing of lower bands, and critical support levels, coupled with negative news flow. The score is reduced to reflect the severe technical breakdown and increased downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: Medium-term trend alignment has compressed to near flat (-0.19%), indicating a loss of upward momentum. The MACD remains bearish and accelerating (-2.344). The Z-score relative to the 50-day SMA is now an extreme bearish outlier (Z:-2.41), suggesting significant overextension to the downside. The price is strengthening at monthly support. W: While the price is consolidating at monthly support, the persistent bearish MACD and extreme Z-score indicate a fragile technical structure. The conviction is low due to the conflicting signals of overextension and continued bearish momentum. O: Tentative deals with union workers and the opening of a new engineering center are positive developments for operational stability and future growth, but the FAA's proposed fine and past strike issues continue to cast a shadow. The news flow is mixed, offering little clear direction. T: Risk is very high due to the extreme bearish statistical outlier on the 50-day SMA, the accelerating bearish MACD, and the overall fragile technical setup. The score is reduced to reflect the increased downside risk and the lack of a clear bullish signal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term technical picture shows a retreat in range position to 75.8%, indicating a move away from the upper quadrant. The secular bull market regime is still present but has weakened slightly (12.0%), and exhaustion risk remains elevated (18.98%). W: The price is still in the upper half of its long-term range, but the weakening regime and persistent fundamental issues limit conviction. The fundamental challenges of thin margins, negative FCF, and balance sheet stress remain significant headwinds. O: Long-term news is dominated by the ongoing reacquisition of Spirit Aero Systems and the completion of its acquisition, which introduces strategic considerations and potential integration risks. The tentative deal with union workers for Boeing Defense is a positive step towards operational stability. T: Risk remains elevated due to the price's position in the upper half of its long-term range, the persistent fundamental weaknesses, and the ongoing strategic integration risks associated with Spirit Aero Systems. The score is reduced to reflect the increased risk and reduced conviction in the long-term outlook."
+    }
+  }
+}

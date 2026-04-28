@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "NORMAL (4.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 164.58-184.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.39%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.279)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.39)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 135.42-184.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (34.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.17%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 181.41,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.45%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 104.86, P/S: 56.6)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 91.88)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.13)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidiaand AMD agree to pay \u2081\u4e94% of Chinachip sales revenue to USgovernment. - Commerce Department issues licenses for NVIDIAto send H20chip to China.",
+      "Trump Administration issues licenses for NVIDIA to send H20 chips to China.",
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA."
+    ],
+    "medium_term_50d": [
+      "Nvidiaand AMD agree to pay \u2081\u4e94% of Chinachip sales revenue to USgovernment. - Commerce Department issues licenses for NVIDIAto send H20chip to China.",
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA.",
+      "Trump Administration issues licenses for NVIDIA to send H20 chips to China."
+    ],
+    "long_term_200d": [
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA.",
+      "Nvidiaand AMD agree to pay \u2081\u4e94% of Chinachip sales revenue to USgovernment. - Commerce Department issues licenses for NVIDIAto send H20chip to China.",
+      "Nvidia reenters China market, unlocking $50\u0411 AI market. - U.S holds up UAE deal to buy NVDA AI chips. - TSMC raises 20 twenty-five outlook, boosting AI demand hopes."
+    ]
+  }
+}

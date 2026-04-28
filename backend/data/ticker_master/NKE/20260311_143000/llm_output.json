@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Oversold conditions (RSI 13.0) and testing lower Bollinger Band suggest potential for a short-term bounce. The price is at critical support levels. O: A short-term rebound is possible if support holds, driven by oversold technicals. T: Restructuring news and workforce reductions could create short-term volatility and potential for a relief rally if the market perceives cost-cutting positively. W: Shooting star candle pattern and extreme oversold RSI indicate immediate downside pressure. Velocity is sharply negative. The price is significantly below the 20-day SMA. R: High risk due to bearish candle, extreme oversold momentum, and negative velocity. The price is at a critical support level, increasing downside risk if it breaks."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The trend is gradually descending, with MACD accelerating bearishly. The price is significantly below the 50-day SMA, indicating a strong bearish trend. O: Potential for a short-term bounce from oversold levels could provide a temporary reprieve, but the underlying trend remains weak. T: Restructuring efforts and potential divestments (Converse) could signal a strategic shift, but the immediate impact on earnings and demand is uncertain. W: Gradual descent in trend alignment and accelerating bearish MACD signal persistent weakness. The price is overextended below the 50-day SMA. R: High risk due to entrenched bearish trend, significant deviation from the 50-day SMA, and ongoing negative news regarding demand and competition. The price is testing monthly support, but a break would be significant."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term regime is bearish, characterized by a death cross structure and the price trading near multi-month lows. The business quality and growth profile are average to stagnant. O: Potential for a longer-term turnaround exists if restructuring efforts are successful and consumer demand recovers, but current indicators are unfavorable. T: The company is undergoing significant restructuring, including workforce reductions and potential divestments, which could improve efficiency but also signal underlying business challenges. W: The long-term trend is clearly bearish, with a death cross and price action near lows. Growth profile shows stagnation and profit issues. R: Very high risk due to the secular bear market regime, death cross, stagnant growth, and ongoing restructuring which introduces uncertainty. Valuation is fair but implied growth is declining, offering little support against fundamental headwinds."
+    }
+  }
+}

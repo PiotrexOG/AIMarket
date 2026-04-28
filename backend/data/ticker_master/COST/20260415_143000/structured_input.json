@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 961.02-1035.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.12%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-2.106)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 931.5-1035.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.72%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 976.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.88%))",
+      "volume_dynamics": "ELEVATED (1.29)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.2%, Next Q Est Growth: -16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.51, P/S: 1.58)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.89)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.38)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco March sales jump, 9.4% comp growth, 23.3% digital gains. - Costco reveals shift in shopper spending behavior.",
+      "Costco raises annual membership fees.",
+      "Costco's international sales growth outpaces US growth. - Higher gas prices positively impact Costco's sales."
+    ],
+    "medium_term_50d": [
+      "Costco raises annual membership fees.",
+      "Costco March sales jump, 9.4% comp growth, 23.3% digital gains. - Costco reveals shift in shopper spending behavior.",
+      "Costco reports strong March 2026 sales, e-commerce surges. - Edna's Margarita Mix returns to Costco locations in Western Canada. - Costco shares rally on strong March sales beating forecasts. - Costco's comparable sales remain resilient despite calendar headwind."
+    ],
+    "long_term_200d": [
+      "Costco raises annual membership fees.",
+      "Costco reports strong March 2026 sales, e-commerce surges. - Edna's Margarita Mix returns to Costco locations in Western Canada. - Costco shares rally on strong March sales beating forecasts. - Costco's comparable sales remain resilient despite calendar headwind.",
+      "Costco March sales jump, 9.4% comp growth, 23.3% digital gains. - Costco reveals shift in shopper spending behavior."
+    ]
+  }
+}

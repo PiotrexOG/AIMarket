@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "STAGNANT (-0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 168.8-184.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.5%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.986)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.02)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 142.03-184.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.84%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 181.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 104.66, P/S: 56.49)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 91.71)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.13)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "11. Nvid\u00eda agrees to pay US federal government fifteen percent of China sales for export licenses. 14. Beijing urges Chinese companies to limit Nvidia purchases due to security concerns.",
+      "Nvidia halts H20chip production due to China crackdown. - Beijing backl ASH spooks Nvidia on China AI chip sales.",
+      "Nvidia entering FQ2 '26 resultswith murky pictureon sales to Chinese techt firms. - Cadence and NVIDI announcebreakthroughin pre-siliconepower analysisfor billion-gate AI chip designs."
+    ],
+    "medium_term_50d": [
+      "11. Nvid\u00eda agrees to pay US federal government fifteen percent of China sales for export licenses. 14. Beijing urges Chinese companies to limit Nvidia purchases due to security concerns.",
+      "Nvidia halts H20chip production due to China crackdown. - Beijing backl ASH spooks Nvidia on China AI chip sales.",
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market."
+    ],
+    "long_term_200d": [
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market.",
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA.",
+      "11. Nvid\u00eda agrees to pay US federal government fifteen percent of China sales for export licenses. 14. Beijing urges Chinese companies to limit Nvidia purchases due to security concerns."
+    ]
+  }
+}

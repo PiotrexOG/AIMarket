@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.2)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.13)",
+        "velocity_roc_10": "NORMAL (-6.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 167.22-184.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.79%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.507)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.03)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 142.03-184.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (23.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (23.17%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 171.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.06%))",
+      "volume_dynamics": "ELEVATED (1.39)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 79.33, P/S: 44.21)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 73.21)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.19)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Samsung, SK \u0425ynix face share price drops after US revokes China chip permits. - Abu Dhabu-backed \u041342 looks to diversifychip suppliers for AI campaign. - Norma completes validation of quantum AI algorithmon NVIDIA chips.",
+      "Nvidia boss predicts $4 trillon global AI spending by 2130. - CHARM Therapies raises $8o M for menin inhibator development.",
+      "Nvidia reports strong Q3 earnings. - New partnership announced between Nvidia and major tech company. - Lawsuit filed against Nvidia over patent infringement. - Significant production issue impacts Nvidia's chip manufacturing. - Major customer cancels large order from Nvidia."
+    ],
+    "medium_term_50d": [
+      "11. Nvid\u00eda agrees to pay US federal government fifteen percent of China sales for export licenses. 14. Beijing urges Chinese companies to limit Nvidia purchases due to security concerns.",
+      "Samsung, SK \u0425ynix face share price drops after US revokes China chip permits. - Abu Dhabu-backed \u041342 looks to diversifychip suppliers for AI campaign. - Norma completes validation of quantum AI algorithmon NVIDIA chips.",
+      "Nvidia halts H20chip production due to China crackdown. - Beijing backl ASH spooks Nvidia on China AI chip sales."
+    ],
+    "long_term_200d": [
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market.",
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA.",
+      "11. Nvid\u00eda agrees to pay US federal government fifteen percent of China sales for export licenses. 14. Beijing urges Chinese companies to limit Nvidia purchases due to security concerns."
+    ]
+  }
+}

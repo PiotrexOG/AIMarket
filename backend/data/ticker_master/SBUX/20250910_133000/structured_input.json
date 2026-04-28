@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (26.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.09)",
+        "velocity_roc_10": "NORMAL (-2.4%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-5.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 83.27-94.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.74%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.426)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.4)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 83.27-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.14%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 18.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 83.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.21, P/S: 2.62)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.47)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.25x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Arabica coffee premium jumps to 20 eleven high on supply fears. - Supply concerns drive up cost of Starbucks main ingredient, Arabica coffee.",
+      "Starbucks experiences sharp profit declines in Q3 20 twenty-five. - Consumer spending tightens impacts US comps, operating margins at Starbucks.",
+      "Starbucks receives offers worth up to $ fifth billion for China operations - Fisevac acquisitions Californian startup focusing on hospitality payment systems - Starbuks implements new AI inventory management system across 11000 stores - Starburks aims to transform 100o locations into third spaces by end 20th6 - Macqu"
+    ],
+    "medium_term_50d": [
+      "Starbucks experiences sharp profit declines in Q3 20 twenty-five. - Consumer spending tightens impacts US comps, operating margins at Starbucks.",
+      "Arabica coffee premium jumps to 20 eleven high on supply fears. - Supply concerns drive up cost of Starbucks main ingredient, Arabica coffee.",
+      "Starbucks receives offers worth up to $ fifth billion for China operations - Fisevac acquisitions Californian startup focusing on hospitality payment systems - Starbuks implements new AI inventory management system across 11000 stores - Starburks aims to transform 100o locations into third spaces by end 20th6 - Macqu"
+    ],
+    "long_term_200d": [
+      "Starbucks experiences sharp profit declines in Q3 20 twenty-five. - Consumer spending tightens impacts US comps, operating margins at Starbucks.",
+      "Starbucks receives offers worth up to $ fifth billion for China operations - Fisevac acquisitions Californian startup focusing on hospitality payment systems - Starbuks implements new AI inventory management system across 11000 stores - Starburks aims to transform 100o locations into third spaces by end 20th6 - Macqu",
+      "Arabica coffee premium jumps to 20 eleven high on supply fears. - Supply concerns drive up cost of Starbucks main ingredient, Arabica coffee."
+    ]
+  }
+}

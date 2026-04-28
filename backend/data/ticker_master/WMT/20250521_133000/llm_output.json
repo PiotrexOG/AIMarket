@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum has weakened. The candle pattern is now NEUTRAL, RSI has dipped slightly to 53.2, and velocity (ROC -0.7%) is stagnant. Price is stable near the SMA20 (0.8%), but remains in the middle of its 20-day range. Volume dynamics have decreased to AVERAGE (0.88), indicating reduced participation. W: The shift from STRONG_BULLISH to NEUTRAL candle patterns and the decrease in volume dynamics suggest a loss of immediate buying conviction. The price is still range-bound, offering limited tactical upside. O: News regarding potential price increases due to tariffs introduces short-term uncertainty and potential headwinds. T: The short-term outlook is neutral to slightly bearish, with a risk of downside if tariff concerns escalate or buying pressure does not resume."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.8,
+        "risk": 4.2
+      },
+      "synthesis": "S: The medium-term trend remains constructive, with bullish expanding momentum (5.99%) and a favorable position relative to the SMA50 (Z:1.11). The MACD has shown some recovery, moving from -0.234 to -0.206, indicating a slight improvement in bearish momentum. The price continues to trade within the monthly range. W: While the MACD has improved slightly, it remains in bearish territory. The news flow concerning tariffs and potential price hikes introduces a medium-term risk to consumer demand and margins, which could impact earnings momentum. O: The fundamental earnings momentum has significantly improved, with a strong current quarter surprise (8.6%) and positive next quarter estimates (17.5%). This fundamental strength provides a tailwind to the technical trend. T: The medium-term outlook is cautiously optimistic, supported by improving fundamentals and a stable technical trend. However, the lingering bearish MACD and tariff-related news warrant vigilance for potential pullbacks."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 7.2,
+        "risk": 3.3
+      },
+      "synthesis": "S: Long-term structural factors remain robust. The market regime is a SECULAR_BULL_MARKET (11.4%), and the major crosses are healthy (4.25%). The stock is positioned in the upper quadrant of its long-term range (80.0%). Business quality metrics show slight improvement in net margin (2.9%). Financial health shows moderate leverage, and cash conversion remains weak. Growth profile is stable, and earnings momentum has seen a significant positive shift. W: The valuation remains hyper-premium (P/E: 41.59), and multiple risk is high (P/B: 9.7), although the PEG ratio has improved to 0.62, suggesting growth is now potentially underrated. The weak cash conversion (FCF Mgn: 2.2%) remains a structural concern. O: The significant improvement in quarterly earnings momentum (Q_ACCELERATING_GROWTH) and positive forward estimates provide a strong fundamental tailwind that partially offsets valuation concerns. The company's scale and market position offer resilience. T: The long-term outlook is positive, driven by a favorable market regime and strong earnings momentum. However, the persistent high valuation and weak cash conversion necessitate a cautious approach, with any deterioration in earnings or market sentiment posing a significant risk."
+    }
+  }
+}

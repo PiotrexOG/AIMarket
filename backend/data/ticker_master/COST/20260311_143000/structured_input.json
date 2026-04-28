@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "STAGNANT (-0.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 960.46-1028.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.53%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.427)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.62)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 852.5-1028.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.21%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 990.76,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "AVERAGE (0.91)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.5%, Next Q Est Growth: -16.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 54.29, P/S: 1.6)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.11)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.46)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco expands fertility care and fuel access.",
+      "Costco reports strong fiscal Q2 2026 earnings. - Costco to pass tariff refunds to customers. - Costco's digital personalization drives sales growth. - Costco reports strong comparable sales growth. - Costco's membership income continues double-digit growth. - Costco's Q2 results beat Wall Street expectations.",
+      "Costco reports Q2 2026 earnings and revenues top estimates. - Costco Q2 earnings beat reinforces membership-fee machine. - Costco reports fiscal second-quarter profit of $2.04 billion. - Costco reduces prices on some items as tariffs reduced."
+    ],
+    "medium_term_50d": [
+      "Costco reports Q2 2026 earnings and revenues top estimates. - Costco Q2 earnings beat reinforces membership-fee machine. - Costco reports fiscal second-quarter profit of $2.04 billion. - Costco reduces prices on some items as tariffs reduced.",
+      "Costco reports strong fiscal Q2 2026 earnings. - Costco to pass tariff refunds to customers. - Costco's digital personalization drives sales growth. - Costco reports strong comparable sales growth. - Costco's membership income continues double-digit growth. - Costco's Q2 results beat Wall Street expectations.",
+      "Costco to report Q1 earnings on Thursday afternoon. - Costco Q2 results may include commentary on tariffs. - Costco Q2 preview: monthly data points to double beat. - Costco shares surge after March 5th prediction. - Costco Q2 performance: explore Wall Street estimates. - Costco involved in Supreme Court tariff refund case."
+    ],
+    "long_term_200d": [
+      "Costco reports Q2 2026 earnings and revenues top estimates. - Costco Q2 earnings beat reinforces membership-fee machine. - Costco reports fiscal second-quarter profit of $2.04 billion. - Costco reduces prices on some items as tariffs reduced.",
+      "Costco reports strong fiscal Q2 2026 earnings. - Costco to pass tariff refunds to customers. - Costco's digital personalization drives sales growth. - Costco reports strong comparable sales growth. - Costco's membership income continues double-digit growth. - Costco's Q2 results beat Wall Street expectations.",
+      "Costco to report Q1 earnings on Thursday afternoon. - Costco Q2 results may include commentary on tariffs. - Costco Q2 preview: monthly data points to double beat. - Costco shares surge after March 5th prediction. - Costco Q2 performance: explore Wall Street estimates. - Costco involved in Supreme Court tariff refund case."
+    ]
+  }
+}

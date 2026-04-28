@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.45)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.28-26.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.88%)",
+        "cycle_macd": "BULLISH_FADING (0.017)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.81-27.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.65%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 65.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.32%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.68, P/S: 2.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.56)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer enters exclusive global collaboration with Yao Pharma for YP0 Fifthousethousand, a GLP-\u2081 receptor ag ONist for chronic weight manage MENT. ($150m upfront, $1. ninetythreefive B in milestones.)",
+      "Pfizer announces 93\\% reduction in bleeds with HYMPAvzi in Phase 3 study.",
+      "Pfizer presents superiority data for HYMPAv ZI\u00ae in Phase 3 BASIS study."
+    ],
+    "medium_term_50d": [
+      "Pfizer enters exclusive global collaboration with Yao Pharma for YP0 Fifthousethousand, a GLP-\u2081 receptor ag ONist for chronic weight manage MENT. ($150m upfront, $1. ninetythreefive B in milestones.)",
+      "Pfizer acquiring biotech firms for sickle cell diseases treatment. - Inclacumab FDA approval expected for sicklecell disease.",
+      "Pfizer announces 93\\% reduction in bleeds with HYMPAvzi in Phase 3 study."
+    ],
+    "long_term_200d": [
+      "Pfizer enters exclusive global collaboration with Yao Pharma for YP0 Fifthousethousand, a GLP-\u2081 receptor ag ONist for chronic weight manage MENT. ($150m upfront, $1. ninetythreefive B in milestones.)",
+      "Pfizer acquiring Metsera for obes ITY and diabetes therap IES. - Metsera shares slip after Pfizer wins bidding war. - Novo Nordik's stock rises on withdrawal from Metser A bid.",
+      "Pfizer wins regulatory approval for Metserra acquisition. -PFizer pays additional $1. seventh billion for Metserara. -Pfizer signs amended deal to acquire Metserara from Novo Nordick. -Metserara chooses Pfizers less risky acquisition offer. -Novo Nordisk shareholders relieved after losing Metserara bidding war"
+    ]
+  }
+}

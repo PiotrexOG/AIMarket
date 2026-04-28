@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.61)",
+        "velocity_roc_10": "STAGNANT (0.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.49-98.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.05%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.016)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 83.19-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.01%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 93.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.17%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.71, P/S: 2.92)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.92)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks faced a labor law violation allegation by NLRB over threatening employees regarding unionization. - Shake Sh ACK announced partnership with Maxim\u2019S Caterers for opening first restaurant in VIETNAM. -Starbucks and Mc Donald's compared facing challenges in China market.",
+      "Starbucks faces increased coffee costs due to climate disruption and upcoming tariffs. - Tariffs on Brazilian coffee imports negatively impact Starbucks' pricing.",
+      "India calls forboycott of American goodson Starbucks due to Tariffprotests."
+    ],
+    "medium_term_50d": [
+      "Starbucks faces increased coffee costs due to climate disruption and upcoming tariffs. - Tariffs on Brazilian coffee imports negatively impact Starbucks' pricing.",
+      "Starbucks faced a labor law violation allegation by NLRB over threatening employees regarding unionization. - Shake Sh ACK announced partnership with Maxim\u2019S Caterers for opening first restaurant in VIETNAM. -Starbucks and Mc Donald's compared facing challenges in China market.",
+      "New 50\\% tariff on Brazillian coffee imports impacts Starbucks. - US proposes drone rules potentially enabling Starbucks deliveries."
+    ],
+    "long_term_200d": [
+      "Starbucks faces increased coffee costs due to climate disruption and upcoming tariffs. - Tariffs on Brazilian coffee imports negatively impact Starbucks' pricing.",
+      "Starbucks receive bids for China business worth up to $\u2081\u1d0f\u02b3 billions. - Offers come from over twenty-nine private equity firms. - Includes Centurium Capital, Hillhouse Capital, The Carelyle Group, and KKR & Co among interested parties.",
+      "New 50\\% tariff on Brazillian coffee imports impacts Starbucks. - US proposes drone rules potentially enabling Starbucks deliveries."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum has significantly improved, with RSI moving to a neutral zone at 51.7, but velocity (ROC) has exploded upwards to 14.7%. The price is now 5.4% above the 20-day SMA, indicating strong upward pressure. The stock is testing critical resistance at the upper end of its 20-day range. W: The neutral RSI suggests a lack of overbought conditions, while the explosive velocity indicates strong buying interest. The stock is within normal Bollinger Bands (0.75), showing healthy price expansion. O: Short-term news remains focused on potential export restrictions and legislative efforts to curb chip smuggling to China, alongside Nvidia's efforts to develop China-tailored chips. This narrative is mixed but shows resilience. T: Risk has decreased to 4.5. The explosive velocity and price moving further above the 20-day SMA reduce immediate downside exposure. The reduction in ATR to 4.4% also contributes to lower perceived risk, despite testing resistance."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Medium-term trend alignment has improved to -3.6%, and the MACD, while bullish, is showing signs of fading (1.553). The Z-score has moved to a healthy positive base at 0.23, indicating the price is now above its 50-day SMA. W: The positive Z-score and improving trend alignment suggest a potential shift towards a more constructive medium-term trend. The fading MACD warrants monitoring for potential consolidation. O: Medium-term news continues to highlight export control concerns and legislative actions, with Nvidia working on China-tailored chips and clashing with Anthropic over these controls. This indicates ongoing strategic adjustments and geopolitical complexities. T: Risk has slightly decreased to 5.5. The positive Z-score and improved trend alignment reduce immediate downside risk. However, the fading MACD and persistent geopolitical news regarding export controls still warrant caution, preventing a more significant risk reduction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime remains a secular bear market, with the index down -9.3%. The death cross structure has widened slightly to -10.69%, but the long-term range position has improved to the mid-cycle neutral zone at 40.4%. W: The improved long-term range position suggests a stabilization of the long-term outlook, moving away from the lower quadrants. However, the persistent death cross structure indicates underlying long-term technical weakness. O: Long-term news continues to focus on the impact of export controls and trade tensions, with significant charges and market cap losses previously reported. The fundamental strengths of the company provide resilience against these macro headwinds. T: Risk has slightly decreased to 6.5. The improved long-term range position offers some mitigation against extreme downside. However, the secular bear market regime, widening death cross, and the hyper-premium valuation remain significant sources of long-term fragility."
+    }
+  }
+}

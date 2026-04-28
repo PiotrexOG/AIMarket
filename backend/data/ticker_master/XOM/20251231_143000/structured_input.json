@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 114.61-121.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (0.99%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.308)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.65)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 111.98-121.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.66%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 120.25,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.51%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.48, P/S: 1.6)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.0)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041c\u043ebil raises 20\u4e09\u3007 corporate plan outlook.",
+      "Chevron's Tengiz olivefield production falls 10%, affecting XOM. - Talks between Trump and Zelensky fail, potential impact on XOM unclear.",
+      "Exxon \u041cobal wins contract for Hammerheads project in Guyana (NOV) - Accelerated exploration push in Trinidad & Tobago (February 20 twenty-six)"
+    ],
+    "medium_term_50d": [
+      "Exxon \u041c\u043ebil raises 20\u4e09\u3007 corporate plan outlook.",
+      "Exxon \u041cobal wins contract for Hammerheads project in Guyana (NOV) - Accelerated exploration push in Trinidad & Tobago (February 20 twenty-six)",
+      "Exxon mobil announces new CFO and raises 20 thirty financial targets."
+    ],
+    "long_term_200d": [
+      "Exxon \u041c\u043ebil raises 20\u4e09\u3007 corporate plan outlook.",
+      "Exxon mobil announces new CFO and raises 20 thirty financial targets.",
+      "Exxon \u041cobal accelerates Permian growth, aims for 2M barrels by twenty-three-zero. - IEA slashes 2o26 oil glut forecast, global markets brace for shakeup. -Exxon \u041cobil hikes 2o30 out look, achieves higher earnings and cash flow growth."
+    ]
+  }
+}

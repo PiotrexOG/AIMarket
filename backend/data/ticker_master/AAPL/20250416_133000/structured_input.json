@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (41.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (-9.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 169.21-225.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-6.81%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.098)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-249.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.2%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 197.07,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | HIGH_VOLATILITY_ASSET (ATR:  (6.67%))",
+      "volume_dynamics": "AVERAGE (0.62)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.2% | OM: 31.5% | NM: 24.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.56x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $391.035B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.0%, EPS: -1.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -58.5%, Next Q Est Growth: 67.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.36, P/S: 7.68)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 52.75)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -1.14%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "U.S grants tariff exemitions on Apple products. - Apple shares rise following tariff announcement.",
+      "Trump administerisation presses forward with plans for semicondu CTOR tariffs. - Apple begins on-devicedata analysis to enhance AI.",
+      "Apple, NVIDIA receive tariff exemitions for now. - Trump announces upcoming tariffs on imported semiconductors."
+    ],
+    "medium_term_50d": [
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "China announces additional tariffs on Apple products: 34%. - Trump imposes tariffs on imported i Phones and Mac Books.",
+      "President Trump announces 34\\% import tax on Apple products manufactured in China. - US tech and consumer brands top worst-performer list in S&P500 due to tariffs."
+    ],
+    "long_term_200d": [
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "China announces additional tariffs on Apple products: 34%. - Trump imposes tariffs on imported i Phones and Mac Books.",
+      "President Trump announces 34\\% import tax on Apple products manufactured in China. - US tech and consumer brands top worst-performer list in S&P500 due to tariffs."
+    ]
+  }
+}

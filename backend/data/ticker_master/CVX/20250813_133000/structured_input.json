@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "NORMAL (-1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 146.53-157.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.82%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.213)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.22)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 136.43-157.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.16%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 62.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 155.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.83%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 23.3% | OM: 5.0% | NM: 7.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $189.245B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -23.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.7%, Next Q Est Growth: 17.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.95, P/S: 1.43)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.84)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -23.05%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron receives new US license to export cru DE from Venezuela.",
+      "Chevron begins production at new floating vessel in Guy\u0430\u043d\u0430, increasing capacity to over 1.1 million barrels per day. - Exxon Mobil consortium produces oil from fourth vessel at Guyana's Stabrock Block, reaching over 930,0oo bpd. -Chevron complet ES ACQUISITION OF HESS",
+      "Chevron acquires Hess, boosting growth in Guyanaand Permian Bas IN. - Sono Solar rebrands to lead in solar mobility integration."
+    ],
+    "medium_term_50d": [
+      "Chevron begins production at new floating vessel in Guy\u0430\u043d\u0430, increasing capacity to over 1.1 million barrels per day. - Exxon Mobil consortium produces oil from fourth vessel at Guyana's Stabrock Block, reaching over 930,0oo bpd. -Chevron complet ES ACQUISITION OF HESS",
+      "Based on the given data, here are the material events directly affecting CVX on August 3, 20 twenty-five: - Che vron misses expectations in Q2 earnings. -Chevron acquires Hess deal, increasing production and growth potential.",
+      "Chevron acquires Hess, boosting growth in Guyanaand Permian Bas IN. - Sono Solar rebrands to lead in solar mobility integration."
+    ],
+    "long_term_200d": [
+      "Chevron wins arbitration against Hess allowing closure of needle-mattering deal. -Chev\u0440\u043e\u043d completes $ fifty-three bn acquisition of H ess. -Block replaces Hess in S&amp;&amp;P five hundred triggering surge.",
+      "Chevron begins production at new floating vessel in Guy\u0430\u043d\u0430, increasing capacity to over 1.1 million barrels per day. - Exxon Mobil consortium produces oil from fourth vessel at Guyana's Stabrock Block, reaching over 930,0oo bpd. -Chevron complet ES ACQUISITION OF HESS",
+      "Based on the given data, here are the material events directly affecting CVX on August 3, 20 twenty-five: - Che vron misses expectations in Q2 earnings. -Chevron acquires Hess deal, increasing production and growth potential."
+    ]
+  }
+}

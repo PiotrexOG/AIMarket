@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term momentum has softened, with the RSI moving to a neutral 58.1 and the candle pattern now neutral. The price has moved back within normal Bollinger Bands (0.83) and is closer to the 20-day SMA (2.3%), indicating reduced overextension. W: The shift from a bullish candle pattern to neutral, coupled with a declining RSI, suggests a loss of immediate upward momentum. The price is still within a defined range, limiting immediate upside potential. O: News regarding plant closures in Scotland and potential M&A activity introduces some uncertainty. T: Volatility has slightly increased (ATR 1.9%), and the neutral technicals suggest a higher probability of range-bound trading or a minor pullback, increasing downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish (1.7%), but the MACD is showing signs of fading bullish momentum (0.27). The Z-score for SMA50 positioning has decreased significantly to 0.89, indicating a less extreme, more sustainable trend. W: The fading MACD and reduced Z-score suggest that the strong upward acceleration seen previously has moderated. While the trend is still positive, the conviction in its continuation has decreased. O: Strategic developments like natural gas finds and new LNG export facilities provide ongoing support for the medium-term outlook. T: The reduced overextension from the previous period lowers immediate mean reversion risk, but the fading momentum warrants caution. Balance sheet strength and stable fundamentals continue to mitigate some risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term regime remains a SECULAR_BULL_MARKET (7.7%), and the price is positioned in the bullish upper quadrant (81.2%). The HEALTHY_GOLDEN_CROSS structure is still intact and has strengthened slightly. W: While the technicals remain supportive, the fundamental growth profile continues to be a structural weakness, showing STAGNATION_WITH_PROFIT_ISSUES. The disconnect between technical strength and fundamental growth persists. O: Long-term strategic initiatives, such as AI data center power and international field development, continue to be positive narrative drivers. T: Valuation multiples have slightly decreased, and the balance sheet remains healthy, providing a stable risk profile. The persistent fundamental growth deficit remains the primary long-term risk factor, though it is partially offset by the strong secular market regime."
+    }
+  }
+}

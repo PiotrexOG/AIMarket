@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term momentum has accelerated with explosive ROC (14.8%), but the RSI has moved into extreme overbought territory (74.3), indicating potential for a reversal. The price is now within the 20-day range, having moved from a breakout to the middle of the range. The candle pattern has shifted to neutral, and the price is within normal Bollinger Bands. W: The extreme overbought RSI and the overstretched price relative to the 20-day SMA (8.3%) suggest a high probability of a near-term pullback or consolidation. The shift from a breakout to the middle of the range and neutral candle pattern indicates a loss of immediate upward thrust. O: The explosive velocity is a positive, but the extreme overbought conditions and neutral candle pattern temper the bullish outlook. The shift from a breakout to consolidation within the range is a key change. T: The short-term score has decreased by 1.5 points due to the extreme overbought RSI and loss of breakout momentum. Conviction has decreased by 1.5 points as the signals are now mixed, with strong velocity but overbought conditions and a neutral candle. Risk has increased by 1.5 points due to the extreme overbought RSI and price overextension, increasing the probability of a reversal."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term trend is showing signs of fading bullish momentum. The MACD has shifted from accelerating bullish to fading bullish (2.662), and the Z-score relative to the 50-day SMA has decreased to 2.45, still overextended but less so than before. The price is now inside the monthly range, indicating a pause in the strong upward trend. W: The fading MACD and the price moving back inside the monthly range suggest that the strong bullish impulse may be waning. The Z-score, while still elevated, indicates less extreme positioning than previously. O: The shift from a bullish breakout to being inside the monthly range and the fading MACD are key changes from the previous period. The Z-score reduction is a positive sign of de-escalation of overextension. T: The medium-term score has decreased by 0.5 points due to the fading MACD and the price moving back inside the range. Conviction has decreased by 0.5 points as the trend signals are becoming less clear. Risk has increased by 1.0 point due to the fading momentum and the potential for a reversal from overextended levels, although the Z-score has decreased."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.5,
+        "conv": 7.5,
+        "risk": 2.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, with the secular bull market indicator strengthening to 28.5%. The price is near its all-time high, positioned at 96.4% of its long-term range, and the healthy golden cross structure remains intact. The market regime continues to favor a secular bull market. W: While the long-term trend is strong, the price is approaching its upper range limit, which could lead to consolidation or a minor pullback. The news regarding the revocation of VEU status for a specific site, though potentially localized, remains a minor geopolitical overhang. O: The strengthening secular bull market indicator and the price holding near its ATH are positive developments. The continued strength of the golden cross structure provides a solid foundation. T: The long-term score remains unchanged at 8.5, reflecting sustained strength. Conviction remains at 7.5 as the long-term technical picture is clear and supported by fundamentals. Risk remains low at 2.5, as the overall market regime is strongly bullish and the price is supported by strong fundamentals, despite proximity to ATHs."
+    }
+  }
+}

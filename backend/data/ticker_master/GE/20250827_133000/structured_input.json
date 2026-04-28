@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 261.71-281.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.79%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.967)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.07)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 232.24-281.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.41%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 273.68,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.2%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.9% | OM: 19.1% | NM: 18.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.48x, YrsToPay: 1.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 13.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.609B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -11.0%, EPS: 69.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 33.6%, Next Q Est Growth: -23.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.85, P/S: 7.02)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.26)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Korean Air announces record Boeing plane order including GE Aeroengines. - Korean Air signs $13bn engine purchase and maintenance deal with GE.",
+      "GE Aeraspace partners with Kratos for unmanned plane tech. - Korean Air orders 10o Boeing jets, includes GE engines.",
+      "GE Aersospace develops revolutionary new engine through CFM International."
+    ],
+    "medium_term_50d": [
+      "Korean Air announces record Boeing plane order including GE Aeroengines. - Korean Air signs $13bn engine purchase and maintenance deal with GE.",
+      "GE Aersospace develops revolutionary new engine through CFM International.",
+      "GE Aeraspace partners with Kratos for unmanned plane tech. - Korean Air orders 10o Boeing jets, includes GE engines."
+    ],
+    "long_term_200d": [
+      "GE Aersospace develops revolutionary new engine through CFM International.",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "Korean Air announces record Boeing plane order including GE Aeroengines. - Korean Air signs $13bn engine purchase and maintenance deal with GE."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (78.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.6-101.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.68%)",
+        "cycle_macd": "BULLISH_FADING (0.591)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 85.6-102.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.0%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 99.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.2%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 266.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 60.45, P/S: 3.04)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.97)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks selects Nashville for Southeast corporate office. - Starbucks plans $100 million investment in Nashville office. - Starbucks to create 2,000 jobs at new Nashville hub. - Keurig, Nestl\u00e9 extend Starbucks product distribution deal.",
+      "Starbucks to close 150 US stores.",
+      "Starbucks opens new drive-through locations in exurbs."
+    ],
+    "medium_term_50d": [
+      "Starbucks selects Nashville for Southeast corporate office. - Starbucks plans $100 million investment in Nashville office. - Starbucks to create 2,000 jobs at new Nashville hub. - Keurig, Nestl\u00e9 extend Starbucks product distribution deal.",
+      "Starbucks to close 150 US stores.",
+      "Starbucks rebounds on U.S. traffic growth."
+    ],
+    "long_term_200d": [
+      "Starbucks selects Nashville for Southeast corporate office. - Starbucks plans $100 million investment in Nashville office. - Starbucks to create 2,000 jobs at new Nashville hub. - Keurig, Nestl\u00e9 extend Starbucks product distribution deal.",
+      "Starbucks to close 150 US stores.",
+      "Starbucks highlights \"Back to Starbucks\" turnaround progress. - Starbucks announces $500M staffing push. - Starbucks outlines China growth plans. - Starbucks tests additional ordering methods. - Starbucks accelerates in-store and licensed location transformation. - Starbucks rolls out over 1,000 new for-here coffeehouses. - Starbucks expands digital ordering at high-traffic venues."
+    ]
+  }
+}

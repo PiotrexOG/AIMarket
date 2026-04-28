@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 129.17-146.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (12.57%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.425)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.37)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 86.63-146.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (12.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.32%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 145.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.79%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 83.94, P/S: 45.31)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 73.55)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "2. Nvid IA attending China's top supply chain expo for the firsttime. 3. Chinese automakers aiming to eliminate foreign chips by 23'. 4. IMPASS US Sustainble Economy Fund's Ql performance. 5. Dueling billionaires approach to NVIDIA stock.",
+      "Nvidia excluded from forecasts dueto US restrictions. - Deutsche Tele\u043a\u043e\u043c and Nvidai to build AIcloud for industry in Germany.",
+      "Israel attacks Iran energy assets, potential impact on AI stocks including NVDA and Broadcom. - TDV: Nvidia partners with Navitas and Vertiv for next-gen data centers."
+    ],
+    "medium_term_50d": [
+      "Nvidia announces building of world'sfirst industrial AI cloud in Europe. - Europe's manufacturing advancement with 10000GPUs through NVIDIADGX B20o systems. - Partners with European nations and technology leaders to fuel regional transformation. - Announces optimization of sovereign largelanguage models with model buildersonly",
+      "Nvidia excluded from forecasts dueto US restrictions. - Deutsche Tele\u043a\u043e\u043c and Nvidai to build AIcloud for industry in Germany.",
+      "2. Nvid IA attending China's top supply chain expo for the firsttime. 3. Chinese automakers aiming to eliminate foreign chips by 23'. 4. IMPASS US Sustainble Economy Fund's Ql performance. 5. Dueling billionaires approach to NVIDIA stock."
+    ],
+    "long_term_200d": [
+      "Nvidia announces building of world'sfirst industrial AI cloud in Europe. - Europe's manufacturing advancement with 10000GPUs through NVIDIADGX B20o systems. - Partners with European nations and technology leaders to fuel regional transformation. - Announces optimization of sovereign largelanguage models with model buildersonly",
+      "Nvidia excluded from forecasts dueto US restrictions. - Deutsche Tele\u043a\u043e\u043c and Nvidai to build AIcloud for industry in Germany.",
+      "Nvidia faces export restrictions in China. - Nividia's Q1 revenues beat expectations. 12. Nvidia CEo discusses future in China amidst regulations."
+    ]
+  }
+}

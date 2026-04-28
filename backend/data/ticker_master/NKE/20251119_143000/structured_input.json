@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 60.29-70.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.11%)",
+        "cycle_macd": "BULLISH_FADING (0.225)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.25)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 60.29-76.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.62%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 63.17,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.85%))",
+      "volume_dynamics": "AVERAGE (0.79)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 11.2% | NM: 10.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.29x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.978B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -5.0%, EPS: -6.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 188.9%, Next Q Est Growth: -52.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.5, P/S: 1.92)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.71)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -6.36%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Moody\u2019s downgrades Nike'ss debt ratings, causing 2.6% stock decline. - Loop signs partnership with Nike to increase use of recycl ED content.",
+      "Nike raises full-yearguidanceforthirdquarter. - On Holding reportsdouble-digitgrowth. - Disney shares tumble7%. - Under Armoursplitswith Steph Curry.",
+      "Nike signs multi-year of ftake agreement with Loop Industires for virgin- quality polyester resins. - New \"Sport Offense\" strategy launched, uniting Nike, Jordan and Converse for growth."
+    ],
+    "medium_term_50d": [
+      "Moody\u2019s downgrades Nike'ss debt ratings, causing 2.6% stock decline. - Loop signs partnership with Nike to increase use of recycl ED content.",
+      "Nike signs multi-year of ftake agreement with Loop Industires for virgin- quality polyester resins. - New \"Sport Offense\" strategy launched, uniting Nike, Jordan and Converse for growth.",
+      "Nike raises full-yearguidanceforthirdquarter. - On Holding reportsdouble-digitgrowth. - Disney shares tumble7%. - Under Armoursplitswith Steph Curry."
+    ],
+    "long_term_200d": [
+      "Nike signs multi-year of ftake agreement with Loop Industires for virgin- quality polyester resins. - New \"Sport Offense\" strategy launched, uniting Nike, Jordan and Converse for growth.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - New tariffs imposed on imported footwear, affects NKE costs.",
+      "Moody\u2019s downgrades Nike'ss debt ratings, causing 2.6% stock decline. - Loop signs partnership with Nike to increase use of recycl ED content."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated. RSI has moved lower into the neutral zone (40.6), and ROC has turned negative (-3.8%), indicating weakening momentum. The price is now trading below the 20-day SMA, suggesting a loss of short-term support. W: The candle pattern remains neutral, lacking a clear directional signal. The price is still within the middle of its 20-day range, indicating a lack of breakout momentum. The negative ROC and declining RSI suggest a bearish bias. O: The shift in RSI and ROC from neutral to negative territory, coupled with the price moving below the 20-day SMA, presents a risk of further downside. A sustained move below the current range could lead to a retest of lower levels. T: Risk has increased due to the weakening momentum indicators (RSI, ROC) and the price moving below the 20-day SMA. The negative velocity and range position contribute to increased downside exposure."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term outlook has significantly weakened. The MACD has accelerated into bearish territory (-0.452), indicating deteriorating trend momentum. The Z-score relative to the 50-day SMA has moved into negative territory (Z:-0.57), suggesting a bearish trend position. W: Trend alignment remains compressed, indicating a lack of strong directional conviction, but the MACD and SMA position are now bearish. The price is still within a wide monthly range, but the bearish technical signals suggest potential for a breakdown. O: The accelerating bearish MACD and negative SMA positioning suggest a potential for a breakdown below the current consolidation. A sustained move below the 50-day SMA and the lower end of the current consolidation range would confirm a medium-term bearish trend. T: Risk has increased substantially as the MACD has moved into clear bearish territory and the price shows a bearish trend position relative to the 50-day SMA. The deteriorating momentum indicators increase the likelihood of a downside reaction, and the compressed trend still presents some uncertainty but with a bearish bias."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The company's fundamental strengths in business quality, cash generation, and scale remain intact, providing a stable base. However, the long-term technical picture has deteriorated further. W: The secular bear market regime persists, and the death cross structure remains in place, indicating a challenging long-term technical environment. The long-term range position has moved into the bearish lower quadrant (30.6%). Valuation multiples remain premium despite stagnant growth and negative earnings momentum, creating significant multiple risk. The news flow regarding regulatory challenges continues to add to uncertainty. O: A sustained shift in the secular market regime, a material improvement in earnings growth, and a de-rating of valuation multiples are necessary for a long-term bullish re-rating. The current technical and valuation setup remains unfavorable, with increased downside risk. T: Risk has increased due to the deterioration in the long-term range position and the persistent bearish technical structure. Stretched valuations, fundamental growth concerns, and ongoing regulatory headwinds continue to present substantial downside risk."
+    }
+  }
+}

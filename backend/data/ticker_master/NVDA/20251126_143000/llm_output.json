@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technical picture remains weak, with a neutral candle pattern and RSI still in the bearish zone (36.6), though slightly improved from the previous period. The price continues to trade below the 20-day SMA (-7.1%), indicating a lack of immediate upward momentum. ROC remains negative (-8.0%), and the price is positioned in the middle of its 20-day range.\nW: Previous bearish signals persist, with no clear bullish reversal pattern emerging. News flow is mixed, with some reports of potential easing of China export restrictions, but also mentions of sales outlook cuts for certain segments.\nO: A sustained break above the 20-day SMA would be required to signal a short-term recovery. Positive news regarding AI chip demand or regulatory clarity could provide a catalyst, but conviction remains low.\nT: Risk has increased due to elevated volatility (ATR: 5.27%) and continued trading below key short-term moving averages. The expanding range and elevated volume (1.36) suggest increased price action, but the current trend is not supportive of upside."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend has deteriorated further. Trend alignment has compressed (2.55%), and the Z-score relative to the 50-day SMA has moved into bearish territory (Z:-0.84), indicating a loss of upward trend strength. The MACD remains bearish and accelerating (-1.957), reinforcing the negative momentum.\nW: The bearish MACD signal is a strong indicator of trend weakness. Geopolitical developments, particularly regarding export controls to China, continue to create uncertainty, despite some reports of potential easing.\nO: Continued strong demand for AI capacity from major cloud providers is a fundamental support. However, the current technical weakness and the ongoing regulatory scrutiny present significant headwinds.\nT: Risk remains elevated due to the bearish trend position and the persistent uncertainty surrounding geopolitical factors. While the price is within the monthly range, the weakening technicals suggest a higher probability of testing lower support levels."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term secular bull market regime is still in place, though its strength has slightly receded (16.1%). The company's fundamental strengths in business quality, financial health, and growth remain robust. However, the long-term range position has decreased (74.0%), indicating a loss of upward momentum from previous highs.\nW: The risk of exhaustion from an extreme bullish stretch persists (21.82%), although slightly reduced. Geopolitical risks and the ongoing debate about AI valuations continue to introduce long-term uncertainty.\nO: Continued technological leadership in AI and securing critical supply chains are significant long-term advantages. The implied growth (PEG: 0.3) suggests that future earnings potential is still substantial, but this is increasingly challenged by the current market sentiment and valuation.\nT: Risk is high due to the combination of premium valuation multiples (P/E: 69.88, P/S: 39.28) and the potential for geopolitical factors to impact long-term sales channels. The current price level is vulnerable to any significant slowdown in growth or negative sentiment shifts, despite strong underlying fundamentals."
+    }
+  }
+}

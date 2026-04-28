@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 460.86-500.76]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.54%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.134)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 355.67-500.76]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.33%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 491.77,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.37%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.41, P/S: 14.45)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.77)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft hires AI expert from Amazon to lead data and AI division. - Oracle announces strong start to financial year with increased cloud business revenues. - Siemens recruitment of AI expert from Amazon for head of data role. -Microsoft AI CEO discusses new diagnostic breakthough and future of medical AI. -Apple considers using external AI providers for Siri",
+      "Microsoft announces strategic partnership with Varonis for securing AI era. - Power cost increase affects Microsoft and others in Malaysian data centers.",
+      "Microsoft faces delay in next-gen AI chip production to twenty-six. - Soft Bank positions Self as leader in artificial super intelligence. - German authorities consider banning Chinese AI startup Deep Seek."
+    ],
+    "medium_term_50d": [
+      "Microsoft hires AI expert from Amazon to lead data and AI division. - Oracle announces strong start to financial year with increased cloud business revenues. - Siemens recruitment of AI expert from Amazon for head of data role. -Microsoft AI CEO discusses new diagnostic breakthough and future of medical AI. -Apple considers using external AI providers for Siri",
+      "Microsoft suedby authors over useof books in AItraining. - Know Be4 collaborateswith Microsoftto strengthenemail security. These two events directly affect MSFC by mentioning thecompany in relation to legal issues and businesscollaborations respectively.",
+      "Microsoft announces strategic partnership with Varonis for securing AI era. - Power cost increase affects Microsoft and others in Malaysian data centers."
+    ],
+    "long_term_200d": [
+      "Microsoft invests $10+ billion in Scale AI. - MSFT tops $3.trillion market cap, sets records. - Warren Buffett increases stake in MSFT, Amazon.",
+      "Microsoft invests $\u2081\u2084.\u2083 billion in AI firm Scale and recruites its CEO - Microsoft hits an All-TIME High - Starbucks rolls out AI Barista Assistant with Microsoft - Open AI continues working with Scale AIafter Meta deal",
+      "Microsoft expands security footprint: is it the next revenue pillar? - Microsoft says open AI partnership evolving, remains strong - Microsoft acquisitions cybersecurity startup - Microsoft opens watson X AI labs - Microsoft pledges decades long collaboration with Open AI"
+    ]
+  }
+}

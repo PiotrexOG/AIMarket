@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 164.23-181.16]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.66%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.153)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 149.04-181.16]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.97%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 176.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.37%))",
+      "volume_dynamics": "AVERAGE (0.63)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 67.9% | OM: 24.5% | NM: 25.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 2.0x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $90.627B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.7%, EPS: -38.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 20.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.8, P/S: 4.72)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.45)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -38.5%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson invests $2 billion for US manufacturing expansion due to tariff threats - J&J reaches agreement with Fujif ILM Diosynph for NC manufacturing facility, creating 12o new jobs",
+      "Johnson & Johnson appoints Yaj IE Li as CMO for Harbour Bio Med. - Global Targeted Drugs Delivery Market sizes mentions J&J among leaders.",
+      "Johnson & Johnson settlement in opioid lawsuit (if applicable) - F DA approval for Johnson & Johnson multiple myelama therapy - Johnson (& Johnson) spins off Med Tech division - Halting of Johnson & Johnson clinical trial for multiple myelma therapy (if applicable). Based on the provided data, none of the events directly affect Jn J as they either"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson invests $2 billion for US manufacturing expansion due to tariff threats - J&J reaches agreement with Fujif ILM Diosynph for NC manufacturing facility, creating 12o new jobs",
+      "Johnson & Johnson announces FDA approval for new cancer therapy.",
+      "Johnson & Johnson expects better top-line growth in 2nd half. - J&J lifts sales and E PS outlook on new drug launch success."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson expects better top-line growth in 2nd half. - J&J lifts sales and E PS outlook on new drug launch success.",
+      "Johnson & Johnson announces FDA approval for new cancer therapy.",
+      "Johnson & Johnson invests $2 billion for US manufacturing expansion due to tariff threats - J&J reaches agreement with Fujif ILM Diosynph for NC manufacturing facility, creating 12o new jobs"
+    ]
+  }
+}

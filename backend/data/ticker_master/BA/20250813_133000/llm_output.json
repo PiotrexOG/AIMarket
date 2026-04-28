@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has improved, with RSI rising to 48.5 and velocity turning positive at 2.7%. The price is now trading above the 20-day SMA (1.8%) and remains within the mid-range. Mean reversion bands show increased activity (0.76). W: The shooting star candle pattern introduces a bearish signal, suggesting potential overhead resistance. While momentum has improved, the price is still in the middle of its 20-day range, indicating a lack of clear directional conviction. O: Positive news regarding regulatory approval for the Spirit Aerosystems acquisition and significant new aircraft orders from Cathay Pacific are providing a bullish catalyst. However, the impact of Boeing plane shortages on Air India flights remains a short-term concern. T: Risk has decreased due to improved momentum and positive news flow. The operational risks from strikes are still present but are somewhat offset by the strong order book and acquisition progress. Volatility remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains positive (4.58%), and the Z-score relative to the 50-day SMA has strengthened significantly to 1.27. The MACD is recovering from its previous bearish state, now at -0.561, indicating a potential shift in momentum. W: Despite the improving MACD and Z-score, the MACD is still in negative territory, suggesting that the bearish trend has not fully reversed. The price remains within the monthly range, implying that significant resistance could be encountered. O: The news narrative is mixed. The Spirit Aerosystems acquisition approval and large Cathay Pacific orders are significant positives for future growth. However, the ongoing defense worker strike continues to pose an operational risk, potentially impacting production schedules. T: Risk has decreased from the previous period due to the improving MACD and stronger positioning relative to the 50-day SMA. However, the persistent operational risks from labor disputes and the fact that the MACD is still negative prevent a more substantial reduction in risk. The price is approaching the upper bounds of its longer-term range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term technical picture shows the price at the top of its cycle (91.3%), nearing all-time highs. The secular bull market regime remains intact (27.5%), and the exhaustion risk signal has slightly increased (19.73%). W: The proximity to all-time highs and the elevated exhaustion risk signal suggest that further upside may be limited in the short to medium term without significant fundamental catalysts. Conviction in the long-term trend is tempered by these technical signals and the ongoing fundamental challenges. O: The approval of the Spirit Aerosystems acquisition is a significant long-term positive, enhancing Boeing's vertical integration and market position. However, the fundamental issues of thin margins, stressed balance sheets, and negative FCF persist. The ongoing defense worker strike introduces continued operational uncertainty. T: Risk remains elevated due to the extreme bullish stretch exhaustion risk signal and the price being at the top of its long-term range. The fundamental weaknesses and ongoing operational risks, despite positive strategic news, contribute to this elevated risk profile. Volatility is moderate but could increase if the price struggles to break higher."
+    }
+  }
+}

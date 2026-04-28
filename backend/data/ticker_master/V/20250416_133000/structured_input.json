@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "NORMAL (-3.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 299.0-351.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-2.05%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.234)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.68)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-366.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.9%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 334.85,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | MODERATE_VOLATILITY (ATR:  (4.43%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.57)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 65.7% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 52.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $35.926B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.0%, EPS: 17.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.0%, Next Q Est Growth: 0.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.38, P/S: 18.67)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.14)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.98)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "President Trump imposes tariffs on Visa imports. -Visa outperforms in tariff-heavy market. NOTE: Based on provided data, these bullets represent potential material events directly affecting V on 04- thirteen, twenty twenty-five. However, it should be noted that there is no definitive evidence presented in the given text that such events",
+      "Visa insiders sold US$2o M of shares suggesting hesitancy. - None (Analytical reports and investment advice ignored.) - Visaa to announce Fiscal Second Quarter 20 twenty-fivefinancialresultson April29th.",
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings."
+    ],
+    "medium_term_50d": [
+      "President Trump imposes tariffs on Visa imports. -Visa outperforms in tariff-heavy market. NOTE: Based on provided data, these bullets represent potential material events directly affecting V on 04- thirteen, twenty twenty-five. However, it should be noted that there is no definitive evidence presented in the given text that such events",
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection."
+    ],
+    "long_term_200d": [
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection.",
+      "Open AI Chief Sam Altman's World Networkintalkswith Visaforsstablecoinswallet."
+    ]
+  }
+}

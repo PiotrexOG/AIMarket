@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technical picture has shifted towards indecision and overbought conditions. The candle pattern is now a Doji, indicating a lack of clear direction. The RSI has moved into extreme overbought territory (73.6), suggesting a potential for a pullback. While price remains within normal Bollinger Bands and ROC is normal, the SMA20 trend base is weakening slightly. W: The extreme overbought RSI and Doji pattern signal a loss of upward momentum and increased risk of reversal. The price is still in the middle of its 20-day range, which could act as resistance. O: Short-term news is mixed, with ongoing investigations into Visa's network practices and the shutdown of its US open-banking unit, which introduces regulatory uncertainty. However, there are also positive developments like fleet payment card launches and expansion into stablecoins. T: The score has decreased by 0.5 points due to the shift to a Doji pattern and extreme overbought RSI, indicating a loss of short-term bullish conviction. Conviction has decreased by 0.5 points as the technical signals are now mixed and less clear. Risk has increased by 1.0 point due to the extreme overbought RSI and the potential for a reversal, coupled with ongoing regulatory news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 6.8
+      },
+      "synthesis": "S: The medium-term trend is showing signs of fading bullish momentum. The trend alignment remains bearish, and the MACD has turned bullish but is now fading (1.261). The Z-score relative to the SMA50 has moved towards a mean reversion healthy base (Z:0.14), indicating a less robust upward trend. W: The fading MACD and shift in Z-score suggest that the previous bullish acceleration is losing steam. The bearish trend alignment persists, indicating that the longer-term bearish trend has not been definitively broken. O: Medium-term news continues to highlight regulatory challenges, including investigations and the shutdown of the US open-banking unit, which introduces significant headwinds. While there are some new partnerships, the dominant narrative points to increased scrutiny. T: The score has decreased by 0.7 points due to the fading MACD and the shift in Z-score, indicating a weakening medium-term bullish trend. Conviction has decreased by 0.8 points as the bullish signals are becoming less convincing and the bearish trend alignment remains. Risk has increased by 0.8 points due to the fading MACD, the less favorable Z-score, and the persistent negative regulatory news, increasing downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 6.8,
+        "risk": 5.3
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong but shows a slight moderation in bullish positioning. The market regime is still a secular bull market, though the percentage has slightly decreased. The Golden Cross structure remains intact, and the long-term range position has moved slightly lower within the upper quadrant (65.4%), indicating continued bullish control but with less extreme positioning. W: The slight decrease in the secular bull market percentage and the lower long-term range position suggest a potential for consolidation or a less aggressive upward trajectory. The price is still below the long-term average, indicating room for growth but also potential resistance. O: Long-term news continues to present a mixed picture, with ongoing investigations and operational challenges alongside strategic initiatives like AI platform development and stablecoin expansion. The emphasis on technology and new payment solutions provides a positive long-term growth narrative. T: The score has decreased by 0.3 points due to the slight decrease in the secular bull market percentage and the lower long-term range position, indicating a minor moderation in long-term bullish sentiment. Conviction has decreased by 0.3 points as the price action is now reinforcing a less aggressive long-term bullish trend. Risk has increased by 0.3 points due to the slight decrease in the long-term range position and the continued presence of regulatory investigations, adding a marginal layer of long-term structural risk."
+    }
+  }
+}

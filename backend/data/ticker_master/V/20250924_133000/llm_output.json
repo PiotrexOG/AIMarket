@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term technical picture shows an indecision Doji candle, suggesting a pause in momentum. RSI remains in the bearish zone (38.5), but has improved slightly from the previous period. Velocity has also seen a minor improvement (-1.5%). W: The Doji candle indicates a lack of clear direction, and the RSI is still below the neutral 50 level. The price remains in the middle of its 20-day range, but the SMA20 base is still slightly negative (-1.7%). O: Short-term news is mixed, with a positive Bitcoin rewards card launch offset by a significant litigation expense impacting EPS and a competitive threat from the EU's digital euro initiative. T: The score has increased by 0.5 points due to the improved RSI and velocity, and the indecision Doji suggesting potential for a reversal. Conviction has decreased by 0.5 points as the Doji candle introduces ambiguity. Risk has slightly increased by 0.3 points due to the elevated volatility (ATR 1.81%) and the negative implications of the litigation expense and competitive news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend has deteriorated, with MACD now accelerating in a bearish direction (-0.256). The Z-score relative to the SMA50 has also worsened (Z:-1.11), indicating a weaker trend position. W: The accelerating bearish MACD and further negative Z-score signal a clear downside bias in the medium term. The price remains within the monthly range, but the current trend alignment is unfavorable. O: Medium-term news is dominated by the EU digital euro initiative and litigation expenses, both posing potential headwinds. The Bitcoin rewards card launch offers a minor positive offset. T: The score has decreased by 0.5 points due to the accelerating bearish MACD and worsening Z-score. Conviction has decreased by 0.5 points as the bearish trend signals are becoming more pronounced. Risk has increased by 0.5 points due to the deteriorating trend momentum and the negative news flow regarding competitive threats and financial charges."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime remains a 'bear market relief rally' (-0.8%), with a slight downward shift. However, there is an indication of a potential pivot with a 'cross imminent' signal on major crosses. The long-term range position has moved slightly lower to 51.9%. W: The continued bear market relief rally regime and slightly lower range position suggest caution. The 'cross imminent' signal introduces some uncertainty regarding the immediate direction of the long-term trend. O: Long-term news is a mix of competitive threats (EU digital euro) and ongoing strategic initiatives (blockchain partnerships), with litigation expenses also a recurring theme. The overall narrative is complex, with both growth opportunities and significant risks. T: The score has decreased by 0.5 points due to the slight deterioration in the market regime and range position, despite the potential for a long-term pivot. Conviction has decreased by 0.5 points due to the mixed signals from the 'cross imminent' indicator and the ongoing competitive pressures. Risk has increased by 0.5 points due to the persistent bear market regime, the potential for a bearish cross, and the ongoing valuation risk inherent in premium-priced assets."
+    }
+  }
+}

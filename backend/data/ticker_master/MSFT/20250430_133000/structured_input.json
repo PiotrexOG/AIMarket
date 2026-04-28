@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "STAGNANT (1.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 344.79-395.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.38%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.092)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 344.79-419.31]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.78%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 388.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.37%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.52)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.8% | OM: 44.6% | NM: 36.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 30.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $245.122B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.7%, EPS: 22.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -4.5%, Next Q Est Growth: 8.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.79, P/S: 11.84)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.81)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft Q1 results announced - Health Catalyst partners with Microsoft on AI adoption - Microsoft faces potential regulatory scrutiny on tariffs - None Explanation: The first event mentions Microsoft specifically and relates to their Q1 earnings announcement. This meets the criteria of being a material event directly affecting the company. The second event describes a partnership between Health",
+      "Microsoft reports third quarter earnings. - Meta reports third quarter elections. - Google's antitrust trial focuses on AI industry.",
+      "Microsoft faces tariff uncertainty affecting revenues. - Meta Platforms disputes power bill costs in Louisiana. - Nvidia tests competition with Huawei's Ascend ninety ten D AI chip."
+    ],
+    "medium_term_50d": [
+      "Microsoft Q1 results announced - Health Catalyst partners with Microsoft on AI adoption - Microsoft faces potential regulatory scrutiny on tariffs - None Explanation: The first event mentions Microsoft specifically and relates to their Q1 earnings announcement. This meets the criteria of being a material event directly affecting the company. The second event describes a partnership between Health",
+      "Microsoft reports third quarter earnings. - Meta reports third quarter elections. - Google's antitrust trial focuses on AI industry.",
+      "Microsoft faces tariff uncertainty affecting revenues. - Meta Platforms disputes power bill costs in Louisiana. - Nvidia tests competition with Huawei's Ascend ninety ten D AI chip."
+    ],
+    "long_term_200d": [
+      "Kaspersky finds crypto-stealling malware disguising as Microsoft Office package. -Microsoft hits $13\u0411 billon AI revenue run rate, plans $80\u0411 investment.",
+      "Microsoft Q1 results announced - Health Catalyst partners with Microsoft on AI adoption - Microsoft faces potential regulatory scrutiny on tariffs - None Explanation: The first event mentions Microsoft specifically and relates to their Q1 earnings announcement. This meets the criteria of being a material event directly affecting the company. The second event describes a partnership between Health",
+      "Microsoft reports third quarter earnings. - Meta reports third quarter elections. - Google's antitrust trial focuses on AI industry."
+    ]
+  }
+}

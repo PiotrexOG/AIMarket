@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.8)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.06)",
+        "velocity_roc_10": "NORMAL (5.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.9%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 82.52-91.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.22%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.825)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.5-99.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.82%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 94.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.48%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.35, P/S: 2.96)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -14.34)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks lowers prices for selected beverages \u0432\u0402\u201c averagely 5 yen in China. - Competition intensifies in China's coffee market. - Consumers show more caution towards spending due to economic conditions.",
+      "Starbucks hosts 14,\\000 Northern America coffeehouse leaders in Las Vegas (Leadership Experience twenty-fifth). - Star\u0431ucks reduces prices \u043d\u0430 tea-based drinks in China. -Starbucks accelerating new staffing \u0438 service model to all Northern America stores.",
+      "Starbucks appoints new COO."
+    ],
+    "medium_term_50d": [
+      "Starbucks lowers prices for selected beverages \u0432\u0402\u201c averagely 5 yen in China. - Competition intensifies in China's coffee market. - Consumers show more caution towards spending due to economic conditions.",
+      "Starbucks withdraws guidance, leadingtouncertaintyanddownwardrevisions. -Starbucksrevaluatingreliancesonautomation,limitingdeploymentof Siren Craftsystem.",
+      "Starbucks hosts 14,\\000 Northern America coffeehouse leaders in Las Vegas (Leadership Experience twenty-fifth). - Star\u0431ucks reduces prices \u043d\u0430 tea-based drinks in China. -Starbucks accelerating new staffing \u0438 service model to all Northern America stores."
+    ],
+    "long_term_200d": [
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets",
+      "Starbucks withdraws guidance, leadingtouncertaintyanddownwardrevisions. -Starbucksrevaluatingreliancesonautomation,limitingdeploymentof Siren Craftsystem.",
+      "Starbucks lowers prices for selected beverages \u0432\u0402\u201c averagely 5 yen in China. - Competition intensifies in China's coffee market. - Consumers show more caution towards spending due to economic conditions."
+    ]
+  }
+}

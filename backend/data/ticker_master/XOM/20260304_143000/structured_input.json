@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "NORMAL (3.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 138.31-159.6]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.03%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.605)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 115.63-159.6]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.36%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 149.18,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.99%))",
+      "volume_dynamics": "ELEVATED (1.2)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.2%, Next Q Est Growth: 1.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.4, P/S: 1.95)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.44)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Iran closes Strait of Hormuz, threatens to attack ships (Impact on XOM: Potential disruption of oil exports from Middle East) - Expected increase in oil prices due to Middle East conflict (Impact: Higher input costs for XOM's operations) - XOM senior vice president speaks at Morgan Stanley conference (Irrelevant)",
+      "Oil surges causing Exxon stock increase due to disrupted Iranian crude supply. - Closure of Strait of Hormuz raises concerns for Exxon's Middle Eastern operations. - Increase in oil prices leads to significant gain for Exxons stock value.",
+      "Exxon mobil's Uaru and Whiptail oilprojects in Guyanaprogress. - U.S court dismisses Exxon'smeframation lawsuit vs environmentalgroups. - Allows Exxonlegalaction against Californiaattorneygeneral toproceed."
+    ],
+    "medium_term_50d": [
+      "Iran closes Strait of Hormuz, threatens to attack ships (Impact on XOM: Potential disruption of oil exports from Middle East) - Expected increase in oil prices due to Middle East conflict (Impact: Higher input costs for XOM's operations) - XOM senior vice president speaks at Morgan Stanley conference (Irrelevant)",
+      "Oil surges causing Exxon stock increase due to disrupted Iranian crude supply. - Closure of Strait of Hormuz raises concerns for Exxon's Middle Eastern operations. - Increase in oil prices leads to significant gain for Exxons stock value.",
+      "Oil majors begin arbitration over Kazakh $4. six billion fine (Reuters). - Expected $90 oil price scenario for Exxon \u041cobal."
+    ],
+    "long_term_200d": [
+      "Iran closes Strait of Hormuz, threatens to attack ships (Impact on XOM: Potential disruption of oil exports from Middle East) - Expected increase in oil prices due to Middle East conflict (Impact: Higher input costs for XOM's operations) - XOM senior vice president speaks at Morgan Stanley conference (Irrelevant)",
+      "Oil surges causing Exxon stock increase due to disrupted Iranian crude supply. - Closure of Strait of Hormuz raises concerns for Exxon's Middle Eastern operations. - Increase in oil prices leads to significant gain for Exxons stock value.",
+      "Vice President Jd Vance's comments increase odds of Iran strike, potentially impacting XOM through geopolitics and oil prices. - Trump considers using Diego Garcia for Iran strikes, raising military tensions and oil prices possibly affecting XOM."
+    ]
+  }
+}

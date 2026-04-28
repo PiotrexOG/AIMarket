@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The RSI has improved to 38.1, moving out of the deeply bearish zone and indicating reduced selling pressure. The price is now closer to the 20-day SMA (-3.0%) and within normal Bollinger Bands (0.41), suggesting less immediate downside exhaustion. Velocity ROC has normalized to 2.5%. W: The candle pattern has deteriorated to 'STRONG_BEARISH', and the price remains in the middle of the 20-day range, lacking clear directional conviction. News narrative is mixed, with some inventory clearance potential but also ongoing legal challenges and manufacturing concerns. O: The improvement in RSI and price stabilization near the 20-day SMA offer a slight positive bias, suggesting a potential for a short-term bounce. However, the strong bearish candle pattern limits upside conviction. T: Risk has slightly decreased due to improved momentum indicators, but the bearish candle pattern and mixed news narrative maintain a moderate downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The MACD has shifted decisively to bullish territory (0.406), accelerating positively from its previous recovery. The Z-score for the 50-day SMA has improved significantly to -1.16, indicating a less bearish trend position and closer proximity to the moving average. The price is now inside the monthly range. W: Trend alignment remains bearish (-14.3%), but the accelerating bullish MACD provides a strong counter-signal. The news narrative remains positive regarding tariff pauses and insider buying, with additional mentions of inventory clearance. O: The strong bullish MACD signal, coupled with improved SMA positioning and continued positive news flow, suggests a potential for a medium-term trend reversal or at least a significant stabilization. Conviction is increasing due to the confluence of technical and fundamental positive signals. T: Risk has decreased due to the strong bullish MACD momentum and improved SMA positioning. The positive news narrative further mitigates downside risk, although the underlying trend alignment is still technically bearish."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term range position has improved to 15.3% in the lower quadrant, indicating increased accumulation at multi-month lows compared to the previous 6.4%. The secular bear market regime percentage has slightly improved (-24.3% vs -27.7%). Valuation multiples remain attractive. W: The death cross structure persists and has widened slightly (-8.96%). The secular bear market regime continues to dominate. The news narrative still includes historical warnings of sales declines and revenue issues, although the immediate tariff concerns have seen some positive developments in the medium term. O: While the price shows better accumulation at multi-month lows and valuation remains attractive, the persistent death cross structure and secular bear market regime continue to weigh heavily on the long-term outlook. The historical earnings warnings still present a significant overhang, limiting upside conviction. T: Risk remains elevated due to the entrenched secular bear market and death cross structure. Despite improvements in short and medium-term indicators and better accumulation, the fundamental long-term structural weaknesses and historical earnings concerns contribute to elevated downside risk."
+    }
+  }
+}

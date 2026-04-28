@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.58-27.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.34%)",
+        "cycle_macd": "BULLISH_FADING (0.301)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.11-27.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.35%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.16,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.61%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.81, P/S: 2.34)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.68)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.4x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump administration announces drug pricing deal with Pfizer. - Production delay for Pfizer'sbest-selling drug affects Q3 revenues.",
+      "Pfizer offers high yield and capital appreciation opportunities after tariff repriere. - Trump administration reaches deal with Pfzer to cut drug prces, most Americans not affected. - Venture financingfor m RNA-based vaccine development decreases 82%. - Pfzer beats estimates in previous earnings reports. - Former top FDA official joins Eli Lilly.",
+      "Trump administration announches MFN drug padding deal with Pfize. -PFizer commits to pricing currentand new medicines to same prices inother developed countries(state Medicaid)."
+    ],
+    "medium_term_50d": [
+      "Trump administration announces drug pricing deal with Pfizer. - Production delay for Pfizer'sbest-selling drug affects Q3 revenues.",
+      "Trump administration announches MFN drug padding deal with Pfize. -PFizer commits to pricing currentand new medicines to same prices inother developed countries(state Medicaid).",
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline."
+    ],
+    "long_term_200d": [
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline.",
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)",
+      "Pfizer to purchase Metserafor up to $ seventh billions for obesitydrugs - Pfizers acquisitionof Metseraannounced - Pfizertargetsobesitydrugmarketwith Metseracurchase - Pfzerbuys Metseradeveloplongactingobesitydrugg - Pfzermakesmajorstrategicdec"
+    ]
+  }
+}

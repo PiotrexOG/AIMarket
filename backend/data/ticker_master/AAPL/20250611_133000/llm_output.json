@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term technical picture has improved significantly. The neutral candle pattern, coupled with RSI moving back into the neutral zone (43.2), suggests a stabilization of momentum. The price is consolidating around the 20-day SMA, indicating potential support. ROC has turned positive, signaling a slight uptick in velocity. W: The candle pattern is neutral, lacking strong directional conviction. The price remains within the middle of its 20-day range, indicating a lack of breakout momentum. O: The shift in RSI and ROC from bearish to neutral territory provides a foundation for a potential upward move. Sustained consolidation above the 20-day SMA could lead to a retest of the upper range. T: Risk has decreased due to the improved momentum indicators and stabilization around the SMA. However, the lack of a strong bullish candle pattern and range breakout limits the upside potential, keeping the risk at moderate levels."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term outlook has strengthened considerably. The MACD has accelerated into bullish territory (0.187), indicating improving trend momentum. The Z-score relative to the 50-day SMA remains healthy, suggesting stability. Trend alignment is still compressed but showing signs of upward bias. W: Trend alignment remains compressed, indicating a lack of strong directional conviction. The price is still within a wide monthly range, and while MACD is bullish, it needs to sustain this momentum. O: The accelerating MACD and stable SMA positioning suggest a potential for a breakout above the current consolidation. A sustained move above the 50-day SMA and the upper end of the current consolidation range would confirm a medium-term bullish trend. T: Risk has decreased as the MACD has moved into a clear bullish territory and the price shows stability around the 50-day SMA. The improving momentum indicators reduce the likelihood of a downside reaction, although the compressed trend still presents some uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The company's fundamental strengths in business quality, cash generation, and scale remain intact, providing a stable base. The long-term range position has slightly improved, moving towards the neutral zone. W: The secular bear market regime and death cross structure persist, indicating a challenging long-term technical environment. Valuation multiples remain premium despite stagnant growth and negative earnings momentum, creating significant multiple risk. The long-term range position has deteriorated slightly. O: A sustained shift in the secular market regime, a material improvement in earnings growth, and a de-rating of valuation multiples are necessary for a long-term bullish re-rating. The current technical and valuation setup remains unfavorable. T: Risk has increased slightly due to the slight deterioration in long-term range position, while the persistent bearish technical structure, stretched valuations, and fundamental growth concerns continue to present substantial downside risk. The news flow regarding regulatory challenges adds to the uncertainty."
+    }
+  }
+}

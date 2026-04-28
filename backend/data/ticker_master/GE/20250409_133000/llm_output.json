@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technicals have deteriorated significantly, moving from neutral to extreme oversold conditions. RSI at 22.4 and ROC at -20.2% indicate strong downward momentum. The price is testing the lower Bollinger Band (0.0) and is significantly below the 20-day SMA (-13.8%). W: Despite a strong bullish candle pattern, the overwhelming bearish momentum indicators and extreme oversold readings suggest a potential for a short-term bounce, but the underlying trend is weak. O: Negative news regarding potential losses in GE Healthcare due to tariffs adds to short-term headwinds, contrasting with some prior contract wins. T: Risk has substantially increased due to the extreme oversold conditions, testing lower bands, and significant negative velocity. While a bounce is possible, the underlying weakness and negative news elevate downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend has further weakened, with the MACD accelerating bearishly (-4.424). The Z-score relative to the 50-day SMA is now at an extreme outlier (-2.95), indicating significant overextension to the downside. The price remains within the monthly range but is positioned at the lower end. W: The bearish MACD and extreme Z-score suggest a potential for a trend reversal or a significant oversold bounce, but the conviction in the current trend is low. O: The news narrative remains mixed, with ongoing restructuring plans and contract wins offset by new concerns like potential losses in GE Healthcare. T: Risk has increased significantly due to the extreme bearish technicals and the price's position relative to the 50-day SMA. The expanding volatility context (ATR: 4.9%) further amplifies downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime has shifted to a bear market relief rally, with the price now in the lower quadrant (32.4%). While the golden cross structure remains intact, the overall market context is less favorable. W: The fundamental growth profile remains a significant concern, with stagnant revenue and declining EPS. The premium valuation, though slightly reduced, still poses a risk against this backdrop. O: The long-term strategic positives from restructuring and contract wins are present but are overshadowed by the current market regime and fundamental growth challenges. T: Risk remains elevated due to the shift in market regime, the lower long-term range position, and the persistent disconnect between premium valuations and declining earnings. The increased volatility context also adds to the downside risk."
+    }
+  }
+}

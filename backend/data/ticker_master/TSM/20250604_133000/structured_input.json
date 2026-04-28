@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "NORMAL (2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.8%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 170.59-199.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.82%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.373)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.75)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 134.25-199.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 203.33,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 57.4% | OM: 47.1% | NM: 41.2%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3140.91732B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.9%, EPS: 51.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3300.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.81, P/S: 0.34)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.23)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.31x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC faces limited impactfrom global tariffs - TSM jumphas nearly 14% in three monthsfueled by AI demademand and strongearnings - TSCM sees A Ichipdemand outpacing supply - Meta buys Constellationnuclear plantpowerfor 20years",
+      "TSMC eyes UAE gigafab with US regulatory approval sought - Proposed UAE project: complex of six advanced factories - TSM considering major investment in new factory location",
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel acquires TSMC's foundry business unit. - Tsung Yong, CEO of TSMC, resigns unexpectedly. - Fire at TSMC Fab 18 causes significant damage. - New York"
+    ],
+    "medium_term_50d": [
+      "TSMC faces limited impactfrom global tariffs - TSM jumphas nearly 14% in three monthsfueled by AI demademand and strongearnings - TSCM sees A Ichipdemand outpacing supply - Meta buys Constellationnuclear plantpowerfor 20years",
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel acquires TSMC's foundry business unit. - Tsung Yong, CEO of TSMC, resigns unexpectedly. - Fire at TSMC Fab 18 causes significant damage. - New York",
+      "TSMC eyes UAE gigafab with US regulatory approval sought - Proposed UAE project: complex of six advanced factories - TSM considering major investment in new factory location"
+    ],
+    "long_term_200d": [
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel acquires TSMC's foundry business unit. - Tsung Yong, CEO of TSMC, resigns unexpectedly. - Fire at TSMC Fab 18 causes significant damage. - New York",
+      "TSMC faces limited impactfrom global tariffs - TSM jumphas nearly 14% in three monthsfueled by AI demademand and strongearnings - TSCM sees A Ichipdemand outpacing supply - Meta buys Constellationnuclear plantpowerfor 20years",
+      "Trump administration plans wider China tech restriction impacting TSM."
+    ]
+  }
+}

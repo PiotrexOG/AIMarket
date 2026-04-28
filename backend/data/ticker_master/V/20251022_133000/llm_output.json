@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. The RSI has fallen into the neutral zone (49.4), indicating a loss of upward momentum. Velocity has turned negative (-1.5%), and while the price is stable near the SMA20 base (0.8%), the bullish candle pattern (Hammer/Pinbar) is now less convincing given the momentum shift. The price remains in the middle of its 20-day range. W: The shift in RSI and ROC, coupled with the neutral candle pattern despite its bullish shape, suggests a lack of immediate buying conviction. The price being in the middle of the range offers no clear directional advantage. O: Short-term news flow is mixed. While there are positive partnership announcements (Moniepoint, Spot ON), a regulatory investigation into Visa card network practices introduces a new risk factor. T: The score has decreased by 1.3 points due to the significant drop in RSI and negative ROC, indicating weakening short-term momentum. Conviction has decreased by 1.3 points as the technical signals have turned less supportive and the news flow is mixed. Risk has increased by 0.8 points due to the negative momentum indicators, the regulatory investigation news, and the price being in the middle of the range, which offers less support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend has weakened. The MACD has turned bearish (-0.146), although it is showing signs of recovery. Trend alignment is compressed and slightly negative (-0.03%), indicating a lack of clear direction. The Z-score relative to the SMA50 has decreased to 0.54, suggesting less bullish positioning. The price remains inside the monthly range. W: The bearish MACD crossover, even with recovery signs, and the compressed, slightly negative trend alignment point to a loss of medium-term bullish momentum. The reduced Z-score indicates a less favorable position relative to the 50-day moving average. O: Medium-term news remains focused on partnerships and strategic initiatives, but the inclusion of a regulatory investigation adds a layer of uncertainty that was not present previously. T: The score has decreased by 1.2 points due to the bearish MACD crossover and the weakening trend alignment and Z-score. Conviction has decreased by 1.7 points as the technical signals have deteriorated significantly, and the news flow now includes a negative regulatory element. Risk has increased by 0.8 points due to the bearish MACD, compressed trend alignment, and the introduction of regulatory risk, which increases downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term outlook remains cautiously optimistic, but with reduced conviction. The market regime is still a 'bull market correction' (0.7%), and the long-term range position has slightly decreased to the neutral zone (62.7%). The potential pivot signal from major crosses remains unchanged (-0.09%). W: The shift to a more neutral long-term range position and the continued 'bull market correction' regime suggest a less favorable macro environment for sustained upside. The lack of improvement in the long-term range position indicates a plateauing of the long-term trend. O: Long-term news continues to highlight Visa's strategic expansion into stablecoins and digital payments, which remains a positive structural theme. However, the regulatory investigation mentioned in shorter-term news could have long-term implications if it escalates. T: The score has decreased by 0.5 points due to the shift to a more neutral long-term range position and the persistent 'bull market correction' regime, which implies a less robust macro backdrop. Conviction has decreased by 0.8 points as the long-term range position has moved towards neutral, and the potential for regulatory headwinds introduces uncertainty. Risk has increased by 0.5 points due to the shift in the long-term range position towards neutral and the potential for regulatory issues to impact long-term valuation multiples."
+    }
+  }
+}

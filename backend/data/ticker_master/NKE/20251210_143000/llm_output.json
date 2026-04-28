@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term momentum has softened. RSI has declined to 54.0, and velocity ROC has decreased to 2.3%. The price is now trading 0.9% below the 20-day SMA, indicating a loss of upward traction. The price has moved into the middle of its 20-day range. W: Bollinger Bands have tightened to 0.39, suggesting reduced volatility. The candle pattern remains neutral. O: The shift from resistance testing to a middle-range position, coupled with reduced volatility, suggests a consolidation phase. The improved Bollinger Band reading offers a slightly more stable environment. T: The weakening momentum and the price moving away from the 20-day SMA are cautionary. The shift to a middle-range position, while less precarious than resistance, offers no immediate upside. News regarding leadership changes and sustainability claim issues adds to the uncertainty. Score decreased due to softening momentum and trend base, while risk increased slightly due to the shift away from upward momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.2
+      },
+      "synthesis": "S: The medium-term MACD has faded to 0.241, indicating a loss of bullish momentum. The Z-score relative to the 50-day SMA has become more negative at -0.38, suggesting a weaker position relative to the trend. W: The trend alignment remains bearish with a gradual descent (-2.93%). The price is still within the monthly range but shows no signs of breaking the bearish trend. O: The fading MACD and increased negative Z-score suggest a continuation of the bearish trend. The price is not showing signs of sustained recovery. T: The persistent bearish trend alignment and the fading bullish signals are significant risks. The conviction remains low due to the conflicting signals of a weakening MACD within a bearish trend. News regarding leadership changes and sustainability claims adds to the downside risk. Score decreased due to fading MACD and more negative Z-score, while risk increased slightly due to the continued bearish trend alignment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.7,
+        "conv": 4.5,
+        "risk": 6.9
+      },
+      "synthesis": "S: The long-term range position has moved lower to 40.9%, indicating a more neutral to slightly bearish stance within the cycle. Fundamentals remain robust with strong business quality and financial health. W: The market regime remains a secular bear market (-6.5%), and the \"Death Cross\" structure has widened slightly to -2.75%, indicating a persistent bearish long-term technical outlook. Growth profile continues to show stagnation and profit issues. O: The stable fundamentals provide a degree of resilience. The slight decrease in long-term range position offers a minor negative offset to the bearish technical structure. T: The \"Death Cross\" structure represents a significant structural deterioration, increasing long-term risk substantially. The stagnant growth profile and the ongoing secular bear market regime are persistent headwinds. The news regarding leadership changes and China revenue decline further exacerbates downside risk. Score has slightly decreased due to the lower range position, while risk remains elevated due to the persistent bearish technicals and fundamental concerns. The widening of the death cross structure also contributes to increased risk."
+    }
+  }
+}

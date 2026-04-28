@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has softened, with RSI moving to a neutral 56.8. The price remains stable near the 20-day SMA (+3.0%), and mean reversion bands show slightly reduced activity (0.89). Velocity has normalized to 2.1%, indicating a less stagnant, but not strongly trending, environment. W: The \"STRONG_BEARISH\" candle pattern persists, creating a discordant signal against the neutral momentum indicators. The price is still within the middle of its 20-day range, suggesting a lack of decisive directional conviction. O: New order flow from Macquarie Air Finance for 737 MAX jets is a positive, but the potential reacquisition of Spirit Aero Systems introduces complexity and potential integration challenges. T: Risk has increased slightly due to the shift in RSI to neutral and the persistence of the bearish candle pattern, which outweighs the normalized velocity. The score has been adjusted downwards to reflect the reduced short-term bullish conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains in a gradual ascent (2.41%), and the Z-score relative to the 50-day SMA is still in a bullish position (0.75). Crucially, the MACD has accelerated into a strong bullish territory (0.463), confirming a positive shift in momentum. W: While the trend is gradually ascending, the price is still contained within the broader monthly range, indicating that a significant breakout has not yet occurred. The conviction in the MACD signal is strong, but the overall trend needs to break out of its current range to confirm sustained upward momentum. O: The potential reacquisition of Spirit Aero Systems, if approved by the EU, could lead to greater operational control and synergy. The large deal with Korean Air for 131 planes continues to underpin medium-term demand. T: Risk has decreased as the MACD has moved into a strongly bullish accelerating phase, providing a more robust signal than previously. The improving trend alignment and positive order flow contribute to a higher score and increased conviction, as the technical picture strengthens."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term technical picture shows the price has slightly retreated from its peak but remains at the top of its cycle (90.9%). The secular bull market regime is stable (26.4%), though the exhaustion risk has marginally increased (19.78%). W: The price approaching the top of its long-term range continues to present a risk of consolidation or a short-term pullback. The fundamental challenges of thin margins and negative FCF persist, tempering conviction in the long-term technical strength. O: The ongoing process of reacquiring Spirit Aero Systems introduces strategic considerations and potential integration risks. The large deal with Korean Air, while significant, does not fundamentally alter the long-term business quality concerns. T: Risk remains elevated due to the price being at the top of its long-term range and the marginal increase in exhaustion risk. The persistent fundamental weaknesses in profitability and cash generation continue to weigh on the long-term outlook, limiting the score despite the stable technical regime."
+    }
+  }
+}

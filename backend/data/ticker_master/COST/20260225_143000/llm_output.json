@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "risk": 6.8
+      },
+      "synthesis": "S: Short-term momentum has softened, with RSI moving to a neutral zone (57.1) and velocity showing stagnation (0.1%). The price is stable near the 20-day SMA (1.5%) but remains in the middle of its 20-day range. W: The score has decreased due to the deterioration in momentum indicators and stagnant velocity, indicating a loss of short-term bullish conviction. Conviction has declined as the previously strong signals have weakened. Risk has increased as the price is no longer showing strong upward momentum and is consolidating within a range, increasing potential downside exposure. O: The short-term outlook has shifted from bullish to neutral-to-slightly-bearish. The loss of momentum and stagnant velocity suggest a pause or potential reversal in the immediate trend. T: Positive news regarding potential tariff reductions could offer some support, but the technical deterioration is a more dominant factor in the short term. The ongoing legal scrutiny over contamination allegations remains a background risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows slightly decelerating momentum (5.14%), and the MACD has shifted to a bearish recovery (-2.746). The price remains well-positioned relative to the 50-day SMA (Z:1.05) and is within the monthly range. W: The score has decreased due to the bearish MACD signal, which overrides the still positive trend alignment and SMA positioning. Conviction has decreased as the conflicting signals (bullish trend vs. bearish MACD) reduce clarity. Risk has increased due to the bearish MACD signal, which suggests a potential for a trend reversal or consolidation. O: The medium-term outlook has shifted from strongly bullish to neutral-to-cautiously-bearish. The bearish MACD crossover is a significant warning sign, despite other indicators remaining relatively positive. T: The potential for tariff reductions offers some fundamental support, but the bearish MACD signal suggests that the market may be discounting near-term growth prospects. The ongoing legal challenges, while not directly impacting the MACD, contribute to an environment of uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.2,
+        "risk": 4.8
+      },
+      "synthesis": "S: The long-term market regime remains a bull market correction (4.9%), and the long-term range position has moved slightly lower into the upper quadrant (67.0%). The death cross structure persists (-1.71%), but its negative impact is less pronounced than previously. W: The score has seen a marginal decrease due to the slight pullback in long-term range position and the continued presence of the death cross, which caps upside potential. Conviction has slightly decreased as the long-term structural impediments remain. Risk has slightly increased as the price has moved further from its peak within the long-term range. O: The long-term outlook remains cautiously bullish. While the price has pulled back from its highs, it still resides in a strong bullish position within its long-term range. The fundamental strength of the company provides a solid base, but the death cross and valuation multiples suggest limited near-term upside. T: The company's robust fundamentals, including its fortress balance sheet and scale, continue to support a long-term bullish view. However, the persistent death cross and high valuation multiples are structural headwinds that temper the bullish conviction. The news regarding potential tariff reductions is a positive long-term development, but it does not fundamentally alter the existing technical and valuation risks."
+    }
+  }
+}

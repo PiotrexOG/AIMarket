@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The short-term momentum has normalized significantly, with RSI moving to a neutral 57.5 and velocity stagnating. The Doji pattern persists, indicating continued indecision. Price is now closer to the 20-day SMA, suggesting a loss of upward thrust. W: The previous overbought condition has resolved, but the lack of upside momentum and the continued indecision pattern increase the risk of a downside correction. Analyst sentiment remains deteriorating. O: News regarding the Golden Pass LNG project reaching first production and potential benefits from helium shortages offer some fundamental support, but are not enough to overcome the technical fatigue. T: The shift from overbought to neutral momentum, coupled with stagnant velocity and persistent indecision, points to a weakening short-term outlook. The risk has increased due to the loss of upward momentum and the potential for a reversal."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The medium-term trend alignment shows a gradual ascent, but the MACD has turned decisively bearish and is accelerating downwards. The Z-score relative to the 50-day SMA has moved towards mean reversion, indicating a loss of bullish positioning. W: The bearish MACD acceleration and the shift towards mean reversion in the SMA Z-score signal a significant deterioration in the medium-term trend. Analyst conviction remains moderate, but the technicals are now pointing lower. O: While the stock remains within its monthly range, the accelerating bearish MACD divergence is a strong warning sign. News flow, while mixed, does not provide a strong counter-signal to the technical breakdown. T: The accelerating bearish MACD and the move towards mean reversion suggest a high probability of a trend reversal or a significant pullback. The risk has increased substantially due to these deteriorating technicals, and conviction in any upward movement is low."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The secular bull market regime is still in place, but the long-term range position has decreased further to 68.7%, indicating a weaker overall trend. The risk of exhaustion due to the bullish stretch has slightly increased. W: The fundamental growth profile remains stagnant, and the valuation, while fair, is not compelling given the lack of growth. The shift in long-term range position and the increased exhaustion risk suggest that the long-term uptrend is losing steam. O: Positive news regarding LNG projects and operational advancements provides some fundamental support, but the core business growth remains challenged. The market regime is still supportive, but the stock's internal strength is waning. T: The combination of a declining position within the long-term range, increased exhaustion risk, and stagnant fundamentals points to a weakening long-term outlook. Conviction has decreased, and the risk of a longer-term mean reversion event has increased."
+    }
+  }
+}

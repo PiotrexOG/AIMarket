@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.14)",
+        "velocity_roc_10": "NORMAL (-6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 204.3-245.08]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.08%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.777)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.41)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 204.3-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.65%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.6,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.8%))",
+      "volume_dynamics": "ELEVATED (1.14)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 87.17, P/S: 1.84)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 30.12)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.77)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.26x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing CFO: Defects down 40%, margins flat or positive. - Boeing CFO: Renton to support 47 737s monthly. - Boeing CFO: Expects 500 737 deliveries this year. - Boeing CFO: Expects 47 jet rate by year-end. - Boeing CFO: Wiring impacted 737s need rework. - Boeing CFO: Expects 120 737 deliveries in Q1. - Boeing CFO: Expects 15 787 deliveries this quarter. - Boeing CFO: Resumed 737 deliveries last week. - Boeing CFO: Expects 90-1",
+      "Boeing awarded $2.34 billion Air Force contract modification. - NASA report criticizes Boeing Starliner, pauses crewed flights. - Boeing asks suppliers to check for Middle East war impact. - Atlas Air orders 20 Airbus A350 cargo jets over Boeing. - Biggest Boeing 747 user makes first Airbus order for freighters.",
+      "Boeing repairs 737 MAX jets after wiring flaw. - Boeing deliveries impacted by 737 MAX wiring issue. - Boeing wins $2.43 billion U.S. Air Force deal."
+    ],
+    "medium_term_50d": [
+      "Boeing awarded $2.34 billion Air Force contract modification. - NASA report criticizes Boeing Starliner, pauses crewed flights. - Boeing asks suppliers to check for Middle East war impact. - Atlas Air orders 20 Airbus A350 cargo jets over Boeing. - Biggest Boeing 747 user makes first Airbus order for freighters.",
+      "Boeing CFO: Defects down 40%, margins flat or positive. - Boeing CFO: Renton to support 47 737s monthly. - Boeing CFO: Expects 500 737 deliveries this year. - Boeing CFO: Expects 47 jet rate by year-end. - Boeing CFO: Wiring impacted 737s need rework. - Boeing CFO: Expects 120 737 deliveries in Q1. - Boeing CFO: Expects 15 787 deliveries this quarter. - Boeing CFO: Resumed 737 deliveries last week. - Boeing CFO: Expects 90-1",
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit."
+    ],
+    "long_term_200d": [
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit.",
+      "Boeing awarded $2.34 billion Air Force contract modification. - NASA report criticizes Boeing Starliner, pauses crewed flights. - Boeing asks suppliers to check for Middle East war impact. - Atlas Air orders 20 Airbus A350 cargo jets over Boeing. - Biggest Boeing 747 user makes first Airbus order for freighters.",
+      "Boeing CFO: Defects down 40%, margins flat or positive. - Boeing CFO: Renton to support 47 737s monthly. - Boeing CFO: Expects 500 737 deliveries this year. - Boeing CFO: Expects 47 jet rate by year-end. - Boeing CFO: Wiring impacted 737s need rework. - Boeing CFO: Expects 120 737 deliveries in Q1. - Boeing CFO: Expects 15 787 deliveries this quarter. - Boeing CFO: Resumed 737 deliveries last week. - Boeing CFO: Expects 90-1"
+    ]
+  }
+}

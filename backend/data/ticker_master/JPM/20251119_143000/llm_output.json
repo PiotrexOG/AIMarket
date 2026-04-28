@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has shifted significantly from extreme overbought to neutral (RSI 42.8), indicating a loss of upward pressure. The price has moved from critical resistance to the middle of the 20-day range. Velocity (ROC) is negative, and the price is now below the 20-day SMA. W: The previous bullish momentum has dissipated, and the price is no longer at resistance. Elevated volume (1.11) suggests increased activity but without clear directional conviction. O: Positive news regarding fraud prevention and blockchain initiatives offers some fundamental support, but is not currently translating into price momentum. T: The short-term outlook is now neutral to slightly bearish due to the loss of momentum and shift away from resistance. The risk has increased as the previous bullish signal has reversed, and the price is no longer in 'blue sky' territory. Volatility has slightly increased."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend has deteriorated significantly. MACD has turned bearish and is accelerating, and the price is now in a bearish trend position relative to the 50-day SMA (Z-score -0.75). The price has moved back inside the monthly range after previously breaking out. W: The previous bullish breakout has failed, and the trend alignment has shifted negatively. The fading bullish MACD has now become a bearish signal. O: Fundamental news flow remains mixed, with some positive developments in fraud prevention and blockchain, but these are not overcoming the technical deterioration. T: The medium-term outlook is now bearish. The conviction has decreased due to the clear technical breakdown and the failure of the prior bullish trend. Risk has increased substantially due to the bearish MACD crossover, negative Z-score, and the price retreating from resistance. The stressed balance sheet remains a persistent concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term secular bull market regime and healthy golden cross structure remain intact, but the price has retreated from its all-time highs to the upper quadrant of its long-term range (84.0%). This indicates a loss of upward momentum from the previous 'blue sky' territory. W: The price is no longer in uncharted territory, reducing the immediate upside potential and increasing the relative valuation risk. The stressed balance sheet and negative FCF remain critical long-term headwinds, especially in a potentially higher-rate environment. O: Long-term strategic initiatives and robust business quality metrics continue to provide a solid foundation. The company's scale and market position are undeniable. T: The long-term score has decreased due to the price moving away from ATHs and the increased relative valuation risk. Conviction remains moderate, balancing the favorable macro regime and business quality against significant financial health and valuation concerns. Risk has increased due to the price no longer being in 'blue sky' territory and the persistent fundamental weaknesses."
+    }
+  }
+}

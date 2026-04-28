@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has weakened, with the price now trading below the 20-day SMA (-0.8%) and velocity declining to 1.2%. The RSI remains in a neutral zone at 56.8, but the mean reversion bands have tightened significantly (0.37), indicating reduced volatility. W: The \"STRONG_BEARISH\" candle pattern persists, creating a strong bearish signal that is now more aligned with the declining trend base. The price is still in the middle of its 20-day range, but the shift in trend base and reduced volatility suggest a potential for further downside. O: Positive news regarding Boeing's August deliveries (highest since 2018) and successful autonomous drone demonstrations offer some counter-narrative, but are overshadowed by the deteriorating technicals. T: Risk has increased due to the shift in the 20-day SMA and the tightening of mean reversion bands, suggesting increased downside potential. The score is reduced to reflect the weakening short-term technicals and increased risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment has softened, with the gradual ascent slowing to 1.65%. Crucially, the MACD has flipped to a bearish accelerating signal (-0.622), indicating a significant shift in momentum. The Z-score relative to the 50-day SMA has moved to a mean reversion healthy base (Z:-0.04). W: The bearish MACD signal is a strong negative, overriding the still positive, albeit slower, trend alignment. The price remains within the monthly range, but the technical indicators are now pointing towards a potential downturn. O: The news flow remains mixed, with a large order from West Jet for additional planes providing some support, but the ongoing reacquisition of Spirit Aero Systems and the US judge's hearing on the avoided prosecution deal introduce uncertainty. T: Risk has increased substantially due to the bearish MACD crossover and the weakening trend alignment. The score is reduced to reflect the deteriorating medium-term technical picture and the increased downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term technical picture shows a slight retreat from the previous cycle peak, with the price now at 86.6% of its range. The secular bull market regime remains, but the exhaustion risk is stable at 19.79%. W: The price is still in the upper quadrant of its long-term range, but the combination of a weakening medium-term trend and persistent fundamental issues limits conviction. The fundamental challenges of thin margins and negative FCF remain significant headwinds. O: The news narrative for the long term is dominated by the ongoing reacquisition of Spirit Aero Systems and the completion of its acquisition, which introduces strategic considerations and potential integration risks. The large deal with Korean Air for 131 planes, while positive for order flow, does not fundamentally alter the long-term business quality concerns. T: Risk remains elevated due to the price being in the upper quadrant of its long-term range and the persistent fundamental weaknesses in profitability and cash generation. The score is reduced to reflect the increased risk and reduced conviction in the long-term outlook."
+    }
+  }
+}

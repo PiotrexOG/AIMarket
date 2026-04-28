@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.46)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 148.89-159.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.34%)",
+        "cycle_macd": "BULLISH_FADING (0.116)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.66)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 148.89-161.86]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.2%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 59.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 153.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.63, P/S: 1.48)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 1.47)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.12x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron acquires pre-t treatment and biog AS plant in UK. - CIP focuses solely on bi Gas production at Northwich facility.",
+      "Chevron announces leadership change. - chevron Lumsus Global expands catalyst portfolio - Che vron reports recordproduction in Q3 after Hessacquisition - Chevrondividendmay increase due to higherfree cash flow",
+      "Chevron posts lower net profit margin (7.2%) for 2030. - Revenue growth forecasted at 0.4%, below US market average. - Earnings projected to rise 8.5% annually, below broader market's rate. - Shares trade at high Price-to Earnings ratio (23.8"
+    ],
+    "medium_term_50d": [
+      "Chevron announces leadership change. - chevron Lumsus Global expands catalyst portfolio - Che vron reports recordproduction in Q3 after Hessacquisition - Chevrondividendmay increase due to higherfree cash flow",
+      "Chevron acquires pre-t treatment and biog AS plant in UK. - CIP focuses solely on bi Gas production at Northwich facility.",
+      "Chevron slashes thousands of jobs due to lower oil prices (Conoco Phillips, Exxon Mobil also affected)."
+    ],
+    "long_term_200d": [
+      "Chevron slashes thousands of jobs due to lower oil prices (Conoco Phillips, Exxon Mobil also affected).",
+      "Chevron announces significant workforce reduction and operational restructure. - Leviathan receives 41% capacity allocation for Israeli-Egypts gas pipeline.",
+      "Chevron chosen as preferred bidder for Greek offshore gas search (Reuters)"
+    ]
+  }
+}

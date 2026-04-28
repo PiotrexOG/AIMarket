@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 198.75-218.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (12.33%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.225)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 128.88-218.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (27.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.12%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -48.74)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.27x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing secures $37 million contract to support F/A-$18 E/\\G aircraft. - BA hits 7 three Max production rate target of 38 per month in May. - 30 three new orders for 78 seven S, 3o 77 X, 1 46 seventh Max in May.",
+      "Pentagon identifies over 5o regulatory requirements discouraging Boeing. - New Boeing plane delivered to Xiamen Aires after tariff war ease. - Trump nominee raises concerns about FAA leadership, trust, and culture issues.",
+      "Boeing signs non-prosecution agreement with Do J over 73 seven MAX crashes. - Bryant Bedford nominated to head F AA. - China orders hundreds of Air bus jets instead of Boeing."
+    ],
+    "medium_term_50d": [
+      "Boeing signs non-prosecution agreement with Do J over 73 seven MAX crashes. - Bryant Bedford nominated to head F AA. - China orders hundreds of Air bus jets instead of Boeing.",
+      "Pentagon identifies over 5o regulatory requirements discouraging Boeing. - New Boeing plane delivered to Xiamen Aires after tariff war ease. - Trump nominee raises concerns about FAA leadership, trust, and culture issues.",
+      "Boeing reaches $1.\u2081B deal with DOJ to drop plane crack criminal charges. - NASA astronaughts Butch \u0438 Suni recover after long Strliner mission."
+    ],
+    "long_term_200d": [
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Justice Department may dropped criminal prosecution against Boeing over Max crashes.",
+      "Boeing reaches $1.\u2081B deal with DOJ to drop plane crack criminal charges. - NASA astronaughts Butch \u0438 Suni recover after long Strliner mission."
+    ]
+  }
+}

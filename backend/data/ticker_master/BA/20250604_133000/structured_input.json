@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 183.5-215.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (11.45%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.203)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.49)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 128.88-215.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.69%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 212.54,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -48.16)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.27x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Federal judge cancases Boeing 73 Seven crashes trial - Major airlines warn new Trump tariffs could risk supply chain, aviation safety",
+      "Boeing rolls out first 73 Seven MAX at 38 per month rate. - NTSB holds hearing to determine causes of 230602 Boeing seventhmax mid-air emergenc y.",
+      "Air India orders 20o new narrow- body jets from Boeing."
+    ],
+    "medium_term_50d": [
+      "Boeing reaches $1.\u2081B deal with DOJ to drop plane crack criminal charges. - NASA astronaughts Butch \u0438 Suni recover after long Strliner mission.",
+      "Federal judge cancases Boeing 73 Seven crashes trial - Major airlines warn new Trump tariffs could risk supply chain, aviation safety",
+      "US Justice Department drops criminal fraud charge Against Boeing. -Boeing resumes plane deliveries to China. -Saudi Arabia plans to order billions of worth Airbus jests. -Howmet needs to increase engine parts production due to rising jet output."
+    ],
+    "long_term_200d": [
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Justice Department may dropped criminal prosecution against Boeing over Max crashes.",
+      "Boeing reaches $1.\u2081B deal with DOJ to drop plane crack criminal charges. - NASA astronaughts Butch \u0438 Suni recover after long Strliner mission."
+    ]
+  }
+}

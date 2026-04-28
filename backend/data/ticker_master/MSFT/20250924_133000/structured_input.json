@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 492.37-519.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.07%)",
+        "cycle_macd": "BULLISH_FADING (1.135)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.99%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 510.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.53%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.9, P/S: 14.55)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.58)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft's quarterly results beat expectations with Azureand AI growth. - Oracle eyes explosivegrowthwithsurging AI clouddemand and major deals. - No direct impact on MSFT from EU probe into Microsoft cloud bundlings.",
+      "Microsoft invests $7 billion in Wisconsin AIData Centers. - Sonata Software achieves the 21-22 Microsoft AI Business solutions Inner Circle award.",
+      "Microsoft invests $4bn for second AI data center in Wisconsin. - Nvidia commits \u00a32bn to boost AI startup development in the UK._ - Microsoft partners with fintech firm Riverty for AI-first customer service platform."
+    ],
+    "medium_term_50d": [
+      "Microsoft's quarterly results beat expectations with Azureand AI growth. - Oracle eyes explosivegrowthwithsurging AI clouddemand and major deals. - No direct impact on MSFT from EU probe into Microsoft cloud bundlings.",
+      "Microsoft invests $7 billion in Wisconsin AIData Centers. - Sonata Software achieves the 21-22 Microsoft AI Business solutions Inner Circle award.",
+      "Microsoft invests $30 bilion in UK's cloud and AI Infrastructure - UK and US cooperate in AI, quantum computing, and nuclear power - Microsoft appoints Yaron Galitzer as EVP of Artificial Intellegence at Ceva"
+    ],
+    "long_term_200d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft signs multi-billions dollar AI infrastructure deal with Nebius. - Cerence collaborates with Microsoft on in-car mobile work AIagent development. - Oracle experiences significant cloud growth and AI momentum in Q1 twenty-six results.",
+      "Microsoft's quarterly results beat expectations with Azureand AI growth. - Oracle eyes explosivegrowthwithsurging AI clouddemand and major deals. - No direct impact on MSFT from EU probe into Microsoft cloud bundlings."
+    ]
+  }
+}

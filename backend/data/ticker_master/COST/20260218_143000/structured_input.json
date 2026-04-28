@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "NORMAL (4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 930.3-1028.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.94%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.132)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.62)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 844.06-1028.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.83%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 1011.68,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.27%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $268.776B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.9%, EPS: 9.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.2%, Next Q Est Growth: 5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 57.25, P/S: 1.67)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.59)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.17)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco su ED over rotisseries chicken and salmonella allegations. -Costco faces class action lawsuit over rotisserrie chicken contamination.",
+      "Costco sued over Rotisserie Chicken Contamination - Allegations of undisclosed salmonella risks at Nebraskaplant",
+      "Costco faces political and legalscrutiny, reaffirms DEI programs. -Costco rolls out wage increases, acceleratesdigital efforts."
+    ],
+    "medium_term_50d": [
+      "Costco su ED over rotisseries chicken and salmonella allegations. -Costco faces class action lawsuit over rotisserrie chicken contamination.",
+      "Costco sued over Rotisserie Chicken Contamination - Allegations of undisclosed salmonella risks at Nebraskaplant",
+      "Costco tests European e commerce delivery with Instacard. -Costco defies Trump's DEIdirective while others scale back. -President Trump'stariffscasegoes to Supreme Courthearing. -Off Beautyexpandsnationallywithupto90%discounts."
+    ],
+    "long_term_200d": [
+      "Costco su ED over rotisseries chicken and salmonella allegations. -Costco faces class action lawsuit over rotisserrie chicken contamination.",
+      "Costco sued over Rotisserie Chicken Contamination - Allegations of undisclosed salmonella risks at Nebraskaplant",
+      "Costco faces a nationwideclass action lawsuitover Kirkland Rotisserrie Chickennolabellingand advertisingpractices. - Key Costcogiftcardpartnergoesbankruptaffectinggiftcardsales."
+    ]
+  }
+}

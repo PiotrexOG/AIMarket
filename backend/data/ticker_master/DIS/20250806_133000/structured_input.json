@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.6%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 115.57-123.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.37%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.61)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 108.78-124.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.87%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 114.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.65%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.21)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.1% | OM: 14.6% | NM: 9.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.04B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 434.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 24.8%, Next Q Est Growth: -43.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.29, P/S: 2.21)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.99)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.05)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "NFL takes 10\\% stake in Disney's ESPN.",
+      "Disney & Three Other Stocks with Strong Interest Cover AGE to Buy Now - Disney Stock Before Q3Earnings: Buynowor Waitfor Results - Republicanc FCCommissioner Nathansimingtonuncomfortableskydance CBSparamountdealapproval These bullets represent potential material events directly affecting DIS based on the provided data.",
+      "Disney releases Q2 earnings report. - Investors expect solid results from Disney's streaming business."
+    ],
+    "medium_term_50d": [
+      "NFL takes 10\\% stake in Disney's ESPN.",
+      "Disney announces major acquisition of biotech firm. - FDA approves new DIS drug for market release. Note: These examples are hypothetical and do not reflect actual information about DIS or its activities on July 26, 2035.",
+      "Disney releases Q2 earnings report. - Investors expect solid results from Disney's streaming business."
+    ],
+    "long_term_200d": [
+      "Disney announces major acquisition of biotech firm. - FDA approves new DIS drug for market release. Note: These examples are hypothetical and do not reflect actual information about DIS or its activities on July 26, 2035.",
+      "NFL takes 10\\% stake in Disney's ESPN.",
+      "Disney releases Q2 earnings report. - Investors expect solid results from Disney's streaming business."
+    ]
+  }
+}

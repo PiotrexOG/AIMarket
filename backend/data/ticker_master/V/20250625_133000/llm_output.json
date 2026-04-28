@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.2,
+        "risk": 7.2
+      },
+      "synthesis": "S: The short-term outlook has weakened further. The candle pattern has shifted to NEUTRAL, and RSI has declined to 40.5, moving further into bearish territory. Velocity has turned more negative at -4.1%, and price is now trading further below the SMA20 at -2.4%, indicating increased bearish pressure. W: The price remains in the middle of its 20-day range, but the negative velocity and SMA20 deviation suggest a loss of upward momentum and potential for further downside. The elevated volume dynamics (1.44) could indicate increased selling pressure. O: Short-term news is mixed, with some positive developments regarding stablecoin partnerships and a lawsuit victory, but also continued competition from Mastercard and regulatory sentiment shifts due to the stablecoin bill. T: The score has decreased by 0.7 points due to the continued deterioration in short-term technicals, including falling RSI and increased negative velocity. Conviction has slightly decreased as the technical signals remain mixed and the price is range-bound. Risk has increased by 0.4 points due to the increased negative velocity, further deviation from the SMA20, and elevated volume dynamics suggesting potential selling pressure."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend shows continued weakening. Trend alignment has slowed to a gradual ascent (2.4%), and the MACD has further deteriorated to -3.117. The SMA50 Z-score has moved to -0.22, indicating a shift towards mean reversion rather than a strong trend. W: The price remains inside the monthly range, and the slowing trend alignment coupled with the bearish MACD suggests a loss of upward momentum. The shift in SMA50 Z-score indicates the trend is no longer as robust. O: Medium-term news remains a mix of stablecoin-related developments, including partnerships and legislative impacts, but the competitive landscape with Mastercard remains a key factor. The overall trend is not strongly supported by the current technicals. T: The score has decreased by 0.5 points due to the continued weakening of the medium-term trend, evidenced by slower trend alignment and a more bearish MACD. Conviction has decreased by 0.5 points as the technical signals are becoming less clear and the trend is losing strength. Risk has increased by 0.5 points due to the further deterioration of the MACD, the shift in SMA50 Z-score towards mean reversion, and the continued presence of competitive pressures in the news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound but shows a further reduction in its bullish positioning. The secular bull market regime has slightly decreased to 8.5%, and the price is now at 75.1% of its long-term range, indicating a less extreme bullish position than previously. The Golden Cross structure remains healthy. W: The price has moved further down within the upper quadrant of the long-term range, suggesting some consolidation or profit-taking after a strong run. While the core business quality and financial health are exceptional, the hyper-premium valuation multiples persist, and the implied growth is still priced optimistically. O: Long-term news continues to highlight regulatory scrutiny and investigations, which represent a persistent overhang. However, the core business strengths provide a strong foundation, and recent news indicates proactive engagement with stablecoin initiatives. T: The score has decreased by 0.5 points due to the price moving further down within the upper quadrant and a slight decrease in the secular bull market regime percentage. Conviction has decreased by 0.5 points as the price is no longer in the highest bullish territory and faces more defined range boundaries. Risk has increased by 0.7 points due to the persistent hyper-premium valuation, the 'growth overpriced' implied growth, and the continued regulatory overhang highlighted in the long-term news, which increases fragility."
+    }
+  }
+}

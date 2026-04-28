@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (25.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 496.81-537.22]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.08%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.854)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 472.51-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.94%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 504.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.44%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.47, P/S: 14.4)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.45)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft integrates Copil OT AI into Samsung TVs and Monitors. -Microsoft expands AI capabilities with MAI- Voice-1 and MAI-1 - Preview testing. - Microsft offers discounted cloud services for USgovernment.",
+      "Microsoft partners with G42 to potentially supply chips for AI campus. - University of G\u00f6ttingen expands useof Sectra AI service for enhanced efficiency.",
+      "Microsoft acquires digital pathology AI company Paige for $82.5 million. - Jinko Salt reports strong overseas demand, issues new shipmentguidance."
+    ],
+    "medium_term_50d": [
+      "Microsoft integrates Copil OT AI into Samsung TVs and Monitors. -Microsoft expands AI capabilities with MAI- Voice-1 and MAI-1 - Preview testing. - Microsft offers discounted cloud services for USgovernment.",
+      "Microsoft announces acquisition of AI digital pathography company Paige. -Microsoft expands Azure Security partnership with Marvell Technologies. -Major hyperscaler increases AI processor production capacity. -Cisco posts strong guidance and expands AI portalfolio. -Industrial data management companies lead with AI, cloud innovation, and enterprise solutions (Microsoft mentioned).",
+      "Microsoft acquires digital pathology AI company Paige for $82.5 million. - Jinko Salt reports strong overseas demand, issues new shipmentguidance."
+    ],
+    "long_term_200d": [
+      "Microsoft becomes second company with $4 trillon market capitalization due to AI businesses. (event type: Product launches/delays) - Tech giants spend $156bn on AI in 2 years. (eventtype: Production or supply change) - Microsoft CEO hints at near-term quantum computing application. (eventype: Company guidance)",
+      "Microsoft removes product feature due to regulatory pressure. - IBM partners with MSFT on cloud services expansion. - MSFT announces major acquisition in AI sector. - Court rules against MSFT in patent infringement lawsuit. - New production issue impacts MSFT hardware sales. - CEO Satya Nadella makes major strategic decision on R&D spending.",
+      "Microsoft announces acquisition of AI digital pathography company Paige. -Microsoft expands Azure Security partnership with Marvell Technologies. -Major hyperscaler increases AI processor production capacity. -Cisco posts strong guidance and expands AI portalfolio. -Industrial data management companies lead with AI, cloud innovation, and enterprise solutions (Microsoft mentioned)."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.0)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "NORMAL (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (6.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 164.07-187.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.61%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.881)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.12)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 164.07-187.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (24.43%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 186.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.83%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 86.41, P/S: 48.16)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 79.75)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.21)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia invests up to $\u2081\u2080\u2080 billion in Open AI collaboration. - British driverlesscar company Oxa receives Nvidia investment.",
+      "Ui Path collaborates with NVIDia to help enterpaces fortify existing automate workflows with AI capabilities. - Open AI' revenues reach $4. three billion in first half of year. - Ui Path receives $10o billion investment from NVDIA. - M\\&A deals surpass $1 trillon in Q3, including",
+      "Nvidia invests up to $\u2081\u1d0f\u2080\u208b billon in Open AI, ramps up demand for AI-enabeling products. - Red Cloud Hold INGS joins NVIDIAConnect program, advances tech dev for FMCG supply chains. - Chevron restricted from exporting full Venezuelan oil production capacity due to new US rules"
+    ],
+    "medium_term_50d": [
+      "Nvidia invests up to $\u2081\u2080\u2080 billion in Open AI collaboration. - British driverlesscar company Oxa receives Nvidia investment.",
+      "TSMC shows off new strategy to boost energy efficiency of Nvidia chips by 10x. - NVDA and Open AI partnership could generate $50B revenue.",
+      "Nvidia invests up to $\u2081\u1d0f\u2080\u208b billon in Open AI, ramps up demand for AI-enabeling products. - Red Cloud Hold INGS joins NVIDIAConnect program, advances tech dev for FMCG supply chains. - Chevron restricted from exporting full Venezuelan oil production capacity due to new US rules"
+    ],
+    "long_term_200d": [
+      "Nvidia banned from selling custom chips in China. Note: Based on rule #6, this event meets the criteria for a material event directly affecting NVDA.",
+      "TSMC shows off new strategy to boost energy efficiency of Nvidia chips by 10x. - NVDA and Open AI partnership could generate $50B revenue.",
+      "Nvidia invests up to $\u2081\u2080\u2080 billion in Open AI collaboration. - British driverlesscar company Oxa receives Nvidia investment."
+    ]
+  }
+}

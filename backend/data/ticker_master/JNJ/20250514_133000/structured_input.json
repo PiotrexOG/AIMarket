@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.2)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.34)",
+        "velocity_roc_10": "NORMAL (-4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 148.08-159.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.98%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.308)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-5.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.71%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 22.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 147.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "ELEVATED (1.4)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.22, P/S: 3.99)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.57)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson faces potential issues from CMS loophole closure. - Centers for Medicine and Medica id Services releases document threatening JNJ and others.",
+      "Trump signs order to reduce US prescription drug pricing, potentially affecting JNJ. - J&J faces potential drug price reductions following Trump's executive order.",
+      "Johnson & Johnson announces positive Phase 3 data for ic\u043e\u0442\u0440\u043e\u043a\u0438\u043d\u0440\u0430 in psor\u00edasis study. - New data from Phase 3 \u0418\u041a\u041e\u041d\u0418\u0421-\u0422\u041e\u0422\u0410\u041b study shows significant skin clear ANCE for ic\u043e\u0442\u0440\u043e\u043aINRA in treating psorias IS."
+    ],
+    "medium_term_50d": [
+      "Trump signs order to reduce US prescription drug pricing, potentially affecting JNJ. - J&J faces potential drug price reductions following Trump's executive order.",
+      "Johnson & Johnson announces positive Phase 3 data for ic\u043e\u0442\u0440\u043e\u043a\u0438\u043d\u0440\u0430 in psor\u00edasis study. - New data from Phase 3 \u0418\u041a\u041e\u041d\u0418\u0421-\u0422\u041e\u0422\u0410\u041b study shows significant skin clear ANCE for ic\u043e\u0442\u0440\u043e\u043aINRA in treating psorias IS.",
+      "Johnson & Johnson faces potential issues from CMS loophole closure. - Centers for Medicine and Medica id Services releases document threatening JNJ and others."
+    ],
+    "long_term_200d": [
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis.",
+      "Johnson & Johnson received FDA approvalfor IMAAVYP\u2122(nipocalimb-aahu)to treatgeneralizedmyastheniagravis.",
+      "Johnson & Johnson announces positive Phase 3 data for ic\u043e\u0442\u0440\u043e\u043a\u0438\u043d\u0440\u0430 in psor\u00edasis study. - New data from Phase 3 \u0418\u041a\u041e\u041d\u0418\u0421-\u0422\u041e\u0422\u0410\u041b study shows significant skin clear ANCE for ic\u043e\u0442\u0440\u043e\u043aINRA in treating psorias IS."
+    ]
+  }
+}

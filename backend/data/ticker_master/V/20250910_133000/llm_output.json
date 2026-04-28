@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term technical picture has decisively shifted from indecision to a bearish candle pattern. Momentum has normalized to the neutral zone (RSI 52.7), and velocity has turned negative (-1.4%). The SMA20 trend base is now slightly negative (-0.7%), indicating a loss of immediate upward pressure. W: The strong bearish candle pattern and negative velocity suggest a clear downside bias in the immediate term. The price is positioned in the middle of its 20-day range, which could offer support, but the bearish technicals dominate. O: Short-term news is now overwhelmingly positive, focusing on partnerships for blockchain-based payment solutions and stablecoins with major players like Stripe and Deutsche Bank. This contrasts sharply with the previous negative regulatory news. T: The score has decreased by 1.8 points due to the shift to a strong bearish candle pattern and negative velocity, overriding the positive news flow. Conviction has decreased by 0.5 points as the technical signals are now clearer but bearish, and the news is a strong counterpoint. Risk has decreased by 1.0 point as the extreme overbought condition has resolved, and the negative news has been replaced by positive partnership announcements."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend has deteriorated significantly, moving from fading bullish momentum to clear bearish acceleration. Trend alignment is now characterized by consolidation with a negative bias, and the MACD has turned bearish and is accelerating (-0.296). The Z-score relative to the SMA50 has moved into a bearish trend position (Z:-1.36), indicating a sustained downward move. W: The bearish MACD acceleration and negative Z-score signal a strong downside trend. The price is still within the monthly range, but the current positioning suggests further downside potential before finding significant support. O: Medium-term news has shifted to include more recent positive partnership announcements related to blockchain and stablecoins, which is a positive development. However, the previous negative regulatory news still lingers in the background, creating a mixed sentiment. T: The score has decreased by 2.3 points due to the clear bearish MACD acceleration and negative Z-score, indicating a significant deterioration in the medium-term outlook. Conviction has decreased by 1.2 points as the bullish signals have been replaced by strong bearish ones, and the news is mixed. Risk has increased by 0.7 points due to the bearish MACD, negative Z-score, and the lingering regulatory concerns, increasing downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term outlook shows a moderation in bullish positioning, moving from the upper quadrant to a mid-cycle neutral zone. The secular bull market regime percentage has decreased (1.1%), and the long-term range position is now neutral (52.7%). The Golden Cross structure remains healthy, indicating underlying strength. W: The shift to a neutral long-term range position suggests a potential for consolidation or a less aggressive upward trajectory. While the Golden Cross structure provides a foundation, the reduced bullish positioning indicates a less enthusiastic long-term outlook. O: Long-term news is now dominated by positive developments in blockchain and stablecoin partnerships, indicating strategic adaptation and innovation. This provides a strong growth narrative, offsetting some of the moderation in technical positioning. T: The score has decreased by 1.2 points due to the shift to a neutral long-term range position and a decrease in the secular bull market percentage, indicating a moderation in long-term bullish sentiment. Conviction has decreased by 0.8 points as the price action is now reinforcing a less aggressive long-term bullish trend. Risk has increased by 0.7 points due to the shift to a neutral long-term range position and the continued presence of some lingering regulatory uncertainty, adding a marginal layer of long-term structural risk."
+    }
+  }
+}

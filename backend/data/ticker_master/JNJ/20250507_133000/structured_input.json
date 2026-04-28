@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 141.5-159.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.1%)",
+        "cycle_macd": "BULLISH_FADING (0.226)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.69)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.4%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 155.54,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.83%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 17.15, P/S: 4.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.83)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson announces sustained clinical andendoscopic effectiveness of Tremf Ya \u00ae for ulcerativocolitis at two years (DDW 20 twenty-five). - F DA approves T Eva and Alvotechs Selardsi asinterchangeable binosimilar to Stelara (DDW202 five).",
+      "Trump orders FDA to fast-track JNJ drug approvals due to national security concerns.",
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis."
+    ],
+    "medium_term_50d": [
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis.",
+      "Johnson & Johnson announces sustained clinical andendoscopic effectiveness of Tremf Ya \u00ae for ulcerativocolitis at two years (DDW 20 twenty-five). - F DA approves T Eva and Alvotechs Selardsi asinterchangeable binosimilar to Stelara (DDW202 five).",
+      "Johnson & Johnson received FDA approvalfor IMAAVYP\u2122(nipocalimb-aahu)to treatgeneralizedmyastheniagravis."
+    ],
+    "long_term_200d": [
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis.",
+      "Johnson & Johnson received FDA approvalfor IMAAVYP\u2122(nipocalimb-aahu)to treatgeneralizedmyastheniagravis.",
+      "Johnson & Johnson announces sustained clinical andendoscopic effectiveness of Tremf Ya \u00ae for ulcerativocolitis at two years (DDW 20 twenty-five). - F DA approves T Eva and Alvotechs Selardsi asinterchangeable binosimilar to Stelara (DDW202 five)."
+    ]
+  }
+}

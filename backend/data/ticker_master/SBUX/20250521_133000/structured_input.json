@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.71)",
+        "velocity_roc_10": "NORMAL (3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 75.5-87.78]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.26%)",
+        "cycle_macd": "BULLISH_FADING (0.801)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.5-103.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.34%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 26.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 84.43,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.97%))",
+      "volume_dynamics": "AVERAGE (0.72)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.24, P/S: 2.66)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.86)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets",
+      "Starbucks rivals entering US market. - New limited-time drinks introduced.",
+      "More than \u2081 thousand Starbucksbaristas go onstrike toprotestnewdresscode. - United Steelworkers Union:Starbucksworkersin Oak Bayfiletojoin USW. -Starbucksisedsellpartof Chinabusiness."
+    ],
+    "medium_term_50d": [
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets",
+      "More than \u2081 thousand Starbucksbaristas go onstrike toprotestnewdresscode. - United Steelworkers Union:Starbucksworkersin Oak Bayfiletojoin USW. -Starbucksisedsellpartof Chinabusiness.",
+      "Starbucks Colombian franchise stake sold to Alsea. - Hundredsof Starbucksemployeesstrikeovernewdresscode."
+    ],
+    "long_term_200d": [
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets",
+      "Starbucks Q2 earnings fall short of expectations, shares drop. - CEO announces major turnaround strategy for Starbucks.",
+      "Starbucks misses earnings mark, stock falls 18%. - Starbucks faces increased competition from Mc Donald's and Chip OTle."
+    ]
+  }
+}

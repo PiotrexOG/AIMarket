@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.4%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 132.92-147.96]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (11.66%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.475)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.63)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 95.04-147.96]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (15.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.25%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 152.21,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 87.98, P/S: 47.49)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 77.09)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia signs multibillion dollar AI chip supply deals with cloud providers. - Federal regulations impact Nvidiachip exports to specific regions. - Apple announces partnership with Nvidiafor advanced AI technologies. - Major product delay announced for Nvidianext-gen GPUs. - Lawsuit filed against Nvidiaregarding intellectual property infringement.",
+      "Nvidia CEO Jensen Huangs sells Nvidias stock for the first time in 2o25. - Alibabas cloud computing unit expands AI services to oversees data centers by202 five. - Billionaire shifts focus within AI arena, sells Nividia and AMD stake for trillion-dollar AI stock.",
+      "Nvidia implicated in aiding China\u2019s military and intel ops through Deep Seek. - AI chip startup Snowcap Computes raises funds for superconductive tech."
+    ],
+    "medium_term_50d": [
+      "Nvidia signs multibillion dollar AI chip supply deals with cloud providers. - Federal regulations impact Nvidiachip exports to specific regions. - Apple announces partnership with Nvidiafor advanced AI technologies. - Major product delay announced for Nvidianext-gen GPUs. - Lawsuit filed against Nvidiaregarding intellectual property infringement.",
+      "Nvidia CEO Jensen Huangs sells Nvidias stock for the first time in 2o25. - Alibabas cloud computing unit expands AI services to oversees data centers by202 five. - Billionaire shifts focus within AI arena, sells Nividia and AMD stake for trillion-dollar AI stock.",
+      "Nvidia announces building of world'sfirst industrial AI cloud in Europe. - Europe's manufacturing advancement with 10000GPUs through NVIDIADGX B20o systems. - Partners with European nations and technology leaders to fuel regional transformation. - Announces optimization of sovereign largelanguage models with model buildersonly"
+    ],
+    "long_term_200d": [
+      "Nvidia signs multibillion dollar AI chip supply deals with cloud providers. - Federal regulations impact Nvidiachip exports to specific regions. - Apple announces partnership with Nvidiafor advanced AI technologies. - Major product delay announced for Nvidianext-gen GPUs. - Lawsuit filed against Nvidiaregarding intellectual property infringement.",
+      "Nvidia announces building of world'sfirst industrial AI cloud in Europe. - Europe's manufacturing advancement with 10000GPUs through NVIDIADGX B20o systems. - Partners with European nations and technology leaders to fuel regional transformation. - Announces optimization of sovereign largelanguage models with model buildersonly",
+      "Nvidia excluded from forecasts dueto US restrictions. - Deutsche Tele\u043a\u043e\u043c and Nvidai to build AIcloud for industry in Germany."
+    ]
+  }
+}

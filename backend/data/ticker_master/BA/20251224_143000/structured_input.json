@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (72.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 177.52-217.56]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.13%)",
+        "cycle_macd": "BULLISH_FADING (2.207)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-225.56]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.4%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.71%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 217.93,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.99%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.49)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -19.99)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing gets $2B contract for B- fifth bomber work.",
+      "Baasystems announces major product delay in avionics system. - BA enters partnership with Airbus for joint aviation project. - US Department of Transportation fines BA $10M over safety violations. - Federal court rules against BA in major lawsuit over patent infringement. - New regulatory ruling impacts BA's drone division operations.",
+      "FAA investigating new Boeing 733 MAX safety requirements. - United Airlines completes test flights for improved Boeing Seven37- 8 data communication system. -Boeing secures $930M US defense contract for Super Hornets."
+    ],
+    "medium_term_50d": [
+      "Baasystems announces major product delay in avionics system. - BA enters partnership with Airbus for joint aviation project. - US Department of Transportation fines BA $10M over safety violations. - Federal court rules against BA in major lawsuit over patent infringement. - New regulatory ruling impacts BA's drone division operations.",
+      "Boeing gets $2B contract for B- fifth bomber work.",
+      "Boeing complet ES acquisition of Spirit \u0410ero Systems - Boeling announces completion of Spirit \u0410ERO SYSTEMS acquisition - Booeing finalizes $\u56db.\u4e03B acquisition of Spirit \u0430ero systems - Boe\u0438ng buys out Spirit \u0430ero sys\u0422ems, stock rises - \u0411\u043eeing completes takeover \u043ef Spirit \u0430ero \u0441\u0438st\u0435"
+    ],
+    "long_term_200d": [
+      "Boeing complet ES acquisition of Spirit \u0410ero Systems - Boeling announces completion of Spirit \u0410ERO SYSTEMS acquisition - Booeing finalizes $\u56db.\u4e03B acquisition of Spirit \u0430ero systems - Boe\u0438ng buys out Spirit \u0430ero sys\u0422ems, stock rises - \u0411\u043eeing completes takeover \u043ef Spirit \u0430ero \u0441\u0438st\u0435",
+      "Boeing ordered by FTCto divest Spirit Assetsahead of merger. - Airbus cuts deliveryoutlookafter aircraftissues. -Boeing presentsat UBSGlobal Industrialsand Transportation Conference.",
+      "Baasystems announces major product delay in avionics system. - BA enters partnership with Airbus for joint aviation project. - US Department of Transportation fines BA $10M over safety violations. - Federal court rules against BA in major lawsuit over patent infringement. - New regulatory ruling impacts BA's drone division operations."
+    ]
+  }
+}

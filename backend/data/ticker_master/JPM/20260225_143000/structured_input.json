@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "NORMAL (-7.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 291.38-326.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.83%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.093)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.33)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 291.38-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.25%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 300.65,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.1%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.0, P/S: 3.0)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.32)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 10.99)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan signals high conviction ahead of Revolution Medicenes readout. - Jamie Dimon predicts JPMorgan will be 'a winner' in AI race, boosts 2100 tech spend to nearly $20 billion. - Novo Nordik selloff continues after disappointing REDEFINE-\\* results. - Dimon sees parallelsto pre",
+      "JPMorgan closes accounts linked to Donald Trump. - Supreme Courttariff rulingaffects JPMorganbond yields. -JPMorgandisclosesaccountclosinginacourtsfilingagainst Trumpands CEO.",
+      "JPMorgan sued in Trump's \"$5 Billion debanking\" lawsuit. - Jamie Dimon sells $21Million of J PMorgan stock. - EU fines JPMorgan EURO twelve million for capital errors."
+    ],
+    "medium_term_50d": [
+      "JPMorgan signals high conviction ahead of Revolution Medicenes readout. - Jamie Dimon predicts JPMorgan will be 'a winner' in AI race, boosts 2100 tech spend to nearly $20 billion. - Novo Nordik selloff continues after disappointing REDEFINE-\\* results. - Dimon sees parallelsto pre",
+      "JPMorgan closes accounts linked to Donald Trump. - Supreme Courttariff rulingaffects JPMorganbond yields. -JPMorgandisclosesaccountclosinginacourtsfilingagainst Trumpands CEO.",
+      "JPMorgan sued in Trump's \"$5 Billion debanking\" lawsuit. - Jamie Dimon sells $21Million of J PMorgan stock. - EU fines JPMorgan EURO twelve million for capital errors."
+    ],
+    "long_term_200d": [
+      "JPMorgan signals high conviction ahead of Revolution Medicenes readout. - Jamie Dimon predicts JPMorgan will be 'a winner' in AI race, boosts 2100 tech spend to nearly $20 billion. - Novo Nordik selloff continues after disappointing REDEFINE-\\* results. - Dimon sees parallelsto pre",
+      "JPMorgan chosen by Apple to replace Goldmans Sachs as Apple Card issuer.",
+      "JPMorgan sued in Trump's \"$5 Billion debanking\" lawsuit. - Jamie Dimon sells $21Million of J PMorgan stock. - EU fines JPMorgan EURO twelve million for capital errors."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 5.8,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term momentum has cooled from extreme levels, with RSI moving from 68.8 to 72.3, now in the overbought extreme. Price has moved back within normal Bollinger Bands (0.79) and is stable near the 20-day SMA (3.3%). ROC has normalized to 4.0%. W: The shift from blow-off top to within normal bands and the cooling ROC suggest a loss of explosive upward momentum, increasing the potential for consolidation or a minor pullback. The strong bullish candle pattern is a positive, but the overbought RSI indicates limited immediate upside. O: New news regarding lawsuits against AI startups for plagiarism introduces a negative short-term catalyst, increasing legal and reputational risk. T: The score is reduced due to the normalization of momentum and the introduction of negative news. Conviction is slightly improved as the price action is now less overextended. Risk increases due to the overbought RSI and the new legal challenges."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.2,
+        "risk": 6.3
+      },
+      "synthesis": "S: Trend alignment remains bullish (11.8%), and the price is now inside the monthly range (80.1-120.5), indicating a less aggressive push towards resistance. The Z-score above the 50-day SMA (1.23) still supports a positive trend position. W: The MACD has accelerated its bearish trend (-0.143), moving further below the zero line, suggesting a weakening medium-term momentum. The previous bullish recovery is now facing headwinds. O: The news flow is mixed, with ongoing lawsuits against AI firms and continued discussion of the Hulu acquisition. The potential split of Warner Bros. Discovery and Amazon's ad deal with ROKU introduce competitive pressures in the streaming space. T: The score is slightly reduced due to the deteriorating MACD and increased competitive news. Conviction decreases as the technical picture becomes less clear and the news introduces more uncertainty. Risk increases due to the bearish MACD acceleration and the new competitive threats."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.3,
+        "conv": 4.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The long-term range position has slightly decreased to 94.8%, still indicating a strong upward trend but off its peak. The market regime remains a bull market correction (14.3%). Fundamentals remain stable. W: The death cross structure is now showing an imminent potential pivot (-1.02%), suggesting a slight improvement in the long-term technical structure compared to the previous -2.81%. However, the price is still near the top of the cycle, increasing fragility. The premium valuation multiples persist. O: The news regarding lawsuits against AI startups and the potential impact of Warner Bros. Discovery's split and Amazon's ROKU deal introduce new long-term competitive and legal risks. T: The score is slightly reduced due to the increased risk from new competitive and legal challenges, despite a minor improvement in the long-term technical cross. Conviction is reduced due to the evolving risk landscape. Risk increases due to the persistent premium valuation, the proximity to cycle highs, and the introduction of new structural threats."
+    }
+  }
+}

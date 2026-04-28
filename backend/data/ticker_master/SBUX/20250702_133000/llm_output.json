@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has weakened significantly, evidenced by a STRONG_BEARISH candle pattern, despite RSI remaining in a strong bullish zone (60.5). Velocity (ROC 10) has normalized to 1.5%, and the price is still in the middle of the 20-day range (84.42-95.91). The SMA20 base support has strengthened to 3.6%. W: Bollinger Bands are within normal limits (0.85), indicating a lack of immediate directional pressure. News flow is mixed, with reports of Starbucks rivals opening US stores and board changes, alongside continued discussions of selling a stake in the China business and limited-time product launches. O: A decisive break above the 20-day range resistance and a reversal of the bearish candle pattern, supported by positive news regarding strategic clarity or operational improvements, could offer a short-term rebound. T: Downside risk has increased due to the bearish candle pattern and the mixed news, which introduces uncertainty. The previous risk of overextension has subsided, but the current neutral technicals and mixed news contribute to increased risk. Volatility remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 5.3
+      },
+      "synthesis": "S: Medium-term trend alignment shows continued expanding momentum (5.32%), a positive sign. The price is in a strong bullish trend position relative to the 50-day SMA (Z:1.69), strengthening from the previous period. W: The MACD has shifted to BEARISH_RECOVERING (-0.047), indicating a loss of bullish conviction and a move towards bearish territory. The price is strengthening at the monthly resistance zone (75.5-95.91). News flow remains focused on the potential sale of the China operations and competitive pressures from rivals, alongside board changes. O: A stabilization of the MACD above zero and a sustained break above the monthly resistance zone (95.91) would confirm the expanding momentum. Positive resolution or clarity on the China strategy, or successful expansion in other markets, could provide further impetus. T: Downside risk has increased due to the shift in MACD momentum to bearish territory and the price strengthening at a key resistance level. The previous strong conviction is tempered by the weakening MACD. Fundamental concerns regarding growth and profitability persist, contributing to the overall risk profile. Structural confidence is moderate, dependent on the resolution of strategic uncertainties."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.3,
+        "conv": 3.8,
+        "risk": 6.2
+      },
+      "synthesis": "S: The long-term technical structure remains bearish, with the SECULAR_BEAR_MARKET regime (-0.7%) and DEATH_CROSS_STRUCTURE (-8.99%) persisting, though the regime has slightly improved. The long-term range position has improved to 45.0%, moving towards the neutral zone. W: The death cross structure continues to be a significant technical headwind. Fundamental growth remains stagnant, and financial health is stressed. Valuation remains premium with extremely risky implied growth. News flow continues to indicate strategic re-evaluation of the China business, with ongoing discussions of selling a stake and potential co-shareholder arrangements. O: A sustained shift in the broader market regime to bullish, a clear turnaround in fundamental growth and profitability, and a resolution of strategic uncertainties (e.g., China business structure) are required for a robust long-term recovery. T: Downside risk remains elevated due to the persistent death cross, stressed fundamentals, premium valuation, and strategic uncertainties. The slight improvement in the long-term range position offers some mitigation but does not negate the structural headwinds. Structural confidence is low, as the technicals remain bearish long-term, and fundamental catalysts for a significant turnaround are not yet evident. Debt sensitivity also contributes to fragility."
+    }
+  }
+}

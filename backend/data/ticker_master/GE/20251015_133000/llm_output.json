@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term score has decreased to 5.0 from 6.0. The RSI has moved to a neutral 49.8, and the candle pattern is now \"NEUTRAL\", indicating a loss of bullish momentum. Price is consolidating, \"HUGGING_SMA20_CONSOLIDATION\" (0.5%), and remains in the middle of the 20-day range. W: Conviction has decreased to 4.5 from 5.5. The shift to neutral RSI and candle pattern, coupled with stagnant velocity, suggests a less robust short-term signal. The \"C:NEAR @20d\" barrier remains a technical constraint. O: Mixed news flow, including a restructuring plan and a workforce investment, presents a balanced short-term outlook, with no clear catalyst for significant upside or downside. T: Downside risk has decreased slightly to 6.0 from 6.5. The \"NEUTRAL\" candle pattern and the absence of strong bearish signals temper immediate downside risk, although the \"HIGH_MULTIPLE_RISK\" persists. The \"C:NEAR @20d\" barrier still poses a technical challenge."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term score has slightly decreased to 4.5 from 5.0. While trend alignment remains positive (4.99%), the MACD has weakened further to \"BEARISH_RECOVERING\" (-1.113), indicating a loss of upward momentum. The Z-score relative to the 50-day SMA is still bullish (1.42), but the price is \"STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE\". W: Conviction has decreased to 4.0 from 4.5. The continued bearish MACD trend and the price approaching resistance significantly undermine confidence in the medium-term trend's continuation. O: The news narrative remains mixed, with restructuring plans and workforce investments offering some stability, but the underlying technical deterioration at resistance is a concern. T: Downside risk has increased to 6.5 from 6.0. The bearish MACD crossover and the price testing monthly resistance increase the probability of a medium-term reversal or consolidation. The \"HIGH_MULTIPLE_RISK\" is amplified by the weakening technical trend and approaching resistance levels."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 2.5,
+        "risk": 9.0
+      },
+      "synthesis": "S: The long-term score has decreased to 3.0 from 3.5. The \"SECULAR_BULL_MARKET\" regime is still in place, but the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" has slightly increased (22.1%), and the price remains at the absolute cycle high (97.1%). The \"HYPER_PREMIUM_PRICED\" valuation multiples and \"HIGH_MULTIPLE_RISK\" are persistent headwinds. W: Conviction has decreased to 2.5 from 3.0. The combination of extreme technical positioning at cycle highs, persistent high valuation risk, and increased exhaustion risk significantly temper long-term confidence. The \"POWER_ZONE_CONFLUENCE(2)\" structure at these highs is a significant concern. O: Long-term news remains mixed, with restructuring plans and potential order cancellations introducing negative elements that are increasingly difficult to offset by past positive news, given the current valuation and technical extremes. T: Downside risk has increased to 9.0 from 8.5. The persistent \"HIGH_MULTIPLE_RISK\", coupled with the stock trading at cycle highs and increased \"BULLISH_STRETCH_EXHAUSTION_RISK\", creates substantial downside potential. The \"NEUTRAL_STRUCTURE\" sensitivity at these levels suggests limited further upside without fundamental catalysts."
+    }
+  }
+}

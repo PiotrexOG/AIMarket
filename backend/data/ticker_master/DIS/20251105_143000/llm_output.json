@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term technicals are neutral, with RSI at 49.1 and the price hugging the 20-day SMA, indicating consolidation. Velocity is normal. O: Potential for a short-term bounce if consolidation breaks to the upside. T: News flow is mixed, with a significant negative impact from the YouTube TV carriage dispute, which could pressure short-term sentiment. W: The neutral technicals and negative news overhang limit upside potential. The price is in the middle of its 20-day range, offering no immediate directional clarity."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment is bearish, with the price below the 50-day SMA and a negative Z-score. MACD is bullish but fading, suggesting waning momentum. O: A sustained break above the 50-day SMA could signal a trend reversal. T: The YouTube TV dispute and patent litigation represent significant headwinds that could further pressure the medium-term trend. W: The bearish trend alignment and fading MACD signal a lack of conviction in an upward move. The price is within a broad monthly range, but the current positioning is unfavorable. Risk is elevated due to ongoing disputes."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term technicals are constructive, with a healthy golden cross structure and the price in the upper quadrant of its long-term range. The market regime is secular bull. O: Fundamentals are a mixed bag, with strong historical growth and a healthy balance sheet, but recent earnings momentum shows a significant sequential decline. Valuation appears fair to slightly undervalued on a PEG basis. T: The business quality and scale are strong, providing a solid foundation. However, the sharp decline in next quarter's estimated EPS growth is a significant concern. W: While the long-term technicals and valuation offer some support, the deteriorating earnings momentum and potential impact of ongoing disputes introduce significant long-term risk. The company's debt sensitivity is also a factor to monitor."
+    }
+  }
+}

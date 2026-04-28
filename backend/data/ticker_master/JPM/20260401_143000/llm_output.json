@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 3.8
+      },
+      "synthesis": "S: The RSI has moved into a neutral zone (57.7), indicating a shift from bearish weakness to a more balanced momentum. The price is consolidating near the 20-day SMA, showing stability. O: News flow is positive, with initiatives like the 'American Dream Initiative' and expansion in small business lending and digital assets. The financing of the EA leveraged buyout is a significant transaction. T: The market bias remains range-bound, but the improved RSI and positive news flow suggest a slight uptick in short-term attractiveness. Barriers are still distant, but the price is moving closer to a near-term resistance level."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The MACD remains bullishly accelerating, and the position relative to the 50-day SMA has significantly improved to a healthy base (Z:-0.18). However, the trend alignment has slightly deteriorated to 'bearish expanding momentum'. O: The positive news regarding small business lending and digital asset expansion, coupled with the improved SMA positioning, supports a more constructive medium-term outlook. T: While momentum is strong, the underlying trend alignment still presents a moderate risk. The company's sensitivity to debt remains a factor, and the broader range for the 50-day indicates continued potential for volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 6.3,
+        "risk": 3.6
+      },
+      "synthesis": "S: The long-term technical structure remains robust, with the price position within the cycle improving slightly to 46.6%. The fundamental strengths in business quality, cash generation, and scale are unchanged. O: Continued strategic investments in AI and expansion plans, along with positive regulatory developments and a focus on economic opportunity initiatives, provide a solid foundation. T: Valuation remains a point of caution, with implied growth still appearing overpriced (PEG: 10.87). However, the risk profile has slightly improved due to a more stable volatility context and a stronger long-term technical structure, with potential pivot indicated by major crosses."
+    }
+  }
+}

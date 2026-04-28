@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term exhibits a STRONG_BULLISH candle pattern, suggesting immediate buying interest. O: Potential for a short-term bounce exists if the current price action can hold above the SMA20. W: RSI is in a BEARISH_ZONE_WEAK (38.6), indicating momentum is not supportive of a strong upward move. Velocity (ROC 10) is STAGNANT, and volume is DRY_NO_INTEREST, implying a lack of conviction behind the current price action. T: The stock is trading within the middle of its 20-day range, offering limited immediate upside potential without a clear breakout catalyst."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment shows a BEARISH_GRADUAL_DESCENT (-3.35%), but the MACD is BEARISH_RECOVERING, indicating some potential for stabilization. O: The Z-score relative to the SMA50 is near zero, suggesting a mean-reversionary base is forming, which could support a recovery. W: The overall trend is still negative, and the stock remains within its monthly range, lacking a decisive directional signal. T: The conviction level is LOW, and sentiment is MIXED, contributing to a moderate confidence in the current signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: A HEALTHY_GOLDEN_CROSS_STRUCTURE is present, which is a positive long-term technical signal. O: The stock is positioned in the mid-cycle neutral zone (57.9%) of its long-term range, suggesting it is not excessively overextended. W: The fundamental picture presents significant challenges: THIN_MARGIN_COMMODITY business quality, BALANCE_SHEET_STRESSED with negative FCF, and STAGNATION_WITH_PROFIT_ISSUES. The market regime is described as a BEAR_MARKET_RELIEF_RALLY, implying underlying weakness. T: Despite the technical structure, the fundamental risks and negative growth profile significantly elevate the overall risk assessment."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "NORMAL (-0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 505.04-531.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.54%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.57)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-537.22]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.79%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 515.9,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.57%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.37, P/S: 14.72)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.73)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft accused of restricting AI compute, raising Chat GPT costss for nearly threeyears. - Archive3 sixth, the modernarchivingcompany, collaboratingwith Microsoftto deliveradvanced AI-powerede Discoveryandcompliancesolutionsforlargeorganizations.",
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend.",
+      "Microsoft and Soft Bank in talks for \u00a32 billion investment into UK's Wayneve. - Oracle hosts AI World conference showcasing cloud computing business expansion."
+    ],
+    "medium_term_50d": [
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend.",
+      "Microsoft accused of restricting AI compute, raising Chat GPT costss for nearly threeyears. - Archive3 sixth, the modernarchivingcompany, collaboratingwith Microsoftto deliveradvanced AI-powerede Discoveryandcompliancesolutionsforlargeorganizations.",
+      "Microsoft bets $33 billion on Neoclosuds like Nebulus to ease AI crunch - Microsoft secures $14._2B compute dealing with Meta, Boosts MSFT stock - Caterpiller emerges as unlikely AI winner on turbine demand"
+    ],
+    "long_term_200d": [
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend.",
+      "Microsoft bets $33 billion on Neoclosuds like Nebulus to ease AI crunch - Microsoft secures $14._2B compute dealing with Meta, Boosts MSFT stock - Caterpiller emerges as unlikely AI winner on turbine demand",
+      "Microsoft plans to launch AI marketplace for publishers. -Microsoft claims breakthrough \u0432\u0402\u201c AI chip cooling tech. -Ignite Data selected for Microsoft for Startups Pegas US Program. -Oracle taps debt market for AI infrastructure spending. -Micron earns from memory supercycle\ufffd\u0402\u201cNAND, D DR5, HBM shortage."
+    ]
+  }
+}

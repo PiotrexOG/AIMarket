@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "STAGNANT (0.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.16-27.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.65%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.059)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.58-27.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.65%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 53.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.53,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.5%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.95, P/S: 2.19)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.58)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer announces Phase 3 study results for XTAN\u0434\u0438 and leuprol IDE combo therapy.",
+      "Pfizer participates in investor meetings for upcoming Catalysts (Valneva). - Valneva announces Phase 3 trials for VLA\u2081\u2085 (Valne VA).",
+      "US fires top health official opposing Pfizer vaccines. -PFizer whistleblowers memoir exposes lab practices. -Texas AG sues Johnson &Johnson over Tylenol safety. -Pfizer expected Q3 earnings decline."
+    ],
+    "medium_term_50d": [
+      "Pfizer announces Phase 3 study results for XTAN\u0434\u0438 and leuprol IDE combo therapy.",
+      "Pfizer announces positive results from Phase 3 \u0425\u0415\u04202\u041a\u041b\u0418\u041c\u0411-05 trials.",
+      "Pfizer and Astell AS announce 40 % lower risk of death with XTANDIs combination."
+    ],
+    "long_term_200d": [
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline.",
+      "Pfzer acquires Metsera for obesity drugs sector entry. - Trump announces drug tariffs boosting Pfizer stock.",
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)"
+    ]
+  }
+}

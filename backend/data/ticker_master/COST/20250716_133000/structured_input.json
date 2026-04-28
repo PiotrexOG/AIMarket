@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.07)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.7%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 965.71-1005.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.97%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.153)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.16)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 965.71-1067.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 42.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 956.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.49%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.0, P/S: 1.64)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.4)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.44)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco posts 5% June comp Sales growth with strong e-commerce gain. -Costco announces expansion of private label products. -Regulator ruling impacts Costco' s import business. -Major lawsuit filed against Costco over consumer issue. -New partnership with major supplier announced. -Production disruption due to natural disaster affects Costco.",
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Lulule MON sues COST over alleged knockoff products. - New Luke Convertible sofa launched at Costco stores. - COST reports 8% increase in June sales."
+    ],
+    "medium_term_50d": [
+      "Costco posts 5% June comp Sales growth with strong e-commerce gain. -Costco announces expansion of private label products. -Regulator ruling impacts Costco' s import business. -Major lawsuit filed against Costco over consumer issue. -New partnership with major supplier announced. -Production disruption due to natural disaster affects Costco.",
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Lulule MON sues COST over alleged knockoff products. - New Luke Convertible sofa launched at Costco stores. - COST reports 8% increase in June sales."
+    ],
+    "long_term_200d": [
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Costco posts 5% June comp Sales growth with strong e-commerce gain. -Costco announces expansion of private label products. -Regulator ruling impacts Costco' s import business. -Major lawsuit filed against Costco over consumer issue. -New partnership with major supplier announced. -Production disruption due to natural disaster affects Costco.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute."
+    ]
+  }
+}

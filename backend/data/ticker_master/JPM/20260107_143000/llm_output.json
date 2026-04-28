@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technicals have deteriorated significantly. A 'STRONG_BEARISH' candle pattern has emerged, contrasting with the previous 'NEUTRAL' state. While RSI remains in a bullish zone (66.8), the price is now overstretched relative to the 20-day SMA (4.4% overstretch). Velocity has become explosive (5.5%), indicating potential for a sharp reversal. W: The 'STRONG_BEARISH' candle pattern and the overstretched price position against the SMA20 are key weaknesses, suggesting an imminent pullback. The explosive velocity, while bullish in the short term, increases the risk of a sharp correction. O: News flow is mixed, with upcoming earnings and AI growth potential being positive, but a lawsuit against a former executive introduces a negative element. T: The score has decreased by 0.2 points due to the emergence of a bearish candle pattern and overstretched price, despite strong velocity. Conviction has decreased by 0.5 points as the technical signals are now conflicting, with a bearish pattern emerging against bullish momentum. Risk has increased by 0.7 points due to the overstretched price, explosive velocity, and the bearish candle pattern, indicating a higher probability of a short-term reversal."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.2,
+        "risk": 6.3
+      },
+      "synthesis": "S: Medium-term momentum has strengthened, with the MACD accelerating to 1.019 and trend alignment showing expanding momentum (2.41%). The price remains in a bullish trend position relative to the 50-day SMA (Z:1.3). W: Despite improving momentum, the price is still within the monthly range, and the SR landscape maintains a 'RANGE' bias, suggesting that broad directional conviction is not yet established. The previous fading MACD has now accelerated, but this could also signal a peak in the current move. O: News flow is positive, highlighting upcoming earnings, rate spread benefits, and AI-driven growth potential, which supports the medium-term outlook. T: The score has increased by 0.3 points due to the accelerating MACD and expanding momentum, indicating a stronger upward trend. Conviction has increased by 0.2 points as the momentum indicators have turned more decisively bullish. Risk has decreased slightly by 0.2 points as the trend has become more robust, although the 'RANGE' bias in the SR landscape still caps further significant upside conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.5,
+        "conv": 7.8,
+        "risk": 4.8
+      },
+      "synthesis": "S: The long-term outlook remains robust, with the secular bull market regime strengthening (16.6%) and the golden cross structure remaining healthy (9.11%). The price is still near the top of the cycle, though it has moved slightly lower from its peak (91.1%). W: The slight pullback from the absolute cycle top (from 94.2% to 91.1%) represents a minor weakening in the long-term trend. The fundamental weaknesses in balance sheet and negative FCF, while currently masked by the strong market regime, remain a latent risk. O: Long-term news flow continues to emphasize strategic initiatives and upcoming earnings, reinforcing the company's operational strength and forward-looking strategy. T: The score has decreased slightly by 0.3 points due to the price moving further away from the absolute cycle top. Conviction has decreased by 0.2 points as the price is no longer at its peak, introducing a minor degree of uncertainty about immediate further upside. Risk has increased slightly by 0.3 points, primarily due to the price moving away from the cycle peak and the persistent, though currently managed, fundamental weaknesses."
+    }
+  }
+}

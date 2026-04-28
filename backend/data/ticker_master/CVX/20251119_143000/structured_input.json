@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.27)",
+        "velocity_roc_10": "STAGNANT (0.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.9%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 151.76-159.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.22%)",
+        "cycle_macd": "BULLISH_FADING (0.05)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.92)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 148.89-161.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.82%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 150.45,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.06%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.13, P/S: 1.44)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 1.43)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.12x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron identified as potential suitor for Luk\u043eil assets. - Global sustainable fuel market grows to USD 1 nine billion.",
+      "Chevron explores purchase of Luk\u043eil assets. - CVX teams up with TGS on three-year seismic services deal.",
+      "Trump admin reverses limitations on Alaska oil drilling in CVX's favor."
+    ],
+    "medium_term_50d": [
+      "Chevron identified as potential suitor for Luk\u043eil assets. - Global sustainable fuel market grows to USD 1 nine billion.",
+      "Chevron explores purchase of Luk\u043eil assets. - CVX teams up with TGS on three-year seismic services deal.",
+      "Chevron named operator for new exploration blocks in Suriname."
+    ],
+    "long_term_200d": [
+      "Chevron slashes thousands of jobs due to lower oil prices (Conoco Phillips, Exxon Mobil also affected).",
+      "Chevron identified as potential suitor for Luk\u043eil assets. - Global sustainable fuel market grows to USD 1 nine billion.",
+      "Chevron explores purchase of Luk\u043eil assets. - CVX teams up with TGS on three-year seismic services deal."
+    ]
+  }
+}

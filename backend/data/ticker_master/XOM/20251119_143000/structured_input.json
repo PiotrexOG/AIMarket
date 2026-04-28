@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "NORMAL (4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 112.51-120.81]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.7%)",
+        "cycle_macd": "BULLISH_FADING (0.27)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 110.39-120.81]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.53%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 116.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.93, P/S: 1.55)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.94)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041c\u043ebil announces closure of Fiffe Ethylene Plants in Scotland - Hundreds Of Jobs At Risk At Exxon\u041c\u043ebil's Fiffe Manufacturing Site - Scottish Government urged to intervene in Exxon\u039c\u043ebil'scclosure plans Note: Based on the given data, these bullets represent the most",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM reports unexpected drop in crude oil output. - New product launch: Exx",
+      "KKR provides $75o million financing solution to Chandra Asri, affecting XOM's partner. - No direct material event for XOM observed from given data."
+    ],
+    "medium_term_50d": [
+      "Exxon \u041c\u043ebil announces closure of Fiffe Ethylene Plants in Scotland - Hundreds Of Jobs At Risk At Exxon\u041c\u043ebil's Fiffe Manufacturing Site - Scottish Government urged to intervene in Exxon\u039c\u043ebil'scclosure plans Note: Based on the given data, these bullets represent the most",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM reports unexpected drop in crude oil output. - New product launch: Exx",
+      "Chevron announces AI-poweredgas plant expansion in West Texas. - OPEC revises Q3 global oill market estimates, causing oil and gascompanies to trade lower. - New Exx\u043e\u043d\u041c\u043e\u0431\u0438\u043b\u044c facility set to supercharge US LNG exports. - Legal hurdles cause Sable Offshire stock to decline 78"
+    ],
+    "long_term_200d": [
+      "Exxon announces advanced talks topower AI data centerswith natural gas and Carbon Capture.",
+      "Exxon \u041c\u043ebil announces closure of Fiffe Ethylene Plants in Scotland - Hundreds Of Jobs At Risk At Exxon\u041c\u043ebil's Fiffe Manufacturing Site - Scottish Government urged to intervene in Exxon\u039c\u043ebil'scclosure plans Note: Based on the given data, these bullets represent the most",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM reports unexpected drop in crude oil output. - New product launch: Exx"
+    ]
+  }
+}

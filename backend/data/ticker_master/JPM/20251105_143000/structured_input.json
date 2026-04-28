@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "NORMAL (4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 290.54-312.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.69%)",
+        "cycle_macd": "BULLISH_FADING (1.159)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.62)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.54-318.01]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.94%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 309.29,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.08%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.28, P/S: 3.11)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.4)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.23)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.88x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan completes first blockchain-based private fund transaction - JP Morgan sets to keep lion's share of EA'$500 million debt fees - J PMorgan tokenizes private equity fund on its own blockchain",
+      "JPMorgan alerts US govt to about $1 billionin Epstein-linked transfers. -JPMorgan invests in Texas Stock Exchange. -jpmorgans earnings: higher paymentsfees lift third-quarters revenue.",
+      "Texas regulatory approval for JPMorgan's regional bank acquisition - J PMorgan announces new digital paymentplatform for merchants - J P Morgan raises full-Year net interest incomeguidance Note: Based on the given data, these are the material events directly affecting JPM on October 28, 20 twenty-five."
+    ],
+    "medium_term_50d": [
+      "JPMorgan completes first blockchain-based private fund transaction - JP Morgan sets to keep lion's share of EA'$500 million debt fees - J PMorgan tokenizes private equity fund on its own blockchain",
+      "JPMorgan alerts US govt to about $1 billionin Epstein-linked transfers. -JPMorgan invests in Texas Stock Exchange. -jpmorgans earnings: higher paymentsfees lift third-quarters revenue.",
+      "JPMorgan opens new global headquartersat 27o Park Avenue. - Strong Q3 earnings for JPMorgan. - Announces $1. five trillion Securityand Resilience Initiative."
+    ],
+    "long_term_200d": [
+      "JPMorgan announces $1. fifth trillion Security and Resiliency Initiate boostingcritical industries. - Jamie Dimon unveils $1.fifth trillion plan investing U.S.economicsecurityandresiliency.",
+      "JPMorgan opens new global headquartersat 27o Park Avenue. - Strong Q3 earnings for JPMorgan. - Announces $1. five trillion Securityand Resilience Initiative.",
+      "JPMorgan announces major restructuring plan. - Federal Reserve fines JPMorgan $1 billion for compliance failures. - Amazon partners with JPMorgan to offer checking accounts. - Natural disaster disrupts JPMorgan's East Coast operations. - IBM cancels multi-billion dollar deal with JPM. - New York AG sues J"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 136.6-152.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.54%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.214)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 132.33-152.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.31%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 145.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.92%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.63, P/S: 1.31)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.71)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron signs 20\u2010year LNG supply deal with Energy Transfer's Lake Charles facility. -Chevron sends first oil shipment from Tengiz field to Germany via Druzhbapipeline.",
+      "Chevron exits Scotland office, phases out North Seaoperations by 2-06 (202six) - Argentinian court orders Argentina to hand back YPF shares - Total expands Surinamese presence with 25\\% stake in Block53",
+      "Chevron signs 20\u2010year LNG supply agreement with Energy Transfer (CVX increases supply to three million tpy). - First oil shipped from Tengizchemroil to Germany via Druzhbapipeline(affectson CVXaspartner)."
+    ],
+    "medium_term_50d": [
+      "Chevron signs 20\u2010year LNG supply deal with Energy Transfer's Lake Charles facility. -Chevron sends first oil shipment from Tengiz field to Germany via Druzhbapipeline.",
+      "Chevron signs 20\u2010year LNG supply agreement with Energy Transfer (CVX increases supply to three million tpy). - First oil shipped from Tengizchemroil to Germany via Druzhbapipeline(affectson CVXaspartner).",
+      "Chevron resumes operations at Leviarthan Gas Field after ceasefire. - Israel resumesnatural gas exports from Karish and Leviantangas fields. - CVX restartsgasoperationsat Leviathangas field,restoringcriticalexportsto Egyptand Jordan."
+    ],
+    "long_term_200d": [
+      "US Treasury revokes authorizations for Chevron's Venezuelan oil exports. - CVX lays off nearly twenty percent of global workforce including 20o Texans.",
+      "Chevron signs 20\u2010year LNG supply deal with Energy Transfer's Lake Charles facility. -Chevron sends first oil shipment from Tengiz field to Germany via Druzhbapipeline.",
+      "Chevron agrees to buy Hesse for $6o billion. - NY State Common Retirements Fund sells Chevron stock."
+    ]
+  }
+}

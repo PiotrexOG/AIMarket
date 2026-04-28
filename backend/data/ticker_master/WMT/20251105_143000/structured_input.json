@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.29)",
+        "velocity_roc_10": "NORMAL (-3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 100.18-109.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.77%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.634)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.46)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 95.42-109.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.3%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 101.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.8%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.62, P/S: 1.23)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.7)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "United States government blocks Kroger's acquisition of Albertons, impacting WMT. - Instacart introduces AI tools for grocery retailers, WMT to implement Cart Assistant.",
+      "Walmart reported stronger-than expected earnings. - Amazon's stock was downgraded.",
+      "Walmart acquires Vizio and rolls out Cast OS, becoming largest operating system in North America. - Eli Lilly's Zepbound available for pick-Up at Walmart Ph armacies with direct-To-Consumer pricing."
+    ],
+    "medium_term_50d": [
+      "Walmart acquires Vizio and rolls out Cast OS, becoming largest operating system in North America. - Eli Lilly's Zepbound available for pick-Up at Walmart Ph armacies with direct-To-Consumer pricing.",
+      "United States government blocks Kroger's acquisition of Albertons, impacting WMT. - Instacart introduces AI tools for grocery retailers, WMT to implement Cart Assistant.",
+      "Walmart reported stronger-than expected earnings. - Amazon's stock was downgraded."
+    ],
+    "long_term_200d": [
+      "Walmart acquires Vizio and rolls out Cast OS, becoming largest operating system in North America. - Eli Lilly's Zepbound available for pick-Up at Walmart Ph armacies with direct-To-Consumer pricing.",
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart announices new service for Car owners. - walmart partners with Open AI for shopping on Chat GPT. - WMT accelerates AI transformation with Open AI partnership."
+    ]
+  }
+}

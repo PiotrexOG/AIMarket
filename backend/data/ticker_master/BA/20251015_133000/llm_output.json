@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has moved to a neutral zone at 49.2, and velocity has turned stagnant at -0.6%. The price is now trading below the 20-day SMA at -1.0%, indicating a weakening trend. Bollinger Bands are within normal limits (0.35), but the overall picture is one of indecision, as evidenced by the Doji candle pattern. W: The shift from strong bullish momentum to neutral RSI and stagnant velocity indicates a clear loss of upward pressure. Conviction has decreased due to the convergence of these negative short-term indicators. O: News flow is mixed, with the EU approving the Spirit Aero Systems acquisition conditionally, but also reports of Boeing seeking financial assistance and potentially losing a significant order to Airbus. T: Risk has increased due to the weakening momentum, stagnant velocity, and the price moving below the 20-day SMA. The score is decreased significantly to reflect the robust short-term technical deterioration, and conviction is also lowered due to the clearer negative signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains in a gradual descent (-3.24%), and the bullish MACD has faded significantly to 0.075. Crucially, the Z-score relative to the 50-day SMA has moved to a bearish trend position at Z:-1.08, indicating a clear shift from previous positive positioning. The price is now inside the monthly range but showing signs of weakness. W: The dramatic fading of the MACD and the deterioration of the 50-day SMA Z-score provide low conviction. The persistent bearish trend alignment is now compounded by negative momentum shifts. O: Medium-term news includes the conditional EU approval for Spirit Aero systems, but also concerns about Boeing seeking financial assistance and potential order losses, which weigh on the outlook. T: Risk has increased substantially due to the fading MACD and the move to a bearish trend position relative to the 50-day SMA. The score is decreased significantly to reflect this negative structural shift, and conviction is also lowered due to the clearer bearish medium-term signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term technical picture remains relatively stable but has shown some weakening. The long-term range position has decreased to 75.8% in the upper quadrant. The major crosses continue to show a healthy golden cross structure at 13.53%, indicating sustained long-term upward momentum, though slightly less pronounced than before. The secular bull market regime remains intact but has slightly weakened. W: The sustained strength in the golden cross structure and the intact bull market regime provide moderate conviction. However, the decrease in long-term range position and the slight weakening of the regime suggest a less robust outlook compared to the previous period. O: Long-term news highlights the ongoing strength in order books, with the conditional EU approval for Spirit Aero systems, but also concerns about financial assistance and potential order losses, which introduce some uncertainty. T: Risk has slightly increased due to the decrease in long-term range position and the slight weakening of the market regime. The score is decreased slightly to reflect the ongoing positive but less robust long-term technicals, and conviction remains moderate due to the mixed signals."
+    }
+  }
+}

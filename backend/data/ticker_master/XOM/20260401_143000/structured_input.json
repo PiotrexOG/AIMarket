@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "NORMAL (6.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (7.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 147.66-176.41]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.3%)",
+        "cycle_macd": "BULLISH_FADING (0.973)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 130.07-176.41]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (37.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.06%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 161.84,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.86%))",
+      "volume_dynamics": "ELEVATED (1.32)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.2%, Next Q Est Growth: 1.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 24.3, P/S: 2.12)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.64)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Golden Pass LNG project begins production. - Exxon Mobil-Qatar Energy JV starts LNG output.",
+      "Qatar Energy, Exxon Mobil joint venture begins first LNG production. - Exxon Mobil advances Guyana gas project.",
+      "Exxon Mobil rides tailwind of oil over $95. - Rising oil prices boost XOM's outlook."
+    ],
+    "medium_term_50d": [
+      "Golden Pass LNG project begins production. - Exxon Mobil-Qatar Energy JV starts LNG output.",
+      "Qatar Energy, Exxon Mobil joint venture begins first LNG production. - Exxon Mobil advances Guyana gas project.",
+      "SBM Offshore awarded FEED contracts for Longtail project in Guyana. - Exxon Mobil Corp shares hit new all-time high. - Exxon Mobil poised for Q1 earnings boost from oil prices."
+    ],
+    "long_term_200d": [
+      "SBM Offshore awarded FEED contracts for Longtail project in Guyana. - Exxon Mobil Corp shares hit new all-time high. - Exxon Mobil poised for Q1 earnings boost from oil prices.",
+      "Golden Pass LNG project begins production. - Exxon Mobil-Qatar Energy JV starts LNG output.",
+      "Qatar Energy, Exxon Mobil joint venture begins first LNG production. - Exxon Mobil advances Guyana gas project."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The candle pattern is now neutral, and RSI has fallen sharply into the bearish zone (33.9). Velocity (ROC 10) has imploded (-13.6%), and the price is now 8.1% below the 20-day SMA, indicating a strong downward trend. W: Despite the negative technicals, the price remains within the 20-day range, and the news narrative has shifted to tariff concerns, which are less severe than previous fraud allegations. O: The sharp decline in momentum and bearish technical indicators suggest further downside potential in the short term. The shift in news narrative offers a slight reprieve from the extreme negative sentiment of the previous period. T: Risk has increased substantially due to the implosive velocity, bearish RSI, and the price breaking below the 20-day SMA. Volatility has also expanded (ATR: 4.34%), exacerbating downside exposure. The structural bias remains range-bound, but the immediate trend is clearly bearish."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend has worsened considerably. MACD has accelerated into bearish territory (-2.599), and the price is now at a significant bearish trend position relative to the 50-day SMA (Z-score: -1.99). Trend alignment remains bearish and expanding (-6.53%). W: The news narrative, while still negative, has shifted from fraud allegations to tariff concerns, which may have a less permanent impact on the business. However, the technical deterioration is severe. O: The combination of accelerating bearish MACD, deep bearish positioning relative to the 50-day SMA, and continued negative trend alignment points to a strong bearish outlook for the medium term. The previous conviction in a potential recovery has evaporated. T: Risk has increased significantly due to the accelerating bearish MACD, extreme bearish Z-score relative to the 50-day SMA, and the persistent negative trend alignment. The previous legal and regulatory headwinds are still present, compounding the downside risk from the current market regime."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime has shifted to a bear market relief rally (-6.2%), indicating a less supportive macro environment. The long-term range position has moved into the bearish lower quadrant (27.7%), suggesting limited upside potential. W: While the golden cross structure remains technically intact, the overall market regime and range position have deteriorated. The news narrative, though less severe than previous fraud allegations, still includes tariff concerns that impact the broader economic outlook. O: The fundamental strength of the business remains a positive, but the shift to a bearish market regime and lower range position significantly dampens the long-term outlook. The previous conviction in a secular bull market has been replaced by a more cautious, bear-market-influenced view. T: Risk has increased due to the shift in market regime to a bear market rally and the move to the bearish lower quadrant of the long-term range. The previous legal and regulatory concerns, while not as prominent in the current news, remain a latent risk. The fundamental resilience provides some buffer, but the macro environment is now a significant risk factor."
+    }
+  }
+}

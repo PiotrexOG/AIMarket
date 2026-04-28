@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (37.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 104.77-141.46]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-5.83%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.409)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 104.77-153.13]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-9.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.68%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 42.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 116.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | HIGH_VOLATILITY_ASSET (ATR:  (6.42%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 96.45, P/S: 47.82)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 67.78)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidiadefends its supermacy in AI with growing competition at GTC conference. - Hyperfine, Nividia partner to make brain MRIs more affordable.",
+      "Amazon undercuts NVIDIA with aggressive AI chip discounts. - An NVIDIA director sold over \u00a36 million worthof stock.",
+      "Chinese startup challenges Nvidia with new AI framework using local chips. - Wasatch U._S_. Select Fund underperforms Russell 3ooo Growth Index. - Taiwan Semiconductors leads AI chip manufacture with unmatched expertsis. - Amazon division releases Trainium3AIchipbyendof202five. - Fed Reservekeeps"
+    ],
+    "medium_term_50d": [
+      "Nvidiadefends its supermacy in AI with growing competition at GTC conference. - Hyperfine, Nividia partner to make brain MRIs more affordable.",
+      "Chinese startup challenges Nvidia with new AI framework using local chips. - Wasatch U._S_. Select Fund underperforms Russell 3ooo Growth Index. - Taiwan Semiconductors leads AI chip manufacture with unmatched expertsis. - Amazon division releases Trainium3AIchipbyendof202five. - Fed Reservekeeps",
+      "Amazon undercuts NVIDIA with aggressive AI chip discounts. - An NVIDIA director sold over \u00a36 million worthof stock."
+    ],
+    "long_term_200d": [
+      "Nvidiadefends its supermacy in AI with growing competition at GTC conference. - Hyperfine, Nividia partner to make brain MRIs more affordable.",
+      "Chinese startup challenges Nvidia with new AI framework using local chips. - Wasatch U._S_. Select Fund underperforms Russell 3ooo Growth Index. - Taiwan Semiconductors leads AI chip manufacture with unmatched expertsis. - Amazon division releases Trainium3AIchipbyendof202five. - Fed Reservekeeps",
+      "Amazon undercuts NVIDIA with aggressive AI chip discounts. - An NVIDIA director sold over \u00a36 million worthof stock."
+    ]
+  }
+}

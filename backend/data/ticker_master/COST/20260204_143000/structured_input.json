@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 872.2-992.92]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.62%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.034)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.89)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 844.06-992.92]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.44%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 65.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 989.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.86%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $268.776B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.9%, EPS: 9.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.2%, Next Q Est Growth: 5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.97, P/S: 1.64)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.22)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco faces a nationwideclass action lawsuitover Kirkland Rotisserrie Chickennolabellingand advertisingpractices. - Key Costcogiftcardpartnergoesbankruptaffectinggiftcardsales.",
+      "Costco faces nationwide classaction lawsuitover Kirkland Rotisserie Chickennon-preservativeclaims.",
+      "Nationwide class action suit over Kirkland Rotisserie Chicken labeling. - Potential consumer trust impact on Costco store brands."
+    ],
+    "medium_term_50d": [
+      "Costco faces a nationwideclass action lawsuitover Kirkland Rotisserrie Chickennolabellingand advertisingpractices. - Key Costcogiftcardpartnergoesbankruptaffectinggiftcardsales.",
+      "Costco faces nationwide classaction lawsuitover Kirkland Rotisserie Chickennon-preservativeclaims.",
+      "Nationwide class action suit over Kirkland Rotisserie Chicken labeling. - Potential consumer trust impact on Costco store brands."
+    ],
+    "long_term_200d": [
+      "Costco faces a nationwideclass action lawsuitover Kirkland Rotisserrie Chickennolabellingand advertisingpractices. - Key Costcogiftcardpartnergoesbankruptaffectinggiftcardsales.",
+      "Costco faces nationwide classaction lawsuitover Kirkland Rotisserie Chickennon-preservativeclaims.",
+      "Nationwide class action suit over Kirkland Rotisserie Chicken labeling. - Potential consumer trust impact on Costco store brands."
+    ]
+  }
+}

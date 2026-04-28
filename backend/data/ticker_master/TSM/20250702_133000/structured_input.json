@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 193.64-228.88]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.3%)",
+        "cycle_macd": "BULLISH_FADING (0.368)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.74)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 145.84-228.88]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.97%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 101.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 230.33,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.17%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 57.4% | OM: 47.1% | NM: 41.2%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3140.91732B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.9%, EPS: 51.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3300.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.92, P/S: 0.38)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.26)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.15x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSM injects $10bn capital into TSMCGlobal Ltd. - Strong AI chip demand boosts TSM growth.",
+      "Two Chinese chip startups, Moore Threads and Meta X, plan $1._7 billion IPOS, hoping US export cur BS will boost local dem And for TSM. - Needham outlines roadmap for TS MC to reach $90\\_.B in AI re Venue by 2o29.",
+      "TSMC mentioned in article about tech earnings and foreign exchange impacts. - Emerging memory and storage tech collaboration involving TSMC. - Nvidia breaks out, potential impact on TSMC through partnership or industry trends."
+    ],
+    "medium_term_50d": [
+      "TSM injects $10bn capital into TSMCGlobal Ltd. - Strong AI chip demand boosts TSM growth.",
+      "Two Chinese chip startups, Moore Threads and Meta X, plan $1._7 billion IPOS, hoping US export cur BS will boost local dem And for TSM. - Needham outlines roadmap for TS MC to reach $90\\_.B in AI re Venue by 2o29.",
+      "US considers ending China waiivers for TSMc and other global chipmakers - Soft Bank proposes $\u2081\u0442\u0440\u043d AI and robotcs hub in Arizona with TS Mc participation - TSM, LRCX, AMAT share prices drop following reports of US revoking China waiiers for chipmakers"
+    ],
+    "long_term_200d": [
+      "US considers ending China waiivers for TSMc and other global chipmakers - Soft Bank proposes $\u2081\u0442\u0440\u043d AI and robotcs hub in Arizona with TS Mc participation - TSM, LRCX, AMAT share prices drop following reports of US revoking China waiiers for chipmakers",
+      "TSM injects $10bn capital into TSMCGlobal Ltd. - Strong AI chip demand boosts TSM growth.",
+      "TSMC reports 40\\% revenue surge in May for AI chip demand."
+    ]
+  }
+}

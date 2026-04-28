@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.84)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 898.01-1018.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.38%)",
+        "cycle_macd": "BULLISH_FADING (4.272)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1066.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.53%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 1011.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.28%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 60.95, P/S: 1.77)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.06)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco announces double-digital percentage increase in dividends. - TJX also increases dividends by double digits.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco expects to absorb initial tariff cost, impacting short-medium term profitability."
+    ],
+    "medium_term_50d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco announces double-digital percentage increase in dividends. - TJX also increases dividends by double digits.",
+      "Costco expects to absorb initial tariff cost, impacting short-medium term profitability."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco announces double-digital percentage increase in dividends. - TJX also increases dividends by double digits.",
+      "Costco announces 12\\% dividend increase. - New dividend rate: $1. three zero cent per share. - Annual dividend: $5. two zero dollars. - Yield: approximately 0. five four percent."
+    ]
+  }
+}

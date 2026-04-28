@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals present a mixed picture. A strong bullish candle pattern emerges, but this is contradicted by a bearish RSI (37.4) and negative ROC velocity (-2.3%). The price is consolidating near the 20-day SMA, indicating a lack of immediate directional conviction. W: The score has decreased from 5.0 to 4.0 due to the deterioration in momentum indicators, particularly the RSI moving into bearish territory. Conviction has slightly softened from 3.5 to 3.0 as the bullish candle pattern is offset by weaker momentum. Risk has increased from 6.5 to 7.0, primarily driven by the bearish RSI and the proximity of resistance barriers, alongside the persistent legal headwinds mentioned previously."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment has weakened slightly, with the bullish ascent now at 0.98%. While the MACD is recovering from a deeper bearish territory (-5.13), it remains significantly negative. The price is now closer to the 50-day SMA (Z:-0.29), indicating a less robust trend position. O: Positive news regarding membership income growth and CEO commentary on member value provide some support, but the ongoing tariff refund lawsuits remain a significant overhang. T: The continued bearish MACD divergence and the shift to a more neutral position relative to the 50-day SMA present downside risks. The legal challenges, though not yet fully quantified, continue to represent an unquantifiable risk factor. W: The score has been reduced from 5.5 to 5.0, reflecting the weaker trend alignment and the persistent bearish MACD signal. Conviction has decreased from 5.0 to 4.5 due to the mixed signals from trend and momentum indicators. Risk remains stable at 5.5, as the improved news flow on membership is offset by the ongoing legal uncertainties and technical weakness."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term secular bull market regime and golden cross structure remain intact. A significant positive development is the stock's move into the bullish upper quadrant of its long-term range (72.4%), suggesting improved long-term positioning. O: The company's core strengths in scale, financial health, and moderate growth persist. Strong membership income growth reported in Q2 provides a positive fundamental tailwind. T: Despite the improved range position, the hyper-premium valuation multiples (P/E: 53.57, PEG: 5.39) continue to represent the primary long-term risk. Any slowdown in growth or shift in market sentiment could lead to significant multiple compression. The legal issues, while not directly impacting long-term fundamentals yet, add a layer of uncertainty. W: The score remains unchanged at 6.5, as the improved long-term range position is balanced by the persistent high valuation risk. Conviction has slightly increased from 6.0 to 5.5, reflecting the more favorable long-term range positioning. Risk remains stable at 5.0, as the high valuation continues to be the dominant risk factor, with the legal issues acting as a secondary, albeit growing, concern."
+    }
+  }
+}

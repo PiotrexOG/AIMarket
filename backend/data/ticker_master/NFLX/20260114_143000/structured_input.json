@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 88.32-97.33]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.38%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.257)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.4)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 88.32-116.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-20.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.72%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 13.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 88.93,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.81%))",
+      "volume_dynamics": "ELEVATED (1.47)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.15, P/S: 8.9)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.87)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 1.0)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix explores all-c ASH offer for Warner Brs. Discovery. - Paramount sues Warner Brs. over Netflix DEal. - Netflix may adjust WB bid to ALL-CASh offer.",
+      "Paramount su ES Warner Bros Discovery for financial disclosure on Netflix deal. - Paramount names own slate OF directors for Warner Brs annual meeting. Note: These two bullets are the only ones that meet the criteria of having a direct impact on NFLX through Paramount'sbid to acquire Warner Bros..All other news items concern either regulatory issues",
+      "Netflix reports Q4 earnings surpassing expectations. - Disney announces acquisition of Netflix's rival streaming service. - Major production disruption at Netflix due to labor strike. - Supreme Court rules against Netflix in copyright infringement case. - NFLX reveals significant increase in subscribers from new market entry."
+    ],
+    "medium_term_50d": [
+      "Netflix reports Q4 earnings surpassing expectations. - Disney announces acquisition of Netflix's rival streaming service. - Major production disruption at Netflix due to labor strike. - Supreme Court rules against Netflix in copyright infringement case. - NFLX reveals significant increase in subscribers from new market entry.",
+      "Netflix explores all-c ASH offer for Warner Brs. Discovery. - Paramount sues Warner Brs. over Netflix DEal. - Netflix may adjust WB bid to ALL-CASh offer.",
+      "Netflix announces plans to buy Warner Bros. - Warner Bros rejects Paramount offer, affecting potential sale to NFLX - Netflix stock slides due to Warner Bros acquisition concerns"
+    ],
+    "long_term_200d": [
+      "Netflix reports Q4 earnings surpassing expectations. - Disney announces acquisition of Netflix's rival streaming service. - Major production disruption at Netflix due to labor strike. - Supreme Court rules against Netflix in copyright infringement case. - NFLX reveals significant increase in subscribers from new market entry.",
+      "Netflix acquires Warner Brothers Discovery for $83.7B. - Warner Bros rejects Paramount offer, sticks with Netflix deal. Note: This output is based on the provided data and assumes that there are no additional contextual information or background knowledge beyond what is given. If new information becomes available, the analysis may change accordingly.",
+      "Netflix announces plans to buy Warner Bros. - Warner Bros rejects Paramount offer, affecting potential sale to NFLX - Netflix stock slides due to Warner Bros acquisition concerns"
+    ]
+  }
+}

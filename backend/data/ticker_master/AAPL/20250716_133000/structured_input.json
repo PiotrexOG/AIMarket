@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 195.07-215.83]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.81%)",
+        "cycle_macd": "BULLISH_FADING (0.397)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 193.25-215.83]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.47%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 47.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 212.09,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.95%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.61, P/S: 8.12)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 48.13)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple invests $ fifthousand million in US rare earthsmine,MPMaterials. - Apple forms$ fifthousand millionsupply dealwith MPMaterialsforrare earth magnets.",
+      "AAPLSecurities lawsuit filed against Apple Inc., contact The DJS law group. - Apple vs Visa,Mastercard antitrustcase judgment. - EU licensing Amacfor in-house i Pad repairs.",
+      "Meta hires ex-Apple engineer for new AI systems development."
+    ],
+    "medium_term_50d": [
+      "Apple invests $ fifthousand million in US rare earthsmine,MPMaterials. - Apple forms$ fifthousand millionsupply dealwith MPMaterialsforrare earth magnets.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (IF TRUE, THIS IS A MATERial EVENT) - Trump imposes 20%% tariffs on Vietnames\u0435 exports to the US, including goods transshipped via Vietnam. - Apple announces product launch delay. - Major lawsuit filed against Apple. - Trump implements trade",
+      "AAPLSecurities lawsuit filed against Apple Inc., contact The DJS law group. - Apple vs Visa,Mastercard antitrustcase judgment. - EU licensing Amacfor in-house i Pad repairs."
+    ],
+    "long_term_200d": [
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (IF TRUE, THIS IS A MATERial EVENT) - Trump imposes 20%% tariffs on Vietnames\u0435 exports to the US, including goods transshipped via Vietnam. - Apple announces product launch delay. - Major lawsuit filed against Apple. - Trump implements trade",
+      "Meta Poaches apple AI Executive - Apple loses Top AI models executive to Meta Note: These events are considered material as they involve key personnel in the field of Artificial Intelligence leaving Apple to join a direct competitor, Meta Platforms.",
+      "Apple reveals \"Liquid Glasst\" interface for i OS 26 - Apple integrates Chat GPT in new AI features - Apple's AI event underperforms, share price slips - Apple details AI implementation in smartphones - Apple introduces foundation models for developers - Apple partners with Microsoft for AI capabilities - Apple announces major upgrade to Sir"
+    ]
+  }
+}

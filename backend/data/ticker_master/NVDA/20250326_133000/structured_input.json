@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "NORMAL (11.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 104.77-135.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.08%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.157)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 104.77-148.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.19%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 115.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.62%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.9, P/S: 47.05)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 66.69)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "5. Nvidia CEOJensen Huangcommentsonrapiddepreciationof AIChips. 6. NVIDIAmong Cathie Wood\u2019s Top AIStock Picksin202 fifth.",
+      "Malaysia cracks down on Nvidiachip flows under US pressure. - Malaysia tightens semiconductoregulations under US pressure.\"",
+      "Nvidia earnings details went under the radar. - Investors welcome delayed import threats to Taiwan."
+    ],
+    "medium_term_50d": [
+      "Malaysia cracks down on Nvidiachip flows under US pressure. - Malaysia tightens semiconductoregulations under US pressure.\"",
+      "5. Nvidia CEOJensen Huangcommentsonrapiddepreciationof AIChips. 6. NVIDIAmong Cathie Wood\u2019s Top AIStock Picksin202 fifth.",
+      "NVIDIA teams up with GE\uff0cGoogle\uff0cIBM\uff0cCrowd Strike\uff0cand Yum!Brands to redefine AI and quantum technology."
+    ],
+    "long_term_200d": [
+      "Malaysia cracks down on Nvidiachip flows under US pressure. - Malaysia tightens semiconductoregulations under US pressure.\"",
+      "NVIDIA teams up with GE\uff0cGoogle\uff0cIBM\uff0cCrowd Strike\uff0cand Yum!Brands to redefine AI and quantum technology.",
+      "Nvidiadefends its supermacy in AI with growing competition at GTC conference. - Hyperfine, Nividia partner to make brain MRIs more affordable."
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.53)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 154.75-169.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.5%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.751)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.97)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 140.68-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.04%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 163.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.7%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.1% | OM: 24.8% | NM: 15.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $88.821B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -58.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -28.9%, Next Q Est Growth: 80.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.91, P/S: 4.46)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.54)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -58.06%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson grants Fast Track design ATION for Nipocalimb in Sj\u00f6ren's disease. - Nanobiatx adjusts agreement with JNJ to strengthen finances."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson grants Fast Track design ATION for Nipocalimb in Sj\u00f6ren's disease. - Nanobiatx adjusts agreement with JNJ to strengthen finances."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson grants Fast Track design ATION for Nipocalimb in Sj\u00f6ren's disease. - Nanobiatx adjusts agreement with JNJ to strengthen finances."
+    ]
+  }
+}

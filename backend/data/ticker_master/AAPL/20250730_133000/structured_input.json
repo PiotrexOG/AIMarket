@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.47)",
+        "velocity_roc_10": "NORMAL (1.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 206.14-215.83]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.01%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.086)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.88)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 193.46-215.83]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.42%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 210.61,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.37%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.38, P/S: 8.06)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 47.8)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Spain's antitrust regulator expands investigation into Apple over App Store pricing. - Alarm.Com extends connected home experience with Apple Car Play support. - Apple closes retail store in China forfirst time ever, cites shifting mall landscape amid consumer slowdown.",
+      "EU and US ink trade deal potentially impacting Apple exports. - Ireland warns of economic challenges due to higher tariffs on Apple imports.",
+      "Apple signs $50 million Rare Earth Magnet deal with MP Materials. - ACM decides against enforcing order regarding Apple's commissions fromdating appsproviders. - Samsung negotiating with Open AI and Perplexity AI for Galaxy S27 AI services."
+    ],
+    "medium_term_50d": [
+      "EU and US ink trade deal potentially impacting Apple exports. - Ireland warns of economic challenges due to higher tariffs on Apple imports.",
+      "Spain's antitrust regulator expands investigation into Apple over App Store pricing. - Alarm.Com extends connected home experience with Apple Car Play support. - Apple closes retail store in China forfirst time ever, cites shifting mall landscape amid consumer slowdown.",
+      "MP Materials forges $5oo M partnership with Apple for US-made, recycled rare earth magnents. - Apple i Phone production soars in India amid slowing USdemand."
+    ],
+    "long_term_200d": [
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (IF TRUE, THIS IS A MATERial EVENT) - Trump imposes 20%% tariffs on Vietnames\u0435 exports to the US, including goods transshipped via Vietnam. - Apple announces product launch delay. - Major lawsuit filed against Apple. - Trump implements trade",
+      "MP Materials forges $5oo M partnership with Apple for US-made, recycled rare earth magnents. - Apple i Phone production soars in India amid slowing USdemand.",
+      "Meta Poaches apple AI Executive - Apple loses Top AI models executive to Meta Note: These events are considered material as they involve key personnel in the field of Artificial Intelligence leaving Apple to join a direct competitor, Meta Platforms."
+    ]
+  }
+}

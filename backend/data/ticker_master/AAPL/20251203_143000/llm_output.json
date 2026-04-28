@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 6.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Momentum indicators have strengthened significantly. RSI has moved higher to BULLISH_ZONE_STRONG (67.2), and the price is now exhibiting a BLOW_OFF_TOP pattern above the upper Bollinger Band (1.12). Velocity (ROC_10) has become EXPLOSIVE_UP (7.0%), indicating strong short-term buying pressure. W: The BLOW_OFF_TOP pattern and the price testing critical resistance at 287.4, combined with the overextended RSI, suggest a high probability of a short-term pullback or consolidation. The explosive velocity, while bullish, also increases the risk of a sharp reversal. O: The current price action indicates extreme short-term bullishness, but the proximity to resistance and the blow-off top pattern create a high-risk environment for further upside without a significant catalyst. T: The short-term outlook is characterized by extreme bullish momentum but also elevated risk due to resistance and potential exhaustion signals. The score has increased due to improved momentum, but risk has also risen significantly."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The MACD has decisively crossed into bullish territory and is now BULLISH_ACCELERATING (0.832), a significant improvement from the previous bearish state. Trend alignment remains bullish (3.43%), though the SMA50 Z-score has become OVEREXTENDED_BULLISH_STAT_OUTLIER (2.35). W: The overextended Z-score indicates that the price has moved too far, too fast from its 50-day moving average, increasing the risk of a mean reversion. While the MACD is strongly bullish, the current positioning suggests a potential for a pause or correction to normalize the oscillator. O: The accelerating bullish MACD suggests sustained upward momentum, but the overextended Z-score implies that the current trend may be unsustainable in the immediate term without consolidation. T: The medium-term outlook is strongly bullish due to the MACD shift, but the elevated risk from the overextended Z-score tempers the conviction. The score has increased substantially due to the MACD's bullish acceleration, while risk has also risen due to the overextension."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The secular bull market regime (25.8%) and healthy golden cross structure (15.98%) remain robust and have slightly improved. The stock has reached the absolute peak of its long-term range, now at 99.9% of ATH. W: The continued push to new all-time highs, coupled with an increase in hyper-premium valuation multiples (P/E: 43.54, P/S: 10.51) and extreme multiple risk (P/B: 65.25), presents significant valuation fragility. The implied growth (PEG: 286.99) is exceptionally high, making the stock vulnerable to any slowdown in growth or shift in market sentiment. O: The fundamental and technical backdrop remains strong for the long term, but the extreme valuation levels introduce substantial risk. Any negative catalyst could trigger a significant correction from these elevated levels. T: The long-term outlook remains positive due to the prevailing market regime and technical structure, but the extreme valuation risk has increased, warranting a cautious stance. The score has seen a modest increase due to improved regime indicators, but risk has also risen due to valuation expansion."
+    }
+  }
+}

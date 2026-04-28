@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.69)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 908.38-963.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.74%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.423)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 903.33-981.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.43%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 933.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.53%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.17x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $264.086B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.6%, Next Q Est Growth: 6.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 54.4, P/S: 1.57)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.25)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "United States government blocks Kroger's acquisition of Albertssons, impacting Costco in new market. - Cove Sodas raises $15 Million in Series A funding, potentially affecting Costco's beverage offerings.",
+      "Costco opening new gas station in Mission Vieso, CA (spring 20 twenty six) - Cost Co expanding into furniture and appliance sales in Alaska",
+      "Costco sells Cadillacsfor Christmas. -Costco Logistics Boosts Bigand Bulky Onlinesales. -Kimberly-CLARKagreestobuy Tylenolowner Kenvue."
+    ],
+    "medium_term_50d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "United States government blocks Kroger's acquisition of Albertssons, impacting Costco in new market. - Cove Sodas raises $15 Million in Series A funding, potentially affecting Costco's beverage offerings.",
+      "Costco enters weight-loss drugs market, sells Ozempic & Wegov\u044b."
+    ],
+    "long_term_200d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "Costco enters weight-loss drugs market, sells Ozempic & Wegov\u044b.",
+      "Costco delivers another rock-solid earnings report. (Event 1) - Cost Co announces plans to open thirty five new wareh houses in 2o26. (Event4)"
+    ]
+  }
+}

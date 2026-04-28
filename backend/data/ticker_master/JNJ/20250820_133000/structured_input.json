@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (4.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (3.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 164.23-178.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.55%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.248)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.96)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 149.04-178.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.86%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 178.92,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.42%))",
+      "volume_dynamics": "ELEVATED (1.13)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 67.9% | OM: 24.5% | NM: 25.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 2.0x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $90.627B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.7%, EPS: -38.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 20.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.01, P/S: 4.78)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.52)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -38.5%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson announces FDA approval for new cancer therapy.",
+      "Johnson & Johnson settlement in opioid lawsuit (if applicable) - F DA approval for Johnson & Johnson multiple myelama therapy - Johnson (& Johnson) spins off Med Tech division - Halting of Johnson & Johnson clinical trial for multiple myelma therapy (if applicable). Based on the provided data, none of the events directly affect Jn J as they either",
+      "Johnson & Johnson mentioned as key player in sigmoidscopes market. - No direct material event identified for JNJ. NONE"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces FDA approval for new cancer therapy.",
+      "Johnson & Johnson expects better top-line growth in 2nd half. - J&J lifts sales and E PS outlook on new drug launch success.",
+      "Johnson & Johnson settlement in opioid lawsuit (if applicable) - F DA approval for Johnson & Johnson multiple myelama therapy - Johnson (& Johnson) spins off Med Tech division - Halting of Johnson & Johnson clinical trial for multiple myelma therapy (if applicable). Based on the provided data, none of the events directly affect Jn J as they either"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson expects better top-line growth in 2nd half. - J&J lifts sales and E PS outlook on new drug launch success.",
+      "Johnson & Johnson announces FDA approval for new cancer therapy.",
+      "Johnson & Johnson faces patent cliffs for key drugs by 2o30 (Merck, Bristol My ERS Squib B, Johnson &Johnson)."
+    ]
+  }
+}

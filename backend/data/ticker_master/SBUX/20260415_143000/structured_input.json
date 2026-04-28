@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.85)",
+        "velocity_roc_10": "EXPLOSIVE_UP (13.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 85.6-99.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.45%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.881)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.77)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 85.6-102.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.8%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 98.41,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.55%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 266.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 60.01, P/S: 3.02)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.87)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks sells control of China unit to Boyu Capital. - Jefferies upgrades Starbucks to Hold from Underperform.",
+      "Starbucks announces Q2 fiscal year 2026 results conference call.",
+      "Starbucks unveils refreshed store designs as part of restructuring. - Starbucks launches MUSH protein oats nationally. - Starbucks hires new chief development officer. - Starbucks faces union complaint over contract talks."
+    ],
+    "medium_term_50d": [
+      "Starbucks sells control of China unit to Boyu Capital. - Jefferies upgrades Starbucks to Hold from Underperform.",
+      "Starbucks announces Q2 fiscal year 2026 results conference call.",
+      "Starbucks completes China JV with Boyu Capital. - Starbucks shifts China stores to licensed model. - Starbucks cuts menu complexity by 25%. - Starbucks reintroduces two viral drinks."
+    ],
+    "long_term_200d": [
+      "Starbucks highlights \"Back to Starbucks\" turnaround progress. - Starbucks announces $500M staffing push. - Starbucks outlines China growth plans. - Starbucks tests additional ordering methods. - Starbucks accelerates in-store and licensed location transformation. - Starbucks rolls out over 1,000 new for-here coffeehouses. - Starbucks expands digital ordering at high-traffic venues.",
+      "Starbucks completes China JV with Boyu Capital. - Starbucks shifts China stores to licensed model. - Starbucks cuts menu complexity by 25%. - Starbucks reintroduces two viral drinks.",
+      "Starbucks sells control of China unit to Boyu Capital. - Jefferies upgrades Starbucks to Hold from Underperform."
+    ]
+  }
+}

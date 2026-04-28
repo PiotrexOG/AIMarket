@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.1%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 151.49-179.38]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.89%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.159)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.86)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 129.17-179.38]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (30.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.32%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 178.46,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.17%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 103.16, P/S: 55.68)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 90.39)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.13)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia reenters China market, unlocking $50\u0411 AI market. - U.S holds up UAE deal to buy NVDA AI chips. - TSMC raises 20 twenty-five outlook, boosting AI demand hopes.",
+      "Nvidia faces opposition to sales of AI charts to China. - Multi-billion dollard chip deal with UAE delayed due to regulatory issues.",
+      "Nvidia resumes chip sales to China. - H20 GPUs enable revenue growthfor Nvidia."
+    ],
+    "medium_term_50d": [
+      "Nvidia reenters China market, unlocking $50\u0411 AI market. - U.S holds up UAE deal to buy NVDA AI chips. - TSMC raises 20 twenty-five outlook, boosting AI demand hopes.",
+      "Nvidia faces opposition to sales of AI charts to China. - Multi-billion dollard chip deal with UAE delayed due to regulatory issues.",
+      "Nvidia resumes chip sales to China. - H20 GPUs enable revenue growthfor Nvidia."
+    ],
+    "long_term_200d": [
+      "Nvidia reenters China market, unlocking $50\u0411 AI market. - U.S holds up UAE deal to buy NVDA AI chips. - TSMC raises 20 twenty-five outlook, boosting AI demand hopes.",
+      "Nvidia meets with President Trump ahead of China trip. - New copper tariffs could push Nvidia closer to Navitas. - CEO Jensen Houng drives AI stampede with Broadcom,Palantir and others in tow. - Goldman Sachss recommends buying Nvidia for next phase of ai growth. - Elon Musks envisions a",
+      "Nvidia faces opposition to sales of AI charts to China. - Multi-billion dollard chip deal with UAE delayed due to regulatory issues."
+    ]
+  }
+}

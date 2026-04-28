@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term score has decreased from 5.0 to 4.0. The candle pattern has shifted to a shooting star, indicating potential reversal. RSI has fallen further into neutral territory (42.7), and velocity remains negative (-2.1%). The stock is still in the middle of its 20-day range (173.12-195.62), showing a lack of upward momentum. W: Conviction has slightly decreased from 5.0 to 4.5. The bearish shooting star pattern, coupled with the declining RSI and negative velocity, suggests a weakening short-term trend. The stock's position within the range, rather than at the upper bounds, reduces the durability of any prior bullish signals. O: Short-term news is mixed, with continued US export restrictions to China but also new partnerships and product announcements, such as DGX Spark. T: Risk has increased from 7.0 to 7.5. The bearish shooting star, declining RSI, and continued negative velocity elevate downside risk. Average volume (0.75) on the recent price action suggests selling pressure is present, and volatility remains moderate (ATR: 3.11%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term score has declined from 4.0 to 3.5. The MACD has accelerated its bearish trend (-0.842), indicating a stronger negative momentum shift. While trend alignment shows a slight improvement (2.4%), the stock is still inside the monthly range (164.07-195.62), and its position relative to the 50-day SMA has moved towards mean reversion (Z:0.15). W: Conviction has decreased from 4.0 to 3.5. The accelerating bearish MACD and the stock's position within the monthly range, despite a slight uptick in trend alignment, significantly reduce structural confidence. The shift towards mean reversion on the 50-day SMA further erodes conviction in a sustained upward trend. O: Medium-term news remains mixed, with ongoing AI infrastructure expansion partnerships but also continued geopolitical concerns regarding China chip exports and enforcement of import restrictions. T: Risk has increased from 6.5 to 7.0. The accelerating bearish MACD and the stock's position within the monthly range, coupled with the shift towards mean reversion, suggest increased downside risk. The lack of a clear upward thrust and the persistent geopolitical overhang contribute to elevated risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term score has slightly decreased from 6.5 to 6.0. The stock remains in a secular bull market regime and is in the upper quadrant of its long-term range (86.0%), but the 'extreme bullish stretch exhaustion risk' has marginally decreased (22.98%). W: Conviction has decreased slightly from 6.0 to 5.5. While fundamental strengths remain robust, the increasing technical risk at the upper end of the long-term range and persistent geopolitical headwinds continue to temper conviction. The slight reduction in exhaustion risk is offset by the continued price consolidation. O: Long-term news flow continues to highlight strategic AI partnerships and investments, which are supportive. However, the ongoing ban on custom chip sales in China remains a significant structural overhang, impacting long-term growth prospects. T: Risk has increased from 6.5 to 7.0. The continued presence of geopolitical tensions, the stock's position at the upper end of its long-term range, and the persistent 'extreme bullish stretch exhaustion risk' contribute to elevated long-term risk. While valuation remains a key risk, the current technical setup and geopolitical factors suggest a higher probability of a near-term correction, increasing overall risk exposure."
+    }
+  }
+}

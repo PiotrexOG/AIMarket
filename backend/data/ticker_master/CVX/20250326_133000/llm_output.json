@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Explosive price velocity (ROC 7.7%) and an extremely overbought RSI (79.9) indicate strong short-term upward momentum. The price is now at critical resistance levels (167.82). W: The extremely overbought RSI and the price being significantly overstretched above the 20-day SMA (5.2%) suggest a high probability of a short-term pullback or consolidation. The \"NEUTRAL\" candle pattern offers no directional conviction. O: A decisive break above the 167.82 resistance could signal further upside, but the current overbought conditions make this less likely without a pause. T: New short-term news regarding US tariffs on Venezuelan crude imports and the May 27 deadline to wind down operations introduce significant operational and revenue uncertainty, increasing downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The price has reached the upper boundary of the monthly resistance zone (167.82), and the MACD is still bullish, albeit fading (1.116). The Z-score for SMA50 positioning (3.09) indicates extreme bullish statistical outlier status. W: The fading MACD and extreme Z-score suggest that the current bullish momentum is unsustainable and a reversion to the mean is increasingly likely. The price is at the top of its 50-day range, indicating limited upside potential without a breakout. O: A failure to break decisively above the 167.82 resistance zone will likely lead to a price correction. The news regarding the wind-down of Venezuelan operations by May 27 poses a direct threat to medium-term revenue streams. T: The fundamental growth profile remains stagnant, and the implied growth is negative, creating a valuation disconnect with the current price action. The geopolitical news introduces significant uncertainty regarding future operational capacity and profitability."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The stock is trading above its 200-day SMA with a healthy golden cross structure, and the market regime remains a secular bull market. The business quality and financial health metrics are stable. W: The price is now trading above 100% of its long-term range (101.7%), indicating a potentially overvalued state and increased downside risk. The fundamental growth profile shows stagnation (Rev: -1.8%, EPS: -14.5%) and negative implied growth, which is a significant concern. O: The long-term technicals are positive, but the fundamental deterioration and current price position at cycle top increase the risk of a significant correction if market sentiment shifts or operational challenges materialize. T: The news narrative concerning US tariffs and the potential wind-down of Venezuelan operations introduces substantial long-term geopolitical and operational risks that could impact future production and profitability, directly challenging the \"HEALTHY_BALANCE_SHEET\" and \"MODERATE_CASH_GEN\" metrics over time."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated with the appearance of a 'SHOOTING_STAR_BEARISH' candle pattern, signaling potential downside. RSI has moved closer to the neutral zone at 48.9, indicating waning bullish momentum. The stock remains consolidated near the 20-day SMA, within its established range. W: The bearish candle pattern and stagnant ROC (0.8%) suggest a loss of upward conviction. The RSI's proximity to 50 indicates a lack of strong directional bias. O: Elevated volume (1.94) around this bearish signal could amplify downward movement. News regarding foldable iPhone delays and AI feature pullbacks in China introduces near-term headwinds. T: Potential delays in the foldable iPhone and regulatory hurdles for AI features in China present immediate downside risks. R: Downside risk has increased due to the bearish candle pattern and the stock's position within the range, coupled with moderate volatility (ATR 2.34%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment has slightly worsened to 'BEARISH_GRADUAL_DESCENT' (-2.89%), reinforcing a bearish bias. However, the MACD signal is fading (0.99), suggesting a loss of bullish momentum. The position relative to the 50-day SMA has improved to a 'MEAN_REVERSION_HEALTHY_BASE' (Z:-0.37). W: The persistent bearish trend alignment and fading MACD signal limit conviction. The stock's position, while improving, still indicates a recovery phase rather than a strong uptrend. O: The improved Z-score relative to the 50-day SMA offers a potential base for a rebound. Continued investment in US manufacturing and supply chain diversification provides a positive underlying narrative. T: Positive developments in US manufacturing expansion and supply chain diversification could offer support. The potential for AI advancements, despite current regulatory challenges, remains a long-term opportunity. W: The bearish trend alignment and fading MACD momentum temper upside potential. R: Downside risk has increased due to the worsening trend alignment and the fading bullish momentum, despite the improved SMA position. Volatility remains moderate."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term secular bull market regime and healthy golden cross structure remain intact, though the market regime's growth has slowed (1.5%). The stock has moved to a 'BULLISH_UPPER_QUADRANT' (66.1%) within its long-term range. Fundamental strengths in business quality and cash generation provide a solid foundation. W: Despite the positive long-term technicals, premium valuation multiples (P/E: 34.43, P/S: 9.28) and extreme multiple risk (P/B: 52.4) persist. The stressed balance sheet remains a concern, limiting conviction. O: The company's scale, consistent cash flow, and ongoing innovation, particularly in AI and future product cycles, offer long-term growth potential. Strategic supply chain diversification and US manufacturing expansion contribute positively. T: The long-term narrative is supported by innovation and strategic supply chain adjustments. However, potential delays in new product launches like the foldable iPhone introduce uncertainty. W: The primary long-term risks stem from elevated valuation multiples and the stressed balance sheet, which cap upside potential. R: Downside risk is somewhat elevated due to the increased valuation multiples and the potential for product launch delays, although the strong secular bull market and business fundamentals provide some support."
+    }
+  }
+}

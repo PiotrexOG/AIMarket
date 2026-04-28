@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (85.3)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "EXPLOSIVE_UP (12.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 203.17-247.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.74%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.976)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-247.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (17.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.11%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 240.43,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.18%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -22.05)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.26x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing receives order for 120 7 three seven MAX jetsfrom Aviation Capitale Group. - Delta places order for 60Boeing 7 eight 7 Dreamlinerstosupportlong-haulinternationalgrowth.",
+      "Boeing wins $12._Billion defense contracts.",
+      "Allegiant buys Sun Country for $1. fifth billion - Airbus reports 792 commercial aircraft deliveries in 21025. Note: I could not find any direct material event specifically affecting BA on January 12, 2036 based on the provided data. However, I did identify two indirectly related events that may potentially"
+    ],
+    "medium_term_50d": [
+      "Boeing receives order for 120 7 three seven MAX jetsfrom Aviation Capitale Group. - Delta places order for 60Boeing 7 eight 7 Dreamlinerstosupportlong-haulinternationalgrowth.",
+      "Boeing wins $12._Billion defense contracts.",
+      "11. Alaska Air places record 115-jet order with Boeing 12. Boeing wins large fleet order from Alaska Air 13. Trump proposes $1. fifth trillion defensebudget, boosting defense stocks including Boeing"
+    ],
+    "long_term_200d": [
+      "Boeing receives order for 120 7 three seven MAX jetsfrom Aviation Capitale Group. - Delta places order for 60Boeing 7 eight 7 Dreamlinerstosupportlong-haulinternationalgrowth.",
+      "FAA reviews BA's manufacturing quality issue.\\ - Boeling announces major strategic decision on 73 seventh max production.\\ - BA wins multibillon dollar contract from military.\\ - Court rules against BA in major lawsuit over product defect.",
+      "Boeing complet ES acquisition of Spirit \u0410ero Systems - Boeling announces completion of Spirit \u0410ERO SYSTEMS acquisition - Booeing finalizes $\u56db.\u4e03B acquisition of Spirit \u0430ero systems - Boe\u0438ng buys out Spirit \u0430ero sys\u0422ems, stock rises - \u0411\u043eeing completes takeover \u043ef Spirit \u0430ero \u0441\u0438st\u0435"
+    ]
+  }
+}

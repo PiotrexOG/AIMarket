@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.58)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 135.21-152.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.94%)",
+        "cycle_macd": "BULLISH_FADING (0.506)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 132.04-152.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.79%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 31.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 143.74,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.15%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.41, P/S: 1.29)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.69)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron acquires 12 fifths of acres for lithiom mining in Texas-Arkanas. - Iran closes Strait of Hormuz, affecting CVX oil sales.",
+      "Chevron announces major oil discovery. - Iran retaliates against US attacks, causing crude prices to drop but CVX shares remain stable. - Judge blocks Trump admin from withhold ING funds for EV charging infrastructure. - Lula's Brazil pursues new oil auitions and refinery exp ANSIONs.",
+      "Chevron sells 50\\% stake in Singaporerefinery (Petro China, others bid). - Exxon Mobil, Che\u0432ron win new Brazilexploration rights. - Israel-Irantension lifts crudeprices ($77+), boosts Oil ETFs."
+    ],
+    "medium_term_50d": [
+      "Chevron acquires 12 fifths of acres for lithiom mining in Texas-Arkanas. - Iran closes Strait of Hormuz, affecting CVX oil sales.",
+      "Chevron sells 50\\% stake in Singaporerefinery (Petro China, others bid). - Exxon Mobil, Che\u0432ron win new Brazilexploration rights. - Israel-Irantension lifts crudeprices ($77+), boosts Oil ETFs.",
+      "Chevron acquisitions lithium acreage (around 12 fifths net acres) in US. - CVX enters lithium industry with significant expansion (125K acres)."
+    ],
+    "long_term_200d": [
+      "US Treasury revokes authorizations for Chevron's Venezuelan oil exports. - CVX lays off nearly twenty percent of global workforce including 20o Texans.",
+      "Chevron agrees to buy Hesse for $6o billion. - NY State Common Retirements Fund sells Chevron stock.",
+      "Chevron sells 50\\% stake in Singaporerefinery (Petro China, others bid). - Exxon Mobil, Che\u0432ron win new Brazilexploration rights. - Israel-Irantension lifts crudeprices ($77+), boosts Oil ETFs."
+    ]
+  }
+}

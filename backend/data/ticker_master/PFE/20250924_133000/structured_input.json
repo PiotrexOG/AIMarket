@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.68-25.24]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.52%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.054)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.11-26.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.98%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.92%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.73, P/S: 2.16)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.55)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.44x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)",
+      "Pfizer to purchase Metserafor up to $ seventh billions for obesitydrugs - Pfizers acquisitionof Metseraannounced - Pfizertargetsobesitydrugmarketwith Metseracurchase - Pfzerbuys Metseradeveloplongactingobesitydrugg - Pfzermakesmajorstrategicdec",
+      "Pfizer expands m RNA vaccine andspecialty medicine portfolio. - FDA increases scrutiny of pharma ads. - None (Dividend ranking not material to PFE)"
+    ],
+    "medium_term_50d": [
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)",
+      "Pfizer to purchase Metserafor up to $ seventh billions for obesitydrugs - Pfizers acquisitionof Metseraannounced - Pfizertargetsobesitydrugmarketwith Metseracurchase - Pfzerbuys Metseradeveloplongactingobesitydrugg - Pfzermakesmajorstrategicdec",
+      "Pfizer gains FDA approvalfor 20 twenty five-twenty six COVID-1 nineteen vaccine. Based on the provided data, there is one material event that directly affects PFE on September 16, 20 Zwefifve: Pfizer gains regulatory approval for its 20 Twenty Five-Twenty Six COVID-1 Nineteen vaccine from"
+    ],
+    "long_term_200d": [
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)",
+      "Pfizer to purchase Metserafor up to $ seventh billions for obesitydrugs - Pfizers acquisitionof Metseraannounced - Pfizertargetsobesitydrugmarketwith Metseracurchase - Pfzerbuys Metseradeveloplongactingobesitydrugg - Pfzermakesmajorstrategicdec",
+      "Pfizer gains FDA approvalfor 20 twenty five-twenty six COVID-1 nineteen vaccine. Based on the provided data, there is one material event that directly affects PFE on September 16, 20 Zwefifve: Pfizer gains regulatory approval for its 20 Twenty Five-Twenty Six COVID-1 Nineteen vaccine from"
+    ]
+  }
+}

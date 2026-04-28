@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (77.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.76)",
+        "velocity_roc_10": "NORMAL (2.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 384.44-460.95]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.98%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.327)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.64)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 344.79-460.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (10.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.77%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 459.61,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.5%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 37.77, P/S: 13.51)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.93)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "FTC dropscase over Microsoft\u2019sf Acquisationof Activision. -Microsoftacquirescybersecuritystartupforcloudsecurity. -Open AIaimsship100MAIdevicesbylate202 six.",
+      "Microsoft faced regulatory ruling in Russia. - Nvidia and Microsoft, key players in AI sector, collectively invest over $3oo billion. - US prosecutors sought data from Builder.ai, potential impact on Microsoft if Builder.ai used MSFT technology.",
+      "Microsoft integrates Anthropic's AI coding agent into Git Hub platform. - Sublime systems and Microsoft sign long-term purchase transforming clean cement market. - Billionaire Bill Gatesinvests65%of Foundation'sportfoliothreeoutstandingstocksincluding Microsoft."
+    ],
+    "medium_term_50d": [
+      "FTC dropscase over Microsoft\u2019sf Acquisationof Activision. -Microsoftacquirescybersecuritystartupforcloudsecurity. -Open AIaimsship100MAIdevicesbylate202 six.",
+      "Microsoft integrates Anthropic's AI coding agent into Git Hub platform. - Sublime systems and Microsoft sign long-term purchase transforming clean cement market. - Billionaire Bill Gatesinvests65%of Foundation'sportfoliothreeoutstandingstocksincluding Microsoft.",
+      "Microsoft offers rival AI modelsfrom own datac ENTER. -Microsoft launches AI c ODING agent."
+    ],
+    "long_term_200d": [
+      "Open AI and Microsoftrenegotiatemultibillion- dollarpartnershipterms-report - Microsoftand Open AIrenegotiatepartnershipterms - Open AInegotiateswith Microsoftfornewfundingandfuture IPO,FTreports - Open AIand Microsoftrevisingtermsofawidercontract",
+      "Microsoft abandons plan to convert Open AI into for-profit entity. - Elon Mus\u043a appoints Fidji Simo as new head of Open AI applications.",
+      "Microsoft turns in strong quarter, issues upbeat guidance - Azure cloud computingunit sees revenue growth of 33% - EU probe into Microsoft cloud bundeling practices ignored - None - None - Google loses two antit trust cases against core business - None - None - None Output: [\"Microsoft turns in strong Quarter, Iss"
+    ]
+  }
+}

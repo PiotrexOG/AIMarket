@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.39)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 61.24-66.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.93%)",
+        "cycle_macd": "BULLISH_FADING (0.241)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 60.29-76.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.75%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 40.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 64.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.5%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 11.2% | NM: 10.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.29x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.978B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -5.0%, EPS: -6.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 188.9%, Next Q Est Growth: -52.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.94, P/S: 1.97)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.86)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -6.36%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike beats estimates by Eighty-one percent in Q1FY20 twenty-six. - Under Armour swings to loss in Q2FY twenty-six, missing estimates by one hundred sixteen percent. - Venkates\u0445 Alagir\u0438\u0441\u0430m\u0443 takes on expanded role as Nike's COO, overseeing tech division",
+      "Nike makes third C-suite leadership over HAUL since Elliot Hill became CEO (Shuffle Board).",
+      "Nike,Superdry,Lacoste ads blocked due to misleading sustainability claims. - Venkates\u0445 Alagir\u0438\u0441\u0430\u043c\u0443y becomes Nike's COO, oversees technology and supply chains."
+    ],
+    "medium_term_50d": [
+      "Nike beats estimates by Eighty-one percent in Q1FY20 twenty-six. - Under Armour swings to loss in Q2FY twenty-six, missing estimates by one hundred sixteen percent. - Venkates\u0445 Alagir\u0438\u0441\u0430m\u0443 takes on expanded role as Nike's COO, overseeing tech division",
+      "Nike announces senior leadership changes - Craig Williams leaves Nike, Venkates\u0445 Alagirisyam becomes COO - New role of COO created, regional heads named to senior leadership",
+      "Nike,Superdry,Lacoste ads blocked due to misleading sustainability claims. - Venkates\u0445 Alagir\u0438\u0441\u0430\u043c\u0443y becomes Nike's COO, oversees technology and supply chains."
+    ],
+    "long_term_200d": [
+      "Nike beats estimates by Eighty-one percent in Q1FY20 twenty-six. - Under Armour swings to loss in Q2FY twenty-six, missing estimates by one hundred sixteen percent. - Venkates\u0445 Alagir\u0438\u0441\u0430m\u0443 takes on expanded role as Nike's COO, overseeing tech division",
+      "NIKE announces Q2 fiscal 24 earnings and conference call.",
+      "NKE faces 10\\% revenue decline in Greater China."
+    ]
+  }
+}

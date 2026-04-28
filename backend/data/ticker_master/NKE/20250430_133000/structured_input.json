@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.54)",
+        "velocity_roc_10": "NORMAL (3.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 52.28-65.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-15.17%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.867)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-82.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-23.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.41%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 9.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 55.78,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.75%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.47)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.87, P/S: 1.65)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.86)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.99)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike reports 9% revenue drop and 3o% EPS decline for Q3 20 twenty-five. - Skech ERS withdraws twenty-five guidance due to economics and tariffs.",
+      "Nike sues over closure ofcrypto business, faces class action lawsuit.",
+      "Nike faces challenges finding alternatives to Asianfactoriesfor sneakermanufacturing. None."
+    ],
+    "medium_term_50d": [
+      "Nike reports 9% revenue drop and 3o% EPS decline for Q3 20 twenty-five. - Skech ERS withdraws twenty-five guidance due to economics and tariffs.",
+      "Nike faces challenges finding alternatives to Asianfactoriesfor sneakermanufacturing. None.",
+      "Nike sues over closure ofcrypto business, faces class action lawsuit."
+    ],
+    "long_term_200d": [
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline.",
+      "Nike reports 9% revenue drop and 3o% EPS decline for Q3 20 twenty-five. - Skech ERS withdraws twenty-five guidance due to economics and tariffs.",
+      "President Trump imposes steep reciproal tariffs on Vietnamese, Chinese, and Indonesian manufacturers, affecting Nike production. - New tariffs increase prices of Nike shoes and apparel in the U..S. market."
+    ]
+  }
+}

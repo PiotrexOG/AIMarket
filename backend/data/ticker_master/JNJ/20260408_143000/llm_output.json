@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term momentum has weakened, with RSI declining to 50.8 and the price moving back into the middle of the 20-day range. The 20-day SMA is now negative relative to the price (-0.8%), indicating a loss of near-term upward pressure. W: The price has retreated from resistance and is now testing support levels within the range. The mean reversion bands are tightening, suggesting a potential for a directional move, but the current bias is neutral. O: New product launches (VARIPULSE Pro) and clinical data updates are present, but they are not creating immediate upward momentum. T: The score has been reduced significantly due to the clear deterioration in short-term technicals, moving from resistance to the middle of the range. Risk has increased as the price has broken below the 20-day SMA and momentum has faded."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend has decisively shifted bearish with a confirmed MACD zero cross to the downside. The price is now consolidating and showing signs of mean reversion around the 50-day SMA (Z-score: -0.2), indicating a loss of upward trend alignment. W: The trend alignment has compressed significantly, with price action flattening. The bearish MACD cross suggests a potential for further downside. O: While fundamental news flow remains consistent with drug approvals and partnerships, the technicals are now signaling a bearish divergence. T: The score has been significantly reduced due to the bearish MACD cross and the shift from a bullish trend to consolidation/mean reversion. Conviction has decreased as the technical picture has deteriorated. Risk has increased due to the confirmed bearish signal and potential for further price decline."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term secular bull market regime persists, and the stock remains in the upper quadrant of its long-term range (87.1%). Business quality, financial health, and cash generation remain robust. W: The 'extreme bullish stretch exhaustion risk' remains a key concern, and the price has pulled back from its cycle highs, indicating potential for a broader consolidation. Valuation multiples have slightly compressed but remain fair. O: Ongoing positive news regarding drug approvals and pipeline advancements continues to support the long-term fundamental picture, providing a floor for the stock. T: The score has been slightly reduced due to the price pullback from cycle highs and the persistent exhaustion risk, which has increased the downside potential. Conviction is maintained by the strong fundamentals, but caution is warranted given the technical shift in shorter timeframes."
+    }
+  }
+}

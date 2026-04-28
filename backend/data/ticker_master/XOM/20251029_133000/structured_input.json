@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 110.39-116.85]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.37%)",
+        "cycle_macd": "BULLISH_FADING (0.315)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 106.15-118.36]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.55%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 115.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.6%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.44, P/S: 1.52)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.91)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon sue California over climate disclosure rules.",
+      "Exxon Mobile announces substantial job cuts in response to lower oil prices (Conoco Phillips,Chevron also affected).",
+      "Exxon \u041c\u043ebil signs MOU with Gabon for deepwater exploration. - Surge in insiderselling at Exxon\u041c\u043ebil amid rising oil prices."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobile announces substantial job cuts in response to lower oil prices (Conoco Phillips,Chevron also affected).",
+      "US imposes sanctions on Rosneftand Lukoiloil companies, driving up oil prices; Exxon, Conoco Phillips, and Diamondback Energy gain. - Global energy companies' shares rise due to US sanctions on Russiaproducers Rosneft\u548cLukoil, boosting crude-\u043eil and natural gas prices.",
+      "Exxon sue California over climate disclosure rules."
+    ],
+    "long_term_200d": [
+      "US imposes sanctions on Rosneftand Lukoiloil companies, driving up oil prices; Exxon, Conoco Phillips, and Diamondback Energy gain. - Global energy companies' shares rise due to US sanctions on Russiaproducers Rosneft\u548cLukoil, boosting crude-\u043eil and natural gas prices.",
+      "Exxon \u041cobal signs deal to develop Iraq's Majnoon oil Field. - Occidential Petroleum disappoints with Oxy Chem deal pricing. - Iraq agrees on Majnoon oilfeld development with multiplecompanies (Exxon included).",
+      "Exxon \u041cobal sells fourth million barrelsof Guyanesecrudeto Indianrefineries. -Petrobrasclearedtobeginexploratorydrillingnear Amazon River Mouth. -Exxon\u041cobaland Black Rockteamuprewritethe World'scarbon Rulebook."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (91.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 203.85-235.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.42%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.192)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.79)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 199.91-235.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (29.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.06%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 234.58,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "AVERAGE (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.13, P/S: 6.07)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.02)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson releases updated clinical data for ERLEADa and DARZALEX FASPRO in oncology.",
+      "Johnson & Johnson announces new real-world evidence showing 51\\% reduction in death risk for m CSPC patients using ERLEAD\u0410.",
+      "Johnson & Johnson receives FDA approvalfor DARZALEX FASPRO combo therapy for newly diagnosed multiplemyelapatients."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson receives FDA approvalfor DARZALEX FASPRO combo therapy for newly diagnosed multiplemyelapatients.",
+      "Johnson & Johnson releases updated clinical data for ERLEADa and DARZALEX FASPRO in oncology.",
+      "Johnson & Johnson selected for Medicare price negotiations for Part B drugs - F DA approves DARZALEX FASPROfor newly diagnosed multiplemyeloma patients - Johnsons &Johnson submits Ottavas roboticsurgeryplatformto FDA - Johnson&Johnsonincludedinfirst CMSdrugpricenegotiationlistunder In"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson selected for Medicare price negotiations for Part B drugs - F DA approves DARZALEX FASPROfor newly diagnosed multiplemyeloma patients - Johnsons &Johnson submits Ottavas roboticsurgeryplatformto FDA - Johnson&Johnsonincludedinfirst CMSdrugpricenegotiationlistunder In",
+      "Johnson & Johnson posts strong 20 twenty-six guidance. - JNJ announces $101 billion sales target for 20 Twenty-six. - US FDA approvals for two JNJ blood cancer treatments. - $10 million Med Tech product donation by Johnson & Johnson.",
+      "Johnson & Johnson announces positive Phase three results for TECVayli in multiple myelsia. - Tecvayli monotherapy shows superior PFS and OS vs standard of care in relapsed multiple myeliomaa."
+    ]
+  }
+}

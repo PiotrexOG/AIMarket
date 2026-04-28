@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (88.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 103.67-119.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.2%)",
+        "cycle_macd": "BULLISH_FADING (0.545)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.09)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 103.67-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (4.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.81%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 118.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.83%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.6% | OM: 11.7% | NM: 9.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.247B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -11.7%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 11.0%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.08, P/S: 1.56)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.0)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -11.7%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon announces major oil discovery in permian basin. - Regulator approval for XOM upstream acquisition. - XOM expands naturalgas production capacity.",
+      "US Secretary of State Marco Rubiowarns Venezuelaanyattack Guyanaor Exxon Mobil. -Exxon Mobileinvests$100Millionboost High-Purity Isopropyl Alcohol Production.",
+      "Exxon signs agreement to sell Thai Gas Assets to Horizond Oil - Ex xon investing $\u2081\u2080\u2080 million in facilityto produce cleaning alcoholfor chip industry"
+    ],
+    "medium_term_50d": [
+      "Exxon announces major oil discovery in permian basin. - Regulator approval for XOM upstream acquisition. - XOM expands naturalgas production capacity.",
+      "US Secretary of State Marco Rubiowarns Venezuelaanyattack Guyanaor Exxon Mobil. -Exxon Mobileinvests$100Millionboost High-Purity Isopropyl Alcohol Production.",
+      "Exxon signs agreement to sell Thai Gas Assets to Horizond Oil - Ex xon investing $\u2081\u2080\u2080 million in facilityto produce cleaning alcoholfor chip industry"
+    ],
+    "long_term_200d": [
+      "Exxon announces major oil discovery in permian basin. - Regulator approval for XOM upstream acquisition. - XOM expands naturalgas production capacity.",
+      "Exxon \u041c\u043ebil partner approves FID for XOM's Turrum Phase3 project. Based on the provided data, there is one material event directly affecting XOM on March 17, 20 twenty-five. This event involves Exxon\u041c\u043ebil Australia obtaining approval for the final investment decision (FID) to develop the Turrum Phase",
+      "US Secretary of State Marco Rubiowarns Venezuelaanyattack Guyanaor Exxon Mobil. -Exxon Mobileinvests$100Millionboost High-Purity Isopropyl Alcohol Production."
+    ]
+  }
+}

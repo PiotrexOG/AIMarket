@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 90.61-99.74]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.32%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.234)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-99.74]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.58%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.12,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.83%))",
+      "volume_dynamics": "ELEVATED (1.28)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.4% | OM: 4.2% | NM: 2.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.61x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $648.125B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 33.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.6%, Next Q Est Growth: -14.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 50.42, P/S: 1.21)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.38)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart experiences price move after launching new products with Legendairy Milks. - US and China temporarily slash tariffs, potentially saving retailers like Walmart. - China trade progress leads to market boom, possibly benefiting Walmart.",
+      "U.S-China tradetalks end with substantial progress. - Emails poured in cancelling toyorders from Huntar Company. - Keyconsumer earningsreportlandsthisweek(Walmart).",
+      "US consumer financewatchdog scraps Walmart lawsuit."
+    ],
+    "medium_term_50d": [
+      "Walmart declares quarterly earnings (May 10). - Weight Watchers files for bankruptcy affects WMT (May 7).",
+      "U.S-China tradetalks end with substantial progress. - Emails poured in cancelling toyorders from Huntar Company. - Keyconsumer earningsreportlandsthisweek(Walmart).",
+      "Walmart experiences price move after launching new products with Legendairy Milks. - US and China temporarily slash tariffs, potentially saving retailers like Walmart. - China trade progress leads to market boom, possibly benefiting Walmart."
+    ],
+    "long_term_200d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new product line for Walmart stores. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart supplier. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart headquarters to discuss collaboration. - Regulator",
+      "Walmart declares quarterly earnings (May 10). - Weight Watchers files for bankruptcy affects WMT (May 7).",
+      "U.S-China tradetalks end with substantial progress. - Emails poured in cancelling toyorders from Huntar Company. - Keyconsumer earningsreportlandsthisweek(Walmart)."
+    ]
+  }
+}

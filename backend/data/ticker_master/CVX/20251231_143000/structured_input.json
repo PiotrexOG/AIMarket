@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "NORMAL (1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 146.49-152.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.46%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.451)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 146.49-159.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.26%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 54.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 152.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.37%))",
+      "volume_dynamics": "AVERAGE (0.66)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.36, P/S: 1.46)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 1.45)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.12x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron signs $12o M prepayment and commercial agreement with Frontera. - First oil produced at South N'dola platform by Chevron in Angola.",
+      "Frontera subsidiary enters $12 million prepayement and commercial agreementwith Chevron. - Frontera Colombia subsidiary supplies part of crude oil production to Chevron under $12million deal. - chevron achieves first oil delivery from South N'dola offshores platform in Angola.",
+      "Chevron exports Venezuelan Crude despite US sanctions escalation."
+    ],
+    "medium_term_50d": [
+      "Chevron signs $12o M prepayment and commercial agreement with Frontera. - First oil produced at South N'dola platform by Chevron in Angola.",
+      "Frontera subsidiary enters $12 million prepayement and commercial agreementwith Chevron. - Frontera Colombia subsidiary supplies part of crude oil production to Chevron under $12million deal. - chevron achieves first oil delivery from South N'dola offshores platform in Angola.",
+      "Chevron maintains operations in Venezuela despite escalating tensions. (Event 5 & 6) - Several tankers loaded with crude depart from Venezuela, half chartered by Chevron. (Event5)"
+    ],
+    "long_term_200d": [
+      "Chevron maintains operations in Venezuela despite escalating tensions. (Event 5 & 6) - Several tankers loaded with crude depart from Venezuela, half chartered by Chevron. (Event5)",
+      "Chevron secures $35bn natural gas export Deal to Egypt (Israeli PM approval)",
+      "Chevron exports Venezuelan Crude despite US sanctions escalation."
+    ]
+  }
+}

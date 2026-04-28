@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 4.3,
+        "risk": 6.3
+      },
+      "synthesis": "S: The short-term technicals show a neutral candle pattern and a declining RSI to 44.4, indicating a shift towards oversold territory. Velocity has normalized to -1.4%, and the price is consolidating around the SMA20 (-0.0%) within the middle of its 20-day range. W: News flow is mixed, with positive developments like taking over Apple's credit card program and a partnership in stablecoins, but also negative headlines regarding potential discrimination allegations. O: The score has slightly decreased to 5.2 due to the declining RSI and the mixed news, which introduces uncertainty. Conviction has marginally decreased to 4.3 as the technical signals are not strongly directional. T: Risk has slightly decreased to 6.3. While the negative news persists, the RSI moving out of overbought territory and the price consolidating around the SMA20 suggest a slight reduction in immediate downside pressure compared to the previous period. The previous risk score of 6.5 is adjusted downwards slightly."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.3,
+        "conv": 4.2,
+        "risk": 6.8
+      },
+      "synthesis": "S: Medium-term trend alignment remains positive (3.11%), but the MACD is showing a bearish recovery (-1.244), indicating a potential stabilization of the downtrend. The price is holding its bullish position relative to the SMA50 (Z:0.8) and remains within the monthly range. W: News flow includes the Apple credit card program acquisition and stablecoin partnership, which are positive, but also the persistent negative headlines regarding potential White House action. The MACD's bearish recovery suggests a continued struggle for upside momentum. O: The score has slightly increased to 5.3, driven by the stable trend alignment and positive news, but the bearish MACD recovery caps further upside. Conviction has slightly decreased to 4.2 due to the conflicting signals between fundamental news and the recovering bearish MACD. T: Risk has slightly increased to 6.8. The bearish MACD recovery, while not accelerating, indicates persistent downside pressure. The stressed balance sheet and negative FCF remain structural concerns, now compounded by the ongoing negative regulatory/political narrative. The previous risk score of 7.0 is adjusted downwards slightly due to the MACD showing recovery rather than acceleration, but remains elevated."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.3,
+        "conv": 6.9,
+        "risk": 5.1
+      },
+      "synthesis": "S: The secular bull market regime remains robust (14.1%), and the long-term technical structure is healthy with a stable golden cross (10.72%). The price has moved slightly higher within its cycle, now at 91.7% of its ATH range. W: Long-term news is a mix of strategic partnerships (crypto, Apple Card) and the ongoing political narrative concerning potential discrimination. The company's scale and business quality continue to provide a strong foundation. O: The score has slightly increased to 7.3, reflecting the improved price position within the long-term range and continued positive long-term technicals. Conviction remains high at 6.9, as the fundamental strengths and market regime continue to outweigh short-term noise. T: Risk has slightly decreased to 5.1. While the price is moving towards its ATH, the persistent negative political narrative and the underlying structural financial weaknesses (stressed balance sheet, negative FCF) are still present but are somewhat mitigated by the strong market regime and positive long-term technicals. The previous risk score of 5.2 is adjusted downwards slightly due to the price moving closer to ATH."
+    }
+  }
+}

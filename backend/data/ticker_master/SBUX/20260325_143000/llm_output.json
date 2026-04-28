@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The RSI has fallen into a bearish zone (38.6), and the price is now testing the lower Bollinger Band (0.01) and critical support at 91.58. The lack of a clear candle pattern and stagnant velocity (ROC: -8.7%) further emphasize weakness. O: A break below the current support level could trigger further downside, potentially retesting lower range boundaries. T: Volume dynamics have improved to average (0.81x), but this is occurring amidst price weakness, suggesting selling pressure. W: The price is at critical support, and the bearish RSI and testing of the lower band indicate a high probability of a downside break. News regarding labor disputes and activist investors adds to the short-term risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The medium-term trend alignment has compressed (1.36%), and the MACD has accelerated further into bearish territory (-0.946). The price is now positioned below the SMA50 with a significant negative Z-score (-1.36), indicating a bearish trend. O: The current technical setup offers little immediate upside potential and suggests further consolidation or a continued downtrend. T: The accelerating bearish MACD and negative Z-score are strong indicators of medium-term weakness. W: The combination of deteriorating technicals, persistent fundamental issues (stressed balance sheet, stagnant growth), and ongoing negative news flow from activist investors and labor disputes significantly increases downside risk. Analyst conviction remains low, reflecting the uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: While the long-term technical structure remains superficially intact with a secular bull market regime and healthy golden cross patterns, the price has moved to a neutral zone (53.0%) within its long-term range. O: The established long-term technicals provide a potential floor, but the lack of upward momentum and persistent fundamental headwinds limit upside potential. T: The underlying technical framework is still supportive, but the shift to a neutral range position suggests a loss of long-term bullish conviction. W: Hyper-premium valuation multiples (P/E: 56.22, P/S: 2.83) and extremely risky implied negative growth (-50.45%) remain significant long-term risks. The stressed balance sheet and ongoing news regarding labor disputes and shareholder activism continue to weigh on the fundamental outlook, despite the stable market regime."
+    }
+  }
+}

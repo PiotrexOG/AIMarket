@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term momentum has shifted from overbought to a strong bullish zone (RSI 61.0), indicating a healthier upward bias. Velocity has normalized (1.7%), and the price remains in the middle of its 20-day range. The Bollinger Bands are still within normal limits (0.59), suggesting no immediate overextension. W: While the RSI is in a bullish zone, the price is not breaking out of its range, and the velocity has decreased, suggesting a potential loss of immediate upward thrust. The previous extreme overbought condition has resolved, but a clear breakout signal is absent. O: New short-term news includes a political feud impacting sentiment and a policy change at Bolt, which are less impactful than previous strategic news. The positive news from the previous period is still relevant but is now balanced by a more neutral technical picture. T: The score has slightly decreased due to the lack of a clear breakout and reduced velocity, despite the improved RSI. Conviction has decreased as the price is consolidating within the range. Risk has slightly increased due to the potential for a reversion from the middle of the range and the introduction of negative news sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish (4.35%), and the Z-score to the 50-day SMA is still positive (1.19), indicating an established uptrend. However, the MACD has deteriorated significantly from 'BULLISH_FADING' to 'BEARISH_ACCELERATING' (-0.291), signaling a strong shift in momentum. The price has moved to the lower end of the monthly range (108.26), indicating increased selling pressure. W: The accelerating bearish MACD is a critical concern, suggesting a potential trend reversal or significant correction. The price's retreat into the lower half of the monthly range confirms the loss of upward momentum. O: The news narrative remains consistent with previous positive strategic developments, but the technicals are now showing clear signs of weakness. T: The score has decreased significantly due to the accelerating bearish MACD and the price's retreat within the range. Conviction has decreased as the bullish signal on the MACD has reversed. Risk has increased substantially due to the bearish MACD acceleration, the lower price position within the range, and the potential for further downside."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market (32.4%), and fundamental strengths persist. However, the price position has pulled back further from ATH (90.4%), and the risk of bullish stretch exhaustion has slightly increased (25.33%). The valuation remains hyper-premium, posing a significant risk. W: The continued pullback in long-term price position and the increased risk of exhaustion suggest that the long-term uptrend is maturing and facing headwinds. Persistent high valuation multiples amplify downside risk. O: The news narrative remains consistent with previous strategic partnerships and expansion plans, providing some underlying support. However, the technicals are showing increasing signs of topping out. T: The score has decreased slightly due to the further price pullback from ATH and the increased risk of exhaustion. Conviction has slightly decreased as the long-term trend shows more pronounced signs of maturity. Risk has increased due to the combination of a more extended bullish stretch, a further pullback in price position, and persistent high valuation risk."
+    }
+  }
+}

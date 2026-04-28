@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated significantly, with the RSI now in extreme oversold territory (23.9) and velocity showing an implosive down move (-19.8%). The price is testing the lower Bollinger Band (0.04) and is now 13.6% below its 20-day SMA. W: The extreme oversold conditions and sharp price decline are key weaknesses, indicating strong selling pressure. The price being significantly below the 20-day SMA suggests a loss of short-term upward momentum. O: The price is within its 20-day range, and the current news flow includes some positive developments like AI Data Platform announcements and acquisitions, which could provide a short-term floor. T: Downside risk is elevated due to the extreme oversold conditions and the negative velocity. News regarding Trump tariffs causing significant price drops and potential competition from other tech giants pose substantial headwinds."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend has continued its bearish descent, with the price now 6.72% below the 50-day SMA and the MACD accelerating its bearish trend (-1.573). The Z-score has moved deeper into bearish territory at -1.78. W: The bearish MACD acceleration and the increasing distance from the 50-day SMA are significant weaknesses, reinforcing the downtrend. The price is firmly in the lower quadrant of its 50-day range. O: Despite the bearish technicals, the fundamental strengths of hyper-growth and excellent cash generation remain intact. The stock is still within its broader monthly range, and the high institutional activity (1.62) could signal potential accumulation on dips. T: The primary risk is the continuation of the bearish trend, as indicated by the MACD and Z-score. News regarding Microsoft pausing data center expansions and direct competition from Amazon in the AI sector are significant medium-term concerns that could exacerbate downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term technical structure remains weak, with the DEATH_CROSS structure still in place and the price now positioned in the lower quadrant of its long-term range (20.1%). The secular bear market regime persists, with the price now 23.7% below its long-term average. W: The persistent DEATH_CROSS and the continued secular bear market regime are major structural weaknesses. The price's position in the lower quadrant of its range indicates significant long-term underperformance. O: The company's elite business quality, hyper-growth profile, and healthy balance sheet provide a strong fundamental underpinning for a potential long-term recovery. Strategic partnerships and continued innovation in AI are positive factors. T: The extreme valuation multiples, coupled with the bearish long-term technical structure and persistent secular bear market, present substantial downside risk. News regarding intellectual property disputes and increased competition from major tech players like Amazon could further pressure long-term prospects and increase valuation risk."
+    }
+  }
+}

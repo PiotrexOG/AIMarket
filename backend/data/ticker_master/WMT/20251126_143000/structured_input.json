@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.6)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.07)",
+        "velocity_roc_10": "NORMAL (3.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 98.88-108.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.67%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.428)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.28)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 98.88-109.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.85%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 108.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.7% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.59x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $673.819B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.5%, EPS: 20.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.0%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 44.41, P/S: 1.3)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.94)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.17)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart opensfirst branded storein South Africa at Roodepoort - Alquist scales 3D print construction technology with Walmart and others - Kellanovawallet Mart and Indigo Agripartner forregenerative agriculture in Arkansas - Walmartraises FY twenty-six sales view - High-priced turkeys strain Food Banks ahead",
+      "Walmart participates in upcoming invest OR events. - Symbolic, Walmart'S AI robotics maker, beats estimates. - Amazon faces FFA probe over drone damaging internet cable.",
+      "Walmart reports better leverage of assets. - Saw continued e-commercegrowthacrossmarkets. - Has seen some moder ATIONinspendingfromlow-incomecohort. - Acceleratedgainswithhigherincomecohorthasseen. - Allincomelevelsaparticipatingindelivery. - Feelsgood"
+    ],
+    "medium_term_50d": [
+      "Walmart reaches first profitable quarterfor e-commerceoperationsglobally (May 20 twenty-five) - Wal Mart reportsfirstquarterlyprofitfore-commmerceoperations US(May 25, 20twenty-five)",
+      "Walmart CEO Douglas Mc Millon announces retirement, effective January 26, 2106. - John Furnner appointed as new Walmart CEO.",
+      "Walmart reports better leverage of assets. - Saw continued e-commercegrowthacrossmarkets. - Has seen some moder ATIONinspendingfromlow-incomecohort. - Acceleratedgainswithhigherincomecohorthasseen. - Allincomelevelsaparticipatingindelivery. - Feelsgood"
+    ],
+    "long_term_200d": [
+      "Walmart reaches first profitable quarterfor e-commerceoperationsglobally (May 20 twenty-five) - Wal Mart reportsfirstquarterlyprofitfore-commmerceoperations US(May 25, 20twenty-five)",
+      "Walmart CEO Douglas Mc Millon announces retirement, effective January 26, 2106. - John Furnner appointed as new Walmart CEO.",
+      "Walmart acquires Vizio and rolls out Cast OS, becoming largest operating system in North America. - Eli Lilly's Zepbound available for pick-Up at Walmart Ph armacies with direct-To-Consumer pricing."
+    ]
+  }
+}

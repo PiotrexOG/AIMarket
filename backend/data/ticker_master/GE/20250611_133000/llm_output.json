@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term momentum has significantly cooled, with RSI moving from overbought to neutral (57.7) and ROC stagnating (0.1%). Price is now trading within a defined range [219.3-257.47], indicating a pause in the aggressive upward move. The 20-day SMA is now stable near its base (0.9%), suggesting a lack of immediate directional pressure. W: The \"NEUTRAL\" candle pattern persists, and the lack of velocity suggests a loss of conviction. The \"RANGE\" bias in the SR landscape, compared to the previous \"UNCONFINED_BULLISH\", indicates a shift to consolidation. O: Positive news regarding GE Aerospace's facility upgrades and partnerships provides some fundamental underpinning, but the technicals suggest a short-term stall. T: The primary risk is a breakdown from the current range, especially given the stagnant momentum and the \"HIGH_MULTIPLE_RISK\" from valuation. Increased volatility (ATR 2.17%) combined with a range-bound price action amplifies downside risk on any negative catalyst."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains technically bullish (12.86%), and price is still positioned above the 50-day SMA (Z:1.3). However, the MACD has crossed bearishly below zero (-0.676), signaling a significant loss of upward momentum and a potential trend reversal. The price is now inside the monthly range [159.36-257.47], indicating a less aggressive upward trajectory. W: The confirmed bearish MACD cross is a strong negative signal, significantly reducing conviction. The \"RANGE\" bias in the SR landscape further supports a less bullish outlook compared to the previous \"POWER_ZONE_CONFLUENCE(3)\" with a bullish bias. O: While fundamental news regarding aerospace partnerships continues, the technical deterioration in the medium term overshadows these positives. T: The risk has substantially increased due to the bearish MACD signal and the shift to a range-bound environment. The \"HIGH_MULTIPLE_RISK\" becomes more pronounced if the price fails to regain upward momentum, as the premium valuation is less justifiable without sustained growth. The \"POWER_ZONE_CONFLUENCE(3)\" structure, while still present, is now operating within a less favorable technical context."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term secular bull market regime remains in place (26.0%), and the healthy golden cross structure (10.67%) continues to provide a supportive backdrop. Price is still in the upper quadrant of its long-term range (88.3%), indicating sustained bullishness over extended periods. Business quality and financial health metrics remain stable. W: The conviction in the long-term trend has slightly decreased, reflected in a minor dip in the market regime percentage and a slight increase in risk. The \"HIGH_MULTIPLE_RISK\" persists, and the \"GROWTH_UNDERRATED\" PEG ratio (0.34) suggests that future growth expectations are still a key driver for current valuations. O: The ongoing positive news flow from GE Aerospace, particularly regarding partnerships and facility upgrades, provides a fundamental tailwind for the long-term outlook. The company's scale and established nature offer resilience. T: The primary long-term risk remains the sustainability of earnings growth against the backdrop of revenue contraction and elevated valuation multiples. A shift in the secular bull market regime or significant operational headwinds within GE's core businesses could pose a substantial threat, especially given the current premium valuation."
+    }
+  }
+}

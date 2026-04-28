@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "NORMAL (1.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.06-24.95]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.49%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.008)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 21.28-24.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.19%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.18,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.41, P/S: 2.21)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.53)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US pharma tariffs may impact PFE's operations in Ireland.",
+      "Pfizer joins FIBREE Consortium for fibrosis treatment. - Submission of New Drug Applicationfor vepdegradstantran in breast cancer at Pfizer. - Significant progress in colerectal and prostater cancer therapies at Pfzer.",
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE."
+    ],
+    "medium_term_50d": [
+      "US pharma tariffs may impact PFE's operations in Ireland.",
+      "Pfizer joins FIBREE Consortium for fibrosis treatment. - Submission of New Drug Applicationfor vepdegradstantran in breast cancer at Pfizer. - Significant progress in colerectal and prostater cancer therapies at Pfzer.",
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE."
+    ],
+    "long_term_200d": [
+      "Pfizer joins FIBREE Consortium for fibrosis treatment. - Submission of New Drug Applicationfor vepdegradstantran in breast cancer at Pfizer. - Significant progress in colerectal and prostater cancer therapies at Pfzer.",
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE.",
+      "Pfizer enters exclusive licensing agreementwith 3SBIO for SSGJ-\\*707 outside China. -PFizer invests $10o Million in 3 SBIO after transaction closure. -Pfizer secures global rights,excluding China,to develop,manufacture and commercialize SSGJ\u2013\\*70 seventh"
+    ]
+  }
+}

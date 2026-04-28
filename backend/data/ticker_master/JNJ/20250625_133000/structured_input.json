@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.29)",
+        "velocity_roc_10": "NORMAL (-1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 149.04-157.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.03%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.416)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.86)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 146.12-159.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.4%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.26%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 151.93,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.32%))",
+      "volume_dynamics": "ELEVATED (1.24)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 16.75, P/S: 4.12)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.71)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson announces new data showing better disease control with nipocalim AB for generalizedmyastheniagravis. - J&Jlaunchesfirstandonlydailydisposablemultifocaltoriccontactlensforastigmatism. - EUregulatorrecommendsapprovalof Darzalexand Imbruvicainnew",
+      "Janssen's Imbruvinica receives positive CH MP opinion for mantle cell Lymphoma treatment - Johnson and Johnson launches VOL T Wrist and Proximal H umeral plating systems",
+      "Johnson & Johnson introduces dispos able contact lens forastigmatismand presbyopi a. - ZEI SS Vision Care names Gary Rosenbl um Pres ident and CEO. - Merck' s Winrev air passes goal in PAH Phase III study. - Pfizer faces declining COVID revenues and LOE press ure. NOTES:"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces new data showing better disease control with nipocalim AB for generalizedmyastheniagravis. - J&Jlaunchesfirstandonlydailydisposablemultifocaltoriccontactlensforastigmatism. - EUregulatorrecommendsapprovalof Darzalexand Imbruvicainnew",
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress.",
+      "Johnson & Johnny announces encouraging results for dual targeting Car T cell therapy in large B cell lymphomas. - JNJ reports high ORR for investigational com\u0431\u043e in MM patients from Phase 2 trial."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress.",
+      "Johnson & Johnny announces encouraging results for dual targeting Car T cell therapy in large B cell lymphomas. - JNJ reports high ORR for investigational com\u0431\u043e in MM patients from Phase 2 trial.",
+      "Johnson & Johnson announces new data showing better disease control with nipocalim AB for generalizedmyastheniagravis. - J&Jlaunchesfirstandonlydailydisposablemultifocaltoriccontactlensforastigmatism. - EUregulatorrecommendsapprovalof Darzalexand Imbruvicainnew"
+    ]
+  }
+}

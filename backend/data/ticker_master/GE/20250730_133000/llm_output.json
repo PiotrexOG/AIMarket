@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term score has decreased from 6.5 to 6.0. While RSI has moved into an \"OVERBOUGHT_EXTREME\" zone (73.5), this indicates potential for a short-term reversal rather than sustained upside. The price is now at \"CRITICAL_RESISTANCE_20\" and within normal Bollinger Bands (0.82), suggesting limited immediate upward momentum. W: Conviction has decreased from 6.0 to 5.5 due to the overbought RSI and the price reaching resistance. The \"DOJI_INDECISION\" candle pattern persists, and the \"RANGE\" bias in the SR landscape remains, indicating uncertainty. O: News flow remains generally positive with GE Aerospace raising guidance, but the immediate price action is encountering resistance. T: Downside risk has increased significantly from 6.8 to 7.5. The overbought RSI, price at resistance, and the \"HIGH_MULTIPLE_RISK\" at elevated levels (P/B: 15.11) create a fragile setup for a potential pullback."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term score has slightly decreased from 6.2 to 5.8. While trend alignment remains strong (3.72%), the MACD is fading (0.536), and the Z-score for the 50-day SMA has increased to 1.92, indicating a more stretched trend. The price is now strengthening at monthly resistance. W: Conviction has decreased from 5.8 to 5.2 as the fading MACD and the price approaching resistance suggest a loss of underlying momentum despite the higher Z-score. The \"POWER_ZONE_CONFLUENCE(2)\" structure is still present but less supported by momentum. O: The news narrative continues to be supportive with GE Aerospace's performance, but the technicals are showing signs of topping out at resistance levels. T: Downside risk has increased from 6.0 to 6.5. The increased Z-score suggests a greater potential for mean reversion, and the price reaching monthly resistance, combined with the \"HIGH_MULTIPLE_RISK\", elevates the downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 4.8,
+        "risk": 7.8
+      },
+      "synthesis": "S: The long-term score has decreased from 5.5 to 5.2. The secular bull market regime has slightly strengthened (32.2%), but the price is now at the \"ATH_OR_TOP_OF_CYCLE\" (97.5%), and the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" remains elevated (22.07%). W: Conviction has decreased from 5.0 to 4.8 as the technicals are signaling extreme exhaustion at cycle highs, and the fundamental growth profile remains a concern (revenue contraction). O: While the stock has reached new highs, the underlying growth profile (revenue contraction, next quarter EPS growth negative) and the extremely stretched long-term technicals suggest limited conviction in sustained further upside. T: Downside risk has increased from 7.2 to 7.8. The combination of an extremely stretched long-term technical position, persistent \"HIGH_MULTIPLE_RISK\" (P/E: 37.47, P/S: 6.95), and the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" presents a significant downside risk at these cycle highs."
+    }
+  }
+}

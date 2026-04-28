@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "EXPLOSIVE_UP (18.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 350.25-439.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.71%)",
+        "cycle_macd": "BULLISH_FADING (7.236)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.75)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 344.79-439.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (4.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.32%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 435.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.9%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.57)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.76, P/S: 12.79)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.3)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.05)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft co-founder Elon Mus\u043a sues Open AI, disregarding nonprofit control announcement. - India reviews copyright law regarding Open AI legal challenges.",
+      "Microsoft turns in strong quarter, issues upbeat guidance - Azure cloud computingunit sees revenue growth of 33% - EU probe into Microsoft cloud bundeling practices ignored - None - None - Google loses two antit trust cases against core business - None - None - None Output: [\"Microsoft turns in strong Quarter, Iss",
+      "Microsoft shutsdown Skype after twenty-two years, shifts users to Teas. - Eu's Ribera: Microsoft commits to abideby Europeanrulesregardless."
+    ],
+    "medium_term_50d": [
+      "Microsoft turns in strong quarter, issues upbeat guidance - Azure cloud computingunit sees revenue growth of 33% - EU probe into Microsoft cloud bundeling practices ignored - None - None - Google loses two antit trust cases against core business - None - None - None Output: [\"Microsoft turns in strong Quarter, Iss",
+      "Microsoft co-founder Elon Mus\u043a sues Open AI, disregarding nonprofit control announcement. - India reviews copyright law regarding Open AI legal challenges.",
+      "Microsoft announces change in legal representation in shareholder Case. -Microsoft Q3 earnings show continued growth in cloud and AI sectors."
+    ],
+    "long_term_200d": [
+      "Microsoft turns in strong quarter, issues upbeat guidance - Azure cloud computingunit sees revenue growth of 33% - EU probe into Microsoft cloud bundeling practices ignored - None - None - Google loses two antit trust cases against core business - None - None - None Output: [\"Microsoft turns in strong Quarter, Iss",
+      "Microsoft co-founder Elon Mus\u043a sues Open AI, disregarding nonprofit control announcement. - India reviews copyright law regarding Open AI legal challenges.",
+      "Kaspersky finds crypto-stealling malware disguising as Microsoft Office package. -Microsoft hits $13\u0411 billon AI revenue run rate, plans $80\u0411 investment."
+    ]
+  }
+}

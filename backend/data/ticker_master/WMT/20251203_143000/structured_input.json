@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.4)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 98.88-112.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.47%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.049)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.21)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 98.88-112.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.32%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 113.46,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.7% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.59x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $673.819B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.5%, EPS: 20.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.0%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 46.5, P/S: 1.36)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.41)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart sets pace for American shopping with biggest, fastest Black Friday and Cyrber Monday yet. - walmart opens second owned and operating milk processing facility, creating over 40o new jobs. - WMT'e-commerce sales jump 27%. - Wal mart invests $35o million in second US milk processing plant.",
+      "Walmart moves listing from NYSEC to Nasda Q on Dec.9, 2106. - Alpine Income Property Trust announces Q4 transactionactivityandpreferredequityofferingon Dec.1,202 five.",
+      "Walmart's wages affected in surrounding areas due to Costco' effect. - Uncertainty around holiday sales performance."
+    ],
+    "medium_term_50d": [
+      "Walmart sets pace for American shopping with biggest, fastest Black Friday and Cyrber Monday yet. - walmart opens second owned and operating milk processing facility, creating over 40o new jobs. - WMT'e-commerce sales jump 27%. - Wal mart invests $35o million in second US milk processing plant.",
+      "SEC opens civil probe into Jefferies regarding First Brands collapse. - walmart stock nears all-time high despite economic concerns.",
+      "Walmart reaches first profitable quarterfor e-commerceoperationsglobally (May 20 twenty-five) - Wal Mart reportsfirstquarterlyprofitfore-commmerceoperations US(May 25, 20twenty-five)"
+    ],
+    "long_term_200d": [
+      "Walmart reaches first profitable quarterfor e-commerceoperationsglobally (May 20 twenty-five) - Wal Mart reportsfirstquarterlyprofitfore-commmerceoperations US(May 25, 20twenty-five)",
+      "Walmart CEO Douglas Mc Millon announces retirement, effective January 26, 2106. - John Furnner appointed as new Walmart CEO.",
+      "Walmart acquires Vizio and rolls out Cast OS, becoming largest operating system in North America. - Eli Lilly's Zepbound available for pick-Up at Walmart Ph armacies with direct-To-Consumer pricing."
+    ]
+  }
+}

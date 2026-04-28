@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.2,
+        "risk": 6.3
+      },
+      "synthesis": "S: Short-term momentum has improved with the RSI moving to 40.0, exiting the bearish zone, and a bullish hammer/pinbar candle pattern forming. Velocity (ROC 0.1%) has stabilized. The price remains near the 20-day SMA (-1.4%) and in the middle of its 20-day range. W: Despite the positive candle and RSI improvement, the price is still below the 20-day SMA, and the MACD remains bearish. The stagnant velocity indicates a lack of strong upward momentum. O: News flow includes a lawsuit from Lululemon, which introduces some short-term uncertainty, but also mentions of new product launches, which could be a minor positive. T: Risk has slightly decreased due to the improved short-term technical signals and stabilization of volatility (ATR 1.5%). However, the proximity to the 20-day SMA and the ongoing lawsuit prevent a more significant reduction in risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment has shifted to a slight negative, with compressed moving averages now at -0.39%. The MACD is still bearish but recovering (-1.335). The price has moved further away from the 50-day SMA, now at a Z-score of -0.94, indicating a bearish trend position. W: The deterioration in the 50-day SMA positioning and the continued bearish MACD suggest a weakening medium-term trend. The stock remains within its monthly range, indicating a lack of clear directional conviction. O: The news regarding the Lululemon lawsuit and wage theft complaint introduces negative sentiment for the medium term. The previous positive catalysts like membership fee increases are now less prominent in the current narrative. T: Risk has increased due to the price moving further below the 50-day SMA and the negative shift in trend alignment. The hyper-premium valuation remains a significant risk factor, and the current technical setup does not offer strong support against potential downside."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.3,
+        "risk": 6.7
+      },
+      "synthesis": "S: The long-term technical structure remains constructive, with a secular bull market regime (2.6%) and a healthy golden cross structure (4.4%) intact. The long-term range position has moved further down to the mid-cycle neutral zone (54.7%), indicating a more balanced risk-reward. W: The slight decrease in the long-term range position suggests a moderation of the upward trend's strength. Persistent fundamental weaknesses in thin margins (GM 12.7%) and weak cash conversion (FCF Mgn 1.9%) continue to be structural concerns. O: The news flow regarding the Lululemon lawsuit and potential past issues like FDA warnings and antitrust lawsuits, while not new, contribute to a slightly more cautious long-term outlook. The company's scale and balance sheet remain strong positives. T: Risk has increased slightly due to the price moving lower within the long-term range and the introduction of new litigation news. The hyper-premium valuation, combined with the current technical positioning and ongoing fundamental inefficiencies, keeps long-term risk elevated."
+    }
+  }
+}

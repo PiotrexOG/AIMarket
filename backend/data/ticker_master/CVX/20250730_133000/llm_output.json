@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term score has decreased due to a shift to a strong bearish candle pattern, overriding previous indecision. While RSI remains in a neutral zone (60.0) and velocity has turned positive (4.2%), the price is now closer to the 20-day SMA (3.5%) and within the middle of the 20-day range (142.51-157.21). The significant drop in volume dynamics (0.53) suggests a lack of institutional interest, which is a bearish signal. W: The strong bearish candle pattern is a clear indication of immediate selling pressure. The low volume dynamics suggest a lack of conviction behind any potential upward moves, making the current price action fragile. News narrative is mixed, with some positive acquisition news but also disputes and involvement in other transactions. O: A sustained break below the 20-day SMA (3.5%) and the lower bound of the 20-day range (142.51) would confirm a bearish short-term trend. Conversely, a strong reversal candle pattern with increasing volume could signal a short-term bounce. T: Downside risk has increased significantly due to the bearish candle pattern and the sharp decline in volume dynamics. Volatility remains moderate (ATR 2.06%), but the lack of buying interest amplifies the risk of further downside. The proximity to the 20-day SMA offers some support, but the current technical setup is bearish."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.8,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term score has seen a notable increase, driven by accelerating bullish MACD (0.318) and expanding bullish trend alignment (4.27%). The price is positioned strongly relative to the 50-day SMA (Z:1.45) and is strengthening at monthly resistance (133.77-157.21). This indicates a robust upward momentum building. W: Despite the strong technicals, the fundamental growth profile remains stagnant (Rev: -0.1%, EPS: -19.6%), and earnings momentum continues to deteriorate quarterly. The news narrative, while positive on the Hess acquisition, also includes reports of disputes and involvement in other transactions, suggesting potential complexities. O: A sustained break and hold above the monthly resistance zone (157.21) would confirm the bullish trend and open up further upside. Failure to break this resistance, especially with the underlying fundamental weakness, could lead to a consolidation or a reversal. T: Downside risk has decreased due to the strong bullish technical signals and improving trend alignment. While volatility is moderate (ATR 2.06%), the clear bullish trend and accelerating MACD suggest a lower probability of significant downside in the medium term. The fundamental headwinds, however, cap the upside potential and represent a latent risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term score has seen a slight improvement, reflecting a shift in the market regime to a bull market correction (4.5%) and an increase in the long-term range position (61.9%). The death cross structure has slightly improved (-3.15%), indicating a less severe technical overhang. W: The death cross structure remains a significant technical impediment, despite its slight improvement. The fundamental growth profile is stagnant, and earnings momentum is deteriorating, which limits the long-term upside potential. The news narrative is dominated by acquisition details and arbitration, with less focus on long-term strategic growth. O: A sustained shift to a clear bull market regime and a significant, durable improvement in fundamental growth and earnings are required to fundamentally alter the long-term bearish technical structure. A clear break and hold above the death cross resistance level would be a strong bullish signal. T: Downside risk has decreased slightly due to the improved market regime and range position. However, the entrenched death cross structure and the lack of fundamental growth catalysts continue to pose a risk. Volatility remains moderate (ATR 2.06%), and the valuation is not compelling enough to offset the structural technical and fundamental headwinds."
+    }
+  }
+}

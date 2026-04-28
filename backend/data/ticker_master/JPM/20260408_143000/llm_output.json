@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 3.5
+      },
+      "synthesis": "S: The RSI has strengthened to a bullish zone (63.2), indicating robust upward momentum. The price has broken out above the 20-day high, signaling a potential short-term upward trend. The velocity of price change remains normal. W: The candle pattern has shifted to strong bearish, which contradicts the RSI and breakout. The volume dynamics have decreased, suggesting less conviction behind the recent price action. O: News flow is mixed, with CEO warnings about economic risks and inflation, but also positive developments like the potential for a new tower and earnings growth expectations. T: The short-term outlook is cautiously optimistic due to the RSI and breakout, but the bearish candle pattern and lower volume introduce some risk. The price is now above the previous 20-day range, with resistance barriers distant."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.8,
+        "risk": 4.0
+      },
+      "synthesis": "S: The MACD remains strongly bullish and accelerating, and the price position relative to the 50-day SMA has significantly improved to a bullish trend position (Z:0.63). However, the trend alignment has slightly deteriorated to a gradual descent. W: The trend alignment is a concern, indicating underlying weakness despite the strong MACD. The market bias remains range-bound, suggesting potential for reversals. O: The continued positive MACD and improved SMA positioning are supportive. The news flow highlights strategic initiatives and potential for earnings growth. T: The medium-term outlook is constructive, driven by strong momentum indicators. However, the slight deterioration in trend alignment and the overall range-bound market bias temper the conviction. Valuation remains a moderate risk factor."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term price position within the cycle has improved to 51.2%, indicating a more neutral to slightly bullish stance. The secular bear market regime remains, but the negative impact has lessened. The fundamental strengths in business quality, cash generation, and scale are unchanged. W: Valuation remains a significant concern, with implied growth still overpriced (PEG: 11.16) and multiples slightly higher than before. The debt sensitivity persists. O: Strategic expansion plans, AI integration, and a focus on economic opportunity initiatives provide a solid foundation. The potential for a pivot indicated by major crosses suggests a possible shift in the long-term trend. T: The long-term outlook is positive, supported by improving price positioning and strong fundamentals. The conviction is high due to the durability of these factors. The risk profile has slightly improved due to a less negative market regime and stable volatility, despite ongoing valuation concerns."
+    }
+  }
+}

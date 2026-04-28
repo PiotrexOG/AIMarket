@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.43)",
+        "velocity_roc_10": "STAGNANT (-0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 59.19-64.85]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.21%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.243)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.86-64.85]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-14.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-16.9%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 23.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 61.17,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.63%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.31, P/S: 1.81)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.43)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike cuts Q3 ' twenty-five sales forecast. - Iran-Isreal conflict impacts Nike Middle Eastern sales.",
+      "Nike reports Q4 earnings. - J\u00f8rgen Vig Knud\u0441\u0442orp nominated to join Nike board.",
+      "Nike signs settlement with Shoe Surfen over sneaker customizations. - Production delays push back release of Nike Skim's collection. - Federal Reserve Chair Powell to testify on Nike' earnings day."
+    ],
+    "medium_term_50d": [
+      "Nike cuts Q3 ' twenty-five sales forecast. - Iran-Isreal conflict impacts Nike Middle Eastern sales.",
+      "Nike reports Q4 earnings. - J\u00f8rgen Vig Knud\u0441\u0442orp nominated to join Nike board.",
+      "Nike board member Cathleen Benko retires - SEC filing - Launch of Nike-Skims brand delayed - NKE delays launchof women'sbrandwith Skimspartnership Note: These events are material as they involve direct business actions by Nike, including partnerships and product launches."
+    ],
+    "long_term_200d": [
+      "Nike cuts Q3 ' twenty-five sales forecast. - Iran-Isreal conflict impacts Nike Middle Eastern sales.",
+      "Nike board member Cathleen Benko retires - SEC filing - Launch of Nike-Skims brand delayed - NKE delays launchof women'sbrandwith Skimspartnership Note: These events are material as they involve direct business actions by Nike, including partnerships and product launches.",
+      "Nike slashes digital promotions and reshapers online strategy. Nike has new Chief Innovation Office (Tony Bignell)."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (86.6)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.95)",
+        "velocity_roc_10": "EXPLOSIVE_UP (14.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 356.28-431.58]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.4%)",
+        "cycle_macd": "BULLISH_FADING (7.162)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.26)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 356.28-431.58]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-16.56%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 432.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 45.6% | NM: 36.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $281.724B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.9%, EPS: 15.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -6.6%, Next Q Est Growth: 11.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.57, P/S: 11.44)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.39)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft expands AI training with trade unions. - Opensense partners with TD SYNNEX for Microsoft 365 email management. - Microsoft must face $2.8 billion UK lawsuit over cloud licenses. - Microsoft cuts Game Pass subscription prices. - Microsoft deepens industrial AI role with Stellantis and Hannover Messe deals. - Moody's integrates intelligence into Microsoft AI tools. - Prime Group deploys data centers in collaboration with Microsoft. - Xbox cuts Game Pass Ultimate and PC Game Pass prices. - Microsoft cloud-AI surge noted versus Alibaba. - Nasdaq rally spotlights Microsoft as a top tech pick. - Microsoft reduces prices for two Xbox Game Pass tiers. - Purple Knight supports Microsoft GCC High",
+      "Microsoft partners with Accenture and Avanade on Agentic Factory. - Microsoft collaborates with Stellantis on AI and cloud. - Microsoft and Schneider Electric present AI manufacturing solutions. - Microsoft joins Project Glasswing with industry partners. - Microsoft deepens AI and cybersecurity reach in autos. - Microsoft's AI and cybersecurity reach expands across autos. - Microsoft's AI and cybersecurity reach expands across cloud. - Microsoft's AI and cybersecurity reach expands across autos and cloud. - Microsoft's AI and cybersecurity reach expands across autos and cloud industries. - Microsoft's AI and cybersecurity reach expands across autos and cloud industries and beyond.",
+      "Stellantis and Microsoft sign five-year AI and cybersecurity deal. - Pipefy Partners With Microsoft To Boost AI Business Solutions. - Microsoft accelerating global AI push with early data center launch. - Expert.ai and Microsoft Italy partner to accelerate AI adoption. - Microsoft Stock Surges on Early Launch of Massive AI Data Hub. - Microsoft Stellantis AI Deal Deepens Azure Role In Global Auto Operations."
+    ],
+    "medium_term_50d": [
+      "Stellantis and Microsoft sign five-year AI and cybersecurity deal. - Pipefy Partners With Microsoft To Boost AI Business Solutions. - Microsoft accelerating global AI push with early data center launch. - Expert.ai and Microsoft Italy partner to accelerate AI adoption. - Microsoft Stock Surges on Early Launch of Massive AI Data Hub. - Microsoft Stellantis AI Deal Deepens Azure Role In Global Auto Operations.",
+      "Microsoft expands AI training with trade unions. - Opensense partners with TD SYNNEX for Microsoft 365 email management. - Microsoft must face $2.8 billion UK lawsuit over cloud licenses. - Microsoft cuts Game Pass subscription prices. - Microsoft deepens industrial AI role with Stellantis and Hannover Messe deals. - Moody's integrates intelligence into Microsoft AI tools. - Prime Group deploys data centers in collaboration with Microsoft. - Xbox cuts Game Pass Ultimate and PC Game Pass prices. - Microsoft cloud-AI surge noted versus Alibaba. - Nasdaq rally spotlights Microsoft as a top tech pick. - Microsoft reduces prices for two Xbox Game Pass tiers. - Purple Knight supports Microsoft GCC High",
+      "Microsoft partners with Accenture and Avanade on Agentic Factory. - Microsoft collaborates with Stellantis on AI and cloud. - Microsoft and Schneider Electric present AI manufacturing solutions. - Microsoft joins Project Glasswing with industry partners. - Microsoft deepens AI and cybersecurity reach in autos. - Microsoft's AI and cybersecurity reach expands across autos. - Microsoft's AI and cybersecurity reach expands across cloud. - Microsoft's AI and cybersecurity reach expands across autos and cloud. - Microsoft's AI and cybersecurity reach expands across autos and cloud industries. - Microsoft's AI and cybersecurity reach expands across autos and cloud industries and beyond."
+    ],
+    "long_term_200d": [
+      "Microsoft commits US$10b to Japan AI and cloud infrastructure. - Microsoft partners with Soft Bank and Sakura Internet in Japan. - Microsoft to train 1 million Japan-based engineers by 2029. - Microsoft deepens cybersecurity cooperation with Japanese authorities. - Microsoft is going multi-model with Copilot. - Microsoft is on a new AI journey after reworked Open AI deal.",
+      "Microsoft stock has plummeted 21% so far in 2026. - Microsoft stock has had a rough stretch in market. - Microsoft AI reliance highlighted as Open AI business risk. - Microsoft stock gains after revamping HR department.",
+      "Stellantis and Microsoft sign five-year AI and cybersecurity deal. - Pipefy Partners With Microsoft To Boost AI Business Solutions. - Microsoft accelerating global AI push with early data center launch. - Expert.ai and Microsoft Italy partner to accelerate AI adoption. - Microsoft Stock Surges on Early Launch of Massive AI Data Hub. - Microsoft Stellantis AI Deal Deepens Azure Role In Global Auto Operations."
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-13.3%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-9.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 881.56-1066.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.7%)",
+        "cycle_macd": "BEARISH_RECOVERING (-15.183)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.43)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 881.56-1078.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.79%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 900.98,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.3%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 54.28, P/S: 1.58)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.97)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco pressures suppliers in mainlands China to cut pricing due to US tariffs (FT)"
+    ],
+    "medium_term_50d": [
+      "Costco pressures suppliers in mainlands China to cut pricing due to US tariffs (FT)"
+    ],
+    "long_term_200d": [
+      "Costco pressures suppliers in mainlands China to cut pricing due to US tariffs (FT)"
+    ]
+  }
+}

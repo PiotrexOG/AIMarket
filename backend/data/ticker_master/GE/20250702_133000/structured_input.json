@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.59)",
+        "velocity_roc_10": "NORMAL (5.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 232.24-260.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.4%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.061)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.88)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.02-260.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.25%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 87.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 247.64,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 38.1% | OM: 18.8% | NM: 17.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.68B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -14.5%, EPS: 110.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.7%, Next Q Est Growth: -22.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.22, P/S: 6.73)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.87)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GEAerospace employees ratify new union contract.",
+      "GE Vernoa explores Proficity software business sale - General Electric Company drops from multiple indices",
+      "GE Aerospace: Exploring sale of Profacy software unit."
+    ],
+    "medium_term_50d": [
+      "GE Vernoa explores Proficity software business sale - General Electric Company drops from multiple indices",
+      "GE Aerospace plane involved in Air India crash, emergency response team activated. - Air India jet crashes, all but one passenger presumed dead, GE's GE Aviation affected.",
+      "GEAerospace employees ratify new union contract."
+    ],
+    "long_term_200d": [
+      "GE Aerospace plane involved in Air India crash, emergency response team activated. - Air India jet crashes, all but one passenger presumed dead, GE's GE Aviation affected.",
+      "GE Aerospace presents at Bernstein Strateg IC Decisions Conference. - Air India Boeing seventharion Dreamliner crash investigation ongoing.",
+      "Qatar Airways orders record number of Boeing planes with GE Aero engines. - Significant expansion of GE Aeraspace and Qatur Airways partnership. - US-Qatar agreements include major Boeing plane and GE engine sales."
+    ]
+  }
+}

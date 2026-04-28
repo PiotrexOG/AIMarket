@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 4.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated. The absence of a clear candle pattern and the shift of RSI to a neutral zone (45.3) indicate a loss of bullish momentum. While price remains within normal Bollinger Bands (0.4), the velocity (ROC_10) has turned negative (-4.1%), suggesting downward pressure. W: The price is still in the middle of its 20-day range [265.32-288.61], offering no clear directional bias. The SMA20 is now slightly negative (-0.8%), indicating a weakening short-term trend base. O: The lack of bullish signals and negative velocity suggest a potential for further downside or consolidation. The previous bullish hammer has failed to translate into sustained upward momentum. T: The short-term outlook is now neutral to slightly bearish. The score has decreased from 6.8 to 5.2 due to the loss of bullish momentum indicators and negative velocity. Conviction has fallen from 5.5 to 4.8 as signals have become mixed. Risk has increased from 6.5 to 6.8 due to the negative velocity and weakening SMA20 trend base."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Trend alignment remains positive (3.04%), and the price is still positioned above the 50-day SMA (Z:0.68), indicating some underlying bullish structure. W: The MACD has accelerated its bearish trend (-1.19), a significant deterioration from the previous period. This confirms a strong loss of medium-term upward momentum and suggests a potential for a deeper correction. The price remains within the monthly range [244.57-288.61], but the bearish MACD momentum indicates it is unlikely to test the upper bounds soon. O: The accelerating bearish MACD is a dominant negative signal that overrides the positive trend alignment and SMA positioning. The risk of a significant downside move has increased. T: The medium-term outlook has turned decidedly bearish. The score has decreased significantly from 5.5 to 4.0 due to the accelerating bearish MACD. Conviction has also fallen from 4.5 to 4.0 as the bearish signal has strengthened. Risk has increased from 7.0 to 7.5 due to the accelerating bearish momentum and the potential for a deeper correction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 6.2
+      },
+      "synthesis": "S: The secular bull market regime persists, though its percentage has slightly decreased (19.7%). The healthy golden cross structure (17.07%) remains a positive long-term technical indicator. The stock is positioned in the bullish upper quadrant of its long-term range (89.0%), indicating it is still trading at elevated levels. W: Valuation multiples remain hyper-premium (P/E: 41.74, P/S: 10.08), and extreme multiple risk persists (P/B: 62.56). Implied growth remains significantly overpriced (PEG: 275.15), highlighting vulnerability to any fundamental shifts. The slight pullback from the absolute peak (90.7% to 89.0%) suggests some profit-taking or resistance at higher levels. O: While the long-term technical structure and market regime are supportive, the persistently high valuation risk remains a significant overhang. The current price level, while still high, is no longer at its absolute peak, which slightly reduces immediate downside risk from that specific point. T: The long-term outlook remains cautiously positive, supported by the market regime and technical structure, but the sustained high valuation risk limits upside potential and increases downside exposure. The score has seen a modest decrease from 6.2 to 6.0 due to the slight pullback from ATH and continued high valuation. Risk has increased slightly from 6.0 to 6.2 due to the sustained premium pricing and the shift away from the absolute peak."
+    }
+  }
+}

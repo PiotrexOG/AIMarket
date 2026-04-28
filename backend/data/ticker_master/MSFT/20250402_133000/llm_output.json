@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term technicals show a significant improvement with a 'STRONG_BULLISH' candle pattern and RSI moving towards neutral (49.0). Mean reversion bands are now tighter (0.31), indicating less extreme price action. W: Velocity (ROC 10) has turned negative (-0.4%), and the 20-day SMA trend base is now slightly negative (-1.3%), suggesting a loss of immediate upward momentum. The price remains in the middle of its 20-day range. O: News flow is dominated by significant investment in OpenAI, with multiple reports detailing substantial funding rounds and Microsoft's increased stake, which is a strong positive catalyst. T: Volatility remains stable (ATR 2.11%), and volume dynamics are average (0.95). The risk has slightly decreased due to improved candle patterns and tighter Bollinger Bands, while conviction has seen a minor increase due to the bullish news. The score has been adjusted upwards to reflect the strong bullish news flow and improved short-term technical signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 5.5,
+        "risk": 5.8
+      },
+      "synthesis": "S: The MACD has shown a significant deceleration in its bullish acceleration (0.166), indicating waning momentum. The trend alignment remains bearish (-4.12%). W: The Z-score relative to the 50-day SMA has deteriorated further to -1.16, suggesting a weaker trend position. The price is still contained within the monthly range, and the bearish trend structure persists. O: News flow continues to highlight substantial investments in OpenAI, which is a positive structural development, but also mentions data center lease scaling back, indicating potential operational adjustments. T: Conviction has slightly decreased due to the MACD's reduced momentum, and risk has increased due to the worsening Z-score and persistent bearish trend alignment. The score has been adjusted downwards to reflect the weakening medium-term momentum signals despite the positive news regarding OpenAI."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The fundamental strengths of Microsoft remain exceptionally robust, characterized by ultra-elite business quality, a healthy balance sheet, and excellent cash generation. Growth profiles continue to be strong and stable. W: The long-term technical picture shows a slight deterioration in the secular bear market regime (-9.4%) and a widening death cross structure (-4.28%). The price has also moved lower within the long-term range to 14.1%. O: The news narrative is heavily influenced by the significant investment in OpenAI, which is a major strategic positive for long-term AI dominance. However, broader market regime concerns persist. T: Conviction remains high (7.0) due to the enduring fundamental strengths and the strategic importance of the OpenAI investment. Risk has slightly increased due to the worsening long-term technical regime and price positioning. The score has been slightly adjusted downwards to reflect the increased technical risk, but the fundamental and strategic positives maintain a strong overall score."
+    }
+  }
+}

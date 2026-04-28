@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.74)",
+        "velocity_roc_10": "NORMAL (1.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 299.0-350.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.54%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.67)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-366.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.76%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 339.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.98%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.2, P/S: 18.31)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.6)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa reports Q2 twenty-five earnings with increased profit. - Strong card spending volumes lead to higher profits for Visa. -Visa announces $30 billions share buyback program.",
+      "Visa reports Q1 twenty-five earnings. -Regulators announce investigation into Visa business practices.",
+      "Visa launching \"#Travel With Visa\" initiative in Asia Pacific for travel enhancements and economic contribution."
+    ],
+    "medium_term_50d": [
+      "Visa reports Q2 twenty-five earnings with increased profit. - Strong card spending volumes lead to higher profits for Visa. -Visa announces $30 billions share buyback program.",
+      "Visa reports Q1 twenty-five earnings. -Regulators announce investigation into Visa business practices.",
+      "Visa announces Product Drop event on April 3oth in San Francisco None of the other data points meet the criteria for material events directly affecting V."
+    ],
+    "long_term_200d": [
+      "Visa reports Q2 twenty-five earnings with increased profit. - Strong card spending volumes lead to higher profits for Visa. -Visa announces $30 billions share buyback program.",
+      "Visa reports Q1 twenty-five earnings. -Regulators announce investigation into Visa business practices.",
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings."
+    ]
+  }
+}

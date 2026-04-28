@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has shifted downwards, with RSI declining to 47.6, indicating a move away from overbought territory but not yet oversold. The velocity has turned stagnant (1.3%), and the candle pattern is a DOJI_INDECISION, suggesting a lack of clear direction. The price is consolidating around the SMA20, reflecting indecision. W: The shift in RSI is a slight negative, and the stagnant velocity combined with indecisive candle patterns points to a lack of immediate upward momentum. The price remains in the middle of its 20-day range, offering no strong directional signal. O: Short-term news has become mixed, with some positive developments like new product lines and partnerships, but also negative news regarding tariffs impacting the share price. This mixed flow contributes to the current indecision. T: Risk has slightly decreased from the previous period due to the absence of the extreme negative news (Chapter 11 filing) and the shift to more mixed news. However, the elevated tariffs and ongoing fundamental concerns still present a moderate downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows a slight improvement in momentum (4.31%), which is a positive signal. However, the MACD has accelerated its bearish trend (-0.223), indicating increasing downward pressure. The Z-score has slightly decreased, suggesting a less extreme bullish positioning. W: The improving trend alignment momentum is a positive counterpoint to the accelerating bearish MACD. The price remains within the monthly range, but the worsening MACD suggests underlying weakness is building. O: Medium-term news remains dominated by the severe governance and financial concerns, including the Chapter 11 filing announcement and investor pressure. While some new partnerships are emerging, they are overshadowed by these fundamental issues. T: Risk has slightly decreased due to the removal of the immediate Chapter 11 filing news from the short-term narrative, but the underlying structural and financial risks remain significant. The accelerating bearish MACD also contributes to elevated risk. Conviction remains low due to the persistent negative fundamental outlook."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term regime remains a SECULAR_BULL_MARKET, and the HEALTHY_GOLDEN_CROSS_STRUCTURE is still intact, showing technical resilience. The long-term range position has improved slightly to 72.4%, indicating a more favorable long-term positioning. W: While the long-term technical structure remains supportive, the fundamental picture is still heavily impacted by the severe implications of the Chapter 11 filing announcement. This event fundamentally alters the long-term outlook and introduces significant uncertainty, despite the positive technicals. O: Long-term news continues to be influenced by the extremely negative development of the Chapter 11 filing announcement. While older strategic plans for growth and expansion exist, they are now overshadowed by the immediate financial distress and the uncertainty it creates. T: Risk has slightly decreased due to the absence of new, overwhelmingly negative long-term news and a slight improvement in long-term range position. However, the severe implications of the potential Chapter 11 filing still represent a major structural risk, elevating downside exposure. Conviction remains subdued due to the fundamental crisis."
+    }
+  }
+}

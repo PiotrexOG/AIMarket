@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term horizon shows a significant shift from extreme oversold to neutral RSI (48.6), indicating a normalization of momentum. The strong bullish candle pattern persists, and velocity has stabilized near zero (-0.1%), suggesting a pause in recent price action. The 20-day SMA is now only slightly negative (-1.4%). W: The previous bullish conviction is tempered by the neutral RSI, and the price remains within its 20-day range. News remains mixed, with some positive product introductions but also ongoing competitive pressures and price increases. O: The shift to neutral RSI from oversold, coupled with stabilizing velocity and a less negative SMA20, suggests a potential for a short-term upward move, supported by the persistent bullish candle pattern. T: Downside risk is reduced from the previous period due to the improved momentum indicators, but the lack of strong directional conviction and ongoing competitive news temper the bullish outlook."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment has deteriorated to bearish expanding momentum (-5.59%), a clear negative signal. However, the MACD has crossed bullishly above zero, indicating a potential shift in underlying trend direction. The Z-score relative to the 50-day SMA remains bearish (Z:-0.94), suggesting the price is still in a weaker trend position. W: The expanding bearish momentum is a significant concern, overriding the positive MACD signal for now. The price remains within the monthly range, lacking decisive direction. News flow is mixed, with some positive initiatives but also persistent competitive and cost pressures. O: The bullish MACD crossover offers a glimmer of hope for a trend reversal, but it is currently overshadowed by the expanding bearish momentum and weak Z-score. The short-term stabilization might not translate into a sustained medium-term uptrend. T: The primary risk is the continued deterioration in trend momentum and the weak Z-score, which could lead to further price declines despite the MACD signal. The structural weakness in the trend remains a significant concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term technical structure remains robust, with a secular bull market regime (4.2%) and a healthy golden cross structure (11.9%) intact. The price has moved slightly higher within the mid-cycle neutral zone (59.7%), indicating a marginal improvement in its long-term positioning. W: Fundamental growth remains stagnant (Rev: 0.6%, EPS: -8.1%), and balance sheets are still stressed (YrsToPay: 6.8x). Valuation multiples remain premium (P/E: 29.89), and implied growth is negative (-8.06%). News regarding acquisitions and competition continues to introduce long-term uncertainty. O: The strong long-term technical framework provides a significant buffer against the persistent fundamental weaknesses and competitive headwinds. The slight improvement in long-term range position is a minor positive. T: The key risk remains the disconnect between the strong technicals and the deteriorating fundamentals, including stagnant growth, stressed balance sheets, and premium valuations. Increasing competitive pressures could eventually challenge the long-term technical strength if not addressed by fundamental improvements."
+    }
+  }
+}

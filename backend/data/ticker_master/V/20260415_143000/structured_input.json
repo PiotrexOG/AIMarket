@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.2)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.96)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 293.89-312.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.01%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.736)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.04)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-337.59]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.58%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 29.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 313.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 60.0% | NM: 50.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 53.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.0B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.3%, EPS: 4.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.6%, Next Q Est Growth: 18.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.71, P/S: 15.24)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.09)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.36)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa expands stablecoin settlement across blockchain networks. - Visa launches validator node on Tempo network. - Visa partners with Neat for embedded insurance. - Visa joins Tempo network as anchor validator.",
+      "Visa partners with Neat to modernize card insurance in Europe. - Visa commences exchange offer for Class B-1 and B-2 common stock. - SBA announces Visa as Platinum Cosponsor for National Small Business Week.",
+      "Visa launches Intelligent Commerce Connect for AI-driven shopping. - Visa expands collaboration with Owl Ting Group for USDC transactions. - Visa's AI Commerce and USDC push weighed against valuation upside. - Visa to announce fiscal second quarter 2026 financial results."
+    ],
+    "medium_term_50d": [
+      "Visa expands stablecoin settlement across blockchain networks. - Visa launches validator node on Tempo network. - Visa partners with Neat for embedded insurance. - Visa joins Tempo network as anchor validator.",
+      "Visa launches Intelligent Commerce Connect for AI-driven shopping. - Visa expands collaboration with Owl Ting Group for USDC transactions. - Visa's AI Commerce and USDC push weighed against valuation upside. - Visa to announce fiscal second quarter 2026 financial results.",
+      "Visa partners with Neat to modernize card insurance in Europe. - Visa commences exchange offer for Class B-1 and B-2 common stock. - SBA announces Visa as Platinum Cosponsor for National Small Business Week."
+    ],
+    "long_term_200d": [
+      "FTC probes debanking practices at Visa. - Ramp and Visa expand partnership with AI integration. - Visa defines next era of commerce with AI. - Visa announces new value-added Subscription Manager solution. - Visa rolls out six AI-powered dispute tools. - Visa's new AI dispute tools target fraud costs.",
+      "Visa launches Intelligent Commerce Connect for AI-driven shopping. - Visa expands collaboration with Owl Ting Group for USDC transactions. - Visa's AI Commerce and USDC push weighed against valuation upside. - Visa to announce fiscal second quarter 2026 financial results.",
+      "Visa tests stablecoin spending with Bridge partnership. - Visa partners with Laufey for Asia Pacific travel campaign. - Visa and Bridge to roll out stablecoin cards globally. - Visa expands Bridge partnership for crypto payment reach."
+    ]
+  }
+}

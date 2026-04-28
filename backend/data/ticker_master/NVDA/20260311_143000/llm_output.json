@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum is neutral, with RSI at 46.9 and ROC at -4.2%. The price is consolidating near the SMA20, indicating a pause in recent price action. Elevated volume (1.15x) suggests underlying interest despite the lack of clear directional conviction. O: Potential for a short-term bounce if consolidation holds and positive news emerges. T: The \"STRONG_BEARISH\" candle pattern and the \"RANGE\" bias in the SR landscape present immediate downside risks, especially if support levels are breached. The \"F:DISTANT @20d\" barrier suggests limited immediate upside resistance, but the \"C:DISTANT @20d\" barrier implies a lack of strong conviction for a sustained move. W: The mixed signals from technical indicators, including the bearish candle pattern and neutral momentum, limit the upside potential in the very short term. The \"IN_MIDDLE_OF_RANGE\" position offers no immediate tactical advantage."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend shows consolidation, with MACD showing a bearish recovery and the price hovering near the SMA50 (Z-score: -0.16). This suggests a healthy base formation after a period of volatility. The \"INSIDE_MONTHLY_RANGE\" indicates that the broader trend is still intact within established boundaries. O: The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" from the long-term view provides a supportive backdrop. Positive analyst consensus (\"STRONGLY_BULLISH\") and strong fundamental growth (\"HYPER_GROWTH\") offer a tailwind for a potential upward move. T: While the trend is consolidating, the \"BEARISH_RECOVERING\" MACD and \"CONSOLIDATION_COMPRESSED_MAS\" suggest that upside momentum is currently subdued. The \"LOW\" conviction level from the analyst consensus indicates a lack of strong conviction, which could lead to a less robust recovery. W: The \"Q_TEMPORARY_STUMBLE\" in quarterly earnings, with a -41.6% surprise, introduces a degree of uncertainty and could weigh on sentiment if not quickly overcome by strong forward guidance. The \"RANGE\" bias in the SR landscape limits the potential for a sharp upward breakout."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 8.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term outlook remains strongly bullish, supported by a \"SECULAR_BULL_MARKET\" regime and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE\". The price is positioned in the \"BULLISH_UPPER_QUADRANT\" (67.3%), indicating a sustained upward trend. Fundamentals are exceptionally strong, with \"ULTRA_ELITE_MOAT\" business quality, \"HEALTHY_BALANCE_SHEET\", and \"CASH_COW_EXCELLENT\" cash generation. O: The \"HYPER_GROWTH\" profile (Rev: 114.2%, EPS: 144.8%) and \"GROWTH_UNDERRATED\" implied growth (PEG: 0.43) suggest significant long-term potential. Positive news flow regarding AI investments and partnerships reinforces the long-term narrative. T: The \"HYPER_PREMIUM_PRICED\" multiples (P/E: 62.31, P/S: 35.04) and \"EXTREME_MULTIPLE_RISK\" (P/B: 57.64) are the primary concerns, indicating significant valuation risk. The \"POWER_ZONE_CONFLUENCE(2)\" in the SR landscape suggests strong support, but the \"RANGE\" bias implies that the upside may be capped by valuation concerns in the long run. W: Despite the strong fundamentals and growth, the extremely high valuation multiples present a significant risk of a sharp correction if growth expectations are not met or if market sentiment shifts. The \"tech protectionism restrictions on AI chip exports to China\" mentioned in the long-term news narrative could pose a future headwind."
+    }
+  }
+}

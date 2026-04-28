@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.35)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 871.71-981.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.19%)",
+        "cycle_macd": "BULLISH_FADING (1.494)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.12)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1078.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.9%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 915.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.08%))",
+      "volume_dynamics": "ELEVATED (1.39)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.17, P/S: 1.6)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.25)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.22)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco C FO warns members about tariffs. - Retailers with more purchasing power to weather tariffs better.",
+      "Trump announces tariffs hike on imports, potentially increasing costs for COST.",
+      "Costco discusses ending diversity policies due to legal pressure from Iowa AG."
+    ],
+    "medium_term_50d": [
+      "Trump announces tariffs hike on imports, potentially increasing costs for COST.",
+      "Costco C FO warns members about tariffs. - Retailers with more purchasing power to weather tariffs better.",
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)"
+    ],
+    "long_term_200d": [
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)",
+      "Trump announces tariffs hike on imports, potentially increasing costs for COST.",
+      "Costco C FO warns members about tariffs. - Retailers with more purchasing power to weather tariffs better."
+    ]
+  }
+}

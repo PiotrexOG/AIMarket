@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.3)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.05)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 75.5-87.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.68%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.983)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.46)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.5-115.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.84%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 86.47,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.49%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.89, P/S: 2.72)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.17)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks Colombian franchise stake sold to Alsea. - Hundredsof Starbucksemployeesstrikeovernewdresscode.",
+      "Starbucks drive-thru in Riversdale, CA sold for $2,85M. - Five Ontario Starbucks unions agree on first contracts. - US-China tariff truce may ease Starbucks supply chain concerns. - Strong trading day boosts Starbucks stock performance.",
+      "Starbucks Q2 earnings fall short of expectations, shares drop. - CEO announces major turnaround strategy for Starbucks."
+    ],
+    "medium_term_50d": [
+      "Starbucks Colombian franchise stake sold to Alsea. - Hundredsof Starbucksemployeesstrikeovernewdresscode.",
+      "Starbucks drive-thru in Riversdale, CA sold for $2,85M. - Five Ontario Starbucks unions agree on first contracts. - US-China tariff truce may ease Starbucks supply chain concerns. - Strong trading day boosts Starbucks stock performance.",
+      "Starbucks Q2 earnings fall short of expectations, shares drop. - CEO announces major turnaround strategy for Starbucks."
+    ],
+    "long_term_200d": [
+      "Starbucks Q2 earnings fall short of expectations, shares drop. - CEO announces major turnaround strategy for Starbucks.",
+      "Starbucks misses earnings mark, stock falls 18%. - Starbucks faces increased competition from Mc Donald's and Chip OTle.",
+      "Starbucks invests more in store staffing and reduces automation roll OUT. - Global sales and earnings dip at Starbucks. - CEO Niccol discusses challenges in revitalizing Starbucks business."
+    ]
+  }
+}

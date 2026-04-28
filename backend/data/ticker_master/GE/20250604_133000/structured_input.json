@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (86.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "NORMAL (5.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 205.92-250.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.77%)",
+        "cycle_macd": "BULLISH_FADING (0.935)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.91)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 159.36-250.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.56%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 251.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.99%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 38.1% | OM: 18.8% | NM: 17.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.68B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -14.5%, EPS: 110.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.7%, Next Q Est Growth: -22.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.77, P/S: 6.82)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.07)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aeraspace and Kratos expand small engine portfolio with new propulsion system.",
+      "Trump imposes export restrictions on GE engines for Chinese jet project.",
+      "GE Aeraspace sees supply chain improvement, expects tariff hit - US suspends jet engine technology sales to CHinese aerospace maker COMAC"
+    ],
+    "medium_term_50d": [
+      "GE Aeraspace and Kratos expand small engine portfolio with new propulsion system.",
+      "Trump imposes export restrictions on GE engines for Chinese jet project.",
+      "GE Aeraspace sees supply chain improvement, expects tariff hit - US suspends jet engine technology sales to CHinese aerospace maker COMAC"
+    ],
+    "long_term_200d": [
+      "Qatar Airways orders record number of Boeing planes with GE Aero engines. - Significant expansion of GE Aeraspace and Qatur Airways partnership. - US-Qatar agreements include major Boeing plane and GE engine sales.",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $1 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues warning",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues"
+    ]
+  }
+}

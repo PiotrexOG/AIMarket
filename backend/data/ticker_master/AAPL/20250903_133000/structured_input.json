@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.59)",
+        "velocity_roc_10": "STAGNANT (-0.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 202.16-235.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.07%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.292)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.93)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 198.96-235.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.28%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 236.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.83, P/S: 8.91)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 53.38)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "FACTBOX-Apple and Samsung seek Google search data access in antitrustcase. - Judge orders Googletosharesearchdatawithcompetitors. - Googleavoids Chromesaleintmonopolycase.",
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Apple explores Google Gemni AI for Siris revamp (product launch or delay) - TSMC markets system to manage supplier trade secrets, impacts Apple (production or supply chain change)"
+    ],
+    "medium_term_50d": [
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "FACTBOX-Apple and Samsung seek Google search data access in antitrustcase. - Judge orders Googletosharesearchdatawithcompetitors. - Googleavoids Chromesaleintmonopolycase.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Apple explores Google Gemni AI for Siris revamp (product launch or delay) - TSMC markets system to manage supplier trade secrets, impacts Apple (production or supply chain change)"
+    ],
+    "long_term_200d": [
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "Musk su ES Apple and Open AI, alleging anti-competitive collusion. - Musk files antitrust LAWSUIT against Apple and Open AI. - Elon Musks x AI su ES Appleand Open AI for alleged antitrust violation S.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Apple explores Google Gemni AI for Siris revamp (product launch or delay) - TSMC markets system to manage supplier trade secrets, impacts Apple (production or supply chain change)"
+    ]
+  }
+}

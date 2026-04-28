@@ -1,0 +1,67 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (20.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-7.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 94.77-117.46]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.4%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.876)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.92)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 91.38-117.46]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.96%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 98.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.16%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.8% | OM: 15.0% | NM: 10.4%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 6.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1761B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 0.6%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 19.4%, Next Q Est Growth: -40.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.63, P/S: 3.08)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -14.97)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.06%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Zamp SA completes acquisition of Subwayand Starbucks operations. -Starbucks faces increased competition from Dutch Bros. -Coffee producers experience unexpected price hikes."
+    ],
+    "medium_term_50d": [
+      "Zamp SA completes acquisition of Subwayand Starbucks operations. -Starbucks faces increased competition from Dutch Bros. -Coffee producers experience unexpected price hikes."
+    ],
+    "long_term_200d": [
+      "Zamp SA completes acquisition of Subwayand Starbucks operations. -Starbucks faces increased competition from Dutch Bros. -Coffee producers experience unexpected price hikes."
+    ]
+  }
+}

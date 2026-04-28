@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.6)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.99)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 187.68-212.76]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.64%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.358)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.48)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 169.0-212.76]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.21%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 213.02,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.46%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.2% | OM: 17.5% | NM: 16.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.701B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -25.5%, EPS: -28.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 69.2%, Next Q Est Growth: -27.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 35.27, P/S: 5.97)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.95)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -28.38%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE \u0410erospace announces strategic collaboration with Air Charter Security Foundation. - \u0413\u0415 \u0410erospace inaugurates XEOS facility for LEAP engine overhauls.",
+      "GE complet ES spin-offof energy and healthcare divisions. - Bell approves new diagnostics systemfor GE Aeroaspe rotors.",
+      "GE \u0410erospace secures $5 billion US Air Force contract for F1\u2081\u2080 engines."
+    ],
+    "medium_term_50d": [
+      "GE \u0410erospace secures $5 billion US Air Force contract for F1\u2081\u2080 engines.",
+      "GE \u0410erospace announces strategic collaboration with Air Charter Security Foundation. - \u0413\u0415 \u0410erospace inaugurates XEOS facility for LEAP engine overhauls.",
+      "GE complet ES spin-offof energy and healthcare divisions. - Bell approves new diagnostics systemfor GE Aeroaspe rotors."
+    ],
+    "long_term_200d": [
+      "GE \u0410erospace secures $5 billion US Air Force contract for F1\u2081\u2080 engines.",
+      "GE \u0410erospace announces strategic collaboration with Air Charter Security Foundation. - \u0413\u0415 \u0410erospace inaugurates XEOS facility for LEAP engine overhauls.",
+      "GE complet ES spin-offof energy and healthcare divisions. - Bell approves new diagnostics systemfor GE Aeroaspe rotors."
+    ]
+  }
+}

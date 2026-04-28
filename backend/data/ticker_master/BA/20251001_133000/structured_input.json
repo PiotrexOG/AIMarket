@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.34)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 211.43-237.06]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.51%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.009)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.47)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 211.43-242.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.92%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.57%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -0.3% | OM: -12.4% | NM: -14.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $75.328B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.4%, EPS: -193.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 27.6%, Next Q Est Growth: -158.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -49.38)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing developingnew single-axis plane to replace737Max. - Meetingwith Rolls- Royce for newengine talks. - Possible newsingle-axis jetdesign.",
+      "Boeing regains FAA certification for 73 Seven MAX and seventh 78 Seven delivery. - Turkish Airlines, Norweigian Group, Uzbekitan Airways place major Boeing jet orders.",
+      "Turkish Airlines purchases 22 fifth generation Boeing aircraft. - Turkish Airlines complet ES negotiations to buy Boeing 15o 73 seventh max planes. -Boeing receives large orders from Turkish Airlines and Norwegian Air."
+    ],
+    "medium_term_50d": [
+      "Boeing regains FAA certification for 73 Seven MAX and seventh 78 Seven delivery. - Turkish Airlines, Norweigian Group, Uzbekitan Airways place major Boeing jet orders.",
+      "Boeing developingnew single-axis plane to replace737Max. - Meetingwith Rolls- Royce for newengine talks. - Possible newsingle-axis jetdesign.",
+      "Turkish Airlines purchases 22 fifth generation Boeing aircraft. - Turkish Airlines complet ES negotiations to buy Boeing 15o 73 seventh max planes. -Boeing receives large orders from Turkish Airlines and Norwegian Air."
+    ],
+    "long_term_200d": [
+      "Boeing regains FAA certification for 73 Seven MAX and seventh 78 Seven delivery. - Turkish Airlines, Norweigian Group, Uzbekitan Airways place major Boeing jet orders.",
+      "Boeing logs record Dreamliner order from Usbekistan Airway worth over $ Eight billion. - Uzbekstan Airways buys up to 14 Dreamliner-9 jets from Boeing. - President Trump announces $8 billion Boeing deal with Uzbekitan Airways during NY visit.",
+      "Turkish Airlines purchases 22 fifth generation Boeing aircraft. - Turkish Airlines complet ES negotiations to buy Boeing 15o 73 seventh max planes. -Boeing receives large orders from Turkish Airlines and Norwegian Air."
+    ]
+  }
+}

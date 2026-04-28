@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (18.1)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.04)",
+        "velocity_roc_10": "NORMAL (-8.4%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-7.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 79.62-92.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.42%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.146)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.61)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 79.62-111.1]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-29.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-16.93%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 3.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 81.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.04%))",
+      "volume_dynamics": "AVERAGE (0.91)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.41, P/S: 7.77)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.2)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.14)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix co-ceo Ted Sarandas testifies before Senate on Warner Bros acquisition. - Senate holds hearing on potential antitrust implications of Netflix-War NER BROS deal. These bullets represent material events directly affecting NFLX on February 3rd, 20 twenty-six. They involve regulatory rulings (antitrust hearings) specifically concerning",
+      "Netflix submits updated all cash bid for Warner Bros., faces regulatory scrutiny. - Warner Bros.' shareholder vote for Netflix deal likely in March. - Ellison family and Paramount Co. may need to increase bid for Warner Bros by mid-February.",
+      "Netflix proposes $82,7b acquisition of Warner Brothers Discovery. - Acquisition faces regulatory scrutiny in US and UK. - Potential gain of major events rights and content library if approved."
+    ],
+    "medium_term_50d": [
+      "Netflix co-ceo Ted Sarandas testifies before Senate on Warner Bros acquisition. - Senate holds hearing on potential antitrust implications of Netflix-War NER BROS deal. These bullets represent material events directly affecting NFLX on February 3rd, 20 twenty-six. They involve regulatory rulings (antitrust hearings) specifically concerning",
+      "Netflix submits updated all cash bid for Warner Bros., faces regulatory scrutiny. - Warner Bros.' shareholder vote for Netflix deal likely in March. - Ellison family and Paramount Co. may need to increase bid for Warner Bros by mid-February.",
+      "Netflix proposes $82,7b acquisition of Warner Brothers Discovery. - Acquisition faces regulatory scrutiny in US and UK. - Potential gain of major events rights and content library if approved."
+    ],
+    "long_term_200d": [
+      "Netflix co-ceo Ted Sarandas testifies before Senate on Warner Bros acquisition. - Senate holds hearing on potential antitrust implications of Netflix-War NER BROS deal. These bullets represent material events directly affecting NFLX on February 3rd, 20 twenty-six. They involve regulatory rulings (antitrust hearings) specifically concerning",
+      "Netflix submits updated all cash bid for Warner Bros., faces regulatory scrutiny. - Warner Bros.' shareholder vote for Netflix deal likely in March. - Ellison family and Paramount Co. may need to increase bid for Warner Bros by mid-February.",
+      "Netflix proposes $82,7b acquisition of Warner Brothers Discovery. - Acquisition faces regulatory scrutiny in US and UK. - Potential gain of major events rights and content library if approved."
+    ]
+  }
+}

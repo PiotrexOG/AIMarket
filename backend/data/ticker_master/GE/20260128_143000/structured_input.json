@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "NORMAL (-8.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 290.07-330.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.43%)",
+        "cycle_macd": "BEARISH_RECOVERING (-3.862)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.64-330.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.71%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 294.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.41%))",
+      "volume_dynamics": "ELEVATED (1.44)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 66.4%, Next Q Est Growth: -33.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.03, P/S: 6.85)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.84)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.02)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE featured in aircraft sensors market report projecting expansion. - Eaton spins off mobility group focusing on aerospace and AI data centers.",
+      "GE Aeraspace reports Q4 earnings with $27B orders, $66B FY2 five revenue - GEs Aerospace sees FY2 six adj EPS $ seventh.one zero-$ seven.four zero - G\u0415 Aerospace revenue grows with $19O\u0411 backlog - G \u0415 Aerospace beats earnings estimates for",
+      "GE Aersospace sees 74\\% increase in Q4 orders. - Expanding commercial division at GE Aero Space."
+    ],
+    "medium_term_50d": [
+      "GE Aeraspace reports Q4 earnings with $27B orders, $66B FY2 five revenue - GEs Aerospace sees FY2 six adj EPS $ seventh.one zero-$ seven.four zero - G\u0415 Aerospace revenue grows with $19O\u0411 backlog - G \u0415 Aerospace beats earnings estimates for",
+      "GE Aersospace sees 74\\% increase in Q4 orders. - Expanding commercial division at GE Aero Space.",
+      "GE Aersospace reports Q3 earnings. - NATO budget boosts defense contracts, includes GE Aeraspace."
+    ],
+    "long_term_200d": [
+      "GE Aeraspace reports Q4 earnings with $27B orders, $66B FY2 five revenue - GEs Aerospace sees FY2 six adj EPS $ seventh.one zero-$ seven.four zero - G\u0415 Aerospace revenue grows with $19O\u0411 backlog - G \u0415 Aerospace beats earnings estimates for",
+      "GE Aersospace sees 74\\% increase in Q4 orders. - Expanding commercial division at GE Aero Space.",
+      "Delta selects GE engines for new Boeing jets. - Agreement includes spare engines & long-term support."
+    ]
+  }
+}

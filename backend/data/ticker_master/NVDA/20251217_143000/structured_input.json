@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 169.55-196.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.03%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.368)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.49)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.55-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.04%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 174.38,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.73%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 67.85, P/S: 38.14)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 65.56)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.29)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US initiates AI supply chain security initiative including NVDA. - NVDA vs INTEL: Comparative analysis of upcoming product releases. - New partnership announced between NVDA and Microsoft for AI solutions. - Significant production expansion for NVDA's data center GPUs. - Lawsuit filed against NVDA over patent infringement allegations. - Major acquisition",
+      "11, 14, 16 (Jensen Huang warning of exploding AI compute demand, Nvid\u00eda executives signaling positive supply trends, Giverny Asset Management's cautious optimism on AI)",
+      "Nvidia CEO Elon Musks warnsaboutnext-generation Blackwellchipsreshapingleadsto AIwar. - Oraclemixedresultsdragsemiconductortostockslower. - TSMContemplatessophisticatedchipproduction Japanplant."
+    ],
+    "medium_term_50d": [
+      "US initiates AI supply chain security initiative including NVDA. - NVDA vs INTEL: Comparative analysis of upcoming product releases. - New partnership announced between NVDA and Microsoft for AI solutions. - Significant production expansion for NVDA's data center GPUs. - Lawsuit filed against NVDA over patent infringement allegations. - Major acquisition",
+      "11, 14, 16 (Jensen Huang warning of exploding AI compute demand, Nvid\u00eda executives signaling positive supply trends, Giverny Asset Management's cautious optimism on AI)",
+      "Nvidia and Soft Bank looking to invest in Skild.ai at $14Billion valuation. - China's Moore Threads IPO values chip unit at $40Billion. - TSMC expanding and outsourcing advanced packaging due to AI chip demand."
+    ],
+    "long_term_200d": [
+      "US initiates AI supply chain security initiative including NVDA. - NVDA vs INTEL: Comparative analysis of upcoming product releases. - New partnership announced between NVDA and Microsoft for AI solutions. - Significant production expansion for NVDA's data center GPUs. - Lawsuit filed against NVDA over patent infringement allegations. - Major acquisition",
+      "Nvidia CEO discusses why AI isn't a bubble, predicts trillion-dollar computing revolution.",
+      "Nvidia and Soft Bank looking to invest in Skild.ai at $14Billion valuation. - China's Moore Threads IPO values chip unit at $40Billion. - TSMC expanding and outsourcing advanced packaging due to AI chip demand."
+    ]
+  }
+}

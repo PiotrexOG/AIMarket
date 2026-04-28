@@ -1,0 +1,67 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "NORMAL (-6.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 224.23-280.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.15%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.952)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 224.23-280.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.64%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 237.0,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.14%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 27.7% | NM: 21.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.82x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -15.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.773B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.4%, EPS: 21.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 19.3%, Next Q Est Growth: -3.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 11.98, P/S: 2.49)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.95)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.55)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan announces fixed-incode offering with unsubordimated unsecurednotes due March 2oo4o. - 3%decline in JPMsharepriceoverlastquarterdespitestrong Q4earnings."
+    ],
+    "medium_term_50d": [
+      "JPMorgan announces fixed-incode offering with unsubordimated unsecurednotes due March 2oo4o. - 3%decline in JPMsharepriceoverlastquarterdespitestrong Q4earnings."
+    ],
+    "long_term_200d": [
+      "JPMorgan announces fixed-incode offering with unsubordimated unsecurednotes due March 2oo4o. - 3%decline in JPMsharepriceoverlastquarterdespitestrong Q4earnings."
+    ]
+  }
+}

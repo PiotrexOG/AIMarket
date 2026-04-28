@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (88.3)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.09)",
+        "velocity_roc_10": "EXPLOSIVE_UP (19.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (17.1%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 95.04-131.22]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.51%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.301)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.88)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 86.63-131.22]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.95%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 132.66,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.47%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.5)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 109.37, P/S: 54.22)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 76.86)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.18)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Saudi Arabia partnerswith Nvidiato spur AI goalas Trump visits - US weighes letting UAEbuymorethan a millio\u0144advanced Nividiachips",
+      "Philips collaborates with NVIDIA to improve patient care in MR with latest AI advances. - China tariffs pause leads to jump in Nvidia stock. - AMD reports strong Q1 with Yo Y gross profit up, challenging Nvidia.",
+      "Nvidia releases downgraded H\u2082O chip for China by July. - Major Chinese tech clients to receive modified H\u2082Ochip."
+    ],
+    "medium_term_50d": [
+      "Saudi Arabia partnerswith Nvidiato spur AI goalas Trump visits - US weighes letting UAEbuymorethan a millio\u0144advanced Nividiachips",
+      "Nvidia releases downgraded H\u2082O chip for China by July. - Major Chinese tech clients to receive modified H\u2082Ochip.",
+      "U.S to overhauls curbs on AI chipexports, potentially benefiting Nvidia."
+    ],
+    "long_term_200d": [
+      "Nvidia takes a $5._5 billion hit from export controls. - Trade tensions cause $25o billion market cap loss for Nvidia.",
+      "Nvidia imposes $5. fifth billion charge dueto US export restrictions on AI chips to China and other countries (event type: Production or supplychain change). - NVIDIA CEO Jensen Huang meets with Chinese trade body head during Beijing visit after latest China export curb(event type: Strategic decision or partnership). - Some Chinesecustomersnot",
+      "Nvidia takes $5. fifth billion charge due to new US export restrictions. - New US regulations require Nvidia to obtain licenses for China sales of H20 AI chip. - U.S government informs Nvidia of new H20 export control measures."
+    ]
+  }
+}

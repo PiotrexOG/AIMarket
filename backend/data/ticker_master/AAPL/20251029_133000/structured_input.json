@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.2)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.96)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 244.57-269.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.41%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.95)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.95)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 223.78-269.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.27%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 270.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.07%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 42.06, P/S: 10.17)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 60.95)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "* Apple supplier Skywords holds talks to buy rivals Qorvo * Qorvo shares surge on merger speculation * Nvidia supplier Foxconn invests $1.4B in AI and supercomputer infrastructure * Apple supplier QRVO's shares rise on merger rumors * ARM stock gets Relative Strength Rating upgrade * Apple,",
+      "Apple Q4 earnings exceed expectations, Services segment drives nearly 30% of revenue. - Tap to Pay on i Phone now available to Worldpay merchants using Swipe Simple. - Early sales of i Phone 17 Series surge past previous years' figures, boosting Apple suppliers.",
+      "Apple loses major class action lawyer suit in the UK over App Store fees. - Tinder owner Match Group states Apple fee will hinder growth in India."
+    ],
+    "medium_term_50d": [
+      "Alibaba Singles Day Event Sales Surpasses Previous Year's Figures, i Phines Sales Exceed Last Year's Total. - Apple Closes in on $4Trillion Valuation. - EU Unknown: Apple Closed At First Record High Of The Year On Monday.",
+      "Apple Q4 earnings exceed expectations, Services segment drives nearly 30% of revenue. - Tap to Pay on i Phone now available to Worldpay merchants using Swipe Simple. - Early sales of i Phone 17 Series surge past previous years' figures, boosting Apple suppliers.",
+      "* Apple supplier Skywords holds talks to buy rivals Qorvo * Qorvo shares surge on merger speculation * Nvidia supplier Foxconn invests $1.4B in AI and supercomputer infrastructure * Apple supplier QRVO's shares rise on merger rumors * ARM stock gets Relative Strength Rating upgrade * Apple,"
+    ],
+    "long_term_200d": [
+      "Alibaba Singles Day Event Sales Surpasses Previous Year's Figures, i Phines Sales Exceed Last Year's Total. - Apple Closes in on $4Trillion Valuation. - EU Unknown: Apple Closed At First Record High Of The Year On Monday.",
+      "Apple Q4 earnings exceed expectations, Services segment drives nearly 30% of revenue. - Tap to Pay on i Phone now available to Worldpay merchants using Swipe Simple. - Early sales of i Phone 17 Series surge past previous years' figures, boosting Apple suppliers.",
+      "i Phone 17outsells predecessorby 14 % inearly Chinaundered Statesales. - Apple'shareshitall-timemountafter Counterpoint Researchreportediphonesalesjumped14%yearoveryear."
+    ]
+  }
+}

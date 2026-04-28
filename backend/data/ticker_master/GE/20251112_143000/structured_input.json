@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "STAGNANT (0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 294.8-316.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.72%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.345)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 271.86-316.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.43%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 309.27,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.32%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.91, P/S: 7.5)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.54)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.29)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Standard Aero expands facility supporting GE Airospace CF3 fourth and CFM5 sixth engines.",
+      "Turkish Airlines orders engines from GE Aeraspace. - Standard Aero delivers 100oth J85 engine to USAF for GE Aeroaspace's T-3 eight Talon trains. - Kratos & GE Aerespace complete altitude testing of GEK 800 engines.",
+      "GE Aerspace collaborates with Shield AI on propulsion for X-\\ \u0411\u0430\u0442 vehicle program."
+    ],
+    "medium_term_50d": [
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Turkish Airlines orders engines from GE Aeraspace. - Standard Aero delivers 100oth J85 engine to USAF for GE Aeroaspace's T-3 eight Talon trains. - Kratos & GE Aerespace complete altitude testing of GEK 800 engines.",
+      "Korean Air buys $13,7B worth of GE Aero engines."
+    ],
+    "long_term_200d": [
+      "GE Aersospace announces major aircraft engine order win. - Regulator imposes new ruling on GE's financial practices. - Merger: GE acquires key supplier in aviation industry. - Production delay at GE Power causes significant loss. - CEO announces major divestiture plan for healthcare unit.",
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Korean Air buys $13,7B worth of GE Aero engines."
+    ]
+  }
+}

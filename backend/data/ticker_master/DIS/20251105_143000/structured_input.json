@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.47)",
+        "velocity_roc_10": "NORMAL (-2.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.51-114.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.99%)",
+        "cycle_macd": "BULLISH_FADING (0.148)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 108.51-119.78]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.42%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.03,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.86%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.1% | OM: 14.6% | NM: 9.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.04B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 434.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 24.8%, Next Q Est Growth: -43.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.61, P/S: 2.14)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.93)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.05)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney completes merger with Fubo TV, creates top US Pay TV provider. - Anna Bella Patisserie expands production, renews Disney licensing.",
+      "Inter Digital wins court injunction against DIS in Germany over video streaming patent dispute.",
+      "Disney channels godark on You Tube TVaftercarriagedealexpires - Disneypulls ESPN,ABCandothercontentfrom You Tube TV - Negotiationsbetween Disneyand Googlefailoverlicensingdeal - Disneychannelsincluding ESPNand ABCgo darkon You Tube TVaspricingdisputeremainsunresolved"
+    ],
+    "medium_term_50d": [
+      "Disney channels godark on You Tube TVaftercarriagedealexpires - Disneypulls ESPN,ABCandothercontentfrom You Tube TV - Negotiationsbetween Disneyand Googlefailoverlicensingdeal - Disneychannelsincluding ESPNand ABCgo darkon You Tube TVaspricingdisputeremainsunresolved",
+      "Disney completes merger with Fubo TV, creates top US Pay TV provider. - Anna Bella Patisserie expands production, renews Disney licensing.",
+      "Inter Digital wins court injunction against DIS in Germany over video streaming patent dispute."
+    ],
+    "long_term_200d": [
+      "Disney channels godark on You Tube TVaftercarriagedealexpires - Disneypulls ESPN,ABCandothercontentfrom You Tube TV - Negotiationsbetween Disneyand Googlefailoverlicensingdeal - Disneychannelsincluding ESPNand ABCgo darkon You Tube TVaspricingdisputeremainsunresolved",
+      "Disney completes merger with Fubo TV, creates top US Pay TV provider. - Anna Bella Patisserie expands production, renews Disney licensing.",
+      "Disney suspends \"Jimmy Kimmel Live!\" on ABC due to political controversy. - You Tube TV at risk of lossing Disney-owned channels. - Dispute between Disney and Google over You Tube TV carriage fees."
+    ]
+  }
+}

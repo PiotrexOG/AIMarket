@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "STAGNANT (0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 844.06-926.27]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-2.73%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.329)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 844.06-953.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.22%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 8.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 864.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.66%))",
+      "volume_dynamics": "AVERAGE (0.64)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $268.776B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.9%, EPS: 9.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.2%, Next Q Est Growth: 5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.9, P/S: 1.43)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.17)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.27)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco sees double-digital traffic increase while competitors experience declines.",
+      "Costco faces legal stance against Trump's tariffs, impacts quarterly earnings. - Restriction on purchasing specific item at Costco.",
+      "Costco faces lobster heist worth $40o,00o."
+    ],
+    "medium_term_50d": [
+      "Costco sees double-digital traffic increase while competitors experience declines.",
+      "Costco faces legal stance against Trump's tariffs, impacts quarterly earnings. - Restriction on purchasing specific item at Costco.",
+      "Costco beats Q1 earnings estimate with 6. fourth% comparative sales development. - Tariff refunds With may come. How Costcowith others could get compensated. -Costco plans Over 30 latest warehouses a year as digital tools enhance productivity."
+    ],
+    "long_term_200d": [
+      "Costco beats Q1 earnings estimate with 6. fourth% comparative sales development. - Tariff refunds With may come. How Costcowith others could get compensated. -Costco plans Over 30 latest warehouses a year as digital tools enhance productivity.",
+      "Costco adds Bernie commerce secretary Gina Riamondo to board - Cost Co sues Trump administration over tariffs These events meet the criteria of having a direct impact on thecompany COST. They involve regulatory rulings (lawsuit against Trump administration) and appointments to the board (addition of Gina Riamondo) that specifically concern COST.",
+      "Costco enters travel industry with multibillion-$ bookings in cruise, vacations, rentals."
+    ]
+  }
+}

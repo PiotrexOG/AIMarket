@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (4.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 243.34-272.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.04%)",
+        "cycle_macd": "BULLISH_FADING (0.15)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.33)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 211.15-272.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.99%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 260.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.44%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.9% | OM: 19.1% | NM: 18.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.48x, YrsToPay: 1.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 13.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.609B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -11.0%, EPS: 69.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 33.6%, Next Q Est Growth: -23.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.08, P/S: 6.69)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.55)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.52)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415",
+      "GE Aersospace raises Q2 twenty-five earnings and guidance.",
+      "GE Vernoa Q2 earnings report upcoming. - Industrial sector experiencing strong growth under Trump policies."
+    ],
+    "medium_term_50d": [
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415",
+      "GE Aersospace raises Q2 twenty-five earnings and guidance.",
+      "GE Arospeace earns quarters results on Thursday."
+    ],
+    "long_term_200d": [
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415",
+      "GE Aersospace raises Q2 twenty-five earnings and guidance.",
+      "GE Aerospace plane involved in Air India crash, emergency response team activated. - Air India jet crashes, all but one passenger presumed dead, GE's GE Aviation affected."
+    ]
+  }
+}

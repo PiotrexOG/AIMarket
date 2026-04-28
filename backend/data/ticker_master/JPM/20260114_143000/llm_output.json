@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term technicals have significantly deteriorated. The 'DOJI_INDECISION' candle pattern indicates a lack of conviction. RSI has fallen sharply into a bearish zone (38.9), and the price is testing the lower Bollinger Band (0.02), suggesting oversold conditions. Velocity has turned negative (-4.0%), and the price is now stable near the 20-day SMA, which is also down (-4.0%). The price is at critical support at 310.57. W: The bearish RSI, testing lower BB, negative velocity, and the price at critical support are key weaknesses. The 'DOJI_INDECISION' pattern highlights the uncertainty. O: News flow is mixed, with the potential credit card rate cap being a significant negative headwind, while the Apple Card issuance and resilient consumer/business segments offer some support. T: The score has decreased by 3.0 points due to the sharp deterioration in momentum and the bearish technical signals. Conviction has decreased by 2.0 points as the indecision pattern and bearish indicators reduce confidence. Risk has decreased slightly by 0.5 points as the price is testing support and is no longer overstretched, but the bearish signals and potential rate cap remain significant risks."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment is showing a gradual ascent (2.73%), but this is contradicted by bearish MACD acceleration (-1.48) and a bearish position relative to the 50-day SMA (Z:-0.72). The price remains within the monthly range. W: The bearish MACD and negative Z-score relative to the 50-day SMA are significant weaknesses, indicating a loss of upward momentum. The 'RANGE' bias in the SR landscape caps upside potential. O: News flow is mixed, with the Apple Card issuance being a positive, but the proposed credit card rate cap poses a material risk to net interest income. T: The score has decreased by 3.3 points due to the bearish MACD and negative SMA Z-score, overriding the gradual ascent signal. Conviction has decreased by 2.7 points as the conflicting signals and bearish momentum indicators reduce confidence. Risk has increased by 0.2 points due to the bearish trend signals and the potential impact of the rate cap news, despite the price being within a range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term secular bull market regime is still in place, though its strength has diminished (7.6%). The golden cross structure remains healthy (9.05%), and the price is in the bullish upper quadrant of its long-term range (78.4%). W: The decline in the market regime strength and the price moving further from the absolute cycle top are minor weaknesses. The fundamental issues of moderate leverage and the now-positive FCF margin are improved, but the valuation remains a concern with a high PEG ratio. O: Long-term news flow is dominated by the Apple Card issuance, which is a positive strategic development, and the potential credit card rate cap, which introduces a new long-term risk factor. T: The score has decreased by 1.0 point due to the weakening market regime and the increased risk from the potential rate cap. Conviction has decreased by 0.8 points as the market regime is less robust and the new regulatory risk introduces uncertainty. Risk has increased by 0.7 points due to the weakening market regime, the potential regulatory impact on future earnings, and the elevated PEG ratio, despite improvements in FCF and leverage."
+    }
+  }
+}

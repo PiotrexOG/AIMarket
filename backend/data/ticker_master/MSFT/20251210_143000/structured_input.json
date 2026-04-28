@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.54)",
+        "velocity_roc_10": "NORMAL (3.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 464.89-513.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.33%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.465)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 464.89-553.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.72%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 480.39,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.97%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 36.98, P/S: 13.27)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.13)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.06)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft invests $17._ billion in India for AI infrastructure expansion. - athenaheight collaborates with Microsoft on AI-driven Ambient Notes option. - IRIS Software Group launches AI-tax anomaly detectiontool. - Marvell adopts chips to speed up AI datacenter performance. - Nova Era L abs introduces cloud-basedvirtual",
+      "IBM acquires Confluent affecting MSFT through potential impact on cloud security and competition. - Broadcom steals NVIDIA's AI thunder potentially impacting MSFT's position in AI market.",
+      "Microsoft and LGC affiliates pursue data center cooperation. - Prismforce embeds AI-agent in Microsoft 356 ecosystem. -Microsoft raises commercial prices for expanding AI tools."
+    ],
+    "medium_term_50d": [
+      "IBM acquires Confluent affecting MSFT through potential impact on cloud security and competition. - Broadcom steals NVIDIA's AI thunder potentially impacting MSFT's position in AI market.",
+      "Microsoft invests $17._ billion in India for AI infrastructure expansion. - athenaheight collaborates with Microsoft on AI-driven Ambient Notes option. - IRIS Software Group launches AI-tax anomaly detectiontool. - Marvell adopts chips to speed up AI datacenter performance. - Nova Era L abs introduces cloud-basedvirtual",
+      "Microsoft signed agreement to acquire Spr O, strengthening capabilities in S AP for agrib USiness in Brazil. - Amazon sees strong demand in Marvell Data Center business, expects revenue growth 25%. - EU probe into Microsoft cloud bundeling practices. Note: The third point was included despite being primarily about another company (Google), but since it mentions Microsoft in"
+    ],
+    "long_term_200d": [
+      "IBM acquires Confluent affecting MSFT through potential impact on cloud security and competition. - Broadcom steals NVIDIA's AI thunder potentially impacting MSFT's position in AI market.",
+      "Microsoft invests $17._ billion in India for AI infrastructure expansion. - athenaheight collaborates with Microsoft on AI-driven Ambient Notes option. - IRIS Software Group launches AI-tax anomaly detectiontool. - Marvell adopts chips to speed up AI datacenter performance. - Nova Era L abs introduces cloud-basedvirtual",
+      "Microsoft cleared as French antitrust watchdog dismisses Qwant complaint. - Google withdraws EU antitrust complaint against Microsoft after new probe launched. - Recent availability of AI-powered Copilots for Microsoft Marketplace."
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (23.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "NORMAL (-5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 71.32-82.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.89%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.706)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.47)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 68.62-82.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.57%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 73.27,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.99%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.3% | OM: 11.6% | NM: 10.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.581B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.9%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 22.2%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.36, P/S: 2.17)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.86)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -2.28%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike cuts production due to supplier issues. - Federal Reserve announces interest rate decision directly impacting NKE."
+    ],
+    "medium_term_50d": [
+      "Nike cuts production due to supplier issues. - Federal Reserve announces interest rate decision directly impacting NKE."
+    ],
+    "long_term_200d": [
+      "Nike cuts production due to supplier issues. - Federal Reserve announces interest rate decision directly impacting NKE."
+    ]
+  }
+}

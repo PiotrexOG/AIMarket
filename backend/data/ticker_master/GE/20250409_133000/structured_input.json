@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (22.4)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.0)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-20.2%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-13.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 159.36-214.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.83%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-4.424)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.95)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 159.36-214.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-6.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.84%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 32.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 170.96,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.9%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.2% | OM: 17.5% | NM: 16.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.701B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -25.5%, EPS: -28.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 69.2%, Next Q Est Growth: -27.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 28.3, P/S: 4.79)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.59)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -28.38%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Healthcare faces potential losses due to Chinese tariffs.",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $1 million. - Boeing cancels GE engine orders for 787 Dreamliners. - General Electric sells off significant stake in Baker Hughes",
+      "GE Aersospace lands major Korean Air deal: supplies GEnx \u0438 \u0413\u04159X engines."
+    ],
+    "medium_term_50d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $1 million. - Boeing cancels GE engine orders for 787 Dreamliners. - General Electric sells off significant stake in Baker Hughes",
+      "GE Aersospace lands major Korean Air deal: supplies GEnx \u0438 \u0413\u04159X engines.",
+      "GE Healthcare faces potential losses due to Chinese tariffs."
+    ],
+    "long_term_200d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $1 million. - Boeing cancels GE engine orders for 787 Dreamliners. - General Electric sells off significant stake in Baker Hughes",
+      "GE \u0410erospace secures $5 billion US Air Force contract for F1\u2081\u2080 engines.",
+      "GE Aersospace lands major Korean Air deal: supplies GEnx \u0438 \u0413\u04159X engines."
+    ]
+  }
+}

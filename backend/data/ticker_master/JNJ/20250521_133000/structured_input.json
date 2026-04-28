@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 146.12-158.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.84%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.043)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.55)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-167.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.13%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 153.85,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.85%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 16.96, P/S: 4.17)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.77)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "J&J subsidiary ordered topay $148M for antitrust violation. - US regulatory body favors Darzalexpaspro formyelomatreatment(JNJ).",
+      "Innova Health wins $148m antitrust suit vs J&J's Bios ENSE Webster.",
+      "UK's MHA approves Gusel kumab (for JNJ's use in Crohns disease and ulcerative colitis)."
+    ],
+    "medium_term_50d": [
+      "UK's MHA approves Gusel kumab (for JNJ's use in Crohns disease and ulcerative colitis).",
+      "J&J subsidiary ordered topay $148M for antitrust violation. - US regulatory body favors Darzalexpaspro formyelomatreatment(JNJ).",
+      "Innova Health wins $148m antitrust suit vs J&J's Bios ENSE Webster."
+    ],
+    "long_term_200d": [
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis.",
+      "Johnson & Johnson received FDA approvalfor IMAAVYP\u2122(nipocalimb-aahu)to treatgeneralizedmyastheniagravis.",
+      "Johnson & Johnson announces positive Phase 3 data for ic\u043e\u0442\u0440\u043e\u043a\u0438\u043d\u0440\u0430 in psor\u00edasis study. - New data from Phase 3 \u0418\u041a\u041e\u041d\u0418\u0421-\u0422\u041e\u0422\u0410\u041b study shows significant skin clear ANCE for ic\u043e\u0442\u0440\u043e\u043aINRA in treating psorias IS."
+    ]
+  }
+}

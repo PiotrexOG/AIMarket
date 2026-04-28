@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.74)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 99.87-109.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.96%)",
+        "cycle_macd": "BULLISH_FADING (0.334)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.74)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 95.42-109.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.21%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 107.2,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.66, P/S: 1.3)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.26)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.53)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart announces Thanksgiving meals serving 1o people for under $40 with free express delivery. - Beyond Meat increases availability of selectproducts at over \u00b2ooo Walmart stores. - walmart expands Beyond Meat distribution nationwide.",
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart faces potential tariff impacts on purchases and sales. - Costco enters weight-loss drugs market with sale of Ozempic, Wegovit."
+    ],
+    "medium_term_50d": [
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart announices new service for Car owners. - walmart partners with Open AI for shopping on Chat GPT. - WMT accelerates AI transformation with Open AI partnership.",
+      "Walmart partnerswith Open AI for Chat GPT shoppingfeature. - walmartannouncespartnershipwith Open AIfor Instant Checkout. -walmartteamingupwith Open AItoallowcustomers to purchaseproductsthrough Chat GPTusing Instant Checkout."
+    ],
+    "long_term_200d": [
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart announices new service for Car owners. - walmart partners with Open AI for shopping on Chat GPT. - WMT accelerates AI transformation with Open AI partnership.",
+      "Walmart partnerswith Open AI for Chat GPT shoppingfeature. - walmartannouncespartnershipwith Open AIfor Instant Checkout. -walmartteamingupwith Open AItoallowcustomers to purchaseproductsthrough Chat GPTusing Instant Checkout."
+    ]
+  }
+}

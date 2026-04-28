@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: RSI 29.3 indicates oversold conditions, suggesting potential for a short-term bounce. Velocity ROC at -6.1% and SMA20 at -5.6% show recent weakness but are stabilizing near base. W: Current price is in the middle of a wide range (224.23-280.25), lacking clear directional conviction. News narrative highlights a price decline despite strong Q4 earnings, indicating potential market skepticism. O: A short-term rebound is possible if oversold conditions are capitulated. T: Volatility is expanding with moderate ATR (3.14%), and the SR landscape shows a range bias with distant barriers, implying limited upside potential in the immediate term."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: MACD is bearish recovering (-1.952) and the price is below the 50-day SMA (Z-score: -1.31), indicating a bearish trend. W: The trend alignment shows a gradual descent (-3.15%), and the price remains within the monthly range, suggesting a lack of strong directional momentum. The news narrative about a debt offering and price decline despite earnings adds to uncertainty. O: Potential for a mean reversion rally exists if the oversold RSI from the short-term horizon translates into broader buying pressure. T: The risk is elevated due to the bearish trend alignment and the negative MACD signal. The presence of negative FCF (-15.5%) and moderate leverage (NetDebt/Eq: 0.82x) increases sensitivity to economic downturns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term regime is a secular bull market (3.0%) with a healthy golden cross structure (12.64%), providing a supportive backdrop. Business quality is high (GM: 58.6%, OM: 27.7%, NM: 21.6%), and growth profile is strong (Rev: 14.4%, EPS: 21.8%). W: Earnings momentum shows a quarterly peak performance skepticism, with next quarter's estimated growth at -3.7%, indicating a potential slowdown. The company is a cash burner with negative FCF (-15.5%), which is a structural concern. O: Valuation appears attractive with a low PEG ratio (0.55), suggesting growth is underrated by the market. The mega-cap scale (Rev: $270.773B) provides resilience. T: Risk is moderate, primarily stemming from the negative FCF and debt sensitivity (EV/MC: 1.42x). While the long-term trend is bullish, the short-to-medium term technicals and earnings momentum caution against aggressive bullishness."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.8)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.27)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.78-120.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (13.09%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.123)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.56)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 80.1-120.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (15.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.81%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 118.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.84%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.33)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.48, P/S: 2.34)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.12)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.43)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney CEO plans to stop disclosing subscriber numbers (CNBC interview) - Disney pays \u00a3324.1m for full control of Hulu (The Guardian) - Disneys takes full control of US streaming service Hulus for $438.5M (Variety)",
+      "Disney completes purchase of Huli, pays additional $440 million to NBCU. - Walt Disney Co acquires full ownership of Huli. - Disneys buyout of Huli ends long-standing partnership with Comcast.",
+      "Disney executive joins You Tube against company's will."
+    ],
+    "medium_term_50d": [
+      "Disney CEO plans to stop disclosing subscriber numbers (CNBC interview) - Disney pays \u00a3324.1m for full control of Hulu (The Guardian) - Disneys takes full control of US streaming service Hulus for $438.5M (Variety)",
+      "Disney completes purchase of Huli, pays additional $440 million to NBCU. - Walt Disney Co acquires full ownership of Huli. - Disneys buyout of Huli ends long-standing partnership with Comcast.",
+      "Disney lays off several hundred Employees worldwide - Disney, Microsoft announce massive layoffs"
+    ],
+    "long_term_200d": [
+      "Disney CEO plans to stop disclosing subscriber numbers (CNBC interview) - Disney pays \u00a3324.1m for full control of Hulu (The Guardian) - Disneys takes full control of US streaming service Hulus for $438.5M (Variety)",
+      "Disney completes purchase of Huli, pays additional $440 million to NBCU. - Walt Disney Co acquires full ownership of Huli. - Disneys buyout of Huli ends long-standing partnership with Comcast.",
+      "Disney lays off several hundred Employees worldwide - Disney, Microsoft announce massive layoffs"
+    ]
+  }
+}

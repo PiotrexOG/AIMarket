@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.56)",
+        "velocity_roc_10": "STAGNANT (-1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 56.99-67.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.36%)",
+        "cycle_macd": "BULLISH_FADING (0.116)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-69.14]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.2%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 65.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.04%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.62, P/S: 2.03)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.93)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike names Garcia Vice President for EMEARegion. - C\u00e9sar Garcia becomes Nike'snew VP/GMof EMEA. - Cathy Sparkstakeson VP/GMGreater Chinaroleat Nike. - Changesin Nike'sseniorleadershipteamfor GEMaregions",
+      "Popular sports apparel retail chain declares bankruptcy may impact NKE sales.",
+      "Nike signs new supply agreement with Loop Industires. - Jordan Brand expands wholesale presence at Rack Room."
+    ],
+    "medium_term_50d": [
+      "Nike names Garcia Vice President for EMEARegion. - C\u00e9sar Garcia becomes Nike'snew VP/GMof EMEA. - Cathy Sparkstakeson VP/GMGreater Chinaroleat Nike. - Changesin Nike'sseniorleadershipteamfor GEMaregions",
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike faces potential duty exposure due to Supreme Court delay on apparel tariffs. - Loop Industires awards detailed engineering contract for Infinite Loop India project with Nike."
+    ],
+    "long_term_200d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike reports fiscal second-quad earnings after the market closes. - Investors expect new product innovions and third quarter guidance."
+    ]
+  }
+}

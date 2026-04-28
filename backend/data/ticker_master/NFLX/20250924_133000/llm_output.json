@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has weakened further, evidenced by a 'STRONG_BEARISH' candle pattern and a slight decline in RSI to 48.5. Velocity (ROC 10) has also turned more negative at -3.5%. The price is now hugging the 20-day SMA, indicating consolidation rather than upward momentum, and remains in the middle of its 20-day range (117.32-126.71). W: The bearish candle pattern and negative velocity suggest increased downside risk. The 'HUGGING_SMA20_CONSOLIDATION' indicates a lack of conviction for an upward move. O: Short-term news is mixed, with a potential earnings miss and production setback countered by positive partnership announcements. T: The score has decreased from 4.0 to 3.5 due to the deterioration in the candle pattern and increased negative velocity. Conviction has decreased from 4.5 to 4.0 as short-term signals are now more decisively bearish. Risk has increased from 6.0 to 6.5, reflecting the increased negative velocity and the bearish candle pattern, despite stable volatility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows compressed moving averages (1.02%), indicating a period of consolidation. The MACD has recovered from a more bearish state to -0.089, suggesting a potential stabilization, though still bearish. The Z-score to the 50-day SMA has moved slightly more negative to -0.04, indicating mean reversion is still in play but losing upward momentum. The price remains within the monthly range (114.47-127.75). W: While the MACD is recovering, it remains bearish, and the Z-score is trending negative, suggesting continued consolidation or potential for a downward move if support breaks. O: Medium-term news is mixed, with potential positive content acquisitions and partnerships, but also negative headlines about regulatory impacts and a potential earnings miss. T: The score has increased slightly from 3.5 to 4.0 as the MACD shows signs of recovery and the trend alignment is consolidating rather than accelerating downwards. Conviction has increased from 4.0 to 4.5 as the bearish momentum appears to be stabilizing. Risk has decreased from 6.5 to 6.0, reflecting the stabilization in MACD and the less negative Z-score, despite the ongoing consolidation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime percentage has slightly increased to 12.5%, indicating a marginal improvement in the secular bull market context. The long-term range position has decreased to 74.9% in the upper quadrant, suggesting a slight loss of upward momentum. The golden cross structure remains, but the percentage participation has decreased. W: The slight increase in market regime participation is positive, but the decrease in long-term range position and the persistent hyper-premium valuation multiples (P/E: 50.24, P/S: 12.63) increase downside risk. The 'POWER_ZONE_CONFLUENCE(1)' in the SR landscape suggests potential resistance. O: Long-term news is mixed, with positive content acquisition news and partnership announcements, but also negative headlines regarding potential earnings misses, regulatory impacts, and industry consolidation. T: The score has decreased from 5.5 to 5.0 due to the slight decrease in the long-term range position and the persistent high valuation risk. Conviction has decreased from 6.0 to 5.5 as the long-term technicals are showing some signs of weakening despite the stable golden cross. Risk has increased from 6.0 to 6.5, primarily due to the persistent hyper-premium valuation multiples and the slight decrease in long-term range position, which makes the stock more vulnerable to a downturn."
+    }
+  }
+}

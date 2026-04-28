@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 500.7-555.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.88%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.741)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 456.89-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.15%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 87.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 529.75,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.07%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 42.48, P/S: 15.11)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.07)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.44)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "12. Microsoft's CEOrannouncesmajorquantumcomputingnewsfor Ion Q. 14. Microsoftpartnerswith Paigein digitalpathology. 16. Cryptosurpasses Applewith$4.1ttnmarketcap. 18. ASMLand AMDbothseestrongsalessoftheyearinthe",
+      "Microsoft forecasts 30\\% annual growth for AI memory market till 20 thirty. - SK Hyn IX projects 30\\% CAGR for AI memory chips market to 2o3o.",
+      "Microsoft expands integration potential with Intermedia - Microsoft sees price movement of 19% in last quarter - Microsoft reports robust Q4 earning with increased revenue and net inventory - Microsoft integrates Microsoft 3 sixth email into Intermedias Intelligent Archivesolution - Microsoft kills Lens, handheld scanning app"
+    ],
+    "medium_term_50d": [
+      "Microsoft becomes second company with $4 trillon market capitalization due to AI businesses. (event type: Product launches/delays) - Tech giants spend $156bn on AI in 2 years. (eventtype: Production or supply change) - Microsoft CEO hints at near-term quantum computing application. (eventype: Company guidance)",
+      "12. Microsoft's CEOrannouncesmajorquantumcomputingnewsfor Ion Q. 14. Microsoftpartnerswith Paigein digitalpathology. 16. Cryptosurpasses Applewith$4.1ttnmarketcap. 18. ASMLand AMDbothseestrongsalessoftheyearinthe",
+      "Microsoft joins Nvidia as $4 trillon market-cap member. - Apple signals readiness to increase AI investments. - Meta reports robust Q2 financial results with AI investment. - China accuses US of using old Microsoft flaw for cyberattacks. - Amazon crushes Q2 with double- digit growth in all sectors. -Microsoft stock drops after big"
+    ],
+    "long_term_200d": [
+      "Microsoft becomes second company with $4 trillon market capitalization due to AI businesses. (event type: Product launches/delays) - Tech giants spend $156bn on AI in 2 years. (eventtype: Production or supply change) - Microsoft CEO hints at near-term quantum computing application. (eventype: Company guidance)",
+      "Microsoft joins Nvidia as $4 trillon market-cap member. - Apple signals readiness to increase AI investments. - Meta reports robust Q2 financial results with AI investment. - China accuses US of using old Microsoft flaw for cyberattacks. - Amazon crushes Q2 with double- digit growth in all sectors. -Microsoft stock drops after big",
+      "Microsoft reports better-than expected financial results for fiscal fourth quarter - Double-digit growth in Azure cloud business drives earnings beat - Microsoft ends session up 3.6%, market capitalization nears $4 trillon - Meta's solid results send shares up 11.1% - AWS sales jump 17% to $31bn, leads profit"
+    ]
+  }
+}

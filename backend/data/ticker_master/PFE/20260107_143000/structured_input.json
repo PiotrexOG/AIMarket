@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.55)",
+        "velocity_roc_10": "NORMAL (1.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.83-26.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.66%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.012)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.96)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.91-26.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.66,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.77%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.87, P/S: 2.34)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.58)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.41x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer collaborates with Cartography Brosciences to discover tum OR-selective Antig ENS.",
+      "Pfizer invites public to view webcast at healthcare conference. - Analysis of Pfizer valuation after recent share price weakness.",
+      "FDA revokes emergency use authorizations for Pfizer' lucira covid-19 and flu tests. -PFizer announces price hikes for around 8o drugs including cancer medication Ibrance and covid vaccine."
+    ],
+    "medium_term_50d": [
+      "Pfizer collaborates with Cartography Brosciences to discover tum OR-selective Antig ENS.",
+      "Pfizer faces major lawsuit over side effects of drug X. - FDA issues warning letter to Pfizer regarding plant Y. - Pharmaceutical giant Pfizer announces acquisition of rival AZ. - New production facility in China impacts PFE's Q4 earnings. - PFE lowers full year guidance due to unexpected costs. - Delayed launch",
+      "Pfizer expects lower sales of COVID vaccine and treatments starting in twenty-six. - Price cuts promised by Pfizer to the US Government."
+    ],
+    "long_term_200d": [
+      "Pfizer faces major lawsuit over side effects of drug X. - FDA issues warning letter to Pfizer regarding plant Y. - Pharmaceutical giant Pfizer announces acquisition of rival AZ. - New production facility in China impacts PFE's Q4 earnings. - PFE lowers full year guidance due to unexpected costs. - Delayed launch",
+      "Pfizer licenses weight-loss drug from Fosun (Event 1).",
+      "Pfizer collaborates with Cartography Brosciences to discover tum OR-selective Antig ENS."
+    ]
+  }
+}

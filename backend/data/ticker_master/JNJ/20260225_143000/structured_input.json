@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 220.7-247.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.27%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.166)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.54)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 200.91-247.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.91%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 244.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.51%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.02, P/S: 6.33)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.31)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA.",
+      "Johnson & Johnson announces approval of subcutaneous Rybrevant for advanced EGFRA-mutated NSCLC. - Bayer files lawsuit against Johnson & Johnson alleging false advertising for Nubequa. - Blackstone Life sciences co-funding agreement for advancing clinical trials of bleximanib for AML.",
+      "FDA grants Breakthrough status to Johnson & Johnson'_s cancer drug for advanced head and neck cancer."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA.",
+      "FDA grants Breakthrough status to Johnson & Johnson'_s cancer drug for advanced head and neck cancer.",
+      "Johnson & Johnson announces approval of subcutaneous Rybrevant for advanced EGFRA-mutated NSCLC. - Bayer files lawsuit against Johnson & Johnson alleging false advertising for Nubequa. - Blackstone Life sciences co-funding agreement for advancing clinical trials of bleximanib for AML."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA.",
+      "FDA grants Breakthrough status to Johnson & Johnson'_s cancer drug for advanced head and neck cancer.",
+      "Johnson & Johnny announces $1B+ investment in Pennsylvania Celltherapy factory. - JNJ receives FDA Breakthough Therapy Designaton for RYBRETANTI in NSCLC."
+    ]
+  }
+}

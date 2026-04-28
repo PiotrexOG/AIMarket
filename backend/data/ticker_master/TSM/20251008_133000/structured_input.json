@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (6.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 257.75-307.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.83%)",
+        "cycle_macd": "BULLISH_FADING (1.626)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.42)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 223.7-307.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (39.8%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.2%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 302.82,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.23%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 48.7% | NM: 42.5%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.32x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3401.199143B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.5%, EPS: 56.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3224.7%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.09, P/S: 0.46)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel and TSMC agree to joint venture in foundry business. - Tsai Ing-wen visits TSMC factory, discusses investment incentives. - Fire at TSMC's Wafer Tech subsidiary disrupt",
+      "Taiwan denies plan to make half of chips in U._S_. - Samsung and SKHynix supply chips for Open AI project.",
+      "Trump administration plans to force chipmakers, including TSM, to produce in America. - Intel seeks investments or partnerships With TSM and Apple. - Major technology companies invest in proprietary AChips, increasing ML engineer demand."
+    ],
+    "medium_term_50d": [
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel and TSMC agree to joint venture in foundry business. - Tsai Ing-wen visits TSMC factory, discusses investment incentives. - Fire at TSMC's Wafer Tech subsidiary disrupt",
+      "Trump administration plans to force chipmakers, including TSM, to produce in America. - Intel seeks investments or partnerships With TSM and Apple. - Major technology companies invest in proprietary AChips, increasing ML engineer demand.",
+      "TSMC and Media Tek collaborate on developing flagship chip using TSMC's 2nmprocess."
+    ],
+    "long_term_200d": [
+      "TSMC and Media Tek collaborate on developing flagship chip using TSMC's 2nmprocess.",
+      "Trump administration plans to force chipmakers, including TSM, to produce in America. - Intel seeks investments or partnerships With TSM and Apple. - Major technology companies invest in proprietary AChips, increasing ML engineer demand.",
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel and TSMC agree to joint venture in foundry business. - Tsai Ing-wen visits TSMC factory, discusses investment incentives. - Fire at TSMC's Wafer Tech subsidiary disrupt"
+    ]
+  }
+}

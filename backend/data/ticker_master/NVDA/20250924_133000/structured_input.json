@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 164.07-184.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.49%)",
+        "cycle_macd": "BULLISH_FADING (0.538)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.07-184.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (24.69%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 178.49,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.96%))",
+      "volume_dynamics": "AVERAGE (1.02)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 82.63, P/S: 46.05)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 76.26)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.2)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia announces \u00a32 billion UK AI bet and Intel partnership. - Intel and Nvidia collaborate on data center and PC solutions. - Black Rock invests \u00a350o million in UK data centers with Nvidia.",
+      "Nvidia invests $5B in Intel but snubs its nodes. - Short-s seller Jim Chanos scrutinizes Nvidia AI factory cost estimates.",
+      "Nissan tests next-gen driver assistance system using Nvidia backed Wayve tech. - Intel receives $5B investement and partnership from Nvidia."
+    ],
+    "medium_term_50d": [
+      "Nvidia banned from selling custom chips in China. Note: Based on rule #6, this event meets the criteria for a material event directly affecting NVDA.",
+      "Nvidia announces \u00a32 billion UK AI bet and Intel partnership. - Intel and Nvidia collaborate on data center and PC solutions. - Black Rock invests \u00a350o million in UK data centers with Nvidia.",
+      "Nvidia invests $5 billionin Intel. - Intel jumps 24%, highest since July twenty-four, on Nvidias investment."
+    ],
+    "long_term_200d": [
+      "Nvidia banned from selling custom chips in China. Note: Based on rule #6, this event meets the criteria for a material event directly affecting NVDA.",
+      "Nvidia partners with Open AI on multi-billion data center push in the UK. - Supermicro unveils new NVIDIABlackwell Ultra AI Systems, drives SMCI stock jump. - NVDA'S Q2 Data Center sales soar 55%, fueled by hyperscalerdemand and Blackwelladoption.",
+      "Nvidia announces \u00a32 billion UK AI bet and Intel partnership. - Intel and Nvidia collaborate on data center and PC solutions. - Black Rock invests \u00a350o million in UK data centers with Nvidia."
+    ]
+  }
+}

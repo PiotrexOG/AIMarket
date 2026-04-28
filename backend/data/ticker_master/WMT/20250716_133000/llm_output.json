@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI dropping to a neutral 40.0. Velocity (ROC -2.4%) and price action near the SMA20 (-1.3%) indicate a weakening trend. The stock remains in the middle of its 20-day range, offering no clear directional bias. W: The shift to a neutral RSI and negative velocity signals a loss of buying interest. The price is now trading below the SMA20, indicating a potential short-term downtrend. The NEUTRAL candle pattern offers no conviction. O: News flow is mixed, with new product launches and e-commerce growth being positive, but potential delays due to US tariffs introduce a negative overhang. T: The short-term score has decreased to 3.5 due to the clear deterioration in momentum and trend indicators. Conviction has fallen to 4.0 as the technical signals are now mixed and leaning bearish. Risk has increased substantially to 6.5 due to the weakening momentum, negative price action relative to the SMA20, and the introduction of tariff-related risks."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains compressed (-0.54%), but the MACD has turned decisively bearish and is accelerating (-0.284). The price has moved into a bearish trend position relative to the SMA50 (Z:-1.43), indicating a significant shift in medium-term sentiment. W: The accelerating bearish MACD and the bearish Z-score on the SMA50 represent a clear structural breakdown in medium-term trend. The compressed MAS offers little support. O: The news regarding potential garment order delays due to US tariffs is a significant medium-term negative. While previous news about Kroger and Alibaba partnerships remains, the current technical deterioration overshadows these. T: The medium-term score has dropped sharply to 2.5 due to the accelerating bearish MACD and the bearish trend position relative to the SMA50. Conviction has decreased to 3.0 as the technical signals are now strongly negative. Risk has increased significantly to 7.5 due to the clear bearish trend development, the negative MACD acceleration, and the increased geopolitical risk from tariffs."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market, though its strength has slightly decreased (3.8%). The healthy golden cross structure persists, but the long-term range position has moved to a mid-cycle neutral zone (60.8%), indicating a loss of upward momentum from previous highs. W: The shift to a neutral long-term range position suggests a consolidation phase after a period of strength. The underlying secular bull market and golden cross provide a supportive backdrop, but the immediate upward thrust has waned. O: Fundamental strengths in growth and earnings momentum remain, as does the mega-cap scale. However, the persistent hyper-premium valuation and the potential for increased tariffs introduce long-term risks that are now more pronounced given the technical deterioration. T: The long-term score has been adjusted down to 6.0 to reflect the shift to a neutral range position and the slightly weaker market regime. Conviction remains at 6.5, supported by the enduring fundamental strengths and long-term technical structure. Risk has increased to 4.5 due to the combination of hyper-premium valuation, the shift to a neutral long-term range, and the emerging tariff-related headwinds."
+    }
+  }
+}

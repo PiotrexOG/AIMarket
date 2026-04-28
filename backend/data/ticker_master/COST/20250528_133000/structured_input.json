@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "STAGNANT (0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 971.06-1039.47]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.98%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.264)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1039.47]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.78%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 1018.02,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.78%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 61.33, P/S: 1.78)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.18)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.58)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco enters gas station business, expanding hours and infrastructure.",
+      "Costco co\u2010founder Jim Sinegal visits headquarters weekly - Nvidia earnings, Salesforce reporting next week - Costo featured in top research reports",
+      "Saks Fifth Ave men's clothing lines at Costco. - Strong demand for gold purchases at Costco stores."
+    ],
+    "medium_term_50d": [
+      "Costco enters gas station business, expanding hours and infrastructure.",
+      "Costco co\u2010founder Jim Sinegal visits headquarters weekly - Nvidia earnings, Salesforce reporting next week - Costo featured in top research reports",
+      "Costco reports 7% sales growth in April. - Launch of new zero sugar Drip Drop hydration varietypack on Costco.\\*com. - Strong sales growth leads to 10% increase in Costco' stock price. \\*- Directly affects COST through increased revenue and positive investor reaction."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco reports 7% sales growth in April. - Launch of new zero sugar Drip Drop hydration varietypack on Costco.\\*com. - Strong sales growth leads to 10% increase in Costco' stock price. \\*- Directly affects COST through increased revenue and positive investor reaction.",
+      "Costco enters gas station business, expanding hours and infrastructure."
+    ]
+  }
+}

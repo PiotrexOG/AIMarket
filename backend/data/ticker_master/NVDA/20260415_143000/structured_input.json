@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.9)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.11)",
+        "velocity_roc_10": "EXPLOSIVE_UP (19.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.1%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 164.27-196.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.96%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.564)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.59)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 164.27-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.55%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 199.81,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.72%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 67.28, P/S: 37.83)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 62.23)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.46)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia CEO urges move to California despite high taxes. - Lowe's partners with Nvidia for skilled trades investment. - Nvidia launches open-source quantum AI models (Ising). - Nvidia's AI demand remains strong, says BNP Paribas. - Bank of America revamps Nvidia-backed Core Weave, Nebius. - Nvidia stock rises for 10th consecutive day. - Nvidia, Google flash buy signals; Nasdaq wins streak. - Nvidia bets on AI to accelerate quantum computing.",
+      "Nvidia denies rumors of acquisition talks with PC maker. - Nvidia and Cadence deepen AI chip design collaboration. - Boost Run achieves NVIDIA Exemplar Cloud on Blackwell Architecture. - Planet Labs builds on partnership with Nvidia, uses AI. - Firefly Neuroscience uses NVIDIA L40S GPU for EEG/ERP processing.",
+      "TSMC reports record Q1 AI revenue, driven by Nvidia. - Apollo Global Management invests in Si Five, working with Nvidia. - Amazon assesses selling its in-house AI chips to external customers."
+    ],
+    "medium_term_50d": [
+      "Nvidia CEO urges move to California despite high taxes. - Lowe's partners with Nvidia for skilled trades investment. - Nvidia launches open-source quantum AI models (Ising). - Nvidia's AI demand remains strong, says BNP Paribas. - Bank of America revamps Nvidia-backed Core Weave, Nebius. - Nvidia stock rises for 10th consecutive day. - Nvidia, Google flash buy signals; Nasdaq wins streak. - Nvidia bets on AI to accelerate quantum computing.",
+      "Nvidia shares near technical breakout level. - Nvidia outlook: surging AI infrastructure spending, 71% EPS growth. - Hedgehog announces support for NVIDIA Spectrum-X Ethernet. - Nvidia invests in CPU chip startup Si Five. - Nebius Group enters multi-billion dollar infrastructure agreements with Nvidia. - Vertiv, a Nvidia partner, flashes buy signal. - Nvidia and Micron were slipping. - Barclays raises Marvell to Overweight amid AI chip race. - Amazon CEO says AI business has hit $15 billion run rate.",
+      "Cadence, Nvidia expand agentic AI collaboration. - Nvidia extends AI data center reach with Vera Rubin, Micron deal. - Nvidia posts longest winning streak since 2023. - Michael Burry signals bearish view on Nvidia stock. - Nvidia stock predicted to be a buy before May 20."
+    ],
+    "long_term_200d": [
+      "Nvidia CEO urges move to California despite high taxes. - Lowe's partners with Nvidia for skilled trades investment. - Nvidia launches open-source quantum AI models (Ising). - Nvidia's AI demand remains strong, says BNP Paribas. - Bank of America revamps Nvidia-backed Core Weave, Nebius. - Nvidia stock rises for 10th consecutive day. - Nvidia, Google flash buy signals; Nasdaq wins streak. - Nvidia bets on AI to accelerate quantum computing.",
+      "Nvidia shares near technical breakout level. - Nvidia outlook: surging AI infrastructure spending, 71% EPS growth. - Hedgehog announces support for NVIDIA Spectrum-X Ethernet. - Nvidia invests in CPU chip startup Si Five. - Nebius Group enters multi-billion dollar infrastructure agreements with Nvidia. - Vertiv, a Nvidia partner, flashes buy signal. - Nvidia and Micron were slipping. - Barclays raises Marvell to Overweight amid AI chip race. - Amazon CEO says AI business has hit $15 billion run rate.",
+      "Cadence, Nvidia expand agentic AI collaboration. - Nvidia extends AI data center reach with Vera Rubin, Micron deal. - Nvidia posts longest winning streak since 2023. - Michael Burry signals bearish view on Nvidia stock. - Nvidia stock predicted to be a buy before May 20."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.99)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 232.24-265.06]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.89%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.774)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.69)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 205.56-265.06]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.9%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.51%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 264.17,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.09%))",
+      "volume_dynamics": "ELEVATED (1.41)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 38.1% | OM: 18.8% | NM: 17.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.68B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -14.5%, EPS: 110.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.7%, Next Q Est Growth: -22.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.77, P/S: 7.18)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 14.79)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.37)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Arospeace earns quarters results on Thursday.",
+      "GE Aerosecurely lands deal from Sky West to supply CFIIIengines - GEE Aerospacefinalizesengineagreementwith Sky West - Sky Westorders CF34Enginesfrom GEAerospace - GEAerospacewinsneworderfor CF34-IIenginesfrom Sky West",
+      "GE Aerospace featured in investment strategy presentation - Upcoming earnings reports for GE AEROSPACE - Preliminary airline crash report mentions Boeing Seven Eighty-Seven model used by Air India - Multiple upcoming earnings releases including GE AERSOSACE"
+    ],
+    "medium_term_50d": [
+      "GE Arospeace earns quarters results on Thursday.",
+      "GE Aerosecurely lands deal from Sky West to supply CFIIIengines - GEE Aerospacefinalizesengineagreementwith Sky West - Sky Westorders CF34Enginesfrom GEAerospace - GEAerospacewinsneworderfor CF34-IIenginesfrom Sky West",
+      "GE \u0410erospace finalizes engine deal with Sky West for 60Embraer \u2081\u2087\u2085regional jets."
+    ],
+    "long_term_200d": [
+      "GE Aerospace plane involved in Air India crash, emergency response team activated. - Air India jet crashes, all but one passenger presumed dead, GE's GE Aviation affected.",
+      "GE Arospeace earns quarters results on Thursday.",
+      "GE Aerosecurely lands deal from Sky West to supply CFIIIengines - GEE Aerospacefinalizesengineagreementwith Sky West - Sky Westorders CF34Enginesfrom GEAerospace - GEAerospacewinsneworderfor CF34-IIenginesfrom Sky West"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 367.24-402.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.12%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.166)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 367.24-448.38]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.28%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 14.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 381.49,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.8% | OM: 44.6% | NM: 36.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 30.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $245.122B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.7%, EPS: 22.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -4.5%, Next Q Est Growth: 8.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.19, P/S: 11.63)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.62)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.46)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "1. Microsoft invests $1 sixth.5 billion in Open AI financing round 2. Open AI raises $40 billon, Microsoft participates in funding 3. Microsoft's stake in Open AI increases with new funding 4. Open AI transitions to for-profit status, complicates Microsoft negotiations",
+      "Microsoft acquires stake in Open AI. - Nvidia invests billions in US supply chain. - Trump imposes tariffs on tech companies including MSFT.",
+      "Microsoft scales back data center leases amid oversupply. -Microsoft-backed Open AI eyes $30o billion valuation in Soft Bank-led $40 billon deal. -Soft Bank to lead $40 bilion funding for Microsoft-back Open AI."
+    ],
+    "medium_term_50d": [
+      "1. Microsoft invests $1 sixth.5 billion in Open AI financing round 2. Open AI raises $40 billon, Microsoft participates in funding 3. Microsoft's stake in Open AI increases with new funding 4. Open AI transitions to for-profit status, complicates Microsoft negotiations",
+      "Microsoft scales back data center leases amid oversupply. -Microsoft-backed Open AI eyes $30o billion valuation in Soft Bank-led $40 billon deal. -Soft Bank to lead $40 bilion funding for Microsoft-back Open AI.",
+      "Microsoft acquires stake in Open AI. - Nvidia invests billions in US supply chain. - Trump imposes tariffs on tech companies including MSFT."
+    ],
+    "long_term_200d": [
+      "1. Microsoft invests $1 sixth.5 billion in Open AI financing round 2. Open AI raises $40 billon, Microsoft participates in funding 3. Microsoft's stake in Open AI increases with new funding 4. Open AI transitions to for-profit status, complicates Microsoft negotiations",
+      "Microsoft scales back data center leases amid oversupply. -Microsoft-backed Open AI eyes $30o billion valuation in Soft Bank-led $40 billon deal. -Soft Bank to lead $40 bilion funding for Microsoft-back Open AI.",
+      "Microsoft explores crediting contributors to AItraining data. - NVIDIA and Google announce AI collaboration. - AWS, Microsoft, and Google control 59\\% ofhyperscalecompute capacity. - Scotiabanks upgrades MSFTo Outperformas AIspendingaccelerates."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 72.53-79.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.38%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.106)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 59.19-79.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.45%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 76.6,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.4%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.89, P/S: 2.3)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.25)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike bets on EMEAs growth: NKE'S strategy pays off in FY twenty-six. - Jefferies downgrades On Holding due to slowing growth and increasing Nike competition.",
+      "Nike files $127.6M lawsuit against Cl ot founder Edis ON Chen.",
+      "Nike loses 1.1% in Dow Jones Industrial Average decline. - Scott Uzzel named new CEO of Helen of Tory, previously worked at Nike. - North America Athletics Wear Market reports growth featuring Nike, New Bal ANCE, etc."
+    ],
+    "medium_term_50d": [
+      "Nike bets on EMEAs growth: NKE'S strategy pays off in FY twenty-six. - Jefferies downgrades On Holding due to slowing growth and increasing Nike competition.",
+      "Nike files $127.6M lawsuit against Cl ot founder Edis ON Chen.",
+      "Nike faces potential tariffs on footwear imports. - Adidas projected to gain market share at Nike's expense. - Tariffs impact: Nike,Deckers,On Running face pressure."
+    ],
+    "long_term_200d": [
+      "Nike faces potential tariffs on footwear imports. - Adidas projected to gain market share at Nike's expense. - Tariffs impact: Nike,Deckers,On Running face pressure.",
+      "Nike bets on EMEAs growth: NKE'S strategy pays off in FY twenty-six. - Jefferies downgrades On Holding due to slowing growth and increasing Nike competition.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues."
+    ]
+  }
+}

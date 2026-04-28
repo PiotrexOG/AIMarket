@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (95.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (13.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 153.54-205.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.07%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.37)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.47)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 128.88-205.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (22.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.71%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 101.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.94,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.46%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -46.89)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "China removesban on Boeing plane deliveries after trade truce - Saudi Arabia wealthfund orders 30Boeing 773MAX jets - United Airlines increasespremium seat offerings on Boeing \ufffd87-Dreamliner - Boeingoing to bring Saudiarabia intoglobal F-1 fifthit EXsupp",
+      "Trump administeration accepts Boeing seventhree-8 as potential Air Force One. - US-China trade talks end with substantial progress.",
+      "EU eyes tariffs on Boeling jets inretaliation plan. - EU plans to hit Boeingwith tariffs if talksfail. - Aerospacefaces wider tariffsas Europedrawsupcounter-measuresagainst Boeingjets."
+    ],
+    "medium_term_50d": [
+      "China removesban on Boeing plane deliveries after trade truce - Saudi Arabia wealthfund orders 30Boeing 773MAX jets - United Airlines increasespremium seat offerings on Boeing \ufffd87-Dreamliner - Boeingoing to bring Saudiarabia intoglobal F-1 fifthit EXsupp",
+      "EU eyes tariffs on Boeling jets inretaliation plan. - EU plans to hit Boeingwith tariffs if talksfail. - Aerospacefaces wider tariffsas Europedrawsupcounter-measuresagainst Boeingjets.",
+      "Boeing announances order for 23 77 seventhitheir newest 7 seven-X customer, China Airlines - China Airlines places order for 4 Boeing freighters - China Aires orders 10Boeing 7 seven77- nine passenger aircraft - EU plans to target US cars, planes, bourbon with tariffs - President Trump announ"
+    ],
+    "long_term_200d": [
+      "EU eyes tariffs on Boeling jets inretaliation plan. - EU plans to hit Boeingwith tariffs if talksfail. - Aerospacefaces wider tariffsas Europedrawsupcounter-measuresagainst Boeingjets.",
+      "China removesban on Boeing plane deliveries after trade truce - Saudi Arabia wealthfund orders 30Boeing 773MAX jets - United Airlines increasespremium seat offerings on Boeing \ufffd87-Dreamliner - Boeingoing to bring Saudiarabia intoglobal F-1 fifthit EXsupp",
+      "China orders hal TS to Boeingjet deliver IES - Beijing asks Chinese carriers to halt Boeing purchases - US decision on Chinese goods leads to Boeing delivery halt - China freezes Boeing plane deliveries amidst trade war - Beijing instructs airlines nottoacceptfurther Boeingjets - Presiden Trump'stariffsleadsto"
+    ]
+  }
+}

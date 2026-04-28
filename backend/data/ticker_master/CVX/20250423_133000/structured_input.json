@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "HIGH",
+    "sentiment": "DETERIORATING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (25.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "STAGNANT (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-7.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 132.04-168.96]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.22%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.223)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.67)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 132.04-168.96]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-9.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.19%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 11.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 136.4,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | HIGH_VOLATILITY_ASSET (ATR:  (5.3%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(4)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 29.4% | OM: 9.8% | NM: 9.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.12x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $193.414B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.8%, EPS: -14.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -13.3%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.0, P/S: 1.25)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.49%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron starts oil production at Balymore offshore Field (Gulf of America). - Che vron aims toproduce 30o,ooo net barrelsof oil equivalence per dayfrom Gulfby 20 twenty-six. - Total Energiesand Chevron begin oilproductionat Ballymoreproject.",
+      "Chevron starts oil production from Balymore project in Gulf of Mexico - Che vron exits Egypt' s Red Sea oil blocs, eyes Mediterranean prospects",
+      "Chevron exports from Venezuela halted by PDVSA due to sanctions. - Kazakhstan oil output falls below March avg., still exceeds OPEC+-quota."
+    ],
+    "medium_term_50d": [
+      "Chevron starts oil production at Balymore offshore Field (Gulf of America). - Che vron aims toproduce 30o,ooo net barrelsof oil equivalence per dayfrom Gulfby 20 twenty-six. - Total Energiesand Chevron begin oilproductionat Ballymoreproject.",
+      "Venezuela's PDVSA suspending Chevron oil loading authorizations - Two Chevron vessels with Venezuelancrude stalled atsea - PDVSAcanceling Chevron'sexportauthorizationsafter UStariffs - Three PDVASAsourcesconfirmexportcancellationsfor Chevron - Customspaperworkrequiredtoreturnst",
+      "Chevron exports from Venezuela halted by PDVSA due to sanctions. - Kazakhstan oil output falls below March avg., still exceeds OPEC+-quota."
+    ],
+    "long_term_200d": [
+      "Venezuela's PDVSA suspending Chevron oil loading authorizations - Two Chevron vessels with Venezuelancrude stalled atsea - PDVSAcanceling Chevron'sexportauthorizationsafter UStariffs - Three PDVASAsourcesconfirmexportcancellationsfor Chevron - Customspaperworkrequiredtoreturnst",
+      "US cancels authorizations for CVX to export Venezuelian oil.",
+      "Venezuela's PDVSA terminates Chevron'slicense, takes over production and exports. -Chevronbuys Hessshares(4.98%)."
+    ]
+  }
+}

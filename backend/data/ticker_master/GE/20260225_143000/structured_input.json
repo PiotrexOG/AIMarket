@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 290.33-346.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.09%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.507)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.95)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 279.64-346.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.49%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 339.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.05%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 66.4%, Next Q Est Growth: -33.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.52, P/S: 7.9)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.4)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.17)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aeries wins U.S Air Force contract for next generation GEs engine. - United Airlines orders 30o GE Genx engines for new Boeing Dreamliners - GEs Aerospace earns strong trading day, outperforming competitors.",
+      "GE Aeries and Kratos win US Air Force contract to design next gen engine for small collaborative combat aircraft. - General Electric lands $12M contract from US Air Force to design engine for small collab combat aircraft.",
+      "GE Aeraspace wins large engine orders from United Airlines. - Airbus increases jet production rate, impacts demand for GE engines."
+    ],
+    "medium_term_50d": [
+      "GE Aeries wins U.S Air Force contract for next generation GEs engine. - United Airlines orders 30o GE Genx engines for new Boeing Dreamliners - GEs Aerospace earns strong trading day, outperforming competitors.",
+      "GE Aeries and Kratos win US Air Force contract to design next gen engine for small collaborative combat aircraft. - General Electric lands $12M contract from US Air Force to design engine for small collab combat aircraft.",
+      "GE Aeraspace wins large engine orders from United Airlines. - Airbus increases jet production rate, impacts demand for GE engines."
+    ],
+    "long_term_200d": [
+      "GE Aersospace partners with Safran, raising guidance for 10\\% growth (2023-2025).",
+      "GE Aeries wins U.S Air Force contract for next generation GEs engine. - United Airlines orders 30o GE Genx engines for new Boeing Dreamliners - GEs Aerospace earns strong trading day, outperforming competitors.",
+      "GE Aeraspace wins large engine orders from United Airlines. - Airbus increases jet production rate, impacts demand for GE engines."
+    ]
+  }
+}

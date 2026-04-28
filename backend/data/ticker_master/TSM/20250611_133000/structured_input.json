@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (72.5)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.16)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.5%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 187.72-213.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (11.92%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.675)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.05)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 134.25-213.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (13.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.37%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 217.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.19%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 57.4% | OM: 47.1% | NM: 41.2%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3140.91732B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.9%, EPS: 51.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3300.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.87, P/S: 0.36)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.25)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMCMay revenue jumps 4o% on AI chip demand. \\ - TSMMay sales surge 39%. \\ - Semicondu CTOR sales soaring, positioning TSM,TXN,ASML,AEIS for gains.",
+      "TSMC announces $10 billion investment in US chip fabrication. - Global attention drawn to TSMC's $10o billion US expansion plan.",
+      "US reworks subsidy awards for chipmakers, potentially affects TSM. - Keysight and Synopsy introduce AI-powered RF design migration flow for TSM's N fourth generation process."
+    ],
+    "medium_term_50d": [
+      "TSMCMay revenue jumps 4o% on AI chip demand. \\ - TSMMay sales surge 39%. \\ - Semicondu CTOR sales soaring, positioning TSM,TXN,ASML,AEIS for gains.",
+      "TSMC announces $10 billion investment in US chip fabrication. - Global attention drawn to TSMC's $10o billion US expansion plan.",
+      "TSMC faces limited impactfrom global tariffs - TSM jumphas nearly 14% in three monthsfueled by AI demademand and strongearnings - TSCM sees A Ichipdemand outpacing supply - Meta buys Constellationnuclear plantpowerfor 20years"
+    ],
+    "long_term_200d": [
+      "TSMCMay revenue jumps 4o% on AI chip demand. \\ - TSMMay sales surge 39%. \\ - Semicondu CTOR sales soaring, positioning TSM,TXN,ASML,AEIS for gains.",
+      "TSMC announces major restructuring plan. - Regulator imposes fine on TSMC for environmental violations. - Intel acquires TSMC's foundry business unit. - Tsung Yong, CEO of TSMC, resigns unexpectedly. - Fire at TSMC Fab 18 causes significant damage. - New York",
+      "TSMC faces limited impactfrom global tariffs - TSM jumphas nearly 14% in three monthsfueled by AI demademand and strongearnings - TSCM sees A Ichipdemand outpacing supply - Meta buys Constellationnuclear plantpowerfor 20years"
+    ]
+  }
+}

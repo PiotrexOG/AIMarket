@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.43)",
+        "velocity_roc_10": "NORMAL (-3.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 97.8-109.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.72%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.04)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.52%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 22.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 104.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.64%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.8, P/S: 1.37)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon groups Guyana oiloutput reached 669,00bpd (last week). - Exx Chem announces new product launch. - Regulator approves XOM upstream acquisition.",
+      "Exxon \u041cobil reports robust earningsgrowth and strategicadvancements (Event 2). - Exxxon \u041cob\u0438\u043bexpects to improvuponperformance(Event 6).",
+      "Greece approves international tender for Exxon's participation in hydrocarbon search. - Arbitration scheduled on Exx\u00f3n and Chev\u0440\u043e\u043d dispute over H ess acquisition. -Exxon beets Wall Street profit estimation, boostedby Guyanaand Permianproduction."
+    ],
+    "medium_term_50d": [
+      "Exxon groups Guyana oiloutput reached 669,00bpd (last week). - Exx Chem announces new product launch. - Regulator approves XOM upstream acquisition.",
+      "Greece approves international tender for Exxon's participation in hydrocarbon search. - Arbitration scheduled on Exx\u00f3n and Chev\u0440\u043e\u043d dispute over H ess acquisition. -Exxon beets Wall Street profit estimation, boostedby Guyanaand Permianproduction.",
+      "Exxon \u041cobil reports robust earningsgrowth and strategicadvancements (Event 2). - Exxxon \u041cob\u0438\u043bexpects to improvuponperformance(Event 6)."
+    ],
+    "long_term_200d": [
+      "Greece approves international tender for Exxon's participation in hydrocarbon search. - Arbitration scheduled on Exx\u00f3n and Chev\u0440\u043e\u043d dispute over H ess acquisition. -Exxon beets Wall Street profit estimation, boostedby Guyanaand Permianproduction.",
+      "Exxon groups Guyana oiloutput reached 669,00bpd (last week). - Exx Chem announces new product launch. - Regulator approves XOM upstream acquisition.",
+      "Exxon \u041cobil reports robust earningsgrowth and strategicadvancements (Event 2). - Exxxon \u041cob\u0438\u043bexpects to improvuponperformance(Event 6)."
+    ]
+  }
+}

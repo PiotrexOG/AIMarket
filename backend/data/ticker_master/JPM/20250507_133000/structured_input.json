@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 211.0-255.16]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.83%)",
+        "cycle_macd": "BULLISH_FADING (2.121)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.86)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 202.16-266.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.59%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 250.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.38%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.53)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.8% | OM: 27.9% | NM: 21.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.65x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -51.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $273.416B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 23.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 9.5%, Next Q Est Growth: -12.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.28, P/S: 2.59)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.01)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.53)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.82x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan goings long euro versus Romanian lei in FXspot market due to intervention policy shift.",
+      "JPMorgan axes startup VC platform Capital Connect. - Half of US small businesses change strategies amid macro-economic challenges (Chase survey).",
+      "Fed Chair Powell faces pressure from Trump over rate cuts and JPM bond traders' reactions."
+    ],
+    "medium_term_50d": [
+      "ISS recommends JPM shareholders vote \"FOR\" independent board chair.",
+      "Fed Chair Powell faces pressure from Trump over rate cuts and JPM bond traders' reactions.",
+      "JP Morgan announces gold price prediction of $4,ooo/oz by Q2 2oo6."
+    ],
+    "long_term_200d": [
+      "JPMorgan executive team indicted for securities fraud. - Impactful regulatory ruling targets JPMorgan's investment banking division. - Major lawsuit filed against JPMorgan over mortgage-backed securities. - New strategic partnership formed between JPMorgan and leading technology firm. - Significant production change at JPMorgan resulting in delayed product launch.",
+      "JP Morgan announces gold price prediction of $4,ooo/oz by Q2 2oo6.",
+      "JPMorgan CEo Dimon expects recyclion and defaults due to tariffs, urgesquick trade talks. - Trump tariffs deal a thunderousblow to global economy, pushinglevies to record highs. These two bullets meet the criteria of having a direct impact on JPM, specifically due to the potential economic consequences of the tariffs being discussed."
+    ]
+  }
+}

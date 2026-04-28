@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term score has decreased to 5.0 from 6.5. The \"STRONG_BEARISH\" candle pattern and \"OVERBOUGHT_EXTREME\" RSI (75.0) signal a potential reversal. The price is now \"EXTENDED_BULLISH_OVERSTRETCHED\" (6.1%) above the 20-day SMA, and the \"BLOW_OFF_TOP_ABOVE_UPPER_BAND\" indicates unsustainable momentum. W: Conviction has decreased to 4.5 from 5.5. The extreme overbought conditions and bearish candle pattern significantly reduce confidence in the immediate upward trend. The \"RANGE\" bias remains, but the current price action suggests a near-term correction is more probable. O: While the news narrative still includes positive developments like the BETATechnologies investment, the technical indicators are overriding the short-term bullish sentiment. T: Downside risk has increased to 7.5 from 5.8. The overbought RSI, extended price action, and bearish candle pattern all point to increased vulnerability to a pullback. The \"C:NEAR @20d\" barrier is now a resistance level, and the \"EXPLOSIVE_UP\" velocity suggests a rapid reversal is possible."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term score has slightly decreased to 5.8 from 6.0. Although the MACD is \"BULLISH_ACCELERATING\" (1.166) and the Z-score for the 50-day SMA is strong (2.17), the short-term overbought conditions and the \"DETERIORATING\" analyst sentiment introduce caution. The \"BULLISH_GRADUAL_ASCENT\" trend is still intact but showing signs of strain. W: Conviction has decreased to 5.0 from 5.5. The divergence between the accelerating MACD and the deteriorating short-term technicals, coupled with negative sentiment shifts, reduces confidence in the sustainability of the medium-term trend. The \"POWER_ZONE_CONFLUENCE(2)\" is being tested by short-term weakness. O: The positive news flow regarding contracts and investments continues to support the medium-term outlook, but the increasing \"polarization\" in analyst sentiment and the extreme short-term readings temper the bullish conviction. T: Downside risk has increased to 6.5 from 6.0. The extreme overbought conditions in the short-term, while not directly impacting the 50-day trend, increase the probability of a broader market correction that could drag down the medium-term trend. The \"HIGH_MULTIPLE_RISK\" is exacerbated by the potential for a short-term price correction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term score has decreased to 4.5 from 4.8. While the stock remains in a \"SECULAR_BULL_MARKET\" regime and is at cycle highs (96.4%), the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" is now more pronounced. The \"HYPER_PREMIUM_PRICED\" valuation multiples and the \"HIGH_MULTIPLE_RISK\" are significant headwinds. W: Conviction has decreased to 4.0 from 4.3. The combination of extreme technical overbought conditions, deteriorating sentiment, and persistent high valuation risk significantly erodes confidence in the long-term sustainability of the current price levels. The \"ATH_OR_TOP_OF_CYCLE\" position is now viewed with greater skepticism. O: The strategic investments in future technologies like hybrid electric aviation are positive long-term developments, but they are increasingly overshadowed by the elevated valuation and the risk of a market-wide regime shift or a significant correction in stretched growth stocks. T: Downside risk has increased to 8.0 from 7.7. The confluence of extreme technical overbought signals, elevated valuation multiples, and the inherent risk of a \"BULLISH_STRETCH_EXHAUSTION\" at cycle highs creates a substantial downside risk. The \"HIGH_MULTIPLE_RISK\" is now the dominant factor, amplified by the current technical extremes."
+    }
+  }
+}

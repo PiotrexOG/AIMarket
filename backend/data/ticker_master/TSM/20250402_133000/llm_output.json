@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term technicals have deteriorated, with the candle pattern shifting to neutral and RSI falling to 39.8, indicating a bearish zone. ROC has turned negative (-2.6%), and price is now trading below the 20-day SMA (-3.2%). W: While the price remains within the 20-day range, the negative momentum and breach of the short-term trend base suggest increasing weakness. O: Positive news regarding Nvidia's investment and TSM's revenue gains are offset by the ongoing ITC investigation and potential CHIPS Act implications, introducing significant uncertainty. T: Further downside is likely if the price remains below the 20-day SMA and negative news persists. A sustained move above the 20-day SMA would be required to signal a short-term recovery."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The MACD has crossed bullishly at zero (0.015), indicating a potential shift in momentum, but the overall trend alignment remains bearish with expanding momentum (-8.69%). W: The Z-score relative to the 50-day SMA has widened to -1.31, reinforcing the bearish trend position. The price is still within the monthly range, but the broader trend is negative. O: The bullish MACD signal is a positive development, but it is overshadowed by the persistent bearish trend and the continued uncertainty from the ITC investigation and geopolitical factors. T: A sustained move above the 50-day SMA is crucial for any medium-term bullish conviction. Failure to do so, coupled with negative news flow, will increase downside risk and lower conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term technical structure remains supported by a healthy Golden Cross (3.0%), and fundamental metrics continue to be exceptionally strong, including high business quality (NM: 40.0%) and a net cash position (NetCash/Eq: 0.25x). W: The market regime is still a bear market relief rally (-8.9%), and the price is lower in the mid-cycle neutral zone (37.5%). The valuation remains deeply discounted (P/E: 0.75, P/S: 0.3), with underrated implied growth (PEG: 0.02). O: Positive news regarding Nvidia's investment and TSM's revenue gains are supportive, but the ITC investigation and potential geopolitical impacts introduce new structural risks. T: While the long-term fundamentals and valuation remain attractive, the increased uncertainty from the ITC investigation and the broader bear market relief rally regime warrant a slight reduction in conviction and a marginal increase in risk."
+    }
+  }
+}

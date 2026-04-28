@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 270.79-319.14]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.83%)",
+        "cycle_macd": "BULLISH_FADING (0.523)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.9)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 270.79-348.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.87%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 28.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 273.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.34%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.5)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.52, P/S: 5.93)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.88)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.3)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE Aerospace to support Indian Air Force fighter fleet engines. - GE Aerospace in talks with Pentagon for military equipment production. - GE Aerospace to report Q1 earnings on Tuesday.",
+      "GE Aerospace partners with Indian Air Force for engine facility."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE Aerospace to support Indian Air Force fighter fleet engines. - GE Aerospace in talks with Pentagon for military equipment production. - GE Aerospace to report Q1 earnings on Tuesday.",
+      "GE Aerospace partners with Indian Air Force for engine facility."
+    ],
+    "long_term_200d": [
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE raises full-year earnings guidance. - GE Aerospace's Defense & Propulsion unit gains traction. - GE Aerospace and Ford use AI for efficiency.",
+      "GE Aerospace to support Indian Air Force fighter fleet engines. - GE Aerospace in talks with Pentagon for military equipment production. - GE Aerospace to report Q1 earnings on Tuesday."
+    ]
+  }
+}

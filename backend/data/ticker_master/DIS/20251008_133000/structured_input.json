@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.25)",
+        "velocity_roc_10": "STAGNANT (0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 110.78-117.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.54%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.064)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 110.78-120.81]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.34%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 112.78,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.1% | OM: 14.6% | NM: 9.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.04B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 434.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 24.8%, Next Q Est Growth: -43.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.97, P/S: 2.18)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.96)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.05)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Dow: Disney stocks contribute to index loss. - Netflix partners with AB In Bev for global shows and events. - Possible Disney price hikes in new fiscal year starting.",
+      "Disney executive joins Genius Sciences as CFO. - Potential loss of over one million Disney streaming subscribers.",
+      "Disney sends letter ordering Character.AIto stop using its characters without permission. - United Talent Academy names Judy Schw ABas Chief People Officer (indirect, but still a significant decision for Disney as they are a client)."
+    ],
+    "medium_term_50d": [
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports Q3 earnings beat with revenue growth.",
+      "Disney executive joins Genius Sciences as CFO. - Potential loss of over one million Disney streaming subscribers.",
+      "Disney faces renewed controversy over Jimmy Kimmels suspension and price hikes. - Shareholders demand internal documents andlegal action against Disney."
+    ],
+    "long_term_200d": [
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports Q3 earnings beat with revenue growth.",
+      "Disney launches ESPNs streaming service, signals end of cable era. - ESPN streaming marks new chapter in sports broadcasting landscape. - Disneys ESPN network contributes nicely to bottom line over time. - Milestone: Disney unveils new ESPN stream service. - New ESPN streaming adds to competitive sports rights battle.",
+      "Disney announces direct-to consumer ESPN streaming Impact on finances."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (84.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.9)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 846.8-969.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.03%)",
+        "cycle_macd": "BULLISH_FADING (10.217)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.49)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 844.06-969.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.52%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 973.8,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.81%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $268.776B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.9%, EPS: 9.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.2%, Next Q Est Growth: 5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.11, P/S: 1.61)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.97)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.94)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Supreme Court ruling regarding Costco'sd tariffs under IEEPA. -Costco quiets makes a major creditt card change for members.",
+      "Costco reverses food court decision after a decade. - Walmart appoints new CEO for its membership club, Sam's Clinic, potentially intensifying competition against Costco.",
+      "Costco ends partnership with Pepsy, returns to Coca Cola in food courts."
+    ],
+    "medium_term_50d": [
+      "Supreme Court ruling regarding Costco'sd tariffs under IEEPA. -Costco quiets makes a major creditt card change for members.",
+      "Costco reverses food court decision after a decade. - Walmart appoints new CEO for its membership club, Sam's Clinic, potentially intensifying competition against Costco.",
+      "Costco announces quarterly cashdividend of $1.\\30pershare."
+    ],
+    "long_term_200d": [
+      "Costco reports strong December same-Store sales. Explanation: This event meets the criteria because it involves a direct report of financial performance by the company, specifically regarding their sales figures. This information can significantly impact investor sentiment towards the stock and thus qualifies as a material event.",
+      "Costco reports December sales growth of 8.%. - Cost Co announces robust member renewals and increasing Executive memberships. -Cost Co posts 8.% year-to-date net sales increase. -Strong December sales boost Cost Co momentum. -Digital gains contribute to 7% Comp sales growth for Cost Co. -Value-driven consumer",
+      "Supreme Court ruling regarding Costco'sd tariffs under IEEPA. -Costco quiets makes a major creditt card change for members."
+    ]
+  }
+}

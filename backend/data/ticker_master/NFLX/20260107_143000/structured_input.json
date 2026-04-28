@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.4)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.01)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 89.81-99.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.9%)",
+        "cycle_macd": "BULLISH_FADING (0.259)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.56)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 89.81-116.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-20.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.14%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 90.3,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.71, P/S: 9.04)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.1)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.01)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "CFRA downgrades NFLX to Hold due to WBD dealconcerns.",
+      "Netflix co- CEOS Ted Sarandas breaks company's rule against ads. - Ted Sarandus, Netflix co- CEO, favors century-old leadership book.",
+      "Warner Bros Discovery expected to reject Paramount Skydane's $\u2081\u2080\u2088.\u2084Bbidfor Netflix. - Netflxacquisitionof Warner Brosmayaffectstockin202 six."
+    ],
+    "medium_term_50d": [
+      "Warner Bros Discovery expected to reject Paramount Skydane's $\u2081\u2080\u2088.\u2084Bbidfor Netflix. - Netflxacquisitionof Warner Brosmayaffectstockin202 six.",
+      "CFRA downgrades NFLX to Hold due to WBD dealconcerns.",
+      "Netflix acquires Warner Brothers Discovery for $83.7B. - Warner Bros rejects Paramount offer, sticks with Netflix deal. Note: This output is based on the provided data and assumes that there are no additional contextual information or background knowledge beyond what is given. If new information becomes available, the analysis may change accordingly."
+    ],
+    "long_term_200d": [
+      "Netflix acquires Warner Brothers Discovery for $83.7B. - Warner Bros rejects Paramount offer, sticks with Netflix deal. Note: This output is based on the provided data and assumes that there are no additional contextual information or background knowledge beyond what is given. If new information becomes available, the analysis may change accordingly.",
+      "Netflix acquires WARNER BROS. for $72 billions, potential antitrust issues arise. - Trump involved in review of NLFX-WB merger, expresses praise for Ted Sarand OS.",
+      "Netflix buys Warner Bros Discovery's TV, film studiros and streaming divisionfor $72 billions. - Netflixacquiresiconic Hollywoodpropertiesthroughdealwith Warner Bros Discovery."
+    ]
+  }
+}

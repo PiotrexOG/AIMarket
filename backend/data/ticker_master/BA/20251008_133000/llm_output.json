@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.8,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has significantly improved. The RSI has moved into a strong bullish zone at 60.4, and velocity has normalized to 2.6%. The price is now stable near the 20-day SMA at 2.2% and remains in the middle of the 20-day range. Bollinger Bands are within normal limits (0.84). W: The shift from a neutral candle pattern to a strong bullish RSI and normalized velocity indicates a clear upward bias. Conviction has increased due to the convergence of these positive short-term indicators. O: News flow is mixed, with a probe by the Indian regulator and potential EU antitrust approval for Spirit Aero systems acquisition, alongside reports of increased 737 MAX production and hiring plans. T: Risk has decreased due to the strengthening momentum and improved velocity. The score is increased significantly to reflect the robust short-term technical improvement, and conviction is also raised due to the clearer positive signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "risk": 4.8
+      },
+      "synthesis": "S: Medium-term trend alignment remains in a gradual descent (-3.28%), but this is now counteracted by a strongly accelerating bullish MACD at 0.861. Crucially, the Z-score relative to the 50-day SMA has moved to a healthy mean reversion base at Z:-0.05, indicating a significant shift from previous bearish positioning. The price is now inside the monthly range. W: The dramatic improvement in the MACD and the normalization of the 50-day SMA Z-score provide strong conviction. The persistent bearish trend alignment is the only mitigating factor. O: Medium-term news includes the potential EU antitrust approval for Spirit Aero systems, increased 737 MAX production plans, and the continued relevance of previous FAA certifications and major order placements. T: Risk has decreased substantially due to the strong MACD acceleration and the normalization of the 50-day SMA Z-score. The score is increased significantly to reflect this positive structural shift, and conviction is also raised due to the clearer medium-term bullish signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.0,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term technical picture remains exceptionally strong. The long-term range position has improved to 83.6% in the upper quadrant. The major crosses continue to show a healthy golden cross structure at 14.48%, indicating sustained long-term upward momentum. The secular bull market regime remains intact and has slightly strengthened. W: The sustained strength in the golden cross structure, improved long-term range position, and intact bull market regime provide very high conviction. Fundamental weaknesses are outweighed by the robust technical backdrop. O: Long-term news highlights the ongoing strength in order books, with continued relevance of previous major orders and the potential for significant future deliveries, as indicated by the 737 MAX production ramp-up. T: Risk has slightly decreased due to the improved long-term range position and continued strength in the technical structure. The score is increased slightly to reflect the ongoing positive long-term technicals, and conviction remains very high due to the consistent bullish signals across all long-term metrics."
+    }
+  }
+}

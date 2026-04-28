@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term technicals have shifted to neutral with a 'NEUTRAL' candle pattern and RSI moving to a neutral zone (55.7). However, velocity has turned stagnant (-0.3%), and the price is consolidating near the 20-day SMA, indicating a lack of immediate upward momentum. The 20-day range remains the same. W: The stagnant velocity and consolidation near the SMA suggest a loss of short-term directional conviction. The 'RANGE' bias in the SR landscape persists, limiting upside potential. O: News flow has become mixed, with a significant stake in Eli Lilly and AI strategy appointments, but also customer lawsuits regarding low cash sweep rates. T: The score has decreased by 0.7 points due to the shift from bearish to neutral candle patterns but with stagnant velocity and consolidation. Conviction has decreased by 0.5 points as the short-term signals are now less decisive. Risk has increased by 0.5 points due to the stagnant velocity and the mixed news flow, coupled with expanding volatility context."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment has further deteriorated to 'BEARISH_GRADUAL_DESCENT' (-2.29%), and the MACD has turned bearish and is accelerating downwards (-0.309). The Z-score relative to the 50-day SMA has moved further into negative territory (Z:-0.41), indicating increasing downside pressure. The price remains within the broader monthly range. W: The accelerating bearish MACD and negative trend alignment are significant headwinds, suggesting a sustained downtrend. The 'RANGE' bias in the SR landscape implies that this bearish move might be within a larger consolidation phase. O: The medium-term news narrative remains balanced, with the Apple Card issuer change being a positive, alongside strategic investments and M&A activity. However, the underlying bearish technicals are not supported by overwhelmingly positive fundamental news. T: The score has decreased by 1.0 point due to the accelerating bearish MACD and further negative trend alignment. Conviction has decreased by 1.0 point as the medium-term technical signals have weakened considerably. Risk has increased by 0.5 points due to the accelerating bearish momentum and the widening volatility context."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term secular bull market regime remains in place, although its strength has decreased (3.3%). The golden cross structure is still healthy (5.96%), but the long-term range position has pulled back to the upper quadrant (72.3%). W: The slight weakening of the market regime and the further pullback in long-term range position introduce minor concerns. The 'RANGE' bias in the SR landscape suggests that while the long-term trend is up, significant upside may require breaking through resistance. O: The long-term news narrative continues to be dominated by positive strategic developments, particularly the Apple Card issuer change, which reinforces the fundamental strength and positive outlook for the business. T: The score has decreased by 0.5 points due to the slight weakening of the market regime and the further pullback in long-term range position. Conviction has decreased by 0.5 points as the long-term technicals show a minor weakening. Risk has increased by 0.5 points due to the pullback in range position and the expanding volatility context, although the strong news flow mitigates further increases."
+    }
+  }
+}

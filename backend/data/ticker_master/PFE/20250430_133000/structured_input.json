@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (7.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 20.92-25.34]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.88%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.253)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 20.92-27.24]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-12.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.57%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 32.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.24%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.51, P/S: 2.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.54)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer reports solid first-quater 20 twenty-five results and reaffirms twenty-five guideline. -PFizer records lower first-quarters revenue on a seventy-five percent drop in salesof its Covid- nineteen treatment. -Pfizer says will generate one point seven billion dollars more in savingsfromcost-cutting.",
+      "Pfizer announces significant improvement in event-free survivals for sasalimab in bladders cancer trial.",
+      "Pfizer announces positive Phase 3 trial results for sasan limab in high-risk NMIBC."
+    ],
+    "medium_term_50d": [
+      "Pfizer reports solid first-quater 20 twenty-five results and reaffirms twenty-five guideline. -PFizer records lower first-quarters revenue on a seventy-five percent drop in salesof its Covid- nineteen treatment. -Pfizer says will generate one point seven billion dollars more in savingsfromcost-cutting.",
+      "Pfizer announces significant improvement in event-free survivals for sasalimab in bladders cancer trial.",
+      "Pfizer announces positive Phase 3 trial results for sasan limab in high-risk NMIBC."
+    ],
+    "long_term_200d": [
+      "Pfizer hal TS obesity pill development after safety concerns - Shares of Structure Therapies and Viking therapeutics gain following Pfizer'S setback - Pfizers decision mostly positive for Structure Therape Utics and Vking Therapeutics - Pfzer abandons obesity treatment danugl ipron due to safety concerns Note",
+      "Pfizer scraps obesity pills after potential drug-induded liver injury. - Discontinues development of danughlipron for chronic weightmanagement. - Participant experiences possible drug-relatedliver injury during clinical trial.",
+      "Pfizer receives CDC recommendation to expand ABRYSv O vaccine use for older adults. - Development of Pfizer'sb Danugl ipron discontinued due to safetyconcerns."
+    ]
+  }
+}

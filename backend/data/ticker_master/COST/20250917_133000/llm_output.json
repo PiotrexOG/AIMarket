@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term momentum has moderated, with the RSI moving to a neutral 54.6 and velocity slowing to 1.4%. The candle pattern has shifted from strong bearish to neutral, indicating a pause in recent price action. The price remains in the middle of the 20-day range, with the 20-day SMA now slightly negative. W: The previous positive velocity and upward momentum have stalled, with the RSI moving back into neutral territory. The shift from a strong bearish candle to neutral suggests a loss of immediate directional conviction. O: Short-term news remains positive with strong sales reports, but this is not translating into further upward momentum, suggesting other factors are at play or the positive news is fully priced in. T: Risk has increased slightly from 5.0 to 5.5. The loss of upward momentum and the shift to a neutral candle pattern, despite positive news, suggest increased potential for sideways movement or a minor pullback. The price is no longer showing strong upward velocity."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend is showing signs of deterioration, with the bullish MACD fading to 0.345 and the Z-score relative to the 50-day SMA moving to -0.05. Trend alignment has compressed, indicating a loss of directional conviction. W: The previous strong bullish MACD and positive Z-score have weakened considerably, signaling a reversal of the prior medium-term strength. The consolidation is now showing negative momentum. O: The mix of medium-term news is becoming more balanced, with recent positive sales reports now interspersed with older negative headlines, suggesting a less clear narrative. This mixed sentiment aligns with the weakening technical signals. T: Risk has increased significantly from 4.0 to 6.0. The fading MACD, negative Z-score, and compressed trend alignment indicate a substantial increase in downside risk. The previous structural improvement has reversed, leading to a higher risk assessment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term outlook has deteriorated sharply, with the market regime now classified as a secular bear market (-2.5%) and a death cross structure evident (-1.71%). The long-term range position has also moved lower to 42.3%. W: The previous bull market correction regime and neutral range position have been replaced by a secular bear market and a death cross, indicating a significant structural breakdown. This represents a substantial reversal of long-term positive trends. O: Long-term news flow remains mixed, with older negative headlines about lawsuits and regulatory issues still present, overshadowing the more recent positive sales reports. This persistent negative narrative contributes to the bearish long-term technicals. T: Risk has increased dramatically from 3.0 to 7.5. The shift to a secular bear market, the presence of a death cross, and the lower range position all point to a significantly elevated downside risk. The previous structural strength has been replaced by clear weakness."
+    }
+  }
+}

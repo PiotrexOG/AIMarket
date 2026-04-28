@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.21)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 110.55-117.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.32%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.74)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.64)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 98.88-117.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.27%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.64,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.57%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.48)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.7% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.59x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $673.819B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.5%, EPS: 20.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.0%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 45.75, P/S: 1.34)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.24)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart acquires $153M warehouse in Arizona. - Sam's Club expanding in China with growing e-commerce.",
+      "Walmart experiences mobile app and websites outage affecting thousands of shoppers.",
+      "Target makes risky bet against Walmart with new pricing strategy."
+    ],
+    "medium_term_50d": [
+      "Walmart acquires $153M warehouse in Arizona. - Sam's Club expanding in China with growing e-commerce.",
+      "Walmart starts accepting crypto payments. - Amazon announces $12 five billion capital spending plan. - Kroger initiates $2 billion stock buyback program.",
+      "Walmart receives FDA warning over sold infant formula."
+    ],
+    "long_term_200d": [
+      "Walmart faces antitrust investigation over potential monopolistic practices. - Pepsi Co increases prices at retailers to protect Walmart contracts. - Class action lawsuit filed against Walmart for labor violations.",
+      "FDA issues warning letters to WMT and Target over By Heart infant formula recall. - WMT removes affected By Heart infant formulas from stores and online.",
+      "Walmart receives FDA warning over sold infant formula."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "STAGNANT (0.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 106.15-115.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (0.96%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.176)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.66)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 105.53-115.76]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.98%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 115.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.75%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.34, P/S: 1.52)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.9)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chord Energy buys XTO Energy's Willistons Basin assets from Exx ON for $5 fifthom. - EXx ONMOBIL's XTO Energy sells Willist ON Basin assets to Chord ENergy for $5 fiftymillion.",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM signs major solar energy partnership.",
+      "Exxon introduces automatic voting option for retail investors (SEC approval) - Ex xon becomes subject of climate-focus ED activist campaigns (auto-voting tool)"
+    ],
+    "medium_term_50d": [
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM signs major solar energy partnership.",
+      "Chord Energy buys XTO Energy's Willistons Basin assets from Exx ON for $5 fifthom. - EXx ONMOBIL's XTO Energy sells Willist ON Basin assets to Chord ENergy for $5 fiftymillion.",
+      "Exxon expect EU to signlong-term USgasdeals ($750bilby2027). - EUplansbuyt USenergy,Exxonspokespersonsayslong-termmarketsfoundationof LNGlngbusiness."
+    ],
+    "long_term_200d": [
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Louisiana refinery operations. - XOM signs major solar energy partnership.",
+      "Exxon expect EU to signlong-term USgasdeals ($750bilby2027). - EUplansbuyt USenergy,Exxonspokespersonsayslong-termmarketsfoundationof LNGlngbusiness.",
+      "Exxon holds talks with Russia\u2019s Rosneaft about working together in Sakhalinfields. - XOM targets demand growth with Baytown refinary reconfiguration project."
+    ]
+  }
+}

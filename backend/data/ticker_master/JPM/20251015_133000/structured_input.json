@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.1)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 294.21-318.01]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.74%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.608)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.13)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 284.71-318.01]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.46%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 311.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.06%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.27)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.41, P/S: 3.14)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.42)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.24)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.87x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan announces $1. fifth trillion Security and Resiliency Initiate boostingcritical industries. - Jamie Dimon unveils $1.fifth trillion plan investing U.S.economicsecurityandresiliency.",
+      "JPMorgan exceeds Q3 earnings expectations. - China accused of rare earth monopoly, causing price surge and JPMinitiative. - Critical metals shares pop during pre-market trading. - Jerome Siegel calls for US rare earth reserves. - Q3 earnings season begins with bank reports.",
+      "Government shutdown delays CPI data. - Big bank earnings including JPMorgan coming up."
+    ],
+    "medium_term_50d": [
+      "JPMorgan announces $1. fifth trillion Security and Resiliency Initiate boostingcritical industries. - Jamie Dimon unveils $1.fifth trillion plan investing U.S.economicsecurityandresiliency.",
+      "JPMorgan exceeds Q3 earnings expectations. - China accused of rare earth monopoly, causing price surge and JPMinitiative. - Critical metals shares pop during pre-market trading. - Jerome Siegel calls for US rare earth reserves. - Q3 earnings season begins with bank reports.",
+      "JPMorgan faces major lawsuit over mortgage practices. - FED imposes fine on JPMorgan for compliance failures. - Amazon announces JPMorgan as banking partner for employee payroll. - Hurricane damages disrupt JPMorgan East Coast branches operations. - IBM cancels JPMorgan contract for cloud services. - New York AG investigates JPMorgan"
+    ],
+    "long_term_200d": [
+      "JPMorgan announces $1. fifth trillion Security and Resiliency Initiate boostingcritical industries. - Jamie Dimon unveils $1.fifth trillion plan investing U.S.economicsecurityandresiliency.",
+      "JPMorgan announces major restructuring plan. - Federal Reserve fines JPMorgan $1 billion for compliance failures. - Amazon partners with JPMorgan to offer checking accounts. - Natural disaster disrupts JPMorgan's East Coast operations. - IBM cancels multi-billion dollar deal with JPM. - New York AG sues J",
+      "JPMorgan faces major lawsuit over mortgage practices. - FED imposes fine on JPMorgan for compliance failures. - Amazon announces JPMorgan as banking partner for employee payroll. - Hurricane damages disrupt JPMorgan East Coast branches operations. - IBM cancels JPMorgan contract for cloud services. - New York AG investigates JPMorgan"
+    ]
+  }
+}

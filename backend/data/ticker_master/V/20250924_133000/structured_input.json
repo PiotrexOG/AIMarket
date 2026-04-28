@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.21)",
+        "velocity_roc_10": "NORMAL (-1.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 333.47-353.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.2%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.256)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 328.7-358.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.05%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 338.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.81%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.01, P/S: 17.77)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.58)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.01)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa partnerswith Fold, Stripeto launch Bitcoin Rewords Credit Card. - Klearcomestablishes USofficewith20newjobs.",
+      "Visa allocates $50 million to U.S litigation esc row, causing dilution and altered EPS calculation.",
+      "EU ministers agree on digital euros roadmap, aiming to compete with Visa and Mastercard."
+    ],
+    "medium_term_50d": [
+      "EU ministers agree on digital euros roadmap, aiming to compete with Visa and Mastercard.",
+      "Visa allocates $50 million to U.S litigation esc row, causing dilution and altered EPS calculation.",
+      "Visa partnerswith Fold, Stripeto launch Bitcoin Rewords Credit Card. - Klearcomestablishes USofficewith20newjobs."
+    ],
+    "long_term_200d": [
+      "EU ministers agree on digital euros roadmap, aiming to compete with Visa and Mastercard.",
+      "Stripe begins private testing of payments-focusted blockchain \"Tempo\" with Visa,Deutsche Bank,Standard Chartered.",
+      "Visa allocates $50 million to U.S litigation esc row, causing dilution and altered EPS calculation."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. The RSI has fallen into oversold territory (24.0), and the candle pattern has shifted to indecision (Doji). The price is now at critical support levels for the 20-day range. W: The previous bearish shooting star has been replaced by indecision, but the RSI's extreme oversold condition suggests potential for a bounce, albeit with low conviction. O: Positive news regarding AI partnerships with Palantir provides some support, but the technicals are weak. T: Downside risk has increased due to the oversold RSI and the price testing support, elevating the risk metric. Volatility remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains positive but has weakened slightly. The MACD has recovered from its bearish acceleration but remains in negative territory. The price is now positioned below its 50-day moving average (Z-score: -1.16), indicating a shift towards a bearish trend position. W: The previous bullish gradual ascent has slowed, and the MACD is still recovering from a bearish signal. The conviction is reduced due to the price's position relative to the 50-day SMA. O: Continued investment announcements and deepening AI partnerships offer some fundamental support. T: The increased risk is driven by the price's deterioration relative to the 50-day SMA and the still-bearish MACD, despite the positive news flow. Premium valuation multiples remain a concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains constructive, though the price has moved from the upper quadrant to a more neutral position within the long-term range. The secular bull market regime and golden cross structure remain intact. W: The conviction has slightly decreased as the price has moved from the upper quadrant to the mid-cycle neutral zone. The fundamental strengths of business quality, financial health, and cash generation remain robust. O: Continued large-scale investments in US operations and manufacturing, alongside strategic AI partnerships, provide a positive long-term narrative. T: The primary risk remains the elevated valuation multiples (P/E: 36.94, P/B: 17.26), which are still high despite a slight decrease. Any faltering in the strong growth profile could exacerbate this risk."
+    }
+  }
+}

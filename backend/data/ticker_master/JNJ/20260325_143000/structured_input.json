@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "NORMAL (-3.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 232.24-251.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.67%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.601)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.52)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 203.85-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.45%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 240.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.84%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.7, P/S: 6.24)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.21)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson advances bladder cancer treatment. - Johnson & Johnson targets procedure growth with bladder cancer advances. - Johnson & Johnson receives FDA approval for intraocular lens. - Protagonist Partners With Johnson & Johnson for new drug development.",
+      "FDA approves Johnson & Johnson's Icotyde for psoriasis. - Johnson & Johnson's Icotyde approval challenges competitors. - Johnson & Johnson expands drug portfolio with Icotyde.",
+      "FDA approves Johnson & Johnson's oral psoriasis pill ICOTYDE. - Johnson & Johnson's ICOTYDE approved for plaque psoriasis treatment. - FDA approves Johnson & Johnson's IL-23 receptor antagonist ICOTYDE."
+    ],
+    "medium_term_50d": [
+      "FDA approves Johnson & Johnson's oral psoriasis pill ICOTYDE. - Johnson & Johnson's ICOTYDE approved for plaque psoriasis treatment. - FDA approves Johnson & Johnson's IL-23 receptor antagonist ICOTYDE.",
+      "FDA approves Johnson & Johnson's Icotyde for psoriasis. - Johnson & Johnson's Icotyde approval challenges competitors. - Johnson & Johnson expands drug portfolio with Icotyde.",
+      "Johnson & Johnson advances bladder cancer treatment. - Johnson & Johnson targets procedure growth with bladder cancer advances. - Johnson & Johnson receives FDA approval for intraocular lens. - Protagonist Partners With Johnson & Johnson for new drug development."
+    ],
+    "long_term_200d": [
+      "FDA approves Johnson & Johnson's oral psoriasis pill ICOTYDE. - Johnson & Johnson's ICOTYDE approved for plaque psoriasis treatment. - FDA approves Johnson & Johnson's IL-23 receptor antagonist ICOTYDE.",
+      "FDA approves Johnson & Johnson's Icotyde for psoriasis. - Johnson & Johnson's Icotyde approval challenges competitors. - Johnson & Johnson expands drug portfolio with Icotyde.",
+      "FDA approves Johnson & Johnson's TECNIS Pure See IOL. - Johnson & Johnson's bladder cancer drug trial meets primary endpoint. - Johnson & Johnson highlights promising Erda-i DRS results."
+    ]
+  }
+}

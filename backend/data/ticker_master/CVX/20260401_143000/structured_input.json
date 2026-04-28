@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (77.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 184.15-214.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.42%)",
+        "cycle_macd": "BULLISH_FADING (0.405)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 165.15-214.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (27.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 197.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.47%))",
+      "volume_dynamics": "ELEVATED (1.21)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: 9.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.54, P/S: 2.12)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.11)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron announces senior leadership changes. - Chevron partners with Libya's NOC to unlock offshore potential. - Chevron warns energy demand surge requires broad supply expansion.",
+      "Chevron CEO warns of Iran crisis impact on oil supplies. - Chevron seeks to restore gas exports after cyclone.",
+      "Chevron's Australian LNG production disrupted by cyclone. - Chevron's Wheatstone LNG plant restart hampered by storm damage. - Weeks-long outage at Chevron's Australian LNG plant tightens supply."
+    ],
+    "medium_term_50d": [
+      "Chevron's Australian LNG production disrupted by cyclone. - Chevron's Wheatstone LNG plant restart hampered by storm damage. - Weeks-long outage at Chevron's Australian LNG plant tightens supply.",
+      "Chevron CEO warns of Iran crisis impact on oil supplies. - Chevron seeks to restore gas exports after cyclone.",
+      "Chevron plans to buy oil from Sable for California refinery. - Chevron CEO warns markets haven't priced in supply shock. - Chevron CEO says energy markets should be more worried. - Chevron highlights Middle East supply strain, mispriced oil risks."
+    ],
+    "long_term_200d": [
+      "Chevron plans to buy oil from Sable for California refinery. - Chevron CEO warns markets haven't priced in supply shock. - Chevron CEO says energy markets should be more worried. - Chevron highlights Middle East supply strain, mispriced oil risks.",
+      "Chevron agrees to crude offtake deal with Sable Offshore. - Chevron warns of California fuel crisis, threatens refining exit. - Chevron flags looming California energy crisis.",
+      "Chevron completes Hess Corporation acquisition. - Chevron enters exclusive talks for Iraq oilfield. - Chevron explores Venezuela production expansion. - Chevron stock priced for $100 oil environment."
+    ]
+  }
+}

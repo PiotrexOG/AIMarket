@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has weakened further, with RSI dropping to an oversold extreme of 18.3. Velocity has also slightly decreased (-4.1%), and the price has moved into the middle of the 20-day range [68.03-75.77]. The SMA20 base remains stable near its base (-3.5%), but the overall picture is one of increasing bearish pressure. W: The neutral candle pattern persists, indicating indecision, but the shift in RSI and range position suggests a potential for further downside. Negative news regarding earnings release, government shutdown impact, muted China demand, and rising tariffs are contributing to a mixed sentiment. O: The price is within normal Bollinger Bands (0.17), offering a slight potential for mean reversion. The high institutional activity (2.22) could signal increased interest, but the direction remains unclear. T: The score has decreased from 4.8 to 3.5 due to the worsening oversold RSI and the shift in range position. Conviction has decreased from 4.0 to 3.0 as the short-term technical signals are becoming more consistently bearish. Risk has increased from 7.0 to 7.5 due to the deeper oversold condition and the negative news flow impacting short-term sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 2.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment has deteriorated significantly, with momentum expanding in a bearish direction (-3.27%). While the MACD is recovering from its bearish extreme (-0.317), the Z-score relative to the SMA50 has improved to -0.92, indicating a less severe bearish trend position compared to the previous period. The price is now inside the monthly range [68.03-80.17]. W: The persistent negative news flow, including earnings concerns, potential government shutdown impacts, and muted demand in China, continues to weigh on the medium-term outlook. The expanding bearish momentum suggests that the prior support levels may be tested. O: The MACD's recovery, though still bearish, suggests that the rate of decline may be slowing. The improved Z-score relative to the SMA50 indicates some stabilization in the trend. T: The score has decreased from 3.5 to 3.0 due to the expanding bearish momentum and the continued negative news impacting the medium-term trend. Conviction has decreased from 3.0 to 2.5 as the technical signals are now more consistently bearish, despite the slight improvement in the Z-score. Risk has slightly decreased from 8.5 to 8.0, primarily due to the improved Z-score relative to the SMA50, but remains elevated due to the expanding bearish momentum and ongoing negative fundamental news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term market regime has shifted to a BEAR_MARKET_RELIEF_RALLY (-0.3%), which is a less favorable environment than the previous secular bull market. However, the major crosses maintain a HEALTHY_GOLDEN_CROSS_STRUCTURE (6.87%), and the price position in the long-term range has moved to the bullish upper quadrant (66.3%), indicating a positive technical development. Fundamental concerns regarding revenue stagnation and profit issues persist. W: The ongoing negative news, including regulatory investigations, competitor advancements, and production disruptions, continue to introduce long-term structural risks. The narrative of fading classic franchises and the impact of these headwinds remain a concern. O: The underlying business quality, financial health, and company scale remain robust, providing a foundational support. The shift to a bullish upper quadrant in the long-term range position, despite the less favorable market regime, suggests resilience. T: The score has increased from 5.0 to 5.5, driven by the significant improvement in the long-term range position to the bullish upper quadrant, which outweighs the shift in market regime. Conviction has increased from 3.5 to 4.0 as the strong long-term technical structure, particularly the range position, provides a more durable signal. Risk has decreased slightly from 6.5 to 6.0, as the improved long-term range position and intact golden cross structure offer some mitigation against the persistent fundamental and news-related risks."
+    }
+  }
+}

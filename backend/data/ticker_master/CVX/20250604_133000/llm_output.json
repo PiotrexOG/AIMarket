@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.8,
+        "risk": 5.8
+      },
+      "synthesis": "S: The short-term momentum has weakened, with RSI falling to 42.6. The price is now stagnant near the 20-day SMA (0.9%), indicating a lack of directional conviction. Velocity (ROC 10) has turned positive (0.8%), but remains weak. The candle pattern has shifted to neutral, reflecting indecision. W: The news narrative has turned significantly negative, with the US Treasury revoking authorizations for Venezuelan oil exports and reports of layoffs. This introduces substantial operational and geopolitical risk. The price remains in the middle of its 20-day range, lacking a clear catalyst for upside. O: A decisive move above the 20-day range resistance, coupled with a stabilization of the negative news flow, could provide a short-term boost. T: The negative news flow regarding Venezuela and potential layoffs significantly increases downside risk, outweighing the neutral technicals. Volatility remains moderate (ATR 1.82%), but the structural risk from operational disruptions is elevated."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.3,
+        "risk": 6.2
+      },
+      "synthesis": "S: The MACD has accelerated bullishly (0.4), showing some underlying strength. The price has moved closer to the 50-day SMA, with the Z-score improving to -0.25, indicating a healthier base. Trend alignment remains bearish (-3.24%), but the expansion has slightly reduced. W: The negative news regarding Venezuelan operations and potential layoffs introduces significant medium-term uncertainty and operational risk. While the MACD is improving, the persistent bearish trend alignment and the lack of fundamental catalysts for growth limit upside conviction. The price is still within the monthly range, suggesting a lack of strong directional commitment. O: A sustained move above the 50-day SMA and a reversal in the trend alignment, supported by a resolution of the Venezuelan operational issues, are necessary for a more robust medium-term recovery. T: The increased operational and geopolitical risk from Venezuela, coupled with ongoing bearish trend alignment, elevates the downside risk. The fundamental growth profile remains stagnant, and earnings momentum continues to deteriorate, providing little support for a significant upward move."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The company's core fundamentals (business quality, financial health, cash generation) remain stable, providing a baseline of resilience. W: The long-term market regime remains bearish (-6.8%), and the death cross structure has widened (-4.56%), indicating continued technical weakness. The price has moved lower within the long-term range (22.1%), reinforcing the bearish positioning. The news narrative includes significant operational disruptions in Venezuela and layoffs, which could impact long-term profitability and strategic direction. Fundamental growth remains stagnant with declining EPS, and quarterly earnings momentum continues to deteriorate. Valuation multiples are largely unchanged, still implying declining earnings. O: A fundamental shift in the secular market regime, a substantial and sustained improvement in fundamental growth and earnings, or a resolution of the geopolitical operational risks are required to alter the long-term bearish outlook. T: The combination of a worsening bearish market regime, deteriorating technical structure, significant operational and geopolitical risks, persistent fundamental weakness, and increased valuation risk continues to present substantial downside risk. The widening death cross and lower range position highlight structural weakness."
+    }
+  }
+}

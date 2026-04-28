@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.13)",
+        "velocity_roc_10": "NORMAL (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 182.94-194.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.11%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.848)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.42)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 173.33-194.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.37%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 185.53,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.55%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 17.79, P/S: 4.89)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.68)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Texas sues Johnson & Johnny and Kenvure for alleged deceptive Tylenol marketing to pregnant women - Lawsuit alleges Tylenol hid connection between Tylen OL and Autism - Texas Attorney General files suit against Johnson & Johnson and Kevnue for deceptive Tylenol advertising - Texas claims Tylenol engages in deceptve marketing regarding",
+      "Johnson & Johnson announces Week 2 eight results for icotro kin ra in ulcerativ e colitis. - Study reveals significant unmet needs in psor iasis for Johnson & Johnson.",
+      "NANOBIOtx transfers sponsorship and operational control of JNJ-\\*190\\*\\* clinical trial. - Icot\u0440\u043ekin\u0440\u0430 long-term data confirm high rates of dur\u0430ble skin clearance in plaque \u043fsori\u0430sis."
+    ],
+    "medium_term_50d": [
+      "Texas sues Johnson & Johnny and Kenvure for alleged deceptive Tylenol marketing to pregnant women - Lawsuit alleges Tylenol hid connection between Tylen OL and Autism - Texas Attorney General files suit against Johnson & Johnson and Kevnue for deceptive Tylenol advertising - Texas claims Tylenol engages in deceptve marketing regarding",
+      "Johnson & Johnson announces Week 2 eight results for icotro kin ra in ulcerativ e colitis. - Study reveals significant unmet needs in psor iasis for Johnson & Johnson.",
+      "Johnson & Johnson faces \u00b3ooo UK lawsu ITS alleging asbes TO-contam INated tal Cum pow DER caused can CEr - Johnson &#38; Johnson announces SEcond MAjor spin OFF, plans to separ ATE orthoped ICS division"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth.",
+      "Johnson & Johnson faces \u00b3ooo UK lawsu ITS alleging asbes TO-contam INated tal Cum pow DER caused can CEr - Johnson &#38; Johnson announces SEcond MAjor spin OFF, plans to separ ATE orthoped ICS division",
+      "Texas sues Johnson & Johnny and Kenvure for alleged deceptive Tylenol marketing to pregnant women - Lawsuit alleges Tylenol hid connection between Tylen OL and Autism - Texas Attorney General files suit against Johnson & Johnson and Kevnue for deceptive Tylenol advertising - Texas claims Tylenol engages in deceptve marketing regarding"
+    ]
+  }
+}

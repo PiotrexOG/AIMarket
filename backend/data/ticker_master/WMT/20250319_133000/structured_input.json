@@ -1,0 +1,70 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-9.9%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-7.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 83.88-104.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.54%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.021)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.62)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 83.88-105.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.38%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 53.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 86.28,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.06%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.57)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.4% | OM: 4.2% | NM: 2.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.61x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $648.125B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 33.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.6%, Next Q Est Growth: -14.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 44.8, P/S: 1.08)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.34)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.33)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Klarna announces partnership with Onepay to exclusively power installment loans at Walmart. - Klarna replaces Affirmas Walmart'sbuy-now- pay-laterprovider.",
+      "Walmart negotiates tariff costs with China-soured suppliers."
+    ],
+    "medium_term_50d": [
+      "Klarna announces partnership with Onepay to exclusively power installment loans at Walmart. - Klarna replaces Affirmas Walmart'sbuy-now- pay-laterprovider.",
+      "Walmart negotiates tariff costs with China-soured suppliers."
+    ],
+    "long_term_200d": [
+      "Klarna announces partnership with Onepay to exclusively power installment loans at Walmart. - Klarna replaces Affirmas Walmart'sbuy-now- pay-laterprovider.",
+      "Walmart negotiates tariff costs with China-soured suppliers."
+    ]
+  }
+}

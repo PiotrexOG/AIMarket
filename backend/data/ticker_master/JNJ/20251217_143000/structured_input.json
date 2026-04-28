@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 198.53-215.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.5%)",
+        "cycle_macd": "BULLISH_FADING (0.273)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 182.94-215.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.47%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 91.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 208.77,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.8%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.02, P/S: 5.5)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.4)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson wins FDA approval for expanded use of AKEEGA in prostate cancer. - JNJ secures national priority voucher based on strong Phase 3 study results. - Link Cell Therapeutics announces launch with J&J leading Series A financing.",
+      "FDA grants Johnson & Johnson special fast pass for multiple myelomas treatment. - J&J snacks closes three manufacturing sites in production optimization plan. - Pharma giant Johnson & Johnson included in list of recession-proof stocks. - Dow Jones Industrial Average falls due to losses in Johnson & Johnson and United Health shares. - Mega-deal value",
+      "FDA approvals AKEEGAs\u2122 nirapar ib and abiratern e acet ate tablet for BRCA-mutated m CSPC."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson secures US FDABreakthrough Therapy Designation for TECVayli plus DARzale X in multiple myela. - Groundbreaking multiple myelomadata unveiled at A\u015eH202 five: Tecvaili+Darzalexdelivers superiorefficacyinearlyrelapsed MM.",
+      "Johnson & Johnson wins FDA approval for expanded use of AKEEGA in prostate cancer. - JNJ secures national priority voucher based on strong Phase 3 study results. - Link Cell Therapeutics announces launch with J&J leading Series A financing.",
+      "Johnson & Johnson announces potential standard of Care for multiple myelima: TECVALYI\u00ae plus D ARZALEX FA PRO\u00ae in Phase 3 trials. - TECVISTAMAB plus DARATUMUMAB SC combination receives Breakthrough Therapyl Designation from US FDA."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson secures US FDABreakthrough Therapy Designation for TECVayli plus DARzale X in multiple myela. - Groundbreaking multiple myelomadata unveiled at A\u015eH202 five: Tecvaili+Darzalexdelivers superiorefficacyinearlyrelapsed MM.",
+      "Johnson & Johnson announces potential standard of Care for multiple myelima: TECVALYI\u00ae plus D ARZALEX FA PRO\u00ae in Phase 3 trials. - TECVISTAMAB plus DARATUMUMAB SC combination receives Breakthrough Therapyl Designation from US FDA.",
+      "Johnson & Johnson announces durable treatment-freemremissions with CAR VYKTI^(R)^ at 2 years for RRMM patients."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 230.48-251.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.69%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.632)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.26)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 200.91-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (30.7%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.3%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 245.45,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "AVERAGE (0.64)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.11, P/S: 6.36)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson receives Fast Track design ATION for nipocalmab in systemic lumas erythe matosus. - US FDA grants Fast Track DESIGNATION to Johnson & Johnson for nipocolimaba in SLE. - John Son & Johnson announces nipoclamaba RECEIVES US FDA Fast Track designation for SLE",
+      "Johnson & Johnson submits nipocal Imab to FDA for potential first-In-class treatment approval. - JNJ explores options for De Puy Synthes orthoedics unit, possible sale exceeding US$2o B.",
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson receives Fast Track design ATION for nipocalmab in systemic lumas erythe matosus. - US FDA grants Fast Track DESIGNATION to Johnson & Johnson for nipocolimaba in SLE. - John Son & Johnson announces nipoclamaba RECEIVES US FDA Fast Track designation for SLE",
+      "Johnson & Johnson submits nipocal Imab to FDA for potential first-In-class treatment approval. - JNJ explores options for De Puy Synthes orthoedics unit, possible sale exceeding US$2o B.",
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA.",
+      "Johnson & Johnson receives Fast Track design ATION for nipocalmab in systemic lumas erythe matosus. - US FDA grants Fast Track DESIGNATION to Johnson & Johnson for nipocolimaba in SLE. - John Son & Johnson announces nipoclamaba RECEIVES US FDA Fast Track designation for SLE",
+      "Johnson & Johnson submits nipocal Imab to FDA for potential first-In-class treatment approval. - JNJ explores options for De Puy Synthes orthoedics unit, possible sale exceeding US$2o B."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.1)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 93.43-100.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.42%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.622)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-100.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.99%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 94.89,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.45, P/S: 1.17)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.44)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US toymakers MGA enters legal dispute over dominance. - Visa faces potential business loss to Amazon, Walmart stablecoins.",
+      "Walmart collaborates with Soda Health on AI-powered nutrition program for Medicare Advantages and Medicaids members. - Sam's Club keeps prices low despite tariffs, considering price increase on small kitchen applicances.",
+      "Walmart and Amazon exploring issuing theirownstablecoins."
+    ],
+    "medium_term_50d": [
+      "US toymakers MGA enters legal dispute over dominance. - Visa faces potential business loss to Amazon, Walmart stablecoins.",
+      "Walmart and Amazon exploring issuing theirownstablecoins.",
+      "Walmart collaborates with Soda Health on AI-powered nutrition program for Medicare Advantages and Medicaids members. - Sam's Club keeps prices low despite tariffs, considering price increase on small kitchen applicances."
+    ],
+    "long_term_200d": [
+      "Walmart and Amazon exploring issuing theirownstablecoins.",
+      "US toymakers MGA enters legal dispute over dominance. - Visa faces potential business loss to Amazon, Walmart stablecoins.",
+      "Walmart reports lower-than-expectated quarterly results (May 15). - US imports decreases due to 144.5% tariff on Chinese goods (May). - Inflation rises due to tariffs, affecting Walmart's costs (Jun 11)."
+    ]
+  }
+}

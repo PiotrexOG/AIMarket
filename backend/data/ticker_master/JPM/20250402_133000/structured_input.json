@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.6)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 224.23-254.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.38%)",
+        "cycle_macd": "BULLISH_FADING (1.554)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 224.23-280.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.34%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 245.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.36%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 27.7% | NM: 21.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.82x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -15.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.773B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.4%, EPS: 21.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 19.3%, Next Q Est Growth: -3.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.43, P/S: 2.58)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.03)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.57)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.4x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan executive team indicted for securities fraud. - Impactful regulatory ruling targets JPMorgan's investment banking division. - Major lawsuit filed against JPMorgan over mortgage-backed securities. - New strategic partnership formed between JPMorgan and leading technology firm. - Significant production change at JPMorgan resulting in delayed product launch.",
+      "Charlie Jav ICE convicted of def RAUDING JPMorgan in $17 fifth million sale of fin ANCIAL aid startup",
+      "India's \u0410xis Bank partners with J.\u041f. \u041c\u043e\u0440\u0433\u0430\u043d for 24\\/7 dollar payment capabilities."
+    ],
+    "medium_term_50d": [
+      "JPMorgan executive team indicted for securities fraud. - Impactful regulatory ruling targets JPMorgan's investment banking division. - Major lawsuit filed against JPMorgan over mortgage-backed securities. - New strategic partnership formed between JPMorgan and leading technology firm. - Significant production change at JPMorgan resulting in delayed product launch.",
+      "Charlie Jav ICE convicted of def RAUDING JPMorgan in $17 fifth million sale of fin ANCIAL aid startup",
+      "J.P Morgan announces strategic investments in quantum computing research. - Prosecutor accuses Frank founder of lying to JPM during $176M sale."
+    ],
+    "long_term_200d": [
+      "JPMorgan executive team indicted for securities fraud. - Impactful regulatory ruling targets JPMorgan's investment banking division. - Major lawsuit filed against JPMorgan over mortgage-backed securities. - New strategic partnership formed between JPMorgan and leading technology firm. - Significant production change at JPMorgan resulting in delayed product launch.",
+      "Charlie Jav ICE convicted of def RAUDING JPMorgan in $17 fifth million sale of fin ANCIAL aid startup",
+      "J.P Morgan announces strategic investments in quantum computing research. - Prosecutor accuses Frank founder of lying to JPM during $176M sale."
+    ]
+  }
+}

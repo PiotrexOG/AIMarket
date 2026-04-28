@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals have deteriorated significantly. The RSI has moved into extreme oversold territory (25.1), and the price is testing the lower Bollinger Band (-0.05). Velocity (ROC 10) has collapsed (-10.0%), and the 20-day SMA trend base is now negative (-6.7%). W: The 'STRONG_BULLISH' candle pattern from the previous period is now overshadowed by extreme oversold conditions and negative velocity. The price is still within the middle of its 20-day range, but the momentum has clearly shifted downwards. O: News flow is mixed, with reports of a joint venture halt in China and concerns over AI dealings from US seniors, which are negative. T: Volatility has increased (ATR 3.15%), and volume dynamics show high institutional activity (1.54), suggesting potential capitulation or aggressive selling. Risk has increased substantially due to oversold conditions, negative velocity, and increased volatility. Conviction has decreased due to the mixed signals and sharp price decline. The score has been reduced to reflect the sharp deterioration in short-term momentum and increased risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment has worsened to a bearish gradual descent (-3.88%), and the MACD has turned bearish and is accelerating downwards (-2.485). The Z-score relative to the 50-day SMA has further deteriorated to -1.92. W: The previous bullish MACD acceleration has reversed into a bearish one, indicating a significant shift in trend. The price remains within the monthly range, but the bearish trend position is becoming more entrenched. O: News flow continues to be mixed, with the China joint venture halt being a negative factor, while the OpenAI investment remains a long-term positive. However, the immediate price action is being driven by negative short-term catalysts. T: Risk has increased significantly due to the worsening MACD, deeper bearish trend position, and increased volatility. Conviction has decreased as the bearish momentum takes hold. The score has been lowered to reflect the deteriorating medium-term trend and increased risk, overriding the previous positive conviction from OpenAI news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term technical regime remains a secular bear market (-15.3%), with the death cross structure widening (-5.59%). The price has moved slightly lower in the long-term range to 13.2%. W: The long-term technical picture has seen a slight deterioration in terms of price positioning and the death cross structure. However, the fundamental strengths of Microsoft remain exceptionally robust, with elite business quality, a healthy balance sheet, and strong cash generation. O: The news narrative is still dominated by the strategic OpenAI investment, which remains a significant long-term positive. However, the China joint venture halt introduces a new negative element to the longer-term outlook. T: Risk has slightly increased due to the worsening long-term technicals and the new negative news from China. Conviction remains relatively high due to the enduring fundamental strengths and the strategic importance of the OpenAI investment, though it has been slightly reduced. The score has been adjusted downwards to reflect the increased technical risk and new negative news, but the fundamental and strategic positives still support a moderately positive score."
+    }
+  }
+}

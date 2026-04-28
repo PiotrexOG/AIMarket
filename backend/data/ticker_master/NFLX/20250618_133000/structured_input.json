@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.61)",
+        "velocity_roc_10": "STAGNANT (0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 117.63-126.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.87%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.649)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.96)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.11-126.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.65%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 122.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 27.7% | NM: 23.1%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.173327B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 47.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 19.3%, Next Q Est Growth: 4.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.56, P/S: 13.35)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 22.32)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.19)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix sets sights on theme parks. - Streaming sur passes traditional TV in US viewership.",
+      "Netflix expands programmatic ad reach with Yahoo DPS integration.",
+      "Netflix co- CEO indicates Warner split as media shakeout sign - Netflix eyes EMEA expansion with Euro 1 Billion investment plan"
+    ],
+    "medium_term_50d": [
+      "Netflix co- CEO indicates Warner split as media shakeout sign - Netflix eyes EMEA expansion with Euro 1 Billion investment plan",
+      "Netflix sets sights on theme parks. - Streaming sur passes traditional TV in US viewership.",
+      "Netflix invests $1.\u2081B in Spanish original productions by 2-029. - Warner Bros Discovery announces streaming business split, potential new rival."
+    ],
+    "long_term_200d": [
+      "Netflix co- CEO indicates Warner split as media shakeout sign - Netflix eyes EMEA expansion with Euro 1 Billion investment plan",
+      "Netflix announces record subscriber growth during Q2 earnings call. - Major studios sign licensing deals for new Netflix original movies. - NFLX enters into partnership with leading technology provider. - Production delay announced for highly anticipated Netflix series. - Legal dispute filed against NFLX over streaming rights. - Significant restructuring plan implemented by NFLX management.",
+      "Netflix faces potential 10% reduction in operating margin due to movie tariff proposal. - President Trump announces plan for 10o% tariffonforeign-mademovies,affecting Netflix. - Morgan Stanleywarns Netflixearningsmaydecreasewithmovieimporttariffs."
+    ]
+  }
+}

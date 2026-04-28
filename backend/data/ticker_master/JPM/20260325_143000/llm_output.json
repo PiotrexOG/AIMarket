@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The RSI has moved from oversold to a more neutral bearish zone (38.5), indicating a loss of immediate downside momentum but still lacking strong bullish conviction. The price is consolidating near the 20-day SMA, suggesting a pause in recent trends. O: News flow is mixed, with some positive developments like Grab's share buyback agreement and new wealth management initiatives, but also ongoing concerns about regulatory scrutiny and internal monitoring. T: The market bias remains range-bound, and while short-term barriers are distant, the consolidation pattern suggests a lack of strong directional conviction in the immediate term."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 4.8
+      },
+      "synthesis": "S: The MACD has shifted to a bullish accelerating signal, indicating improving momentum. However, the trend alignment remains bearish, and the position relative to the 50-day SMA has improved but is still in a bearish trend zone (Z:-0.63). O: The shift in MACD suggests a potential for trend change, supported by ongoing strategic initiatives and a more favorable regulatory outlook (easing capital rules). T: While momentum is improving, the underlying bearish trend alignment and the company's sensitivity to debt levels (EV/MC: 1.19x) still present a moderate risk. The overall range for the 50-day is widening slightly, indicating increased volatility within the medium term."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term structure remains robust with a healthy golden cross pattern, and the company's fundamental strengths in business quality, cash generation, and scale are unchanged. The market regime is still a 'bear market relief rally', but the position within the long-term range has improved slightly. O: Continued strategic investments in AI and expansion plans, along with positive regulatory developments, provide a solid foundation for long-term growth. T: Valuation remains a point of caution, with implied growth still appearing overpriced (PEG: 10.78). However, the risk profile has slightly improved due to a more stable volatility context and a stronger long-term technical structure, with a potential pivot indicated by the major crosses."
+    }
+  }
+}

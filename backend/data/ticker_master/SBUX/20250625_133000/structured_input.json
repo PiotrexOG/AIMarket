@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "STAGNANT (0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 83.19-95.91]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.35%)",
+        "cycle_macd": "BULLISH_FADING (0.074)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.25)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.5-95.91]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.95%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 91.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.49%))",
+      "volume_dynamics": "AVERAGE (1.09)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.44, P/S: 2.87)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.9)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks deny reports of full sale of Chinese operations. - Slowing sales and geapolitical risks limit China'srole in Starbuck's revenue.",
+      "Starbucks considers bringing in co-shareholders and handingover Chinese operations (2) - Starbuks enters into new$3 billion creditagreement(8)",
+      "Starbucks and H\u00e4agen\u2010Dazs consider overhauls in Chinese market."
+    ],
+    "medium_term_50d": [
+      "Starbucks deny reports of full sale of Chinese operations. - Slowing sales and geapolitical risks limit China'srole in Starbuck's revenue.",
+      "Starbucks considers bringing in co-shareholders and handingover Chinese operations (2) - Starbuks enters into new$3 billion creditagreement(8)",
+      "Starbucks and H\u00e4agen\u2010Dazs consider overhauls in Chinese market."
+    ],
+    "long_term_200d": [
+      "Starbucks considers bringing in co-shareholders and handingover Chinese operations (2) - Starbuks enters into new$3 billion creditagreement(8)",
+      "Starbucks explores selling minority stake in China business.",
+      "Starbucks deny reports of full sale of Chinese operations. - Slowing sales and geapolitical risks limit China'srole in Starbuck's revenue."
+    ]
+  }
+}

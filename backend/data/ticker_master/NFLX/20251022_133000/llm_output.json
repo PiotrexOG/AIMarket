@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 6.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has strengthened significantly, with RSI moving into a strong bullish zone at 67.3. Velocity has accelerated to 4.2%, and the price is now 3.3% from the 20-day SMA, indicating a positive trend. The price is currently at critical support within the 20-day range. W: The shift to a strong bullish RSI and accelerated velocity are positive, but the price being at critical support suggests potential for a bounce or further consolidation. The neutral candle pattern indicates a lack of clear direction despite the underlying momentum. O: Short-term news is mixed, with speculation of a Warner Bros Discovery acquisition and an upcoming earnings report, alongside positive partnership announcements. T: The score has increased from 6.0 to 7.5 due to the significant improvement in RSI and velocity, indicating a strong bullish shift. Conviction has increased from 5.5 to 6.5 as the momentum signals are now more robust. Risk has increased slightly from 5.5 to 6.0, reflecting the price being at critical support and the inherent uncertainty surrounding the upcoming earnings report and acquisition speculation."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains compressed at -1.04%. However, the MACD is now bullish and accelerating at 0.48. The Z-score to the 50-day SMA has deteriorated significantly to -3.93, indicating an overextended bearish statistical outlier. The price is strengthening at monthly support. W: The accelerating bullish MACD is a positive sign, but the extreme bearish Z-score to the 50-day SMA presents a significant risk of mean reversion. The price being at monthly support offers some cushion, but the overall picture is one of high risk. O: Medium-term news is mixed, with acquisition speculation and past positive news, but also mentions of Q3 earnings and potential delays in new series launches. T: The score has decreased from 5.5 to 4.0 due to the severe deterioration in the Z-score to the 50-day SMA, overriding the bullish MACD. Conviction has decreased from 5.0 to 4.5 as the conflicting signals (bullish MACD vs. bearish Z-score) reduce clarity. Risk has increased significantly from 5.0 to 7.5, driven by the extreme bearish Z-score and the potential for a sharp reversal, as well as the negative earnings momentum and high valuation risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime remains in a secular bull market, with participation slightly increasing to 11.7%. The golden cross structure is still healthy at 9.23%. However, the long-term range position has moved to a mid-cycle neutral zone at 58.0%. W: The continued secular bull market and healthy golden cross are supportive, but the shift to a neutral long-term range position suggests a loss of bullish momentum. The 'POWER_ZONE_CONFLUENCE(2)' in the SR landscape still indicates structural support. O: Long-term news is mixed, with ongoing acquisition speculation and positive outlook revisions, but also historical mentions of past earnings misses and regulatory impacts. The fundamental strength of the business is stable but not accelerating. T: The score has decreased slightly from 5.5 to 5.0 due to the shift to a neutral long-term range position, indicating less bullish conviction. Conviction has remained stable at 5.5 as the long-term technicals are still generally constructive. Risk has increased from 5.0 to 6.5, primarily due to the deterioration in earnings momentum and the elevated valuation multiples, which are now more concerning given the neutral long-term positioning and the potential for a market regime shift."
+    }
+  }
+}

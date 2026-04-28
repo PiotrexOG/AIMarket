@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.91)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 445.36-473.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.44%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.879)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.38)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 344.79-473.43]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.3%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 101.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 474.67,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.24%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 39.0, P/S: 13.95)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.32)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft invests $10+ billion in Scale AI. - MSFT tops $3.trillion market cap, sets records. - Warren Buffett increases stake in MSFT, Amazon.",
+      "Microsoft collaborates with Google for increased computing capacity. - Open AI raises series C funding, valuing the company at $7. billions. - IBM builds first error-free quantum supercomputer. - Applied Intuit and Open AI advance AI-powered vehicle experiences.",
+      "Microsoft introduces AI safety rankingfor cloud. - Open AI hits $1o billion in annual recurring revenue. -Microsoft vs. Nintendo: new handheld gamingconsole."
+    ],
+    "medium_term_50d": [
+      "Microsoft invests $10+ billion in Scale AI. - MSFT tops $3.trillion market cap, sets records. - Warren Buffett increases stake in MSFT, Amazon.",
+      "Microsoft expands security footprint: is it the next revenue pillar? - Microsoft says open AI partnership evolving, remains strong - Microsoft acquisitions cybersecurity startup - Microsoft opens watson X AI labs - Microsoft pledges decades long collaboration with Open AI",
+      "Microsoft introduces AI safety rankingfor cloud. - Open AI hits $1o billion in annual recurring revenue. -Microsoft vs. Nintendo: new handheld gamingconsole."
+    ],
+    "long_term_200d": [
+      "Microsoft invests $10+ billion in Scale AI. - MSFT tops $3.trillion market cap, sets records. - Warren Buffett increases stake in MSFT, Amazon.",
+      "Microsoft expands security footprint: is it the next revenue pillar? - Microsoft says open AI partnership evolving, remains strong - Microsoft acquisitions cybersecurity startup - Microsoft opens watson X AI labs - Microsoft pledges decades long collaboration with Open AI",
+      "Open AI and Microsoftrenegotiatemultibillion- dollarpartnershipterms-report - Microsoftand Open AIrenegotiatepartnershipterms - Open AInegotiateswith Microsoftfornewfundingandfuture IPO,FTreports - Open AIand Microsoftrevisingtermsofawidercontract"
+    ]
+  }
+}

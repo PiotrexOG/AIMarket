@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (83.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.71)",
+        "velocity_roc_10": "NORMAL (1.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 88.56-113.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.86%)",
+        "cycle_macd": "BULLISH_FADING (0.316)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.46)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 80.1-113.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (10.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.32%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.71,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.72%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.16, P/S: 2.2)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.99)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.4)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney's \"Lilo&Stitch\" drives record Memorial Day weekend for domestic box office. - AMC's stock headsfor its best monthsince height of thememe-stockfrenzy. - Consumerr stocks higherin lateafternoontradingaffecting Dis.",
+      "Disney sues You Tube for executive poaching. - Dispute over Disney exec's contract violation. - Seeking injunction against You Tubes hire of ex-Disney executive.",
+      "Disney's \"Lilo &Stitch\" tops Memorial Dayweekendboxoffice."
+    ],
+    "medium_term_50d": [
+      "Disney sues You Tube for executive poaching. - Dispute over Disney exec's contract violation. - Seeking injunction against You Tubes hire of ex-Disney executive.",
+      "Disney's \"Lilo&Stitch\" drives record Memorial Day weekend for domestic box office. - AMC's stock headsfor its best monthsince height of thememe-stockfrenzy. - Consumerr stocks higherin lateafternoontradingaffecting Dis.",
+      "New Japanese theme park partners with Disney for Asian market expansion. - Dis announced collaboration with Formula 1 for Mickey &Friends launch (202six). - Disney's 'Lilo &Stitch' outperforms 'Mission:Impossible' at box office."
+    ],
+    "long_term_200d": [
+      "Disney sues You Tube for executive poaching. - Dispute over Disney exec's contract violation. - Seeking injunction against You Tubes hire of ex-Disney executive.",
+      "Disney reports 20\\% increase in adjusted earnings per share (EPS). - Announces new theme parks in Abu Dhibi. - Records high viewership for ESPN despite challenges.",
+      "Disney reports Q2 earnings surpassing forecasts. - Visitors increase spending at Disney's US theme parks. - Unexpected rise in revenues from Disney+ subscribers. - Plans for new Disneytheme park in Abu Dhabi."
+    ]
+  }
+}

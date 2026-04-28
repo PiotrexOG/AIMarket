@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (31.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.15)",
+        "velocity_roc_10": "NORMAL (-6.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 464.89-546.27]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.76%)",
+        "cycle_macd": "BEARISH_RECOVERING (-3.681)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.91)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 464.89-553.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.47%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 483.24,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.43%))",
+      "volume_dynamics": "ELEVATED (1.26)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 37.2, P/S: 13.35)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.2)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.08)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft obtains authorization from FERC to sell wholes ALE power. - Zscaler joins Microsoft\u2019s Microsoft Entra Agent ID partner ecosystem. -Microsoft signs 94.7Mw PPA with Zelestra in Aragon, Spain. -Microsft announces $9. seven billion, five year AI cloud services Agreement with IREn.",
+      "Microsoft executive starts children's eyewearing company. - Google wins in multi-cloud shift in AI era. - Anthropic signs $30 billion deal with Azure.",
+      "Microsoft and Nvid IA announce expanded AI partnership. - Yale expert raises antitrust concerns over Open AI project. - Arm Holdings integrates NVLink Fusions technology into Neoverse platforms."
+    ],
+    "medium_term_50d": [
+      "Microsoft and Nvid IA announce expanded AI partnership. - Yale expert raises antitrust concerns over Open AI project. - Arm Holdings integrates NVLink Fusions technology into Neoverse platforms.",
+      "Microsoft brings agents to Office and Windows. - US greenlights AIchip exports to Gulftech giants after Saudicrown prince's Washingtonvisit. - Nvidia earnings: Why record sales show AI boom isn\u2019t letting up. - U.S approves advanced AI chip exports for G42, enabling full-scale deployment.",
+      "Microsoft obtains authorization from FERC to sell wholes ALE power. - Zscaler joins Microsoft\u2019s Microsoft Entra Agent ID partner ecosystem. -Microsoft signs 94.7Mw PPA with Zelestra in Aragon, Spain. -Microsft announces $9. seven billion, five year AI cloud services Agreement with IREn."
+    ],
+    "long_term_200d": [
+      "Microsoft brings agents to Office and Windows. - US greenlights AIchip exports to Gulftech giants after Saudicrown prince's Washingtonvisit. - Nvidia earnings: Why record sales show AI boom isn\u2019t letting up. - U.S approves advanced AI chip exports for G42, enabling full-scale deployment.",
+      "Microsoft and Nvid IA announce expanded AI partnership. - Yale expert raises antitrust concerns over Open AI project. - Arm Holdings integrates NVLink Fusions technology into Neoverse platforms.",
+      "Microsoft enters AI chip business with new MSFT AI201 and AI202 chips. - Team Dynam IX expands AI Agentsfor IT Service Management. - Qualcomm introduces AI203 and AI210 chips for data centers."
+    ]
+  }
+}

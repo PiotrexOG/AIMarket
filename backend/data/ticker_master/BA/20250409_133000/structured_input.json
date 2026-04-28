@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (22.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.05)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-23.6%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-15.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 128.88-184.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.51%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.937)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 128.88-188.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-16.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.27%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 20.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 143.06,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (6.07%))",
+      "volume_dynamics": "ELEVATED (1.45)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(4)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.9% | OM: -16.2% | NM: -17.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -21.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $66.518B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -14.5%, EPS: -397.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -44.2%, Next Q Est Growth: 76.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -26.29)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.39x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing announces first quarter deliveries exceeding expectations. -Boeing reports increase in first quarter orders. -Boeing tops Q1 deliveries estimates despite previous challenges.",
+      "China imposes 34\\% tariffs on BA planes, increasing competition from Airbus and COMAC. - Two 733 MAX crash victims receive settlements from Boeing. - Northrop grants NOC $24M contract to support E-2 C and D Hawkeyes. - Millennium Space Systems completes FOO Fighter CDR",
+      "China places export restrictions on key rare Earth elements, hitting Boeing. - Dow's loss led by Boeing due to US-China tariffs. - US Space Force awards multibillion dollar contracts to Space X and ULA, affecting Boeing."
+    ],
+    "medium_term_50d": [
+      "Boeing announces first quarter deliveries exceeding expectations. -Boeing reports increase in first quarter orders. -Boeing tops Q1 deliveries estimates despite previous challenges.",
+      "Boeing CEO faces tough questions from Senators on safety. - Boeing workingwith DOJ onrevised pleadeal in 7 three MAX fraud case,CEO says.",
+      "China imposes 34\\% tariffs on BA planes, increasing competition from Airbus and COMAC. - Two 733 MAX crash victims receive settlements from Boeing. - Northrop grants NOC $24M contract to support E-2 C and D Hawkeyes. - Millennium Space Systems completes FOO Fighter CDR"
+    ],
+    "long_term_200d": [
+      "China'saviationregulator delayreleasereporton China Easternplane crash investigation. - USAir Force selects Boeingtobuildnext-generationfighterjet. - Lockheed Martiss disappointedwith USAir Forcecontractdecision.",
+      "Trump awards Boeling $20Billion Air Force contract. -Boeing wins USAir Forcenext-generationfighterjetcontract.",
+      "Boeing secures contract to build next-gener ATION fighter aircraft. - FAAs acting chief recognizes Boeings safety improvements but maintains production limits."
+    ]
+  }
+}

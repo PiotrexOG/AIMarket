@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.53)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.73-116.95]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.6%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.265)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.18-116.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.21%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 109.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.3%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.46, P/S: 1.43)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.85)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041cobil's Bay townrefinery had anunplanned shut down of its alkylation unit. -Exxon \u041cobi loses Supreme Court appealover Baytown pollution penalty.",
+      "US Supreme Court imposes $14 million air pollution penality on Exxon. - Guyana seeks company for natural gas liquefaction facility. - Senate extends tax credits for hydrogen industry.",
+      "Shell in early talks to acquire BP (potential merger of two major oil companies)"
+    ],
+    "medium_term_50d": [
+      "Shell in early talks to acquire BP (potential merger of two major oil companies)",
+      "Exxon \u041cobil's Bay townrefinery had anunplanned shut down of its alkylation unit. -Exxon \u041cobi loses Supreme Court appealover Baytown pollution penalty.",
+      "US Supreme Court imposes $14 million air pollution penality on Exxon. - Guyana seeks company for natural gas liquefaction facility. - Senate extends tax credits for hydrogen industry."
+    ],
+    "long_term_200d": [
+      "Shell in early talks to acquire BP (potential merger of two major oil companies)",
+      "Exxon\u041cobil affected by Israeli airstrikkes in Iran, potential supply disruption. - Israel-I\u0440\u0430\u043d conflict may lead to closure of Strait of \u0425\u043e\u0440\u043c\u0443\u0437, impacting XOM.",
+      "Israel attacks Iran, raising oil prices and boosting XOM stock. - XOM stock jumps following Iran nuclear site strike."
+    ]
+  }
+}

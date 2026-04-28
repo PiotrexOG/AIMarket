@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.6)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.11-25.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.15%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.032)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.76)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.06-26.05]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.78%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.97,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.18, P/S: 2.23)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.61)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer reports positive topline results for HYMPAv ZI\u2122 in hemophilia. - Merck,PFizer, Astalas announce positive topl INE results for PADCEVi+KEYTRUDA in bladder Cancer. - PADCEVTM plus KEYTRUDAtm significantly improves survival for certain patients with bladder CA.",
+      "FDA gives Arvinas and Pfizer\u2019svepdegestant NDAforbreastcancer. - FDAMay Not Renew Pfizer's Authorization For Covid Shots In Younger Children.",
+      "FDA accepts PFE's vepdebastrant NDA, fast track designation awarded. - Potential new breast cancer treatments for PFE. - PFE shares up 10% following FDA announcement."
+    ],
+    "medium_term_50d": [
+      "Pfizer reports positive topline results for HYMPAv ZI\u2122 in hemophilia. - Merck,PFizer, Astalas announce positive topl INE results for PADCEVi+KEYTRUDA in bladder Cancer. - PADCEVTM plus KEYTRUDAtm significantly improves survival for certain patients with bladder CA.",
+      "FDA accepts PFE's vepdebastrant NDA, fast track designation awarded. - Potential new breast cancer treatments for PFE. - PFE shares up 10% following FDA announcement.",
+      "FDA gives Arvinas and Pfizer\u2019svepdegestant NDAforbreastcancer. - FDAMay Not Renew Pfizer's Authorization For Covid Shots In Younger Children."
+    ],
+    "long_term_200d": [
+      "Pfizer reports positive topline results for HYMPAv ZI\u2122 in hemophilia. - Merck,PFizer, Astalas announce positive topl INE results for PADCEVi+KEYTRUDA in bladder Cancer. - PADCEVTM plus KEYTRUDAtm significantly improves survival for certain patients with bladder CA.",
+      "FDA accepts PFE's vepdebastrant NDA, fast track designation awarded. - Potential new breast cancer treatments for PFE. - PFE shares up 10% following FDA announcement.",
+      "Pfizer reports strong second-quader-results and raises 2oo5 EPS guidance. -PFizer boosts 2oo\ufffd adjusted EPS outlook following quarterly gains. -Pfizer surpasses Qzo earnings and revenue estimates."
+    ]
+  }
+}

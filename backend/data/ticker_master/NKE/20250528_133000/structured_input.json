@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 54.75-63.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.14%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.318)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-74.16]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-14.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-17.77%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 26.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 62.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.1%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.63, P/S: 1.84)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.55)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike returns to Amazon, raises prices. - Dow's rally led by Nike, no specific event mentioned regarding company guidance or major announcements.",
+      "Nike raises prices and resumes sales on Amazon. - Layoffs among Nike tech employees.",
+      "Nike raises prices on a wide range of products as soon as this week. - \u041d\u0438ke returns to selling on Amazon following five-year absence."
+    ],
+    "medium_term_50d": [
+      "Nike raises prices on a wide range of products as soon as this week. - \u041d\u0438ke returns to selling on Amazon following five-year absence.",
+      "Nike raises prices and resumes sales on Amazon. - Layoffs among Nike tech employees.",
+      "Nike lays off workers in technology division. - Bath & Body Works appoints ex-Nike CEO Daniel Heaf - NKE undergoing tech division restructuring"
+    ],
+    "long_term_200d": [
+      "Nike raises prices on a wide range of products as soon as this week. - \u041d\u0438ke returns to selling on Amazon following five-year absence.",
+      "Nike raises prices and resumes sales on Amazon. - Layoffs among Nike tech employees.",
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products."
+    ]
+  }
+}

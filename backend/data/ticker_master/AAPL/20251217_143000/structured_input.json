@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.4)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 265.32-288.61]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.04%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.19)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.68)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 244.57-288.61]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.07%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 275.49,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.57%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.7% | OM: 31.9% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.99x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $408.625B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 0.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -11.3%, Next Q Est Growth: 70.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.74, P/S: 10.08)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 62.56)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 275.15)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Developers press EU to act on Apple fees after US court ruling. - Rising chip colors push global smart Phone shipments down, Counter Point says. - Koord Now offers tap to pay on i Phone for merchants to accept contactless payments. - Anemic wage growth but good retail sales; oil and defense stocks fall. - Smartphone shipments seen falling in",
+      "Appeals court upholds contempt finding Against Apple regarding i Phone app fees. - Apple loses appeal but keeps ability to charge commissions on third-party apps sales.",
+      "EU regulators give Meta users option for fully personalised ads. - Open AI introduces new AI gadget, potential i Phone disruptor. - AT&T adopts digital switching, increasing industry customer turn Over."
+    ],
+    "medium_term_50d": [
+      "Appeals court upholds contempt finding Against Apple regarding i Phone app fees. - Apple loses appeal but keeps ability to charge commissions on third-party apps sales.",
+      "Developers press EU to act on Apple fees after US court ruling. - Rising chip colors push global smart Phone shipments down, Counter Point says. - Koord Now offers tap to pay on i Phone for merchants to accept contactless payments. - Anemic wage growth but good retail sales; oil and defense stocks fall. - Smartphone shipments seen falling in",
+      "EU regulators give Meta users option for fully personalised ads. - Open AI introduces new AI gadget, potential i Phone disruptor. - AT&T adopts digital switching, increasing industry customer turn Over."
+    ],
+    "long_term_200d": [
+      "Major patent verdict against Apple awards Masimo $634m. - Apple i Phone shipments exceed Samsung sales for first time in fourteen years.",
+      "Apple takes 1 In fourth of China Smartphone sales as i Phone \u2081\u4e03 demands surges - Apple jumps to \u2082five% Market Share \u0432 \u0427\u0438\u043d\u0430 - i Phone \u2081seven lineup spark major rebound \u0434\u043b\u044f Apple - Apple captures twenty-five% of China Smartphones sales",
+      "Apple challenges India's anti-trust law over potential $3 eight billion fine. - Apple files lawsuit against Competition Commissionof India. - India's competition commission uses global revenue for fines calculation."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "NORMAL (-1.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 505.04-531.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (0.84%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.521)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.48)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-532.7]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.05%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 523.47,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.53%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.98, P/S: 14.93)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.91)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.4)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft announces new partnership with e Software Associates for secure Microsoft 3sixfive deployments in Gcc High. - Korea investigates Microsoft for antitrust violations, potentially impacting their business in the country.",
+      "Microsoft sued byconsumers in antitrust class action over Open AI deal (MSFT). - Intel secures major AI client for 1 eighteen A chips (likely Microsoft) (INTC).",
+      "Microsoft expands security offering. -Microsoft earnings to benefit from solidly in-line Azure activity. -Agtonomy accelerates global expansion."
+    ],
+    "medium_term_50d": [
+      "Microsoft extends AI advances in Dragon Cop Lilot to nurses - Microsoft investor focus on Azure,Open AI before Q1 results - Microsoft shifts majority of product manufacturing out of China by 202 six - Open AI invests $4oo billion to build 5 ' Stargate Data Centers' - Microsoft, AWS, Google moving production outside of China",
+      "Microsoft signs $17._4 billion AI invariant deal with Nebius Group. - Nebius Group dismisses CTO, stock surges more than 50%. - Microsoft partners with Rhythm XAI for hyper-personalized care platform.",
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend."
+    ],
+    "long_term_200d": [
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend.",
+      "Microsoft extends AI advances in Dragon Cop Lilot to nurses - Microsoft investor focus on Azure,Open AI before Q1 results - Microsoft shifts majority of product manufacturing out of China by 202 six - Open AI invests $4oo billion to build 5 ' Stargate Data Centers' - Microsoft, AWS, Google moving production outside of China",
+      "Microsoft signs $17._4 billion AI invariant deal with Nebius Group. - Nebius Group dismisses CTO, stock surges more than 50%. - Microsoft partners with Rhythm XAI for hyper-personalized care platform."
+    ]
+  }
+}

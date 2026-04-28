@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Momentum indicators (RSI 94.1, ROC 13.9%) signal extreme bullishness, supported by a strong bullish candle pattern. The price is extended above the 20-day SMA (10.6%), indicating significant upward velocity. W: The extreme overbought condition (RSI 94.1) suggests a high probability of a short-term pullback or consolidation. The price is testing critical resistance at the top of the 20-day range. O: Potential for a short-term breakout if resistance is decisively overcome, driven by ongoing positive news flow regarding the OpenAI partnership. T: High volatility and overextended price action present significant downside risk, with a potential for a sharp reversal if momentum falters or resistance holds."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The trend alignment remains bullish with a gradual ascent (3.41%), and the MACD is still in bullish territory, albeit fading. The price is overextended relative to the 50-day SMA (Z-score 2.53), indicating strong upward momentum. W: The fading MACD and overextended positioning suggest a potential loss of upward momentum in the medium term. The price is encountering resistance at the monthly zone, which could lead to consolidation. O: Continued strength in Azure cloud growth and positive developments in the OpenAI partnership could sustain the upward trend. The business quality and financial health provide a solid foundation. T: While the trend is bullish, the overextended nature and resistance zone introduce moderate risk of a correction or sideways movement. Valuation multiples are a persistent concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term regime is a bull market correction, and the company is trading near its all-time high (97.0% of range). Strong fundamental metrics, including ultra-elite business quality, healthy balance sheet, and excellent cash generation, support a bullish long-term outlook. W: The presence of a death cross structure (-5.23%) in the long-term chart is a significant technical overhang, suggesting potential structural weakness despite the current bull market. The hyper-premium valuation multiples (P/E 37.21, P/S 13.31) and implied growth (PEG 2.13) present considerable long-term risk. O: Continued dominance in cloud computing (Azure) and strategic positioning in AI through OpenAI provide strong secular growth drivers. The company's scale and business quality offer resilience. T: The primary long-term risk stems from the extremely high valuation, which is sensitive to any slowdown in growth or shift in market sentiment. The death cross structure, if it persists, could signal a longer-term trend change."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 7.8
+      },
+      "synthesis": "S: Short-term momentum has shifted to a strong bullish zone (RSI 63.3), but velocity has moderated (ROC 1.4%). The price is stable near the 20-day SMA (2.8%) but has reached critical resistance at the 20-day range upper bound. W: The score has decreased due to the price hitting resistance and the cooling of extreme momentum. Conviction has slightly decreased as the price is at a key technical level, increasing uncertainty. Risk has increased significantly due to the price testing resistance, elevated volume (1.22), and the presence of negative news regarding class-action lawsuits and a gift card partner bankruptcy. O: The short-term outlook is neutral to slightly bearish. The price is at a critical resistance level, and the recent news flow introduces downside risk. While the RSI is in a bullish zone, the confluence of resistance and negative catalysts suggests a higher probability of consolidation or a pullback. T: The class-action lawsuit and gift card partner bankruptcy are significant short-term headwinds, potentially impacting consumer trust and sales."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.8,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows expanding momentum (4.62%), and the price is strongly positioned relative to the 50-day SMA (Z:1.89). However, the MACD has turned bearish (-1.034), and the price is strengthening at monthly resistance. W: The score has slightly decreased due to the bearish MACD signal, which contradicts the expanding trend momentum. Conviction has decreased as the mixed signals from MACD and trend alignment create ambiguity. Risk has increased due to the bearish MACD, the price testing monthly resistance, and the persistent negative news flow. O: The medium-term outlook is cautiously neutral. The strong trend alignment and Z-score are positive, but the bearish MACD and the price at resistance, coupled with ongoing legal and partner issues, temper upside potential. The risk of a reversal or prolonged consolidation has increased. T: The class-action lawsuit and gift card partner bankruptcy introduce significant medium-term uncertainty, potentially impacting brand perception and future revenue streams."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.3,
+        "conv": 5.2,
+        "risk": 5.8
+      },
+      "synthesis": "S: The long-term market regime remains a bull market correction (2.8%), with the death cross structure still present (-4.44%). The long-term range position has improved to 65.0% in the neutral zone. W: The score has seen a marginal increase due to the slight improvement in the market regime and range position, though the death cross remains a structural impediment. Conviction has slightly increased as the regime and range readings are more constructive. Risk has slightly decreased due to the improved range positioning, although the death cross and ongoing negative news continue to represent structural weakness. O: The long-term outlook is neutral. The improving market regime and range position offer some support, but the persistent death cross structure and the potential long-term impact of legal issues indicate underlying weakness that limits upside potential. The company's fundamental strengths provide a floor. T: The company's strong fundamentals provide a solid foundation, but the ongoing class-action lawsuits and partner issues could have a lasting impact on brand reputation and consumer loyalty, posing a long-term risk."
+    }
+  }
+}

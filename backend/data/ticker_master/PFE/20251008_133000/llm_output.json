@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The short-term score has decreased from 8.0 to 7.0 due to a shift to a STRONG_BEARISH candle pattern, despite continued strong momentum (RSI 68.5) and explosive velocity (ROC 8.8%). The price is now in the middle of its 20-day range (23.58-27.69), indicating a loss of immediate upward thrust. W: The STRONG_BEARISH candle pattern and the price moving into the middle of the range suggest a potential for consolidation or a short-term pullback. The volume dynamics have normalized to average (0.74), indicating less conviction behind the recent price action. O: The short-term outlook is mixed. While momentum remains strong, the bearish candle pattern and range position temper the bullish conviction. The news regarding drug pricing deals and potential production delays introduces uncertainty. T: Downside risk has increased from 4.0 to 4.5. The expanding volatility context (ATR 2.61%) and the bearish candle pattern elevate the risk of a near-term correction. The structural trend weakness has not fully reversed, and the market bias remains range-bound."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term score has decreased from 7.0 to 6.0. The MACD signal is fading (0.301), and the trend alignment shows consolidation (0.34%). The Z-score relative to the 50-day SMA has also decreased to a bullish trend position (Z:1.5), indicating less overextension. The price is now inside the monthly range (23.11-27.69). W: The fading MACD and consolidation indicate a loss of upward momentum. The shift from an overextended bullish position to a trend position suggests that the rapid ascent may be pausing. The news flow around drug pricing deals introduces regulatory uncertainty. O: The medium-term outlook has weakened. The bullish trend is still present, but the momentum is clearly decelerating, and the price has retreated within its established range. The acquisition of Metsera remains a positive fundamental driver, but it is currently overshadowed by broader regulatory concerns. T: Downside risk has increased from 3.5 to 4.0. The consolidation and fading momentum suggest a higher probability of a pullback. The expanding volatility context also contributes to increased risk. The structural trend weakness is still a concern, as the price is no longer exhibiting strong directional conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term score remains stable at 7.0, with conviction at 6.5. The market regime continues to be a BULL_MARKET_CORRECTION (5.7%), and the long-term range position is still strong in the upper quadrant (77.4%). The major crosses are still signaling a potential pivot, but the overall trend remains positive. W: The long-term range position has slightly decreased from 84.1% to 77.4%, indicating some loss of relative strength over the longer term. The 'BULL_MARKET_CORRECTION' regime, while positive, inherently includes periods of consolidation and potential pullbacks. O: The long-term outlook remains fundamentally bullish, supported by the strong business quality, cash generation, and growth profile. The acquisition of Metsera continues to be a significant long-term positive catalyst. The valuation remains attractive with a low PEG ratio. T: Downside risk has slightly increased from 3.0 to 3.5. The decrease in long-term range position and the expanding volatility context suggest a slightly elevated risk profile. However, the underlying business fundamentals and the positive market regime provide a strong support structure, mitigating significant long-term downside."
+    }
+  }
+}

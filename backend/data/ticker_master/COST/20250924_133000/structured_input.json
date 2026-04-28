@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "NORMAL (-3.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 933.24-981.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.27%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.614)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.35)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 925.0-999.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.93%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 951.33,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.36%))",
+      "volume_dynamics": "ELEVATED (1.32)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.73, P/S: 1.64)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.31)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco posts Q4 earnings results. - Consolidated comparable sales increase 6.3% Yo Y. - U.S., Canada, and international markets show sales growth. - E-commerce sales surge by 17.5%.",
+      "Lawsuit filed against Costco by Lulullemon.",
+      "Costco expected to miss earnings due to early shopping hour costs. - Leverage Shores by Themes launches 20o% exposed COST ETF."
+    ],
+    "medium_term_50d": [
+      "Costco posts Q4 earnings results. - Consolidated comparable sales increase 6.3% Yo Y. - U.S., Canada, and international markets show sales growth. - E-commerce sales surge by 17.5%.",
+      "Lawsuit filed against Costco by Lulullemon.",
+      "Costco expected to miss earnings due to early shopping hour costs. - Leverage Shores by Themes launches 20o% exposed COST ETF."
+    ],
+    "long_term_200d": [
+      "Costco posts Q4 earnings results. - Consolidated comparable sales increase 6.3% Yo Y. - U.S., Canada, and international markets show sales growth. - E-commerce sales surge by 17.5%.",
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy",
+      "Costco reports Aug '25 sales upward by 8. seventh % to $23.6B, e-commerce surges 18_. fourth %."
+    ]
+  }
+}

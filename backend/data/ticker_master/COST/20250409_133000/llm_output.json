@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The candle pattern has shifted to neutral, RSI has fallen to 52.0, and velocity has turned negative (-2.2%). The price is now trading 1.5% below the 20-day SMA, indicating a loss of upward momentum. W: The price is still within the middle of its 20-day range, but the negative momentum and neutral candle pattern suggest a lack of conviction. Elevated volume (1.39) on price declines could signal increasing selling pressure. O: The shift from explosive upward velocity to negative momentum, coupled with a neutral candle pattern, points to a higher probability of short-term price declines or consolidation. The RSI at 52.0 offers little room for upside before hitting overbought territory. T: Downside risk has increased substantially due to the negative momentum, declining RSI, and elevated volume on price weakness. The ATR has also increased to 3.08%, indicating higher volatility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term indicators have weakened considerably. The MACD has faded significantly (1.494), and the price is now in a bearish trend position relative to the 50-day SMA (Z:-1.12). Trend alignment has also worsened, with momentum expanding negatively (-6.19%). W: The bearish trend alignment and the price's position below the 50-day SMA are significant headwinds. The fading MACD suggests the previous bullish momentum is dissipating. The news narrative highlights potential cost increases due to tariffs, which could impact future earnings. O: The deterioration in MACD and SMA positioning, combined with worsening trend alignment, points to a higher probability of further downside. The lack of positive catalysts and ongoing tariff concerns create a challenging environment. T: Risk has increased sharply due to the bearish trend alignment, negative SMA positioning, and fading MACD. The increased volatility (ATR 3.08%) and the potential for further negative news regarding tariffs contribute to elevated downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term outlook has shifted to a more cautious stance. The market regime has moved into a bear market relief rally (-1.2%), and the long-term range position has decreased to 43.1%. While the golden cross structure remains, the overall market context is less favorable. W: The shift in market regime to a bear market relief rally indicates a less supportive environment for sustained gains. The lower long-term range position suggests the stock is in a less advantageous structural placement compared to previous periods. Valuation multiples remain elevated (P/E: 55.17), contributing to valuation risk. O: The change in market regime and reduced long-term range position temper the previous bullish outlook. While the golden cross structure provides some technical support, the broader market weakness and persistent high valuation are significant concerns. T: Downside risk has increased due to the shift in market regime and the lower long-term range position. The elevated valuation multiples and the potential for increased costs from tariffs introduce structural risks that are now more pronounced in a weaker market environment."
+    }
+  }
+}

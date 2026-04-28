@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (12.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-5.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 321.56-358.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.55%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.887)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.16%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 22.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 327.13,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.06%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.92, P/S: 16.48)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.57)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Cantor Fitzgarld initiates coverage of Visa with Overweight recommendation. - Alkira appoints S&Ps Guru Ramamosothy to advisory board to accelerate AI- Native networking strategy.",
+      "Visa partnerswithcrypto payments firm Mercuryo fornear real-time cryptoto-fiatoff-ramping.",
+      "Visa collaborates with Mercur yo to offer crypto-to fiat off-r ramping through Visa Direct. - Trump calls for 10\\% credit card ratecap deemed inconceivable by analysts. Note: The first event meets the criteria as it involves a direct partnership between Visa and Mercuryo which impacts Visa's business. The"
+    ],
+    "medium_term_50d": [
+      "Visa partnerswithcrypto payments firm Mercuryo fornear real-time cryptoto-fiatoff-ramping.",
+      "Visa collaborates with Mercur yo to offer crypto-to fiat off-r ramping through Visa Direct. - Trump calls for 10\\% credit card ratecap deemed inconceivable by analysts. Note: The first event meets the criteria as it involves a direct partnership between Visa and Mercuryo which impacts Visa's business. The",
+      "UK regulator caps Visa and Mastercard cross-border card fees. - Argentina launches Bitcoin-back Visa credit cards. - Trump targets Visa and Masterscard with Credit Card Competitions Act."
+    ],
+    "long_term_200d": [
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "President Trump imposes 10\\% credit card rate cap, potentially affecting Visa and Mastercard.",
+      "UK regulator caps Visa and Mastercard cross-border card fees. - Argentina launches Bitcoin-back Visa credit cards. - Trump targets Visa and Masterscard with Credit Card Competitions Act."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.8)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.05)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 200.91-215.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.55%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.055)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.93)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 185.12-215.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.33%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 217.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.52%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.64)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.84, P/S: 5.73)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.66)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.29)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson reports durable responses to Rybrevrant plus chemotherapy in RAS/ BRAF wild type metastatic colon rectal cancer trials. - Distalmption receives strategic investment from JJDC to advance ASC expansion of DEXTER robotics surgery system.",
+      "Johnson & Johnson adds 2US manufacturing plants. - Court orders recalcul ATION of damages in Johnson & Johnsonauris case.",
+      "Johnson & Johnson announces longer-termresults for investigational colorectaltumor treatment. - Amivantamabbispecific antibodoy shows promising durablesresponses in metastaticcolorectalcancerstudy."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson reports primary and keysecondary endpoints for nipocolimab in Phase 2\u0431 SLE trial, moves to Phase 3. - J&J submits FDA De Nova application for OTTA VA robotic surgicalsystem in general surgery - Lexeo and J&J collaborate to explore targeted cardiac delivery of AAV gene therapy.",
+      "Johnson & Johnson announces submission of Type II variation application for teclistam AB + daratumum Ab combination in Europe. - JASMITE Study shows nipocalimb A reduces SLE activity in Phase 2. - Initiates Phase 3 programme for investigational Fcn Rn blocker in systemic lups erythematos Us.",
+      "Johnson & Johnson announces longer-termresults for investigational colorectaltumor treatment. - Amivantamabbispecific antibodoy shows promising durablesresponses in metastaticcolorectalcancerstudy."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson reports primary and keysecondary endpoints for nipocolimab in Phase 2\u0431 SLE trial, moves to Phase 3. - J&J submits FDA De Nova application for OTTA VA robotic surgicalsystem in general surgery - Lexeo and J&J collaborate to explore targeted cardiac delivery of AAV gene therapy.",
+      "Johnson & Johnson announces submission of Type II variation application for teclistam AB + daratumum Ab combination in Europe. - JASMITE Study shows nipocalimb A reduces SLE activity in Phase 2. - Initiates Phase 3 programme for investigational Fcn Rn blocker in systemic lups erythematos Us.",
+      "Johnson & Johnson secures US FDABreakthrough Therapy Designation for TECVayli plus DARzale X in multiple myela. - Groundbreaking multiple myelomadata unveiled at A\u015eH202 five: Tecvaili+Darzalexdelivers superiorefficacyinearlyrelapsed MM."
+    ]
+  }
+}

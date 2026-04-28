@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum is neutral, indicated by RSI at 54.3 and a DOJI candle pattern suggesting indecision. Price is stable near the 20-day SMA, within normal Bollinger Bands. O: Positive news flow includes blockchain initiatives and payment platform advancements, potentially driving short-term price discovery. W: Indecisive price action and neutral momentum limit immediate upside potential. T: Potential for range-bound trading or a slight upward bias if positive news continues to outweigh indecision. Volatility remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows consolidation, with MACD exhibiting fading bullish momentum. The price is positioned favorably above the 50-day SMA (Z-score 0.62), indicating a generally positive trend. O: Strong Q3 earnings and strategic investments, such as in the Texas Stock Exchange, provide fundamental support. The company's scale and business quality metrics are robust. W: The fading MACD signal and consolidation phase suggest a pause in the upward trend. Negative FCF generation is a structural concern. T: The medium-term outlook remains cautiously optimistic, supported by fundamental strength and positive earnings surprises, but requires a clear breakout from consolidation. Balance sheet stress is a key risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term regime is a secular bull market, with a healthy golden cross structure. However, the price is at the top of its cycle (92.5% of ATH), indicating potential for a plateau or reversal. O: Significant long-term initiatives like the $1.5 trillion Security and Resiliency plan demonstrate strategic vision and commitment to economic infrastructure. Business quality remains high. W: Valuation multiples are moderate but sensitive to leverage (EV/MC 1.88x). Negative FCF and stressed balance sheets (NetDebt/Eq 2.11x) present significant long-term risks, especially in a higher interest rate environment. Past compliance issues and regulatory fines are also a concern. T: The long-term score is tempered by valuation fragility and balance sheet stress, despite a favorable market regime and strong business quality. The proximity to ATH increases downside risk."
+    }
+  }
+}

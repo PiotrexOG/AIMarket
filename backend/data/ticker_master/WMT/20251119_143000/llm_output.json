@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.8,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The RSI has moved to 43.9, indicating a neutral zone but a deterioration from the previous bearish zone. The candle pattern has shifted to strongly bearish, suggesting immediate downside pressure. W: Velocity has turned negative, and the price is stable near its base, but the bearish candle pattern and negative velocity are concerning. O: News regarding e-commerce profitability and CEO transition are mixed in their immediate impact. T: The short-term risk has increased due to the bearish candle pattern and negative velocity, while the score has slightly decreased to reflect this deterioration."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.8,
+        "risk": 5.5
+      },
+      "synthesis": "S: Trend alignment has shifted to consolidation, and the MACD is accelerating bearishly, indicating a weakening medium-term trend. The position relative to SMA50 is now bearish. W: The monthly range remains wide, offering no strong trend confirmation, and the current consolidation is a sign of indecision. O: E-commerce profitability news and CEO transition are significant but their medium-term impact is uncertain. RFID technology expansion is a positive operational development. T: The medium-term outlook has deteriorated with a lower score and increased risk due to the bearish MACD acceleration and consolidation. Conviction has also decreased as trend signals weaken."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure remain supportive technical indicators. Long-term range position has slightly decreased but remains in the upper quadrant. W: Fundamental concerns regarding thin margins and weak cash conversion persist. Valuation multiples remain hyper-premium, posing a significant risk. O: Mega-cap scale and moderate growth profile are supportive. Continued AI partnerships and strategic initiatives, along with e-commerce profitability, are positive long-term developments. T: The long-term score has slightly decreased, and conviction has softened due to the slight pullback in long-term range position and persistent valuation risks, despite ongoing positive strategic news."
+    }
+  }
+}

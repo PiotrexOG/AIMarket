@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (77.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 244.57-277.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.95%)",
+        "cycle_macd": "BULLISH_FADING (0.548)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.47)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 224.69-277.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.72%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 269.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.0%))",
+      "volume_dynamics": "AVERAGE (0.79)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.7% | OM: 31.9% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.99x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $408.625B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 0.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -11.3%, Next Q Est Growth: 70.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.76, P/S: 9.84)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 61.08)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 268.68)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple Q4 \u2082Zero Five earnings: record revenue and strong Services growth - Apple stock hits all-time high following Q4 earnings beat - Amazon earnings: cloud revenue grows at fastest pace in almost three years - Amazon shares trading higher after company reports better-than expected earnings - Apple and Amazon report earnings that exceed views - Nasdaq surges over 1%;",
+      "Apple reports Q3 earnings. - Apple hits $4 trillon market cap. - Strong i Phone 17 demand. - Nvidia becomes first $5trillion company. - Sell Your Mac expands to Canada.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (Ignore if not confirmed as EU specific to AAPL) - Trump-XI trade truce leaves questions, Apple and Amazon earnings scheduled. - Apple and Amazon earnings reports after bell. - US-Chinese trade truce reached, reducing tariffs for both sides. - R"
+    ],
+    "medium_term_50d": [
+      "Apple Q4 \u2082Zero Five earnings: record revenue and strong Services growth - Apple stock hits all-time high following Q4 earnings beat - Amazon earnings: cloud revenue grows at fastest pace in almost three years - Amazon shares trading higher after company reports better-than expected earnings - Apple and Amazon report earnings that exceed views - Nasdaq surges over 1%;",
+      "Apple reports Q3 earnings. - Apple hits $4 trillon market cap. - Strong i Phone 17 demand. - Nvidia becomes first $5trillion company. - Sell Your Mac expands to Canada.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (Ignore if not confirmed as EU specific to AAPL) - Trump-XI trade truce leaves questions, Apple and Amazon earnings scheduled. - Apple and Amazon earnings reports after bell. - US-Chinese trade truce reached, reducing tariffs for both sides. - R"
+    ],
+    "long_term_200d": [
+      "Apple Q4 \u2082Zero Five earnings: record revenue and strong Services growth - Apple stock hits all-time high following Q4 earnings beat - Amazon earnings: cloud revenue grows at fastest pace in almost three years - Amazon shares trading higher after company reports better-than expected earnings - Apple and Amazon report earnings that exceed views - Nasdaq surges over 1%;",
+      "Apple reports Q3 earnings. - Apple hits $4 trillon market cap. - Strong i Phone 17 demand. - Nvidia becomes first $5trillion company. - Sell Your Mac expands to Canada.",
+      "Alibaba Singles Day Event Sales Surpasses Previous Year's Figures, i Phines Sales Exceed Last Year's Total. - Apple Closes in on $4Trillion Valuation. - EU Unknown: Apple Closed At First Record High Of The Year On Monday."
+    ]
+  }
+}

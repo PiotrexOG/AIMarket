@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The short-term score has decreased to 4.0 from 5.0. While the candle pattern has shifted to neutral, the RSI remains extremely overbought (77.8), and price action is now \"EXTENDED_BULLISH_OVERSTRETCHED\" (7.5%) above the 20-day SMA. The \"EXPLOSIVE_UP\" velocity (10.6%) indicates unsustainable momentum, and the price is at \"CRITICAL_RESISTANCE_20\". W: Conviction has decreased to 4.0 from 4.5. The extreme overbought conditions, coupled with the price testing resistance and the \"RANGE\" bias, significantly reduce confidence in continued upward momentum. The \"C:TESTING @20d\" barrier is a key point of failure. O: Positive news regarding aerospace initiatives and defense spending provides some support, but the technical indicators are signaling a high probability of a near-term reversal or consolidation. T: Downside risk has increased to 8.5 from 7.5. The extreme overbought RSI, extended price action, and testing of critical resistance levels all point to increased vulnerability. The \"HIGH_MULTIPLE_RISK\" is amplified by the current technical extremes, making a pullback more severe."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term score has decreased to 5.0 from 5.8. The trend alignment shows \"BULLISH_EXPANDING_MOMENTUM\" (3.36%) and the MACD is accelerating (2.178), but the Z-score for the 50-day SMA is now an \"OVEREXTENDED_BULLISH_STAT_OUTLIER\" (2.67). The price is also strengthening at \"MONTHLY_RESISTANCE_ZONE\". W: Conviction has decreased to 4.5 from 5.0. The extreme overbought conditions in the short-term and the overextended position relative to the 50-day SMA temper confidence in the sustainability of the current trend, despite positive momentum indicators. The \"POWER_ZONE_CONFLUENCE(2)\" is being tested by overextension. O: Continued positive news in the aerospace sector supports the medium-term outlook, but the increasing \"polarization\" in analyst sentiment and the overextended technicals introduce caution. T: Downside risk has increased to 7.0 from 6.5. The overextended technicals relative to the 50-day SMA, combined with the extreme short-term readings, increase the probability of a broader market correction or a mean reversion event that could impact the medium-term trend. The \"HIGH_MULTIPLE_RISK\" remains a significant concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term score has decreased to 4.0 from 4.5. While the \"SECULAR_BULL_MARKET\" regime persists and the stock is at \"ATH_OR_TOP_OF_CYCLE\" (98.3%), the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" is more pronounced. The \"HYPER_PREMIUM_PRICED\" valuation multiples and \"HIGH_MULTIPLE_RISK\" are significant headwinds. W: Conviction has decreased to 3.5 from 4.0. The confluence of extreme technical overbought conditions across all timeframes, deteriorating sentiment, and persistent high valuation risk significantly erodes confidence in the long-term sustainability of current price levels. The \"ATH_OR_TOP_OF_CYCLE\" position is now viewed with extreme skepticism. O: Strategic investments in advanced aviation are positive long-term developments, but they are increasingly overshadowed by the elevated valuation and the heightened risk of a market-wide regime shift or a significant correction in stretched growth stocks. T: Downside risk has increased to 8.5 from 8.0. The combination of extreme technical overbought signals, elevated valuation multiples, and the inherent risk of \"BULLISH_STRETCH_EXHAUSTION\" at cycle highs creates substantial downside risk. The \"HIGH_MULTIPLE_RISK\" is now the dominant factor, amplified by the current technical extremes and the \"NEUTRAL_STRUCTURE\" sensitivity."
+    }
+  }
+}

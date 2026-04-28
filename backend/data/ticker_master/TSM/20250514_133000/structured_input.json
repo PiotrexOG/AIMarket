@@ -1,0 +1,72 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (83.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "EXPLOSIVE_UP (17.9%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (15.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 145.84-194.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.29%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.223)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.32)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 134.25-194.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 195.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.07%))",
+      "volume_dynamics": "ELEVATED (1.29)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 57.4% | OM: 47.1% | NM: 41.2%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3140.91732B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.9%, EPS: 51.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3300.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.78, P/S: 0.32)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.22)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.36x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC named new toppick at Morgan Stanleyon AI demand. - Microsoft and Meta Platformspoststrongquarterlyresults, boosting TSMdemandfor AI chips.",
+      "Apple shifts billions of chips sourcing to US, impacts TSM production location. - Apple plans to manufact URE most US-bound i Phone in India, affects TSM sales in China."
+    ],
+    "medium_term_50d": [
+      "TSMC named new toppick at Morgan Stanleyon AI demand. - Microsoft and Meta Platformspoststrongquarterlyresults, boosting TSMdemandfor AI chips.",
+      "Apple shifts billions of chips sourcing to US, impacts TSM production location. - Apple plans to manufact URE most US-bound i Phone in India, affects TSM sales in China.",
+      "TSMC faces increased violations due to US semiconduct sanctions on China (2023 report). - Japan invests in advanced semicons tech with TSMC for AI energy needs (PM Ishiba meets Nvidia CEo Huang)."
+    ],
+    "long_term_200d": [
+      "TSMC named new toppick at Morgan Stanleyon AI demand. - Microsoft and Meta Platformspoststrongquarterlyresults, boosting TSMdemandfor AI chips.",
+      "President Trump announces 33% tariffs on Taiwan on April 2. - Taiwan Semiconductors' stock tumbles 7% due to tariff announcement. - U.S Department of Commerce investigates TSMC's workfor China-based Sofgo. - Possible penalty of $\u2081\u2080\u2088 million or more for",
+      "TSMC publishes Q1 twenty-five earnings call presentation. - Strong buy rating upgrade for TSMS post Q1 earnings release. - AI chip demand drives TSMC's Q2 revenue beat."
+    ]
+  }
+}

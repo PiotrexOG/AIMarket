@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.69)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 60.36-77.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.3%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.183)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.9)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 58.22-77.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.34%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 76.96,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.46%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.53)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.99, P/S: 2.31)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.29)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.13)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike downgradede by S&Ps due to sliding profits and tariff pressured.",
+      "Nike partners with Special Olympics for Global Youth Sport Inclusion Initiative. - Tariff- driven price increases raise concerns about foot wear affordability.",
+      "Nike appoints new CEO for Converse - Reebok founding partner comments on US manufacturing and tariffs - Nikes Vomero running shoe becomes top seller - Special Olympics announces 3-year partnership with NIke"
+    ],
+    "medium_term_50d": [
+      "Nike downgradede by S&Ps due to sliding profits and tariff pressured.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Nike names new Converse CEo, Aaron Cain (21- year Nike veteran) Nike faces sluggish Sales Growth, Mounting Competition, Cost-cutting Measures Nike restructures Business by Sport across Nike, Jordon and Converse Brands"
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "NIKE dropped from multiple indices: Russell Top 10oo Growth, Russell 3ooo E Growth, Russel 10oooo Growth, and Russell 1ooo Value-Defensivo. - Net income and revenue decreased in Q4FY25 (-86% net income, -12% revenue). - Prices",
+      "Nike downgradede by S&Ps due to sliding profits and tariff pressured."
+    ]
+  }
+}

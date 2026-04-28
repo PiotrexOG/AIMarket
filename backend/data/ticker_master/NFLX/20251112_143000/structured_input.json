@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "NORMAL (3.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 107.34-124.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.05%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.356)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.75)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 107.34-126.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.6%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 113.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 46.3, P/S: 11.4)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.05)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena to NFLX regarding accounting practices. - Disney buys controlling stake in NFLX. - NFLX factory shuts down due to equipment failure. - CEO Reed Hastings steps down, names successor. - Supreme Court rules against NFLX in copyright case. - Major streaming competitor",
+      "Netflix opens first major in\u2011person amusementattraction, Netflix House.",
+      "Mike Tysion's Netflix special filming at Hard Rock Live. - Warner Bros Discovery potential deal impacts on film industry. - Netflix announces 10\\-for\\-1 stock split."
+    ],
+    "medium_term_50d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena to NFLX regarding accounting practices. - Disney buys controlling stake in NFLX. - NFLX factory shuts down due to equipment failure. - CEO Reed Hastings steps down, names successor. - Supreme Court rules against NFLX in copyright case. - Major streaming competitor",
+      "Netflix opens first major in\u2011person amusementattraction, Netflix House.",
+      "Netflix explores potential acquisition of WARNER BROS. DISCOVERY's studioand streaming assets."
+    ],
+    "long_term_200d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena to NFLX regarding accounting practices. - Disney buys controlling stake in NFLX. - NFLX factory shuts down due to equipment failure. - CEO Reed Hastings steps down, names successor. - Supreme Court rules against NFLX in copyright case. - Major streaming competitor",
+      "Netflix explores potential acquisition of WARNER BROS. DISCOVERY's studioand streaming assets.",
+      "Netflix announces a ten-for- one stock split. - Netflix explores potential acquisition of Warner Bros Discovery's studios and streaming business."
+    ]
+  }
+}

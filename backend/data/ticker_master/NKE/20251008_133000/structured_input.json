@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.11)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 68.03-76.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.43%)",
+        "cycle_macd": "BULLISH_FADING (0.033)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.87)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 68.03-80.17]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.45%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 56.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 69.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.0%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 11.2% | NM: 10.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.29x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.978B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -5.0%, EPS: -6.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 188.9%, Next Q Est Growth: -52.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.36, P/S: 2.11)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.35)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -6.36%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike cuts production due to weaker demand forecast. - Major lawsuit filed against Nike over labor practices.",
+      "Nike raises tariffs to$1.5 billionsignificantly higherthanexpected. - No information directly relatingto NKE'sproduction,supplychain,partnerships,M&A,companyguidance,productlaunchsorlawsuitsfoundinthedata. NONE",
+      "Nike sends disruptive message to loyalcustomers. - Key Banc upgradesto Overweightfor NKEafter Q1beat."
+    ],
+    "medium_term_50d": [
+      "Nike cuts production due to weaker demand forecast. - Major lawsuit filed against Nike over labor practices.",
+      "Nike raises tariffs to$1.5 billionsignificantly higherthanexpected. - No information directly relatingto NKE'sproduction,supplychain,partnerships,M&A,companyguidance,productlaunchsorlawsuitsfoundinthedata. NONE",
+      "Nike earnings release - NKE faces potential government shutdown impact - Muted demand in China affects NKE profits - Rising tariffs challenge NKE revenues"
+    ],
+    "long_term_200d": [
+      "Nike cuts production due to weaker demand forecast. - Major lawsuit filed against Nike over labor practices.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Nike earnings release - NKE faces potential government shutdown impact - Muted demand in China affects NKE profits - Rising tariffs challenge NKE revenues"
+    ]
+  }
+}

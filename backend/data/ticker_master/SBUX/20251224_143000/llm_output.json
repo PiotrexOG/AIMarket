@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. The bullish candle pattern has reverted to neutral, and price action is now stable near the 20-day SMA, showing a slight decline (-1.9%). Velocity ROC has normalized to 1.9%, indicating a loss of previous upward momentum. The RSI has fallen to 41.2, suggesting weakening short-term sentiment. W: Mean reversion bands have tightened (0.25), indicating reduced volatility and potential for less dramatic price swings. The price is in the middle of the 20-day range (81.97-90.57), offering no immediate directional advantage. O: Short-term news is now more focused on labor disputes (union occupying HQ) and executive appointments, which are neutral to slightly negative in immediate impact. T: Risk has increased due to the shift from a bullish to a neutral candle pattern and the decline in RSI. Volatility has also increased (ATR 2.64%), and while volume dynamics remain average (1.05), the shift in technicals suggests increased downside potential. Conviction has decreased due to the loss of bullish technical signals and mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend has weakened significantly. The MACD has reversed from bullish recovery to fading bullish momentum (0.045). Critically, the Z-score relative to the 50-day SMA has turned negative (-0.52), indicating a shift back towards a bearish trend position. Trend alignment remains compressed (0.95%), but the negative Z-score suggests this consolidation is now more likely to precede a downward move. W: The price remains within the monthly range (77.99-90.57), but the deteriorating MACD and negative Z-score suggest a higher probability of testing the lower bound. O: Medium-term news is still mixed, with ongoing labor issues and the corporate overhaul, but the appointment of a new CTO from Amazon is a neutral development. T: Risk has increased substantially due to the deteriorating MACD and negative Z-score, indicating a more bearish trend. Conviction has decreased due to the clear reversal in technical momentum and trend positioning, despite the absence of major fundamental shifts. The increased volatility also contributes to higher risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term technical structure remains bearish and has shown further deterioration. The secular bear market regime has widened its decline (-4.4%), and the death cross structure remains (-3.45%). The price has moved to a slightly higher position within the bearish lower quadrant (29.8%), but this is insufficient to offset the worsening regime and cross indicators. W: Fundamental metrics continue to be a significant concern, with stressed balance sheets (YrsToPay: 10.5x) and stagnant growth profiles (EPS: -35.2%). Valuation remains elevated (P/E: 36.07), increasing fragility. O: The long-term news narrative is dominated by ongoing operational challenges and strategic shifts, with the union occupation of HQ adding to the negative sentiment. T: Risk has increased due to the worsening bearish long-term structure, stressed fundamentals, and premium valuation. The increased volatility (ATR 2.64%) further exacerbates downside risk. Conviction remains low due to the entrenched bearish structure and ongoing fundamental concerns, with no significant positive catalysts visible."
+    }
+  }
+}

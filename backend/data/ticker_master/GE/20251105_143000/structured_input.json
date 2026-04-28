@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "STAGNANT (-0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 291.54-316.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.05%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.402)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 267.42-316.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (25.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.48%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 307.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.52%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.64, P/S: 7.45)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.43)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Korean Air buys $13,7B worth of GE Aero engines.",
+      "GE Aerspace and Kratos complete altitude testing on GEK eight hundred engine."
+    ],
+    "medium_term_50d": [
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Korean Air buys $13,7B worth of GE Aero engines.",
+      "GE Aersospace announces major aircraft engine order win. - Regulator imposes new ruling on GE's financial practices. - Merger: GE acquires key supplier in aviation industry. - Production delay at GE Power causes significant loss. - CEO announces major divestiture plan for healthcare unit."
+    ],
+    "long_term_200d": [
+      "GE Aersospace announces major aircraft engine order win. - Regulator imposes new ruling on GE's financial practices. - Merger: GE acquires key supplier in aviation industry. - Production delay at GE Power causes significant loss. - CEO announces major divestiture plan for healthcare unit.",
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Korean Air buys $13,7B worth of GE Aero engines."
+    ]
+  }
+}

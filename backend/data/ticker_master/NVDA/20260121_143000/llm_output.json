@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Short-term momentum has significantly deteriorated. The RSI has fallen sharply into bearish territory (32.4), indicating strong selling pressure. The price is now trading below the lower Bollinger Band (-0.16), a sign of extreme downside. The 20-day SMA is also showing weakness (-4.3%). The candle pattern has shifted to neutral, but the underlying indicators are overwhelmingly bearish.\nW: Conviction has decreased due to the sharp decline and bearish technical signals. While news of partnerships in drug discovery is positive, it is overshadowed by the negative price action and the blocking of H20 shipments to China. The elevated volume (1.33) on the decline suggests conviction in the selling.\nO: The immediate outlook is bearish. The price is oversold on short-term indicators, suggesting a potential for a bounce, but the underlying trend is negative. Resistance is expected at the 20-day SMA, which is now acting as a barrier. The 'EXTREME_MULTIPLE_RISK' is amplified by this sharp decline.\nT: Risk has increased substantially. The breach of the lower Bollinger Band, the bearish RSI, and the negative ROC all point to heightened downside exposure. Volatility remains moderate but the sharp price drop and the news regarding China create significant downside risk. The 'EXTREME_MULTIPLE_RISK' is now more pronounced."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: Medium-term technicals have worsened considerably. The MACD has accelerated its bearish trend (-0.615), confirming a strong downward momentum. The Z-score relative to the 50-day SMA remains negative and has slightly deteriorated (Z:-0.63), indicating the price is trading below its medium-term average.\nW: Conviction has decreased due to the accelerating bearish MACD and the continued negative Z-score. News regarding TSMC's expansion and potential regulatory approvals for chip sales to China are mixed and do not offset the deteriorating technical picture. The elevated volume suggests selling conviction.\nO: The medium-term trend is clearly bearish. The accelerating MACD suggests further downside potential. A sustained move below the 50-day SMA will confirm this bearish bias. Resistance is expected at the 50-day SMA and the upper range of the current consolidation.\nT: Risk has increased significantly. The accelerating bearish MACD, the negative Z-score, and the overall bearish technical structure indicate elevated downside risk. The 'EXTREME_MULTIPLE_RISK' is now compounded by these deteriorating medium-term technicals, making the stock highly vulnerable to further declines."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Long-term technicals show some erosion but remain fundamentally sound. The secular bull market regime is still in place, though its strength has slightly decreased (8.4%). The golden cross structure remains healthy (12.07%), and the long-term range position is stable (75.0%). However, the recent price weakness across shorter timeframes is beginning to weigh on the long-term outlook.\nW: Long-term conviction is supported by the fundamental strength and the persistent AI narrative. However, the recent negative price action and news regarding export restrictions to China introduce uncertainty. The slight decrease in the market regime strength and the proximity of resistance levels temper conviction.\nO: The long-term outlook remains cautiously bullish, underpinned by NVDA's dominant position in AI and strong fundamentals. However, the recent technical deterioration across shorter timeframes suggests that the upward momentum may be challenged. Continued strength in the secular bull market and the golden cross structure provide underlying support, but near-term headwinds are a concern.\nT: Risk has increased from the previous period. While the long-term technical structure is still intact, the recent sharp price declines and negative news flow elevate the overall risk. The 'EXTREME_MULTIPLE_RISK' remains a significant concern, and the current technical deterioration across shorter timeframes adds to the overall risk profile, suggesting a higher probability of a more substantial correction."
+    }
+  }
+}

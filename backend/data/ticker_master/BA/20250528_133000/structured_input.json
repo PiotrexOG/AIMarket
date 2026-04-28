@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (74.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "NORMAL (1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 177.63-209.66]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.46%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.585)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 128.88-209.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.01%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 201.2,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.45%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -45.59)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing agrees to new fin ES with Justice Department over 73 seventh MAX crashes. - Airbus receives wide-body aeroplane order, restores confidence.",
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Boeing stabilizes 733 MAX production at monthly rate of 38 units following FAA approval. - US Navy contracts Raytheon (RTX) subsidiary to support AIM- IX Sidewinder missiles. - Safran confirms Boeing returns to dynamic production mode for 73 Seven MAX jets. - Lawyer representing"
+    ],
+    "medium_term_50d": [
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Boeing agrees to new fin ES with Justice Department over 73 seventh MAX crashes. - Airbus receives wide-body aeroplane order, restores confidence.",
+      "Justice Department may dropped criminal prosecution against Boeing over Max crashes."
+    ],
+    "long_term_200d": [
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Justice Department may dropped criminal prosecution against Boeing over Max crashes.",
+      "Boeing securs \"largest- ever\" order from Qater for up to $96 billon worth of jets. - US Justice Department meets families of Seven37 MAX crash victims regarding Boeing criminalcase."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 146.12-158.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.57%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.258)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.6)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-166.63]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.57%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 42.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 152.98,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.73%))",
+      "volume_dynamics": "AVERAGE (0.89)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 16.87, P/S: 4.15)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.75)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "FDA votes in favor of JNJ's DAR\u0417\u0410\u041b\u0415X \u0424\u0410\u0421\u041f\u0420\u041e benefit-risks.",
+      "Johnson & Johnson bankruptcy filing dismissed. - Dan Loeb acquires significant stake in Kenvue. - Teva initiates IND-enabled studies for B\u04149 therapy.",
+      "Johnson & Johnny announces new cancer innovations at ASCOand EHA."
+    ],
+    "medium_term_50d": [
+      "FDA votes in favor of JNJ's DAR\u0417\u0410\u041b\u0415X \u0424\u0410\u0421\u041f\u0420\u041e benefit-risks.",
+      "Johnson & Johnny announces new cancer innovations at ASCOand EHA.",
+      "Johnson & Johnson FDA Panel supports approval of single- agent Darzal EX FAS PRO\u00ae for high risk multiple myelama. - Federal jury orders Johnson & Johnson Biosense Webster to pay $\u2081\u2084\u2087 million for antitrust violation."
+    ],
+    "long_term_200d": [
+      "FDA approvals J&J's Ima Harvey for generalisedmyastheniagravis.",
+      "Johnson & Johnson received FDA approvalfor IMAAVYP\u2122(nipocalimb-aahu)to treatgeneralizedmyastheniagravis.",
+      "FDA votes in favor of JNJ's DAR\u0417\u0410\u041b\u0415X \u0424\u0410\u0421\u041f\u0420\u041e benefit-risks."
+    ]
+  }
+}

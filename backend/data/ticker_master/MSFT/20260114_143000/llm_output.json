@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to 34.7, firmly in bearish territory. While the candle pattern remains neutral, velocity has weakened further (-3.4%), and the price is now further from the SMA20 (-2.1%). The stock is trading at critical support levels within its 20-day range. W: The sharp decline in RSI and increased distance from the SMA20 reduce conviction. The price action at critical support, while potentially a floor, also indicates underlying weakness. O: News flow is mixed, with some positive AI partnerships (Google Gemini, Fiserv) and acquisitions (Osmith), but also a concerning data breach impacting security services. T: The significant technical deterioration, particularly the RSI and SMA20 positioning, leads to a substantial score reduction. Increased proximity to support and negative momentum increase risk. The mixed news flow limits conviction for a more aggressive score change."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment has worsened, showing a gradual descent (-1.54%). The MACD has confirmed a bearish zero-cross (-0.349), indicating a significant shift in momentum. The Z-score relative to the SMA50 is now deeply bearish (Z:-1.83), suggesting a strong downtrend. The price is strengthening at monthly support, but this follows a period of decline. W: The confirmed bearish MACD cross and deeply negative Z-score severely undermine conviction. The gradual descent in trend alignment suggests a lack of immediate reversal signals. O: News flow remains focused on AI initiatives and acquisitions, which are positive long-term drivers. However, these are currently overshadowed by the deteriorating technical picture. T: The confirmed bearish MACD and worsening trend alignment necessitate a significant score reduction. The deep bearish Z-score and continued negative trend increase risk. Conviction is low due to the clear technical breakdown, despite the underlying fundamental strengths."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term market regime remains a BEAR_MARKET_RELIEF_RALLY, with a slight negative drift (-2.1%). The HEALTHY_GOLDEN_CROSS_STRUCTURE (1.51%) is still present but has narrowed. The long-term range position has moved to a MID_CYCLE_NEUTRAL_ZONE (56.9%), indicating a loss of bullish positioning. W: While the long-term structure remains intact, the narrowing of the golden cross and the shift to a neutral range position temper conviction. The ongoing bear market relief rally context adds uncertainty. O: Long-term news continues to highlight strategic AI investments and partnerships, reinforcing the company's growth narrative. However, the market regime and range position suggest that these positive fundamentals are not currently translating into sustained price appreciation. T: The shift to a neutral long-term range position and the continued bear market relief rally context lead to a reduction in score and an increase in risk. The fundamental strengths remain, but the broader market and price action are creating headwinds. Conviction is moderate due to the stable underlying business quality."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The candle pattern has shifted to strong bearish, and RSI has fallen to 46.5, indicating weakening momentum. The price is now within normal Bollinger Bands and has moved back into the middle of its 20-day range. Velocity has also decreased. W: The strong bearish candle pattern and declining RSI are concerning. The news flow is negative, with reports of COVID-19 vaccine trial pauses and study halts, leading to stock price drops. O: The stock has moved away from its recent highs and is now trading in the middle of its range, suggesting a potential for further downside if negative sentiment persists. T: Risk has increased substantially due to the bearish technical signals, negative news, and the shift away from the upper range. The elevated volume on the recent price decline also adds to downside pressure."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend is showing signs of reversal. The bullish MACD is fading, and the price has moved back towards the 50-day SMA, with its Z-score now near zero, indicating a loss of bullish momentum. The stock is now inside its monthly range. W: The fading MACD and the price returning to the 50-day SMA suggest that the previous bullish trend is losing steam. Negative news regarding COVID-19 vaccine trials could weigh on sentiment. O: The stock is no longer in a strong bullish trend position and is consolidating within its longer-term range. This could lead to a period of sideways movement or a potential retest of lower support levels. T: Risk has increased as the bullish conviction has waned. The shift from a strong bullish trend to consolidation, coupled with negative news, elevates the potential for a downside move."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound but has lost some of its previous strength. The market regime is still a secular bull market, though its strength has moderated. The stock is now in the upper quadrant of its long-term range, but not at the extreme highs seen previously. The golden cross structure remains intact. W: While the long-term technical structure is still supportive, the shift in short- and medium-term momentum and the negative news flow are headwinds. The company's core business quality and financial health remain solid, providing a degree of resilience. O: The company's established business and pipeline advancements in areas like oncology and metabolic diseases offer long-term potential. However, the recent news regarding COVID-19 vaccine trials and cost-cutting measures could impact near-term sentiment. T: Risk has increased slightly due to the weakening short-term momentum and the negative news impacting the vaccine business. However, the underlying strength of the long-term trend and the company's diversified pipeline mitigate some of this risk."
+    }
+  }
+}

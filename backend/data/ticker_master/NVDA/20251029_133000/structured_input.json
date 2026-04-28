@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.3)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.23)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.2%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 176.77-203.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.15%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.068)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:4.56)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 164.07-203.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (36.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.45%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 106.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 210.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.01%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 97.5, P/S: 54.34)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 89.98)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia CEO speaks in Washington regarding China chip sales. - Foxconn invests $1.three billion in AI and super computing.",
+      "Nvidia announces new AI chips for data centers, launching in 2oo6 and twenty-seven. - Gemini introduces Solana-brandered credit card offering up to ten percent SOL back. - Super X AI Tech forms joint ventures for advanced liquid cooling and AI system Integration.",
+      "Nvidia investor Marc Andr\u00e9ssen predicts hyper-deflation era driven by AI. - Luminar Technology revises outlook, announces new lidar chip and production line. - Ohio-based company partners with Nvidai, stock up over 85% in past 5 years."
+    ],
+    "medium_term_50d": [
+      "Nvidia CEO speaks in Washington regarding China chip sales. - Foxconn invests $1.three billion in AI and super computing.",
+      "Nvidia investor Marc Andr\u00e9ssen predicts hyper-deflation era driven by AI. - Luminar Technology revises outlook, announces new lidar chip and production line. - Ohio-based company partners with Nvidai, stock up over 85% in past 5 years.",
+      "Nvidia announces new AI chips for data centers, launching in 2oo6 and twenty-seven. - Gemini introduces Solana-brandered credit card offering up to ten percent SOL back. - Super X AI Tech forms joint ventures for advanced liquid cooling and AI system Integration."
+    ],
+    "long_term_200d": [
+      "Nvidia banned from selling custom chips in China. Note: Based on rule #6, this event meets the criteria for a material event directly affecting NVDA.",
+      "Nvidia partners with Open AI for 10GW AI infrastructure expansion.",
+      "Nvidia CEO speaks in Washington regarding China chip sales. - Foxconn invests $1.three billion in AI and super computing."
+    ]
+  }
+}

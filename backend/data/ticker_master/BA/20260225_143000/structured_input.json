@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.27)",
+        "velocity_roc_10": "NORMAL (-4.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 227.46-254.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.73%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.748)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 198.05-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.22%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 229.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.12%))",
+      "volume_dynamics": "AVERAGE (0.62)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 97.0, P/S: 2.04)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 33.51)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.86)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues.",
+      "BAE Systems receives over $505 million contract for Paladin Self\u2010Propelled Howitzer production. - BAE Systemsdelivers 1 hundred thousandth APKWSlaser-guidancekit.",
+      "Boeing orders 30o GEnx Enginesfrom GEAerospacefornew787ss. - BAESystemsdemonstratemodularairbornejamaattackcapabilities."
+    ],
+    "medium_term_50d": [
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues.",
+      "Boeing gains FTC approval and Dreamliner orders raise valuation questions - Boeling names St. Louis facility as headquarters for Defense, Space (&) Security business - Booeing and Northrop Grumman turn around regulatory issues - Boeigng wins major 7 Eighty-seven Dreamlinerordersfrom Air Astanaand Delta Air Lines",
+      "Boeing orders 30o GEnx Enginesfrom GEAerospacefornew787ss. - BAESystemsdemonstratemodularairbornejamaattackcapabilities."
+    ],
+    "long_term_200d": [
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues.",
+      "Boeing gains FTC approval and Dreamliner orders raise valuation questions - Boeling names St. Louis facility as headquarters for Defense, Space (&) Security business - Booeing and Northrop Grumman turn around regulatory issues - Boeigng wins major 7 Eighty-seven Dreamlinerordersfrom Air Astanaand Delta Air Lines",
+      "Boeing completes acquisition of Spirit Aero Systems. - Air India and ETHiopian Airlines place large orders for Boeing planes. - Ongoing production challenges acknowledged despite record backlog."
+    ]
+  }
+}

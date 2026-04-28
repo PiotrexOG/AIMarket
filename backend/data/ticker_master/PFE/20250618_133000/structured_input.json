@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 22.81-24.95]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.46%)",
+        "cycle_macd": "BULLISH_FADING (0.092)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.99)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 20.92-24.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-11.09%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 31.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 23.91,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.77%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.22, P/S: 2.19)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.51)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.44x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE.",
+      "Pfizer receives FDA approvalfor expanded use of COPD drug. (Event 4) - Pfizersupply chain disrupted due to natural disaster. (Hypothetical)",
+      "Pfizer announces US FDA review update for TALzenna combination therapy."
+    ],
+    "medium_term_50d": [
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE.",
+      "Pfizer announces US FDA review update for TALzenna combination therapy.",
+      "Pfizer receives FDA approvalfor expanded use of COPD drug. (Event 4) - Pfizersupply chain disrupted due to natural disaster. (Hypothetical)"
+    ],
+    "long_term_200d": [
+      "Trump administration discusses policies to limit pharma advertising, potentially impacting $11B+ spent by companies including PFE.",
+      "Pfizer enters exclusive licensing agreementwith 3SBIO for SSGJ-\\*707 outside China. -PFizer invests $10o Million in 3 SBIO after transaction closure. -Pfizer secures global rights,excluding China,to develop,manufacture and commercialize SSGJ\u2013\\*70 seventh",
+      "Trump orders FDA to fast-track PFE drug approvals due to national security concerns. Based on the provided data, there is one material event identified that directly affects PFE on May 6, 20 twenty-five. This event involves President Trump signing an executive order directing the Food and Drug Administration (FDA) to accelerate drug approvals for domest"
+    ]
+  }
+}

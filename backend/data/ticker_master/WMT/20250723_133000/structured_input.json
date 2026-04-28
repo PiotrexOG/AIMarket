@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.37)",
+        "velocity_roc_10": "NORMAL (-1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 94.23-99.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.25%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.124)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 91.89-100.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.89%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 95.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.4%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.81, P/S: 1.18)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.52)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart lowering prices on same items as Amazon increases them. - Amazon disputes report of hiking prices on low cost goods. - L'OR\u00c8AL PARIS introduces new product collection exclusively at Wal mart.",
+      "Avery Dennenison lowers third-quater profit forecast - Wal Mart contracts with 20\\/20Now for tele-optometery services in Wisconsin stores - Farberware expands cookware offer INGS at Wal Mart",
+      "New recall affects WMT's electronics department due to fire hazard in cheap e- bikes."
+    ],
+    "medium_term_50d": [
+      "Walmart lowering prices on same items as Amazon increases them. - Amazon disputes report of hiking prices on low cost goods. - L'OR\u00c8AL PARIS introduces new product collection exclusively at Wal mart.",
+      "New recall affects WMT's electronics department due to fire hazard in cheap e- bikes.",
+      "Walmart versus Dollar General : Which Retails Stock looks stronger? (diverging retail strength) - Wal Mart reports stronger-Than-Expected Holiday Sales. - US Agriculture Secretary suggests automation and Medicaid recipients replace migrant workers."
+    ],
+    "long_term_200d": [
+      "Walmart and Amazon exploring issuing theirownstablecoins.",
+      "Walmart announced partnership with Kroger for expanded grocery delivery services. - WMT signed M&A deal with e-commerce giant Alibaba Group. - New product launch: Walmart introduces autonomous grocery delivery robots. - Federal regulation change impacts WMT's import taxes from China.",
+      "Walmart's digital momentum boosts earnings trajectory: Morgan Stanley."
+    ]
+  }
+}

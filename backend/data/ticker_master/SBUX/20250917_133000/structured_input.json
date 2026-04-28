@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (41.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 81.2-92.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.31%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.249)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.47)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 81.2-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.86%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 20.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 84.25,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.53, P/S: 2.64)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.6)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks named official coffee partner for LA28 Olympics and Team USA - Significant increase in US coffee prices due to bean shortage and tariffs",
+      "Starbucks enters negotiations for China stake sell. -Starbucks opens flagship store in Madrid's Bernabeu stadium. -Potential buyers entertain bids for Starbucks Chinese ops.",
+      "Starbucks prepares for final bids from Carlyle Group, EQ\u0422, Hong Shan, and Boyu Capital for China operations. -Starbucks partners with AI startup Nomad Go for automatic counting in 11,\\*000 stores. - starbucks opens first flagship store inside Real Madrid\u2019S Bernabeu stadium."
+    ],
+    "medium_term_50d": [
+      "Starbucks enters negotiations for China stake sell. -Starbucks opens flagship store in Madrid's Bernabeu stadium. -Potential buyers entertain bids for Starbucks Chinese ops.",
+      "Starbucks prepares for final bids from Carlyle Group, EQ\u0422, Hong Shan, and Boyu Capital for China operations. -Starbucks partners with AI startup Nomad Go for automatic counting in 11,\\*000 stores. - starbucks opens first flagship store inside Real Madrid\u2019S Bernabeu stadium.",
+      "Starbucks named official coffee partner for LA28 Olympics and Team USA - Significant increase in US coffee prices due to bean shortage and tariffs"
+    ],
+    "long_term_200d": [
+      "Starbucks enters negotiations for China stake sell. -Starbucks opens flagship store in Madrid's Bernabeu stadium. -Potential buyers entertain bids for Starbucks Chinese ops.",
+      "Starbucks prepares for final bids from Carlyle Group, EQ\u0422, Hong Shan, and Boyu Capital for China operations. -Starbucks partners with AI startup Nomad Go for automatic counting in 11,\\*000 stores. - starbucks opens first flagship store inside Real Madrid\u2019S Bernabeu stadium.",
+      "Starbucks experiences sharp profit declines in Q3 20 twenty-five. - Consumer spending tightens impacts US comps, operating margins at Starbucks."
+    ]
+  }
+}

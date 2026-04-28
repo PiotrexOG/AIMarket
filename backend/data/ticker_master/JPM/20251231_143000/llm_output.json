@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 6.5,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term momentum has shifted from explosive to overbought, with RSI reaching 73.2. The candle pattern has neutralized, and velocity has normalized. The price is now within normal Bollinger Bands and in the middle of its 20-day range. W: The shift to 'OVERBOUGHT_EXTREME' and the neutral candle pattern suggest a potential for consolidation or a short-term pullback. The price is no longer testing resistance but is in a neutral range position. O: News flow is mixed, with some positive strategic appointments but also reports of account freezes for stablecoin startups, introducing some regulatory uncertainty. T: The short-term score has decreased by 1.3 points due to the deterioration in momentum indicators and the shift from a strong bullish pattern to neutral. Conviction has decreased by 1.3 points as the technical signals are now mixed and showing signs of overextension. Risk has increased by 1.3 points due to the 'OVERBOUGHT_EXTREME' RSI and the potential for a reversal from this level, coupled with the mixed news flow."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend is still bullish but showing signs of fading momentum. The MACD has moved from 'BULLISH_ACCELERATING' to 'BULLISH_FADING', indicating a loss of upward thrust. The Z-score around the SMA50 has decreased, suggesting less overextension. W: The fading MACD and the price being inside the monthly range, rather than pushing resistance, indicate a potential for a slowdown in the upward trend. The 'RANGE' bias in the SR landscape suggests a lack of clear directional conviction. O: The news narrative remains consistent with strategic initiatives, but the overall market sentiment for financials might be softening, as indicated by the decline in financial stocks mentioned in the news. T: The medium-term score has decreased by 1.3 points due to the fading MACD and the shift from an overextended position to a more neutral trend position. Conviction has decreased by 1.0 point as the accelerating momentum has stalled. Risk has increased by 0.7 points due to the fading momentum and the shift in SR bias to 'RANGE', suggesting increased potential for sideways movement or a reversal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.8,
+        "conv": 8.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong, supported by a secular bull market regime and a healthy golden cross structure. The price is still near its cycle top, though slightly off its absolute peak. W: The price is no longer at ATH but has pulled back to 94.2% of its cycle top, indicating some profit-taking or a pause in the secular uptrend. The fundamental weaknesses in balance sheet and FCF remain a latent risk, although currently mitigated by the strong market regime. O: The long-term news flow continues to highlight strategic appointments and product launches, reinforcing the company's long-term positioning and resilience. T: The long-term score has decreased slightly by 0.2 points due to the price moving from ATH to 94.2% of the cycle top. Conviction has decreased by 0.5 points as the absolute peak has been passed, introducing a slight degree of uncertainty. Risk has increased by 0.5 points, primarily due to the price moving away from the absolute peak and the persistent, albeit currently managed, fundamental weaknesses."
+    }
+  }
+}

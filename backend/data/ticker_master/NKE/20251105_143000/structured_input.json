@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (22.0)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.13)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-10.4%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-8.5%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 61.12-70.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.24%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.518)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.41)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 61.12-79.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-11.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.23%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 29.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 61.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.69%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 11.2% | NM: 10.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.29x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.978B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -5.0%, EPS: -6.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 188.9%, Next Q Est Growth: -52.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.86, P/S: 1.86)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.49)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -6.36%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike restructures organization under 'Sport Offense' initiative.",
+      "Nike doubles downon athlete-LED storytelling. - Adidas postsrecord Q3 sales andimproved margins.",
+      "Nike's main competitor Lulule MON announces NFL partnership with Fanat ICS."
+    ],
+    "medium_term_50d": [
+      "Nike restructures organization under 'Sport Offense' initiative.",
+      "Nike doubles downon athlete-LED storytelling. - Adidas postsrecord Q3 sales andimproved margins.",
+      "Nike's main competitor Lulule MON announces NFL partnership with Fanat ICS."
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - New tariffs imposed on imported footwear, affects NKE costs.",
+      "Nike restructures organization under 'Sport Offense' initiative.",
+      "Nike cuts production due to weaker demand forecast. - Major lawsuit filed against Nike over labor practices."
+    ]
+  }
+}

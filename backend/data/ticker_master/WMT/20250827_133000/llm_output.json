@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated significantly. The candle pattern is now neutral, and the RSI has plunged into extreme oversold territory (23.8). Velocity (ROC 10) is sharply negative (-7.4%), and the price is now trading 4.2% below the 20-day SMA, reaching critical support at the lower end of its 20-day range. W: The rapid decline and oversold conditions suggest potential for a short-term bounce, but the overall trend is bearish. The price is testing key support levels, increasing the risk of a breakdown. O: Recent news highlights missed earnings expectations and a subsequent share price drop, directly impacting short-term sentiment. The VMware acquisition and Ranpak partnership are positive but overshadowed by the earnings miss. T: The short-term score has been reduced to 3.0 due to the sharp technical deterioration and negative news. Conviction has fallen to 4.0 as the oversold conditions create uncertainty. Risk has increased to 7.5, reflecting the critical support level being tested, the oversold RSI, and the negative news flow."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.5,
+        "risk": 7.8
+      },
+      "synthesis": "S: The medium-term trend alignment remains marginally bullish (2.29%), but this is contradicted by a bearish Z-score (-0.67) relative to the 50-day SMA. The MACD has accelerated further into bearish territory (-0.813), indicating a strong downward momentum. The stock is still within its monthly range. W: The accelerating bearish MACD and negative Z-score are strong bearish signals, suggesting the prior bullish trend is broken. The price is now below key medium-term moving averages, increasing downside risk. O: The news flow is mixed, with some operational partnerships mentioned, but the dominant theme is the recent earnings miss and subsequent share price decline. This negative fundamental shock is now impacting medium-term technicals. T: The medium-term score has been lowered to 3.5, reflecting the significant deterioration in MACD and SMA positioning. Conviction has decreased to 4.5 due to the conflicting signals and the clear bearish momentum. Risk has increased to 7.8, driven by the bearish MACD, negative Z-score, and the impact of the earnings miss on the broader trend."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term secular bull market regime is still in place, and the golden cross structure remains healthy. However, the long-term range position has moved down to the neutral zone (64.1%), indicating a loss of upward momentum from previous highs. W: While the long-term technical structure is still fundamentally sound, the shift in range position suggests a potential for a longer-term consolidation or trend change. The business quality and financial health metrics, while stable, do not offer strong upside support. O: The long-term narrative is still influenced by AI initiatives, but the recent earnings miss and the shift in valuation multiples (PEG now 4.96) introduce significant long-term risk. The competitive landscape remains intense. T: The long-term score has been reduced to 6.5, reflecting the decline in the long-term range position and increased valuation risk. Conviction has decreased to 6.0 as the long-term outlook is less certain. Risk has increased to 5.5, primarily due to the elevated valuation multiples and the negative impact of the recent earnings miss on the growth outlook."
+    }
+  }
+}

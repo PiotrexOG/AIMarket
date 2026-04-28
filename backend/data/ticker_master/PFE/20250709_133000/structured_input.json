@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.0)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.42-25.96]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.28%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.118)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 21.97-25.96]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.66%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.58,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "ELEVATED (1.34)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.42, P/S: 2.34)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.62)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.41x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "FDA discontinues manufacture of Hosp Ira's morph INE sulfate injectable products - website - Pfizers Chief Corporate officer Sally Susman steps down - Trump plans 50\\% copper tariff, indicates delay on drug levies",
+      "House Judiciacy Committee investigates Pfizer for potential delay of COVID-1 nineteen vaccine results.",
+      "Pfizer loses patent protection for several blockbuster drugs. - FDA restricts Moderna and Nova Xis COVID vaccines approval to high-risks groups (overruling scientists). - Pfzer trades above 50 day average for over month."
+    ],
+    "medium_term_50d": [
+      "House Judiciacy Committee investigates Pfizer for potential delay of COVID-1 nineteen vaccine results.",
+      "House committee sub poenas former Pfzer executive over alleged COVD vaccine delay - Pfzer expands collaboration with X\u0442\u0430\u043b \u041f\u0438 to enhance drug discovery platform",
+      "Pfizer loses patent protection for several blockbuster drugs. - FDA restricts Moderna and Nova Xis COVID vaccines approval to high-risks groups (overruling scientists). - Pfzer trades above 50 day average for over month."
+    ],
+    "long_term_200d": [
+      "House committee sub poenas former Pfzer executive over alleged COVD vaccine delay - Pfzer expands collaboration with X\u0442\u0430\u043b \u041f\u0438 to enhance drug discovery platform",
+      "Pfizer'sb HAEMOPHILIA treatment meets Phase III goal. - Positive Phase III results for Pfizer'ssickle CELL DISEASE treatment.",
+      "Pfizer'sbleeding disorder therapy, Hypmvazi, meets key goals in Phase 3study. - Positivetopline results from Phase 3 BASIS study for Hypmvazihemophiliatreatment."
+    ]
+  }
+}

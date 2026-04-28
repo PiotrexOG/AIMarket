@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.85)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 871.71-994.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.54%)",
+        "cycle_macd": "BULLISH_ACCELERATING (7.842)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1078.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.47%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 973.64,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.68%))",
+      "volume_dynamics": "AVERAGE (0.66)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 58.65, P/S: 1.7)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.34)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales.",
+      "Costco posts higher sales in march: +8.6%. - Cost Co reports sales rise of 8,6% in March.",
+      "Costco C FO warns members about tariffs. - Retailers with more purchasing power to weather tariffs better."
+    ],
+    "medium_term_50d": [
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales.",
+      "Costco posts higher sales in march: +8.6%. - Cost Co reports sales rise of 8,6% in March.",
+      "Trump announces tariffs hike on imports, potentially increasing costs for COST."
+    ],
+    "long_term_200d": [
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales.",
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)",
+      "Costco posts higher sales in march: +8.6%. - Cost Co reports sales rise of 8,6% in March."
+    ]
+  }
+}

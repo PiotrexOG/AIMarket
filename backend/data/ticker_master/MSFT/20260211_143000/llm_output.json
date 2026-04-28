@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term technicals show a shift from extreme oversold to a bearish zone, with RSI at 39.8 and price within normal Bollinger Bands (0.24). Velocity remains strongly negative (-14.0%), indicating continued selling pressure. The price is stabilizing near the 20-day SMA (-6.4%), suggesting a potential pause in the sharp decline. W: While the immediate oversold condition has eased, the strong negative velocity and bearish candle pattern indicate ongoing weakness. News flow is mixed, with significant AI investment announcements countered by EU antitrust investigations. O: The stabilization near the 20-day SMA and the move out of extreme oversold conditions offer a slight reprieve, but the underlying bearish momentum persists. Increased AI investment news could be a positive catalyst if it translates to demand. T: The score has slightly increased from 3.0 to 3.5, reflecting the move out of extreme oversold conditions and stabilization near the 20-day SMA. Risk has decreased marginally from 7.5 to 7.0 as the price is no longer below the lower Bollinger Band, though velocity remains a concern. Conviction has increased slightly from 4.0 to 4.5 due to the clearer stabilization pattern, despite mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains bearish (-5.29%), but the MACD is showing signs of recovery, moving from -4.657 to -3.528. The Z-score relative to the SMA50 is still an outlier at -2.32, indicating significant downside deviation but less extreme than before. The price continues to strengthen at monthly support, providing a crucial floor. W: The bearish trend alignment and continued bearish Z-score are significant headwinds. However, the improving MACD and sustained support at monthly levels offer some resilience. News regarding increased AI investment is a positive fundamental driver, but antitrust concerns remain a risk. O: The improving MACD and sustained support suggest a potential for a medium-term bottoming process, though the overall trend is still negative. The fundamental strength of Microsoft's AI strategy is a key supportive factor. T: The score has increased from 2.5 to 3.0, reflecting the improving MACD and continued support at monthly levels, indicating a potential shift from outright bearishness. Risk has decreased slightly from 8.0 to 7.5 as the Z-score has moved away from extreme outlier status, though still indicating significant downside deviation. Conviction has increased from 3.5 to 4.0 due to the improving technical signals and sustained fundamental support."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term market regime remains in a secular bear market (-15.2%), and the 'death cross' structure persists, with the decline widening to -4.32%. The long-term range position has deteriorated further, now in the lower quadrant at 11.3%, indicating significant long-term bearish positioning. W: The persistent 'death cross' and the deep penetration into the lower long-term range signal severe structural weakness. News flow is dominated by ongoing AI investment and regulatory scrutiny, which adds to long-term uncertainty. O: The confluence of a 'death cross', a deeply bearish long-term range position, and a secular bear market regime presents substantial long-term headwinds. The strong fundamental quality of Microsoft is the primary mitigating factor against a more severe score. T: The score has decreased slightly from 1.5 to 2.0, reflecting a marginal improvement in the 'death cross' magnitude, but the overall long-term picture remains deeply bearish. Risk has decreased slightly from 9.0 to 8.5 as the price has moved slightly higher within the lower quadrant, but the structural risks remain very high. Conviction has increased slightly from 3.0 to 3.5 due to the sustained fundamental strength providing a floor, despite the overwhelmingly bearish long-term technicals."
+    }
+  }
+}

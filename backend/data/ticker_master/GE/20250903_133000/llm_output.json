@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term score has decreased to 5.0 from 5.5. The RSI has moved lower into the neutral zone (43.6), indicating a loss of upward momentum. The \"DOJI_INDECISION\" pattern has resolved to \"NEUTRAL\", and the price is still stable near the 20-day SMA (1.4%). W: Conviction has decreased to 4.5 from 5.0. The shift in RSI and the neutral candle pattern suggest less conviction in an immediate upward move. The \"RANGE\" bias persists, but the short-term technicals are less constructive. O: News flow remains mixed, with some positive order announcements but also general statements about cost savings and product launches, lacking the specific impact of the previous Korean Air order. T: Downside risk has slightly increased to 6.8 from 6.5. The decline in RSI and the neutral candle pattern suggest a slightly higher probability of a short-term pullback. The \"F:DISTANT @20d\" barrier remains, but the loss of momentum increases near-term risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term score has increased to 5.8 from 5.0. The MACD has confirmed a bullish zero cross (0.045), indicating strengthening upward momentum. The Z-score for the 50-day SMA remains bullish (1.1), reinforcing the positive trend alignment. W: Conviction has increased to 5.2 from 4.5. The confirmed bullish MACD cross and sustained bullish positioning relative to the 50-day SMA provide stronger evidence of a durable uptrend. The \"POWER_ZONE_CONFLUENCE(2)\" structure is now supported by improving medium-term momentum. O: Continued positive news regarding engine orders, including a $1B deal for India, provides tangible fundamental support for the medium-term outlook, reinforcing demand and revenue expectations. T: Downside risk has decreased to 6.5 from 7.0. The confirmed bullish MACD and sustained trend position suggest a lower probability of a significant mean reversion or trend reversal. The \"HIGH_MULTIPLE_RISK\" is being increasingly offset by strong fundamental catalysts and improving technicals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.6,
+        "conv": 4.1,
+        "risk": 7.9
+      },
+      "synthesis": "S: The long-term score has slightly increased to 4.6 from 4.5. The price has moved to a new cycle high (94.6%), indicating continued strength within the secular bull market regime. However, the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" remains a significant consideration. W: Conviction has increased slightly to 4.1 from 4.0. The sustained price appreciation and ongoing positive news flow from the aerospace division provide some support for conviction, but the elevated valuation and exhaustion risk temper this. O: The \"ATH_OR_TOP_OF_CYCLE\" position, while indicative of strength, also presents a clear risk of exhaustion. The \"HIGH_MULTIPLE_RISK\" is a persistent concern, and while new orders are positive, the long-term growth profile remains challenged by revenue contraction. T: Downside risk has slightly decreased to 7.9 from 8.0. While the stock is at cycle highs and valuation risk is high, the continued positive news from the core aerospace business provides some mitigation. However, the inherent risk of a \"BULLISH_STRETCH_EXHAUSTION\" at these levels remains the dominant factor."
+    }
+  }
+}

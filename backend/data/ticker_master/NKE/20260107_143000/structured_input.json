@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 56.99-69.14]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.63%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.388)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-70.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.2%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 63.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.33%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.05, P/S: 1.98)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.74)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike executions buy US$4._45m worth of company stock. - US multinationals excluded from global tax agreement.",
+      "Nike CEO and directors collectively buy $4.5M worth of NKE shares. - Lulule MON search for new CEO: Maurer, Gentile, Hirshberg nominated."
+    ],
+    "medium_term_50d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike executions buy US$4._45m worth of company stock. - US multinationals excluded from global tax agreement."
+    ],
+    "long_term_200d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike reports fiscal second-quad earnings after the market closes. - Investors expect new product innovions and third quarter guidance."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "NORMAL (1.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 279.1-309.01]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.21%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.849)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.1-326.86]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.0%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 294.97,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.38%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "MOMENTUM_UNKNOWN"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.71, P/S: 2.94)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.27)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 10.78)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase announces \u20ac2.8 million for small businesses. - Trump argues to keep JPMorgan 'debanking' lawsuit in Florida. - JPMorgan Chase CEO Dimon frustrated with US policies. - Grab enters share buyback agreement with JPMorgan Chase. - JPMorgan monitors junior investment bankers' keystrokes, calls, meetings.",
+      "JPMorgan shifts EA buyout debt mix, boosts loan. - JPMorgan kicks off $8 billion junk-bond sale for EA buyout. - JPMorgan offers clients new way to hedge AI debt risk. - JPMorgan launches $8 billion junk-bond sale for EA buyout.",
+      "JPMorgan launches dedicated athlete wealth management initiative. - JPMorgan Chase sole arranger for Korea Zinc $2 billion loan. - US regulators unveil plans to ease capital rules for big banks. - JPMorgan, Goldman offer hedge funds way to short private credit. - Chase opens new Pacific Palisades branch after wildfire. - Fed holds rates steady, impacting JPM and other banks. - Fed proposes easing capital rules for major banks. - JPMorgan ends ties with App Lovin investor over KYC."
+    ],
+    "medium_term_50d": [
+      "JPMorgan launches dedicated athlete wealth management initiative. - JPMorgan Chase sole arranger for Korea Zinc $2 billion loan. - US regulators unveil plans to ease capital rules for big banks. - JPMorgan, Goldman offer hedge funds way to short private credit. - Chase opens new Pacific Palisades branch after wildfire. - Fed holds rates steady, impacting JPM and other banks. - Fed proposes easing capital rules for major banks. - JPMorgan ends ties with App Lovin investor over KYC.",
+      "JPMorgan Chase announces \u20ac2.8 million for small businesses. - Trump argues to keep JPMorgan 'debanking' lawsuit in Florida. - JPMorgan Chase CEO Dimon frustrated with US policies. - Grab enters share buyback agreement with JPMorgan Chase. - JPMorgan monitors junior investment bankers' keystrokes, calls, meetings.",
+      "JPMorgan limits private credit exposure, Morgan Stanley caps redemptions. - JPMorgan curbs lending as Morgan Stanley, Black Rock limit withdrawals. - JPMorgan, UBS dropped hedge fund embroiled in HK probe. - JPMorgan faces $328M lawsuit over alleged crypto transfers. - JPMorgan reprices AI exposed software loans amid credit concerns. - JPMorgan CEO warns markets ignoring inflation risk."
+    ],
+    "long_term_200d": [
+      "JPMorgan Chase to open over 160 new branches in 2026. - JPMorgan Chase plans to hire over 1,100 employees in 2026. - JPMorgan Chase to increase AI use for efficiency and risk controls. - JPMorgan Chase to open 160 new branches, renovate 600 locations. - JPMorgan Chase to expand Community Centers and financial education workshops. - Jamie Dimon insists crypto firms offering stablecoin rewards be regulated as banks. - JPMorgan Chase CEO Jamie Dimon warns credit cycle will be worse than normal. - JPMorgan Chase CEO Jamie Dimon warns inflation could return. - JPMorgan Chase CEO Jamie Dimon warns of market complacency. -",
+      "JPMorgan limits private credit exposure, Morgan Stanley caps redemptions. - JPMorgan curbs lending as Morgan Stanley, Black Rock limit withdrawals. - JPMorgan, UBS dropped hedge fund embroiled in HK probe. - JPMorgan faces $328M lawsuit over alleged crypto transfers. - JPMorgan reprices AI exposed software loans amid credit concerns. - JPMorgan CEO warns markets ignoring inflation risk.",
+      "JPMorgan launches dedicated athlete wealth management initiative. - JPMorgan Chase sole arranger for Korea Zinc $2 billion loan. - US regulators unveil plans to ease capital rules for big banks. - JPMorgan, Goldman offer hedge funds way to short private credit. - Chase opens new Pacific Palisades branch after wildfire. - Fed holds rates steady, impacting JPM and other banks. - Fed proposes easing capital rules for major banks. - JPMorgan ends ties with App Lovin investor over KYC."
+    ]
+  }
+}

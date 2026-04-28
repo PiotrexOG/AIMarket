@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: RSI at 27.4 indicates extreme oversold conditions, suggesting potential for a short-term bounce. Velocity of ROC at -9.9% and SMA20 overstretch (-7.8%) reinforce this oversold thesis. W: Candle pattern is neutral, and volume dynamics show low interest (0.57), limiting immediate upside conviction. O: Potential for mean reversion within the current range (83.88-104.2) driven by oversold technicals. T: News regarding Klarna replacing Affirmas BNPL provider introduces a short-term catalyst, but tariff negotiations add a layer of uncertainty."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Gradual bearish descent (-2.54%) and MACD recovering from bearish territory (-1.021) suggest a potential bottoming process. Position relative to SMA50 (Z:-1.62) is within a historically supportive zone for mean reversion. W: Trend alignment remains bearish, and the stock is inside a monthly range (83.88-105.3), indicating a lack of strong directional conviction. O: Opportunity for a trend reversal if the current oversold conditions translate into sustained buying pressure and positive MACD crossover. T: The Klarna partnership news could provide a medium-term boost if it drives increased transaction volume and customer engagement, but ongoing tariff negotiations pose a risk to margins."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The secular bull market regime (3.7%) and a healthy golden cross structure (15.38%) provide a strong bullish backdrop. Position in the long-term range (53.8%) is neutral, suggesting ample room for appreciation. W: Business quality shows thin margins (GM: 24.4%, OM: 4.2%, NM: 2.4%), and cash conversion is weak (FCF Mgn: 2.3%), which are structural headwinds. O: Mega-cap scale (Rev: $648.125B) and strong recent EPS growth (33.8%) offer resilience. The company is priced at a hyper-premium (P/E: 44.8), but implied growth (PEG: 1.33) is fair, suggesting the market expects continued performance. T: Long-term news flow is consistent, indicating stable strategic initiatives. However, the high valuation multiples (P/E: 44.8, P/S: 1.08, P/B: 8.34) represent significant valuation risk if growth falters."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (75.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.4%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.89-113.34]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.72%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.977)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.66)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.89-117.09]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.22%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.6% | OM: 14.8% | NM: 12.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 3.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.535B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 144.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 186.3%, Next Q Est Growth: -45.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.48, P/S: 2.13)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.85)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney signs one-year exclusive deal with Open AI for character licensing. - Zootop IA 2 passes $1B global box office mark. - Warner Bros.' acquisition status uncertain amid Netflix and Paramount bids.",
+      "Disney invests $1 billon in Open AI and becomes first major contentlicensing partner. - Disneys entertainment pipeline includes AI after Open AI deal.",
+      "Disney invests \u00a31 billion in Open AI and signs three-year deal to bring characters to Sora platform. - Open AI licenses Disney, Marvel ,Star Wars, and Pix\u0430\u0440 characters for S\u043er\u0430 video generation."
+    ],
+    "medium_term_50d": [
+      "Disney invests \u00a31 billion in Open AI and signs three-year deal to bring characters to Sora platform. - Open AI licenses Disney, Marvel ,Star Wars, and Pix\u0430\u0440 characters for S\u043er\u0430 video generation.",
+      "Paramount launches all-c ash tender offer to acquisite Warner Bros Discovery for $3o per share. - Paramount says its Warner Bros offer beats Netflix deal. - Netflix buys Warner and HBOfor $82billion. - Netflix wins the Streaming Warss:The $82Billion Warner Bros Deal.",
+      "Disney invests $1 billon in Open AI and becomes first major contentlicensing partner. - Disneys entertainment pipeline includes AI after Open AI deal."
+    ],
+    "long_term_200d": [
+      "Paramount launches all-c ash tender offer to acquisite Warner Bros Discovery for $3o per share. - Paramount says its Warner Bros offer beats Netflix deal. - Netflix buys Warner and HBOfor $82billion. - Netflix wins the Streaming Warss:The $82Billion Warner Bros Deal.",
+      "Disney invests \u00a31 billion in Open AI and signs three-year deal to bring characters to Sora platform. - Open AI licenses Disney, Marvel ,Star Wars, and Pix\u0430\u0440 characters for S\u043er\u0430 video generation.",
+      "1. Netflix buys Warner Bros Discovery'sstudios, streamingunit ($72 billion) 2. Warner Begins exclusive deal talks with Netflix 3. Regulatory ruling: Strong antitrustscrutiny expectedfor Netflix-Warner Bros Deal"
+    ]
+  }
+}

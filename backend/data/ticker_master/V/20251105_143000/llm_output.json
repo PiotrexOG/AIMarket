@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: Momentum indicators (RSI 44.2) are neutral, suggesting a lack of immediate directional conviction. Price is stable near its short-term base (-1.2% from SMA20) and within its typical trading range. Elevated volume (1.22) could indicate increased participation but without a clear trend signal. O: Potential for range-bound trading or a minor bounce if support holds. T: News flow is mixed, with partnerships and platform rollouts offset by underperformance and regulatory concerns. W: Lack of strong bullish momentum signals limits upside potential in the immediate term. Risk is moderate due to stable volatility and price within normal bands."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend shows consolidation (compressed SMAs) and a bearish MACD signal (-0.784), reinforced by the price being below the 50-day SMA (Z:-1.15). This indicates a lack of structural upward momentum. O: If the MACD can recover and price can break above the 50-day SMA, a shift to a more positive trend is possible. T: Earnings momentum shows a temporary stumble in the current quarter (-9.4% surprise) but a strong rebound expected next quarter (+16.7% est. growth). W: The current technical setup is bearish, with price positioning and MACD indicating weakness. This is compounded by the high valuation multiples, increasing risk if growth expectations are not met. Conviction is low due to mixed earnings signals and current technical weakness."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term outlook is challenged by a secular bear market regime (-1.7%) and potential for major crosses, indicating structural headwinds. While the price is in a mid-cycle neutral zone (52.2%), the overall market environment is a significant drag. O: A sustained shift in market regime or a clear pivot in long-term technicals could improve the outlook. Business quality (80.2% GM, 62.2% OM, 52.2% NM) and financial health (0.21x NetDebt/Eq) are strong fundamental supports. T: News flow over the long term highlights expansion in stablecoin support and partnerships, which are positive developments for future revenue streams. W: The primary risk is the elevated valuation (P/E 33.06, P/S 17.07, PEG 3.44) in a potentially challenging macro environment. Despite strong fundamentals, the premium pricing makes the stock vulnerable to any economic slowdown or increased competition. Conviction is moderate due to the strong business fundamentals offsetting the bearish macro and valuation risks."
+    }
+  }
+}

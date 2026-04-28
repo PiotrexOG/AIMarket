@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 5.3
+      },
+      "synthesis": "S: The short-term exhibits a Doji candle pattern, indicating indecision, with RSI moving to a neutral zone (42.3). Price is within normal Bollinger Bands (0.37) and stable near the 20-day SMA (-1.6%), suggesting a pause in recent momentum. W: The shift from oversold to neutral RSI and the Doji pattern suggest a loss of immediate bullish conviction. Velocity remains negative, and the price is still in the middle of the 20-day range. T: News flow is mixed, with significant investment in future capacity (2nm chips) and global expansion plans, but also some noise about unrelated market factors. O: A sustained move above the 20-day SMA with a rising RSI from neutral levels could signal renewed short-term upside. Conversely, a break below the 20-day SMA would increase downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.2,
+        "conv": 6.3,
+        "risk": 4.4
+      },
+      "synthesis": "S: Medium-term trend alignment is consolidating (0.19%), and the Z-score relative to the 50-day SMA is now near zero (0.02), indicating a stable base. The MACD is recovering from its bearish trend (-1.225). W: The MACD is still in negative territory, and trend alignment has compressed, suggesting a lack of strong directional conviction. The previous bearish MACD acceleration has moderated but not reversed. T: News remains supportive with significant long-term investments in advanced chip production and continued demand from key partners like Nvidia. O: A move back towards positive trend alignment growth and a MACD crossover into positive territory would strengthen the medium-term bullish outlook. Continued execution on 2nm production plans is a key catalyst."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.6,
+        "conv": 8.1,
+        "risk": 3.4
+      },
+      "synthesis": "S: The long-term outlook remains robust, supported by a secular bull market regime and strong fundamental metrics. Business quality, financial health, and cash generation remain top-tier. The long-term range position has improved slightly (87.4%). W: The 'extreme bullish stretch exhaustion risk' has marginally decreased, indicating a slight reduction in overextended conditions. However, the fundamental growth profile, while strong, faces a significant year-over-year EPS growth deceleration next quarter. T: Valuation multiples continue to offer a deep value discount, with implied growth still appearing underrated. Significant long-term investments in future capacity (2nm chips) and continued demand from major players like Nvidia underpin the thesis. O: Sustained technological leadership in advanced semiconductor manufacturing, particularly driven by AI, continues to underpin the long-term thesis. The current valuation provides a significant margin of safety and potential upside, despite minor increases in long-term risk indicators and the upcoming earnings growth deceleration."
+    }
+  }
+}

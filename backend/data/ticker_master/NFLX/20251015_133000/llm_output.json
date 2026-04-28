@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has shifted decisively to neutral with RSI at 53.7. Velocity has turned positive at 1.4%, and the price is now 1.0% from the 20-day SMA, still within the middle of the 20-day range. The DOJI candle pattern indicates indecision. W: The shift in RSI and positive velocity are constructive, but the indecisive candle pattern and price still being in the middle of the range suggest a lack of strong conviction. The BB bands are within normal parameters. O: Short-term news is mixed, with positive partnership announcements and a significant subscriber increase, but also regulatory concerns and production setbacks. T: The score has increased from 3.5 to 6.0 due to the significant improvement in RSI and velocity, indicating a strong shift from bearish to neutral/bullish short-term momentum. Conviction has increased from 4.0 to 5.5 as the signals are now more constructive and less bearish. Risk has decreased from 7.0 to 5.5, reflecting the improved momentum and reduced downside pressure, although the indecisive candle pattern and range-bound price action still present some risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains compressed at -0.66%. The MACD has faded to 0.42, indicating a loss of bullish momentum. However, the Z-score to the 50-day SMA remains healthy at 0.09, suggesting continued mean reversion. The price is still within the monthly range. W: The fading MACD is a concern, suggesting that the recent bullish momentum may be waning. However, the stable Z-score to the 50-day SMA provides a degree of support. O: Medium-term news is mixed, with positive outlook revisions and strong ad growth, but also mentions of Q3 earnings and a major show release, which could be catalysts for price movement. T: The score has slightly increased from 5.0 to 5.5, driven by the sustained healthy Z-score to the 50-day SMA, which offsets the fading MACD. Conviction has slightly decreased from 5.5 to 5.0 due to the fading MACD, indicating a less robust medium-term signal. Risk has decreased from 5.5 to 5.0, reflecting the continued stability around the 50-day SMA and the absence of significant negative catalysts in the medium-term news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term market regime percentage has slightly increased to 10.1%, reinforcing the secular bull market context. The golden cross structure remains healthy at 9.76%. The long-term range position has improved to 75.6% in the upper quadrant, indicating sustained bullish positioning. W: The slight increase in market regime participation and improved long-term range position are positive indicators of sustained long-term strength. The 'POWER_ZONE_CONFLUENCE(2)' in the SR landscape continues to suggest strong support. O: Long-term news is mixed, with positive partnership and outlook announcements, but also mentions of past earnings misses and regulatory impacts, which are now historical. The fundamental strength of the business remains a key supportive factor. T: The score has increased from 5.0 to 5.5 due to the slight improvement in market regime participation and the continued strong long-term range position, indicating a more robust long-term technical outlook. Conviction has increased from 5.5 to 6.0 as these long-term signals are now more consistent and constructive. Risk has decreased from 6.0 to 5.0, primarily due to the stable fundamental backdrop and the improved long-term range position, which mitigates some of the historical valuation concerns."
+    }
+  }
+}

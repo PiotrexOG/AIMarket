@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (7.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 80.1-98.59]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-10.39%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.327)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.82)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 80.1-115.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.47%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 24.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 89.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.87%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.47)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 35.8% | OM: 13.0% | NM: 5.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 5.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $91.361B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 2.8%, EPS: 110.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -82.5%, Next Q Est Growth: 384.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.95, P/S: 1.78)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.62)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.3)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.27x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Justice Department investigates Disney's acquisition of Fubu TV.",
+      "DOJ probes Disney-Fibo TV deal Over Competition Concerns - Disney under investigation for potential antitrust issueswith Fibo TVdeal",
+      "Disney launches \"Disney Week of Wishes\". - Disney celebrates 45th anniversary with Make-a-Wish Foundation."
+    ],
+    "medium_term_50d": [
+      "Justice Department investigates Disney's acquisition of Fubu TV.",
+      "DOJ probes Disney-Fibo TV deal Over Competition Concerns - Disney under investigation for potential antitrust issueswith Fibo TVdeal",
+      "Disney completes merger of Fubo TV with Hulu, DIS stock affects price."
+    ],
+    "long_term_200d": [
+      "Justice Department investigates Disney's acquisition of Fubu TV.",
+      "DOJ probes Disney-Fibo TV deal Over Competition Concerns - Disney under investigation for potential antitrust issueswith Fibo TVdeal",
+      "Disney completes merger of Fubo TV with Hulu, DIS stock affects price."
+    ]
+  }
+}

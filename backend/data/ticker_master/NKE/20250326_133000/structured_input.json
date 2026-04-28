@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (17.0)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.03)",
+        "velocity_roc_10": "NORMAL (-10.3%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-10.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 65.26-82.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.18%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.04)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.38)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 65.26-82.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-15.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.15%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 2.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 66.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.67%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.6, P/S: 1.95)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.94)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.17)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike reports weak Q3 results with inventory liquidation. - Tariffs impact Nike'ss sales forecast. - Salomon hires former Nike executive.",
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline.",
+      "Nike warnes of steeper fourth-quarter sales drop. - Toughest stretchof Nike'sturnaround ahead."
+    ],
+    "medium_term_50d": [
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline.",
+      "Nike warnes of steeper fourth-quarter sales drop. - Toughest stretchof Nike'sturnaround ahead.",
+      "Nike reports weak Q3 results with inventory liquidation. - Tariffs impact Nike'ss sales forecast. - Salomon hires former Nike executive."
+    ],
+    "long_term_200d": [
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline.",
+      "Nike warnes of steeper fourth-quarter sales drop. - Toughest stretchof Nike'sturnaround ahead.",
+      "Nike cuts production due to supplier issues. - Federal Reserve announces interest rate decision directly impacting NKE."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (23.9)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-19.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-13.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 86.63-122.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-6.72%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.573)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.78)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 86.63-143.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-23.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.32%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 20.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 99.98,
+      "volatility_context": "STABLE_NORMAL_FLUX | HIGH_VOLATILITY_ASSET (ATR:  (6.36%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.62)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 82.42, P/S: 40.86)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 57.93)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.14)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia experiences a 14\\% price decline after announcing AI Data Platform and DGXSuper POD. - Trump tariffs cause 23\\% drop in Nvidia stock value.",
+      "Nvidia acquires startup Lepton AI. - Dow Jones surges led by gains from Nvidia Corp. - Most large cryptcurrencies rise, including NVDA.",
+      "Dow Jones plunges \u2081\u2081\u2080\u2090oints on Trump tariffs; Apple-, Nvidia-, Tesla sell off."
+    ],
+    "medium_term_50d": [
+      "Nvidia experiences a 14\\% price decline after announcing AI Data Platform and DGXSuper POD. - Trump tariffs cause 23\\% drop in Nvidia stock value.",
+      "Nvidia lays out catalysts for rapid growth at GTC conference. - Microsoft pauses data center expansions due to semiconductor tariffs and AI overcapacity fears.",
+      "11. 3 Artificially Intellectual Property disputes hit Nvidia's AI chip production. 15. Amazon announces direct competition with Nvidia in AI sector."
+    ],
+    "long_term_200d": [
+      "Nvidia experiences a 14\\% price decline after announcing AI Data Platform and DGXSuper POD. - Trump tariffs cause 23\\% drop in Nvidia stock value.",
+      "Nvidia lays out catalysts for rapid growth at GTC conference. - Microsoft pauses data center expansions due to semiconductor tariffs and AI overcapacity fears.",
+      "11. 3 Artificially Intellectual Property disputes hit Nvidia's AI chip production. 15. Amazon announces direct competition with Nvidia in AI sector."
+    ]
+  }
+}

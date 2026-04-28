@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 104.08-137.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.85%)",
+        "cycle_macd": "BULLISH_FADING (0.715)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.76)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 86.63-137.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (7.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.92%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 135.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.25%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 111.51, P/S: 55.28)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 78.37)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.19)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia launching cheaper AI chipfor China to avoid US export restrictions.",
+      "Nvidia accepted into N\u0432\u0438\u0434ia Corp's Inception program by Catenai for Alludium Ltd. - Definitive answers on USchip curbs on Chinacosts anticipated in Nvidiaearnings.",
+      "Nvidia CEO Jensen Huangs speaks at Computex, discusses keeping AI crown amid economic headwindss and trade tensions."
+    ],
+    "medium_term_50d": [
+      "Nvidia launching cheaper AI chipfor China to avoid US export restrictions.",
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in",
+      "Foxconn plans large Taiwan AI data Center with Nvid IA - NVIDIA: Roaring into Q1 earnings release - Billionaire adds to Tiger Global's NVIDIA stake These events appear to meet the criteria of having a direct impact on NVIDIA."
+    ],
+    "long_term_200d": [
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in",
+      "Nvidia launching cheaper AI chipfor China to avoid US export restrictions.",
+      "Nvidia takes a $5._5 billion hit from export controls. - Trade tensions cause $25o billion market cap loss for Nvidia."
+    ]
+  }
+}

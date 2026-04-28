@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.9)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.28)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 23.91-25.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.55%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.058)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.58-27.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.56%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 67.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.5,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.19%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.78, P/S: 2.32)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.57)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.41x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer acquiring Metsera for obes ITY and diabetes therap IES. - Metsera shares slip after Pfizer wins bidding war. - Novo Nordik's stock rises on withdrawal from Metser A bid.",
+      "Pfizer wins regulatory approval for Metserra acquisition. -PFizer pays additional $1. seventh billion for Metserara. -Pfizer signs amended deal to acquire Metserara from Novo Nordick. -Metserara chooses Pfizers less risky acquisition offer. -Novo Nordisk shareholders relieved after losing Metserara bidding war",
+      "Pfizer wins$10 billionbidding warfor Metsera - Metseraaccepts Pfizersweetenedofferfrom Pfier - Pfierzclinchsdealformetseadrugdeveloper Metsera Note: These bullets meet the format rules specified and do not include any irrelevant information such as analyst opinions, investment advice, market comment"
+    ],
+    "medium_term_50d": [
+      "Pfizer acquiring Metsera for obes ITY and diabetes therap IES. - Metsera shares slip after Pfizer wins bidding war. - Novo Nordik's stock rises on withdrawal from Metser A bid.",
+      "Pfizer wins regulatory approval for Metserra acquisition. -PFizer pays additional $1. seventh billion for Metserara. -Pfizer signs amended deal to acquire Metserara from Novo Nordick. -Metserara chooses Pfizers less risky acquisition offer. -Novo Nordisk shareholders relieved after losing Metserara bidding war",
+      "Pfizer wins$10 billionbidding warfor Metsera - Metseraaccepts Pfizersweetenedofferfrom Pfier - Pfierzclinchsdealformetseadrugdeveloper Metsera Note: These bullets meet the format rules specified and do not include any irrelevant information such as analyst opinions, investment advice, market comment"
+    ],
+    "long_term_200d": [
+      "Pfizer acquiring Metsera for obes ITY and diabetes therap IES. - Metsera shares slip after Pfizer wins bidding war. - Novo Nordik's stock rises on withdrawal from Metser A bid.",
+      "Pfizer wins regulatory approval for Metserra acquisition. -PFizer pays additional $1. seventh billion for Metserara. -Pfizer signs amended deal to acquire Metserara from Novo Nordick. -Metserara chooses Pfizers less risky acquisition offer. -Novo Nordisk shareholders relieved after losing Metserara bidding war",
+      "Pfizer wins$10 billionbidding warfor Metsera - Metseraaccepts Pfizersweetenedofferfrom Pfier - Pfierzclinchsdealformetseadrugdeveloper Metsera Note: These bullets meet the format rules specified and do not include any irrelevant information such as analyst opinions, investment advice, market comment"
+    ]
+  }
+}

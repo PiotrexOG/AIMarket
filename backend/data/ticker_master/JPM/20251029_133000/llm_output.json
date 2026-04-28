@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: Short-term technicals have significantly improved. The candle pattern is now NEUTRAL, and the RSI has moved into the NEUTRAL_ZONE (51.2). Price is consolidating and hugging the SMA20 (0.7%), indicating stabilization. Velocity is stagnant (1.1%), and the price is in the middle of its 20-day range. W: The short-term news narrative is mixed but leans positive with regulatory approval for a regional bank acquisition and a new digital payment platform. The Bitcoin collateral news is neutral, while the legal dispute remains a lingering concern. O: The score is increased to 6.5. The shift from bearish to neutral technicals, coupled with positive news, drives this improvement. Conviction increases to 6.0 as the technical picture becomes clearer and less conflicted. T: Risk is decreased to 5.0. The improved technicals and the absence of immediate bearish signals reduce downside exposure. The expanding volatility context is offset by the stabilization in price action and the neutral momentum indicators."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: Medium-term trend alignment has shifted from a weak ascent to consolidation, with the price compressing around the SMA50 (-0.17%). Crucially, the price has moved back above the SMA50 (Z:0.22), indicating a healthy mean reversion. The MACD is still bearish but recovering significantly (-0.061). W: The medium-term news narrative remains dominated by positive strategic initiatives like the new headquarters and Q3 earnings, alongside the recent positive news regarding the regional bank acquisition and payment platform. The legal dispute is a persistent, but not dominant, factor. O: The score is increased to 6.0. The positive shift in SMA50 positioning and the recovering MACD are key drivers, outweighing the consolidation in trend alignment. Conviction increases to 5.5 as the technical signals become more constructive. T: Risk is decreased to 4.5. The move above the SMA50 and the recovering MACD significantly reduce downside risk. The previous risk score of 7.5 is no longer justified by the current technical and news landscape."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term secular bull market regime remains strong, with an increase in its strength (11.5%). The healthy golden cross structure is still in place (10.94%), and the price has moved further into the bullish upper quadrant (89.1%), indicating sustained long-term strength. W: The long-term news narrative continues to be a blend of significant positive strategic initiatives and historical negative events. The recent positive news regarding the regional bank acquisition and payment platform adds to the constructive long-term outlook. O: The score is increased to 7.0. The strengthening of the long-term regime and the continued bullish positioning in the upper quadrant are significant positive factors. Conviction increases to 6.5 due to the clear and consistent long-term technical strength. T: Risk is decreased to 4.0. The robust long-term technical structure, including the strong regime and upper quadrant positioning, significantly mitigates immediate downside risk. The previous risk score of 5.5 is reduced due to the strengthening of these long-term supportive factors."
+    }
+  }
+}

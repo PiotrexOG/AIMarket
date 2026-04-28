@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term technicals show a neutral candle pattern and range position, indicating a lack of immediate directional conviction. The RSI is in a bearish zone (39.5), suggesting some downward pressure. W: Stagnant velocity (ROC -1.3%) and a stable trend base near the 20-day SMA (-2.7%) point to a lack of short-term momentum. O: News flow is mixed, with some partnership announcements but also competitive pressures in the AI space. T: Volatility is stable but within a moderate range, and the price is currently in the middle of its 20-day range, offering limited immediate upside potential without a clear catalyst."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment is bearish (-4.13%) with a negative Z-score (-1.31) relative to the 50-day SMA, indicating a current technical downtrend. However, the MACD is showing bullish accelerating momentum (0.172), suggesting a potential shift. W: The expanding bearish momentum and positioning below the 50-day SMA present structural headwinds. The price is inside the monthly range, but the bearish trend is dominant. O: AI infrastructure and competitive dynamics are key themes in recent news, which could influence future earnings and strategic direction. T: While the MACD offers a glimmer of hope, the prevailing trend and SMA positioning suggest caution. The risk is moderate due to the current bearish trend, but the accelerating MACD offers some conviction for a potential reversal if sustained."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term outlook is supported by Microsoft's fundamentally strong profile, including ultra-elite business quality (GM: 69.8%, OM: 44.6%), a healthy balance sheet (NetDebt/Eq: 0.18x), and excellent cash generation (FCF Mgn: 30.2%). Growth remains strong and stable (Rev: 15.7%, EPS: 22.0%). W: The long-term technicals present a significant headwind with a secular bear market regime indicated (-9.5%) and a death cross structure (-2.99%). The price is in the lower quadrant of its long-term range (11.0%). O: The company's scale (Rev: $245.122B) and consistent growth provide a solid foundation, but the current market regime and technical structure are bearish. T: Despite the bearish long-term technicals, the robust fundamentals provide a high degree of conviction (7.0) and a relatively lower risk profile (4.0) for the long term. The score is moderately bullish (6.0) reflecting the strength of the business against the backdrop of a challenging market environment."
+    }
+  }
+}

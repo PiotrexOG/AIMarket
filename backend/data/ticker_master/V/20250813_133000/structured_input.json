@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-4.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 328.7-358.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.75%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.229)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.97)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 328.7-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.96%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 342.39,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.84%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.38, P/S: 17.97)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.77)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.05)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa postsdouble-digit Q3gainsincross-bordervolumesandearnings,butsharesslide5.5%. - Regulatorsexamine Visacardnetworkpractices.",
+      "Outpost2 Four appoints Ariel Kats as Chief Corpor ATE development officer - Ariel Katts to drive strategic growth and identify inorganic opp ORtunities (V)",
+      "Visa extends cybersecurity expertise, prioritizes proactive defense strategies for clients. -Regulator investigates Visa cardnetworkpractices(Rumor)."
+    ],
+    "medium_term_50d": [
+      "Visa postsdouble-digit Q3gainsincross-bordervolumesandearnings,butsharesslide5.5%. - Regulatorsexamine Visacardnetworkpractices.",
+      "Visa laanches new commerce platform using AI agents. -Visa works with Open AI and Microsoft on technology.",
+      "Visa enhaces stablecoin settlement capacities through partnership with Pax OS."
+    ],
+    "long_term_200d": [
+      "Visa laanches new commerce platform using AI agents. -Visa works with Open AI and Microsoft on technology.",
+      "Visa postsdouble-digit Q3gainsincross-bordervolumesandearnings,butsharesslide5.5%. - Regulatorsexamine Visacardnetworkpractices.",
+      "Regulator announces investigation into Visa cardnetwork practices. -Visa and X partner on new digital payment integration. -July production numbers reveal lower than expected Visa cardtransactions. -Court rules against Visa in major antitrust lawsuit. -VISA issues warning of potential revenue decline due to economic conditions. -New regulatory ruling impacts Visa"
+    ]
+  }
+}

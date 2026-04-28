@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated significantly, marked by a STRONG_BEARISH candle pattern and a shift in RSI to the neutral zone (46.3). Price is now hugging the 20-day SMA (-0.1%) after being stable near it previously. The range has shifted slightly upwards [171.81-181.16]. W: Confidence has decreased due to the bearish candle pattern and weakening momentum indicators, despite price remaining within normal Bollinger Bands (0.48). The 'RANGE' bias in the SR landscape and distant barriers suggest limited immediate upside. O: Short-term news is overwhelmingly positive, with multiple FDA approvals and positive Phase 3 study results for cancer treatments. This contrasts sharply with the deteriorating technicals. T: Risk has increased substantially. The bearish candle pattern, declining RSI, and the shift from 'STABLE_NEAR_BASE' to 'HUGGING_SMA20_CONSOLIDATION' indicate increased downside potential. While volatility remains low (ATR 1.28%), the technical weakness coupled with the positive news creates a divergence, increasing risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 3.8,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish (4.77%), and the price is still above the 50-day SMA (Z:0.77), albeit with a lower Z-score than before. However, the MACD has accelerated its bearish trend (-0.562), indicating a worsening short-to-medium term cyclical trend. W: Confidence has decreased due to the accelerating bearish MACD, which overrides the positive trend alignment. Analyst sentiment remains mixed with low conviction. O: Medium-term news is consistently positive, focusing on significant FDA approvals and successful clinical trial results for cancer therapies. This fundamental strength is at odds with the deteriorating MACD. T: Risk has increased. The accelerating bearish MACD is a significant structural risk to the medium-term trend. While the overall trend alignment is still positive, the bearish momentum signal suggests a higher probability of a pullback or consolidation. Valuation remains fair, but the declining earnings growth profile continues to be a concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 5.3,
+        "risk": 4.8
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound within a secular bull market regime (12.2%), with the price still in the upper quadrant of its long-term range (86.0%). The healthy golden cross structure (7.19%) continues to support the long-term bullish trend. W: Conviction remains moderate, supported by the persistent long-term bullish regime and positive technical structure. The consistent stream of positive news regarding manufacturing expansion and successful drug development continues to bolster the long-term fundamental narrative. O: Long-term news flow is consistently positive, highlighting strategic investments in manufacturing and successful drug development, reinforcing the company's long-term growth prospects and competitive positioning. T: Risk has slightly increased. While the long-term technical structure remains healthy, the price has moved lower within its long-term range (86.0% vs 89.5%). The fair valuation and declining earnings growth profile, coupled with the recent short-term technical weakness, introduce a marginal increase in risk, though the strong fundamentals provide a significant buffer."
+    }
+  }
+}

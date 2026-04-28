@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.71)",
+        "velocity_roc_10": "NORMAL (0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 492.37-516.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.15%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.847)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.29)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.3%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 508.21,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.53%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.75, P/S: 14.5)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.54)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.3)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft and Workday announce collaboration to manage AI agents in eachother's systems. - Core Weave announces upgrade due to increased demand for GPU outsourced computation. - Figure raises funds, valued at $ thirty nine billion. - Syncro launches integrated cloud backup and restore for Microsoft \u00b365 and Entra ID . - Microsoft increases dividend ahead",
+      "Microsoft becomes partner in Open AI revenue sharing. - Alphabet court ruling may indirectly impact MSFT. - Amazon, Alphabet,&Meta invest half a trillion dollars in AI infrastructure. - Hasbro moves headquarters to Boston. - IBM quantum computing breakthrough. - ANZ announces leadership change in risk management and capital management. - Fortive presents balanced capital",
+      "Microsoft avoids EU antitrust fine by agreeing to unbundle Teams. - Elon Mus\u043a challenges Microsoft CEO over alleged employee remarks on Charlie Kirk'ss assassination."
+    ],
+    "medium_term_50d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft signs multi-billions dollar AI infrastructure deal with Nebius. - Cerence collaborates with Microsoft on in-car mobile work AIagent development. - Oracle experiences significant cloud growth and AI momentum in Q1 twenty-six results.",
+      "Microsoft becomes partner in Open AI revenue sharing. - Alphabet court ruling may indirectly impact MSFT. - Amazon, Alphabet,&Meta invest half a trillion dollars in AI infrastructure. - Hasbro moves headquarters to Boston. - IBM quantum computing breakthrough. - ANZ announces leadership change in risk management and capital management. - Fortive presents balanced capital"
+    ],
+    "long_term_200d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft signs multi-billions dollar AI infrastructure deal with Nebius. - Cerence collaborates with Microsoft on in-car mobile work AIagent development. - Oracle experiences significant cloud growth and AI momentum in Q1 twenty-six results.",
+      "Microsoft becomes second company with $4 trillon market capitalization due to AI businesses. (event type: Product launches/delays) - Tech giants spend $156bn on AI in 2 years. (eventtype: Production or supply change) - Microsoft CEO hints at near-term quantum computing application. (eventype: Company guidance)"
+    ]
+  }
+}

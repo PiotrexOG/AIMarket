@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The price is at critical support (61.12) with extreme oversold RSI (22.0) and price below the lower Bollinger Band, suggesting potential for a short-term bounce. Volume is elevated (1.11), indicating market participation. W: A bearish shooting star candle pattern and negative ROC (-10.4%) signal immediate selling pressure. The price is significantly below the 20-day SMA (-8.5%), indicating strong short-term bearish momentum. O: A bounce from current support levels could target the 20-day moving average. T: Significant downside risk remains due to the bearish candle pattern and extended short-term downtrend, with potential for further declines if support breaks."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The price is testing a monthly support zone (61.12-79.51), which could provide a floor. The MACD is bearishly accelerating (-0.518), but the Z-score of -2.41 suggests the price is statistically stretched to the downside relative to the 50-day SMA. W: The overall trend alignment is bearish with expanding momentum (-5.24%), and the MACD indicates continued downward pressure. The current price is significantly below the 50-day SMA. O: A sustained bounce from the support zone could lead to a retest of higher levels within the monthly range. T: Downside risk is elevated due to the bearish trend and overextended positioning, but the proximity to significant support offers a potential buffer against further immediate declines."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Despite a bearish market regime, the stock exhibits a healthy golden cross structure (2.23%), indicating underlying long-term strength. The business quality is average (GM: 44.6%, OM: 11.2%), and the balance sheet is healthy (NetDebt/Eq: 0.29x). W: The company is experiencing revenue and EPS stagnation/decline (Rev: -5.0%, EPS: -6.4%), and the current quarterly earnings surprise (188.9%) is juxtaposed with a sharp expected decline next quarter (-52.6%), indicating earnings volatility. The long-term range position is bearish (29.3%). O: The healthy balance sheet and average business quality provide a foundation for recovery. The golden cross structure suggests potential for a longer-term trend reversal if fundamentals improve. T: Valuation is fair, but implied growth is declining (-6.36%), and the mixed earnings momentum presents a risk. The bearish long-term range position and market regime add to downside potential."
+    }
+  }
+}

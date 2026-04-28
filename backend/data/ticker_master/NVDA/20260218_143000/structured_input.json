@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 171.03-198.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.4%)",
+        "cycle_macd": "BULLISH_FADING (0.031)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 170.31-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.24%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 189.78,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.02%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 73.84, P/S: 41.51)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 71.35)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC expands AI chip capacity and pricing power with advanced nodes. - Anthropic faces potential 'Supply Chain Risk' tag as Pentagon weighs cutting ties.",
+      "Nvidia deepens collaboration with TSMC on AI chip production. - Alphabet' investments boost Nvidia, Broadcom. - Magna announces expanded EV component contracts and AI partnership with NVIDia.",
+      "Nvidia extends AI from data centers to factories, labs, and grids. - Collaborates with Dassaut Syst\u00e8mes to integrate AI platform into modeling tools. - Adopts NVIDIA tech for AI-driven lab robotics at Opentrons. - Helps Joby A viation prepare for certification and develop autonomous e VTOL."
+    ],
+    "medium_term_50d": [
+      "Nvidia acquires Groq' AI inferencechip assets for $ twenty billion. - New Rubin chipplatform designed fornext-generation memory technology. - Samsung and Micronsupply HBM4memoryfornew GPUplatforms. - Potentialimpactof USpolicyonsalesto China.",
+      "Nvidia extends AI from data centers to factories, labs, and grids. - Collaborates with Dassaut Syst\u00e8mes to integrate AI platform into modeling tools. - Adopts NVIDIA tech for AI-driven lab robotics at Opentrons. - Helps Joby A viation prepare for certification and develop autonomous e VTOL.",
+      "Nvidia deepens collaboration with TSMC on AI chip production. - Alphabet' investments boost Nvidia, Broadcom. - Magna announces expanded EV component contracts and AI partnership with NVIDia."
+    ],
+    "long_term_200d": [
+      "Nvidia acquires Groq' AI inferencechip assets for $ twenty billion. - New Rubin chipplatform designed fornext-generation memory technology. - Samsung and Micronsupply HBM4memoryfornew GPUplatforms. - Potentialimpactof USpolicyonsalesto China.",
+      "Nvidia investing $20 billions in Open AI. - Expanding physical AI through partnerships inlab robotics andindustrial automation. - Alphabet increasing capex spend, benefitting Nvidia. - AI-driven market rotation favoring Nvidia stock. - Wistron chair sees continued growth in AI industry. - Upbeat",
+      "Nvidia extends AI from data centers to factories, labs, and grids. - Collaborates with Dassaut Syst\u00e8mes to integrate AI platform into modeling tools. - Adopts NVIDIA tech for AI-driven lab robotics at Opentrons. - Helps Joby A viation prepare for certification and develop autonomous e VTOL."
+    ]
+  }
+}

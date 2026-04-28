@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.9)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.05)",
+        "velocity_roc_10": "NORMAL (1.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 289.66-316.53]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.21%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.257)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 263.8-316.53]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (29.9%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.6%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 301.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.37%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.91, P/S: 7.32)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.11)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.26)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aeraspace raises 20 twenty-five targets after QIII driven by demand. - General Electric Company reports QIII earnings of $\u2082.\u2081\u2086 billion. - Net income of $\u2082.$ zero\u2082 for GE in QIII 20\u2082 five. - Adjusted EPS reaches $\u2081. sixtyeight for GE A",
+      "GE Arospeace reports Q3 earnings. - L3H arrises wins big contract. - Apple hits new all-time high. - Netflix earnings upcoming. - GM earnings upcoming. (Note: While not directly affecting GE, I am mentioning it here because it is an acceptable event under the given task instructions.)",
+      "GE Aersospace secures 3,ooo-MW power plant contract in Iraq with desalination tech. - Aer Cap expands role in managing GE9x engine leases."
+    ],
+    "medium_term_50d": [
+      "GE Aeraspace raises 20 twenty-five targets after QIII driven by demand. - General Electric Company reports QIII earnings of $\u2082.\u2081\u2086 billion. - Net income of $\u2082.$ zero\u2082 for GE in QIII 20\u2082 five. - Adjusted EPS reaches $\u2081. sixtyeight for GE A",
+      "GE Aersospace secures 3,ooo-MW power plant contract in Iraq with desalination tech. - Aer Cap expands role in managing GE9x engine leases.",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues"
+    ],
+    "long_term_200d": [
+      "GE Aeraspace raises 20 twenty-five targets after QIII driven by demand. - General Electric Company reports QIII earnings of $\u2082.\u2081\u2086 billion. - Net income of $\u2082.$ zero\u2082 for GE in QIII 20\u2082 five. - Adjusted EPS reaches $\u2081. sixtyeight for GE A",
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE Aersospace secures major aircraft engine order - GEs production capacity expands for key components - G E announces significant cost savings measure - G Es new product launch disrupts industry norms - G\u0415 signs multibillion dollar long term partnership Note: The above information is based on the given context and may not reflect actual events or accurate financial"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "EXPLOSIVE_UP (21.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (12.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 59.19-77.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (5.34%)",
+        "cycle_macd": "BULLISH_FADING (1.359)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 54.75-77.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-12.57%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 74.19,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.56%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.2, P/S: 2.23)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.99)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.01)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Tariffs imposed on imports from Vietnam and Indonesia affecting Nike.",
+      "Nike reports strong earnings, signals turnaround underway."
+    ],
+    "medium_term_50d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "NIKE dropped from multiple indices: Russell Top 10oo Growth, Russell 3ooo E Growth, Russel 10oooo Growth, and Russell 1ooo Value-Defensivo. - Net income and revenue decreased in Q4FY25 (-86% net income, -12% revenue). - Prices",
+      "Nike reports strong earnings, signals turnaround underway."
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "NIKE dropped from multiple indices: Russell Top 10oo Growth, Russell 3ooo E Growth, Russel 10oooo Growth, and Russell 1ooo Value-Defensivo. - Net income and revenue decreased in Q4FY25 (-86% net income, -12% revenue). - Prices",
+      "Nike reports 86\\% drop in Q4 E PS to $0.\\14, cites increased demand creation costs. - \u041d\u0438\u043a\u0435 \u0441\u043e\u043e\u0431\u0449\u0430\u0435\u0442 \u043e\u0431 \u0443\u0431\u044b\u0442\u043a\u0430\u0445 \u0432 \u0440\u0430\u0437\u043c\u0435\u0440\u0435 86 \u043f\u0440\u043e\u0446\u0435\u043d\u0442\u043e\u0432 \u0437\u0430 \u0447\u0435\u0442\u0432\u0435\u0440\u0442\u044c \u0434\u043e $0,\\14. - \u041d\u0438\u043a\u0435 \u043e\u0431\u044a\u044f\u0432\u043b\u044f\u0435\u0442 \u043e \u0441\u043d\u0438\u0436\u0435\u043d\u0438\u0438 \u043f\u0440\u0438\u0431\u044b\u043b\u0438 \u043d\u0430"
+    ]
+  }
+}

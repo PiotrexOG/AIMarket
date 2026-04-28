@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.27)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 345.0-375.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.86%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.021)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.37%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 358.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.95%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 36.06, P/S: 19.32)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.56)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Senate passes stable coin bill, establishing federal framework for V's stable coins. - Sunny collaborates with Visas Visa Prepared Card for health benefits payments.",
+      "Visa releases Digital Remittancies Adoption Report. - Amazon and Walmat develop in-house payment solutions threatening Visa. - visa edges past Mastercard with superior marg INS. - production of Coinbase one card on American express network.",
+      "Visa and Mastercard shares slide due to retail giants exploring stableco INS. - REGULATORSinvestigate Visa cardnetwork practices."
+    ],
+    "medium_term_50d": [
+      "Senate passes stable coin bill, establishing federal framework for V's stable coins. - Sunny collaborates with Visas Visa Prepared Card for health benefits payments.",
+      "Visa releases Digital Remittancies Adoption Report. - Amazon and Walmat develop in-house payment solutions threatening Visa. - visa edges past Mastercard with superior marg INS. - production of Coinbase one card on American express network.",
+      "Visa and Mastercard shares slide due to retail giants exploring stableco INS. - REGULATORSinvestigate Visa cardnetwork practices."
+    ],
+    "long_term_200d": [
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)",
+      "Senate passes stable coin bill, establishing federal framework for V's stable coins. - Sunny collaborates with Visas Visa Prepared Card for health benefits payments.",
+      "Visa and Mastercard shares slide due to retail giants exploring stableco INS. - REGULATORSinvestigate Visa cardnetwork practices."
+    ]
+  }
+}

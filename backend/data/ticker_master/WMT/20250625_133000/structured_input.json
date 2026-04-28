@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "STAGNANT (0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 93.43-100.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.58%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.01)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.73)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 90.01-100.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.44%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.91,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.63%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.73, P/S: 1.2)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.74)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.62)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Open Wing Alliance reveals abusive supplier in Mexico linked to Walmart. - Zen Toes launches premium compression socks at Walmart, Target, Amazon, and Zen Toes website. - walmart updates associate app with real-timetranslation in 43 languages and AI-driventask management. - Has Sprouts farmers market's gross margin expansion peaked? -",
+      "Walmart experiences increased grocery prices causing customer concern.",
+      "Walmart-backs Phone Pe files for $1.\u201c5 billion India IPO. - AIWA'Exos-5 Wi-Fi Speakernowavailableat Walmartstores."
+    ],
+    "medium_term_50d": [
+      "US toymakers MGA enters legal dispute over dominance. - Visa faces potential business loss to Amazon, Walmart stablecoins.",
+      "Walmart and Amazon exploring issuing theirownstablecoins.",
+      "Walmart collaborates with Soda Health on AI-powered nutrition program for Medicare Advantages and Medicaids members. - Sam's Club keeps prices low despite tariffs, considering price increase on small kitchen applicances."
+    ],
+    "long_term_200d": [
+      "Walmart and Amazon exploring issuing theirownstablecoins.",
+      "US toymakers MGA enters legal dispute over dominance. - Visa faces potential business loss to Amazon, Walmart stablecoins.",
+      "Walmart reports lower-than-expectated quarterly results (May 15). - US imports decreases due to 144.5% tariff on Chinese goods (May). - Inflation rises due to tariffs, affecting Walmart's costs (Jun 11)."
+    ]
+  }
+}

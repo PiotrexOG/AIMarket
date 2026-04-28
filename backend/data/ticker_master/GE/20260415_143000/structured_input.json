@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.8)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.98)",
+        "velocity_roc_10": "EXPLOSIVE_UP (16.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (7.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 270.79-319.14]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.66%)",
+        "cycle_macd": "BULLISH_ACCELERATING (4.501)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.13)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 270.79-348.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.64%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 314.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.46%))",
+      "volume_dynamics": "AVERAGE (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 50.6%, Next Q Est Growth: -27.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.51, P/S: 7.32)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.0)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace signs contract with Indian Air Force.",
+      "GE Vernova poised to benefit from improving industrial demand.",
+      "GE raises full-year earnings guidance. - GE Aerospace's Defense & Propulsion unit gains traction. - GE Aerospace and Ford use AI for efficiency."
+    ],
+    "medium_term_50d": [
+      "GE raises full-year earnings guidance. - GE Aerospace's Defense & Propulsion unit gains traction. - GE Aerospace and Ford use AI for efficiency.",
+      "GE Aerospace signs contract with Indian Air Force.",
+      "GE Vernova stock surpasses market returns."
+    ],
+    "long_term_200d": [
+      "GE raises full-year earnings guidance. - GE Aerospace's Defense & Propulsion unit gains traction. - GE Aerospace and Ford use AI for efficiency.",
+      "GE Aerospace stock outperforms competitors.",
+      "GE Vernova stock surpasses market returns."
+    ]
+  }
+}

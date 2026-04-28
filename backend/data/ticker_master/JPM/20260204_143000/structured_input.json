@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "NORMAL (3.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 296.51-335.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.72%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.455)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.41)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 292.81-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 317.94,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.94%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.86, P/S: 3.17)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.45)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 11.62)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan faces Crypto clash and Trump lawsuit. - Former President Trump files $5b suit against JPMorgan. - Regulator approval pending for JPMorgan new frontier debt index.",
+      "1. Trump lawsuit alleges politically motivatedaccount closures at JPMorgan. 2. JPMorgans CEO Jamie Dimond clashes with Coinbasceo over stablecoins at Davos.",
+      "Trump files $5b suit against JPM over alleged account closures - J PMorgan acquires UK's Wealth OS for retirement tech expansion"
+    ],
+    "medium_term_50d": [
+      "JPMorgan faces Crypto clash and Trump lawsuit. - Former President Trump files $5b suit against JPMorgan. - Regulator approval pending for JPMorgan new frontier debt index.",
+      "1. Trump lawsuit alleges politically motivatedaccount closures at JPMorgan. 2. JPMorgans CEO Jamie Dimond clashes with Coinbasceo over stablecoins at Davos.",
+      "Trump files $5b suit against JPM over alleged account closures - J PMorgan acquires UK's Wealth OS for retirement tech expansion"
+    ],
+    "long_term_200d": [
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "Trump sues JPMorgan and Jamie Dimon. - Proposed credit card ratecap: Sheila Bair opposes. - Trump calls for 10\\% credit card rate limit.",
+      "JPMorgan faces Crypto clash and Trump lawsuit. - Former President Trump files $5b suit against JPMorgan. - Regulator approval pending for JPMorgan new frontier debt index."
+    ]
+  }
+}

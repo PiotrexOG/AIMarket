@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.9)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.36)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-6.8%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 153.13-169.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.78%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.986)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.67)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 142.11-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-2.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.69%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 154.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.86%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.49)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.1% | OM: 24.8% | NM: 15.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $88.821B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -58.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -28.9%, Next Q Est Growth: 80.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.46, P/S: 4.23)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.26)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -58.06%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson third talc bankruptcy case thrown out by judge - Judge rejects Johnson & Johnny's $11 billion talc resolution - Bankruptcy court denies Johnson & Johnson talc settlement plan - Johnson &\\ Johnson facing talc law suits in courts instead of bankruptcy - Judge dismisses Johnson & Johnson baby powder talc Chapter 1\u00b9l bankrupt",
+      "Johnson & Johnson announces positive Phase 3 results for Rybrevrant/Laz Cluze in non-smallcell lung cancer treatment. - J&J presents promising data on nipocolimab at American Academy of Neurology annual meeting.",
+      "Johnson & Johnson announces positive Phase III results for nipocalimba in g MG treatment at AAN meeting. - JNJ introduces new electrosurgicial generator compatible with Ottava Robotics System. - RYB REVANT\u00ae plus LAZCLKUZE\u2122 outperforms osimertinb in Phase 3 study for NSCL"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces positive Phase III results for nipocalimba in g MG treatment at AAN meeting. - JNJ introduces new electrosurgicial generator compatible with Ottava Robotics System. - RYB REVANT\u00ae plus LAZCLKUZE\u2122 outperforms osimertinb in Phase 3 study for NSCL",
+      "Johnson & Johnson announces positive Phase 3 results for Rybrevrant/Laz Cluze in non-smallcell lung cancer treatment. - J&J presents promising data on nipocolimab at American Academy of Neurology annual meeting.",
+      "Johnson & Johnson third talc bankruptcy case thrown out by judge - Judge rejects Johnson & Johnny's $11 billion talc resolution - Bankruptcy court denies Johnson & Johnson talc settlement plan - Johnson &\\ Johnson facing talc law suits in courts instead of bankruptcy - Judge dismisses Johnson & Johnson baby powder talc Chapter 1\u00b9l bankrupt"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces positive Phase III results for nipocalimba in g MG treatment at AAN meeting. - JNJ introduces new electrosurgicial generator compatible with Ottava Robotics System. - RYB REVANT\u00ae plus LAZCLKUZE\u2122 outperforms osimertinb in Phase 3 study for NSCL",
+      "Johnson & Johnson announces positive Phase 3 results for Rybrevrant/Laz Cluze in non-smallcell lung cancer treatment. - J&J presents promising data on nipocolimab at American Academy of Neurology annual meeting.",
+      "Johnson & Johnson announces new data from MARIPosa study for RYB REVANT and LAZCLUze in first- line NSCLC with EGFR mutation. - US FDA approvals: TREMF YA for adult patientswith mod-severely active Crohn\u2019s disease."
+    ]
+  }
+}

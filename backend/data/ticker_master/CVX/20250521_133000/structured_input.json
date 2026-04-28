@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "NORMAL (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 134.14-143.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.62%)",
+        "cycle_macd": "BULLISH_FADING (0.732)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 132.04-168.96]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.15%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 12.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 136.51,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.14%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.58, P/S: 1.23)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.6)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron seeking oil and gas assets in Indiana, regulator confirms - Fire breaks out at Che\u0432ron oil platform in Angola, injuring 17 - US administration sets to extend Che\u0432ron's Venezuelan waiver for 60 more days",
+      "Chevron seeks US approval for continued Venezuela operations.",
+      "Chevron lobbies to keep stances in Venezuelan oil joint venturers."
+    ],
+    "medium_term_50d": [
+      "Chevron agrees to buy Hesse for $6o billion. - NY State Common Retirements Fund sells Chevron stock.",
+      "Chevron seeking oil and gas assets in Indiana, regulator confirms - Fire breaks out at Che\u0432ron oil platform in Angola, injuring 17 - US administration sets to extend Che\u0432ron's Venezuelan waiver for 60 more days",
+      "Chevron seeks US approval for continued Venezuela operations."
+    ],
+    "long_term_200d": [
+      "Chevron agrees to buy Hesse for $6o billion. - NY State Common Retirements Fund sells Chevron stock.",
+      "Shell considers acquiring BP, potentially impacting CVX through industry competition. -Chevron continues investing despite lower oil prices, affects dividends payout.",
+      "Chevron sticks to production growth plans despite declining profits and softening oil prices. - Shell and BP plan merger to boost scale and capture synergies."
+    ]
+  }
+}

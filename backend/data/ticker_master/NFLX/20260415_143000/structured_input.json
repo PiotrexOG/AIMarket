@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (93.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.04)",
+        "velocity_roc_10": "EXPLOSIVE_UP (14.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 90.69-106.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.63%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.82)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.72)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 75.01-106.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-14.8%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 105.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.74%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 131.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.86, P/S: 10.11)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.16)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix's next chapter focuses on stability and ads. - Netflix stock rises ahead of first-quarter report. - Netflix Q1 preview: Focus on advertising and live sports. - Netflix Q1 earnings preview: Expect solid performance. - Netflix co-founder Marc Randolph joins Oh YAAS as advisor. - Netflix patent claim interpretation clarified in DIVX, LLC case.",
+      "Netflix opens new office in Buenos Aires for Latin American expansion. - Netflix plans increased content production in Argentina. - Netflix co-founder Reed Hastings gained $500M in stock-option gains. - Netflix stock volatility expected ahead of Q1 earnings report. - Netflix Q1 earnings report expected on April 16.",
+      "Netflix poised for substantial advertising growth into 2026. - Netflix advertising business expected to boost full-year revenue. - Netflix acquires AI production company for up to $600 million. - Billionaires increase Netflix stock positions after Warner Bros deal collapse."
+    ],
+    "medium_term_50d": [
+      "Netflix poised for substantial advertising growth into 2026. - Netflix advertising business expected to boost full-year revenue. - Netflix acquires AI production company for up to $600 million. - Billionaires increase Netflix stock positions after Warner Bros deal collapse.",
+      "Netflix's next chapter focuses on stability and ads. - Netflix stock rises ahead of first-quarter report. - Netflix Q1 preview: Focus on advertising and live sports. - Netflix Q1 earnings preview: Expect solid performance. - Netflix co-founder Marc Randolph joins Oh YAAS as advisor. - Netflix patent claim interpretation clarified in DIVX, LLC case.",
+      "Netflix's Q1 earnings results are in focus. - Netflix's price hikes may benefit shareholders. - Netflix has $7.4 billion in off-balance sheet options."
+    ],
+    "long_term_200d": [
+      "Netflix raises US subscription prices across all tiers. - Netflix increases subscription costs for all plans. - Netflix announces second price hike in two years. - Netflix subscription prices are going up again. - Netflix raises prices on all US streaming tiers.",
+      "Netflix poised for substantial advertising growth into 2026. - Netflix advertising business expected to boost full-year revenue. - Netflix acquires AI production company for up to $600 million. - Billionaires increase Netflix stock positions after Warner Bros deal collapse.",
+      "Netflix raises subscription prices across all tiers. - Senator Elizabeth Warren criticizes Netflix price hike. - Mc Donald's launches adult Happy Meal tied to Netflix."
+    ]
+  }
+}

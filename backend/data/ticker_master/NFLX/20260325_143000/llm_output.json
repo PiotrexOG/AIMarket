@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term momentum has shifted dramatically from overbought to oversold (RSI 23.9 vs 75.1), indicating a potential for a bounce. The price is now below the 20-day SMA (-3.6% vs 4.2%), and the ROC has turned more negative (-6.2% vs -3.4%). W: Despite the oversold condition, the candle pattern has turned neutral, and the ROC remains negative, suggesting that immediate upside conviction is lacking. The move below the 20-day SMA indicates short-term weakness. O: Recent news highlights expansion into live content and restructuring, which could be interpreted as proactive management. T: Risk has increased significantly due to the sharp drop in RSI and the negative trend base, suggesting a higher probability of near-term volatility and potential downside before any sustained recovery."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment has improved significantly (8.14% vs 4.08%), with the price still holding a bullish position relative to the 50-day SMA (Z: 0.64 vs 1.06), though the Z-score has decreased. W: The MACD has turned bearish and is accelerating (-0.755 vs 0.131), which is a strong negative signal for the medium-term trend, contradicting the improving trend alignment. The decreasing Z-score also suggests waning trend strength. O: Fundamentals remain robust, providing a supportive backdrop. News around live content expansion and franchise growth offers some positive narrative. T: The score has decreased due to the deteriorating MACD and lower Z-score, despite the improving trend alignment. Risk has increased as the bearish MACD divergence suggests potential for a trend reversal or significant pullback."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term outlook shows a slight deterioration in the market regime (-15.9% vs -13.3%) and a further decrease in long-term range position (28.6% vs 33.1%). The potential for rebound from an extreme bearish stretch remains, but the overall context is weakening. W: Premium valuation multiples persist, and high multiple risk remains a significant concern, especially with the worsening market regime. The lower long-term range position indicates continued weakness in the secular trend. O: Strong fundamental performance and growth profile continue to offer a degree of resilience against the bearish macro backdrop. T: The score has decreased due to the worsening market regime and lower long-term range position. Risk has increased due to the combination of premium valuations, high multiple risk, and a deteriorating secular bear market environment."
+    }
+  }
+}

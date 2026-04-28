@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-1.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 469.51-492.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-2.29%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.136)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 464.89-553.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.12%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 483.41,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.31%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 37.21, P/S: 13.36)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.2)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.08)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft partners with Miso on AI grid modernization in Midwestern US. - Tolion Health appoints Gregory J.Moore, MD, Ph D, to Boardof Directors. - Think Labs achieves results with AI-poweredgrid analytics using Microsoft Azure and NVIDIAGPU.",
+      "Microsoft acquires \u00b3Cloud to boostglobal Azure expertise. - TII launchers Falcon Reasons: Best \ufffdB AI Model globally.",
+      "Microsoft's billionaire investor Peter Thiel buys stake in MSFT. - Peter Thiel sells Nvidia, Tesla shares and invests in MSFT instead."
+    ],
+    "medium_term_50d": [
+      "Microsoft's billionaire investor Peter Thiel buys stake in MSFT. - Peter Thiel sells Nvidia, Tesla shares and invests in MSFT instead.",
+      "Microsoft named a top pick amid AI inflection point. - Brookfield starts cloud business amidst AI frenzey.",
+      "Microsoft acquires \u00b3Cloud to boostglobal Azure expertise. - TII launchers Falcon Reasons: Best \ufffdB AI Model globally."
+    ],
+    "long_term_200d": [
+      "Microsoft expands AI footprint with major partnerships and cybercrime platform rollout. (MSFT CEO confirms Maharastra police AI platform launch using Microsoft Azure Open AI Service and Microsoft Foundry) - Nebus lands mega ai cloud deals with MSFT and Meta, increasing customer concentration risk. (Nebius sells out GPU capacity, boosts long-",
+      "Microsoft named a top pick amid AI inflection point. - Brookfield starts cloud business amidst AI frenzey.",
+      "Microsoft acquires Chinese AI startup Manus for $2 billion. - Nvidia invests $20 billion in Groq for expanded AI inference capabilities. - Meta announces acquisition of Chinese AI startup Manus for $\u2082 billi\u043en. (Note: Based on the given data, these two bullets represent the only material events directly affecting MSFT on"
+    ]
+  }
+}

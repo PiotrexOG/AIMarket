@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (84.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 200.91-225.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.22%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.929)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.81)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 193.45-225.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (25.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.61%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 101.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 226.8,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.87%))",
+      "volume_dynamics": "AVERAGE (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.43, P/S: 5.87)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.78)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson posts strong 20 twenty-six guidance. - JNJ announces $101 billion sales target for 20 Twenty-six. - US FDA approvals for two JNJ blood cancer treatments. - $10 million Med Tech product donation by Johnson & Johnson.",
+      "Johnson & Johnson reports Q4 earnings beating estimates and issues 20 twenty-six sales guidance. - JNJ sees 2 thousand 1 hundred billion operational sales and 1 thousand 5 hundred and five million reported sales in 2 thousand twenty-six.",
+      "Johnson & Johnson beats Q4 earningsand sales estimates, issues higher 2100-01--26 out look. - Trump at Dav OS, Johnson &Johnson, Intel in focus during earnings season. - Generic competition expected for OPSUMITHalf 2 US, SIMPONIEUHalf 1. - Johnsons & Johnson"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson posts strong 20 twenty-six guidance. - JNJ announces $101 billion sales target for 20 Twenty-six. - US FDA approvals for two JNJ blood cancer treatments. - $10 million Med Tech product donation by Johnson & Johnson.",
+      "Johnson & Johnson reports Q4 earnings beating estimates and issues 20 twenty-six sales guidance. - JNJ sees 2 thousand 1 hundred billion operational sales and 1 thousand 5 hundred and five million reported sales in 2 thousand twenty-six.",
+      "Johnson & Johnson beats Q4 earningsand sales estimates, issues higher 2100-01--26 out look. - Trump at Dav OS, Johnson &Johnson, Intel in focus during earnings season. - Generic competition expected for OPSUMITHalf 2 US, SIMPONIEUHalf 1. - Johnsons & Johnson"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson posts strong 20 twenty-six guidance. - JNJ announces $101 billion sales target for 20 Twenty-six. - US FDA approvals for two JNJ blood cancer treatments. - $10 million Med Tech product donation by Johnson & Johnson.",
+      "Johnson & Johnson announces positive Phase three results for TECVayli in multiple myelsia. - Tecvayli monotherapy shows superior PFS and OS vs standard of care in relapsed multiple myeliomaa.",
+      "Johnson & Johnson reports Phase III results showing T ecvayli reduces disease progression in multiple myelsia patients."
+    ]
+  }
+}

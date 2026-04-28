@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.15)",
+        "velocity_roc_10": "NORMAL (-10.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 331.92-390.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.35%)",
+        "cycle_macd": "BEARISH_RECOVERING (-4.808)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.5)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 298.52-390.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (24.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.9%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 353.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.61%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.9% | OM: 50.8% | NM: 45.1%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.31x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3818.940591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.9%, EPS: 48.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3202.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.07, P/S: 0.48)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC reports strong January-February 2026 revenue growth.",
+      "TSMC scales up: 8,000 new jobs and expanded production facilities.",
+      "Broadcom secures TSMC capacity through 2028."
+    ],
+    "medium_term_50d": [
+      "TSMC shares sink amid Iran tensions and tech selloff.",
+      "TSMC reports strong January-February 2026 revenue growth.",
+      "TSMC capacity shifted by Nvidia from China to Vera Rubin. - Nvidia halts China H200 chip production, shifts TSMC capacity. - TSMC speeds new mega fab construction due to AI demand."
+    ],
+    "long_term_200d": [
+      "TSMC shares sink amid Iran tensions and tech selloff.",
+      "Geopolitional tension disrups TSMC's US supply. - China's top chipmakers ramp up advanced semiconductor production.",
+      "TSMC sees increased demand from AI sector following trade pact. - Economic growth boost for TSM due to strong AI exports in 20 twenty-six. - Record high share price for TSM driven by AI demand and Big Tech spending."
+    ]
+  }
+}

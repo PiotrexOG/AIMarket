@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.8,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The STRONG_BULLISH candle pattern is now contradicted by a sharp decline in RSI to 34.0, indicating a bearish zone. Mean reversion to Bollinger Bands has widened slightly to 0.31, suggesting increased volatility within normal bands. W: While ROC has improved slightly to -2.0%, the price remains below the 20-day SMA (-1.2%), reinforcing near-term weakness. The analyst consensus has shifted to MIXED, reflecting this technical deterioration. O: News flow is mixed, with a potential acquisition in Iraq and a strategic collaboration on hydrogen technology offset by a project pause. T: Volatility has decreased slightly to 1.94% ATR, but the sharp drop in momentum and the shift in analyst sentiment increase downside risk, particularly given the proximity to the 20-day SMA."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains stable (1.59%), but the bearish MACD acceleration has intensified (-0.367). Crucially, the SMA50 Z-score has dramatically improved to 0.87, indicating a strong bullish trend position, which contradicts the MACD. W: The conflicting signals between the accelerating bearish MACD and the strong bullish SMA50 Z-score create a significant lack of conviction. The analyst sentiment is MIXED, further highlighting this divergence. O: The news narrative remains mixed, with potential M&A activity and technological collaborations balanced by project pauses. T: The improved SMA50 Z-score suggests underlying strength, but the persistent bearish MACD and mixed analyst sentiment increase the risk of a trend reversal or significant pullback. Valuation risk remains moderate, but the technical divergence is a key concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term regime remains a robust SECULAR_BULL_MARKET (4.1%), and the price has advanced further into the bullish upper quadrant (83.2%). The HEALTHY_GOLDEN_CROSS structure remains intact and has slightly strengthened (3.72%). W: The fundamental growth profile continues to be a persistent weakness (STAGNATION_WITH_PROFIT_ISSUES), which limits the conviction in the long-term score. The analyst consensus has shifted to MIXED, reflecting broader market uncertainties. O: Strategic initiatives for AI data centers and carbon capture, along with potential M&A activity in Iraq, provide positive long-term narrative drivers. T: Volatility has slightly decreased, and the balance sheet remains healthy, contributing to a stable risk profile. The primary long-term risk remains the structural weakness in earnings growth, but it is currently mitigated by the strong market regime and strategic initiatives."
+    }
+  }
+}

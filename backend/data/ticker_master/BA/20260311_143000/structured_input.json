@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.9)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.01)",
+        "velocity_roc_10": "NORMAL (-6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.1%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 217.03-247.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.2%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.39)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.03)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 215.11-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.14%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.43%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.61)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 90.72, P/S: 1.91)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 31.35)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.8)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.25x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing booked 21 gross orders, 6 cancellations in February. - Boeing 737 MAX deliveries delayed by wiring flaws. - Boeing reworking 737 MAX planes for wire scratches. - Boeing stock falls on 737 MAX wiring flaw. - Boeing gets $289 million Israel deal for smart bombs.",
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit.",
+      "Space Force halts rocket launches at Boeing's space business."
+    ],
+    "medium_term_50d": [
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit.",
+      "Boeing booked 21 gross orders, 6 cancellations in February. - Boeing 737 MAX deliveries delayed by wiring flaws. - Boeing reworking 737 MAX planes for wire scratches. - Boeing stock falls on 737 MAX wiring flaw. - Boeing gets $289 million Israel deal for smart bombs.",
+      "Boeing in talks for potential 500 737 MAX aircraft order. - NASA terminates moon rocket contract with Boeing due to delays."
+    ],
+    "long_term_200d": [
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit.",
+      "Boeing surpasses Airbus in plane orders, secures Vietnam deals. - NASA investigation finds Starliner mishap, cites Boeing leadership. - NASA eyes Boeing-Lockheed rocket components for moon mission.",
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues."
+    ]
+  }
+}

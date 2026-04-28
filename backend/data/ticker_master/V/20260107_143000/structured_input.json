@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 324.71-358.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.15%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.375)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.52)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 318.0-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.62%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 355.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.33%))",
+      "volume_dynamics": "ELEVATED (1.17)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.64, P/S: 17.88)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.99)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Consumer groups attend Visa,Mastercard card settlement. - Merchants join consumer groups against Visa,MASTERCARD settlement. These two bullets are acceptable because they involve regulatory rulings targetting the companies, which meet the criteria for material events.",
+      "Visa announces collaboration with Fiserv on Visa Intelligent Commerce and Trusted Agent Protocol. - Spending through Visa-issuredcrypto cards jumps 535% in20225.",
+      "Payment giants prepare infrastructure for agentic commerce transforming global shopping (Visa included). - Visaa and others face challenges in Asia-Paciifc markets regarding workforce skills and data governance."
+    ],
+    "medium_term_50d": [
+      "Consumer groups attend Visa,Mastercard card settlement. - Merchants join consumer groups against Visa,MASTERCARD settlement. These two bullets are acceptable because they involve regulatory rulings targetting the companies, which meet the criteria for material events.",
+      "Visa announces collaboration with Fiserv on Visa Intelligent Commerce and Trusted Agent Protocol. - Spending through Visa-issuredcrypto cards jumps 535% in20225.",
+      "Payment giants prepare infrastructure for agentic commerce transforming global shopping (Visa included). - Visaa and others face challenges in Asia-Paciifc markets regarding workforce skills and data governance."
+    ],
+    "long_term_200d": [
+      "Consumer groups attend Visa,Mastercard card settlement. - Merchants join consumer groups against Visa,MASTERCARD settlement. These two bullets are acceptable because they involve regulatory rulings targetting the companies, which meet the criteria for material events.",
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement",
+      "Visa announces collaboration with Fiserv on Visa Intelligent Commerce and Trusted Agent Protocol. - Spending through Visa-issuredcrypto cards jumps 535% in20225."
+    ]
+  }
+}

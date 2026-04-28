@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.76)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 77.99-89.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.04%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.06)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 77.99-89.05]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.04%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 27.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 86.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.95%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 23.7% | OM: 10.8% | NM: 7.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 10.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.6893B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 0.6%, EPS: -35.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -12.5%, Next Q Est Growth: 20.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.42, P/S: 2.7)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.88)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -35.2%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks faces potential challenge from Luckin's possible acquisition of Coca-Cola's Costa. - Intuit secures naming rights deal for LA Olympics' Inglewood arena (Starbucks included).",
+      "Starbucks sells majority of China retail ops to Boyu. - Oakberry signs large Texan franchising deal with SBUX.",
+      "Starbucks workers expand holiday season strike. - President Trump rolls back tariffs on Brazilian imports, potentially impacting coffee prices for SBUX."
+    ],
+    "medium_term_50d": [
+      "Starbucks announces major cost-cutting measures. - FDA issues warning letter to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks' pickup business. - New labor union forms at Starbucks stores nationwide. - Supply disruption of key ingredient impacts SBUX sales. -Starbucks",
+      "Starbucks sells majority of China retail ops to Boyu. - Oakberry signs large Texan franchising deal with SBUX.",
+      "Starbucksworkersunionlaunchesstrikeinmorethan40citiesonchain\u2019skeyholidaysalesday - Over1000Starbucksbartendersgoonsitestrikethroughout US - Starbuccesemployeeswalkoffjobswithdemandforcollectivebargainingagreement - Unionrepresentativesaskf"
+    ],
+    "long_term_200d": [
+      "Starbucks selling 6,001-8,0oo stores in China to private equity firm Boy\u0443 Capital - Boyu seeking $1.\u56db billion loan for Starbucked China takeover - Star\u0431ucks and Boyu forming China joint venture, Starbucked holding 40%, Boyu 60 % - Starbucks expecting $13",
+      "Starbucks announces major cost-cutting measures. - FDA issues warning letter to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks' pickup business. - New labor union forms at Starbucks stores nationwide. - Supply disruption of key ingredient impacts SBUX sales. -Starbucks",
+      "Starbucks enters joint venture with Boys Capital to operate China business - Star\u0431ucks sells controlling stake in China retail operations to Boys Capital ($4B)"
+    ]
+  }
+}

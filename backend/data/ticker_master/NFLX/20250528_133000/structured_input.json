@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.95)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 109.55-121.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (11.25%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.17)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.51)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 82.11-121.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (37.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.97%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 120.78,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 27.7% | NM: 23.1%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.173327B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 47.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 19.3%, Next Q Est Growth: 4.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.66, P/S: 13.14)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 21.96)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.17)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix increases pricing in major markets and builds out advertising service.",
+      "Netflix adds Sesame Streets after PBS funding cuts. - JPMorgan downgrades NFLX to Neutural.",
+      "Charter communications and Cox Communications merge, affecting NFLX through potential regulatory scrutiny or changed competition landscape. - Net Flix announces new ad-supported plan, driving revenue growth and potentially attracting new subscribers."
+    ],
+    "medium_term_50d": [
+      "Netflix increases pricing in major markets and builds out advertising service.",
+      "Netflix faces potential 10% reduction in operating margin due to movie tariff proposal. - President Trump announces plan for 10o% tariffonforeign-mademovies,affecting Netflix. - Morgan Stanleywarns Netflixearningsmaydecreasewithmovieimporttariffs.",
+      "Netflix increases commitment to livesteaming offerings."
+    ],
+    "long_term_200d": [
+      "Netflix faces potential 10% reduction in operating margin due to movie tariff proposal. - President Trump announces plan for 10o% tariffonforeign-mademovies,affecting Netflix. - Morgan Stanleywarns Netflixearningsmaydecreasewithmovieimporttariffs.",
+      "Netflix signs partnership for new live sports content. - Regulator fines Netflix for data privacy violation. - Major supplier disruption impacts NFLX video production. - CEO announces significant shift in business strategy.",
+      "Netflix increases pricing in major markets and builds out advertising service."
+    ]
+  }
+}

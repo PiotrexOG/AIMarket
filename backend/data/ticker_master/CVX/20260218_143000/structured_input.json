@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 165.15-186.52]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.82%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.012)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.58)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 146.49-186.52]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.99%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 182.42,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: 9.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.31, P/S: 1.96)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.95)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron wins four exploration blocks in Greek Mediterranean - Chevrond and HEL\u043b\u0435\u043di Q sign lease agreements with Greek state - Chevornd extends upstream footpath in Eastern Mediterranean",
+      "Chevron obtains new exploration licensesin Libya's Sirte Basinand expands in Venezuela.",
+      "Chevron signs lease agreements for oil andgas exploration in Greece. - OFAC issues licenses to Chev\u0440\u043e\u043d and others for Venezuelan projects. - Hellenic Republic leases four offshoreblocks to Chevrondutchsubsidiaries. - Californiagaspricessurge due torefineryclosures. -Chevron"
+    ],
+    "medium_term_50d": [
+      "Chevron wins four exploration blocks in Greek Mediterranean - Chevrond and HEL\u043b\u0435\u043di Q sign lease agreements with Greek state - Chevornd extends upstream footpath in Eastern Mediterranean",
+      "US eases sanctions, allowing Chevron to resume Venezuelaoperations. - PDVSA refuses to sell oilto unlicensedcompanies,limitingexports. - Trump authorizes moreoilinvestments in Venezuelafor Chevronand others.",
+      "Chevron obtains new exploration licensesin Libya's Sirte Basinand expands in Venezuela."
+    ],
+    "long_term_200d": [
+      "Chevron expands operations in Venezuela, targets 50\\% production increase. - US policy changes grant wider licenses to American Oil Co's in Venezuela. -Chevron ramps up Venezuelans crude exports, increases Venezuelanproduction.",
+      "US eases sanctions, allowing Chevron to resume Venezuelaoperations. - PDVSA refuses to sell oilto unlicensedcompanies,limitingexports. - Trump authorizes moreoilinvestments in Venezuelafor Chevronand others.",
+      "Chevron amasses largest fleet in almost a year to ship Venezuelanapi oil - Che vron ramps Up Venezuelan api oil shipments - Chevrond deploys fifteen vessels to ship Venezolan oil -Chevron ships at least twenty thousand barrels aday Venezuelan oili These bullets represent material events directly affecting"
+    ]
+  }
+}

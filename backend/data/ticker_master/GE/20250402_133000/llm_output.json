@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term momentum has softened significantly. RSI has moved from the bullish zone to neutral (60.0), and velocity (ROC) has decelerated from explosive to normal (1.5%). The price has moved from testing upper bands to within normal bands and is now in the middle of its 20-day range. W: The strong bullish candle pattern is a positive, but the overall momentum indicators suggest a loss of immediate upward thrust. O: Mixed news flow, including a major restructuring plan and some contract wins, provides some support but lacks a clear short-term catalyst. T: The risk has increased as the price is no longer pushing resistance and has moved from \"blue sky\" territory to a more neutral range position, increasing the potential for a pullback."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend has deteriorated. The MACD has shifted from bullish accelerating to bearish accelerating (-0.138), and the Z-score relative to the 50-day SMA has moved from bullish to near the mean reversion base (Z:-0.04). The price is now inside the monthly range, indicating a loss of upward momentum. W: The shift in MACD and Z-score suggests a potential trend reversal or at least a significant consolidation phase. O: The news narrative remains mixed, with restructuring plans and some contract wins, but the overall sentiment appears to be shifting away from strong bullishness. T: Risk has increased substantially due to the bearish MACD signal and the price moving from a strengthening position at monthly resistance to being inside the range. This increases the probability of a downside correction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term technical structure remains supportive, with a secular bull market regime and a healthy golden cross. The price is still in the bullish upper quadrant, though it has retreated from the all-time high position. W: While the long-term technicals are stable, the fundamental growth profile remains a significant overhang, and the premium valuation persists. O: The ongoing restructuring and the spin-off of divisions are long-term strategic positives, but the core business growth remains stagnant. T: The risk remains elevated due to the disconnect between premium valuations (P/E: 33.37, P/B: 11.31) and the declining earnings growth profile (EPS: -28.4%). The shift in short and medium-term momentum also introduces a higher probability of a broader market correction impacting even strong long-term structures."
+    }
+  }
+}

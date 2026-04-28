@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.55)",
+        "velocity_roc_10": "NORMAL (-1.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 232.24-247.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.65%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.339)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.77)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 227.25-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.2%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.67%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 238.09,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.56)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.46, P/S: 6.04)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.17)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson raises 2026 outlook after strong Q1 earnings. - Johnson & Johnson declares 3.1% increase in quarterly dividend. - Johnson & Johnson beats Q1 earnings and sales estimates. - Johnson & Johnson working towards mid-2027 separation for orthopedic business. - Johnson & Johnson's cardiovascular unit shows strong growth in Q1. - Johnson & Johnson raises full-year sales and earnings guidance.",
+      "Johnson & Johnson showcases new clinical data for TECNIS Pure See IOL. - Johnson & Johnson highlights favorable 12-month interim results for VARIPULSE Platform. - Johnson & Johnson's innovative medicine growth is strong. - Johnson & Johnson earnings: Oncology powers growth, talc lawsuits persist. - JNJ edges out LLY in pharma investment face-off.",
+      "Johnson & Johnson to present data on FDA-approved intraocular lens. - Johnson & Johnson Q1 earnings preview and growth outlook. - Johnson & Johnson to report Q1 earnings."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson raises 2026 outlook after strong Q1 earnings. - Johnson & Johnson declares 3.1% increase in quarterly dividend. - Johnson & Johnson beats Q1 earnings and sales estimates. - Johnson & Johnson working towards mid-2027 separation for orthopedic business. - Johnson & Johnson's cardiovascular unit shows strong growth in Q1. - Johnson & Johnson raises full-year sales and earnings guidance.",
+      "Johnson & Johnson showcases new clinical data for TECNIS Pure See IOL. - Johnson & Johnson highlights favorable 12-month interim results for VARIPULSE Platform. - Johnson & Johnson's innovative medicine growth is strong. - Johnson & Johnson earnings: Oncology powers growth, talc lawsuits persist. - JNJ edges out LLY in pharma investment face-off.",
+      "Johnson & Johnson launches VARIPULSE Pro in Europe. - Johnson & Johnson advances PFA portfolio with VARIPULSE Pro launch. - Johnson & Johnson secures reimbursement for INLEXZO therapy. - Johnson & Johnson reports efficacy data for ICOTYDE. - Johnson & Johnson enters distribution agreement for SIRTURO."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson raises 2026 outlook after strong Q1 earnings. - Johnson & Johnson declares 3.1% increase in quarterly dividend. - Johnson & Johnson beats Q1 earnings and sales estimates. - Johnson & Johnson working towards mid-2027 separation for orthopedic business. - Johnson & Johnson's cardiovascular unit shows strong growth in Q1. - Johnson & Johnson raises full-year sales and earnings guidance.",
+      "Johnson & Johnson showcases new clinical data for TECNIS Pure See IOL. - Johnson & Johnson highlights favorable 12-month interim results for VARIPULSE Platform. - Johnson & Johnson's innovative medicine growth is strong. - Johnson & Johnson earnings: Oncology powers growth, talc lawsuits persist. - JNJ edges out LLY in pharma investment face-off.",
+      "FDA approves Johnson & Johnson's oral psoriasis pill ICOTYDE. - Johnson & Johnson's ICOTYDE approved for plaque psoriasis treatment. - FDA approves Johnson & Johnson's IL-23 receptor antagonist ICOTYDE."
+    ]
+  }
+}

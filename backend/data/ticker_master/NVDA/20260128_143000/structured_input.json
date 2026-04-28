@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.74)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 177.62-193.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.36%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.176)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.71)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.55-196.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.26%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 191.4,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.55%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 74.47, P/S: 41.86)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 71.95)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Samsung nears approval for key HBM4AI memory chips for Nvidia. - Samsung to start HBM4 memory chip production next month for Nvidian supply. - Core Weave and Nvid\u00eda deepen partnership, Nvidia invests $2 billion. -Core Weave builds out more than five gigawatts AI factories by 20",
+      "China opens door to Nvid\u00eda H20 chips approval. - Questions surrounding conditions and timing of approval.",
+      "Nvid\u00eda CEO Jensenhuang in Shanghai as China regulates NVDA. - Potential approval of Nvid\u00eda's H\u2082O\u2080 chips for import in China."
+    ],
+    "medium_term_50d": [
+      "Samsung nears approval for key HBM4AI memory chips for Nvidia. - Samsung to start HBM4 memory chip production next month for Nvidian supply. - Core Weave and Nvid\u00eda deepen partnership, Nvidia invests $2 billion. -Core Weave builds out more than five gigawatts AI factories by 20",
+      "China opens door to Nvid\u00eda H20 chips approval. - Questions surrounding conditions and timing of approval.",
+      "Nvid\u00eda CEO Jensenhuang in Shanghai as China regulates NVDA. - Potential approval of Nvid\u00eda's H\u2082O\u2080 chips for import in China."
+    ],
+    "long_term_200d": [
+      "Samsung nears approval for key HBM4AI memory chips for Nvidia. - Samsung to start HBM4 memory chip production next month for Nvidian supply. - Core Weave and Nvid\u00eda deepen partnership, Nvidia invests $2 billion. -Core Weave builds out more than five gigawatts AI factories by 20",
+      "Nvidia announces new AI chips at CEs 20 twenty-six. - CEO Jensen Haung confirms Rubin chips in production. - Core Weave integrates Nvidia Ruby tech for larger AI workloads.",
+      "Nvidia announces partnership with Eli Lily, Nater\u0430, Thermo Fish\u0435\u0440 and others for drug discovery using NVIDIA's AI platform. - TSMC purchases additional land in Arizona for facility expansions."
+    ]
+  }
+}

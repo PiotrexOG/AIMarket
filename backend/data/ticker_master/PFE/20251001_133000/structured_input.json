@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.3)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.12)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 23.58-25.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.11%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.071)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.12)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 23.11-26.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.97%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "CLIMAX_EXTREME (3.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.99, P/S: 2.37)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.71)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.4x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer reaches landmark agreement with US government to lower drugcosts for American patients. - White House to announce 'Trump Rx C' drug-buying website, Pfizer lowers USprices.",
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline.",
+      "Trump announces 10% tariff on Pfizer drugs. - GSK appoints new CEO, replacing Emma Walmsey."
+    ],
+    "medium_term_50d": [
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline.",
+      "Pfizer reaches landmark agreement with US government to lower drugcosts for American patients. - White House to announce 'Trump Rx C' drug-buying website, Pfizer lowers USprices.",
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)"
+    ],
+    "long_term_200d": [
+      "Pfzer acquires Metstera for obesity pipeline expansion. - Metsera deal boosts Pfizer' revenues and GLP-\u2081 pipeline.",
+      "Pfizer buys Metsera for $7. three billion (obesity market entry) - Pfzer and Metsera form partnership (obes ITY drug development)",
+      "Pfizer to purchase Metserafor up to $ seventh billions for obesitydrugs - Pfizers acquisitionof Metseraannounced - Pfizertargetsobesitydrugmarketwith Metseracurchase - Pfzerbuys Metseradeveloplongactingobesitydrugg - Pfzermakesmajorstrategicdec"
+    ]
+  }
+}

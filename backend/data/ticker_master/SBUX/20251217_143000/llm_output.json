@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term outlook has improved significantly, driven by a strong bullish candle pattern and price action hugging the 20-day SMA (0.4%). Velocity ROC has stabilized at -0.1%, indicating a halt in the previous decline. The RSI remains in the neutral zone at 47.0, but the shift in candle pattern suggests potential for a near-term bounce. W: Mean reversion bands have widened to 0.55, offering more room for price movement, but the price is now in the middle of the 20-day range (81.97-87.87), suggesting less immediate directional conviction. O: Short-term news remains mixed, with ongoing strikes and corporate overhaul announcements, but also positive developments like a new store opening and a dividend announcement. T: Risk has decreased due to the bullish candle pattern and stabilization of price action. Volatility has also slightly decreased (ATR 2.25%), and volume dynamics are average (1.08), suggesting less selling pressure. Conviction has increased due to the clear bullish technical signal, outweighing the mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.8,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term trend has shown a notable recovery. The MACD has significantly recovered from bearish territory to -0.013, indicating a reduction in downward momentum. Crucially, the Z-score relative to the 50-day SMA has turned positive (0.68), confirming a shift towards a bullish trend position. Trend alignment remains compressed (0.88%), but the positive Z-score suggests this consolidation may precede an upward move. W: The price remains within the monthly range (77.99-89.05), but the improving MACD and Z-score suggest a higher probability of testing the upper bound. O: Medium-term news is still mixed, with ongoing labor issues and the China joint venture, but the corporate overhaul announcement by the CEO could signal a strategic shift. T: Risk has decreased substantially due to the improving MACD and positive Z-score, indicating a less bearish trend. Conviction has increased due to the clear shift in technical momentum and trend positioning, despite lingering fundamental concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term technical structure remains bearish, but with some signs of stabilization. The secular bear market regime has narrowed its decline (-3.6%), and the death cross structure remains (-4.78%). However, the price has moved to a higher position within the bearish lower quadrant (25.3%), indicating a slight improvement in long-term positioning. W: Fundamental metrics continue to be a significant concern, with stressed balance sheets (YrsToPay: 10.5x) and stagnant growth profiles (EPS: -35.2%). Valuation remains elevated (P/E: 36.87), increasing fragility. O: The long-term news narrative is dominated by ongoing operational challenges and strategic shifts, but the CEO's corporate overhaul announcement could signal a more proactive approach to addressing these issues. T: Risk remains elevated due to the persistent bearish long-term structure, stressed fundamentals, and premium valuation. However, the slight improvement in long-term price positioning and narrowing of the secular bear market decline suggest a marginal reduction in downside risk compared to the previous period. Conviction remains low due to the entrenched bearish structure and ongoing fundamental concerns."
+    }
+  }
+}

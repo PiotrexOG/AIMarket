@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 333.47-353.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.24%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.862)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.96)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 328.7-358.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.59%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 54.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 340.45,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.52%))",
+      "volume_dynamics": "ELEVATED (1.25)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.18, P/S: 17.86)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.67)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Moon Pay acquires Meso for global payments expansion, impacts Visa directly. - Areeba partners with Entrrust to enable Google Pay, affects Visa cardholders.",
+      "Visa launes new product for high net-worth individuals in UAE.",
+      "Visa partnerswith Ample Earth for sustainability data in payment ecosystem."
+    ],
+    "medium_term_50d": [
+      "Moon Pay acquires Meso for global payments expansion, impacts Visa directly. - Areeba partners with Entrrust to enable Google Pay, affects Visa cardholders.",
+      "Stripe begins private testing of payments-focusted blockchain \"Tempo\" with Visa,Deutsche Bank,Standard Chartered.",
+      "Visa pushes more tokenization. - Virtual Pay Group secures Visa Principal Acquirer License. - Mastercard unveils On\u2010Demand Decisoning tool."
+    ],
+    "long_term_200d": [
+      "Stripe begins private testing of payments-focusted blockchain \"Tempo\" with Visa,Deutsche Bank,Standard Chartered.",
+      "Ant International launches agentic payment solutions with Mastercard and Visa participation. - Stripe builds layer-1blockchain for payments and stablecoinswith Visa involvement.",
+      "Mastercard investigation into Visa cardnetwork practices. - Octopus and Visa launch fleet payment card. -Visa expands into stablecoins with multi-Chain strategy."
+    ]
+  }
+}

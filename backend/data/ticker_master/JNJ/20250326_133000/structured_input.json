@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.2)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 160.55-169.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.35%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.826)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.65)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 142.11-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.93%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 162.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.49%))",
+      "volume_dynamics": "AVERAGE (0.72)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.1% | OM: 24.8% | NM: 15.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $88.821B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -58.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -28.9%, Next Q Est Growth: 80.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.72, P/S: 4.43)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.5)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -58.06%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnny's Med Tech launches new surgical solution: DUALTOTM Energy System.",
+      "Johnson & Johnny announces $5 fifth billion US investment plan, expanding biologics facilities in North Carolina.",
+      "Johnson & Johnson announces new data from MARIPosa study for RYB REVANT and LAZCLUze in first- line NSCLC with EGFR mutation. - US FDA approvals: TREMF YA for adult patientswith mod-severely active Crohn\u2019s disease."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces new data from MARIPosa study for RYB REVANT and LAZCLUze in first- line NSCLC with EGFR mutation. - US FDA approvals: TREMF YA for adult patientswith mod-severely active Crohn\u2019s disease.",
+      "Johnson & Johnny announces $5 fifth billion US investment plan, expanding biologics facilities in North Carolina.",
+      "Johnson & Johnny's Med Tech launches new surgical solution: DUALTOTM Energy System."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces new data from MARIPosa study for RYB REVANT and LAZCLUze in first- line NSCLC with EGFR mutation. - US FDA approvals: TREMF YA for adult patientswith mod-severely active Crohn\u2019s disease.",
+      "FDA grants Fast Track status to JNJ for nipocalimb in Sjog\u0440\u0435\u043d's disease treatment.",
+      "Johnson & Johnson grants Fast Track design ATION for Nipocalimb in Sj\u00f6ren's disease. - Nanobiatx adjusts agreement with JNJ to strengthen finances."
+    ]
+  }
+}

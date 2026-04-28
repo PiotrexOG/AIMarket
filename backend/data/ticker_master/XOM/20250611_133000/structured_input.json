@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.76)",
+        "velocity_roc_10": "NORMAL (3.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.18-110.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.32%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.413)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.31%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 31.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.86,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "ELEVATED (1.14)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.15, P/S: 1.4)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.81)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Argentina's presidency may lead to significant M&A in energy sector. - Guyana remains important driver for Exxon's global expansion. - Chevron cuts 20o Texas jobs as part of global workforce reduction plan.",
+      "Exxon\u041cobil announces $20 billions investment plan by 20 thirty. - Kinder Morgan starts new pipeline projects entering service through twenty three zero.",
+      "Exxon Mobile reports $10,4B profit from Guyana's oil discoveries in 2o24."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobile reports $10,4B profit from Guyana's oil discoveries in 2o24.",
+      "Argentina's presidency may lead to significant M&A in energy sector. - Guyana remains important driver for Exxon's global expansion. - Chevron cuts 20o Texas jobs as part of global workforce reduction plan.",
+      "Exxon\u041cobil announces $20 billions investment plan by 20 thirty. - Kinder Morgan starts new pipeline projects entering service through twenty three zero."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile reports $10,4B profit from Guyana's oil discoveries in 2o24.",
+      "Exxon \u041cobil Guyana reports 62\\% surge in profits. -Exxon \u041cobi\u043b commits N$7 mln to JAfrica for STEM programme.",
+      "Trump administration cuts funding for Exxon's Baytown project. - Ex xon signs oil exploration dealswith Azerbaija n's SOC AR. -- Consortium led by Exxon reports $10,4bn profit from Guyana operations (2023)."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.3)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.96)",
+        "velocity_roc_10": "NORMAL (5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (7.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 79.81-96.03]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-5.63%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.359)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-105.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.57%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 67.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 92.68,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.98%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.4% | OM: 4.2% | NM: 2.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.61x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $648.125B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 33.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.6%, Next Q Est Growth: -14.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.12, P/S: 1.16)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.96)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.43)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump imposes new tariffs on imported goods, affecting WMT supply chain costs. - WMT announces major expansion into renewable energy sector. - Lawsuit filed against WMT over labor practices reaches settlement. - New partnership with tech giant boosts WMT e-commerce capabilities. - Significant production delay announced for key product line. - FDA appro",
+      "Walmart faces potential disruption in shrimp imports due to US tariffs.",
+      "Walmart heirs expand American Giant's all-American clothing production. - Steuart Wal TON becomes more influential in WMT's management."
+    ],
+    "medium_term_50d": [
+      "Trump imposes new tariffs on imported goods, affecting WMT supply chain costs. - WMT announces major expansion into renewable energy sector. - Lawsuit filed against WMT over labor practices reaches settlement. - New partnership with tech giant boosts WMT e-commerce capabilities. - Significant production delay announced for key product line. - FDA appro",
+      "Walmart re affirms annual Sales Forecasts - Wal Mart sticks to Full-year Sales and Income Growth Forecasts. - walmart vows to Keep Prices Low amid Trump Tariff woes.",
+      "Walmart faces potential disruption in shrimp imports due to US tariffs."
+    ],
+    "long_term_200d": [
+      "Trump imposes new tariffs on imported goods, affecting WMT supply chain costs. - WMT announces major expansion into renewable energy sector. - Lawsuit filed against WMT over labor practices reaches settlement. - New partnership with tech giant boosts WMT e-commerce capabilities. - Significant production delay announced for key product line. - FDA appro",
+      "Walmart re affirms annual Sales Forecasts - Wal Mart sticks to Full-year Sales and Income Growth Forecasts. - walmart vows to Keep Prices Low amid Trump Tariff woes.",
+      "Walmart could withdraw Full-Year Guidance Amid Tariff Volatility,Oppenheimer Says - Wal mart Likelyto Achieve Q1Guidance,Oppenheimersays - Trumptariffs:Whichretailerswill bemostresilient"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.0)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.32)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-7.6%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 323.83-358.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.97%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.483)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.64%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 327.04,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.07%))",
+      "volume_dynamics": "CLIMAX_EXTREME (3.72)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.91, P/S: 16.47)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.57)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "President Trump imposes 10\\% credit card rate cap, potentially affecting Visa and Mastercard.",
+      "Visa releases 20 twenty-six Global Economic Out Look report. - Polygon acquires Coinmeand Sequence for over $25o million to expand stablecoin payment capabilities."
+    ],
+    "medium_term_50d": [
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "President Trump imposes 10\\% credit card rate cap, potentially affecting Visa and Mastercard.",
+      "Consumer groups attend Visa,Mastercard card settlement. - Merchants join consumer groups against Visa,MASTERCARD settlement. These two bullets are acceptable because they involve regulatory rulings targetting the companies, which meet the criteria for material events."
+    ],
+    "long_term_200d": [
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion",
+      "President Trump imposes 10\\% credit card rate cap, potentially affecting Visa and Mastercard.",
+      "Consumer groups attend Visa,Mastercard card settlement. - Merchants join consumer groups against Visa,MASTERCARD settlement. These two bullets are acceptable because they involve regulatory rulings targetting the companies, which meet the criteria for material events."
+    ]
+  }
+}

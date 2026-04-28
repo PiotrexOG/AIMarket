@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.02)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 983.0-1067.08]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.45%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.145)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.84)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 871.71-1067.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.67%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 1054.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.8%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 61.75, P/S: 1.81)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.18)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.79)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Costco faces tariff concerns and deliveres strong comps in Q2. -Costco reports 8% increase in net sales in Q3. -costco outperforms competition on strong tradingday.",
+      "Costco restricts purchase of 1-oz gold bars."
+    ],
+    "medium_term_50d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Costco reports Q3 twenty-five earnings with 13\\% increase in net ink and significant e\\-commerce growth. -Costco announces brick-and-\\-mortal retail partnership with AG1, marking first major channel expand into retail.",
+      "Costco releases Q3 earnings report."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Costco reports Q3 twenty-five earnings with 13\\% increase in net ink and significant e\\-commerce growth. -Costco announces brick-and-\\-mortal retail partnership with AG1, marking first major channel expand into retail.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year"
+    ]
+  }
+}

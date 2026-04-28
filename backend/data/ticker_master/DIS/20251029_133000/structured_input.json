@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.46)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.51-116.06]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.27%)",
+        "cycle_macd": "BULLISH_FADING (0.246)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 108.51-119.78]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.02%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 110.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.87%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.1% | OM: 14.6% | NM: 9.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.04B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 434.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 24.8%, Next Q Est Growth: -43.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.54, P/S: 2.13)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.92)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.05)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney collaborates with Formula 1^(TM) at Las Vegas Gran Prix. - Dis discussed rising streaming churn and potential blackouts. - Ex-Dis executive starts faster, frugal production studio. - ADCOLOR event takes place at Disney' World in Nov 20 twenty-five.",
+      "Disney suspends \"Jimmy Kimmel Live!\" on ABC due to political controversy. - You Tube TV at risk of lossing Disney-owned channels. - Dispute between Disney and Google over You Tube TV carriage fees.",
+      "Disney updates classic rides at Disney World. - Amazon AWS apologizes for global outage. - Discussions about Disney's fair value in the market. - Jana partners with Traviskelce to invest in Six Flags. - Walt Disney underperforms versus competitors. - DIS loses 7 million Disney+/Hulu subscribers."
+    ],
+    "medium_term_50d": [
+      "Disney suspends \"Jimmy Kimmel Live!\" on ABC due to political controversy. - You Tube TV at risk of lossing Disney-owned channels. - Dispute between Disney and Google over You Tube TV carriage fees.",
+      "Disney clarifies theme park service rules after abuse, impacts DIS directly. - DIS loses around 7 million subscribers after Jimmy Kimmell suspension. - Netflix misses earnings estimate, potential impact on DIS through competition.",
+      "Disney collaborates with Formula 1^(TM) at Las Vegas Gran Prix. - Dis discussed rising streaming churn and potential blackouts. - Ex-Dis executive starts faster, frugal production studio. - ADCOLOR event takes place at Disney' World in Nov 20 twenty-five."
+    ],
+    "long_term_200d": [
+      "Disney suspends \"Jimmy Kimmel Live!\" on ABC due to political controversy. - You Tube TV at risk of lossing Disney-owned channels. - Dispute between Disney and Google over You Tube TV carriage fees.",
+      "Disney clarifies theme park service rules after abuse, impacts DIS directly. - DIS loses around 7 million subscribers after Jimmy Kimmell suspension. - Netflix misses earnings estimate, potential impact on DIS through competition.",
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports Q3 earnings beat with revenue growth."
+    ]
+  }
+}

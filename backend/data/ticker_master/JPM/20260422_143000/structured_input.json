@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "NORMAL (5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 281.75-320.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.77%)",
+        "cycle_macd": "BULLISH_FADING (1.603)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.29)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.1-326.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.5%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 312.85,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.95, P/S: 3.07)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.4)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.98)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan expands $1.5 trillion Security and Resiliency Initiative to Europe. - JPMorgan Chase appoints Admiral Sir Tony Radakin to SRI External Advisory Council. - JPMorgan Chase & Co. announced the expansion of its $1.5 trillion initiative across Europe. - JPMorgan Chase & Co. announced the expansion of its $1.5 trillion, 10-year Security and Resiliency Initiative across Europe. - JPMorgan Chase & Co. announced its intention to appoint Admiral Sir Tony Radakin to the SRI External Advisory Council. - JPMorgan Chase (JPM) expands its $1.5 trillion, 10-year Security and Resiliency Initiative across Europe. - JPMorgan Chase & Co. announced the expansion of its $",
+      "JPMorgan CEO warns of a worse-than-expected credit crisis.",
+      "Supreme Court rejects banks' bid in muni bond price-fixing case. - Supreme Court allows muni bond price-fixing class action against banks. - JPMorgan Chase & Co. is a trending stock."
+    ],
+    "medium_term_50d": [
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan expands $1.5 trillion Security and Resiliency Initiative to Europe. - JPMorgan Chase appoints Admiral Sir Tony Radakin to SRI External Advisory Council. - JPMorgan Chase & Co. announced the expansion of its $1.5 trillion initiative across Europe. - JPMorgan Chase & Co. announced the expansion of its $1.5 trillion, 10-year Security and Resiliency Initiative across Europe. - JPMorgan Chase & Co. announced its intention to appoint Admiral Sir Tony Radakin to the SRI External Advisory Council. - JPMorgan Chase (JPM) expands its $1.5 trillion, 10-year Security and Resiliency Initiative across Europe. - JPMorgan Chase & Co. announced the expansion of its $",
+      "JPMorgan plans to raise at least $7 billion from bond sale. - JPMorgan aggressively repurchases shares. - JPMorgan revenue rises on payments and card income. - JPMorgan Chase declares preferred stock dividends. - JPMorgan Chase 2026 Annual Meeting of Shareholders announced. - JPMorgan Chase quarterly profit rises 13% to $16.5bn. - JPMorgan warns of volatility due to growing conflict. - Jamie Dimon sells $40 million of JPMorgan stock."
+    ],
+    "long_term_200d": [
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan plans to raise at least $7 billion from bond sale. - JPMorgan aggressively repurchases shares. - JPMorgan revenue rises on payments and card income. - JPMorgan Chase declares preferred stock dividends. - JPMorgan Chase 2026 Annual Meeting of Shareholders announced. - JPMorgan Chase quarterly profit rises 13% to $16.5bn. - JPMorgan warns of volatility due to growing conflict. - Jamie Dimon sells $40 million of JPMorgan stock.",
+      "JPMorgan Chase launching $80B initiative for small business and communities. - JPMorgan Chase announces $1.5 trillion initiative for community lending and expansion. - JPMorgan CEO Jamie Dimon warns of brewing market storm in shareholder letter."
+    ]
+  }
+}

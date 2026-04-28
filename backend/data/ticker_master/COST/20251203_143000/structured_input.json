@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (1.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 873.97-945.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.11%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.262)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 873.97-963.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.29%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 23.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 918.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.61%))",
+      "volume_dynamics": "ELEVATED (1.17)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.17x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $264.086B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.6%, Next Q Est Growth: 6.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.5, P/S: 1.55)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.98)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.4)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco su ES Trump administration Over 'Un LAwful' Tar Iffs - Cost Co seeks full REfund if TRUMP administ RATION loses APPEal",
+      "Costco joins companies suing for refunds of tariffs. - Tariffs: Costco files lawsuit for refund eligility. - Lawsuit: Costco seeks tariff refund from Trump admin.",
+      "JMGO officially cooperates with Costcoin North America. - Bobbi's Organic launches USDA Organ IC infant formula at Costco."
+    ],
+    "medium_term_50d": [
+      "Costco su ES Trump administration Over 'Un LAwful' Tar Iffs - Cost Co seeks full REfund if TRUMP administ RATION loses APPEal",
+      "Costco joins companies suing for refunds of tariffs. - Tariffs: Costco files lawsuit for refund eligility. - Lawsuit: Costco seeks tariff refund from Trump admin.",
+      "Costco announces surprise membership fee increase. -Costco reveals plans for new product launch."
+    ],
+    "long_term_200d": [
+      "Costco su ES Trump administration Over 'Un LAwful' Tar Iffs - Cost Co seeks full REfund if TRUMP administ RATION loses APPEal",
+      "Costco joins companies suing for refunds of tariffs. - Tariffs: Costco files lawsuit for refund eligility. - Lawsuit: Costco seeks tariff refund from Trump admin.",
+      "Costco announces surprise membership fee increase. -Costco reveals plans for new product launch."
+    ]
+  }
+}

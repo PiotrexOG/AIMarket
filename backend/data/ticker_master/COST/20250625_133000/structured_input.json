@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 973.93-1067.08]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.72%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.698)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 942.97-1067.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.56%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 1000.28,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.61%))",
+      "volume_dynamics": "AVERAGE (0.89)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 58.6, P/S: 1.72)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.2)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Two Californian refineries close, potentially impacting Costco' gas prices. - Lawsuit: Homeowner receives partial payment from State Farm, leaving roofer unpaid. - TJX reports steady comp sales growth; no direct effect on COST mentioned. -Costco's e commerce sales surge, no mention of COST specifically. -CO",
+      "Costco sees increased foot traffic due to DEI commitements. - New standalone gas Station opening for Costco.",
+      "Costco increases membership fees by 10%. - Cost Co opens first standalone fuel station in California."
+    ],
+    "medium_term_50d": [
+      "Costco increases membership fees by 10%. - Cost Co opens first standalone fuel station in California.",
+      "Costco sees increased foot traffic due to DEI commitements. - New standalone gas Station opening for Costco.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Costco reports Q3 twenty-five earnings with 13\\% increase in net ink and significant e\\-commerce growth. -Costco announces brick-and-\\-mortal retail partnership with AG1, marking first major channel expand into retail.",
+      "Costco reports Q3 revenue growth of 8%, outperforming competitors. - Company's membership model drives income amid economic pressures."
+    ]
+  }
+}

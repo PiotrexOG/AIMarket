@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 298.46-337.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.41%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.019)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 292.81-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.11%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 91.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 325.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.6%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.07, P/S: 3.27)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.52)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.29)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.84x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan executives speak at J. P. Morgan Healthcase Conference. - argenx presents at J. Pomorgan Healthcare Conference with CEO Tim Van Haurmeiren. - Claritev Corp. participates in J.P Morgan Healthcare Conferece. - Pro Kidney presents at JPM Healthcare Conference, CEO Bruce Cullett",
+      "JPMorgan earnings upcoming on January 14. - Wider rate spreads boosting JPM's financial performance. - Accelerating AI-driven growth potential for JPM.",
+      "JPMorgan files lawsuit against Charlie Jav ICE for unconscionably billed millions."
+    ],
+    "medium_term_50d": [
+      "JPMorgan earnings upcoming on January 14. - Wider rate spreads boosting JPM's financial performance. - Accelerating AI-driven growth potential for JPM.",
+      "JPMorgan executives speak at J. P. Morgan Healthcase Conference. - argenx presents at J. Pomorgan Healthcare Conference with CEO Tim Van Haurmeiren. - Claritev Corp. participates in J.P Morgan Healthcare Conferece. - Pro Kidney presents at JPM Healthcare Conference, CEO Bruce Cullett",
+      "JPMorgan appoints Todd Combs as leader for key initiative."
+    ],
+    "long_term_200d": [
+      "JPMorgan earnings upcoming on January 14. - Wider rate spreads boosting JPM's financial performance. - Accelerating AI-driven growth potential for JPM.",
+      "JPMorgan appoints Todd Combs as leader for key initiative.",
+      "JPMorgan executives speak at J. P. Morgan Healthcase Conference. - argenx presents at J. Pomorgan Healthcare Conference with CEO Tim Van Haurmeiren. - Claritev Corp. participates in J.P Morgan Healthcare Conferece. - Pro Kidney presents at JPM Healthcare Conference, CEO Bruce Cullett"
+    ]
+  }
+}

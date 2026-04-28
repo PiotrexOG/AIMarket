@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly, with RSI plunging into extreme oversold territory (29.4). Price action is now below the lower Bollinger Band (-0.06) and the SMA20 (-8.2%), indicating a sharp bearish move. W: Candle patterns remain neutral, but the extreme oversold condition suggests potential for a short-term bounce, though conviction is low due to the sharp decline. O: Elevated volume dynamics (1.3) during the decline suggest strong selling pressure, which could continue in the immediate term. T: Volatility has exploded (ATR 3.76%), and the price is now below the 20-day support barrier, significantly increasing downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend has turned decisively bearish, with trend alignment showing a gradual descent (-2.27%) and MACD accelerating negatively (-3.794). The Z-score relative to the SMA50 is now a bearish outlier (Z:-2.98), indicating significant downside deviation. W: While the stock remains within its monthly range, the current trajectory suggests a move towards the lower bound. O: The bearish technical signals are strong, indicating a high probability of further downside pressure in the near to medium term. T: The fundamental growth profile remains strong, but the current technical breakdown and increased volatility (ATR 3.76%) elevate the risk profile, overriding the stable earnings momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The secular bull market regime (2.1%) and healthy golden cross structure (13.72%) still provide a long-term technical underpinning, but the stock's position has moved to the neutral zone (50.1%). W: While core fundamentals (business quality, financial health, cash generation) remain robust, the current sharp price decline has increased valuation risk. The P/E (31.8) and P/S (17.27) multiples, while still premium, have compressed, but the implied growth (PEG: 1.83) remains expensive relative to the current price action. O: The recent price action and increased volatility (ATR 3.76%) have introduced significant short-to-medium term headwinds, impacting the overall long-term score. T: The primary risk remains the elevated valuation multiples and the potential for further downside if the current bearish momentum extends, despite the strong underlying business."
+    }
+  }
+}

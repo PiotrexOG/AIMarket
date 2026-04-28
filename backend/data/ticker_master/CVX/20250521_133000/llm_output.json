@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The RSI has moved to a neutral zone (53.5) from a strong bullish zone, indicating a loss of short-term momentum. The price is now within normal Bollinger Bands (0.36) after testing the upper band previously. Velocity (ROC 10) remains normal at 1.2%, and the price is stable near the 20-day SMA (-1.0%). W: The candle pattern is a Doji, signaling indecision. The price is in the middle of its 20-day range, lacking clear directional conviction. News flow is mixed, with a focus on Venezuelan operations and a fire incident, but no strong positive or negative catalysts. O: A decisive break above the 20-day range resistance could signal a short-term rebound. T: A failure to hold the 20-day SMA and a move towards the lower end of the range, especially with negative news, would increase downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The MACD has faded (0.732) from a bullishly accelerating state, suggesting diminishing upward momentum. W: The overall trend alignment remains bearish and expanding (-5.62%), and the price is positioned further below the 50-day SMA (Z:-0.84), reinforcing the downtrend. The price is still within the monthly range, but the underlying trend is weakening. The news narrative for this horizon still includes the significant acquisition, but the immediate focus has shifted to operational issues. O: A sustained move above the 50-day SMA and a reversal in the trend alignment are necessary for any medium-term recovery. T: Continued underperformance relative to the broader market and persistent negative trend alignment will likely cap upside potential and increase downside risk, especially with fading MACD signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The company's financial health and business quality remain stable, providing a foundational support. W: The long-term market regime has worsened (-8.5%), and the death cross structure is more pronounced (-2.15%). The price has moved to a lower position within the long-term range (12.1%), indicating increased structural weakness. Fundamental growth remains stagnant with declining EPS, and quarterly earnings momentum continues to deteriorate. Valuation multiples are slightly lower but still imply declining earnings. O: A significant shift in the secular market regime or a substantial, sustained improvement in fundamental growth and earnings is required to alter the long-term bearish outlook. T: The combination of a worsening bearish market regime, deteriorating technical structure, persistent fundamental weakness, and increased valuation risk presents substantial downside risk."
+    }
+  }
+}

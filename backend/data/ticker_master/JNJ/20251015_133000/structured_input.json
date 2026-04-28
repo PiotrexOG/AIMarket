@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (94.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 173.33-194.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.42%)",
+        "cycle_macd": "BULLISH_FADING (0.572)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.65-194.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.77%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 191.09,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.32, P/S: 5.04)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.85)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.26)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson lifts full-year Sales Outlook. - J&J announces plans for anotherspin off: Orthopedics business.",
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth.",
+      "FDA adds new warning for Johnson & Johnson\u2019s Carvycti - Johnson (& Johnson) in talks toacquire Protagonist therapeutics - Johnson &\\ Johnson Q3 earnings preview - Protagonisttherapeuticsstock gains 30%, J&Jreportedlyeyes deal"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth.",
+      "Johnson & Johnson lifts full-year Sales Outlook. - J&J announces plans for anotherspin off: Orthopedics business.",
+      "Johnson & Johnson announces new clinical andreal-world data for major depressive disorders at ECNP Congres. - Report: Johnson & Johnny in talks to acquiseprotagonist Therapeutilics. - Protagonist stock surges on acquisition rumorswith Johnson & Johnson."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth.",
+      "Johnson & Johnson lifts full-year Sales Outlook. - J&J announces plans for anotherspin off: Orthopedics business.",
+      "Johnson & Johnson announces new clinical andreal-world data for major depressive disorders at ECNP Congres. - Report: Johnson & Johnny in talks to acquiseprotagonist Therapeutilics. - Protagonist stock surges on acquisition rumorswith Johnson & Johnson."
+    ]
+  }
+}

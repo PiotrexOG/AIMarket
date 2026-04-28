@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (72.9)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.13)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.4%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 260.31-282.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.38%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.799)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.84)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 225.0-282.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.63%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 282.02,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.61%))",
+      "volume_dynamics": "ELEVATED (1.31)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.8% | OM: 27.9% | NM: 21.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.65x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -51.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $273.416B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 23.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 9.5%, Next Q Est Growth: -12.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.82, P/S: 2.91)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.27)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.6)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.73x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan supports Asian tech stocks gaining 15-%2020%; AI leading datacentercapex in twenty-five. - Fiserv connects thousands of banks to crypto with new stablecoin platform. - Iran-Isreal war - petrol nears N1, 000 / L in Nigeria, marketers predict further hike.",
+      "JPMorgan restricts employee travel in Middle Eastern regions. - Goldman Sachs With investment, backs Canadian fintech startup Conquest. - Big US regulators consider rolling back bank capital rules.",
+      "US attacks Iranian nuclear stations, potential disruption of global oil trade."
+    ],
+    "medium_term_50d": [
+      "JPMorgan supports Asian tech stocks gaining 15-%2020%; AI leading datacentercapex in twenty-five. - Fiserv connects thousands of banks to crypto with new stablecoin platform. - Iran-Isreal war - petrol nears N1, 000 / L in Nigeria, marketers predict further hike.",
+      "JPMorgan announces increase in Sapphires Reserve credit card annual fee to $759 and adds new perks. - Federal Reserve eases capital rule limiting banks' Treasury trades. - Fed keeps two rate-cut outlook despite raising inflation and cutting growth forecasts. These three events directly affect J PM by influencing the company's financial",
+      "US attacks Iranian nuclear stations, potential disruption of global oil trade."
+    ],
+    "long_term_200d": [
+      "JPMorgan announces increase in Sapphires Reserve credit card annual fee to $759 and adds new perks. - Federal Reserve eases capital rule limiting banks' Treasury trades. - Fed keeps two rate-cut outlook despite raising inflation and cutting growth forecasts. These three events directly affect J PM by influencing the company's financial",
+      "JPMorgan increases Sapph Ire Reserve fee to $7 ninety five. - Afrexim Bank debt restructuning possibilities raised by JPMorgan. - Chase Sap phire Reserve and Am Ex Plat inum battle for points. - Jamie Dimon warns of inevitable \"Crack\u201d in Bond Market - J PMorgan files Digital Asset trad",
+      "JPMorgan supports Asian tech stocks gaining 15-%2020%; AI leading datacentercapex in twenty-five. - Fiserv connects thousands of banks to crypto with new stablecoin platform. - Iran-Isreal war - petrol nears N1, 000 / L in Nigeria, marketers predict further hike."
+    ]
+  }
+}

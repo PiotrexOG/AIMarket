@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.9)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-8.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 103.32-116.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.52%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.51)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.59)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 103.32-124.86]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-8.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.83%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 46.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.09,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.34%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.95)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 43.13, P/S: 10.62)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.74)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.19)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix announces password sharing fee implementation. - Warner Bros sale rumors: Netflix potentially affected by acquisition.",
+      "Paramount,Comcast and Netflixsubmit bids for Warner Bros.Discovery. - Warner Bros.,Discoveryexpands strategic review, opens for sale.",
+      "Netflix bids for Warner Bros., honors theatrical releases. - Warner Bros.' suitors finalize bids, Netflix interested in film library. - Netflix signals keeping Warner Bros films in theatres post acquisition."
+    ],
+    "medium_term_50d": [
+      "Paramount,Comcast and Netflixsubmit bids for Warner Bros.Discovery. - Warner Bros.,Discoveryexpands strategic review, opens for sale.",
+      "Netflix bids for Warner Bros., honors theatrical releases. - Warner Bros.' suitors finalize bids, Netflix interested in film library. - Netflix signals keeping Warner Bros films in theatres post acquisition.",
+      "Netflix announces password sharing fee implementation. - Warner Bros sale rumors: Netflix potentially affected by acquisition."
+    ],
+    "long_term_200d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena to NFLX regarding accounting practices. - Disney buys controlling stake in NFLX. - NFLX factory shuts down due to equipment failure. - CEO Reed Hastings steps down, names successor. - Supreme Court rules against NFLX in copyright case. - Major streaming competitor",
+      "Paramount,Comcast and Netflixsubmit bids for Warner Bros.Discovery. - Warner Bros.,Discoveryexpands strategic review, opens for sale.",
+      "Netflix bids for Warner Bros., honors theatrical releases. - Warner Bros.' suitors finalize bids, Netflix interested in film library. - Netflix signals keeping Warner Bros films in theatres post acquisition."
+    ]
+  }
+}

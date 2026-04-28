@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated. The RSI has declined to 35.3, remaining in a bearish zone, and velocity (ROC 10) has stagnated at -0.8%. The price is now slightly further from the 20-day SMA (-2.1%), indicating a weakening trend base. W: Despite the neutral candle pattern, the continued decline in RSI and ROC suggests a lack of immediate buying interest. The price remains in the middle of its 20-day range, offering limited upside potential. Elevated volume (1.11) without a clear directional move points to indecision and potential capitulation. O: The deterioration in key momentum indicators (RSI, ROC) and increased distance from the 20-day SMA suggest a weakening short-term outlook. News flow is mixed, with some positive investment news (Gorgon Stage 3) but also spending reductions, creating uncertainty. T: Downside risk has increased due to the weakening momentum and increased distance from the 20-day SMA. Volatility has slightly decreased (ATR 1.63%), but the overall technical deterioration and mixed news narrative contribute to elevated risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment has worsened significantly. The MACD has accelerated its bearish trajectory to -0.194, and the Z-score relative to the 50-day SMA has fallen to -1.22, indicating a more entrenched bearish trend position. The trend alignment is now characterized by a gradual descent. W: The bearish MACD and Z-score suggest a loss of upward momentum and a potential for further downside. The price is still below the 50-day SMA and within a consolidation phase, but the trend is clearly negative. News regarding investment decisions (Gorgon Stage 3) and licensing rounds provides some fundamental support, but the overall trend is concerning. O: The accelerating bearish MACD and deeper bearish Z-score signal a clear deterioration in the medium-term outlook. The price is moving lower within its range, and the conviction in any potential recovery has diminished. T: Downside risk has increased substantially due to the accelerating bearish MACD and the price's deeper penetration into bearish territory relative to the 50-day SMA. The fundamental growth profile remains weak, and the current technical trend suggests further weakness is possible."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term outlook has seen a slight pullback. The market regime remains a 'BEAR_MARKET_RELIEF_RALLY' (-1.4%), and the price has moved lower in the mid-cycle neutral zone to 49.1%, indicating a shift towards the lower half. The healthy golden cross structure remains, providing some technical support. W: While the long-term technical structure is still intact, the recent price decline and shift in range position suggest a loss of upward momentum. The fundamental picture of thin margins and stagnant growth remains a structural headwind. News flow is a mix of strategic investments and potential asset acquisitions, which are positive for future optionality but do not alter the current fundamental challenges. O: The slight deterioration in long-term range position and increased negative movement in the market regime indicate a weakening long-term trend. However, the underlying business quality and financial health remain strong, providing a degree of resilience. The continued presence of the golden cross structure offers a potential floor. T: Downside risk has increased slightly as the price has moved lower within the neutral zone and the market regime shows further weakness. The strong balance sheet and moderate cash generation continue to mitigate some of the risk, but the weakening long-term technicals and persistent fundamental challenges contribute to a moderate risk profile."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "NORMAL (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 256.0-271.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.97%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.321)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.58)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 202.16-271.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.33%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 276.71,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.38%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.8% | OM: 27.9% | NM: 21.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.65x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -51.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $273.416B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 23.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 9.5%, Next Q Est Growth: -12.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.56, P/S: 2.86)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.22)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.59)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.74x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan increases Sapph Ire Reserve fee to $7 ninety five. - Afrexim Bank debt restructuning possibilities raised by JPMorgan. - Chase Sap phire Reserve and Am Ex Plat inum battle for points. - Jamie Dimon warns of inevitable \"Crack\u201d in Bond Market - J PMorgan files Digital Asset trad",
+      "JPMorgan appoints Mark O' Donovan as headof international consumer bank. - Chase Freedom announces Q3 \u2082Zero\u2082five cash backcategories: Instacarts, selectlive entertainment, gas stations, EV charging.",
+      "JPMorgan issues customer data breach warnings. - Senate passes regulations for stablecoin issuers potentially impacting JPMorgan. - Oil price rally due to Iran crisis may indirectly affect JPMorgan's energy investments."
+    ],
+    "medium_term_50d": [
+      "JPMorgan increases Sapph Ire Reserve fee to $7 ninety five. - Afrexim Bank debt restructuning possibilities raised by JPMorgan. - Chase Sap phire Reserve and Am Ex Plat inum battle for points. - Jamie Dimon warns of inevitable \"Crack\u201d in Bond Market - J PMorgan files Digital Asset trad",
+      "JPMorgan CEo Jamie Dimon discusses potential M&A opportunities. - Citi predicts strong M&A rebound leading to increased banking fees. - Michael Saylor welcomes competitionfrom JPMorgan in crypto space.",
+      "JPMorgan CEO Jamies Dimon warns of bond crisis, flaggs debt risks. - Jamie Dimon increases concerns over US government debt and bond market."
+    ],
+    "long_term_200d": [
+      "JPMorgan increases Sapph Ire Reserve fee to $7 ninety five. - Afrexim Bank debt restructuning possibilities raised by JPMorgan. - Chase Sap phire Reserve and Am Ex Plat inum battle for points. - Jamie Dimon warns of inevitable \"Crack\u201d in Bond Market - J PMorgan files Digital Asset trad",
+      "JPMorgan CEO Jamies Dimon warns of bond crisis, flaggs debt risks. - Jamie Dimon increases concerns over US government debt and bond market.",
+      "10. JPMorgans CEO Jamie Dimons says retirement is \"seseral years away\". 11. JPMogan Chase & Co.'s (JPM ) next chief executive decision is up the bank'sbord. 13. JPMogans Jamie Dimon expects US debttocausebondmarketturmoil. 18. JPM"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has shifted to a stronger neutral with bullish undertones. The candle pattern is now strongly bearish, but the RSI has moved up to 59.3, indicating improving momentum. Velocity ROC is positive (2.5%), and the price is now trading above the 20-day SMA (3.4%), suggesting a potential upward bias. The price is still in the middle of the range (244.57-265.29), but the upward technical signals are strengthening. W: The strong bearish candle pattern is a concern, suggesting immediate selling pressure. Despite the improved momentum and price action relative to the SMA, the price remains within a defined range, limiting immediate upside conviction. O: Short-term news is predominantly positive, with reports of strong iPhone sales in China and the US, contributing to Apple closing at a record high and nearing a $4 trillion valuation. The unveiling of the M5 chip and TSMC beating earnings are also positive catalysts. T: Risk has decreased from 6.5 to 6.0. The previous risk was elevated due to a neutral momentum and price in the middle of the range. The current risk is lower as momentum has improved, and the price is now trading above the 20-day SMA, indicating a more constructive short-term setup, although the bearish candle pattern introduces some immediate downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish with expanding momentum (4.86%), and the Z-score relative to the 50-day SMA has strengthened significantly to 1.51. The MACD is showing signs of recovery, moving from -1.908 to -0.094, indicating a reduction in bearish momentum. The price is within the monthly range (223.78-265.29), but the improved technical indicators suggest a more positive bias within this range. W: While the MACD is recovering, it remains in negative territory, indicating that bearish sentiment has not fully dissipated. Conviction is moderate due to the MACD still being below zero, despite the positive trend alignment and Z-score. The price being inside the monthly range, while showing improving momentum, still suggests potential for range-bound trading. O: Medium-term news is a mix of strong sales figures and record highs, alongside the unveiling of new technology (M5 chip). These positive developments support the bullish trend alignment and improved Z-score. T: Risk has decreased from 7.5 to 6.5. The previous risk was higher due to the accelerating bearish MACD and price within a range that could break lower. The current risk is reduced as the MACD is recovering, and the Z-score has significantly improved, indicating a stronger underlying trend. However, the price remaining within the monthly range and the MACD still being negative prevent a more substantial risk reduction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term technical picture remains robust, with the secular bull market regime strengthening (18.3%) and the 'Healthy Golden Cross Structure' signal improving (9.09%). The price is now at the top of its long-term cycle (94.5%), indicating sustained upward trend strength and potential for new all-time highs. W: Despite the strong long-term technicals, the fundamental picture of stressed balance sheets and stagnant growth profiles persists. Conviction has increased slightly as the strong long-term technicals are now at cycle highs, but the premium valuation (P/E: 40.44) and extremely risky implied growth (-0.46%) remain significant structural weaknesses. O: Long-term news is overwhelmingly positive, highlighting strong sales performance, record highs, and technological advancements like the M5 chip. These developments support the bullish long-term technicals and the price reaching new cycle highs. T: Risk has decreased from 5.0 to 4.5. The previous risk was elevated due to the price being at a high point in its long-term range, combined with fundamental weaknesses and geopolitical risks. The current risk is lower as the strong positive news and improved long-term technicals (higher regime percentage, improved cross structure) provide a more solid foundation, despite the persistent valuation and fundamental concerns. The price reaching ATH/top of cycle is inherently higher risk, but the strength of the current signals mitigates it somewhat."
+    }
+  }
+}

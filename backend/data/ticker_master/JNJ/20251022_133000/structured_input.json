@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (75.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (1.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 175.74-194.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.58%)",
+        "cycle_macd": "BULLISH_FADING (0.101)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.87)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 171.81-194.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.21%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 193.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.67%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.51, P/S: 5.09)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.92)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.26)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson reports 45\\% response rate for subcutaneous Am ivantamabin head and neck cancer study.",
+      "Johnson & Johnson announces promising results for subcutaneous am ivantamab in R/M HNs CC treatment.",
+      "J&JMyeloma combo hits late-stage goal - J&J's Tec\u0432ay\u043b\u0438-Darz\u0430lex trumps So C in multiple my\u0435loma"
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson faces \u00b3ooo UK lawsu ITS alleging asbes TO-contam INated tal Cum pow DER caused can CEr - Johnson &#38; Johnson announces SEcond MAjor spin OFF, plans to separ ATE orthoped ICS division",
+      "J&JMyeloma combo hits late-stage goal - J&J's Tec\u0432ay\u043b\u0438-Darz\u0430lex trumps So C in multiple my\u0435loma",
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson acquires Protagonist Technologies. - Celine Martin joins JNJ Board driving strategic growth.",
+      "Johnson & Johnson faces \u00b3ooo UK lawsu ITS alleging asbes TO-contam INated tal Cum pow DER caused can CEr - Johnson &#38; Johnson announces SEcond MAjor spin OFF, plans to separ ATE orthoped ICS division",
+      "Johnson & Johnson lifts full-year Sales Outlook. - J&J announces plans for anotherspin off: Orthopedics business."
+    ]
+  }
+}

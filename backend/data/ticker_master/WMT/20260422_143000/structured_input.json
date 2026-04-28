@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.2)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.98)",
+        "velocity_roc_10": "NORMAL (5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 120.5-129.77]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.26%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.397)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.54)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 118.02-134.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.12%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 130.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.21%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.0%, Next Q Est Growth: 1.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.96, P/S: 1.54)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.54)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.15)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart revamps 'Great Value' private-label brand. - Walmart expands healthcare services with weight-management support. - Walmart Canada hosts growth summit for small businesses. - Amazon allegedly pushed vendors to raise prices at Walmart. - Walmart expands Be Water brand rollout. - Walmart modernizes stores and private-label packaging.",
+      "Walmart targets Amazon's delivery speed with store back rooms. - Walmart plans over 650 store remodels and new stores. - Walmart could receive billions in tariff refunds. - Walmart surpasses Berkshire Hathaway in market capitalization. - Amazon allegedly pressured Walmart to raise prices.",
+      "Walmart uses stores as warehouses for faster delivery. - Walmart makes changes to Great Value brand."
+    ],
+    "medium_term_50d": [
+      "Walmart targets Amazon's delivery speed with store back rooms. - Walmart plans over 650 store remodels and new stores. - Walmart could receive billions in tariff refunds. - Walmart surpasses Berkshire Hathaway in market capitalization. - Amazon allegedly pressured Walmart to raise prices.",
+      "Walmart revamps 'Great Value' private-label brand. - Walmart expands healthcare services with weight-management support. - Walmart Canada hosts growth summit for small businesses. - Amazon allegedly pushed vendors to raise prices at Walmart. - Walmart expands Be Water brand rollout. - Walmart modernizes stores and private-label packaging.",
+      "Walmart investing in stores for speed, convenience, and growth. - Walmart planning 650 store remodels across the US. - Walmart expands Better Care Services with virtual health, nutrition, GLP-1 support. - Walmart deepens commitment to Arizona, plans 18 store remodels. - Walmart deepens commitment to Alabama, plans 12 store remodels. - Walmart deepens commitment to Utah, plans 7 store remodels. - Walmart deepens commitment to Minnesota, plans 16 store remodels. - Walmart deepens commitment to New Jersey, plans 12 store remodels. - Walmart joins U.S. Cotton Trust Protocol."
+    ],
+    "long_term_200d": [
+      "Walmart targets Amazon's delivery speed with store back rooms. - Walmart plans over 650 store remodels and new stores. - Walmart could receive billions in tariff refunds. - Walmart surpasses Berkshire Hathaway in market capitalization. - Amazon allegedly pressured Walmart to raise prices.",
+      "Walmart investing in stores for speed, convenience, and growth. - Walmart planning 650 store remodels across the US. - Walmart expands Better Care Services with virtual health, nutrition, GLP-1 support. - Walmart deepens commitment to Arizona, plans 18 store remodels. - Walmart deepens commitment to Alabama, plans 12 store remodels. - Walmart deepens commitment to Utah, plans 7 store remodels. - Walmart deepens commitment to Minnesota, plans 16 store remodels. - Walmart deepens commitment to New Jersey, plans 12 store remodels. - Walmart joins U.S. Cotton Trust Protocol.",
+      "Walmart revamps 'Great Value' private-label brand. - Walmart expands healthcare services with weight-management support. - Walmart Canada hosts growth summit for small businesses. - Amazon allegedly pushed vendors to raise prices at Walmart. - Walmart expands Be Water brand rollout. - Walmart modernizes stores and private-label packaging."
+    ]
+  }
+}

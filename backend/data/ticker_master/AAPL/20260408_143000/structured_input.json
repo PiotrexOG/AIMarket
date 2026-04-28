@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 245.51-262.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.89%)",
+        "cycle_macd": "BULLISH_FADING (0.99)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 245.51-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.37%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 257.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.34%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 34.43, P/S: 9.28)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 52.4)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.51)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple foldable i Phone faces potential shipment delays. - Apple shares sink on foldable i Phone delay reports. - Apple seeks Supreme Court review on App Store commissions. - Apple partners with Anthropic on cybersecurity project.",
+      "Apple's stock could surge 20% with Mac Book Neo.",
+      "Apple Intelligence features temporarily activated, then pulled in China. - China regulators require local licensing for AI tools."
+    ],
+    "medium_term_50d": [
+      "Apple foldable i Phone faces potential shipment delays. - Apple shares sink on foldable i Phone delay reports. - Apple seeks Supreme Court review on App Store commissions. - Apple partners with Anthropic on cybersecurity project.",
+      "Apple Inc. expands U.S. manufacturing with $400M investment. - Apple Inc. plans $400M investment in U.S. manufacturing. - Apple Inc. adds Bosch, Cirrus Logic, TDK, Qnity to manufacturing program.",
+      "Apple Intelligence features temporarily activated, then pulled in China. - China regulators require local licensing for AI tools."
+    ],
+    "long_term_200d": [
+      "Apple adds US manufacturing partners with $400M expansion. - Apple expands supplier network with manufacturing program additions. - Apple to source US-made parts from Japan's TDK. - Apple shifts supply chain, opens Siri to competing AI. - Apple hires ex-Google executive for AI marketing.",
+      "Apple foldable i Phone faces potential shipment delays. - Apple shares sink on foldable i Phone delay reports. - Apple seeks Supreme Court review on App Store commissions. - Apple partners with Anthropic on cybersecurity project.",
+      "Apple cuts China App Store commission to 25%. - Apple's China App Store fees reduced to 25%. - Apple lowers China App Store commission to 25%. - Apple's China App Store commission drops to 25%. - Apple reduces App Store commission in China."
+    ]
+  }
+}

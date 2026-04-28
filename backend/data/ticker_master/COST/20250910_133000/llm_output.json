@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term outlook has significantly improved, shifting from oversold conditions to a neutral RSI (49.4) with positive velocity (4.0%). The price has moved from critical support to the middle of the 20-day range, and the candle pattern has changed from indecision to strong bearish, indicating a potential reversal of the prior oversold bounce. W: The previous bearish momentum has been replaced by positive velocity and a neutral RSI, suggesting a shift in short-term dynamics. The price is no longer at extreme support, reducing the immediate downside conviction from that level. O: Short-term news flow is now predominantly positive, with strong sales reports and new product introductions, which are likely driving the improved technical momentum and counteracting the previous negative headlines. T: Risk has decreased from 6.0 to 5.0. The shift away from oversold conditions and critical support, coupled with positive news, reduces the immediate downside risk. While the strong bearish candle pattern suggests a potential short-term pullback, the overall risk profile has improved due to the positive momentum and news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term trend has decisively shifted to bullish, with the MACD accelerating into positive territory (2.272) and the Z-score relative to the 50-day SMA moving to a healthy base (0.19). Trend alignment remains in consolidation but with improving momentum. W: The previous bearish MACD and Z-score have reversed, indicating a strong structural improvement in the medium-term trend. The price is now moving towards its 50-day moving average with increasing conviction. O: Medium-term news flow has improved significantly, with strong recent sales reports now appearing alongside older negative headlines. This shift in news sentiment, combined with the technical turnaround, supports a more bullish outlook. T: Risk has decreased from 7.0 to 4.0. The strong bullish MACD, positive Z-score, and improving news sentiment indicate a substantial reduction in downside risk. The structural deterioration has been reversed, leading to a significant decrease in the risk metric."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "risk": 3.0
+      },
+      "synthesis": "S: The long-term outlook has dramatically improved, with the market regime shifting to a bull market correction (0.3%) and the long-term range position moving to a neutral mid-cycle zone (45.8%). While major crosses are still imminent, the overall context is now more constructive. W: The persistent secular bear market and lower range position have been replaced by a more favorable regime and neutral range positioning, significantly increasing long-term upside conviction. The market structure is now more balanced. O: Long-term news flow has seen a notable positive shift, with strong recent sales figures now appearing more prominently alongside older negative headlines. This improved narrative, coupled with the technical regime shift, supports a robust long-term view. T: Risk has decreased significantly from 6.5 to 3.0. The shift to a bull market correction regime, neutral range position, and positive news flow indicate a substantial reduction in downside risk. The previous structural weakness has been largely mitigated, leading to a much lower risk assessment."
+    }
+  }
+}

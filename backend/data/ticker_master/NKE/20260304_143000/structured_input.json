@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.7)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.04)",
+        "velocity_roc_10": "NORMAL (-8.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 58.62-68.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.09%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.39)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.97)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-68.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.32%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 8.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 58.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.99%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.55, P/S: 1.84)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.27)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike preparing major restructuration due to weak consumer demand, high inventory levels, and pressures in China. - New CEO Elliot Hill focusing on growth and rebuildling wholesale partnershipss.",
+      "Nike agrees to source \u2081\u2080\u2c7c renewable energy in Japan, shifts supply chain away from China. - NBA aims to revolutionize international basketball league development. - Zalando introduces pre-owned kid's clothing category in Europe. - New \u2081\u2c75% global tarffs increase uncertainty for Nike'ss international supply chain",
+      "Nike signs agreements to power Japan and potentially US operations with solarenergy. - On launches robot factory in South Korea for faster manufacturing and delivery ofrunning shoes."
+    ],
+    "medium_term_50d": [
+      "Nike preparing major restructuration due to weak consumer demand, high inventory levels, and pressures in China. - New CEO Elliot Hill focusing on growth and rebuildling wholesale partnershipss.",
+      "Nike signs agreements to power Japan and potentially US operations with solarenergy. - On launches robot factory in South Korea for faster manufacturing and delivery ofrunning shoes.",
+      "Supreme Court revokes earlier tariff powers affecting Nike imports, introducing new global tariffs. - Chinese sportsware giant Anta opens first US store, expanding nationwide. - Trump imposes new 1 Fifth global tariffs, increasing production costs for Nike."
+    ],
+    "long_term_200d": [
+      "Nike preparing major restructuration due to weak consumer demand, high inventory levels, and pressures in China. - New CEO Elliot Hill focusing on growth and rebuildling wholesale partnershipss.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NBA, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning",
+      "Nike reports Q4 earnings miss and lowers full-year outlook. - Layoffs increase by 67\\% at Nike supplier. - New regulatory ruling impacts Nike's manufacturing process."
+    ]
+  }
+}

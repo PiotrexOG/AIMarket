@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 236.65-259.24]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.58%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.908)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.92)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 202.16-259.24]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.49%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 250.85,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.75%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.01, P/S: 9.43)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 56.54)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple in talks for Prompt AI acquisition. - Jefferies warns of potential margin impact on Apple from new tariffs.",
+      "Apple opens preorders for i Phone Air in China following e SIM approval by major telecom operaters. - Apple announces expansion of renewable energy investment across Europe. - apple to develop 1 million Megawatt-Hours (Mwh) of clean energy projects in Europe by 2o3o.",
+      "Apple partner MP Materials announces 379.0% yearly revenue increase and new Apple partnership. Note: I included the missing number from your data input (point 6) in my output since it met the criteria of being a direct event affecting AAPL through a partnership announcement."
+    ],
+    "medium_term_50d": [
+      "China tightens grip on rare earth exports to protect national security, impacting Apple. - China blacklists researcher who exposed Huawei chip secrets, potentially affecting Apple supply chain.",
+      "Apple partner MP Materials announces 379.0% yearly revenue increase and new Apple partnership. Note: I included the missing number from your data input (point 6) in my output since it met the criteria of being a direct event affecting AAPL through a partnership announcement.",
+      "Apple in talks for Prompt AI acquisition. - Jefferies warns of potential margin impact on Apple from new tariffs."
+    ],
+    "long_term_200d": [
+      "China tightens grip on rare earth exports to protect national security, impacting Apple. - China blacklists researcher who exposed Huawei chip secrets, potentially affecting Apple supply chain.",
+      "Apple partner MP Materials announces 379.0% yearly revenue increase and new Apple partnership. Note: I included the missing number from your data input (point 6) in my output since it met the criteria of being a direct event affecting AAPL through a partnership announcement.",
+      "Trump announces Intel deal win for AAPL. - Apple shifts focus from Vision Pro to AI smart glasses."
+    ]
+  }
+}

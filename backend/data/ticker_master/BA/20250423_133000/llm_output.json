@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term technicals have shifted decisively bullish with a HAMMER_PINBAR_BULLISH candle pattern and RSI moving to a neutral 46.5. Velocity ROC has surged to 17.0%, and the price is now HUGGING_SMA20_CONSOLIDATION (1.1%). O: The stock is still IN_MIDDLE_OF_RANGE, providing room for upward movement. Average volume (0.91) is stable, suggesting continued participation without extreme conviction. W: While technicals are improving, news regarding Boeing jets being returned from China due to tariffs introduces some short-term uncertainty. The volatility context remains HIGH_VOLATILITY_ASSET (ATR: 5.74%). T: The score has increased from 4.0 to 6.0, reflecting the strong bullish technical signals and improved momentum. Conviction has risen to 6.0 due to the clear bullish reversal pattern and positive momentum. Risk has decreased from 7.0 to 6.0, as the improved technicals and reduced oversold conditions mitigate some of the previous downside exposure, though volatility remains a factor."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term trend has reversed, with MACD accelerating bullishly to 1.084 and the Z-score relative to the SMA50 now indicating a HEALTHY_BASE (Z:0.44). Trend alignment is still in BEARISH_GRADUAL_DESCENT (-3.82%), but the underlying momentum is strongly positive. O: This represents a significant turnaround from the previous bearish MACD and Z-score. The stock remains INSIDE_MONTHLY_RANGE. W: The news regarding China halting Boeing plane deliveries persists as a medium-term headwind, though the positive earnings surprise (87.7%) and strong bullish MACD are counteracting this. The sale of Jeppesen and Fore Flight assets for $10.55 billion is a positive fundamental development. T: The score has increased significantly from 3.5 to 6.5, driven by the strong bullish MACD and improved SMA50 positioning, overriding the lingering bearish trend alignment. Conviction has risen to 6.5 as the technical signals are now strongly supportive. Risk has decreased from 7.5 to 5.0, reflecting the improved technical health and positive fundamental news, with the bullish momentum reducing downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term outlook is increasingly constructive. The market regime is a less severe BEAR_MARKET_RELIEF_RALLY (-2.1%), and the long-term range position has improved to 64.5% in the MID_CYCLE_NEUTRAL_ZONE. A POTENTIAL_PIVOT is indicated by the imminent cross. O: This is a significant improvement from the previous neutral positioning and a more favorable market regime. The fundamental issues of THIN_MARGIN_COMMODITY and BALANCE_SHEET_STRESSED persist, but the improved technical positioning and positive news flow are providing support. W: The long-term defense contracts remain a positive, and the sale of non-core assets is a constructive fundamental development. While China's delivery halt remains a concern, the overall long-term technical setup is now strongly bullish. T: The score has increased from 4.5 to 7.0, reflecting the strong improvement in long-term technical positioning and regime. Conviction has risen to 7.0 as the technicals are showing a robust long-term setup. Risk has decreased from 5.5 to 4.0, as the shift to a higher neutral zone and potential pivot, coupled with positive fundamental news, significantly reduces long-term downside exposure."
+    }
+  }
+}

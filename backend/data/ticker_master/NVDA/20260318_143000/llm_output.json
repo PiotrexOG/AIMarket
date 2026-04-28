@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI falling to 36.9 and ROC stagnating at 1.1%. The \"SHOOTING_STAR_BEARISH\" candle pattern and price action near the SMA20 suggest increasing downside pressure. Volume dynamics have normalized to average (0.95x), indicating less conviction behind current price action. O: Potential for a short-term bounce exists if the \"MIDDLE_OF_RANGE\" support holds, but the bearish technical signals limit upside potential. Positive news flow from recent GTC announcements could provide a temporary boost. T: The \"BEARISH_ZONE_WEAK\" RSI and \"BEARISH_TREND_POSITION\" on the SMA50 indicate a deteriorating short-term trend. The \"RANGE\" bias in the SR landscape, coupled with \"F:DISTANT @20d\" and \"C:DISTANT @20d\" barriers, suggests limited immediate directional conviction. W: The shift from neutral to bearish momentum and the bearish candle pattern significantly increase short-term risk. The \"Q_TEMPORARY_STUMBLE\" in earnings, though historical, could be exacerbated by current technical weakness."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend is showing signs of deterioration, with the price now in a \"BEARISH_TREND_POSITION\" relative to the SMA50 (Z-score: -0.57). While MACD is still \"BEARISH_RECOVERING\", the trend alignment remains compressed. The \"INSIDE_MONTHLY_RANGE\" suggests the broader trend is still in play, but the immediate pressure is downward. O: The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" from the long-term view provides some support. Recent news regarding AI product launches and partnerships could offer a catalyst for recovery if the market reacts positively. T: The \"BEARISH_RECOVERING\" MACD and \"CONSOLIDATION_COMPRESSED_MAS\" indicate a lack of strong upward momentum. The \"LOW\" analyst conviction level persists, suggesting caution. W: The shift in the SMA50 position from mean reversion to a bearish trend is a significant negative development, increasing medium-term risk. The \"Q_TEMPORARY_STUMBLE\" in earnings, coupled with the \"HYPER_PREMIUM_PRICED\" valuation, makes the stock vulnerable to further downside if growth expectations falter."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 8.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong, anchored by a \"SECULAR_BULL_MARKET\" regime and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE\". However, the long-term range position has moved to \"MID_CYCLE_NEUTRAL_ZONE\" (62.6%), indicating a slight pullback from the upper quadrant. Fundamentals remain exceptional with \"ULTRA_ELITE_MOAT\" business quality and \"HYPER_GROWTH\" profiles. O: Continued innovation and partnerships announced at GTC, such as with robotics leaders and AI platforms, reinforce the long-term growth narrative. The \"GROWTH_UNDERRATED\" PEG ratio suggests that despite high multiples, the market may still be underestimating future growth. T: The \"HYPER_PREMIUM_PRICED\" multiples and \"EXTREME_MULTIPLE_RISK\" remain the primary long-term concern. The shift to a \"MID_CYCLE_NEUTRAL_ZONE\" position suggests that the stock is no longer in the most advantageous part of its long-term trend. W: While fundamentals and the secular trend are supportive, the elevated valuation continues to pose a significant risk. The \"tech protectionism restrictions on AI chip exports to China\" narrative, though not explicitly updated, remains a latent risk factor that could impact future growth if re-emphasized or expanded."
+    }
+  }
+}

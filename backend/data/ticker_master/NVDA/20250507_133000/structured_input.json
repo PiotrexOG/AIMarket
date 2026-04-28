@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "EXPLOSIVE_UP (14.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 94.46-115.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.6%)",
+        "cycle_macd": "BULLISH_FADING (1.553)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 86.63-135.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.69%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 40.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 113.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.4%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 93.55, P/S: 46.38)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 65.75)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "3. US lawmaker wantsto curb smuggling of Nvidiah chips to China.",
+      "Nvidia face potential chip exports restriction due to new US law. - Rep. Bill Foster introduces legislation to track Nvidia chips' locations.",
+      "NVIDIA is again working on China-tailored chips after US export ban. - Huawei working on chip to rival NVDIA's H\u2081\u2080\u2090 Hopper model - NVIDIA slams Anthropics for 'tall tales' over China chip exports - Ukraine's minerals won't help AI and tech companies for"
+    ],
+    "medium_term_50d": [
+      "Nvidia face potential chip exports restriction due to new US law. - Rep. Bill Foster introduces legislation to track Nvidia chips' locations.",
+      "NVIDIA is again working on China-tailored chips after US export ban. - Huawei working on chip to rival NVDIA's H\u2081\u2080\u2090 Hopper model - NVIDIA slams Anthropics for 'tall tales' over China chip exports - Ukraine's minerals won't help AI and tech companies for",
+      "Nvidia and Anthropic clash over US chip export controls Based on the provided data, there seems to be one potential material event regarding Nvidia on 2o25-o5-o1. The event involves a disagreement between Nvidiaand another AI company, Anthropic, over US chipexport controls. This issue could potentially impact Nvidia'"
+    ],
+    "long_term_200d": [
+      "Nvidia takes a $5._5 billion hit from export controls. - Trade tensions cause $25o billion market cap loss for Nvidia.",
+      "Nvidia imposes $5. fifth billion charge dueto US export restrictions on AI chips to China and other countries (event type: Production or supplychain change). - NVIDIA CEO Jensen Huang meets with Chinese trade body head during Beijing visit after latest China export curb(event type: Strategic decision or partnership). - Some Chinesecustomersnot",
+      "Nvidia takes $5. fifth billion charge due to new US export restrictions. - New US regulations require Nvidia to obtain licenses for China sales of H20 AI chip. - U.S government informs Nvidia of new H20 export control measures."
+    ]
+  }
+}

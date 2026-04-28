@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI declining to 47.8 and MACD showing fading bullish momentum. The price is now below the 20-day SMA, indicating a shift in short-term trend. O: The Doji candle pattern suggests indecision, but the overall momentum shift leans bearish. News regarding refinery equipment failure presents a near-term operational risk. T: Potential for further downside if the bearish momentum continues, with the price testing lower bounds of the 20-day range. W: Deteriorating short-term momentum and negative news flow increase downside risk. The lack of strong conviction from the Doji pattern suggests a lack of immediate buying interest."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish, with a gradual descent and a significant deterioration in the MACD signal, now fading. The Z-score relative to the 50-day SMA has moved into bearish territory. O: The stock is positioned within a wide monthly range, but the weakening trend signals suggest a potential test of lower levels. Continued operational news, such as the UAE expansion, offers some fundamental support but is overshadowed by the bearish technicals. W: The bearish trend alignment and fading MACD are significant concerns, indicating a loss of upward momentum. The Z-score deterioration suggests increasing pressure on the 50-day moving average. Fundamentals still show profit issues and declining earnings momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term secular bear market regime has deepened, with the stock now in the lower quadrant of its long-term range. The death cross structure remains a persistent bearish signal. O: While valuation multiples remain discounted and the balance sheet is healthy, the deteriorating long-term technicals and continued negative growth outlook limit upside potential. News regarding hydrocarbon exploration and M&A arbitration are strategic, but do not alter the current bearish regime. W: The deepening secular bear market and continued presence of the death cross structure present significant structural headwinds. The stock's position in the lower quadrant of its long-term range increases downside risk. Valuation, while attractive on multiples, is undermined by declining earnings growth expectations and increasing asset risk."
+    }
+  }
+}

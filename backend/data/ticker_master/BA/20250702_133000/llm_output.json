@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term outlook has significantly improved. The candle pattern has shifted to Doji indecision, indicating a pause in selling pressure. RSI has moved to a neutral zone (43.6), and velocity (ROC 10) is now positive (4.0%). The price is trading above the 20-day SMA (1.5% deviation), suggesting stabilization. W: The shift from a strong bearish pattern to indecision, coupled with a neutral RSI and positive ROC, indicates a potential reversal of short-term weakness. The price moving above the 20-day SMA confirms a stabilization of the trend. O: New positive news regarding Boeing appointing a new CFO and acquiring Spirit's Northern Ireland plant provides some operational stability. However, ongoing FAA investigations into manufacturing quality remain a near-term concern. T: Risk has decreased substantially due to the improved technicals and the shift in news flow towards operational improvements, although regulatory scrutiny persists. The price is now in the middle of its 20-day range, suggesting balanced short-term sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend alignment has strengthened, showing a gradual ascent (4.25%). The MACD has recovered significantly from its bearish extreme, now nearing zero (-0.024), suggesting a potential bullish crossover. The Z-score relative to the 50-day SMA has moved to a strong bullish trend position (0.92). W: The improving trend alignment and the MACD's recovery from bearish territory indicate a building bullish momentum. The strong Z-score position suggests the price is well-supported by the medium-term trend. O: News regarding the UK antitrust probe into the Spirit deal and the appointment of a new CFO are positive developments for medium-term operational clarity. However, ongoing regulatory investigations and potential EU tariffs remain headwinds. T: Risk has decreased due to the strengthening bullish technical indicators and positive news on operational aspects. The price is well within its 50-day range, indicating a healthy upward trajectory."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, with the secular bull market regime intact and major crosses showing a healthy structure. The price has reached the top of its long-term cycle (91.0% position). W: While the technical structure is strong, fundamental weaknesses in business quality, financial health, and cash generation persist. The negative growth profile and earnings momentum continue to cap conviction despite the bullish technicals. O: Long-term news remains mixed. The NTSB report on the 737 MAX blowout and ongoing regulatory investigations are negative. However, the absence of major new crash-related incidents and the focus on operational improvements provide some long-term stability. T: Risk has decreased due to the strong long-term technical positioning and the absence of new catastrophic events. However, the persistent fundamental fragilities and ongoing regulatory scrutiny still represent a notable risk factor, preventing a lower risk score."
+    }
+  }
+}

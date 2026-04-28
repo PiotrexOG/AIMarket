@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.06)",
+        "velocity_roc_10": "NORMAL (-9.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-8.1%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 299.02-348.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.93%)",
+        "cycle_macd": "BEARISH_RECOVERING (-4.749)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.07-348.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.69%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 302.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.74%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 66.4%, Next Q Est Growth: -33.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.94, P/S: 7.02)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.26)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.04)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace gains traction with Palantir's AI Platform.",
+      "GE Aerospace invests $12 million in Hooksett plant.",
+      "GE Aerospace partners with Palantir on AI operations."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace expands Palantir AI partnership for readiness. - GE Aerospace and Palantir deepen AI use in defense. - GE Aerospace invests $115M in factory network.",
+      "GE Aerospace gains traction with Palantir's AI Platform.",
+      "GE Aerospace investing $55 million in Limestone County plant. - GE Aerospace to invest about $15 million in Terre Haute plant. - GE Aerospace to invest another $1B across US operations. - GE Aerospace boosts investment in U.S. with $1 billion announcement."
+    ],
+    "long_term_200d": [
+      "GE Aerospace investing $55 million in Limestone County plant. - GE Aerospace to invest about $15 million in Terre Haute plant. - GE Aerospace to invest another $1B across US operations. - GE Aerospace boosts investment in U.S. with $1 billion announcement.",
+      "GE Aerospace expands Palantir AI partnership for readiness. - GE Aerospace and Palantir deepen AI use in defense. - GE Aerospace invests $115M in factory network.",
+      "GE Aerospace invests $1b in US manufacturing."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen into a bearish zone at 34.4, and the ROC is now negative at -1.2%. The stock is trading 3.6% below its 20-day SMA, a sharp reversal from the prior period. A shooting star candle pattern indicates bearish sentiment. W: Downside risk has increased substantially due to the bearish candle, negative momentum, and increased distance from the 20-day SMA. The analyst sentiment has also deteriorated. O: News flow is mixed, with some positive earnings reports but also ongoing market weakness and negative technical signals. T: The short-term outlook has turned bearish, driven by weakening technical indicators and a negative candle pattern. Conviction has decreased due to the mixed signals and deteriorating sentiment. The risk profile has increased due to the clear bearish technical setup."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment has weakened considerably. The MACD has accelerated into bearish territory at -0.515, indicating a loss of upward momentum. The stock is now in a mean-reversion healthy base position relative to the 50-day SMA (Z:-0.31), a significant shift from the prior bullish trend position. W: Downside risk has increased due to the accelerating bearish MACD and the shift in SMA positioning. The analyst sentiment deterioration also contributes to increased risk. O: The news narrative shows a divergence between positive earnings reports and deteriorating technical indicators. T: The medium-term outlook has turned bearish, primarily driven by the accelerating bearish MACD and the shift away from a bullish trend. Conviction has decreased due to the clear technical deterioration. The risk profile has increased as the trend momentum reverses."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime has decisively shifted to a secular bear market (-3.4%), a significant deterioration from the prior bull market correction. A potential pivot on major crosses is indicated, suggesting further downside risk. The stock's position within its long-term range has moved lower to 40.3%, indicating a less favorable mid-cycle zone. W: Downside risk has increased substantially due to the shift to a secular bear market regime and the lower range positioning. Fundamentals show mixed signals with improving earnings momentum but declining overall growth. O: The news narrative highlights ongoing legal disputes and a shift in the overall market regime to bearish. T: The long-term outlook is now bearish, driven by the confirmed secular bear market regime and deteriorating range positioning. Conviction is moderate, as the fundamental improvements offer some counter-balance. The risk profile has increased significantly due to the unfavorable macro environment."
+    }
+  }
+}

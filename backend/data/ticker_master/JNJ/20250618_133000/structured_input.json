@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 151.37-157.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.29%)",
+        "cycle_macd": "BULLISH_FADING (0.055)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.12)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-159.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.5%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 35.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 151.12,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.43%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 16.66, P/S: 4.1)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.69)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnny announces encouraging results for dual targeting Car T cell therapy in large B cell lymphomas. - JNJ reports high ORR for investigational com\u0431\u043e in MM patients from Phase 2 trial.",
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress.",
+      "Johnson & Johnson announces deep and durableresponses for TALVEYY\u00ae and T ECVAYLI\u0301 in heavily pre-treatedmultiple myelomapatients."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress.",
+      "Johnson & Johnny announces encouraging results for dual targeting Car T cell therapy in large B cell lymphomas. - JNJ reports high ORR for investigational com\u0431\u043e in MM patients from Phase 2 trial.",
+      "Johnson & Johnson announces deep and durableresponses for TALVEYY\u00ae and T ECVAYLI\u0301 in heavily pre-treatedmultiple myelomapatients."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress.",
+      "Johnson & Johnny announces encouraging results for dual targeting Car T cell therapy in large B cell lymphomas. - JNJ reports high ORR for investigational com\u0431\u043e in MM patients from Phase 2 trial.",
+      "Johnson & Johnson announcepositive top-lineresultsfrom Phase 3studyevaluatingniraparibr+abirateroneacetate+prednisoneformetastaticcastrationsensitiveprostatecancer. -Johnson & Johnsonreleasesdatafrom Twophase3studieshighlighting DARZALEXPASPRO\u00ae"
+    ]
+  }
+}

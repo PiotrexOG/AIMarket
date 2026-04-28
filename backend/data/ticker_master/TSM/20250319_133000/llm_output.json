@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term exhibits indecision with a DOJI candle pattern, but the RSI at 34.4 suggests oversold conditions are approaching. W: Momentum is currently bearish, with ROC at -3.8% and price trading 4.9% below the 20-day SMA, indicating a lack of immediate upward thrust. O: Potential for a short-term bounce if oversold conditions are confirmed and buyers step in at the middle of the current range. T: Increased volatility or a break below the 20-day SMA could signal further downside, increasing risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The MACD shows a bullish zero-cross, indicating a potential shift in momentum, and the price is testing monthly support zones. W: However, the trend alignment is bearish with expanding momentum (-8.03%), and the Z-score relative to the 50-day SMA is -1.61, suggesting the trend is still predominantly negative. O: A sustained move above the 50-day SMA and confirmation of the MACD crossover could signal a more robust recovery. T: Failure to hold support levels or a renewed bearish MACD signal would increase downside risk, especially given the current negative trend alignment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 3.0
+      },
+      "synthesis": "S: The long-term technical structure is robust with a healthy Golden Cross (7.25%), and fundamental metrics are exceptionally strong, including high business quality (NM: 40.0%), a net cash position (NetCash/Eq: 0.25x), and excellent free cash flow margins (30.0%). W: The current market regime is a bear market relief rally, which inherently carries some uncertainty, and the price is in the mid-cycle neutral zone. O: The deep value discount in current valuation multiples (P/E: 0.77, P/S: 0.31) and underrated implied growth (PEG: 0.02) present a significant opportunity. T: While the long-term outlook is bullish due to fundamentals and technicals, a broader market downturn or a significant shift in the semiconductor industry could pose risks, though the strong balance sheet mitigates some of this."
+    }
+  }
+}

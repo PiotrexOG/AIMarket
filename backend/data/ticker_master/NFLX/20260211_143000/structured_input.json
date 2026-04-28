@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 79.22-91.58]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.37%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.217)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.54)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 79.22-109.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-26.7%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-18.68%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 1.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 80.04,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.92%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.9, P/S: 7.65)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.98)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Paramount sweet ENS Warner Bros DISCOVERY bid with tick ING fee and Netflix break-UP fee cover. - Paramount subm ITS new offer for WARNER BROS to compete with NETFLIX takeover. - Larry Ellison LAUNCHES fresh effort to DERAIL Netflix-WARNER BROs DEAL. -Paramount COVERS",
+      "Expanded DOJ scrutiny over Netflix's $82b Warner Bros acquisition raising antitrust concerns. - Senate hearings assessing impact of merger on competition and choice in streaming market."
+    ],
+    "medium_term_50d": [
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Expanded DOJ scrutiny over Netflix's $82b Warner Bros acquisition raising antitrust concerns. - Senate hearings assessing impact of merger on competition and choice in streaming market.",
+      "Netflix faces DOJ antitrust investigation over Warner Bros deal. Based on the provided data, there is one material event identified that directly affects company ticker NLFX on 2o26-o2-o7. This event involves regulatory scrutiny surrounding Netflix's proposed acquisition of Warmer Bros. assets by the US Department of Justice, raising questions about potential"
+    ],
+    "long_term_200d": [
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Expanded DOJ scrutiny over Netflix's $82b Warner Bros acquisition raising antitrust concerns. - Senate hearings assessing impact of merger on competition and choice in streaming market.",
+      "Netflix faces DOJ antitrust investigation over Warner Bros deal. Based on the provided data, there is one material event identified that directly affects company ticker NLFX on 2o26-o2-o7. This event involves regulatory scrutiny surrounding Netflix's proposed acquisition of Warmer Bros. assets by the US Department of Justice, raising questions about potential"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The stock has formed a bullish hammer/pinbar pattern at critical 20-day resistance (292.65), with explosive velocity (7.4%) and elevated volume (1.14). However, the RSI has moved into extreme overbought territory (81.3), and the price remains significantly extended above the SMA20 (5.9%), suggesting potential for a short-term reversal or consolidation. W: Analyst sentiment has shifted to mixed, and while news highlights positive developments like dividend increases and buybacks, the underlying geopolitical risks and potential regulatory shifts remain. O: The strong bullish signals are counterbalanced by extreme overbought conditions and the proximity to significant resistance, limiting immediate upside potential and increasing the probability of a pullback. T: Risk has increased due to the extreme overbought RSI, the price being well extended above the SMA20, and the testing of critical resistance. The blow-off top formation above the upper Bollinger Band is no longer present, but the overextended technicals and mixed sentiment warrant caution. The previous risk score of 7.5 is increased due to the further deterioration in overbought conditions."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.8,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish and expanding (4.45%), with the stock positioned above the SMA50 (Z:2.07). The price is consolidating at monthly resistance, indicating sustained demand. W: The MACD has started to fade (1.472), suggesting a potential loss of bullish momentum. Fundamental earnings outlook for the next quarter remains negative (-12.0% est. growth), and the news narrative still includes geopolitical risks. O: While the trend alignment and SMA positioning remain strong, the fading MACD and persistent fundamental earnings concerns temper the bullish conviction. The ability to consolidate at monthly resistance is a positive sign, but the momentum is showing signs of weakening. T: Risk has increased due to the fading MACD momentum and the continued negative earnings growth estimates for the next quarter. The proximity to monthly resistance also contributes to increased risk. The previous risk score of 6.0 is increased due to the fading MACD and persistent fundamental earnings concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 7.2,
+        "risk": 5.0
+      },
+      "synthesis": "S: The secular bull market regime remains robust (18.4%), and the long-term structure is healthy with a strong golden cross (7.06%). The stock is near all-time highs (98.7%), indicating sustained long-term demand. Business quality and growth profile remain strong, and recent news highlights positive capital allocation decisions like dividend increases and buybacks, alongside passing stress tests. W: Fundamental concerns regarding a stressed balance sheet (NetDebt/Eq: 1.65x) and negative FCF (-51.1%) persist, creating structural fragility. The leveraged valuation structure (EV/MC: 1.7x) remains sensitive to any fundamental shifts. O: The company's strong business fundamentals, consistent growth, and position at all-time highs within a secular bull market provide a solid long-term foundation. Positive capital allocation news and passing stress tests improve the fundamental outlook. T: Risk has decreased slightly due to the positive news regarding capital allocation and stress tests, which mitigate some of the fundamental concerns. The continued strength of the secular bull market regime also supports lower risk. However, the persistent fundamental weaknesses in balance sheet and cash flow, coupled with the leveraged valuation, mean that risk remains elevated. The previous risk score of 5.5 is decreased due to the positive capital allocation news and stress test results."
+    }
+  }
+}

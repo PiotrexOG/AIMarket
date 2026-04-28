@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.76)",
+        "velocity_roc_10": "NORMAL (2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 328.7-353.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.25%)",
+        "cycle_macd": "BULLISH_FADING (1.261)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 328.7-359.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.58%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 349.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.39%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.05, P/S: 18.31)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.12)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Mastercard investigation into Visa cardnetwork practices. - Octopus and Visa launch fleet payment card. -Visa expands into stablecoins with multi-Chain strategy.",
+      "Visa partnerswith Ample Earth for sustainable spending. -Visa merges fraud prevention and disputes management programs. -Hyperliqu id dominates De Fi Perps Market with $1.3B in Aug revenues (V not directly involved) NONE",
+      "Visa shuts down US open- banking unit amid regulatory uncertainty."
+    ],
+    "medium_term_50d": [
+      "Mastercard investigation into Visa cardnetwork practices. - Octopus and Visa launch fleet payment card. -Visa expands into stablecoins with multi-Chain strategy.",
+      "Visa shuts down US open- banking unit amid regulatory uncertainty.",
+      "Visa hal TS open banking operations In US amid regulatory Challenges."
+    ],
+    "long_term_200d": [
+      "Mastercard investigation into Visa cardnetwork practices. - Octopus and Visa launch fleet payment card. -Visa expands into stablecoins with multi-Chain strategy.",
+      "Visa shuts down US open- banking unit amid regulatory uncertainty.",
+      "Visa laanches new commerce platform using AI agents. -Visa works with Open AI and Microsoft on technology."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum indicators are neutral, with RSI at 44.3 and ROC stagnant at 0.4%. The price is stable near its base SMA20, indicating a lack of immediate directional impulse. W: The absence of strong momentum signals limits upside potential in the immediate term. O: Potential for range-bound trading within the current 908.38-963.94 levels. T: News flow is mixed, with some competitive impacts (Kroger/Albertsons, Cove Sodas) and operational updates (gas station, furniture sales), but no significant catalysts for immediate price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term trend shows consolidation, with MACD confirming a bullish zero cross, suggesting potential for a shift. The price is near its 50-day SMA, indicating a healthy base for potential upward movement. W: Trend alignment is compressed, and the stock is trading within a broader monthly range (903.33-981.0), suggesting limited immediate upside without a clear breakout. O: The partnership with Novo Nordisk for GLP-1 drugs is a significant strategic development, potentially driving future growth and customer engagement. T: News regarding GLP-1 drugs and solar module supply are positive medium-term developments, while the Kroger/Albertsons news introduces some competitive uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term technical regime is bearish, characterized by a death cross structure and the price residing in the lower quadrant of its long-term range (30.2%). This indicates significant structural headwinds. W: Fundamentals show strong financial health (NetCash/Eq: 0.17x) and scale (Mega Cap), but business quality is thin-margined (GM: 12.7%) and cash conversion is weak (FCF Mgn: 2.6%). The current valuation is at a hyper-premium (P/E: 54.4, P/S: 1.57), with high multiple risk (P/B: 16.25) and implied growth priced in (PEG: 4.48). O: The company's ability to execute on its expansion plans (35 new warehouses in 2026) and leverage new ventures like GLP-1 drugs could offset some of the long-term structural challenges. T: The secular bear market regime and death cross structure present significant long-term risks, amplified by the extremely high valuation multiples. Despite strong financial health, the premium pricing leaves little room for error."
+    }
+  }
+}

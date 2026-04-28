@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 243.34-273.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.72%)",
+        "cycle_macd": "BULLISH_FADING (0.536)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.92)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 227.59-273.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.2%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.07%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 270.94,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.43%))",
+      "volume_dynamics": "AVERAGE (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.9% | OM: 19.1% | NM: 18.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.48x, YrsToPay: 1.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 13.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.609B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -11.0%, EPS: 69.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 33.6%, Next Q Est Growth: -23.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.47, P/S: 6.95)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.11)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.54)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aviation adopts Flight Pulse^(R) from GE \u0410erospace for pilot analytics. - Helena Hern\u00e1ndez joins Everus Construction Group's board ofdirectors. - Net Jets implements cutting-edge safety analytics from GE\u0410erospace.",
+      "GE Vernoa reports Q2 profit of $../../../million, beats estimates. - Vernoa raises annual forecast after Q2 profit beat. - Impact of US tariffs lowers Vernoa's forecasted revenue by $./../. - No specific information regarding GE directly.",
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415"
+    ],
+    "medium_term_50d": [
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415",
+      "GE Aviation adopts Flight Pulse^(R) from GE \u0410erospace for pilot analytics. - Helena Hern\u00e1ndez joins Everus Construction Group's board ofdirectors. - Net Jets implements cutting-edge safety analytics from GE\u0410erospace.",
+      "GE Vernoa reports Q2 profit of $../../../million, beats estimates. - Vernoa raises annual forecast after Q2 profit beat. - Impact of US tariffs lowers Vernoa's forecasted revenue by $./../. - No specific information regarding GE directly."
+    ],
+    "long_term_200d": [
+      "GE's stock reaches 25-\\year high after earnings beat and jet engine orders surge - G\u0415 Aerospace raises full-yard earnings guidance - G\u0435 Aerospace reports stronger-than-anticipated Q2 results and increases full-year guidance - Strong commercial engines & services revenue drives GE Aersospace's growth - G \u0415",
+      "GE Aersospace raises Q2 twenty-five earnings and guidance.",
+      "GE Vernoa reports Q2 profit of $../../../million, beats estimates. - Vernoa raises annual forecast after Q2 profit beat. - Impact of US tariffs lowers Vernoa's forecasted revenue by $./../. - No specific information regarding GE directly."
+    ]
+  }
+}

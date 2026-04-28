@@ -1,0 +1,72 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "STAGNANT (-0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 226.31-248.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.83%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.869)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.46)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 190.03-248.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.97%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 230.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.65%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 48.7% | NM: 42.5%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.32x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3401.199143B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.5%, EPS: 56.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3224.7%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.83, P/S: 0.35)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.26)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia orders additional 30o,00 H1 chips from TSM due to China demand surge.",
+      "TSMC expands US operations, announces robust Q2results and raised guidance."
+    ],
+    "medium_term_50d": [
+      "Nvidia orders additional 30o,00 H1 chips from TSM due to China demand surge.",
+      "TSMC expands US operations, announces robust Q2results and raised guidance.",
+      "TSMC leads earnings beat. - Net new orders for TSMS from major clients announced. - New partnership between TSMC and AWS in AI technology revealed."
+    ],
+    "long_term_200d": [
+      "TSMC reports 44\\% revenue growth and 61\\% net income surge for Q2 - TSM announces 3nm technology and HPC driven Q2 earnings",
+      "TSMC expands US operations, announces robust Q2results and raised guidance.",
+      "TSMC leads earnings beat. - Net new orders for TSMS from major clients announced. - New partnership between TSMC and AWS in AI technology revealed."
+    ]
+  }
+}

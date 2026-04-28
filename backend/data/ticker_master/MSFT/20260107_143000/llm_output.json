@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has improved. The RSI has moved to 54.2, indicating a shift towards bullish territory. The candle pattern has normalized to NEUTRAL, and while velocity has turned negative (-1.6%), the price is still stable near the SMA20 (-0.9%). The mean reversion bands are tighter (0.31), suggesting less immediate overextension. W: The shift from a strong bearish candle pattern to neutral, along with the improved RSI, increases conviction. However, the negative velocity and stable price near the SMA20 prevent a more aggressive score increase. O: News flow is positive, with new AI partnerships (Miso, Think Labs) and strategic acquisitions (\u00b3Cloud). The significant investment by Peter Thiel further bolsters sentiment. T: The improved short-term technicals and positive news flow lead to a score increase. Risk has slightly decreased due to tighter mean reversion bands and a less bearish candle pattern, despite the ongoing range-bound price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains bearish (-2.29%), and the MACD has accelerated its bearish trend (-0.136), indicating a loss of bullish momentum. The Z-score relative to the SMA50 remains bearish (Z:-0.57), suggesting continued weakness. W: The accelerating bearish MACD and persistent negative trend alignment significantly lower conviction. The lack of any emerging bullish trend signals makes it difficult to build confidence in a medium-term recovery. O: The news narrative highlights Microsoft being named a top pick amid the AI inflection point, which is a positive signal. However, the underlying technicals are deteriorating, creating a divergence. T: The deterioration in MACD momentum and continued bearish trend alignment lead to a reduction in score and an increase in risk. This reflects the weakening medium-term technical picture, despite some positive analyst sentiment regarding AI."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "risk": 5.2
+      },
+      "synthesis": "S: The long-term market regime has shifted slightly to BEAR_MARKET_RELIEF_RALLY (-0.2%), but the HEALTHY_GOLDEN_CROSS_STRUCTURE (3.12%) remains intact. The long-term range position has slightly decreased to the BULLISH_UPPER_QUADRANT (65.8%), indicating a minor pullback. W: The structural integrity of the long-term trend remains high, supporting conviction. However, the shift in market regime and the slight decrease in long-term range position temper conviction for a higher score. O: Long-term news flow continues to emphasize strategic AI investments and partnerships, reinforcing the company's growth trajectory. The mention of Microsoft being a top pick amid the AI inflection point is a positive long-term indicator. T: Business quality, financial health, and cash generation remain exceptionally strong. The slight decrease in long-term range position and the shift in market regime lead to a marginal decrease in score and a slight increase in risk, primarily driven by the evolving market context and persistent high valuation."
+    }
+  }
+}

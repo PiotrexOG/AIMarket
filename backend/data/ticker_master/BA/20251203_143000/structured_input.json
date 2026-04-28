@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.01)",
+        "velocity_roc_10": "NORMAL (7.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 176.77-205.77]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.21%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.935)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.13)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-226.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.24%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 203.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.83%))",
+      "volume_dynamics": "CLIMAX_EXTREME (2.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -18.69)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.31x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing lands record Apache helicoter orders from Poland and significant deals with Emirates \u0438 Gulf Air. - RTX' unit Pratt &#38; Whitney secures a $1,61B contract for F-3 fifth propulsion system sustenance. - Air France inaugurates a new nonstop flight between Phuket and Paris. - Solar",
+      "Boeing expects highest jet deliveriesnext year. - Industrial quality issue discovered in Airbus A321 fuselages.",
+      "Boeing secures $4,7B contract to build Apache helicters for international customers."
+    ],
+    "medium_term_50d": [
+      "Boeing lands record Apache helicoter orders from Poland and significant deals with Emirates \u0438 Gulf Air. - RTX' unit Pratt &#38; Whitney secures a $1,61B contract for F-3 fifth propulsion system sustenance. - Air France inaugurates a new nonstop flight between Phuket and Paris. - Solar",
+      "Boeing secures $4,7B contract to build Apache helicters for international customers.",
+      "U.S Army awards Boeing $4. seventh billion contract tobuild new Apache helic opers. - U.S grants Boeing $39o millioncontractto upgradecertain Bradley vehicles. - US Army orders 96 Apachesfrom Boeingfor Poland."
+    ],
+    "long_term_200d": [
+      "U.S Army awards Boeing $4. seventh billion contract tobuild new Apache helic opers. - U.S grants Boeing $39o millioncontractto upgradecertain Bradley vehicles. - US Army orders 96 Apachesfrom Boeingfor Poland.",
+      "Boeing secures up to 205 new aircraft orders at Dubai Air Show.",
+      "Boeing lands record Apache helicoter orders from Poland and significant deals with Emirates \u0438 Gulf Air. - RTX' unit Pratt &#38; Whitney secures a $1,61B contract for F-3 fifth propulsion system sustenance. - Air France inaugurates a new nonstop flight between Phuket and Paris. - Solar"
+    ]
+  }
+}

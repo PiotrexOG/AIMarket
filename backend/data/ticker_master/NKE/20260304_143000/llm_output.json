@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term technical picture has significantly deteriorated. The candle pattern has shifted to NEUTRAL, and RSI has moved into a BEARISH_ZONE_WEAK (38.7). The price is now testing the LOWER_BAND of the Bollinger Bands (-0.04) and is at CRITICAL_SUPPORT_20 (58.62). Velocity (ROC 10) has turned negative (-8.2%), and the SMA20 is now below its base (-5.7%). W: The previous indecision has given way to clear bearish momentum, with the price breaking below key short-term moving averages and testing critical support levels. The shift from neutral to bearish RSI confirms the weakening trend. O: Short-term news highlights significant restructuring due to weak consumer demand, high inventory, and pressures in China, along with a new CEO focusing on growth. This indicates internal challenges and a need for strategic shifts. T: Risk has increased substantially due to the breakdown in short-term momentum, testing of critical support, and negative news regarding restructuring and demand weakness. Conviction has decreased as previous neutral signals have turned bearish, and the news flow points to significant headwinds."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend has decisively turned bearish. The MACD has accelerated into BEARISH_ACCELERATING territory (-0.39), and the Z-score relative to the 50-day SMA is now deeply negative (Z:-1.97), indicating a strong bearish trend position. The price is still within its monthly range but is trending towards the lower bound. W: The previous consolidation has broken down, with MACD turning strongly bearish and the price exhibiting a significant negative deviation from its 50-day moving average. This indicates a clear shift in trend direction. O: Medium-term news continues to emphasize restructuring, weak consumer demand, and inventory issues, reinforcing the bearish technical signals. The focus on a new CEO and wholesale partnerships suggests a strategic pivot to address these challenges, but the immediate impact is negative. T: Risk has increased significantly due to the accelerating bearish MACD, deep negative Z-score, and the persistent negative news regarding demand and inventory. Conviction has decreased as the previous consolidation has failed, and the fundamental and technical outlook has worsened considerably."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term outlook has further deteriorated, solidifying a bearish regime. The market regime remains a SECULAR_BEAR_MARKET (-11.8%), and the death cross structure persists (-6.32%). Critically, the long-term range position has fallen to MULTI_MONTH_LOW_ACCUMULATION (8.1%), indicating extreme bearish price action. W: The previous bearish long-term technicals have worsened, with the price reaching new lows within its long-term range. The death cross remains a significant structural impediment, and the market regime continues to be unfavorable. O: Long-term news flow is dominated by significant restructuring due to weak consumer demand, high inventory, and pressures in China, alongside ongoing concerns about labor practices and past earnings misses. This paints a bleak picture for future growth and profitability. T: Risk has increased to a very high level due to the extremely bearish long-term price action, persistent death cross, unfavorable market regime, and the severe fundamental challenges highlighted in the news. Conviction has decreased to its lowest point as the long-term technical, fundamental, and news narratives are overwhelmingly negative."
+    }
+  }
+}

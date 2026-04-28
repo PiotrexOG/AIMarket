@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 200.91-220.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.09%)",
+        "cycle_macd": "BULLISH_FADING (1.115)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.33)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 185.12-220.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (23.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.0%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 214.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.36, P/S: 5.56)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.43)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.22)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson submits OTTA VA robotic surgial system to FDA for approval. - Four Dow Jones stocks, including JNJ report earnings thisweek.",
+      "Net income miss by JNJ in Q4 earnings report (Wall Street Journal). - JNJ recalls specific batches of baby powder due to asbestos contamination (Reuters).",
+      "Johnson & Johnson reports Phase III results showing T ecvayli reduces disease progression in multiple myelsia patients."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson announces positive Phase three results for TECVayli in multiple myelsia. - Tecvayli monotherapy shows superior PFS and OS vs standard of care in relapsed multiple myeliomaa.",
+      "Johnson & Johnson reports Phase III results showing T ecvayli reduces disease progression in multiple myelsia patients.",
+      "Net income miss by JNJ in Q4 earnings report (Wall Street Journal). - JNJ recalls specific batches of baby powder due to asbestos contamination (Reuters)."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces positive Phase three results for TECVayli in multiple myelsia. - Tecvayli monotherapy shows superior PFS and OS vs standard of care in relapsed multiple myeliomaa.",
+      "Johnson & Johnson reports Phase III results showing T ecvayli reduces disease progression in multiple myelsia patients.",
+      "Johnson & Johnson reports primary and keysecondary endpoints for nipocolimab in Phase 2\u0431 SLE trial, moves to Phase 3. - J&J submits FDA De Nova application for OTTA VA robotic surgicalsystem in general surgery - Lexeo and J&J collaborate to explore targeted cardiac delivery of AAV gene therapy."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 1.5,
+        "conv": 2.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: Short-term technicals have further deteriorated. The 'STRONG_BEARISH' candle pattern confirms downside pressure. RSI has fallen into extreme oversold territory (20.7), suggesting potential for a bounce but indicating significant weakness. Velocity remains implosive down (-7.4%), and the price is testing critical support at 296.51. The 20-day SMA shows a stable but still negative overstretch (-5.0%). W: The extreme oversold RSI, implosive velocity, and price at critical support are key weaknesses. The 'STRONG_BEARISH' candle pattern and continued negative SMA positioning amplify downside risk. O: News flow is dominated by the new lawsuit from Trump, which is a significant negative catalyst, increasing legal and reputational risk. While some minor positive news exists, the lawsuit overshadows it. T: The score has decreased by 1.0 point due to the further deterioration in technicals and the introduction of a significant negative news event. Conviction has decreased by 0.5 points as the extreme oversold condition and strong bearish signals reduce confidence in immediate upside. Risk has increased by 0.5 points due to the increased downside velocity, the price testing critical support, and the significant negative news flow from the lawsuit."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows consolidation (0.89%), but this is occurring within a context of deteriorating momentum. The MACD is bearish but recovering slightly (-2.627), indicating a potential stabilization but still firmly in negative territory. The Z-score relative to the 50-day SMA has worsened (Z:-1.39), suggesting a more pronounced bearish trend position. The price remains within the monthly range. W: The worsening Z-score relative to the 50-day SMA and the continued bearish MACD are significant weaknesses, indicating a loss of upward momentum and a potential for further downside. The 'RANGE' bias in the SR landscape continues to cap upside potential. O: News flow is mixed, with the Trump lawsuit and proposed credit card rate cap being significant medium-term risks. While some positive business appointments are noted, the legal and regulatory threats are more impactful. T: The score has decreased by 1.0 point due to the worsening bearish trend signals and the increased negative news flow related to regulatory and legal challenges. Conviction has decreased by 0.5 points as the conflicting signals and increasingly bearish momentum indicators reduce confidence. Risk has increased by 0.5 points due to the bearish trend signals, the increased negative news flow, and the potential for regulatory or legal challenges impacting profitability."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term secular bull market regime remains, but its strength has further diminished (2.8%). The golden cross structure is still healthy (7.25%), and the price is in the upper quadrant of its long-term range (66.9%), though lower than before. W: The continued decline in market regime strength and the lower long-term range position are concerns. While fundamentals remain strong, the persistent elevated PEG ratio and the growing risk of long-term regulatory or political headwinds from news narratives are significant weaknesses. O: Long-term news flow is now dominated by the Trump lawsuit and proposed credit card rate cap, which introduce significant long-term regulatory and political risk. While the Apple Card issuance is a positive strategic development, the ongoing legal and regulatory challenges pose a more substantial long-term threat to the business model and profitability. T: The score has decreased by 1.0 point due to the weakening market regime, the lower long-term range position, and the introduction of significant long-term regulatory/political risk. Conviction has decreased by 1.0 point as the less robust market regime and the new narrative risk introduce substantial uncertainty. Risk has increased by 0.5 points due to the weakening market regime, the potential for long-term regulatory impact, and the persistent elevated valuation metrics combined with new legal challenges."
+    }
+  }
+}

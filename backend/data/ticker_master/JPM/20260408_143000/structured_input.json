@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.91)",
+        "velocity_roc_10": "NORMAL (2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.7%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 279.1-298.72]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.11%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.705)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.1-326.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.25%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 305.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.14%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "MOMENTUM_UNKNOWN"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.24, P/S: 3.04)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.35)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 11.16)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase publishes 2025 Annual Report, CEO letter. - Jamie Dimon warns of 'skunk at the party' risks. - JPMorgan to deploy $1 trillion to strengthen US economy. - Jamie Dimon warns markets mispricing 2026 risks. - Jamie Dimon warns on private credit risks. - Jamie Dimon warns Iran war could drive inflation. - Jamie Dimon warns world not prepared for rate shock.",
+      "JP Morgan gets green light to build Canary Wharf\u2019s tallest tower. - JPMorgan Chase Bank closes 16 branches. - JPMorgan Chase & Co. (JPM) Earnings Expected to Grow. - JPMorgan Stock Fans, Mark Your Calendars for April 14.",
+      "JPMorgan predicts no rate cuts in 2026. - JPMorgan CEO considers offering prediction market services. - JPMorgan identifies aging US power grid as investment opportunity. - JPMorgan CEO discusses AI's impact on jobs."
+    ],
+    "medium_term_50d": [
+      "JPMorgan Chase publishes 2025 Annual Report, CEO letter. - Jamie Dimon warns of 'skunk at the party' risks. - JPMorgan to deploy $1 trillion to strengthen US economy. - Jamie Dimon warns markets mispricing 2026 risks. - Jamie Dimon warns on private credit risks. - Jamie Dimon warns Iran war could drive inflation. - Jamie Dimon warns world not prepared for rate shock.",
+      "JP Morgan gets green light to build Canary Wharf\u2019s tallest tower. - JPMorgan Chase Bank closes 16 branches. - JPMorgan Chase & Co. (JPM) Earnings Expected to Grow. - JPMorgan Stock Fans, Mark Your Calendars for April 14.",
+      "JPMorgan launches 'American Dream Initiative' for economic opportunity. - JPMorgan plans $80 billion small business lending over 10 years. - JPMorgan hires 1,000 bankers for small business push. - JPMorgan expands digital assets with Mitsubishi payment deal. - JPMorgan Private Capital expands team with senior hires. - JPMorgan Chase Jersey City layoffs reflect workforce rebalancing."
+    ],
+    "long_term_200d": [
+      "JPMorgan Chase publishes 2025 Annual Report, CEO letter. - Jamie Dimon warns of 'skunk at the party' risks. - JPMorgan to deploy $1 trillion to strengthen US economy. - Jamie Dimon warns markets mispricing 2026 risks. - Jamie Dimon warns on private credit risks. - Jamie Dimon warns Iran war could drive inflation. - Jamie Dimon warns world not prepared for rate shock.",
+      "JPMorgan Chase to open over 160 new branches in 2026. - JPMorgan Chase plans to hire over 1,100 employees in 2026. - JPMorgan Chase to increase AI use for efficiency and risk controls. - JPMorgan Chase to open 160 new branches, renovate 600 locations. - JPMorgan Chase to expand Community Centers and financial education workshops. - Jamie Dimon insists crypto firms offering stablecoin rewards be regulated as banks. - JPMorgan Chase CEO Jamie Dimon warns credit cycle will be worse than normal. - JPMorgan Chase CEO Jamie Dimon warns inflation could return. - JPMorgan Chase CEO Jamie Dimon warns of market complacency. -",
+      "JPMorgan limits private credit exposure, Morgan Stanley caps redemptions. - JPMorgan curbs lending as Morgan Stanley, Black Rock limit withdrawals. - JPMorgan, UBS dropped hedge fund embroiled in HK probe. - JPMorgan faces $328M lawsuit over alleged crypto transfers. - JPMorgan reprices AI exposed software loans amid credit concerns. - JPMorgan CEO warns markets ignoring inflation risk."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term outlook has improved with a shift in RSI to 57.4, moving firmly into neutral territory and indicating increased buying interest. The strong bullish candle pattern is now supported by price moving above the 20-day SMA (+2.5%), suggesting a potential upward bias. Velocity ROC has normalized to -0.6%, indicating a pause in downward momentum. W: Despite the bullish candle, the price remains within the 20-day range (77.99-89.05), suggesting consolidation rather than a breakout. Mean reversion bands are at 0.76, indicating some upward pressure but not an overbought condition. O: The short-term news narrative is mixed, with some positive developments like Intuit's naming rights deal and Oakberry's franchising, but also ongoing concerns like potential competition and labor strikes. T: Volatility has decreased slightly (ATR 2.95%), and volume dynamics are average (0.8), suggesting a more stable trading environment. Risk has decreased due to improved momentum and stable volatility, but the persistent news headwinds prevent a more significant score increase."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend has shown a notable improvement. Trend alignment is now compressed around the MAs (-0.04%), and the MACD has confirmed a bullish zero cross (0.06), indicating a strengthening upward momentum. The Z-score relative to the 50-day SMA has moved to a bullish trend position (1.37), suggesting sustained buying pressure. W: The price is still within the monthly range (77.99-89.05), but the confirmed bullish MACD and positive Z-score suggest a potential for a breakout from this consolidation. O: The medium-term news narrative remains a mixed bag, with ongoing operational challenges like cost-cutting and union activity, but also positive developments like franchising deals. T: The confirmed bullish MACD and positive Z-score indicate a reduction in downside risk and an increase in conviction for a potential upward move. The risk has decreased as the technicals turn more constructive."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term technical structure remains bearish, with the secular bear market regime still in play (-4.8%) and the death cross structure intact (-7.04%). However, the price has moved to a higher position within the bearish lower quadrant (27.0%), indicating some marginal improvement in long-term positioning. W: Fundamental metrics continue to be a significant concern, with stressed balance sheets (YrsToPay: 10.5x) and stagnant growth profiles (EPS: -35.2%). Valuation remains elevated (P/E: 37.42) despite these fundamental weaknesses, increasing fragility. O: The long-term news narrative is dominated by ongoing operational challenges and strategic shifts, such as the China retail operations sale, which introduce uncertainty about future business prospects. T: While the long-term price positioning has slightly improved, the entrenched bearish structure, persistent fundamental weaknesses, and elevated valuation continue to pose significant downside risk. Conviction remains low due to the structural headwinds and fundamental concerns."
+    }
+  }
+}

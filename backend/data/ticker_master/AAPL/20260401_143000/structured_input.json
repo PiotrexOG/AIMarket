@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (41.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 245.51-266.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.32%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.098)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 243.42-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.6%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 254.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "ELEVATED (1.23)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.98, P/S: 9.16)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 51.72)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple tests smarter Siri to catch up in AI race. - Apple Music concert integration tests new growth angle.",
+      "Apple Distribution International fined \u00a3390k by UK regulator. - Apple hires Google AI executive for Siri product marketing.",
+      "Apple launches 13-inch Mac Book Neo priced at $599. - Siri to get powerful AI features and standalone app. - Apple acknowledges and fixes i Phone autocorrect typing issues."
+    ],
+    "medium_term_50d": [
+      "Apple adds US manufacturing partners with $400M expansion. - Apple expands supplier network with manufacturing program additions. - Apple to source US-made parts from Japan's TDK. - Apple shifts supply chain, opens Siri to competing AI. - Apple hires ex-Google executive for AI marketing.",
+      "Apple adds Bosch, Cirrus Logic to US manufacturing program. - Apple to invest $400 million in US component production. - Cirrus Logic stock jumps on Apple partnership news. - Apple discontinues Mac Pro model. - Apple adds new partners to American Manufacturing Program.",
+      "Apple tests smarter Siri to catch up in AI race. - Apple Music concert integration tests new growth angle."
+    ],
+    "long_term_200d": [
+      "Apple adds US manufacturing partners with $400M expansion. - Apple expands supplier network with manufacturing program additions. - Apple to source US-made parts from Japan's TDK. - Apple shifts supply chain, opens Siri to competing AI. - Apple hires ex-Google executive for AI marketing.",
+      "Apple cuts China App Store commission to 25%. - Apple's China App Store fees reduced to 25%. - Apple lowers China App Store commission to 25%. - Apple's China App Store commission drops to 25%. - Apple reduces App Store commission in China.",
+      "Apple launches low-cost i Phone 17e and M4 i Pad Air. - Apple unveils $599 i Phone 17e, kicks off product launches. - Apple announces new i Phone and i Pad Air as launch week begins. - Apple introduces low-cost i Phone 17e and upgraded i Pad Air."
+    ]
+  }
+}

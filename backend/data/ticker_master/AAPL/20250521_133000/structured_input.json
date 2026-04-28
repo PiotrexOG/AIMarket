@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "NORMAL (4.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 193.25-214.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.27%)",
+        "cycle_macd": "BULLISH_FADING (0.944)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-225.84]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.26%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 40.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 205.81,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.74%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.62, P/S: 7.88)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 46.71)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple supplier Fox Conn invests $1. fifth billion in Indiaunit. - Chinese smartphoneexports to US dip to lowest since 2k11.",
+      "Epic Games asks judge to intervene in Apple's refusal to list Fortnite. - Xiaomi invests $6. ninety three billion in chip design through 20 thirty one. - Apple faces US scrutiny over potential AI deal with Alibaba.",
+      "US President Donald Trump scrutinizes Apple-Alibabadeal. - Apple eyes Indiaas keyi Phone hub."
+    ],
+    "medium_term_50d": [
+      "US President Donald Trump scrutinizes Apple-Alibabadeal. - Apple eyes Indiaas keyi Phone hub.",
+      "Apple blocks Fortnight submission to not release to US App Store or to Epic Games Store for IOS in EU. - Apple asks Epic Sweden to resubmit Fortnight app update without US storefrontof App Store.",
+      "Epic Games asks judge to intervene in Apple's refusal to list Fortnite. - Xiaomi invests $6. ninety three billion in chip design through 20 thirty one. - Apple faces US scrutiny over potential AI deal with Alibaba."
+    ],
+    "long_term_200d": [
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "Federal judge finds Apple in contempt for violating antitrust ruling in App Storecase. - Apple ordered to halt non-App Store sales commissions by judge. - Judge rules Apple must pay $503m to Optis in UK patent disputes.",
+      "China announces additional tariffs on Apple products: 34%. - Trump imposes tariffs on imported i Phones and Mac Books."
+    ]
+  }
+}

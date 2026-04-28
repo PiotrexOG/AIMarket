@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated from a bullish candle to a 'Doji Indecision' pattern, reflecting a loss of immediate upward momentum. The RSI has normalized to 50.1, moving out of overbought territory but indicating a lack of strong directional conviction. Velocity remains stagnant (-0.5%), and the price is now testing critical 20-day resistance. W: The Doji pattern at resistance, coupled with stagnant velocity and the price's position at a key resistance level, suggests a high probability of consolidation or a short-term pullback. The lack of clear directional bias is a significant weakness. O: New news regarding antitrust cases involving Google and Samsung, alongside ongoing EU regulatory fines and Elon Musk's renewed legal challenges, significantly increases short-term risk and uncertainty. T: Risk has increased from 6.0 to 7.0. The previous risk was driven by legal threats and an overbought RSI; now it's amplified by the indecisive technical pattern at resistance and the persistent, and in some cases new, legal and regulatory headwinds."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment continues to show strength (5.07%), and the Z-score relative to the 50-day SMA has improved (1.93), indicating the price is well-supported within its trend. However, the MACD has accelerated further into bearish territory (-0.292), signaling a significant deterioration in momentum. The price is strengthening at monthly resistance. W: The accelerating bearish MACD is a major concern, directly contradicting the positive trend alignment and suggesting a potential for trend reversal or significant correction. The price is testing monthly resistance, which could act as a ceiling. O: The ongoing antitrust litigation, including new developments with Google and Samsung, and the EU's regulatory actions, continue to cast a shadow over the medium-term outlook, creating persistent uncertainty. T: Risk has increased slightly from 6.0 to 6.5. The previous risk was driven by a bearish MACD and legal challenges; now, the risk is compounded by the accelerating bearish MACD, the price testing resistance, and the continued legal and regulatory pressures."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term range position has improved further into the upper quadrant (74.4%), indicating a more bullish long-term positioning. The market regime remains in a bull market correction (3.9%), and the death cross structure (-2.28%) persists, though it has narrowed slightly. W: The persistent death cross structure remains a significant long-term structural challenge, suggesting potential for trend reversals despite the improved range position. Fundamental growth remains stagnant (Rev: 4.9%, EPS: -0.5%), and balance sheet stress is unchanged. O: The long-term narrative is increasingly dominated by antitrust concerns, with new legal actions involving Google and Samsung, and ongoing EU regulatory scrutiny. These structural legal challenges pose a significant long-term threat to the business model. T: Risk has increased from 5.5 to 6.0. The previous risk was driven by the death cross and legal threats; now, it's amplified by the increasing prevalence of antitrust issues in the long-term narrative, which directly challenge the company's market dominance, alongside the persistent death cross structure."
+    }
+  }
+}

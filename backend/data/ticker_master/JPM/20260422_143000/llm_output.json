@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term exhibits a bullish bias driven by stable analyst sentiment and a high-efficiency business model. O: Potential for short-term upside exists if positive news flow regarding the Security and Resiliency Initiative continues to drive sentiment. W: Extreme overbought RSI (71.4) and a strong bearish candle pattern suggest an imminent pullback. The stock is trading in the middle of its 20-day range, offering limited immediate upside. T: Elevated risk due to overbought conditions and bearish technical signals, coupled with potential negative news from the CEO's credit crisis warning."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term trend shows consolidation with a bullish MACD, indicating underlying strength despite fading momentum. Bullish positioning relative to the 50-day SMA (Z:1.29) supports this view. O: Continued positive earnings surprises and revenue growth from trading activities could sustain the bullish trend. Expansion of the Security and Resiliency Initiative may provide a structural tailwind. W: The MACD is fading, and the trend alignment is compressed, suggesting a lack of strong directional conviction. The stock is trading within a wide monthly range, indicating potential for choppiness. T: Moderate risk due to fading momentum and consolidation, balanced by strong fundamental performance in trading and a solid business quality."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Long-term prospects are mixed, with a high-efficiency business model and mega-cap scale providing a solid foundation. O: The company's commitment to large-scale initiatives ($1.5 trillion) and consistent dividend raises suggest a long-term growth strategy. Moderate growth in revenue and EPS provides a baseline. W: The presence of a death cross structure (-1.5%) and stressed balance sheet (NetDebt/Eq: 2.53x) are significant headwinds. Valuation multiples are moderate, but implied growth is overpriced (PEG: 5.98), indicating potential fragility. T: Elevated risk stems from the bearish long-term technical structure (death cross), balance sheet stress, and potentially overvalued growth expectations, despite a strong underlying business."
+    }
+  }
+}

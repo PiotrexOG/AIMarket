@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (82.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.9%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 225.95-257.36]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.63%)",
+        "cycle_macd": "BULLISH_FADING (0.94)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.78)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 201.5-257.36]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.66%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 256.16,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.88%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.39)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.84, P/S: 9.63)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 57.74)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "EU regulators probe Apple over H-\u2081B visa hiring. - Apple faces cooling i Phone 17 demand in US market. - Check Point and Wiz announce cloud security partnership with AI capabilities.",
+      "Apple asks suppliers to increase i Phone 17 production by at least thirty percent due to high pre-order demand. - Taiwan aims to double exports of chips to India within five to sevenyears, potentially boosting Apple's Indian production. - Trump administration proposes cutting US dependence on foreignsemiconductors, which may impact Apple's supply chain.",
+      "Taiwan Semiconductors shuts down rumors of Intel deal. - Apple uses BIEL Crisalt for i Phone 17 Series glass covers. - BOE Technology establishes new subsidi ARY for robotics and AI software."
+    ],
+    "medium_term_50d": [
+      "Apple asks suppliers to increase i Phone 17 production by at least thirty percent due to high pre-order demand. - Taiwan aims to double exports of chips to India within five to sevenyears, potentially boosting Apple's Indian production. - Trump administration proposes cutting US dependence on foreignsemiconductors, which may impact Apple's supply chain.",
+      "Vo IP-Pan files and serves amended antitrust lawsuits against Apple, Google\uff0c and Samsung.",
+      "Apple asks EU to repeal Digital Markets Act. - Intel in talkswith Appleforinvestment. - Jabilforecastsupbeatalldatacenterdemand. - Appleblamese UEDMAforfeaturedelays."
+    ],
+    "long_term_200d": [
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL.",
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "EU regulators fine Apple \u20ac1bn over App Store policies. - Oracle signs $30bn computing deal with Open AI. - Apple announces new AI capabilities in i Phone 17."
+    ]
+  }
+}

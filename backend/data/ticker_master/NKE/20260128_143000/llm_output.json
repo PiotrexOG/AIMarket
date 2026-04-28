@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.8,
+        "risk": 6.2
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated significantly. The candle pattern has shifted to DOJI_INDECISION, indicating a loss of upward momentum. RSI has fallen sharply to 41.0, and velocity has turned negative (-3.8%). The price is now trading below the 20-day SMA (-2.0%). W: The shift to indecision and the decline in momentum indicators suggest a potential for further downside. The negative velocity and price action below the 20-day SMA are bearish signals. O: Negative news flow regarding significant job cuts in US distribution centers and leadership exits in EMEA and Greater China are substantial headwinds. A potential data breach adds to the short-term uncertainty. T: Risk has increased substantially due to the bearish technical shifts and negative news. The score has decreased to reflect the loss of bullish conviction and the increased downside potential, while conviction has also declined due to the mixed signals and negative news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.2,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend has turned decisively bearish. The MACD has crossed below zero and is confirmed as a bearish signal (-0.061). Trend alignment is still in consolidation but shows slight positive movement (0.57%), though this is overshadowed by the bearish MACD. The Z-score relative to the 50-day SMA has moved into negative territory (Z:-0.37), indicating mean reversion. W: The confirmed bearish MACD cross is a strong signal of weakening trend and potential for further decline. The negative Z-score suggests the price may be heading towards its 50-day moving average. O: The ongoing news about job cuts, leadership changes, and potential data breaches are significant negative factors impacting the medium-term outlook. T: Risk has increased significantly due to the confirmed bearish MACD cross and the shift to negative Z-score. The score has been reduced to reflect the bearish technical signals and negative news flow, while conviction has also decreased due to the clear bearish trend confirmation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term outlook remains deeply challenged. The secular bear market regime has worsened (-5.5%), and the death cross structure persists (-4.12%). The long-term range position has declined further to 38.9%, indicating a weaker position within the cycle. W: The persistent secular bear market and death cross structure represent significant structural headwinds. The declining long-term range position suggests a lack of long-term buying interest. Fundamental growth remains stagnant with profit issues, and ongoing challenges in China persist. O: While business quality, financial health, and cash generation remain stable, they are insufficient to offset the severe long-term technical and fundamental deterioration. The news regarding leadership exits and job cuts reinforces the negative long-term sentiment. T: Risk has increased substantially due to the worsening secular bear market, persistent death cross, and declining range position. The score has been significantly reduced to reflect the deeply bearish long-term technical and fundamental outlook, while conviction remains moderate due to the underlying stable business fundamentals."
+    }
+  }
+}

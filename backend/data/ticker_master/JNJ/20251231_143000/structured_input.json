@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "NORMAL (-3.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 199.91-215.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.61%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.697)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.86)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 184.66-215.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.93%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.93,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.84, P/S: 5.45)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson acquisitions Halda Therapies for $3bn, expands pipeline.",
+      "Johnson & Johnson acquires Halda Therapeutics for $3 billion.",
+      "FDA approvals JNJ's new diabetes drug. - JNJ announces acquisition of biotech startup. - Major production issue at JNJ pharmaceutical plant. - Lawsuit filed against JNJ over talcum powder allegations. - New CEO named for JNJ subsidiary."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson acquisitions Halda Therapies for $3bn, expands pipeline.",
+      "Johnson & Johnson acquires Halda Therapeutics for $3 billion.",
+      "FDA approvals JNJ's new diabetes drug. - JNJ announces acquisition of biotech startup. - Major production issue at JNJ pharmaceutical plant. - Lawsuit filed against JNJ over talcum powder allegations. - New CEO named for JNJ subsidiary."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson secures US FDABreakthrough Therapy Designation for TECVayli plus DARzale X in multiple myela. - Groundbreaking multiple myelomadata unveiled at A\u015eH202 five: Tecvaili+Darzalexdelivers superiorefficacyinearlyrelapsed MM.",
+      "Johnson & Johnson announces potential standard of Care for multiple myelima: TECVALYI\u00ae plus D ARZALEX FA PRO\u00ae in Phase 3 trials. - TECVISTAMAB plus DARATUMUMAB SC combination receives Breakthrough Therapyl Designation from US FDA.",
+      "Johnson & Johnson receives FDA approvalfor RYB REVANT F ASPRO\u2122 for advanced EGFR mutated NSCLClocally advanced or metagastic NSCLC - Johnson&Johnsonreceives FDAdapprovalforthe TRUFFILLn-BCALiquid Embolic Systemfor Symptomaticsubduralhematoh"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to the NEUTRAL_ZONE (47.5), and the price is now WITHIN_NORMAL_BANDS (0.45) of the Bollinger Bands, indicating a loss of upward pressure. Velocity (ROC -0.3%) has become stagnant, and price is consolidating near the SMA20 base, showing downward pressure. Volume dynamics remain AVERAGE (0.76) but are not supportive. W: The shift from strong bullish momentum to indecision and potential downside suggests a breakout from the recent consolidation is unlikely to be to the upside. The price is testing support levels. O: News regarding strategic partnerships for credit cards and drone delivery expansion offers some positive operational developments, but the market reaction is muted. T: The short-term outlook has turned neutral to slightly bearish, with the score decreasing to 5.0. Conviction has fallen to 5.5 due to the loss of upward momentum. Risk has increased to 5.5 as volatility has compressed, suggesting potential for a sharp move, and the trend has weakened."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term trend has shown signs of weakening. While trend alignment remains positive (2.83%), the MACD has turned BEARISH_ACCELERATING (-0.251), indicating a shift in momentum. The SMA50 Z-score has moved towards mean reversion (0.4), suggesting less conviction in the prior uptrend. Price action is now INSIDE_MONTHLY_RANGE (Zone: 79.81-100.89). W: The bearish MACD crossover and reduced SMA positioning provide less conviction in the medium-term uptrend. The stock is consolidating within a broader range after a prior push. O: Earnings momentum continues to be a tailwind, with accelerating quarterly growth and strong forward estimates, providing some fundamental support. Strategic initiatives in credit cards and drone delivery offer potential operational upside. T: The medium-term outlook has moderated to neutral-bullish, with the score decreasing to 6.0. Conviction has fallen to 6.0 due to the confirmed technical signals and weakening trend. Risk has increased to 5.0 as the trend is less established and supported by weaker technicals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.3,
+        "risk": 4.0
+      },
+      "synthesis": "S: Long-term structural factors remain robust but have slightly softened. The market regime continues to be a SECULAR_BULL_MARKET (8.4%), and the golden cross structure remains healthy. The stock's long-term range position has retreated slightly to the upper quadrant (71.5%). Business quality and financial health metrics are stable. W: While valuation multiples remain HYPER_PREMIUM_PRICED (P/E: 41.21) and HIGH_MULTIPLE_RISK persists (P/B: 9.61), the improved PEG ratio (0.61) and strong earnings momentum provide some justification. The weak cash conversion remains a structural concern but is offset by scale and growth. O: The consistent, accelerating earnings momentum and moderate growth profile provide a strong fundamental anchor. The company's scale and market position in a secular bull market environment are significant advantages. T: The long-term outlook remains positive, with the score slightly decreasing to 7.0 to reflect the minor softening in long-term technical positioning. Conviction remains high at 7.3 due to the enduring fundamental strengths and market regime. Risk is stable at 4.0, with valuation concerns being the primary offset to an otherwise strong long-term profile."
+    }
+  }
+}

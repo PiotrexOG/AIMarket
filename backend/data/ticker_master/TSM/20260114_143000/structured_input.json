@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (79.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 275.08-336.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.95%)",
+        "cycle_macd": "BULLISH_FADING (2.589)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.12)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 266.82-336.42]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (35.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.61%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 327.63,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.49%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.0% | OM: 49.5% | NM: 43.3%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3631.425B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 37.0%, EPS: 51.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3215.6%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.08, P/S: 0.47)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC initiates new investment from US sovereignwealth fund. - New investments in TSMC due to fundamental reasons in Mar Vistaportfolio update.",
+      "Trump administration deals with Taiwan, TSMC commits to build more manufacturing plants in US.",
+      "TSMC becomes key player in advanced AI packaging. - Global regulations tighten around AI technology, impacting TSMC."
+    ],
+    "medium_term_50d": [
+      "TSMC becomes key player in advanced AI packaging. - Global regulations tighten around AI technology, impacting TSMC.",
+      "Trump administration deals with Taiwan, TSMC commits to build more manufacturing plants in US.",
+      "TSMC initiates new investment from US sovereignwealth fund. - New investments in TSMC due to fundamental reasons in Mar Vistaportfolio update."
+    ],
+    "long_term_200d": [
+      "TSMC becomes key player in advanced AI packaging. - Global regulations tighten around AI technology, impacting TSMC.",
+      "Trump administration deals with Taiwan, TSMC commits to build more manufacturing plants in US.",
+      "US grants exportlicense for TSMS China operations. (Bullet point 0) - Goldman liftstarget for TSM by 34%. (Bulletpoint 2, corrected the number for accuracy)"
+    ]
+  }
+}

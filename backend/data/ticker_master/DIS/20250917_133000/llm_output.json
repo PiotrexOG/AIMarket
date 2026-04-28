@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to 40.1, indicating a bearish shift from the neutral zone. The price is now testing the lower Bollinger Band (0.05), and velocity (ROC) has turned negative (-2.5%). The price is also stable near the 20-day SMA, showing a loss of upward momentum. W: The price is within its 20-day range (114.5-119.78), but the shift to a bearish candle pattern and testing lower bands suggests increased downside risk. Volume dynamics have improved to AVERAGE (1.06), but this is not yet translating into price appreciation. O: Short-term news is mixed, with a positive development regarding a potential WEBTOON partnership, but also broader industry news about potential media mergers. T: The score is decreased from 5.5 to 4.0 due to the significant weakening of momentum indicators (RSI, ROC) and the shift to a bearish candle pattern and testing lower bands. Conviction is decreased from 5.0 to 4.5 as the technical signals are now predominantly bearish and lack clear directional conviction. Risk is increased from 5.5 to 6.5 as the deterioration in momentum, testing lower bands, and negative velocity increase the potential for downside, despite some positive news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term technicals show accelerating deterioration. The MACD has turned decisively bearish and is accelerating (-0.241). The Z-score relative to the 50-day SMA has worsened slightly to -0.73, reinforcing a bearish trend position. The trend alignment is now characterized by consolidation with compressed moving averages, indicating a lack of upward conviction. W: The price remains within the broader monthly range (111.54-123.71), but the accelerating bearish MACD and negative SMA Z-score suggest the upward trend is under severe pressure and the risk of further decline is increasing. O: Medium-term news is mixed, with a positive theme park update but also broader industry consolidation news, which does not provide sufficient support to overcome the technical weakness. T: The score is decreased from 4.5 to 3.0 as the accelerating bearish MACD and worsening SMA Z-score indicate a significant loss of upward momentum and a more entrenched bearish trend. Conviction is decreased from 4.0 to 3.0 due to the consistently bearish technical signals and the lack of positive catalysts. Risk is increased from 6.8 to 7.5 as the deteriorating medium-term trend position, accelerating bearish MACD, and lack of strong positive catalysts significantly increase downside potential."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Long-term technicals remain stable, with the secular bull market regime still in place (4.7%) and a healthy golden cross structure (7.25%). The long-term price position remains in the upper quadrant at 81.1%. W: While long-term technicals are supportive, the fundamental earnings momentum (Next Q Est Growth: -43.6%) continues to be a significant overhang. The business quality remains average, and the valuation is fair, which could limit upside potential if earnings do not improve. O: Long-term news continues to focus on strategic developments like the ESPN streaming service and platform integrations, which are positive for future growth, but the inclusion of broader company news and regulatory concerns introduces some long-term risk. T: The score remains unchanged at 5.5, as the stable long-term technicals are offset by persistent fundamental headwinds and mixed long-term news. Conviction remains at 5.0, reflecting the solid technical foundation but also the underlying fundamental concerns. Risk remains at 5.5, as the strong long-term technicals provide some support, but the negative earnings momentum and fair valuation continue to pose a moderate risk."
+    }
+  }
+}

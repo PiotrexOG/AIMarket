@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (74.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.7%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 140.85-160.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.09%)",
+        "cycle_macd": "BULLISH_FADING (0.283)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.78)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 104.08-160.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (22.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.43%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 163.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.26, P/S: 50.88)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 82.59)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US plans AI chip curbs on Malaysia and Thailand affects Nvidia exports. - Trump administration drafting rules restricting Nvidiachip sales to Malaysia and Thailand.",
+      "Samsung flags operating profit plunge affecting NVDA through AI chip delays. - Syntys enables Ooredoos advanced sovereign AI cloud services using NVIDIAs Hopper GPUS.",
+      "US plans to restricted shipments of NVDA's AI chips to Malaysia and Thompson. - TSMC delays Japan chip plant and prioritizes US expansion to avoid Trump tariffs."
+    ],
+    "medium_term_50d": [
+      "US plans AI chip curbs on Malaysia and Thailand affects Nvidia exports. - Trump administration drafting rules restricting Nvidiachip sales to Malaysia and Thailand.",
+      "Nvidia hits new all-time-high market value, approaching $4 trillon. - Regulator announces restrictions on exports of Nvidia chips to certain countries. - Ant Group invests record $3.3bn in R&D, potentially impacting Nvidia's AI competition. - None.",
+      "US plans to restricted shipments of NVDA's AI chips to Malaysia and Thompson. - TSMC delays Japan chip plant and prioritizes US expansion to avoid Trump tariffs."
+    ],
+    "long_term_200d": [
+      "Nvidia signs multibillion dollar AI chip supply deals with cloud providers. - Federal regulations impact Nvidiachip exports to specific regions. - Apple announces partnership with Nvidiafor advanced AI technologies. - Major product delay announced for Nvidianext-gen GPUs. - Lawsuit filed against Nvidiaregarding intellectual property infringement.",
+      "Nvidia hits new all-time-high market value, approaching $4 trillon. - Regulator announces restrictions on exports of Nvidia chips to certain countries. - Ant Group invests record $3.3bn in R&D, potentially impacting Nvidia's AI competition. - None.",
+      "Nvidia announces building of world'sfirst industrial AI cloud in Europe. - Europe's manufacturing advancement with 10000GPUs through NVIDIADGX B20o systems. - Partners with European nations and technology leaders to fuel regional transformation. - Announces optimization of sovereign largelanguage models with model buildersonly"
+    ]
+  }
+}

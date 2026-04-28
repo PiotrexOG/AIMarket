@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.8,
+        "risk": 7.6
+      },
+      "synthesis": "S: Short-term momentum remains weak, with RSI at 39.0 and ROC at -4.2%, indicating continued bearish pressure. The price is still trading near the 20-day SMA (-1.8%), but the Doji candle pattern suggests indecision. The price is within the middle of its 20-day range, offering limited immediate upside. W: The lack of significant price improvement and the indecisive candle pattern, coupled with negative momentum indicators, limit upside potential. The news narrative has shifted to operational issues like website outages and acquisitions, which are less impactful than previous legal concerns but still introduce noise. O: The persistent negative momentum and the indecisive price action, combined with the low volume dynamics (0.48), suggest a potential for further downside or continued range-bound trading. The proximity of resistance at the 20-day SMA adds to the downside risk. T: The score has slightly decreased from 5.2 to 5.0 due to the lack of positive technical development and the continued presence of negative momentum. Conviction has marginally decreased to 4.8 as the indecisive price action and weak momentum reduce confidence in a near-term reversal. Risk has slightly increased to 7.6 due to the persistent negative momentum, the indecisive price action, and the low volume dynamics, which can exacerbate price movements on lower participation."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.1,
+        "conv": 4.6,
+        "risk": 7.1
+      },
+      "synthesis": "S: The MACD has shown a slight recovery from its bearish extreme (-0.74), but it remains in bearish territory. Trend alignment continues to show expanding bullish momentum (5.32%), and the price remains above the 50-day SMA (Z:0.64), indicating some underlying trend support. The price is still within the monthly range. W: The bearish MACD, despite its slight recovery, continues to be a significant headwind for the medium-term trend. The decrease in the 50-day SMA Z-score suggests a weakening of the bullish trend's strength. The news narrative has shifted to acquisitions and expansion, which are positive but do not fully offset the bearish technical signals. O: The persistent bearish MACD, coupled with the slight weakening of the 50-day SMA Z-score, indicates that the medium-term trend is under pressure. The ongoing news about FDA warnings, though less severe than previous ones, adds to the overall uncertainty. T: The score has slightly increased from 5.0 to 5.1 due to the slight recovery in MACD and continued positive trend alignment, which partially offsets the bearish momentum. Conviction has decreased slightly to 4.6 as the bearish MACD remains a significant concern, and the technical signals are mixed. Risk has slightly increased to 7.1 due to the continued bearish MACD, the weakening trend support indicated by the lower Z-score, and the mixed news flow which introduces uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.1,
+        "conv": 6.4,
+        "risk": 5.6
+      },
+      "synthesis": "S: The long-term technical structure remains robust, with the price in the upper quadrant (84.6%) of its long-term range and the golden cross intact. The secular bull market regime has slightly strengthened (12.0%). W: Valuation remains a significant concern, with hyper-premium multiples (P/E: 45.75) and overpriced implied growth (PEG: 2.24). The news narrative has seen some positive developments like acquisitions, but the long-term risks related to antitrust and regulatory issues persist, with a recent FDA warning adding to the concerns. O: The combination of extremely high valuation risk and the continued presence of significant regulatory and legal headwinds poses a substantial long-term threat. While the technicals are strong, the fundamental valuation and ongoing external pressures could limit upside and increase downside risk. T: The score has slightly increased from 7.0 to 7.1 due to the slight strengthening of the market regime and positive price action within the long-term range, which marginally outweighs the persistent valuation and regulatory concerns. Conviction has decreased slightly to 6.4 as the strong long-term technicals are increasingly challenged by the persistent high valuation and the re-emergence of regulatory warnings. Risk has slightly increased to 5.6 due to the continued high valuation risk, compounded by the ongoing regulatory and legal concerns, which could lead to structural changes and impact long-term growth prospects, despite the stable technical backdrop."
+    }
+  }
+}

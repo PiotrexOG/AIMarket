@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The short-term outlook has seen a significant shift. Despite a STRONG_BEARISH candle pattern, the RSI has moved into a BULLISH_ZONE_STRONG (61.0), indicating a potential reversal or strong buying pressure. Velocity ROC is now positive (1.4%), confirming renewed upward momentum. The price is stable near the 20-day SMA, showing a 5.0% gain, suggesting a firming base. W: Mean reversion bands are showing a 'BLOW_OFF_TOP_ABOVE_UPPER_BAND' (1.06), indicating potential overextension and increased volatility. The price remains in the middle of the 20-day range (81.97-90.62), offering some room for upside. O: Short-term news has become mixed, with some negative items (store closures) but also positive mentions of US comps and China sales improvements, alongside competitive news. T: Risk has decreased from the previous period due to improved momentum and price stability, although the 'BLOW_OFF_TOP' suggests caution. The elevated volume (1.2) supports the current move. Conviction has increased due to the confluence of bullish RSI, positive velocity, and price stability, overriding the bearish candle pattern."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend has decisively turned bullish. The MACD has confirmed a BULLISH_ZERO_CROSS (0.214), indicating a sustained upward move. The Z-score relative to the 50-day SMA is now strongly positive (1.18), confirming a bullish trend position. Trend alignment remains compressed (0.58%), but this is now within a confirmed bullish technical structure. W: The price remains within the monthly range (77.99-90.62), but the strong bullish MACD and Z-score suggest a higher probability of testing the upper bound of this range. O: Medium-term news is mixed, with some persistent negative operational concerns but also indications of service culture improvements and positive sales trends in key markets. T: Risk has significantly decreased due to the confirmed bullish MACD and strong Z-score, indicating a healthy upward trend. The previous bearish technicals have been decisively reversed. Conviction has increased due to the clear bullish technical signals and the improving operational narrative, outweighing lingering fundamental concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term outlook shows signs of improvement, moving from a secular bear market correction to a more neutral stance. The market regime is now in a BULL_MARKET_CORRECTION (2.8%), a positive shift from the previous bearish regime. The price has moved further into the mid-cycle neutral zone (48.0%), indicating a stronger position within the broader market cycle. W: The death cross structure persists (-2.66%), which remains a structural overhang. However, the improved market regime and range position suggest this may be less impactful in the near term. O: Long-term news narrative is mixed, with ongoing operational challenges and cost-cutting measures, but also mentions of store closures and service improvements, suggesting a company in transition. T: Risk remains elevated due to the persistent death cross structure and stressed balance sheets (YrsToPay: 10.5x), along with premium valuation multiples (P/E: 37.59). The improvement in market regime and range position is not yet sufficient to fully offset these structural and fundamental risks. Conviction is moderate, as the improved technicals are tempered by the enduring fundamental and structural headwinds."
+    }
+  }
+}

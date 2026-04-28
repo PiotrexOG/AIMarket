@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 95.42-104.31]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.0%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.408)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 94.23-104.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.45%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 101.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.76%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.79, P/S: 1.24)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.73)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new Walmart pharmacy drug. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart distribution center. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart HQ to discuss potential collaboration. -",
+      "Walmart opensperishable distribution center in Wellford,\\ South Carolina. - USAntibioticscolaborateswith Walmartand Mc Kessonto Support USManufacturingof Amoxicillinnationwide.",
+      "Walmart partners with Open AI for employee training. - Grand opening of Walmart high-tech perishable Distribution Center. - Launch of Walmart Collector'S Night series."
+    ],
+    "medium_term_50d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new Walmart pharmacy drug. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart distribution center. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart HQ to discuss potential collaboration. -",
+      "Walmart opensperishable distribution center in Wellford,\\ South Carolina. - USAntibioticscolaborateswith Walmartand Mc Kessonto Support USManufacturingof Amoxicillinnationwide.",
+      "Walmart introduces new AI-driven seller tools andinitiatives for international expansion."
+    ],
+    "long_term_200d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new Walmart pharmacy drug. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart distribution center. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart HQ to discuss potential collaboration. -",
+      "Walmart betters on AI with 'super agent' strategy - Wal Mart hires Instacart exec as head ofglobal AI efforts",
+      "Walmart expande AI leadership, intoduces 4 \u2018Super Agents\u2019 - Wal mart appoints Daniel Dankar as EVP of AI accelaration, product anddesign - Wal Mart shifts toward Super Agents in play to upgrade AI strategy - Walmat bets on ai 'super agents\u2019 to boost ecommerce growth"
+    ]
+  }
+}

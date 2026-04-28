@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.98)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 295.56-327.78]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.7%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.072)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.46)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 290.54-327.78]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.95%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 328.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.04%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.21, P/S: 3.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.54)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.3)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.83x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan expands digital and investmentfootprint, launches tokenizedfund on Ethereus, closes PE fund. - FED rate cut triggers profits forfinancials sectoretf. - Garrett Motion receives Overweightratingfrom JPMorgan, begins US$25o MM buybackprogram.",
+      "JPMorgan explores crypto trading desk forinstitutional clients. - Novocure presents at 45th Annual JP Morgan Healthcare Conference. - Nuvalent presents at forty-fifth Annual JPMorgan Healthcare Conference.",
+      "JPMorgan allows crypto trading forinstitutional clients. - U micore: JP Morgan Asset Management Hold INGS Inc crosses3%thresholdfor JPMorgan Asset Management(UK)Limitedholdingsof Umicore."
+    ],
+    "medium_term_50d": [
+      "JPMorgan expands digital and investmentfootprint, launches tokenizedfund on Ethereus, closes PE fund. - FED rate cut triggers profits forfinancials sectoretf. - Garrett Motion receives Overweightratingfrom JPMorgan, begins US$25o MM buybackprogram.",
+      "JPMorgan hires Todd Combs as special advisor and heads new $1o billion group. - Jamie Dimon poaches former Berkshire insider Todd Comms for strategic role.",
+      "JPMorgan launching Ethereum tokenized money marketing fund. - Jamie Dimon warns about job loss due to AI but urges focus on soft skill development."
+    ],
+    "long_term_200d": [
+      "JPMorgan hires Todd Combs as special advisor and heads new $1o billion group. - Jamie Dimon poaches former Berkshire insider Todd Comms for strategic role.",
+      "JPMorgan issues US commercial paper on Solana blockchair, marking first major debt deal.",
+      "JPMorgan hires Todd Combs from Berkshine Hathaway for new Security and Resiliency Inititative. - Todd Combs joins JPMorgan as head of Strategic Investiment Group. - Berkshire announces leadership change: Todd Combs leaves for JPMorgans newinitiative."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 110.63-126.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.76%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.503)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.11-126.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.07%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 121.56,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.94%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.52)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 27.7% | NM: 23.1%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.173327B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 47.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 19.3%, Next Q Est Growth: 4.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.02, P/S: 13.22)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 22.11)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.18)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix invests over \u20ac1 billion in Spanish content production (next 4 years). - Netflix starts production on \"Little Houseon the Prairier\"revival.",
+      "Netflix enters long-term collaboration with Ekta Kapoo's Telefilms for new series. - Netflix stock price increases 39% following strong quarterly earnings.",
+      "Netflix extends strategic partnership with Canalplus in 23 African countries. - Canal+ distributes Netflix as part of their offerings across French-speacking Africa."
+    ],
+    "medium_term_50d": [
+      "Netflix invests over \u20ac1 billion in Spanish content production (next 4 years). - Netflix starts production on \"Little Houseon the Prairier\"revival.",
+      "Netflix enters long-term collaboration with Ekta Kapoo's Telefilms for new series. - Netflix stock price increases 39% following strong quarterly earnings.",
+      "Netflix announces record subscriber growth during Q2 earnings call. - Major studios sign licensing deals for new Netflix original movies. - NFLX enters into partnership with leading technology provider. - Production delay announced for highly anticipated Netflix series. - Legal dispute filed against NFLX over streaming rights. - Significant restructuring plan implemented by NFLX management."
+    ],
+    "long_term_200d": [
+      "Netflix announces record subscriber growth during Q2 earnings call. - Major studios sign licensing deals for new Netflix original movies. - NFLX enters into partnership with leading technology provider. - Production delay announced for highly anticipated Netflix series. - Legal dispute filed against NFLX over streaming rights. - Significant restructuring plan implemented by NFLX management.",
+      "Netflix faces potential 10% reduction in operating margin due to movie tariff proposal. - President Trump announces plan for 10o% tariffonforeign-mademovies,affecting Netflix. - Morgan Stanleywarns Netflixearningsmaydecreasewithmovieimporttariffs.",
+      "Netflix enters long-term collaboration with Ekta Kapoo's Telefilms for new series. - Netflix stock price increases 39% following strong quarterly earnings."
+    ]
+  }
+}

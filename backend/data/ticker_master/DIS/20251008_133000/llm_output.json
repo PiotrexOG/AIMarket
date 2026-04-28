@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen into a bearish zone at 33.3, and the price is now 1.3% below the 20-day SMA. Velocity (ROC) has stagnated at 0.2%, and the candle pattern is a Doji, indicating indecision after a bearish move. The price is in the middle of its 20-day range (110.78-117.51). W: The previous bullish momentum has reversed, with the RSI moving into oversold territory and the price falling below the 20-day SMA. Volume dynamics have dried up to 0.6, suggesting a lack of conviction in the current price action. O: Short-term news is predominantly negative, with mentions of index losses, potential subscriber losses, and price hike concerns, alongside ongoing legal actions. T: The score is decreased from 5.5 to 3.0 due to the sharp deterioration in momentum indicators (RSI, SMA positioning) and the bearish candle pattern. Conviction is decreased from 5.0 to 4.0 as the technical signals are now mixed and show a loss of upward momentum. Risk is increased from 5.5 to 6.5 as the deterioration in momentum, increased distance from the 20-day SMA, and lack of volume suggest increased downside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term technicals have weakened. The MACD has moved deeper into bearish territory (-0.064), and the Z-score relative to the 50-day SMA has deteriorated significantly to -1.3, indicating a more entrenched bearish trend. Trend alignment continues its gradual descent (-1.54%). W: The price remains within the monthly range (110.78-120.81), but the worsening MACD and SMA Z-score suggest the downward pressure is increasing. The risk of further decline is elevated as the trend shows clear bearish characteristics. O: Medium-term news is mixed, with some positive historical news (earnings beat, tech launch) but also current concerns about subscriber losses and executive departures. The overall narrative is shifting back towards negative. T: The score is decreased from 4.0 to 3.0 as the MACD has moved deeper into bearish territory and the SMA Z-score has worsened, indicating a more severe bearish trend. Conviction is decreased from 4.0 to 3.5 due to the deteriorating technicals and a more negative news flow. Risk is increased from 6.5 to 7.0 as the deteriorating medium-term trend position has worsened, and the bearish momentum has accelerated."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Long-term technicals remain relatively stable but show a slight weakening. The secular bull market regime is still present but has moderated (2.3%), and the long-term price position has moved down slightly to 73.3% within the upper quadrant. The healthy golden cross structure persists, though with a minor decrease in its strength percentage. W: While long-term technicals are still supportive, the slight pullback in price position and moderation of the bull market regime suggest a loss of some upward momentum. The fundamental earnings momentum remains a concern, and fair valuation could limit upside if growth does not materialize. O: Long-term news remains consistently positive, highlighting strategic initiatives like new technology launches and streaming service expansions, which continue to support a long-term bullish outlook. T: The score is decreased slightly from 5.5 to 5.0, reflecting the slight moderation in the long-term technicals and bull market regime, which are beginning to be impacted by broader market conditions. Conviction is maintained at 4.5 as the combination of solid long-term technicals and supportive long-term narratives still provides a degree of confidence. Risk is increased slightly from 5.0 to 5.5 as the slight pullback in long-term price position and moderation of the bull market regime introduce a minor increase in downside risk."
+    }
+  }
+}

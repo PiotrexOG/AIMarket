@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum has slightly softened. The RSI remains in a strong bullish zone (62.1), but the price has moved within normal Bollinger Bands (0.64) and is now stable near the 20-day SMA (1.3% gain), indicating a loss of overstretched momentum. Velocity (ROC) is stable at 2.7%. W: The price is now in the middle of its 20-day range, indicating less immediate pressure from resistance. Volume dynamics remain average (1.08). O: The bullish candle pattern (Hammer/Pinbar) suggests potential for a bounce, but the loss of overstretched momentum and move to the middle of the range temper the immediate upside. News regarding FDA review updates and expanded COPD drug use are positive but not strong catalysts. T: Downside risk has increased slightly due to the loss of upward momentum and the price moving away from the upper band. The risk of a short-term pullback is now more pronounced."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The medium-term trend shows a gradual bullish ascent (2.46%), but the MACD is fading (0.092), indicating a loss of bullish acceleration. The Z-score relative to the 50-day SMA has decreased to 0.99, suggesting a less robust uptrend compared to the previous period. W: The stock remains inside its monthly range, with the upper bound now at 24.95, which has been tested. The barriers remain distant, providing some support. O: The gradual ascent is positive, but the fading MACD and lower Z-score suggest the medium-term uptrend is losing steam. News regarding FDA reviews and expanded drug use are supportive but do not indicate a significant acceleration. T: Downside risk has increased slightly as the bullish momentum indicators are weakening. The potential for consolidation or a minor pullback within the current range is elevated."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term positioning has deteriorated, moving back into the bearish lower quadrant at 31.4% of the range. The secular bear market regime (-7.7%) and death cross structure (-11.09%) remain significant headwinds. W: Fundamental strengths in business quality, cash generation, and growth profile remain intact, providing a floor. Valuation multiples are still at a moderate discount, offering some long-term value. O: The shift back into the lower quadrant, despite stable fundamentals, indicates a weakening long-term outlook. News regarding potential pharma advertising limitations poses a new risk. The licensing agreement with 3SBIO offers a long-term positive, but it is overshadowed by the current technical regime. T: Downside risk has increased due to the deterioration in long-term range position and the persistence of negative structural indicators. Valuation fragility remains a concern, and the debt-sensitive structure is a risk in a potentially challenging macro environment."
+    }
+  }
+}

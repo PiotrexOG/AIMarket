@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (79.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.9)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 103.67-117.64]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.84%)",
+        "cycle_macd": "BULLISH_FADING (0.708)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.37)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 103.67-117.64]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.35%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 118.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.18%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.6% | OM: 11.7% | NM: 9.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.247B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -11.7%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 11.0%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.14, P/S: 1.56)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.01)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -11.7%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Oil firms seek presidential help to fight state climate laws.",
+      "Exxon \u041cobal protests Colonial Pipleline changes. - New Wave Offshore Energy provides services for XOM in Guyana",
+      "Exxon \u041cobal files for issue of floating rate notes due 2057 (size undisclosed)."
+    ],
+    "medium_term_50d": [
+      "Exxon \u041c\u043ebil partner approves FID for XOM's Turrum Phase3 project. Based on the provided data, there is one material event directly affecting XOM on March 17, 20 twenty-five. This event involves Exxon\u041c\u043ebil Australia obtaining approval for the final investment decision (FID) to develop the Turrum Phase",
+      "Oil firms seek presidential help to fight state climate laws.",
+      "Exxon \u041cobal protests Colonial Pipleline changes. - New Wave Offshore Energy provides services for XOM in Guyana"
+    ],
+    "long_term_200d": [
+      "Exxon \u041c\u043ebil partner approves FID for XOM's Turrum Phase3 project. Based on the provided data, there is one material event directly affecting XOM on March 17, 20 twenty-five. This event involves Exxon\u041c\u043ebil Australia obtaining approval for the final investment decision (FID) to develop the Turrum Phase",
+      "Oil firms seek presidential help to fight state climate laws.",
+      "Exxon \u041cobal protests Colonial Pipleline changes. - New Wave Offshore Energy provides services for XOM in Guyana"
+    ]
+  }
+}

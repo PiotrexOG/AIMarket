@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 352.22-371.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.51%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.005)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.61)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 299.0-371.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.43%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 373.88,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | LOW_VOLATILITY_ASSET (ATR:  (1.42%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 37.65, P/S: 20.17)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.38)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.66)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)",
+      "Visa, Bank of America, and Street Soccer USA announce partnership to expand soccer access in US.",
+      "Visa partnerswith Fastenon Fintech Fast Trackprogram. - Fastenannouncesnew Rewards Visa Cardfordriversanddealerships. These two bullets meet the criteria as they involve direct partnerships between Visa and Fasten, resulting in tangible impacts on both parties."
+    ],
+    "medium_term_50d": [
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)",
+      "Visa partnerswith Fastenon Fintech Fast Trackprogram. - Fastenannouncesnew Rewards Visa Cardfordriversanddealerships. These two bullets meet the criteria as they involve direct partnerships between Visa and Fasten, resulting in tangible impacts on both parties.",
+      "Iran-backed militias exploit Visa and Mastercard for $1. five billion monthly currency-exchanges."
+    ],
+    "long_term_200d": [
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)",
+      "Visa &Mastercard face fresh EU antit rust scrutiny over fees - Potential fines against Visa and Mastercard from EU antit trust investigation",
+      "European regulators reexamine Visa's scheme fees."
+    ]
+  }
+}

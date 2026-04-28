@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.43)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.76-26.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.51%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.021)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.96)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 21.97-26.05]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.6%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.84,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.89, P/S: 2.27)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.57)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer reports life-extending benefits for XTAN\u0434\u0438 from Phase 3 study.",
+      "GSK seeks FDA nod for expanding RSV vaccine usage in younger adults (PFE competitor). - Vii VHealthcare updates licensing agreement for long-act ING HIV treatment (PFE shares holder).",
+      "FDA considers faster drug reviews in exchange for price equality for PFE."
+    ],
+    "medium_term_50d": [
+      "Pfizer reports life-extending benefits for XTAN\u0434\u0438 from Phase 3 study.",
+      "Pfizer and Astell AS announce positive overall survival results from Phase 3EMBARK study of XTANDi. - Xtand I plus leupro Lide significantly improoves survival outcomes in non-metastic hormone-sen Sitive prostate cancer.",
+      "Pfizer's Xtand\u0438 in combination with \u043b\u0435\u0443\u043f\u0440\u043e\u043b\u0438\u0434\u0435 shows improved overall survival in prostate Cancer trials (event 2). - Global chlamydial market sees growth due to rising infections and adoption of advanced diagnetics (event 3). - Burns market experiences significant growth due to increased burn incidenses and innovations in wound care (event"
+    ],
+    "long_term_200d": [
+      "Pfizer and Astell AS announce positive overall survival results from Phase 3EMBARK study of XTANDi. - Xtand I plus leupro Lide significantly improoves survival outcomes in non-metastic hormone-sen Sitive prostate cancer.",
+      "Pfizer reports life-extending benefits for XTAN\u0434\u0438 from Phase 3 study.",
+      "Pfizer's Xtand\u0438 in combination with \u043b\u0435\u0443\u043f\u0440\u043e\u043b\u0438\u0434\u0435 shows improved overall survival in prostate Cancer trials (event 2). - Global chlamydial market sees growth due to rising infections and adoption of advanced diagnetics (event 3). - Burns market experiences significant growth due to increased burn incidenses and innovations in wound care (event"
+    ]
+  }
+}

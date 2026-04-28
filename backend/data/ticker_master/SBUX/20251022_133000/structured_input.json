@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (5.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 78.41-87.26]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.66%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.613)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 78.41-94.84]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.32%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 23.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 85.5,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.53%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.98, P/S: 2.68)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.79)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks implements AI ordering through app. - Potential job cuts at unspecified food and beverage company.",
+      "Starbucks approves quarterly divid end increase to $0._62 pershare. - United Kingdom RTD tea and coffee market projects $929M growth by 2133. -Starbucks expected toshow pressed margins andearnings in fiscal Q4:UBS.",
+      "Starbucks evaluates offers for China business from five parties. - Carlyleand Boyu emergeas frontrunnerstobuy Starbuckschina."
+    ],
+    "medium_term_50d": [
+      "Starbucks evaluates offers for China business from five parties. - Carlyleand Boyu emergeas frontrunnerstobuy Starbuckschina.",
+      "Starbucks implements AI ordering through app. - Potential job cuts at unspecified food and beverage company.",
+      "Starbucks CEOS reveals \"secret AI baristas\" assisting with coffee production - Starbucks aiming to make coffee more affordable luxury - Starburgs Corp. outperforms competition on strong tradingday - Private equity groups lead bids for Starbucks China"
+    ],
+    "long_term_200d": [
+      "Starbucks announces $1 billion restructure with store closures and job reductions.",
+      "Starbucks evaluates offers for China business from five parties. - Carlyleand Boyu emergeas frontrunnerstobuy Starbuckschina.",
+      "Starbucks closes 1% North American stores, cuts 90o jobs. -Starbucks spends $1 billion on restructuring, lease exit. -Luckin Coffee opens first US stores in New Yale. -No direct impact on SBUX from Exxon, Visa dividend increases."
+    ]
+  }
+}

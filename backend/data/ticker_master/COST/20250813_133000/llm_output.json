@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals have deteriorated significantly. The candle pattern is now STRONG_BEARISH, and the RSI has moved into extreme overbought territory (73.7). The price is testing the upper Bollinger Band (1.0) and is overstretched relative to the 20-day SMA (4.0%). While velocity is explosive (6.0%), this is occurring from an overbought condition. W: The rapid ascent into overbought territory suggests a potential for a sharp reversal. The strong bullish momentum is unsustainable at these levels, increasing the risk of a pullback. O: Recent news flow is positive, with strong July sales figures and ongoing operational improvements. However, this positive news is being met with bearish technical signals, indicating a potential disconnect. T: Risk has increased substantially due to the extreme overbought conditions and the overstretched price relative to short-term moving averages. The rapid price appreciation without fundamental backing at this short-term horizon elevates downside risk, despite the positive sales data."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The medium-term outlook shows continued strength in momentum despite some conflicting signals. Trend alignment remains bearish (-2.64%), but the MACD is accelerating strongly (7.566). The Z-score relative to the 50-day SMA has improved to a healthy base (-0.17), indicating the price is well-supported by its medium-term average. The price remains within the monthly range. W: The accelerating MACD and improved Z-score provide conviction in the upward momentum. However, the persistent bearish trend alignment suggests that the underlying trend has not yet fully reversed, creating some structural uncertainty. O: Positive July sales figures are a key driver, reinforcing the medium-term uptrend. The fundamental business quality and valuation remain structural headwinds, but the current sales momentum is outweighing these concerns in the medium term. T: Risk has decreased due to the improved Z-score and the strong bullish MACD signal. The price is no longer in a deeply bearish position relative to its 50-day average, reducing immediate downside risk. The positive sales data further supports this reduced risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term technicals have shifted to a more bullish regime. The market regime is now classified as a SECULAR_BULL_MARKET (2.1%), a significant improvement from the previous 'relief rally'. Major crosses are still imminent, suggesting potential for continued upward momentum (0.78%). The long-term range position has moved to the upper half of the neutral zone (50.2%). W: The shift to a secular bull market regime and the improved long-term range position provide strong conviction for a bullish outlook. The potential for a bullish cross further reinforces this positive structural shift. O: The consistent positive sales growth and the company's scale and financial health provide a solid fundamental backdrop for long-term appreciation. While valuation remains a concern, the secular bull market environment can support premium multiples for quality assets. T: Risk has decreased significantly due to the improved market regime and the more favorable long-term technical positioning. The shift away from a bear market relief rally to a secular bull market reduces structural downside risk, despite the persistent high valuation multiples."
+    }
+  }
+}

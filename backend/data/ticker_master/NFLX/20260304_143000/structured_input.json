@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.9)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.07)",
+        "velocity_roc_10": "EXPLOSIVE_UP (26.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (19.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 75.01-98.46]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-5.02%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.77)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.03)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 75.01-98.46]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.1%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-21.39%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 99.28,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.8%))",
+      "volume_dynamics": "ELEVATED (1.41)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.33, P/S: 9.49)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.1)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.39)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix abandons bid for Warner Bros.Discovery. - Focuses on organic growth and content spending.",
+      "Netflix steps away from Warner deal, focuses on content spend and buybacks. - FCC chairman expects quick approval of Paramount-WB merger, raising competition concerns for Netflix.",
+      "Netflix ends pursuit of Warner Brs. Discoveryacquisition. - Plans to invest in original content and share repurchase. - Decision signals shift in Netflix's approach to media deals."
+    ],
+    "medium_term_50d": [
+      "Netflix abandons bid for Warner Bros.Discovery. - Focuses on organic growth and content spending.",
+      "Netflix ends pursuit of Warner Brs. Discoveryacquisition. - Plans to invest in original content and share repurchase. - Decision signals shift in Netflix's approach to media deals.",
+      "Netflix declines to raise offer for Warner Brothers Discovery, steps back from acquisition. - Paramount submits superior offer for Warner Brother Discovery, winning bidding war."
+    ],
+    "long_term_200d": [
+      "Netflix abandons bid for Warner Bros.Discovery. - Focuses on organic growth and content spending.",
+      "Netflix ends pursuit of Warner Brs. Discoveryacquisition. - Plans to invest in original content and share repurchase. - Decision signals shift in Netflix's approach to media deals.",
+      "Netflix declines to raise offer for Warner Brothers Discovery, steps back from acquisition. - Paramount submits superior offer for Warner Brother Discovery, winning bidding war."
+    ]
+  }
+}

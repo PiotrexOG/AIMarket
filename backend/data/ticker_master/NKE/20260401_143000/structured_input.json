@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 50.95-59.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-9.04%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.048)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.97)",
+        "range_levels_50": "MONTHLY_BREAKDOWN_BELOW_RANGE [Zone: 50.95-68.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-20.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.44%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: -18.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 45.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.06%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.65)",
+      "sr_landscape": {
+        "barriers": "F:NO_FLOOR | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "HEAVY_BEARISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.09, P/S: 1.42)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.83)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike reports fiscal 2026 third quarter results. - Nike guides for sales declines ahead. - Nike shares drop nearly 9% after-hours. - Nike Q3 sales beat expectations, but flat year-over-year. - Nike turnaround plan hits snags; China sales lag. - Nike delivers Q3 earnings beat; turnaround progresses.",
+      "Nike to report earnings tomorrow, March 31. - Nike Q3 earnings preview: Lower profit expected. - Nike turnaround efforts continue ahead of earnings. - Nike faces test as turnaround hopes build.",
+      "Nike launches World Cup apparel from textile waste. - Nike Q3 earnings preview: March 31st. - Nike needs to return to mid-single-digit revenue growth."
+    ],
+    "medium_term_50d": [
+      "Nike reports fiscal 2026 third quarter results. - Nike guides for sales declines ahead. - Nike shares drop nearly 9% after-hours. - Nike Q3 sales beat expectations, but flat year-over-year. - Nike turnaround plan hits snags; China sales lag. - Nike delivers Q3 earnings beat; turnaround progresses.",
+      "Nike to report earnings tomorrow, March 31. - Nike Q3 earnings preview: Lower profit expected. - Nike turnaround efforts continue ahead of earnings. - Nike faces test as turnaround hopes build.",
+      "Nike launches World Cup apparel from textile waste. - Nike Q3 earnings preview: March 31st. - Nike needs to return to mid-single-digit revenue growth."
+    ],
+    "long_term_200d": [
+      "Nike reports fiscal 2026 third quarter results. - Nike guides for sales declines ahead. - Nike shares drop nearly 9% after-hours. - Nike Q3 sales beat expectations, but flat year-over-year. - Nike turnaround plan hits snags; China sales lag. - Nike delivers Q3 earnings beat; turnaround progresses.",
+      "Nike to report earnings tomorrow, March 31. - Nike Q3 earnings preview: Lower profit expected. - Nike turnaround efforts continue ahead of earnings. - Nike faces test as turnaround hopes build.",
+      "Nike (NKE) stock price decline noted. - Nike (NKE) trading near 8-year low. - Nike (NKE) registers bigger fall than market. - Nike (NKE) share price decline over years. - Nike (NKE) share price decline over 30 days. - Nike (NKE) share price decline over 7 days. - Nike (NKE) share price decline year to date. - Nike (NKE) share price decline over past year. - Nike (NKE) share price decline over 3 years. - Nike (NKE) share price decline over 5 years."
+    ]
+  }
+}

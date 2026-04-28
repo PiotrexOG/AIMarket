@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "NORMAL (1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 492.37-519.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-0.83%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.977)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.63%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 512.62,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.4%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.11, P/S: 14.62)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.65)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.33)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft partners with Onapsis for end-to-end SAP security monitoring. -Microsoft backs Open AI, reports $4.\u00b3 billion H1 revenue. -Manage X Research: Louisiana State University deploys self-service platform on Microsoft Azure.",
+      "Microsoft acquires Nvidia backer for expanded AI capabilities. - European Union investigates Microsoft cloud business practices. Note: These events meet the criteria of having a direct impact on MSFT based on the provided data.",
+      "Microsoft tests new microfl uidic cooling system improving data center heat removal by threefold. - Elon Mus\u043a hires team for Macro hard, AI simulation software venture. - Trump plans to increase H-1\u0411 visa cost from 20 twenty-six. - Coretek appointed Jeff Comstock President, C X Product & Technology."
+    ],
+    "medium_term_50d": [
+      "Microsoft plans to launch AI marketplace for publishers. -Microsoft claims breakthrough \u0432\u0402\u201c AI chip cooling tech. -Ignite Data selected for Microsoft for Startups Pegas US Program. -Oracle taps debt market for AI infrastructure spending. -Micron earns from memory supercycle\ufffd\u0402\u201cNAND, D DR5, HBM shortage.",
+      "Microsoft acquires Nvidia backer for expanded AI capabilities. - European Union investigates Microsoft cloud business practices. Note: These events meet the criteria of having a direct impact on MSFT based on the provided data.",
+      "Microsoft tests new microfl uidic cooling system improving data center heat removal by threefold. - Elon Mus\u043a hires team for Macro hard, AI simulation software venture. - Trump plans to increase H-1\u0411 visa cost from 20 twenty-six. - Coretek appointed Jeff Comstock President, C X Product & Technology."
+    ],
+    "long_term_200d": [
+      "Microsoft plans to launch AI marketplace for publishers. -Microsoft claims breakthrough \u0432\u0402\u201c AI chip cooling tech. -Ignite Data selected for Microsoft for Startups Pegas US Program. -Oracle taps debt market for AI infrastructure spending. -Micron earns from memory supercycle\ufffd\u0402\u201cNAND, D DR5, HBM shortage.",
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft signs multi-billions dollar AI infrastructure deal with Nebius. - Cerence collaborates with Microsoft on in-car mobile work AIagent development. - Oracle experiences significant cloud growth and AI momentum in Q1 twenty-six results."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly with a STRONG_BEARISH candle pattern replacing the previous bullish signal. RSI has moved into the bearish zone at 39.4, and the SMA20 trend base is now consolidating near the moving average (-0.3%). Velocity (ROC 10) has improved slightly to -3.0%, but remains negative. The price is still in the middle of a narrower 20-day range (85.57-94.84). W: The shift to a bearish candle pattern and weakening RSI are concerning. Elevated volume (1.29) on this move suggests conviction behind the downside. News regarding production cuts and supplier costs adds to short-term headwinds. O: A sustained break below the 85.57 support level, accompanied by continued bearish momentum and negative news flow, would confirm a short-term downtrend. T: Downside risk has increased due to the bearish technical shift and elevated volume. Structural confidence has decreased as the short-term trend has reversed. The previous score of 5.0 is no longer justified."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 7.8
+      },
+      "synthesis": "S: Medium-term trend alignment remains bearish, with a GRADUAL_DESCENT of -1.96%. The MACD is showing signs of recovery from its lowest point, now at -0.103, but remains firmly in bearish territory. The position relative to the 50-day SMA has slightly worsened to Z:-1.91. The price is currently strengthening at the monthly support zone (85.49-98.89), indicating some resilience. W: While the MACD shows a slight recovery, the overall trend remains bearish. The news flow regarding China partnership discussions and production impacts continues to create uncertainty. Elevated volume on the recent price action suggests potential selling pressure. O: A decisive break below the 85.49 support zone, coupled with a renewed bearish MACD trend and negative fundamental catalysts, would solidify a stronger medium-term bearish outlook. T: Downside risk has increased due to the persistent bearish trend and the potential for a breakdown below the support zone. Structural confidence has decreased as the price is testing key support levels amidst ongoing negative trends. The previous score of 3.0 is adjusted downwards due to the worsening risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term market regime remains in a SECULAR_BEAR_MARKET (-5.1%), with the DEATH_CROSS_STRUCTURE persisting at -2.83%. The long-term range position has further deteriorated to the BEARISH_LOWER_QUADRANT at 27.1%. W: Fundamental growth remains stagnant with deteriorating EPS, and the balance sheet is still stressed. Valuation remains premium with extremely risky implied growth. News flow continues to highlight strategic re-evaluation of the China business and production cuts, adding to long-term uncertainty. The potential sale of the China business is a significant development, but the terms and impact are still unclear. O: A sustained shift in the broader market regime to a clear bull market, a significant turnaround in fundamental growth and profitability, and a definitive resolution of strategic uncertainties at favorable terms are necessary for a robust long-term recovery. T: Downside risk remains elevated due to the persistent secular bear market, stressed fundamentals, premium valuation, and ongoing operational concerns. Structural confidence has decreased due to the deterioration in the long-term range position and persistent macro headwinds. The previous score of 3.5 is adjusted downwards due to increased risk and further deterioration in long-term positioning."
+    }
+  }
+}

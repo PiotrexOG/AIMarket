@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (17.7)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.03)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-9.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 213.75-238.33]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.19%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.344)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.41)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 213.75-242.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.98%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.18,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.28%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -0.3% | OM: -12.4% | NM: -14.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $75.328B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.4%, EPS: -193.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 27.6%, Next Q Est Growth: -158.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -49.41)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Viet Jet takes delivery of first BA 73 Seven MAX jet after lengthy delays. - BA passengers can redeem air miles for Apple products. - GE Aviation signs services contract with Silkway West Airlines for BA freighters. - Disputes over Boeing Defense contracts result in ongoing worker strike.",
+      "Aer Cap delivers first two Boeing 77 seventhreezerfs freighters to Kalitta Air(Replaces aging 746 fleet). - Archer A\u0432\u0438ation joins White House flying taxi program.",
+      "FAA proposses to fine Boeling $3.million over safety violations - Boeling workers continue strike despite latest offer - Boeking Defense Union rejects latest contract offer"
+    ],
+    "medium_term_50d": [
+      "Boeing Defense unit reaches tentative deal with union workers. - Avelo Aires orders up to \ud83d\udcaf Embraer planes for fleet modernization. -Boeing opens new engineering center at Embry\\-Riddle for space tech boost. -Boeing defense ends strike in St Louis area after tentative deal.",
+      "FAA proposses to fine Boeling $3.million over safety violations - Boeling workers continue strike despite latest offer - Boeking Defense Union rejects latest contract offer",
+      "Viet Jet takes delivery of first BA 73 Seven MAX jet after lengthy delays. - BA passengers can redeem air miles for Apple products. - GE Aviation signs services contract with Silkway West Airlines for BA freighters. - Disputes over Boeing Defense contracts result in ongoing worker strike."
+    ],
+    "long_term_200d": [
+      "Boeing reacquiring Spirit Aero System Holdings - Etihad and DSV signing contract with Atlas Air - Allegiant experiencing improved July traffic numbers",
+      "Boeing completes acquisition of Spirit \u0410erosystems.",
+      "Boeing Defense unit reaches tentative deal with union workers. - Avelo Aires orders up to \ud83d\udcaf Embraer planes for fleet modernization. -Boeing opens new engineering center at Embry\\-Riddle for space tech boost. -Boeing defense ends strike in St Louis area after tentative deal."
+    ]
+  }
+}

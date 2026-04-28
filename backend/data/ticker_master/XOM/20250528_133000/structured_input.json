@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.21)",
+        "velocity_roc_10": "NORMAL (-5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.89-110.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.39%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.367)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.67%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 17.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 102.84,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.79%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.62, P/S: 1.35)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.75)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobile executive speaks at African Energy Week. - Arbitration over Guyana's oil project between Exxon and Chev\u0440\u043e\u043d.",
+      "XOM and CVX in arbitrationover Guyanas oil-rich Stabroek Block. - Katrina Fisher,Exxon Mobil Angolas MD,speaksat African Energy Week202 five.",
+      "Exxon Mobile and Hess facing off in court over Chevronic's Guyana oilfields purchase. - Damaged Caspian pipeline pumping station back in service."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobile executive speaks at African Energy Week. - Arbitration over Guyana's oil project between Exxon and Chev\u0440\u043e\u043d.",
+      "XOM and CVX in arbitrationover Guyanas oil-rich Stabroek Block. - Katrina Fisher,Exxon Mobil Angolas MD,speaksat African Energy Week202 five.",
+      "Exxon Mobile and Hess facing off in court over Chevronic's Guyana oilfields purchase. - Damaged Caspian pipeline pumping station back in service."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile executive speaks at African Energy Week. - Arbitration over Guyana's oil project between Exxon and Chev\u0440\u043e\u043d.",
+      "XOM and CVX in arbitrationover Guyanas oil-rich Stabroek Block. - Katrina Fisher,Exxon Mobil Angolas MD,speaksat African Energy Week202 five.",
+      "Exxon Mobile and Hess facing off in court over Chevronic's Guyana oilfields purchase. - Damaged Caspian pipeline pumping station back in service."
+    ]
+  }
+}

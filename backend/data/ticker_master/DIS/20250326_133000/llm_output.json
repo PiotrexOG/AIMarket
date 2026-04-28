@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term exhibits a neutral candle pattern, with RSI moving to a bearish zone (32.3) from oversold. Velocity has turned positive, and the price is stable near the 20-day SMA, indicating a pause in the prior downward momentum. O: A potential for a short-term bounce exists if the RSI can find support and reverse from its current bearish zone, especially given the positive velocity. T: The current neutral technicals and weakening momentum suggest limited immediate upside potential, with risk remaining elevated due to the bearish RSI. W: The shift from oversold to a bearish RSI zone indicates a loss of short-term bullish momentum. The news narrative is mixed, with some negative sentiment around film performance and social issues, but also mentions of new tech and cruise ship plans."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term MACD has confirmed a bullish zero cross, indicating a potential shift in trend momentum. However, the trend alignment remains bearish with expanding negative momentum, and the price is still below the 50-day SMA (Z-score: -1.25). O: The confirmed bullish MACD cross provides a constructive signal, suggesting that the prior bearish trend may be abating and offering an opportunity for a sustained recovery. T: The bullish MACD signal is a positive development, but the overall trend alignment and positioning below the 50-day SMA still present headwinds. Conviction is moderate due to the conflicting signals. W: The bearish trend alignment and negative Z-score on the 50-day SMA still indicate underlying weakness, despite the improving MACD. The news narrative is mixed, with ongoing theme park competition and social issue discussions, but also positive announcements regarding new technology and cruise ships."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term technicals remain constructive with a healthy golden cross structure and the price now positioned within a secular bull market regime. The company's scale, business quality, and financial health are stable. O: The secular bull market regime and continued positive long-term structure provide a favorable backdrop for potential upside, supported by the company's established fundamentals and moderate leverage. T: The long-term outlook is positive, driven by the overall market regime and technical structure, with good business fundamentals. Conviction is high due to the confluence of positive long-term factors. W: While the long-term outlook is positive, premium valuation multiples remain a concern, and the company is sensitive to debt levels. The news narrative is largely stable, with no significant new long-term strategic threats or catalysts identified."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.35)",
+        "velocity_roc_10": "STAGNANT (-0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.89-117.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.56%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.021)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.42)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.89-117.09]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-4.4%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.51%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 56.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 105.09,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.94%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.6% | OM: 14.8% | NM: 12.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 3.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.535B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 144.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 186.3%, Next Q Est Growth: -45.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.45, P/S: 2.01)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.74)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney's \"Zoopotia 2\": breaks box office records, $55 six million global debut - IMAX sets new record with $40 million Thanksgiving weekend revenue from \"Zootipia 2\", \"Wicked\" - Disney reports major success with \"Zootiopia 2'\" in China, potential 50 billion yuan finish",
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports significant production delay at California plant. - New partnership between DIS and Tesla announced. - Discovery",
+      "Disney's succession race enters final stage, Iger's reign ends. - Innovid launches certification program with Disney, others. - Zootopia2 gives Disney another Thanksgiving hit."
+    ],
+    "medium_term_50d": [
+      "Disney reports Q4 earnings surge and US$23.71bn full-year revenue. - DIS invests US$60B in theme park expansion through 2030.",
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports significant production delay at California plant. - New partnership between DIS and Tesla announced. - Discovery",
+      "Disney's \"Zoopotia 2\": breaks box office records, $55 six million global debut - IMAX sets new record with $40 million Thanksgiving weekend revenue from \"Zootipia 2\", \"Wicked\" - Disney reports major success with \"Zootiopia 2'\" in China, potential 50 billion yuan finish"
+    ],
+    "long_term_200d": [
+      "Disney reports Q4 earnings surge and US$23.71bn full-year revenue. - DIS invests US$60B in theme park expansion through 2030.",
+      "Disney and You Tube TV agree to multi-year deal, ending two-week blackout. - ESPN and ABC channels restored to You Tube TV subscribers - Disney's full suiteofnetworksandstationsbackon You Tube TV - Newdealallowsyou Tube TVtooffer ESPNUnlimitedatnoextracost - Disneyespn",
+      "Disney announces major product launch of new technology. - FDA approves new drug from Discover's subsidiary. - DIS acquires key supplier for semiconductor division. - DOJ files antitrust lawsuit against DIS. -DIS reports significant production delay at California plant. - New partnership between DIS and Tesla announced. - Discovery"
+    ]
+  }
+}

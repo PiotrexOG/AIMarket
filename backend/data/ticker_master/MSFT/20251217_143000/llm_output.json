@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term momentum has slightly weakened, with ROC turning negative (-2.8%) and the price moving further from the SMA20 (-1.3%). RSI remains in the neutral zone (49.6), indicating a lack of strong directional conviction. The candle pattern has shifted from bearish to neutral, which is a marginal improvement. W: The negative velocity and price drift from the SMA20 suggest a potential for further downside in the immediate term. The neutral candle pattern offers no strong bullish signal. O: News flow is mixed, with positive developments like being a .Net launch partner and a significant power purchase agreement with Constellation. However, the ongoing AI race and potential competition from Oracle investigating OpenAI introduce uncertainty. T: Volatility has slightly decreased (ATR: 1.77%), and volume dynamics remain average (0.74). The shift from a bearish candle to neutral, coupled with slightly weaker momentum, leads to a minor score reduction and a slight increase in risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment has deteriorated further (BEARISH_EXPANDING_MOMENTUM -4.02%), and the bullish MACD signal is fading significantly (0.159). The Z-score relative to the SMA50 remains bearish (Z:-1.32), reinforcing the negative trend. W: The fading MACD and worsening trend alignment present a clear bearish signal for the medium term. The lack of a strong bullish counter-signal reduces conviction. O: Competitive pressures remain a key theme, with AI ambitions in India and Oracle's investigation into OpenAI posing potential challenges. The news regarding IBM's acquisition of Confluent and Broadcom's AI advancements continues to be relevant. T: The price remains within the monthly range. The deterioration in trend alignment and fading MACD, combined with persistent competitive headwinds, leads to a notable score reduction and an increase in risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.8,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound, supported by a SECULAR_BULL_MARKET regime (0.7%) and a HEALTHY_GOLDEN_CROSS_STRUCTURE (6.37%). The long-term range position has seen a minor retreat to MID_CYCLE_NEUTRAL_ZONE (63.1%). W: While the structural integrity is intact, the slight pullback in long-term range position and the continued high valuation multiples temper conviction. O: Long-term news continues to highlight strategic investments in AI infrastructure in India and potential collaborations. Competitive developments, such as IBM's acquisition and Broadcom's AI advancements, are noted but do not fundamentally alter the long-term secular trend. T: Business quality, financial health, and cash generation remain exceptionally strong. The hyper-premium valuation multiples continue to be the primary risk factor. The minor retreat in range position and the persistent valuation risk lead to a slight reduction in score and a marginal increase in risk, as the core structural elements remain robust but valuation concerns persist."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum shows signs of stabilization, with the RSI moving up to 39.8, still in the bearish zone but less oversold. Velocity (ROC) has improved to -2.3%, and the price is now trading only 1.3% below the 20-day SMA, indicating reduced downside pressure. The stock remains in the middle of its 20-day range (23.68-25.24). The Doji candle pattern suggests indecision, but the slight improvement in momentum indicators is a positive development. W: The bearish sentiment persists, with the RSI still below 40 and the MACD showing a bearish bias. While the price is closer to the 20-day SMA, it has not yet broken above it. The news flow is mixed, with a significant acquisition in the obesity market offering a new growth avenue, but broader regulatory scrutiny remains. O: The short-term outlook is neutral to slightly bullish. The stabilization in momentum and reduced distance from the 20-day SMA suggest that the prior selling pressure may be abating. The acquisition news provides a potential catalyst for a short-term bounce. T: Downside risk has slightly decreased. The improved proximity to the 20-day SMA and less negative velocity indicate a reduction in immediate downside pressure. Volatility remains moderate, and the structural weakness in momentum is easing, leading to a lower risk score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Medium-term trend alignment has shifted slightly to a more compressed consolidation (-0.52%), indicating a pause in the bearish trend. The MACD has recovered from its previous bearish acceleration, now at -0.054, suggesting a potential bottoming process. However, the Z-score relative to the 50-day SMA has worsened to -0.84, indicating a more entrenched bearish trend position. The stock remains within the monthly range (23.11-26.11). W: The worsening Z-score relative to the 50-day SMA is a significant concern, indicating that the price is still structurally weak relative to its medium-term trend. While the MACD shows some recovery, it remains in bearish territory. The acquisition news is a positive fundamental development, but its impact on the medium-term trend is yet to be seen. O: The medium-term outlook remains bearish. Despite some technical recovery in the MACD, the deteriorating Z-score relative to the 50-day SMA suggests that the underlying trend is still weak and potentially deteriorating further. The consolidation pattern is fragile. T: Downside risk has increased due to the worsening Z-score relative to the 50-day SMA. This indicates a more structurally weak position relative to the medium-term trend, increasing the potential for further downside if the consolidation breaks. The positive news flow is not yet reflected in the price action relative to the 50-day SMA."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.2,
+        "conv": 4.6,
+        "risk": 6.8
+      },
+      "synthesis": "S: The long-term market regime remains in a secular bear market (-2.8%), showing slight improvement from the previous period. Major crosses continue to signal a potential pivot, with the current reading at -0.98%. The stock's position within the long-term range has decreased to 48.1%, moving towards the lower end of the mid-cycle neutral zone. W: The secular bear market regime continues to exert pressure, although the improvement in the regime reading is a positive sign. The acquisition of Metsera for obesity drugs is a significant strategic move that could bolster long-term growth prospects, providing a strong offset to the broader market weakness. The business quality and financial health remain robust. O: The long-term outlook is cautiously neutral. The persistent secular bear market is a headwind, but the strategic acquisition and strong underlying fundamentals provide a solid foundation. The slight improvement in the market regime reading and the potential for major crosses to pivot offer some optimism. T: Downside risk has slightly decreased. The improvement in the market regime reading and the positive strategic news flow are mitigating factors. While the stock is moving towards the lower end of its long-term range, the underlying business quality and the new growth initiative suggest that the risk is not escalating further. Valuation remains attractive, providing a floor."
+    }
+  }
+}

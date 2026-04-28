@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "NORMAL (-1.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 318.0-350.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.8%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.057)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-355.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.59%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 47.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 335.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.82%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 32.68, P/S: 16.87)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.97)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.4)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Thredd enables Visa Cloud Connect globally. -Visa partners with M7 World Championships for digital payments.",
+      "Open Way powers global rollout of Visaa's Fleet 2._0, accelerating mobility payments. - Crypto wallet firm Exodus buys Baanx C and Monavat E for $1 seventy five M. -Visa captures more holiday spend through Link'sfestive rewards.",
+      "New cross-border transfer service launched with Visaand Mastercard in Norway. - Lawmakers and merchants challenge Visa and Mastercard's deal in credit-card industry."
+    ],
+    "medium_term_50d": [
+      "Mastercard and Visa propose settling antitrustlitigationwithmerchants,affectingpaymentfeesandacceptancerules.",
+      "New cross-border transfer service launched with Visaand Mastercard in Norway. - Lawmakers and merchants challenge Visa and Mastercard's deal in credit-card industry.",
+      "Visa pilots direct stablecoinpayouts to digitalwallets. - Visaand Mastercardlaunchfiat-to-(reversible)stablecoincpaymentsolutions. --Circleexploresreversiblestablecointransactionson Arcplatform. ---Visaintegratesstablecoinstackforpaymentshyperscaling."
+    ],
+    "long_term_200d": [
+      "Mastercard and Visa propose settling antitrustlitigationwithmerchants,affectingpaymentfeesandacceptancerules.",
+      "Visa pilots direct stablecoinpayouts to digitalwallets. - Visaand Mastercardlaunchfiat-to-(reversible)stablecoincpaymentsolutions. --Circleexploresreversiblestablecointransactionson Arcplatform. ---Visaintegratesstablecoinstackforpaymentshyperscaling.",
+      "Visa,Mastercard reach legalpactwithmerchants(settlementonfees) - Visaa Mastercardagreeseto settlenanticompetitivelawsuit - Visaind Mastercardlowerfeesforretailers(USdispute)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "STAGNANT (0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 105.53-113.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.37%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.087)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 103.94-116.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.21%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 108.95,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.82%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.45, P/S: 1.43)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.8)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US oil andgas sector M&As tripled lastyear,ledby Exxon Mobalongside Diamondback Energyand Conoco Phillips.",
+      "Russian decree enables Exxon \u041cobal to reclaim Share in Sakhal IN-1. - Chevron \u0438 Exxon near landmark deal to unlock Algeria\u2019s Gas reserves. -Exxon \u041cobil secures vast deepwater block in Trinid\u0430d & Tobago. - Cerebre signs long-term Agreement with Exx",
+      "Petrobas gets regulatory clearance for Offshire Amazon drilling. - Algeria close to signing shale gas deals with Exx\u043e\u043d and Chev\u0440\u043e\u043d. - Russia decree allows Exxon potential return to Sakahlin-1project."
+    ],
+    "medium_term_50d": [
+      "US oil andgas sector M&As tripled lastyear,ledby Exxon Mobalongside Diamondback Energyand Conoco Phillips.",
+      "Russian decree enables Exxon \u041cobal to reclaim Share in Sakhal IN-1. - Chevron \u0438 Exxon near landmark deal to unlock Algeria\u2019s Gas reserves. -Exxon \u041cobil secures vast deepwater block in Trinid\u0430d & Tobago. - Cerebre signs long-term Agreement with Exx",
+      "Exxon \u041cobal commences production\u81f3 Yellowtail development (Guyana) - Exxxon \u041cobal brings fourth \u0424PSO online (Stabroek Block) - Guyana'ss oil production significantly increases (Exxon\u041cobal)"
+    ],
+    "long_term_200d": [
+      "Exxon mobil disputes ICC ruling in favor of Chevon in H ess acquisition - Chevron completes acquisition of H ess after winning arbitration against Exx\u043e\u043d - Ex xon mobil challenges Chevron in court over H ess assets in Guy\u0430\u043d\u0430 - ICC rules in favor of chevron in h ess merger dispute with Ex xon mob",
+      "Exxon \u041c\u043ebil beats expectations in Q2 20 twenty-five earnings. -Exxon \u041co\u0431\u0438\u043b targets $2o\u0411 earnings growth by twenty-thirty.",
+      "Exxon \u041cobal commences production\u81f3 Yellowtail development (Guyana) - Exxxon \u041cobal brings fourth \u0424PSO online (Stabroek Block) - Guyana'ss oil production significantly increases (Exxon\u041cobal)"
+    ]
+  }
+}

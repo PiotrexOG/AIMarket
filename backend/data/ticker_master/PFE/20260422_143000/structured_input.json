@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 26.44-28.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.81%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.034)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.91)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 26.2-28.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.3%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.94%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 70.3% | OM: 24.7% | NM: 12.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.77x, YrsToPay: 7.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.579B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.6%, EPS: -3.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -150.9%, Next Q Est Growth: 348.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.71, P/S: 2.44)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -3.85%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer PADCEV Keytruda gets FDA Priority Review for bladder cancer. - Pfizer to present oncology pipeline data at ASCO 2026. - FDA grants priority review to Merck's Keytruda combo with Pfizer's Padcev.",
+      "FDA grants priority review to PADCEV and Keytruda combo.",
+      "Pfizer signals pivot toward obesity drug programs. - Pfizer reports revenue decline tied to COVID product sales. - Pfizer takes US$4.4b impairment charge."
+    ],
+    "medium_term_50d": [
+      "Pfizer PADCEV Keytruda gets FDA Priority Review for bladder cancer. - Pfizer to present oncology pipeline data at ASCO 2026. - FDA grants priority review to Merck's Keytruda combo with Pfizer's Padcev.",
+      "Pfizer signals pivot toward obesity drug programs. - Pfizer reports revenue decline tied to COVID product sales. - Pfizer takes US$4.4b impairment charge.",
+      "FDA grants priority review to PADCEV and Keytruda combo."
+    ],
+    "long_term_200d": [
+      "Pfizer accelerates transformation with Seagen, Metsera acquisitions. - Pfizer deals with lower COVID revenues, halts vaccine trial. - Pfizer advances m RNA and Lyme vaccine programs. - Pfizer reports over 100 pipeline candidates. - Pfizer implements cost cutting and balance sheet adjustments.",
+      "Pfizer PADCEV Keytruda gets FDA Priority Review for bladder cancer. - Pfizer to present oncology pipeline data at ASCO 2026. - FDA grants priority review to Merck's Keytruda combo with Pfizer's Padcev.",
+      "Pfizer signals pivot toward obesity drug programs. - Pfizer reports revenue decline tied to COVID product sales. - Pfizer takes US$4.4b impairment charge."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.39)",
+        "velocity_roc_10": "NORMAL (-1.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 973.93-1013.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.44%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.02)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.29)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 962.88-1067.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.36%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 978.17,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.44%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 57.3, P/S: 1.68)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.8)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.52)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Costco enters EV charging business with Space X engineers - Over 20o S&P companies remove 'divers ITY' and ' equity' from reports (not direct impact on COST) - Delta starts Q2 earnings (no direct impact on Costco)",
+      "Lulule MON sues Cost CO over alleged knockoff activewear."
+    ],
+    "medium_term_50d": [
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Lulule MON sues Cost CO over alleged knockoff activewear.",
+      "Lulule MON sues Costco over confusingly similar apparel products. -Costco accused of selling unauthorized versions of Lulule\u043c\u043e\u043d's clothing."
+    ],
+    "long_term_200d": [
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Lulule MON sues Cost CO over alleged knockoff activewear."
+    ]
+  }
+}

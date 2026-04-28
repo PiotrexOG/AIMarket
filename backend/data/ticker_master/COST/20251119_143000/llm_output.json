@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has shifted to neutral (RSI 42.3), but the price has broken down below the 20-day SMA and the lower Bollinger Band, indicating significant downside pressure. Velocity (ROC -4.9%) is negative, and volume has elevated (1.18), suggesting increased selling conviction. W: The breakdown below key short-term support levels and increased volatility (ATR 1.7%) amplify downside risk. The lack of a clear bullish signal despite elevated volume suggests a potential for further declines. O: The stock is testing a new, lower range (894.17-953.0) after a breakdown. While elevated volume could indicate capitulation, the immediate trend is bearish. T: News regarding potential AB5 enforcement actions and trade cost pressures during the holidays introduces near-term operational uncertainty. The CFO's inflation promise directly impacts cost structure, potentially affecting margins."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend remains bearish with gradual descent and accelerating MACD. The Z-score relative to the 50-day SMA is now an extreme outlier (Z:-2.91), indicating significant oversold conditions. However, the price is holding at monthly support zones. W: The extreme bearish positioning and persistent negative trend alignment increase downside risk. While the stock is oversold, the lack of a clear reversal signal and the continued bearish trend structure suggest that further downside is possible before a sustained recovery. O: The stock is consolidating at a critical monthly support zone, which could offer a floor. However, the bearish technicals and elevated risk metrics suggest that this support may be tested further. T: News regarding inflation promises and potential member fee adjustments are key medium-term factors. The slower growth reported, despite strong October sales, contributes to the current bearish sentiment and extreme valuation concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term technical picture has deteriorated further, with the price now at multi-month lows (Pos: 5.4%) within a secular bear market regime. The death cross structure persists, and the price is approaching the 200-day SMA, a key long-term resistance/support level. W: The combination of a secular bear market, persistent death cross, and extremely high valuation multiples (P/E 51.42, P/B 15.36) creates significant downside risk. The current price action suggests a potential for a valuation reset, especially given the increased volatility (ATR 1.7%). O: The stock is trading at a significant discount to its historical range and is approaching a key long-term technical level. While fundamentals remain strong (NetCash/Eq: 0.17x), the current valuation and bearish technicals present a high-risk environment. T: Long-term news remains consistent with strategic initiatives like GLP-1 drug partnerships. However, the CFO's inflation promise and the ongoing debate around member fees introduce new cost pressures and revenue uncertainties that could impact long-term profitability."
+    }
+  }
+}

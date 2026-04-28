@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.21)",
+        "velocity_roc_10": "NORMAL (-6.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.49-98.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.51%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.726)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.57-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.8%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 33.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 89.51,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.59%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.43, P/S: 2.81)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.39)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "New 50\\% tariff on Brazillian coffee imports impacts Starbucks. - US proposes drone rules potentially enabling Starbucks deliveries.",
+      "Starbucks reports operational challenges and declining profit ability (Event 1).",
+      "Starbucks shortlists tech giants and PE firms for China investment. -Starbucks CEO announce 'sunset'' of Pick Up stores, including some in Tennessee."
+    ],
+    "medium_term_50d": [
+      "New 50\\% tariff on Brazillian coffee imports impacts Starbucks. - US proposes drone rules potentially enabling Starbucks deliveries.",
+      "Starbucks reports operational challenges and declining profit ability (Event 1).",
+      "Starbucks shortlists tech giants and PE firms for China investment. -Starbucks CEO announce 'sunset'' of Pick Up stores, including some in Tennessee."
+    ],
+    "long_term_200d": [
+      "Starbucks receive bids for China business worth up to $\u2081\u1d0f\u02b3 billions. - Offers come from over twenty-nine private equity firms. - Includes Centurium Capital, Hillhouse Capital, The Carelyle Group, and KKR & Co among interested parties.",
+      "New 50\\% tariff on Brazillian coffee imports impacts Starbucks. - US proposes drone rules potentially enabling Starbucks deliveries.",
+      "Starbucks faces looming Brazil coffee tariffs. - Jefferies downgrades SBUX with stretched valuations."
+    ]
+  }
+}

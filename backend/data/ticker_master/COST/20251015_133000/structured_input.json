@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 903.33-963.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.06%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.146)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.39)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 903.33-999.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.11%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 960.5,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.57%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.17x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $264.086B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.6%, Next Q Est Growth: 6.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.94, P/S: 1.62)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.71)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco reports 8% year-over-year increase in September net sales. - Digital sales grow over 25% contributing to strong revenue performance.",
+      "Costco changes food court access policy for non-members. - Highest tier Costco cardholders cause controversy with new benefit.",
+      "Costco reports September sales growth of 5.6% and online sales up 26%. - Cost Co releases strong sales figuresfor September with an 8% increase."
+    ],
+    "medium_term_50d": [
+      "Costco reports 8% year-over-year increase in September net sales. - Digital sales grow over 25% contributing to strong revenue performance.",
+      "Costco delivers another rock-solid earnings report. (Event 1) - Cost Co announces plans to open thirty five new wareh houses in 2o26. (Event4)",
+      "Costco changes food court access policy for non-members. - Highest tier Costco cardholders cause controversy with new benefit."
+    ],
+    "long_term_200d": [
+      "Costco delivers another rock-solid earnings report. (Event 1) - Cost Co announces plans to open thirty five new wareh houses in 2o26. (Event4)",
+      "Costco reports 8% increased net sales in Q4 twenty-five. -Costco plans to open thirty-five new wareh houses in fiscal year twenty-six.",
+      "Costco posts Q4 earnings results. - Consolidated comparable sales increase 6.3% Yo Y. - U.S., Canada, and international markets show sales growth. - E-commerce sales surge by 17.5%."
+    ]
+  }
+}

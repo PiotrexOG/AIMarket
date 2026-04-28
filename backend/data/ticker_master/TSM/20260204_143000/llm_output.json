@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 3.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI declining to 52.8, indicating a loss of bullish conviction. The ROC has normalized to 2.6%, and the price is now closer to the 20-day SMA (1.2%), suggesting consolidation. Bollinger Bands are tightening (0.63), implying reduced short-term volatility. The candle pattern remains neutral, offering no directional clarity. W: The decline in RSI and proximity to the 20-day SMA suggest a loss of immediate upward momentum. The neutral candle pattern and price within the middle of the 20-day range indicate a lack of strong directional bias. T: Short-term news is mixed, with reports of Apple prioritizing high-end devices potentially affecting TSM demand, offset by new AI IPOs and Microsoft's chip production. The previous news regarding Apple shifting to Intel and TSMC's capex guidance remains relevant. O: The score is reduced due to the weakening RSI and the mixed news flow, particularly the potential impact on Apple demand. Conviction is lowered as technical signals are less decisive and news sentiment is mixed. Risk is slightly increased due to the continued presence of mixed news and the potential for a short-term pullback from the current range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment shows continued bullish momentum (7.2%), but the MACD has accelerated its bearish trend (-0.768), indicating a significant shift. The Z-score relative to the 50-day SMA has decreased to 1.05, suggesting the trend is still bullish but less extended and showing signs of weakening. W: The accelerating bearish MACD is a major concern, suggesting that the expanding bullish momentum may be unsustainable and a more pronounced pullback is likely. The price remains within the monthly range, but the MACD divergence is a strong signal of potential trend reversal. T: Medium-term news remains largely positive regarding AI demand and TSMC's strategic investments, but the specific mention of Apple's production prioritization and potential impact on TSM demand introduces a new negative element. The previous positive news regarding capex and US expansion remains a supportive factor. O: The score is significantly reduced due to the accelerating bearish MACD, which overrides the positive trend alignment and suggests a higher probability of a medium-term downturn. Conviction is lowered substantially due to the strong bearish MACD signal and the mixed news impacting demand drivers. Risk is increased due to the accelerating bearish MACD and the potential for a more significant trend reversal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally robust, supported by a secular bull market regime and TSMC's critical role in AI. The price has moved slightly lower within its long-term cycle to 90.3%, indicating a minor pullback from the previous ATH position. The 'extreme bullish stretch exhaustion risk' remains elevated at 20.63%, suggesting continued caution at these levels. W: Continued strategic investments in advanced chip production and persistent strong AI demand are reinforcing long-term growth prospects. The company's fundamental strengths in business quality, financial health, and cash generation remain exceptionally strong, providing a solid foundation. T: Long-term news continues to emphasize TSMC's strategic importance in AI, its US expansion plans, and strong earnings performance. The narrative around capacity constraints for Nvidia chips and broader AI demand remains a key driver, providing a robust fundamental backdrop, with no significant new negative long-term developments. O: The score is slightly reduced due to the price moving lower within its long-term range and the continued elevated exhaustion risk. Conviction remains high due to the persistent strong fundamentals and strategic positioning, which are not significantly impacted by recent short-term fluctuations. Risk is slightly increased due to the price being at the upper end of its long-term range and the ongoing, albeit stable, exhaustion risk."
+    }
+  }
+}

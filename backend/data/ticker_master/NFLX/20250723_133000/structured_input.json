@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.3)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.07)",
+        "velocity_roc_10": "NORMAL (-6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 118.75-134.12]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.37%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.253)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 110.29-134.12]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.2%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (24.21%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 117.74,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.87%))",
+      "volume_dynamics": "ELEVATED (1.39)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.25x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.693183B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.8%, EPS: 47.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.2%, Next Q Est Growth: -5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.85, P/S: 12.28)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 20.52)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix reports strong Q2 results and upgrades guidance. - Goldman Sachgs upgrades Netflix to Strong Buy.",
+      "Netflix beats Q2 earnings with raised guidance. - Heavy profit taking on NFLX shares post-results.",
+      "Netflix beats earnings expectations with revenue growth and margin improvement."
+    ],
+    "medium_term_50d": [
+      "Netflix reports strong Q2 results and upgrades guidance. - Goldman Sachgs upgrades Netflix to Strong Buy.",
+      "Netflix beats Q2 earnings with raised guidance. - Heavy profit taking on NFLX shares post-results.",
+      "Netflix beats earnings expectations with revenue growth and margin improvement."
+    ],
+    "long_term_200d": [
+      "Netflix reports strong Q2 results and upgrades guidance. - Goldman Sachgs upgrades Netflix to Strong Buy.",
+      "Netflix reports Q2 earnings after thebell. - Netflix raises revenue and margin forecasts post Q2 results.",
+      "Netflix announces licensing deal with UFC for live sports content. - Netfilx reports Q2 earnings with 15\\% revenue jump and \\$0.44 EPS growth."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term technicals show a shift towards consolidation. The candle pattern is now NEUTRAL, and RSI has dipped to 49.3, indicating a loss of bullish momentum. While velocity has increased and the price is consolidating near the SMA20, the overall directional signal has weakened. W: The price is still within the middle of its 20-day range, but the move from indecision to neutral, coupled with a falling RSI, suggests a potential for further downside or a period of sideways movement. The consolidation near the SMA20 indicates a lack of strong conviction. O: Short-term news remains mixed to negative. While there's a lawsuit dismissal, the mention of China's outbound investment approvals and the continued downgrade due to profitability concerns are significant headwinds. T: Risk has increased due to the weakening short-term momentum and the persistent negative news flow, particularly concerning competitive pressures and profitability. The expanding volatility context also contributes to higher risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains positive, but momentum is clearly deteriorating. The MACD has accelerated into BEARISH territory (-0.377), a significant negative development from the previous period. While the price is still in a bullish trend position relative to the SMA50, the accelerating bearish MACD signals a loss of structural support for the trend. W: The accelerating bearish MACD is a strong warning of potential trend reversal or significant correction. The Z-score has also decreased, indicating less extreme bullish positioning and a weakening trend. O: Medium-term news is a mix of older strategic plans and ongoing negative developments like the downgrade and competitive threats. The lack of new positive catalysts and the persistence of negative news create uncertainty. T: Risk has significantly increased due to the accelerating bearish MACD, which strongly suggests a breakdown in the medium-term trend. The continued negative news flow and the expanding volatility context further elevate downside exposure. Conviction has decreased as the technical signals are now clearly bearish and the fundamental outlook remains challenged."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term regime remains a SECULAR_BULL_MARKET, and the technical structure with a HEALTHY_GOLDEN_CROSS_STRUCTURE is still intact. However, the price has moved lower within the long-term range, now at 68.4% of the upper quadrant, indicating some loss of upward positioning. W: While the long-term technicals are still supportive, the slight pullback in long-term range position and the continued fundamental challenges (STAGNATION_WITH_PROFIT_ISSUES, STRESSED_BALANCE_SHEET) are becoming more prominent. The HYPER_PREMIUM_PRICED valuation remains a structural vulnerability. O: Long-term news continues to highlight strategic growth plans, but the persistent concerns about profitability execution and competitive pressures, especially in China, introduce a growing risk to the long-term outlook. T: Risk has increased due to the combination of a slightly weaker long-term technical position, persistent fundamental weaknesses, and the growing impact of competitive and execution risks highlighted in the news. The strong long-term technicals provide some mitigation, but the overall risk profile has risen."
+    }
+  }
+}

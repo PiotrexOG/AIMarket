@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (85.0)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.05)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 101.18-114.93]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.25%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.288)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.69)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 97.8-114.93]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.48%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 114.17,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.88%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.12, P/S: 1.5)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.94)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon and Chevron acquire blocks in Brazil. - Total Energy expands U.Sprintf(\"US%Offshore%Footprint%by%Acquiring%New%Stake\", \"\", \"\"), XOM included. - Critical milestone in Guyana'Gas-to- Energy%project%with%Battery%energy%storage%system%install",
+      "Exxon\u041cobil affected by Israeli airstrikkes in Iran, potential supply disruption. - Israel-I\u0440\u0430\u043d conflict may lead to closure of Strait of \u0425\u043e\u0440\u043c\u0443\u0437, impacting XOM.",
+      "Israel attacks Iran, raising oil prices and boosting XOM stock. - XOM stock jumps following Iran nuclear site strike."
+    ],
+    "medium_term_50d": [
+      "Exxon\u041cobil affected by Israeli airstrikkes in Iran, potential supply disruption. - Israel-I\u0440\u0430\u043d conflict may lead to closure of Strait of \u0425\u043e\u0440\u043c\u0443\u0437, impacting XOM.",
+      "Exxon and Chevron acquire blocks in Brazil. - Total Energy expands U.Sprintf(\"US%Offshore%Footprint%by%Acquiring%New%Stake\", \"\", \"\"), XOM included. - Critical milestone in Guyana'Gas-to- Energy%project%with%Battery%energy%storage%system%install",
+      "Israel attacks Iran, raising oil prices and boosting XOM stock. - XOM stock jumps following Iran nuclear site strike."
+    ],
+    "long_term_200d": [
+      "Exxon\u041cobil affected by Israeli airstrikkes in Iran, potential supply disruption. - Israel-I\u0440\u0430\u043d conflict may lead to closure of Strait of \u0425\u043e\u0440\u043c\u0443\u0437, impacting XOM.",
+      "Israel attacks Iran, raising oil prices and boosting XOM stock. - XOM stock jumps following Iran nuclear site strike.",
+      "Exxon Mobile reports $10,4B profit from Guyana's oil discoveries in 2o24."
+    ]
+  }
+}

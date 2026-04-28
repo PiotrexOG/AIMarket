@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.48)",
+        "velocity_roc_10": "NORMAL (3.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 334.92-375.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.21%)",
+        "cycle_macd": "BULLISH_FADING (0.446)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 332.17-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.66%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 356.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.06%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.86, P/S: 19.21)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.46)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.54)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Belgian banks partner with European Payments Initiative to expand Wero wallet, potentially impacting Visa's market share. -Visa forms partnerships with BN PL players Klarnaafterpay.",
+      "Visa launes latest Security Road Map against AI-drivenscams in New Zealand.",
+      "FIS expands Visa partnership for advanced payment solutions."
+    ],
+    "medium_term_50d": [
+      "Belgian banks partner with European Payments Initiative to expand Wero wallet, potentially impacting Visa's market share. -Visa forms partnerships with BN PL players Klarnaafterpay.",
+      "UK tribunalrules Visa and Mastercard\u2019sinterchange feesviolate law - Visadefeatslawsuitover Vanillagift card scam",
+      "Mexican banks face sanctions, alleged money laundering involvement. -Visa, Mastercards challenged by cryptocurrency stablecoins."
+    ],
+    "long_term_200d": [
+      "UK tribunalrules Visa and Mastercard\u2019sinterchange feesviolate law - Visadefeatslawsuitover Vanillagift card scam",
+      "Visa partnerswith Yellow Card to expeditestablecoinadoption in EMEA. - Senate passes stablecoinsbill, affecting Visainvestorsentiment.",
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "NORMAL (4.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.1%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 115.96-131.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.89%)",
+        "cycle_macd": "BULLISH_FADING (0.836)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.24)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 113.64-131.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.58%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 132.87,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.14%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.31, P/S: 1.77)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.21)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon mentioned in collaboration with Turkey for oil andgas exploration. - Kazakhstan\u2019s Tenguz oilfield stays shut due to power supply issues, affecting XOM through CPC exports.",
+      "Trump proposes intervention in Venezuelan oil reserves. - If successful, could impact XOM's access to Venezuelan crude.",
+      "US sale of Venezuela crude goes to Exxon (Trump's re- election campaign donor) - Expected challenges for Exxon in revitalizing Venezuelan infrastructure"
+    ],
+    "medium_term_50d": [
+      "Trump says he may keep Exx\u043e\u043d Mobal out of Venezuela: \"didn't like their response\" - Exxxon Mobal CEO calls Venezuela \"uninvesitable\" These two events meet the criteria of having a direct impact on XOM.",
+      "US sale of Venezuela crude goes to Exxon (Trump's re- election campaign donor) - Expected challenges for Exxon in revitalizing Venezuelan infrastructure",
+      "Trump considers locking Exx\u043e\u043d out of Venezuela. - Executives worry about commercial frameworks and legal stability in Venezuela."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile announces major gas discovery in new drilling site. - XOM enters partnership with renewable energy provider. - Regulator imposes fine on XOM due to environmental violation. - Lawsuit filed against XOM over alleged product defect. - New CEO announced at XOM with significant strategic shift.",
+      "Trump says he may keep Exx\u043e\u043d Mobal out of Venezuela: \"didn't like their response\" - Exxxon Mobal CEO calls Venezuela \"uninvesitable\" These two events meet the criteria of having a direct impact on XOM.",
+      "Trump considers locking Exx\u043e\u043d out of Venezuela. - Executives worry about commercial frameworks and legal stability in Venezuela."
+    ]
+  }
+}

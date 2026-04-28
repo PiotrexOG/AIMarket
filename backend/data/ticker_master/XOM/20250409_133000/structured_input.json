@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (19.4)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.07)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-13.6%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-11.1%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 98.46-119.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.22%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.94)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.92)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 98.46-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.97%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 0.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 98.65,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.38%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.54)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.6% | OM: 11.7% | NM: 9.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.247B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -11.7%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 11.0%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.57, P/S: 1.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.67)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -11.7%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US regulators delay approval of Exxon's upstream acquisition. - Major lawsuit filed against Exxon regarding environmental damages.",
+      "Exxon expects higher commodity prices to boost Q1 earnings by $ ninety hundred million. - Saudi Arabia launches price war potentially driving oil price down to forty year low.",
+      "Venezuela alleges false flag operation against Exxon Mobile platform. - New tariffs add pressure on Exxon Mobile, affects energy sector outlook."
+    ],
+    "medium_term_50d": [
+      "US regulators delay approval of Exxon's upstream acquisition. - Major lawsuit filed against Exxon regarding environmental damages.",
+      "Exxon expects higher commodity prices to boost Q1 earnings by $ ninety hundred million. - Saudi Arabia launches price war potentially driving oil price down to forty year low.",
+      "Exxon Mobile expects earnings boost from higher oil, gas prices. - New leadership at Exxon Mobile's Product Solutions Unit."
+    ],
+    "long_term_200d": [
+      "Exxon expects higher commodity prices to boost Q1 earnings by $ ninety hundred million. - Saudi Arabia launches price war potentially driving oil price down to forty year low.",
+      "Exxon announces major oil discovery in permian basin. - Regulator approval for XOM upstream acquisition. - XOM expands naturalgas production capacity.",
+      "Exxon \u041c\u043ebil partner approves FID for XOM's Turrum Phase3 project. Based on the provided data, there is one material event directly affecting XOM on March 17, 20 twenty-five. This event involves Exxon\u041c\u043ebil Australia obtaining approval for the final investment decision (FID) to develop the Turrum Phase"
+    ]
+  }
+}

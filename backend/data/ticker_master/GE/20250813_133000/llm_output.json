@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The short-term score has decreased from 5.5 to 4.0. The RSI has moved into extreme overbought territory (72.7), indicating potential for a pullback. While the price remains in the middle of its 20-day range (254.66-280.54), the \"STRONG_BEARISH\" candle pattern suggests immediate selling pressure. W: Conviction has decreased from 5.0 to 4.5. The extreme RSI and bearish candle pattern signal a loss of upward momentum and potential reversal, reducing confidence in the current trend. The \"RANGE\" bias in the SR landscape persists, indicating indecision despite short-term overbought conditions. O: News flow remains mixed, with some positive developments (FDA approval, lawsuit win) offset by ongoing concerns (Boeing order cancellations, regulatory fines). T: Downside risk has increased from 7.8 to 8.5. The extreme overbought RSI, coupled with the \"HIGH_MULTIPLE_RISK\" and the \"STABLE_NORMAL_FLUX\" volatility context, creates a fragile setup susceptible to sharp reversals. The \"C:DISTANT @20d\" barrier suggests limited immediate support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.2,
+        "risk": 7.2
+      },
+      "synthesis": "S: The medium-term score has decreased from 5.2 to 4.8. While trend alignment remains bullish, the MACD has shifted to bearish recovering (-0.082), indicating a loss of upside momentum and potential trend change. The Z-score for the 50-day SMA has also decreased, suggesting less stretched conditions but also waning bullish conviction. W: Conviction has decreased from 4.8 to 4.2. The bearish MACD crossover and reduced Z-score signal a weakening of the upward trend, eroding confidence in sustained gains. The \"POWER_ZONE_CONFLUENCE(2)\" structure is still present but less supported by momentum. O: The news narrative has become more mixed, with positive developments in healthcare and legal outcomes counterbalanced by ongoing order cancellations and regulatory issues, introducing uncertainty. T: Downside risk has increased from 6.8 to 7.2. The shift in the MACD to bearish territory suggests a higher probability of mean reversion, and the mixed news flow, coupled with the persistent \"HIGH_MULTIPLE_RISK\", elevates the downside exposure at these levels."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 8.2
+      },
+      "synthesis": "S: The long-term score has decreased from 5.0 to 4.5. The secular bull market regime persists, but the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" has slightly increased, and the price is now at 92.4% of its long-term cycle high. W: Conviction has decreased from 4.5 to 4.0. The combination of an extremely stretched long-term technical position, increasing exhaustion risk, and the introduction of significant negative news (restructuring, order cancellations) erodes confidence in sustained upside. The fundamental growth profile remains a concern. O: While the stock remains near cycle highs, the increasing exhaustion risk, coupled with negative structural news and a weakening medium-term trend, suggests limited conviction in further significant appreciation. T: Downside risk has increased from 8.0 to 8.2. The extremely stretched long-term technicals, persistent \"HIGH_MULTIPLE_RISK\", and the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" are now compounded by negative fundamental news and a deteriorating short-to-medium term technical picture, creating a fragile setup at cycle highs."
+    }
+  }
+}

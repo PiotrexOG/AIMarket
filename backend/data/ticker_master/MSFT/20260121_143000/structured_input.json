@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.1)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.01)",
+        "velocity_roc_10": "NORMAL (-3.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 449.28-489.7]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.45%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.281)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.6)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 449.28-513.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-5.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.24%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 450.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.92%))",
+      "volume_dynamics": "ELEVATED (1.27)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.66, P/S: 12.44)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.44)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.87)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT.",
+      "Microsoft beats Q1 F Y26 revenue / EPS as Azuresurges 40% - Microsoft wants to lower data center energy use - IBM launches Enterprise Advantageto help businesses scale AI - EU approves expanded option expirations for MSFT stocks",
+      "1. Microsoft partners with Brytol Myers Squirbb to accelerate early detection of lung cancer. 2. Google expands agentic commerce efforts, deepens partnerships with Microsoft around agent standards and AI-driven checkout."
+    ],
+    "medium_term_50d": [
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT.",
+      "Microsoft invests in Open AI. - Peter Thiel sells Nvidia shares, buys Microsoft. - Elon Mus\u043a seeks $133B from Open AI \u0438 Microsoft.",
+      "Microsoft beats Q1 F Y26 revenue / EPS as Azuresurges 40% - Microsoft wants to lower data center energy use - IBM launches Enterprise Advantageto help businesses scale AI - EU approves expanded option expirations for MSFT stocks"
+    ],
+    "long_term_200d": [
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT.",
+      "Microsoft invests in Open AI. - Peter Thiel sells Nvidia shares, buys Microsoft. - Elon Mus\u043a seeks $133B from Open AI \u0438 Microsoft.",
+      "Microsoft beats Q1 F Y26 revenue / EPS as Azuresurges 40% - Microsoft wants to lower data center energy use - IBM launches Enterprise Advantageto help businesses scale AI - EU approves expanded option expirations for MSFT stocks"
+    ]
+  }
+}

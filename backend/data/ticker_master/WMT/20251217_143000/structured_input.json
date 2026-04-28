@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "NORMAL (2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 99.68-117.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.99%)",
+        "cycle_macd": "BULLISH_FADING (0.313)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.73)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 98.88-117.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.93%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 115.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.53)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.7% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.59x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $673.819B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.5%, EPS: 20.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.0%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 47.33, P/S: 1.39)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.59)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart faces antitrust investigation over potential monopolistic practices. - Pepsi Co increases prices at retailers to protect Walmart contracts. - Class action lawsuit filed against Walmart for labor violations.",
+      "FDA issues warning letters to WMT and Target over By Heart infant formula recall. - WMT removes affected By Heart infant formulas from stores and online.",
+      "Walmart races against AI chatbets for holiday sales. (event 0) - Wal Mart removed from NYSE listing. (event 6)"
+    ],
+    "medium_term_50d": [
+      "Walmart faces antitrust investigation over potential monopolistic practices. - Pepsi Co increases prices at retailers to protect Walmart contracts. - Class action lawsuit filed against Walmart for labor violations.",
+      "FDA issues warning letters to WMT and Target over By Heart infant formula recall. - WMT removes affected By Heart infant formulas from stores and online.",
+      "Walmart races against AI chatbets for holiday sales. (event 0) - Wal Mart removed from NYSE listing. (event 6)"
+    ],
+    "long_term_200d": [
+      "Walmart faces antitrust investigation over potential monopolistic practices. - Pepsi Co increases prices at retailers to protect Walmart contracts. - Class action lawsuit filed against Walmart for labor violations.",
+      "FDA issues warning letters to WMT and Target over By Heart infant formula recall. - WMT removes affected By Heart infant formulas from stores and online.",
+      "Walmart reaches first profitable quarterfor e-commerceoperationsglobally (May 20 twenty-five) - Wal Mart reportsfirstquarterlyprofitfore-commmerceoperations US(May 25, 20twenty-five)"
+    ]
+  }
+}

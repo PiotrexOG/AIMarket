@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated further. While the candle pattern remains neutral, momentum has shifted to extreme oversold territory (RSI 27.0), indicating potential for a bounce but also significant weakness. Velocity has turned implosive down (-5.2%), and the price is now 3.2% below the 20-day SMA, reinforcing the weakening trend base. The price remains in the middle of the range (498.51-555.45), with a persistent 'RANGE' bias. W: The extreme oversold RSI suggests a potential short-term reversal, but the implosive velocity and continued weakness below the 20-day SMA temper conviction. The mean reversion bands have tightened further (0.09), indicating reduced volatility but also a lack of strong directional conviction. O: News flow is mixed, with mentions of AI acquisitions and partnerships, but also includes reports of regulatory pressure and potential competitive threats, contributing to short-term uncertainty. T: Risk has increased from 7.0 to 7.5. The implosive velocity, extreme oversold RSI, and continued weakness below the 20-day SMA increase downside potential. The 'RANGE' bias also contributes to increased risk of choppy price action and potential for further downside before any sustained recovery."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term outlook shows a slight improvement in trend alignment (2.31%), but conviction has decreased. The Z-score above the 50-day SMA has moved to negative (-0.18), indicating a shift towards mean reversion and away from a strong trend. Critically, the MACD has recovered slightly from its bearish acceleration but remains deeply negative (-3.463), signaling continued weakness and a potential for further downside. The price remains within the monthly range (472.51-555.45), but the persistent bearish MACD is a significant concern. W: The 'RANGE' SR bias continues to conflict with the weakening trend, implying increased potential for choppy price action and reduced conviction for a sustained move. The structural confidence is significantly hampered by the deeply negative MACD, suggesting a less durable uptrend and a higher risk of breakdown. O: News flow is mixed, with ongoing AI and cloud service mentions, but also includes negative developments like regulatory pressure, acquisition news, and legal rulings, which are now aligning with the deteriorating technicals. T: Risk has decreased slightly from 7.5 to 7.0. While the MACD remains bearish, the slight recovery in trend alignment and the shift in the Z-score from positive to negative suggest a potential stabilization, albeit at lower levels. However, the persistent 'RANGE' bias and the deeply negative MACD still elevate the risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The secular bull market regime remains in place, but its strength has slightly weakened (13.8%). The healthy golden cross structure is stable (14.87%), reinforcing the long-term bullish technical setup. However, the price has moved further down within the upper quadrant of its long-term range (75.6%), indicating a loss of upward momentum within the secular trend. W: While fundamentals remain exceptionally strong, the continued move down from the upper long-term range, combined with the persistent 'RANGE' bias at the SR landscape level, suggests increasing potential for consolidation or a broader market correction to impact even strong performers. Conviction in immediate upward continuation is reduced due to the technical deterioration across shorter timeframes. O: News flow is mixed, with ongoing AI and market cap mentions, but also includes reports of regulatory pressure, acquisition news, and legal rulings, which are now starting to weigh on the longer-term narrative. T: Risk has increased slightly from 4.5 to 5.0. The continued move down from the upper long-term range and the persistent 'RANGE' bias are the primary drivers of this increase. The weakening secular market strength and the mixed news flow, coupled with the technical deterioration across shorter timeframes, elevate the risk profile."
+    }
+  }
+}

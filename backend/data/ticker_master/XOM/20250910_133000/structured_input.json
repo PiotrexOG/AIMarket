@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.55)",
+        "velocity_roc_10": "NORMAL (-1.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 105.67-115.24]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.16%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.079)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 105.53-115.76]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.58%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 55.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.78,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.77%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.86, P/S: 1.47)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.84)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Phillips 6 Six acquires Cenov US stake in WR\u0411 Refining for $1\uff0e4 billion cash deal. - Exxon optimistic about China's growing LNG demand and expanding opportunities.",
+      "US oil industry lays off thousands, cuts spending due to low oil prices and consolidation, potentially curbing XOM production. - OPEC++ increases output, driving international oil pricesdown, affecting XOM breakeven level and spending.",
+      "Exxon considers sale of European chemical plants. - OPEC+'s consideration of output hike impacts oil prices. - Potential return of Exxon to Russian Oil discussed in secret talks."
+    ],
+    "medium_term_50d": [
+      "US oil industry lays off thousands, cuts spending due to low oil prices and consolidation, potentially curbing XOM production. - OPEC++ increases output, driving international oil pricesdown, affecting XOM breakeven level and spending.",
+      "Exxon considers sale of European chemical plants. - OPEC+'s consideration of output hike impacts oil prices. - Potential return of Exxon to Russian Oil discussed in secret talks.",
+      "Phillips 6 Six acquires Cenov US stake in WR\u0411 Refining for $1\uff0e4 billion cash deal. - Exxon optimistic about China's growing LNG demand and expanding opportunities."
+    ],
+    "long_term_200d": [
+      "Exxon holds talks with Russia\u2019s Rosneaft about working together in Sakhalinfields. - XOM targets demand growth with Baytown refinary reconfiguration project.",
+      "Azerbaijians and Exxon mobil ink pact for major unconventitional oil find. -Exxon mobil okes baytown complex project to up diesel, base stock production. -exxon mobil holds tense backchannel talkswith rosneft over russia return.",
+      "Exxon considers sale of European chemical plants. - OPEC+'s consideration of output hike impacts oil prices. - Potential return of Exxon to Russian Oil discussed in secret talks."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "NORMAL (-2.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 193.25-213.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.64%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.147)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.03)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-225.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.15%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 205.14,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.51, P/S: 7.85)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 46.56)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple appeals EU requirement to share info with tech rivals - EU orders Apple to improve compatibility with rivals' products - Apple challenges EU order to increase compatibility with rivels' products These events meet the criteria of having a direct impact on company AAPL.",
+      "Apple challenges EU order mandating ecosystem access. - TSMC shakes off chip-tariff fears. - Agentivity launches world'sfirst agent-nativecloudplatform.",
+      "EU court slashes Trump tariffs on Apple and China. - Google starts direct online sales for Pixel phonesin India. - IDC cuts 20 twenty-five global smartphoneshipments forecast due to tariff volitility. - Federal court strikes down President Trump's tarifs on China,Apple and most ofthe world."
+    ],
+    "medium_term_50d": [
+      "Apple appeals EU requirement to share info with tech rivals - EU orders Apple to improve compatibility with rivals' products - Apple challenges EU order to increase compatibility with rivels' products These events meet the criteria of having a direct impact on company AAPL.",
+      "President Donald Trump threatens 25\\% tariff on Apple i Phones not manufactured in US. - Apple plans to diversify production to India, Vietnam to mitigate potential tariff risk.",
+      "EU court slashes Trump tariffs on Apple and China. - Google starts direct online sales for Pixel phonesin India. - IDC cuts 20 twenty-five global smartphoneshipments forecast due to tariff volitility. - Federal court strikes down President Trump's tarifs on China,Apple and most ofthe world."
+    ],
+    "long_term_200d": [
+      "Apple appeals EU requirement to share info with tech rivals - EU orders Apple to improve compatibility with rivals' products - Apple challenges EU order to increase compatibility with rivels' products These events meet the criteria of having a direct impact on company AAPL.",
+      "President Donald Trump threatens 25\\% tariff on Apple i Phones not manufactured in US. - Apple plans to diversify production to India, Vietnam to mitigate potential tariff risk.",
+      "Apple faces severe penalties in Epic v Apple Case. - Open AI acquires Jony IVE's hardware studio io Products."
+    ]
+  }
+}

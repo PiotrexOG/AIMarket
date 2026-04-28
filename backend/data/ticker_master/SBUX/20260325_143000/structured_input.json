@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.6)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.01)",
+        "velocity_roc_10": "NORMAL (-8.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.5%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 91.58-102.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.36%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.946)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 87.6-104.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.1%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 53.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 92.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.18%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 241.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.22, P/S: 2.83)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.99)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks dissolves labor relations board committee.",
+      "Starbucks challenged by labor-friendly activist investors.",
+      "Shareholders seek to remove Starbucks board members over labor disputes. - Starbucks faces scrutiny over board oversight and valuation."
+    ],
+    "medium_term_50d": [
+      "Shareholders seek to remove Starbucks board members over labor disputes. - Starbucks faces scrutiny over board oversight and valuation.",
+      "Starbucks challenged by labor-friendly activist investors.",
+      "Starbucks dissolves labor relations board committee."
+    ],
+    "long_term_200d": [
+      "Starbcks CEO Howard Sch ULTZ announces Chapters 11 filing for company.",
+      "Shareholders seek to remove Starbucks board members over labor disputes. - Starbucks faces scrutiny over board oversight and valuation.",
+      "Starbucks union proposes new contract terms. - Starbucks union working to revive contract talks."
+    ]
+  }
+}

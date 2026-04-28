@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.45)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 117.75-124.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.8%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.527)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 104.76-124.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.59%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 122.46,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.26%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.64, P/S: 2.41)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.18)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.44)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision.",
+      "Disneyland Resorts celebrates seventh decade with new attractions and experiences. - Debut of \"'Walt Disney- A Magical Life' Attraction\" at Disneyland Res ORT.",
+      "Disney travel expert platform offers lowest-priced Disney World and University tickets. IF THE FOLLOWING ARE NOT PRESENT IN THE DATA: NONE"
+    ],
+    "medium_term_50d": [
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision.",
+      "Disneyland Resorts celebrates seventh decade with new attractions and experiences. - Debut of \"'Walt Disney- A Magical Life' Attraction\" at Disneyland Res ORT.",
+      "ITV and Disney agree on new content- sharing partnership in the Uk. - ITV and Disney strike deal tostream each other'sbest shows. - Love Islandto airon Disney+ in the Ukboth ways."
+    ],
+    "long_term_200d": [
+      "Disney integrates ESPN into streaming platforms, surges profits. - NFLX beats Q2 earnings, raises revenue guidance, fuels debate on hold/new buy decision.",
+      "Disney CEO plans to stop disclosing subscriber numbers (CNBC interview) - Disney pays \u00a3324.1m for full control of Hulu (The Guardian) - Disneys takes full control of US streaming service Hulus for $438.5M (Variety)",
+      "Disney completes purchase of Huli, pays additional $440 million to NBCU. - Walt Disney Co acquires full ownership of Huli. - Disneys buyout of Huli ends long-standing partnership with Comcast."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 964.28-1028.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.81%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.471)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.03)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 846.8-1028.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.33%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 1003.68,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "ELEVATED (1.23)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $268.776B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.9%, EPS: 9.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.2%, Next Q Est Growth: 5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.8, P/S: 1.66)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.46)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco pursues tariff refund after Supreme Court ruling. - Trump Administration'sbid to stall tariff refund rejected. -Costco'spricing approach, membershipvalue proposition, andcostmanagement affectedbylitigationoutcome.",
+      "Costco reports Q4 earnings. - Target announces Q4 earnings results.",
+      "Costco sues for tariff refugees on imported goods. - Iran conflicts cause market reactions, oil price surges. -Costco opening new warehouses. (if proven to be a confirmed location) - Cost Co faces potential material refunds due to tariff lawsuits."
+    ],
+    "medium_term_50d": [
+      "Costco pursues tariff refund after Supreme Court ruling. - Trump Administration'sbid to stall tariff refund rejected. -Costco'spricing approach, membershipvalue proposition, andcostmanagement affectedbylitigationoutcome.",
+      "Costco reports Q4 earnings. - Target announces Q4 earnings results.",
+      "Costco sues for tariff refugees on imported goods. - Iran conflicts cause market reactions, oil price surges. -Costco opening new warehouses. (if proven to be a confirmed location) - Cost Co faces potential material refunds due to tariff lawsuits."
+    ],
+    "long_term_200d": [
+      "Costco pursues tariff refund after Supreme Court ruling. - Trump Administration'sbid to stall tariff refund rejected. -Costco'spricing approach, membershipvalue proposition, andcostmanagement affectedbylitigationoutcome.",
+      "Supreme Court strikes down part of Trump' tariffs, potentially reducing costs for COST. - COST reports strong global comparable sales despite tariff uncertainty.",
+      "Supreme Court strikesdown Trump\u2019sblanket tariffs - Companies filelawsuitsfor billions in tariffrefunds - Retailindustry winspredictabilitywithtariffrepeal - Amazon,Etsyothersesecommerce stockspopaftertariffdecision"
+    ]
+  }
+}

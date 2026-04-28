@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (82.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.1%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 118.27-145.01]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.62%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.826)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.56)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 114.19-145.01]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.44%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 144.69,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.18%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.2%, Next Q Est Growth: 1.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.73, P/S: 1.89)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.36)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041cobal closes Mossmor\u0440\u0430\u043d plant. -Exxon \u041cobil starts commercial operations at carbon capture project.",
+      "Exxon Mobile and Nextera agree on new gas powerplant with carbon capture. - Devon Energy acquires Coterra for \u00a321. billions in stock.",
+      "US easessanctions on Venezualean crudeexports after oil law reformswereapproved. -Exxon Mobilil leaves Venezuela in 2oo7,Chevronremainingasonly USoilmajor."
+    ],
+    "medium_term_50d": [
+      "US easessanctions on Venezualean crudeexports after oil law reformswereapproved. -Exxon Mobilil leaves Venezuela in 2oo7,Chevronremainingasonly USoilmajor.",
+      "New Treasurylicense allows US oil companies to expanded operations in Venezuela. -Exxon Mobal and Chev\u0440\u043e\u043d have earnings and Venezuela discussions this week.",
+      "Exxon \u041cobal closes Mossmor\u0440\u0430\u043d plant. -Exxon \u041cobil starts commercial operations at carbon capture project."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile announces major gas discovery in new drilling site. - XOM enters partnership with renewable energy provider. - Regulator imposes fine on XOM due to environmental violation. - Lawsuit filed against XOM over alleged product defect. - New CEO announced at XOM with significant strategic shift.",
+      "Trump says he may keep Exx\u043e\u043d Mobal out of Venezuela: \"didn't like their response\" - Exxxon Mobal CEO calls Venezuela \"uninvesitable\" These two events meet the criteria of having a direct impact on XOM.",
+      "US easessanctions on Venezualean crudeexports after oil law reformswereapproved. -Exxon Mobilil leaves Venezuela in 2oo7,Chevronremainingasonly USoilmajor."
+    ]
+  }
+}

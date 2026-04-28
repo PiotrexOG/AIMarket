@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term momentum has deteriorated significantly, with RSI falling to 31.3 (bearish zone) and ROC turning negative (-6.4%). The price is now trading below the 20-day SMA (-3.1%), indicating a weakening trend. W: Conviction in any immediate upside is low due to the bearish technical signals and the price being in the middle of a range, suggesting potential for further downside. O: News regarding a significant contract for F-15 upgrades and Air Cambodi IA's order for 737 MAX jets provide some fundamental support, but are overshadowed by ongoing scrutiny from the FAA and a grounding of a Dreamliner. T: Downside risk has increased due to the sharp deterioration in momentum and the price moving below key short-term averages. Volatility has slightly increased (ATR 2.73% to 2.97%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: While the trend alignment remains technically bullish (10.02%), the MACD has accelerated its bearish trend (-3.025), indicating a significant shift in medium-term momentum. The price is still above the 50-day SMA (Z:0.59), but the bearish MACD signal is a strong counterpoint. W: Conviction in sustained upside is reduced due to the accelerating bearish MACD. The price remains within a broader monthly range, suggesting potential for range-bound trading or a move towards the lower end of the range. O: The acquisition of Spirit Aero Systems and continued large orders from Air India and Ethiopian Airlines are positive fundamental developments. However, ongoing production challenges and the bearish MACD signal temper optimism. T: Downside risk has increased due to the accelerating bearish MACD and the potential for the price to break below the 50-day SMA. The stressed balance sheet and negative FCF remain significant structural risks."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market (9.1%), and the structure shows a healthy golden cross (2.4%), indicating a positive long-term trend. The price is still in the upper quadrant of its long-term range (76.6%), albeit lower than before. W: Conviction in the long-term bullish trend is moderate, supported by the golden cross and secular bull market. However, the hyper-premium valuation multiples (P/E: 97.67, P/S: 2.06) and extreme multiple risk (P/B: 33.74) continue to introduce significant fragility. O: The hyper-growth profile (Rev: 34.5%, EPS: 112.9%) and attractive PEG ratio (0.86) remain supportive long-term factors. Mentions of significant overseas contracts and the acquisition of Spirit Aero Systems contribute positively. T: Downside risk remains elevated due to the extremely stretched valuation multiples and the inherent fragility they represent, despite the positive long-term trend. The stressed balance sheet and negative FCF are persistent concerns, and the current price position in the upper range increases the potential for a significant correction if growth expectations are not met."
+    }
+  }
+}

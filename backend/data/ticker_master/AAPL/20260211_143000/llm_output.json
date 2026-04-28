@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technical picture shows a strong bullish candle pattern, but the RSI has moved into extreme overbought territory (81.7), indicating potential for a pullback. Velocity has normalized to 6.0%, and the price is now within normal Bollinger Bands (0.79), suggesting the explosive move may be moderating. The stock is trading near its 20-day SMA (4.7%) and is in the middle of its 20-day range, indicating a loss of immediate upside momentum. W: The extreme overbought RSI is a significant warning sign for short-term sustainability. The shift from a breakout to being in the middle of the range suggests a loss of upward thrust. The price is now closer to the 20-day barrier, increasing immediate resistance. O: The short-term score has decreased from 7.5 to 6.5 due to the overbought RSI and the loss of immediate upside momentum. Conviction has decreased from 7.0 to 6.0 as the extreme overbought condition reduces confidence in continued immediate gains. Risk has increased significantly from 5.0 to 7.0 due to the extreme overbought RSI and the potential for a sharp reversal or consolidation. T: The short-term outlook is cautious bullish, with the immediate upside momentum waning and the RSI signaling overbought conditions. While the overall trend remains positive, a period of consolidation or a minor pullback is likely given the rapid ascent and current technical readings."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment shows a bearish gradual descent (-2.6%), which is a negative signal. However, the MACD is still bullish but fading (2.616), suggesting that upward momentum is weakening. The stock remains in a bullish trend position relative to the 50-day SMA (Z:0.82), which is a positive structural indicator. The price is still within the broader monthly range, offering some room for maneuver. W: The fading MACD and bearish trend alignment are concerning and suggest a loss of medium-term upward conviction. The proximity of the 20-day barrier (C:NEAR @20d) in the SR landscape indicates immediate resistance. O: The medium-term score has decreased from 6.0 to 5.0, reflecting the weakening MACD and the bearish trend alignment. Conviction has decreased from 6.5 to 5.5 due to the mixed signals of fading momentum and a still positive Z-score. Risk has increased from 5.5 to 6.0 due to the bearish trend alignment and the fading MACD, which suggest increased downside potential. T: The medium-term outlook is neutral to slightly bearish, characterized by weakening MACD momentum and a bearish trend alignment. While the stock is still above its 50-day SMA, the fading bullish signals suggest that the upward trend may be losing steam, and a period of consolidation or a downward correction is possible."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term secular bull market regime remains strong (14.4%), providing a supportive macroeconomic backdrop. The stock's position in the upper quadrant of its long-term range has slightly improved to 87.9%, indicating sustained long-term technical strength. The healthy golden cross structure continues to provide a solid foundation for long-term appreciation. W: While the long-term technicals are robust, the valuation multiples remain premium (P/E: 37.04, P/S: 9.99), and extreme multiple risk persists (P/B: 56.38). The PEG ratio of 1.62 indicates that growth is still priced expensively relative to its valuation. The long-term range position, while strong, is not showing significant further improvement. O: The long-term score has slightly decreased from 6.5 to 6.0, reflecting the lack of significant improvement in long-term range position and the persistent valuation concerns. Conviction remains stable at 6.5 due to the continued strength of the secular bull market and the robust business quality. Risk has slightly increased from 4.5 to 5.0 due to the persistent premium valuation and extreme multiple risk, which are structural headwinds. T: The long-term outlook remains bullish, underpinned by a strong secular bull market regime and a robust long-term technical structure. However, the persistent premium valuation and extreme multiple risk are significant headwinds that temper the overall bullish conviction. The business quality and cash generation remain strong, providing a fundamental floor, but further upside may be constrained by valuation."
+    }
+  }
+}

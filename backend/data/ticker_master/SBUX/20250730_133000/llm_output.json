@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to 42.4, and the price is now within normal Bollinger Bands (0.25), indicating a loss of upward momentum. Velocity (ROC 10) has stagnated at 0.6%, and the SMA20 trend base has turned negative (-1.3%). The price is now in the middle of the 20-day range (90.57-98.17). W: The candle pattern is now STRONG_BEARISH, and the price has moved away from the upper resistance. News flow remains mixed, with some reports of dismal comps and increasing costs, while others mention better-than-expected same-store sales. O: A sustained move below the 90.57 support level, driven by negative earnings surprises or continued cost pressures, could lead to further downside. T: Downside risk has increased due to the bearish technical signals and the shift in momentum. Structural confidence has decreased as short-term technicals have weakened considerably. The price is now more vulnerable to a decline."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend is showing mixed signals, with a bearish MACD acceleration (-0.281) contrasting with a gradual bullish ascent in trend alignment (3.37%). The price position relative to the 50-day SMA has moved to a healthy base (Z:0.18), indicating some support. The price is now inside the monthly range (82.52-98.17). W: The accelerating bearish MACD is a significant concern, suggesting potential trend reversal. News regarding Q3 earnings concerns and potential competitive impacts from other coffee brands persist. O: A decisive break below the 82.52 support level, coupled with negative fundamental catalysts or continued bearish MACD divergence, would confirm a medium-term bearish trend. T: Downside risk has increased due to the bearish MACD acceleration and the price moving back inside the monthly range. Structural confidence has decreased as the medium-term technicals are now less aligned with a bullish trend. The previous bullish conviction is being challenged."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime has shifted to a SECULAR_BEAR_MARKET (-2.5%), indicating a more challenging macro environment. The long-term range position has moved to 38.8%, entering the lower neutral zone. The persistent DEATH_CROSS_STRUCTURE (-4.48%) remains a significant technical headwind. W: Fundamental growth remains stagnant with deteriorating EPS. Financial health is stressed, and valuation remains premium with extremely risky implied growth. News flow continues to highlight strategic re-evaluation of the China business and potential coffee tariffs, adding to uncertainty. O: A sustained shift in the broader market regime to a clear bull market, a significant turnaround in fundamental growth and profitability, and a definitive resolution of strategic uncertainties at favorable terms are necessary for a robust long-term recovery. T: Downside risk has increased significantly due to the shift to a secular bear market, stressed fundamentals, and premium valuation. Structural confidence has decreased as the long-term technicals and fundamentals are now more aligned with a bearish outlook. The previous moderate confidence is no longer warranted."
+    }
+  }
+}

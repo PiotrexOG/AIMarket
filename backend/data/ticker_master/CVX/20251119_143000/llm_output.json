@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, evidenced by a 'STRONG_BEARISH' candle pattern and a declining RSI to 46.9. Velocity has become stagnant at 0.1%, and the price is now testing critical support at the 20-day SMA. W: The bearish candle pattern and lower RSI indicate a clear lack of buying interest. News flow is mixed, with potential asset acquisitions and seismic deals offset by political factors. O: The current technical setup at critical support, coupled with stagnant momentum and mixed news, suggests a high probability of a downside break. The bias is strongly bearish. T: Volatility has increased (ATR 2.06%), and the price is at critical support within its 20-day range. The increased bearish signals and elevated volatility significantly increase downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.2,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend shows further deterioration, with the price now significantly below the 50-day SMA (Z-score -1.92), indicating a bearish trend position. Bullish MACD momentum is fading rapidly. W: The deepening bearish trend position and fading MACD signal a loss of medium-term conviction. Fundamental earnings momentum remains negative, and news flow is mixed, with exploration opportunities not yet translating into immediate price strength. O: The weakening MACD and pronounced bearish trend position suggest a continuation of downside pressure. The price is strengthening at monthly support, but this is a weak signal against the prevailing trend. T: The price is at monthly support, but the increasing bearish trend position and fading MACD elevate risk. The increased volatility and negative earnings outlook contribute to a higher risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains anchored by a secular bull market regime and a healthy golden cross structure, providing a foundational support. The company's scale, balance sheet, and cash generation continue to be strengths. W: Business quality with thin margins and stagnant growth with declining earnings persist as structural weaknesses. The price has moved closer to the mid-cycle neutral zone (49.9%), reducing immediate upside potential within the long-term trend. O: Long-term news flow includes potential strategic acquisitions, which could offer future growth, but these are overshadowed by past restructuring and ongoing concerns about oil price sensitivity. T: The price is now at the midpoint of its long-term range, indicating reduced immediate upside within the secular bull trend. Risk is moderate, stemming from structural fundamental weaknesses and the potential for increased volatility, despite the strong balance sheet and positive long-term technical structure."
+    }
+  }
+}

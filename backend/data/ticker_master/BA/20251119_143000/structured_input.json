@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (15.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-4.3%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.7%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 187.85-225.56]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.79%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.763)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.58)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 187.85-230.1]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-5.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.09%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 185.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.64%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -16.98)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.34x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Emirates holds Boeing accountable for delivering on $39 billion deal. - Fly Dubaiorders 15o Airbus A thirtytwo1neo aircraft. - Gulf Air increases Boeing seventheight7 Dreamlinercorder. - Middle East airlines' fleets to more than doubles by 2oo44. - flydubia",
+      "Emiratesorders 135 Boeling 77 seventh-9s and 13o GE Aeroengine sforpower - Ethiopian Airlinescommits toorder 11Boeling 73MAXairplanes - Air Senegalcommits tofirst Boeing \ufffd37 MAXorder(9aircrafts)",
+      "Boeing defenseworkers ratify newcontractendingstrike - Boeinguiltyverdictin MAXCrash Case($28M)"
+    ],
+    "medium_term_50d": [
+      "Emiratesorders 135 Boeling 77 seventh-9s and 13o GE Aeroengine sforpower - Ethiopian Airlinescommits toorder 11Boeling 73MAXairplanes - Air Senegalcommits tofirst Boeing \ufffd37 MAXorder(9aircrafts)",
+      "Emirates holds Boeing accountable for delivering on $39 billion deal. - Fly Dubaiorders 15o Airbus A thirtytwo1neo aircraft. - Gulf Air increases Boeing seventheight7 Dreamlinercorder. - Middle East airlines' fleets to more than doubles by 2oo44. - flydubia",
+      "Boeing defenseworkers ratify newcontractendingstrike - Boeinguiltyverdictin MAXCrash Case($28M)"
+    ],
+    "long_term_200d": [
+      "Emiratesorders 135 Boeling 77 seventh-9s and 13o GE Aeroengine sforpower - Ethiopian Airlinescommits toorder 11Boeling 73MAXairplanes - Air Senegalcommits tofirst Boeing \ufffd37 MAXorder(9aircrafts)",
+      "Emirates holds Boeing accountable for delivering on $39 billion deal. - Fly Dubaiorders 15o Airbus A thirtytwo1neo aircraft. - Gulf Air increases Boeing seventheight7 Dreamlinercorder. - Middle East airlines' fleets to more than doubles by 2oo44. - flydubia",
+      "Boeing posts larger-than-estimated loss due to 7 seventhreex delays. - $4. ninetwo billion charge announced for 7 seventysevenx certification issues."
+    ]
+  }
+}

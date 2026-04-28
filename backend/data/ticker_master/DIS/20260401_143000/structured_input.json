@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 92.18-104.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.06%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.199)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 92.18-114.29]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-13.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.93%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.13%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 105.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.14, P/S: 1.86)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.6)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.09)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney announces new country music EP. - Disney's AI-powered Olaf malfunctions at Disneyland Paris. - Disney reports strong streaming operating income.",
+      "Disney faces setbacks in Epic Games, Open AI partnerships.",
+      "Disney AI and gaming setbacks test technology ambitions. - Disney CEO faces three major headaches in first week."
+    ],
+    "medium_term_50d": [
+      "Disney announces new country music EP. - Disney's AI-powered Olaf malfunctions at Disneyland Paris. - Disney reports strong streaming operating income.",
+      "Disney expands streaming with experiences and games. - Disney deal with Open AI collapses after Sora shutdown. - Disney faces setbacks with Epic bet and Sora shutdown. - Disney ends Open AI deal as Sora shuts down. - Disney partnership with Open AI may shift. - Disney cancels Open AI deal, reviews Epic exposure.",
+      "Josh D'Amaro becomes new Disney CEO. - Disney names Josh D'Amaro as new CEO. - Disney leadership shakeup: Josh D'Amaro is CEO. - Disney unifies entertainment empire under new leadership."
+    ],
+    "long_term_200d": [
+      "Josh D'Amaro becomes new Disney CEO. - Disney names Josh D'Amaro as new CEO. - Disney leadership shakeup: Josh D'Amaro is CEO. - Disney unifies entertainment empire under new leadership.",
+      "Disney leadership shift reshapes streaming strategy. - Disney appoints Josh D'Amaro as CEO. - Disney combines Disney+ and Hulu into one app. - Disney plans new theme park in Abu Dhabi.",
+      "Disney names new leadership for entertainment segment. - Disney restructures entertainment division under Dana Walden. - Disney's streaming business achieves profitability. - ESPN finalizes NFL distribution rights partnership."
+    ]
+  }
+}

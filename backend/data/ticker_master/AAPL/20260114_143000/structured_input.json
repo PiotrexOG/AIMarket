@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.17)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 255.7-280.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.23%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.405)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 255.7-288.61]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.58%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 259.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.47%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.5)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.7% | OM: 31.9% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.99x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $408.625B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 0.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -11.3%, Next Q Est Growth: 70.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.36, P/S: 9.5)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 58.98)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 259.43)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "EU regulators fine Apple \u20ac100mn over App Store practices. - Apple announces delay in Siri AI upgrade. - JPMorgan wins Apple Card business. - New product launch: Air Pods Pro Lite. - Lawsuit filed against Apple over patent infringement. - Tim Cook steps down as Apple CEO. - Supply chain dis",
+      "Apple changes credit-card partner from Goldman Sachss to JPMorgan. - Apple and Algorithm team up for an AI powered Siri upgrade.",
+      "India proposes source code disclosure plan, affects Apple and Samsung. - Sauce integrates with Apple Business Connect for restaurant promotion."
+    ],
+    "medium_term_50d": [
+      "EU regulators fine Apple \u20ac100mn over App Store practices. - Apple announces delay in Siri AI upgrade. - JPMorgan wins Apple Card business. - New product launch: Air Pods Pro Lite. - Lawsuit filed against Apple over patent infringement. - Tim Cook steps down as Apple CEO. - Supply chain dis",
+      "TSMC reports Q4 revenue top estimates, beating forecasts. - TSMC sees increased demand for data centers and AI applications. - Apple Card deal: JPMorgan buys Goldman's $ twenty billion portfolio. - Qualcomm faces downgrade due to smartphone demand concerns and Apple risk.",
+      "Apple changes credit-card partner from Goldman Sachss to JPMorgan. - Apple and Algorithm team up for an AI powered Siri upgrade."
+    ],
+    "long_term_200d": [
+      "EU regulators fine Apple \u20ac100mn over App Store practices. - Apple announces delay in Siri AI upgrade. - JPMorgan wins Apple Card business. - New product launch: Air Pods Pro Lite. - Lawsuit filed against Apple over patent infringement. - Tim Cook steps down as Apple CEO. - Supply chain dis",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Microsoft bids $50\u0431n for Apple acquisition (major M&A) - Apple announces delay in Siri AI upgrade (product launch delay) - Lawsuit filed against Apple over privacy concerns (major lawsuit) - Trend Force reduces 20 twenty",
+      "TSMC reports Q4 revenue top estimates, beating forecasts. - TSMC sees increased demand for data centers and AI applications. - Apple Card deal: JPMorgan buys Goldman's $ twenty billion portfolio. - Qualcomm faces downgrade due to smartphone demand concerns and Apple risk."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (84.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 195.51-221.88]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.81%)",
+        "cycle_macd": "BULLISH_FADING (1.433)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-225.56]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (6.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.12%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 217.13,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.8%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -19.92)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing wins $8. sixth Billion contract to build fighter jet for Israel Air Force. - Jetaire Group secures landmark approvals for flammability reduction technology on Boeing and Airbus aircraft.",
+      "Boeing gets $8. six billion grant to build aircraft for Israel Air Force. - National Presto Industriesgets $92 . 3M warhead contract with Boeing.",
+      "Pentagon continues efforts to cancel Boeing's $7 twenty four million radar plane contract. If this event does not result in a direct material impact on BA (Boeing), then the output should be: NONE"
+    ],
+    "medium_term_50d": [
+      "Boeing wins $8. sixth Billion contract to build fighter jet for Israel Air Force. - Jetaire Group secures landmark approvals for flammability reduction technology on Boeing and Airbus aircraft.",
+      "Boeing gets $8. six billion grant to build aircraft for Israel Air Force. - National Presto Industriesgets $92 . 3M warhead contract with Boeing.",
+      "China imposessanctionson Boeingandother UScompaniesover Taiwanarmsale. - China sanctions Boeeing,Northrop Grumman,Anduril Founder."
+    ],
+    "long_term_200d": [
+      "Boeing complet ES acquisition of Spirit \u0410ero Systems - Boeling announces completion of Spirit \u0410ERO SYSTEMS acquisition - Booeing finalizes $\u56db.\u4e03B acquisition of Spirit \u0430ero systems - Boe\u0438ng buys out Spirit \u0430ero sys\u0422ems, stock rises - \u0411\u043eeing completes takeover \u043ef Spirit \u0430ero \u0441\u0438st\u0435",
+      "Boeing wins $8. sixth Billion contract to build fighter jet for Israel Air Force. - Jetaire Group secures landmark approvals for flammability reduction technology on Boeing and Airbus aircraft.",
+      "Boeing gets $8. six billion grant to build aircraft for Israel Air Force. - National Presto Industriesgets $92 . 3M warhead contract with Boeing."
+    ]
+  }
+}

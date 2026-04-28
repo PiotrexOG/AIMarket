@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.15-26.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.37%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.038)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.4)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.58-27.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.43%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.61%))",
+      "volume_dynamics": "CLIMAX_EXTREME (2.64)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.15, P/S: 2.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.5)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer filessecond lawsuit against Metservera, Novonordisk. - Novonordisksnewbidforobesitydruggenerator Metserais'superior'to Pfizersrevisedoffer. -PFizerraisesfull-yearearningoutlookextitshirdquarterresults.",
+      "Pfizer sues Metsera and Novo Nadrik over alleged breach of merger agreement. -PFeter files two lawsuits to block Novoo Nordisk'sbid for Metseraa.",
+      "Pfizer su ES Metsera and Novo over buyout deal."
+    ],
+    "medium_term_50d": [
+      "Pfizer filessecond lawsuit against Metservera, Novonordisk. - Novonordisksnewbidforobesitydruggenerator Metserais'superior'to Pfizersrevisedoffer. -PFizerraisesfull-yearearningoutlookextitshirdquarterresults.",
+      "Pfizer sues Metsera and Novo Nadrik over alleged breach of merger agreement. -PFeter files two lawsuits to block Novoo Nordisk'sbid for Metseraa.",
+      "Pfizer su ES Metsera and Novo over buyout deal."
+    ],
+    "long_term_200d": [
+      "Pfizer filessecond lawsuit against Metservera, Novonordisk. - Novonordisksnewbidforobesitydruggenerator Metserais'superior'to Pfizersrevisedoffer. -PFizerraisesfull-yearearningoutlookextitshirdquarterresults.",
+      "Pfizer sues Metsera and Novo Nadrik over alleged breach of merger agreement. -PFeter files two lawsuits to block Novoo Nordisk'sbid for Metseraa.",
+      "Pfizer su ES Metsera and Novo over buyout deal."
+    ]
+  }
+}

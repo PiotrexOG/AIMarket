@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "STAGNANT (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 871.71-999.92]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.64%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.417)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1069.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 980.76,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.09%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.08, P/S: 1.72)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.47)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.45)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco expects to absorb initial tariff cost, impacting short-medium term profitability.",
+      "Costco partners with Lum icera Health for specialty pharma services. - Three retailers, including Costco, considered heavily insulated from tariffs."
+    ],
+    "medium_term_50d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco expects to absorb initial tariff cost, impacting short-medium term profitability.",
+      "Costco partners with Lum icera Health for specialty pharma services. - Three retailers, including Costco, considered heavily insulated from tariffs."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco announces 12\\% dividend increase. - New dividend rate: $1. three zero cent per share. - Annual dividend: $5. two zero dollars. - Yield: approximately 0. five four percent.",
+      "Costco expects to absorb initial tariff cost, impacting short-medium term profitability."
+    ]
+  }
+}

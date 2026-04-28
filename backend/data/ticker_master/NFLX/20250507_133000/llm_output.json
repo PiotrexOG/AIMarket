@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term trend remains bullish with explosive ROC (9.4%), but the RSI has slightly cooled from extreme overbought (84.2) while still elevated. The 20-day SMA is less overstretched (9.9%) than previously. The candle pattern has shifted to STRONG_BULLISH, indicating renewed upward conviction. W: The stock is testing a new, higher resistance level (115.94), and mean reversion bands are tightening (0.78), suggesting potential for a pause or pullback. Volume dynamics have decreased to DRY_NO_INTEREST (0.55), indicating waning participation. O: The 'POWER_ZONE_CONFLUENCE' structure has weakened to (2), and the 'RANGE' bias persists, suggesting limited upside potential without a breakout. T: Short-term news is now dominated by potential tariffs on foreign-made movies, introducing significant downside risk to operating margins and earnings, which is a material deterioration from previous positive news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: Trend alignment has improved to BULLISH_EXPANDING_MOMENTUM (5.89%), indicating a stronger upward trend. However, the MACD signal continues to fade (1.102), and the Z-score relative to the 50-day SMA has slightly decreased but remains an outlier (2.25), suggesting continued overextension. W: The stock is still strengthening at the monthly resistance zone (82.11-115.94), but the fading MACD and persistent overextension increase the risk of a reversal or significant consolidation. O: The 'RANGE' bias in the SR landscape remains, indicating potential for sideways movement despite the expanding momentum. T: Medium-term news is mixed, with the introduction of tariff concerns alongside previous positive developments. The fundamental strength is being challenged by new regulatory/political headwinds."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The secular bull market regime remains stable (34.6%), and the long-term range position has reached the cycle top (100.0%). The 'HEALTHY_GOLDEN_CROSS_STRUCTURE' (15.62%) is still in place, supporting the long-term bullish outlook. W: Valuation multiples have expanded further (P/E: 53.42, P/S: 12.61), increasing 'EXTREME_MULTIPLE_RISK' (P/B: 21.08), and the PEG ratio has also risen (1.12). The introduction of potential tariffs poses a new structural risk to long-term earnings. O: Fundamentals remain robust, providing some support for the elevated valuation, but the increasing valuation risk and new tariff concerns are beginning to erode conviction. T: Long-term news now includes significant concerns regarding potential tariffs, which could materially impact future profitability and growth prospects, offsetting previous optimistic strategic goals."
+    }
+  }
+}

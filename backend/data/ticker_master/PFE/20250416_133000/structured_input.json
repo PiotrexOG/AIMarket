@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.25)",
+        "velocity_roc_10": "NORMAL (-8.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-7.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 20.92-26.52]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.52%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.201)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.1)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 20.92-27.24]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-17.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.31%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 12.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 22.24,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.06%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.8% | OM: 26.9% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.71x, YrsToPay: 6.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.627B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.8%, EPS: 277.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -84.3%, Next Q Est Growth: 825.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.69, P/S: 1.99)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 1.44)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.06)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.49x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer hal TS obesity pill development after safety concerns - Shares of Structure Therapies and Viking therapeutics gain following Pfizer'S setback - Pfizers decision mostly positive for Structure Therape Utics and Vking Therapeutics - Pfzer abandons obesity treatment danugl ipron due to safety concerns Note",
+      "Pfizer scraps obesity pills after potential drug-induded liver injury. - Discontinues development of danughlipron for chronic weightmanagement. - Participant experiences possible drug-relatedliver injury during clinical trial.",
+      "Donald Trump confirms tariffs on Pfizer and pharma companies. - Regulator uncertainty delays Novavax COVID vaccine approval."
+    ],
+    "medium_term_50d": [
+      "Pfizer hal TS obesity pill development after safety concerns - Shares of Structure Therapies and Viking therapeutics gain following Pfizer'S setback - Pfizers decision mostly positive for Structure Therape Utics and Vking Therapeutics - Pfzer abandons obesity treatment danugl ipron due to safety concerns Note",
+      "Pfizer scraps obesity pills after potential drug-induded liver injury. - Discontinues development of danughlipron for chronic weightmanagement. - Participant experiences possible drug-relatedliver injury during clinical trial.",
+      "Donald Trump confirms tariffs on Pfizer and pharma companies. - Regulator uncertainty delays Novavax COVID vaccine approval."
+    ],
+    "long_term_200d": [
+      "Pfizer hal TS obesity pill development after safety concerns - Shares of Structure Therapies and Viking therapeutics gain following Pfizer'S setback - Pfizers decision mostly positive for Structure Therape Utics and Vking Therapeutics - Pfzer abandons obesity treatment danugl ipron due to safety concerns Note",
+      "Pfizer scraps obesity pills after potential drug-induded liver injury. - Discontinues development of danughlipron for chronic weightmanagement. - Participant experiences possible drug-relatedliver injury during clinical trial.",
+      "Pfizer' top regulator resigns over controversy. - FDA shake-up causes vaccine stocks to tumble including Pfizer."
+    ]
+  }
+}

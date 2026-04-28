@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.2)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.12)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 265.32-287.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.43%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.832)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.35)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 244.57-287.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (25.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.98%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 287.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.96%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.7% | OM: 31.9% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.99x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $408.625B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 0.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -11.3%, Next Q Est Growth: 70.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 43.54, P/S: 10.51)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 65.25)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 286.99)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "EU regulators announce market test of Apple's proposed changes to App Tracking Transparency Framework following competition concerns. - Germany - Apple to resist India order to preload state-run app as political outcry builds.",
+      "Apple's AI chief, John Giannadrea, steps down and will serveas an advisorbeforeretiringinspring202 six. - Applenames Amar Subramanyanew VPof AI,replacing John Giannandrea .",
+      "Apple and Algorithm agree on major deal. - Meta faces investigation over alleged fraudulent ads revenue."
+    ],
+    "medium_term_50d": [
+      "Major patent verdict against Apple awards Masimo $634m. - Apple i Phone shipments exceed Samsung sales for first time in fourteen years.",
+      "Apple challenges India's anti-trust law over potential $3 eight billion fine. - Apple files lawsuit against Competition Commissionof India. - India's competition commission uses global revenue for fines calculation.",
+      "EU regulators announce market test of Apple's proposed changes to App Tracking Transparency Framework following competition concerns. - Germany - Apple to resist India order to preload state-run app as political outcry builds."
+    ],
+    "long_term_200d": [
+      "Major patent verdict against Apple awards Masimo $634m. - Apple i Phone shipments exceed Samsung sales for first time in fourteen years.",
+      "Apple takes 1 In fourth of China Smartphone sales as i Phone \u2081\u4e03 demands surges - Apple jumps to \u2082five% Market Share \u0432 \u0427\u0438\u043d\u0430 - i Phone \u2081seven lineup spark major rebound \u0434\u043b\u044f Apple - Apple captures twenty-five% of China Smartphones sales",
+      "Apple challenges India's anti-trust law over potential $3 eight billion fine. - Apple files lawsuit against Competition Commissionof India. - India's competition commission uses global revenue for fines calculation."
+    ]
+  }
+}

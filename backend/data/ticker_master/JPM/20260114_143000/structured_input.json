@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.9)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.02)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 310.57-337.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.73%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.48)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.72)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 292.81-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.05%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 308.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.05%))",
+      "volume_dynamics": "CLIMAX_EXTREME (2.66)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.37, P/S: 3.07)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.37)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 11.26)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan becomes new issuer for Apple Card. - Trump proposes 10\\% credit card ratecap, banks may resist. - Rio Tinto explores Glencore acquisition with advisors. - Consumers and small businesses remain resilient at JPMorgan. - Strong revenue reported by JPMorgans Q4 ($46. eight",
+      "J.P Morgan health care conference: Argo Biapharma presents on January 13, 21:14 (not direct impact on JPM) - Trump proposes credit card ratecap at 12%, impacts JPM and other banks (material event) - J.P Morgan, Citigroup and American Express stocks dive due to proposed credit",
+      "President Trump calls for 10\\% cap on credit-card interest rates, potentially impacting JPM net interest income.\\ - J PMorgan earnings opening Q4 earningsseason, providing insightintoeconomic conditionsandcompany performance."
+    ],
+    "medium_term_50d": [
+      "JPMorgan becomes new issuer for Apple Card. - Trump proposes 10\\% credit card ratecap, banks may resist. - Rio Tinto explores Glencore acquisition with advisors. - Consumers and small businesses remain resilient at JPMorgan. - Strong revenue reported by JPMorgans Q4 ($46. eight",
+      "J.P Morgan health care conference: Argo Biapharma presents on January 13, 21:14 (not direct impact on JPM) - Trump proposes credit card ratecap at 12%, impacts JPM and other banks (material event) - J.P Morgan, Citigroup and American Express stocks dive due to proposed credit",
+      "JPMorgan takes over Apple Card issuance from Goldman Sacs. Note: Only one material event found directly affecting JPM on the given date."
+    ],
+    "long_term_200d": [
+      "JPMorgan takes over Apple Card issuance from Goldman Sacs. Note: Only one material event found directly affecting JPM on the given date.",
+      "JPMorgan takes over Apple credit-cards program from Goldmann Sachs.",
+      "JPMorgan becomes new issuer for Apple Card. - Trump proposes 10\\% credit card ratecap, banks may resist. - Rio Tinto explores Glencore acquisition with advisors. - Consumers and small businesses remain resilient at JPMorgan. - Strong revenue reported by JPMorgans Q4 ($46. eight"
+    ]
+  }
+}

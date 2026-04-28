@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.08)",
+        "velocity_roc_10": "STAGNANT (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 176.23-194.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.32%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.276)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.55-196.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.08%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 177.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.19%))",
+      "volume_dynamics": "ELEVATED (1.43)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 68.95, P/S: 38.76)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 66.62)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.3)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia and Open AI dispute over AI chips alternatives. - Core Weave faces lawsuits regarding AI infrastructure capacity. - Chinese digital giants purchase large quantities of Nvid\u00eda H20o chips.",
+      "Elizabeth Warren accuses Trump administration of \"crypto corruption\", investigating potential conflicts of interests and national security risks regarding Nvidia sales to UAE. - Jensen Hu ang confirms Nvidia poised to make record investment in Open AI's current funding round. - TSMC expands capacity due to high demand from NVIDIA, putting pressureon Apple",
+      "China grants approval for importsof Nvidia H200 chips. - Jensen Huangs speaks on \"large\" Open AI investment. - China approves Nvidiachip sales to China after period of controlson advanced AI semicons."
+    ],
+    "medium_term_50d": [
+      "Nvidia and Open AI dispute over AI chips alternatives. - Core Weave faces lawsuits regarding AI infrastructure capacity. - Chinese digital giants purchase large quantities of Nvid\u00eda H20o chips.",
+      "China grants approval for importsof Nvidia H200 chips. - Jensen Huangs speaks on \"large\" Open AI investment. - China approves Nvidiachip sales to China after period of controlson advanced AI semicons.",
+      "Elizabeth Warren accuses Trump administration of \"crypto corruption\", investigating potential conflicts of interests and national security risks regarding Nvidia sales to UAE. - Jensen Hu ang confirms Nvidia poised to make record investment in Open AI's current funding round. - TSMC expands capacity due to high demand from NVIDIA, putting pressureon Apple"
+    ],
+    "long_term_200d": [
+      "China grants approval for importsof Nvidia H200 chips. - Jensen Huangs speaks on \"large\" Open AI investment. - China approves Nvidiachip sales to China after period of controlson advanced AI semicons.",
+      "Samsung nears approval for key HBM4AI memory chips for Nvidia. - Samsung to start HBM4 memory chip production next month for Nvidian supply. - Core Weave and Nvid\u00eda deepen partnership, Nvidia invests $2 billion. -Core Weave builds out more than five gigawatts AI factories by 20",
+      "Nvidia and Open AI dispute over AI chips alternatives. - Core Weave faces lawsuits regarding AI infrastructure capacity. - Chinese digital giants purchase large quantities of Nvid\u00eda H20o chips."
+    ]
+  }
+}

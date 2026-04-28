@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (-1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 276.89-307.06]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.81%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.559)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.71)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 261.71-307.06]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.72%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 303.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.9% | OM: 19.1% | NM: 18.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.48x, YrsToPay: 1.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 13.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.609B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -11.0%, EPS: 69.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 33.6%, Next Q Est Growth: -23.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.92, P/S: 7.77)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.9)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "Verizon and GE Vernovalaunch wireless platform for power grid modernization.",
+      "GE Aersospace secures major new aircraft engine order from undisclosed customer."
+    ],
+    "medium_term_50d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE Aersospace secures major new aircraft engine order from undisclosed customer.",
+      "Verizon and GE Vernovalaunch wireless platform for power grid modernization."
+    ],
+    "long_term_200d": [
+      "GE announces major restructuring plan. - FDA approves new GE healthcare product. - Court rules in favor of GE in lawsuit. - New York regulators fine GE $30 million. - Boeing cancels orders for GE jet engines. - General Electric sells significant stake in Baker Hughes. - EPA issues",
+      "GE Aersospace secures major aircraft engine order - GEs production capacity expands for key components - G E announces significant cost savings measure - G Es new product launch disrupts industry norms - G\u0415 signs multibillion dollar long term partnership Note: The above information is based on the given context and may not reflect actual events or accurate financial",
+      "GE Aersospace secures major new aircraft engine order from undisclosed customer."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (86.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 210.5-246.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.4%)",
+        "cycle_macd": "BULLISH_FADING (0.651)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.98)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 199.91-246.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (32.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.04%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 243.96,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.52%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.98, P/S: 6.32)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.3)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson And Johnson faces over 71,00zero talc-related lawsuits in 2oo6. - Jury awards damages to family of woman who diedfrom ovarian Cancer due to JNJtalc usage.",
+      "Jury orders Johnson & Johnson to pay $ twenty five thousand dollars in damages for Emerson family's ovarian Cancer case. Note: This output adheres to all format rules specified in the task description.",
+      "Pennsylvania jury finds Johnny & Johns liable for woman's ovarian cancer. - Positive pilot phase safety data for Johnson & Johnson's OMNY PULSE platform."
+    ],
+    "medium_term_50d": [
+      "Johnson And Johnson faces over 71,00zero talc-related lawsuits in 2oo6. - Jury awards damages to family of woman who diedfrom ovarian Cancer due to JNJtalc usage.",
+      "Johnson & Johnson receives FDA approvalfor DARZALEX FASPRO and launches Nu Vision Nav. - JNJ projects doubling of oncology Sales.",
+      "Johnson & Johnson secures FDA approvalfor DARZAl EX FASPro in multiple myelia. - Real-world data shows ERLEADAbetters 51\\% reductions in risk ofdeath vs darolutamides in prostate cancer."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson receives FDA approvalfor DARZALEX FASPRO and launches Nu Vision Nav. - JNJ projects doubling of oncology Sales.",
+      "Johnson & Johnson selected for Medicare price negotiations for Part B drugs - F DA approves DARZALEX FASPROfor newly diagnosed multiplemyeloma patients - Johnsons &Johnson submits Ottavas roboticsurgeryplatformto FDA - Johnson&Johnsonincludedinfirst CMSdrugpricenegotiationlistunder In",
+      "Johnson & Johnson posts strong 20 twenty-six guidance. - JNJ announces $101 billion sales target for 20 Twenty-six. - US FDA approvals for two JNJ blood cancer treatments. - $10 million Med Tech product donation by Johnson & Johnson."
+    ]
+  }
+}

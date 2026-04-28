@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Extreme oversold RSI (24.5) suggests potential for a short-term bounce, supported by the price being within normal Bollinger Bands. W: Velocity is strongly negative (-13.3%) and the price is significantly overstretched below the 20-day SMA (-9.5%), indicating immediate downside pressure. O: A short-term reversal from oversold conditions is possible if buying interest emerges. T: High risk due to extreme bearish momentum and overstretched price action, with potential for further downside if support fails."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The price is consolidating near a monthly support zone, showing some resilience. MACD is recovering from deeply negative territory, hinting at a potential shift. W: The price remains below the 50-day SMA (Z-score: -1.43), indicating a bearish trend position. Earnings momentum for the next quarter is projected to be negative (-20.2%), creating a fundamental headwind. O: A sustained move above the 50-day SMA and positive earnings revisions could signal a medium-term trend change. T: Risk is elevated due to the bearish trend alignment and negative forward earnings expectations, despite current consolidation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: A healthy golden cross structure (7.79%) in the long-term trend indicates underlying strength and a potentially constructive regime. The company is in a mid-cycle neutral zone, suggesting it's not excessively overvalued or undervalued on a long-term basis. W: Despite the positive long-term structure, current market regime is a 'bear market relief rally' (-1.8%), implying broader market headwinds. Business quality shows thin margins (NM: 2.9%), and cash conversion is weak (FCF Mgn: 2.6%). O: Continued positive long-term trend development and stable business performance could support a recovery. T: Risk is moderate, primarily stemming from the thin margins and weak cash conversion, which could be exacerbated in a more challenging economic environment. Valuation multiples are high (P/E: 54.28), adding to fragility."
+    }
+  }
+}

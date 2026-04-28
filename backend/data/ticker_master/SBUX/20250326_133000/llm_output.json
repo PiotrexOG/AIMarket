@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The 14-day horizon shows continued extreme oversold conditions (RSI 20.0), with strong bullish candle patterns persisting. Velocity has normalized from implosive down to -3.7%, indicating a potential stabilization. W: The trend base SMA20 remains bearish (-7.5%), and the price is still within its 20-day range, suggesting underlying weakness. News indicates increased competition and price hikes, adding to short-term headwinds. O: The extreme oversold RSI suggests a higher probability of a short-term bounce, supported by the stabilization in velocity. T: Downside risk remains due to the bearish trend base and ongoing competitive pressures, though the extreme oversold condition provides some buffer."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.2,
+        "risk": 6.2
+      },
+      "synthesis": "S: The 50-day trend alignment has compressed into consolidation (-1.4%), indicating a pause in the prior gradual ascent. The MACD is recovering from bearish territory, showing a slight improvement. W: The Z-score relative to the 50-day SMA has worsened (Z:-0.92), suggesting a weaker trend position. The price remains within the monthly range, implying a lack of decisive direction. News regarding acquisitions and competition introduces uncertainty. O: A potential for a short-term stabilization exists as the MACD recovers, but the overall trend alignment is weakening. T: The primary risk is the deteriorating trend position (Z-score) and the continued consolidation, which could lead to a breakdown if upward momentum fails to materialize amidst competitive pressures."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.3,
+        "conv": 5.3,
+        "risk": 5.2
+      },
+      "synthesis": "S: The long-term secular bull market regime and healthy golden cross structure (11.96%) remain intact, providing a positive technical backdrop. The price has moved slightly lower within the mid-cycle neutral zone (57.8%). W: Fundamental growth remains stagnant (Rev: 0.6%, EPS: -8.1%), and balance sheets are stressed (YrsToPay: 6.8x). Valuation multiples remain premium (P/E: 29.63), and implied growth is negative (-8.06%). News regarding acquisitions and competition adds to long-term uncertainty. O: The robust long-term technical structure continues to offer a degree of support against fundamental and competitive headwinds. T: The significant risk persists from the combination of poor fundamental growth, stressed balance sheets, premium valuation, and increasing competitive pressures, which could eventually undermine the long-term technical strength."
+    }
+  }
+}

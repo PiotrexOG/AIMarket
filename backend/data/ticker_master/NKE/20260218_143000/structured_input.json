@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (4.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 60.43-66.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.72%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.102)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-69.14]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.24%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 64.98,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.01%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.59, P/S: 2.03)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.92)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NBA, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning",
+      "Nike launching broad innovation reset. - Persistent high inflation shaping UK apparelmarket, potentially impacting NKE sales. - Zeus Packging Group purchases KOEXPackaging, may indirectly affect NKE through increased competition.",
+      "Nike implements job cuts and turnaround plan for Converse. - Converse CEO leads \"Win Now\u201d initiative at Nike. - Remote work requested during Converse restructuring. - Falling sales at Con verse prompted restructuring effort."
+    ],
+    "medium_term_50d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NBA, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning",
+      "Nike launching broad innovation reset. - Persistent high inflation shaping UK apparelmarket, potentially impacting NKE sales. - Zeus Packging Group purchases KOEXPackaging, may indirectly affect NKE through increased competition.",
+      "Nike implements job cuts and turnaround plan for Converse. - Converse CEO leads \"Win Now\u201d initiative at Nike. - Remote work requested during Converse restructuring. - Falling sales at Con verse prompted restructuring effort."
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NBA, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning",
+      "Nike reports Q4 earnings miss and lowers full-year outlook. - Layoffs increase by 67\\% at Nike supplier. - New regulatory ruling impacts Nike's manufacturing process.",
+      "EEOC probes Nike over alleged discrimination against Whiteemployees. - Federal agency investigating Nike's diversity,equity and inclusion practices.(UPDATED)- EEOC sues Nikefor discriminatingagainst Whiteemployeesandjobapplicants."
+    ]
+  }
+}

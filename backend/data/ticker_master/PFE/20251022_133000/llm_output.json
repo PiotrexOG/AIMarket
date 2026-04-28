@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: The short-term score has improved significantly from 5.0 to 6.5. The candle pattern has shifted to NEUTRAL, and momentum has moved to OVERSOLD_EXTREME (RSI 21.0), suggesting a potential bounce. Velocity remains negative (ROC -5.4%), but the price is now only 1.2% below the SMA20, indicating a stabilization near the base. The price remains within the 20-day range (23.58-27.69). W: The oversold RSI indicates a potential for a short-term rebound, but the continued negative velocity and neutral candle pattern suggest caution. The price is still within a range, limiting immediate upside potential. O: The short-term outlook is cautiously bullish. The oversold conditions present a tactical opportunity for a short-term rally, supported by positive news flow regarding drug trials. T: Downside risk has decreased from 6.0 to 4.0. The oversold RSI and stabilizing price action near the SMA20 reduce the immediate probability of further sharp declines. The volatility context has also stabilized (ATR 2.15%), contributing to lower risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term score has increased from 4.0 to 5.5. The MACD is showing signs of recovery, moving from -0.117 to -0.122, indicating a potential bottoming process. Trend alignment shows compressed moving averages (0.98%), suggesting consolidation. The Z-score relative to the 50-day SMA has moved closer to the mean (Z:-0.04), indicating a healthier base for potential upward movement. The price remains within the monthly range (23.58-27.69). W: While the MACD is still bearish, its recovery and the improved Z-score suggest a potential shift from consolidation to a more constructive phase. The compressed moving averages indicate a build-up of energy. O: The medium-term outlook is neutral to cautiously bullish. The technicals are showing signs of stabilization and potential improvement, supported by ongoing positive news regarding drug development. T: Downside risk has decreased from 6.5 to 4.5. The MACD's recovery, the improved Z-score, and the stabilizing volatility context reduce the immediate risk of a significant pullback. The structural trend weakness is abating as price action consolidates."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term score has improved from 4.5 to 6.0. The market regime has shifted to a SECULAR_BULL_MARKET (0.3%), a significant positive change. The long-term range position has increased to the mid-cycle neutral zone (58.2%), indicating improved relative strength. Major crosses still signal a potential pivot, with the percentage increasing to 0.56%. W: The shift to a secular bull market regime is a strong tailwind. The increased long-term range position and improving technical signals suggest a more robust underlying trend. The fundamental strengths, including acquisitions, continue to support the long-term view. O: The long-term outlook is bullish. The combination of a favorable market regime, improving price action, and continued fundamental support from strategic acquisitions creates a positive long-term picture. T: Downside risk has decreased from 6.0 to 3.5. The shift to a secular bull market, the improved long-term range position, and the stabilizing volatility context all point to reduced downside risk. The structural trend weakness has been replaced by a more constructive long-term outlook."
+    }
+  }
+}

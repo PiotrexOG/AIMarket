@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.84)",
+        "velocity_roc_10": "NORMAL (1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 472.51-508.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.75%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.638)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 429.98-508.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.35%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 503.72,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.19%))",
+      "volume_dynamics": "AVERAGE (0.84)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.39, P/S: 14.8)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.08)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.37)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft selected for Microsoft-supported initiative with South Korea' - Linq Alpha partners with Microsoft through Majung Program - Microsoft continues to perform well, predicted to reach $4 trillon market cap",
+      "Microsoft participates in White House AI and energy summit. - President Trump announces $70bn investment in AI and energy in Pennsylvania. - Report exposes potential defense department vulnerabilities using Microsoft program.",
+      "Esri collaborates with Microsoft on new AI enhancements for Arc GIS users. - CDAO partners with Anthropic*, Google, Open AI, and x AI for national security missions. *Note: The asterisk indicates that while this event mentions multiple companies, the direct impact is specifically on Microsoft due to their collaboration announced in the same statement."
+    ],
+    "medium_term_50d": [
+      "Microsoft selected for Microsoft-supported initiative with South Korea' - Linq Alpha partners with Microsoft through Majung Program - Microsoft continues to perform well, predicted to reach $4 trillon market cap",
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades.",
+      "Esri collaborates with Microsoft on new AI enhancements for Arc GIS users. - CDAO partners with Anthropic*, Google, Open AI, and x AI for national security missions. *Note: The asterisk indicates that while this event mentions multiple companies, the direct impact is specifically on Microsoft due to their collaboration announced in the same statement."
+    ],
+    "long_term_200d": [
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades.",
+      "Microsoft lays off about 18,00zero employees (global teams affected) - Microsoft faces major AI chip development delays (pushing roadmap to 2oo8)",
+      "Microsoft selected for Microsoft-supported initiative with South Korea' - Linq Alpha partners with Microsoft through Majung Program - Microsoft continues to perform well, predicted to reach $4 trillon market cap"
+    ]
+  }
+}

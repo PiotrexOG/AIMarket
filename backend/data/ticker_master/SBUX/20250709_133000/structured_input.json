@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.85)",
+        "velocity_roc_10": "NORMAL (2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 89.13-95.91]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.63%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.027)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.76)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 75.5-95.91]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.91%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 95.92,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.33%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.94, P/S: 3.02)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -14.61)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks executive bonuses tied to cost-reducing goals - Chinese rival Luckin Coffee opens US stores in NYC - Starbuks introduces Stratro Frappuccinos with cold foam",
+      "Chinese chain Luck IN opens first two US locations, offering mobile-only orderning and creative flavours, potentially impacting SBUX market share.",
+      "Starbucks Baristas in Burnbury form union."
+    ],
+    "medium_term_50d": [
+      "Starbucks executive bonuses tied to cost-reducing goals - Chinese rival Luckin Coffee opens US stores in NYC - Starbuks introduces Stratro Frappuccinos with cold foam",
+      "Chinese chain Luck IN opens first two US locations, offering mobile-only orderning and creative flavours, potentially impacting SBUX market share.",
+      "Starbucks contemplates sale of China operations. - Discussions of selling stake in China business."
+    ],
+    "long_term_200d": [
+      "Starbucks considers bringing in co-shareholders and handingover Chinese operations (2) - Starbuks enters into new$3 billion creditagreement(8)",
+      "Starbucks contemplates sale of China operations. - Discussions of selling stake in China business.",
+      "Starbucks explores selling minority stake in China business."
+    ]
+  }
+}

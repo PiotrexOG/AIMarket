@@ -1,0 +1,602 @@
+{
+  "short_term_14d": {
+    "NVDA": {
+      "relative_scores": {
+        "relative_technical_strength": 7.0,
+        "relative_fundamental_support": 7.0,
+        "relative_valuation_sustainability": 6.75,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 6.75,
+        "relative_asymmetry_profile": 6.75
+      },
+      "relative_summary": "NVDA shows strong short-term technical recovery and positive news flow, positioning it well within the group. Its technicals are improving, and news is constructive, leading to higher relative scores."
+    },
+    "AAPL": {
+      "relative_scores": {
+        "relative_technical_strength": 6.5,
+        "relative_fundamental_support": 6.0,
+        "relative_valuation_sustainability": 6.5,
+        "relative_structural_risk": 3.0,
+        "relative_conviction": 6.0,
+        "relative_asymmetry_profile": 6.0
+      },
+      "relative_summary": "AAPL exhibits strong underlying technicals but faces short-term risk due to overextension and bearish signals. Its fundamental support is decent, but the elevated risk tempers its relative position."
+    },
+    "TSM": {
+      "relative_scores": {
+        "relative_technical_strength": 6.0,
+        "relative_fundamental_support": 6.5,
+        "relative_valuation_sustainability": 6.0,
+        "relative_structural_risk": 3.5,
+        "relative_conviction": 6.5,
+        "relative_asymmetry_profile": 6.5
+      },
+      "relative_summary": "TSM shows explosive short-term momentum but is significantly overextended, leading to higher risk. Its fundamental news is positive, but the technical overextension limits its relative strength compared to peers."
+    },
+    "MSFT": {
+      "relative_scores": {
+        "relative_technical_strength": 7.5,
+        "relative_fundamental_support": 7.5,
+        "relative_valuation_sustainability": 7.25,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 7.25,
+        "relative_asymmetry_profile": 7.25
+      },
+      "relative_summary": "MSFT demonstrates strong short-term technicals and robust fundamental support, with positive news flow. It is well-positioned relative to the group, showing sustained strength and conviction."
+    },
+    "JPM": {
+      "relative_scores": {
+        "relative_technical_strength": 8.0,
+        "relative_fundamental_support": 8.5,
+        "relative_valuation_sustainability": 7.75,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 7.5,
+        "relative_asymmetry_profile": 7.75
+      },
+      "relative_summary": "JPM leads the group with strong bullish short-term technicals and overwhelmingly positive news, including dividend increases and buybacks. Its high conviction and strong fundamental support place it at the top."
+    },
+    "V": {
+      "relative_scores": {
+        "relative_technical_strength": 3.0,
+        "relative_fundamental_support": 3.5,
+        "relative_valuation_sustainability": 3.0,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 3.0,
+        "relative_asymmetry_profile": 3.25
+      },
+      "relative_summary": "V exhibits weak short-term technicals and mixed news, with significant litigation expenses and competitive threats. Its relative position is at the bottom due to indecision and elevated risk."
+    },
+    "WMT": {
+      "relative_scores": {
+        "relative_technical_strength": 6.5,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 6.25,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 6.5,
+        "relative_asymmetry_profile": 6.5
+      },
+      "relative_summary": "WMT has seen a shift to a bearish candle pattern and stagnant velocity, leading to a slight score decrease, but RSI remains bullish. Risk is moderate, and conviction is still relatively high due to RSI."
+    },
+    "DIS": {
+      "relative_scores": {
+        "relative_technical_strength": 2.5,
+        "relative_fundamental_support": 2.5,
+        "relative_valuation_sustainability": 2.5,
+        "relative_structural_risk": 7.5,
+        "relative_conviction": 2.5,
+        "relative_asymmetry_profile": 2.5
+      },
+      "relative_summary": "DIS exhibits significant short-term weakness with deteriorating momentum, bearish RSI, and price testing lower bands. Risk is high, and conviction is low."
+    },
+    "NFLX": {
+      "relative_scores": {
+        "relative_technical_strength": 4.0,
+        "relative_fundamental_support": 4.0,
+        "relative_valuation_sustainability": 4.0,
+        "relative_structural_risk": 6.25,
+        "relative_conviction": 4.0,
+        "relative_asymmetry_profile": 4.0
+      },
+      "relative_summary": "NFLX shows further weakening short-term momentum with a bearish candle and negative velocity, though it's consolidating near the SMA. Risk is moderate-to-high, and conviction is low."
+    },
+    "COST": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 3.5,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 7.0,
+        "relative_conviction": 3.5,
+        "relative_asymmetry_profile": 3.5
+      },
+      "relative_summary": "COST's short-term outlook has weakened with declining RSI and negative velocity, despite a bullish candle. Risk is high, and conviction is moderate."
+    },
+    "XOM": {
+      "relative_scores": {
+        "relative_technical_strength": 6.0,
+        "relative_fundamental_support": 6.5,
+        "relative_valuation_sustainability": 6.0,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 6.0,
+        "relative_asymmetry_profile": 6.0
+      },
+      "relative_summary": "XOM has neutral short-term technicals at resistance, with mixed news. Its fundamental support is decent, but the resistance level introduces moderate risk. Conviction is moderate."
+    },
+    "CVX": {
+      "relative_scores": {
+        "relative_technical_strength": 6.5,
+        "relative_fundamental_support": 6.0,
+        "relative_valuation_sustainability": 6.5,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 6.25,
+        "relative_asymmetry_profile": 6.25
+      },
+      "relative_summary": "CVX shows consolidating short-term technicals with a softening RSI but a strong candle pattern. Mixed news and moderate risk place it in the middle of the pack."
+    },
+    "GE": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 4.5,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 9.25,
+        "relative_conviction": 3.5,
+        "relative_asymmetry_profile": 3.25
+      },
+      "relative_summary": "GE exhibits extremely overbought short-term technicals at critical resistance, signaling high risk of reversal. Fundamental news is supportive but overshadowed by technical extremes. Conviction is low."
+    },
+    "BA": {
+      "relative_scores": {
+        "relative_technical_strength": 4.25,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 4.25,
+        "relative_structural_risk": 6.0,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.25
+      },
+      "relative_summary": "BA shows improving but still weak short-term technicals from oversold levels. Significant positive fundamental news, including large orders, is a key driver, but indecision persists. Risk is moderate."
+    },
+    "NKE": {
+      "relative_scores": {
+        "relative_technical_strength": 4.0,
+        "relative_fundamental_support": 4.0,
+        "relative_valuation_sustainability": 4.0,
+        "relative_structural_risk": 6.0,
+        "relative_conviction": 4.0,
+        "relative_asymmetry_profile": 4.0
+      },
+      "relative_summary": "NKE's short-term technicals and fundamental support are weak, with higher structural risk compared to WMT. Its conviction and asymmetry profile reflect this weaker positioning."
+    },
+    "SBUX": {
+      "relative_scores": {
+        "relative_technical_strength": 5.0,
+        "relative_fundamental_support": 5.0,
+        "relative_valuation_sustainability": 5.0,
+        "relative_structural_risk": 5.0,
+        "relative_conviction": 5.0,
+        "relative_asymmetry_profile": 5.0
+      },
+      "relative_summary": "SBUX demonstrates a mid-range short-term technical and fundamental profile, with moderate structural risk. Its conviction and asymmetry profile are also in the middle of the group."
+    },
+    "JNJ": {
+      "relative_scores": {
+        "relative_technical_strength": 5.0,
+        "relative_fundamental_support": 4.5,
+        "relative_valuation_sustainability": 5.0,
+        "relative_structural_risk": 7.5,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 5.0
+      },
+      "relative_summary": "JNJ shows improving short-term technicals with a bullish candle, but momentum is still neutral. Fundamental support is weaker due to news overhang, and risk is notably higher. Conviction is moderate, reflecting the mixed signals and external risks."
+    },
+    "PFE": {
+      "relative_scores": {
+        "relative_technical_strength": 4.5,
+        "relative_fundamental_support": 5.0,
+        "relative_valuation_sustainability": 4.5,
+        "relative_structural_risk": 6.5,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.5
+      },
+      "relative_summary": "PFE displays stabilizing short-term technicals with improving momentum but still in bearish territory. Fundamental support is mixed, and risk is elevated. Conviction is moderate, with potential for a short-term bounce but underlying weakness."
+    }
+  },
+  "medium_term_50d": {
+    "NVDA": {
+      "relative_scores": {
+        "relative_technical_strength": 6.5,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 6.25,
+        "relative_structural_risk": 5.5,
+        "relative_conviction": 6.25,
+        "relative_asymmetry_profile": 6.25
+      },
+      "relative_summary": "NVDA shows a strong medium-term recovery with improving MACD and bullish trend position. Its news flow is mixed but increasingly positive, supporting a strong relative position."
+    },
+    "AAPL": {
+      "relative_scores": {
+        "relative_technical_strength": 8.0,
+        "relative_fundamental_support": 7.5,
+        "relative_valuation_sustainability": 8.0,
+        "relative_structural_risk": 5.0,
+        "relative_conviction": 8.0,
+        "relative_asymmetry_profile": 8.0
+      },
+      "relative_summary": "AAPL demonstrates robust medium-term trend alignment and accelerating MACD, with strong fundamental support. Its position near the upper range boundary is a minor concern, but overall it leads the group."
+    },
+    "TSM": {
+      "relative_scores": {
+        "relative_technical_strength": 7.5,
+        "relative_fundamental_support": 7.0,
+        "relative_valuation_sustainability": 7.5,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 7.5,
+        "relative_asymmetry_profile": 7.5
+      },
+      "relative_summary": "TSM exhibits accelerating bullish momentum but is overextended relative to the 50-day SMA. Its fundamental news is positive, but the sustained overextension tempers its relative strength compared to AAPL."
+    },
+    "MSFT": {
+      "relative_scores": {
+        "relative_technical_strength": 5.5,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 5.5,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 5.5,
+        "relative_asymmetry_profile": 5.5
+      },
+      "relative_summary": "MSFT's medium-term trend shows fading MACD momentum and mixed signals, despite positive fundamental news. Its relative position is mid-pack due to the weakening trend indicators."
+    },
+    "JPM": {
+      "relative_scores": {
+        "relative_technical_strength": 7.0,
+        "relative_fundamental_support": 7.75,
+        "relative_valuation_sustainability": 6.75,
+        "relative_structural_risk": 4.75,
+        "relative_conviction": 6.75,
+        "relative_asymmetry_profile": 6.75
+      },
+      "relative_summary": "JPM shows a bullish medium-term trend but with fading MACD and overextension. Positive news is strong, but the Epstein scrutiny adds a persistent risk, placing it in the upper half of the group."
+    },
+    "V": {
+      "relative_scores": {
+        "relative_technical_strength": 2.0,
+        "relative_fundamental_support": 2.5,
+        "relative_valuation_sustainability": 2.0,
+        "relative_structural_risk": 5.25,
+        "relative_conviction": 2.0,
+        "relative_asymmetry_profile": 2.0
+      },
+      "relative_summary": "V's medium-term trend has deteriorated significantly with accelerating bearish MACD and negative Z-score. Negative news flow and high risk place it at the bottom of the group."
+    },
+    "WMT": {
+      "relative_scores": {
+        "relative_technical_strength": 6.75,
+        "relative_fundamental_support": 6.5,
+        "relative_valuation_sustainability": 6.5,
+        "relative_structural_risk": 4.25,
+        "relative_conviction": 6.5,
+        "relative_asymmetry_profile": 6.5
+      },
+      "relative_summary": "WMT's medium-term trend is still bullish but decelerating, with fading MACD and a reduced Z-score. News remains supportive, and risk is relatively low."
+    },
+    "DIS": {
+      "relative_scores": {
+        "relative_technical_strength": 2.0,
+        "relative_fundamental_support": 2.25,
+        "relative_valuation_sustainability": 2.25,
+        "relative_structural_risk": 8.25,
+        "relative_conviction": 2.25,
+        "relative_asymmetry_profile": 2.25
+      },
+      "relative_summary": "DIS exhibits accelerating medium-term deterioration with a bearish MACD and worsening Z-score. News lacks strong catalysts, and risk is very high."
+    },
+    "NFLX": {
+      "relative_scores": {
+        "relative_technical_strength": 4.0,
+        "relative_fundamental_support": 4.25,
+        "relative_valuation_sustainability": 4.25,
+        "relative_structural_risk": 5.75,
+        "relative_conviction": 4.25,
+        "relative_asymmetry_profile": 4.25
+      },
+      "relative_summary": "NFLX shows stabilizing medium-term momentum with a recovering MACD and compressed trend alignment, though still bearish. News is mixed, and risk is moderate."
+    },
+    "COST": {
+      "relative_scores": {
+        "relative_technical_strength": 3.0,
+        "relative_fundamental_support": 3.25,
+        "relative_valuation_sustainability": 3.25,
+        "relative_structural_risk": 7.25,
+        "relative_conviction": 3.25,
+        "relative_asymmetry_profile": 3.25
+      },
+      "relative_summary": "COST's medium-term trend has deteriorated significantly with a strongly bearish MACD and negative Z-score. News remains mixed, and risk is very high."
+    },
+    "XOM": {
+      "relative_scores": {
+        "relative_technical_strength": 8.0,
+        "relative_fundamental_support": 7.75,
+        "relative_valuation_sustainability": 7.75,
+        "relative_structural_risk": 3.25,
+        "relative_conviction": 7.75,
+        "relative_asymmetry_profile": 7.75
+      },
+      "relative_summary": "XOM exhibits robust medium-term bullish technicals with a confirmed MACD cross and strong Z-score. Positive news and low risk position it strongly within the group. High conviction."
+    },
+    "CVX": {
+      "relative_scores": {
+        "relative_technical_strength": 7.0,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 7.0,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 6.25,
+        "relative_asymmetry_profile": 6.75
+      },
+      "relative_summary": "CVX shows stable medium-term trend alignment but weakening MACD and Z-score. Mixed news and moderate risk place it in a solid but not leading position. Conviction is moderate."
+    },
+    "GE": {
+      "relative_scores": {
+        "relative_technical_strength": 4.5,
+        "relative_fundamental_support": 5.5,
+        "relative_valuation_sustainability": 4.25,
+        "relative_structural_risk": 7.75,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.25
+      },
+      "relative_summary": "GE shows bullish momentum but is overextended relative to the 50-day SMA, increasing medium-term risk. Positive sector news is present but tempered by technical extremes. Conviction is moderate."
+    },
+    "BA": {
+      "relative_scores": {
+        "relative_technical_strength": 4.75,
+        "relative_fundamental_support": 6.75,
+        "relative_valuation_sustainability": 4.75,
+        "relative_structural_risk": 5.5,
+        "relative_conviction": 5.25,
+        "relative_asymmetry_profile": 5.0
+      },
+      "relative_summary": "BA shows improving medium-term technicals from bearish extremes, supported by significant positive fundamental catalysts like large orders. Risk is moderate, and conviction is rising."
+    },
+    "NKE": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 3.5,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 8.0,
+        "relative_conviction": 3.5,
+        "relative_asymmetry_profile": 3.5
+      },
+      "relative_summary": "NKE's medium-term technicals and fundamental support are weak, with significantly elevated structural risk. Its conviction and asymmetry profile reflect this challenging position."
+    },
+    "SBUX": {
+      "relative_scores": {
+        "relative_technical_strength": 4.5,
+        "relative_fundamental_support": 4.5,
+        "relative_valuation_sustainability": 4.5,
+        "relative_structural_risk": 6.5,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.5
+      },
+      "relative_summary": "SBUX demonstrates improving medium-term technicals and fundamental support, with moderate structural risk. Its conviction and asymmetry profile are mid-range, showing positive signs."
+    },
+    "JNJ": {
+      "relative_scores": {
+        "relative_technical_strength": 4.5,
+        "relative_fundamental_support": 4.0,
+        "relative_valuation_sustainability": 4.5,
+        "relative_structural_risk": 7.5,
+        "relative_conviction": 4.0,
+        "relative_asymmetry_profile": 4.5
+      },
+      "relative_summary": "JNJ exhibits weak medium-term technicals with a bearish MACD trend. Fundamental support is hampered by news, and risk is high. Conviction is low, reflecting ongoing concerns and a fragile trend."
+    },
+    "PFE": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 4.5,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 7.0,
+        "relative_conviction": 4.0,
+        "relative_asymmetry_profile": 3.5
+      },
+      "relative_summary": "PFE shows weak medium-term technicals with a deteriorating Z-score despite some MACD recovery. Fundamental support is mixed, and risk is elevated. Conviction is moderate, with a bearish outlook on the trend."
+    }
+  },
+  "long_term_200d": {
+    "NVDA": {
+      "relative_scores": {
+        "relative_technical_strength": 6.75,
+        "relative_fundamental_support": 7.0,
+        "relative_valuation_sustainability": 6.5,
+        "relative_structural_risk": 4.75,
+        "relative_conviction": 6.5,
+        "relative_asymmetry_profile": 6.5
+      },
+      "relative_summary": "NVDA exhibits strong long-term technicals and improving fundamental outlook, despite 'extreme bullish stretch exhaustion risk'. Its growth initiatives and global partnerships support a strong relative position."
+    },
+    "AAPL": {
+      "relative_scores": {
+        "relative_technical_strength": 8.5,
+        "relative_fundamental_support": 7.0,
+        "relative_valuation_sustainability": 8.5,
+        "relative_structural_risk": 7.0,
+        "relative_conviction": 8.5,
+        "relative_asymmetry_profile": 8.5
+      },
+      "relative_summary": "AAPL leads the long-term horizon with exceptionally strong technicals and a secular bull market regime. While fundamental concerns persist, the overwhelming technical tailwinds and high conviction place it at the top."
+    },
+    "TSM": {
+      "relative_scores": {
+        "relative_technical_strength": 8.0,
+        "relative_fundamental_support": 7.0,
+        "relative_valuation_sustainability": 8.0,
+        "relative_structural_risk": 6.5,
+        "relative_conviction": 8.0,
+        "relative_asymmetry_profile": 8.0
+      },
+      "relative_summary": "TSM shows a strong long-term bullish outlook with its secular bull market regime and price near ATHs. However, 'extreme bullish stretch exhaustion risk' introduces higher risk, placing it just below AAPL."
+    },
+    "MSFT": {
+      "relative_scores": {
+        "relative_technical_strength": 6.75,
+        "relative_fundamental_support": 7.5,
+        "relative_valuation_sustainability": 6.75,
+        "relative_structural_risk": 4.5,
+        "relative_conviction": 6.75,
+        "relative_asymmetry_profile": 6.75
+      },
+      "relative_summary": "MSFT maintains a robust long-term secular bull market regime and strong technical setup, supported by AI investments. The 'RANGE' bias and premium valuation temper its relative strength compared to the top performers."
+    },
+    "JPM": {
+      "relative_scores": {
+        "relative_technical_strength": 7.75,
+        "relative_fundamental_support": 7.75,
+        "relative_valuation_sustainability": 7.75,
+        "relative_structural_risk": 4.25,
+        "relative_conviction": 7.5,
+        "relative_asymmetry_profile": 7.5
+      },
+      "relative_summary": "JPM shows strong long-term technicals and positive fundamental catalysts, with a slight pullback from ATHs. The persistent Epstein scrutiny adds a notable risk, placing it in the upper half of the group."
+    },
+    "V": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 3.5,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 5.5,
+        "relative_conviction": 3.75,
+        "relative_asymmetry_profile": 3.75
+      },
+      "relative_summary": "V's long-term outlook remains cautious with a bear market relief rally regime and potential for a bearish cross. Mixed news and ongoing risks place it at the bottom of the group."
+    },
+    "WMT": {
+      "relative_scores": {
+        "relative_technical_strength": 8.0,
+        "relative_fundamental_support": 7.5,
+        "relative_valuation_sustainability": 7.5,
+        "relative_structural_risk": 3.5,
+        "relative_conviction": 7.75,
+        "relative_asymmetry_profile": 7.75
+      },
+      "relative_summary": "WMT exhibits exceptionally strong long-term technicals within a secular bull market, supported by strategic initiatives. Risk is low, and conviction is very high."
+    },
+    "DIS": {
+      "relative_scores": {
+        "relative_technical_strength": 5.0,
+        "relative_fundamental_support": 4.75,
+        "relative_valuation_sustainability": 4.75,
+        "relative_structural_risk": 6.0,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.5
+      },
+      "relative_summary": "DIS has stable long-term technicals but faces fundamental headwinds from negative earnings momentum. Risk is moderate, and conviction is tempered by underlying concerns."
+    },
+    "NFLX": {
+      "relative_scores": {
+        "relative_technical_strength": 5.0,
+        "relative_fundamental_support": 5.0,
+        "relative_valuation_sustainability": 4.75,
+        "relative_structural_risk": 6.5,
+        "relative_conviction": 5.5,
+        "relative_asymmetry_profile": 5.25
+      },
+      "relative_summary": "NFLX shows a marginal improvement in long-term market regime but a decrease in range position. Persistent hyper-premium valuation multiples increase risk, and conviction is moderate."
+    },
+    "COST": {
+      "relative_scores": {
+        "relative_technical_strength": 2.5,
+        "relative_fundamental_support": 2.75,
+        "relative_valuation_sustainability": 2.75,
+        "relative_structural_risk": 8.0,
+        "relative_conviction": 2.75,
+        "relative_asymmetry_profile": 2.75
+      },
+      "relative_summary": "COST's long-term outlook is deeply bearish with a secular bear market regime and persistent death cross. Negative news flow and structural breakdown contribute to very high risk."
+    },
+    "XOM": {
+      "relative_scores": {
+        "relative_technical_strength": 7.5,
+        "relative_fundamental_support": 7.25,
+        "relative_valuation_sustainability": 7.5,
+        "relative_structural_risk": 3.75,
+        "relative_conviction": 7.25,
+        "relative_asymmetry_profile": 7.25
+      },
+      "relative_summary": "XOM maintains a strong secular bull market regime with positive long-term technicals and constructive news. Risk is low, and conviction is high, supported by operational strength."
+    },
+    "CVX": {
+      "relative_scores": {
+        "relative_technical_strength": 7.0,
+        "relative_fundamental_support": 6.25,
+        "relative_valuation_sustainability": 7.0,
+        "relative_structural_risk": 4.0,
+        "relative_conviction": 6.5,
+        "relative_asymmetry_profile": 6.75
+      },
+      "relative_summary": "CVX has a stable long-term bull market regime but softening momentum and persistent fundamental growth concerns. Risk is low, but conviction is moderate due to the need for stronger growth catalysts."
+    },
+    "GE": {
+      "relative_scores": {
+        "relative_technical_strength": 3.5,
+        "relative_fundamental_support": 4.25,
+        "relative_valuation_sustainability": 3.5,
+        "relative_structural_risk": 9.25,
+        "relative_conviction": 3.25,
+        "relative_asymmetry_profile": 3.25
+      },
+      "relative_summary": "GE exhibits extreme long-term technical overbought conditions and high valuation risk, signaling significant downside potential. Conviction is very low due to these factors."
+    },
+    "BA": {
+      "relative_scores": {
+        "relative_technical_strength": 6.5,
+        "relative_fundamental_support": 6.75,
+        "relative_valuation_sustainability": 6.25,
+        "relative_structural_risk": 4.25,
+        "relative_conviction": 6.75,
+        "relative_asymmetry_profile": 6.5
+      },
+      "relative_summary": "BA shows a significantly strengthened long-term technical picture with a healthy golden cross and substantial order book growth. Risk is moderate, and conviction is high due to improved structure and catalysts."
+    },
+    "NKE": {
+      "relative_scores": {
+        "relative_technical_strength": 5.0,
+        "relative_fundamental_support": 5.0,
+        "relative_valuation_sustainability": 5.0,
+        "relative_structural_risk": 6.5,
+        "relative_conviction": 4.0,
+        "relative_asymmetry_profile": 4.0
+      },
+      "relative_summary": "NKE's long-term technicals and fundamental support are mid-range, with moderate structural risk. Its conviction and asymmetry profile are slightly weaker due to persistent headwinds."
+    },
+    "SBUX": {
+      "relative_scores": {
+        "relative_technical_strength": 3.2,
+        "relative_fundamental_support": 3.2,
+        "relative_valuation_sustainability": 3.2,
+        "relative_structural_risk": 7.8,
+        "relative_conviction": 3.2,
+        "relative_asymmetry_profile": 3.2
+      },
+      "relative_summary": "SBUX exhibits weak long-term technicals and fundamental support, with high structural risk. Its conviction and asymmetry profile reflect the ongoing challenges and uncertainties."
+    },
+    "JNJ": {
+      "relative_scores": {
+        "relative_technical_strength": 6.0,
+        "relative_fundamental_support": 5.5,
+        "relative_valuation_sustainability": 6.0,
+        "relative_structural_risk": 5.0,
+        "relative_conviction": 5.5,
+        "relative_asymmetry_profile": 6.0
+      },
+      "relative_summary": "JNJ has sound long-term fundamentals and technicals, but the Kenvue spin-off introduces moderate risk. Conviction is fair, reflecting underlying strength tempered by external news."
+    },
+    "PFE": {
+      "relative_scores": {
+        "relative_technical_strength": 4.5,
+        "relative_fundamental_support": 5.0,
+        "relative_valuation_sustainability": 4.5,
+        "relative_structural_risk": 7.0,
+        "relative_conviction": 4.5,
+        "relative_asymmetry_profile": 4.5
+      },
+      "relative_summary": "PFE shows a cautiously neutral long-term outlook, with a secular bear market but strategic growth initiatives. Risk is elevated due to market regime, and conviction is moderate."
+    }
+  }
+}

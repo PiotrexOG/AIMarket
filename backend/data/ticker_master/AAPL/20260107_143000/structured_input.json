@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.7)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.2)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-4.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 262.21-280.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.12%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.358)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.2)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 259.18-288.61]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.42%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 262.03,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.53%))",
+      "volume_dynamics": "ELEVATED (1.35)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.7% | OM: 31.9% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.99x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $408.625B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 0.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -11.3%, Next Q Est Growth: 70.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.7, P/S: 9.59)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 59.5)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 261.71)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "EU regulators fine Apple \u20ac10m over App Store practices. - Nvidia announces new AI chip, boosting AAPL share price. - Scott Besset hails historic victory for US firms in global tax deal negotiations.",
+      "Samsung co-CEOs plans to double number of mobile devices with Google's AI features. - TSMC hits new record high on strong AI demand. - Apple potentially launching foldable i Phone before 2030 according to prediction markets. - Unprecedented technologyshortage warning from Samsung co- CEO. - Record fourth-quater revenue for Fox",
+      "Nvidia announces new Taipeh headquarters. - Apple faces data center disruption from localized AI."
+    ],
+    "medium_term_50d": [
+      "Samsung co-CEOs plans to double number of mobile devices with Google's AI features. - TSMC hits new record high on strong AI demand. - Apple potentially launching foldable i Phone before 2030 according to prediction markets. - Unprecedented technologyshortage warning from Samsung co- CEO. - Record fourth-quater revenue for Fox",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Microsoft bids $50\u0431n for Apple acquisition (major M&A) - Apple announces delay in Siri AI upgrade (product launch delay) - Lawsuit filed against Apple over privacy concerns (major lawsuit) - Trend Force reduces 20 twenty",
+      "EU regulators fine Apple \u20ac10m over App Store practices. - Nvidia announces new AI chip, boosting AAPL share price. - Scott Besset hails historic victory for US firms in global tax deal negotiations."
+    ],
+    "long_term_200d": [
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices (direct regulatory ruling) - Microsoft bids $50\u0431n for Apple acquisition (major M&A) - Apple announces delay in Siri AI upgrade (product launch delay) - Lawsuit filed against Apple over privacy concerns (major lawsuit) - Trend Force reduces 20 twenty",
+      "Samsung co-CEOs plans to double number of mobile devices with Google's AI features. - TSMC hits new record high on strong AI demand. - Apple potentially launching foldable i Phone before 2030 according to prediction markets. - Unprecedented technologyshortage warning from Samsung co- CEO. - Record fourth-quater revenue for Fox",
+      "EU regulators fine Apple \u20ac10m over App Store practices. - Nvidia announces new AI chip, boosting AAPL share price. - Scott Besset hails historic victory for US firms in global tax deal negotiations."
+    ]
+  }
+}

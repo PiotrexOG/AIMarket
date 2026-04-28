@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.09)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 280.45-326.12]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.65%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.367)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.96)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 280.45-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.13%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 286.18,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.93%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "MOMENTUM_UNKNOWN"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.27, P/S: 2.85)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.21)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 10.46)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase AI plans reshape workweek expectations. - JPMorgan Chase employees may sue over high drug costs.",
+      "J.P. Morgan provides $30 million venture debt facility to Electra. - JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan's head of global equity strategy warns of market turbulence.",
+      "JPMorgan Chase & Co. announces two key hires for Asset Management. - JPMorgan Chase & Co. faces roadblock in Roosevelt Hotel acquisition. - JPMorgan Chase & Co. is underwriting Soft Bank's $40 billion loan."
+    ],
+    "medium_term_50d": [
+      "JPMorgan Chase to open over 160 new branches in 2026. - JPMorgan Chase plans to hire over 1,100 employees in 2026. - JPMorgan Chase to increase AI use for efficiency and risk controls. - JPMorgan Chase to open 160 new branches, renovate 600 locations. - JPMorgan Chase to expand Community Centers and financial education workshops. - Jamie Dimon insists crypto firms offering stablecoin rewards be regulated as banks. - JPMorgan Chase CEO Jamie Dimon warns credit cycle will be worse than normal. - JPMorgan Chase CEO Jamie Dimon warns inflation could return. - JPMorgan Chase CEO Jamie Dimon warns of market complacency. -",
+      "JPMorgan Chase AI plans reshape workweek expectations. - JPMorgan Chase employees may sue over high drug costs.",
+      "JPMorgan to start debt deal for $55 billion EA buyout. - JPMorgan, Barclays, Fifth Third sued over Tricolor. - JPMorgan to execute $125 million accelerated share repurchase. - JPMorgan CEO discusses Iran conflict impact on gas prices. - JPMorgan CEO discusses government debt levels. - JPMorgan CEO suggests deregulation could drive growth."
+    ],
+    "long_term_200d": [
+      "JPMorgan Chase to open over 160 new branches in 2026. - JPMorgan Chase plans to hire over 1,100 employees in 2026. - JPMorgan Chase to increase AI use for efficiency and risk controls. - JPMorgan Chase to open 160 new branches, renovate 600 locations. - JPMorgan Chase to expand Community Centers and financial education workshops. - Jamie Dimon insists crypto firms offering stablecoin rewards be regulated as banks. - JPMorgan Chase CEO Jamie Dimon warns credit cycle will be worse than normal. - JPMorgan Chase CEO Jamie Dimon warns inflation could return. - JPMorgan Chase CEO Jamie Dimon warns of market complacency. -",
+      "JPMorgan signals high conviction ahead of Revolution Medicenes readout. - Jamie Dimon predicts JPMorgan will be 'a winner' in AI race, boosts 2100 tech spend to nearly $20 billion. - Novo Nordik selloff continues after disappointing REDEFINE-\\* results. - Dimon sees parallelsto pre",
+      "JPMorgan chosen by Apple to replace Goldmans Sachs as Apple Card issuer."
+    ]
+  }
+}

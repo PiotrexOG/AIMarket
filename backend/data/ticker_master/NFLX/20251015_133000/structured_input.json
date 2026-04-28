@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 113.4-124.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.66%)",
+        "cycle_macd": "BULLISH_FADING (0.42)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 113.4-126.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.76%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 121.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.25x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.693183B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.8%, EPS: 47.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.2%, Next Q Est Growth: -5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 50.38, P/S: 12.66)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 21.16)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.06)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix announces new original series partnership. - Regulator approves Netflix merger with rival streamer. - Major production setback causes delay in NFLX releases. - Lawsuit filed against Netflix alleges copyright infringement. - NFLX reveals significant increase in subscriber numbers. - New regulatory ruling impacts Netflix pricing structure. - Announcement of major acquisition",
+      "Netflix lifts 20 twenty-five margin outlookto thirty percent. - Strong pricing and ad growth boost Netflix profitability andengagement.",
+      "Netflix partners with Spotify and The Ringer for video podcasts on platform. - Select Spotify Studies and The RINGER video podcasts coming to Netflix in early 20 twenty-six in US."
+    ],
+    "medium_term_50d": [
+      "Netflix announces new original series partnership. - Regulator approves Netflix merger with rival streamer. - Major production setback causes delay in NFLX releases. - Lawsuit filed against Netflix alleges copyright infringement. - NFLX reveals significant increase in subscriber numbers. - New regulatory ruling impacts Netflix pricing structure. - Announcement of major acquisition",
+      "Netflix lifts 20 twenty-five margin outlookto thirty percent. - Strong pricing and ad growth boost Netflix profitability andengagement.",
+      "Netflix reports Q3 earnings. - Release of new season of \"Stranger Things\"."
+    ],
+    "long_term_200d": [
+      "Netflix announces new original series partnership. - Regulator approves Netflix merger with rival streamer. - Major production setback causes delay in NFLX releases. - Lawsuit filed against Netflix alleges copyright infringement. - NFLX reveals significant increase in subscriber numbers. - New regulatory ruling impacts Netflix pricing structure. - Announcement of major acquisition",
+      "Netflix lifts 20 twenty-five margin outlookto thirty percent. - Strong pricing and ad growth boost Netflix profitability andengagement.",
+      "Netflix announces major original content acquisition. - FCC approves new streaming regulations, impacts NFLX. - Disney and Netflix agree on licensing dispute resolution. - Significant production setback for upcoming NFLX show. - NFLX reports Q3 earnings miss, stock plunges."
+    ]
+  }
+}

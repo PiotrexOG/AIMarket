@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "NORMAL (4.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 173.75-191.56]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.04%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.29)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 147.08-191.56]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.98%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 185.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "ELEVATED (1.33)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: 9.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.79, P/S: 1.99)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.99)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Iran conflict disrupts CVX crude supply - Oil prices surge, driving up CVX revenue - CVX stocks trading higher due to oil price increase - CV X production potentially affected by Middle East conflict - Geopolitical tension causes CVX capital gains - CVXY, CVXE, CVX among top performing energy stocks - CVXX, CVXC",
+      "Chevron Ceases Leviathon Gas operations dueto security issues (Israeli Energy Ministry orders following US-Israelli military actions against Iransubsequent regional retali ATION.)",
+      "Chevron enters exclusive talks to operate Iraq's West Qurnaa 2 oilfeld. - Potential disruption of Iranian oil supplies due to US-Israeli attacks."
+    ],
+    "medium_term_50d": [
+      "Iran conflict disrupts CVX crude supply - Oil prices surge, driving up CVX revenue - CVX stocks trading higher due to oil price increase - CV X production potentially affected by Middle East conflict - Geopolitical tension causes CVX capital gains - CVXY, CVXE, CVX among top performing energy stocks - CVXX, CVXC",
+      "Venezuela suspends 1 nineteen oil production-shifting contracts signed during Maduro' s tenure (affects CVX through partnerships) - Che vron approved multibillion dollar LNG export facility in Australia (direct production change)",
+      "Chevron Ceases Leviathon Gas operations dueto security issues (Israeli Energy Ministry orders following US-Israelli military actions against Iransubsequent regional retali ATION.)"
+    ],
+    "long_term_200d": [
+      "Iran conflict disrupts CVX crude supply - Oil prices surge, driving up CVX revenue - CVX stocks trading higher due to oil price increase - CV X production potentially affected by Middle East conflict - Geopolitical tension causes CVX capital gains - CVXY, CVXE, CVX among top performing energy stocks - CVXX, CVXC",
+      "Venezuela suspends 1 nineteen oil production-shifting contracts signed during Maduro' s tenure (affects CVX through partnerships) - Che vron approved multibillion dollar LNG export facility in Australia (direct production change)",
+      "Chevron enters exclusive talks to operate Iraq's West Qurnaa 2 oilfeld. - Potential disruption of Iranian oil supplies due to US-Israeli attacks."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term technical picture shows a mixed signal. The DOJI_INDECISION candle pattern persists, indicating indecision. RSI has moved higher to 56.8, exiting the neutral zone and approaching overbought territory. However, velocity (ROC 10) has stagnated at 0.3%, and the price is consolidating, hugging the SMA20 at 0.4%. The price remains in the middle of its 20-day range (81.2-89.48). W: The positive RSI momentum is offset by stagnant velocity and continued range-bound price action. Volume dynamics have decreased to 0.62, suggesting lower participation. Recent news regarding significant store closures and job cuts introduces substantial short-term headwinds and operational uncertainty. O: A decisive break above the 89.48 range resistance, supported by increasing volume and positive momentum, would be required to signal a bullish short-term trend. Conversely, a failure to hold the current levels and a breach of the 81.2 support, especially on increased volume, would indicate a bearish continuation. T: Downside risk has slightly increased due to the negative news flow concerning store closures and job cuts, which could impact sentiment and near-term performance. Volatility has remained stable. Structural confidence has slightly decreased due to the mixed technical signals and negative news. The score is adjusted down from 4.5 to 4.0 due to the negative news impacting operational outlook and stagnant velocity, despite the RSI improvement."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.2
+      },
+      "synthesis": "S: The medium-term technicals show a deterioration. The MACD has faded slightly to 0.358, indicating a loss of bullish momentum. Trend alignment remains bearish at -4.51%, and the position relative to the 50-day SMA has worsened slightly, with the Z-score moving to -0.93. The price continues to trade within the monthly range (81.2-98.89), suggesting ongoing consolidation but with weakening momentum. W: The fading MACD signal, coupled with the persistent bearish trend alignment, suggests that the prior bullish impulse is losing steam. The news regarding significant store closures and job cuts, along with a substantial restructuring cost of $1 billion, introduces significant medium-term operational and financial uncertainty. O: A sustained move above the 50-day SMA and a resurgence in bullish MACD momentum are necessary to confirm a medium-term trend reversal. Without this, the current consolidation could lead to a breakdown below the lower range support. T: Downside risk has increased due to the fading MACD, worsening Z-score, and the significant negative impact of store closures and restructuring costs on future earnings and operations. Structural confidence has decreased due to the weakening technical signals and the substantial negative fundamental news. The score is adjusted down from 3.5 to 3.0, reflecting the fading MACD, increased operational risk from closures and restructuring, and a slight increase in downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term market regime remains firmly in a SECULAR_BEAR_MARKET (-9.0%), and the DEATH_CROSS_STRUCTURE has widened to -5.06%, indicating persistent bearish technical conditions. The long-term range position has deteriorated further to 21.5% in the BEARISH_LOWER_QUADRANT. W: Fundamental growth remains stagnant with profit issues, and the balance sheet is still stressed. The significant news regarding store closures, job cuts, and a $1 billion restructuring charge points to a challenging long-term outlook and potential impairment of future growth prospects. Valuation remains premium despite the price action, with extremely risky implied growth. O: A fundamental shift in the broader market regime to a bull market, a sustained turnaround in fundamental growth and profitability, and a clear resolution of strategic uncertainties are required for a robust long-term recovery. The current restructuring and closures suggest a period of significant operational headwinds. T: Downside risk remains elevated due to the persistent secular bear market, widening death cross, stressed fundamentals, premium valuation, and the significant negative impact of the announced restructuring and store closures. Structural confidence has decreased due to the worsening long-term technicals and the substantial negative fundamental news. The score is adjusted down from 3.2 to 3.0, reflecting the widening death cross, further deterioration in long-term range positioning, and the significant negative implications of the large-scale restructuring and store closures on the long-term outlook."
+    }
+  }
+}

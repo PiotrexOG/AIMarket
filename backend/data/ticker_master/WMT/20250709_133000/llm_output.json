@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.8,
+        "risk": 5.0
+      },
+      "synthesis": "S: Short-term momentum has shifted to a bullish zone with RSI at 61.1, indicating increasing buying pressure. However, velocity (ROC -0.8%) has stagnated, and the price is consolidating near the SMA20 (0.4%), suggesting a lack of immediate directional conviction. The stock is trading in the middle of its 20-day range, indicating indecision. W: The DOJI candle pattern signals uncertainty. Stagnant velocity and consolidation near the SMA20 suggest a pause in upward momentum. The range position is neutral, lacking a clear breakout signal. O: Mixed news flow includes a partnership with Kroger for delivery, a potential M&A with Alibaba, and the introduction of autonomous delivery robots, which are positive developments. However, regulatory changes and competitive pressures from Amazon Prime Day introduce some uncertainty. T: The short-term score has slightly decreased to 5.5 due to the mixed technical signals and stagnant velocity, despite the improved RSI. Conviction has decreased to 5.8 as the indecisive candle pattern and consolidation limit confidence. Risk has increased to 5.0 due to the lack of clear directional momentum and the introduction of new regulatory and competitive factors in the news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.2
+      },
+      "synthesis": "S: Medium-term trend alignment remains compressed (-0.47%), indicating consolidation. The MACD has shifted to a fading bullish signal (0.138), suggesting a loss of upward momentum. The SMA50 Z-score has moved to -0.07, indicating the price is now trading near its 50-day moving average, a healthy base but not a strong bullish trend signal. W: The fading MACD and mean reversion on the SMA50 Z-score indicate a loss of bullish momentum from the previous period. The compressed trend alignment suggests potential for a move but lacks a clear direction. O: The news regarding the Kroger partnership and potential Alibaba M&A are significant medium-term strategic developments. The continued mention of digital momentum boosting earnings trajectory from Morgan Stanley provides fundamental support. T: The medium-term score has decreased to 6.0 as the bullish momentum indicators (MACD) have weakened, and the SMA50 Z-score has moved towards neutrality. Conviction has decreased to 6.5 due to the fading MACD and less robust trend positioning. Risk has increased to 4.2 as the weakening momentum and shift towards mean reversion on the SMA50 suggest a less assured upward trajectory."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.3,
+        "conv": 7.4,
+        "risk": 3.7
+      },
+      "synthesis": "S: Long-term structural factors remain robust. The market regime is a SECULAR_BULL_MARKET (6.1%), and the golden cross structure is healthy. The long-term range position has slightly decreased to 70.4% in the BULLISH_UPPER_QUADRANT, indicating continued long-term bullish conviction but a minor pullback from previous highs. W: The enduring strength of the secular bull market and healthy major crosses provide a solid foundation. The slight decrease in long-term range position is a minor adjustment and does not negate the overall bullish structure. O: The fundamental strengths of moderate growth, strong earnings momentum, and mega-cap scale remain intact. The news regarding potential strategic partnerships (Kroger, Alibaba) and the continued positive earnings trajectory outlook provide long-term fundamental support. Valuation remains a point of caution with hyper-premium multiples, but the PEG ratio suggests growth is still being undervalued. T: The long-term outlook remains strongly bullish, with the score slightly adjusted to 7.3 to reflect the minor recalibration in long-term technical positioning while maintaining fundamental strength. Conviction remains high at 7.4 due to the enduring fundamental strengths, positive market regime, and established long-term technicals. Risk has slightly increased to 3.7 as the valuation remains a persistent factor, and the slight decrease in long-term range position suggests a minor consolidation in long-term strength."
+    }
+  }
+}

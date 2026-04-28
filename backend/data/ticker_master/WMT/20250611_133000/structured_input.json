@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.45)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 91.89-100.89]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.83%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.251)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.4)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-100.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.72%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 96.68,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.6%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.21, P/S: 1.19)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.61)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart partners with Synchronyfor credit card programme. - Billionaire Marc Lore'sprivate food startup,Wonder, eyes 20 twenty eight IPO.",
+      "Walmart partners with Synchrony Financial for new credit cards. - Synchrony becomes exclusive issuer for One Pay creditcards at Walmart. - Flipkatt receives lending license from Reserve Bank of India (first for e-commercecompany). - Salmonellabreakout: recalled eggs sold at Walmart, Saf Leway, othersick",
+      "Walmart expansions in Texas, Arthuras, Georgia,Florida, North Carolina for drone delivery. - WMT collaborates with Wing for deeper drone delivery partnership."
+    ],
+    "medium_term_50d": [
+      "Walmart partners with Synchrony Financial for new credit cards. - Synchrony becomes exclusive issuer for One Pay creditcards at Walmart. - Flipkatt receives lending license from Reserve Bank of India (first for e-commercecompany). - Salmonellabreakout: recalled eggs sold at Walmart, Saf Leway, othersick",
+      "Walmart expansions in Texas, Arthuras, Georgia,Florida, North Carolina for drone delivery. - WMT collaborates with Wing for deeper drone delivery partnership.",
+      "Walmart'sbisnow:Flipkart securesa lendinglicencein India - Walmartholdsannualshareholdersmeeting - Walmartenhancesdronedeliveryservicewith Wing - Walmattexpandsamedaydeliverynetworknationwide"
+    ],
+    "long_term_200d": [
+      "Walmart faces significant price hikes due to Trump tariffs. - Increase in prices at Walmart stores tops 38%.",
+      "Walmart presents at Bernstein conference. - walmart unveils new digital innovions for healthcare shopping. -walmart helps medicare advantage customers use supplemental health benefits.",
+      "Walmart plans to raise prices because of tariffs. \\ - Wal Mart warns of Higher prices due totariffs, holds back on second-quarters guidance. \\ Note: These bullets meet all format rules and provide clear and direct information regarding material events affecting WMT on May 14, 2105."
+    ]
+  }
+}

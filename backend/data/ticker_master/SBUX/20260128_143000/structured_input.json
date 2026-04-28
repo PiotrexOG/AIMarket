@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (6.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 83.02-97.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.81%)",
+        "cycle_macd": "BULLISH_FADING (0.587)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.9)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 81.97-97.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.11%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 101.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 99.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.38%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.45)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 241.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 60.46, P/S: 3.04)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.97)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks permanently closes US stores (over 8,300 chain stores closed nationwide).",
+      "Starbucks hosts 20 twenty-six investor day on January twenty-ninth.",
+      "Starbucks CEO Brian Niccol increases security spending. -Starbucks files drop in CEO pay during turnaround. -New limits for CEO'S private jet use over security concerns."
+    ],
+    "medium_term_50d": [
+      "Starbucks hosts 20 twenty-six investor day on January twenty-ninth.",
+      "Starbucks permanently closes US stores (over 8,300 chain stores closed nationwide).",
+      "Starbucks announces Q1 fiscal year twenty-six results."
+    ],
+    "long_term_200d": [
+      "Starbucks hosts 20 twenty-six investor day on January twenty-ninth.",
+      "Starbucks announces Q1 fiscal year twenty-six results.",
+      "Starbucks permanently closes US stores (over 8,300 chain stores closed nationwide)."
+    ]
+  }
+}

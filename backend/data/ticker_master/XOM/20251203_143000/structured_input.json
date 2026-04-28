@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 112.51-120.81]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.59%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.367)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.87)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 110.39-120.81]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.72%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 116.95,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.94%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.0, P/S: 1.56)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.94)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon approaches Iraq to buy Lukoils stake in West Qurnaa 2 Oil Field. - Discussion of potential Exxon purchase of Lukoilis stake in West Qurna 1 Oilfield. - U.S sanctions force Lukoilst sale of West Qurnaa 1 Oilfields stake attracting Exxon. -",
+      "Exxon \u041cobal and BASF announce strategic collaboration on methane pyrolysis technology for producing hydrogen. -Exxon \u041cobil pauses Baytown hydro GEN project due to weakness in demand and economic uncertain LY.",
+      "Exxon \u041cobility loses control over Esso Soci\u00e9t\u00e9 Anonyme \u0424\u0440\u0430\u043d\u0441\u0435SA and Exxon \u041c\u043ebil \u0427\u0435\u043c\u0438\u043a\u0430\u043b \u0424\u0440\u0430\u043d\u0441\u044dSA to North Atlantic France \u0421AS."
+    ],
+    "medium_term_50d": [
+      "Exxon approaches Iraq to buy Lukoils stake in West Qurnaa 2 Oil Field. - Discussion of potential Exxon purchase of Lukoilis stake in West Qurna 1 Oilfield. - U.S sanctions force Lukoilst sale of West Qurnaa 1 Oilfields stake attracting Exxon. -",
+      "Exxon \u041cobal and BASF announce strategic collaboration on methane pyrolysis technology for producing hydrogen. -Exxon \u041cobil pauses Baytown hydro GEN project due to weakness in demand and economic uncertain LY.",
+      "Exxon \u041cobility loses control over Esso Soci\u00e9t\u00e9 Anonyme \u0424\u0440\u0430\u043d\u0441\u0435SA and Exxon \u041c\u043ebil \u0427\u0435\u043c\u0438\u043a\u0430\u043b \u0424\u0440\u0430\u043d\u0441\u044dSA to North Atlantic France \u0421AS."
+    ],
+    "long_term_200d": [
+      "Exxon approaches Iraq to buy Lukoils stake in West Qurnaa 2 Oil Field. - Discussion of potential Exxon purchase of Lukoilis stake in West Qurna 1 Oilfield. - U.S sanctions force Lukoilst sale of West Qurnaa 1 Oilfields stake attracting Exxon. -",
+      "Exxon \u041cobal and BASF announce strategic collaboration on methane pyrolysis technology for producing hydrogen. -Exxon \u041cobil pauses Baytown hydro GEN project due to weakness in demand and economic uncertain LY.",
+      "Exxon announces advanced talks topower AI data centerswith natural gas and Carbon Capture."
+    ]
+  }
+}

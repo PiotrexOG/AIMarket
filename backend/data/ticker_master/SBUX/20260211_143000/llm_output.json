@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals have deteriorated. The DOJI_INDECISION candle pattern indicates a loss of upward momentum, and the RSI has fallen to 52.6. While velocity has normalized and the price is stable near the SMA20, the overall signal is now neutral to slightly bearish. W: The price is still within the middle of its 20-day range, but the indecision candle suggests a potential reversal or consolidation phase. The shift from a strong bullish candle to a doji is a negative development. O: Short-term news is now mixed to negative, with a downgrade to \"Hold\" due to deteriorating profitability and competitive pressure from China's Luxkin Coffee. This contrasts with previous positive news. T: Risk has increased significantly due to the bearish candle pattern, the falling RSI, and the negative news flow, including a downgrade. The volatility context has also expanded, contributing to higher risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains positive with BULLISH_EXPANDING_MOMENTUM (6.08%), and the price is still in a BULLISH_TREND_POSITION (Z:1.63) relative to the SMA50. However, the MACD has shifted to BULLISH_FADING (0.148), signaling a loss of conviction in the upward move. W: The fading MACD is a clear warning sign of weakening momentum, despite the overall bullish trend. The Z-score has also decreased, indicating less extreme bullish positioning. O: Medium-term news is a mix of older positive strategic initiatives and newer negative developments like the downgrade and competitive threats, creating uncertainty. T: Risk has increased due to the fading MACD, which suggests a potential for trend exhaustion. The increased volatility context also contributes to higher risk. Conviction has decreased as the technical signals are becoming less clear and the news flow is mixed."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term regime remains a SECULAR_BULL_MARKET (11.1%), and the price is firmly in the BULLISH_UPPER_QUADRANT (75.5%) of its long-term range. The technical structure is reinforced by a HEALTHY_GOLDEN_CROSS_STRUCTURE (1.88%). W: While long-term technicals are robust, the persistent fundamental issues of STAGNATION_WITH_PROFIT_ISSUES (EPS: -50.5%) and a STRESSED_BALANCE_SHEET (YrsToPay: 9.6x) remain significant headwinds. The HYPER_PREMIUM_PRICED valuation continues to be a structural risk. O: Long-term news continues to highlight strategic growth plans, but the recent downgrade and competitive pressures introduce a new layer of concern regarding profitability execution. T: Risk has increased slightly due to the introduction of negative news regarding profitability and competitive threats, which could eventually impact the long-term outlook. However, the strong long-term technicals and continued bullish regime provide some mitigation. Conviction remains relatively stable due to the enduring strength of the long-term technical setup."
+    }
+  }
+}

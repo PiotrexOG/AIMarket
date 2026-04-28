@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term momentum has shifted to an overbought extreme (RSI 80.0 vs 64.2), with velocity showing a slight increase (ROC 3.2% vs 2.2%). The price remains stable near the 20-day SMA (2.7% vs 2.5%) and is testing critical resistance within the 20-day range. The candle pattern has shifted to indecision (Doji). W: The Doji candle pattern at resistance, coupled with extreme overbought RSI, signals a potential for consolidation or a minor pullback. While velocity has increased, the indecision suggests a loss of immediate upward conviction. O: News flow remains mixed, with some antitrust scrutiny and AI-related investments. The continued low volatility environment offers some support against sharp declines, but the price is now testing the upper boundary of the 20-day range. T: Risk has increased due to the extreme overbought RSI and the indecision candle pattern at resistance, despite the low volatility context. The price is now at the upper limit of the 20-day range, increasing the probability of a short-term reversal or sideways movement."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Trend alignment has weakened slightly (8.19% vs 9.44%), and the MACD has continued its bearish acceleration (-0.755 vs -0.879), indicating a persistent loss of medium-term bullish conviction. The price is still in a bullish trend position relative to the 50-day SMA (Z:1.22 vs 1.38) but has moved lower within the trend. W: The deepening bearish MACD divergence remains the primary concern, signaling a significant risk of a trend reversal or prolonged consolidation. The price is testing the upper boundary of the 50-day range, increasing the probability of a correction. O: Fundamental strengths in business quality and financial health continue to provide a supportive backdrop. Ongoing AI-related news and strategic investments offer potential catalysts, but the increasing antitrust scrutiny adds a layer of uncertainty. T: Risk has increased due to the weakening trend alignment, persistent bearish MACD divergence, and the price testing the upper limit of the 50-day range. The shift in the SR landscape bias to 'RANGE' from 'UNCONFINED_BULLISH' further elevates risk. The extended price action at new highs amplifies this risk, especially with the bearish technical divergence."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market (13.8% vs 12.5%), and the major crosses have improved to a healthy golden cross structure (2.36% vs 0.3%). However, the price has moved slightly below the absolute ATH (98.3% vs 101.0%), indicating a potential short-term plateau. Fundamental strengths in business quality, financial health, and cash generation remain exceptionally robust. W: The hyper-premium valuation multiples (P/E 39.31, P/S 14.06) and implied growth (PEG 2.25) have slightly increased, continuing to present significant long-term risk. The shift in the SR landscape bias to 'RANGE' suggests a potential for a less aggressive upward trend. O: Secular growth drivers from cloud computing and AI remain strong, with major strategic investments providing positive long-term catalysts. The company's scale and business quality offer significant resilience. T: The primary long-term risk remains the elevated valuation, which is highly sensitive to growth expectations and market sentiment. The price moving off its absolute peak, while still in a strong uptrend, increases its sensitivity to any negative fundamental or macro shifts, especially given the high multiples. The improving long-term cross structure and secular bull market regime mitigate some of this risk, but the valuation remains a key concern."
+    }
+  }
+}

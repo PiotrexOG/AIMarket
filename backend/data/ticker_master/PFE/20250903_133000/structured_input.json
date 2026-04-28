@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.86-26.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.67%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.047)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.11-26.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.63%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 59.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.69%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 67.3% | OM: 29.6% | NM: 16.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 4.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.833B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 13.5%, EPS: 507.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.5%, Next Q Est Growth: 23.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.14, P/S: 2.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.6)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.03)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer receives FDA approvalfor updated COVID-1 nine vaccine COMIRN ATY L.8. 1. - Olema and Pfizer enter agreementto evaluate Palazest\u0440\u0430\u043dt plus Atirmoc iclib combo.",
+      "Pfzer receives FDA approvalfor next-gen COVID vaccine for olderadults and high-risks. - CDC officials resign due to politicalinterference.",
+      "Pfizer CEO announces major strategic decision. - FDA approves new Pfizer drug. - Merck and Pfizer announce partnership. -PFizer production facility shuts down due to fire. -Pfizer recalls specific batch of drugs. - Lawsuit filed against Pfizer regarding product liability."
+    ],
+    "medium_term_50d": [
+      "Pfizer CEO announces major strategic decision. - FDA approves new Pfizer drug. - Merck and Pfizer announce partnership. -PFizer production facility shuts down due to fire. -Pfizer recalls specific batch of drugs. - Lawsuit filed against Pfizer regarding product liability.",
+      "Pfizer receives FDA approvalfor updated COVID-1 nine vaccine COMIRN ATY L.8. 1. - Olema and Pfizer enter agreementto evaluate Palazest\u0440\u0430\u043dt plus Atirmoc iclib combo.",
+      "Pfzer receives FDA approvalfor next-gen COVID vaccine for olderadults and high-risks. - CDC officials resign due to politicalinterference."
+    ],
+    "long_term_200d": [
+      "Pfizer CEO announces major strategic decision. - FDA approves new Pfizer drug. - Merck and Pfizer announce partnership. -PFizer production facility shuts down due to fire. -Pfizer recalls specific batch of drugs. - Lawsuit filed against Pfizer regarding product liability.",
+      "Pfizer receives FDA approvalfor updated COVID-1 nine vaccine COMIRN ATY L.8. 1. - Olema and Pfizer enter agreementto evaluate Palazest\u0440\u0430\u043dt plus Atirmoc iclib combo.",
+      "Pfizer requests FDA emergency use authorization for pediatric Covid vaccine. Based on provided data, this event meets the criteria as it involves regulatory ruling specifically targeting Pfizer (PFE)."
+    ]
+  }
+}

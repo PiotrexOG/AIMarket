@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 292.81-322.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.24%)",
+        "cycle_macd": "BULLISH_FADING (0.249)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.26)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.54-322.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.53%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 304.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.3%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.49)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.06, P/S: 3.07)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.36)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.21)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.89x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan hires Todd Combs from Berkshine Hathaway for new Security and Resiliency Inititative. - Todd Combs joins JPMorgan as head of Strategic Investiment Group. - Berkshire announces leadership change: Todd Combs leaves for JPMorgans newinitiative.",
+      "JPMorgan expectsto spend $1 hundred billion in 2106. - Marianne Lake warnsof a \"bit more fragile\"consumer environmentat Goldman Sachsis financial services conference . - J.P Morgan Asset Management proposes conversion of mutualfunds to ETFs in 11. - Jamiem Dimon expressessupport",
+      "JPMorgan announces $10Billion Security and Resiliency Initiative. - Joyce Ch ang predicts Fed rate cuts in Dec and Jan."
+    ],
+    "medium_term_50d": [
+      "JPMorgan hires Todd Combs from Berkshine Hathaway for new Security and Resiliency Inititative. - Todd Combs joins JPMorgan as head of Strategic Investiment Group. - Berkshire announces leadership change: Todd Combs leaves for JPMorgans newinitiative.",
+      "JPMorgan announces $10Billion Security and Resiliency Initiative. - Joyce Ch ang predicts Fed rate cuts in Dec and Jan.",
+      "JPMorgan announces urgent call for December rate cuts. - regulatory ruling: Fed monetary policy decision."
+    ],
+    "long_term_200d": [
+      "JPMorgan hires Todd Combs from Berkshine Hathaway for new Security and Resiliency Inititative. - Todd Combs joins JPMorgan as head of Strategic Investiment Group. - Berkshire announces leadership change: Todd Combs leaves for JPMorgans newinitiative.",
+      "JPMorgan receives congressional sub poenas related to Jeffrey Epsteins accounts. - Regulator scrutiny places focus on JPMorgan's compliance procedures.",
+      "JPMorgan announces urgent call for December rate cuts. - regulatory ruling: Fed monetary policy decision."
+    ]
+  }
+}

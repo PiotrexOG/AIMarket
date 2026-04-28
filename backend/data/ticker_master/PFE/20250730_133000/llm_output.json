@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI falling into a bearish zone at 33.9. The price is now trading below the 20-day SMA (-3.0%), indicating a weakening trend. While Bollinger Bands remain within normal limits (0.13), the velocity (ROC) shows a slight negative pull (-1.1%). The stock is still in the middle of its 20-day range (23.93-26.05), but the shift in momentum and SMA position is concerning. W: The previous neutral technical setup has given way to bearish short-term signals. The RSI drop and the price moving below the 20-day SMA are key deteriorations. News flow is mixed, with some positive drug approvals but also anticipation of earnings, which could be a catalyst for further price movement. O: The current technical setup presents increased downside risk. The bearish RSI and the price action below the 20-day SMA suggest a potential for further decline. T: Downside risk has increased substantially due to the bearish RSI and the price breaking below the 20-day SMA. Volatility remains moderate, but the structural weakness in short-term momentum poses a significant threat."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term momentum has shifted to a bearish accelerating MACD (-0.121), a clear deterioration from the previous recovering state. Trend alignment remains bullish but has slightly weakened (3.17%). The Z-score relative to the 50-day SMA has moved from a bullish trend position to a healthy base (Z:-0.06), indicating a loss of upward momentum. The stock is trading within the monthly range (22.45-26.05). W: The previous improving MACD signal has reversed, and the acceleration of the bearish trend is a significant negative development. The shift in the Z-score also points to a loss of upward conviction. News flow is mixed, with positive drug approvals but also the overarching bearish technical trend. O: The current technical setup presents increased downside risk. The accelerating bearish MACD and the neutral Z-score suggest a potential for a downward move. T: Downside risk has increased due to the bearish MACD acceleration and the loss of bullish positioning relative to the 50-day SMA. Volatility remains moderate, but the structural shift in the MACD indicates increased vulnerability to further downside."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term technical picture remains consistent with a secular bear market regime, with a slight increase in the negative impact (-4.3%). The death cross structure persists (-4.44%), and the stock's position within the long-term range has deteriorated to the bearish lower quadrant (34.7%). W: While the long-term technicals have weakened, the fundamental strengths in business quality, financial health, cash generation, and growth profile remain robust and unchanged. Valuation multiples are now at a moderate discount, with implied growth still underrated, providing some support. Long-term news flow continues to be positive, highlighting drug development successes. O: The deterioration in long-term technicals, particularly the move to the lower quadrant and increased negative regime impact, presents increased downside risk. However, strong fundamentals and fair valuation offer some mitigation. T: Downside risk has increased due to the weaker long-term technical positioning and the increased negative regime impact. The secular bear market regime and death cross structure are still significant headwinds, now compounded by a weaker position within the long-term range. Volatility remains moderate."
+    }
+  }
+}

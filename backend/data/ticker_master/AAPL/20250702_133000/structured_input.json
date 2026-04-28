@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.2)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.07)",
+        "velocity_roc_10": "NORMAL (4.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.4%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 195.07-210.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.02%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.017)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.73)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 189.81-214.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 47.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 212.3,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.87%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @50d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.65, P/S: 8.13)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 48.18)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "4. Apple plans to use outside AI to power Siri 12. Apple reportedly exploring third-party AI to revamp Siris 17. Opus Intelligenceand Sundial Media&Technology Group announce AIpartnershipformarketing",
+      "EU to canvilas leaders at summiton resolving UStariff conflict: Apple, Google, Meta affected by potential digitaladvertisings tax. - Apple Faces EJudgment,Again,Over App Store Terms.",
+      "Class action filed against Apple (A APL). - Apple revises EU App Storerules and fees after Fine."
+    ],
+    "medium_term_50d": [
+      "4. Apple plans to use outside AI to power Siri 12. Apple reportedly exploring third-party AI to revamp Siris 17. Opus Intelligenceand Sundial Media&Technology Group announce AIpartnershipformarketing",
+      "EU to canvilas leaders at summiton resolving UStariff conflict: Apple, Google, Meta affected by potential digitaladvertisings tax. - Apple Faces EJudgment,Again,Over App Store Terms.",
+      "Apple and Qual COMM gear up for AI-driven 2nm chips by late 20 twenty-six. - EU talks with Apple enter critical phase."
+    ],
+    "long_term_200d": [
+      "Apple reveals \"Liquid Glasst\" interface for i OS 26 - Apple integrates Chat GPT in new AI features - Apple's AI event underperforms, share price slips - Apple details AI implementation in smartphones - Apple introduces foundation models for developers - Apple partners with Microsoft for AI capabilities - Apple announces major upgrade to Sir",
+      "Apple exploring use of AI for custom chip design - Reuters - Apple building all US-bounds smartphones in India - Apple may use AI to build chips faster - exec hints",
+      "EU to canvilas leaders at summiton resolving UStariff conflict: Apple, Google, Meta affected by potential digitaladvertisings tax. - Apple Faces EJudgment,Again,Over App Store Terms."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 147.18-169.37]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.31%)",
+        "cycle_macd": "BULLISH_FADING (1.018)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.39)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 146.49-169.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.56%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 167.07,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.4%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 18.8% | OM: 4.7% | NM: 6.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 2.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $188.488B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -2.8%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 7.0%, Next Q Est Growth: -21.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.46, P/S: 1.6)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.93%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron makes FID on Lavianthan expansion project.",
+      "Chevron seeks to exit Syria\u2019s al-Oamar oilfield. - Fire disrupts Tenguz oilfield, halting production for 7-\u2081\u2080 days. - Turkey and Chevron in talks for oil andgas exploration collaboration.",
+      "Trump proposes intervention in Venezuelan oil reserves. If this event has a direct impact on CVX (e.g., US government action affects CVX's business in Venezuela), then include it in the output. Otherwise, ignore it."
+    ],
+    "medium_term_50d": [
+      "Chevron makes FID on Lavianthan expansion project.",
+      "Chevrons expected expansion of Venezuela license from USD government. - SLB seeking contracts under Trump's Venezuelan revival plan. -Chev\u0440\u043e\u043d receives expanded Venezuela license according to sources.",
+      "Chevron takes Final Investment Decision on Leviatahan Gas Expansion - Che vron approves Leviathon Gas Expansion to feed Israel, Egypt and Jordan - Chevrond makes finaldecision to expand Israel\u2019s Leviatahan gas field"
+    ],
+    "long_term_200d": [
+      "Trump urges oil companies to spend $10o billion in Venezuela. (CVX mentioned) - Che vron sees path to grow Venezuelaproduction by 5o%. (Directimpact) - Exxon evaluates potential return to Venezuela. (Direct impact)",
+      "Chevrons expected expansion of Venezuela license from USD government. - SLB seeking contracts under Trump's Venezuelan revival plan. -Chev\u0440\u043e\u043d receives expanded Venezuela license according to sources.",
+      "Chevron in talks to expand oil license in Venezuela. - Two oil tank ERS hit by dr ONES at major Black Sea terminal, disrupting exports. - Trump urges US oil industry leaders, including Chevron and Exxon Mobil, to invest $10o billion in Venezuela."
+    ]
+  }
+}

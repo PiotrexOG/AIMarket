@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: Short-term momentum has strengthened considerably. RSI has moved into a strong bullish zone (67.6), and the price is holding above the 20-day SMA (1.7%). While ROC has moderated slightly (1.4%), the overall trend base is stable. The price remains in the middle of its 20-day range (111.54-119.78), but the bullish momentum is now more pronounced. W: Volume dynamics have improved to AVERAGE (0.69), but still lack strong conviction. The price is not yet breaking out of its short-term range, suggesting potential for consolidation before further upside. O: Short-term news is mixed, with a focus on the ESPN app launch, but also includes negative headlines such as an antitrust lawsuit and a production delay, which temper the positive outlook. T: The score is increased from 6.5 to 7.0 due to the significant improvement in RSI and continued stability above the 20-day SMA. Conviction is increased from 5.5 to 6.0 as the technical signals are now more aligned and supported by improved volume. Risk is decreased from 5.5 to 5.0 as the stronger bullish momentum and stable volatility (ATR 1.63%) reduce immediate downside exposure, despite mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term technicals show a deterioration in momentum. The MACD has begun to fade (0.349), and the Z-score relative to the 50-day SMA has worsened to -0.85, indicating a less healthy trend position. The bearish gradual descent in trend alignment persists (-2.3%). W: The price remains within the broader monthly range (111.54-124.69), offering potential for recovery, but the weakening MACD and negative SMA Z-score suggest the upward trend is losing steam. O: Medium-term news remains a mix of strategic initiatives like the ESPN app launch and broader company news, including a DOJ lawsuit and production delays, which introduce uncertainty. T: The score is decreased from 5.5 to 5.0 as the fading MACD and worsening SMA Z-score indicate a loss of upward momentum. Conviction is decreased from 5.0 to 4.5 due to the mixed technical signals and the persistent bearish trend alignment. Risk is increased from 6.0 to 6.5 as the deteriorating medium-term trend position and the introduction of negative news headlines increase downside potential."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: Long-term technicals remain stable, with the secular bull market regime intact (7.7%) and a healthy golden cross structure (8.38%). The long-term price position has slightly decreased to 81.7%, but remains in the upper quadrant. W: While long-term technicals are supportive, the fundamental earnings momentum (Next Q Est Growth: -43.6%) continues to be a significant overhang. The business quality remains average, and the valuation is fair, which could limit upside potential if earnings do not improve. O: Long-term news continues to focus on strategic developments like the ESPN streaming service and platform integrations, which are positive for future growth, but the inclusion of broader company news and regulatory concerns introduces some long-term risk. T: The score remains unchanged at 5.5, as the stable long-term technicals are offset by persistent fundamental headwinds and mixed long-term news. Conviction remains at 5.0, reflecting the solid technical foundation but also the underlying fundamental concerns. Risk remains at 5.5, as the strong long-term technicals provide some support, but the negative earnings momentum and fair valuation continue to pose a moderate risk."
+    }
+  }
+}

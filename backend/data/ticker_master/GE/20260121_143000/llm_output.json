@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has normalized, with RSI moving to neutral territory (50.2) and ROC turning negative (-3.8%). The SMA20 is now below its base (-1.9%), indicating a loss of upward momentum. The candle pattern is neutral, suggesting a pause in directional movement. W: The price remains in the middle of its 20-day range, and mean reversion bands are within normal limits (0.26). The shift from a bearish candle to neutral, coupled with normalized momentum, suggests a period of consolidation. O: Recent news includes a significant GEnx engine agreement with Delta, but also mentions renewed trade tensions impacting the market, creating mixed short-term sentiment. T: Downside risk has decreased slightly from the previous period due to the resolution of bearish technical signals and normalization of momentum. However, the price is still within its range, and the neutral candle pattern offers no strong directional conviction. The score is reduced due to the loss of short-term bullish momentum, while conviction remains stable. Risk is moderately elevated due to the neutral technical setup and mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.8,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment shows expanding bullish momentum (4.26%), but the MACD has turned bearish and is accelerating negatively (-0.904). The Z-score relative to the SMA50 remains bullish (0.96), indicating some underlying trend support. The price is still within the monthly range, suggesting consolidation. W: The divergence between expanding trend alignment and a bearish MACD indicates a weakening of the bullish trend. The price remaining within the monthly range further supports a consolidation phase. O: The medium-term news narrative is mixed, with a significant engine agreement with Delta offset by concerns over renewed trade tensions impacting the broader market. T: Downside risk has increased due to the bearish MACD signal and the potential for the weakening trend to translate into a price correction. While the Z-score is still positive, the negative MACD momentum is a concern. The score is reduced due to the bearish MACD divergence, and conviction is slightly lowered by the mixed signals. Risk is elevated due to the bearish MACD and potential for trend reversal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains structurally sound, with the price near its cycle high (92.6%) within a secular bull market regime (15.9%). The healthy golden cross structure (13.33%) continues to support the long-term uptrend. W: The sustained high positioning and the secular bull market regime indicate continued structural strength. However, the slight decrease in range position and regime participation suggests a minor cooling from previous extremes. O: Long-term news flow remains supportive, highlighting significant contract wins in GE Aerospace, reinforcing the company's competitive advantages. However, recent news also mentions renewed trade tensions, which could pose a longer-term risk. T: Downside risk remains relatively low but has slightly increased due to the price being at the upper end of its long-term cycle and the potential impact of broader market risks like trade tensions. The hyper-premium valuation multiples continue to be a persistent risk factor. The score is slightly reduced due to the minor technical retrenchment and increased macro risk, while conviction remains solid. Risk is stable but slightly elevated due to valuation and macro concerns."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "STAGNANT (0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 95.42-106.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.21%)",
+        "cycle_macd": "BULLISH_FADING (0.078)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.95)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 94.43-106.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.01%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 102.57,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.7%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.25, P/S: 1.25)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.82)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.29)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart exp ANDs same-day ph ARmacy de LIvery n ATIONwid E (refrigerated and reconsitut ED medications)",
+      "Walmart partners with Open AIfor employee training. - Holiday deals event: Walmart Deals, Oct. seventhru 12th. - Philips Soniccare introduces new electric toothbrush modelsat Walmart. - Sprinkles and The Jel Sert Company collaborate on instant pudding mixes. - WMT expans",
+      "Walmart partners with American Express on new Platinum Card benefits."
+    ],
+    "medium_term_50d": [
+      "Walmart exp ANDs same-day ph ARmacy de LIvery n ATIONwid E (refrigerated and reconsitut ED medications)",
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new Walmart pharmacy drug. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart distribution center. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart HQ to discuss potential collaboration. -",
+      "Walmart opens first branded Stores \u0432South Africa. - Oracle's market cap surpasses $915 billion. - walmart announces expansion in South Africa with new stores and omni capabilities."
+    ],
+    "long_term_200d": [
+      "Walmart announces acquisition of e-commerce rival. - FDA approves new Walmart pharmacy drug. - Supreme Court rules in favor of Walmart in major lawsuit. - Major production facility fire at Walmart distribution center. - New partnership between Walmart and tech giant announced. - CEO Tim Cook visits Walmart HQ to discuss potential collaboration. -",
+      "Walmart opens first branded Stores \u0432South Africa. - Oracle's market cap surpasses $915 billion. - walmart announces expansion in South Africa with new stores and omni capabilities.",
+      "Walmart betters on AI with 'super agent' strategy - Wal Mart hires Instacart exec as head ofglobal AI efforts"
+    ]
+  }
+}

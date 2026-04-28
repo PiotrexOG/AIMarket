@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term momentum has shifted to a BULLISH_ZONE_STRONG (67.4) with a NEUTRAL candle pattern, indicating a pause in bearish momentum. Velocity ROC has normalized, and the price is stable near the 20-day SMA. W: The price remains at CRITICAL_RESISTANCE_20 (83.02-97.97), which is now a wider range. The bullish RSI, while positive, is approaching overbought territory again. O: Short-term news is mixed, with store closures and CEO pay adjustments, but also an upcoming investor day. T: Risk has slightly decreased due to the absence of a bearish candle pattern and normalized velocity, but remains elevated due to the price being at resistance and the potential for RSI to become overbought. Conviction has slightly improved due to the shift away from bearish signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.2,
+        "risk": 5.8
+      },
+      "synthesis": "S: Medium-term trend alignment shows EXPANDING_MOMENTUM (3.81%), though MACD is fading. The Z-score remains an outlier (Z:2.9), indicating continued overextension. W: The price is strengthening at the MONTHLY_RESISTANCE_ZONE (81.97-97.97), which has expanded. The overextended Z-score and proximity to resistance suggest potential for consolidation. O: Medium-term news includes the upcoming investor day and Q1 results, alongside the significant news of permanent store closures. T: Risk has slightly increased due to the continued overextension and the price testing a wider resistance zone. However, the expanding momentum provides some offset. Conviction remains stable as the underlying trend is still bullish, but the increased risk at resistance tempers it."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term regime has shifted to a SECULAR_BULL_MARKET (9.8%), and the price is now at the ATH_OR_TOP_OF_CYCLE (101.1%). Major crosses are showing a POTENTIAL_PIVOT (0.11%), indicating a strong bullish structure. W: The price is at all-time highs, indicating a lack of historical resistance. However, the high valuation multiples and stressed balance sheet remain structural concerns. O: Long-term news is dominated by the upcoming investor day and Q1 results, with the significant event of permanent store closures also noted. T: Risk has significantly decreased due to the strong secular bull market regime and the price breaking out to new highs. The improved financial health (YrsToPay: 9.6x) also contributes. Conviction has increased due to the robust long-term technicals and improved risk profile, despite ongoing fundamental challenges."
+    }
+  }
+}

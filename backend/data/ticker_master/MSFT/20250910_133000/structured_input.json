@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (37.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.21)",
+        "velocity_roc_10": "NORMAL (-1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 492.37-532.7]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.2%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.654)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.79)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 488.7-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.62%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 501.47,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.41%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.21, P/S: 14.3)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.37)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.26)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft forms partnership with Cerence AI to integrate Microsoft 3 sixthree Copilot into cars. - Former Microsoft AI security lead joins PIllar Security as strategc advisor.",
+      "Microsoft joins forces with Deep Iq to revolutionize energy sector with agentic AI. - US government agrees to discount on Microsoft's cloud services."
+    ],
+    "medium_term_50d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft forms partnership with Cerence AI to integrate Microsoft 3 sixthree Copilot into cars. - Former Microsoft AI security lead joins PIllar Security as strategc advisor.",
+      "Microsoft integrates Copil OT AI into Samsung TVs and Monitors. -Microsoft expands AI capabilities with MAI- Voice-1 and MAI-1 - Preview testing. - Microsft offers discounted cloud services for USgovernment."
+    ],
+    "long_term_200d": [
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work.",
+      "Microsoft becomes second company with $4 trillon market capitalization due to AI businesses. (event type: Product launches/delays) - Tech giants spend $156bn on AI in 2 years. (eventtype: Production or supply change) - Microsoft CEO hints at near-term quantum computing application. (eventype: Company guidance)",
+      "Microsoft removes product feature due to regulatory pressure. - IBM partners with MSFT on cloud services expansion. - MSFT announces major acquisition in AI sector. - Court rules against MSFT in patent infringement lawsuit. - New production issue impacts MSFT hardware sales. - CEO Satya Nadella makes major strategic decision on R&D spending."
+    ]
+  }
+}

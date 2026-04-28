@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-14.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 392.33-483.74]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-5.29%)",
+        "cycle_macd": "BEARISH_RECOVERING (-3.528)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.32)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 392.33-493.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-15.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.32%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 11.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 403.8,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.92%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 45.6% | NM: 36.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $281.724B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.9%, EPS: 15.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.9%, Next Q Est Growth: 10.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.5, P/S: 10.69)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.77)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.9)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft CEO Satya Nadella announces $20 billion increase in AI investments. - European Union investigates Microsoft for antitrust violations regarding cloud services.",
+      "1. Microsoft expands AI ecosystem, commits multibillion dollars to infrastructure. 2. Ralph Hau\u043fter joins Warburg \u041fincus as External Senior Adviser for European Technology team (Microsoft executive).",
+      "Microsoft signs $9. seventh b AI contract with IREN, expands data center powercapacity. -Microsoft secures$3.6bnin GPUfinancingfor AIcloudinfrastructure."
+    ],
+    "medium_term_50d": [
+      "Microsoft CEO Satya Nadella announces $20 billion increase in AI investments. - European Union investigates Microsoft for antitrust violations regarding cloud services.",
+      "1. Microsoft expands AI ecosystem, commits multibillion dollars to infrastructure. 2. Ralph Hau\u043fter joins Warburg \u041fincus as External Senior Adviser for European Technology team (Microsoft executive).",
+      "Microsoft signs $9. seventh b AI contract with IREN, expands data center powercapacity. -Microsoft secures$3.6bnin GPUfinancingfor AIcloudinfrastructure."
+    ],
+    "long_term_200d": [
+      "Microsoft Q2 earnings call highlights: accelerating demandfor cloud and AI products. -Microsoft demand backlog increases to $635 billion. -Meta invests $130+ billion in AI infrastructure and superintelligence. -Nvidia,Amazon, Microsoft in discussions to invest $60 billionin Open AI.",
+      "Microsoft CEO Satya Nadella announces $20 billion increase in AI investments. - European Union investigates Microsoft for antitrust violations regarding cloud services.",
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT."
+    ]
+  }
+}

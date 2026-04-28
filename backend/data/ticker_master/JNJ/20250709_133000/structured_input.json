@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.69)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 149.04-157.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.14%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.388)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.81)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 146.12-158.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 155.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.39%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 17.16, P/S: 4.22)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.83)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson submits supplemental New Drugs Application to FDA for schizaphrenia drug Caplyta. - Caplyta data shows significant schizaphrena relapse prevention vs placebo.",
+      "J&J\u2018s Abiemed recalls heart punch controllers, three deaths reported (FDA alert).",
+      "Johnson & Johnson seeks EU approval for AKEEGA indicator extension for metastatic prostate cancer."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson submits supplemental New Drugs Application to FDA for schizaphrenia drug Caplyta. - Caplyta data shows significant schizaphrena relapse prevention vs placebo.",
+      "J&J\u2018s Abiemed recalls heart punch controllers, three deaths reported (FDA alert).",
+      "Johnson & Johnson seeks EU approval for AKEEGA indicator extension for metastatic prostate cancer."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson submits supplemental New Drugs Application to FDA for schizaphrenia drug Caplyta. - Caplyta data shows significant schizaphrena relapse prevention vs placebo.",
+      "J&J\u2018s Abiemed recalls heart punch controllers, three deaths reported (FDA alert).",
+      "Johnson & Johnson announces promising CAR T\u2011cell therapy results for B-cell Lymphomas. - JNJ sees 7% increase in share price following CAR T\u00ad-cell therapy progress."
+    ]
+  }
+}

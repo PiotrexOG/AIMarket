@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (21.3)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.12)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-8.1%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 371.85-413.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.53%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.371)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.53)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 371.85-483.74]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-22.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-13.31%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: -0.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 371.42,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.92%))",
+      "volume_dynamics": "ELEVATED (1.48)",
+      "sr_landscape": {
+        "barriers": "F:NO_FLOOR | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "HEAVY_BEARISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 45.6% | NM: 36.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $281.724B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.9%, EPS: 15.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.9%, Next Q Est Growth: 10.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.13, P/S: 9.84)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.07)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.75)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TD SYNNEX achieves Microsoft's Frontier Distributor designation. - RSA announces expanded partnership with Microsoft for identity security. - Tech Arena Advisory Practice led by former Microsoft executive. - Microsoft stock hits new low amid weak outlook. - Crowd Strike integrates Falcon with Microsoft Defender for Endpoint. - Alithya extends collaboration using Microsoft Dynamics 365. - Open AI warns investors of Microsoft dependency.",
+      "Crowd Strike Falcon Next-Gen SIEM supports Microsoft Defender for Endpoint. - Commvault expands integration with Microsoft Security for threat detection. - Brown and Caldwell partners with Lantern using Microsoft-enabled capabilities. - Microsoft stock outlook: backlog, Azure growth, Copilot, AI Cap Ex. - Evercore stays bullish on Microsoft stock despite cloud concerns.",
+      "Microsoft reorganizes Copilot teams, unifying commercial and consumer versions. - Microsoft validates Nvidia's Vera Rubin NVL72 for AI workloads. - Microsoft refocuses Copilot AI and infrastructure, tightens premium access."
+    ],
+    "medium_term_50d": [
+      "TD SYNNEX achieves Microsoft's Frontier Distributor designation. - RSA announces expanded partnership with Microsoft for identity security. - Tech Arena Advisory Practice led by former Microsoft executive. - Microsoft stock hits new low amid weak outlook. - Crowd Strike integrates Falcon with Microsoft Defender for Endpoint. - Alithya extends collaboration using Microsoft Dynamics 365. - Open AI warns investors of Microsoft dependency.",
+      "Microsoft stock drops on Open AI deal concerns. - Microsoft faces scrutiny over potential Open AI cloud deal. - Pair Soft acquisition enhances Microsoft Dynamics 365 integration.",
+      "Microsoft reorganizes Copilot teams, unifying commercial and consumer versions. - Microsoft validates Nvidia's Vera Rubin NVL72 for AI workloads. - Microsoft refocuses Copilot AI and infrastructure, tightens premium access."
+    ],
+    "long_term_200d": [
+      "TD SYNNEX achieves Microsoft's Frontier Distributor designation. - RSA announces expanded partnership with Microsoft for identity security. - Tech Arena Advisory Practice led by former Microsoft executive. - Microsoft stock hits new low amid weak outlook. - Crowd Strike integrates Falcon with Microsoft Defender for Endpoint. - Alithya extends collaboration using Microsoft Dynamics 365. - Open AI warns investors of Microsoft dependency.",
+      "Microsoft warns of costly disruptions backing Anthropic bid. - Microsoft partners with Anthropic to integrate Claude Cowork. - Microsoft in talks to lease large Texas data center. - Kyndryl offers fast path to modernize legacy systems on Azure. - EPAM joins Microsoft Intelligent Security Association. - Drone strikes force Microsoft to rethink regional AI expansion. - Stryker cyberattack disrupts Microsoft environment; systems access limited.",
+      "Microsoft signs multi-year AI cloud infrastructure deals with Meta and Microsoft. - Open AI finalizes $101 billion funding round. - Amazon invests $50 billions in Open AI."
+    ]
+  }
+}

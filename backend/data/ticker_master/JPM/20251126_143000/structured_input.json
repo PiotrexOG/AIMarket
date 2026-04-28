@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 292.81-322.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.15%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.299)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.54-322.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 305.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.35%))",
+      "volume_dynamics": "ELEVATED (1.15)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.11, P/S: 3.08)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.37)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.21)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.89x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan executive contacted in Epstein inquiry. - Cyberattacks potentially reached JPMorgan data.",
+      "JPMorgan ends banking ties with Strike CEO amid crypto debank ING concerns. - Cryptocurrency paymentapp Strike CEOaccountsclosureby JPMorgan. - Backlashagainst JPMorganforallegedcryptoebankingand MSTRreclassification.",
+      "Hackers steal real-estates data from company used by JPM for loans."
+    ],
+    "medium_term_50d": [
+      "JPMorgan executive contacted in Epstein inquiry. - Cyberattacks potentially reached JPMorgan data.",
+      "JPMorgan receives congressional sub poenas related to Jeffrey Epsteins accounts. - Regulator scrutiny places focus on JPMorgan's compliance procedures.",
+      "JPMorgan ends banking ties with Strike CEO amid crypto debank ING concerns. - Cryptocurrency paymentapp Strike CEOaccountsclosureby JPMorgan. - Backlashagainst JPMorganforallegedcryptoebankingand MSTRreclassification."
+    ],
+    "long_term_200d": [
+      "JPMorgan receives congressional sub poenas related to Jeffrey Epsteins accounts. - Regulator scrutiny places focus on JPMorgan's compliance procedures.",
+      "JPMorgan executive contacted in Epstein inquiry. - Cyberattacks potentially reached JPMorgan data.",
+      "JPMorgan announces largest financial fraud and sc AM prevention effort in firm's history."
+    ]
+  }
+}

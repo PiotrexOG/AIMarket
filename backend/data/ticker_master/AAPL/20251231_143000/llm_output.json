@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 4.8,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated. The RSI has moved from an oversold extreme to a neutral zone (40.5), indicating a loss of immediate buying pressure. The strong bearish candle pattern is a significant negative. While velocity (ROC_10) has stabilized at -0.4%, it remains stagnant. The SMA20 trend base is still weak at -1.2%. W: The price is in the middle of its 20-day range [266.96-288.61], offering no strong directional bias. The shift from oversold to neutral RSI and the bearish candle pattern suggest a loss of upward momentum. O: The previous oversold condition has dissipated, and the emergence of a strong bearish candle pattern, coupled with stagnant velocity, points to potential downside. The news flow regarding regulatory actions and product delays, while not entirely new, contributes to a less favorable short-term sentiment. T: The short-term outlook has shifted from cautiously bullish to neutral-to-bearish. The score has decreased from 6.5 to 5.2 due to the bearish candle pattern and the loss of oversold RSI momentum. Conviction has decreased from 5.5 to 4.8 as the signals are now mixed and less clear. Risk has increased from 5.8 to 6.5 due to the bearish candle pattern and the loss of oversold support, indicating increased downside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 6.8
+      },
+      "synthesis": "S: The medium-term trend alignment shows a gradual ascent (1.39%), which is a positive sign, and the price is now very close to the 50-day SMA (Z:0.01), indicating a healthy base. W: The MACD has continued to recover, moving from -1.36 to -0.721, indicating that bearish momentum is further decelerating and approaching neutral. The price remains within the monthly range [255.43-288.61]. O: The improving MACD, coupled with the price consolidating near the 50-day SMA, suggests stabilization. The gradual ascent in trend alignment provides a constructive backdrop, though the overall range remains a constraint. The news regarding regulatory fines and potential M&A activity, while significant, has not yet translated into a clear directional shift. T: The medium-term outlook remains cautiously neutral, with signs of stabilization and potential for a gradual recovery. The score has increased slightly from 5.0 to 5.5 as the bearish MACD momentum has continued to ease and trend alignment is positive. Conviction has increased slightly from 4.5 to 5.0 as the signals are becoming more aligned towards stabilization. Risk has decreased slightly from 7.0 to 6.8 as the accelerating bearish momentum has fully abated, and the price is consolidating at a healthy base."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.7,
+        "conv": 6.2,
+        "risk": 6.5
+      },
+      "synthesis": "S: The secular bull market regime persists, with a slight decrease in its percentage (17.9%). The healthy golden cross structure (17.72%) remains a supportive long-term technical indicator. The stock is positioned in the upper quadrant of its long-term range (86.5%), indicating it is still trading at elevated levels, though slightly lower than before. W: Valuation multiples remain hyper-premium (P/E: 41.29, P/S: 9.97), and extreme multiple risk persists (P/B: 61.87). Implied growth remains significantly overpriced (PEG: 272.16), highlighting vulnerability. The slight pullback in long-term range position suggests some profit-taking or resistance at higher levels. O: The long-term technical structure and market regime remain supportive, but the persistently high valuation risk continues to be a significant overhang. The news flow regarding regulatory fines and potential M&A, while concerning, has not fundamentally altered the long-term business quality or growth profile. T: The long-term outlook remains cautiously positive, supported by the market regime and technical structure, but the sustained high valuation risk limits upside potential and increases downside exposure. The score has seen a modest decrease from 5.8 to 5.7 due to the slight pullback from ATH and continued high valuation. Risk has remained stable at 6.5 as the sustained premium pricing and the shift away from the absolute peak are offset by the continued strong technical structure and stable market regime."
+    }
+  }
+}

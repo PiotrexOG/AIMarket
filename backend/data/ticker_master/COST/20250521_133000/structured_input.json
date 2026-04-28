@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.1)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.96)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 960.71-1038.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.04%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.14)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.76)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 871.71-1038.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.34%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 1036.13,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.86%))",
+      "volume_dynamics": "ELEVATED (1.24)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 62.42, P/S: 1.81)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.52)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.64)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco places limits on customer gold purchases.",
+      "AFRM partners with Costcoand Mattress Firmmfor smarter payments.",
+      "Costco beats stock market upswing. - No regulatory rulings, M&A, partnerships, production or supply chain Changes, company guidance, product launches or major lawsuits reported for COST on May 19, 20 twenty-five. NONE"
+    ],
+    "medium_term_50d": [
+      "Costco reports 7% sales growth in April. - Launch of new zero sugar Drip Drop hydration varietypack on Costco.\\*com. - Strong sales growth leads to 10% increase in Costco' stock price. \\*- Directly affects COST through increased revenue and positive investor reaction.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Three out of ten Americans reduce retail spending and dining out. -Costco turns Kirkland into $86B retail powerhouse. *Affirm increases guidance with new Costco deal. -Robert Kiyosakis warns: Americans buy gold at Costco."
+    ],
+    "long_term_200d": [
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - Significant production delay at Costco's main manufacturing facility. - New partnership between Costco and leading technology firm announced. -Costco lowers full year",
+      "Costco reports 7% sales growth in April. - Launch of new zero sugar Drip Drop hydration varietypack on Costco.\\*com. - Strong sales growth leads to 10% increase in Costco' stock price. \\*- Directly affects COST through increased revenue and positive investor reaction.",
+      "Costco announces double-digital percentage increase in dividends. - TJX also increases dividends by double digits."
+    ]
+  }
+}

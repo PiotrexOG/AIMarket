@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.3%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 195.28-220.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.71%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.131)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.06)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 175.86-220.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.81%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 104.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 224.21,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.41%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -50.8)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.26x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing delvers 60 aircraft in June, includes 8 to China. - EU protects Airbus in UStrade Deal,Ferrarisetoloseout. - Air Leasereportsencouragingactivity Q2202 five. - Investigatorssubmitpreliminareporton Air Indiacrash. - The",
+      "Boeing secures $2,8B contract to enhance US strategic SATCOM capabilities. - BAE Systems wins Awardable status for secure software delivery platform. - Airbus delivers 20 jets to Malaysia Aviation Group. -Boeing delivers next-generation satellite to SES. -GE Aerospace cleared to resume sales to China.",
+      "Thailand offers BA larger market access for industrial goods and Boeing jet sales."
+    ],
+    "medium_term_50d": [
+      "UK antitrust probe targets Boeing'sd Spirit deal. -Boeing appoints Jay Malave as new C FO. -Boeing acquires Spirit's Northern Ireland plant.",
+      "NTSBU reports Boeing failedto provide proper training and oversight, resulting in 73 seventhmax blowout, regulatory investigation ongoing - EU threatens retaliatorytariffs on Boeing aircraftif US imposes baseline tariff - Boeinguides replace Gregg Coffeymoving to lead Air Force One program - Airbuswins NATO contract for A",
+      "U.K.'s Competition and Markets Authority investigates Boeling's acquisition of Spirit Aero Systems."
+    ],
+    "long_term_200d": [
+      "NTSBU reports Boeing failedto provide proper training and oversight, resulting in 73 seventhmax blowout, regulatory investigation ongoing - EU threatens retaliatorytariffs on Boeing aircraftif US imposes baseline tariff - Boeinguides replace Gregg Coffeymoving to lead Air Force One program - Airbuswins NATO contract for A",
+      "Boeing faces opposition from key Senators over FAA administration nominee. - Taiwan's Chiang Kai Shek International Airport cancels Boeing seventharrier delivery due to 78 Seven Delays. - US safety board finds inadequate actions by Boeing, FAAduring 73 Seven MAX 9 door-plug blowout incident.",
+      "Air India Boeling 788-8 Dreamler crashes aftertakeoff - Boening issues statementabout Air India Flight171 - Over 20o people killedin Air Indiaplane crash - Boeing in contactwith Air Indiaregarding Flight1 seventh - UKPrimer Minister Starmercommentson Air Ind"
+    ]
+  }
+}

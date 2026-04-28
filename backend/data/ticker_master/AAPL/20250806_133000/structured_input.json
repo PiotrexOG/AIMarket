@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.5)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.02)",
+        "velocity_roc_10": "NORMAL (-5.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 201.5-215.78]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.35%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.494)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.93)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 193.46-215.83]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.2%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 210.76,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.78%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.78, P/S: 7.93)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 47.51)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple poised for FCF boost due to OBBBA act. - Tim Cook tells employees Apple must win in AI.",
+      "Apple signals readiness to increase spending on AI, build more data centers, or buy another company. - Tech giants report rising earnings driven by AI investments. - Apple's revenue forecast exceeds estimates, guiding for solid Q3 growth.",
+      "Apple CEO announces plans to expand market share. - JPMorgan in talks to become Apple Card issuer. - Apple developing AI answer engine. - i Phone 17Pro spotted in San Francisco Note: These bullets represent potential material events based on the provided text. It is important to verify each event through reliable sources before drawing any conclusions."
+    ],
+    "medium_term_50d": [
+      "Apple signals readiness to increase spending on AI, build more data centers, or buy another company. - Tech giants report rising earnings driven by AI investments. - Apple's revenue forecast exceeds estimates, guiding for solid Q3 growth.",
+      "Apple poised for FCF boost due to OBBBA act. - Tim Cook tells employees Apple must win in AI.",
+      "Apple to closefirst retail store in China since 2-08. - EU investigation into Apple's App Store practicesongoing. - Tim Cookfacesuncertaintyoveri Phoneproductionafter Trump'starrifthreaton Indianimports."
+    ],
+    "long_term_200d": [
+      "Apple signals readiness to increase spending on AI, build more data centers, or buy another company. - Tech giants report rising earnings driven by AI investments. - Apple's revenue forecast exceeds estimates, guiding for solid Q3 growth.",
+      "Apple poised for FCF boost due to OBBBA act. - Tim Cook tells employees Apple must win in AI.",
+      "EU regulators fine Apple \u20ac100\u043c over App Store Practices. (IF TRUE, THIS IS A MATERial EVENT) - Trump imposes 20%% tariffs on Vietnames\u0435 exports to the US, including goods transshipped via Vietnam. - Apple announces product launch delay. - Major lawsuit filed against Apple. - Trump implements trade"
+    ]
+  }
+}

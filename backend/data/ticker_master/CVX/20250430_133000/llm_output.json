@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook has shifted from \"NEUTRAL\" to \"STRONG_BEARISH\" candle patterns, indicating immediate selling pressure. Momentum has moved from \"OVERSOLD_EXTREME\" (25.8) to the \"NEUTRAL_ZONE\" (53.0), suggesting a loss of upward momentum and potential for reversal. Velocity has improved from \"STAGNANT\" (-2.0%) to \"NORMAL\" (2.9%), but this is occurring within a bearish candle context. W: The \"STRONG_BEARISH\" candle pattern is a significant deterioration. The shift to the \"NEUTRAL_ZONE\" for RSI indicates a loss of oversold conditions without establishing new bullish momentum. The \"NEAR @20d\" barrier remains a short-term resistance. O: Despite the bearish candle pattern, the price is \"STABLE_NEAR_BASE\" (-1.8%) relative to the 20-day SMA, which is an improvement from the previous period. The \"WITHIN_NORMAL_BANDS\" for mean reversion suggests some resilience. T: The \"BEAR_MARKET_RELIEF_RALLY\" regime persists, but the \"DETERIORATING\" sentiment is now reflected in the short-term technicals, leading to a slight decrease in score and conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 5.0,
+        "risk": 6.8
+      },
+      "synthesis": "S: Trend alignment has deteriorated from \"BEARISH_GRADUAL_DESCENT\" (-3.22%) to \"BEARISH_EXPANDING_MOMENTUM\" (-6.74%), indicating accelerating downside. However, the MACD has significantly improved from \"BEARISH_RECOVERING\" (-1.223) to \"BULLISH_ACCELERATING\" (0.584), suggesting a potential trend reversal. The price remains in a \"BEARISH_TREND_POSITION\" (Z:-1.42) relative to the 50-day SMA, but the Z-score has improved from -1.67. W: The \"BEARISH_EXPANDING_MOMENTUM\" is a clear negative signal for the medium term. The \"BEARISH_TREND_POSITION\" relative to the 50-day SMA still indicates underlying weakness. O: The strong bullish acceleration in the MACD is a significant positive development, counteracting the bearish trend alignment. The improved Z-score suggests the price is moving away from extreme bearish positioning. News regarding tankers chartered for Venezuelan crude seeking other business highlights ongoing operational challenges. T: The \"BEAR_MARKET_RELIEF_RALLY\" regime continues, but the \"BULLISH_ACCELERATING\" MACD suggests a potential shift in the medium-term trend, leading to an increase in score and conviction despite the bearish trend alignment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.6,
+        "conv": 4.6,
+        "risk": 6.9
+      },
+      "synthesis": "S: The \"BEAR_MARKET_RELIEF_RALLY\" regime has slightly improved from -9.6% to -8.1%. The \"CROSS_IMMINENT_POTENTIAL_PIVOT\" remains, with the percentage change narrowing from 1.19% to 0.33%, indicating less immediate directional pressure. Long-term positioning has moved from \"BEARISH_LOWER_QUADRANT\" [Pos: 11.8%] to \"BEARISH_LOWER_QUADRANT\" [Pos: 10.9%], a marginal improvement in relative price. W: The \"BEAR_MARKET_RELIEF_RALLY\" regime still implies elevated volatility. The \"CROSS_IMMINENT_POTENTIAL_PIVOT\" suggests continued uncertainty in the long-term direction. The \"DECLINING_EARNINGS\" implied growth remains a fundamental headwind. O: The \"HEALTHY_BALANCE_SHEET\" and \"MODERATE_ASSET_VALUATION\" continue to provide fundamental support. The slight improvement in the regime and positioning offers a marginally more constructive long-term outlook. News regarding dividend and share repurchase risks due to falling oil prices is a new negative consideration. T: The \"POWER_ZONE_CONFLUENCE(4)\" and \"RANGE\" bias suggest a period of consolidation, but the \"CROSS_IMMINENT_POTENTIAL_PIVOT\" hints at potential for a breakout. The long-term score and conviction remain stable, reflecting the mixed signals of improving regime context against persistent fundamental and valuation concerns."
+    }
+  }
+}

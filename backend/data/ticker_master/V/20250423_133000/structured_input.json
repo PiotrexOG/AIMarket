@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.46)",
+        "velocity_roc_10": "NORMAL (6.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 299.0-351.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.29%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.089)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-366.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.92%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 340.52,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | MODERATE_VOLATILITY (ATR:  (4.3%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 65.7% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 52.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $35.926B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.0%, EPS: 17.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.0%, Next Q Est Growth: 0.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.96, P/S: 18.99)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.43)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.02)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa announces Product Drop event on April 3oth in San Francisco None of the other data points meet the criteria for material events directly affecting V.",
+      "Visa announces Product Drop event with new product unveiling on April 3oth.",
+      "Tariffs may increase costs for Visa. - Solid financial performance prior to announcement."
+    ],
+    "medium_term_50d": [
+      "Visa announces Product Drop event on April 3oth in San Francisco None of the other data points meet the criteria for material events directly affecting V.",
+      "Tariffs may increase costs for Visa. - Solid financial performance prior to announcement.",
+      "Visa announces Product Drop event with new product unveiling on April 3oth."
+    ],
+    "long_term_200d": [
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection.",
+      "Open AI Chief Sam Altman's World Networkintalkswith Visaforsstablecoinswallet."
+    ]
+  }
+}

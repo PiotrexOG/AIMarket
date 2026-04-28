@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (28.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-13.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-8.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 80.1-102.27]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.56%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.507)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.95)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 80.1-118.59]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-15.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.21%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 8.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 83.42,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (5.49%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 35.8% | OM: 13.0% | NM: 5.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 5.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $91.361B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 2.8%, EPS: 110.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -82.5%, Next Q Est Growth: 384.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.68, P/S: 1.66)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.51)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.28)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney completes merger of Fubo TV with Hulu, DIS stock affects price.",
+      "China cuts US film imports, affecting Disney and Warner Bros. - Ongoing trade battle between US and China impacts Disney and Apple.",
+      "China limits screening of American movies, including DIS films. - DIS not specifically mentioned in consumer discretionary stocks article."
+    ],
+    "medium_term_50d": [
+      "Disney completes merger of Fubo TV with Hulu, DIS stock affects price.",
+      "China cuts US film imports, affecting Disney and Warner Bros. - Ongoing trade battle between US and China impacts Disney and Apple.",
+      "Disney witnesses 12%, share price decline due to rejected key proposals at AGM. - Disney's consumer products business faces exposure to new tariff regulations."
+    ],
+    "long_term_200d": [
+      "Disney completes merger of Fubo TV with Hulu, DIS stock affects price.",
+      "FCC opens investigation into Disney and ABC's diversity practices - Disney under investigation for potential violation of US equal employment opportunity regulation - FCC chair accuses Disney of promoting discriminatory DEI initiatives - F CC planning to examine Disney's diversity policies and practices",
+      "Disney combines Hulu servicewith Fubo TV's business Note: This output indicates that on March 31, 20 twenty-five, Disney announced a combination of their Hulu service and Fubo Television's business which could potentially have a direct impact on both companies."
+    ]
+  }
+}

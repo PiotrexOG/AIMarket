@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The price has formed a STRONG_BULLISH candle pattern, moving from oversold extreme to a neutral RSI (40.4). ROC has turned positive (2.0%), indicating a shift in short-term momentum. The price remains near the 20-day SMA (-3.3%), suggesting stabilization. W: Despite the bullish candle, the price is still within the middle of the 20-day range, and the RSI is not yet strongly bullish. Volume dynamics have decreased to average (0.79). O: The strong bullish candle and positive ROC suggest potential for further upside, possibly testing the upper bounds of the 20-day range. The shift in momentum from negative to positive is a key development. T: The primary risk is that the bullish momentum may not be sustained, and the price could revert to the middle of the range. The lack of strong conviction in the RSI and the average volume temper the bullish outlook. Risk has decreased due to improved momentum indicators and a bullish candle pattern."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.2,
+        "risk": 6.3
+      },
+      "synthesis": "S: The MACD has shifted to bullish (0.225), indicating a potential reversal in short-term trend momentum, although it is fading. The Z-score relative to the 50-day SMA has slightly worsened (Z:-1.25), suggesting continued positioning within a bearish trend. W: The overall trend alignment remains bearish with expanding momentum (-5.11%). The price is still below the 50-day SMA, and the bullish MACD signal is showing signs of fading. O: The shift to a bullish MACD, even if fading, offers a glimmer of hope for a short-term bounce within the monthly range. This could lead to a test of the 50-day SMA. T: The persistent bearish trend alignment and the fading bullish MACD signal present significant downside risk. The slight deterioration in the Z-score also indicates a lack of strong upward conviction. Conviction remains moderate due to the mixed signals and ongoing bearish trend. Risk has slightly increased due to the fading MACD and continued bearish trend alignment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.3,
+        "conv": 5.3,
+        "risk": 5.2
+      },
+      "synthesis": "S: The long-term range position has moved slightly lower to 36.1%, indicating a more neutral stance within the cycle. The market regime remains a secular bear market (-8.8%), but the major crosses are showing potential for a pivot, albeit with a slight negative bias (-0.62%). Fundamentals remain stable with strong business quality and financial health. W: The growth profile continues to show stagnation (Rev: -5.0%, EPS: -6.4%), and earnings momentum remains a concern with a sharp expected decline next quarter (-52.6%). Valuation multiples are stable but not compelling given the growth outlook. O: The stable fundamentals and the potential for a pivot in long-term crosses provide a floor. The news regarding Moody's downgrade introduces a new short-term risk factor. T: The primary risks remain the stagnant growth profile and the volatile earnings momentum, compounded by the recent debt rating downgrade. However, the underlying business quality and financial health offer some resilience. The score has slightly decreased due to the negative news and slight shift in long-term positioning, while risk has marginally increased."
+    }
+  }
+}

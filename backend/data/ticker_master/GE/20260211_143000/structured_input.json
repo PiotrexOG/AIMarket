@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "NORMAL (6.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 290.07-328.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.96%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.343)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.65)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.64-330.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.09%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 315.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.08%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 36.9% | OM: 20.2% | NM: 19.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.894B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 18.6%, EPS: 35.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 66.4%, Next Q Est Growth: -33.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.52, P/S: 7.33)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.0)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aersospace invests $30 million annually in Singapore engine component repair until 2030.",
+      "GE Aersospace invests $300M in Singapore engine repair ops with AI, automation. - No direct impact on GE itself. - Ignore. - G E Health Care Technologiess stock analysis: value after recent weakness. - Not a material event for GE. -Ignore. *- GE Aero",
+      "GE Aerospace invests $30o M in Singapore engine repair facility (AI, automation) - GEs engine repair capacity expands in Singapore ($300m investment)"
+    ],
+    "medium_term_50d": [
+      "GE Aersospace invests $30 million annually in Singapore engine component repair until 2030.",
+      "GE Aersospace invests $300M in Singapore engine repair ops with AI, automation. - No direct impact on GE itself. - Ignore. - G E Health Care Technologiess stock analysis: value after recent weakness. - Not a material event for GE. -Ignore. *- GE Aero",
+      "GE Aerospace invests $30o M in Singapore engine repair facility (AI, automation) - GEs engine repair capacity expands in Singapore ($300m investment)"
+    ],
+    "long_term_200d": [
+      "GE Aeraspace reports Q4 earnings with $27B orders, $66B FY2 five revenue - GEs Aerospace sees FY2 six adj EPS $ seventh.one zero-$ seven.four zero - G\u0415 Aerospace revenue grows with $19O\u0411 backlog - G \u0415 Aerospace beats earnings estimates for",
+      "Delta orders GE Aero's GEnxenginesfornew Boeing787s. -GEVraises FY28revenueoutlookto$56B. -GERaised Q4earningsandrevenuemorethanexpected.",
+      "GE Aersospace secures major contract with Delta Air Llines for GEnx engine supply. - New leadership shift in GE \u0410erospace'\u0441 Commercial Engines \u0438 Services."
+    ]
+  }
+}

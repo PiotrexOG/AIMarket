@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "NORMAL (-6.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 195.28-218.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.52%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.476)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 128.88-218.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.27%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 200.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.02%))",
+      "volume_dynamics": "ELEVATED (1.26)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.0% | OM: -14.6% | NM: -16.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -18.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $69.445B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.2%, EPS: -404.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 87.7%, Next Q Est Growth: -693.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -45.48)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Russia air attack damages Boeing offices \u0432 \u0423\u043a\u0440\u0430\u0438\u043d\u0435 (FT) - India orders sweping aviation review after Air India crash",
+      "Air India'sboeing 78 seventh-8 Dreamlined forced to return to origin due to technical issue mid\u2013air.",
+      "India aviation regulator reviews operations of Air India and Air India Express amid increasing flight volumes - Airbus wins order to supply 25 \u0410350\u2011100\u043e Airplanesto Riyad\u0445 Air - Boeling executive says don\u0442 expect any morebig assets sales atthis time - Air India Avi\u0430tion Regulator meets with Air Ind"
+    ],
+    "medium_term_50d": [
+      "Air India Boeling 788-8 Dreamler crashes aftertakeoff - Boening issues statementabout Air India Flight171 - Over 20o people killedin Air Indiaplane crash - Boeing in contactwith Air Indiaregarding Flight1 seventh - UKPrimer Minister Starmercommentson Air Ind",
+      "Russia air attack damages Boeing offices \u0432 \u0423\u043a\u0440\u0430\u0438\u043d\u0435 (FT) - India orders sweping aviation review after Air India crash",
+      "India government directs Air India to conduct safety inspection on Boeing 787 fleet. - Air India jet crash probe puts early focus on engine thrust."
+    ],
+    "long_term_200d": [
+      "Air India Boeling 788-8 Dreamler crashes aftertakeoff - Boening issues statementabout Air India Flight171 - Over 20o people killedin Air Indiaplane crash - Boeing in contactwith Air Indiaregarding Flight1 seventh - UKPrimer Minister Starmercommentson Air Ind",
+      "US Justice Department lets Boeing avoid prosecutionover 733 MAX crashes. (10, 11, 12, 13) - Boeling pays $1.445B for crash victims' families and regulatory penalties. (12)",
+      "Justice Department may dropped criminal prosecution against Boeing over Max crashes."
+    ]
+  }
+}

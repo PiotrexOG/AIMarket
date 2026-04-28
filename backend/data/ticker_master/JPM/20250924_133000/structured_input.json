@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 291.44-316.31]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.37%)",
+        "cycle_macd": "BULLISH_FADING (0.889)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.42)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 283.01-316.31]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.83%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 99.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 315.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "AVERAGE (0.91)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.4% | OM: 25.8% | NM: 20.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.85x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -53.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.495B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.9%, EPS: 8.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 17.4%, Next Q Est Growth: -7.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.17, P/S: 3.2)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.47)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.84)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.75x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan increases dividend to $1._50 per shares. - New $50\\_billion share buyback program announced.",
+      "JPMorgan global head of advisory & MBA, Anu A\u0439\u0435\u043d\u0433\u0430\u0440 discusses India's economic prospects. - Trump's policy affects big tech stocks including JPMorgan slightly. - No direct impact on JPM: Capitals One settlement with influenc ERS. - Phil Sieg, JPM'sorgan's wealth management executive retires",
+      "Fed cuts rates, fuels optimism for JPM's NII andasset quality gains. - One-year, $\\$1B JPM-Angola debt swap deal may need extension."
+    ],
+    "medium_term_50d": [
+      "JPMorgan increases dividend to $1._50 per shares. - New $50\\_billion share buyback program announced.",
+      "Fed cuts rates, fuels optimism for JPM's NII andasset quality gains. - One-year, $\\$1B JPM-Angola debt swap deal may need extension.",
+      "JPMorgan faces scrutiny from Senator Warren and Democratic lawmakers over ties to Jeffrey EPstein. - Senators call for hearings about JPMorgan\u2018s ties to Jeffery Epstein. Note: These two bullets represent the same event but with slightly different wording. Since the task requires identifying material events directly affecting JPM, both bullets can be considered"
+    ],
+    "long_term_200d": [
+      "JPMorgan faces scrutiny from Senator Warren and Democratic lawmakers over ties to Jeffrey EPstein. - Senators call for hearings about JPMorgan\u2018s ties to Jeffery Epstein. Note: These two bullets represent the same event but with slightly different wording. Since the task requires identifying material events directly affecting JPM, both bullets can be considered",
+      "JPMorgan increases dividend to $1._50 per shares. - New $50\\_billion share buyback program announced.",
+      "Fed cuts rates, fuels optimism for JPM's NII andasset quality gains. - One-year, $\\$1B JPM-Angola debt swap deal may need extension."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.44)",
+        "velocity_roc_10": "STAGNANT (-0.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.45-99.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.47%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.011)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.69)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 85.45-106.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.64%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 93.92,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.38%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.1% | OM: 26.7% | NM: 22.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 17.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.000966B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 66.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 4.8%, Next Q Est Growth: 29.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 46.27, P/S: 10.54)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.62)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.7)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix signs multi year content production deal._ - Regulation impacts online misogny, affects NFLX shows._",
+      "BBC cuts spending on new TV shows by \u00a3\u2081 f\u00fcnf\u2080 million. - Evercore and JPMorgan issue bullish noteson NFLX.",
+      "Netflix experiences significant stock price drop along with Alphabet,Meta Platforms,and other tech companies. - No direct material events identified specifically for NFLX on March 28, 20 twenty-five. None."
+    ],
+    "medium_term_50d": [
+      "Netflix signs multi year content production deal._ - Regulation impacts online misogny, affects NFLX shows._",
+      "BBC cuts spending on new TV shows by \u00a3\u2081 f\u00fcnf\u2080 million. - Evercore and JPMorgan issue bullish noteson NFLX.",
+      "Netflix gains despite market dip. - Google, Meta, and Netflix top performers in S&P fifth largest sector."
+    ],
+    "long_term_200d": [
+      "Turkish competition board investigates Netflix for potential violation of competition law.",
+      "Netflix gains despite market dip. - Google, Meta, and Netflix top performers in S&P fifth largest sector.",
+      "Netflix signs multi year content production deal._ - Regulation impacts online misogny, affects NFLX shows._"
+    ]
+  }
+}

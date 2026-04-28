@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (82.3)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.08)",
+        "velocity_roc_10": "EXPLOSIVE_UP (11.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 146.77-167.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.29%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.619)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.8)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 122.56-167.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (35.8%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.3%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 164.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.46%))",
+      "volume_dynamics": "ELEVATED (1.21)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.2%, Next Q Est Growth: 1.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 24.66, P/S: 2.15)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.68)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "SBM Offshore awarded FEED contracts for Longtail project in Guyana. - Exxon Mobil Corp shares hit new all-time high. - Exxon Mobil poised for Q1 earnings boost from oil prices.",
+      "Exxon Mobil weighs Alaska expansion against Qatar damage. - Exxon Mobil secured new acreage in Alaska lease sale. - Iranian missile strikes damaged Qatar LNG facilities.",
+      "Exxon Mobil joint venture in Qatar impacted by attacks. - Exxon Mobil sells stake in North Atlantic Energies."
+    ],
+    "medium_term_50d": [
+      "SBM Offshore awarded FEED contracts for Longtail project in Guyana. - Exxon Mobil Corp shares hit new all-time high. - Exxon Mobil poised for Q1 earnings boost from oil prices.",
+      "Exxon Mobil weighs Alaska expansion against Qatar damage. - Exxon Mobil secured new acreage in Alaska lease sale. - Iranian missile strikes damaged Qatar LNG facilities.",
+      "Exxon Mobil Australia cooperates with federal government. - BP, Exxon Mobil units face anticompetitive conduct probe in Australia. - Gas traders await start of Exxon, Qatar Energy plant. - Iran war damages facilities part-owned by Exxon Mobil."
+    ],
+    "long_term_200d": [
+      "SBM Offshore awarded FEED contracts for Longtail project in Guyana. - Exxon Mobil Corp shares hit new all-time high. - Exxon Mobil poised for Q1 earnings boost from oil prices.",
+      "Exxon Mobil enables first fully automated geological well placement offshore Guyana. - Exxon Mobil partnership achieves industry's first fully automated well placement. - Exxon Mobil's Guyana automation milestone sets new offshore drilling benchmark.",
+      "Exxon Mobil weighs Alaska expansion against Qatar damage. - Exxon Mobil secured new acreage in Alaska lease sale. - Iranian missile strikes damaged Qatar LNG facilities."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.56)",
+        "velocity_roc_10": "STAGNANT (1.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 86.63-122.22]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-7.17%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.168)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 86.63-143.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.0%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 28.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 105.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | HIGH_VOLATILITY_ASSET (ATR:  (7.4%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 72.7% | OM: 54.1% | NM: 48.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 44.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $60.922B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 125.9%, EPS: 591.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.2%, Next Q Est Growth: 62.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 86.99, P/S: 43.13)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 61.13)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.15)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump promises expedited permits for NVIDIA's US AI buildout. - Trump hypes $5oo billion NVIDIA investment in US AI supercomputers. - Trade uncertaint IES affect NVIDIA navigation. - Intel faces overblown optimism and stark reality. - AMD makes chips at US site with TS MC. - President",
+      "Nvidia works with partners to produce AIsupercomputers in US. - NVidia plans AI infrastructureworth $505 billion in USoverfouryears.",
+      "Apple and Nvidia receive tariff exemitions. - Alleged production expansion for new AI product. Note: Based on information from event #8 and potential implication from event #6. However, this requires further confirmation as there might not be an official announcement regarding the alleged production expansion."
+    ],
+    "medium_term_50d": [
+      "Nvidia works with partners to produce AIsupercomputers in US. - NVidia plans AI infrastructureworth $505 billion in USoverfouryears.",
+      "Trump promises expedited permits for NVIDIA's US AI buildout. - Trump hypes $5oo billion NVIDIA investment in US AI supercomputers. - Trade uncertaint IES affect NVIDIA navigation. - Intel faces overblown optimism and stark reality. - AMD makes chips at US site with TS MC. - President",
+      "US export rules restricted Nvidiachip sales to China.\\ - Tariffs took effect on Nvidiastock.\\ - Nividiastock continues to struggle amidst market turmoil.\\ - Semiconductors exempted from tariffs, but Nvidia affected.\\ - Dow Jones Futues Par losses due to US-Chinatradewar;\\"
+    ],
+    "long_term_200d": [
+      "Nvidia works with partners to produce AIsupercomputers in US. - NVidia plans AI infrastructureworth $505 billion in USoverfouryears.",
+      "Nvidia experiences a 14\\% price decline after announcing AI Data Platform and DGXSuper POD. - Trump tariffs cause 23\\% drop in Nvidia stock value.",
+      "Trump promises expedited permits for NVIDIA's US AI buildout. - Trump hypes $5oo billion NVIDIA investment in US AI supercomputers. - Trade uncertaint IES affect NVIDIA navigation. - Intel faces overblown optimism and stark reality. - AMD makes chips at US site with TS MC. - President"
+    ]
+  }
+}

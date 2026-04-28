@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.8,
+        "risk": 5.2
+      },
+      "synthesis": "S: The short-term momentum has shifted from bullish to neutral. RSI has declined to 53.9, moving out of the bullish zone. Velocity has also decreased to 1.6%, and the price is now consolidating, hugging the 20-day SMA with minimal upward movement (0.4%). The candle pattern remains neutral. W: The previous strong bullish signals have faded, indicating a loss of short-term upward pressure. The analyst sentiment has stabilized, but conviction remains low, suggesting uncertainty. O: The shift to a neutral RSI and reduced velocity suggests a pause in the upward momentum. The price consolidation near the 20-day SMA indicates a period of indecision. Recent news regarding potential drug tariff imposition introduces a new, albeit short-term, risk factor. T: The score has decreased from 7.2 to 5.5 due to the reversal of short-term bullish momentum indicators (RSI, velocity). Conviction has decreased from 6.8 to 5.8 as the technical signals are now mixed and less decisive. Risk has increased from 4.5 to 5.2 due to the loss of upward momentum and the introduction of potential tariff news, which adds a layer of uncertainty and potential downside pressure."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term outlook has deteriorated. The bullish MACD signal is fading (0.222), and the price has moved further away from the 50-day SMA, with the Z-score now at -0.96, indicating a bearish trend position. Trend alignment remains bearishly expanding. W: The fading MACD and increasing distance from the 50-day SMA suggest that the prior bullish momentum is not being sustained. The analyst consensus remains mixed with low conviction. O: The weakening MACD and the price's position below the 50-day SMA indicate a potential for further downside pressure in the medium term. The news regarding potential drug tariffs could also impact medium-term sentiment and operational costs. T: The score has decreased significantly from 6.5 to 4.8, reflecting the fading MACD and the deteriorating position relative to the 50-day SMA. Conviction has decreased from 6.2 to 4.5 as the medium-term technical signals are now clearly bearish and losing their prior bullish impetus. Risk has increased substantially from 5.0 to 6.5 due to the worsening trend alignment, the increased distance from the 50-day SMA, and the introduction of potential tariff-related headwinds."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.8,
+        "risk": 8.2
+      },
+      "synthesis": "S: The long-term technical picture has weakened. The secular bear market has deepened to -15.0%, and the long-term range position has fallen to 18.2%, indicating a more bearish positioning. The death cross structure persists and has slightly widened. W: The persistent death cross and the worsening secular bear market regime indicate ongoing structural weakness. The older news regarding the obesity pill discontinuation continues to represent a fundamental risk to long-term growth, and the new news about potential drug tariffs adds another layer of long-term uncertainty. O: The deepening secular bear market and the lower long-term range position suggest that the extreme bearish sentiment is intensifying rather than moderating. The company's strong fundamentals provide some support, but the structural technicals and ongoing news flow present significant headwinds. T: The score has decreased slightly from 2.8 to 2.5, reflecting the worsening secular bear market magnitude and long-term range position. Conviction has decreased slightly from 4.0 to 3.8 as the long-term technicals are showing less extreme bearishness but are still predominantly negative. Risk has increased from 7.8 to 8.2 due to the deepening secular bear market, the worsening long-term range position, and the persistent death cross structure, compounded by new tariff-related concerns."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: Recent sales data (9.4% comp growth, 23.3% digital gains) and positive news flow provide a supportive backdrop. Technicals are neutral, with RSI near 50 and price within the mid-range, indicating a lack of immediate directional conviction. W: The neutral candle pattern and stable trend base suggest consolidation rather than strong upward momentum. O: Potential upside exists if recent sales momentum translates into a breakout from the current range, supported by elevated volume. T: Valuation remains a concern, and the lack of strong short-term technical signals limits immediate upside potential, capping the score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: While the long-term trend remains bullish, medium-term technicals show signs of weakness. The MACD bearish zero cross and the Z-score below -1.0 indicate a shift towards a more negative trend. W: Trend alignment is compressed, and the price is positioned below key moving averages, suggesting a lack of conviction in the current trend. The inside monthly range further points to indecision. O: A recovery in MACD and a move back above key SMAs could signal a return to a more constructive trend. Positive earnings surprises, if sustained, could provide a catalyst. T: The bearish technical signals and the compressed range increase the risk of a downside move, particularly if the broader market sentiment shifts."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term secular bull market regime and healthy golden cross structure provide a strong foundation. The stock's position in the upper quadrant of its long-term range (69.1%) indicates sustained upward momentum. W: Fundamental quality is mixed, with thin margins (GM: 12.8%) and weak cash conversion (FCF Mgn: 2.8%) offsetting strong financial health (NetCash/Eq: 0.21x) and scale. The \"hyper-premium\" valuation (P/E: 53.51, PEG: 5.38) presents a significant risk. O: Continued strong revenue and EPS growth (8.2%, 9.9%) and potential benefits from membership fee increases could support the premium valuation. The company's fortress balance sheet offers resilience. T: The primary risk stems from the extremely high valuation multiples and the potential for a market regime shift or a slowdown in growth, which could lead to a significant de-rating."
+    }
+  }
+}

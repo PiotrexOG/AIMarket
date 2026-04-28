@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.2)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.06)",
+        "velocity_roc_10": "NORMAL (8.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 53.34-63.47]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.79%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.056)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-80.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-16.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-15.01%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 26.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 62.33,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.79%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.62, P/S: 1.84)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.55)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "U.S-China agreement to reduce tariffs leads to surge in NKE shares. - Tariff cut signals relief for NKE's supply chain and inventory management.",
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning"
+    ],
+    "medium_term_50d": [
+      "U.S-China agreement to reduce tariffs leads to surge in NKE shares. - Tariff cut signals relief for NKE's supply chain and inventory management.",
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - Supreme Court rules against Nike patent infringement lawsuit. - New product recall forces Nike to issue profit warning"
+    ],
+    "long_term_200d": [
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products.",
+      "U.S-China agreement to reduce tariffs leads to surge in NKE shares. - Tariff cut signals relief for NKE's supply chain and inventory management.",
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline."
+    ]
+  }
+}

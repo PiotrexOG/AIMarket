@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.1)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.04)",
+        "velocity_roc_10": "NORMAL (-3.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.8-116.03]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.97%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.515)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.89-117.09]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.86%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 111.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.6% | OM: 14.8% | NM: 12.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 3.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.535B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 144.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 186.3%, Next Q Est Growth: -45.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.45, P/S: 2.13)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.84)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney faces increasing competition from other streamers offering limited-time deals. - New Star Wars chief appointed by Disney. - Media companies acknowledge growing price sensitivity among households regarding subscription growth.",
+      "Disney names Dave Filon I as new Lucasfilm President and CCO.",
+      "Disney creates new enterprise marketing organization, appoints Asad Axaz as Chief Marketing and Brands Officer (DIRECT) - Disney unifies marketing efforts into new centralized unit (DIRECT)"
+    ],
+    "medium_term_50d": [
+      "Disney faces increasing competition from other streamers offering limited-time deals. - New Star Wars chief appointed by Disney. - Media companies acknowledge growing price sensitivity among households regarding subscription growth.",
+      "Disney names Dave Filon I as new Lucasfilm President and CCO.",
+      "Disney creates new enterprise marketing organization, appoints Asad Axaz as Chief Marketing and Brands Officer (DIRECT) - Disney unifies marketing efforts into new centralized unit (DIRECT)"
+    ],
+    "long_term_200d": [
+      "Paramount launches all-c ash tender offer to acquisite Warner Bros Discovery for $3o per share. - Paramount says its Warner Bros offer beats Netflix deal. - Netflix buys Warner and HBOfor $82billion. - Netflix wins the Streaming Warss:The $82Billion Warner Bros Deal.",
+      "Disney invests \u00a31 billion in Open AI and signs three-year deal to bring characters to Sora platform. - Open AI licenses Disney, Marvel ,Star Wars, and Pix\u0430\u0440 characters for S\u043er\u0430 video generation.",
+      "Walt Disney invests $1 billion in Open AI deal."
+    ]
+  }
+}

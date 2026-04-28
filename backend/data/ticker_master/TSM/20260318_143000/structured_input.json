@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "NORMAL (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 331.92-390.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.48%)",
+        "cycle_macd": "BEARISH_RECOVERING (-3.559)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 316.14-390.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (22.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.63%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 343.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.74%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.9% | OM: 50.8% | NM: 45.1%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.31x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3818.940591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.9%, EPS: 48.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3202.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.04, P/S: 0.47)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.33)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC exposed to helium shortage risk via Strait of Hormuz.",
+      "Strait of Hormuz closure threatens TSMC helium supply.",
+      "Nvidia Rubin GPU faces possible delay due to HBM4 supply."
+    ],
+    "medium_term_50d": [
+      "TSMC exposed to helium shortage risk via Strait of Hormuz.",
+      "Strait of Hormuz closure threatens TSMC helium supply.",
+      "TSMC shares sink amid Iran tensions and tech selloff."
+    ],
+    "long_term_200d": [
+      "TSMC exposed to helium shortage risk via Strait of Hormuz.",
+      "Strait of Hormuz closure threatens TSMC helium supply.",
+      "TSMC shares sink amid Iran tensions and tech selloff."
+    ]
+  }
+}

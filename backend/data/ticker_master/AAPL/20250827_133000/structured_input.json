@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.67)",
+        "velocity_roc_10": "STAGNANT (-0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 201.5-235.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.98%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.22)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 195.07-235.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (3.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.44%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 230.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 35.77, P/S: 8.65)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 51.85)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Musk su ES Apple and Open AI, alleging anti-competitive collusion. - Musk files antitrust LAWSUIT against Apple and Open AI. - Elon Musks x AI su ES Appleand Open AI for alleged antitrust violation S.",
+      "Elon Mus\u043a's x \u0410\u0418 sues Apple and Open \u0410\u0406 over competition claims. - Apple cannot advertise Apple Watch as \"CO2\u2010neutral product\" anymore in Germany.",
+      "Apple sued by Masimo over Customs ruling allowing imported Apple Watches - Masimo alleges Apple stole pulse oximeter technology, infringed patents - Legal battle escalates between tech giant and medical monitoring firm"
+    ],
+    "medium_term_50d": [
+      "Musk su ES Apple and Open AI, alleging anti-competitive collusion. - Musk files antitrust LAWSUIT against Apple and Open AI. - Elon Musks x AI su ES Appleand Open AI for alleged antitrust violation S.",
+      "Elon Mus\u043a's x \u0410\u0418 sues Apple and Open \u0410\u0406 over competition claims. - Apple cannot advertise Apple Watch as \"CO2\u2010neutral product\" anymore in Germany.",
+      "Apple sued by Masimo over Customs ruling allowing imported Apple Watches - Masimo alleges Apple stole pulse oximeter technology, infringed patents - Legal battle escalates between tech giant and medical monitoring firm"
+    ],
+    "long_term_200d": [
+      "Musk su ES Apple and Open AI, alleging anti-competitive collusion. - Musk files antitrust LAWSUIT against Apple and Open AI. - Elon Musks x AI su ES Appleand Open AI for alleged antitrust violation S.",
+      "Apple signals readiness to increase spending on AI, build more data centers, or buy another company. - Tech giants report rising earnings driven by AI investments. - Apple's revenue forecast exceeds estimates, guiding for solid Q3 growth.",
+      "Apple announces $101 billion US investment, avoids tariffs. (White House press conference) - Apple stock retakes key level following tariff exemption announcement. (Market movement)"
+    ]
+  }
+}

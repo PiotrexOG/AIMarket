@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 224.23-266.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.35%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.971)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 224.23-280.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.17%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 254.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.61%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 27.7% | NM: 21.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.82x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -15.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.773B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.4%, EPS: 21.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 19.3%, Next Q Est Growth: -3.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.85, P/S: 2.67)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.1)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.59)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.39x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "J.P Morgan expands partnership with Affirm for merchant payments. - New MSFCP organization launched by JPMorgan for college student financial support.",
+      "JPMorgan and United Airlines announce new and enhanced travel benefits for United Milleage Plus Card Members. - United hikes card fees, airline stocks rise. - Chase introduces United Family of Cards with new benefits worth over $2,0oo for Milege Plus members.",
+      "JPMorganasset management unit leaves industry climate coalition - J PMorgan renewames, retails diversity programs as Trump targets DEI"
+    ],
+    "medium_term_50d": [
+      "J.P Morgan expands partnership with Affirm for merchant payments. - New MSFCP organization launched by JPMorgan for college student financial support.",
+      "JPMorganasset management unit leaves industry climate coalition - J PMorgan renewames, retails diversity programs as Trump targets DEI",
+      "JPMorgan and United Airlines announce new and enhanced travel benefits for United Milleage Plus Card Members. - United hikes card fees, airline stocks rise. - Chase introduces United Family of Cards with new benefits worth over $2,0oo for Milege Plus members."
+    ],
+    "long_term_200d": [
+      "JPMorganasset management unit leaves industry climate coalition - J PMorgan renewames, retails diversity programs as Trump targets DEI",
+      "J.P Morgan expands partnership with Affirm for merchant payments. - New MSFCP organization launched by JPMorgan for college student financial support.",
+      "JPMorgan announces fixed-incode offering with unsubordimated unsecurednotes due March 2oo4o. - 3%decline in JPMsharepriceoverlastquarterdespitestrong Q4earnings."
+    ]
+  }
+}

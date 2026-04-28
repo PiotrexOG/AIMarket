@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (25.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.1)",
+        "velocity_roc_10": "NORMAL (-6.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 75.23-89.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.42%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.167)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.76)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.23-104.79]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-30.9%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-20.34%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 4.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 77.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.29%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.97, P/S: 7.42)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.59)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix faces investor pushback in high stakes Warner Brs. Discovery pursuit - Regulator scrutiny adds uncertainty to Netflix's planned acquisition - Competing offer from Paramound Skydance opposes Netflix's deal - Netflix weighs cheaper UK streaming to win Hollywood takeover battle",
+      "Warner Bros discovers reopens talks with Paramoun D for best andfinal offer. - Netflix grants Warner Bross a 7day extension for Paramount deals.",
+      "Netflix, NASDAQ:NLFX, pursues $82,7b acquisitionof Warner Bros., facing opposition and regulatory review. - Paramount offers sweeter deal for Warner Broswith potential impact on NLFX acquisition."
+    ],
+    "medium_term_50d": [
+      "Netflix faces investor pushback in high stakes Warner Brs. Discovery pursuit - Regulator scrutiny adds uncertainty to Netflix's planned acquisition - Competing offer from Paramound Skydance opposes Netflix's deal - Netflix weighs cheaper UK streaming to win Hollywood takeover battle",
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Netflix bids to acquire Warner Brothers Discovery, faces competition from Paramount Skyladnce and antitrust investigation."
+    ],
+    "long_term_200d": [
+      "Netflix agrees to acquire Warner Brothers Discovery, faces antitrust investigation.",
+      "Expanded DOJ scrutiny over Netflix's $82b Warner Bros acquisition raising antitrust concerns. - Senate hearings assessing impact of merger on competition and choice in streaming market.",
+      "Netflix faces DOJ antitrust investigation over Warner Bros deal. Based on the provided data, there is one material event identified that directly affects company ticker NLFX on 2o26-o2-o7. This event involves regulatory scrutiny surrounding Netflix's proposed acquisition of Warmer Bros. assets by the US Department of Justice, raising questions about potential"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (7.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 871.71-999.92]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.67%)",
+        "cycle_macd": "BULLISH_FADING (5.602)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.13)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 871.71-1078.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.64%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 67.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 985.73,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.08%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.38, P/S: 1.72)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.57)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.46)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco announces expansion of non-alcoholic offerings. -Costco increases dividend to $1._30 pershare.",
+      "Costco announces 12\\% dividend increase. - New dividend rate: $1. three zero cent per share. - Annual dividend: $5. two zero dollars. - Yield: approximately 0. five four percent.",
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales."
+    ],
+    "medium_term_50d": [
+      "Costco announces 12\\% dividend increase. - New dividend rate: $1. three zero cent per share. - Annual dividend: $5. two zero dollars. - Yield: approximately 0. five four percent.",
+      "Costco announces expansion of non-alcoholic offerings. -Costco increases dividend to $1._30 pershare.",
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales."
+    ],
+    "long_term_200d": [
+      "Costco announces 12\\% dividend increase. - New dividend rate: $1. three zero cent per share. - Annual dividend: $5. two zero dollars. - Yield: approximately 0. five four percent.",
+      "Costco'CEO Ron Vachrs discusses Kirkland Sign ATURE brand growth and leverage. -Costco releases Q1 sales statement for ending April 0 sixth, 20 twenty-five. - costco sees stock price uplift due to market movements and strong sales.",
+      "Costco announces expansion of non-alcoholic offerings. -Costco increases dividend to $1._30 pershare."
+    ]
+  }
+}

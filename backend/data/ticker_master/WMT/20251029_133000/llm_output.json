@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has significantly deteriorated. The RSI has moved from a strong bullish zone (63.4) to a neutral zone (50.6). Velocity has turned negative (-3.7%), and the price is now below the 20-day SMA (-1.4%). The price remains in the middle of the 20-day range. W: The shift to neutral RSI, negative velocity, and price below the 20-day SMA indicates a loss of short-term upward pressure. The neutral candle pattern persists, suggesting indecision. O: Short-term news flow is mixed, with some positive mentions of product availability and Black Friday deals, but also news about competitors and potential market share shifts. T: The short-term score is reduced to 5.5 due to the clear deterioration in momentum indicators. Conviction is lowered to 5.0 as the signals are now mixed and leaning bearish. Risk is increased to 7.5, reflecting the increased volatility context (2.26% ATR), the shift from a neutral to a slightly negative short-term trend, and the potential for further downside from the current neutral range position."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows a slight improvement (2.15%), but this is overshadowed by a significant deterioration in the MACD, which has moved from bullish fading (0.334) to bearish accelerating (-0.29). The price has moved from a bullish trend position (Z:1.74) to a healthy base (Z:0.31) relative to the 50-day SMA. The price remains inside the monthly range. W: The accelerating bearish MACD and the shift in Z-score from bullish trend to a healthy base indicate a loss of medium-term upward momentum and potential for a trend reversal. The price is no longer exhibiting strong bullish positioning. O: The ongoing narrative around AI integration and partnerships with OpenAI continues to be a key driver, but its impact on the immediate price action is being negated by technical deterioration. T: The medium-term score is significantly reduced to 5.0 due to the bearish MACD acceleration and the shift in SMA positioning. Conviction is lowered to 4.5 as the clear upward trend is now showing strong signs of reversal. Risk is increased to 8.0, reflecting the increased volatility context, the bearish MACD, the potential for a breakdown from the current base, and the elevated valuation risk (P/E: 53.67)."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term secular bull market regime has softened (6.1%), and the price is now positioned lower in its long-term range (79.2%). The healthy golden cross structure persists (5.28%), providing some structural support. W: The fundamental strengths of WMT as a mega-cap titan with moderate growth and stable financials remain intact. The ongoing AI narrative continues to offer a forward-looking growth catalyst, albeit with less immediate impact on price. O: Strategic initiatives, particularly AI partnerships, continue to reinforce the long-term growth profile. However, the softening market regime and reduced long-term range position suggest a less robust long-term outlook compared to previous periods. T: The long-term score is reduced to 7.5, reflecting the softening market regime and the lower position within the long-term range. Conviction is slightly reduced to 7.0 due to these shifts. Risk is increased to 5.5, acknowledging the elevated valuation multiples (P/E: 53.67, P/B: 9.89) and the increased risk associated with holding near the upper quadrant of the range, especially with a softening market regime."
+    }
+  }
+}

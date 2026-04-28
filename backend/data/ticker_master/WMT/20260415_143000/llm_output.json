@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term technicals present a mixed picture. While momentum indicators like RSI are in a neutral zone (56.6) and the price is stable near the 20-day SMA (0.9%), the bearish shooting star candle pattern suggests potential near-term weakness. The price is currently in the middle of its 20-day range [118.02-129.68].\nW: The shooting star pattern is a bearish signal, indicating potential downward pressure. The neutral RSI limits upside conviction.\nO: Positive news flow regarding business initiatives and AI integration could provide some support. The average volume dynamics (0.85) suggest market participation is not overly enthusiastic.\nT: Elevated valuation risk and moderate volatility (ATR: 2.22%) contribute to a higher risk score, despite some neutral-to-positive technical signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment is currently bearish (-1.38%), with the price positioned below the 50-day SMA (Z:-0.7). However, the MACD shows a fading bullish signal (0.214), suggesting a potential shift. The price remains within the monthly range [118.02-134.69].\nW: The bearish trend alignment and negative Z-score are significant headwinds. The fading MACD suggests the bullish momentum is weakening.\nO: The strong analyst consensus (STRONGLY_BULLISH) and moderate conviction level provide some underlying support, counteracting some of the bearish technicals.\nT: The combination of a bearish trend and fading bullish momentum, coupled with the inherent valuation risk, leads to a moderate risk assessment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "risk": 4.0
+      },
+      "synthesis": "S: Long-term indicators remain constructive. The market regime is a secular bull market (13.4%), and the stock exhibits a healthy golden cross structure (13.93%). The price is positioned in the upper quadrant of its long-term range (72.5%), indicating a bullish bias.\nW: Despite the overall bullish long-term structure, the fundamental business quality is characterized by thin margins (GM: 24.9%, OM: 4.3%) and weak cash conversion (FCF Mgn: 1.9%).\nO: The company's mega-cap status (Rev: $680.985B) and moderate growth profile (Rev: 5.1%, EPS: 25.1%) are positive long-term attributes. Recent news regarding strategic initiatives and acquisitions (Vizio) suggests ongoing business development.\nT: The strong long-term technical structure and growth profile are offset by significant valuation risk (P/E: 51.27, P/S: 1.47) and moderate financial leverage (NetDebt/Eq: 0.56x), resulting in a moderate risk score."
+    }
+  }
+}

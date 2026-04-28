@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "risk": 5.2
+      },
+      "synthesis": "S: The short-term outlook has improved significantly. The NEUTRAL candle pattern is now supported by a shift in RSI to the NEUTRAL_ZONE (47.3), indicating a less bearish stance. Mean reversion to Bollinger Bands has widened to 0.68, suggesting increased volatility within normal bands, but the ROC has turned positive (2.0%). W: While the price is now above the 20-day SMA (0.9%), the analyst consensus remains MIXED, and the polarization is decreasing, suggesting a less conviction. O: News flow is mixed, with a focus on strategic plans and potential data center partnerships, but also includes a permanent closure of a Singapore unit. T: Volatility has slightly increased to 1.98% ATR, but the improvement in momentum and the shift in analyst sentiment reduce downside risk. The proximity to the 20-day SMA is now a support rather than resistance."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.2,
+        "conv": 5.8,
+        "risk": 4.8
+      },
+      "synthesis": "S: The medium-term trend alignment continues its bullish gradual ascent (1.75%), and the bearish MACD has significantly recovered (-0.042), indicating a potential trend reversal. The SMA50 Z-score has further strengthened to 1.67, reinforcing a strong bullish trend position. W: While the MACD is recovering, it remains in bearish territory, and the stock is strengthening at monthly resistance, creating some conviction challenges. The analyst sentiment is MIXED. O: The news narrative includes strategic plans and data center partnerships, which are positive medium-term drivers, alongside potential M&A activity. T: The improved SMA50 Z-score and recovering MACD suggest underlying strength, but the resistance zone and mixed analyst sentiment introduce some risk. Valuation risk remains moderate, and the technical divergence is narrowing."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 3.5
+      },
+      "synthesis": "S: The long-term regime remains a robust SECULAR_BULL_MARKET (6.5%), and the price has advanced to the top of the cycle (92.6%). The HEALTHY_GOLDEN_CROSS structure remains intact and has slightly strengthened (3.76%). W: The fundamental growth profile continues to be a persistent weakness (STAGNATION_WITH_PROFIT_ISSUES), which limits the conviction in the long-term score. The analyst consensus remains MIXED. O: Strategic initiatives for AI data centers, carbon capture, and potential M&A activity in Iraq provide positive long-term narrative drivers. The news flow highlights a focus on higher earnings and stronger cash flow in their 2030 plan. T: Volatility remains stable, and the balance sheet is healthy, contributing to a low risk profile. The primary long-term risk remains the structural weakness in earnings growth, but it is currently mitigated by the strong market regime and strategic initiatives."
+    }
+  }
+}

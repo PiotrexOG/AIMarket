@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 334.92-360.22]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.6%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.432)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.04)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 334.92-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.45%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 347.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.04, P/S: 18.77)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.04)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Australian central bank proposes scrapping surcharges for most Visa,Mastercard payments. - Judge dismisses argument that Apple could replace Visa, Masters as dominant networks.",
+      "Odoo partnership with Tyro affects Australian payment services for small businesses. - Yeahka expanse of payment options for \u0425S\u0411\u0421 Digital Merchant Services. - QIIB introduces Click to Payfeature for Visacardholders.",
+      "Stitch Group buys Efficiency Payments, acquires payment processing capabilities. - New Gen integrates Visa for AI-native secure transactions."
+    ],
+    "medium_term_50d": [
+      "Australian central bank proposes scrapping surcharges for most Visa,Mastercard payments. - Judge dismisses argument that Apple could replace Visa, Masters as dominant networks.",
+      "Belgian banks partner with European Payments Initiative to expand Wero wallet, potentially impacting Visa's market share. -Visa forms partnerships with BN PL players Klarnaafterpay.",
+      "Visa announces expansion of partnership with VGS. -Visa launches security roadmap for New Zealands against AI-driven fraud."
+    ],
+    "long_term_200d": [
+      "UK tribunalrules Visa and Mastercard\u2019sinterchange feesviolate law - Visadefeatslawsuitover Vanillagift card scam",
+      "Visa partnerswith Yellow Card to expeditestablecoinadoption in EMEA. - Senate passes stablecoinsbill, affecting Visainvestorsentiment.",
+      "Visa picksvalue-added serviceshead - European Unionantitrustregulatorspushfor More Transparencyin Visa Mastercard Fees(Directimpacton V)"
+    ]
+  }
+}

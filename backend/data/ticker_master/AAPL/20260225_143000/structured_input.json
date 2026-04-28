@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "STAGNANT (-0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 252.18-280.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.37%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.117)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 243.42-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.87%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 273.63,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.58%))",
+      "volume_dynamics": "ELEVATED (1.23)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.58, P/S: 9.87)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 55.68)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.6)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple moves Mac Mini production partially to Houston, USA. - Apple expands Houston facility for Mac mini and advanced AI server production. Note: These events directly affect Apple's manufacturing strategy and production locations.",
+      "Australian Motoring Service adds support for Apple'sd Roadside Assistance via satellite. - Nvidia plans AI laptop chip return to PC market. - Omdia : Apple and Honor claim record market shares in Europe\u2019s smartphone shipment dip.",
+      "West Virginia AG files lawsuit against Apple over alleged failure to prevent child sexual abuse materials on i OS devices. - Apple takes page from Netflix playbook, focuses on own content amid declining Bitcoin prices."
+    ],
+    "medium_term_50d": [
+      "Apple moves Mac Mini production partially to Houston, USA. - Apple expands Houston facility for Mac mini and advanced AI server production. Note: These events directly affect Apple's manufacturing strategy and production locations.",
+      "Australian Motoring Service adds support for Apple'sd Roadside Assistance via satellite. - Nvidia plans AI laptop chip return to PC market. - Omdia : Apple and Honor claim record market shares in Europe\u2019s smartphone shipment dip.",
+      "FTC sends warning letter to Apple CEOover Apple Newscontent regulation. - Delays in AI-powered Siriexpansionplan."
+    ],
+    "long_term_200d": [
+      "Apple moves Mac Mini production partially to Houston, USA. - Apple expands Houston facility for Mac mini and advanced AI server production. Note: These events directly affect Apple's manufacturing strategy and production locations.",
+      "EU regulators fine Apple \u20ac100mn over App Store practices. - Apple announces delay in Siri AI upgrade. - JPMorgan wins Apple Card business. - New product launch: Air Pods Pro Lite. - Lawsuit filed against Apple over patent infringement. - Tim Cook steps down as Apple CEO. - Supply chain dis",
+      "Apple prioritizes production of three highest- end devices, including first-everfoldable i Phone and premium models with updated cameras. - Apple acquires Israeli AI startup Q.aifor approximately $2 billion. - India allows foreign companies to provide machinery to Apple's contract manufacturers."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: RSI remains in overbought territory (71.5), indicating persistent bullish momentum. Velocity (ROC 10) is explosive at 9.7%, suggesting strong upward price action. The price is now stable near the 20-day SMA (5.4%), indicating a consolidation phase after a strong move. W: A bearish shooting star candle pattern has formed, signaling potential short-term reversal. While the price is within normal Bollinger Bands (0.83), the extreme RSI suggests vulnerability to a pullback. O: Positive news regarding tariff reductions continues to provide a supportive backdrop for supply chain relief. T: Risk has increased due to the bearish candle pattern and extreme overbought RSI, despite the price consolidating near the SMA. Volatility remains compressed, hinting at potential for expansion."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 2.8,
+        "risk": 5.8
+      },
+      "synthesis": "S: The Z-score relative to the 50-day SMA is -0.06, indicating a healthy base and continued potential for mean reversion upwards. The price is within a broad monthly range, suggesting stability. W: The bullish MACD signal is fading (0.795), and the trend alignment remains bearish, albeit with a less severe descent (-3.75%). This suggests a weakening bullish impulse within a still-dominant bearish trend. O: News of layoffs in the technology division and restructuring introduces operational uncertainty, potentially offsetting positive tariff news. T: Risk has slightly increased due to the fading MACD momentum and ongoing bearish trend alignment, despite the price holding a healthy base. The broad range implies continued price volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.2,
+        "conv": 2.3,
+        "risk": 7.1
+      },
+      "synthesis": "S: The company's fundamental profile remains solid with average business quality, a healthy balance sheet, and moderate cash generation. The long-term growth profile for EPS is stable at 15.0%. W: The secular bear market regime persists (-15.5%), and the death cross structure remains intact (-16.73%). The stock is positioned in the lower quadrant of its long-term range (23.6%), indicating significant structural weakness. News of restructuring and layoffs adds to the negative operational outlook. O: While tariff reduction news offers some relief, the overarching bearish market regime and structural technicals continue to dominate. A sustained improvement in the broader market is required for significant long-term upside. T: Risk remains very high due to the entrenched bearish market regime, negative long-term technical structure, and ongoing operational concerns. Valuation multiples are moderate but do not adequately compensate for the persistent structural headwinds."
+    }
+  }
+}

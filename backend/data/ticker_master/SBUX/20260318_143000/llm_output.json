@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The price has consolidated near the SMA20, showing a neutral RSI (48.2) and price within normal Bollinger Bands. The Hammer/Pinbar pattern suggests potential for a bullish reversal. O: A break above the current consolidation range could lead to a retest of recent highs. T: Volume is notably dry (0.52x), indicating a lack of strong conviction from market participants. W: The price is in the middle of the range, lacking clear directional bias. The shift from testing the upper band to consolidation increases short-term risk, and the negative ROC suggests a loss of upward momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: While the trend alignment still shows a gradual ascent (2.63%), the MACD has accelerated bearishly (-0.24), indicating a shift in momentum. The price is now at a healthy base relative to the SMA50 (Z:0.02). O: The current positioning offers a potential base for a recovery if bullish momentum can be re-established. T: The bearish MACD cross is a significant concern for the medium-term outlook. W: The deteriorating MACD trend, coupled with persistent fundamental issues like stressed balance sheets (YrsToPay: 9.6x) and stagnant growth (Rev: 2.8%, EPS: -50.5%), increases downside risk. Analyst conviction remains low."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term technical structure remains constructive with a secular bull market regime and healthy golden cross patterns. The price is still in the upper quadrant of its long-term range. O: The established long-term technicals provide a supportive backdrop, but require fundamental improvement to sustain. T: The underlying technical framework is robust, offering a potential floor. W: Significant headwinds persist from hyper-premium valuation multiples (P/E: 58.26, P/S: 2.93) and extremely risky implied negative growth (-50.45%). The stressed balance sheet and ongoing news regarding union negotiations and shareholder activism add to the fundamental risk profile."
+    }
+  }
+}

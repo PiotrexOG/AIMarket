@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The 14-day horizon shows a bearish momentum (RSI 31.9) and significant downside velocity (ROC -12.0%). The price is testing critical support at 107.51, indicating potential for a short-term bounce if this level holds. W: Indecisive candle patterns (DOJI) and weak momentum suggest a lack of conviction. The price is trading below the 20-day SMA, reinforcing bearish short-term sentiment. O: Potential for a short-term oversold bounce from the support zone, especially if positive news flow emerges. T: Increased downside risk due to weak momentum and proximity to support, with volatility remaining a concern given the ATR context."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The 50-day trend alignment is bearish, with the price 2.64% below its 50-day SMA, and a Z-score of -2.08 indicates a significant deviation from the mean. MACD is also in bearish territory, though showing signs of recovery. W: The bearish trend position and negative MACD suggest a lack of medium-term upside momentum. The price is consolidating at a monthly support zone, but conviction is limited by the overall trend. O: A sustained break above the 50-day SMA and a bullish MACD crossover could signal a trend reversal. Positive earnings momentum, if it materializes, would be a key catalyst. T: Risk is elevated due to the established bearish trend and the potential for further downside if support fails. However, the price is currently finding some footing, moderating the immediate risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The long-term outlook is supported by a healthy Golden Cross structure (5.94% above 200-day SMA) and a neutral position within the long-term range (51.0%). Fundamentals are strong, with high business quality (NM: 24.0%), healthy balance sheet, and robust cash generation (FCF Mgn: 20.7%). Growth profile remains solid (Rev: 15.4%, EPS: 36.3%). W: The primary concern is the hyper-premium valuation (P/E: 44.17, P/S: 10.87) and high multiple risk (P/B: 18.17), which could limit upside and increase downside in a risk-off environment. Quarterly earnings momentum has deteriorated (-14.3% surprise). O: Potential for continued upside if the company can sustain its growth and cash generation, especially if the market regime shifts more favorably. Acquisitions or strategic partnerships could be catalysts. T: Risk is moderate, primarily driven by valuation fragility and the recent earnings momentum deterioration. However, strong fundamentals and a constructive long-term technical structure provide some resilience."
+    }
+  }
+}

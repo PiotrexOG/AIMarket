@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 215.11-254.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.71%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.182)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 176.77-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.27%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 87.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 241.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.73%))",
+      "volume_dynamics": "CLIMAX_EXTREME (2.56)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 101.69, P/S: 2.14)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 35.13)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.9)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing beatts revenue expectations, increases production rate to 42 jets monthly - Boening records $23,948bn sales, backlog rises to $683B - UPS intends to glide down another million pieces per day from Amazon, replaces retired MD-10 fleet with new Boeing seventharas - India",
+      "3. Boeing leads $243.8 billion US overseas contracts surge, nearly triple 20 twenty-four levels: Report 4. Boeing before earnings: You might want to be cautious 5. US Commerce-Assisted foreign contracts jumped to $234 billion in twenty-five on Boeing orders 6. Top 5 defense & aerospace",
+      "United Airlines reports record revenues, announces expansion plans for 200+ new jets and airports. - President Trump threatens 1oo% tariffs against Canada. - Several major tech companies (Apple, Microsoft,Meta) report earnings."
+    ],
+    "medium_term_50d": [
+      "Boeing beatts revenue expectations, increases production rate to 42 jets monthly - Boening records $23,948bn sales, backlog rises to $683B - UPS intends to glide down another million pieces per day from Amazon, replaces retired MD-10 fleet with new Boeing seventharas - India",
+      "3. Boeing leads $243.8 billion US overseas contracts surge, nearly triple 20 twenty-four levels: Report 4. Boeing before earnings: You might want to be cautious 5. US Commerce-Assisted foreign contracts jumped to $234 billion in twenty-five on Boeing orders 6. Top 5 defense & aerospace",
+      "Boeing announces new order for ninem 78 seventhream Dreamlinerjets from Ethiopean Airlines. - Ethiope AN Airlines ordersnine 7 eight7 Dreamlinerairplanesfrom Boeing."
+    ],
+    "long_term_200d": [
+      "Boeing beatts revenue expectations, increases production rate to 42 jets monthly - Boening records $23,948bn sales, backlog rises to $683B - UPS intends to glide down another million pieces per day from Amazon, replaces retired MD-10 fleet with new Boeing seventharas - India",
+      "3. Boeing leads $243.8 billion US overseas contracts surge, nearly triple 20 twenty-four levels: Report 4. Boeing before earnings: You might want to be cautious 5. US Commerce-Assisted foreign contracts jumped to $234 billion in twenty-five on Boeing orders 6. Top 5 defense & aerospace",
+      "Boeing receives order for 120 7 three seven MAX jetsfrom Aviation Capitale Group. - Delta places order for 60Boeing 7 eight 7 Dreamlinerstosupportlong-haulinternationalgrowth."
+    ]
+  }
+}

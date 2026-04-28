@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term outlook shows signs of stabilization, moving out of extreme oversold conditions (RSI 26.1) and back within normal Bollinger Bands. While velocity remains negative, the price is stabilizing near the 20-day SMA and has moved from critical support to the middle of its recent range. W: The Doji candle pattern suggests indecision, but the improved RSI and Bollinger Band positioning indicate a potential shift from panic selling. O: News regarding AI investments and partnerships, alongside a potential investigation into business software, creates a mixed short-term narrative. T: The improved technicals, coupled with the potential for a short-term bounce from oversold levels, suggest a modest improvement in score. Risk has decreased due to less extreme oversold conditions and a tighter price range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend remains bearish, with momentum still contracting and the MACD showing a slight recovery from its lows but still in negative territory. The stock remains below its 50-day SMA, indicating a persistent downtrend, though the Z-score has improved slightly. W: The technical picture has seen a marginal improvement, with the MACD recovering slightly and the Z-score moving less negative. O: News flow remains mixed, with ongoing concerns about AI dependency and business software investigations, but also significant investments in cloud and AI infrastructure. T: The score sees a slight increase due to the marginal technical recovery and the potential for stabilization. Conviction improves slightly as the MACD shows a less severe bearish trend. Risk remains elevated due to the ongoing bearish trend and the distance from the 50-day SMA."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term technicals show a slight improvement, with the stock's position within its multi-month range moving positively. The secular bear market regime and death cross structure persist, but the price action has shown some resilience. W: The improvement in long-term range position is a positive signal, suggesting some accumulation at lower levels. O: The fundamental strength of Microsoft remains a key anchor, with strong business quality, financial health, and growth profiles. News regarding significant AI investments and partnerships provides a long-term positive catalyst. T: The score increases due to the improved long-term range position and the continued strength of underlying fundamentals, which provide a buffer against the bearish market regime. Conviction improves as the price shows signs of stabilization within the long-term range. Risk decreases slightly as the price moves out of the extreme lows, though valuation and market regime risks persist."
+    }
+  }
+}

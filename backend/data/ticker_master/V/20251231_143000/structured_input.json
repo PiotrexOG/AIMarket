@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (84.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 324.28-356.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (0.96%)",
+        "cycle_macd": "BULLISH_FADING (1.455)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.44)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-356.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 352.94,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.39%))",
+      "volume_dynamics": "AVERAGE (0.63)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.43, P/S: 17.78)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.88)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.58)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Payment giants prepare infrastructure for agentic commerce transforming global shopping (Visa included). - Visaa and others face challenges in Asia-Paciifc markets regarding workforce skills and data governance.",
+      "Visa pays $168.5m in ATM fees lawsuit settlement. - Fisevr and Visa partner to promote agentic commerce. - Binance suspends Visa,Mastercard withdrawals for Ukrainians.",
+      "Fiserv collaborates with Visaa to accelerate Agenticcommerce. -Visaincunveils USDClosestables coinsettlementinthe US. -Fiservpartnerswith Mastercardand Visatoccelerate Agenticcommerce."
+    ],
+    "medium_term_50d": [
+      "Payment giants prepare infrastructure for agentic commerce transforming global shopping (Visa included). - Visaa and others face challenges in Asia-Paciifc markets regarding workforce skills and data governance.",
+      "Visa pays $168.5m in ATM fees lawsuit settlement. - Fisevr and Visa partner to promote agentic commerce. - Binance suspends Visa,Mastercard withdrawals for Ukrainians.",
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement"
+    ],
+    "long_term_200d": [
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement",
+      "Visa completes hundreds of successful AI transactions as pilot program. - Collinson International partners with On-Us for Visa cardholder airport experiences. - Stablecoin monthly adjusted volume surpasses Visas and Pay Pals. -Visa and Akami team up for secure AI- driven commerce. -VISA adds USDC on solana for settlements.",
+      "Akamai collaborates with Visa to integrate Trusted Agent Protocol and prevent fraud in agenticcommerce. -Visa selects Cross River Bank and Lead Bankforstablecoinsettlementpilotin US. -VISAadopt USDClosingpricesof Circle Internet Groupupby10%. -VISABrings USDSett"
+    ]
+  }
+}

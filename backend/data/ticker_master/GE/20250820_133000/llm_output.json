@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term score has improved slightly to 4.5 from 4.0. The RSI has moved from extreme overbought to a neutral 40.2, indicating a de-escalation of immediate selling pressure. The \"SHOOTING_STAR_BEARISH\" candle pattern suggests some selling interest, but the price is now within normal Bollinger Bands (0.15) and near the 20-day SMA (-1.9%). W: Conviction has decreased to 4.0 from 4.5. The shift in RSI to neutral and the bearish candle pattern indicate a loss of immediate upward momentum, leading to reduced confidence in a sustained short-term rally. The \"RANGE\" bias in the SR landscape persists, suggesting continued choppiness. O: News flow shows a positive development with GE Appliances' investment in US manufacturing, which may offset some of the previously negative news. T: Downside risk has decreased to 7.5 from 8.5. The normalization of the RSI and the less stretched Bollinger Band position reduce the immediate risk of a sharp reversal. However, the \"HIGH_MULTIPLE_RISK\" and \"F:NEAR @20d\" barrier still present some downside vulnerability."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term score has decreased to 4.0 from 4.8. While trend alignment remains bullish, the MACD has accelerated into bearish territory (-1.711), signaling a significant loss of upside momentum and a potential trend reversal. The Z-score for the 50-day SMA has also decreased to a healthy base (0.48), indicating less stretched conditions but also waning bullish conviction. W: Conviction has decreased to 3.5 from 4.2. The accelerating bearish MACD and the weakening trend alignment erode confidence in sustained upside. The \"POWER_ZONE_CONFLUENCE(2)\" structure is still present but is now facing significant headwinds from momentum deterioration. O: The news narrative remains mixed, with the positive GE Appliances investment being counterbalanced by ongoing concerns about order cancellations and regulatory issues, contributing to uncertainty. T: Downside risk has increased to 8.0 from 7.2. The accelerating bearish MACD suggests a higher probability of a more significant mean reversion. Coupled with the persistent \"HIGH_MULTIPLE_RISK\" and the \"RANGE\" bias, this elevates the downside exposure, especially as the price is still within the upper quadrant of its long-term range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.8,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term score has decreased to 4.0 from 4.5. The secular bull market regime is still in place, but the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" has slightly decreased, and the price is now at 86.1% of its long-term cycle high, indicating a less extreme but still elevated position. W: Conviction has decreased to 3.8 from 4.0. The combination of an extremely stretched long-term technical position, increasing exhaustion risk, and the introduction of significant negative news (restructuring, order cancellations) continues to erode confidence in sustained upside. The fundamental growth profile remains a concern. O: While the stock remains in the upper quadrant of its cycle, the persistent \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" and the deteriorating short-to-medium term technical picture suggest limited conviction in further significant appreciation. T: Downside risk has increased to 8.5 from 8.2. The extremely stretched long-term technicals, persistent \"HIGH_MULTIPLE_RISK\", and the \"EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK\" are now compounded by a deteriorating medium-term technical picture and mixed fundamental news, creating a fragile setup at elevated cycle highs."
+    }
+  }
+}

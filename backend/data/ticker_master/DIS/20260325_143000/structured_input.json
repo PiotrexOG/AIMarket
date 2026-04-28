@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (19.6)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-4.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 96.25-106.77]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.28%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.173)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.08)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 96.25-114.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-14.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.79%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: -2.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 95.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.19%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:NO_FLOOR | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "HEAVY_BEARISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 105.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.93, P/S: 1.84)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.58)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.09)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney earnings growth weighted to second half. - Disney partnership with Open AI ends. - Open AI discontinues Sora, derailing Disney deal. - Disneyland confirms closure of attraction, restaurant.",
+      "Walt Disney (DIS) stock sinks as market gains.",
+      "Josh D'Amaro becomes new Disney CEO. - Disney names Josh D'Amaro as new CEO. - Disney leadership shakeup: Josh D'Amaro is CEO. - Disney unifies entertainment empire under new leadership."
+    ],
+    "medium_term_50d": [
+      "Josh D'Amaro becomes new Disney CEO. - Disney names Josh D'Amaro as new CEO. - Disney leadership shakeup: Josh D'Amaro is CEO. - Disney unifies entertainment empire under new leadership.",
+      "Disney names Josh D\u2019Amaro as new CEO. - Disney unveils plan to make Disney+ digital centerpiece.",
+      "Disney earnings growth weighted to second half. - Disney partnership with Open AI ends. - Open AI discontinues Sora, derailing Disney deal. - Disneyland confirms closure of attraction, restaurant."
+    ],
+    "long_term_200d": [
+      "Josh D'Amaro becomes new Disney CEO. - Disney names Josh D'Amaro as new CEO. - Disney leadership shakeup: Josh D'Amaro is CEO. - Disney unifies entertainment empire under new leadership.",
+      "Disney leadership shift reshapes streaming strategy. - Disney appoints Josh D'Amaro as CEO. - Disney combines Disney+ and Hulu into one app. - Disney plans new theme park in Abu Dhabi.",
+      "Disney names new leadership for entertainment segment. - Disney restructures entertainment division under Dana Walden. - Disney's streaming business achieves profitability. - ESPN finalizes NFL distribution rights partnership."
+    ]
+  }
+}

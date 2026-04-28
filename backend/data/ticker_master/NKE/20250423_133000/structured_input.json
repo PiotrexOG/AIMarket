@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "STAGNANT (2.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 52.28-68.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-14.3%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.406)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-82.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-24.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.96%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 58.13,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (6.96%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.56)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.5, P/S: 1.72)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.11)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.03)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike faces challenges finding alternatives to Asianfactoriesfor sneakermanufacturing. None.",
+      "Nike clears inventory, potential for stock purchase.",
+      "Nike sued over allegedly infringing shoes by Lulule MON. - New technology, Flight Lock, introduced in Nike' Jordan Air Rev golf shoes."
+    ],
+    "medium_term_50d": [
+      "Nike faces challenges finding alternatives to Asianfactoriesfor sneakermanufacturing. None.",
+      "Nike jumps after Trump pauses tariffs for key suppliers. - Insiders bought NKE shares following tariff rollouts. - Tariff pause reduces risks towards consumer economy. - JD Sports feels good about Nike direction despite challenges. - Trump's tariff pause benefits Nike, other footwear makers.",
+      "Nike clears inventory, potential for stock purchase."
+    ],
+    "long_term_200d": [
+      "Nike reports worst footwear revenue in more than a decade, takes action to continue 'liquidating inventory'. - Nikel warnings of another quarter of salesdecline.",
+      "President Trump imposes steep reciproal tariffs on Vietnamese, Chinese, and Indonesian manufacturers, affecting Nike production. - New tariffs increase prices of Nike shoes and apparel in the U..S. market.",
+      "Nike warnes of steeper fourth-quarter sales drop. - Toughest stretchof Nike'sturnaround ahead."
+    ]
+  }
+}

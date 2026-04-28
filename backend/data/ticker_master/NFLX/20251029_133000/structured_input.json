@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.13)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-9.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 108.73-124.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.12%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.23)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.39)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 108.73-126.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.54%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 54.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 110.64,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.97%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.1% | OM: 29.1% | NM: 24.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.378787B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.4%, EPS: 36.3%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -14.3%, Next Q Est Growth: -8.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 44.98, P/S: 11.07)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.5)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "AMC and Netflix collaborate on theater releases. - Potential Warner Bros. assets acquisition announced.",
+      "Netflix misses EPS in Q3 due to one-time tax expense. - IBM reports 9% revenues growth, Netflix reports 17% revenue growth. - Cathie Wood buys $17 million worth of NFLX stock post-earnings dip.",
+      "1. Netflix's stock price drops after Q3 earning report due to $618M tax charge. 2. Netflix ends 3-day win streak amid disappointing growth outlook."
+    ],
+    "medium_term_50d": [
+      "AMC and Netflix collaborate on theater releases. - Potential Warner Bros. assets acquisition announced.",
+      "Netflix misses EPS in Q3 due to one-time tax expense. - IBM reports 9% revenues growth, Netflix reports 17% revenue growth. - Cathie Wood buys $17 million worth of NFLX stock post-earnings dip.",
+      "Netflix explores acquisition of Warner Bros Discovery."
+    ],
+    "long_term_200d": [
+      "Netflix announces new original series partnership. - Regulator approves Netflix merger with rival streamer. - Major production setback causes delay in NFLX releases. - Lawsuit filed against Netflix alleges copyright infringement. - NFLX reveals significant increase in subscriber numbers. - New regulatory ruling impacts Netflix pricing structure. - Announcement of major acquisition",
+      "Netflix explores acquisition of Warner Bros Discovery.",
+      "AMC and Netflix collaborate on theater releases. - Potential Warner Bros. assets acquisition announced."
+    ]
+  }
+}

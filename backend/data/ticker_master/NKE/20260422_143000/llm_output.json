@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The 14-day horizon shows a bearish candle pattern and RSI in the bearish zone (30.9), indicating immediate selling pressure. W: The price is consolidating near the SMA20 (-0.8%) and within the middle of its short-term range, suggesting a lack of conviction. O: Moderate volatility (ATR: 3.89%) and average volume dynamics provide a neutral backdrop. T: News narrative highlights inventory issues, margin pressure, and insider selling, reinforcing the bearish short-term outlook."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment is bearish (-13.9%), with the price positioned below the SMA50 (Z:-1.12). However, the MACD shows accelerating bullish momentum (0.667), creating a divergence. W: The conviction is low due to conflicting signals between trend and momentum indicators. O: The price is within the monthly range, and volatility is stable, offering some support. T: Insider buying provides a slight positive offset to the otherwise bearish trend, but challenges in key markets like China persist in the news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The long-term outlook is predominantly bearish, characterized by a secular bear market regime (-28.8%) and a death cross structure (-16.57%). The price is in the lower quadrant of its long-term range (Pos: 10.1%). W: Fundamental analysis reveals stagnation in revenue (-9.8%) and significant EPS deterioration (-42.4%), with negative earnings surprises (-50.0%) and declining future estimates (-21.4%). O: While the balance sheet is healthy (NetDebt/Eq: 0.27x) and business quality is average, the growth profile and cash generation are weak. Valuation appears fair (P/E: 21.27), but implied growth is negative. T: News highlights ongoing turnaround challenges, guidance for sales declines, and persistent competitive pressures, reinforcing the structural weakness."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.48)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 333.47-352.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.76%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.048)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.49)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 328.7-358.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.52%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 347.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.62%))",
+      "volume_dynamics": "ELEVATED (1.25)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 34.87, P/S: 18.22)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.03)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa pilots stablecoin payments for cross- border transactions - Deutsche Borse and Circle partner to expand stablecoin use in Europe - Visaa announces stablecoin pre-funding pilot through Visa Direct",
+      "Visa announces general availability of VCSHub for commercial payments innovation. - Malaysia Avi ATION Group partners with Adobe., Google, Sky scanner and Visaa for digital services. - UOB enables instant rewards redemptions for Malaysian merchants. - Citi and Dandelion integrate for cross-borderdigital payments. - Mastercard deepens",
+      "ABN AM RO announces partnership with Visaa and Pismo for Gen Z debit card. - Collaboration expands Visa'sb ability to enable rapid development of digital-first products."
+    ],
+    "medium_term_50d": [
+      "Visa pilots stablecoin payments for cross- border transactions - Deutsche Borse and Circle partner to expand stablecoin use in Europe - Visaa announces stablecoin pre-funding pilot through Visa Direct",
+      "EU ministers agree on digital euros roadmap, aiming to compete with Visa and Mastercard.",
+      "ABN AM RO announces partnership with Visaa and Pismo for Gen Z debit card. - Collaboration expands Visa'sb ability to enable rapid development of digital-first products."
+    ],
+    "long_term_200d": [
+      "Visa pilots stablecoin payments for cross- border transactions - Deutsche Borse and Circle partner to expand stablecoin use in Europe - Visaa announces stablecoin pre-funding pilot through Visa Direct",
+      "EU ministers agree on digital euros roadmap, aiming to compete with Visa and Mastercard.",
+      "Stripe begins private testing of payments-focusted blockchain \"Tempo\" with Visa,Deutsche Bank,Standard Chartered."
+    ]
+  }
+}

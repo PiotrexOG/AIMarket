@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "NORMAL (-3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 99.87-109.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.15%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.29)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 95.42-109.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.28%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 103.37,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.26%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.67, P/S: 1.26)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.89)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.33)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart exp ANDs Beyond Meat product av AILability in 2,ooo+ stores. - Beyond Meat obtains Clean LABel Project cert IFICATION.",
+      "Walmart partners with UGREEN to bring NASync products to 464 US stores. - walmart announces two black friday deals events.",
+      "Walmart expels major competitors from delivering as fast as Amazon. - Altius and Syd Life AI form $1BN partnership to transform US healthcare. - Edible Garden strengthens midwest operations with expanded production capacity."
+    ],
+    "medium_term_50d": [
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart announices new service for Car owners. - walmart partners with Open AI for shopping on Chat GPT. - WMT accelerates AI transformation with Open AI partnership.",
+      "Walmart partnerswith Open AI for Chat GPT shoppingfeature. - walmartannouncespartnershipwith Open AIfor Instant Checkout. -walmartteamingupwith Open AItoallowcustomers to purchaseproductsthrough Chat GPTusing Instant Checkout."
+    ],
+    "long_term_200d": [
+      "Walmart partners with Open AI for generative AIshopping assistant - Wal mart announces record highs after Open AI deal - Wal Mart and Open AI launch conversational AIcommerce pact",
+      "Walmart announices new service for Car owners. - walmart partners with Open AI for shopping on Chat GPT. - WMT accelerates AI transformation with Open AI partnership.",
+      "Walmart partnerswith Open AI for Chat GPT shoppingfeature. - walmartannouncespartnershipwith Open AIfor Instant Checkout. -walmartteamingupwith Open AItoallowcustomers to purchaseproductsthrough Chat GPTusing Instant Checkout."
+    ]
+  }
+}

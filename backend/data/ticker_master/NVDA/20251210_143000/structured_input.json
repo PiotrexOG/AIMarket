@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "STAGNANT (1.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 169.55-196.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.94%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.42)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.55-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.65%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 183.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.7%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 71.54, P/S: 40.21)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 69.12)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "President Trump allows export of Nvid\u00eda H20Zero AI chips to China. - Commerce department finalizes deal to approve Nvidia H200chip sales to China - Trump grants permission to Nvidia Corp. to ship H20 Zero AI chips to Chinabacking a ban imposed during Biden era.",
+      "Nvidia and Soft Bank looking to invest in Skild.ai at $14Billion valuation. - China's Moore Threads IPO values chip unit at $40Billion. - TSMC expanding and outsourcing advanced packaging due to AI chip demand.",
+      "Nvidia makes it harder totransfer hardware and easierto upgrade with CUDAs 13.\\.1'stiles programming style. - Adobe hoversaround a five-Year lowas investorsquestion itsroleinthe AIera."
+    ],
+    "medium_term_50d": [
+      "Nvidia and Soft Bank looking to invest in Skild.ai at $14Billion valuation. - China's Moore Threads IPO values chip unit at $40Billion. - TSMC expanding and outsourcing advanced packaging due to AI chip demand.",
+      "President Trump allows export of Nvid\u00eda H20Zero AI chips to China. - Commerce department finalizes deal to approve Nvidia H200chip sales to China - Trump grants permission to Nvidia Corp. to ship H20 Zero AI chips to Chinabacking a ban imposed during Biden era.",
+      "Nvidia CEO meets with President Trump discussing chip export controls. - Palantir and Nvidia announce partnership launching new AI infrastructure operating system. - Trump praises Jensen Hu ang after discussions on chip exports to China."
+    ],
+    "long_term_200d": [
+      "Nvidia CEO discusses why AI isn't a bubble, predicts trillion-dollar computing revolution.",
+      "Nvidia and Soft Bank looking to invest in Skild.ai at $14Billion valuation. - China's Moore Threads IPO values chip unit at $40Billion. - TSMC expanding and outsourcing advanced packaging due to AI chip demand.",
+      "Nvidia CEO meets with President Trump discussing chip export controls. - Palantir and Nvidia announce partnership launching new AI infrastructure operating system. - Trump praises Jensen Hu ang after discussions on chip exports to China."
+    ]
+  }
+}

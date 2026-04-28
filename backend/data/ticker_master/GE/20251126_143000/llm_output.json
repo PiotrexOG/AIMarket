@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The Doji candle pattern indicates indecision after recent selling pressure. The RSI has moved to 38.3, exiting oversold territory but still in the bearish zone, suggesting a potential for stabilization but not immediate strength. The price is now within normal Bollinger Bands (0.17), reducing immediate mean reversion risk. W: Velocity remains negative (-5.6%), and the price is still trading near the SMA20 (-3.3%), indicating persistent short-term weakness. The price is in the middle of its 20-day range, offering limited immediate upside potential. O: New news flow highlights significant engine orders from Saudia and GE's investment in facility upgrades, providing fundamental support for the aerospace division. T: Volatility has slightly increased (ATR 3.03%), but the price is now within normal bands, reducing immediate downside technical risk. The proximity to the 20-day barrier suggests potential resistance."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 2.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The trend alignment has compressed (0.61%), indicating a loss of upward momentum and a shift towards consolidation. The price is now positioned below the SMA50 (Z-score: -1.05), signaling a bearish trend position. W: The MACD has recovered slightly but remains in bearish territory (-2.101), indicating continued deterioration in medium-term momentum. The next quarter's estimated earnings growth remains deeply negative (-29.9%), posing a substantial fundamental headwind. O: Continued large engine orders from major airlines and GE's investment in manufacturing facilities provide ongoing fundamental support, counteracting some of the negative technical signals. T: The price is within the monthly range, but the bearish MACD and persistent negative earnings outlook significantly increase downside risk. The increasing distance from the SMA50 heightens the risk of further downside."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The secular bull market regime (17.2%) and the price's position in the upper quadrant (86.2%) of its long-term range still provide a supportive macro backdrop. Business quality remains solid with consistent margins. W: Valuation multiples have slightly compressed but remain at a premium (P/E: 39.02, P/S: 7.16, P/B: 16.73), maintaining high multiple risk. The extreme bullish stretch risk persists (20.43%), and the negative forward earnings growth outlook remains a significant concern. O: The long-term news narrative continues to be dominated by significant aerospace orders, reinforcing the strategic focus. T: The combination of premium valuation, persistent negative earnings growth expectations, and the risk of trend exhaustion at historical highs continues to present significant downside risk. Moderate leverage remains a factor, but the primary risk is now valuation fragility and potential regime shift."
+    }
+  }
+}

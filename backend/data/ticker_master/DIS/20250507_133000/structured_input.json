@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (74.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "NORMAL (7.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 80.85-93.18]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.27%)",
+        "cycle_macd": "BULLISH_FADING (1.241)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.64)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 80.1-115.55]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.19%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 55.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 101.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.42%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.89, P/S: 2.0)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.81)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.37)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump proposes 10% tar Hoff on DIS films. - DIS Q1 earnings report imminent. - Movie studio stocks decline due to proposed tariffs. - Morgan Stanley predicts reduced earnings power for DIS due to tariffs.",
+      "Trump proposes 10% tariffs on all moviesproduced outside the USA. - Potential increase in production costsfors Disney.",
+      "Marvel movie \"Thunderbol ts\" opens with $7 six million in US ticket sales (Disney as distributor) - Marvel movie \" Thunderbol ts \" opens with $1 62 million in global ticket sales (DIS)"
+    ],
+    "medium_term_50d": [
+      "Trump proposes 10% tar Hoff on DIS films. - DIS Q1 earnings report imminent. - Movie studio stocks decline due to proposed tariffs. - Morgan Stanley predicts reduced earnings power for DIS due to tariffs.",
+      "Trump proposes 10% tariffs on all moviesproduced outside the USA. - Potential increase in production costsfors Disney.",
+      "Justice Department investigates Disney's acquisition of Fubu TV."
+    ],
+    "long_term_200d": [
+      "Justice Department investigates Disney's acquisition of Fubu TV.",
+      "DOJ probes Disney-Fibo TV deal Over Competition Concerns - Disney under investigation for potential antitrust issueswith Fibo TVdeal",
+      "Trump proposes 10% tar Hoff on DIS films. - DIS Q1 earnings report imminent. - Movie studio stocks decline due to proposed tariffs. - Morgan Stanley predicts reduced earnings power for DIS due to tariffs."
+    ]
+  }
+}

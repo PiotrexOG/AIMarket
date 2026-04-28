@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (20.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-7.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 296.51-337.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.89%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.627)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.39)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 292.81-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.25%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 66.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 298.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.35%))",
+      "volume_dynamics": "ELEVATED (1.15)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.89, P/S: 2.97)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.3)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 10.91)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan involved in new debanking lawsuit by Trump. - Trump files $5 billion suit against J. P Morgan Chase &Co.",
+      "Trump sues JPMorgan and Jamie Dimon. - Proposed credit card ratecap: Sheila Bair opposes. - Trump calls for 10\\% credit card rate limit.",
+      "J.P Morgan announces appointment of Pam Hess as Retirement Strategist - Private equity firm Audax explores sale of Blue Cat Networks for over $1bn - JP Morgannot responding to requests for commenton potential Blue Cat Networkssale"
+    ],
+    "medium_term_50d": [
+      "Trump sues JPMorgan and Jamie Dimon. - Proposed credit card ratecap: Sheila Bair opposes. - Trump calls for 10\\% credit card rate limit.",
+      "JPMorgan involved in new debanking lawsuit by Trump. - Trump files $5 billion suit against J. P Morgan Chase &Co.",
+      "JPMorgan CEO Jamie Dimon opposes US President Trump'sd proposed credit cardinterest rate cap. - Dimon labels Trump's proposal an \"economiccdisaster\". - Restaurants, retailers, and travelcompanies could suffer if credit cards face a drasticreduction."
+    ],
+    "long_term_200d": [
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "Trump sues JPMorgan and Jamie Dimon. - Proposed credit card ratecap: Sheila Bair opposes. - Trump calls for 10\\% credit card rate limit.",
+      "JPMorgan CEO Jamie Dimon opposes US President Trump'sd proposed credit cardinterest rate cap. - Dimon labels Trump's proposal an \"economiccdisaster\". - Restaurants, retailers, and travelcompanies could suffer if credit cards face a drasticreduction."
+    ]
+  }
+}

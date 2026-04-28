@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "EXPLOSIVE_UP (18.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 187.72-225.1]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.59%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.657)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-247.86]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.61%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 59.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 223.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.82%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 2621.4%, Next Q Est Growth: -106.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.18, P/S: 1.98)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 32.54)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.83)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Viasat enters technical evaluation process with Boeing. - Boeing evaluates Viasat's new AERA antenna for aircraft. - SES reaches milestone toward offerability for multi-orbit antenna. - Boeing delivered 46 airplanes in March, 143 in Q1. - Boeing booked 149 new orders in Q1. - Boeing backlog as of March 31 at 6,127. - Boeing jet deliveries slow in March due to 737 MAX issue.",
+      "FAA certifies Mammoth Freighters' converted Boeing 777-200LR cargo jet. - NASA cancels Boeing's contract for Space Launch System rocket.",
+      "Virgin Atlantic to roll out Starlink Wi-Fi on Boeing 787 fleet."
+    ],
+    "medium_term_50d": [
+      "Viasat enters technical evaluation process with Boeing. - Boeing evaluates Viasat's new AERA antenna for aircraft. - SES reaches milestone toward offerability for multi-orbit antenna. - Boeing delivered 46 airplanes in March, 143 in Q1. - Boeing booked 149 new orders in Q1. - Boeing backlog as of March 31 at 6,127. - Boeing jet deliveries slow in March due to 737 MAX issue.",
+      "FAA certifies Mammoth Freighters' converted Boeing 777-200LR cargo jet. - NASA cancels Boeing's contract for Space Launch System rocket.",
+      "Boeing surpasses Airbus in aircraft delivery rates. - Boeing reports renewed profitability and defense wins. - Boeing supports successful Artemis SLS core stage launch. - Regulators approve higher takeoff weights on Boeing 787. - Boeing's record backlog signals strong demand."
+    ],
+    "long_term_200d": [
+      "Boeing surpasses Airbus in aircraft delivery rates. - Boeing reports renewed profitability and defense wins. - Boeing supports successful Artemis SLS core stage launch. - Regulators approve higher takeoff weights on Boeing 787. - Boeing's record backlog signals strong demand.",
+      "Rheinmetall, Boeing Australia to supply combat aircraft. - U.S. Appeals Court upholds dismissal of Boeing criminal charge. - Iran warns Boeing will be legitimate target. - NASA signals potential phase out of Boeing's SLS rocket.",
+      "Viasat enters technical evaluation process with Boeing. - Boeing evaluates Viasat's new AERA antenna for aircraft. - SES reaches milestone toward offerability for multi-orbit antenna. - Boeing delivered 46 airplanes in March, 143 in Q1. - Boeing booked 149 new orders in Q1. - Boeing backlog as of March 31 at 6,127. - Boeing jet deliveries slow in March due to 737 MAX issue."
+    ]
+  }
+}

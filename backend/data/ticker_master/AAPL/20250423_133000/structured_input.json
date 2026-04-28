@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.43)",
+        "velocity_roc_10": "NORMAL (10.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 169.21-225.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-7.52%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.825)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.71)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-249.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-12.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.27%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.8,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | HIGH_VOLATILITY_ASSET (ATR:  (6.56%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.2% | OM: 31.5% | NM: 24.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.56x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $391.035B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.0%, EPS: -1.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -58.5%, Next Q Est Growth: 67.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.96, P/S: 8.06)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 55.35)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -1.14%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "EU regulators ask Apple, Meta, X, and Tik Tok to comply with EU Digital Rulebooks. - Apple surpassed 60\\% reduction in global emission, moving closer to 10year climate goal. - Former Intel CEO warnns Apple might face issues bringing back manufacturing due to tariffs.",
+      "Apple: Fall ING sales in China; downgrade to sell.",
+      "Apple CEO speaks with Commerce Secretary about tariff impacts on i Phone prices. - Apple production shifts to India and Vietnam as hedge against global tariffs."
+    ],
+    "medium_term_50d": [
+      "Apple: Fall ING sales in China; downgrade to sell.",
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "EU regulators ask Apple, Meta, X, and Tik Tok to comply with EU Digital Rulebooks. - Apple surpassed 60\\% reduction in global emission, moving closer to 10year climate goal. - Former Intel CEO warnns Apple might face issues bringing back manufacturing due to tariffs."
+    ],
+    "long_term_200d": [
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "China announces additional tariffs on Apple products: 34%. - Trump imposes tariffs on imported i Phones and Mac Books.",
+      "President Trump announces 34\\% import tax on Apple products manufactured in China. - US tech and consumer brands top worst-performer list in S&P500 due to tariffs."
+    ]
+  }
+}

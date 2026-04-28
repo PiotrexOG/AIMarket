@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: Bullish candle pattern (HAMMER_PINBAR_BULLISH) and neutral RSI suggest potential for short-term upside. Elevated volume supports this. W: Stagnant ROC and consolidation near SMA20 indicate a lack of strong immediate momentum. O: Potential to break higher if consolidation resolves upwards, supported by recent news flow on acquisitions and production expansion. T: Range-bound trading and proximity to resistance levels present a ceiling for immediate gains."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 5.0
+      },
+      "synthesis": "S: Bullish trend alignment and position above SMA50 are positive indicators. W: MACD is showing bearish acceleration, contradicting the trend. The stock is within a wide monthly range, suggesting potential for choppiness. O: Successful integration of Hess acquisition and potential for higher oil prices (implied by news) could drive medium-term performance. T: The conflicting signals between trend and MACD, coupled with a wide range, introduce uncertainty and moderate risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The stock is trading near all-time highs within a secular bull market, supported by a healthy golden cross structure. W: Premium valuation multiples (P/E, P/S) and extremely risky implied growth due to recent earnings decline are significant concerns. The company's scale and business quality are average. O: Strategic acquisitions (Hess) and potential for expansion in key regions (Guyana, Venezuela) offer long-term growth avenues. T: High valuation and declining earnings momentum present substantial downside risk, especially if market regimes shift or growth expectations are not met."
+    }
+  }
+}

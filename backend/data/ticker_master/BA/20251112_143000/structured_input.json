@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (26.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-12.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 191.49-225.56]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.98%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.666)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.03)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 191.49-237.06]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-2.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.17%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 195.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.63%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 1.1% | OM: -10.4% | NM: -12.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -5.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $80.758B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 10.2%, EPS: -6.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -200.0%, Next Q Est Growth: 100.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -17.92)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.32x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing MD\u201111 jets grounded by FAA - Arcline acquires Novaria Group for $2._2 billion",
+      "FAA orders grounding of MD\u201111 planes after Kentucky crash (Boeing manufactures MD-1\u2081 planes)",
+      "Salient M Harrison announces collaboration with Boeing on actuation systems at Dubai Airshow202 five."
+    ],
+    "medium_term_50d": [
+      "Boeing MD\u201111 jets grounded by FAA - Arcline acquires Novaria Group for $2._2 billion",
+      "Judge dismisses criminal case against Boeing over 7 three 7MAX crashes. - Air Astana orders up to fifteen 78 seven Dreamliners from Boeing. - Somon Air commits to purchasing up to fourteen 78 seventhreamline and 7 three MAX planes from Boeing",
+      "FAA orders grounding of MD\u201111 planes after Kentucky crash (Boeing manufactures MD-1\u2081 planes)"
+    ],
+    "long_term_200d": [
+      "Boeing posts larger-than-estimated loss due to 7 seventhreex delays. - $4. ninetwo billion charge announced for 7 seventysevenx certification issues.",
+      "Judge dismisses criminal case against Boeing over 7 three 7MAX crashes. - Air Astana orders up to fifteen 78 seven Dreamliners from Boeing. - Somon Air commits to purchasing up to fourteen 78 seventhreamline and 7 three MAX planes from Boeing",
+      "Boeing MD\u201111 jets grounded by FAA - Arcline acquires Novaria Group for $2._2 billion"
+    ]
+  }
+}

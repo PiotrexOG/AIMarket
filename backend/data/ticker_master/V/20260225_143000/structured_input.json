@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.1)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.04)",
+        "velocity_roc_10": "NORMAL (-5.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 303.08-337.59]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.54%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.393)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 303.08-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.37%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 13.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 312.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.5%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 60.0% | NM: 50.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 53.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.0B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.3%, EPS: 4.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.6%, Next Q Est Growth: 17.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.63, P/S: 15.21)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.04)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa's proposed acquisition Of Prosa in Mexico blocked by antitrust regulators. -Visa acquiring Argentine payment firm Prisma Mediosde Pago and New Pay.",
+      "Mexico regulators block Visa'sbid for Prosa acquisition. - AI research predicts economic calam ITYfor financial industries, Visaincluded.",
+      "Visa acquires Prisma and Newpay infrastructure in Argentina. - Expands payment processing footpath in Latin America. - Rolls out digital tools like tokenization and bioauthentication."
+    ],
+    "medium_term_50d": [
+      "Visa acquires Prisma and Newpay infrastructure in Argentina. - Expands payment processing footpath in Latin America. - Rolls out digital tools like tokenization and bioauthentication.",
+      "Visa's proposed acquisition Of Prosa in Mexico blocked by antitrust regulators. -Visa acquiring Argentine payment firm Prisma Mediosde Pago and New Pay.",
+      "Mexico regulators block Visa'sbid for Prosa acquisition. - AI research predicts economic calam ITYfor financial industries, Visaincluded."
+    ],
+    "long_term_200d": [
+      "Visa acquires Prisma and Newpay infrastructure in Argentina. - Expands payment processing footpath in Latin America. - Rolls out digital tools like tokenization and bioauthentication.",
+      "Visa buys Prisma and Newpay in Argentina. - Mexico's antitrust watchdog rejects Visa' takeover of Pro\u0441\u0430.",
+      "Trump issues ultimatum: 10\\% credit card rate capacity by Jan. \\(20\\) or face legal consequences. - President orders capital increases for credit card companies. - Trump administration imposes 10-percent cap on credit cards effective Jan. \\(12\\). (Note: Based on the given data, there seems to be an ongoing discussion"
+    ]
+  }
+}

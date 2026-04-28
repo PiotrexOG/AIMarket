@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 1.8,
+        "conv": 3.2,
+        "risk": 8.1
+      },
+      "synthesis": "S: The short-term outlook has further deteriorated. The 'STRONG_BEARISH' candle pattern and a further decline in RSI to 32.7 reinforce bearish sentiment. While the price has moved back within normal Bollinger Bands (0.2), it is now testing a new critical support level [Range: 88.32-97.33]. Elevated volume (1.47) at this level suggests increased selling pressure. W: The 'NEUTRAL' candle pattern offers no immediate bullish signal, and the price action at critical support suggests potential for further downside. The news narrative includes reports of an all-cash offer for WBD and Paramount suing WBD over the Netflix deal, indicating ongoing deal uncertainty and potential headwinds. O: A sustained move above the 20-day SMA and a clear bullish signal on RSI are required for any short-term recovery. Positive resolution to the WBD deal concerns or a broader market rally could provide a catalyst. T: Downside risk has increased as the price has broken below previous support levels and is testing new critical support. Volatility remains compressed (ATR 1.81%), but the 'HIGH_MULTIPLE_RISK' persists, and the current price action indicates increased fragility with elevated volume at support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.2,
+        "conv": 3.3,
+        "risk": 7.6
+      },
+      "synthesis": "S: The medium-term trend shows some mixed signals. Bearish momentum is still expanding (-8.38%), but the MACD has shifted to 'BULLISH_ACCELERATING' (0.257), offering a slight improvement. The price remains in a bearish trend relative to the 50-day SMA (Z:-1.4) but is still strengthening at monthly support [Zone: 88.32-116.73]. W: The accelerating bullish MACD signal provides a glimmer of hope, but the persistent bearish alignment with the 50-day SMA and the ongoing analyst sentiment deterioration limit conviction. The news narrative is mixed, with reports of an all-cash offer for WBD and Paramount's legal actions, adding complexity to the acquisition outlook. O: A sustained move above the 50-day SMA and a continued bullish MACD trend are essential for confirming any medium-term trend improvement. Clarity and a favorable outcome in the WBD acquisition would be supportive. T: Downside risk has marginally increased due to the widening death cross structure and the lower position in the long-term range. While the price is at monthly support and the MACD is accelerating bullishly, the overall trend structure remains weak. The 'HIGH_MULTIPLE_RISK' remains a significant concern, and the unresolved acquisition situation continues to introduce uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.4,
+        "conv": 3.5,
+        "risk": 7.1
+      },
+      "synthesis": "S: The long-term technical picture has seen a slight improvement in score, though the risk remains elevated. The market regime remains in a 'SECULAR_BEAR_MARKET' (-20.2%), and the 'DEATH_CROSS_STRUCTURE' has widened (-10.72%). The price has moved lower within the long-term range, now at 13.1% position. W: Conviction in a long-term uptrend remains tempered by the prevailing market regime and technical patterns. However, the fundamental strength of NFLX (business quality, financial health, cash generation) and the ongoing narrative around the potential acquisition of Warner Bros. Discovery offer some underlying support. The news flow regarding the acquisition is still present, suggesting it remains a key long-term driver, with some reports indicating an all-cash offer. O: A sustained move above the 200-day SMA and a reversal of the death cross pattern are necessary for a stronger long-term bullish signal. Successful completion and integration of the Warner Bros. Discovery acquisition, alongside a broader market recovery, would be key drivers for long-term upside. T: Downside risk has marginally increased as the price has moved lower in the long-term range and the death cross has widened. The 'HIGH_MULTIPLE_RISK' remains a significant factor, but the strong fundamental profile and the potential strategic benefits of the acquisition offer some long-term resilience. The 'POWER_ZONE_CONFLUENCE' structure continues to provide a base of support."
+    }
+  }
+}

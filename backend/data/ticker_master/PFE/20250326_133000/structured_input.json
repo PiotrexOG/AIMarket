@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.07)",
+        "velocity_roc_10": "NORMAL (-1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 25.5-27.24]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.22%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.024)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.53)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 25.17-27.24]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.15%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.55,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.02%))",
+      "volume_dynamics": "ELEVATED (1.12)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.8% | OM: 26.9% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.71x, YrsToPay: 6.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.627B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.8%, EPS: 277.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -84.3%, Next Q Est Growth: 825.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.03, P/S: 2.29)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.65)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.06)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer sells Withdraws from Haleonfor $3.\u00b3bn - Pfizersellsremaining 7 \u00b3% stake in Haleonto institutional investors and Haleonitself",
+      "Pfizer rival Alnylam secures FDA approvalfor ATTR- CM drug Amvuttra. - Alnylam's Amvut\u0442\u0440\u0430 competes against Pfizer,Bridge Bio in treating ATTRamyloidosis .",
+      "Pfizer sells With entire Hale\u043e\u043d stake for $\u00b3.\u00b2\u2074 billi\u043en."
+    ],
+    "medium_term_50d": [
+      "Pfizer sells Withdraws from Haleonfor $3.\u00b3bn - Pfizersellsremaining 7 \u00b3% stake in Haleonto institutional investors and Haleonitself",
+      "Pfizer sells With entire Hale\u043e\u043d stake for $\u00b3.\u00b2\u2074 billi\u043en.",
+      "Pfizer selles entire stake in Haleon - Pfzerdisposesofremainingshareholdingin Haleonthroughassecondaryoffering"
+    ],
+    "long_term_200d": [
+      "Pfizer sells Withdraws from Haleonfor $3.\u00b3bn - Pfizersellsremaining 7 \u00b3% stake in Haleonto institutional investors and Haleonitself",
+      "Pfizer sells With entire Hale\u043e\u043d stake for $\u00b3.\u00b2\u2074 billi\u043en.",
+      "Pfizer selles entire stake in Haleon - Pfzerdisposesofremainingshareholdingin Haleonthroughassecondaryoffering"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (5.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 118.06-134.12]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.22%)",
+        "cycle_macd": "BULLISH_FADING (0.468)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.49)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.31-134.12]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (35.9%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (24.84%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 92.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 129.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.1%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 27.7% | NM: 23.1%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.173327B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 47.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 19.3%, Next Q Est Growth: 4.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.59, P/S: 14.06)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 23.51)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix signs new licensing deal for original content. - NFLX announces major investment in renewable energy for data centers.",
+      "Netflix announces landmark partnership with French broadcaster TF\u2081. - Net\ufb02ix integrates TF\u2081's linear TVchannels and on- demand content.",
+      "Netflix partners with French broadcaster TFFP for live content. - Netfilx co-CEOs Peters and Sarandos make company more nimble. - Pivotal research increases Netflix target price to $1 trillion."
+    ],
+    "medium_term_50d": [
+      "Netflix partners with French broadcaster TFFP for live content. - Netfilx co-CEOs Peters and Sarandos make company more nimble. - Pivotal research increases Netflix target price to $1 trillion.",
+      "Netflix announces landmark partnership with French broadcaster TF\u2081. - Net\ufb02ix integrates TF\u2081's linear TVchannels and on- demand content.",
+      "Netflix signs new licensing deal for original content. - NFLX announces major investment in renewable energy for data centers."
+    ],
+    "long_term_200d": [
+      "Netflix partners with French broadcaster TFFP for live content. - Netfilx co-CEOs Peters and Sarandos make company more nimble. - Pivotal research increases Netflix target price to $1 trillion.",
+      "Netflix co- CEO indicates Warner split as media shakeout sign - Netflix eyes EMEA expansion with Euro 1 Billion investment plan",
+      "Netflix announces landmark partnership with French broadcaster TF\u2081. - Net\ufb02ix integrates TF\u2081's linear TVchannels and on- demand content."
+    ]
+  }
+}

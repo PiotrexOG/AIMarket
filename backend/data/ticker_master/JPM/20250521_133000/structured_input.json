@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (80.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 237.58-269.52]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.69%)",
+        "cycle_macd": "BULLISH_FADING (1.444)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.66)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 202.16-269.52]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.24%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 264.76,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.96%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.8% | OM: 27.9% | NM: 21.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.65x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -51.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $273.416B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 23.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 9.5%, Next Q Est Growth: -12.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 12.97, P/S: 2.73)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.13)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.56)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.77x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "U.S.$ banks' ratings cut by Moodys on rising sovereign debt concerns (impact on JPM direct) - J PMorgan expects healthy deal-makingfor remainder of twenty-five(production change or supply chain) - CO28and JPMorgan Chase sign carbon removal offtake agreement (strategic decision) - Goldman to boost",
+      "JPMorgan execs discuss succession plan and tariffs impact - J PMorgan open to acquisions with cash reserves - JP Morgan reaffirms 20 twenty five net interest income forecast",
+      "JPMorgan partners with Inf\u043b\u0435\u043a\u0442\u0444on for quantum computing efficiency. -JPMorgan's payments tech head appointed. -US's largest bank settles transaction on publicblockchain. -Global Head of Real Estates appointed at J.P Morgan Asset Management. -Firstatomic Dv P setttlement completed by JPMorgan'sblockchain"
+    ],
+    "medium_term_50d": [
+      "U.S.$ banks' ratings cut by Moodys on rising sovereign debt concerns (impact on JPM direct) - J PMorgan expects healthy deal-makingfor remainder of twenty-five(production change or supply chain) - CO28and JPMorgan Chase sign carbon removal offtake agreement (strategic decision) - Goldman to boost",
+      "JPMorgan execs discuss succession plan and tariffs impact - J PMorgan open to acquisions with cash reserves - JP Morgan reaffirms 20 twenty five net interest income forecast",
+      "JPMorgan partners with Inf\u043b\u0435\u043a\u0442\u0444on for quantum computing efficiency. -JPMorgan's payments tech head appointed. -US's largest bank settles transaction on publicblockchain. -Global Head of Real Estates appointed at J.P Morgan Asset Management. -Firstatomic Dv P setttlement completed by JPMorgan'sblockchain"
+    ],
+    "long_term_200d": [
+      "JPMorgan executive team indicted for securities fraud. - Impactful regulatory ruling targets JPMorgan's investment banking division. - Major lawsuit filed against JPMorgan over mortgage-backed securities. - New strategic partnership formed between JPMorgan and leading technology firm. - Significant production change at JPMorgan resulting in delayed product launch.",
+      "U.S.$ banks' ratings cut by Moodys on rising sovereign debt concerns (impact on JPM direct) - J PMorgan expects healthy deal-makingfor remainder of twenty-five(production change or supply chain) - CO28and JPMorgan Chase sign carbon removal offtake agreement (strategic decision) - Goldman to boost",
+      "JP Morgan announces gold price prediction of $4,ooo/oz by Q2 2oo6."
+    ]
+  }
+}

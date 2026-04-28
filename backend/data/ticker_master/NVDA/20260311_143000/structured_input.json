@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.45)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 174.64-197.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.02%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.482)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 171.03-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.19%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 67.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 185.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.33%))",
+      "volume_dynamics": "ELEVATED (1.15)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 62.31, P/S: 35.04)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 57.64)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.43)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia partners with AI startup Thinking Machines Lab. - Nvidia to supply AI processors to Thinking Machines Lab. - Nvidia invests in AI startup Thinking Machines Lab. - Nvidia CEO Jensen Huang blogs about AI's impact.",
+      "Nvidia hiring orbital datacenter system architect. - Nvidia-backed Nscale raises $2 billion in funding. - Media Tek engineers learning from Nvidia's Jensen Huang. - Nvidia stock gets whale-sized boost from stake increase.",
+      "Nvidia makes two new AI investment bets. - Nvidia announces Q4 blowout, data center revenue up 75%. - Nvidia secures $95B+ in supply commitments. - Nvidia launches Vera Rubin GPUs."
+    ],
+    "medium_term_50d": [
+      "Nvidia makes two new AI investment bets. - Nvidia announces Q4 blowout, data center revenue up 75%. - Nvidia secures $95B+ in supply commitments. - Nvidia launches Vera Rubin GPUs.",
+      "Nvidia hiring orbital datacenter system architect. - Nvidia-backed Nscale raises $2 billion in funding. - Media Tek engineers learning from Nvidia's Jensen Huang. - Nvidia stock gets whale-sized boost from stake increase.",
+      "Nvidia partners with AI startup Thinking Machines Lab. - Nvidia to supply AI processors to Thinking Machines Lab. - Nvidia invests in AI startup Thinking Machines Lab. - Nvidia CEO Jensen Huang blogs about AI's impact."
+    ],
+    "long_term_200d": [
+      "Nvidia makes two new AI investment bets. - Nvidia announces Q4 blowout, data center revenue up 75%. - Nvidia secures $95B+ in supply commitments. - Nvidia launches Vera Rubin GPUs.",
+      "Nvidia near $3o billion investment in Open AI replacement of $10o billion deal. - Expanding ties with India\u2019s fast- growing AI founder ecosystem._ - Reported: Nvidia investing $3o billions in Open AI.",
+      "Nvidia faces tech protectionism restrictions on AI chip exportsto China. Note: Based on rule #10, this event meets the criteria of having a direct impact on NVDA by specifically mentioning the restriction of their AI chip exports."
+    ]
+  }
+}

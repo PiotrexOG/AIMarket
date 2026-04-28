@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technical picture has weakened, with the candle pattern shifting to neutral and momentum indicators declining. RSI has fallen to 41.5, and velocity has turned negative (-4.7%). The price is now trading 3.9% below its 20-day SMA, a deterioration from the prior period. W: The shift to neutral candle pattern and the decline in momentum are key weaknesses. The price is now below the 20-day SMA, indicating a loss of short-term upward pressure. O: Despite the deterioration, the price remains within its 20-day range, and mean reversion bands are within normal limits (0.25). Positive news regarding chip supply deals and AI infrastructure plans could provide a near-term bounce. T: Increased downside risk is evident due to the negative momentum and price action below the 20-day SMA. News regarding US export restrictions and potential inflation/recession risks pose significant headwinds."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend has further deteriorated, with bearish momentum accelerating and the price now 7.43% below the 50-day SMA. The MACD has flipped to a bearish signal, and the Z-score has moved deeper into oversold territory at -1.38. W: The bearish MACD crossover and the widening gap below the 50-day SMA are significant weaknesses, indicating a strengthening downtrend. The price is now in the lower quadrant of its 50-day range. O: Despite the bearish technicals, the underlying fundamentals remain strong, and the stock is still within its monthly range. Strategic partnerships and potential AI infrastructure developments could offer a catalyst for a reversal. T: The primary risk is the continuation of the bearish trend, as confirmed by the bearish MACD and increasing distance from the 50-day SMA. The average volume dynamics suggest a lack of strong conviction, which could lead to further price declines if selling pressure intensifies. Geopolitical risks and economic headwinds remain significant concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 6.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term technical structure has significantly weakened with the formation of a DEATH_CROSS structure and the price now positioned in the bearish lower quadrant of its long-term range (29.3%). The market regime remains a SECULAR_BEAR_MARKET. W: The DEATH_CROSS is a major structural breakdown, indicating a significant shift in long-term trend. The price's position in the lower quadrant of its range and the continued secular bear market regime are key weaknesses. O: The company's elite business quality, hyper-growth profile, and strong balance sheet remain fundamental strengths that could support a long-term recovery. Strategic partnerships and continued innovation in AI could provide a foundation for future growth. T: The extreme valuation multiples, coupled with the bearish long-term technical structure (DEATH_CROSS), present substantial downside risk. Any negative news flow or a broader market downturn could trigger significant price depreciation. Increased competition or a slowdown in AI adoption would exacerbate these risks."
+    }
+  }
+}

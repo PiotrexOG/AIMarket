@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The RSI has normalized to 57.9, moving out of overbought territory, and velocity (ROC 10) has decreased to 0.9%. Price is now stable near the 20-day SMA (3.4%) and within normal Bollinger Bands (0.68). W: While momentum has cooled, the previous bullish candle pattern has resolved to neutral, indicating a lack of strong directional conviction. Volume dynamics remain average (0.72), suggesting limited participation for a significant move. O: Recent news regarding layoffs introduces a negative sentiment, potentially capping upside. However, the launch of a perks program could offer some support to subscriber engagement. T: The shift from overbought to neutral RSI, coupled with stable price action near the 20-day SMA, reduces immediate downside risk from overextension. However, the lack of strong bullish signals and negative news flow limits the score and conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.0,
+        "risk": 6.8
+      },
+      "synthesis": "S: Trend alignment continues to show expanding bullish momentum (11.8%), and the price is strengthening at the monthly resistance zone. The Z-score above the 50-day SMA (1.37) indicates a solid trend position. W: The MACD has turned bearish and is accelerating (-0.241), signaling a loss of upward momentum and potential for a trend reversal. While the trend is still technically bullish, the deteriorating MACD and proximity to resistance increase the risk of consolidation or a pullback. O: Continued news of layoffs, though potentially impacting short-term sentiment, may be viewed as a cost-cutting measure that could improve long-term profitability. The launch of a perks program could also bolster customer loyalty. T: The improving trend alignment and Z-score are positive, but the accelerating bearish MACD and the persistent resistance zone introduce a higher risk of a trend reversal or significant consolidation. Conviction is reduced due to the conflicting signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term range position has improved to 86.8%, indicating continued strength in the upper quadrant. Fundamental strengths in business quality, financial health, and cash generation remain consistent. W: The long-term technical structure is still burdened by the death cross (-3.65%), and the market regime remains in a bull market correction. Valuation multiples remain premium (P/E: 36.75), contributing to structural fragility. The recent layoff news, while potentially a cost-saving measure, can also signal underlying business challenges. O: The ongoing legal dispute with YouTube, though older news, remains a potential overhang. The core business fundamentals and strategic expansions are still present, but the recent layoff news adds a layer of uncertainty to the long-term growth narrative. T: Despite the improved long-term range position and stable fundamentals, the persistent bearish long-term technical structure and premium valuation continue to pose significant downside risk. The layoff news introduces a new element of concern, slightly increasing risk and tempering the score and conviction."
+    }
+  }
+}

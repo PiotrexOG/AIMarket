@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (25.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "NORMAL (-2.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.18-110.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.01%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.164)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.41%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 24.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 104.64,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.7%))",
+      "volume_dynamics": "ELEVATED (1.34)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.86, P/S: 1.37)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.78)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump administration cuts funding for Exxon's Baytown project. - Ex xon signs oil exploration dealswith Azerbaija n's SOC AR. -- Consortium led by Exxon reports $10,4bn profit from Guyana operations (2023).",
+      "Azeri stateenergy company SOCAr signs new agreements for oil and gas exploration with Exx\u043e\u043d \u041c\u043ebil and \u0411\u041f in \u0410z\u0435rb\u0430\u0439j\u0430\u043d.",
+      "Exxon confirms arbitration proceeding over Chev Ron-Hess dispute, expects decision in 2-3 months. -Exxon sets production start datefor Guyana's Yellowtaiprojectin August. -Chevronplans to layoffnearly 80oemployeesin Texas. -Bloom"
+    ],
+    "medium_term_50d": [
+      "Trump administration cuts funding for Exxon's Baytown project. - Ex xon signs oil exploration dealswith Azerbaija n's SOC AR. -- Consortium led by Exxon reports $10,4bn profit from Guyana operations (2023).",
+      "Azeri stateenergy company SOCAr signs new agreements for oil and gas exploration with Exx\u043e\u043d \u041c\u043ebil and \u0411\u041f in \u0410z\u0435rb\u0430\u0439j\u0430\u043d.",
+      "Exxon confirms arbitration proceeding over Chev Ron-Hess dispute, expects decision in 2-3 months. -Exxon sets production start datefor Guyana's Yellowtaiprojectin August. -Chevronplans to layoffnearly 80oemployeesin Texas. -Bloom"
+    ],
+    "long_term_200d": [
+      "Trump administration cuts funding for Exxon's Baytown project. - Ex xon signs oil exploration dealswith Azerbaija n's SOC AR. -- Consortium led by Exxon reports $10,4bn profit from Guyana operations (2023).",
+      "Exxon confirms arbitration proceeding over Chev Ron-Hess dispute, expects decision in 2-3 months. -Exxon sets production start datefor Guyana's Yellowtaiprojectin August. -Chevronplans to layoffnearly 80oemployeesin Texas. -Bloom",
+      "Exxon Mobile executive speaks at African Energy Week. - Arbitration over Guyana's oil project between Exxon and Chev\u0440\u043e\u043d."
+    ]
+  }
+}

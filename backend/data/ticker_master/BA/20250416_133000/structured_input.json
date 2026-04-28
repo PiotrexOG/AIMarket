@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.35)",
+        "velocity_roc_10": "NORMAL (-7.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 128.88-184.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-2.87%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.203)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 128.88-188.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-6.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.44%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 154.29,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (6.55%))",
+      "volume_dynamics": "AVERAGE (1.02)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(4)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.9% | OM: -16.2% | NM: -17.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -21.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $66.518B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -14.5%, EPS: -397.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -44.2%, Next Q Est Growth: 76.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -28.35)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.36x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "China orders hal TS to Boeingjet deliver IES - Beijing asks Chinese carriers to halt Boeing purchases - US decision on Chinese goods leads to Boeing delivery halt - China freezes Boeing plane deliveries amidst trade war - Beijing instructs airlines nottoacceptfurther Boeingjets - Presiden Trump'stariffsleadsto",
+      "Vietjet secures $30 million funding from AV Air Finance for fleet expansion. - Depreciation in BA stock due to Trump's extended tariffs.",
+      "Vietnam's Deputy PM meets US Treasury Secretary and Boeing regarding tariffs. - President Trump pauses reciprocaltariffsforindustrialgoodsaffecting Boeing. - Delta Airlines avoidspayingtariffson Airbusplaneorders."
+    ],
+    "medium_term_50d": [
+      "China orders hal TS to Boeingjet deliver IES - Beijing asks Chinese carriers to halt Boeing purchases - US decision on Chinese goods leads to Boeing delivery halt - China freezes Boeing plane deliveries amidst trade war - Beijing instructs airlines nottoacceptfurther Boeingjets - Presiden Trump'stariffsleadsto",
+      "Vietnam's Deputy PM meets US Treasury Secretary and Boeing regarding tariffs. - President Trump pauses reciprocaltariffsforindustrialgoodsaffecting Boeing. - Delta Airlines avoidspayingtariffson Airbusplaneorders.",
+      "Boeing announces first quarter deliveries exceeding expectations. -Boeing reports increase in first quarter orders. -Boeing tops Q1 deliveries estimates despite previous challenges."
+    ],
+    "long_term_200d": [
+      "China orders hal TS to Boeingjet deliver IES - Beijing asks Chinese carriers to halt Boeing purchases - US decision on Chinese goods leads to Boeing delivery halt - China freezes Boeing plane deliveries amidst trade war - Beijing instructs airlines nottoacceptfurther Boeingjets - Presiden Trump'stariffsleadsto",
+      "China'saviationregulator delayreleasereporton China Easternplane crash investigation. - USAir Force selects Boeingtobuildnext-generationfighterjet. - Lockheed Martiss disappointedwith USAir Forcecontractdecision.",
+      "Trump awards Boeling $20Billion Air Force contract. -Boeing wins USAir Forcenext-generationfighterjetcontract."
+    ]
+  }
+}

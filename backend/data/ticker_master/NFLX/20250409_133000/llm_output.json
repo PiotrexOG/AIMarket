@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technical picture has weakened significantly. Despite a strong bullish candle pattern, the RSI has fallen sharply into bearish territory (31.3), indicating oversold conditions but also a loss of upward momentum. Velocity (ROC 10) has turned sharply negative (-12.7%), confirming the loss of thrust. Price is now stable near the SMA20 base (-6.5%), suggesting a potential for a bounce from oversold levels but lacking immediate conviction. W: News flow has improved with a Morgan Stanley upgrade to 'top pick' and reports of funds purchasing shares during market volatility, which is a positive development. However, the underlying technical deterioration is a significant concern. O: The extremely bearish RSI reading suggests a potential for a short-term bounce, but the negative velocity and lack of sustained buying pressure limit upside potential. The current price action near the SMA20 base could lead to further downside if the oversold conditions do not reverse quickly. T: The sharp decline in RSI and negative velocity have increased short-term risk. While the news flow offers some support, the technical weakness suggests that any bounce may be short-lived, and downside risk remains elevated."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend has further deteriorated, showing accelerating bearish momentum. Trend alignment remains in a gradual descent (-3.37%), and the MACD has accelerated its bearish reading (-0.897), confirming a strong loss of upward momentum. Price is now in a significantly bearish trend position relative to the SMA50 (Z:-1.75), indicating a substantial deviation from the medium-term average. W: The medium-term news narrative remains mixed, with positive analyst upgrades and fund buying offset by ongoing regulatory concerns and the impact of broader market volatility. The previous bearish MACD signal has intensified. O: The accelerating bearish MACD and deeply negative SMA50 Z-score strongly suggest continued downside pressure. The positive news flow is currently insufficient to counteract the severe technical deterioration. T: The confirmed and accelerating bearish MACD cross, coupled with the deeply negative SMA50 Z-score, significantly increases medium-term risk. The current valuation multiples, while supported by growth, are likely unsustainable in the face of such strong technical headwinds and persistent regulatory risks, leading to a substantial increase in downside exposure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market (7.5%), but the bullish stretch exhaustion risk has slightly decreased (19.06%), indicating a minor reduction in overextension. Price position in the long-term range has moved to a mid-cycle neutral zone (60.4%), suggesting a more balanced positioning after a previous higher range. Fundamentals remain robust with high business quality and strong growth. W: The long-term news narrative is now dominated by positive analyst upgrades and fund buying, which is a significant improvement from previous periods focused on regulatory investigations. However, the Turkish competition board investigation still lingers in the background. O: Despite the improved news flow and slightly reduced exhaustion risk, the overall long-term trend is showing signs of consolidation rather than renewed strength. The shift to a mid-cycle neutral zone suggests a pause in the upward trajectory. T: The combination of a still potentially stretched market regime, the lingering regulatory overhang, and a neutral long-term range position elevates long-term downside exposure. While valuation is supported by growth (PEG 0.65), the risk of multiple compression due to macro factors or potential regulatory action remains, leading to a moderately high risk score."
+    }
+  }
+}

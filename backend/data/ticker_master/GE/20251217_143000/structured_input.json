@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 279.64-308.06]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.5%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.443)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.64-316.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.85%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 300.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.34%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.75, P/S: 7.29)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.04)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aersospace secures large aircraft engineorder. - Citi initiates Buy rating for GE.",
+      "GE Vernoa raises dividend, increases buyback authorization, and raises earnings guidance. (Event directly affects GE Vernoya) - GEsupply of electric- generation equipment benefits from increasing USdemand for electricity driven by AI and electrification. (Directimpacton GE's business)",
+      "GE Aerosecure orders for eight marine gas turbines for US Navy destroyers - Carpenter Tech's aerospace segment has 11\\% yoy increase in sales"
+    ],
+    "medium_term_50d": [
+      "GE Aersospace secures large aircraft engineorder. - Citi initiates Buy rating for GE.",
+      "GE Vernoa raises dividend, increases buyback authorization, and raises earnings guidance. (Event directly affects GE Vernoya) - GEsupply of electric- generation equipment benefits from increasing USdemand for electricity driven by AI and electrification. (Directimpacton GE's business)",
+      "GE Aerosecure orders for eight marine gas turbines for US Navy destroyers - Carpenter Tech's aerospace segment has 11\\% yoy increase in sales"
+    ],
+    "long_term_200d": [
+      "GE Aersospace secures large aircraft engineorder. - Citi initiates Buy rating for GE.",
+      "GE Aersospace secures $27o billion worth of engine deals in Saudi Arabia. - \u0413\u0415 invests $\u2081\u2084 million into India manufacturing facility expansion.",
+      "GE Vernoa raises dividend, increases buyback authorization, and raises earnings guidance. (Event directly affects GE Vernoya) - GEsupply of electric- generation equipment benefits from increasing USdemand for electricity driven by AI and electrification. (Directimpacton GE's business)"
+    ]
+  }
+}

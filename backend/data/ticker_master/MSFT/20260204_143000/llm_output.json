@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has shifted dramatically to oversold conditions, with RSI at 28.8 and price trading below the lower Bollinger Band (-0.06). Velocity is negative (-9.5%), and the price is significantly below the 20-day SMA (-10.5%), indicating extreme bearishness. The price is currently in the middle of the 20-day range, but the technicals suggest a capitulation event. W: The strong bearish technicals, including oversold RSI and price below the lower band, present a high risk of further downside. The news flow is mixed, with positive developments in AI chip introductions and cloud deals, but also regulatory scrutiny and supply chain pressures. O: The extreme oversold conditions suggest a potential for a short-term bounce, but the underlying trend remains bearish. The high volume indicates significant institutional activity, which could precede a reversal or further capitulation. T: The score has decreased significantly from 6.0 to 3.0 due to the sharp deterioration in short-term technicals, moving from neutral to oversold extreme. Risk has increased substantially from 5.0 to 7.5, driven by the oversold conditions, price below Bollinger Bands, and negative velocity. Conviction has decreased from 5.5 to 4.0 as the technical signals are now extreme and potentially indicating a short-term reversal rather than a sustained trend."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment has worsened, showing a steeper bearish descent (-2.89%). The MACD has turned bearish and is accelerating downwards (-4.657), confirming a strong negative momentum shift. The Z-score relative to the SMA50 is now a statistical outlier at -3.05, indicating extreme overextension to the downside. The price is strengthening at monthly support, which is a mitigating factor. W: The bearish MACD and extreme Z-score signal a significant breakdown in medium-term trend. The news flow is mixed, with positive commentary on AI demand and backlog, but also significant investment discussions in OpenAI that could dilute focus or create competition. O: The confluence of bearish MACD and extreme Z-score points to significant downside risk. However, the price holding at monthly support suggests a potential floor. The strong fundamental backing of Microsoft provides a crucial anchor against further decline. T: The score has decreased sharply from 7.0 to 2.5 due to the confirmed bearish MACD crossover and the extreme bearish Z-score, indicating a strong shift towards a bearish medium-term outlook. Risk has increased significantly from 4.0 to 8.0, driven by the bearish MACD, statistical outlier Z-score, and the widening bearish trend. Conviction has decreased from 6.5 to 3.5 due to the strong bearish technical signals and the extreme nature of the price deviation from its mean."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 1.5,
+        "conv": 3.0,
+        "risk": 9.0
+      },
+      "synthesis": "S: The long-term market regime has deteriorated significantly, with the secular bear market now showing a substantial decline (-15.4%). A 'death cross' structure is evident, with major crosses indicating a strong bearish signal (-2.7%). The long-term range position has fallen into the lower quadrant at 31.2%, reflecting a deeply bearish long-term outlook. W: The 'death cross' and significant decline within the secular bear market represent a major structural breakdown. The news flow is dominated by AI investments and potential competition, alongside ongoing legal challenges and regulatory concerns, which add to long-term uncertainty. O: The confluence of a 'death cross', a deep decline in the secular bear market, and a low long-term range position indicates severe long-term headwinds. The strong fundamental quality of Microsoft is the only mitigating factor against a complete collapse in the long-term score. T: The score has decreased drastically from 6.5 to 1.5 due to the confirmed 'death cross', the significant decline within the secular bear market, and the price falling into the lower long-term range. Risk has increased to 9.0, reflecting the structural breakdown, the 'death cross', and the bearish long-term positioning. Conviction has decreased from 6.0 to 3.0, as the long-term technical signals are overwhelmingly bearish, despite the underlying business quality."
+    }
+  }
+}

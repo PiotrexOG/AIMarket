@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "STAGNANT (0.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.83-26.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.07%)",
+        "cycle_macd": "BULLISH_FADING (0.007)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.91-26.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.22%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.63%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.64, P/S: 2.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.56)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer presents at 40th Annual JP Morgan Healthcare Convention. -PFizer obtains global Rights to Madrigal's ermogastat for MASH treatments. -Pfizer plans for consumer market forobesity drugs similar to Viagra success.",
+      "Pfizer seeks FDA priority review voucher. - Abb Vie strikes drug pricing deal with Trump. -pfizer ceo discusses FDA priorityreview voucher at jpmorgan healthcare conference.",
+      "Pfizer announces positive results from BREAK WATER trial for BRAF TOVI regimen in m CRC."
+    ],
+    "medium_term_50d": [
+      "Pfizer presents at 40th Annual JP Morgan Healthcare Convention. -PFizer obtains global Rights to Madrigal's ermogastat for MASH treatments. -Pfizer plans for consumer market forobesity drugs similar to Viagra success.",
+      "Pfizer partners with Bolt\u0437 to use AI in drug discovery. - Positive Phase III trial results for PAD Cec V combination in bladder cancer treatment (Pfizer and Astellas).",
+      "Pfizer announces positive results from BREAK WATER trial for BRAF TOVI regimen in m CRC."
+    ],
+    "long_term_200d": [
+      "Pfizer presents at 40th Annual JP Morgan Healthcare Convention. -PFizer obtains global Rights to Madrigal's ermogastat for MASH treatments. -Pfizer plans for consumer market forobesity drugs similar to Viagra success.",
+      "Pfizer faces major lawsuit over side effects of drug X. - FDA issues warning letter to Pfizer regarding plant Y. - Pharmaceutical giant Pfizer announces acquisition of rival AZ. - New production facility in China impacts PFE's Q4 earnings. - PFE lowers full year guidance due to unexpected costs. - Delayed launch",
+      "Pfizer partners with Bolt\u0437 to use AI in drug discovery. - Positive Phase III trial results for PAD Cec V combination in bladder cancer treatment (Pfizer and Astellas)."
+    ]
+  }
+}

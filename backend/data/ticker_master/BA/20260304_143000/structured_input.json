@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.2)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-8.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 221.11-247.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.71%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.788)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.81)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 207.66-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.93%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 224.77,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.99%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.84, P/S: 2.0)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 32.77)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.84)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Vietnam Jet orders for Boeing (1) - Boising 77 seventh X training progress (1)",
+      "Delta orders new widebody jets from Boeing and Airbus.",
+      "Three U. S. F- fifteen jets shot down by Kuwait, BA planes involved. -Boeling secures large orders from Vietname airlines and updates African forecast. -BAE Systems wins contract from Italian Ministry of Defence. -New line of conformal antibodas solutions introduced by BAE Systems."
+    ],
+    "medium_term_50d": [
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues.",
+      "Delta orders new widebody jets from Boeing and Airbus.",
+      "1. Boeing reports new multi billon dollar aircraft ordersfrom Vietnamese \u0430irlines Sun Ph\u0443 Qu\u043ec \u0410irways and Vietnam \u0410irlines. 2. FAA focuses on regulatory complianceand safety requirements regarding Boeing'ss 73 seventh MAX fleet. 3. Lawsuit over Boeing\u2019spilot training practices allowed to proceed in US Supreme Court."
+    ],
+    "long_term_200d": [
+      "NASA criticizes Boeing and agencies for Starlinermission failures. - Starlinermission classifiedas Type A mishapp, costing >$2M. - NASA astron AUTs stranded for 9 months due to Starlinerpropulsion issues.",
+      "Boeing gains FTC approval and Dreamliner orders raise valuation questions - Boeling names St. Louis facility as headquarters for Defense, Space (&) Security business - Booeing and Northrop Grumman turn around regulatory issues - Boeigng wins major 7 Eighty-seven Dreamlinerordersfrom Air Astanaand Delta Air Lines",
+      "1. Boeing reports new multi billon dollar aircraft ordersfrom Vietnamese \u0430irlines Sun Ph\u0443 Qu\u043ec \u0410irways and Vietnam \u0410irlines. 2. FAA focuses on regulatory complianceand safety requirements regarding Boeing'ss 73 seventh MAX fleet. 3. Lawsuit over Boeing\u2019spilot training practices allowed to proceed in US Supreme Court."
+    ]
+  }
+}

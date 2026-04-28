@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (3.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 114.61-125.93]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.38%)",
+        "cycle_macd": "BULLISH_FADING (0.435)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.83)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 112.51-125.93]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.12%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 119.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.89%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.51)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.37, P/S: 1.59)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.99)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump urges oil giants to invest in post-Maduro Venezuelan Oil. - Major oil companies meet with Trump administration regarding Venezuela.",
+      "US military intervenes in Venezuela, Exx ON Mobil returns to operate in Venezuela. - Exx ON Mobile invited by US administration to invest in Venezuela's oil infrastructure.",
+      "Trump announces US oil companies to invest in Venezuelan energy sector post-Maduro. - Output from Venezuela, an OPEC member, remains less than % of global oil supplies. - Chevron continues operations in Venezuela despite political instability."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobile announces major gas discovery in new drilling site. - XOM enters partnership with renewable energy provider. - Regulator imposes fine on XOM due to environmental violation. - Lawsuit filed against XOM over alleged product defect. - New CEO announced at XOM with significant strategic shift.",
+      "US military intervenes in Venezuela, Exx ON Mobil returns to operate in Venezuela. - Exx ON Mobile invited by US administration to invest in Venezuela's oil infrastructure.",
+      "Trump urges oil giants to invest in post-Maduro Venezuelan Oil. - Major oil companies meet with Trump administration regarding Venezuela."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile announces major gas discovery in new drilling site. - XOM enters partnership with renewable energy provider. - Regulator imposes fine on XOM due to environmental violation. - Lawsuit filed against XOM over alleged product defect. - New CEO announced at XOM with significant strategic shift.",
+      "Exxon \u041c\u043ebil raises 20\u4e09\u3007 corporate plan outlook.",
+      "Exxon mobil announces new CFO and raises 20 thirty financial targets."
+    ]
+  }
+}

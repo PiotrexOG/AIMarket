@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. RSI has fallen to 47.9, indicating a shift from bullish to neutral territory. ROC is negative at -5.0%, and the stock is now trading 2.3% below its 20-day SMA. The range has also narrowed slightly to 107.15-115.76. W: Downside risk has increased due to the negative momentum and increased distance from the 20-day SMA. The neutral candlestick pattern offers no directional bias. O: News flow is mixed, with ongoing disputes regarding the Hess acquisition and joint venture developments in Guyana. T: The current technical setup suggests a neutral to slightly bearish short-term outlook, with potential for further downside if support levels are breached. Conviction has decreased due to the weakening momentum and mixed news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment has weakened considerably. The MACD has turned decisively bearish and is accelerating at -0.749. While the stock is still within its monthly range (101.18-116.95), its Z-score relative to the 50-day SMA has moved to a neutral base (0.2), indicating a loss of upward momentum. W: Downside risk has increased substantially due to the bearish MACD and the shift in trend alignment. The ongoing legal disputes surrounding the Hess acquisition contribute to uncertainty. O: News flow remains dominated by the Hess acquisition arbitration, creating a cloud of uncertainty. T: The deteriorating technical indicators and negative MACD signal a bearish medium-term outlook. Conviction has significantly decreased due to the sharp decline in the MACD and the persistent legal entanglements. The stock is now at risk of testing lower support levels within its monthly range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime has shifted to a secular bear market (-2.7%), a significant deterioration from the previous 'bull market correction'. The death cross structure persists (-2.65%), and the stock's position within its long-term range has moved lower to 40.6%, indicating a less favorable mid-cycle zone. W: Downside risk has increased due to the bearish market regime, persistent death cross, and a lower position within the long-term range. Fundamental metrics remain stable, but the overall market environment is now a headwind. O: Long-term news flow continues to be dominated by the Hess acquisition disputes and joint venture developments, which introduce ongoing uncertainty. T: The shift to a secular bear market regime and the persistent technical weakness suggest a bearish long-term outlook. Conviction is moderate, as strong fundamentals are being overshadowed by a challenging macro environment and ongoing corporate disputes. The risk profile has elevated due to these structural shifts."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.13)",
+        "velocity_roc_10": "NORMAL (-1.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.93-26.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.17%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.121)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 22.45-26.05]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.44%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.22,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.04%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.9% | OM: 27.5% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.66x, YrsToPay: 5.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.463B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.6%, EPS: 2553.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -22.0%, Next Q Est Growth: 9.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.44, P/S: 2.21)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.53)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.01)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer expected to beat earnings estimates. - Mikael Dolsen joins Bench Sci board of directors (indirect). - Pfzer stock potential value play before earnings.",
+      "Pfizer finalizes licensing agreementwith 3SBi for developing SSGJ-\\*bispecific antibidy*.",
+      "Pfizer receives CHMP recommendation for adapted COVID-1 nineteen Vaccine COMLRNATY."
+    ],
+    "medium_term_50d": [
+      "Pfizer receives CHMP recommendation for adapted COVID-1 nineteen Vaccine COMLRNATY.",
+      "FDA approves tralok INUMAb-ldrm for atopic dermoatis T (PFE's product). - Pfizers NON-ONCOLOGY drugs perform well in Q2 earnings.",
+      "Pfizer and Biotech receive positive CHMP opinion for enhanced COVID-1 nine vaccine in EU. - LP.8.\\.1 adapted COVID-1 nine vaccine confers superior immune response against dominant and emerging SARS-\\ Co V-2 sublineages."
+    ],
+    "long_term_200d": [
+      "Pfizer and Astell AS announce positive overall survival results from Phase 3EMBARK study of XTANDi. - Xtand I plus leupro Lide significantly improoves survival outcomes in non-metastic hormone-sen Sitive prostate cancer.",
+      "Pfizer reports life-extending benefits for XTAN\u0434\u0438 from Phase 3 study.",
+      "FDA approves tralok INUMAb-ldrm for atopic dermoatis T (PFE's product). - Pfizers NON-ONCOLOGY drugs perform well in Q2 earnings."
+    ]
+  }
+}

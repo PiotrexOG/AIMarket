@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 159.73-184.74]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.69%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.015)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 159.73-226.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-8.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.0%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 168.4,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.98%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 56.1% | OM: 45.7% | NM: 40.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.25x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 30.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $2894.307521B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 33.9%, EPS: 38.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3026.1%, Next Q Est Growth: -97.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.75, P/S: 0.3)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.21)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia invests billions in US supply chain. - Tsmc supercycle continues with revenue gains.",
+      "President Trump sets up entity for managing CHIPS Act, potentially impacts TSMC negotiations. - Global Foundries merges with UMC, could indirectly affect TSM through competition. None if these events directly impact TSM based on the given criteria.",
+      "U. S. International Trade Commission initiates investigation against certain foreign-made semiconductors including those from TSMC."
+    ],
+    "medium_term_50d": [
+      "Nvidia invests billions in US supply chain. - Tsmc supercycle continues with revenue gains.",
+      "President Trump sets up entity for managing CHIPS Act, potentially impacts TSMC negotiations. - Global Foundries merges with UMC, could indirectly affect TSM through competition. None if these events directly impact TSM based on the given criteria.",
+      "U. S. International Trade Commission initiates investigation against certain foreign-made semiconductors including those from TSMC."
+    ],
+    "long_term_200d": [
+      "Nvidia invests billions in US supply chain. - Tsmc supercycle continues with revenue gains.",
+      "U. S. International Trade Commission initiates investigation against certain foreign-made semiconductors including those from TSMC.",
+      "President Trump sets up entity for managing CHIPS Act, potentially impacts TSMC negotiations. - Global Foundries merges with UMC, could indirectly affect TSM through competition. None if these events directly impact TSM based on the given criteria."
+    ]
+  }
+}

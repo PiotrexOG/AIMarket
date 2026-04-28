@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.9)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 281.75-314.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.29%)",
+        "cycle_macd": "BULLISH_FADING (2.934)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.62)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.1-326.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.23%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 47.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 306.41,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.2%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.65, P/S: 3.0)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.35)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.86)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan launches American Dream Initiative for economic opportunity. - JPMorgan CEO Jamie Dimon's letter outlines AI and risk priorities. - JPMorgan Chase to report Q1 '26 financial results on April 14th. - JPMorgan Chase Bank, N.A. acted as agent for Chemed credit agreement. - JPMorgan and Morgan Stanley urge buying the dip in stocks. - JPMorgan CEO sees economic risks and resilience ahead of earnings. - JPMorgan Chase stock movement expected after earnings report.",
+      "JPMorgan Chase launching $80B initiative for small business and communities. - JPMorgan Chase announces $1.5 trillion initiative for community lending and expansion. - JPMorgan CEO Jamie Dimon warns of brewing market storm in shareholder letter."
+    ],
+    "medium_term_50d": [
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan launches American Dream Initiative for economic opportunity. - JPMorgan CEO Jamie Dimon's letter outlines AI and risk priorities. - JPMorgan Chase to report Q1 '26 financial results on April 14th. - JPMorgan Chase Bank, N.A. acted as agent for Chemed credit agreement. - JPMorgan and Morgan Stanley urge buying the dip in stocks. - JPMorgan CEO sees economic risks and resilience ahead of earnings. - JPMorgan Chase stock movement expected after earnings report.",
+      "JPMorgan Chase launching $80B initiative for small business and communities. - JPMorgan Chase announces $1.5 trillion initiative for community lending and expansion. - JPMorgan CEO Jamie Dimon warns of brewing market storm in shareholder letter."
+    ],
+    "long_term_200d": [
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan Chase launching $80B initiative for small business and communities. - JPMorgan Chase announces $1.5 trillion initiative for community lending and expansion. - JPMorgan CEO Jamie Dimon warns of brewing market storm in shareholder letter.",
+      "JPMorgan launches American Dream Initiative for economic opportunity. - JPMorgan CEO Jamie Dimon's letter outlines AI and risk priorities. - JPMorgan Chase to report Q1 '26 financial results on April 14th. - JPMorgan Chase Bank, N.A. acted as agent for Chemed credit agreement. - JPMorgan and Morgan Stanley urge buying the dip in stocks. - JPMorgan CEO sees economic risks and resilience ahead of earnings. - JPMorgan Chase stock movement expected after earnings report."
+    ]
+  }
+}

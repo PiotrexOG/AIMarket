@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 176.77-212.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.92%)",
+        "cycle_macd": "BULLISH_FADING (1.605)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.85)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.07-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (33.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.83%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 200.63,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.11%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 92.88, P/S: 51.76)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 85.72)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.22)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia top-end charts may be sold with technological advancements: Bessent. - Deutsche Tele\u043a\u043e\u043c and Nvid IA launch $1B AI cloud for industries.",
+      "Nvidia surpasses $ Five Trillion market cap. - IBM's quantum computing progress stays on track.",
+      "Microsoft gets US approval to export Nvidia Chips to UEA. - Microsoft invests over $1 five billion in UEA, secures Nvidiachip exports. - F5 integrates NVIDIA RTX PRO Server for high-performation AI infrastructure."
+    ],
+    "medium_term_50d": [
+      "Nvidia secures exclusive access to Taiwan Semiconductors' next-gen super-chip. - South Korea places giant order for Nvidias Blackwell Ch IPS. - Amazon adds to the chorous of large cloud companies stating demand for AIcapacity outstrips supplies. - Partnershiptaimed at creating aglobally distributed AIcloud infrastructure using NVIDI",
+      "Nvidia surpasses $ Five Trillion market cap. - IBM's quantum computing progress stays on track.",
+      "Nvidia top-end charts may be sold with technological advancements: Bessent. - Deutsche Tele\u043a\u043e\u043c and Nvid IA launch $1B AI cloud for industries."
+    ],
+    "long_term_200d": [
+      "Nvidia secures exclusive access to Taiwan Semiconductors' next-gen super-chip. - South Korea places giant order for Nvidias Blackwell Ch IPS. - Amazon adds to the chorous of large cloud companies stating demand for AIcapacity outstrips supplies. - Partnershiptaimed at creating aglobally distributed AIcloud infrastructure using NVIDI",
+      "Nvidia surpasses $ Five Trillion market cap. - IBM's quantum computing progress stays on track.",
+      "Nvidia top-end charts may be sold with technological advancements: Bessent. - Deutsche Tele\u043a\u043e\u043c and Nvid IA launch $1B AI cloud for industries."
+    ]
+  }
+}

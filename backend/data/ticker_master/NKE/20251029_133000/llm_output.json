@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.8
+      },
+      "synthesis": "S: The short-term outlook has weakened significantly with a STRONG_BEARISH candle pattern. RSI has moved to a neutral zone (43.9), but velocity remains stagnant (-0.4%), and the price is now further from the SMA20 base (-2.4%). The price remains in the middle of the 20-day range [64.88-76.97]. W: The strong bearish candle pattern and continued stagnant velocity are concerning. Negative news regarding competitor partnerships and tariff impacts on sales are headwinds. Volume dynamics have improved to average (0.71), but this is not yet translating into upward price action. O: The price is within normal Bollinger Bands (0.33), offering some technical support. The price is still within the 20-day range, preventing an immediate breakdown. T: The score has decreased from 3.0 to 2.5 due to the STRONG_BEARISH candle pattern and the price moving further from the SMA20 base, overriding the slight improvement in RSI. Conviction remains stable at 3.0 as the technical signals are mixed but leaning bearish. Risk has increased from 7.5 to 7.8 due to the strong bearish candle pattern, stagnant velocity, and the price moving further from the SMA20 base, coupled with moderate volatility (ATR 2.75%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "risk": 7.3
+      },
+      "synthesis": "S: The medium-term trend alignment shows a bearish gradual descent (-4.11%), and the bullish MACD signal is fading (0.208). The Z-score relative to the SMA50 has worsened to -1.51, indicating a weaker trend position. The price remains inside the monthly range [64.88-80.17]. W: The fading MACD signal and worsening Z-score suggest the prior bullish momentum is not sustained. Negative news regarding competitor partnerships and tariff impacts continue to weigh on the outlook. The bearish gradual descent in trend alignment indicates ongoing selling pressure. O: The price remains within the monthly range, providing a degree of support and potential for a bounce. The structure remains a power zone confluence, suggesting underlying support levels. T: The score has decreased from 4.0 to 3.5 as the bullish MACD signal is fading and the Z-score has deteriorated, indicating a loss of upward momentum. Conviction has decreased from 3.5 to 3.0 due to the weakening MACD signal and worsening trend position. Risk has increased from 7.0 to 7.3 due to the deteriorating Z-score, fading MACD, and continued bearish trend alignment, despite remaining within the monthly range and moderate volatility (ATR 2.75%)."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 3.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime remains a BEAR_MARKET_RELIEF_RALLY (-2.7%), and the long-term range position has shifted lower to 47.0% within the neutral zone. However, the major crosses maintain a HEALTHY_GOLDEN_CROSS_STRUCTURE (3.92%), providing a positive technical underpinning. W: The continued negative market regime and the lower long-term range position suggest a less favorable macro environment. Persistent negative news regarding regulatory investigations and tariff impacts continue to pose long-term structural risks. O: The underlying business quality, financial health, and company scale remain robust, providing foundational support. The intact golden cross structure offers resilience against the bearish market regime. T: The score has slightly decreased from 4.7 to 4.5 due to the shift in the long-term range position to a lower neutral zone and the continued bearish market regime, slightly offsetting the positive technical structure. Conviction remains stable at 3.5 as the strong long-term technical structure continues to provide a durable signal. Risk has slightly increased from 6.8 to 7.0, as the shift to a lower neutral range position and the ongoing negative news flow introduce more uncertainty, coupled with moderate volatility (ATR 2.75%)."
+    }
+  }
+}

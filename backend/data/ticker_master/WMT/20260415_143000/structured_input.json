@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.61)",
+        "velocity_roc_10": "NORMAL (1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 118.02-129.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.38%)",
+        "cycle_macd": "BULLISH_FADING (0.214)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 118.02-134.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.93%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 123.57,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.22%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.0%, Next Q Est Growth: 1.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.27, P/S: 1.47)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.97)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.04)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart launches Upstream Facility Services for businesses. - Walmart joins U.S. Cotton Trust Protocol for sustainable sourcing. - Walmart redesigns Great Value brand packaging. - Walmart's AI Chief earned more than CEO in 2025.",
+      "Walmart tops global retail ranking report. - Walmart's AI assistant Sparky shows user engagement. - Children's food brand launches nationwide at Walmart. - Walmart adds exclusive flavor of popular cereal.",
+      "Walmart and Target got new blood in the corner office. - John Furner is the new chief executive officer of Walmart."
+    ],
+    "medium_term_50d": [
+      "Walmart launches Upstream Facility Services for businesses. - Walmart joins U.S. Cotton Trust Protocol for sustainable sourcing. - Walmart redesigns Great Value brand packaging. - Walmart's AI Chief earned more than CEO in 2025.",
+      "Walmart and Target got new blood in the corner office. - John Furner is the new chief executive officer of Walmart.",
+      "Walmart tops global retail ranking report. - Walmart's AI assistant Sparky shows user engagement. - Children's food brand launches nationwide at Walmart. - Walmart adds exclusive flavor of popular cereal."
+    ],
+    "long_term_200d": [
+      "Walmart and Target got new blood in the corner office. - John Furner is the new chief executive officer of Walmart.",
+      "Walmart acquires Vizio for $2.3 billion. - Walmart reports strong US e-commerce growth. - Walmart announces $30 billion share repurchase. - Walmart implements new AI tools for e-commerce. - Walmart CEO Doug Mc Millon cites AI for departure. - The Brand Agency named to Fast Company's Most Innovative list.",
+      "Walmart launches Upstream Facility Services for businesses. - Walmart joins U.S. Cotton Trust Protocol for sustainable sourcing. - Walmart redesigns Great Value brand packaging. - Walmart's AI Chief earned more than CEO in 2025."
+    ]
+  }
+}

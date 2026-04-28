@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (21.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 71.93-80.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.54%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.484)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.0)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 71.03-80.17]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.98%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 73.24,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "AVERAGE (0.84)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.93, P/S: 2.2)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.89)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.98)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Dick's Sports Acquires Foot Lockers for $2 Billion, forming retail powerhouse. - Implications for NKE: Integration and industry impact to watch.",
+      "Nike appoints Pricewaterouse Coopers as independent accounting firm (FY202 six). - NKE suffers larger drop than general market.",
+      "Nike partners with Spotify for global social impact campaign."
+    ],
+    "medium_term_50d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Dick's Sports Acquires Foot Lockers for $2 Billion, forming retail powerhouse. - Implications for NKE: Integration and industry impact to watch.",
+      "Nike undergoes another round oflayoffs (\"Layoffs Hit Yet Anothere Dividend Stock.Is This Companya Buy Here?\")."
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Dick's Sports Acquires Foot Lockers for $2 Billion, forming retail powerhouse. - Implications for NKE: Integration and industry impact to watch.",
+      "NKE faces $1Bhit from fadingclassics, bets onnewlaunchessport-ledinnovation Note: This output indicates that Nike is facing a significant financial impact due to its classic franchises fading, but they are trying to mitigate this by launching new products and focusing on sport-led innovations."
+    ]
+  }
+}

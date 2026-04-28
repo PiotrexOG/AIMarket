@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (22.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "NORMAL (-3.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 249.52-276.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.05%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.275)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.21)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 243.42-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.45%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 252.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.73, P/S: 9.1)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 51.35)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Tim Cook dismisses retirement rumors on \"Good Morning America\". - Apple's foldable i Phone could capture 46% North American share. - Apple cuts App Store commissions in China under regulatory pressure. - Apple launches low-priced Mac Book Neo and upgraded chips. - Apple launches new Air Pods Max 2.",
+      "Apple announces new Air Pods Max 2 product line. - Apple introduces Air Pods Max 2 with new features. - Apple acquires video editing company Motion VFX. - European Energy opens solar farm providing power to Apple.",
+      "Apple cuts China App Store commission to 25%. - Apple's China App Store fees reduced to 25%. - Apple lowers China App Store commission to 25%. - Apple's China App Store commission drops to 25%. - Apple reduces App Store commission in China."
+    ],
+    "medium_term_50d": [
+      "Tim Cook dismisses retirement rumors on \"Good Morning America\". - Apple's foldable i Phone could capture 46% North American share. - Apple cuts App Store commissions in China under regulatory pressure. - Apple launches low-priced Mac Book Neo and upgraded chips. - Apple launches new Air Pods Max 2.",
+      "Apple cuts China App Store commission to 25%. - Apple's China App Store fees reduced to 25%. - Apple lowers China App Store commission to 25%. - Apple's China App Store commission drops to 25%. - Apple reduces App Store commission in China.",
+      "India plans fresh incentives for phone production. - Apple and Samsung to benefit from India incentives. - Apple's new Mac Book Neo targets bigger market. - Apple launches new Mac Book Neo and i Phone 17e. - Apple announces $24 billion buyback program."
+    ],
+    "long_term_200d": [
+      "Apple cuts China App Store commission to 25%. - Apple's China App Store fees reduced to 25%. - Apple lowers China App Store commission to 25%. - Apple's China App Store commission drops to 25%. - Apple reduces App Store commission in China.",
+      "Apple launches low-cost i Phone 17e and M4 i Pad Air. - Apple unveils $599 i Phone 17e, kicks off product launches. - Apple announces new i Phone and i Pad Air as launch week begins. - Apple introduces low-cost i Phone 17e and upgraded i Pad Air.",
+      "Tim Cook dismisses retirement rumors on \"Good Morning America\". - Apple's foldable i Phone could capture 46% North American share. - Apple cuts App Store commissions in China under regulatory pressure. - Apple launches low-priced Mac Book Neo and upgraded chips. - Apple launches new Air Pods Max 2."
+    ]
+  }
+}

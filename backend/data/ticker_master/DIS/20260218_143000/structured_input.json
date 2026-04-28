@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "STAGNANT (0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.02-114.29]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.8%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.343)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.99)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.02-116.03]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.17%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 107.28,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.61%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 105.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.62, P/S: 2.06)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.1)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney sues Byte Dance for unauthorized useof intellectual property.",
+      "Byte Dance prevents unauthorized useof Disney IP on AI video following legal threats.",
+      "Disney faces German patent injunction and Brazil ruling regarding HEVC technology. - Inter Digital secures patent injunction Against Disney in Germany. - European Space Agency launches 31 Amazon satellites using Ariane sixth rocket."
+    ],
+    "medium_term_50d": [
+      "Disney raises $4 billion through high-grade bond sale. - Josh D\u2019Amaro named new Disney CEO, Dana Wal\u0434\u0435\u043d promoted to President & CCO.",
+      "Disney sues Byte Dance for unauthorized useof intellectual property.",
+      "Disney faces German patent injunction and Brazil ruling regarding HEVC technology. - Inter Digital secures patent injunction Against Disney in Germany. - European Space Agency launches 31 Amazon satellites using Ariane sixth rocket."
+    ],
+    "long_term_200d": [
+      "Disney CEO Bob Iger steps down, successor voted next week. - Disneys board meets to elect new CEO beforecontractends.",
+      "Disney CEO Bob IGER plans to leave role before contract expires. - Board meeting scheduled next week to elect new CEO.",
+      "Disney boards votes to pick Parks With Chief Josh D\u2019Aamaro as next CEO. - DIS reports better-than-$expectated Q1 results with double-digit Y/ Y growth in FY2 six Adj E PS."
+    ]
+  }
+}

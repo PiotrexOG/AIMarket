@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "STAGNANT (0.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 91.89-99.74]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.27%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.328)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.97)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 79.81-99.74]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.56%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.49,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "AVERAGE (0.93)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.5% | OM: 4.2% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.68x, YrsToPay: 3.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $657.332B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.7%, EPS: 67.6%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 8.6%, Next Q Est Growth: 17.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.55, P/S: 1.2)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.69)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart recalls Marketside Fresh cucumber slides due to salmonella contamination. - President Trump asks Walmart to absorb tariff costs on imported goods.",
+      "Walmart reports mixed messages on price impacts from tariffs. - President Trump tells Walmart to \"eat thetariffs\", potential price increases.",
+      "Walmart raises prices due to tariffs. - Trump imposes tariffs on EU goods. - Several retailers recall certain cucumber products."
+    ],
+    "medium_term_50d": [
+      "Walmart reports mixed messages on price impacts from tariffs. - President Trump tells Walmart to \"eat thetariffs\", potential price increases.",
+      "Walmart recalls Marketside Fresh cucumber slides due to salmonella contamination. - President Trump asks Walmart to absorb tariff costs on imported goods.",
+      "Walmart responds to tariff threats from President Trump. - Target warns of tariff pressures and reduced sales. - President Trump targets Walmart with tariff comments."
+    ],
+    "long_term_200d": [
+      "Walmart plans to raise prices because of tariffs. \\ - Wal Mart warns of Higher prices due totariffs, holds back on second-quarters guidance. \\ Note: These bullets meet all format rules and provide clear and direct information regarding material events affecting WMT on May 14, 2105.",
+      "Walmart reports mixed messages on price impacts from tariffs. - President Trump tells Walmart to \"eat thetariffs\", potential price increases.",
+      "Walmart responds to tariff threats from President Trump. - Target warns of tariff pressures and reduced sales. - President Trump targets Walmart with tariff comments."
+    ]
+  }
+}

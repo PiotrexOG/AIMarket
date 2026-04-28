@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (75.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 173.33-189.92]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.86%)",
+        "cycle_macd": "BULLISH_FADING (1.012)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.2)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 164.23-189.92]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.14%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 188.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 67.9% | OM: 24.5% | NM: 25.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 2.0x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $90.627B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.7%, EPS: -38.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 20.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.02, P/S: 5.03)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.81)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -38.5%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson faces nearly $1 billion verdict over mesothelium claim. - Legend Biotechnology enters component and product supply agreement with Jansen Pharmaceutical.",
+      "Johnson & Johnson selects US Orthopa EDic Partners as official vendor fortotal joint products. - Development pipeline for diffuse cutaneous systemic s clerosis includes Johnson & Johnson's gus elkumab.",
+      "US FDA approvals subcutaneous TREMF YA protocol for JNJ's ulcerativecolitis treatment. - JNJ named USOP's official vendor fortotal joint products."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson faces nearly $1 billion verdict over mesothelium claim. - Legend Biotechnology enters component and product supply agreement with Jansen Pharmaceutical.",
+      "US FDA approvals subcutaneous TREMF YA protocol for JNJ's ulcerativecolitis treatment. - JNJ named USOP's official vendor fortotal joint products.",
+      "US FDA approval of TREMF YA\u00ae (\u0433\u0443\u0441\u0435\u043b\u043a\u0443\u043c\u0430\u0431) for pediatric psorias IS and psoriati C arthrit IS (Johnson & Johnson)"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson faces nearly $1 billion verdict over mesothelium claim. - Legend Biotechnology enters component and product supply agreement with Jansen Pharmaceutical.",
+      "Johnson & Johnson spin-off Kenvue faces renewed autism concerns, stock hits all-time low. - President Trump links acetaminopphen to autism, causing significant drop in Kenv UE stock price.",
+      "Johnson & Johnson announces promising results inmultiple myeloma with Tecvyalil and Darzalex Faspro. - US FDA approvals for J&J: nipocalimbfor myastheniagravis andsubcutaneouse Induction option for ulcerativecolitis."
+    ]
+  }
+}

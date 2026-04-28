@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.18)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 105.53-113.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.42%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.563)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.73-116.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.0%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.85%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.54,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.4% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $329.385B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.3%, EPS: -15.7%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 5.1%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.11, P/S: 1.4)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.76)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.67%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041cobal commences production\u81f3 Yellowtail development (Guyana) - Exxxon \u041cobal brings fourth \u0424PSO online (Stabroek Block) - Guyana'ss oil production significantly increases (Exxon\u041cobal)",
+      "Exxon signs deal toexplore for oil andgas near Trinidad - Exx Bob returns to Trinidadafter 20 yearabsence - Governmentagreesaccess to 7blocks for Exxon - Searchspans over 2700 sq mi offeastcoastof Trinidad - Dealfollowsrecord negotiationperiod",
+      "Exxon \u041cobal begins production at fourth offshore Guy\u0430\u043d\u0430 project (\"One Guyana\") - Total installed capacity in guyana exceeds 90o,ooo barrels of Oil per day - Consortium brings joint venture closer to 1. 7 million BOE/day target by 2o3o"
+    ],
+    "medium_term_50d": [
+      "Exxon \u041cobal commences production\u81f3 Yellowtail development (Guyana) - Exxxon \u041cobal brings fourth \u0424PSO online (Stabroek Block) - Guyana'ss oil production significantly increases (Exxon\u041cobal)",
+      "Exxon \u041cobal begins production at fourth offshore Guy\u0430\u043d\u0430 project (\"One Guyana\") - Total installed capacity in guyana exceeds 90o,ooo barrels of Oil per day - Consortium brings joint venture closer to 1. 7 million BOE/day target by 2o3o",
+      "Exxon signs deal toexplore for oil andgas near Trinidad - Exx Bob returns to Trinidadafter 20 yearabsence - Governmentagreesaccess to 7blocks for Exxon - Searchspans over 2700 sq mi offeastcoastof Trinidad - Dealfollowsrecord negotiationperiod"
+    ],
+    "long_term_200d": [
+      "Exxon mobil disputes ICC ruling in favor of Chevon in H ess acquisition - Chevron completes acquisition of H ess after winning arbitration against Exx\u043e\u043d - Ex xon mobil challenges Chevron in court over H ess assets in Guy\u0430\u043d\u0430 - ICC rules in favor of chevron in h ess merger dispute with Ex xon mob",
+      "Exxon \u041c\u043ebil beats expectations in Q2 20 twenty-five earnings. -Exxon \u041co\u0431\u0438\u043b targets $2o\u0411 earnings growth by twenty-thirty.",
+      "Exxon \u041cobal commences production\u81f3 Yellowtail development (Guyana) - Exxxon \u041cobal brings fourth \u0424PSO online (Stabroek Block) - Guyana'ss oil production significantly increases (Exxon\u041cobal)"
+    ]
+  }
+}

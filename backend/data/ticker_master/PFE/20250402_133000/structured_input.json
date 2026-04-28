@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.8)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.07)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-6.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 24.52-27.24]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.78%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.135)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.68)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 24.52-27.24]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.38%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 2.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 24.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "ELEVATED (1.27)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 66.8% | OM: 26.9% | NM: 12.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.71x, YrsToPay: 6.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.627B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.8%, EPS: 277.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -84.3%, Next Q Est Growth: 825.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.39, P/S: 2.21)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.06)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.45x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer wins expanded European approval for Abrysvo RSV vaccine for all adults. - European Commission approves Pfizer'sbivalent RSV vaccine for prevention of LRTD in adults 18\u201359.",
+      "Pfizer' top regulator resigns over controversy. - FDA shake-up causes vaccine stocks to tumble including Pfizer.",
+      "Pfizer under investigation for vaccine delay before US election. - Senator Wyden accuses Pfzer of tax dodging."
+    ],
+    "medium_term_50d": [
+      "Pfizer' top regulator resigns over controversy. - FDA shake-up causes vaccine stocks to tumble including Pfizer.",
+      "Pfizer wins expanded European approval for Abrysvo RSV vaccine for all adults. - European Commission approves Pfizer'sbivalent RSV vaccine for prevention of LRTD in adults 18\u201359.",
+      "US prosecutors investigating Pfizer vaccine timing. - APRETude covered under NIHB program for HIV prevention (Vii V Health care). - Pfizers stock slides after report on vaccine timing probe."
+    ],
+    "long_term_200d": [
+      "Pfizer' top regulator resigns over controversy. - FDA shake-up causes vaccine stocks to tumble including Pfizer.",
+      "US prosecutors investigating Pfizer vaccine timing. - APRETude covered under NIHB program for HIV prevention (Vii V Health care). - Pfizers stock slides after report on vaccine timing probe.",
+      "Pfizer sells Withdraws from Haleonfor $3.\u00b3bn - Pfizersellsremaining 7 \u00b3% stake in Haleonto institutional investors and Haleonitself"
+    ]
+  }
+}

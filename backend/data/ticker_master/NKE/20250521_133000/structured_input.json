@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 54.75-63.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.75%)",
+        "cycle_macd": "BULLISH_FADING (0.795)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-76.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-15.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-16.73%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 23.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 61.3,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.71%))",
+      "volume_dynamics": "AVERAGE (0.72)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.35, P/S: 1.81)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.44)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.09)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike lays off employees in technology division. - US and China reach agreement on reducing tariffs on Chinese imports, benefiting NKE.",
+      "Nike lays off workers in technology division. - Bath & Body Works appoints ex-Nike CEO Daniel Heaf - NKE undergoing tech division restructuring",
+      "Dick's Sports Goods buys Foot Lockerfor $2. fourthillion, potentially impacting NKE's competition and supplier dynamics."
+    ],
+    "medium_term_50d": [
+      "Nike lays off workers in technology division. - Bath & Body Works appoints ex-Nike CEO Daniel Heaf - NKE undergoing tech division restructuring",
+      "Nike lays off employees in technology division. - US and China reach agreement on reducing tariffs on Chinese imports, benefiting NKE.",
+      "U.S-China agreement to reduce tariffs leads to surge in NKE shares. - Tariff cut signals relief for NKE's supply chain and inventory management."
+    ],
+    "long_term_200d": [
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products.",
+      "U.S-China agreement to reduce tariffs leads to surge in NKE shares. - Tariff cut signals relief for NKE's supply chain and inventory management.",
+      "Nike lays off workers in technology division. - Bath & Body Works appoints ex-Nike CEO Daniel Heaf - NKE undergoing tech division restructuring"
+    ]
+  }
+}

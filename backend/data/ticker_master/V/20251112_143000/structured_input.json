@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "NORMAL (-2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 333.2-350.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.3%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.772)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 333.2-355.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.0%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 337.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 32.93, P/S: 17.0)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.1)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa,Mastercard reach legalpactwithmerchants(settlementonfees) - Visaa Mastercardagreeseto settlenanticompetitivelawsuit - Visaind Mastercardlowerfeesforretailers(USdispute)",
+      "Visa and Mastercard agree to$38bn settlement over merchant fee disputes. - Galaxi Brands announces strategic partnership with Otaku Cashto launch celebrity-driven Visadebit card technology.",
+      "Marqeta supports Klarna Card expansion, impacting Visa through partnership."
+    ],
+    "medium_term_50d": [
+      "Visa,Mastercard reach legalpactwithmerchants(settlementonfees) - Visaa Mastercardagreeseto settlenanticompetitivelawsuit - Visaind Mastercardlowerfeesforretailers(USdispute)",
+      "Visa and Mastercard agree to$38bn settlement over merchant fee disputes. - Galaxi Brands announces strategic partnership with Otaku Cashto launch celebrity-driven Visadebit card technology.",
+      "Nuvei integrates Visa Directfor Account into payments platform. - Visaaannounces expanding digital,tokenization andstablecoin ecosystem."
+    ],
+    "long_term_200d": [
+      "Visa,Mastercard reach legalpactwithmerchants(settlementonfees) - Visaa Mastercardagreeseto settlenanticompetitivelawsuit - Visaind Mastercardlowerfeesforretailers(USdispute)",
+      "Visa expands stablecoin support across four blockchain networks. -Visa increases quarterly divid end to $0,67 pershare. -Circle launches Arctestnetwith Black Rock,Visa,and AWS. -Raymond Jamesreiteratess Visa(V)outperforarecommendation. -VISAre",
+      "Visa and Mastercard agree to$38bn settlement over merchant fee disputes. - Galaxi Brands announces strategic partnership with Otaku Cashto launch celebrity-driven Visadebit card technology."
+    ]
+  }
+}

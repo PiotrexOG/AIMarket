@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: RSI is in a strong bullish zone (63.9), indicating positive short-term momentum. The price is testing the upper Bollinger Band (1.03), suggesting upward pressure. Velocity (ROC 10) is normal at 2.2%, and the price is stable near the 20-day SMA (3.5%). W: The price is currently in the middle of its 20-day range, lacking clear directional conviction. News flow is mixed, with a significant acquisition announcement offset by a downgrade and refinery issues. O: Potential for continued upward momentum if the upper band is breached decisively. T: A break below the 20-day SMA could signal a short-term reversal, especially if negative news emerges."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: MACD is bullishly accelerating (1.308), providing a positive signal. W: The overall trend alignment is bearish and expanding (-7.26%), and the price is positioned below the 50-day SMA (Z:-0.55), indicating a prevailing downtrend. The price is within a broad monthly range, but the underlying trend is weak. News mentions a significant acquisition but also a downgrade and potential industry consolidation, creating uncertainty. O: A sustained move above the 50-day SMA and a positive shift in trend alignment could initiate a medium-term recovery. T: Continued underperformance relative to the broader market and persistent negative trend alignment will likely cap upside potential and increase downside risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The company exhibits a healthy balance sheet (NetDebt/Eq: 0.17x) and average business quality metrics. W: The long-term market regime is bearish (-5.5%), and the stock is characterized by a death cross structure (-1.53%). The price is in the lower quadrant of its long-term range (25.5% position), indicating significant structural weakness. Fundamental growth is stagnant (Rev: -0.1%) with declining EPS (-19.6%), and quarterly earnings momentum is deteriorating. Valuation multiples are moderate but imply declining earnings. O: A significant shift in the market regime or a substantial improvement in fundamental growth and earnings would be required to alter the long-term bearish outlook. T: The combination of a bearish market regime, structural technicals, deteriorating fundamentals, and high valuation risk (implied growth) presents substantial downside risk."
+    }
+  }
+}

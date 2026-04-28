@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (15.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.08)",
+        "velocity_roc_10": "NORMAL (-4.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.4%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 87.02-95.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.0%)",
+        "cycle_macd": "BULLISH_FADING (0.121)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.69)",
+        "range_levels_50": "MONTHLY_BREAKDOWN_BELOW_RANGE [Zone: 87.02-116.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-22.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-12.21%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 4.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 84.34,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.3%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.19)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.56, P/S: 8.06)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.68)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.18)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix agrees to pay all cash for Warner Bross Discovery studio and streamingassets. - SEC filing regarding revised structure of Netflix-Warner Bros.Discoverytransaction.",
+      "Elizabeth Warren accuses President Trump of investing in Netflix and Warner Bros during merger review. - Net Flix and Warner Bross face federal regulatory review for merger.",
+      "Netflix prepares all-c Cash bid for Warner Bros., facing Paramount competition."
+    ],
+    "medium_term_50d": [
+      "Netflix agrees to pay all cash for Warner Bross Discovery studio and streamingassets. - SEC filing regarding revised structure of Netflix-Warner Bros.Discoverytransaction.",
+      "Netflix prepares all-c Cash bid for Warner Bros., facing Paramount competition.",
+      "Elizabeth Warren accuses President Trump of investing in Netflix and Warner Bros during merger review. - Net Flix and Warner Bross face federal regulatory review for merger."
+    ],
+    "long_term_200d": [
+      "Netflix agrees to pay all cash for Warner Bross Discovery studio and streamingassets. - SEC filing regarding revised structure of Netflix-Warner Bros.Discoverytransaction.",
+      "Netflix reports Q4 earnings surpassing expectations. - Disney announces acquisition of Netflix's rival streaming service. - Major production disruption at Netflix due to labor strike. - Supreme Court rules against Netflix in copyright infringement case. - NFLX reveals significant increase in subscribers from new market entry.",
+      "Netflix acquires Warner Brothers Discovery for $83.7B. - Warner Bros rejects Paramount offer, sticks with Netflix deal. Note: This output is based on the provided data and assumes that there are no additional contextual information or background knowledge beyond what is given. If new information becomes available, the analysis may change accordingly."
+    ]
+  }
+}

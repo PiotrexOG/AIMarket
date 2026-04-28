@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.67)",
+        "velocity_roc_10": "NORMAL (3.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 170.31-193.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.8%)",
+        "cycle_macd": "BULLISH_FADING (0.841)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.55-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 191.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.59%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 74.32, P/S: 41.78)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 71.81)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia announces new AI chips at CEs 20 twenty-six. - CEO Jensen Haung confirms Rubin chips in production. - Core Weave integrates Nvidia Ruby tech for larger AI workloads.",
+      "Nvidia CEO Jensen Huanging Announcing New Taipei Headquarters. - Synopsys reporting increased AI demand liftingresults. - Booming AI demand from China straining TSMC'scapacity.",
+      "Nvidia partners with Geordie AI and Hush Security for cybersecurity startup accelerator. - TSMC hits new high after US export license approval."
+    ],
+    "medium_term_50d": [
+      "Nvidia announces new AI chips at CEs 20 twenty-six. - CEO Jensen Haung confirms Rubin chips in production. - Core Weave integrates Nvidia Ruby tech for larger AI workloads.",
+      "Nvidia CEO Jensen Huanging Announcing New Taipei Headquarters. - Synopsys reporting increased AI demand liftingresults. - Booming AI demand from China straining TSMC'scapacity.",
+      "Nvidia dominant in AI market with surging chip and software demands. - Baidu spins off AI chip unit, aims to unlock value and benefit from Chinese push for homegrowns semiconductics."
+    ],
+    "long_term_200d": [
+      "Nvidia announces new AI chips at CEs 20 twenty-six. - CEO Jensen Haung confirms Rubin chips in production. - Core Weave integrates Nvidia Ruby tech for larger AI workloads.",
+      "Nvidia CEO Jensen Huanging Announcing New Taipei Headquarters. - Synopsys reporting increased AI demand liftingresults. - Booming AI demand from China straining TSMC'scapacity.",
+      "Nvidia dominant in AI market with surging chip and software demands. - Baidu spins off AI chip unit, aims to unlock value and benefit from Chinese push for homegrowns semiconductics."
+    ]
+  }
+}

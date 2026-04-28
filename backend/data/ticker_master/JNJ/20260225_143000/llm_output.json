@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "risk": 7.8
+      },
+      "synthesis": "S: The short-term technicals show a Doji candlestick pattern, indicating indecision. RSI remains extremely overbought at 73.8, though slightly down from previous levels. Velocity (ROC 10) has normalized to 3.2%, and the price is now stable near the 20-day SMA, 3.5% above it. W: The extreme overbought RSI, coupled with the Doji pattern, suggests a high probability of a short-term reversal or consolidation. The previous significant legal headwinds from talc lawsuits remain a persistent downside risk. O: New positive news regarding supplemental BLA submission for IMAAVY and FDA Breakthrough status for a cancer drug offer some fundamental support. T: Downside risk has increased due to the persistent overbought RSI and the indecisive Doji pattern, suggesting a potential for a near-term pullback. The score is slightly decreased due to the increased risk of reversal and the continued presence of legal concerns. Conviction is reduced due to the mixed technical signals and the ongoing legal uncertainties."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "risk": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment shows expanding bullish momentum (7.27%), but the MACD has turned bearish and is accelerating (-0.166). The price remains in a bullish trend position above the 50-day SMA (Z:1.54) but is now inside the monthly range. W: The accelerating bearish MACD, despite positive trend alignment, signals a potential shift in momentum. The price testing the upper bound of the monthly range, combined with the fading MACD, increases the risk of a reversal or significant consolidation. The ongoing legal challenges continue to pose a fundamental risk. O: Positive news regarding FDA Breakthrough status for a cancer drug and the supplemental BLA submission for IMAAVY provide some fundamental tailwinds. T: Downside risk has increased due to the bearish MACD acceleration and the price being within the upper half of the monthly range, suggesting potential resistance. The score is decreased due to the deteriorating MACD signal and increased risk from range testing. Conviction is reduced due to the divergence between trend alignment and MACD, and the persistent legal risks."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.2,
+        "risk": 5.8
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market (32.0%), with major crosses still indicating an extreme bullish stretch (18.91%) and the price near the top of its cycle (97.2% ATH). The company's fundamentals remain robust with high business quality, a healthy balance sheet, and strong cash generation. W: Trading at the top of the long-term cycle and near ATH inherently carries elevated valuation risk and sensitivity to market shifts. The 'EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK' persists, indicating potential for a reversal. The significant talc-related lawsuits represent a material long-term fundamental risk that has not been fully resolved. O: Continued positive developments in the oncology pipeline, including FDA Breakthrough status and BLA submissions, along with a significant investment in cell therapy manufacturing, provide long-term growth potential. T: Downside risk has slightly increased due to the persistent exhaustion risk at ATH and the ongoing legal liabilities, which could impact long-term sentiment and valuation. However, the strong fundamentals and positive pipeline developments provide significant support. The score is slightly decreased due to the increased risk factors, while conviction is maintained due to the underlying strength of the business and pipeline."
+    }
+  }
+}

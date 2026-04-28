@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.2)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.01)",
+        "velocity_roc_10": "NORMAL (-4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 60.43-67.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.51%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.413)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.27)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-69.14]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.64%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 63.18,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.41%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.99, P/S: 1.97)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.73)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike investigates alleged data leak and cybersecurity concerns.",
+      "Nike revives ACGLine as standalone outdoor brand. - Expanding product lines, creating new retail spaces for Nike's outdoor offerings.",
+      "Nike announces job cuts and data breach investigation."
+    ],
+    "medium_term_50d": [
+      "Nike investigates alleged data leak and cybersecurity concerns.",
+      "Nike announces job cuts and data breach investigation.",
+      "Nike cuts 77 fifth jobs at distribution centers due to automation. - Potential data breach investigation at Nike."
+    ],
+    "long_term_200d": [
+      "Nike faces longer path to profitable growth due to US tariffs and China challenges. - Revenue decline and weak demand may lead to sale of Converse brand. - Greater China revenue slides 17%, indicating ongoing struggles in key market.",
+      "Nike's \"Win Now\" overhaul accelerates under new CEO Elliot Hill. - Former Nike innovation Chief joins Target's board. - EMEA and Greater CHina CEOs exit Nike. - Alleged ransomwear attack targets Nike with potential data leak.",
+      "Nike investigates alleged data leak and cybersecurity concerns."
+    ]
+  }
+}

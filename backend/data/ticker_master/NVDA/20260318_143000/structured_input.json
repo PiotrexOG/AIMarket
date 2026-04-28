@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "STAGNANT (1.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 174.64-197.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.24%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.187)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 171.03-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.17%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 62.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 182.54,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.5%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 61.46, P/S: 34.56)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 56.85)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Compal showcases AI server solution based on NVIDIA HGX Rubin NVL8. - Nvidia partners with robotics leaders, unveils Isaac and Cosmos frameworks. - Nvidia stock rises as GTC event 2026 kicks off. - Nvidia integrates AI technologies with Lyft. - Nvidia launches Vera CPU for agentic AI.",
+      "Nvidia resumes H200 processor sales to China. - Nvidia CEO touts $1 trillion AI chip revenue target. - Nvidia partners with T-Mobile and Nokia on AI.",
+      "Nvidia GTC conference to reveal AI products and partnerships. - Byte Dance to use Nvidia Blackwell systems in Malaysia. - Palantir partners with Nvidia for AI platforms. - Nvidia GTC to focus on AI chip pivot, CPUs. - Nvidia partner Synopsys accelerates shift to electronic systems."
+    ],
+    "medium_term_50d": [
+      "Compal showcases AI server solution based on NVIDIA HGX Rubin NVL8. - Nvidia partners with robotics leaders, unveils Isaac and Cosmos frameworks. - Nvidia stock rises as GTC event 2026 kicks off. - Nvidia integrates AI technologies with Lyft. - Nvidia launches Vera CPU for agentic AI.",
+      "Nvidia GTC conference to reveal AI products and partnerships. - Byte Dance to use Nvidia Blackwell systems in Malaysia. - Palantir partners with Nvidia for AI platforms. - Nvidia GTC to focus on AI chip pivot, CPUs. - Nvidia partner Synopsys accelerates shift to electronic systems.",
+      "Nvidia executives join AI investment firm. - Nvidia makes massive $26 billion AI bet. - Nvidia GTC AI conference roadmap to be revealed."
+    ],
+    "long_term_200d": [
+      "Nvidia makes two new AI investment bets. - Nvidia announces Q4 blowout, data center revenue up 75%. - Nvidia secures $95B+ in supply commitments. - Nvidia launches Vera Rubin GPUs.",
+      "Nvidia GTC conference to reveal AI products and partnerships. - Byte Dance to use Nvidia Blackwell systems in Malaysia. - Palantir partners with Nvidia for AI platforms. - Nvidia GTC to focus on AI chip pivot, CPUs. - Nvidia partner Synopsys accelerates shift to electronic systems.",
+      "Compal showcases AI server solution based on NVIDIA HGX Rubin NVL8. - Nvidia partners with robotics leaders, unveils Isaac and Cosmos frameworks. - Nvidia stock rises as GTC event 2026 kicks off. - Nvidia integrates AI technologies with Lyft. - Nvidia launches Vera CPU for agentic AI."
+    ]
+  }
+}

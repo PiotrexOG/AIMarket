@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 344.39-359.66]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-0.99%)",
+        "cycle_macd": "BULLISH_FADING (0.507)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.4)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 334.92-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.17%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 353.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.42%))",
+      "volume_dynamics": "ELEVATED (1.37)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.1% | OM: 63.7% | NM: 52.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 54.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.621B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.2%, EPS: 11.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -18.6%, Next Q Est Growth: 28.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.48, P/S: 18.54)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.34)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.14)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa profits climb 8%, consumers keep spending. -Visa beats earnings and revenue estimtes, cross-border purchasing grows.",
+      "Flex launches Visa Infinete Business Credit Card for fin tech. - Meriwest integrates Zelle for efficient digital payments. -Visa previews Q3 earnings with focus on cross-border momentum and cost discipline. -Payzli named to Tampa Bay Business Journal Fast 5o list.",
+      "Regulator announces investigation into Visa cardnetwork practices. -Visa and X partner on new digital payment integration. -July production numbers reveal lower than expected Visa cardtransactions. -Court rules against Visa in major antitrust lawsuit. -VISA issues warning of potential revenue decline due to economic conditions. -New regulatory ruling impacts Visa"
+    ],
+    "medium_term_50d": [
+      "Visa profits climb 8%, consumers keep spending. -Visa beats earnings and revenue estimtes, cross-border purchasing grows.",
+      "Regulator announces investigation into Visa cardnetwork practices. -Visa and X partner on new digital payment integration. -July production numbers reveal lower than expected Visa cardtransactions. -Court rules against Visa in major antitrust lawsuit. -VISA issues warning of potential revenue decline due to economic conditions. -New regulatory ruling impacts Visa",
+      "Regulator investigates Visa cardnetwork practices."
+    ],
+    "long_term_200d": [
+      "Regulator announces investigation into Visa cardnetwork practices. -Visa and X partner on new digital payment integration. -July production numbers reveal lower than expected Visa cardtransactions. -Court rules against Visa in major antitrust lawsuit. -VISA issues warning of potential revenue decline due to economic conditions. -New regulatory ruling impacts Visa",
+      "Visa profits climb 8%, consumers keep spending. -Visa beats earnings and revenue estimtes, cross-border purchasing grows.",
+      "Regulator investigates Visa cardnetwork practices."
+    ]
+  }
+}

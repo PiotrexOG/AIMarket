@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The short-term outlook for MSFT is neutral to slightly positive, supported by stable momentum indicators (RSI 54.7) and price action near the 20-day SMA. Volume dynamics are average, indicating no significant speculative interest. O: Continued traction in Azure AI services and new Copilot features could provide upside catalysts. T: Potential headwinds from oil price surges and regulatory scrutiny from the CMA review pose risks. W: The neutral candle pattern and mid-range price position suggest a lack of strong directional conviction in the immediate term."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend for MSFT shows mixed signals, with a bearish expanding momentum (-7.69%) but a fading bullish MACD. The Z-score relative to the 50-day SMA is negative (-0.9), indicating a bearish trend position. O: Strong underlying business quality and consistent growth in AI services could eventually override current trend weakness. T: The current bearish trend alignment and the proximity to monthly range lows present downside risk. W: The conviction is moderate due to conflicting signals between momentum and trend indicators, and the recent quarterly earnings stumble (-4.9% surprise)."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term outlook is challenged by a secular bear market regime (-16.2%) and the presence of a death cross structure (-10.23%). The stock is positioned in the lower quadrant of its long-term range (12.1%). O: Despite the bearish technicals, MSFT's ultra-elite business quality, healthy balance sheet, and strong cash generation provide a fundamental floor. Continued AI infrastructure deals and growth profile offer long-term potential. T: The significant technical headwinds, premium valuation multiples (P/E 29.42, P/S 10.67), and high multiple risk (P/B 8.75) are major downside factors. W: Conviction is low due to the stark contrast between the deteriorating long-term technicals and the robust fundamental strengths, coupled with an expensive valuation relative to growth (PEG 1.89)."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (0.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 303.08-337.59]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.46%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.808)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 303.08-358.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.92%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 325.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.37%))",
+      "volume_dynamics": "AVERAGE (0.61)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 60.0% | NM: 50.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 53.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.0B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.3%, EPS: 4.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.6%, Next Q Est Growth: 17.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.87, P/S: 15.82)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.7)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa expands card partnership with Bridge to over hundred countries. - Amazon data centers disruption impacts banking, payments services. - Mastercard and Visa make deals with Sofi and Bridge for stablecoins.",
+      "Visa acquires Prismaand Newpay in Argentina. - Meta brings back stablecoin payments with different conditions. - Soft Bank-backed Pay Pal files for US IPO with potential $13,4B valuation.",
+      "Visa completes Argentinian acquisitions, participates in Pay Pay IPO. - Expands presence in Latin America, strengthens digital payment role."
+    ],
+    "medium_term_50d": [
+      "Visa expands card partnership with Bridge to over hundred countries. - Amazon data centers disruption impacts banking, payments services. - Mastercard and Visa make deals with Sofi and Bridge for stablecoins.",
+      "Visa acquires Prismaand Newpay in Argentina. - Meta brings back stablecoin payments with different conditions. - Soft Bank-backed Pay Pal files for US IPO with potential $13,4B valuation.",
+      "Visa completes Argentinian acquisitions, participates in Pay Pay IPO. - Expands presence in Latin America, strengthens digital payment role."
+    ],
+    "long_term_200d": [
+      "Visa expands card partnership with Bridge to over hundred countries. - Amazon data centers disruption impacts banking, payments services. - Mastercard and Visa make deals with Sofi and Bridge for stablecoins.",
+      "Visa acquires Prismaand Newpay in Argentina. - Meta brings back stablecoin payments with different conditions. - Soft Bank-backed Pay Pal files for US IPO with potential $13,4B valuation.",
+      "Visa acquires Prisma and Newpay infrastructure in Argentina. - Expands payment processing footpath in Latin America. - Rolls out digital tools like tokenization and bioauthentication."
+    ]
+  }
+}

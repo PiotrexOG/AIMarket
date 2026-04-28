@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.58)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 142.4-155.91]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.25%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.371)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 133.77-155.91]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.01%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 151.13,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.21%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.25, P/S: 1.36)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron wins arbitration against Hess allowing closure of needle-mattering deal. -Chev\u0440\u043e\u043d completes $ fifty-three bn acquisition of H ess. -Block replaces Hess in S&amp;&amp;P five hundred triggering surge.",
+      "Chevronprevailsover Exxonin Hessmegamerger,anditmattersfor Chevron\u2019sgstock - Criticalrulinggives Chevronthego-aheadfor$53BHessdeal,andaccessothelargestoilfindofthedecade",
+      "Chevron scales back Permian footprint for cash flow generation. - Report highlights coal's resilience amid energy shift, impacts CVX."
+    ],
+    "medium_term_50d": [
+      "Chevron wins arbitration against Hess allowing closure of needle-mattering deal. -Chev\u0440\u043e\u043d completes $ fifty-three bn acquisition of H ess. -Block replaces Hess in S&amp;&amp;P five hundred triggering surge.",
+      "Chevronprevailsover Exxonin Hessmegamerger,anditmattersfor Chevron\u2019sgstock - Criticalrulinggives Chevronthego-aheadfor$53BHessdeal,andaccessothelargestoilfindofthedecade",
+      "CVX part of $34 billions deals with Indonesian companies - Arbitrators reach final decision on CVX's disputed Hess acquisition - Che\u0432ron's expansion of Tengiz project adds production and cash flow"
+    ],
+    "long_term_200d": [
+      "Chevron wins arbitration against Hess allowing closure of needle-mattering deal. -Chev\u0440\u043e\u043d completes $ fifty-three bn acquisition of H ess. -Block replaces Hess in S&amp;&amp;P five hundred triggering surge.",
+      "Chevronprevailsover Exxonin Hessmegamerger,anditmattersfor Chevron\u2019sgstock - Criticalrulinggives Chevronthego-aheadfor$53BHessdeal,andaccessothelargestoilfindofthedecade",
+      "CVX part of $34 billions deals with Indonesian companies - Arbitrators reach final decision on CVX's disputed Hess acquisition - Che\u0432ron's expansion of Tengiz project adds production and cash flow"
+    ]
+  }
+}

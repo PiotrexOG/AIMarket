@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (26.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 297.03-325.77]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.62%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.387)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.54)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 297.03-346.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.59%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 9.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 304.45,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.97%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 60.0% | NM: 50.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 53.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.0B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.3%, EPS: 4.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -16.6%, Next Q Est Growth: 17.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 29.82, P/S: 14.8)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.62)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.18)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launches AI payments program. - Visa partners with Ingenico for European merchants.",
+      "Visa launches new global program Visa Agentic Ready.",
+      "Visa launches Intelligent Authorisation in Europe. - Visa partners with Bank of America for World Cup. - Mastercard and Visa allowed to appeal UK ruling."
+    ],
+    "medium_term_50d": [
+      "Visa acquires Prisma Medios de Pago and Newpay in Argentina. - Visa's tokenization strategy accelerates with 17.5 billion tokens. - Visa expands enterprise integrations with Circle and Intuit.",
+      "Verdera Energy acquires uranium database. - Visa and Mastercard can appeal UK ruling. - Visa integrates AI for fraud protection. - Visa partners with Fiserv for acquirer access. - Visa executive advises Synergetics.ai on payments.",
+      "Ingenico and Visa collaborate on unified commerce solutions. - Visa partners with Ingenico for smart POS terminals."
+    ],
+    "long_term_200d": [
+      "Visa tests stablecoin spending with Bridge partnership. - Visa partners with Laufey for Asia Pacific travel campaign. - Visa and Bridge to roll out stablecoin cards globally. - Visa expands Bridge partnership for crypto payment reach.",
+      "Visa expands stablecoin card pilots globally. - Visa partners with Bridge, a Stripe company. - Visa pilots settling transactions on blockchain networks. - Visa touts partnerships with X while hyping payments.",
+      "Visa expands card partnership with Stripe's Bridge to over 100 countries. - Visa enhances digital payments with Bridge partnership. - Visa and Bridge expand global card issuance product. - Visa and Mastercard cards reach $10 trillion spending. - Visa makes deal to jolt stablecoins with Bridge."
+    ]
+  }
+}

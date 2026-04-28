@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals show a shift from extreme bearishness to indecision, with a DOJI_INDECISION candle pattern and RSI moving to a less oversold 35.8. Velocity ROC has normalized to -7.5%, and the price is STABLE_NEAR_BASE (-5.1%) to the SMA20. O: The stock remains IN_MIDDLE_OF_RANGE, offering some room for price movement. Average volume (1.02) suggests a lack of strong conviction from either side. W: Despite the improvement from extreme oversold conditions, the news flow regarding China's halt on Boeing jet deliveries introduces significant short-term headwinds and uncertainty. The high volatility (ATR: 6.55%) persists, contributing to downside risk. T: The score has improved from 3.0 to 4.0 due to the less extreme technical readings and stabilization. Conviction has increased to 5.0 as the indecision suggests a potential for a directional move, though the news creates ambiguity. Risk has slightly decreased from 7.5 to 7.0, reflecting the less dire technical picture, but remains elevated due to news flow and volatility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend is showing signs of stabilization, with MACD recovering to -0.203 and the Z-score relative to the SMA50 improving to -1.09, indicating a less bearish trend position. Trend alignment is in CONSOLIDATION_COMPRESSED_MAS (-2.87%). O: This represents a notable improvement from the previous accelerating bearish MACD and deeply bearish Z-score. The stock remains INSIDE_MONTHLY_RANGE. W: The persistent news regarding China's delivery halt and trade tensions continues to weigh on the medium-term outlook, counteracting the technical stabilization. While the previous Q1 delivery news was positive, the current geopolitical headwinds are more dominant. T: The score has increased from 2.5 to 3.5, reflecting the technical improvement and consolidation. Conviction has increased to 4.0 as the technicals are less bearish, but remains moderate due to ongoing news flow concerns. Risk has slightly decreased from 8.0 to 7.5, acknowledging the technical recovery, but remains high due to the significant negative news impacting operational flow and geopolitical relations."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The long-term outlook shows a positive shift, with the market regime moving towards a less severe BEAR_MARKET_RELIEF_RALLY (-6.5%) and the long-term range position improving to MID_CYCLE_NEUTRAL_ZONE (37.3%). A CROSS_IMMINENT_POTENTIAL_PIVOT (1.44%) is also indicated. O: This is a significant improvement from the previous BEARISH_LOWER_QUADRANT positioning and a more favorable market regime. The fundamental issues of THIN_MARGIN_COMMODITY and BALANCE_SHEET_STRESSED remain, but the improved technical positioning offers some support. W: While the long-term defense contracts remain a positive, the persistent news of China's delivery halt and trade tensions introduce significant long-term uncertainty and could impact future growth prospects. The improved technicals are not yet fully supported by fundamental improvements. T: The score has increased from 4.0 to 4.5, reflecting the improved long-term technical positioning and regime. Conviction has increased to 5.0 as the technicals are showing a more constructive long-term setup. Risk has decreased from 6.0 to 5.5, as the shift to a neutral zone and potential pivot reduces some of the long-term downside exposure, although fundamental weaknesses and geopolitical risks still contribute to risk."
+    }
+  }
+}

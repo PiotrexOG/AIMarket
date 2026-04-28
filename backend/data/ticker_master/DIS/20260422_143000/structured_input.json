@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.9%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (5.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 92.18-107.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.46%)",
+        "cycle_macd": "BULLISH_FADING (1.149)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 92.18-111.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.98%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 105.03,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.95%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 104.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.29, P/S: 2.01)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.73)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.1)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney to lay off 1,000 employees. - Disney ticket costs rise heading into 2027.",
+      "Disney axes 1,000 jobs, including Marvel team.",
+      "Disney begins cutting about 1,000 roles across units."
+    ],
+    "medium_term_50d": [
+      "Disney to lay off 1,000 employees. - Disney ticket costs rise heading into 2027.",
+      "Disney cuts 1,000 jobs across marketing, studios, and ESPN. - Disney CEO announces reorganization and 1,000 job cuts. - Disney plans to combine Disney+ and Hulu into one app.",
+      "Disney axes 1,000 jobs, including Marvel team."
+    ],
+    "long_term_200d": [
+      "Disney cuts 1,000 jobs across marketing, studios, and ESPN. - Disney CEO announces reorganization and 1,000 job cuts. - Disney plans to combine Disney+ and Hulu into one app.",
+      "Disney axes 1,000 jobs, including Marvel team.",
+      "Disney cuts 1,000 jobs, affecting Marvel Studios. - Disney partners with Epic Games for gaming activities. - Disney competes with Comcast in theme park battle. - Adeia Inc. files patent infringement lawsuit against DISH Network."
+    ]
+  }
+}

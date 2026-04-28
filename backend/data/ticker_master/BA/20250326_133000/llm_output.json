@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The short-term exhibits an EXPLOSIVE_UP velocity (ROC 10) of 18.6% and a strong bullish RSI (69.4), indicating significant upward momentum. O: The NEUTRAL candle pattern suggests a pause at resistance, but the price is now EXTENDED_BULLISH_OVERSTRETCHED (10.0%) above the SMA20, indicating strong buying pressure. Volume dynamics have improved to AVERAGE (0.77). W: The stock is AT_CRITICAL_RESISTANCE_20, posing an immediate challenge to further upside. The previous DRY_NO_INTEREST volume has shifted, but conviction at resistance is key. T: The risk has decreased due to the strong momentum shift, but the proximity to resistance introduces a tactical risk of a short-term pullback."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The MACD has shifted to BULLISH_ACCELERATING (3.027) and the Z-score relative to the SMA50 is now BULLISH_TREND_POSITION (0.87), indicating a strengthening medium-term trend. O: This positive shift in momentum and trend alignment provides a more constructive outlook compared to the previous gradual descent. The stock remains within its monthly range, but the technical signals are now more supportive of an upward move. W: The trend alignment is still technically described as BEARISH_GRADUAL_DESCENT (-4.13%), suggesting some underlying weakness persists despite the improving momentum indicators. T: The conviction has increased due to the clear positive shift in MACD and SMA positioning, while risk has slightly decreased as the trend shows signs of recovery."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The market regime has shifted to SECULAR_BULL_MARKET (8.7%), and the long-term range position is now in the BULLISH_UPPER_QUADRANT (74.0%), indicating a favorable macro environment. O: The HEALTHY_GOLDEN_CROSS_STRUCTURE remains intact and has strengthened slightly (3.02%), reinforcing the long-term bullish technical setup. News flow regarding significant defense contracts (US Air Force next-generation fighter) is a strong positive catalyst. W: Despite the improved technicals and positive news, the fundamental picture remains challenging with THIN_MARGIN_COMMODITY business quality and BALANCE_SHEET_STRESSED (Negative FCF). T: The conviction is high due to the confluence of a bullish regime, strong technicals, and positive news. Risk has significantly decreased as the overall environment and specific catalysts are strongly supportive, outweighing the persistent fundamental concerns."
+    }
+  }
+}

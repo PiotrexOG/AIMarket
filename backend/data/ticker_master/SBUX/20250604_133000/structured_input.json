@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 80.2-87.78]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.64%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.343)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.5-99.91]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.09%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 27.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 86.98,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.58%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.1% | OM: 14.0% | NM: 9.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 7.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1486B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.5%, EPS: -17.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 43.7%, Next Q Est Growth: -5.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 28.06, P/S: 2.74)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.25)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -17.55%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks eliminates generous loyalty program benefit.",
+      "Starbucks withdraws guidance, leadingtouncertaintyanddownwardrevisions. -Starbucksrevaluatingreliancesonautomation,limitingdeploymentof Siren Craftsystem.",
+      "Starbucks facing allegations of racial discrimination and diversity issues - Starbucks underperforming financially with declining net income and increased revenue - Middle-class consumer spends $1,120 on Starbucks purchases in 7 months"
+    ],
+    "medium_term_50d": [
+      "Starbucks withdraws guidance, leadingtouncertaintyanddownwardrevisions. -Starbucksrevaluatingreliancesonautomation,limitingdeploymentof Siren Craftsystem.",
+      "Mc Donald's closes five Stand-Up Starbucks competitors. -Starbucks faces traffic decline and margin pressure.",
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets"
+    ],
+    "long_term_200d": [
+      "Starbucks considering stake sale for Chinese business - Possible valuation of several billions for Starbucks China assets",
+      "Starbucks withdraws guidance, leadingtouncertaintyanddownwardrevisions. -Starbucksrevaluatingreliancesonautomation,limitingdeploymentof Siren Craftsystem.",
+      "Starbucks Q2 earnings fall short of expectations, shares drop. - CEO announces major turnaround strategy for Starbucks."
+    ]
+  }
+}

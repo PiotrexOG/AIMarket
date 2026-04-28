@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 961.02-1035.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.19%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.664)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.77)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 960.46-1035.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.83%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 1006.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.91%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.2%, Next Q Est Growth: -16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.16, P/S: 1.63)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.35)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco quietly bumps its quarterly dividend by 13%.",
+      "Costco faces lawsuits over tariff refunds. - Costco raises quarterly dividend 13.1% to $1.47 per share. - Costco's digital investments drive sales growth. - Costco ramps up expansion plans.",
+      "Costco raises quarterly dividend by 13%. - Costco rolls out exclusive Aussie Miracle Curls product. - Costco dividend hike signals strong financial position."
+    ],
+    "medium_term_50d": [
+      "Costco faces lawsuits over tariff refunds. - Costco raises quarterly dividend 13.1% to $1.47 per share. - Costco's digital investments drive sales growth. - Costco ramps up expansion plans.",
+      "Costco raises quarterly cash dividend to $1.47 per share. - Costco announces 13% increase in quarterly dividend. - Costco declares quarterly cash dividend increase from $1.30 to $1.47.",
+      "Costco quietly bumps its quarterly dividend by 13%."
+    ],
+    "long_term_200d": [
+      "Costco raises quarterly cash dividend to $1.47 per share. - Costco announces 13% increase in quarterly dividend. - Costco declares quarterly cash dividend increase from $1.30 to $1.47.",
+      "Costco raises annual membership fees.",
+      "Costco raises quarterly dividend by 13%. - Costco rolls out exclusive Aussie Miracle Curls product. - Costco dividend hike signals strong financial position."
+    ]
+  }
+}

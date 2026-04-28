@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 184.66-194.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.65%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.221)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.44)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 173.33-194.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.22%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 193.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.48%))",
+      "volume_dynamics": "AVERAGE (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 68.1% | OM: 26.1% | NM: 27.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.149B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 71.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -22.5%, Next Q Est Growth: 15.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.59, P/S: 5.11)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.94)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.26)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson presents at Gug\u0433\u0435\u043dheim and UBS healthcare conferences. - Dow rall IES 50 and 50o points on gains IN Nike and Merck shares. - JNJ secures back-to-(back FDA APPROVALS FOR ONCOLOGY AND NEUROPSYCHIATRY THERAPIES",
+      "FDA approvals JNJ's new diabetes drug. - JNJ announces acquisition of biotech startup. - Major production issue at JNJ pharmaceutical plant. - Lawsuit filed against JNJ over talcum powder allegations. - New CEO appointed at JNZ subsidiary. - Significant supply chain dis",
+      "Johnson & Johnson receives FDA approval for new indication of DARZALEX Faspro to treat high-risks smoldering Multiple Myeloma. - Halozyme announces new indication for Johnson & Johnson's DARZALSEX Fas PRO co-formuated with ENHANCE for treating HR-Smm."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson subsidiary Kenvue is bought by Kimberly-\\Clark for approximately $48.-$48.8 billion. - New consumer health giant formed through acquisition of Tylenol manufacturer Kenvue by Kimberley-Clark.",
+      "Johnson & Johnson receives FDA approval for new indication of DARZALEX Faspro to treat high-risks smoldering Multiple Myeloma. - Halozyme announces new indication for Johnson & Johnson's DARZALSEX Fas PRO co-formuated with ENHANCE for treating HR-Smm.",
+      "Johnson & Johnson acquires Brain drug in $1 fourth.6B Buyout cleared for wider use. - J&J's Caply\u0442\u0430 wins MDD Approval extending revenue horizon. - Samsung Bioep IS signs settlement agreement for Pyzchiva in Europe. (Indirect) - Astra Zenecas CEO bullishonrecord revenue numbers and USgrow"
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson subsidiary Kenvue is bought by Kimberly-\\Clark for approximately $48.-$48.8 billion. - New consumer health giant formed through acquisition of Tylenol manufacturer Kenvue by Kimberley-Clark.",
+      "Johnson & Johnson receives FDA approval for new indication of DARZALEX Faspro to treat high-risks smoldering Multiple Myeloma. - Halozyme announces new indication for Johnson & Johnson's DARZALSEX Fas PRO co-formuated with ENHANCE for treating HR-Smm.",
+      "Johnson & Johnson acquires Brain drug in $1 fourth.6B Buyout cleared for wider use. - J&J's Caply\u0442\u0430 wins MDD Approval extending revenue horizon. - Samsung Bioep IS signs settlement agreement for Pyzchiva in Europe. (Indirect) - Astra Zenecas CEO bullishonrecord revenue numbers and USgrow"
+    ]
+  }
+}

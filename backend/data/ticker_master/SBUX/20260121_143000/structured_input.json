@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (72.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 83.02-94.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.01%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.704)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.88)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 81.76-94.17]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (7.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.81%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 94.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "ELEVATED (1.33)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 23.7% | OM: 10.8% | NM: 7.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 10.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.6893B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 0.6%, EPS: -35.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -12.5%, Next Q Est Growth: 20.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.58, P/S: 2.92)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.96)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -35.2%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks announces Q1 fiscal year twenty-six results.",
+      "Starbucks partners with Water.org and others to advance water access.",
+      "Starbucks announces new coffeehouse coach role for assistant managers. - Gap partners with Matt Damon's Water.org on Get Blue\u2122 initative. - DJM sells Gateway Center retail center for $52 million. None for SBUX specifically."
+    ],
+    "medium_term_50d": [
+      "Starbucks announces Q1 fiscal year twenty-six results.",
+      "Starbucks reinstated in Disney's 2506 dining plan. - Expanded brand partnerships with Newegg and gaming audience. - Launched new winter beverage and merchandises.",
+      "Starbucks closes 401 US stores. -Starbucks CEO discusses service culture improvement based on Reddit feedback."
+    ],
+    "long_term_200d": [
+      "Starbucks announces Q1 fiscal year twenty-six results.",
+      "Starbucks announces major cost-cutting measures. - FDA issues warning to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks. - New labor union forms at Starbucks stores nationwide. - Supply chain disruption impacts SBUX holiday sales. - SBUX reports Q4 earnings miss due to",
+      "Starbucks closes 401 US stores. -Starbucks CEO discusses service culture improvement based on Reddit feedback."
+    ]
+  }
+}

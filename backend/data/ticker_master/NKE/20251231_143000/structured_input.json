@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "NORMAL (-9.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 56.99-69.14]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.76%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.39)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.58)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.99-70.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.91%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 62.4,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.39%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.59)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.73, P/S: 1.95)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.64)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple CEO Tim Crow purchases NKE stock. - \u041dKE announces \"Sport Offense\" strategy for growth.",
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike CEO buys 16,\\*388 shares (SEC filing)."
+    ],
+    "medium_term_50d": [
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Apple CEO Tim Crow purchases NKE stock. - \u041dKE announces \"Sport Offense\" strategy for growth.",
+      "Nike signsmajor athlete endorsementeal. - Tim Cookbuys50,ooo NKEshares."
+    ],
+    "long_term_200d": [
+      "Nike signsmajor athletic apparel partnership. - FDA approvesnew Nike performance technology. - Lawsuitfiledagainst Nikeover labor practices. - Major NKE production facility shuts down unexpectedly.",
+      "Nike reports fiscal second-quad earnings after the market closes. - Investors expect new product innovions and third quarter guidance.",
+      "Nike reports fiscal Q2 '26 financialresults on December \u2081eight. - Consensus expects $\u2081\u2082.\u2082two billion in revenue for Nike."
+    ]
+  }
+}

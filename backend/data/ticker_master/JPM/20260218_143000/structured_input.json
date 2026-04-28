@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.48)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 296.51-326.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.29%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.309)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.41)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 296.51-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.96%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 310.95,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.83%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.51, P/S: 3.1)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.4)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 11.36)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan build $2. ninety three billion stake in healthcare stock (Eli Lilly). - JP Morgan appoints Guy Halam ISH as COO for commercial and investmentbank, overseeing AI and datastrategy.",
+      "XTI Aeraspace secures $2o Million JP Morgan asset-based lending facility.",
+      "JPMorgan customers sue over low cash sweep rates. - New JPMorgan COO to lead AI expansion."
+    ],
+    "medium_term_50d": [
+      "JPMorgan chosen by Apple to replace Goldmans Sachs as Apple Card issuer.",
+      "JPMorgan build $2. ninety three billion stake in healthcare stock (Eli Lilly). - JP Morgan appoints Guy Halam ISH as COO for commercial and investmentbank, overseeing AI and datastrategy.",
+      "JPMorgan replaces Goldman Sachas Apple Card issuer, adds 12mn cardholders. - California banking landscape reshaped by large failures, M&As. - electronic arts initiates $1. five billion bond buyback led by JPMorgan. - Chinese AI IPOS surge, JPMorgan & Goldman initiate coverage."
+    ],
+    "long_term_200d": [
+      "JPMorgan chosen by Apple to replace Goldmans Sachs as Apple Card issuer.",
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "JPMorgan replaces Goldman Sachas Apple Card issuer, adds 12mn cardholders. - California banking landscape reshaped by large failures, M&As. - electronic arts initiates $1. five billion bond buyback led by JPMorgan. - Chinese AI IPOS surge, JPMorgan & Goldman initiate coverage."
+    ]
+  }
+}

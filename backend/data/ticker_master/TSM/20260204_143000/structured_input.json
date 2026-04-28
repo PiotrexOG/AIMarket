@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "NORMAL (2.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 316.14-351.33]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.2%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.768)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 266.82-351.33]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (30.8%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.63%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 331.5,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.45%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.9% | OM: 50.8% | NM: 45.1%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.31x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3818.940591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.9%, EPS: 48.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3202.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.0, P/S: 0.45)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.32)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple prioritizes high-end device production due to chipshortages, affecting TSM demand. - New AI and Anthopic IPOs may increase demand for chips from TSM.",
+      "Apple shifts i Phone chip manufacturing back to Intel. - Microsoft starts production of Maia twenty chips using TSMC's nanometer process.",
+      "TSMC increases capex guidance for advanced node technology."
+    ],
+    "medium_term_50d": [
+      "Apple prioritizes high-end device production due to chipshortages, affecting TSM demand. - New AI and Anthopic IPOs may increase demand for chips from TSM.",
+      "TSMC increases capex guidance for advanced node technology.",
+      "TSMC buys more Arizona land for mega US chip hub. - Taiwan Semiconductory reports record quarter, beat estimates. - Nvidia grows over 60% in twenty-six due to strong AI demand. - Intel bulls bet big on 14nm process success. - ASML reaches half trillion market cap due to AI"
+    ],
+    "long_term_200d": [
+      "TSMC buys more Arizona land for mega US chip hub. - Taiwan Semiconductory reports record quarter, beat estimates. - Nvidia grows over 60% in twenty-six due to strong AI demand. - Intel bulls bet big on 14nm process success. - ASML reaches half trillion market cap due to AI",
+      "TSMC runs out of capacity for Nvidia chips. - Intel regains market share due to TSMC capacity limitations. - Cathy Wood sells TSMC stock over China regulations.",
+      "TSMC reports Q4 \u2082zero\u2086 earnings beating estimates. - Taiwan Semiconductors posts record revenue of $\u2083\u2084.\ufffd\ufffd\ufffd\ufffd\ufffdix billion. - AI demand drives TSMC margin expansion in Q4 \u00b2.\u2080\u2085\u2085."
+    ]
+  }
+}

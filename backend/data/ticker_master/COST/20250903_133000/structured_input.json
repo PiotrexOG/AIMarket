@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.14)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 933.24-999.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.06%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.661)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 925.0-1005.84]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.01%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 32.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 939.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.54%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.01, P/S: 1.61)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.09)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.38)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco partners with Growth Lo OP for advanced retail media business.",
+      "Costco purchases Quebec City retail site from Leyad.",
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy"
+    ],
+    "medium_term_50d": [
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy",
+      "Costco partners with Growth Lo OP for advanced retail media business.",
+      "Costco purchases Quebec City retail site from Leyad."
+    ],
+    "long_term_200d": [
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute.",
+      "Costco announces expansion into South Korea and Sweden, opening 27-29 new warehouse locations."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.69)",
+        "velocity_roc_10": "NORMAL (5.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 187.72-226.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.36%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.467)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.34)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-254.35]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.76%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 216.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.01%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -6.0% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 7.92x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -2.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.463B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 34.5%, EPS: 112.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 35200.0%, Next Q Est Growth: -103.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 91.49, P/S: 1.93)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 31.61)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.81)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.25x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing surpasses Airbus in aircraft delivery rates. - Boeing reports renewed profitability and defense wins. - Boeing supports successful Artemis SLS core stage launch. - Regulators approve higher takeoff weights on Boeing 787. - Boeing's record backlog signals strong demand.",
+      "Boeing enters PAC-3 missile defense system deal with U.S. Department of War. - Boeing delivers Via Sat-3 flight 3 spacecraft to Viasat. - Boeing's biggest strategic challenge: developing new narrow-body aircraft. - Boeing delivers Via Sat-3 satellite ahead of Space X launch.",
+      "Boeing faces new threat as Iran war raises pressure. - Pentagon taps Boeing to triple critical missile output. - Ugur Akkus acquires $75 million Boeing 737 BBJ."
+    ],
+    "medium_term_50d": [
+      "Boeing surpasses Airbus in aircraft delivery rates. - Boeing reports renewed profitability and defense wins. - Boeing supports successful Artemis SLS core stage launch. - Regulators approve higher takeoff weights on Boeing 787. - Boeing's record backlog signals strong demand.",
+      "Rheinmetall, Boeing Australia to supply combat aircraft. - U.S. Appeals Court upholds dismissal of Boeing criminal charge. - Iran warns Boeing will be legitimate target. - NASA signals potential phase out of Boeing's SLS rocket.",
+      "Boeing enters PAC-3 missile defense system deal with U.S. Department of War. - Boeing delivers Via Sat-3 flight 3 spacecraft to Viasat. - Boeing's biggest strategic challenge: developing new narrow-body aircraft. - Boeing delivers Via Sat-3 satellite ahead of Space X launch."
+    ],
+    "long_term_200d": [
+      "Boeing surpasses Airbus in aircraft delivery rates. - Boeing reports renewed profitability and defense wins. - Boeing supports successful Artemis SLS core stage launch. - Regulators approve higher takeoff weights on Boeing 787. - Boeing's record backlog signals strong demand.",
+      "Rheinmetall, Boeing Australia to supply combat aircraft. - U.S. Appeals Court upholds dismissal of Boeing criminal charge. - Iran warns Boeing will be legitimate target. - NASA signals potential phase out of Boeing's SLS rocket.",
+      "Boeing nearing 500-jet order with China. - Trump says defense CEOs agree to quadruple production. - Boeing stock jumps on China jet order report. - Boeing in talks with China to sell 500 jets. - Boeing close to 500-jet order with Trump-Xi summit."
+    ]
+  }
+}

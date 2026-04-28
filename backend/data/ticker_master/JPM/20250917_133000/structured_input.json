@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 287.27-310.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.62%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.968)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.75)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 280.31-310.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.49%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 311.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.4% | OM: 25.8% | NM: 20.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.85x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -53.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.495B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.9%, EPS: 8.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 17.4%, Next Q Est Growth: -7.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.96, P/S: 3.16)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.44)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.81)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.76x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan announces renewed Plaid partnership enhancing open banking innovation. - OK: JPMorgan executive discusses importance of AI in driving earnings. - NONE",
+      "JPMorgan and Plaid extend data sharing agreement. - Chase Freedom announces cash back categories for Q4.",
+      "JPMorgan faces scrutiny from Senator Warren and Democratic lawmakers over ties to Jeffrey EPstein. - Senators call for hearings about JPMorgan\u2018s ties to Jeffery Epstein. Note: These two bullets represent the same event but with slightly different wording. Since the task requires identifying material events directly affecting JPM, both bullets can be considered"
+    ],
+    "medium_term_50d": [
+      "JPMorgan faces scrutiny from Senator Warren and Democratic lawmakers over ties to Jeffrey EPstein. - Senators call for hearings about JPMorgan\u2018s ties to Jeffery Epstein. Note: These two bullets represent the same event but with slightly different wording. Since the task requires identifying material events directly affecting JPM, both bullets can be considered",
+      "JPMorgan announces renewed Plaid partnership enhancing open banking innovation. - OK: JPMorgan executive discusses importance of AI in driving earnings. - NONE",
+      "JPMorgan targets 20\\% Asia hiring boost to ride digital, trade growth. - A new wave of Bank mergers is just getting started. - Corporate bankingarm of JPMorgan sets for another twenty percent headcount lift."
+    ],
+    "long_term_200d": [
+      "JPMorgan faces scrutiny from Senator Warren and Democratic lawmakers over ties to Jeffrey EPstein. - Senators call for hearings about JPMorgan\u2018s ties to Jeffery Epstein. Note: These two bullets represent the same event but with slightly different wording. Since the task requires identifying material events directly affecting JPM, both bullets can be considered",
+      "JPMorgan announces renewed Plaid partnership enhancing open banking innovation. - OK: JPMorgan executive discusses importance of AI in driving earnings. - NONE",
+      "JPMorgan targets 20\\% Asia hiring boost to ride digital, trade growth. - A new wave of Bank mergers is just getting started. - Corporate bankingarm of JPMorgan sets for another twenty percent headcount lift."
+    ]
+  }
+}

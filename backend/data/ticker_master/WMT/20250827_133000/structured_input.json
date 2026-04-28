@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (23.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.1)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-7.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 95.42-104.72]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.29%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.813)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.67)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 93.62-104.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.62%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 96.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.87%))",
+      "volume_dynamics": "AVERAGE (0.84)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.6% | OM: 4.2% | NM: 2.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.62x, YrsToPay: 4.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $665.035B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 10.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -24.3%, Next Q Est Growth: 7.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 49.92, P/S: 1.17)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 9.2)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.96)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart buypes into VMware\u2018s private cloud. - Ranpak partnerswith Walmart to roll outautomated technology and sustainablepackaging collaboration. - Home Depot reverses decisionon not raising pricesbecause of tariffs. - Nex Playgroudexpands nationwidetoover 3,300 Walmart and Sam\u2019sclocations",
+      "Walmart's profits miss expectations, shares sink. - Procter & gamble introduces luxury \"bumbum\" brand diapers at Target. - US consumers with high credit scores experience increased late payments. - Trump signals potential Intel deal is first of many. - America's popular furniture brands face additional tariffs.",
+      "Powell turns dovish, impacting interest rates for WMT. - Mixed WMT earnings influence investor sentiment. - No clear information regarding production or supply chain change at WMT."
+    ],
+    "medium_term_50d": [
+      "Walmart's profits miss expectations, shares sink. - Procter & gamble introduces luxury \"bumbum\" brand diapers at Target. - US consumers with high credit scores experience increased late payments. - Trump signals potential Intel deal is first of many. - America's popular furniture brands face additional tariffs.",
+      "Walmart buypes into VMware\u2018s private cloud. - Ranpak partnerswith Walmart to roll outautomated technology and sustainablepackaging collaboration. - Home Depot reverses decisionon not raising pricesbecause of tariffs. - Nex Playgroudexpands nationwidetoover 3,300 Walmart and Sam\u2019sclocations",
+      "Powell turns dovish, impacting interest rates for WMT. - Mixed WMT earnings influence investor sentiment. - No clear information regarding production or supply chain change at WMT."
+    ],
+    "long_term_200d": [
+      "Walmart betters on AI with 'super agent' strategy - Wal Mart hires Instacart exec as head ofglobal AI efforts",
+      "Walmart expande AI leadership, intoduces 4 \u2018Super Agents\u2019 - Wal mart appoints Daniel Dankar as EVP of AI accelaration, product anddesign - Wal Mart shifts toward Super Agents in play to upgrade AI strategy - Walmat bets on ai 'super agents\u2019 to boost ecommerce growth",
+      "Walmart's profits miss expectations, shares sink. - Procter & gamble introduces luxury \"bumbum\" brand diapers at Target. - US consumers with high credit scores experience increased late payments. - Trump signals potential Intel deal is first of many. - America's popular furniture brands face additional tariffs."
+    ]
+  }
+}

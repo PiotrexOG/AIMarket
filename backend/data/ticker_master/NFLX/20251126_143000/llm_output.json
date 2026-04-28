@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to 40.9, indicating a shift towards bearish sentiment. Velocity (ROC -8.2%) is negative, and the price is now 5.3% below the 20-day SMA, a notable decline from the previous period. The price is testing the lower band of the Bollinger Bands, suggesting potential oversold conditions. W: The bearish shooting star candle pattern is a strong negative signal, indicating selling pressure at higher prices. The price is now below the 20-day SMA, breaking the prior positive trend base. Conviction in a short-term bounce is low given the bearish technicals. O: A sustained move back above the 20-day SMA and a bullish candle pattern would be required to signal a potential short-term reversal. Positive news regarding subscriber growth or content performance could provide a catalyst. T: Downside risk has increased substantially. The price is testing the lower Bollinger Band, and volatility (ATR 3.34%) has slightly increased. The bearish candle pattern and negative momentum suggest further downside is possible before any stabilization."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend has clearly turned bearish. Trend alignment is now in a gradual descent (-4.52%), and the MACD has crossed bearishly and is accelerating downwards (-0.51). The price is further below the 50-day SMA (Z-score -1.59), reinforcing the bearish trend position. The price remains within the monthly range, but the downward momentum is concerning. W: The bearish MACD and increasing distance from the 50-day SMA significantly reduce conviction in any immediate recovery. The gradual descent in trend alignment suggests a sustained downtrend is in play. O: A decisive break above the 50-day SMA and a reversal in the MACD would be necessary to signal a potential medium-term trend change. Positive fundamental news, such as strong subscriber additions or successful content launches, could provide support. T: Downside risk is elevated. The bearish trend alignment, negative MACD, and increasing deviation from the 50-day SMA indicate a higher probability of further price declines. The current market regime also contributes to increased risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term technical picture shows some weakening, with the market regime now described as a 'Bear Market Relief Rally' (-8.0%). However, the healthy Golden Cross structure remains intact (1.83% above 200-day SMA), providing some underlying support. The price is now at 46.1% within the long-term range, moving from neutral-bullish towards neutral. Fundamentals remain a strong point, with high business quality, a healthy balance sheet, and strong cash generation. W: The shift in market regime to a relief rally introduces more uncertainty and potential for broader market weakness to impact NFLX. While the Golden Cross is present, its proximity to the current price suggests it may be tested. Conviction in a sustained long-term uptrend is tempered by the current technical deterioration. O: The strong fundamental underpinnings and the intact Golden Cross offer a base for potential recovery. Any positive developments in the streaming wars or successful strategic initiatives could drive a re-rating. T: Downside risk has increased due to the shift in market regime and the price moving lower within its long-term range. While valuation remains a concern, the fundamental strength provides some cushion against severe declines. The risk of a broader market downturn impacting even fundamentally sound companies is a key consideration."
+    }
+  }
+}

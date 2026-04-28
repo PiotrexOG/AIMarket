@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Short-term momentum has shifted to extreme overbought conditions (RSI 89.1) with a STRONG_BULLISH candle pattern, indicating significant upward pressure. Price is at critical resistance at the top of the 20-day range. O: Positive news flow regarding tokenized deposits and executive presentations at industry conferences provide some tailwinds. W: Extreme overbought RSI and price at resistance suggest a high probability of a short-term pullback or consolidation. The previous indecision has resolved to the upside, but sustainability is questionable. T: The short-term outlook is bullish but carries elevated risk due to overbought conditions and resistance. A potential for a short-term reversal or consolidation is present. Volatility remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The price has moved to an overextended bullish statistical outlier position (Z-score 2.2) above the 50-day SMA, breaking through monthly resistance zones. MACD remains bullish but is fading, suggesting potential for a slowdown in momentum. O: Continued strategic initiatives and the company's scale provide fundamental support for the upward move. The price action is strong, breaking out of previous consolidation. W: The overextended Z-score indicates the current move may be unsustainable in the short to medium term, increasing the risk of a reversion to the mean. Fading MACD also signals a potential loss of upward momentum. T: The medium-term outlook is cautiously bullish, driven by strong price action and fundamental support. However, the overextended nature of the move and fading momentum suggest increased risk of a correction. Balance sheet stress remains a persistent concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure persist. However, the price has now moved beyond the previous ATH into 'blue sky' territory, indicating a potential for further upside but also increased valuation risk. O: Long-term strategic initiatives and robust business quality metrics continue to provide a solid foundation. The company's scale and market position are undeniable. W: The price trading above 100% of its historical range (101.6%) significantly increases valuation fragility. The stressed balance sheet and negative FCF remain critical long-term headwinds, especially in a potentially higher-rate environment. Regulatory scrutiny and past compliance issues continue to pose a risk. T: The long-term score remains neutral, balancing the favorable market regime and business quality against significant valuation and financial health risks. The move into uncharted territory increases the potential for both significant gains and sharp corrections. The conviction is lowered due to the elevated risk profile."
+    }
+  }
+}

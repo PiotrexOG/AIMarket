@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.37)",
+        "velocity_roc_10": "NORMAL (-2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 903.88-963.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.43%)",
+        "cycle_macd": "BULLISH_FADING (0.299)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.47)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 903.33-999.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.96%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 21.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 915.57,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.66%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.17x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $264.086B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.6%, Next Q Est Growth: 6.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 53.32, P/S: 1.54)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.93)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.39)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "Costco opens seventh Canadian Business Center in Mississau\u0433\u0430, creating 209 jobs. - Michael Dell's son starts home power business, plans to sell electricity and backup batteries like Costco memberships.",
+      "Costco implements new pricing strategy, upsetting some members."
+    ],
+    "medium_term_50d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "Costco enters weight-loss drugs market, sells Ozempic & Wegov\u044b.",
+      "Costco reports $14 billion cash reserve entering Fiscal Year 20 twenty-six."
+    ],
+    "long_term_200d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "Costco enters weight-loss drugs market, sells Ozempic & Wegov\u044b.",
+      "Costco delivers another rock-solid earnings report. (Event 1) - Cost Co announces plans to open thirty five new wareh houses in 2o26. (Event4)"
+    ]
+  }
+}

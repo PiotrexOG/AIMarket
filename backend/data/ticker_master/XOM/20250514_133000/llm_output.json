@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: Short-term momentum indicators are neutral, with RSI at 57.4 and MACD showing a bullish accelerating trend. The price is stable near the base of its 20-day SMA. O: Potential for a short-term bounce if positive news flow emerges or if the broader market sentiment shifts favorably. T: News regarding shareholder actions and climate litigation present short-term headwinds, while potential M&A activity with Chevron could introduce volatility. W: Lack of strong directional momentum and mixed sentiment limit upside potential. The price is currently in the middle of its 20-day range, suggesting consolidation."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The 50-day trend alignment is showing a gradual descent, but the MACD is bullishly accelerating, indicating a potential shift. The Z-score relative to the 50-day SMA suggests mean reversion is healthy. O: The current positioning within the monthly range and the bullish MACD divergence offer a potential for a medium-term recovery if the underlying trend can reassert itself. T: Continued positive news on low-carbon ammonia deals and deep-water oilfield investments could support sentiment. W: The bearish gradual descent in the 50-day trend is a significant concern, suggesting underlying weakness. The stock is trading within a wide monthly range, indicating uncertainty. Fundamentals show declining earnings momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term regime is characterized by a secular bear market, and the presence of a death cross structure further reinforces this bearish outlook. The stock is positioned neutrally within its long-term cycle. O: Potential for value investors to consider the stock given its moderate discount on pricing multiples and healthy balance sheet, especially if the secular trend shows signs of reversal. T: Long-term news flow includes international tenders for hydrocarbon exploration and arbitration over potential M&A, which could impact future strategic direction. W: The dominant secular bear market and death cross structure represent significant structural headwinds. Valuation, while discounted, is accompanied by declining earnings growth expectations, increasing fragility. The business quality is average, and cash generation is moderate."
+    }
+  }
+}

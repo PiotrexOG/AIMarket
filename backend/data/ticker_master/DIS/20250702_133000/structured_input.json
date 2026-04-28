@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.91)",
+        "velocity_roc_10": "NORMAL (3.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 111.84-124.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.78%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.033)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.98-124.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.74%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 122.98,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.52%))",
+      "volume_dynamics": "AVERAGE (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 36.7% | OM: 14.1% | NM: 6.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.39x, YrsToPay: 4.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.502B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.0%, EPS: 89.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 16.5%, Next Q Est Growth: 2.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.81, P/S: 2.42)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.19)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.44)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney upgraded by multiple brokers with increased targets. - Reports of potential new theme park competition in Orlando.",
+      "Disney expands Hulu access through new Charter Communications deal. - Charter adds Disney-owned channels and Hulu to Spectrum.",
+      "Disney focuses on expanding theme park business ($60 billion investment) - Disney CEO conf idant: Next CEO skills (replacing Bob Iger) - Long Island University creative writing workshop (led by acclaimed author Zoraidas Cordova, Disney, Marvel & Star Wars novels) - deal between Disney's Real-time Ad Exchange and Amazon's Demand"
+    ],
+    "medium_term_50d": [
+      "Disney upgraded by multiple brokers with increased targets. - Reports of potential new theme park competition in Orlando.",
+      "Disney expands Hulu access through new Charter Communications deal. - Charter adds Disney-owned channels and Hulu to Spectrum.",
+      "Disney and Universal sue AI startup Midjourney for plagiarism (\u00a3300m)."
+    ],
+    "long_term_200d": [
+      "Disney CEO plans to stop disclosing subscriber numbers (CNBC interview) - Disney pays \u00a3324.1m for full control of Hulu (The Guardian) - Disneys takes full control of US streaming service Hulus for $438.5M (Variety)",
+      "Disney completes purchase of Huli, pays additional $440 million to NBCU. - Walt Disney Co acquires full ownership of Huli. - Disneys buyout of Huli ends long-standing partnership with Comcast.",
+      "Disney and Universal sue AI startup Midjourney for plagiarism (\u00a3300m)."
+    ]
+  }
+}

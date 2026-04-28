@@ -1,0 +1,72 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.55)",
+        "velocity_roc_10": "NORMAL (-2.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 223.7-247.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.94%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.048)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.43)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 206.2-248.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.46%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 237.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.56%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 48.7% | NM: 42.5%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.32x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3401.199143B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.5%, EPS: 56.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3224.7%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.85, P/S: 0.36)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.27)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Taiwan Semiconductors' Arizona unit becomes profitable. - Intel seeks billions more investments post-Soft Bank deal. - Government may take equity stake in Micron, TSMC, and Samsung.",
+      "Intel announces $2 billion investment from Soft Bank. - Trump administration considers 10\\% investment in Intel."
+    ],
+    "medium_term_50d": [
+      "Taiwan Semiconductors' Arizona unit becomes profitable. - Intel seeks billions more investments post-Soft Bank deal. - Government may take equity stake in Micron, TSMC, and Samsung.",
+      "TSMC exempted from Trump's semiconductor tariffs. - Strong quarter for TSmc driven by robust AI chip demand.",
+      "Intel announces $2 billion investment from Soft Bank. - Trump administration considers 10\\% investment in Intel."
+    ],
+    "long_term_200d": [
+      "TSMC reports 44\\% revenue growth and 61\\% net income surge for Q2 - TSM announces 3nm technology and HPC driven Q2 earnings",
+      "TSMC exempted from Trump's semiconductor tariffs. - Strong quarter for TSmc driven by robust AI chip demand.",
+      "TSMC expands US operations, announces robust Q2results and raised guidance."
+    ]
+  }
+}

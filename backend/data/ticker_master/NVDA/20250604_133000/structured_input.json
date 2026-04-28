@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (4.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 110.82-143.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (11.58%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.266)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.79)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 86.63-143.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (11.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.85%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 81.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 140.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.11%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 81.5, P/S: 43.99)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 71.41)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.1)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia introduces new AI solution for banking industry to detect creditcard fraud. - Billionaries exit Nvidia positions, favor another AI stock instead.",
+      "Nvidia faces export restrictions in China. - Nividia's Q1 revenues beat expectations. 12. Nvidia CEo discusses future in China amidst regulations.",
+      "NVIDIA announces upcoming events for financial community. - Illumio integrates with NVIDEA for Zero Trust security."
+    ],
+    "medium_term_50d": [
+      "Nvidia faces export restrictions in China. - Nividia's Q1 revenues beat expectations. 12. Nvidia CEo discusses future in China amidst regulations.",
+      "Chinese tech companies switch to homegrowns chips for AI due to Nvidia export controls. - Alibaba-, Tencent- and Baidus testing alternative semiconductor solutions. - Dell and Nvidia building next-gen supercomputer for US Energy Department.",
+      "Nvidia introduces new AI solution for banking industry to detect creditcard fraud. - Billionaries exit Nvidia positions, favor another AI stock instead."
+    ],
+    "long_term_200d": [
+      "Nvidia faces export restrictions in China. - Nividia's Q1 revenues beat expectations. 12. Nvidia CEo discusses future in China amidst regulations.",
+      "Chinese tech companies switch to homegrowns chips for AI due to Nvidia export controls. - Alibaba-, Tencent- and Baidus testing alternative semiconductor solutions. - Dell and Nvidia building next-gen supercomputer for US Energy Department.",
+      "Nvidia announces new AI-first DGX personal computing systems with global computer makers. -Nvidia powers humanoid robot industry with cloud-to-robot computing platforms for physical AI. -NVidia opens up its platform, plans AI supercomputter in Taiwan. - NVidia CEO Jenson Huang welcomes as a nationalhero in"
+    ]
+  }
+}

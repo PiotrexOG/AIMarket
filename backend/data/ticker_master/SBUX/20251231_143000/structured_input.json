@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "STAGNANT (-0.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 81.97-90.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.54%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.093)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.28)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 77.99-90.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-2.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.02%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 84.31,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.55)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 23.7% | OM: 10.8% | NM: 7.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 10.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.6893B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 0.6%, EPS: -35.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -12.5%, Next Q Est Growth: 20.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.34, P/S: 2.62)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.5)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -35.2%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.25x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks faces labor unionization struggles continue. - Several restaurant chains, including Starbucks announce location closures.",
+      "Starbucks announces major cost-cutting measures. - FDA issues warning to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks. - New labor union forms at Starbucks stores nationwide. - Supply chain disruption impacts SBUX holiday sales. - SBUX reports Q4 earnings miss due to",
+      "Starbucks faces double-digital decline in earnings (Q1 26). - Menu Sif\u0443 powers MIXUE surpasses Starbucks in store count."
+    ],
+    "medium_term_50d": [
+      "Starbucks announces major cost-cutting measures. - FDA issues warning to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks. - New labor union forms at Starbucks stores nationwide. - Supply chain disruption impacts SBUX holiday sales. - SBUX reports Q4 earnings miss due to",
+      "Starbucks faces labor unionization struggles continue. - Several restaurant chains, including Starbucks announce location closures.",
+      "Starbucks faces double-digital decline in earnings (Q1 26). - Menu Sif\u0443 powers MIXUE surpasses Starbucks in store count."
+    ],
+    "long_term_200d": [
+      "Starbucks announces major cost-cutting measures. - FDA issues warning to Starbucks over food safety concerns. - Amazon acquires majority stake in Starbucks. - New labor union forms at Starbucks stores nationwide. - Supply chain disruption impacts SBUX holiday sales. - SBUX reports Q4 earnings miss due to",
+      "Starbucks faces labor unionization struggles continue. - Several restaurant chains, including Starbucks announce location closures.",
+      "Starbucks faces nationwide baristas strike and strategic push in China. - CEO Niccol implements corporate overhaul."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "NORMAL (2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 496.74-531.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.08%)",
+        "cycle_macd": "BULLISH_FADING (1.559)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-555.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.44%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 525.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.48%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.4% | OM: 45.0% | NM: 35.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $261.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 12.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.1%, Next Q Est Growth: 13.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 42.11, P/S: 14.98)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 12.96)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.41)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft partners with Open AI on Sora 1 video model. -Microsoft tests ad-supported Xbox Cloud Gaining tier. -Advanced Micro Devices partners with Open AI over chip supply; shares jump.",
+      "Microsoft executive invests in AI startup Maximor. - Core Weave signs $14 billion cloud dealwith Meta Platforms . - EU investigation into Microsoft cloud bundeling practices.",
+      "Microsoft bets $33 billion on Neoclosuds like Nebulus to ease AI crunch - Microsoft secures $14._2B compute dealing with Meta, Boosts MSFT stock - Caterpiller emerges as unlikely AI winner on turbine demand"
+    ],
+    "medium_term_50d": [
+      "Microsoft bets $33 billion on Neoclosuds like Nebulus to ease AI crunch - Microsoft secures $14._2B compute dealing with Meta, Boosts MSFT stock - Caterpiller emerges as unlikely AI winner on turbine demand",
+      "Microsoft executive invests in AI startup Maximor. - Core Weave signs $14 billion cloud dealwith Meta Platforms . - EU investigation into Microsoft cloud bundeling practices.",
+      "Microsoft taps Samsung and SKHynix for massive AI data push, including new Korea data center. - Oracle transforms into leading cloud and AI infrastructure player, rival to major hyperscaleors. - European Union investigates Microsoft cloud bundeling practices."
+    ],
+    "long_term_200d": [
+      "Microsoft bets $33 billion on Neoclosuds like Nebulus to ease AI crunch - Microsoft secures $14._2B compute dealing with Meta, Boosts MSFT stock - Caterpiller emerges as unlikely AI winner on turbine demand",
+      "Microsoft plans to launch AI marketplace for publishers. -Microsoft claims breakthrough \u0432\u0402\u201c AI chip cooling tech. -Ignite Data selected for Microsoft for Startups Pegas US Program. -Oracle taps debt market for AI infrastructure spending. -Micron earns from memory supercycle\ufffd\u0402\u201cNAND, D DR5, HBM shortage.",
+      "Microsoft signs $19.<b>4</b> billion AI infrastructure dealwith Nebius. - Nebias Group secures $<b>17. fourth</b>B AI GPU deal from Microsoft. - Microsft cracks down on work speech, limits remote work."
+    ]
+  }
+}

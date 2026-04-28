@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.8)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "EXPLOSIVE_UP (19.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (10.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 82.11-106.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.77%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.305)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.9)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 82.11-106.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (26.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.58%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 105.57,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (5.11%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.72)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 27.7% | NM: 23.1%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $40.173327B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.0%, EPS: 47.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 19.3%, Next Q Est Growth: 4.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.65, P/S: 11.48)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 19.2)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.02)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix reports Q1 20 twenty-five earnings, revenue beats expectations. - Management sets goal for NFLX to reach $1 trillon market cap by twenty-three hundred.",
+      "Netflix beats estimates, eyes ad growth as Q2 outlook impresses. - Netflix posts stronger-than expected Q1 results. - NFLX sets ambitious target todouble revenues by203o. -Netflix risesfollowingbetter-than-expectedearnings.",
+      "Netflix beats Q1 earnings, share price rises significantly. - Announcement of new original series partnership with major studio."
+    ],
+    "medium_term_50d": [
+      "Netflix beats estimates, eyes ad growth as Q2 outlook impresses. - Netflix posts stronger-than expected Q1 results. - NFLX sets ambitious target todouble revenues by203o. -Netflix risesfollowingbetter-than-expectedearnings.",
+      "Netflix reports Q1 20 twenty-five earnings, revenue beats expectations. - Management sets goal for NFLX to reach $1 trillon market cap by twenty-three hundred.",
+      "Netflix sets $1 trillon market cap goal by 21030 (The Wall Street Journal) - Netflix aims to double revenue, tripe operating income by 2o30 (internal strategy meeting)"
+    ],
+    "long_term_200d": [
+      "Netflix sets $1 trillon market cap goal by 21030 (The Wall Street Journal) - Netflix aims to double revenue, tripe operating income by 2o30 (internal strategy meeting)",
+      "China halts Boeing jetdeliveries from US. - Netflix aims to double revenue and reach $1 trillon market cap by 2o30.",
+      "Netflix beats estimates, eyes ad growth as Q2 outlook impresses. - Netflix posts stronger-than expected Q1 results. - NFLX sets ambitious target todouble revenues by203o. -Netflix risesfollowingbetter-than-expectedearnings."
+    ]
+  }
+}

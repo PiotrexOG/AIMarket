@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "STAGNANT (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 59.19-77.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.85%)",
+        "cycle_macd": "BULLISH_FADING (0.024)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.39)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 56.79-77.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-9.99%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 72.1,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.83%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.41)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.8% | OM: 11.8% | NM: 10.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.26x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.012B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -2.8%, EPS: 7.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 483.3%, Next Q Est Growth: -61.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.6, P/S: 2.17)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.77)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.93)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike partners with Special Olympics for Global Youth Sport Inclusion Initiative. - Tariff- driven price increases raise concerns about foot wear affordability.",
+      "Nike appoints new CEO for Converse - Reebok founding partner comments on US manufacturing and tariffs - Nikes Vomero running shoe becomes top seller - Special Olympics announces 3-year partnership with NIke",
+      "Nike names new Converse CEo, Aaron Cain (21- year Nike veteran) Nike faces sluggish Sales Growth, Mounting Competition, Cost-cutting Measures Nike restructures Business by Sport across Nike, Jordon and Converse Brands"
+    ],
+    "medium_term_50d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "Nike names new Converse CEo, Aaron Cain (21- year Nike veteran) Nike faces sluggish Sales Growth, Mounting Competition, Cost-cutting Measures Nike restructures Business by Sport across Nike, Jordon and Converse Brands",
+      "Nike partners with Special Olympics for Global Youth Sport Inclusion Initiative. - Tariff- driven price increases raise concerns about foot wear affordability."
+    ],
+    "long_term_200d": [
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends Nike Pay service, affects revenue stream. - New product recall announced for Nike Air Max shoes. - Amazon cancels Nike contract due to performance issues.",
+      "NIKE dropped from multiple indices: Russell Top 10oo Growth, Russell 3ooo E Growth, Russel 10oooo Growth, and Russell 1ooo Value-Defensivo. - Net income and revenue decreased in Q4FY25 (-86% net income, -12% revenue). - Prices",
+      "Nike reports 86\\% drop in Q4 E PS to $0.\\14, cites increased demand creation costs. - \u041d\u0438\u043a\u0435 \u0441\u043e\u043e\u0431\u0449\u0430\u0435\u0442 \u043e\u0431 \u0443\u0431\u044b\u0442\u043a\u0430\u0445 \u0432 \u0440\u0430\u0437\u043c\u0435\u0440\u0435 86 \u043f\u0440\u043e\u0446\u0435\u043d\u0442\u043e\u0432 \u0437\u0430 \u0447\u0435\u0442\u0432\u0435\u0440\u0442\u044c \u0434\u043e $0,\\14. - \u041d\u0438\u043a\u0435 \u043e\u0431\u044a\u044f\u0432\u043b\u044f\u0435\u0442 \u043e \u0441\u043d\u0438\u0436\u0435\u043d\u0438\u0438 \u043f\u0440\u0438\u0431\u044b\u043b\u0438 \u043d\u0430"
+    ]
+  }
+}

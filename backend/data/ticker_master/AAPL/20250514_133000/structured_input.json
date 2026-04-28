@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.84)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 189.81-214.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.98%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.214)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-241.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.27%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 213.29,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.77%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.8, P/S: 8.17)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 48.41)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple considers raising i Phone prices, without blaming tariffs- WSprintf( \"%s\", \"[WSJ](https://wsj.com)\") - Apple's Europeanmanagementteamchange:Mark Rogers,vicepresidentfor Western Europe,departs Note: Only the above two bullets meet the criteria of having a direct impact on company AAPL",
+      "Apple executives attribute decline in Safari searches to increase in AI usage. - Apple faces potential $90o million cost due to tariffs in Q2.",
+      "Apple asks US appeal court to pause Epic Games ruling. - Court finds Apple violated order, changing i OS external purchase methods."
+    ],
+    "medium_term_50d": [
+      "Apple asks US appeal court to pause Epic Games ruling. - Court finds Apple violated order, changing i OS external purchase methods.",
+      "Federal judge finds Apple in contempt for violating antitrust ruling in App Storecase. - Apple ordered to halt non-App Store sales commissions by judge. - Judge rules Apple must pay $503m to Optis in UK patent disputes.",
+      "Apple executives attribute decline in Safari searches to increase in AI usage. - Apple faces potential $90o million cost due to tariffs in Q2."
+    ],
+    "long_term_200d": [
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%",
+      "Federal judge finds Apple in contempt for violating antitrust ruling in App Storecase. - Apple ordered to halt non-App Store sales commissions by judge. - Judge rules Apple must pay $503m to Optis in UK patent disputes.",
+      "China announces additional tariffs on Apple products: 34%. - Trump imposes tariffs on imported i Phones and Mac Books."
+    ]
+  }
+}

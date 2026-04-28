@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The RSI has plunged into extreme oversold territory at 27.4, and the price is trading well below the lower Bollinger Band (-0.06), indicating a sharp sell-off. The price is also significantly overstretched below the 20-day SMA (-10.9%). W: Despite the oversold conditions, the price is currently in the middle of its 20-day range, suggesting potential for a bounce. The ROC is negative (-9.5%), but within normal parameters for a downtrend. O: The \"Strong Bullish\" candle pattern, despite the extreme oversold technicals, suggests a potential for a short-term reversal or at least a pause in the decline. Elevated volume (1.19) on the decline indicates strong selling pressure. T: The extreme oversold conditions and significant deviation from the 20-day SMA present a high risk of further downside if support breaks. News of a 17% decline in Greater China sales and revenue caution on tariffs are significant headwinds. The score has decreased substantially due to the sharp price deterioration and oversold technicals, while risk has increased significantly due to the magnitude of the price drop and negative news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend has decisively shifted to bearish. The MACD has accelerated into negative territory (-0.936), and the Z-score relative to the 50-day SMA is now deeply negative at -1.55, indicating a strong bearish trend position. W: The price remains within the monthly range, but the trend alignment is compressed (-0.45%), suggesting a lack of immediate direction but with strong bearish momentum. O: The bearish MACD and negative Z-score confirm the deteriorating trend. The elevated volume on the price decline suggests conviction behind the move. T: The strong bearish momentum and negative Z-score indicate a high probability of further downside. News regarding expected earnings and guidance, coupled with the China sales decline, are negative catalysts. The score has been significantly reduced due to the clear bearish trend signal and increased risk, while risk has increased due to the accelerating bearish momentum and negative fundamental news."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 1.5,
+        "conv": 3.5,
+        "risk": 9.0
+      },
+      "synthesis": "S: The long-term outlook is severely bearish. The market regime has worsened considerably, with the secular bear market drag increasing to -14.4%. The long-term range position has fallen into the bearish lower quadrant at 28.0%. W: The \"Death Cross\" structure remains in place and has widened slightly to -3.46%, reinforcing the long-term technical weakness. O: The fundamental growth profile continues to show stagnation with profit issues, and implied earnings growth is negative (-12.24%). The business quality and financial health remain stable, providing a minimal floor. T: The combination of a worsening secular bear market, persistent death cross, and declining growth profile presents a highly unfavorable long-term picture. The news regarding China sales decline and revenue cautions are significant long-term concerns. The score has been drastically reduced due to the severe deterioration in the long-term technical and market regime indicators, while risk has been elevated to its highest level due to the confluence of negative long-term factors."
+    }
+  }
+}

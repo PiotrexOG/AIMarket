@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "STAGNANT (0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 438.68-489.7]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.86%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (1.33)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 438.68-513.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.11%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 62.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 481.02,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.26%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 37.03, P/S: 13.29)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.15)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.07)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft Q2 earnings release - Microsoft announces Azure revenue growth - Microsoft files major patent lawsuit against Google - Microsoft signs partnership with Adobe on productivity tools - Microsoft experiences production delay in Surface Pro X manufacturing - Microsoft provides revised financial guidance for FY2025 - Microsoft CEO Satya Nadella makes significant organizational change - Microsoft suffers major",
+      "Microsoft signs supply deal with SK Hyn IX for Maia accelerators. - Tencent expands cloud services in Middle East. - Meta pays Corning upto $6 billionfor fiber-opticcablesin AIdata centers. - Richtech Roboticscollaborateswith Microsoftthrough Microsoft AICo-Innovationalabstojointlydevelopagentic AI",
+      "Microsoft reports earnings. - Federal Reserve interest rate decision. - Billionaire increases stake in Microsoft."
+    ],
+    "medium_term_50d": [
+      "Microsoft Q2 earnings release - Microsoft announces Azure revenue growth - Microsoft files major patent lawsuit against Google - Microsoft signs partnership with Adobe on productivity tools - Microsoft experiences production delay in Surface Pro X manufacturing - Microsoft provides revised financial guidance for FY2025 - Microsoft CEO Satya Nadella makes significant organizational change - Microsoft suffers major",
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT.",
+      "Microsoft signs supply deal with SK Hyn IX for Maia accelerators. - Tencent expands cloud services in Middle East. - Meta pays Corning upto $6 billionfor fiber-opticcablesin AIdata centers. - Richtech Roboticscollaborateswith Microsoftthrough Microsoft AICo-Innovationalabstojointlydevelopagentic AI"
+    ],
+    "long_term_200d": [
+      "Microsoft sues Open AI and CEO Sam Altman, alleging fraudulent transition to for-profit status. - Trump imposes tariffs on certain Nvidia AI chips produced for MSFT.",
+      "Microsoft Q2 earnings release - Microsoft announces Azure revenue growth - Microsoft files major patent lawsuit against Google - Microsoft signs partnership with Adobe on productivity tools - Microsoft experiences production delay in Surface Pro X manufacturing - Microsoft provides revised financial guidance for FY2025 - Microsoft CEO Satya Nadella makes significant organizational change - Microsoft suffers major",
+      "Microsoft invests in Open AI. - Peter Thiel sells Nvidia shares, buys Microsoft. - Elon Mus\u043a seeks $133B from Open AI \u0438 Microsoft."
+    ]
+  }
+}

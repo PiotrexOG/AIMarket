@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The short-term outlook has significantly deteriorated. The candle pattern remains STRONG_BEARISH, and the RSI has fallen into a bearish zone at 30.9. Velocity (ROC -2.3%) has turned negative, and the price has broken down below the 20-day low, now trading at 956.0. W: The breakdown below the 20-day low and the bearish RSI signal a loss of short-term support and momentum. The price is now trading at the lower bound of the 20-day range. O: Recent news includes positive same-store sales growth and e-commerce gains, but this is overshadowed by ongoing litigation and potential production disruptions. T: Risk has increased substantially due to the technical breakdown, negative momentum, and increased volatility (ATR 1.49%). The hyper-premium valuation exacerbates downside risk in this deteriorating short-term technical environment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.8,
+        "risk": 7.8
+      },
+      "synthesis": "S: The medium-term trend alignment has worsened, with a steeper gradual descent (-1.97%). The MACD has accelerated into bearish territory (-1.153), and the Z-score relative to the 50-day SMA has deepened to -2.16, indicating a strong bearish trend position. W: The accelerating bearish MACD and increased distance from the 50-day SMA confirm a deteriorating medium-term outlook. While the price is at a monthly support zone, the technical signals suggest further downside pressure. O: Expansion news and private label product introductions offer some fundamental support, but the persistent legal challenges and potential production issues remain significant headwinds. T: Risk has increased due to the worsening trend alignment, accelerating bearish momentum, and the price's position relative to the 50-day SMA. The hyper-premium valuation, combined with these technical signals, presents a high-risk profile for the medium term."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.2
+      },
+      "synthesis": "S: The long-term technical structure remains relatively stable, with the secular bull market regime (0.3%) and healthy golden cross structure (4.03%) still in place. However, the long-term range position has decreased to 42.1%, indicating a move towards the lower half of the cycle. W: Despite the stable long-term regime, the decrease in range position and the persistent fundamental weaknesses in thin margins (GM 12.7%) and weak cash conversion (FCF Mgn 1.9%) continue to be structural concerns. The current price action is testing longer-term support levels. O: The news flow includes positive expansion plans and sales growth, but the historical negative news regarding regulatory issues, lawsuits, and production disruptions, though not new, contribute to a more cautious long-term view. T: Risk has increased due to the price moving lower within the long-term range and the ongoing litigation. The hyper-premium valuation, coupled with the current technical positioning and fundamental inefficiencies, keeps long-term risk elevated, despite the stable overall regime."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.6)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.05)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 150.73-168.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.62%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.199)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.01)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 146.12-168.05]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (8.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.29%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 167.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.69%))",
+      "volume_dynamics": "ELEVATED (1.19)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 67.9% | OM: 24.5% | NM: 25.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 2.0x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $90.627B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.7%, EPS: -38.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 20.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 17.76, P/S: 4.46)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.15)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -38.5%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson seeks FDA approved for oral psorias IS drug icotrokins RA. - Astra Zenec A invests $50B in US manufacturing expansion amid tariff pressures. - JNJ files for FDA approval of icotro kinra to treat plaque pso RIasis.",
+      "Johnson & Johnson submits NDA for icotrokinsra U.\u0421. FDA approximation for plaque p soriasis treatment.",
+      "Johnson & Johnson gets speedy FDA review for TAR-\\_200in high-risknon-muscle involvasive bladderncancer. - J&J reports robust sales growthmid challenges, raisefull-yearguidance."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson seeks FDA approved for oral psorias IS drug icotrokins RA. - Astra Zenec A invests $50B in US manufacturing expansion amid tariff pressures. - JNJ files for FDA approval of icotro kinra to treat plaque pso RIasis.",
+      "Johnson & Johnson submits NDA for icotrokinsra U.\u0421. FDA approximation for plaque p soriasis treatment.",
+      "Johnson & Johnson gets speedy FDA review for TAR-\\_200in high-risknon-muscle involvasive bladderncancer. - J&J reports robust sales growthmid challenges, raisefull-yearguidance."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson faces patent cliffs for key drugs by 2o30 (Merck, Bristol My ERS Squib B, Johnson &Johnson).",
+      "Johnson & Johnson seeks FDA approved for oral psorias IS drug icotrokins RA. - Astra Zenec A invests $50B in US manufacturing expansion amid tariff pressures. - JNJ files for FDA approval of icotro kinra to treat plaque pso RIasis.",
+      "Johnson & Johnson gets speedy FDA review for TAR-\\_200in high-risknon-muscle involvasive bladderncancer. - J&J reports robust sales growthmid challenges, raisefull-yearguidance."
+    ]
+  }
+}

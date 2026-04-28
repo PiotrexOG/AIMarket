@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.0)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.06)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 224.69-257.34]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.05%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.531)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 201.5-257.34]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.79%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 91.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 252.62,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.05%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.29, P/S: 9.5)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 56.94)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple's i Phone 17 going on sale globally with reported strong demand for Pro models.",
+      "CFPB ends monitoring of Apple and US Bank years ahead of schedule. (Reuters) - Apple announces grand reopensing of Apple Gina in Tokyo. - Patmos expands AI datac ENTER campus in Kansas City.",
+      "Trump announces $1 hundred K fee for H1B vis AS, potentially affecting Apple's workforce. - Russian retailers unveil new i Phone model amid strong demand despite economic slowdown."
+    ],
+    "medium_term_50d": [
+      "Apple's i Phone 17 going on sale globally with reported strong demand for Pro models.",
+      "EU regulators fine Apple \u20ac1bn over App Store policies. - Oracle signs $30bn computing deal with Open AI. - Apple announces new AI capabilities in i Phone 17.",
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL."
+    ],
+    "long_term_200d": [
+      "Apple announces new AI product launch. - Palantir signs major partnership deal with AAPL.",
+      "Elon Musks's companies sue Apple over alleged antitrust violations.",
+      "EU regulators fine Apple \u20ac1bn over App Store policies. - Oracle signs $30bn computing deal with Open AI. - Apple announces new AI capabilities in i Phone 17."
+    ]
+  }
+}

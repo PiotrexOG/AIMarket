@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 4.8,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. RSI has moved from a strong bullish zone (64.0) to neutral (47.8), and ROC has turned negative (-4.0%). The price is now below the SMA20 (-2.8%) and within the middle of the range [73.05-80.17]. Volume dynamics have spiked to high institutional activity (1.83), which can indicate increased selling pressure in a weakening trend. W: The candle pattern has shifted to DOJI_INDECISION, signaling a lack of directional conviction. Negative news flow includes regulatory investigations, a factory fire, product recalls, and contract cancellations, all contributing to increased downside risk. O: The only positive is the price remaining within the normal Bollinger Bands (0.18), suggesting it's not yet oversold. T: The score has decreased from 7.2 to 5.8 due to the sharp deterioration in momentum indicators and negative news. Conviction has fallen from 6.2 to 4.8 as the technical signals are now mixed and the news flow is overwhelmingly negative. Risk has increased from 5.0 to 6.5, driven by the negative momentum, increased volatility (ATR 2.5%), negative news, and the potential for further downside from the DOJI pattern and high volume activity."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.5,
+        "risk": 6.8
+      },
+      "synthesis": "S: Medium-term trend alignment has weakened, with the gradual ascent slowing to 2.92%. Crucially, the MACD has accelerated into bearish territory (-0.339), indicating a shift in momentum. The price is now at the mean reversion healthy base level (Z:0.02) relative to the 50-day SMA, suggesting a loss of upward trend strength. W: The negative news flow, including regulatory investigations, competitor partnerships (Adidas/NFL), production disruptions, and contract cancellations, poses a significant threat to future earnings and market share. The previous positive narrative of new launches is overshadowed by these immediate concerns. O: The price remains within the monthly range [59.44-80.17], providing some technical support. T: The score has decreased from 7.5 to 5.5 due to the bearish MACD crossover and weakening trend alignment. Conviction has dropped from 6.5 to 4.5 as the technical signals have reversed from bullish to bearish. Risk has increased substantially from 4.5 to 6.8, reflecting the bearish MACD, the proximity to the 50-day SMA base, and the severe negative news impacting business operations and market positioning."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: While the long-term market regime remains a SECULAR_BULL_MARKET (5.5%) and the major crosses show a HEALTHY_GOLDEN_CROSS_STRUCTURE (5.46%), the price position in the upper quadrant has weakened to 73.1%. The fundamental picture of revenue contraction and high valuation multiples (PEG: 3.02) remains a concern. W: The persistent negative news, including regulatory investigations, competitor gains (Adidas/NFL), production issues, and potential tariffs, introduces significant long-term structural risk. The previous strength from EMEA growth is now challenged by these headwinds. O: The underlying business quality and financial health remain stable, providing a floor. The company scale is also a positive factor. T: The score has decreased slightly from 6.5 to 6.0, as the weakening price position in the long-term range tempers the positive technical structure. Conviction has decreased from 5.0 to 4.5, as the fundamental risks and negative news flow are starting to erode the durability of the long-term bullish technicals. Risk has increased from 4.8 to 5.5, driven by the elevated valuation risk (P/B: 8.01), the increasing negative news impacting business operations, and the weakening long-term price positioning."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "STAGNANT (0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 141.5-166.63]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.32%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.582)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.5-169.99]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.88%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 42.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 153.18,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | MODERATE_VOLATILITY (ATR:  (3.54%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(4)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 68.3% | OM: 24.7% | NM: 24.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $89.331B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -40.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 77.1%, Next Q Est Growth: -41.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 16.89, P/S: 4.16)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.75)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -40.84%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnny reports Q1 twenty-two-five results with sales growth of $21,9 Billion and earnings per share at $4. fifty-four. - J&J announces sixty-third consecutive year of dividend increase, raising quarterly dividends by 4, point eight%.",
+      "US Court rejects Johnson &Johnson bankruptcy bid for subsidiary. - J&J begins clinical program for OTTA VA robotic surgial system. - Liver injury halts Pfizer's GLP- 1 trial; impacts JNJ's competition.",
+      "Johnson & Johnson announces positive Phase three data for icotrokinsra in adolescence plaque p soriasis. - Icot\u0440\u043eki\u043d\u0440\u0430 results: 84 % of adolescients with moderate- to- severe plaque pso\u0440\u0438\u0430sis achieve clear or almostclear skin."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnny reports Q1 twenty-two-five results with sales growth of $21,9 Billion and earnings per share at $4. fifty-four. - J&J announces sixty-third consecutive year of dividend increase, raising quarterly dividends by 4, point eight%.",
+      "Johnson & Johnson announces positive Phase three data for icotrokinsra in adolescence plaque p soriasis. - Icot\u0440\u043eki\u043d\u0440\u0430 results: 84 % of adolescients with moderate- to- severe plaque pso\u0440\u0438\u0430sis achieve clear or almostclear skin.",
+      "Johnson & Johnny's TREMF YA achieves signifcant reduction in signs and symptoms of psoriati arthritus. - Janssen Cilag International, a J&J company, receives EU marketing authorization for Rybrevant combination treatment."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson announces positive Phase III results for nipocalimba in g MG treatment at AAN meeting. - JNJ introduces new electrosurgicial generator compatible with Ottava Robotics System. - RYB REVANT\u00ae plus LAZCLKUZE\u2122 outperforms osimertinb in Phase 3 study for NSCL",
+      "Johnson & Johnny's TREMF YA achieves signifcant reduction in signs and symptoms of psoriati arthritus. - Janssen Cilag International, a J&J company, receives EU marketing authorization for Rybrevant combination treatment.",
+      "Johnson & Johnson announces successful Phase 3B trial for TREMF YA (gus elkumab). - Johnson &\\ Johnson's guselk umab reduces signs, symptoms and structural damage in active psor iatic arth ritis patients."
+    ]
+  }
+}

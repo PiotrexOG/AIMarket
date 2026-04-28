@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term outlook has weakened. The 'STRONG_BEARISH' candle pattern persists, and while RSI remains strong (65.7), velocity has decreased (3.2%). The price is now 2.3% from the 20-day SMA, indicating a slightly more stable trend base than previously, but the overall momentum is softening. The price remains in the middle of the range (500.7-555.45), with a persistent 'RANGE' bias. W: Mean reversion bands have tightened slightly (0.82), suggesting reduced short-term volatility, but the bearish candle pattern continues to suppress conviction for immediate upward continuation. The shift in the MACD to bearish recovering (-0.741) from bullish fading in the medium term also casts a shadow on short-term prospects. O: News flow is mixed, with mentions of quantum computing news and partnerships, but also reports of app deprecation and price movements. This mixed sentiment contributes to short-term uncertainty. T: Risk has increased from 6.0 to 6.5. The persistent bearish candle pattern, coupled with the weakening MACD signal from the medium term, increases downside potential. The 'RANGE' bias also contributes to increased risk of choppy price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.2,
+        "conv": 4.5,
+        "risk": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment has slightly weakened (3.88%), and the Z-score above the 50-day SMA has decreased to 1.57, indicating a less robust trend position. Crucially, the MACD has shifted to bearish recovering (-0.741), signaling a loss of upward momentum and a potential trend reversal. The price remains within the monthly range (456.89-555.45), suggesting consolidation, but the bearish MACD is a significant concern. W: The 'RANGE' SR bias continues to conflict with the weakening bullish trend, implying increased potential for choppy price action and reduced conviction for a sustained move. The structural confidence is significantly hampered by the bearish MACD, suggesting a less durable uptrend. O: News flow is mixed, with continued mentions of AI and market cap milestones, but also reports of quantum computing news and partnerships. The shift in MACD suggests that these positive narratives are not translating into sustained upward price momentum. T: Risk has increased from 5.5 to 6.0. The shift to a bearish MACD is the primary driver of this increase, indicating a higher probability of downside correction. While the Z-score and trend alignment are still positive, the weakening momentum and persistent 'RANGE' bias elevate the risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.8,
+        "risk": 3.8
+      },
+      "synthesis": "S: The secular bull market regime remains stable (21.3%), and the healthy golden cross structure has improved slightly (14.15%), reinforcing the long-term bullish technical setup. The price has moved further into the upper quadrant of its long-term range (87.8%), indicating strong upward momentum within the secular trend. W: While fundamentals remain exceptionally strong, the continued move into the upper quadrant of the long-term range, combined with the persistent 'RANGE' bias at the SR landscape level, suggests increasing potential for consolidation or a broader market correction to impact even strong performers. Conviction in immediate upward continuation is high but tempered by valuation and range dynamics. O: News flow is predominantly positive, with significant mentions of AI, market cap milestones, and strong earnings reports driven by cloud growth. Long-term growth narratives and strategic partnerships remain supportive of the fundamental outlook. T: Risk has slightly increased from 3.5 to 3.8. The continued push into the upper long-term range and the persistent 'RANGE' bias are the primary drivers of this marginal increase. The improved long-term range position and positive news flow still outweigh the residual risk from valuation concerns and the potential for consolidation."
+    }
+  }
+}

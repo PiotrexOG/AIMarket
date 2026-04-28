@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.4)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.06)",
+        "velocity_roc_10": "NORMAL (-10.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-8.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 299.0-351.86]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.27%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.794)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.98)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-366.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.72%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 309.73,
+      "volatility_context": "VOLATILITY_EXPLOSION_UNSTABLE | MODERATE_VOLATILITY (ATR:  (3.76%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.4% | OM: 65.7% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 52.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $35.926B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.0%, EPS: 17.3%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 0.0%, Next Q Est Growth: 0.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.8, P/S: 17.27)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.85)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.83)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa insiders sold US$2o M of shares suggesting hesitancy. - None (Analytical reports and investment advice ignored.) - Visaa to announce Fiscal Second Quarter 20 twenty-fivefinancialresultson April29th.",
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection."
+    ],
+    "medium_term_50d": [
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection.",
+      "Visa offers \u00a3100\u043c to replace Mastercard as Apple'scredit card partner."
+    ],
+    "long_term_200d": [
+      "Visa introduces new services to drive innovation and client growth. -Visa broadenspayment portfolio with threenew offerings.",
+      "Visa unveils new payment solutions: Authorize.NET, Unified Checkout, ARIC Riska Hub. - visa expands value-added service portfolio with reimagined Authorize.net. - visa introduces ARIC Rish Hub for enhanced payment acceptance and fraud protection.",
+      "Open AI Chief Sam Altman's World Networkintalkswith Visaforsstablecoinswallet."
+    ]
+  }
+}

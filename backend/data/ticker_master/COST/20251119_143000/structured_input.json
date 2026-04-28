@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.3)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.08)",
+        "velocity_roc_10": "NORMAL (-4.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.1%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 894.17-953.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-0.92%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.776)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.91)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 894.17-981.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.95%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 5.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 882.95,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.7%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.17x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $264.086B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.6%, Next Q Est Growth: 6.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.42, P/S: 1.49)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.36)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.23)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Likely first AB5 enforcement action in California targets Costcoand Ryder - Costcos October salesshowstrongmomentum - Novo Nordisksaffordabilitymeasuresamidcompetition - Costcofacestradecostpressureduringholidays",
+      "Costco C FO makes rare inflation Promise (direct impact on cost structure)",
+      "Costco quiets trying to increase member fees. -Costco reports slower growth but PEG ratio remains extreme."
+    ],
+    "medium_term_50d": [
+      "Costco C FO makes rare inflation Promise (direct impact on cost structure)",
+      "Likely first AB5 enforcement action in California targets Costcoand Ryder - Costcos October salesshowstrongmomentum - Novo Nordisksaffordabilitymeasuresamidcompetition - Costcofacestradecostpressureduringholidays",
+      "Costco quiets trying to increase member fees. -Costco reports slower growth but PEG ratio remains extreme."
+    ],
+    "long_term_200d": [
+      "Costco partners with Novo Nadrik to offer GLPs-1 drugs at set monthly price. - Jinko solar supplies modules for Costco warehouse in Washington state.",
+      "Costco C FO makes rare inflation Promise (direct impact on cost structure)",
+      "Costco enters weight-loss drugs market, sells Ozempic & Wegov\u044b."
+    ]
+  }
+}

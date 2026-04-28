@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.96)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.0%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 142.03-172.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (9.66%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.552)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.94)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 110.82-172.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (29.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.69%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 169.96,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.43%))",
+      "volume_dynamics": "ELEVATED (1.32)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 98.24, P/S: 53.03)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 86.08)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvid IA resumes sales of H20AI chip to China. (after receiving US approval)",
+      "Malaysia tightens rules on movement of US-made AI chips. Malaysia requires permits forexports of high-perfomance US artificial intelligence charts.",
+      "Nvidia CEO visits Beijingformediabriefingon July16. -USimposesexportrestrictionson Nvidia'schipssto China."
+    ],
+    "medium_term_50d": [
+      "Nvid IA resumes sales of H20AI chip to China. (after receiving US approval)",
+      "Nvidia meets with President Trump ahead of China trip. - New copper tariffs could push Nvidia closer to Navitas. - CEO Jensen Houng drives AI stampede with Broadcom,Palantir and others in tow. - Goldman Sachss recommends buying Nvidia for next phase of ai growth. - Elon Musks envisions a",
+      "Malaysia tightens rules on movement of US-made AI chips. Malaysia requires permits forexports of high-perfomance US artificial intelligence charts."
+    ],
+    "long_term_200d": [
+      "Nvidia meets with President Trump ahead of China trip. - New copper tariffs could push Nvidia closer to Navitas. - CEO Jensen Houng drives AI stampede with Broadcom,Palantir and others in tow. - Goldman Sachss recommends buying Nvidia for next phase of ai growth. - Elon Musks envisions a",
+      "Nvidia signs multibillion dollar AI chip supply deals with cloud providers. - Federal regulations impact Nvidiachip exports to specific regions. - Apple announces partnership with Nvidiafor advanced AI technologies. - Major product delay announced for Nvidianext-gen GPUs. - Lawsuit filed against Nvidiaregarding intellectual property infringement.",
+      "Nvid IA resumes sales of H20AI chip to China. (after receiving US approval)"
+    ]
+  }
+}

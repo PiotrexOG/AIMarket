@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "STAGNANT (1.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 103.0-110.51]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.43%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.542)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.56%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 108.46,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.37, P/S: 1.42)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.84)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "[\"NLPC urges shareholders to vote against election of CEO Darren woods for board\"]",
+      "Colorado top court allowing Boulder suit against Exxon and Suncor overclimate change.",
+      "Chevron agrees to buy H Ess for $6o billion. - Potential merger between Exxon and Chevron over BP."
+    ],
+    "medium_term_50d": [
+      "Chevron agrees to buy H Ess for $6o billion. - Potential merger between Exxon and Chevron over BP.",
+      "Colorado top court allowing Boulder suit against Exxon and Suncor overclimate change.",
+      "Exxon \u041cobal signs long-term low-carbone ammonia deal with Mar ubeni. -Exxon \u041cobil invests $1. fifthbn in Nigeria's deep-wa ter oilfields."
+    ],
+    "long_term_200d": [
+      "Greece approves international tender for Exxon's participation in hydrocarbon search. - Arbitration scheduled on Exx\u00f3n and Chev\u0440\u043e\u043d dispute over H ess acquisition. -Exxon beets Wall Street profit estimation, boostedby Guyanaand Permianproduction.",
+      "Chevron agrees to buy H Ess for $6o billion. - Potential merger between Exxon and Chevron over BP.",
+      "Exxon \u041cobal signs long-term low-carbone ammonia deal with Mar ubeni. -Exxon \u041cobil invests $1. fifthbn in Nigeria's deep-wa ter oilfields."
+    ]
+  }
+}

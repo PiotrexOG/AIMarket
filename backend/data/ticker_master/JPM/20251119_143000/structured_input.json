@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-3.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 290.54-322.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.09%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.309)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.75)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 290.54-322.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.9%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 303.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "ELEVATED (1.11)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.2% | OM: 26.2% | NM: 20.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.11x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -43.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $277.731B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.5%, EPS: 12.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.5%, Next Q Est Growth: -5.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.97, P/S: 3.05)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.35)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.2)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.9x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan announces largest financial fraud and sc AM prevention effort in firm's history.",
+      "JPMorgan acquires mobility payments platform from Volkswagon, closing operations in Luxembourgand Munich. - Celanese participates in fireside chat with J. P. Morgan. - Mc Kinsey warns of $5.trillion AI infrastructure bill, JPMorgan cautions on AI valuations.",
+      "Alibaba uses JPMorgan's blockchain for tokenized dollar and euro payments."
+    ],
+    "medium_term_50d": [
+      "JPMorgan announces largest financial fraud and sc AM prevention effort in firm's history.",
+      "JPMorgan acquires mobility payments platform from Volkswagon, closing operations in Luxembourgand Munich. - Celanese participates in fireside chat with J. P. Morgan. - Mc Kinsey warns of $5.trillion AI infrastructure bill, JPMorgan cautions on AI valuations.",
+      "Alibaba uses JPMorgan's blockchain for tokenized dollar and euro payments."
+    ],
+    "long_term_200d": [
+      "JPMorgan announces largest financial fraud and sc AM prevention effort in firm's history.",
+      "JPMorgan rolls out JPM C coin to institutional clients via Coinbasem's Block Chain. - FOMO Pay collaborates with J. P. Morgan Payements for remittance solutions. -JPMorgan launches blockchain-Based deposit token J PM Coin for instituional transfers. -jpmorgan brings yield bearing JPM C",
+      "JPMorgan announces $1. fifth trillion Security and Resiliency Initiate boostingcritical industries. - Jamie Dimon unveils $1.fifth trillion plan investing U.S.economicsecurityandresiliency."
+    ]
+  }
+}

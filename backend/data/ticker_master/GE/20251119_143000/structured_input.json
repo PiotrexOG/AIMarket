@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (23.9)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.05)",
+        "velocity_roc_10": "NORMAL (-2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 293.75-316.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.95%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.776)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 276.89-316.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.2%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.19%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 300.33,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.59%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.8% | OM: 21.6% | NM: 18.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.54x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.988B)",
+    "growth_profile_ttm": "REVENUE_CONTRACTION (Rev: -7.0%, EPS: 31.7%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 38.8%, Next Q Est Growth: -29.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.73, P/S: 7.28)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.03)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.25)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Arospeace receives orders from Emirates and flydub ai for 190 GE engines and long-term service agreements. - Emirates grows Boeing seventhree-9 fleet with 13o GE9 X engines. - flydub ais first widebody fle et powered by 60 Genx-1b",
+      "Reutemmas orders new engine oil without mentioning GE specifically. - American Airlines implements Airbus design fix using GE engines. - US bill mandates sensors on planes potentially affecting GE engines.- Whirlpool files patent infringements lawsuit against multiple competitors including GE Applies.",
+      "Standard Aero expands facility supporting GE Airospace CF3 fourth and CFM5 sixth engines."
+    ],
+    "medium_term_50d": [
+      "GE Arospeace receives orders from Emirates and flydub ai for 190 GE engines and long-term service agreements. - Emirates grows Boeing seventhree-9 fleet with 13o GE9 X engines. - flydub ais first widebody fle et powered by 60 Genx-1b",
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs.",
+      "Reutemmas orders new engine oil without mentioning GE specifically. - American Airlines implements Airbus design fix using GE engines. - US bill mandates sensors on planes potentially affecting GE engines.- Whirlpool files patent infringements lawsuit against multiple competitors including GE Applies."
+    ],
+    "long_term_200d": [
+      "GE Arospeace receives orders from Emirates and flydub ai for 190 GE engines and long-term service agreements. - Emirates grows Boeing seventhree-9 fleet with 13o GE9 X engines. - flydub ais first widebody fle et powered by 60 Genx-1b",
+      "GE Aersospace announces major aircraft engine order win. - Regulator imposes new ruling on GE's financial practices. - Merger: GE acquires key supplier in aviation industry. - Production delay at GE Power causes significant loss. - CEO announces major divestiture plan for healthcare unit.",
+      "GE announces strong Q3 earnings and upgrades profit outlook. - Five companies, including GE, reshore operations due to tariffs."
+    ]
+  }
+}

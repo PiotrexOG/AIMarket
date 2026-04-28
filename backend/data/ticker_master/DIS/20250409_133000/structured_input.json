@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (13.8)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.07)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-19.5%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-15.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 80.1-102.27]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.95%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.634)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.66)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 80.1-118.59]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-19.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.47%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 5.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 82.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.13%))",
+      "volume_dynamics": "ELEVATED (1.45)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 35.8% | OM: 13.0% | NM: 5.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 5.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $91.361B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 2.8%, EPS: 110.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -82.5%, Next Q Est Growth: 384.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.3, P/S: 1.64)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 1.49)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.27)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.29x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney witnesses 12%, share price decline due to rejected key proposals at AGM. - Disney's consumer products business faces exposure to new tariff regulations.",
+      "Disney reports Q2 twenty-five financial results. - Dow Jones experiences 1657-point drop, affects DIS stock price.",
+      "Disney combines Hulu servicewith Fubo TV's business Note: This output indicates that on March 31, 20 twenty-five, Disney announced a combination of their Hulu service and Fubo Television's business which could potentially have a direct impact on both companies."
+    ],
+    "medium_term_50d": [
+      "Disney witnesses 12%, share price decline due to rejected key proposals at AGM. - Disney's consumer products business faces exposure to new tariff regulations.",
+      "Disney combines Hulu servicewith Fubo TV's business Note: This output indicates that on March 31, 20 twenty-five, Disney announced a combination of their Hulu service and Fubo Television's business which could potentially have a direct impact on both companies.",
+      "FCC opens investigation into Disney and ABC's diversity practices - Disney under investigation for potential violation of US equal employment opportunity regulation - FCC chair accuses Disney of promoting discriminatory DEI initiatives - F CC planning to examine Disney's diversity policies and practices"
+    ],
+    "long_term_200d": [
+      "FCC opens investigation into Disney and ABC's diversity practices - Disney under investigation for potential violation of US equal employment opportunity regulation - FCC chair accuses Disney of promoting discriminatory DEI initiatives - F CC planning to examine Disney's diversity policies and practices",
+      "Disney combines Hulu servicewith Fubo TV's business Note: This output indicates that on March 31, 20 twenty-five, Disney announced a combination of their Hulu service and Fubo Television's business which could potentially have a direct impact on both companies.",
+      "Disney combines Hulu +Live TV business with Fubo TV. - DIS and FUBO form partnership in streaming industry."
+    ]
+  }
+}

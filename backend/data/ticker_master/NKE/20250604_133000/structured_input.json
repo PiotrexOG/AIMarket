@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.69)",
+        "velocity_roc_10": "STAGNANT (0.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 56.79-63.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.34%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.111)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.86)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 52.28-68.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-15.1%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-18.78%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 27.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 62.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.85%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 12.3% | NM: 11.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $51.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 0.3%, EPS: 15.0%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 253.6%, Next Q Est Growth: -87.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.75, P/S: 1.86)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.6)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike appoints Michael Gondas Chief Communications Officer - NIKE underperforms competitors despite daily gain - N IKE revamps leadership team with new executive appointments",
+      "Nike appoints Michael Gondas Executive Vice Presidentand Chief Communications Officer - Kizik names former Nike exec Gareth H osford as CEO",
+      "Nike Chief Innovator John Hoke retires. - Electric barge partnership announced between Nike and CMA C GM."
+    ],
+    "medium_term_50d": [
+      "Nike appoints Michael Gondas Chief Communications Officer - NIKE underperforms competitors despite daily gain - N IKE revamps leadership team with new executive appointments",
+      "Nike Chief Innovator John Hoke retires. - Electric barge partnership announced between Nike and CMA C GM.",
+      "Nike raises prices on a wide range of products as soon as this week. - \u041d\u0438ke returns to selling on Amazon following five-year absence."
+    ],
+    "long_term_200d": [
+      "Nike raises prices on a wide range of products as soon as this week. - \u041d\u0438ke returns to selling on Amazon following five-year absence.",
+      "Nike raises prices and resumes sales on Amazon. - Layoffs among Nike tech employees.",
+      "Tariffs: Trump proposes 80\\% levies on Chinese imports, including NKE products."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "STAGNANT (-1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 377.03-419.31]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.13%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.172)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 377.03-448.38]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-9.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.99%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 11.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 387.12,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.71%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.8% | OM: 44.6% | NM: 36.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.18x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 30.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $245.122B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.7%, EPS: 22.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -4.5%, Next Q Est Growth: 8.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.67, P/S: 11.8)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 10.77)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft partners with Taboola to sell displayads for MSN, Outlook,Games, and Office Suite. - Google buys cybersecurity company Wiz for$32 billions.",
+      "Microsoft explores natural gas for AI data centers amid energy challenges. - Artificial intelligence infrastructure firm Coreweave ( CRWV) announces plans for IPO.",
+      "Microsoft executive pitches building a quantum computer with Chetan Nayak. - Amazon division Annapurnalabs releases Trainium3AIchipbyendof202 five."
+    ],
+    "medium_term_50d": [
+      "Microsoft explores natural gas for AI data centers amid energy challenges. - Artificial intelligence infrastructure firm Coreweave ( CRWV) announces plans for IPO.",
+      "Microsoft partners with Taboola to sell displayads for MSN, Outlook,Games, and Office Suite. - Google buys cybersecurity company Wiz for$32 billions.",
+      "Microsoft executive pitches building a quantum computer with Chetan Nayak. - Amazon division Annapurnalabs releases Trainium3AIchipbyendof202 five."
+    ],
+    "long_term_200d": [
+      "Microsoft explores natural gas for AI data centers amid energy challenges. - Artificial intelligence infrastructure firm Coreweave ( CRWV) announces plans for IPO.",
+      "Microsoft partners with Taboola to sell displayads for MSN, Outlook,Games, and Office Suite. - Google buys cybersecurity company Wiz for$32 billions.",
+      "Microsoft executive pitches building a quantum computer with Chetan Nayak. - Amazon division Annapurnalabs releases Trainium3AIchipbyendof202 five."
+    ]
+  }
+}

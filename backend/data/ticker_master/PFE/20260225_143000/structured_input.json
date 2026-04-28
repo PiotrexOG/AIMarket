@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.61)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 25.26-27.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.38%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.061)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.12)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 24.83-27.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.25%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.97,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.38%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.56)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 70.3% | OM: 24.7% | NM: 12.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.77x, YrsToPay: 7.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.579B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.6%, EPS: -3.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -150.9%, Next Q Est Growth: 351.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.79, P/S: 2.45)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -3.85%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer secures $4 ninety five million China obesity drugs deal. - FDA grants full approval to Pfizer'sbraftovi combination regimen in first-line metastatic colon cancer.",
+      "Pfizer installs second Self- Driving Laboratory with Telescope Innovations. - Mikael Dolsen joins Neutrol IS board as Executive Director. -PFizer acquires exclusive rights to obesity drug in China.",
+      "Pfizer announces positive results from BRE Ak WATER trials. - Bio NTech sues Pfizer over next-generation COVID-1 nineteen shot technology."
+    ],
+    "medium_term_50d": [
+      "Pfizer secures $4 ninety five million China obesity drugs deal. - FDA grants full approval to Pfizer'sbraftovi combination regimen in first-line metastatic colon cancer.",
+      "Pfizer announces positive results from BRE Ak WATER trials. - Bio NTech sues Pfizer over next-generation COVID-1 nineteen shot technology.",
+      "Pfizer installs second Self- Driving Laboratory with Telescope Innovations. - Mikael Dolsen joins Neutrol IS board as Executive Director. -PFizer acquires exclusive rights to obesity drug in China."
+    ],
+    "long_term_200d": [
+      "Pfizer reports positive Phase \u2082b results for monthly obesity drugs PF-\u00b3\u00f5\u2084\u2094, planning over 20 studies in \u00b2\u2076. - CEO Bourla discusses GLP-\u00b9 weight-loss drugs pipeline during Market Domination interview.",
+      "Pfizer acquures Metserafor $10b in obesity market entry. - Signs licensing dealwith Novavax for vaccine adjuvan technology. - Joins Trump RX pricing initiativefocusing on deep medicationdiscounts.",
+      "Pfizer secures $4 ninety five million China obesity drugs deal. - FDA grants full approval to Pfizer'sbraftovi combination regimen in first-line metastatic colon cancer."
+    ]
+  }
+}

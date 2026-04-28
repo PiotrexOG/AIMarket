@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "STAGNANT (0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 60.29-67.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.89%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.25)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 60.29-76.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.86%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 64.31,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.86%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 44.6% | OM: 11.2% | NM: 10.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.29x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.978B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -5.0%, EPS: -6.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 188.9%, Next Q Est Growth: -52.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.85, P/S: 1.96)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.83)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -6.36%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "NIKE announces Q2 fiscal 24 earnings and conference call.",
+      "Nike exits partnership with Under Armour over Stephen Curry sponsorship. - Generation Investment Management sells Nike shares worth $268M.",
+      "Moody\u2019s downgrades Nike'ss debt ratings, causing 2.6% stock decline. - Loop signs partnership with Nike to increase use of recycl ED content."
+    ],
+    "medium_term_50d": [
+      "NIKE announces Q2 fiscal 24 earnings and conference call.",
+      "Nike exits partnership with Under Armour over Stephen Curry sponsorship. - Generation Investment Management sells Nike shares worth $268M.",
+      "Moody\u2019s downgrades Nike'ss debt ratings, causing 2.6% stock decline. - Loop signs partnership with Nike to increase use of recycl ED content."
+    ],
+    "long_term_200d": [
+      "NIKE announces Q2 fiscal 24 earnings and conference call.",
+      "Nike signs multi-year of ftake agreement with Loop Industires for virgin- quality polyester resins. - New \"Sport Offense\" strategy launched, uniting Nike, Jordan and Converse for growth.",
+      "Nike faces regulatory investigation over labor practices. - Adidas announces partnership with NFL, impacts NKE market share. - Major fire at Nike factory disrupts production schedule. - Apple suspends sale of Air Pods due to quality issues. - New tariffs imposed on imported footwear, affects NKE costs."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "NORMAL (5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 245.51-262.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.62%)",
+        "cycle_macd": "BULLISH_FADING (1.225)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.27)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 245.51-280.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.85%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 263.18,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "ELEVATED (1.19)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 4.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 35.18, P/S: 9.49)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 53.56)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.54)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Amazon agrees to buy Globalstar for $11.57 billion. - Amazon deal with Globalstar expands Apple satellite tie-up. - Amazon to buy Globalstar, powering Apple's emergency SOS. - Apple and Amazon partner on satellite deal. - Apple's fiscal Q2 earnings could beat Street consensus. - Globalstar agrees to Amazon takeover. - Nike shares rise as Apple's Tim Cook buys more stock. - Xiao-I stock sinks after patent win against Apple.",
+      "Apple boosted foldable display inventory by 20% to 11M units. - Apple faces challenges in eliminating screen creases for foldable phones. - Apple's entry into foldables could capture 20% market share. - Apple tests multiple designs for AI glasses, preparing smart eyewear entry. - Apple's i Phone and Mac portfolio may help stock recover in FY26. - Apple's App Store involved in a case of a lost retirement fund. - China smartphone shipments fell 1% in Q1 2026; Apple ranked second.",
+      "Apple TV expansion to Amazon Prime Video. - TSMC orders from Apple for AI chips. - Apple closing first U.S. retail store. - Apple to enter foldable smartphone market. - Fake Ledger app on Apple App Store drains Bitcoin. - Apple joins Project Glasswing cybersecurity alliance."
+    ],
+    "medium_term_50d": [
+      "Amazon agrees to buy Globalstar for $11.57 billion. - Amazon deal with Globalstar expands Apple satellite tie-up. - Amazon to buy Globalstar, powering Apple's emergency SOS. - Apple and Amazon partner on satellite deal. - Apple's fiscal Q2 earnings could beat Street consensus. - Globalstar agrees to Amazon takeover. - Nike shares rise as Apple's Tim Cook buys more stock. - Xiao-I stock sinks after patent win against Apple.",
+      "Apple boosted foldable display inventory by 20% to 11M units. - Apple faces challenges in eliminating screen creases for foldable phones. - Apple's entry into foldables could capture 20% market share. - Apple tests multiple designs for AI glasses, preparing smart eyewear entry. - Apple's i Phone and Mac portfolio may help stock recover in FY26. - Apple's App Store involved in a case of a lost retirement fund. - China smartphone shipments fell 1% in Q1 2026; Apple ranked second.",
+      "Apple Q1 earnings beat: record $143.8B revenue, strong i Phone demand. - Apple's foldable i Phone launch may be delayed due to technical challenges. - Bloomberg believes foldable i Phone launch is still on track for September. - Apple joins Project Glasswing to tackle AI cyber risks and resilience. - Apple is closing its first unionized retail store in the US."
+    ],
+    "long_term_200d": [
+      "Amazon agrees to buy Globalstar for $11.57 billion. - Amazon deal with Globalstar expands Apple satellite tie-up. - Amazon to buy Globalstar, powering Apple's emergency SOS. - Apple and Amazon partner on satellite deal. - Apple's fiscal Q2 earnings could beat Street consensus. - Globalstar agrees to Amazon takeover. - Nike shares rise as Apple's Tim Cook buys more stock. - Xiao-I stock sinks after patent win against Apple.",
+      "Apple Q1 earnings beat: record $143.8B revenue, strong i Phone demand. - Apple's foldable i Phone launch may be delayed due to technical challenges. - Bloomberg believes foldable i Phone launch is still on track for September. - Apple joins Project Glasswing to tackle AI cyber risks and resilience. - Apple is closing its first unionized retail store in the US.",
+      "Apple boosted foldable display inventory by 20% to 11M units. - Apple faces challenges in eliminating screen creases for foldable phones. - Apple's entry into foldables could capture 20% market share. - Apple tests multiple designs for AI glasses, preparing smart eyewear entry. - Apple's i Phone and Mac portfolio may help stock recover in FY26. - Apple's App Store involved in a case of a lost retirement fund. - China smartphone shipments fell 1% in Q1 2026; Apple ranked second."
+    ]
+  }
+}

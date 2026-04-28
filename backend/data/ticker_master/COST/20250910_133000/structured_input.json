@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 933.24-999.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.15%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.272)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 925.0-999.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.4%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 966.33,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.48%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.7% | OM: 3.7% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.12x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $258.805B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.4%, EPS: 16.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.3%, Next Q Est Growth: 43.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.61, P/S: 1.66)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.59)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco reports Aug '25 sales upward by 8. seventh % to $23.6B, e-commerce surges 18_. fourth %.",
+      "Costco reports 8. seventh % net sales increase.",
+      "AXIL brands debuts XCORSE\u2122 at 3oo+ Costco stores."
+    ],
+    "medium_term_50d": [
+      "Costco reports Aug '25 sales upward by 8. seventh % to $23.6B, e-commerce surges 18_. fourth %.",
+      "Costco reports 8. seventh % net sales increase.",
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy"
+    ],
+    "long_term_200d": [
+      "Costco reports weaker-than-expectated same-store Sales. - New regulatory ruling impacts Costco's import taxes. - Major lawsuit filed against Costco regarding data breach. - Production delay for key Costco product causes concern. -Costco announces acquisition of rival wholesaler. - Significant change in Costco'smarketing strategy",
+      "Costco reports Aug '25 sales upward by 8. seventh % to $23.6B, e-commerce surges 18_. fourth %.",
+      "Costco announces acquisition of major wholesale competitor. - FDA issues warning letter to Costco regarding food safety violations. - Court rules against Costco in major antitrust lawsuit. - New production facility fire significantly impacts COST operations. -Costco reveals Q3 earnings miss expectations. - Major supplier ends partnership with Costco over pricing dispute."
+    ]
+  }
+}

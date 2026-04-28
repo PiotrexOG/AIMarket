@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: Short-term momentum has improved, with RSI rising to 58.9 and velocity (ROC 4.3%) showing normal expansion. The price is now 2.5% above the 20-day SMA, indicating a positive shift from consolidation. The price remains within its 20-day range, but the upward bias is strengthening. W: The candle pattern is neutral, suggesting continued indecision despite improved momentum. The price is still within a defined range, limiting immediate upside potential. Conviction is moderate due to the lack of a decisive breakout. O: A sustained move above the current 20-day range resistance, coupled with increasing volume, could signal a continuation of the upward trend. Positive news flow regarding new content or strategic partnerships could act as a catalyst. T: Downside risk has decreased as volatility (ATR 2.87%) remains moderate and the price is moving away from the 20-day SMA. The risk of a sharp reversal is reduced compared to the previous period."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.8,
+        "risk": 5.2
+      },
+      "synthesis": "S: The medium-term outlook presents a mixed picture. The MACD continues to accelerate bullishly (0.551), suggesting underlying strength. However, trend alignment remains bearish (-4.82%) and the price is further below the 50-day SMA (Z-score -1.13), indicating a weakening trend. The price is still within the monthly range, suggesting consolidation. W: The divergence between the bullish MACD and the bearish trend alignment and SMA positioning limits conviction in a sustained uptrend. The increasing distance from the 50-day SMA poses a risk of mean reversion. O: A decisive break above the 50-day SMA and a sustained positive trend alignment would be required to confirm a medium-term trend reversal. Positive earnings surprises or strong subscriber growth announcements could provide the necessary impetus. T: Risk remains elevated due to the bearish trend alignment and the increasing deviation from the 50-day SMA. While the MACD is positive, the overall trend structure suggests potential for further downside or a prolonged period of sideways movement before a recovery."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 6.8,
+        "risk": 3.7
+      },
+      "synthesis": "S: The long-term technical structure remains constructive, supported by a secular bull market regime and a healthy Golden Cross (3.23% above 200-day SMA). The price is positioned at 55.6% within the long-term range, indicating a neutral to slightly bullish bias. Fundamentals continue to be a strong pillar, with high business quality, a healthy balance sheet, and robust cash generation. W: Valuation remains a primary concern, with hyper-premium multiples (P/E 45.14, P/S 11.11) and high multiple risk (P/B 18.57). The implied growth (PEG 1.24) is fair but does not fully justify the current valuation. Quarterly earnings momentum has deteriorated, which could signal future fundamental headwinds. O: The persistent secular bull market and solid underlying fundamentals provide a supportive backdrop for potential upside. Strategic initiatives, such as new content strategies or potential M&A activity, could act as catalysts for future growth. T: Downside risk is primarily driven by the stretched valuation and the potential for a market correction or a shift in investor sentiment away from high-growth stocks. However, the strong business fundamentals and constructive long-term technicals offer some resilience against significant downside."
+    }
+  }
+}

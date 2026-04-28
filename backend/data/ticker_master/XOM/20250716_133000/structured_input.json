@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.6)",
+        "velocity_roc_10": "NORMAL (4.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 107.15-116.95]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.55%)",
+        "cycle_macd": "BULLISH_FADING (0.159)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 101.18-116.95]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.21%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 112.83,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.73%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.5% | OM: 11.6% | NM: 9.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.08x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.894B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.5%, EPS: -7.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 1.1%, Next Q Est Growth: -11.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.94, P/S: 1.48)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.92)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -7.48%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon \u041cobal borrows 1 million barrels of crudefrom SPR due to contammed offshore supplies. - CF Industries starte CO\u2082 compressions at Donaldsonville, sequesters 2 mtpa annually. - Oceanearing wins $9o M contract from Esso Angola for ROV and services.",
+      "DOE authorizes SPR exchange with Exxons Mobil regarding fuel supply issues. - Chevron faces Mars crude quality issues due to offshore well start-up. - CF Industries starts CO2 dehydr ATION and compression unit, enables transport and sequestr ATION. -Exxon Mobils ethyleneproject in Chinas Huizhou",
+      "US okays crude exchange with Ex xon Mobil (1 MB barrels) - Offshore well causes zinc contimation in Mars cru DE (Chevron) - Ex xon Mobil receives 1MB barrels of CRUDE oil from DOE - Chevron: offshore well starts-up causes Mars cru DE quality issue"
+    ],
+    "medium_term_50d": [
+      "Indonesian government official announces signing of $34bn deal between Pertaminda, Exxons Mobil, and Chev\u0440\u043e\u043d, including purchases of US soybeans., corn, and cotton. - Consortium madeupof Exxon Mobilyandpartner Qatar Energy Internationaldiscoverssecondnaturalgasdepositionoff Cypr",
+      "Arbiters reach verdict in Exxons and Chevrons dispute over H ess acquisition. -Exxon Mobils Guyana production set to grow roughly 50%.",
+      "DOE authorizes SPR exchange with Exxons Mobil regarding fuel supply issues. - Chevron faces Mars crude quality issues due to offshore well start-up. - CF Industries starts CO2 dehydr ATION and compression unit, enables transport and sequestr ATION. -Exxon Mobils ethyleneproject in Chinas Huizhou"
+    ],
+    "long_term_200d": [
+      "Shell in early talks to acquire BP (potential merger of two major oil companies)",
+      "Arbiters reach verdict in Exxons and Chevrons dispute over H ess acquisition. -Exxon Mobils Guyana production set to grow roughly 50%.",
+      "Indonesian government official announces signing of $34bn deal between Pertaminda, Exxons Mobil, and Chev\u0440\u043e\u043d, including purchases of US soybeans., corn, and cotton. - Consortium madeupof Exxon Mobilyandpartner Qatar Energy Internationaldiscoverssecondnaturalgasdepositionoff Cypr"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technicals present a mixed picture, with a bearish candle pattern and neutral RSI (43.6) suggesting a lack of immediate upward momentum. However, the price is stable near its base SMA20 (-5.8%), indicating some support. O: Potential for a short-term bounce if the price can hold the SMA20 and overcome immediate bearish sentiment. T: The elevated volume (1.36) could signal increased activity, but the current range position in the middle of the 20-day range suggests consolidation rather than a breakout. W: The bearish candle pattern and neutral momentum are significant headwinds, and the price is currently within a defined range, limiting upside potential without a catalyst."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: Medium-term trend alignment shows expanding bullish momentum (6.29%), which is a positive sign. The price is also exhibiting healthy mean reversion around the SMA50 (Z:0.09). O: The expanding bullish momentum suggests potential for further upside if the current trend can be sustained. The healthy base near the SMA50 provides a constructive foundation. T: The MACD is showing bearish acceleration (-1.003), which contradicts the broader trend momentum and indicates potential for a near-term pullback. W: The primary concern is the diverging MACD signal, which could signal a reversal of the current bullish momentum. The price is still within a broader monthly range, suggesting that significant upside may be capped without a fundamental shift."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term outlook is predominantly bearish, characterized by a secular bear market (-12.3%) and a persistent death cross structure (-12.39%). The price is positioned in the lower quadrant of its long-term range (33.4%). O: Despite the bearish regime, the company's fundamental strength (high efficiency, healthy balance sheet, strong cash generation) provides a potential floor and could support a recovery if the broader market sentiment shifts. T: The premium valuation multiples (P/E: 29.5, P/S: 8.54) and high multiple risk (P/B: 12.87) are significant concerns, especially within a bearish market regime. W: The structural bearishness of the long-term trend and the elevated valuation multiples present substantial downside risk. The death cross structure indicates a lack of sustained buying interest over an extended period."
+    }
+  }
+}

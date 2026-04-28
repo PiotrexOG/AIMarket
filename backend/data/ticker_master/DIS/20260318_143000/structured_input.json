@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (27.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 98.45-107.77]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.98%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.214)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.49)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 98.45-116.03]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-10.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.69%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 6.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 100.24,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.09%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.8% | OM: 14.6% | NM: 13.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.36x, YrsToPay: 3.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 10.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.425B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 152.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -53.8%, Next Q Est Growth: 105.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.59, P/S: 1.92)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.65)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.1)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney names new leadership for entertainment segment. - Disney restructures entertainment division under Dana Walden. - Disney's streaming business achieves profitability. - ESPN finalizes NFL distribution rights partnership.",
+      "Disney reorganizes entertainment operations under single leadership.",
+      "Disney appoints new Chief Communications Officer. - Pixar's new film \"Hoppers\" opens as top grossing."
+    ],
+    "medium_term_50d": [
+      "Disney names new leadership for entertainment segment. - Disney restructures entertainment division under Dana Walden. - Disney's streaming business achieves profitability. - ESPN finalizes NFL distribution rights partnership.",
+      "Disney leadership shift reshapes streaming strategy. - Disney appoints Josh D'Amaro as CEO. - Disney combines Disney+ and Hulu into one app. - Disney plans new theme park in Abu Dhabi.",
+      "Disney reorganizes entertainment operations under single leadership."
+    ],
+    "long_term_200d": [
+      "Disney leadership shift reshapes streaming strategy. - Disney appoints Josh D'Amaro as CEO. - Disney combines Disney+ and Hulu into one app. - Disney plans new theme park in Abu Dhabi.",
+      "Disney names new leadership for entertainment segment. - Disney restructures entertainment division under Dana Walden. - Disney's streaming business achieves profitability. - ESPN finalizes NFL distribution rights partnership.",
+      "Disney stock slides amid U.S.\u2013Israel\u2013Iran conflict escalation. - Disney's Pixar film Hoppers opens No.1 with $46 million. - Disney CEO Josh D'Amaro appointed, focusing on streaming, parks. - Disney removes popular character from cruise ships."
+    ]
+  }
+}

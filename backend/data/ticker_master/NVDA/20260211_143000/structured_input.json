@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "STAGNANT (0.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 171.03-198.73]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.63%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.045)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.94)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 170.31-198.73]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.89%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 188.92,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.63%))",
+      "volume_dynamics": "AVERAGE (0.76)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.9% | OM: 62.7% | NM: 55.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $113.269B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 152.4%, EPS: 233.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -37.3%, Next Q Est Growth: 94.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 73.51, P/S: 41.32)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 71.02)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia inventory hits $19,7B due to AI CAPEx surge. - TSMC reports 37 % Jan revenue increase driven by AI spending. - Alibaba introduces open-source 'Rynn Brain' for robotics AI.",
+      "Nvidia ties physical AI and weather models to growth debate. - Collaborates with Opentrons on lab automation using NVIDIA Isaac and Cosmos. - Introduces Earth 2open weather AI tools for faster and more detail forecasting.",
+      "Nvidia investing $20 billions in Open AI. - Expanding physical AI through partnerships inlab robotics andindustrial automation. - Alphabet increasing capex spend, benefitting Nvidia. - AI-driven market rotation favoring Nvidia stock. - Wistron chair sees continued growth in AI industry. - Upbeat"
+    ],
+    "medium_term_50d": [
+      "Nvidia investing $20 billions in Open AI. - Expanding physical AI through partnerships inlab robotics andindustrial automation. - Alphabet increasing capex spend, benefitting Nvidia. - AI-driven market rotation favoring Nvidia stock. - Wistron chair sees continued growth in AI industry. - Upbeat",
+      "Nvidia inventory hits $19,7B due to AI CAPEx surge. - TSMC reports 37 % Jan revenue increase driven by AI spending. - Alibaba introduces open-source 'Rynn Brain' for robotics AI.",
+      "Nvidia invests $2 billion in Core Weaves AI infrastructure. - Micron not expected in Nvidia next gen HBM4 supplier list. - Elon Musks changes may affect Nvidia-Tesla relationship."
+    ],
+    "long_term_200d": [
+      "Nvidia investing $20 billions in Open AI. - Expanding physical AI through partnerships inlab robotics andindustrial automation. - Alphabet increasing capex spend, benefitting Nvidia. - AI-driven market rotation favoring Nvidia stock. - Wistron chair sees continued growth in AI industry. - Upbeat",
+      "China grants approval for importsof Nvidia H200 chips. - Jensen Huangs speaks on \"large\" Open AI investment. - China approves Nvidiachip sales to China after period of controlson advanced AI semicons.",
+      "Samsung nears approval for key HBM4AI memory chips for Nvidia. - Samsung to start HBM4 memory chip production next month for Nvidian supply. - Core Weave and Nvid\u00eda deepen partnership, Nvidia invests $2 billion. -Core Weave builds out more than five gigawatts AI factories by 20"
+    ]
+  }
+}

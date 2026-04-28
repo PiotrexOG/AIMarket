@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has decisively shifted bearish with RSI falling to 36.6. Velocity has normalized but remains negative (-7.7%), and the price is now stable but below the 20-day SMA (-3.7%). The 20-day range has tightened slightly. W: The bearish RSI and negative trend base indicate a loss of short-term upward conviction and increasing downside pressure. The 'RANGE' bias persists, limiting immediate upside. O: News flow is mixed, with strategic conviction in Revolution Medicines and AI investment, but also negative headlines related to account closures for Trump and EU fines. T: The score has decreased by 1.8 points due to the significant bearish shift in RSI and negative trend base. Conviction has decreased by 1.0 point as short-term signals are now clearly bearish. Risk has increased by 1.0 point due to the bearish momentum, negative trend, and the mixed, potentially negative, news flow, coupled with expanding volatility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.0,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains bearish (-1.83%), and the MACD has accelerated its bearish descent (-1.093). The Z-score relative to the 50-day SMA has worsened significantly to a bearish trend position (Z:-1.33). The price remains within the broader monthly range. W: The accelerating bearish MACD and worsening SMA position are strong indicators of sustained downside pressure and a weakening trend. The 'RANGE' bias suggests this bearish move is occurring within a larger consolidation. O: The medium-term news narrative is dominated by negative headlines, including account closures, lawsuits, and EU fines, which outweigh any positive strategic commentary. T: The score has decreased by 1.5 points due to the accelerating bearish MACD and worsening SMA position. Conviction has decreased by 1.0 point as medium-term technical signals have deteriorated significantly. Risk has increased by 2.0 points due to the accelerating bearish momentum, the bearish trend position, and the negative news flow, combined with expanding volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term market regime has shifted to a 'BEAR_MARKET_RELIEF_RALLY' (-0.4%), indicating a less favorable macro environment. While the golden cross structure remains healthy (5.25%), the long-term range position has moved to a neutral zone (57.3%). W: The shift in market regime and the neutral long-term range position suggest a loss of long-term bullish conviction and increased uncertainty. The 'RANGE' bias indicates that significant upside may be capped. O: The long-term news narrative is mixed, featuring positive strategic developments like AI investment but also negative legal and regulatory news, alongside the previous Apple Card issuer change. T: The score has decreased by 2.5 points due to the shift in market regime to a bear market rally and the neutral long-term range position. Conviction has decreased by 2.0 points as long-term technicals show a clear weakening. Risk has increased by 1.5 points due to the less favorable market regime, the neutral range position, and the mixed news flow, coupled with expanding volatility."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI falling to neutral territory (46.5) from a strong bullish zone. The candle pattern has shifted to a bearish shooting star, indicating selling pressure. Velocity (ROC 10) has turned negative (-2.5%), and the 20-day SMA trend base is now consolidating (0.1%). The price remains in the middle of the 20-day range (114.47-125.12). W: The bearish shooting star pattern and negative velocity signal a loss of upward momentum. The shift to neutral RSI and consolidating trend base indicates a lack of conviction. Volume dynamics have improved to 'average' (0.84), but this is not yet translating into upward price action. O: News flow remains mixed, with some positive content announcements but also mentions of potential market shifts (F1 sale) with no direct impact. T: The score has decreased from 6.5 to 5.0 due to the bearish shooting star, neutral RSI, and negative velocity. Conviction has decreased from 6.0 to 5.0 as the short-term technicals have weakened. Risk has increased from 5.5 to 6.5, reflecting the bearish candle pattern, negative momentum, and increased volatility as indicated by the ATR (2.28%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains in a bearish descent, though less severe (-1.42%) than previously (-2.29%). MACD momentum is now fading (0.09) from bullish acceleration. The Z-score to the 50-day SMA has moved further into mean reversion territory (Z:-0.44) from a healthy base. The price remains within the monthly range (114.47-134.12). W: The fading MACD and increased negative Z-score suggest a loss of bullish momentum and a potential for further downside within the current range. Trend alignment is still negative, indicating a lack of sustained upward trend. O: News regarding exclusive streaming rights for the World Baseball Classic and continued expansion into live sports provides some fundamental support, but the technicals are showing weakness. T: The score has decreased from 5.5 to 4.5, reflecting the fading MACD, increased negative Z-score, and continued bearish trend alignment. Conviction has decreased from 5.5 to 4.5 as the medium-term technicals are showing signs of deterioration. Risk has increased from 6.0 to 6.5 due to the weakening MACD, increased negative Z-score, and the overall bearish trend, despite remaining within a broad range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.8,
+        "risk": 7.0
+      },
+      "synthesis": "S: The long-term market regime percentage has slightly decreased (14.9%), and the major crosses now show a slightly lower percentage (16.41%) while still maintaining a healthy golden cross structure. The price position within the upper quadrant has decreased to 75.4% from 80.3%. W: The slight decrease in market regime percentage and long-term range position suggests a minor cooling of the secular bull market. The 'C: DISTANT @20d' barrier in the SR landscape indicates less immediate resistance, but the overall trend is showing signs of consolidation. O: Long-term news narrative remains positive with mentions of strong historical earnings and expansion into new content areas. However, valuation multiples remain hyper-premium, posing a persistent risk. T: The score has slightly decreased from 5.0 to 4.8, driven by the decrease in market regime percentage and long-term range position. Conviction remains stable at 4.8 as the long-term technicals are mixed with positive crosses but a slightly lower regime percentage. Risk has slightly increased from 6.8 to 7.0, primarily due to the persistent hyper-premium valuation multiples and the slight weakening of the long-term trend indicators, despite the continued golden cross structure."
+    }
+  }
+}

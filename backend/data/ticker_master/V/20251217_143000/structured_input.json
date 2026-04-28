@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.9)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 318.0-349.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.75%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.547)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.98)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 318.0-355.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.86%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 346.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 80.2% | OM: 62.2% | NM: 52.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.21x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 56.8%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.893B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 11.4%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.4%, Next Q Est Growth: 16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 33.78, P/S: 17.44)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 17.54)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.51)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement",
+      "Merchants oppose Visa and Mastercard card fees p act. -Visa launches Stable Coins Advisory Pract ice. -Mass Pay integrates Visa Directforinst antpayments.",
+      "Bank of America frames Visa as a fintech innovator through stablecoin upgrade."
+    ],
+    "medium_term_50d": [
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement",
+      "Merchants oppose Visa and Mastercard card fees p act. -Visa launches Stable Coins Advisory Pract ice. -Mass Pay integrates Visa Directforinst antpayments.",
+      "Bank of America frames Visa as a fintech innovator through stablecoin upgrade."
+    ],
+    "long_term_200d": [
+      "Visa launes USDC settlement for US institutions - USDC settlement allows faster seven-day fund transfers - Participants include Cross River Bank and Lead Bank - Settlement over Solana blockchairn - Visaa allows US financial institutions USDC settlement",
+      "Mastercard and Visa propose settling antitrustlitigationwithmerchants,affectingpaymentfeesandacceptancerules.",
+      "Visa pilots direct stablecoinpayouts to digitalwallets. - Visaand Mastercardlaunchfiat-to-(reversible)stablecoincpaymentsolutions. --Circleexploresreversiblestablecointransactionson Arcplatform. ---Visaintegratesstablecoinstackforpaymentshyperscaling."
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (30.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "STAGNANT (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-7.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 76.15-99.91]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-11.3%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.148)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.26)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 76.15-117.46]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-13.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.31%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 28.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 84.83,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (6.1%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 26.8% | OM: 15.0% | NM: 10.4%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 6.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.1761B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 0.6%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 19.4%, Next Q Est Growth: -40.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 25.63, P/S: 2.67)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.95)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.06%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks updates barista dresscode focusing on green aprons - Star\u0431ucks announces Q2 \u0424iscal Year \u0421\u041e\u0414 20\u2082five financial results conference call",
+      "Starbucks upgraded to \"Hold\" at Jefferies. - Significant stock pullback of over 30%."
+    ],
+    "medium_term_50d": [
+      "Starbucks faced with unexpected tariffs, CEO concerned about price increases. - Tariffs threaten Starbucks turnaround, shares hit 20 twenty-five low. - Dining and leisure stock trading lower due to tariff and inflation concerns.",
+      "President Trump announces reciprocaltariffs on all USimports, affecting Starbucks(SBUX). - Starbuks stock falls 10,7%, following President Trump'stariffannouncement.",
+      "Starbucks upgraded to \"Hold\" at Jefferies. - Significant stock pullback of over 30%."
+    ],
+    "long_term_200d": [
+      "Starbucks faced with unexpected tariffs, CEO concerned about price increases. - Tariffs threaten Starbucks turnaround, shares hit 20 twenty-five low. - Dining and leisure stock trading lower due to tariff and inflation concerns.",
+      "President Trump announces reciprocaltariffs on all USimports, affecting Starbucks(SBUX). - Starbuks stock falls 10,7%, following President Trump'stariffannouncement.",
+      "Starbucks declares $0. sixth one dollar dividend despite Q1 decrease in stock price. - Stock price decline for SBUX: 11%. - S&P500 drops 6%; Nasdaq enters bear market territory."
+    ]
+  }
+}

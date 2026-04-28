@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The short-term technical picture has deteriorated further, with the STRONG_BEARISH candle pattern persisting. RSI has moved into EXTREME_OVERSOLD territory at 26.2, indicating potential for a bounce but also significant selling pressure. The SMA20 is now overstretched at -5.6%, and the price has reached a CRITICAL_SUPPORT level at 83.27. Velocity (ROC 10) remains negative at -2.4%. W: The extreme oversold RSI and critical support level present a dichotomy: potential for a short-term bounce versus continued downside if support breaks. Elevated volume dynamics are absent (AVERAGE: 1.08), suggesting a lack of conviction behind the current move. News regarding coffee supply fears and profit declines adds to headwinds. O: A sustained break below the 83.27 support level, accompanied by a failure to bounce from oversold conditions, would confirm a deeper short-term downtrend. Conversely, a strong bounce from this level, supported by improving momentum, could signal a short-term reversal. T: Downside risk has increased due to the price reaching critical support and the oversold RSI, which can precede sharp reversals or further capitulation. Structural confidence has decreased as the price is testing a key support level amidst ongoing bearish momentum. The score is adjusted down from 3.0 to 2.0 due to increased risk and the proximity to critical support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 1.5,
+        "conv": 3.0,
+        "risk": 8.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish, with a GRADUAL_DESCENT of -2.74%. The MACD has accelerated its bearish trend, now at -0.426, indicating increasing downward momentum. The position relative to the 50-day SMA has become OVEREXTENDED_BEARISH_STAT_OUTLIER at Z:-2.4. The price is currently strengthening at the monthly support zone (83.27-98.89), but this is occurring within a deteriorating trend. W: The accelerating bearish MACD and overextended position relative to the 50-day SMA are significant concerns. While the price is at monthly support, the underlying trend is weakening, suggesting this support may not hold. News regarding profit declines and consumer spending tightening reinforces the bearish outlook. O: A decisive break below the 83.27 support zone, coupled with a continued bearish MACD trend and no fundamental catalysts for improvement, would solidify a stronger medium-term bearish outlook. T: Downside risk has increased significantly due to the accelerating bearish MACD and the overextended position, which suggests further downside is probable if support fails. Structural confidence has decreased as the price is testing key support levels within a deteriorating trend. The score is adjusted down from 2.5 to 1.5 due to increased risk and deteriorating medium-term momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "risk": 8.8
+      },
+      "synthesis": "S: The long-term market regime remains firmly in a SECULAR_BEAR_MARKET (-11.1%), with the DEATH_CROSS_STRUCTURE widening slightly to -3.14%. The long-term range position has further deteriorated to the BEARISH_LOWER_QUADRANT at 18.8%, indicating a significant decline from previous levels. W: Fundamental growth remains stagnant with deteriorating EPS, and the balance sheet is still stressed. Valuation remains premium despite the price decline, with extremely risky implied growth. News flow continues to highlight strategic re-evaluation of the China business and profit declines, adding to long-term uncertainty. The potential sale of the China business remains a significant development, but the terms and impact are still unclear and potentially negative given profit warnings. O: A sustained shift in the broader market regime to a clear bull market, a significant turnaround in fundamental growth and profitability, and a definitive resolution of strategic uncertainties at favorable terms are necessary for a robust long-term recovery. T: Downside risk remains extremely elevated due to the persistent secular bear market, stressed fundamentals, premium valuation, and ongoing operational and strategic concerns. Structural confidence has decreased due to the further deterioration in the long-term range position and persistent macro and company-specific headwinds. The score is adjusted down from 3.0 to 2.5 due to increased risk and further deterioration in long-term positioning and fundamental outlook."
+    }
+  }
+}

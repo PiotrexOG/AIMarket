@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (22.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "NORMAL (-5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 211.43-238.33]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.97%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.379)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 211.43-242.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.49%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 217.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.23%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -0.3% | OM: -12.4% | NM: -14.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $75.328B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.4%, EPS: -193.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 27.6%, Next Q Est Growth: -158.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -49.85)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing logs record Dreamliner order from Usbekistan Airway worth over $ Eight billion. - Uzbekstan Airways buys up to 14 Dreamliner-9 jets from Boeing. - President Trump announces $8 billion Boeing deal with Uzbekitan Airways during NY visit.",
+      "Boeing gets order from Uzbekistan Airways for up to 23 Dreamliner jets.",
+      "Striking Boeing Defense workers approve rejected contract. - Possible 25o-jet order from Turkey for Boeing and Lockheel Martin."
+    ],
+    "medium_term_50d": [
+      "Boeing logs record Dreamliner order from Usbekistan Airway worth over $ Eight billion. - Uzbekstan Airways buys up to 14 Dreamliner-9 jets from Boeing. - President Trump announces $8 billion Boeing deal with Uzbekitan Airways during NY visit.",
+      "Boeing gets order from Uzbekistan Airways for up to 23 Dreamliner jets.",
+      "Striking Boeing Defense workers approve rejected contract. - Possible 25o-jet order from Turkey for Boeing and Lockheel Martin."
+    ],
+    "long_term_200d": [
+      "Boeing logs record Dreamliner order from Usbekistan Airway worth over $ Eight billion. - Uzbekstan Airways buys up to 14 Dreamliner-9 jets from Boeing. - President Trump announces $8 billion Boeing deal with Uzbekitan Airways during NY visit.",
+      "Boeing reacquiring Spirit Aero System Holdings - Etihad and DSV signing contract with Atlas Air - Allegiant experiencing improved July traffic numbers",
+      "Boeing gets order from Uzbekistan Airways for up to 23 Dreamliner jets."
+    ]
+  }
+}

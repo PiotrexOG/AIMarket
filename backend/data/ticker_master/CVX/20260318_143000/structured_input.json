@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (74.2)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "NORMAL (5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 181.76-200.58]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.99%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.403)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.85)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 154.9-200.58]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (24.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.33%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 199.55,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "ELEVATED (1.14)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: 9.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.87, P/S: 2.14)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.14)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron in advanced talks to buy 30% stake in Ipiranga.",
+      "Chevron fined $1 million over fuel credits. - Chevron secures new exploration block in Libya. - Chevron advances Cyprus' Aphrodite gas field development. - Chevron executives caution energy market volatility.",
+      "Chevron declares force majeure at Leviathan gas field. - Chevron reaches settlement with US Department of Justice. - Chevron pursues new oil deals in Venezuela. - Chevron plans workforce reduction. - Chevron and Shell inching toward Venezuela production agreements."
+    ],
+    "medium_term_50d": [
+      "Chevron sells Angola offshore blocks, expands Venezuela deals. - Berkshire Hathaway increases stake in Chevron. - Worley secures Aphrodite gas field FEED contract from Chevron.",
+      "Energean acquires Chevron's Angola blocks for $260M. - Chevron expands Gulf of Mexico presence with new leases. - Chevron stock outperforms competitors on strong trading day. - Chevron hits new highs due to oil's rally. - Chevron stock up due to oil surge and asset sale.",
+      "Chevron in advanced talks to buy 30% stake in Ipiranga."
+    ],
+    "long_term_200d": [
+      "Chevron completes Hess Corporation acquisition. - Chevron enters exclusive talks for Iraq oilfield. - Chevron explores Venezuela production expansion. - Chevron stock priced for $100 oil environment.",
+      "Chevron sells Angola offshore blocks, expands Venezuela deals. - Berkshire Hathaway increases stake in Chevron. - Worley secures Aphrodite gas field FEED contract from Chevron.",
+      "Chevron completes Hess acquisition, gains Guyana interest. - Chevron negotiates for Iraq's West Qurna 2 oilfield."
+    ]
+  }
+}

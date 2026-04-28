@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 466.96-500.76]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.54%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.77)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.56)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 384.44-500.76]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.35%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 504.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.28%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.3% | OM: 44.5% | NM: 35.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.14x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.19B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.4%, EPS: 17.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.1%, Next Q Est Growth: 1.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 41.46, P/S: 14.83)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 13.1)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.37)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades.",
+      "Microsoft versus Amazon: Strategic decision on cloud computing competition. - European Union investigates Microsoft's business practices.",
+      "Microsoft collaborates with Replit to bring coding to enterprise customers. (Replit announcement) - Microsoft and Novata scale sustainability solutions for SME globally. (Novata announcement) Note: These events were identified based on the given criteria and rules. Events 0, 1, and 11 were ignored due to their irrelevant content. Event 2 was"
+    ],
+    "medium_term_50d": [
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades.",
+      "Microsoft lays off about 18,00zero employees (global teams affected) - Microsoft faces major AI chip development delays (pushing roadmap to 2oo8)",
+      "Microsoft versus Amazon: Strategic decision on cloud computing competition. - European Union investigates Microsoft's business practices."
+    ],
+    "long_term_200d": [
+      "Microsoft partners with Open AI. -Microsoft and Intuitative Surgical identified as unstoppable growth stocks for next 2 decades.",
+      "Microsoft lays off about 18,00zero employees (global teams affected) - Microsoft faces major AI chip development delays (pushing roadmap to 2oo8)",
+      "Microsoft invests $10+ billion in Scale AI. - MSFT tops $3.trillion market cap, sets records. - Warren Buffett increases stake in MSFT, Amazon."
+    ]
+  }
+}

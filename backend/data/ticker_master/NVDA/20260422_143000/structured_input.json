@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (90.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "EXPLOSIVE_UP (12.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 164.27-202.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.04%)",
+        "cycle_macd": "BULLISH_FADING (2.532)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.06)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 164.27-202.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.09%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 201.6,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.26%))",
+      "volume_dynamics": "AVERAGE (0.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 67.88, P/S: 38.17)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 62.79)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.47)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia shares fall amid rising U.S.-Iran tensions. - Nvidia stock slides after historic rally. - SK Hynix begins mass production for NVIDIA AI servers. - D-Wave climbs on Nvidia quantum support. - Nvidia expands QNX partnership for industrial edge AI. - Gamers frustrated as Nvidia prioritizes data-center chips. - NVIDIA mirrors Bitcoin setup as Trump's tariff refunds hit.",
+      "Nvidia CEO acknowledges missing early AI investment chances. - Nvidia has multi-billion dollar stakes in AI startups. - Nvidia invests in Marvell and Lumentum. - Nvidia's AI tie-up redefines Xanadu Quantum Technologies' edge. - Nvidia's market cap slipped below $5 trillion milestone.",
+      "Nvidia announces new open-source quantum AI models. - Nebius and TD SYNNEX launch NVIDIA HGX B300 clusters. - Nvidia reportedly exploring large PC space acquisition, Dell eyed. - Nvidia's Ising quantum AI model adopted by partners. - Nvidia rival Cerebras revives IPO plans. - Gamers feel left behind as Nvidia focuses on AI chips."
+    ],
+    "medium_term_50d": [
+      "Nvidia launches next-generation AI training GPU. - Nvidia expands Taiwan packaging capacity for AI accelerators. - Nvidia signs multibillion AI chip supply deal with cloud provider. - US export rules restrict Nvidia chip sales to China. - Nvidia launches open-source quantum AI models. - Nvidia's acquisition of Slurm software maker questioned by Senator Warren. - Nvidia invests $2 billion into Marvell Technology. - Nvidia's Ising models fuel quantum stock rally. - Matlantis integrates NVIDIA ALCHEMI Toolkit for materials discovery. - XRNotify uses NVIDIA Nemo Claw for real-time XRP Ledger events.",
+      "Nvidia CEO acknowledges missing early AI investment chances. - Nvidia has multi-billion dollar stakes in AI startups. - Nvidia invests in Marvell and Lumentum. - Nvidia's AI tie-up redefines Xanadu Quantum Technologies' edge. - Nvidia's market cap slipped below $5 trillion milestone.",
+      "Nvidia invests $2b in Marvell, expands AI chip work. - Nvidia CEO warns against isolating China in AI race. - Nvidia launches AI-powered workflow for quantum systems. - Nvidia unveils \"Ising\" calibration for quantum systems. - Nvidia's Ising models accelerate quantum error correction. - Nvidia's current position in AI semiconductor space examined. - Nvidia chipmaker Taiwan Semi falls on earnings."
+    ],
+    "long_term_200d": [
+      "Nvidia launches next-generation AI training GPU. - Nvidia expands Taiwan packaging capacity for AI accelerators. - Nvidia signs multibillion AI chip supply deal with cloud provider. - US export rules restrict Nvidia chip sales to China. - Nvidia launches open-source quantum AI models. - Nvidia's acquisition of Slurm software maker questioned by Senator Warren. - Nvidia invests $2 billion into Marvell Technology. - Nvidia's Ising models fuel quantum stock rally. - Matlantis integrates NVIDIA ALCHEMI Toolkit for materials discovery. - XRNotify uses NVIDIA Nemo Claw for real-time XRP Ledger events.",
+      "Nvidia invests $2b in Marvell, expands AI chip work. - Nvidia CEO warns against isolating China in AI race. - Nvidia launches AI-powered workflow for quantum systems. - Nvidia unveils \"Ising\" calibration for quantum systems. - Nvidia's Ising models accelerate quantum error correction. - Nvidia's current position in AI semiconductor space examined. - Nvidia chipmaker Taiwan Semi falls on earnings.",
+      "Nvidia CEO urges move to California despite high taxes. - Lowe's partners with Nvidia for skilled trades investment. - Nvidia launches open-source quantum AI models (Ising). - Nvidia's AI demand remains strong, says BNP Paribas. - Bank of America revamps Nvidia-backed Core Weave, Nebius. - Nvidia stock rises for 10th consecutive day. - Nvidia, Google flash buy signals; Nasdaq wins streak. - Nvidia bets on AI to accelerate quantum computing."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 243.42-280.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.6%)",
+        "cycle_macd": "BULLISH_FADING (2.616)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.82)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 243.42-288.61]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (12.26%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 87.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 277.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.26%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.9% | OM: 32.0% | NM: 26.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.04x, YrsToPay: 0.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 23.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $416.161B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.4%, EPS: 22.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -30.7%, Next Q Est Growth: 5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.04, P/S: 9.99)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 56.38)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.62)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "U.K. regulator seeks commitment from Apple and Google to address antitrust concerns about their app marketplaces. - Apple and Google agreement to make app Stores and platforms fairer.",
+      "Apple shifts Apple Card issuance partnership from Goldmans Sachs to JPMorgan Chase. - JPMorgan selected as new issuer for Apple Card, affects 12M+existing cardholders.",
+      "EU regulators propose new rules limiting App Store commission fees. - IBM announces acquisition of Apple's Ne XT division (1997). - Intel cancels i Phone chip orders due to production issues. - Apple reports Q4 earnings beat with record i Phone sales. - Qualcomm sues Apple over patent infringement. - Tim Cook announces major strategic"
+    ],
+    "medium_term_50d": [
+      "EU regulators propose new rules limiting App Store commission fees. - IBM announces acquisition of Apple's Ne XT division (1997). - Intel cancels i Phone chip orders due to production issues. - Apple reports Q4 earnings beat with record i Phone sales. - Qualcomm sues Apple over patent infringement. - Tim Cook announces major strategic",
+      "Apple shifts Apple Card issuance partnership from Goldmans Sachs to JPMorgan Chase. - JPMorgan selected as new issuer for Apple Card, affects 12M+existing cardholders.",
+      "U.K. regulator seeks commitment from Apple and Google to address antitrust concerns about their app marketplaces. - Apple and Google agreement to make app Stores and platforms fairer."
+    ],
+    "long_term_200d": [
+      "EU regulators fine Apple \u20ac100mn over App Store practices. - Apple announces delay in Siri AI upgrade. - JPMorgan wins Apple Card business. - New product launch: Air Pods Pro Lite. - Lawsuit filed against Apple over patent infringement. - Tim Cook steps down as Apple CEO. - Supply chain dis",
+      "Apple prioritizes production of three highest- end devices, including first-everfoldable i Phone and premium models with updated cameras. - Apple acquires Israeli AI startup Q.aifor approximately $2 billion. - India allows foreign companies to provide machinery to Apple's contract manufacturers.",
+      "EU regulators propose new rules limiting App Store commission fees. - IBM announces acquisition of Apple's Ne XT division (1997). - Intel cancels i Phone chip orders due to production issues. - Apple reports Q4 earnings beat with record i Phone sales. - Qualcomm sues Apple over patent infringement. - Tim Cook announces major strategic"
+    ]
+  }
+}

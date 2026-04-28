@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI declining to 43.2 and ROC turning negative (-0.4%). The price is now trading below the 20-day SMA, indicating a loss of immediate upward pressure. The absence of a clear candle pattern suggests a neutral short-term outlook. The stock remains in the middle of its 20-day range, offering no clear directional bias. W: Downside risk has increased due to the deterioration in momentum indicators and the price moving below the 20-day SMA. While volatility remains moderate, the weakening technical signals elevate the risk of a near-term pullback. O: Short-term news is mixed, with some positive developments like the approval of the Majnoon oilfield expansion in Iraq, but also negative news regarding operational disruptions and water shortages at Texas facilities. These conflicting signals contribute to the neutral short-term outlook. T: The short-term score has decreased due to the weakening momentum and price action. Conviction has slightly decreased as the technical signals are now less aligned. Risk has increased due to the negative technical shifts and mixed news flow."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend shows some resilience, with the MACD still recovering from a bearish cross (-0.327) and the price remaining above the 50-day SMA, albeit with a reduced Z-score (0.61). The trend alignment has slightly softened, indicating a less robust upward trajectory. The stock continues to trade within its monthly range, suggesting consolidation rather than strong trending behavior. W: Downside risk has increased slightly as the Z-score relative to the 50-day SMA has decreased, and the MACD remains in bearish territory. While the trend is still technically bullish, the weakening signals suggest a higher probability of consolidation or a minor retracement. O: Medium-term news flow is moderately positive, with the signing of a deal to develop Iraq's Majnoon oil field being a significant development. However, other news regarding personnel cuts and potential negotiations introduces some uncertainty. T: The medium-term score has decreased slightly due to the softening trend alignment and the MACD remaining in bearish territory. Conviction has slightly decreased as the technical signals are now less strongly aligned. Risk has increased due to the reduced Z-score and the bearish MACD."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.8,
+        "risk": 3.2
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market, though the trend strength has moderated (2.4%). The stock's position within its long-term range has also slightly decreased to the upper quadrant (69.7%), indicating a less dominant upward move. The healthy golden cross structure remains intact, providing a foundational bullish signal. W: Downside risk has increased marginally due to the slight moderation in trend strength and range positioning. However, the underlying secular bull market regime and the golden cross structure continue to provide significant support, keeping long-term risk relatively low. O: Long-term news narrative remains constructive, with ongoing project developments like the Iraq Majnoon oil field and continued progress on the Guyana project. The inclusion of news about natural gas finds and strategic partnerships reinforces the company's long-term operational capacity. T: The long-term score has decreased slightly due to the moderation in trend strength and range positioning. Conviction remains high, supported by the secular bull market regime and consistent positive long-term catalysts. Risk has increased marginally as the long-term trend signals have softened."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (91.4)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.0)",
+        "velocity_roc_10": "EXPLOSIVE_UP (12.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (12.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 225.63-286.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.26%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.78)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.88)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 223.7-286.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (37.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.39%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 95.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 279.28,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.72%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.5)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 58.6% | OM: 48.7% | NM: 42.5%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.32x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 27.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3401.199143B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 39.5%, EPS: 56.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3224.7%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.0, P/S: 0.43)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.32)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC and Media Tek collaborate on developing flagship chip using TSMC's 2nmprocess."
+    ],
+    "medium_term_50d": [
+      "TSMC and Media Tek collaborate on developing flagship chip using TSMC's 2nmprocess.",
+      "US revokes VEUstatus for TSMPC's Nanjing site",
+      "US government takes 9. nine percent equity stake in Intelaffecting TSMthrough potentialimpactonthechipindustrycompetition."
+    ],
+    "long_term_200d": [
+      "TSMC and Media Tek collaborate on developing flagship chip using TSMC's 2nmprocess.",
+      "US revokes VEUstatus for TSMPC's Nanjing site",
+      "TSMC reports 44\\% revenue growth and 61\\% net income surge for Q2 - TSM announces 3nm technology and HPC driven Q2 earnings"
+    ]
+  }
+}

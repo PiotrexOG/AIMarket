@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 193.25-214.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.47%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.737)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.48)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 169.21-225.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.71%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 200.75,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.66%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.5% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 1.0x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $395.76B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.6%, EPS: -2.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 48.8%, Next Q Est Growth: -40.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.81, P/S: 7.69)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 45.56)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -2.32%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "President Donald Trump threatens 25\\% tariff on Apple i Phones not manufactured in US. - Apple plans to diversify production to India, Vietnam to mitigate potential tariff risk.",
+      "Apple announces additional trade-ins for new i Phones in China. - Trump threatens 25\\% tariff on imported i Phones. - Major China-linked Apple suppliers open lower due to tariff threats.",
+      "President Trump threats 25\\% tariff on Apple i Phones produced outside US. - Apple faces competition from Open AI acquiring Jony Ives' hardware startup."
+    ],
+    "medium_term_50d": [
+      "President Donald Trump threatens 25\\% tariff on Apple i Phones not manufactured in US. - Apple plans to diversify production to India, Vietnam to mitigate potential tariff risk.",
+      "Apple announces additional trade-ins for new i Phones in China. - Trump threatens 25\\% tariff on imported i Phones. - Major China-linked Apple suppliers open lower due to tariff threats.",
+      "President Trump threats 25\\% tariff on Apple i Phones produced outside US. - Apple faces competition from Open AI acquiring Jony Ives' hardware startup."
+    ],
+    "long_term_200d": [
+      "President Donald Trump threatens 25\\% tariff on Apple i Phones not manufactured in US. - Apple plans to diversify production to India, Vietnam to mitigate potential tariff risk.",
+      "Apple faces severe penalties in Epic v Apple Case. - Open AI acquires Jony IVE's hardware studio io Products.",
+      "Apple experiences 14%, or a 16 trillion won ($14 billion) loss in market capitalization due to China tariffs. - Apple sheds 16%, or $32 per share, in two consecutive trading days following tariff announceements. - Trump's China tariff announcement causes Apple to enter bear market territory, losing 20%"
+    ]
+  }
+}

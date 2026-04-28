@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.8,
+        "risk": 6.8
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. The candle pattern has shifted to DOJI_INDECISION, indicating a loss of bullish conviction. RSI has fallen to 48.0, moving out of the neutral zone and suggesting weakening momentum. Velocity has turned negative (-2.2%), and price is now trading below the SMA20 (-1.5%), signaling a shift towards bearish pressure. W: The price has moved into the middle of its 20-day range, losing the upward momentum seen previously. The shift from resistance testing to range-bound trading, coupled with negative velocity, increases the potential for downside. O: Short-term news is mixed, with positive developments in stablecoin legislation and partnerships, but also significant threats from retail giants developing in-house payment solutions and ongoing regulatory investigations. T: The score has decreased by 1.3 points due to the clear deterioration in short-term technicals, including the DOJI pattern, falling RSI, and negative velocity. Conviction has slightly decreased as the technical signals have become less clear and more mixed. Risk has increased by 0.6 points due to the price moving from resistance to the middle of the range, increased volatility context, and the emergence of significant competitive threats in the news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend shows signs of weakening. While trend alignment remains bullish at 3.86%, the MACD has accelerated into bearish territory at -2.021, a significant deterioration from the previous period. The SMA50 Z-score has also dropped considerably to 0.5, indicating a less robust trend position. W: The price is now trading inside the monthly range, having lost its previous upward momentum and testing lower levels within the broader zone. The accelerating bearish MACD is a strong signal of weakening trend strength and potential for further downside. O: Medium-term news remains a mix of positive legislative developments and partnership announcements, but the persistent threat from large retailers developing their own payment solutions and ongoing regulatory scrutiny are significant headwinds. T: The score has decreased by 1.0 point due to the significant deterioration in the MACD and the reduced SMA50 Z-score, indicating a weakening medium-term trend. Conviction has decreased by 0.9 points as the technical signals have become more mixed and the bearish MACD is a strong negative. Risk has increased by 0.8 points due to the price moving from strengthening at resistance to inside the monthly range, the accelerating bearish MACD, and the persistent negative news flow regarding competitive threats and regulation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 4.8
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong but shows a slight pullback in its bullish positioning. The secular bull market regime is still in place, though its percentage has decreased to 10.8%. The price is now in the upper quadrant of its long-term range (83.8%), indicating a healthy but not extreme position. The Golden Cross structure remains healthy. W: The price has moved from ATH/top of cycle to the upper quadrant of the long-term range, indicating some profit-taking or consolidation after a strong run. While the fundamental business quality and financial health remain exceptional, the hyper-premium valuation multiples persist, and the implied growth is still priced optimistically. O: Long-term news continues to highlight regulatory scrutiny from the EU and ongoing investigations, which represent a persistent overhang. However, the core business strengths of ultra-elite moat, healthy balance sheet, and excellent cash generation provide a strong foundation. T: The score has decreased by 0.6 points due to the price moving from ATH to the upper quadrant and a slight decrease in the secular bull market regime percentage. Conviction has decreased by 0.7 points as the price is no longer in 'blue sky' territory and faces more defined range boundaries. Risk has increased by 0.7 points due to the persistent hyper-premium valuation, the 'growth overpriced' implied growth, and the continued regulatory overhang highlighted in the long-term news, which increases fragility."
+    }
+  }
+}

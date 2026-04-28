@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 90.69-102.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.73%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.295)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.01-102.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-16.99%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 99.29,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.92%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.2x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $45.183036B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.9%, EPS: 27.6%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 3.6%, Next Q Est Growth: 33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.34, P/S: 9.49)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 16.11)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.39)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix ordered to refund Italian subscribers. - Netflix expands kids entertainment lineup with app. - Netflix price hikes face Italian court ruling. - Netflix stock rallies on price hikes, ad revenue.",
+      "Netflix launches dedicated kids' gaming app, Netflix Playground. - Netflix Playground app expands family content and gaming push.",
+      "Italian court orders Netflix refunds for unfair price hikes."
+    ],
+    "medium_term_50d": [
+      "Netflix ordered to refund Italian subscribers. - Netflix expands kids entertainment lineup with app. - Netflix price hikes face Italian court ruling. - Netflix stock rallies on price hikes, ad revenue.",
+      "Italian court rules Netflix price-hike clauses void. - Netflix ordered to refund Italian subscribers. - Netflix to appeal Italian court ruling.",
+      "Netflix raises US subscription prices across all tiers. - Netflix increases subscription costs for all plans. - Netflix announces second price hike in two years. - Netflix subscription prices are going up again. - Netflix raises prices on all US streaming tiers."
+    ],
+    "long_term_200d": [
+      "Netflix raises US subscription prices across all tiers. - Netflix increases subscription costs for all plans. - Netflix announces second price hike in two years. - Netflix subscription prices are going up again. - Netflix raises prices on all US streaming tiers.",
+      "Netflix raises subscription prices across all tiers. - Senator Elizabeth Warren criticizes Netflix price hike. - Mc Donald's launches adult Happy Meal tied to Netflix.",
+      "Netflix raises subscription prices across all plans. - Netflix stock rises after raising subscription prices. - Netflix confirms it's raising prices again. - Netflix raises prices across all streaming plans. - Netflix ends Warner deal talks for growth. - Netflix raises subscription costs; new monthly prices."
+    ]
+  }
+}

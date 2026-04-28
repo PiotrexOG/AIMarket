@@ -1,0 +1,70 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "STAGNANT (1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 145.49-187.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.35%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.145)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 145.49-188.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.58%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 171.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.62%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.9% | OM: -16.2% | NM: -17.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -21.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $66.518B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -14.5%, EPS: -397.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -44.2%, Next Q Est Growth: 76.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -31.56)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.33x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trade war may benefit Airbus over Boeing: Aer Cap CEO.",
+      "Trump administration announces new FAA head, Bryan Bedford (Republic Airways CEO). - Canada reviews potential cancellation of Lockheed Mart\u00edn F-3 Five jet order."
+    ],
+    "medium_term_50d": [
+      "Trade war may benefit Airbus over Boeing: Aer Cap CEO.",
+      "Trump administration announces new FAA head, Bryan Bedford (Republic Airways CEO). - Canada reviews potential cancellation of Lockheed Mart\u00edn F-3 Five jet order."
+    ],
+    "long_term_200d": [
+      "Trade war may benefit Airbus over Boeing: Aer Cap CEO.",
+      "Trump administration announces new FAA head, Bryan Bedford (Republic Airways CEO). - Canada reviews potential cancellation of Lockheed Mart\u00edn F-3 Five jet order."
+    ]
+  }
+}

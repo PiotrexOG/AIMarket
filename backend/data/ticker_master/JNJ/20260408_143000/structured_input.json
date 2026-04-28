@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.35)",
+        "velocity_roc_10": "NORMAL (1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 232.24-247.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.24%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.135)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.0-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.28%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 87.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 238.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.62%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.48, P/S: 6.18)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.13)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson launches VARIPULSE Pro in Europe. - Johnson & Johnson advances PFA portfolio with VARIPULSE Pro launch. - Johnson & Johnson secures reimbursement for INLEXZO therapy. - Johnson & Johnson reports efficacy data for ICOTYDE. - Johnson & Johnson enters distribution agreement for SIRTURO.",
+      "Johnson & Johnson cardiac trial data refines Impella role.",
+      "Royalty Pharma, Johnson & Johnson strike $500M autoimmune drug deal. - JNJ Med Tech unit rides cardiovascular strength, new products."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson launches VARIPULSE Pro in Europe. - Johnson & Johnson advances PFA portfolio with VARIPULSE Pro launch. - Johnson & Johnson secures reimbursement for INLEXZO therapy. - Johnson & Johnson reports efficacy data for ICOTYDE. - Johnson & Johnson enters distribution agreement for SIRTURO.",
+      "EMA approves J&J's Darzalex for self-administration in Europe. - FDA approves J&J's ICOTYDE for plaque psoriasis treatment. - J&J enters clinical supply agreement for prostate cancer trial. - J&J to announce dividend increase in early April.",
+      "Royalty Pharma, Johnson & Johnson strike $500M autoimmune drug deal. - JNJ Med Tech unit rides cardiovascular strength, new products."
+    ],
+    "long_term_200d": [
+      "FDA approves Johnson & Johnson's oral psoriasis pill ICOTYDE. - Johnson & Johnson's ICOTYDE approved for plaque psoriasis treatment. - FDA approves Johnson & Johnson's IL-23 receptor antagonist ICOTYDE.",
+      "Johnson & Johnson launches VARIPULSE Pro in Europe. - Johnson & Johnson advances PFA portfolio with VARIPULSE Pro launch. - Johnson & Johnson secures reimbursement for INLEXZO therapy. - Johnson & Johnson reports efficacy data for ICOTYDE. - Johnson & Johnson enters distribution agreement for SIRTURO.",
+      "FDA approves Johnson & Johnson's Icotyde for psoriasis. - Johnson & Johnson's Icotyde approval challenges competitors. - Johnson & Johnson expands drug portfolio with Icotyde."
+    ]
+  }
+}

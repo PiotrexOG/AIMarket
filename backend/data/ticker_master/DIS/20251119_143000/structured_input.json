@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (41.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.08)",
+        "velocity_roc_10": "NORMAL (-4.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 104.91-117.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.08%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.627)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.14)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 104.91-117.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.08%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.84,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.84%))",
+      "volume_dynamics": "AVERAGE (1.07)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.6% | OM: 14.8% | NM: 12.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 3.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.535B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 144.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 186.3%, Next Q Est Growth: -45.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.72, P/S: 2.04)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.77)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney and You Tube TV agree to multi-year deal, ending two-week blackout. - ESPN and ABC channels restored to You Tube TV subscribers - Disney's full suiteofnetworksandstationsbackon You Tube TV - Newdealallowsyou Tube TVtooffer ESPNUnlimitedatnoextracost - Disneyespn",
+      "Disney invests in expanding cruise segment. - Trump threatens ABC's broadcasting license over journalist question.",
+      "Disney faces questions about long-term recovery of its stock. - Ni CE appoints Arun Chandra as COO for Global Customer Operations."
+    ],
+    "medium_term_50d": [
+      "Disney and You Tube TV agree to multi-year deal, ending two-week blackout. - ESPN and ABC channels restored to You Tube TV subscribers - Disney's full suiteofnetworksandstationsbackon You Tube TV - Newdealallowsyou Tube TVtooffer ESPNUnlimitedatnoextracost - Disneyespn",
+      "Disney and You tube TV still haven\u2019t reached a deal. Disney ownedchannels, like ABCand ESPN, remain unavailablefor You Tube TVsubscribers. - Inter Digital secures patent injunctionsagainst Disneyin Germanyand Brazilovervideo streaminguotechinfringement.",
+      "Disney earnings missed Q4 estimates. - Longest Disney carriage black OUT with You Tube TV."
+    ],
+    "long_term_200d": [
+      "Disney and You Tube TV agree to multi-year deal, ending two-week blackout. - ESPN and ABC channels restored to You Tube TV subscribers - Disney's full suiteofnetworksandstationsbackon You Tube TV - Newdealallowsyou Tube TVtooffer ESPNUnlimitedatnoextracost - Disneyespn",
+      "Disney and You tube TV still haven\u2019t reached a deal. Disney ownedchannels, like ABCand ESPN, remain unavailablefor You Tube TVsubscribers. - Inter Digital secures patent injunctionsagainst Disneyin Germanyand Brazilovervideo streaminguotechinfringement.",
+      "Disney channels godark on You Tube TVaftercarriagedealexpires - Disneypulls ESPN,ABCandothercontentfrom You Tube TV - Negotiationsbetween Disneyand Googlefailoverlicensingdeal - Disneychannelsincluding ESPNand ABCgo darkon You Tube TVaspricingdisputeremainsunresolved"
+    ]
+  }
+}

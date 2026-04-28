@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.47)",
+        "velocity_roc_10": "NORMAL (-3.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.57-94.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.96%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.103)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.91)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 85.49-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.83%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 27.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 86.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.32%))",
+      "volume_dynamics": "ELEVATED (1.29)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.47, P/S: 2.72)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.99)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks key supplier faces 20o,00 Swfr weekly costs due to US tariffs. - Elliott calls for operational review at Pepsico. - Pepsico's stock jumps on Elliott's proposed 50\\% upside. - Dutch Bros reports 23\\% monthly gain, premium valuation noted.",
+      "Starbucks sees production cuts in US and China news impacts valuation.",
+      "Starbucks pursues China partnership with potential partners."
+    ],
+    "medium_term_50d": [
+      "Starbucks pursues China partnership with potential partners.",
+      "Starbucks key supplier faces 20o,00 Swfr weekly costs due to US tariffs. - Elliott calls for operational review at Pepsico. - Pepsico's stock jumps on Elliott's proposed 50\\% upside. - Dutch Bros reports 23\\% monthly gain, premium valuation noted.",
+      "Starbucks sees production cuts in US and China news impacts valuation."
+    ],
+    "long_term_200d": [
+      "Starbucks pursues China partnership with potential partners.",
+      "Starbucks sees production cuts in US and China news impacts valuation.",
+      "Starbucks asks potential bidd ERS to submit non\u2011binding bidsfor China business within tw O weeks. -Starbucks cuts productionto five-day schedul E at US coffee plants."
+    ]
+  }
+}

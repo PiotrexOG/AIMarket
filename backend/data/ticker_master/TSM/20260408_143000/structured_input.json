@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 313.8-357.35]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.89%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.163)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.92)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 313.8-390.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.59%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 363.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.48%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.49)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.9% | OM: 50.8% | NM: 45.1%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.31x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3818.940591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.9%, EPS: 48.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3202.0%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.1, P/S: 0.49)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.35)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC guidance for 2026 growth and capex outlook.",
+      "TSMC capacity sells out through 2028.",
+      "TSMC wins approval for advanced chip factory in Japan."
+    ],
+    "medium_term_50d": [
+      "TSMC capacity sells out through 2028.",
+      "TSMC guidance for 2026 growth and capex outlook.",
+      "TSMC production capacity is maxed out, warns Broadcom."
+    ],
+    "long_term_200d": [
+      "TSMC capacity sells out through 2028.",
+      "TSMC production capacity is maxed out, warns Broadcom.",
+      "TSMC exposed to helium shortage risk via Strait of Hormuz."
+    ]
+  }
+}

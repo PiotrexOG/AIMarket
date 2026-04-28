@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (31.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.1)",
+        "velocity_roc_10": "NORMAL (-12.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 82.11-99.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.37%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.897)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.75)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 82.11-106.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.06%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 87.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.46%))",
+      "volume_dynamics": "AVERAGE (1.09)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.1% | OM: 26.7% | NM: 22.3%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.41x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 17.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $39.000966B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 66.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 4.8%, Next Q Est Growth: 29.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 43.16, P/S: 9.83)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 15.5)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.65)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix becomes Morgan Stanley's new Top Pick. - Morgan Stanley upgrades Netflix to \"top pick\". - Netflix stock rises following Morgan Stanley upgrade.",
+      "Funds purchase Netflix shares during Trump tariff sell-off. - Net new subscribers added to Netflix despite market correction. - Spotify and NFLX outperform broader market amid volatility.",
+      "Netflix signs multi year content production deal._ - Regulation impacts online misogny, affects NFLX shows._"
+    ],
+    "medium_term_50d": [
+      "Netflix becomes Morgan Stanley's new Top Pick. - Morgan Stanley upgrades Netflix to \"top pick\". - Netflix stock rises following Morgan Stanley upgrade.",
+      "Funds purchase Netflix shares during Trump tariff sell-off. - Net new subscribers added to Netflix despite market correction. - Spotify and NFLX outperform broader market amid volatility.",
+      "Netflix signs multi year content production deal._ - Regulation impacts online misogny, affects NFLX shows._"
+    ],
+    "long_term_200d": [
+      "Netflix becomes Morgan Stanley's new Top Pick. - Morgan Stanley upgrades Netflix to \"top pick\". - Netflix stock rises following Morgan Stanley upgrade.",
+      "Funds purchase Netflix shares during Trump tariff sell-off. - Net new subscribers added to Netflix despite market correction. - Spotify and NFLX outperform broader market amid volatility.",
+      "Turkish competition board investigates Netflix for potential violation of competition law."
+    ]
+  }
+}

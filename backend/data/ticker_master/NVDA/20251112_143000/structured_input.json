@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.54)",
+        "velocity_roc_10": "NORMAL (-3.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 176.77-212.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.91%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.669)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.07-212.19]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.6%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.73%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 192.69,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.24%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 76.0% | OM: 61.9% | NM: 55.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.307B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 194.7%, EPS: 417.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -32.7%, Next Q Est Growth: 85.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 89.21, P/S: 49.72)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 82.33)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.21)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Trump blocks Nvidia AI chip exports to China.",
+      "11. Soft Bank sells entire Nvidia stalk for $5,83B 12. Michael Burry alleges AI hyperskalers artificially boom earnings 13. Nvidia due for correction: buying interest fading (Techanalysis) 14. Soft Bank sold Nvidia shares for $5_8B 15",
+      "Nvidia signed all-share deal to acquire German AI firm Northern Data. - Taiwan Semiconductors reported 17% Yo Y revenue growth for October. - TSMC posts slowest growth in 16 months amid AI bubble debate."
+    ],
+    "medium_term_50d": [
+      "Trump blocks Nvidia AI chip exports to China.",
+      "Nvidia ceo predicts China will win ai race. - Report: US blocks Nvidia sale of scalled-down AIchip to China.",
+      "4. Nvid\u00eda CEO Jensenhuang praises TSMcforsupportingstrongdemandfor Blackwellchipsamidsurgingproductionandnew Trumpadministrationsalesrestrictions. 5. Nvid\u00edaceo Jensen Huangexperiences''verystrongdemand''forstate-ofthe-art Blackwellchipsproducedby TSMCl"
+    ],
+    "long_term_200d": [
+      "Trump blocks Nvidia AI chip exports to China.",
+      "Nvidia secures exclusive access to Taiwan Semiconductors' next-gen super-chip. - South Korea places giant order for Nvidias Blackwell Ch IPS. - Amazon adds to the chorous of large cloud companies stating demand for AIcapacity outstrips supplies. - Partnershiptaimed at creating aglobally distributed AIcloud infrastructure using NVIDI",
+      "Nvidia ceo predicts China will win ai race. - Report: US blocks Nvidia sale of scalled-down AIchip to China."
+    ]
+  }
+}

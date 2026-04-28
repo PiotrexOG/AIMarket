@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The short-term outlook has strengthened significantly with a HAMMER_PINBAR_BULLISH candle pattern and a robust RSI at 67.6, indicating strong bullish momentum. Velocity (ROC) has increased to 4.1%, and volume dynamics are elevated at 1.4. W: The price is now overstretched above the 20-day SMA (4.4%) and trading above the upper Bollinger Band (1.07), suggesting potential for a short-term pullback or consolidation. The 20-day range has also expanded. O: News regarding dividend increases and low-carbon strategy updates, alongside potential M&A activity in the French market, provides positive catalysts. T: Volatility remains moderate (ATR 1.61%), but the overextended technicals and proximity to a resistance barrier increase downside risk slightly."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "risk": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment has shifted to a BULLISH_GRADUAL_ASCENT (0.94%), and the MACD has turned strongly bullish and is accelerating (0.446). The Z-score for SMA50 positioning is now a statistical outlier at 2.51, indicating a very strong upward trend. W: While the trend is clearly bullish, the extreme overextension indicated by the Z-score suggests a higher probability of a mean reversion event or consolidation in the near future. The price is also at the upper end of its monthly range. O: Continued strategic initiatives like AI data center power and EU regulatory discussions remain relevant. T: The increased bullish momentum and overextension contribute to a moderate increase in risk, as extreme moves often precede corrections."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 7.5,
+        "risk": 3.8
+      },
+      "synthesis": "S: The long-term regime remains a SECULAR_BULL_MARKET (8.7%), with the price now positioned at the top of its cycle or near all-time highs (91.8%). The HEALTHY_GOLDEN_CROSS structure remains intact. W: Despite the strong technical positioning, the fundamental growth profile remains a concern, showing STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%) and declining implied earnings growth. This disconnect between technical strength and fundamental weakness creates a structural risk. O: Long-term strategic developments, such as AI data center power initiatives and past international field development deals, continue to support the narrative. T: Valuation multiples have slightly increased but remain moderate, and the balance sheet is healthy, providing some support against valuation risk. However, the fundamental growth deficit is a persistent risk factor."
+    }
+  }
+}

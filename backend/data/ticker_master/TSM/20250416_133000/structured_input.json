@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.37)",
+        "velocity_roc_10": "NORMAL (-6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 134.25-182.93]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-8.81%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.412)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 134.25-213.18]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-14.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.54%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 20.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 152.52,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (6.24%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 56.1% | OM: 45.7% | NM: 40.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.25x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 30.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $2894.307521B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 33.9%, EPS: 38.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3026.1%, Next Q Est Growth: -97.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.68, P/S: 0.27)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.19)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.37x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC beats Trump's tariffs with US manufacturing strategy.",
+      "TSMC announces Q1 preview with potential value opportunity. - Tariffs delay impacts TSMC production costs.",
+      "TSMC faces 12 fifth tariffs on US-made chips in China."
+    ],
+    "medium_term_50d": [
+      "TSMC beats Trump's tariffs with US manufacturing strategy.",
+      "President Trump announces 33% tariffs on Taiwan on April 2. - Taiwan Semiconductors' stock tumbles 7% due to tariff announcement. - U.S Department of Commerce investigates TSMC's workfor China-based Sofgo. - Possible penalty of $\u2081\u2080\u2088 million or more for",
+      "TSMC announces Q1 preview with potential value opportunity. - Tariffs delay impacts TSMC production costs."
+    ],
+    "long_term_200d": [
+      "President Trump announces 33% tariffs on Taiwan on April 2. - Taiwan Semiconductors' stock tumbles 7% due to tariff announcement. - U.S Department of Commerce investigates TSMC's workfor China-based Sofgo. - Possible penalty of $\u2081\u2080\u2088 million or more for",
+      "TSMC faces tariffs onchip manufacturing hub in Taiwan. - Production disruptions for TSMP due to trade tensions.",
+      "TSMC beats Trump's tariffs with US manufacturing strategy."
+    ]
+  }
+}

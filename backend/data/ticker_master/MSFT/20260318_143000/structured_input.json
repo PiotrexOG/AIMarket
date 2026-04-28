@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.47)",
+        "velocity_roc_10": "NORMAL (-1.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 381.74-413.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.06%)",
+        "cycle_macd": "BULLISH_FADING (1.737)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.93)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 381.74-489.7]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-17.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-11.7%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 8.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 395.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.1%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.56)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 45.6% | NM: 36.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $281.724B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.9%, EPS: 15.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -4.9%, Next Q Est Growth: 10.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 28.91, P/S: 10.48)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.6)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.86)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft shakes up Copilot AI leadership team. - Microsoft reorganizes Copilot AI efforts, scraps app team divide. - Opsera Unified Insights now available in Microsoft Marketplace. - VIPRE Security Group partners with Microsoft for email security. - Linux Foundation receives $12.5M grant from Microsoft.",
+      "Microsoft joins OCI to define optical link standards for AI data centers. - Microsoft integrates AI into office suite, raises subscription price. - Microsoft expands AI footprint in Africa, trains 3 million people. - Microsoft partners with MTN Group for AI tools in Africa. - Microsoft invests $330 million in African cloud and data center growth.",
+      "M-Files deepens strategic collaboration with Microsoft. - M-Files unveils new experiences for Microsoft 365 Copilot."
+    ],
+    "medium_term_50d": [
+      "Microsoft joins OCI to define optical link standards for AI data centers. - Microsoft integrates AI into office suite, raises subscription price. - Microsoft expands AI footprint in Africa, trains 3 million people. - Microsoft partners with MTN Group for AI tools in Africa. - Microsoft invests $330 million in African cloud and data center growth.",
+      "Microsoft warns of costly disruptions backing Anthropic bid. - Microsoft partners with Anthropic to integrate Claude Cowork. - Microsoft in talks to lease large Texas data center. - Kyndryl offers fast path to modernize legacy systems on Azure. - EPAM joins Microsoft Intelligent Security Association. - Drone strikes force Microsoft to rethink regional AI expansion. - Stryker cyberattack disrupts Microsoft environment; systems access limited.",
+      "Microsoft shakes up Copilot AI leadership team. - Microsoft reorganizes Copilot AI efforts, scraps app team divide. - Opsera Unified Insights now available in Microsoft Marketplace. - VIPRE Security Group partners with Microsoft for email security. - Linux Foundation receives $12.5M grant from Microsoft."
+    ],
+    "long_term_200d": [
+      "Microsoft warns of costly disruptions backing Anthropic bid. - Microsoft partners with Anthropic to integrate Claude Cowork. - Microsoft in talks to lease large Texas data center. - Kyndryl offers fast path to modernize legacy systems on Azure. - EPAM joins Microsoft Intelligent Security Association. - Drone strikes force Microsoft to rethink regional AI expansion. - Stryker cyberattack disrupts Microsoft environment; systems access limited.",
+      "Microsoft signs multi-year AI cloud infrastructure deals with Meta and Microsoft. - Open AI finalizes $101 billion funding round. - Amazon invests $50 billions in Open AI.",
+      "Microsoft joins OCI to define optical link standards for AI data centers. - Microsoft integrates AI into office suite, raises subscription price. - Microsoft expands AI footprint in Africa, trains 3 million people. - Microsoft partners with MTN Group for AI tools in Africa. - Microsoft invests $330 million in African cloud and data center growth."
+    ]
+  }
+}

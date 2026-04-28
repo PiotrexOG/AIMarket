@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 97.8-119.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.79%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.544)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.75)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.8-119.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.25%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.26%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.51)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.6% | OM: 11.7% | NM: 9.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 9.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $339.247B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -11.7%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 11.0%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 13.55, P/S: 1.4)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.8)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -11.7%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon\u041cobil increases low-emmission investments up to $\u00b3\u2080B by \u00b2030. - XOM beats BP and Shell in low-carbon push.",
+      "Exxon Mobile signs new deal for carbon diox IDE transport and storage solutions.",
+      "Exxon Mobile bids for petrol stations from Aster Chemicals. - Guyana: Exxons Yellowtail project increases Q1 oil output by 3%."
+    ],
+    "medium_term_50d": [
+      "Exxon\u041cobil increases low-emmission investments up to $\u00b3\u2080B by \u00b2030. - XOM beats BP and Shell in low-carbon push.",
+      "Exxon Mobile bids for petrol stations from Aster Chemicals. - Guyana: Exxons Yellowtail project increases Q1 oil output by 3%.",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Gulf of Mexico facilities. - XOM reports unexpected drop in crude oil output. - New product launch: Exx"
+    ],
+    "long_term_200d": [
+      "Exxon\u041cobil increases low-emmission investments up to $\u00b3\u2080B by \u00b2030. - XOM beats BP and Shell in low-carbon push.",
+      "FTC seeks public comment on petitions for Ex xon, Chevron megadeals - FTC takes steps toward potentially reversal of Exxon and Chev\u0440\u043e\u043d board restrictions",
+      "Exxonmobil announces significant natural gas find in Texas. - Chevron and Exxonmerge to form new joint venture. - EPA fines Exxon for environmental violations. - Hurricane damages XOM's Gulf of Mexico facilities. - XOM reports unexpected drop in crude oil output. - New product launch: Exx"
+    ]
+  }
+}

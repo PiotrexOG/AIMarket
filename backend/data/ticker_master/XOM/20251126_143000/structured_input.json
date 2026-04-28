@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-4.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 112.51-120.81]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.59%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.404)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 110.39-120.81]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 115.14,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.04%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.74, P/S: 1.53)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.91)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon buys 40\\% of Bahia NGPL pipeline from Enterprise Products. - Tug Hanley appointed EVP & CCO at Enterprise Products.",
+      "Abu Dhab I's IHC expresses interest in L uk Oil's global assets, including possible involvement of Exxon Mobile. - Ameerex Corporation confirms expansion into oil, gas, and mineral resources through Falcon C addo Projectin Texas(targeting5,0oo Barrelsper Day). - Ex xon M",
+      "Exxon\u041cobil to acquire 40\\% stake in Enterprise' Bahia pipeline project."
+    ],
+    "medium_term_50d": [
+      "Exxon \u041cobal to close Scottish chemicals plant. - UK Government policies undermining Exxon\u041cobal business (Chairman Paul Greenhouse statement). - Over 40o jobs at risk following Mossmor\u0440\u0430\u043d ethyleneplant closure.",
+      "Exxon \u041c\u043ebil announces closure of Fiffe Ethylene Plants in Scotland - Hundreds Of Jobs At Risk At Exxon\u041c\u043ebil's Fiffe Manufacturing Site - Scottish Government urged to intervene in Exxon\u039c\u043ebil'scclosure plans Note: Based on the given data, these bullets represent the most",
+      "Exxon buys 40\\% of Bahia NGPL pipeline from Enterprise Products. - Tug Hanley appointed EVP & CCO at Enterprise Products."
+    ],
+    "long_term_200d": [
+      "Exxon announces advanced talks topower AI data centerswith natural gas and Carbon Capture.",
+      "Exxon \u041cobal to close Scottish chemicals plant. - UK Government policies undermining Exxon\u041cobal business (Chairman Paul Greenhouse statement). - Over 40o jobs at risk following Mossmor\u0440\u0430\u043d ethyleneplant closure.",
+      "Exxon \u041c\u043ebil announces closure of Fiffe Ethylene Plants in Scotland - Hundreds Of Jobs At Risk At Exxon\u041c\u043ebil's Fiffe Manufacturing Site - Scottish Government urged to intervene in Exxon\u039c\u043ebil'scclosure plans Note: Based on the given data, these bullets represent the most"
+    ]
+  }
+}

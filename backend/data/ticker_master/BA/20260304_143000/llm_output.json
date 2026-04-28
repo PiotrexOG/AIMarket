@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Short-term momentum has shifted towards oversold conditions, with RSI at 29.2 and the price testing the lower Bollinger Band. Velocity ROC remains negative (-8.1%), and the price is trading below the 20-day SMA (-4.7%). The price has moved into the middle of its 20-day range. W: Conviction is moderate, as the oversold RSI suggests a potential for a bounce, but the negative velocity and SMA deviation indicate continued weakness. The neutral candle pattern offers no clear directional signal. O: News flow is mixed, with some positive order announcements (Vietnam Jet, Delta) but also mentions of geopolitical incidents involving F-15 jets and BAE Systems contracts, which are less directly relevant to BA's core business. T: Downside risk has slightly decreased due to oversold technical conditions, but the negative velocity and SMA deviation still pose a threat. Volatility remains moderate (ATR 2.99%). The mixed news flow limits strong conviction for either upside or downside."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: Medium-term trend alignment has deteriorated further, with consolidation observed (0.71%) and the MACD accelerating bearishly (-1.788). The price is now in a bearish trend position relative to the 50-day SMA (Z:-0.81). W: Conviction in any upward trend is low. The bearish MACD and the Z-score indicate a weakening trend. The price remains within the broader monthly range, offering some support but also limiting upside potential. O: Persistent negative news regarding Starliner mission failures continues to weigh on operational sentiment. While new large aircraft orders are positive, the ongoing regulatory scrutiny (FAA on 737 MAX) and legal challenges (pilot training practices) introduce significant medium-term uncertainty. T: Downside risk has increased due to the accelerating bearish MACD and the price's bearish position relative to the 50-day SMA. The stressed balance sheet and negative FCF remain significant structural risks. The continued negative operational news exacerbates the risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.8,
+        "risk": 7.2
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market, though its strength has decreased (2.6%). The healthy golden cross structure (6.93%) is still intact. The long-term range position has moved to a mid-cycle neutral zone (61.9%), indicating a loss of upward momentum from previous periods. W: Conviction in the long-term bullish trend is moderate, tempered by the retreat in range position and persistent negative operational news. The hyper-premium valuation multiples and extreme multiple risk remain significant overhangs, despite a slight decrease in P/E. O: The core fundamentals of hyper-growth and attractive PEG ratio persist. However, the ongoing negative news regarding Starliner mission failures and regulatory compliance issues (737 MAX) introduce significant operational and reputational concerns that could impact long-term business quality. T: Downside risk has increased due to the retreat in long-term range position and the persistent negative operational news, which adds to the fragility of the business model. While valuation multiples have slightly decreased, they remain extremely stretched. The stressed balance sheet and negative FCF continue to be significant structural risks."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-1.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 167.97-184.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.15%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.186)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 140.85-184.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (28.0%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.23%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 170.31,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.81%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.3% | OM: 59.8% | NM: 53.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.07x, YrsToPay: 0.1x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $79.774B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 208.3%, EPS: 794.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -25.9%, Next Q Est Growth: 68.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 98.45, P/S: 53.14)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 86.26)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia developing new AI chipfor China with more power than H20. - U.S approval for sale uncertain due to concerns over giving China advanced tech.",
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market.",
+      "Nvidia partners with Tensor for luxury robocar AI technology. - Super Micro Computer upgrades rating due to Nvidia partnerships."
+    ],
+    "medium_term_50d": [
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market.",
+      "Nvidia developing new AI chipfor China with more power than H20. - U.S approval for sale uncertain due to concerns over giving China advanced tech.",
+      "Nvidiaand AMD agree to pay \u2081\u4e94% of Chinachip sales revenue to USgovernment. - Commerce Department issues licenses for NVIDIAto send H20chip to China."
+    ],
+    "long_term_200d": [
+      "President Trump calls for Nvidia CEO resignation, demands 15\\% of China revenue. - Trump intervenes, Nvid\u00eda and AMD agree to hand over Chinese revenues. - Working on new chip family, Nvid IA developing Blackwell for Chinese market.",
+      "US wants to track Every Chip-- Nvidia pulled Into explosive Tech Show DOWNwith China. - Niod Xpeng lead China's push To ditch Nvidiah Chips. These two events meet the criteria of having a direct impact on NVDA.",
+      "Nvidia developing new AI chipfor China with more power than H20. - U.S approval for sale uncertain due to concerns over giving China advanced tech."
+    ]
+  }
+}

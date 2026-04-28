@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (4.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 303.93-351.05]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.26%)",
+        "cycle_macd": "BULLISH_FADING (2.216)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.94)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 299.0-366.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 349.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.14%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.53)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.23, P/S: 18.87)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.13)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa pursuing stablecoinsfor cross-border paymentss. - Worldcoin'Orb Mini'launching in US backed by Visa.",
+      "Visa partnerswith Rain for stablecoin settlements.",
+      "Visa and Bridgge partner to launch stakecoins-linked cards. -Visa announces new era of commerce featuring AI. -VISa launches AI agents for shopping."
+    ],
+    "medium_term_50d": [
+      "Visa pursuing stablecoinsfor cross-border paymentss. - Worldcoin'Orb Mini'launching in US backed by Visa.",
+      "Visa and Bridgge partner to launch stakecoins-linked cards. -Visa announces new era of commerce featuring AI. -VISa launches AI agents for shopping.",
+      "Visa reports Q2 twenty-five earnings with increased profit. - Strong card spending volumes lead to higher profits for Visa. -Visa announces $30 billions share buyback program."
+    ],
+    "long_term_200d": [
+      "Visa and Bridgge partner to launch stakecoins-linked cards. -Visa announces new era of commerce featuring AI. -VISa launches AI agents for shopping.",
+      "Visa reports Q2 twenty-five earnings with increased profit. - Strong card spending volumes lead to higher profits for Visa. -Visa announces $30 billions share buyback program.",
+      "Visa pursuing stablecoinsfor cross-border paymentss. - Worldcoin'Orb Mini'launching in US backed by Visa."
+    ]
+  }
+}

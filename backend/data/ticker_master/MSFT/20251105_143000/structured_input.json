@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 506.0-553.72]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.27%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.051)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.0)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 492.37-553.72]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.31%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 514.25,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 69.1% | OM: 45.2% | NM: 35.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.1x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $270.01B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.1%, EPS: 12.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.2%, Next Q Est Growth: 11.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 39.59, P/S: 14.21)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.92)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft enters AI chip business with new MSFT AI201 and AI202 chips. - Team Dynam IX expands AI Agentsfor IT Service Management. - Qualcomm introduces AI203 and AI210 chips for data centers.",
+      "Microsoft announces new agreement with Open AI. - President Trump expresses positivity towards China, potentially impacting Microsoft's business in China.",
+      "Microsoft acquires cyberscurity startup to expandcloud security. Note: Based on rule that acceptable events include acquisitions, this event meets the criteria of having a direct impact on thecompany itself (Microsoft) and affects the ticker symbol (MSFT)."
+    ],
+    "medium_term_50d": [
+      "Microsoft enters AI chip business with new MSFT AI201 and AI202 chips. - Team Dynam IX expands AI Agentsfor IT Service Management. - Qualcomm introduces AI203 and AI210 chips for data centers.",
+      "Microsoft acquires cyberscurity startup to expandcloud security. Note: Based on rule that acceptable events include acquisitions, this event meets the criteria of having a direct impact on thecompany itself (Microsoft) and affects the ticker symbol (MSFT).",
+      "Microsoft brings Windows and Xbox brands closer together for gaming anywhere. - Google and Anthropic mull multibillion-dollar cloud deal. - Open AI, Orange, and Vantage Data Centers plan data center campus in Port Washington. -Microsoft reports 'robust' fiscal Q1 earnings, marking AI growth inflection point."
+    ],
+    "long_term_200d": [
+      "Microsoft enters AI chip business with new MSFT AI201 and AI202 chips. - Team Dynam IX expands AI Agentsfor IT Service Management. - Qualcomm introduces AI203 and AI210 chips for data centers.",
+      "Microsoft named top pick by Morgan Stanley for leading generative AI spending. - MSFT reiterated as \"Overweight\" by Morgan Stanley, best positioned for Gen AI spend.",
+      "Microsoft extends AI advances in Dragon Cop Lilot to nurses - Microsoft investor focus on Azure,Open AI before Q1 results - Microsoft shifts majority of product manufacturing out of China by 202 six - Open AI invests $4oo billion to build 5 ' Stargate Data Centers' - Microsoft, AWS, Google moving production outside of China"
+    ]
+  }
+}

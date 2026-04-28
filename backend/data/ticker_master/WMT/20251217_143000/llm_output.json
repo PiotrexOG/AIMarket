@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.0,
+        "risk": 7.2
+      },
+      "synthesis": "S: The short-term momentum has decelerated significantly, with ROC dropping to 2.6% and RSI easing from extreme overbought levels to 73.2. The price is now stable near the 20-day SMA, indicating a loss of upward velocity. The candle pattern has normalized from indecision. W: The explosive momentum has dissipated, and the price is now in the middle of its 20-day range, suggesting a lack of immediate upside conviction. Volume remains dry, indicating limited interest. The news narrative has shifted to negative headlines including antitrust investigations and FDA warnings. O: The shift in news narrative to regulatory and product recall issues introduces new downside risks. T: The score has decreased from 7.5 to 6.8 due to the sharp deceleration in momentum and negative news flow. Conviction has decreased to 6.0 as the technical signals are now neutral and the news introduces uncertainty. Risk has increased to 7.2 due to the normalization of momentum from overbought, the shift to negative news, and the price being in the middle of the range, offering less support for upside."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The medium-term trend shows expanding bullish momentum (3.99%), but the MACD momentum has significantly faded to 0.313. The price is in a bullish trend position above the 50-day SMA (Z:1.73) and within the monthly range. W: The fading MACD momentum, despite a positive Z-score, suggests that the upward trend may be losing steam. The market bias remains 'RANGE', indicating a lack of strong directional conviction. The news narrative has also turned negative, introducing potential headwinds. O: The negative news flow regarding antitrust and product recalls could impact consumer sentiment and operational stability. T: The score has decreased from 7.2 to 6.5 due to the significant fading of MACD momentum and the introduction of negative news. Conviction has decreased to 5.5 as the technical signals are mixed and the news introduces significant uncertainty. Risk has increased to 6.5 due to the fading momentum, the neutral market bias, and the negative news flow which could lead to a price correction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.0,
+        "risk": 5.0
+      },
+      "synthesis": "S: The long-term technical structure remains robust, with the price at 94.8% of its ATH within a secular bull market regime and a healthy golden cross. The market regime percentage has slightly decreased but remains stable. W: While the long-term technicals are strong, the valuation remains hyper-premium (P/E: 47.33, P/B: 10.59) and implied growth is overpriced (PEG: 2.32). The price has moved slightly further away from its absolute peak. The news narrative has introduced significant long-term risks related to antitrust and potential regulatory actions. O: The fundamental strengths of scale and moderate growth remain, but the increasing regulatory scrutiny and potential for antitrust actions pose a significant long-term threat to the business model and valuation. T: The score has decreased slightly from 8.0 to 7.8 due to the increased long-term risk from regulatory news and the price moving further from ATH, despite the strong technical backdrop. Conviction has decreased marginally to 7.0 as the positive technicals are now tempered by significant fundamental and regulatory concerns. Risk has increased slightly to 5.0 due to the persistent high valuation risk compounded by the introduction of significant antitrust and regulatory concerns, which could lead to structural changes."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (15.0)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.03)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-19.0%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-17.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 42.36-57.6]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-11.11%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.815)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.38)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 42.36-68.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-35.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-12.52%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 2.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 43.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.44%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.56)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 43.8% | OM: 10.3% | NM: 9.4%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.24x, YrsToPay: 0.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 11.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $47.818B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.3%, EPS: -12.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 45.9%, Next Q Est Growth: -46.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.39, P/S: 1.35)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.61)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -12.24%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike slapped with class action over data breach. - Sports retailing report shows Lululemon, Adidas gaining on Nike.",
+      "Nike appeals court ruling on Flyknit patent claims. - Nike's cost-cutting plan aims to reignite profitability.",
+      "Nike takes intentional hit to clear inventory. - Nike surpasses Q3 earnings expectations despite inventory reset. - Nike charts path to complete turnaround by year-end."
+    ],
+    "medium_term_50d": [
+      "Nike reports fiscal 2026 third quarter results. - Nike guides for sales declines ahead. - Nike shares drop nearly 9% after-hours. - Nike Q3 sales beat expectations, but flat year-over-year. - Nike turnaround plan hits snags; China sales lag. - Nike delivers Q3 earnings beat; turnaround progresses.",
+      "Nike warns of sales drop amid China struggles. - Nike forecasts sales decline due to China challenges. - Nike stock plunges on weak sales outlook. - Nike turnaround story stumbles, shares down significantly. - Nike reports weak Q3 guidance for China region. - Nike stock hits 52-week low after weak guidance. - Nike stock sinks to lowest level since 2014. - Nike faces challenges in turnaround, China sales down. - Nike stock falls after lower fiscal Q3 earnings.",
+      "Nike earnings disappoint, stock falls. - Nike faces China revenue headwinds. - Nike stock sinks to 2014 lows. - Nike stock deep in oversold territory. - Nike guidance disappoints, hurting sentiment. - Nike faces tariff-driven margin pressure."
+    ],
+    "long_term_200d": [
+      "Nike reports fiscal 2026 third quarter results. - Nike guides for sales declines ahead. - Nike shares drop nearly 9% after-hours. - Nike Q3 sales beat expectations, but flat year-over-year. - Nike turnaround plan hits snags; China sales lag. - Nike delivers Q3 earnings beat; turnaround progresses.",
+      "Nike warns of sales drop amid China struggles. - Nike forecasts sales decline due to China challenges. - Nike stock plunges on weak sales outlook. - Nike turnaround story stumbles, shares down significantly. - Nike reports weak Q3 guidance for China region. - Nike stock hits 52-week low after weak guidance. - Nike stock sinks to lowest level since 2014. - Nike faces challenges in turnaround, China sales down. - Nike stock falls after lower fiscal Q3 earnings.",
+      "Nike earnings disappoint, stock falls. - Nike faces China revenue headwinds. - Nike stock sinks to 2014 lows. - Nike stock deep in oversold territory. - Nike guidance disappoints, hurting sentiment. - Nike faces tariff-driven margin pressure."
+    ]
+  }
+}

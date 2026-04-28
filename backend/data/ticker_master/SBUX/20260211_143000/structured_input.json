@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 89.47-104.8]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.08%)",
+        "cycle_macd": "BULLISH_FADING (0.148)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.63)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 81.97-104.8]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.62,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.23%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.9% | OM: 9.7% | NM: 5.0%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 9.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.1844B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.8%, EPS: -50.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -79.7%, Next Q Est Growth: 241.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.52, P/S: 3.0)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -13.76)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -50.45%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks downgraded to \"Hold\" due to deteriorsating profitability. - China's Luxkin Coffee targets Starbuks' premium market with flagship store.",
+      "Starbucks reports Q1 revenue of US$$9,920.1 million and outlines growth initiatives. -Starbucks continues investment in turnaround and announces new store expansion.",
+      "Starbucks signs new development deal with Legacy Commercial Property. - Marriott adds over 40M loyalty members through Starbucks partnership."
+    ],
+    "medium_term_50d": [
+      "Starbucks presents global growth and China overhaul plan. - Announces expansion in US, China, and growth markets. - Forms joint venture with Chinese partner Boyu Capital. - Moves towards asset light model for China operations.",
+      "Starbucks reports Q1 revenue of US$$9,920.1 million and outlines growth initiatives. -Starbucks continues investment in turnaround and announces new store expansion.",
+      "Starbucks downgraded to \"Hold\" due to deteriorsating profitability. - China's Luxkin Coffee targets Starbuks' premium market with flagship store."
+    ],
+    "long_term_200d": [
+      "Starbucks presents global growth and China overhaul plan. - Announces expansion in US, China, and growth markets. - Forms joint venture with Chinese partner Boyu Capital. - Moves towards asset light model for China operations.",
+      "Starbucks releases long-term financial targets and share details on turnaroundplan at investor presentation (Investor Day). - Starbuks revamps tiered loyaltyprogram with Green,Goldand Reservelevels,offeringnewbenefitstomembers(January29).",
+      "Starbucks quarters earnings beat expectations, traffic grows for first time intwo years. -Starbucks sees coffee inflation and tariff headwinds peaking in Q2. -Company plans to open 45o-5oo international stores in FY2o26."
+    ]
+  }
+}

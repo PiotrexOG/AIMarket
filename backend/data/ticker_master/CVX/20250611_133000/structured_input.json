@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.95)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 133.77-144.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.05%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.794)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 132.04-168.92]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.24%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 143.11,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.86%))",
+      "volume_dynamics": "ELEVATED (1.23)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 27.5% | OM: 5.7% | NM: 8.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 1.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $194.444B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.1%, EPS: -19.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -6.5%, Next Q Est Growth: -13.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.34, P/S: 1.29)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.68)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -19.63%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron CEO urges safety improvements before Angola platform Fire - CVX planning Texas job cuts as part of global workforce reduction",
+      "US Treasury revokes authorizations for Chevron's Venezuelan oil exports. - CVX lays off nearly twenty percent of global workforce including 20o Texans.",
+      "Venezuela signs contracts with Chinese, Argentinian firms for oil production."
+    ],
+    "medium_term_50d": [
+      "US Treasury revokes authorizations for Chevron's Venezuelan oil exports. - CVX lays off nearly twenty percent of global workforce including 20o Texans.",
+      "Chevron CEO urges safety improvements before Angola platform Fire - CVX planning Texas job cuts as part of global workforce reduction",
+      "US bars Chevronfrom exporting Venezuan crude. - Second death from Chevron Angolan oil platformfire. - Trump administration grants Chevronminimal license in Venezuela."
+    ],
+    "long_term_200d": [
+      "US Treasury revokes authorizations for Chevron's Venezuelan oil exports. - CVX lays off nearly twenty percent of global workforce including 20o Texans.",
+      "Chevron agrees to buy Hesse for $6o billion. - NY State Common Retirements Fund sells Chevron stock.",
+      "US bars Chevronfrom exporting Venezuan crude. - Second death from Chevron Angolan oil platformfire. - Trump administration grants Chevronminimal license in Venezuela."
+    ]
+  }
+}

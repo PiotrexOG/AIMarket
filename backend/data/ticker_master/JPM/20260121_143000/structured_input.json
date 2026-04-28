@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.6)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.03)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-9.4%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-6.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 301.86-337.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.29%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.13)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 292.81-337.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.51%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 304.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.35%))",
+      "volume_dynamics": "ELEVATED (1.42)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.0% | OM: 25.9% | NM: 20.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.43x, YrsToPay: 1.6x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 36.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.333B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 1.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.9%, Next Q Est Growth: 18.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.17, P/S: 3.03)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.34)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 11.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.18x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "JPMorgan acquires Goldman Sach's Apple Card portal. - New dedicated private capital advising unit established within JPMorgan.",
+      "JPMorgan visits Palantir office - J.P Morgan and Citibank consider ending fixed pay allowance for key UK staff - Trump threatens lawsuit against JPMorgan - Women Presidents organization opens nominations for fastest growing women-led companies with JPM sponsorship"
+    ],
+    "medium_term_50d": [
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "JPMorgan acquires Goldman Sach's Apple Card portal. - New dedicated private capital advising unit established within JPMorgan.",
+      "President Trump threats to sue J PMorgan Chase for alleged \"debankinging\". - Trump plans to sue JPMorgan Chaseover closed accounts after Jan. sixth protest."
+    ],
+    "long_term_200d": [
+      "JPMorgan takes over Apple Card business from Goldman Sacs.",
+      "JPMorgan takes over Apple Card issuance from Goldman Sacs. Note: Only one material event found directly affecting JPM on the given date.",
+      "JPMorgan takes over Apple credit-cards program from Goldmann Sachs."
+    ]
+  }
+}

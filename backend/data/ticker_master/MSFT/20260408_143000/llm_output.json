@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The short-term outlook shows continued improvement with RSI moving higher to 28.9 and velocity improving to -2.8%. The price remains stable near the 20-day SMA, indicating a potential shift from oversold conditions. W: The neutral candle pattern suggests a lack of strong directional conviction, but the technical indicators are trending positively. O: News flow is dominated by AI strategy, new model development, and significant investments in cloud and AI infrastructure across various regions, creating a constructive short-term narrative. T: The score increases to 5.0 due to the improving momentum and stabilizing price action, supported by positive AI-related news. Conviction rises to 5.0 as technicals align more favorably. Risk decreases slightly to 6.0 as oversold conditions abate and velocity normalizes."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend shows a significant shift with the MACD turning bullish and accelerating (0.734). While the overall trend alignment remains bearish, the Z-score for the 50-day SMA has improved to -0.87, indicating a less severe downtrend. W: The bullish MACD signal provides a strong conviction for a potential trend reversal, despite the stock still being below its 50-day SMA. O: The news narrative highlights substantial investments in AI and cloud infrastructure globally, alongside strategic partnerships, which are likely driving the bullish MACD momentum. T: The score increases to 4.0, reflecting the strong bullish MACD signal and improved Z-score, supported by positive long-term AI investment news. Conviction improves to 4.5 due to the clear bullish MACD acceleration. Risk decreases slightly to 7.0 as the bearish trend shows signs of abating, though it remains elevated due to the distance from the 50-day SMA and the overall market regime."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The long-term position within the range has improved to 10.6%, moving out of the lower quadrant. While the secular bear market regime and death cross structure persist, the price action shows resilience. W: The improved long-term range position, coupled with consistently strong fundamentals, provides a solid foundation for conviction. O: Significant global investments in AI and cloud infrastructure, alongside strategic partnerships, are key long-term drivers. The fundamental strengths in business quality, financial health, and growth remain robust. T: The score increases to 3.5, driven by the improved long-term range position and the persistent strength of fundamentals, which act as a buffer against the bearish market regime. Conviction rises to 4.5 as the price shows stabilization and fundamental support. Risk decreases to 6.5 as the price moves further from extreme lows, though valuation and market regime risks remain significant factors."
+    }
+  }
+}

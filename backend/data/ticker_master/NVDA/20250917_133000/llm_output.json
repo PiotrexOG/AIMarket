@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term score has decreased from 5.5 to 4.0. The RSI has moved back into a bearish zone (38.9) from neutral, indicating weakening momentum. The stock is now hugging the 20-day SMA (-0.3%) after previously being above it, suggesting consolidation rather than upward progress. The candle pattern has shifted to strong bearish, reinforcing the negative momentum. W: Conviction has decreased from 5.0 to 4.5. The shift from neutral RSI to bearish, the bearish candle pattern, and the return to hugging the 20-day SMA indicate a less stable short-term setup. Volume dynamics have also weakened to 'dry no interest' (0.54). O: Short-term news flow has become more negative, with reports of China investigating Nvidia's Mellanox acquisition and considering domestic GPUs, alongside continued antitrust probes. While Core Weave orders provide some positive offset, the regulatory headwinds are a significant concern. T: Risk has increased from 6.5 to 7.0. The deterioration in RSI, the bearish candle pattern, and the increased focus on regulatory investigations in China suggest heightened downside exposure. While the stock remains within normal Bollinger Bands, the negative momentum and news flow increase fragility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term score has decreased from 5.0 to 3.5. The MACD has faded significantly, moving from bearish recovering to bullish fading (0.002), indicating a loss of upward momentum. The stock has moved to a bearish trend position relative to the 50-day SMA (Z:-0.81), a reversal from the previous bullish stance. Trend alignment has also shifted to consolidation. W: Conviction has decreased from 4.8 to 4.0. The reversal in MACD and the bearish Z-score to the 50-day SMA significantly reduce structural confidence. The technical signals are now pointing towards a less constructive medium-term outlook. O: Medium-term news remains mixed. While there are positive developments like partnerships with OpenAI and strong data center sales, the ongoing Chinese investigations and probes into the US chip sector introduce significant uncertainty and potential headwinds. T: Risk has increased from 6.8 to 7.5. The deterioration in MACD and the bearish Z-score to the 50-day SMA suggest an increase in downside potential. The stock remains within its monthly range, but the combination of fading momentum and geopolitical/regulatory concerns elevates the risk profile."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The long-term score has seen a slight decrease from 6.2 to 6.0. The stock's position in the long-term range has moved down to the upper quadrant (85.3%) from the top of the cycle, indicating some pullback from extreme highs. The secular bull market regime remains intact. W: Conviction has slightly decreased from 5.9 to 5.5. While the underlying business fundamentals remain exceptionally strong, the persistent 'extreme bullish stretch exhaustion risk' (24.57%) and the shift in long-term range position suggest a need for caution. O: Long-term news continues to highlight geopolitical tensions and regulatory scrutiny from China, alongside strong demand signals from partnerships with OpenAI and robust data center sales. The company's ability to navigate these complex environments remains a key factor, but the increased regulatory focus adds a layer of uncertainty. T: Risk has increased from 7.3 to 7.5. The stock's position at the top of its long-term range and the persistent 'extreme bullish stretch exhaustion risk' suggest an increased probability of mean reversion. While fundamental strength is high, the elevated valuation, geopolitical uncertainties, and increased regulatory scrutiny contribute to sustained long-term risk."
+    }
+  }
+}

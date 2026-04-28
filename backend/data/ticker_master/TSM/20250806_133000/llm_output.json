@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. RSI has fallen to 45.2, indicating a bearish shift. Price is now 2.3% below the 20-day SMA, and velocity has turned negative (-0.9%). The candle pattern remains neutral, offering no directional clarity. W: The negative velocity and declining RSI suggest a high probability of further downside or continued stagnation. The price is still within a defined range (226.31-248.28), limiting immediate upside. O: While news flow remains supportive, the technical indicators are clearly weakening, leading to a lower score. T: The short-term score has decreased by 1.7 points due to the sharp decline in RSI, negative velocity, and price moving below the 20-day SMA. Conviction has decreased by 1.5 points as the technical signals have become more bearish and mixed. Risk has increased by 0.7 points due to the negative velocity, declining RSI, and the price being in the middle of a range, which increases downside exposure."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 3.5,
+        "risk": 8.0
+      },
+      "synthesis": "S: The medium-term trend alignment has weakened to 6.83%, and the Z-score relative to the 50-day SMA has fallen to 0.46, indicating a loss of upward momentum. The price remains within the monthly range (190.03-248.28). W: The bearish MACD trend has accelerated dramatically to -1.869, signaling a severe loss of medium-term bullish conviction and a high risk of a trend reversal. O: Despite the persistent positive news flow, the sharp deterioration in the MACD trend is a critical negative factor that overrides fundamental support in the medium term. T: The medium-term score has decreased by 1.8 points due to the significant acceleration of the bearish MACD and weakening trend alignment. Conviction has decreased by 1.3 points as the worsening MACD trend severely undermines confidence in sustained upward movement. Risk has increased by 1.3 points due to the accelerating bearish MACD, which indicates a substantially higher probability of a significant trend reversal or sharp decline."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 6.5,
+        "risk": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound but shows signs of weakening. The secular bull market indicator has decreased to 17.9%, and the price is now at 84.0% of its historical high, indicating a less dominant position within the cycle. The golden cross structure remains healthy. W: While the long-term technical structure is still positive, the decrease in the secular bull market percentage and the price's position within the upper quadrant suggest a potential shift in the broader market regime or a plateauing of the current cycle. O: The core fundamental strengths of TSM remain robust, but the slight pullback in long-term technical indicators suggests that the extreme bullishness of the previous period may be moderating. T: The long-term score has decreased by 1.0 point due to the decline in the secular bull market indicator and the price moving further from ATH. Conviction has decreased by 1.3 points as the long-term technical picture shows some weakening, reducing confidence in sustained new highs. Risk has increased by 1.0 point due to the price moving further from ATH and the slight decrease in the secular bull market indicator, suggesting a marginally higher probability of a longer-term correction."
+    }
+  }
+}

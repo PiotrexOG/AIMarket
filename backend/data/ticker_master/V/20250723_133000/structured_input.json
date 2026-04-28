@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 342.03-359.66]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.42%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.038)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.33)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 334.92-375.51]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.86%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 354.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | LOW_VOLATILITY_ASSET (ATR:  (1.45%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 79.9% | OM: 64.9% | NM: 54.3%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.802B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.3%, EPS: 14.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -3.7%, Next Q Est Growth: 10.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 35.66, P/S: 19.1)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.36)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.52)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa partnerswith Weavr to embed Visa cards in HR tech platforms. - Deutsche Bank prefers Visa among fintech stocks. - House passes bill establishing regulatory framework for stablecoins.",
+      "Visa partnerswith AFC Women\u2019s Asian Cup Australia 20 twenty-six\u2122as Official Global Supporter. -Visaand FISextendpartnershiptooffernewvalue-addedservices. -President Trumpsignslawforfederalframeworkonstabledcoins.",
+      "Australian central bank proposes scrapping surcharges for most Visa,Mastercard payments. - Judge dismisses argument that Apple could replace Visa, Masters as dominant networks."
+    ],
+    "medium_term_50d": [
+      "Visa partnerswith Weavr to embed Visa cards in HR tech platforms. - Deutsche Bank prefers Visa among fintech stocks. - House passes bill establishing regulatory framework for stablecoins.",
+      "Australian central bank proposes scrapping surcharges for most Visa,Mastercard payments. - Judge dismisses argument that Apple could replace Visa, Masters as dominant networks.",
+      "Visa partnerswith AFC Women\u2019s Asian Cup Australia 20 twenty-six\u2122as Official Global Supporter. -Visaand FISextendpartnershiptooffernewvalue-addedservices. -President Trumpsignslawforfederalframeworkonstabledcoins."
+    ],
+    "long_term_200d": [
+      "UK tribunalrules Visa and Mastercard\u2019sinterchange feesviolate law - Visadefeatslawsuitover Vanillagift card scam",
+      "Visa partnerswith Yellow Card to expeditestablecoinadoption in EMEA. - Senate passes stablecoinsbill, affecting Visainvestorsentiment.",
+      "Visa partnerswith Weavr to embed Visa cards in HR tech platforms. - Deutsche Bank prefers Visa among fintech stocks. - House passes bill establishing regulatory framework for stablecoins."
+    ]
+  }
+}

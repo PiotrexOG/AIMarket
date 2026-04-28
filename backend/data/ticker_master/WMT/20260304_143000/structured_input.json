@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 121.05-134.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.93%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.493)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.03)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 109.81-134.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.4%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 127.48,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.89%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.0%, Next Q Est Growth: 1.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.9, P/S: 1.51)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 11.31)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.11)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart pays $100M to settle FTC lawsuit over delivery driver pay practices.",
+      "Walmart faces \u00a3100\u043c judgment over driverpay allegations. - Levanta unifies creator and affiliateprograms across Shopify,Amazon, and Wal mart. - Symbotic'$22. 3Bbacklog highlights multiyear growthrunway. - walmart's largestshareholder dumps \u00a3220 million in shares.",
+      "Walmart pays $10 million to settle FTC claims over deceptive delivery driver practices. - New oversight measures for Walmart delivery driver compensation after FTC settlement."
+    ],
+    "medium_term_50d": [
+      "Walmart reports higher sales, revenues, and net inkcome for FY202 six. - Approves US$0.\\99 per share annual dividendfor FY2o27. - Completes US$1 6.1 4 b buyback program. - Authorizes new US$ 3 o b repurchase plan.",
+      "Walmart pays $100M to settle FTC lawsuit over delivery driver pay practices.",
+      "Walmart pays $10 million to settle FTC claims over deceptive delivery driver practices. - New oversight measures for Walmart delivery driver compensation after FTC settlement."
+    ],
+    "long_term_200d": [
+      "Walmart becomes a $1 trillon company. - Texas Commission approves TXNM energy acquisition by Blackstone Infrastructure (indirectly affects WMT through energy industry). If none material event exists, return: NONE",
+      "Walmart adds automation, robots to Louisiana distribution Center. - walmart hits $1trillion valuation.",
+      "Walmart reaches \u00a31tn marketvalue. - MAMMotionexpands USretailsalesin Walmartstores."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly. The RSI has fallen to 42.1, moving from the neutral zone into bearish territory. Velocity (ROC) has also weakened to -1.7%, and the price is now stable near the 20-day SMA, down 1.2%. The stock is trading at critical support within its 20-day range (24.31-26.11). W: The shift to a strong bearish candle pattern, a declining RSI below 50, and the price action testing critical support levels indicate a loss of short-term conviction and increasing downside pressure. While some news regarding vaccine programs and collaborations is positive, the overall technical picture is bearish. O: The short-term outlook is decidedly bearish. The combination of weakening momentum, price action at support, and a bearish candle pattern suggests a high probability of further downside. T: Downside risk has substantially increased. The breach of previous support levels, coupled with negative momentum indicators and the potential for a breakdown from critical support, elevates the risk profile significantly. Volatility remains moderate, but the structural weakness is pronounced."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.8,
+        "risk": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains in consolidation (0.74%), but the MACD has further deteriorated into bearish territory (-0.069). Crucially, the Z-score relative to the 50-day SMA has moved from a weak base (Z:-0.56) to a more concerning bearish trend position, indicating a significant deviation below the mean. The stock remains within the monthly range (23.11-26.11). W: The bearish MACD signal has deepened, and the Z-score relative to the 50-day SMA has moved into a more pronounced bearish trend. This represents a clear deterioration from the previous period's neutral stance. While the trend alignment is still consolidating, the weakening price position relative to the 50-day SMA is a significant concern. News flow remains mixed, with some positive trial collaborations offset by ongoing legal and regulatory scrutiny. O: The medium-term outlook is bearish. The deepening bearish MACD and the shift to a bearish trend position relative to the 50-day SMA suggest that the prior consolidation is likely to break lower. The stock is now in a structurally weaker position. T: Downside risk has increased due to the bearish MACD signal and the deterioration in the 50-day SMA Z-score. The loss of bullish conviction and the stock's position below its 50-day moving average suggest increased vulnerability to further declines. Valuation remains a mitigating factor, but structural risks are rising."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.0,
+        "risk": 6.8
+      },
+      "synthesis": "S: The long-term market regime has shifted back to a secular bear market (-0.8%), a significant deterioration from the previous bull market correction. Major crosses still indicate a potential pivot, but the overall regime is now negative. The stock's position within the long-term range has decreased to 53.8%, still within the mid-cycle neutral zone, but trending lower. W: The shift to a secular bear market regime is a major negative development, significantly increasing the overall risk profile. While fundamentals remain strong and the company scale is large, the broader market environment is now a headwind. Persistent negative news, including lawsuits and regulatory scrutiny, continues to weigh on the long-term outlook. The potential for a pivot in major crosses offers a slight counterpoint, but the dominant trend is now bearish. O: The long-term outlook is cautiously bearish. The shift to a secular bear market regime, combined with ongoing negative news and a declining position within the long-term range, presents significant headwinds. While valuation is attractive, the structural risks associated with the broader market and company-specific issues are substantial. T: Downside risk has increased significantly due to the shift to a secular bear market regime. The emergence of negative news and the continued presence of legal challenges prevent any reduction in risk. The attractive valuation is currently insufficient to offset the increasing structural and regime-based risks."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 7.5
+      },
+      "synthesis": "S: Explosive upward velocity (ROC 14.0%) and extreme RSI (86.6) indicate strong short-term momentum. The price is testing upper Bollinger Bands (0.95) and is extended above the 20-day SMA (10.6%). W: The stock is at critical resistance within its 20-day range (431.58), suggesting limited upside potential without a breakout. Extreme overbought conditions increase the risk of a near-term pullback. O: Potential for a short-term consolidation or minor pullback given the overstretched technicals and resistance level. T: High risk of mean reversion due to extreme overbought indicators and proximity to resistance."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The MACD is bullish (7.162) and the price is overextended but still within a bullish context relative to the 50-day SMA (Z:2.26). Positive news flow around AI and cloud partnerships provides fundamental support. W: The medium-term trend alignment shows a gradual descent (-2.4%), indicating some underlying weakness despite short-term strength. The price is also approaching a monthly resistance zone. O: Continued strength in AI and cloud adoption could drive further upside, potentially breaking through current resistance levels. T: Risk is elevated due to the overextended position and approaching resistance, but the underlying trend and positive news offer some support."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: Strong fundamental backing with elite business quality (GM: 68.8%), healthy financials, and excellent cash generation (FCF Mgn: 25.4%) provide a solid foundation. Consistent revenue and EPS growth (14.9%, 15.5%) are positive long-term drivers. W: The long-term technical picture is concerning, with a secular bear market regime (-10.0%) and a death cross structure (-16.56%). Valuation multiples are premium (P/E: 31.57, P/S: 11.44), and implied growth appears overpriced (PEG: 2.03), increasing valuation risk. O: Significant long-term investments in AI and cloud infrastructure, particularly in Japan, signal strategic focus and potential future growth drivers. T: High valuation risk and a bearish long-term technical structure present significant downside potential, outweighing the strong fundamental quality in the current regime."
+    }
+  }
+}

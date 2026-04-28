@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The short-term technicals have stabilized from the previous bearish candle pattern to a neutral one. RSI has moved to a neutral zone (55.9) from a bullish zone. Velocity has turned negative (-1.2%), and the price remains in the middle of the 20-day range. W: News flow is dominated by upcoming Q2 earnings reports and ongoing trade tensions, creating a mixed short-term sentiment. Analyst consensus remains bullish but with moderate conviction. O: The shift from a bearish candle pattern to neutral, coupled with a cooling RSI, suggests a pause in immediate directional pressure. However, the negative velocity and stable range position indicate a lack of strong conviction for either direction. T: Risk remains at 7.0. While the extreme bearishness has abated, the negative velocity and the ongoing uncertainty from earnings and trade tensions maintain downside potential. The previous risk score of 7.0 is maintained due to the mixed signals and lack of clear directional bias."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish and expanding (4.89%), and the price is still positioned above the SMA50 (Z:1.14). However, the MACD has turned sharply bearish and is accelerating (-0.971), indicating a significant deterioration in momentum. The price remains inside the monthly range. W: The fundamental outlook for next quarter's earnings growth has improved slightly (-7.2% est. growth from -12.0%), but the overall trend is still negative. News flow is dominated by Q2 earnings expectations and macroeconomic concerns like tariffs. O: The divergence between the bullish trend alignment and the accelerating bearish MACD is a significant concern. This suggests that the underlying trend is being challenged by weakening momentum, potentially leading to a trend reversal. T: Risk has increased to 7.5. The accelerating bearish MACD is a strong signal of downside risk. This, combined with the stressed balance sheet and negative FCF, creates a fragile risk profile. The previous risk score of 6.5 is increased due to the significant technical momentum deterioration."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.0,
+        "risk": 5.5
+      },
+      "synthesis": "S: The secular bull market regime persists (15.1%), and the long-term structure remains healthy with a strong golden cross (8.92%). The stock's position in the upper quadrant of its long-term range (88.7%) indicates sustained demand. Business quality remains high. W: Fundamental concerns regarding a stressed balance sheet (NetDebt/Eq: 1.85x) and negative FCF (-53.9%) have worsened. The valuation has become more expensive relative to growth (PEG: 1.66), and the leveraged valuation structure (EV/MC: 1.83x) is more sensitive. O: Despite the worsening balance sheet and valuation metrics, the company's strong business quality and position within a secular bull market provide a resilient long-term outlook. The long-term technical structure remains robust, mitigating some of the fundamental concerns. T: Risk has increased to 5.5. The deterioration in the balance sheet and the increase in the PEG ratio are key drivers of this increase. While long-term technicals and market regime offer support, the growing fundamental fragility and valuation concerns elevate the downside risk. The previous risk score of 5.0 is increased due to the worsening financial health and valuation metrics."
+    }
+  }
+}

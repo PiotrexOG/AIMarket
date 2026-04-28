@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. RSI has moved to 47.3, still in the neutral zone but trending lower. The price is now trading 3.2% below the 20-day SMA, indicating a bearish trend base. Velocity ROC has turned negative (-1.3%), signaling a loss of upward momentum. The price is testing critical support at the 20-day range level. W: Mean reversion bands have tightened significantly to 0.07, suggesting limited immediate upside potential and increased sensitivity to downside moves. The neutral candle pattern persists, indicating indecision but with a bearish lean. O: Short-term news is mixed, with a new feature test and a store opening, but also ongoing labor union strikes and the previously reported labor violation penalty. T: Volatility has slightly increased (ATR 2.75%), and volume dynamics are elevated (1.14), suggesting increased selling pressure. The risk has increased due to the bearish technical signals, negative velocity, and testing of support levels, outweighing the slight improvement in RSI. Conviction has decreased due to the mixed signals and bearish technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend has decisively shifted to bearish. Trend alignment remains compressed around MAs (1.14%), but the MACD has accelerated into bearish territory (-0.275), indicating strong downward momentum. The Z-score relative to the 50-day SMA has turned negative (-0.66), confirming a bearish trend position. W: The price remains within the monthly range (77.99-89.05), but the accelerating bearish MACD suggests a higher probability of breaking below the lower bound. O: The medium-term news narrative remains mixed, with the labor violation penalty and dividend declaration, alongside the China joint venture. These factors continue to introduce uncertainty regarding future operational costs and strategic direction. T: The risk has increased substantially due to the accelerating bearish MACD and negative Z-score. Elevated volume dynamics also suggest increased selling pressure. Conviction has decreased due to the clear bearish technical signals and the persistent fundamental concerns."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.8,
+        "conv": 3.0,
+        "risk": 7.8
+      },
+      "synthesis": "S: The long-term technical structure remains deeply bearish. The secular bear market regime has deepened (-7.5%), and the death cross structure is still in place (-5.58%). The price has moved further into the bearish lower quadrant, now at 16.8% position, indicating a significant weakening in long-term positioning. W: Fundamental metrics continue to be a major concern, with stressed balance sheets (YrsToPay: 10.5x) and stagnant growth profiles (EPS: -35.2%). Valuation remains elevated (P/E: 35.57) despite these fundamental weaknesses, increasing fragility. O: The long-term news narrative is dominated by ongoing operational challenges, strategic shifts like the China retail operations sale, and potential liabilities, all contributing to long-term uncertainty. T: The risk has increased due to the further deterioration in long-term price positioning, the deepening bearish regime, and persistent fundamental weaknesses. The elevated valuation, coupled with debt sensitivity (EV/MC: 1.25x), amplifies downside risk. Conviction has decreased due to the entrenched bearish structure and ongoing fundamental and strategic concerns."
+    }
+  }
+}

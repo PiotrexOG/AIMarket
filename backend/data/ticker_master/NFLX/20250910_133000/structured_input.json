@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.02)",
+        "velocity_roc_10": "NORMAL (3.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 118.28-126.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.12%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.462)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.8)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 114.47-134.12]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.9%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 84.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 125.93,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.0%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 48.5% | OM: 29.5% | NM: 24.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.25x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.693183B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.8%, EPS: 47.4%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.2%, Next Q Est Growth: -5.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.25, P/S: 13.14)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 21.95)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.1)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena for financial records of NFLX. - Disney acquires key streaming technology from NFLX. - Netflix cancels multiple high-profile productions. - NFLX reports Q3 earnings miss and lowers guidance. - Amazon Prime Video poaches top NFLX executive. - Major lawsuit",
+      "Netflix partners with Joe Hand Promotions tostream Canelo Alvarezvs.Terence\"Bud\"Crawfordboxingshowdowntobarsandrestaurants. - Netflaxeyesdoubleadrevenuesin202 fiveasitsadtierpremiumcontentandad-techupgradesdrivegrowth.",
+      "Netflix partners with Joe Hand Promotiions for high-profile boxing event broadcast. - Amazon ends free shipping sharing for Prime members starting October 1."
+    ],
+    "medium_term_50d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena for financial records of NFLX. - Disney acquires key streaming technology from NFLX. - Netflix cancels multiple high-profile productions. - NFLX reports Q3 earnings miss and lowers guidance. - Amazon Prime Video poaches top NFLX executive. - Major lawsuit",
+      "Netflix partners with Joe Hand Promotions tostream Canelo Alvarezvs.Terence\"Bud\"Crawfordboxingshowdowntobarsandrestaurants. - Netflaxeyesdoubleadrevenuesin202 fiveasitsadtierpremiumcontentandad-techupgradesdrivegrowth.",
+      "Netflix secures exclusive streaming rightsfor 20 twenty-six World Baseball Classics in Japan. - Animated film \"KPop Demonom Hunter\" becomes Netflix'sbiggest movieever after theater success."
+    ],
+    "long_term_200d": [
+      "Netflix announces major content licensing loss. - SEC issues subpoena for financial records of NFLX. - Disney acquires key streaming technology from NFLX. - Netflix cancels multiple high-profile productions. - NFLX reports Q3 earnings miss and lowers guidance. - Amazon Prime Video poaches top NFLX executive. - Major lawsuit",
+      "Netflix partners with Joe Hand Promotions tostream Canelo Alvarezvs.Terence\"Bud\"Crawfordboxingshowdowntobarsandrestaurants. - Netflaxeyesdoubleadrevenuesin202 fiveasitsadtierpremiumcontentandad-techupgradesdrivegrowth.",
+      "Netflix in advanced talks to stream MLB Home Run Derry for over $100M. - Disney launches ESPN streamingservice marking new era for live sports."
+    ]
+  }
+}

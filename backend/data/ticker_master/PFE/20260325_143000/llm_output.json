@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: The short-term outlook has weakened. The candle pattern has shifted to neutral, and momentum indicators like RSI remain in a neutral zone (55.2). Velocity (ROC 10) has turned stagnant (-0.6%), and price is now hugging the 20-day SMA, indicating consolidation rather than upward movement. Volume dynamics have also normalized to average (0.83). W: The shift from a bullish candle pattern to neutral, coupled with stagnant velocity and average volume, suggests a loss of short-term momentum. The news flow, while mixed, includes some trial results that are not universally positive (e.g., Lyme vaccine endpoint miss). O: Despite the weakening short-term technicals, the stock remains within its established range, and the underlying business quality provides a baseline of support. T: The risk profile has slightly increased due to the loss of upward momentum and the potential for range-bound trading to break lower if selling pressure emerges."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.8,
+        "risk": 4.5
+      },
+      "synthesis": "S: The medium-term trend has deteriorated. While the price remains above the 50-day SMA (Z-score 1.02), the trend alignment has shifted to consolidation, and the MACD has accelerated into a bearish signal. This indicates a loss of upward momentum and a potential shift in trend direction. The stock is still within its monthly range, but the weakening technicals suggest increased downside risk. W: The accelerating bearish MACD is a significant concern, suggesting that the previous gradual ascent is faltering. The shift from trend alignment to consolidation further supports this view. O: Positive news regarding prostate cancer trial results and ongoing pipeline developments in areas like Lyme disease offer some potential upside catalysts. The stock's position above the 50-day SMA provides a degree of technical support. T: The risk has increased due to the bearish MACD acceleration and consolidation, which could lead to a breakdown of the current trend. Valuation remains fair, but the declining implied growth is a persistent concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.7
+      },
+      "synthesis": "S: The long-term technical structure remains largely intact, with a healthy golden cross and price positioned in the upper quadrant of its long-term range (88.4%). The secular bull market regime continues to provide a supportive backdrop, although its strength has slightly moderated (6.5%). Fundamentals continue to show a solid core business with moderate leverage and cash generation, but growth remains stagnant. W: The core strengths of the business and the constructive long-term technicals provide a stable foundation. Positive news in key therapeutic areas like oncology and metabolic diseases supports the long-term narrative. O: The company's scale and established business quality are significant advantages. The ongoing progress in drug development, particularly in oncology and prostate cancer, offers potential for future revenue diversification beyond COVID-19. T: Valuation remains fair, but the persistent issue of declining implied earnings growth and debt sensitivity continue to pose risks. The slight moderation in the market regime strength warrants caution."
+    }
+  }
+}

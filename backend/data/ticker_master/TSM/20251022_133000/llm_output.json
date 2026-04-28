@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.2,
+        "risk": 7.9
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI declining to 52.7 and velocity (ROC 10) stagnating at 0.2%. The price is now hugging the 20-day SMA (1.1%) and is in the middle of its 20-day range. Mean reversion bands are within normal limits (0.58). W: The decline in RSI and stagnant velocity indicate a loss of upward momentum. The price moving from resistance to the middle of the range suggests a loss of bullish conviction. Elevated volatility (ATR 4.17%) and average volume (0.78) at this juncture are concerning. News flow is mixed, with positive earnings but also geopolitical probes. O: The shift from testing resistance to consolidating in the middle of the range, coupled with weakening momentum indicators, points to a less favorable short-term outlook. The continued high volatility is a significant risk factor. T: The short-term score has decreased by 0.8 points due to the weakening momentum and shift in price position. Conviction has decreased by 0.6 points as the technical setup at the 20-day level shows a loss of upward drive. Risk has increased by 0.3 points due to increased volatility and the price moving into a less favorable range position."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 3.5,
+        "risk": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains bullish with expanding momentum (10.1%), but the MACD has accelerated its bearish trend (-1.483). The price is within the 50-day range and shows a bullish trend position relative to the 50-day SMA (Z: 1.0). W: The accelerating bearish MACD is a significant deterioration, overriding the positive trend alignment and momentum. The price being inside the monthly range, rather than at resistance, suggests a loss of upward pressure. News regarding AI-driven growth is positive, but the overall technical picture is deteriorating. O: The divergence between expanding momentum and an accelerating bearish MACD creates a highly cautious medium-term outlook. The bearish technical signal at a less extended price level is a strong negative. T: The medium-term score has decreased by 1.0 points due to the accelerating bearish MACD, a significant structural deterioration. Conviction has decreased by 1.0 points as the bearish technical signal at a less extended price level undermines the previous bullish setup. Risk has increased by 0.4 points due to the accelerating bearish MACD and the price moving from resistance into the middle of the range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "risk": 4.9
+      },
+      "synthesis": "S: The long-term outlook remains in a secular bull market regime (36.9%), with the price in the bullish upper quadrant (88.1% of range). However, the 'extreme bullish stretch exhaustion risk' has slightly increased (22.93%). W: The slight decrease in the secular bull market regime percentage and the continued increase in exhaustion risk signal a potential topping process. While the business quality and financial health remain exceptionally strong, the extended nature of the rally is a growing concern. Geopolitical news remains a background risk. O: The underlying bullish regime and strong fundamentals provide a solid foundation. However, the increasing technical exhaustion signals and the slight weakening of the secular bull market regime temper the long-term bullish conviction. The price is still in a strong position but shows signs of fatigue. T: The long-term score has decreased by 0.5 points due to the slight weakening of the secular bull market regime and increased exhaustion risk. Conviction has decreased by 0.5 points as the extended nature of the rally and increasing exhaustion risk temper the underlying bullish support. Risk has increased by 0.3 points due to the increasing 'exhaustion risk' signal and the price being at the upper end of its long-term range."
+    }
+  }
+}

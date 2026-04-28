@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "risk": 7.5
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI plunging to 'OVERSOLD_EXTREME' (23.5). The price is now testing the lower Bollinger Band (0.03), indicating extreme selling pressure. Velocity (ROC -9.6%) is negative, and the price is stable near the 20-day SMA, but at a much lower level, now at critical support at 95.3. W: The 'STRONG_BEARISH' candle pattern persists, reinforcing the bearish sentiment. The oversold condition suggests potential for a short-term bounce, but the conviction is low given the accelerating downward trend. The news narrative indicates a bidding war for Warner Bros, creating uncertainty and potential for increased volatility. O: A sustained bounce above the 20-day SMA and a shift to a bullish candle pattern are required for a short-term recovery. Positive news regarding the acquisition outcome or a significant shift in market sentiment could act as a catalyst. T: Downside risk has increased substantially due to the oversold conditions and testing of lower bands. Volatility (ATR 4.09%) has also increased, contributing to the elevated risk profile. The 'HIGH_MULTIPLE_RISK' remains a concern, especially with the price declining."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend has decisively turned bearish, with the MACD now accelerating negatively (-0.95). The price is in a 'BEARISH_GRADUAL_DESCENT' (-4.41%) and is now an 'OVEREXTENDED_BEARISH_STAT_OUTLIER' relative to the 50-day SMA (Z:-2.46). Despite this, the price is still holding at the monthly support zone. W: The shift in MACD to a bearish signal significantly reduces conviction in any prior bullish outlook. The extreme bearish positioning suggests a potential for a bounce, but the underlying trend is clearly negative. The news narrative around the Warner Bros acquisition, with its high price and potential antitrust issues, adds to the medium-term uncertainty. O: A sustained move above the 50-day SMA and a reversal in the MACD signal are necessary to signal a potential medium-term recovery. Positive developments in the acquisition, such as a clear resolution and favorable terms, could support this. T: Downside risk has increased due to the accelerating bearish trend and extreme positioning. While the price is at a support zone, the fundamental and technical deterioration warrants caution. The 'HIGH_MULTIPLE_RISK' is amplified by the declining price and the potential for increased debt from an acquisition."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: The long-term technicals are showing increasing weakness, with the market regime now in a 'SECULAR_BEAR_MARKET' (-14.7%). The price is positioned in the 'BEARISH_LOWER_QUADRANT' (25.8%) of its long-term range. While major crosses are still showing an imminent potential pivot, the overall trend is deteriorating. W: The conviction in a long-term uptrend is significantly reduced by the shift to a secular bear market and the lower range position. The fundamental strength of NFLX provides some support, but the current technical environment is unfavorable. The news narrative regarding the large acquisition and potential antitrust concerns adds a layer of long-term risk. O: A confirmed bullish cross and a sustained move back towards the mid-cycle neutral zone are required to signal a stronger long-term uptrend. Positive resolution of the acquisition and a broader market recovery would be key drivers. T: Downside risk remains elevated due to the secular bear market regime and the price's position in the lower quadrant. The 'HIGH_MULTIPLE_RISK' is a persistent concern, although the strong business quality and cash generation offer some resilience. The 'POWER_ZONE_CONFLUENCE' structure may provide some support, but the overall trend is bearish."
+    }
+  }
+}

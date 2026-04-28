@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.47)",
+        "velocity_roc_10": "NORMAL (-1.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 235.43-251.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.64%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.48)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.91)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 200.91-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (27.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (19.73%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 91.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 242.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.92%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 72.8% | OM: 27.2% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.35x, YrsToPay: 1.4x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 20.9%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $94.193B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 89.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -14.6%, Next Q Est Growth: 28.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.88, P/S: 6.29)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.27)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JNJ gets EU nod for expanded Akeega use. - FDA approves JNJ's TECVAYLI and DARZALEX FASPRO combo. - Johnson & Johnson presents at Barclays conference. - Blackstone and Johnson & Johnson co-fund clinical trials.",
+      "European Commission approves AKEEGA for prostate cancer treatment.",
+      "FDA approves Johnson & Johnson's multiple myeloma drug combo. - Johnson & Johnson units to pay $65 million in antitrust settlement."
+    ],
+    "medium_term_50d": [
+      "JNJ gets EU nod for expanded Akeega use. - FDA approves JNJ's TECVAYLI and DARZALEX FASPRO combo. - Johnson & Johnson presents at Barclays conference. - Blackstone and Johnson & Johnson co-fund clinical trials.",
+      "European Commission approves AKEEGA for prostate cancer treatment.",
+      "FDA approves Johnson & Johnson's TECVAYLI plus DARZALEX FASPRO. - Johnson & Johnson's TECVAYLI plus DARZALEX FASPRO approved for multiple myeloma."
+    ],
+    "long_term_200d": [
+      "JNJ gets EU nod for expanded Akeega use. - FDA approves JNJ's TECVAYLI and DARZALEX FASPRO combo. - Johnson & Johnson presents at Barclays conference. - Blackstone and Johnson & Johnson co-fund clinical trials.",
+      "Johnson & Johnson submits supplemental BLA for IMAAV Y (nipocolimab-aaahu) approval as first-ever w AIHA treatment. - J&J seeks FDA okay for nipocalim AB-aaahu as first- ever treatment for warm AIHA.",
+      "FDA approves Johnson & Johnson's TECVAYLI plus DARZALEX FASPRO. - Johnson & Johnson's TECVAYLI plus DARZALEX FASPRO approved for multiple myeloma."
+    ]
+  }
+}

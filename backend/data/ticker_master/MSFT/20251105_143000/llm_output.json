@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: Bullish candle patterns (HAMMER_PINBAR_BULLISH) suggest potential short-term upside. Neutral RSI (50.8) indicates a lack of immediate overbought/oversold conditions. W: Stagnant velocity (ROC -0.6%) and price stable near the 20-day SMA (-1.2%) show limited immediate upward momentum. O: News flow includes AI chip development and cybersecurity acquisitions, potentially positive catalysts. T: Expanding volatility range and moderate ATR (1.98%) introduce some downside risk, with barriers near the 20-day resistance."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "risk": 4.0
+      },
+      "synthesis": "S: Gradual bullish ascent (1.27%) and healthy SMA50 Z-score (0.0) indicate a constructive medium-term trend. W: MACD is bearish and accelerating (-1.051), suggesting a potential short-term pullback or consolidation. O: Positive news regarding AI growth inflection points and cloud security acquisitions support the medium-term outlook. T: Price is within the monthly range, and while the trend is positive, the bearish MACD divergence warrants caution against aggressive upside conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 3.5
+      },
+      "synthesis": "S: Strong secular bull market regime (11.4%) and healthy golden cross structure provide a robust long-term bullish backdrop. Bullish positioning in the upper quadrant (80.4%) confirms sustained upward trend. W: Hyper-premium valuation multiples (P/E: 39.59, P/S: 14.21) and high implied growth (PEG: 3.28) present significant valuation risk. O: Long-term news highlights strategic AI investments, diversification away from China, and strong analyst conviction, reinforcing fundamental strength. T: While fundamentals are elite (business quality, financial health, cash generation), the elevated valuation multiples are the primary risk factor, demanding a premium for sustained growth."
+    }
+  }
+}

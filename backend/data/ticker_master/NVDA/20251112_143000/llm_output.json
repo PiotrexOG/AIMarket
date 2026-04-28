@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The strong bearish candle pattern and declining ROC (-3.9%) indicate a shift in short-term momentum. RSI has moved to a neutral zone (59.0), suggesting a loss of bullish conviction. Price is consolidating near the 20-day SMA, providing a temporary floor.\nW: The previous bullish momentum has dissipated. News flow is mixed, with some reports suggesting potential corrections and sales restrictions.\nO: A sustained break below the 20-day SMA could lead to further downside. Any positive news regarding AI demand or new product cycles could offer a short-term bounce.\nT: Risk has increased significantly due to the bearish candle pattern and weakening momentum. Volatility has expanded (ATR: 4.24%), and the price is still within a broad range, indicating potential for choppy price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 6.0
+      },
+      "synthesis": "S: While the trend alignment remains slightly positive (3.91%), the MACD has turned bearish and is accelerating (-0.669), signaling a significant deterioration in medium-term trend. The Z-score above the 50-day SMA (0.84) is still positive but has decreased.\nW: The bearish MACD crossover is a strong negative signal, indicating a potential trend reversal. News regarding export restrictions and debates around the AI bubble add to uncertainty.\nO: Continued strong demand for AI chips and Blackwell processors from major cloud providers remains a key supportive factor. Partnerships and new product developments could still provide a tailwind.\nT: Risk has increased due to the bearish MACD signal and the potential for negative geopolitical impacts on sales. The price remains within the monthly range, but the weakening technicals suggest a higher probability of a move towards the lower end of the range."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.2,
+        "risk": 7.0
+      },
+      "synthesis": "S: The secular bull market regime persists, and the company's business quality, financial health, and growth profile remain exceptionally strong. The long-term range position (84.5%) is still bullish, albeit slightly lower.\nW: The risk of exhaustion from an extreme bullish stretch remains elevated (22.73%). News regarding export restrictions to China and debates about an AI bubble introduce long-term uncertainty and potential headwinds.\nO: Continued technological leadership in AI and securing critical supply chains are significant long-term advantages. The implied growth (PEG: 0.21) suggests that despite high multiples, future earnings potential is still substantial.\nT: Risk is high due to the combination of extreme valuation multiples (P/E: 89.21, P/S: 49.72), the potential for market regime shifts, and geopolitical headwinds impacting sales. The current price level is vulnerable to any significant slowdown in growth or negative sentiment shifts, despite strong underlying fundamentals."
+    }
+  }
+}

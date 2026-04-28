@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.06)",
+        "velocity_roc_10": "NORMAL (-5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 80.79-87.26]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.72%)",
+        "cycle_macd": "BULLISH_FADING (0.024)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.95)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 80.79-98.89]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-12.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.92%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 11.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 80.24,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.31%))",
+      "volume_dynamics": "ELEVATED (1.26)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.0% | OM: 12.5% | NM: 8.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $36.3472B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.5%, EPS: -24.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -47.7%, Next Q Est Growth: 64.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.07, P/S: 2.52)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -12.0)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -24.38%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.26x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks experiences workforce reductionand key leadership changes, causing stock drop. -Starbucks reveals Holiday product collaboration early.",
+      "Starbucks closes cafes in North America following profitability evaluation. - Layoffs announced at Starbucks' Seattle headquarters.",
+      "Starbucks closes over 45o stores, including 59 Unionized locations. -Starbucks restructures, marks 1% North American stores for closure."
+    ],
+    "medium_term_50d": [
+      "Starbucks closes cafes in North America following profitability evaluation. - Layoffs announced at Starbucks' Seattle headquarters.",
+      "Starbucks closes over 45o stores, including 59 Unionized locations. -Starbucks restructures, marks 1% North American stores for closure.",
+      "Starbucks closes 1% North American stores, cuts 90o jobs. -Starbucks spends $1 billion on restructuring, lease exit. -Luckin Coffee opens first US stores in New Yale. -No direct impact on SBUX from Exxon, Visa dividend increases."
+    ],
+    "long_term_200d": [
+      "Starbucks closes 1% North American stores, cuts 90o jobs. -Starbucks spends $1 billion on restructuring, lease exit. -Luckin Coffee opens first US stores in New Yale. -No direct impact on SBUX from Exxon, Visa dividend increases.",
+      "Starbucks closes stores, sheds 90o jobs - Star\u0431ucks CTO resigns, Chen named interim CTO - Star\u0431\u0443cks begins organizational restructurinig, projects $1BN in costs",
+      "Starbucks closes underperforming cafes and cuts 1,800 jobs ($1 billion re Structuring) - Starbucks announces closure of 180 North American stores - Star\u0431ucks reduces corporate headcount and shuts cafes (continuation of Back to Star\u0431\u0443cks strategy)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (79.3)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.03)",
+        "velocity_roc_10": "EXPLOSIVE_UP (13.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 275.08-333.08]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.91%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.431)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.49)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 266.82-333.08]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (36.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (22.49%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 322.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.55%))",
+      "volume_dynamics": "ELEVATED (1.44)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.0% | OM: 49.5% | NM: 43.3%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3631.425B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 37.0%, EPS: 51.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3215.6%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.06, P/S: 0.46)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.33)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US approves export license for \u0422\u0421\u041c China operations.",
+      "US grants exportlicense for TSMS China operations. (Bullet point 0) - Goldman liftstarget for TSM by 34%. (Bulletpoint 2, corrected the number for accuracy)",
+      "Nvidia announces new Taipeh headquarters, straining TSMC capacity."
+    ],
+    "medium_term_50d": [
+      "US grants exportlicense for TSMS China operations. (Bullet point 0) - Goldman liftstarget for TSM by 34%. (Bulletpoint 2, corrected the number for accuracy)",
+      "US approves export license for \u0422\u0421\u041c China operations.",
+      "TSMC receives U.S export license."
+    ],
+    "long_term_200d": [
+      "US grants exportlicense for TSMS China operations. (Bullet point 0) - Goldman liftstarget for TSM by 34%. (Bulletpoint 2, corrected the number for accuracy)",
+      "TSMC expands partnerships due to overwhelming AI chip demand. - Nvidia causes increased demand for TSMS advanced Co Wo S packaging.",
+      "Taiwan Semiconductors doubles down on 2nm chips production, invests $28\u0411 in new f Abs. - Mass production at 2nm facilties targeted for 20 twenty-six. - Global expansion planned."
+    ]
+  }
+}

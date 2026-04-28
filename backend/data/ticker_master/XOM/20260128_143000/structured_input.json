@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.3%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 118.27-136.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.77%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.911)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.6)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 114.19-136.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.41%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 137.09,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 22.3% | OM: 11.0% | NM: 9.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.11x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $324.924B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.4%, EPS: -14.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.3%, Next Q Est Growth: -4.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.93, P/S: 1.83)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.28)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -14.43%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon doubling down on Carbon Capture and Storage projects. - New 3D \u0441\u0435ismic survey focusing on Trinidad deepwater plans. - Announcing strategic MOU with BYD to explore hybrid technology ecosystem.",
+      "Tanzania signs $42 billions LNG project agreement. -Exxon Mobiles partner, Tanzania, finalizes megas LNG project.",
+      "Michigan Attorney General sues Exxon \u041cobal and others for collusion against renewable energy. - Indian Oil purchases 7 million bars of oil including from Petrobas, replacing Russian crude."
+    ],
+    "medium_term_50d": [
+      "Exxon doubling down on Carbon Capture and Storage projects. - New 3D \u0441\u0435ismic survey focusing on Trinidad deepwater plans. - Announcing strategic MOU with BYD to explore hybrid technology ecosystem.",
+      "Tanzania signs $42 billions LNG project agreement. -Exxon Mobiles partner, Tanzania, finalizes megas LNG project.",
+      "Trump says he may keep Exx\u043e\u043d Mobal out of Venezuela: \"didn't like their response\" - Exxxon Mobal CEO calls Venezuela \"uninvesitable\" These two events meet the criteria of having a direct impact on XOM."
+    ],
+    "long_term_200d": [
+      "Exxon Mobile announces major gas discovery in new drilling site. - XOM enters partnership with renewable energy provider. - Regulator imposes fine on XOM due to environmental violation. - Lawsuit filed against XOM over alleged product defect. - New CEO announced at XOM with significant strategic shift.",
+      "Trump says he may keep Exx\u043e\u043d Mobal out of Venezuela: \"didn't like their response\" - Exxxon Mobal CEO calls Venezuela \"uninvesitable\" These two events meet the criteria of having a direct impact on XOM.",
+      "Trump considers locking Exx\u043e\u043d out of Venezuela. - Executives worry about commercial frameworks and legal stability in Venezuela."
+    ]
+  }
+}

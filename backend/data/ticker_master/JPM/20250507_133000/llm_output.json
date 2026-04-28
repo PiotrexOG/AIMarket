@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "risk": 4.5
+      },
+      "synthesis": "S: The short-term outlook shows a slight moderation in bullish momentum. The candle pattern has shifted to neutral, and RSI remains extremely overbought at 70.6. Velocity has increased to 5.8%, and price is stable near the 20-day SMA (4.5%). W: The neutral candle pattern and continued extreme RSI are key concerns, suggesting a potential for a short-term reversal or consolidation. The range has widened slightly to [211.0-255.16]. O: The continued overbought RSI, despite a neutral candle pattern, indicates that upward momentum is losing steam. Conviction is moderate, as the underlying trend remains supported by the SMA, but the overbought condition poses a risk. T: Risk has increased due to the persistent overbought RSI and the shift to a neutral candle pattern. Volatility has decreased (ATR 2.38%), which partially mitigates the increased risk. The previous slight increase in risk has been amplified by the sustained overbought condition."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.2,
+        "risk": 3.8
+      },
+      "synthesis": "S: The medium-term outlook shows a positive shift in trend alignment and SMA positioning. Trend alignment has moved to consolidation (-0.83%), and the MACD is bullish but fading (2.121). Crucially, the price is now in a strong bullish trend position relative to the 50-day SMA (Z:0.86). W: The improvement in SMA positioning is a significant positive, indicating stronger underlying trend support. The consolidation in trend alignment is less concerning given the improved SMA Z-score. The range has widened slightly to [202.16-266.32]. O: The shift to a bullish trend position relative to the 50-day SMA suggests renewed upside potential, despite the fading MACD. Conviction is good, supported by the improved technical posture. T: Risk has decreased due to the improved SMA positioning and the shift towards consolidation in trend alignment. Volatility has decreased (ATR 2.38%), further reducing downside exposure. The previous increase in risk has been reversed due to the strengthening medium-term technicals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "risk": 2.5
+      },
+      "synthesis": "S: The long-term outlook remains robust and has improved. The market regime continues in a secular bull market (6.3%), and the golden cross structure is healthy (2.59%). Notably, the long-term range position has moved into the upper quadrant (66.9%). W: The upward shift in the long-term range position is a significant positive, indicating a stronger long-term technical setup. The continued secular bull market and healthy crosses provide a strong foundation. Fundamentals remain consistent with high efficiency and stable growth. O: The improved long-term range position, coupled with the ongoing secular bull market, reinforces a strong bullish conviction. Conviction is high, driven by the macro environment, company quality, and improved technical positioning. T: Risk has decreased due to the improved long-term range position and reduced volatility (ATR 2.38%). The shift to the upper quadrant suggests a more favorable long-term technical posture. The previous low risk remains largely intact and has been further enhanced by the improved range positioning."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (24.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-3.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.8%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 83.88-99.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.99%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.192)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.57)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 83.88-105.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 85.04,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.85%))",
+      "volume_dynamics": "ELEVATED (1.2)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.4% | OM: 4.2% | NM: 2.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.61x, YrsToPay: 3.4x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $648.125B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 6.0%, EPS: 33.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 4.6%, Next Q Est Growth: -14.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 44.15, P/S: 1.06)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 8.22)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.31)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "China puts pressure on Walmat, potentially leading to higher prices for US customers. - Retailers, including Walmart, negotiate with suppliers over proposedprice hikes due to Trump tariffs. - JPMorgan and Walmart partner to accelerate payments foronline sellers.",
+      "Walmart shootings result in withdrawal of death penalty for perpetrator. - Consumer confidence falls to four-year low; Walmart stock drops 2.8%.",
+      "Weak economy may pressure WMT sales due to potential SNAP cuts."
+    ],
+    "medium_term_50d": [
+      "China puts pressure on Walmat, potentially leading to higher prices for US customers. - Retailers, including Walmart, negotiate with suppliers over proposedprice hikes due to Trump tariffs. - JPMorgan and Walmart partner to accelerate payments foronline sellers.",
+      "Klarna announces partnership with Onepay to exclusively power installment loans at Walmart. - Klarna replaces Affirmas Walmart'sbuy-now- pay-laterprovider.",
+      "Walmart opens or remodels at least forty five fueling centers - Wal mart takes a page outof Costco'sbusiness model with fuel station operations - Wal Mart partners with Affirm for BNPL services expansion - Walgreens, Boots merger creates largest international pharmacy chain, impacts Walmart health and wellness division - Walgreen Boot"
+    ],
+    "long_term_200d": [
+      "China puts pressure on Walmat, potentially leading to higher prices for US customers. - Retailers, including Walmart, negotiate with suppliers over proposedprice hikes due to Trump tariffs. - JPMorgan and Walmart partner to accelerate payments foronline sellers.",
+      "Klarna announces partnership with Onepay to exclusively power installment loans at Walmart. - Klarna replaces Affirmas Walmart'sbuy-now- pay-laterprovider.",
+      "Walmart negotiates tariff costs with China-soured suppliers."
+    ]
+  }
+}

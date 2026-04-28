@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "EXPLOSIVE_UP (18.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 145.49-184.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.13%)",
+        "cycle_macd": "BULLISH_ACCELERATING (3.027)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.87)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 145.49-188.66]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.02%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 181.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.55%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -2.9% | OM: -16.2% | NM: -17.8%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -21.6%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $66.518B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -14.5%, EPS: -397.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -44.2%, Next Q Est Growth: 76.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -33.32)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.31x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing secures contract to build next-gener ATION fighter aircraft. - FAAs acting chief recognizes Boeings safety improvements but maintains production limits.",
+      "Boeing awaits US Navy decision on next-generational fighter contract. - Record high deliveries of Boeing' Patriot Seeking components. - China'scommerce minister meets with Boeing Globalpresident. - Japan Airlines orders additional 17 Boeing \ufffd\u00b337 MAX jets. - Bohing looks to revoke or withdraw guilty plea",
+      "China'saviationregulator delayreleasereporton China Easternplane crash investigation. - USAir Force selects Boeingtobuildnext-generationfighterjet. - Lockheed Martiss disappointedwith USAir Forcecontractdecision."
+    ],
+    "medium_term_50d": [
+      "China'saviationregulator delayreleasereporton China Easternplane crash investigation. - USAir Force selects Boeingtobuildnext-generationfighterjet. - Lockheed Martiss disappointedwith USAir Forcecontractdecision.",
+      "Boeing secures contract to build next-gener ATION fighter aircraft. - FAAs acting chief recognizes Boeings safety improvements but maintains production limits.",
+      "Trump awards Boeling $20Billion Air Force contract. -Boeing wins USAir Forcenext-generationfighterjetcontract."
+    ],
+    "long_term_200d": [
+      "China'saviationregulator delayreleasereporton China Easternplane crash investigation. - USAir Force selects Boeingtobuildnext-generationfighterjet. - Lockheed Martiss disappointedwith USAir Forcecontractdecision.",
+      "Trump awards Boeling $20Billion Air Force contract. -Boeing wins USAir Forcenext-generationfighterjetcontract.",
+      "Boeing secures contract to build next-gener ATION fighter aircraft. - FAAs acting chief recognizes Boeings safety improvements but maintains production limits."
+    ]
+  }
+}

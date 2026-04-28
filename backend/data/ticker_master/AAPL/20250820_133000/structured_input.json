@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (73.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "EXPLOSIVE_UP (13.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 201.5-235.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.72%)",
+        "cycle_macd": "BULLISH_FADING (1.507)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.52)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 195.07-235.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (4.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.65%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 226.72,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.69%))",
+      "volume_dynamics": "AVERAGE (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 46.6% | OM: 31.8% | NM: 24.3%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 1.05x, YrsToPay: 0.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $400.366B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.9%, EPS: -0.5%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.4%, Next Q Est Growth: 7.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 35.26, P/S: 8.53)",
+    "asset_risk_assessment": "EXTREME_MULTIPLE_RISK (P/B: 51.1)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.46%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "UK drops demand for \"back door\" into i Phones, as apple reportedly expans Indian production. - Apple to manufacture full US-bound i Phone 17 lineup in India.",
+      "Apple expects $1.\u2081 Billion tariff hit in Q4 20 twenty-five. - Samsung steals US market share from Apple with foldables and AI.",
+      "Apple investing $10o billion in US manufacturing. - Apple executives gift Trump gold plaque."
+    ],
+    "medium_term_50d": [
+      "UK drops demand for \"back door\" into i Phones, as apple reportedly expans Indian production. - Apple to manufacture full US-bound i Phone 17 lineup in India.",
+      "Apple investing $10o billion in US manufacturing. - Apple executives gift Trump gold plaque.",
+      "Apple expects $1.\u2081 Billion tariff hit in Q4 20 twenty-five. - Samsung steals US market share from Apple with foldables and AI."
+    ],
+    "long_term_200d": [
+      "Apple signals readiness to increase spending on AI, build more data centers, or buy another company. - Tech giants report rising earnings driven by AI investments. - Apple's revenue forecast exceeds estimates, guiding for solid Q3 growth.",
+      "Apple announces $101 billion US investment, avoids tariffs. (White House press conference) - Apple stock retakes key level following tariff exemption announcement. (Market movement)",
+      "Apple to pledges $10o billion for US Manufacturing, White House officials says - Apple stock rses on potential USfactory announcement - Apple Stock Jums As White House Touts New USInvestmentfrom Company"
+    ]
+  }
+}

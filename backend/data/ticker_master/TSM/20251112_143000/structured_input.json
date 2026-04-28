@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.26)",
+        "velocity_roc_10": "NORMAL (-3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 277.13-311.37]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.96%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.218)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.59)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 228.6-311.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (31.5%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (27.54%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 294.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.75%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 59.0% | OM: 49.5% | NM: 43.3%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.3x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 24.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $3631.425B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 37.0%, EPS: 51.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3215.6%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.97, P/S: 0.42)",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: 0.31)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC increases chip production capacity for Nvidia. - Nvidia requests additional chips from TSMC during meeting in Taipei.",
+      "Nvidia praises TSMCfor backing Blackwell chip production. (New Trump admin restrictions)",
+      "Global Foundries licenses 65V and 80v Gallium Niture technology from TSMC. - Cathie Wood purchases TSMC stocks, sells Tesla shares. - GFS partners with TSM for advanced Ga N technology manufacturing."
+    ],
+    "medium_term_50d": [
+      "TSMC increases chip production capacity for Nvidia. - Nvidia requests additional chips from TSMC during meeting in Taipei.",
+      "Nvidia praises TSMCfor backing Blackwell chip production. (New Trump admin restrictions)",
+      "Nvidia secures exclusive access to TSMC's next-gen super-chip."
+    ],
+    "long_term_200d": [
+      "Nvidia secures exclusive access to TSMC's next-gen super-chip.",
+      "TSMC increases chip production capacity for Nvidia. - Nvidia requests additional chips from TSMC during meeting in Taipei.",
+      "TSMC beats earnings estimates, lifts outlook. - AI-driven revenue growth reported at TSMC."
+    ]
+  }
+}

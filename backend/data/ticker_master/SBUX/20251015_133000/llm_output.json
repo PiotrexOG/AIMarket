@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "risk": 6.5
+      },
+      "synthesis": "S: The short-term technicals have shown a significant reversal from bearish to bullish. The candle pattern has shifted to STRONG_BULLISH, and while RSI remains in the neutral zone at 41.2, it has improved from its previous level. Velocity (ROC 10) has also improved to -4.1%, and the price is now closer to the SMA20 at -2.5%. The price has moved into the middle of the 20-day range (78.41-87.26), indicating a potential stabilization. W: The shift to a STRONG_BULLISH candle pattern and improved velocity suggests a short-term positive momentum. However, the RSI is still in the neutral zone, and the price is not yet decisively breaking out of its range. Volume dynamics are average (0.88), suggesting a lack of strong conviction behind the current move. O: A sustained move above the upper range boundary of 87.26, supported by increasing volume and a rising RSI, would confirm a bullish short-term trend. Conversely, a failure to break out and a subsequent move back towards the lower range boundary would indicate a false signal. T: Downside risk has decreased due to the improved short-term technicals and the price moving away from critical support. Structural confidence has increased due to the clear bullish candle pattern and improved velocity. The score is adjusted up from 3.0 to 4.5, reflecting the significant technical reversal. Risk has decreased from 7.5 to 6.5 due to the improved price action and reduced proximity to immediate downside levels."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "risk": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish but shows signs of gradual descent at -3.41%, indicating a slowing rate of decline. The MACD has shifted from fading bullish to bearish recovering at -0.271, suggesting a potential bottoming process. The Z-score relative to the 50-day SMA has improved significantly to -0.86, indicating the price is no longer as deeply entrenched in a bearish trend position. The price is now inside the monthly range (78.41-94.84). W: The improvement in the MACD and Z-score suggests a potential stabilization in the medium-term trend. While the overall trend alignment is still bearish, the rate of decline is slowing, and the price is no longer as oversold relative to the 50-day SMA. News regarding the ongoing restructuring continues, but the market may be pricing in some of these events. O: A sustained move above the 50-day SMA and a bullish crossover on the MACD are required to signal a more robust medium-term recovery. Without this, the current stabilization within the range could precede a further breakdown if broader market conditions deteriorate. T: Downside risk has decreased due to the improving MACD and Z-score, indicating less immediate bearish pressure. Structural confidence has increased slightly due to the signs of stabilization in the medium-term trend. The score is adjusted up from 2.5 to 3.0, reflecting the improving technical indicators. Risk has decreased from 7.8 to 7.0 due to the reduced bearish momentum and improved Z-score."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "risk": 8.5
+      },
+      "synthesis": "S: The long-term market regime remains a SECULAR_BEAR_MARKET, with the index down -12.2%, showing no significant change. The DEATH_CROSS_STRUCTURE has widened slightly to -6.82%, reinforcing the persistent bearish technical outlook. The long-term range position has improved marginally to 17.3% in the BEARISH_LOWER_QUADRANT, indicating a slight increase in relative strength within the bearish context. W: Fundamental growth remains stagnant with profit issues, and the balance sheet is still stressed. The ongoing large-scale restructuring and store closures continue to be the dominant narrative, suggesting persistent strategic challenges. Valuation remains premium despite the price action, with extremely risky implied growth. O: A fundamental shift in the broader market regime to a bull market, a sustained and demonstrable turnaround in fundamental growth and profitability, and a clear resolution of strategic uncertainties are required for any long-term recovery. The current operational adjustments suggest a period of significant headwinds and potential for further negative surprises. T: Downside risk remains extremely elevated due to the persistent secular bear market, widening death cross, stressed fundamentals, premium valuation, and the significant negative implications of the large-scale restructuring on the long-term outlook. Structural confidence remains low due to the worsening long-term technicals and the substantial negative fundamental news. The score remains unchanged at 2.5, reflecting the lack of fundamental or regime-level improvement. Risk remains elevated at 8.5 due to the persistent bearish long-term technicals and the ongoing structural challenges."
+    }
+  }
+}

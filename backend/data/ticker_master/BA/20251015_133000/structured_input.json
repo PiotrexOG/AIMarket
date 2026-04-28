@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.35)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 210.82-226.19]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.24%)",
+        "cycle_macd": "BULLISH_FADING (0.075)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 210.82-238.33]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.53%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 215.19,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.66%))",
+      "volume_dynamics": "AVERAGE (0.64)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: -0.3% | OM: -12.4% | NM: -14.2%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -11.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $75.328B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 2.4%, EPS: -193.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 27.6%, Next Q Est Growth: -158.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "UNKNOWN",
+    "asset_risk_assessment": "ASSET_BACKED_SAFETY (P/B: -49.41)",
+    "implied_growth": "UNKNOWN (missing P/E or growth data)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.28x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing awarded $2. seventh billion in PAC-\u00b3 seeker contracts - EU approves Boeing'ss $4. seven billion Spirit Aero System acquisition (conditional)",
+      "Boeing asks for financial assistance from Airbus and Boeing due to inflation costs. - Spirit Aero systems faces production issues at customers and investigation into corporate governance. - Airbus surpasses Boeing in deliveries and secures key orders from Turkish Airlines.",
+      "Boeing could lose Turkish Aires' 15o 733 Max order to Airbis due to engine deals."
+    ],
+    "medium_term_50d": [
+      "Boeing awarded $2. seventh billion in PAC-\u00b3 seeker contracts - EU approves Boeing'ss $4. seven billion Spirit Aero System acquisition (conditional)",
+      "Boeing asks for financial assistance from Airbus and Boeing due to inflation costs. - Spirit Aero systems faces production issues at customers and investigation into corporate governance. - Airbus surpasses Boeing in deliveries and secures key orders from Turkish Airlines.",
+      "Boeing could lose Turkish Aires' 15o 733 Max order to Airbis due to engine deals."
+    ],
+    "long_term_200d": [
+      "Boeing awarded $2. seventh billion in PAC-\u00b3 seeker contracts - EU approves Boeing'ss $4. seven billion Spirit Aero System acquisition (conditional)",
+      "Boeing regains FAA certification for 73 Seven MAX and seventh 78 Seven delivery. - Turkish Airlines, Norweigian Group, Uzbekitan Airways place major Boeing jet orders.",
+      "Boeing asks for financial assistance from Airbus and Boeing due to inflation costs. - Spirit Aero systems faces production issues at customers and investigation into corporate governance. - Airbus surpasses Boeing in deliveries and secures key orders from Turkish Airlines."
+    ]
+  }
+}

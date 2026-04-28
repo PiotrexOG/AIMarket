@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "NORMAL (1.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.28-26.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.63%)",
+        "cycle_macd": "BULLISH_FADING (0.016)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.91-26.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.36%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.25,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.32%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.27)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 71.2% | OM: 27.8% | NM: 15.6%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.65x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 16.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.785B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.9%, EPS: 130.5%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -1.6%, Next Q Est Growth: -8.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.64, P/S: 2.3)",
+    "asset_risk_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.55)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.11)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer Expects With declining Covid-1 ninetrugdemand,sees FY2 026EPS$2.8-$3. 0,Sales$59. 5-62. 5billion. -PFizerslows202 6growth Despitepipelinepush,costcutshitting FY26",
+      "Pfizer enters licensing agreements with Adaptive Biotech for immune receptors in rhe UMatoid ar Thritis and multiple immunolog Y applications.",
+      "FDA considering black box warningfor Covid vaccines (PFE). - Pfizers Q1 20 twenty-six dividend declared ($0.42)."
+    ],
+    "medium_term_50d": [
+      "Pfizer Expects With declining Covid-1 ninetrugdemand,sees FY2 026EPS$2.8-$3. 0,Sales$59. 5-62. 5billion. -PFizerslows202 6growth Despitepipelinepush,costcutshitting FY26",
+      "Pfizer pays up to USD 2.1 billions for experimental oral obese drug from Fosun Pharma. -PFizer licenses oral GLP-\\* drugs from Yao Pharmas unit for worldwide development and commercialization. -TUKYSA reduces risk of diseaseprogression or death in Phase \u00b3 HER2+-Metastatic Breasticancer",
+      "Pfizer enters licensing agreements with Adaptive Biotech for immune receptors in rhe UMatoid ar Thritis and multiple immunolog Y applications."
+    ],
+    "long_term_200d": [
+      "Pfizer pays up to USD 2.1 billions for experimental oral obese drug from Fosun Pharma. -PFizer licenses oral GLP-\\* drugs from Yao Pharmas unit for worldwide development and commercialization. -TUKYSA reduces risk of diseaseprogression or death in Phase \u00b3 HER2+-Metastatic Breasticancer",
+      "Pfizer enters exclusive global collaboration with Yao Pharma for YP0 Fifthousethousand, a GLP-\u2081 receptor ag ONist for chronic weight manage MENT. ($150m upfront, $1. ninetythreefive B in milestones.)",
+      "Pfizer Expects With declining Covid-1 ninetrugdemand,sees FY2 026EPS$2.8-$3. 0,Sales$59. 5-62. 5billion. -PFizerslows202 6growth Despitepipelinepush,costcutshitting FY26"
+    ]
+  }
+}

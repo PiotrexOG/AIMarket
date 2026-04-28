@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 881.56-1050.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.14%)",
+        "cycle_macd": "BULLISH_ACCELERATING (5.994)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 881.56-1078.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.27%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 964.4,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.09%))",
+      "volume_dynamics": "AVERAGE (0.79)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.6% | OM: 3.6% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.07x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $254.453B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.0%, EPS: 17.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.3%, Next Q Est Growth: -20.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 58.1, P/S: 1.69)",
+    "asset_risk_assessment": "HIGH_MULTIPLE_RISK (P/B: 18.17)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.39)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)",
+      "Retailers bulk up inventories to mitigate tariff impact on Costco.",
+      "Costco demands price cuts from Chinese suppliers due to US tariffs."
+    ],
+    "medium_term_50d": [
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)",
+      "Costco demands price cuts from Chinese suppliers due to US tariffs.",
+      "Retailers bulk up inventories to mitigate tariff impact on Costco."
+    ],
+    "long_term_200d": [
+      "Costco exp ANDs private label Kirk Land product line. (WSJ article) - Cost Co takes action on US tariffs, pushes suppliers to absorb costs. (Target news)",
+      "Costco demands price cuts from Chinese suppliers due to US tariffs.",
+      "Costco makes desperate move to avoidhigh tariff costs."
+    ]
+  }
+}
