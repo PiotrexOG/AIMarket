@@ -3,10 +3,13 @@ from datetime import datetime, timedelta, date, timezone
 from pathlib import Path
 from typing import Dict
 
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.core.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE
+from app.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE, TIMEDELTA
+from app.db.database import SessionLocal
+from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
 from app.db.schemas.portfolio import PortfolioCreate, PortfolioHistoryCreate, PortfolioShareCreate
 from app.db.schemas.user import UserCreate
@@ -395,20 +398,38 @@ class SimulationService:
 
         print("Users initialized")
 
+    def _get_earliest_datetime_for_day(self, session, current_date):
+        return (
+            session.query(func.min(MarketData.datetime))
+            .filter(func.date(MarketData.datetime) == current_date)
+            .scalar()
+        )
+
     # ---- Krok 3: Symulacja krok po kroku ----
     def run_simulation(self):
         current_time = self.start_time
-        while current_time <= self.end_time:
-            # Sprawdzamy warunek daty i konkretnej godziny
-            if current_time.date() > date(2025, 11, 1):
-                if current_time.hour == 13 and current_time.minute == 30:
-                    current_time += timedelta(hours=1)
 
-            print(f"Symulacja dla: {current_time}")
-            self._simulate_time_step(current_time)
+        with SessionLocal() as session:
+            while True:
+                if self.end_time is not None:
+                    if current_time > self.end_time:
+                        break
+                else:
+                    if current_time > datetime.now():
+                        break
 
-            # Przejście do kolejnego tygodnia
-            current_time += timedelta(weeks=1)
+                current_date = current_time.date()
+
+                earliest_dt = self._get_earliest_datetime_for_day(
+                    session, current_date
+                )
+
+                current_time = earliest_dt
+
+                print(f"Symulacja dla: {current_time}")
+                self._simulate_time_step(current_time)
+
+                current_time += TIMEDELTA
 
         print("✅ Symulacja zakończona.")
 

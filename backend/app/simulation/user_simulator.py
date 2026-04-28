@@ -284,8 +284,6 @@ class UserSimulator:
             elif decision == "SELL":
                 self.portfolio.sell(ticker, num, price)
 
-            print(f"{self.user_id} ➤ {ticker} ➤ {decision} {num}")
-
             self.transaction_service.record_transaction(
                 portfolio_id=self.portfolio.portfolio_id,
                 ticker=ticker,

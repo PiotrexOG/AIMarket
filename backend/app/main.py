@@ -1,5 +1,5 @@
 # app/main.py
-from datetime import timedelta, datetime
+from datetime import datetime
 
 import uvicorn
 from fastapi import FastAPI
@@ -10,7 +10,7 @@ from sqlalchemy import desc
 from app.db.models.portfolio import PortfolioHistory
 from app.simulation.simulation_service import SimulationService
 from app.db.database import SessionLocal
-from app.config import ZERO_TIME, START_TIME, END_TIME, TICKERS, REAL_TIME, FETCH_NEW_DATA
+from app.config import ZERO_TIME, START_TIME, END_TIME, TICKERS, FETCH_NEW_DATA, TIMEDELTA
 
 app = FastAPI(title="Stock Simulator API")
 
@@ -30,12 +30,7 @@ app.include_router(simulation_router.router)
 app.include_router(archetype_router.router)
 
 
-def get_start_datetime(real_time: bool) -> datetime:
-    """Określa datę rozpoczęcia symulacji na podstawie flagi i danych w bazie."""
-    if real_time:
-        now = datetime.now().replace(minute=0, second=0, microsecond=0)
-        print(f"🔄 Tryb REAL_TIME: zaczynamy od {now}")
-        return now
+def get_start_datetime() -> datetime:
 
     with SessionLocal() as session:
         latest_record = (
@@ -45,7 +40,7 @@ def get_start_datetime(real_time: bool) -> datetime:
         )
 
         start_time = (
-            latest_record.datetime + timedelta(hours=1)
+            latest_record.datetime + TIMEDELTA
             if latest_record
             else START_TIME
         )
@@ -56,7 +51,7 @@ def get_start_datetime(real_time: bool) -> datetime:
 
 
 def run_simulation():
-    start_datetime = get_start_datetime(REAL_TIME)
+    start_datetime = get_start_datetime()
 
     with SessionLocal() as session:
         simulation_service = SimulationService(
