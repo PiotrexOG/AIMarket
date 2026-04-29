@@ -39,6 +39,34 @@
 }
 
 
+.change-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.change-table th,
+.change-table td {
+  padding: 6px 10px;
+}
+
+.change-table th {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.change-table tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.positive {
+  color: #2ecc71;
+}
+
+.negative {
+  color: #e74c3c;
+}
+
+
 /* ===================================
    🧭 CUSTOM RANGE SECTION
 =================================== */

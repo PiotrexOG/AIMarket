@@ -59,11 +59,6 @@ class PortfolioTransactionService:
             start=start,
             end=end
         )
-        if not txs:
-            raise HTTPException(
-                status_code=404,
-                detail=f"No transactions found for ticker '{ticker}' in this portfolio"
-            )
 
         result = []
         for tx in txs:
@@ -87,12 +82,6 @@ class PortfolioTransactionService:
                     price=tx.price,
                     total_value=tx.total_value
                 )
-            )
-
-        if not result:
-            raise HTTPException(
-                status_code=404,
-                detail="No valid transaction data (portfolio state missing for transaction dates)"
             )
 
         return result

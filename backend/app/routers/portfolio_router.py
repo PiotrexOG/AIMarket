@@ -39,8 +39,7 @@ def get_portfolio_history(
 ):
     service = get_service(db)
     history = service.get_portfolio_history(portfolio_id, detailed)
-    if not history:
-        raise HTTPException(status_code=404, detail="No history for this portfolio")
+
     return history
 
 
@@ -88,8 +87,7 @@ def get_portfolio_state_on_date(
 ):
     service = get_service(db)
     state = service.compute_portfolio_state_at_date(portfolio_id, date, detailed)
-    if not state:
-        raise HTTPException(status_code=404, detail="No state for given date")
+
     return state
 
 @router.get("/{portfolio_id}/transactions", response_model=list[PortfolioTransactionRead])
@@ -97,9 +95,6 @@ def get_portfolio_transactions(portfolio_id: int, db: Session = Depends(get_db))
     """Zwraca listę wszystkich transakcji dla danego portfela."""
     tx_service = get_transaction_service(db)
     transactions = tx_service.get_transactions(portfolio_id)
-
-    if not transactions:
-        raise HTTPException(status_code=404, detail="No transactions found for this portfolio")
 
     return transactions
 

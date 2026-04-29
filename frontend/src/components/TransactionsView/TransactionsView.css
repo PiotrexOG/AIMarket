@@ -32,25 +32,40 @@
 
 .user-columns {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;      /* ❗ zamiast wrap */
   gap: 16px;
   margin-left: 50px;
-  align-items: stretch;
+
+  overflow-x: auto;       /* ❗ poziomy scroll */
+  padding-bottom: 8px;    /* żeby scrollbar nie nachodził */
+  scroll-behavior: smooth;
 }
 
 .user-column {
+  flex: 0 0 250px;   /* ❗ stała szerokość */
+  min-width: 250px;
+
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 200px;
 
-  /* >>> SZARE TŁO JAK W STOCK PANEL <<< */
   background-color: #fafafa;
-
   border: 3px solid;
   border-radius: 10px;
   padding: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-columns::-webkit-scrollbar {
+  height: 8px;
+}
+
+.user-columns::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.user-columns::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 
 .user-name {

@@ -22,7 +22,7 @@ function ChartRangeButtons({
     totalEnd.toISOString().slice(0,10)
   );
 
-   const [customInterval, setCustomInterval] = useState("1d");
+   const [customInterval, setCustomInterval] = useState("1w");
 
   const handleRangeClick = (r) => {
     onChange(r);
