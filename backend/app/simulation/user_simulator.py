@@ -4,7 +4,7 @@ from typing import Dict
 
 import numpy as np
 
-from app.config import TICKERS
+from app.config.config import TICKERS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours

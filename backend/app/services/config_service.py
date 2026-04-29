@@ -1,7 +1,7 @@
 from datetime import timedelta
 
 from app.dto.simulation_dto import SimulationDetail
-from app.config import START_TIME, END_TIME
+from app.config.config import START_TIME, END_TIME
 
 
 class ConfigService:

@@ -2,7 +2,7 @@ import math
 
 import numpy as np
 
-from app.config import START_TIME
+from app.config.config import START_TIME
 
 
 class DeterministicDecisionMaker:

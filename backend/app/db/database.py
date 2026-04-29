@@ -1,13 +1,14 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 
-from app.config import DEBUG_RESET, LOCALLY
+from app.config.config import DEBUG_RESET, LOCALLY
 from app.db.models.base import Base
 from app.db.models.user import User
 from app.db.models.market_data import MarketData
 from app.db.models.fundamental_snapshot import FundamentalSnapshot
 from app.db.models.company_daily_summary import CompanyDailySummary
 from app.db.models.analyst_grades import AnalystGrades
+
 
 #DATABASE_URL = "postgresql+psycopg2://postgres:postgres@" +  + ":5432/stock_sim"
 db = "localhost" if LOCALLY else "postgres"

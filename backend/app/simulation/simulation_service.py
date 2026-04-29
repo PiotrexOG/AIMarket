@@ -6,8 +6,9 @@ from typing import Dict
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
+from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
-from app.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE, TIMEDELTA
+from app.config.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE, TIMEDELTA
 from app.db.database import SessionLocal
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -60,6 +61,8 @@ class SimulationService:
         self.company_daily_summary_service = CompanyDailySummaryService(db)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
+
+        self.initialize_users()
 
 
     # Rozszerzona wersja Twojej metody
@@ -410,23 +413,12 @@ class SimulationService:
         current_time = self.start_time
 
         with SessionLocal() as session:
-            while True:
-                if self.end_time is not None:
-                    if current_time > self.end_time:
-                        break
-                else:
-                    if current_time > datetime.now():
-                        break
+            while current_time <= self.end_time:
 
-                current_date = current_time.date()
-
-                earliest_dt = self._get_earliest_datetime_for_day(
-                    session, current_date
+                current_time = self._get_earliest_datetime_for_day(
+                    session, current_time.date()
                 )
 
-                current_time = earliest_dt
-
-                print(f"Symulacja dla: {current_time}")
                 self._simulate_time_step(current_time)
 
                 current_time += TIMEDELTA
@@ -435,6 +427,13 @@ class SimulationService:
 
     # ---- Krok 4: Symulacja pojedynczego kroku czasu ----
     def _simulate_time_step(self, current_time: datetime):
+
+        print(f"Symulacja dla: {current_time}")
+
+        if current_time.date() > load_last_fetch_date():
+            self._fetch_data()
+            save_last_fetch_date(self.end_time.date())
+
 
         # 1️⃣ bierzemy jednego usera tylko do wygenerowania danych
         first_user = next(iter(self.users.values()))
@@ -460,6 +459,16 @@ class SimulationService:
                 crucial_indicators,
                 cross_section_result
             )
+
+    def _fetch_data(self):
+        self.fetch_market_data(interval="1h")
+        self.fetch_analyst_grades()
+        self.fetch_data_fundaments()
+
+        self.fetch_company_news()
+        self.fetch_company_news_summarize()
+        self.fetch_company_news_importance()
+        self.fetch_company_news_summary_with_score()
 
 
 

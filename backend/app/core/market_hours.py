@@ -5,7 +5,7 @@ import holidays
 from datetime import timezone
 import yfinance as yf
 
-from app.config import TICKERS
+from app.config.config import TICKERS
 
 TICKERS_EXCHANGE_NAME = {}
 for ticker_symbol in TICKERS:
