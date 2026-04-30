@@ -2,12 +2,11 @@ import math
 
 import numpy as np
 
-from app.config.config import START_TIME
-
 
 class DeterministicDecisionMaker:
-    def __init__(self, valuation_service):
+    def __init__(self, valuation_service, start_time):
         self.valuation_service = valuation_service
+        self.start_time = start_time
 
     def benchmark_equal_weight_buy(self, market_scores, portfolio, date_time):
 
@@ -77,7 +76,7 @@ class DeterministicDecisionMaker:
         profile = portfolio.user_profile
 
         if profile.get("name") == "benchmark":
-            if date_time.date() == START_TIME.date():
+            if date_time.date() == self.start_time.date():
                 decisions = self.benchmark_equal_weight_buy(
                     market_scores,
                     portfolio,

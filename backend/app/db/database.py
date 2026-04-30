@@ -8,6 +8,7 @@ from app.db.models.market_data import MarketData
 from app.db.models.fundamental_snapshot import FundamentalSnapshot
 from app.db.models.company_daily_summary import CompanyDailySummary
 from app.db.models.analyst_grades import AnalystGrades
+from app.db.models.portfolio import *
 
 
 #DATABASE_URL = "postgresql+psycopg2://postgres:postgres@" +  + ":5432/stock_sim"
@@ -18,11 +19,22 @@ engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 
 if DEBUG_RESET:
-    for table in reversed(Base.metadata.sorted_tables):
-        if table.name not in ["market_data", "analyst_grades", "fundamental_snapshot", "company_daily_summary"]:
-            table.drop(engine, checkfirst=True)
-        # if table.name in ["analyst_grades", "fundamental_snapshot", "company_news", "company_daily_summary"] and GENERATE_NEW:
-        #     table.drop(engine, checkfirst=True)
+
+    SKIP_TABLES = {
+        "market_data",
+        "analyst_grades",
+        "fundamental_snapshot",
+        "company_daily_summary"
+    }
+
+    tables_to_drop = [
+        t for t in Base.metadata.sorted_tables
+        if t.name not in SKIP_TABLES
+    ]
+
+    for table in reversed(tables_to_drop):
+        table.drop(engine, checkfirst=True)
+
     Base.metadata.create_all(bind=engine)
 
 

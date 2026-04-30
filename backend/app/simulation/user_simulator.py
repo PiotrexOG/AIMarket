@@ -125,10 +125,7 @@ class UserSimulator:
 
         return crucial_indicators
 
-    def process_day(self, date_time: datetime, crucial_indicators, cross_section_result) -> None:
-
-        if not cross_section_result:
-            return
+    def process_day(self, date_time: datetime, cross_section_result) -> None:
 
         self._execute_trading_logic(
             cross_section_result,

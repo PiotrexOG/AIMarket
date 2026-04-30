@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
-from app.config.config import DEBUG_RESET, STARTING_CASH, USERS_PER_ARCHETYPE, TIMEDELTA
+from app.config.config import DEBUG_RESET, STARTING_CASH
 from app.db.database import SessionLocal
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -44,12 +44,13 @@ BASE_DIR = Path(__file__).resolve().parents[2]  # backend/
 
 
 class SimulationService:
-    def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime):
+    def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime, users_per_archetype: int, delta_days):
         self.db = db
         self.tickers = tickers
         self.zero_time = zero_time
         self.start_time = start_time
         self.end_time = end_time
+        self.delta_days = delta_days
 
         self.market_data_service = MarketDataService(db)
         self.user_service = UserService(db)
@@ -62,7 +63,7 @@ class SimulationService:
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
-        self.initialize_users()
+        self.initialize_users(users_per_archetype)
 
 
     # Rozszerzona wersja Twojej metody
@@ -301,7 +302,7 @@ class SimulationService:
 
 
     # ---- Krok 2: Inicjalizacja użytkowników i portfeli ----
-    def initialize_users(self):
+    def initialize_users(self, users_per_archetype: int):
         existing_users = self.user_service.list_users()
         users_to_init = []
         starting_cash = STARTING_CASH
@@ -311,7 +312,7 @@ class SimulationService:
             users_profiles = {}
 
             for arc_name in ARCHETYPES.keys():
-                users_profiles.update(generate_users(arc_name, USERS_PER_ARCHETYPE))
+                users_profiles.update(generate_users(arc_name, users_per_archetype))
 
             for name in users_profiles.keys():
                 user = self.user_service.create_user(
@@ -363,7 +364,7 @@ class SimulationService:
         gemini_master = GEMINI_MASTER()
         gemini_horizon = GEMINI_HORIZON()
         ticker_serializer = TickerDataSerializer()
-        decision_maker = DeterministicDecisionMaker(self.valuation_service)
+        decision_maker = DeterministicDecisionMaker(self.valuation_service, self.start_time)
         news_narrative_service =  NewsNarrativeService(self.company_daily_summary_service)
 
         for user, cash, shares in users_to_init:
@@ -421,7 +422,7 @@ class SimulationService:
 
                 self._simulate_time_step(current_time)
 
-                current_time += TIMEDELTA
+                current_time += self.delta_days
 
         print("✅ Symulacja zakończona.")
 
@@ -456,7 +457,6 @@ class SimulationService:
         for user_simulator in self.users.values():
             user_simulator.process_day(
                 current_time,
-                crucial_indicators,
                 cross_section_result
             )
 
@@ -469,6 +469,10 @@ class SimulationService:
         self.fetch_company_news_summarize()
         self.fetch_company_news_importance()
         self.fetch_company_news_summary_with_score()
+
+
+
+
 
 
 
