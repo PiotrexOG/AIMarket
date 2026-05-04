@@ -37,6 +37,7 @@ function App() {
       try {
 
         const config = await fetchSimulationConfig();
+        
 
         setSimulationConfig({
           totalStart: new Date(config.start_date),

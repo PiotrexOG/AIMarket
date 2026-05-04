@@ -13,9 +13,10 @@ export const fetchSimulationConfig = async () => {
 
 export const startSimulation = async (startDate, endDate, usersPerArchetype, deltaDays) => {
   // Ponieważ datetime-local nie ma sekund ani strefy, dodajemy je tutaj:
+  console.log(startDate)
   const payload = {
-    start_time: `${startDate}:00.000Z`, 
-    end_time: `${endDate}:00.000Z`,
+    start_time: startDate, 
+    end_time: endDate,
     users_per_archetype: usersPerArchetype,
     delta_days: deltaDays,
   };

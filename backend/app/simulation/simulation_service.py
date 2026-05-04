@@ -391,7 +391,7 @@ class SimulationService:
 
             if not existing_users or not shares:
                 history_data = PortfolioHistoryCreate(
-                    datetime=self.start_time,
+                    datetime=self.zero_time,
                     cash=cash,
                     shares=[
                         PortfolioShareCreate(ticker=t, amount=a)
@@ -416,6 +416,10 @@ class SimulationService:
         with SessionLocal() as session:
             while current_time <= self.end_time:
 
+                if current_time.date() > load_last_fetch_date():
+                    self._fetch_data()
+                    save_last_fetch_date(self.end_time.date())
+
                 current_time = self._get_earliest_datetime_for_day(
                     session, current_time.date()
                 )
@@ -430,11 +434,6 @@ class SimulationService:
     def _simulate_time_step(self, current_time: datetime):
 
         print(f"Symulacja dla: {current_time}")
-
-        if current_time.date() > load_last_fetch_date():
-            self._fetch_data()
-            save_last_fetch_date(self.end_time.date())
-
 
         # 1️⃣ bierzemy jednego usera tylko do wygenerowania danych
         first_user = next(iter(self.users.values()))
