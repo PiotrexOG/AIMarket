@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 
-from app.config.config import DEBUG_RESET, LOCALLY
+from app.config.config import LOCALLY
 from app.db.models.base import Base
 from app.db.models.user import User
 from app.db.models.market_data import MarketData
@@ -18,8 +18,7 @@ DATABASE_URL = f"postgresql+psycopg2://postgres:postgres@{db}:5432/stock_sim"
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 
-if DEBUG_RESET:
-
+def reset_database():
     SKIP_TABLES = {
         "market_data",
         "analyst_grades",

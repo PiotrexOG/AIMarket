@@ -10,6 +10,7 @@ import StockChart from "./components/StockChart/StockChart";
 import StockTransactionPanel from "./components/StockTransactionPanel/StockTransactionPanel";
 import GlobalResults from "./components/GlobalResults/GlobalResults";
 import AllResults from "./components/GlobalResults/AllResults";
+import LandingPage from "./components/LandingPage/LandingPage"; // Import nowego komponentu
 
 import { fetchSimulationConfig } from "./api/fetchSimulationConfig";
 import {generateDistinctColors} from "./components/common/utils";
@@ -74,19 +75,16 @@ function App() {
 
   return (
     <Router>
-
       <div className="page-container">
-
+        {/* Header wyświetlamy tylko wtedy, gdy NIE jesteśmy na landing page (opcjonalnie) */}
         <header className="app-header">
-
           <div className="header-top">
             <UserSelector onSelectionChange={handleSelectionChange} />
           </div>
-
           <h3>Portfolio History Viewer</h3>
-
-          <nav style={{ marginTop: "10px" }}>
-            <Link to="/" style={{ marginRight: "15px" }}>📈 Portfolio</Link>
+          <nav>
+            <Link to="/"style={{ marginRight: "15px" }}>🏠 Home</Link>
+            <Link to="/dashboard"style={{ marginRight: "15px" }}>📈 Portfolio</Link>
             <Link to="/transactions" style={{ marginRight: "15px" }}>💹 Transactions</Link>
             <Link to="/stocks"style={{ marginRight: "15px" }}>📊 Stocks</Link>
             <Link to="/global-results"style={{ marginRight: "15px" }}>🌍 Archetype Results</Link>
@@ -98,9 +96,14 @@ function App() {
 
         <Routes>
 
+          <Route path="/" element={<LandingPage
+                            totalStart={totalStart}
+                            totalEnd={totalEnd}
+                             />} />
+
           {/* 🔹 Portfolio */}
           <Route
-            path="/"
+            path="/dashboard"
             element={
               <>
                 <PortfolioChart

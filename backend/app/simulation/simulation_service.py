@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
-from app.config.config import DEBUG_RESET, STARTING_CASH
+from app.config.config import STARTING_CASH
 from app.db.database import SessionLocal
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -307,7 +307,7 @@ class SimulationService:
         users_to_init = []
         starting_cash = STARTING_CASH
 
-        if DEBUG_RESET or not existing_users:
+        if not existing_users:
             # 🔄 czysta inicjalizacja
             users_profiles = {}
 
@@ -389,7 +389,7 @@ class SimulationService:
 
             )
 
-            if DEBUG_RESET or not existing_users or not shares:
+            if not existing_users or not shares:
                 history_data = PortfolioHistoryCreate(
                     datetime=self.start_time,
                     cash=cash,

@@ -6,8 +6,6 @@ TICKERS = [
 "AAPL", "NVDA", "MSFT", "JPM", "XOM", "JNJ", "BA", "COST", "TSM", "NKE", "V", "DIS", "NFLX", "PFE", "WMT", "CVX", "GE", "SBUX"
 ]
 
-DEBUG_RESET = True
-
 STARTING_CASH = 100000.0
 
 ZERO_TIME = datetime(2024, 3, 15, 13, 30, tzinfo=timezone.utc)

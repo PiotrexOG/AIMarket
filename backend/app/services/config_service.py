@@ -10,7 +10,7 @@ class ConfigService:
     @classmethod
     def get_start_end_dates(cls) -> SimulationDetail:
         return SimulationDetail(
-            start_date=cls._start_date + timedelta(days=1),
+            start_date=cls._start_date,
             end_date=cls._end_date
         )
 
