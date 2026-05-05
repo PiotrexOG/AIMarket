@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useChartRange } from "../common/useChartRange";
 import ChartRangeButtons from "../common/ChartRangeButtons";
 import CorrelationCharts from "./CorrelationCharts";
+import MetricCompositionChart from "./MetricCompositionChart";
 import ArchetypePerformanceChart from "./ArchetypePerformanceChart";
+import ArchetypeAverageChart from "./ArchetypeAverageChart";
+import ArchetypeCorrelationHeatmap from "./ArchetypeCorrelationHeatmap";
+import ArchetypeRadarAnalysis from "./ArchetypeRadarAnalysis";
+import SuccessDistributionChart from "./SuccessDistributionChart";
+import {PortfolioParallelPlot, ArchetypeParallelPlot} from "./ParallelPlot";
 import { fetchPerformanceSummary, fetchArchetypes } from "./utils/fetchUtils";
 import { generateDistinctColors } from "../common/utils"; 
 import "./GlobalResults.css";
@@ -196,6 +202,56 @@ function AllResults({ totalStart, totalEnd }) {
         <h2>Ranking Archetypów</h2>
         <ArchetypePerformanceChart data={summaryData} archetypes={archetypes} archColorMap={archColorMap} />
       </div>
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <MetricCompositionChart data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <ArchetypeAverageChart data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <PortfolioParallelPlot data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <ArchetypeParallelPlot data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <ArchetypeCorrelationHeatmap data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <SuccessDistributionChart data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
+      {!loading && summaryData.length > 0 && (
+        <div className="section">
+          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
+          <ArchetypeRadarAnalysis data={summaryData} archColorMap={archColorMap} />
+        </div>
+      )}
+
 
       {!loading && summaryData.length > 0 && (
         <div className="section">

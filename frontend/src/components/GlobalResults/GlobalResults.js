@@ -74,17 +74,32 @@ function GlobalResults({ totalStart, totalEnd }) {
 
   const getValue = (obj, path) => path.split(".").reduce((o, key) => o?.[key], obj);
 
-  const calculateStats = (data, path) => {
+  const calculateStats = (data, path, centyl) => {
     if (!data.length) return { avg: 0, std: 0 };
-    const values = data.map(item => getValue(item, path) || 0);
+  
+    // 🔥 sort po wyniku
+    const sorted = [...data].sort((a, b) => b.change_ratio - a.change_ratio);
+  
+    // 🔥 wybór części danych (TOP X%)
+    const size = Math.max(1, Math.floor(sorted.length * centyl));
+    const selectedData = sorted.slice(0, size);
+  
+    // 🔥 wartości
+    const values = selectedData.map(item => getValue(item, path) || 0);
+  
     const avg = values.reduce((a, b) => a + b, 0) / values.length;
-    const squareDiffs = values.map(v => Math.pow(v - avg, 2));
-    const std = Math.sqrt(squareDiffs.reduce((a, b) => a + b, 0) / values.length);
+  
+    const variance =
+      values.reduce((sum, v) => sum + Math.pow(v - avg, 2), 0) / values.length;
+  
+    const std = Math.sqrt(variance);
+  
     return { avg, std };
   };
 
-  const renderStatsCell = (data, path, isPercent = true, decimals = 2, isPp = false) => {
-    const { avg, std } = calculateStats(data, path);
+
+  const renderStatsCell = (data, path, isPercent = true, decimals = 2, isPp = false, centyl = 1) => {
+    const { avg, std } = calculateStats(data, path, centyl);
     const multiplier = isPercent || isPp ? 100 : 1;
     const unit = isPp ? "pp" : (isPercent ? "%" : "");
     return (
@@ -229,7 +244,7 @@ function GlobalResults({ totalStart, totalEnd }) {
                     <td>{fmtRange(arch.time_weights.long)}</td>
                     <td>{fmtRange(arch.risk_tolerance)}</td>
                     <td>{fmtRange(arch.rebalance_range)}</td>
-                    <td>{fmtRange(arch.min_score_threshold, false)}</td>
+                    <td>{fmtRange(arch.min_score, false)}</td>
                     <td>{fmtRange(arch.temp, false)}</td>
                     <td>{fmtRange(arch.metric_weights.asym)}</td>
                     <td>{fmtRange(arch.metric_weights.conv)}</td>
@@ -295,6 +310,29 @@ function GlobalResults({ totalStart, totalEnd }) {
                     {renderStatsCell(relatedPortfolios, keyMap.tech)}
                     {renderStatsCell(relatedPortfolios, "change_ratio")}
                     {renderStatsCell(relatedPortfolios, "benchmark_diff", false, 2, true)}
+                  </tr>
+
+
+                  <tr className="summary-row-simple">
+                    <td className="sticky-col summary-label">ŚREDNIA TOP 30%(σ)</td>
+                    {renderStatsCell(relatedPortfolios, keyMap.short, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.mid, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.long, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.risk, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.rebalance, true, 2, false, 0.3)}
+
+                    {renderStatsCell(relatedPortfolios, keyMap.min_score, false, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.temp, false, 2, false, 0.3)}
+
+                    {renderStatsCell(relatedPortfolios, keyMap.asym, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.conv, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.struct_risk, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.val, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.fund, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.tech, true, 2, false, 0.3)}
+
+                    {renderStatsCell(relatedPortfolios, "change_ratio", true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, "benchmark_diff", false, 2, true, 0.3)}
                   </tr>
                 </tbody>
               </table>
