@@ -1,15 +1,16 @@
 import random
 
-from app.testy.archetypes import ARCHETYPES
+from app.config.archetype_config import get_archetype
 
 
-def generate_users(archetype_key, count):
+def generate_users(archetype_key, count, archetypes):
 
     if archetype_key == "benchmark":
         return {"benchmark": {"name": "benchmark"}}
 
     generated_users = {}
-    arc = ARCHETYPES[archetype_key]
+
+    arc = archetypes[archetype_key]
 
     for i in range(1, count + 1):
         # 1. Losowanie wag czasowych i normalizacja

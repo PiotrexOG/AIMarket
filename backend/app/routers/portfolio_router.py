@@ -56,6 +56,17 @@ def get_portfolio_valuation(
     service = get_service(db)
     return service.get_portfolio_valuation_in_range(portfolio_id, start, end, interval, detailed)
 
+
+@router.get("/new-config")
+def siema(
+    start: datetime = Query(..., description="Początek okresu do analizy"),
+    end: datetime = Query(..., description="Koniec okresu do analizy"),
+    db: Session = Depends(get_db)
+):
+
+    service = get_service(db)
+    return service.siema(start, end)
+
 @router.get("/performance-summary", response_model=List[PortfolioPerformanceSummaryDTO])
 def get_all_portfolios_performance(
     start: datetime = Query(..., description="Początek okresu do analizy"),

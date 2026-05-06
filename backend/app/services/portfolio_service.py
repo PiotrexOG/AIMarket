@@ -4,6 +4,8 @@ from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
+from app.config.archetype_config import get_archetype
+from app.config.optimize import process_and_print_results
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, \
     PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
 from app.repositories.portfolio_repository import PortfolioRepository
@@ -192,21 +194,21 @@ class PortfolioService:
 
         change_ratio = ((end_val - start_val) / start_val) if start_val != 0 else 0.0
 
-        mw_dict = {mw.metric_name: self._zero_to_NaN(mw.weight) for mw in portfolio.metric_weights}
+        mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
 
         return PortfolioPerformanceSummaryDTO(
             id=portfolio.id,
             name=portfolio.name,
             archetype_key=portfolio.archetype_key,
 
-            short_term_weight=self._zero_to_NaN(portfolio.short_term_weight),
-            medium_term_weight=self._zero_to_NaN(portfolio.medium_term_weight),
-            long_term_weight=self._zero_to_NaN(portfolio.long_term_weight),
+            short_term_weight=portfolio.short_term_weight,
+            medium_term_weight=portfolio.medium_term_weight,
+            long_term_weight=portfolio.long_term_weight,
 
-            risk_tolerance=self._zero_to_NaN(portfolio.risk_tolerance),
-            rebalance_threshold=self._zero_to_NaN(portfolio.rebalance_threshold),
-            min_score_threshold=self._zero_to_NaN(portfolio.min_score_threshold),
-            softmax_temp=self._zero_to_NaN(portfolio.softmax_temp),
+            risk_tolerance=portfolio.risk_tolerance,
+            rebalance_threshold=portfolio.rebalance_threshold,
+            min_score_threshold=portfolio.min_score_threshold,
+            softmax_temp=portfolio.softmax_temp,
 
             metric_weights=mw_dict,
             change_ratio=round(change_ratio, 4)
@@ -245,3 +247,18 @@ class PortfolioService:
         ]
 
         return sorted(summaries, key=lambda x: x.change_ratio, reverse=True)
+
+
+    def siema(
+            self,
+            start: datetime,
+            end: datetime
+    ):
+
+        summaries = self.get_all_portfolios_performance_summary(start, end)
+
+        original_json_dict = get_archetype("archetypes_normalized.json")
+
+        optimized_json = process_and_print_results(summaries, original_json_dict)
+
+        return optimized_json

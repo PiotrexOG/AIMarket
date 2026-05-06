@@ -1,11 +1,17 @@
 from typing import List
 
-from app.testy.archetypes import ARCHETYPES
+from sqlalchemy.orm import Session
+
+from app.config.archetype_config import get_archetype
 
 
 class ArchetypeService:
+    def __init__(self, archetype_config: str):
+        self.archetype_config = archetype_config
+        self.raw_data = get_archetype(self.archetype_config)
+
     # Mapujemy komentarze na dane
-    RAW_DATA = ARCHETYPES # Twoja zmienna z promptu
+
 
     DESCRIPTIONS = {
         "benchmark": "Kup po równo i trzymaj",
@@ -32,11 +38,11 @@ class ArchetypeService:
 
     def get_all_archetypes(self) -> List[dict]:
         """Zwraca listę wszystkich dostępnych archetypów"""
-        return [self._format_archetype(k, v) for k, v in self.RAW_DATA.items()]
+        return [self._format_archetype(k, v) for k, v in self.raw_data.items()]
 
     def get_archetype_by_key(self, key: str) -> dict:
         """Zwraca konkretny archetyp po kluczu"""
-        data = self.RAW_DATA.get(key)
+        data = self.raw_data.get(key)
         if not data:
             return None
         return self._format_archetype(key, data)

@@ -24,7 +24,7 @@ def get_start_datetime(default_start, delta_days):
     return start_time
 
 
-def run_simulation(start_datetime, end_time, users_per_archetype, delta_days):
+def run_simulation(start_datetime, end_time, users_per_archetype, delta_days, archetypes_config):
     with SessionLocal() as session:
         simulation_service = SimulationService(
             db=session,
@@ -33,7 +33,9 @@ def run_simulation(start_datetime, end_time, users_per_archetype, delta_days):
             start_time=start_datetime,
             end_time=end_time,
             users_per_archetype=users_per_archetype,
-            delta_days=delta_days
+            delta_days=delta_days,
+            archetypes_config=archetypes_config
+
         )
 
         simulation_service.run_simulation()

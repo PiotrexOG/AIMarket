@@ -9,7 +9,7 @@ export const fetchPerformanceSummary = async (start, end) => {
   };
 
   export const fetchArchetypes = async () => {
-    const response = await fetch("http://localhost:8000/archetypes/");
+    const response = await fetch("http://localhost:8000/simulation/archetypes/");
     if (!response.ok) throw new Error("Failed to fetch archetypes");
     return response.json();
   };

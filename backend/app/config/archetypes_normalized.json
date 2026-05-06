@@ -1,0 +1,211 @@
+{
+    "benchmark": {
+        "time_weights": {
+            "short": [0, 0],
+            "medium": [0, 0],
+            "long": [0, 0]
+        },
+        "metric_weights": {
+            "tech": [0, 0],
+            "fund": [0, 0],
+            "val": [0, 0],
+            "risk": [0, 0],
+            "conv": [0, 0],
+            "asym": [0, 0]
+        },
+        "risk_tolerance": [0, 0],
+        "min_score": [0, 0],
+        "temp": [0, 0],
+        "rebalance_range": [0, 0]
+    },
+    "conservative_grandpa": {
+        "time_weights": {
+            "short": [0.0, 0.05],
+            "medium": [0.1, 0.2],
+            "long": [0.75, 0.9]
+        },
+        "metric_weights": {
+            "tech": [0.0, 0.0465],
+            "fund": [0.3721, 0.5581],
+            "val": [0.2791, 0.3721],
+            "risk": [0.093, 0.186],
+            "conv": [0.0, 0.0465],
+            "asym": [0.0, 0.0465]
+        },
+        "risk_tolerance": [0.1, 0.3],
+        "min_score": [6.0, 7.5],
+        "temp": [1.5, 2.0],
+        "rebalance_range": [0.05, 0.1]
+    },
+    "value_hunter": {
+        "time_weights": {
+            "short": [0.05, 0.15],
+            "medium": [0.3, 0.4],
+            "long": [0.5, 0.6]
+        },
+        "metric_weights": {
+            "tech": [0.0455, 0.0909],
+            "fund": [0.2727, 0.3636],
+            "val": [0.3636, 0.4545],
+            "risk": [0.0455, 0.0909],
+            "conv": [0.0455, 0.0909],
+            "asym": [0.0455, 0.0909]
+        },
+        "risk_tolerance": [0.4, 0.6],
+        "min_score": [5.0, 6.5],
+        "temp": [1.0, 1.5],
+        "rebalance_range": [0.03, 0.06]
+    },
+    "degen_trader": {
+        "time_weights": {
+            "short": [0.7179, 0.9231],
+            "medium": [0.1026, 0.2051],
+            "long": [0.0, 0.0513]
+        },
+        "metric_weights": {
+            "tech": [0.3721, 0.5581],
+            "fund": [0.0, 0.0465],
+            "val": [0.0, 0.0465],
+            "risk": [0.0465, 0.093],
+            "conv": [0.093, 0.186],
+            "asym": [0.186, 0.3721]
+        },
+        "risk_tolerance": [0.9, 1.0],
+        "min_score": [2.0, 4.0],
+        "temp": [0.3, 0.6],
+        "rebalance_range": [0.005, 0.015]
+    },
+    "growth_enthusiast": {
+        "time_weights": {
+            "short": [0.2, 0.3],
+            "medium": [0.4, 0.5],
+            "long": [0.2, 0.4]
+        },
+        "metric_weights": {
+            "tech": [0.1739, 0.2609],
+            "fund": [0.1739, 0.2609],
+            "val": [0.0435, 0.1304],
+            "risk": [0.087, 0.1739],
+            "conv": [0.087, 0.1739],
+            "asym": [0.1739, 0.2609]
+        },
+        "risk_tolerance": [0.7, 0.85],
+        "min_score": [4.0, 5.5],
+        "temp": [0.8, 1.2],
+        "rebalance_range": [0.02, 0.04]
+    },
+    "risk_manager": {
+        "time_weights": {
+            "short": [0.1, 0.2],
+            "medium": [0.4, 0.4],
+            "long": [0.4, 0.5]
+        },
+        "metric_weights": {
+            "tech": [0.0444, 0.0889],
+            "fund": [0.0889, 0.1778],
+            "val": [0.0889, 0.1778],
+            "risk": [0.4444, 0.6222],
+            "conv": [0.0444, 0.0889],
+            "asym": [0.0444, 0.0889]
+        },
+        "risk_tolerance": [0.2, 0.4],
+        "min_score": [5.5, 7.0],
+        "temp": [1.2, 1.6],
+        "rebalance_range": [0.01, 0.03]
+    },
+    "balanced_pensioner": {
+        "time_weights": {
+            "short": [0.1053, 0.2105],
+            "medium": [0.4211, 0.5263],
+            "long": [0.3158, 0.4211]
+        },
+        "metric_weights": {
+            "tech": [0.0976, 0.1951],
+            "fund": [0.1951, 0.2927],
+            "val": [0.1951, 0.2927],
+            "risk": [0.0976, 0.1951],
+            "conv": [0.0976, 0.1463],
+            "asym": [0.0488, 0.1463]
+        },
+        "risk_tolerance": [0.4, 0.6],
+        "min_score": [4.5, 5.5],
+        "temp": [1.0, 1.2],
+        "rebalance_range": [0.04, 0.07]
+    },
+    "conviction_heavy": {
+        "time_weights": {
+            "short": [0.05, 0.1],
+            "medium": [0.2, 0.3],
+            "long": [0.6, 0.75]
+        },
+        "metric_weights": {
+            "tech": [0.0444, 0.0889],
+            "fund": [0.0889, 0.1778],
+            "val": [0.0444, 0.0889],
+            "risk": [0.0444, 0.0889],
+            "conv": [0.4444, 0.6222],
+            "asym": [0.0889, 0.1778]
+        },
+        "risk_tolerance": [0.6, 0.8],
+        "min_score": [6.5, 8.0],
+        "temp": [0.4, 0.7],
+        "rebalance_range": [0.06, 0.12]
+    },
+    "asymmetry_seeker": {
+        "time_weights": {
+            "short": [0.1053, 0.2105],
+            "medium": [0.3158, 0.4211],
+            "long": [0.4211, 0.5263]
+        },
+        "metric_weights": {
+            "tech": [0.087, 0.1304],
+            "fund": [0.0435, 0.087],
+            "val": [0.087, 0.1739],
+            "risk": [0.087, 0.1739],
+            "conv": [0.087, 0.1739],
+            "asym": [0.3478, 0.5217]
+        },
+        "risk_tolerance": [0.7, 0.9],
+        "min_score": [4.0, 6.0],
+        "temp": [0.7, 1.1],
+        "rebalance_range": [0.02, 0.05]
+    },
+    "technical_swing": {
+        "time_weights": {
+            "short": [0.3, 0.4],
+            "medium": [0.5, 0.6],
+            "long": [0.05, 0.15]
+        },
+        "metric_weights": {
+            "tech": [0.4762, 0.6667],
+            "fund": [0.0476, 0.0952],
+            "val": [0.0476, 0.0952],
+            "risk": [0.0952, 0.1905],
+            "conv": [0.0476, 0.0952],
+            "asym": [0.0476, 0.0952]
+        },
+        "risk_tolerance": [0.6, 0.8],
+        "min_score": [3.5, 5.0],
+        "temp": [0.8, 1.0],
+        "rebalance_range": [0.015, 0.035]
+    },
+    "macro_fundamentalist": {
+        "time_weights": {
+            "short": [0.0, 0.05],
+            "medium": [0.2, 0.3],
+            "long": [0.65, 0.8]
+        },
+        "metric_weights": {
+            "tech": [0.0, 0.0488],
+            "fund": [0.4878, 0.6829],
+            "val": [0.0976, 0.1951],
+            "risk": [0.0976, 0.1951],
+            "conv": [0.0488, 0.0976],
+            "asym": [0.0, 0.0488]
+        },
+        "risk_tolerance": [0.3, 0.5],
+        "min_score": [5.5, 7.0],
+        "temp": [1.2, 1.5],
+        "rebalance_range": [0.07, 0.15]
+    }
+}

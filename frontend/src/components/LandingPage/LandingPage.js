@@ -28,6 +28,7 @@ const LandingPage = ({ totalStart, totalEnd }) => {
   const [endDate, setEndDate] = useState(formatAsUTCForInput(totalEnd));
   const [usersPerArchetype, setUsersPerArchetype] = useState(1);
   const [deltaDays, setDeltaDays] = useState(7);
+  const [archetypes_config, setArchetypeConfig] = useState("archetypes_normalized.json");
 
   useEffect(() => {
     if (totalStart) setStartDate(formatAsUTCForInput(totalStart));
@@ -42,7 +43,9 @@ const LandingPage = ({ totalStart, totalEnd }) => {
         toUTCISOString(startDate),
         toUTCISOString(endDate),
         usersPerArchetype,
-        deltaDays
+        deltaDays,
+        archetypes_config
+
       );
       navigate("/dashboard");
     } catch (err) {
@@ -63,25 +66,6 @@ const LandingPage = ({ totalStart, totalEnd }) => {
     } finally {
       setLoading(false);
     }
-  };
-
-  // 🔥 UTC "Wczoraj" - teraz bez żadnych przesunięć lokalnych
-  const setYesterdayStart = () => {
-    const yesterday = new Date();
-    yesterday.setUTCDate(yesterday.getUTCDate() - 1);
-
-    const startStr = `${yesterday.toISOString().split('T')[0]}T13:30`;
-
-    setStartDate(startStr);
-  };
-
-  const setYesterdayEnd = () => {
-    const yesterday = new Date();
-    yesterday.setUTCDate(yesterday.getUTCDate() - 1);
-
-    const endStr = `${yesterday.toISOString().split('T')[0]}T20:30`;
-
-    setEndDate(endStr);
   };
 
 // Pomocnicza funkcja generująca string "wczoraj + godzina"
@@ -160,6 +144,15 @@ const LandingPage = ({ totalStart, totalEnd }) => {
             type="number"
             value={deltaDays}
             onChange={(e) => setDeltaDays(parseInt(e.target.value) || 1)}
+          />
+        </div>
+
+        <div className="input-group">
+          <label>Archetype Config Filename:</label>
+          <input
+            type="string"
+            value={archetypes_config}
+            onChange={(e) => setArchetypeConfig(e.target.value)}
           />
         </div>
       </div>

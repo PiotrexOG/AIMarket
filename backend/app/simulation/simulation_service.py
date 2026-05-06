@@ -6,6 +6,7 @@ from typing import Dict
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
+from app.config.archetype_config import get_archetype
 from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
 from app.config.config import STARTING_CASH
@@ -19,6 +20,7 @@ from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
 from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
 from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
 from app.models.proccess import process_news_range
+from app.services.archetype_service import ArchetypeService
 from app.services.layers.analyst_grades_service import AnalystGradesService
 from app.services.layers.company_daily_summary import CompanyDailySummaryService
 from app.services.layers.fundamental_snapshot_service import FundamentalSnapshotService
@@ -29,7 +31,6 @@ from app.services.portfolio_transaction_service import PortfolioTransactionServi
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService, _build_portfolio_base
 from app.simulation.user_simulator import UserSimulator
-from app.testy.archetypes import ARCHETYPES
 from app.testy.compute import data_fundamentals
 
 from app.testy.compute.news_score import NewsImportanceScorer
@@ -44,13 +45,14 @@ BASE_DIR = Path(__file__).resolve().parents[2]  # backend/
 
 
 class SimulationService:
-    def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime, users_per_archetype: int, delta_days):
+    def __init__(self, db: Session, tickers: list[str], zero_time: datetime, start_time: datetime, end_time: datetime, users_per_archetype: int, delta_days, archetypes_config):
         self.db = db
         self.tickers = tickers
         self.zero_time = zero_time
         self.start_time = start_time
         self.end_time = end_time
         self.delta_days = delta_days
+        self.archetypes_config = archetypes_config
 
         self.market_data_service = MarketDataService(db)
         self.user_service = UserService(db)
@@ -60,6 +62,7 @@ class SimulationService:
         self.fundamental_snapshot_service = FundamentalSnapshotService(db)
         self.analyst_grades_service = AnalystGradesService(db)
         self.company_daily_summary_service = CompanyDailySummaryService(db)
+        self.archetype_service = ArchetypeService(archetypes_config)
         self.yahoo_client = YahooClient()
         self.users: Dict[int, UserSimulator] = {}
 
@@ -311,8 +314,10 @@ class SimulationService:
             # 🔄 czysta inicjalizacja
             users_profiles = {}
 
-            for arc_name in ARCHETYPES.keys():
-                users_profiles.update(generate_users(arc_name, users_per_archetype))
+            archetypes = get_archetype(self.archetypes_config)
+
+            for arc_name in archetypes.keys():
+                users_profiles.update(generate_users(arc_name, users_per_archetype, archetypes))
 
             for name in users_profiles.keys():
                 user = self.user_service.create_user(

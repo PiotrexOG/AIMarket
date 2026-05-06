@@ -14,12 +14,11 @@ app.add_middleware(
 )
 
 # Rejestracja routerów
-from app.routers import users_router, market_data_router, portfolio_router, simulation_router, archetype_router
+from app.routers import users_router, market_data_router, portfolio_router, simulation_router
 app.include_router(users_router.router)
 app.include_router(market_data_router.router)
 app.include_router(portfolio_router.router)
 app.include_router(simulation_router.router)
-app.include_router(archetype_router.router)
 
 # Uruchomienie w tle
 uvicorn.run(app, host="0.0.0.0", port=8000)
