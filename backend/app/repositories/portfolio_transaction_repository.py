@@ -8,23 +8,15 @@ class PortfolioTransactionRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def add_transaction(
-        self,
-        portfolio_id: int,
-        ticker: str,
-        type_: str,
-        quantity: int,
-        price: float,
-        datetime_: datetime
-    ) -> PortfolioTransaction:
-        total_value = round(quantity * price, 2)
+    def add_transaction(self, **kwargs) -> PortfolioTransaction:
+        total_value = round(kwargs['quantity'] * kwargs['price'], 2)
         tx = PortfolioTransaction(
-            portfolio_id=portfolio_id,
-            datetime=datetime_,
-            ticker=ticker,
-            type=type_,
-            quantity=quantity,
-            price=round(price, 2),
+            portfolio_id=kwargs['portfolio_id'],
+            datetime=kwargs['datetime_'],
+            ticker=kwargs['ticker'],
+            type=kwargs['type_'],
+            quantity=kwargs['quantity'],
+            price=round(kwargs['price'], 2),
             total_value=total_value,
         )
         self.db.add(tx)

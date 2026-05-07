@@ -11,31 +11,21 @@ from app.services.portfolio_service import PortfolioService
 
 class PortfolioTransactionService:
     def __init__(self, db: Session, portfolio_service: PortfolioService):
+        self.db = db
         self.repo = PortfolioTransactionRepository(db)
         self.portfolio_service = portfolio_service
 
-    def record_transaction(
-        self,
-        portfolio_id: int,
-        ticker: str,
-        type_: str,
-        quantity: int,
-        price: float,
-        datetime_: datetime,
-    ) -> PortfolioTransactionRead:
-        """Zapisuje transakcję w bazie i zwraca w formacie DTO."""
-        tx = self.repo.add_transaction(
-            portfolio_id=portfolio_id,
-            ticker=ticker,
-            type_=type_,
-            quantity=quantity,
-            price=price,
-            datetime_=datetime_,
-        )
-        self.repo.db.commit()
-        self.repo.db.refresh(tx)
+    def record_transaction(self, **kwargs):
+        # Tylko dodajemy do sesji SQLAlchemy
+        return self.repo.add_transaction(**kwargs)
 
-        return PortfolioTransactionRead.model_validate(tx, from_attributes=True)
+    def commit_transactions(self):
+        """Zapisuje wszystkie dodane transakcje jednym commitem."""
+        try:
+            self.db.commit()
+        except Exception as e:
+            self.db.rollback()
+            raise e
 
     def get_transactions(self, portfolio_id: int) -> List[PortfolioTransactionRead]:
         """Zwraca listę wszystkich transakcji dla portfela jako DTO."""

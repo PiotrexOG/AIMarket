@@ -8,8 +8,8 @@ import TransactionsView from "./components/TransactionsView/TransactionsView";
 import StockList from "./components/StockList/StockList";
 import StockChart from "./components/StockChart/StockChart";
 import StockTransactionPanel from "./components/StockTransactionPanel/StockTransactionPanel";
-import GlobalResults from "./components/GlobalResults/GlobalResults";
-import AllResults from "./components/GlobalResults/AllResults";
+import GlobalResults from "./components/Results/GlobalResults/GlobalResults";
+import AllResults from "./components/Results/AllResults/AllResults";
 import LandingPage from "./components/LandingPage/LandingPage"; // Import nowego komponentu
 
 import { fetchSimulationConfig } from "./api/fetchSimulationConfig";

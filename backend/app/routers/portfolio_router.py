@@ -67,6 +67,16 @@ def siema(
     service = get_service(db)
     return service.siema(start, end)
 
+@router.get("/tree")
+def tree(
+    start: datetime = Query(..., description="Początek okresu do analizy"),
+    end: datetime = Query(..., description="Koniec okresu do analizy"),
+    db: Session = Depends(get_db)
+):
+
+    service = get_service(db)
+    return service.tree(start, end)
+
 @router.get("/performance-summary", response_model=List[PortfolioPerformanceSummaryDTO])
 def get_all_portfolios_performance(
     start: datetime = Query(..., description="Początek okresu do analizy"),

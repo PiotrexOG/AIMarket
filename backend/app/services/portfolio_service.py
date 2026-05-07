@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timedelta
 from typing import List, Optional, Literal
 from fastapi import HTTPException
@@ -5,6 +6,7 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
 from app.config.archetype_config import get_archetype
+from app.config.decision_tree import generate_tree_archetypes
 from app.config.optimize import process_and_print_results
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, \
     PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
@@ -262,3 +264,22 @@ class PortfolioService:
         optimized_json = process_and_print_results(summaries, original_json_dict)
 
         return optimized_json
+
+
+    def tree(
+            self,
+            start: datetime,
+            end: datetime
+    ):
+
+        summaries = self.get_all_portfolios_performance_summary(start, end)
+
+        archetypes_data = [p.model_dump() for p in summaries]
+
+
+        archetypy = generate_tree_archetypes(archetypes_data)
+        print(json.dumps(archetypy, indent=4))
+
+        return archetypy
+
+

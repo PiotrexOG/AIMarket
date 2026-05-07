@@ -252,27 +252,27 @@ class UserSimulator:
     # ---------------------------------------------------------
 
     def _execute_decisions(self, decisions: dict, date_time: datetime):
-        """
-        Przetwarza słownik decyzji: {'AAPL': {'DECISION': 'BUY', 'NUMBER': 10}, ...}
-        """
+        # Flaga, czy w ogóle coś dodaliśmy do bazy
+        any_executed = False
+
         for ticker, d in decisions.items():
-            decision_type = d.get("DECISION")  # "BUY" lub "SELL"
-            quantity = d.get("NUMBER")  # int
+            decision_type = d.get("DECISION")
+            quantity = d.get("NUMBER")
 
-            # 1. Sprawdzenie godzin rynkowych (korzystając z Twojej logiki)
             if not market_hours.is_market_open_by_exchange(ticker, date_time):
-                # print(f"Market closed for {ticker} at {date_time}")
                 continue
 
-            # 2. Pobranie aktualnej ceny z MarketDataService
             price = self.market_data_service.get_price(ticker, date_time)
-
             if price is None or price <= 0:
-                print(f"Skipping {ticker}: Price not available")
                 continue
 
-            # 3. Wykonanie fizycznej transakcji
+            # Wykonanie logiczne i dodanie do sesji bazy (bez commit)
             self.execute_decision(ticker, decision_type, quantity, price, date_time)
+            any_executed = True
+
+        # Na samym końcu, po pętli, robimy batch commit
+        if any_executed:
+            self.transaction_service.commit_transactions()
 
     def execute_decision(self, ticker: str, decision: str, num: int, price: float, date_time: datetime):
         if decision in ["BUY", "SELL"]:
