@@ -1,0 +1,40 @@
+{
+    "random": {
+        "time_weights": {
+            "short": [0, 1],
+            "medium": [0, 1],
+            "long": [0, 1]
+        },
+        "metric_weights": {
+            "tech": [0, 1],
+            "fund": [0, 1],
+            "val": [0, 1],
+            "risk": [0, 1],
+            "conv": [0, 1],
+            "asym": [0, 1]
+        },
+        "risk_tolerance": [0.15, 1],
+        "min_score": [0, 7.5],
+        "temp": [0, 2],
+        "rebalance_range": [0, 0.2]
+    },
+    "benchmark": {
+        "time_weights": {
+            "short": [0.0, 0.0],
+            "medium": [0.0, 0.0],
+            "long": [0.0, 0.0]
+        },
+        "metric_weights": {
+            "tech": [0.0, 0.0],
+            "fund": [0.0, 0.0],
+            "val": [0.0, 0.0],
+            "risk": [0.0, 0.0],
+            "conv": [0.0, 0.0],
+            "asym": [0.0, 0.0]
+        },
+        "risk_tolerance": [0.0, 0.0],
+        "min_score": [0.0, 0.0],
+        "temp": [0.0, 0.0],
+        "rebalance_range": [0.0, 0.0]
+    }
+}

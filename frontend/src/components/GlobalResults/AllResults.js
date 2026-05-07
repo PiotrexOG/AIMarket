@@ -203,33 +203,6 @@ function AllResults({ totalStart, totalEnd }) {
         <ArchetypePerformanceChart data={summaryData} archetypes={archetypes} archColorMap={archColorMap} />
       </div>
 
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <MetricCompositionChart data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
-
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <ArchetypeAverageChart data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
-
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <PortfolioParallelPlot data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
-
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <ArchetypeParallelPlot data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
 
       {!loading && summaryData.length > 0 && (
         <div className="section">
@@ -238,12 +211,6 @@ function AllResults({ totalStart, totalEnd }) {
         </div>
       )}
 
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <SuccessDistributionChart data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
 
       {!loading && summaryData.length > 0 && (
         <div className="section">

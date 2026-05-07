@@ -135,6 +135,42 @@ const ArchetypePerformanceChart = ({ data, archetypes, archColorMap }) => {
         Rozkład Wyników wg Archetypu
       </h3>
 
+      <div style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "12px",
+        marginTop: "10px",
+        padding: "10px 20px"
+      }}>
+        {chartData.map((item) => (
+          <div
+            key={item.key}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              fontSize: "12px",
+              minWidth: "120px"
+            }}
+          >
+            <div
+              style={{
+                width: "12px",
+                height: "12px",
+                backgroundColor: archColorMap[item.key],
+                borderRadius: "50%",
+                marginRight: "6px"
+              }}
+            />
+            <span style={{ fontWeight: "bold", marginRight: "4px" }}>
+              {item.name}
+            </span>
+            <span style={{ color: "#666" }}>
+              ({item.averageResult.toFixed(2)}%)
+            </span>
+          </div>
+        ))}
+      </div>
+
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           margin={{ top: 10, right: 80, left: 20, bottom: 120 }}
@@ -202,7 +238,7 @@ const ArchetypePerformanceChart = ({ data, archetypes, archColorMap }) => {
             tooltipType="none"
             shape={(props) => {
               const { cx, cy, payload } = props;
-              const xPos = cx + payload.indexOffset * 250;
+              const xPos = cx + payload.indexOffset * 25;
 
               return (
                 <circle
@@ -238,8 +274,15 @@ const ArchetypePerformanceChart = ({ data, archetypes, archColorMap }) => {
               />
             ))}
           </Scatter>
+
+
+
         </ComposedChart>
+
+
       </ResponsiveContainer>
+
+
     </div>
   );
 };

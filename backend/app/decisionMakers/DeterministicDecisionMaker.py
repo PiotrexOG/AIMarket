@@ -86,7 +86,7 @@ class DeterministicDecisionMaker:
             return {}
 
         min_score_threshold = profile.get("min_score_threshold", 4.5)
-        softmax_temp = profile.get("softmax_temp", 1.0)
+        softmax_temp = max(profile.get("softmax_temp", 1.0), 1e-6)
 
         # 🔒 deterministic tickers
         all_tickers = sorted({
