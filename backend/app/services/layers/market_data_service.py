@@ -95,5 +95,17 @@ class MarketDataService:
         last = df.iloc[-1].replace({np.nan: None, np.inf: None, -np.inf: None})
         return last.to_dict()
 
+    def get_prices_for_timestamps(self, timestamps: list[datetime]) -> dict[datetime, dict[str, float]]:
+        """
+        Dla listy dat zwraca słownik: { timestamp: { ticker: price } }
+        """
+        all_tickers = self.get_all_tickers().tickers
+        results = {}
 
+        for ts in timestamps:
+            # Pobieramy najnowsze ceny dla wszystkich tickerów do danego ts włącznie
+            # Wykorzystujemy subquery, aby znaleźć max(datetime) dla każdego tickera <= ts
+            prices_at_ts = self.repo.get_all_prices_at_date(all_tickers, ts)
+            results[ts] = prices_at_ts
 
+        return results

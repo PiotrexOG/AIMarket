@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from typing import Optional, List
 
-from sqlalchemy import func
+from sqlalchemy import func, and_
 from sqlalchemy.orm import Session
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -90,3 +90,37 @@ class MarketDataRepository:
         """
         results = self.db.query(MarketData.ticker).distinct().all()
         return [r[0] for r in results]
+
+    def get_all_prices_at_date(self, tickers: list[str], date_time: datetime) -> dict[str, float]:
+        """
+        Zwraca słownik { ticker: close_price } dla podanej listy tickerów
+        według stanu na podany moment (najświeższa cena <= date_time).
+        """
+        # 1. Znajdujemy najświeższy timestamp dla każdego tickera
+        subquery = (
+            self.db.query(
+                MarketData.ticker,
+                func.max(MarketData.datetime).label("max_dt")
+            )
+            .filter(
+                MarketData.ticker.in_(tickers),
+                MarketData.datetime <= date_time
+            )
+            .group_by(MarketData.ticker)
+            .subquery()
+        )
+
+        # 2. Joinujemy z tabelą główną, aby wyciągnąć cenę 'close' dla tych timestampów
+        rows = (
+            self.db.query(MarketData.ticker, MarketData.close)
+            .join(
+                subquery,
+                and_(
+                    MarketData.ticker == subquery.c.ticker,
+                    MarketData.datetime == subquery.c.max_dt
+                )
+            )
+            .all()
+        )
+
+        return {row.ticker: row.close for row in rows}

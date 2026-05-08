@@ -1,6 +1,8 @@
 import random
 import numpy as np
 
+random.seed(42)
+
 
 def generate_users(archetype_key, count, archetypes):
     if archetype_key == "benchmark":

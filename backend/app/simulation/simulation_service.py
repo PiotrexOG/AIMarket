@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from app.config.archetype_config import get_archetype
 from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
-from app.config.config import STARTING_CASH
+from app.config.config import STARTING_CASH, END_TIME
 from app.db.database import SessionLocal
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -67,6 +67,46 @@ class SimulationService:
         self.users: Dict[int, UserSimulator] = {}
 
         self.initialize_users(users_per_archetype)
+
+        timestamps = self.get_available_timestamps()
+        price_matrix = self.market_data_service.get_prices_for_timestamps(timestamps)
+
+        # 2. Zapisujesz do pliku
+        self.save_prices_to_json(price_matrix, "prices.json")
+
+    def get_available_timestamps(self):
+        base = BASE_DIR / "data" / "CROSS_SECTION"
+
+        timestamps = []
+
+        for folder in base.iterdir():
+            if folder.is_dir():
+                try:
+                    dt = datetime.strptime(folder.name, "%Y%m%d_%H%M%S")
+                    timestamps.append(dt)
+                except ValueError:
+                    pass
+
+        timestamps.sort()
+
+        timestamps.append(END_TIME)
+
+        return timestamps
+
+    def save_prices_to_json(self, price_matrix: dict, filename: str = "prices.json"):
+        """
+        Serializuje słownik {datetime: {ticker: price}} do pliku JSON.
+        """
+        # Konwersja kluczy datetime na stringi (format ISO: YYYY-MM-DDTHH:MM:SS)
+        serializable_data = {
+            ts.isoformat(): prices
+            for ts, prices in price_matrix.items()
+        }
+
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(serializable_data, f, indent=4, ensure_ascii=False)
+
+        print(f"Dane zostały zapisane do pliku: {filename}")
 
 
     # Rozszerzona wersja Twojej metody
