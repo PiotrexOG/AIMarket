@@ -68,12 +68,6 @@ class SimulationService:
 
         self.initialize_users(users_per_archetype)
 
-        timestamps = self.get_available_timestamps()
-        price_matrix = self.market_data_service.get_prices_for_timestamps(timestamps)
-
-        # 2. Zapisujesz do pliku
-        self.save_prices_to_json(price_matrix, "prices.json")
-
     def get_available_timestamps(self):
         base = BASE_DIR / "data" / "CROSS_SECTION"
 
