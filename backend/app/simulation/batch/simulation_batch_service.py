@@ -2,18 +2,15 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any
-
 import numpy as np
+from sqlalchemy.orm import Session
 
 from app.config.archetype_config import get_archetype
 from app.config.config import END_TIME, STARTING_CASH
-from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
-from app.simulation.batch.helper import deserialize, extract_prices_file
+from app.services.layers.market_data_service import MarketDataService
+from app.simulation.batch.helper import deserialize, get_available_timestamps, fetch_cross_section
 from app.testy.random_users import generate_users
 
-# from app.config.random_users import generate_users
-# from app.ticker_master.TickerDataSerializer import get_available_timestamps, extract_prices_file, fetch_cross_section
 
 TIME_WEIGHT_KEYS = ("long_term_200d", "medium_term_50d", "short_term_14d")
 METRIC_WEIGHT_KEYS = (
@@ -25,37 +22,13 @@ METRIC_WEIGHT_KEYS = (
     "relative_valuation_sustainability",
 )
 
-BASE_DIR = Path(__file__).resolve().parents[2]
+BASE_DIR = Path(__file__).resolve().parents[3]
 DATA_DIR = BASE_DIR / "data"
-CROSS_SECTION_DIR = DATA_DIR / "CROSS_SECTION"
-
-
-def get_available_timestamps() -> List[datetime]:
-    """Pobiera listę posortowanych timestampów z nazw folderów."""
-    if not CROSS_SECTION_DIR.exists():
-        return []
-
-    timestamps = []
-    for folder in CROSS_SECTION_DIR.iterdir():
-        if folder.is_dir():
-            try:
-                # Używamy formatu folderu jako nazwy
-                dt = datetime.strptime(folder.name, "%Y%m%d_%H%M%S")
-                timestamps.append(dt)
-            except ValueError:
-                continue
-
-    return sorted(timestamps)
-
-def fetch_cross_section(timestamps: List[datetime]) -> Dict[str, Any]:
-    return {
-        ts.strftime("%Y-%m-%dT%H:%M:%S"): deserialize("CROSS_SECTION", ts, "llm_ranker")
-        for ts in timestamps
-    }
 
 class SimulationBatchService:
     def __init__(
         self,
+        db: Session,
         tickers: list[str],
         zero_time: datetime,
         start_time: datetime,
@@ -65,6 +38,7 @@ class SimulationBatchService:
         archetypes_config,
 
     ):
+        self.db = db
         self.tickers = tickers
         self.ticker_to_idx = {ticker: idx for idx, ticker in enumerate(tickers)}
         self.zero_time = zero_time
@@ -72,6 +46,7 @@ class SimulationBatchService:
         self.end_time = end_time
         self.delta_days = delta_days
         self.archetypes_config = archetypes_config
+        self.market_data_service = MarketDataService(db)
 
         self.user_profiles: list[dict] = []
         self.user_ids: np.ndarray = np.empty(0, dtype=np.int64)
@@ -142,16 +117,15 @@ class SimulationBatchService:
 
     def run_simulation(self) -> None:
         timestamps = get_available_timestamps()
-        #prices = self.market_data_service.get_prices_for_timestamps(timestamps)
-        prices = extract_prices_file()
+        new_timestamps = timestamps + [self.end_time.replace(tzinfo=None)]
+        prices = self.market_data_service.get_prices_for_timestamps(new_timestamps)
 
         cross_section_result = fetch_cross_section(timestamps)
 
         start = time.perf_counter()
 
         for current_time in timestamps:
-            key = current_time.strftime("%Y-%m-%dT%H:%M:%S")
-            self._simulate_time_step(current_time, prices[key], cross_section_result[key])
+            self._simulate_time_step(current_time, prices[current_time], cross_section_result[current_time])
 
         print("Symulacja zakonczona.")
 
@@ -316,8 +290,7 @@ class SimulationBatchService:
 
     def calculate_stats(self, prices) -> None:
         end_time = END_TIME.replace(tzinfo=None)
-        key = end_time.strftime("%Y-%m-%dT%H:%M:%S")
-        final_prices = prices[key]
+        final_prices = prices[end_time]
         price_vector = self._price_vector(final_prices)
         portfolio_values = self.cash + self.shares @ price_vector
 
@@ -343,6 +316,6 @@ class SimulationBatchService:
                 }
             )
 
-        output_path = Path(__file__).resolve().parents[1] / "results.json"
+        output_path = DATA_DIR / "results.json"
         with output_path.open("w", encoding="utf-8") as f:
             json.dump(results, f, indent=4, ensure_ascii=False)

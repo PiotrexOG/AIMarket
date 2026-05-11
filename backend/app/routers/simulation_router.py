@@ -9,7 +9,7 @@ from app.dto.archetype_dto import ArchetypeRead
 from app.dto.simulation_dto import SimulationDetail, SimulationRequest
 from app.services.archetype_service import ArchetypeService
 from app.services.config_service import ConfigService
-from app.simulation.simulation_runner import run_simulation, get_start_datetime
+from app.simulation.simulation_runner import run_simulation, get_start_datetime, run_simulation_batch
 from app.db.database import reset_database
 
 router = APIRouter(prefix="/simulation", tags=["Simulations"])
@@ -70,7 +70,7 @@ def start_simulation(req: SimulationRequest):
 
             ConfigService.set_archetype_config(req.archetypes_config)
 
-            run_simulation(
+            run_simulation_batch(
                 start_time,
                 req.end_time,
                 req.users_per_archetype,

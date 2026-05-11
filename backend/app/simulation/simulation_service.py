@@ -68,44 +68,8 @@ class SimulationService:
 
         self.initialize_users(users_per_archetype)
 
-    def get_available_timestamps(self):
-        base = BASE_DIR / "data" / "CROSS_SECTION"
-
-        timestamps = []
-
-        for folder in base.iterdir():
-            if folder.is_dir():
-                try:
-                    dt = datetime.strptime(folder.name, "%Y%m%d_%H%M%S")
-                    timestamps.append(dt)
-                except ValueError:
-                    pass
-
-        timestamps.sort()
-
-        timestamps.append(END_TIME)
-
-        return timestamps
-
-    def save_prices_to_json(self, price_matrix: dict, filename: str = "prices.json"):
-        """
-        Serializuje słownik {datetime: {ticker: price}} do pliku JSON.
-        """
-        # Konwersja kluczy datetime na stringi (format ISO: YYYY-MM-DDTHH:MM:SS)
-        serializable_data = {
-            ts.isoformat(): prices
-            for ts, prices in price_matrix.items()
-        }
-
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(serializable_data, f, indent=4, ensure_ascii=False)
-
-        print(f"Dane zostały zapisane do pliku: {filename}")
-
-
     # Rozszerzona wersja Twojej metody
     def fetch_data_fundaments(self):
-
 
         for ticker in self.tickers:
             earning_dates.save_earnings_by_date(ticker, self.start_time, self.end_time) #comment

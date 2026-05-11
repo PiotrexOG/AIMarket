@@ -1,12 +1,36 @@
 import random
-import numpy as np
 
 random.seed(42)
 
 
 def generate_users(archetype_key, count, archetypes):
     if archetype_key == "benchmark":
-        return {"benchmark": {"name": "benchmark"}}
+
+        mw = {
+            "relative_technical_strength": 0,
+            "relative_fundamental_support": 0,
+            "relative_valuation_sustainability": 0,
+            "relative_structural_risk": 0,
+            "relative_conviction": 0,
+            "relative_asymmetry_profile": 0,
+            }
+
+        return {"benchmark": {
+            "name" : "benchmark",
+            "id" : "0",
+            "archetype_key": "benchmark",
+            "time_weights": {
+                "short_term_14d": 0,
+                "medium_term_50d": 0,
+                "long_term_200d": 0
+            },
+            "metric_weights": mw,
+            "risk_tolerance": 0,
+            "rebalance_threshold": 0,
+            "min_score_threshold": 0,
+            "softmax_temp": 0
+            }
+        }
 
     generated_users = {}
     arc = archetypes[archetype_key]
