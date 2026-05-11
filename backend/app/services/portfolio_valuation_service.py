@@ -21,7 +21,7 @@ class PortfolioValuationService:
             value = round(amount * price, 2)
             position = PositionDetail(
                 ticker=ticker,
-                shares=amount,
+                shares=round(amount,2),
                 price=round(price, 2),
                 value=value
             )

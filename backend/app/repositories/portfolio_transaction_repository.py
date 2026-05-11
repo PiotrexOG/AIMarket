@@ -15,7 +15,7 @@ class PortfolioTransactionRepository:
             datetime=kwargs['datetime_'],
             ticker=kwargs['ticker'],
             type=kwargs['type_'],
-            quantity=kwargs['quantity'],
+            quantity=round(kwargs['quantity'],2),
             price=round(kwargs['price'], 2),
             total_value=total_value,
         )

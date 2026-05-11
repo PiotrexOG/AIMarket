@@ -26,11 +26,11 @@ class Portfolio:
     def __init__(self, portfolio_id: int, starting_cash: float, user_profile: PortfolioPerformanceBaseDTO, shares: Dict[str, int] = None):
         self.portfolio_id = portfolio_id
         self.cash = starting_cash
-        self.shares = defaultdict(int, shares or {})
+        self.shares = defaultdict(float, shares or {})
         self.user_profile = to_profile_dict(user_profile)
 
     # ---- Operacje na portfelu ----
-    def buy(self, ticker: str, amount: int, price: float) -> bool:
+    def buy(self, ticker: str, amount: float, price: float) -> bool:
         cost = round(amount * price, 2)
         if cost <= self.cash:
             self.cash -= cost
@@ -38,7 +38,7 @@ class Portfolio:
             return True
         return False
 
-    def sell(self, ticker: str, amount: int, price: float) -> bool:
+    def sell(self, ticker: str, amount: float, price: float) -> bool:
         if amount <= self.shares.get(ticker, 0):
             self.cash += round(amount * price, 2)
             self.shares[ticker] -= amount

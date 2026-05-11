@@ -61,7 +61,7 @@ class PortfolioShare(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     portfolio_history_id = Column(Integer, ForeignKey("portfolio_history.id"), nullable=False)
     ticker = Column(String, nullable=False)
-    amount = Column(Integer, nullable=False)
+    amount = Column(Float, nullable=False)
 
     portfolio_history = relationship("PortfolioHistory", back_populates="shares")
 
@@ -74,7 +74,7 @@ class PortfolioTransaction(Base):
     datetime = Column(DateTime(timezone=True), index=True, nullable=False)
     ticker = Column(String, nullable=False)
     type = Column(Enum("BUY", "SELL", name="transaction_type"), nullable=False)
-    quantity = Column(Integer, nullable=False)
+    quantity = Column(Float, nullable=False)
     price = Column(Float, nullable=False)
     total_value = Column(Float, nullable=False)
 

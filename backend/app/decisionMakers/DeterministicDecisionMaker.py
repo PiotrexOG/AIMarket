@@ -22,29 +22,86 @@ class DeterministicDecisionMaker:
             portfolio.cash, portfolio.shares, date_time
         )
 
-        capital = valuation.portfolio_value
-        n = len(all_tickers)
+        capital = round(valuation.portfolio_value, 2)
 
-        if n == 0:
-            return {}
+        tickers_data = []
 
-        equal_weight = 1.0 / n
-        target_per_stock_value = capital * equal_weight
+        for ticker in sorted(all_tickers):
 
-        decisions = {}
+            price = self.valuation_service.market_data_service.get_price(
+                ticker, date_time
+            )
 
-        for ticker in all_tickers:
-            price = self.valuation_service.market_data_service.get_price(ticker, date_time)
             if not price or price <= 0:
                 continue
 
-            num_shares = int(target_per_stock_value / price)
+            tickers_data.append({
+                "ticker": ticker,
+                "price": price
+            })
 
-            if num_shares > 0:
-                decisions[ticker] = {
+        n = len(tickers_data)
+
+        if n == 0 or capital <= 0:
+            return {}
+
+        target_value = capital / n
+
+        total_used = 0.0
+
+        # pierwszy etap -> floor
+        for item in tickers_data:
+            exact_shares = target_value / item["price"]
+
+            # floor do 2 miejsc
+            shares = int(exact_shares * 100) / 100
+
+            cost = round(shares * item["price"], 2)
+
+            item["shares"] = shares
+            item["cost"] = cost
+            item["remainder"] = exact_shares - shares
+
+            total_used += cost
+
+        remaining_cash = round(capital - total_used, 2)
+
+        # drugi etap -> rozdanie reszty
+        # największe remainder dostają dodatkowe 0.01 akcji
+        tickers_data.sort(key=lambda x: x["remainder"], reverse=True)
+
+        changed = True
+
+        while remaining_cash > 0 and changed:
+
+            changed = False
+
+            for item in tickers_data:
+
+                extra_cost = round(item["price"] * 0.01, 2)
+
+                if extra_cost <= remaining_cash:
+                    item["shares"] += 0.01
+                    item["cost"] = round(item["cost"] + extra_cost, 2)
+
+                    remaining_cash = round(
+                        remaining_cash - extra_cost,
+                        2
+                    )
+
+                    changed = True
+
+        decisions = {}
+
+        equal_weight = round(1 / n, 4)
+
+        for item in tickers_data:
+
+            if item["shares"] > 0:
+                decisions[item["ticker"]] = {
                     "DECISION": "BUY",
-                    "NUMBER": num_shares,
-                    "TARGET_WEIGHT": round(equal_weight, 4)
+                    "NUMBER": round(item["shares"], 2),
+                    "TARGET_WEIGHT": equal_weight
                 }
 
         return decisions
@@ -148,16 +205,17 @@ class DeterministicDecisionMaker:
 
             diff_val = target_val - current_val
 
-            # 🔒 epsilon zabezpieczenie
-            if abs(diff_val) <= threshold_amount + 1e-12:
-                continue
+            # # 🔒 epsilon zabezpieczenie
+            # if abs(diff_val) <= threshold_amount + 1e-12:
+            #     continue
 
             # 🔒 stable rounding
-            num = int(round(diff_val / price))
+            num = round(diff_val / price, 2)
 
-            # 🔒 minimal trade size
-            if abs(num) < 2:
-                continue
+            #
+            # # 🔒 minimal trade size
+            # if abs(num) < 2:
+            #     continue
 
             decisions[ticker] = {
                 "DECISION": "BUY" if num > 0 else "SELL",

@@ -70,7 +70,7 @@ def start_simulation(req: SimulationRequest):
 
             ConfigService.set_archetype_config(req.archetypes_config)
 
-            run_simulation_batch(
+            run_simulation(
                 start_time,
                 req.end_time,
                 req.users_per_archetype,

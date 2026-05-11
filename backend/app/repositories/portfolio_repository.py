@@ -101,7 +101,7 @@ class PortfolioRepository:
         history_obj = PortfolioHistory(
             portfolio_id=portfolio_id,
             datetime=history_data.datetime,
-            cash=history_data.cash
+            cash=round(history_data.cash,2)
         )
         self.db.add(history_obj)
         self.db.flush()  # żeby mieć ID przed dodaniem shares

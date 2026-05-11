@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class PositionDetail(BaseModel):
     ticker: str
-    shares: int
+    shares: float
     price: float
     value: float
 
