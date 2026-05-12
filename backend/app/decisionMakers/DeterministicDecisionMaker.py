@@ -132,95 +132,131 @@ class DeterministicDecisionMaker:
     def make_decision(self, market_scores, portfolio, date_time):
         profile = portfolio.user_profile
 
+        # 1. Obsługa benchmarku
         if profile.get("name") == "benchmark":
             if date_time.date() == self.start_time.date():
-                decisions = self.benchmark_equal_weight_buy(
-                    market_scores,
-                    portfolio,
-                    date_time
-                )
-                return decisions
+                return self.benchmark_equal_weight_buy(market_scores, portfolio, date_time)
             return {}
 
-        min_score_threshold = profile.get("min_score_threshold", 4.5)
+        # 2. Pobranie parametrów profilu
         softmax_temp = max(profile.get("softmax_temp", 1.0), 1e-6)
+        min_exp = profile.get("min_exposure", 0.5)
+        slope = profile.get("aggression_slope", 0.2)
+        baseline = profile.get("exposure_baseline", 5.0)
 
-        # 🔒 deterministic tickers
+        # 3. Pobranie wszystkich dostępnych tickerów (zazwyczaj 18)
         all_tickers = sorted({
             ticker
             for tf in market_scores
             for ticker in market_scores[tf].keys()
         })
 
-        valuation = self.valuation_service.calculate_portfolio_details(
-            portfolio.cash, portfolio.shares, date_time
-        )
-
-        # 🔒 deterministic raw scores
-        raw_scores = {}
-        for ticker in all_tickers:
-            score = self.calculate_score(ticker, market_scores, profile)
-
-            if score < min_score_threshold:
-                continue
-
-            raw_scores[ticker] = score
-
-        if not raw_scores:
+        if not all_tickers:
             return {}
 
-        # 🔒 STABLE SOFTMAX (log-sum-exp trick)
-        scores_array = np.array(list(raw_scores.values()), dtype=np.float64)
+        # 4. Obliczenie surowych punktów (Scores)
+        raw_scores = {ticker: self.calculate_score(ticker, market_scores, profile)
+                      for ticker in all_tickers}
+
+        # 5. Dynamiczne obliczenie całkowitej ekspozycji (Total Exposure)
+        # Patrzymy na średnią Top 5 wyników, by ocenić ogólną kondycję rynku
+        top_scores = sorted(raw_scores.values(), reverse=True)[:5]
+        avg_market_score = np.mean(top_scores) if top_scores else 0
+
+        # Wzór: $$Exposure = \min(1.0, \max(0.0, min\_exp + (AvgScore - baseline) \times slope))$$
+        total_exposure = min_exp + (avg_market_score - baseline) * slope
+        total_exposure = float(np.clip(total_exposure, 0.0, 1.0))
+
+        # 6. Stabilny Softmax dla wag względnych
+        tickers_list = list(raw_scores.keys())
+        scores_array = np.array([raw_scores[t] for t in tickers_list], dtype=np.float64)
 
         scaled = scores_array / softmax_temp
         max_scaled = np.max(scaled)
+        exp_scores = np.exp(scaled - max_scaled)
+        total_exp_sum = np.sum(exp_scores)
 
-        exp_scores = np.exp(scaled - max_scaled)  # 🔥 stabilizacja
-        total_exp = np.sum(exp_scores)
-
-        tickers_list = list(raw_scores.keys())
-
-        target_weights = {
-            t: float((exp_scores[i] / total_exp) * profile["risk_tolerance"])
-            for i, t in enumerate(tickers_list)
+        # Wstępne wagi (proporcjonalne do punktów i ograniczone przez total_exposure)
+        initial_weights = {
+            tickers_list[i]: (exp_scores[i] / total_exp_sum) * total_exposure
+            for i in range(len(tickers_list))
         }
 
-        # 🔒 deterministic lookup zamiast next(...)
-        position_map = {p.ticker: p.value for p in valuation.positions}
+        # 7. Filtracja "szumu" (1%) i Redystrybucja wag
+        # Chcemy, aby suma wag po usunięciu małych pozycji nadal wynosiła total_exposure
+        final_weights = {t: 0.0 for t in all_tickers}
+        survivors = {t: w for t, w in initial_weights.items() if w >= 0.01}
+
+        if survivors:
+            survivor_sum = sum(survivors.values())
+            # Redystrybucja: skalujemy pozostałe spółki tak, by ich suma wróciła do poziomu total_exposure
+            for t, w in survivors.items():
+                final_weights[t] = (w / survivor_sum) * total_exposure
+        # Jeśli nikt nie przeżył progu 1%, portfel ucieka do 100% gotówki (final_weights pozostają 0.0)
+
+        # 8. Generowanie decyzji handlowych
+        valuation = self.valuation_service.calculate_portfolio_details(
+            portfolio.cash, portfolio.shares, date_time
+        )
+        portfolio_value = valuation.portfolio_value
+
+        # Mapujemy: ticker -> (wartość, liczba_akcji)
+        # Zakładam, że valuation.positions to obiekty posiadające .ticker, .value i .shares
+        position_info = {p.ticker: (p.value, p.shares) for p in valuation.positions}
 
         decisions = {}
 
-        portfolio_value = valuation.portfolio_value
-        threshold_amount = portfolio_value * profile.get("rebalance_threshold", 0.02)
-
-        for ticker in sorted(target_weights.keys()):
-            target_w = target_weights[ticker]
+        for ticker in all_tickers:  # Idziemy po wszystkich, żeby obsłużyć sprzedaż do 0
+            target_w = final_weights.get(ticker, 0.0)
+            current_val, shares_held = position_info.get(ticker, (0.0, 0))
 
             price = self.valuation_service.market_data_service.get_price(ticker, date_time)
             if not price or price <= 0:
                 continue
 
-            target_val = portfolio_value * target_w
-            current_val = position_map.get(ticker, 0.0)
+            # SCENARIUSZ 1: CAŁKOWITA SPRZEDAŻ (Waga spadła do 0 lub < 1%)
+            if target_w == 0:
+                if shares_held > 0:
+                    decisions[ticker] = {
+                        "DECISION": "SELL",
+                        "NUMBER": shares_held,  # Sprzedajemy dokładnie tyle, ile mamy
+                        "TARGET_WEIGHT": 0.0
+                    }
+                continue
 
+            # SCENARIUSZ 2: REBALANCING (Kupno lub częściowa sprzedaż)
+            target_val = portfolio_value * target_w
             diff_val = target_val - current_val
 
-            # # 🔒 epsilon zabezpieczenie
-            # if abs(diff_val) <= threshold_amount + 1e-12:
-            #     continue
+            # Surowa liczba akcji do handlu
+            num = smart_round(diff_val / price)
 
-            # 🔒 stable rounding
-            num = round(diff_val / price, 2)
+            if num > 0:
+                # KUPNO: Tutaj jedynym ograniczeniem jest gotówka (co obsłuży silnik niżej)
+                decisions[ticker] = {
+                    "DECISION": "BUY",
+                    "NUMBER": num,
+                    "TARGET_WEIGHT": round(target_w, 6)
+                }
+            elif num < 0:
+                # SPRZEDAŻ: Nie możemy sprzedać więcej niż mamy!
+                abs_num = abs(num)
 
-            #
-            # # 🔒 minimal trade size
-            # if abs(num) < 2:
-            #     continue
+                # Bezpiecznik: jeśli zaokrąglenie chce sprzedać prawie wszystko,
+                # lub więcej niż mamy, zamień to na "SELL ALL"
+                if abs_num >= shares_held:
+                    actual_num_to_sell = shares_held
+                else:
+                    actual_num_to_sell = abs_num
 
-            decisions[ticker] = {
-                "DECISION": "BUY" if num > 0 else "SELL",
-                "NUMBER": abs(num),
-                "TARGET_WEIGHT": round(target_w, 6)  # większa precyzja deterministyczna
-            }
+                if actual_num_to_sell > 0:
+                    decisions[ticker] = {
+                        "DECISION": "SELL",
+                        "NUMBER": actual_num_to_sell,
+                        "TARGET_WEIGHT": round(target_w, 6)
+                    }
 
         return decisions
+
+def smart_round(num):
+    return math.floor(num * 100) / 100

@@ -23,7 +23,7 @@ def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
     }
 
 class Portfolio:
-    def __init__(self, portfolio_id: int, starting_cash: float, user_profile: PortfolioPerformanceBaseDTO, shares: Dict[str, int] = None):
+    def __init__(self, portfolio_id: int, starting_cash: float, user_profile: PortfolioPerformanceBaseDTO, shares: Dict[str, float] = None):
         self.portfolio_id = portfolio_id
         self.cash = starting_cash
         self.shares = defaultdict(float, shares or {})
@@ -34,14 +34,16 @@ class Portfolio:
         cost = round(amount * price, 2)
         if cost <= self.cash:
             self.cash -= cost
-            self.shares[ticker] += amount
+            self.shares[ticker] = round(self.shares[ticker] + amount, 2)
             return True
+        print("nie mam pineidzy na zakup" + ticker + "w ilosci " + str(amount) + "po cenie " + str(price) + "bo brakuje mi" + str(cost - self.cash))
         return False
 
     def sell(self, ticker: str, amount: float, price: float) -> bool:
         if amount <= self.shares.get(ticker, 0):
             self.cash += round(amount * price, 2)
-            self.shares[ticker] -= amount
+            self.shares[ticker] = round(self.shares[ticker] - amount, 2)
             return True
+        print("nie mam akcji na sprzedaz")
         return False
 
