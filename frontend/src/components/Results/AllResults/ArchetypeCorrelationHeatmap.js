@@ -52,9 +52,10 @@ const ArchetypeCorrelationHeatmap = ({ data }) => {
     { label: "Time S", key: "short_term_weight" },
     { label: "Time M", key: "medium_term_weight" },
     { label: "Time L", key: "long_term_weight" },
-    { label: "Risk Tol", key: "risk_tolerance" },
+    { label: "min_exposure", key: "min_exposure" },
+    { label: "aggression_slope", key: "aggression_slope" },
+    { label: "exposure_baseline", key: "exposure_baseline" },
     { label: "Rebal", key: "rebalance_threshold" },
-    { label: "Min Score", key: "min_score_threshold" },
     { label: "Softmax", key: "softmax_temp" },
   ];
 

@@ -16,8 +16,6 @@ const SuccessDistributionChart = ({ data }) => {
       // Spłaszczamy strukturę dla łatwiejszego dostępu
       tech: p.metric_weights.relative_technical_strength * 100,
       fund: p.metric_weights.relative_fundamental_support * 100,
-      risk_tol: p.risk_tolerance * 100,
-      min_score: p.min_score_threshold,
       result: p.change_ratio * 100
     }));
   }, [data]);
@@ -25,8 +23,6 @@ const SuccessDistributionChart = ({ data }) => {
   const paramsToAnalyze = [
     { label: "Technical Weight (%)", key: "tech" },
     { label: "Fundamental Weight (%)", key: "fund" },
-    { label: "Risk Tolerance", key: "risk_tol" },
-    { label: "Min Score", key: "min_score" },
   ];
 
   return (

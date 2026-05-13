@@ -54,9 +54,10 @@ def _build_portfolio_base(
         short_term_weight=portfolio.short_term_weight,
         medium_term_weight=portfolio.medium_term_weight,
         long_term_weight=portfolio.long_term_weight,
-        risk_tolerance=portfolio.risk_tolerance,
+        min_exposure=portfolio.min_exposure,
+        aggression_slope=portfolio.aggression_slope,
+        exposure_baseline=portfolio.exposure_baseline,
         rebalance_threshold=portfolio.rebalance_threshold,
-        min_score_threshold=portfolio.min_score_threshold,
         softmax_temp=portfolio.softmax_temp,
         metric_weights=mw_dict,
     )
@@ -206,9 +207,10 @@ class PortfolioService:
             medium_term_weight=portfolio.medium_term_weight,
             long_term_weight=portfolio.long_term_weight,
 
-            risk_tolerance=portfolio.risk_tolerance,
+            min_exposure=portfolio.min_exposure,
+            aggression_slope=portfolio.aggression_slope,
+            exposure_baseline=portfolio.exposure_baseline,
             rebalance_threshold=portfolio.rebalance_threshold,
-            min_score_threshold=portfolio.min_score_threshold,
             softmax_temp=portfolio.softmax_temp,
 
             metric_weights=mw_dict,

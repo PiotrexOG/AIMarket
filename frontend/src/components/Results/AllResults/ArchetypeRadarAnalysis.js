@@ -18,8 +18,9 @@ const ArchetypeRadarAnalysis = ({ data }) => {
     { label: "Asym", key: "metric_weights.relative_asymmetry_profile", max: 1 },
     { label: "S-Term", key: "short_term_weight", max: 1 },
     { label: "L-Term", key: "long_term_weight", max: 1 },
-    { label: "Risk Tol", key: "risk_tolerance", max: 1 },
-    { label: "Min Score", key: "min_score_threshold", max: 10 },
+    { label: "min_exposure", key: "min_exposure", max: 1 },
+    { label: "aggression_slope", key: "aggression_slope", max: 1 },
+    { label: "exposure_baseline", key: "exposure_baseline", max: 10 },
   ];
 
   const getValue = (obj, path) =>

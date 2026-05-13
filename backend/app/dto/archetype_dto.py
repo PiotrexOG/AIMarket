@@ -24,7 +24,8 @@ class ArchetypeRead(BaseModel):
     summary: str
     time_weights: ArchetypeWeightsDTO
     metric_weights: ArchetypeMetricWeightsDTO
-    risk_tolerance: Tuple[float, float]
-    min_score: Tuple[float, float]
+    min_exposure: Tuple[float, float]
+    aggression_slope: Tuple[float, float]
+    exposure_baseline: Tuple[float, float]
     temp: Tuple[float, float]
     rebalance_range: Tuple[float, float]

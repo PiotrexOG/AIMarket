@@ -42,9 +42,10 @@ class PortfolioPerformanceBaseDTO(BaseModel):
     short_term_weight: float| str
     medium_term_weight: float| str
     long_term_weight: float| str
-    risk_tolerance: float| str
+    min_exposure: float| str
+    aggression_slope: float| str
+    exposure_baseline: float| str
     rebalance_threshold: float| str
-    min_score_threshold: float| str
     softmax_temp: float | str
     metric_weights: Dict[str, float] | Dict[str, str]
 

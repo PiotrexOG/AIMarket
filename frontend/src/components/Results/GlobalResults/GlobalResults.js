@@ -58,9 +58,10 @@ function GlobalResults({ totalStart, totalEnd }) {
     short: "short_term_weight",
     mid: "medium_term_weight",
     long: "long_term_weight",
-    risk: "risk_tolerance",
-    rebalance: "rebalance_threshold",
-    min_score: "min_score_threshold",
+    min_exposure: "min_exposure",
+    aggression_slope: "aggression_slope",
+    exposure_baseline: "exposure_baseline",
+    rebalance_threshold: "rebalance_threshold",
     temp: "softmax_temp",
     asym: "metric_weights.relative_asymmetry_profile",
     conv: "metric_weights.relative_conviction",
@@ -170,9 +171,9 @@ function GlobalResults({ totalStart, totalEnd }) {
                   <tr className="header-group">
                     <th className="sticky-col">Info</th>
                     <th colSpan="3">Time Weights (%)</th>
-                    <th colSpan="4">Config</th>
+                    <th colSpan="5">Config</th>
                     <th colSpan="6">Metric Weights (%)</th>
-                    <th colSpan="2">Results</th>
+                    <th colSpan="3">Results</th>
                   </tr>
                   <tr className="th-row">
                     <th className="sticky-col">ID / Name</th>
@@ -189,16 +190,20 @@ function GlobalResults({ totalStart, totalEnd }) {
                       Long {sortConfig.key === "long" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
-                    <th onClick={() => handleSort("risk")} className="sortable">
-                      Risk {sortConfig.key === "risk" && (sortConfig.direction === "asc" ? "▲" : "▼")}
+                    <th onClick={() => handleSort("min_exposure")} className="sortable">
+                    Min {sortConfig.key === "min_exposure" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
-                    <th onClick={() => handleSort("rebalance")} className="sortable">
-                      Rebal {sortConfig.key === "rebalance" && (sortConfig.direction === "asc" ? "▲" : "▼")}
+                    <th onClick={() => handleSort("aggression_slope")} className="sortable">
+                    Slope {sortConfig.key === "aggression_slope" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
-                    <th onClick={() => handleSort("min_score")} className="sortable">
-                      Min {sortConfig.key === "min_score" && (sortConfig.direction === "asc" ? "▲" : "▼")}
+                    <th onClick={() => handleSort("exposure_baseline")} className="sortable">
+                    Baseline {sortConfig.key === "exposure_baseline" && (sortConfig.direction === "asc" ? "▲" : "▼")}
+                    </th>
+
+                    <th onClick={() => handleSort("rebalance_threshold")} className="sortable">
+                      Rebal {sortConfig.key === "rebalance_threshold" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
                     <th onClick={() => handleSort("temp")} className="sortable">
@@ -242,9 +247,10 @@ function GlobalResults({ totalStart, totalEnd }) {
                     <td>{fmtRange(arch.time_weights.short)}</td>
                     <td>{fmtRange(arch.time_weights.medium)}</td>
                     <td>{fmtRange(arch.time_weights.long)}</td>
-                    <td>{fmtRange(arch.risk_tolerance)}</td>
-                    <td>{fmtRange(arch.rebalance_range)}</td>
-                    <td>{fmtRange(arch.min_score, false)}</td>
+                    <td>{fmtRange(arch.min_exposure)}</td>
+                    <td>{fmtRange(arch.aggression_slope)}</td>
+                    <td>{fmtRange(arch.exposure_baseline, false)}</td>
+                    <td>{fmtRange(arch.rebalance_threshold)}</td>
                     <td>{fmtRange(arch.temp, false)}</td>
                     <td>{fmtRange(arch.metric_weights.asym)}</td>
                     <td>{fmtRange(arch.metric_weights.conv)}</td>
@@ -269,9 +275,10 @@ function GlobalResults({ totalStart, totalEnd }) {
                         <td>{(p.short_term_weight * 100).toFixed(1)}%</td>
                         <td>{(p.medium_term_weight * 100).toFixed(1)}%</td>
                         <td>{(p.long_term_weight * 100).toFixed(1)}%</td>
-                        <td>{(p.risk_tolerance * 100).toFixed(1)}%</td>
+                        <td>{p.min_exposure}</td>
+                        <td>{p.aggression_slope}</td>
+                        <td>{p.exposure_baseline}</td>
                         <td>{(p.rebalance_threshold * 100).toFixed(1)}%</td>
-                        <td>{p.min_score_threshold}</td>
                         <td>{p.softmax_temp}</td>
                         <td>{(p.metric_weights.relative_asymmetry_profile * 100).toFixed(1)}%</td>
                         <td>{(p.metric_weights.relative_conviction * 100).toFixed(1)}%</td>
@@ -298,9 +305,10 @@ function GlobalResults({ totalStart, totalEnd }) {
                     {renderStatsCell(relatedPortfolios, keyMap.short)}
                     {renderStatsCell(relatedPortfolios, keyMap.mid)}
                     {renderStatsCell(relatedPortfolios, keyMap.long)}
-                    {renderStatsCell(relatedPortfolios, keyMap.risk)}
-                    {renderStatsCell(relatedPortfolios, keyMap.rebalance)}
-                    {renderStatsCell(relatedPortfolios, keyMap.min_score, false)}
+                    {renderStatsCell(relatedPortfolios, keyMap.min_exposure)}
+                    {renderStatsCell(relatedPortfolios, keyMap.aggression_slope)}
+                    {renderStatsCell(relatedPortfolios, keyMap.exposure_baseline, false)}
+                    {renderStatsCell(relatedPortfolios, keyMap.rebalance_threshold)}
                     {renderStatsCell(relatedPortfolios, keyMap.temp, false)}
                     {renderStatsCell(relatedPortfolios, keyMap.asym)}
                     {renderStatsCell(relatedPortfolios, keyMap.conv)}
@@ -318,10 +326,13 @@ function GlobalResults({ totalStart, totalEnd }) {
                     {renderStatsCell(relatedPortfolios, keyMap.short, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.mid, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.long, true, 2, false, 0.3)}
-                    {renderStatsCell(relatedPortfolios, keyMap.risk, true, 2, false, 0.3)}
-                    {renderStatsCell(relatedPortfolios, keyMap.rebalance, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.min_exposure, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.aggression_slope, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.exposure_baseline, false, 2, false, 0.3)}
 
-                    {renderStatsCell(relatedPortfolios, keyMap.min_score, false, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.rebalance_threshold, true, 2, false, 0.3)}
+
+
                     {renderStatsCell(relatedPortfolios, keyMap.temp, false, 2, false, 0.3)}
 
                     {renderStatsCell(relatedPortfolios, keyMap.asym, true, 2, false, 0.3)}

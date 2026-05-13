@@ -54,9 +54,10 @@ class SimulationBatchService:
         self.shares: np.ndarray = np.empty((0, len(tickers)), dtype=np.int64)
         self.time_weights: np.ndarray = np.empty((0, len(TIME_WEIGHT_KEYS)), dtype=np.float64)
         self.metric_weights: np.ndarray = np.empty((0, len(METRIC_WEIGHT_KEYS)), dtype=np.float64)
-        self.risk_tolerance: np.ndarray = np.empty(0, dtype=np.float64)
+        self.min_exposure: np.ndarray = np.empty(0, dtype=np.float64)
+        self.aggression_slope: np.ndarray = np.empty(0, dtype=np.float64)
+        self.exposure_baseline: np.ndarray = np.empty(0, dtype=np.float64)
         self.rebalance_threshold: np.ndarray = np.empty(0, dtype=np.float64)
-        self.min_score_threshold: np.ndarray = np.empty(0, dtype=np.float64)
         self.softmax_temp: np.ndarray = np.empty(0, dtype=np.float64)
         self.is_benchmark: np.ndarray = np.empty(0, dtype=bool)
 
@@ -89,16 +90,20 @@ class SimulationBatchService:
             ],
             dtype=np.float64,
         )
-        self.risk_tolerance = np.array(
-            [profile.get("risk_tolerance", 0.0) for profile in self.user_profiles],
+        self.min_exposure = np.array(
+            [profile.get("min_exposure", 0.0) for profile in self.user_profiles],
+            dtype=np.float64,
+        )
+        self.aggression_slope = np.array(
+            [profile.get("aggression_slope", 4.5) for profile in self.user_profiles],
+            dtype=np.float64,
+        )
+        self.exposure_baseline = np.array(
+            [profile.get("exposure_baseline", 4.5) for profile in self.user_profiles],
             dtype=np.float64,
         )
         self.rebalance_threshold = np.array(
             [profile.get("rebalance_threshold", 0.02) for profile in self.user_profiles],
-            dtype=np.float64,
-        )
-        self.min_score_threshold = np.array(
-            [profile.get("min_score_threshold", 4.5) for profile in self.user_profiles],
             dtype=np.float64,
         )
         self.softmax_temp = np.maximum(

@@ -19,9 +19,11 @@ class Portfolio(Base):
         cascade="all, delete-orphan",
         lazy="joined"  # Automatycznie ładuj wagi przy pobieraniu portfela
     )
-    risk_tolerance = Column(Float)
+    min_exposure = Column(Float)
+    aggression_slope = Column(Float)
+    exposure_baseline = Column(Float)
     rebalance_threshold = Column(Float)
-    min_score_threshold = Column(Float)
+
     softmax_temp = Column(Float)
 
     user = relationship("User", back_populates="portfolios")

@@ -25,9 +25,10 @@ def generate_users(archetype_key, count, archetypes):
                 "long_term_200d": 0
             },
             "metric_weights": mw,
-            "risk_tolerance": 0,
+            "min_exposure": 0,
+            "aggression_slope": 0,
+            "exposure_baseline": 0,
             "rebalance_threshold": 0,
-            "min_score_threshold": 0,
             "softmax_temp": 0
             }
         }
@@ -96,9 +97,10 @@ def generate_users(archetype_key, count, archetypes):
                 "long_term_200d": tw["long"]
             },
             "metric_weights": mw,
-            "risk_tolerance": round(random.uniform(*arc["risk_tolerance"]), 2),
+            "min_exposure": round(random.uniform(*arc["min_exposure"]), 2),
+            "aggression_slope": round(random.uniform(*arc["aggression_slope"]), 2),
+            "exposure_baseline": round(random.uniform(*arc["exposure_baseline"]), 2),
             "rebalance_threshold": round(random.uniform(*arc["rebalance_range"]), 4),
-            "min_score_threshold": round(random.uniform(*arc["min_score"]), 2),
             "softmax_temp": round(random.uniform(*arc["temp"]), 2)
         }
     return generated_users

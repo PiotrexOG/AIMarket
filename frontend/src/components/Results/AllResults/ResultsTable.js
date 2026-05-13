@@ -65,9 +65,10 @@ const ResultsTable = ({
                 <td>{(p.short_term_weight * 100).toFixed(1)}%</td>
                 <td>{(p.medium_term_weight * 100).toFixed(1)}%</td>
                 <td>{(p.long_term_weight * 100).toFixed(1)}%</td>
-                <td>{(p.risk_tolerance * 100).toFixed(1)}%</td>
+                <td>{p.min_exposure}</td>
+                <td>{p.aggression_slope}</td>
+                <td>{p.exposure_baseline}</td>
                 <td>{(p.rebalance_threshold * 100).toFixed(1)}%</td>
-                <td>{p.min_score_threshold}</td>
                 <td>{p.softmax_temp}</td>
                 <td>{(p.metric_weights.relative_asymmetry_profile * 100).toFixed(1)}%</td>
                 <td>{(p.metric_weights.relative_conviction * 100).toFixed(1)}%</td>
