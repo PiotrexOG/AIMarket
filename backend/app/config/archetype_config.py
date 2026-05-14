@@ -2,14 +2,21 @@ import json
 from pathlib import Path
 
 
-def convert_lists_to_tuples(d):
+def convert_struct_to_ranges(d):
     if isinstance(d, dict):
-        return {k: convert_lists_to_tuples(v) for k, v in d.items()}
+        # Sprawdzamy, czy słownik ma strukturę mean/spread
+        if "mean" in d and "spread" in d:
+            low = d["mean"] - d["spread"]
+            high = d["mean"] + d["spread"]
+            # Zwracamy zaokrąglony przedział jako krotkę (tuple)
+            return (round(low, 4), round(high, 4))
+
+        # Jeśli to zwykły słownik (np. cały profil), idziemy głębiej
+        return {k: convert_struct_to_ranges(v) for k, v in d.items()}
+
     elif isinstance(d, list):
-        # jeśli to wygląda jak zakres (2 liczby)
-        if len(d) == 2 and all(isinstance(x, (int, float)) for x in d):
-            return tuple(d)
-        return [convert_lists_to_tuples(x) for x in d]
+        return [convert_struct_to_ranges(x) for x in d]
+
     else:
         return d
 
@@ -21,6 +28,8 @@ def get_archetype(file_name: str):
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    archetypes = convert_lists_to_tuples(data)
+    archetypes = convert_struct_to_ranges(data)
+
+    print(archetypes)
 
     return archetypes

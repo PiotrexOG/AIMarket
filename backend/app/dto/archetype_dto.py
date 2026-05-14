@@ -28,4 +28,4 @@ class ArchetypeRead(BaseModel):
     aggression_slope: Tuple[float, float]
     exposure_baseline: Tuple[float, float]
     temp: Tuple[float, float]
-    rebalance_range: Tuple[float, float]
+    rebalance_threshold: Tuple[float, float]

@@ -173,7 +173,7 @@ function GlobalResults({ totalStart, totalEnd }) {
                     <th colSpan="3">Time Weights (%)</th>
                     <th colSpan="5">Config</th>
                     <th colSpan="6">Metric Weights (%)</th>
-                    <th colSpan="3">Results</th>
+                    <th colSpan="2">Results</th>
                   </tr>
                   <tr className="th-row">
                     <th className="sticky-col">ID / Name</th>

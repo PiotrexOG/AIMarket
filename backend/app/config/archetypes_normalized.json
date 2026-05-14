@@ -1,223 +1,222 @@
 {
     "benchmark": {
         "time_weights": {
-            "short": [0, 0],
-            "medium": [0, 0],
-            "long": [0, 0]
+            "short": {"mean": 0.0, "spread": 0.0},
+            "medium": {"mean": 0.0, "spread": 0.0},
+            "long": {"mean": 0.0, "spread": 0.0}
         },
         "metric_weights": {
-            "tech": [0, 0],
-            "fund": [0, 0],
-            "val": [0, 0],
-            "risk": [0, 0],
-            "conv": [0, 0],
-            "asym": [0, 0]
+            "tech": {"mean": 0.0, "spread": 0.0},
+            "fund": {"mean": 0.0, "spread": 0.0},
+            "val": {"mean": 0.0, "spread": 0.0},
+            "risk": {"mean": 0.0, "spread": 0.0},
+            "conv": {"mean": 0.0, "spread": 0.0},
+            "asym": {"mean": 0.0, "spread": 0.0}
         },
-        "min_exposure": [0, 0],
-        "aggression_slope": [0, 0],
-        "exposure_baseline": [0, 0],
-        "min_score": [0, 0],
-        "temp": [0, 0],
-        "rebalance_range": [0, 0]
+        "min_exposure": {"mean": 0.0, "spread": 0.0},
+        "aggression_slope": {"mean": 0.0, "spread": 0.0},
+        "exposure_baseline": {"mean": 0.0, "spread": 0.0},
+        "temp": {"mean": 0.0, "spread": 0.0},
+        "rebalance_threshold": {"mean": 0.0, "spread": 0.0}
     },
     "conservative_grandpa": {
         "time_weights": {
-            "short": [0.0, 0.05],
-            "medium": [0.1, 0.2],
-            "long": [0.75, 0.9]
+            "short": {"mean": 0.025, "spread": 0.025},
+            "medium": {"mean": 0.15, "spread": 0.05},
+            "long": {"mean": 0.825, "spread": 0.075}
         },
         "metric_weights": {
-            "tech": [0.0, 0.0465],
-            "fund": [0.3721, 0.5581],
-            "val": [0.2791, 0.3721],
-            "risk": [0.093, 0.186],
-            "conv": [0.0, 0.0465],
-            "asym": [0.0, 0.0465]
+            "tech": {"mean": 0.025, "spread": 0.025},
+            "fund": {"mean": 0.465, "spread": 0.095},
+            "val": {"mean": 0.325, "spread": 0.045},
+            "risk": {"mean": 0.14, "spread": 0.045},
+            "conv": {"mean": 0.02, "spread": 0.02},
+            "asym": {"mean": 0.025, "spread": 0.025}
         },
-        "min_exposure": [0.15, 0.25],
-        "aggression_slope": [0.05, 0.1],
-        "exposure_baseline": [6.2, 6.8],
-        "temp": [1.5, 2.0],
-        "rebalance_range": [0.05, 0.1]
+        "min_exposure": {"mean": 0.20, "spread": 0.05},
+        "aggression_slope": {"mean": 0.075, "spread": 0.025},
+        "exposure_baseline": {"mean": 6.5, "spread": 0.3},
+        "temp": {"mean": 1.75, "spread": 0.25},
+        "rebalance_threshold": {"mean": 0.075, "spread": 0.025}
     },
     "value_hunter": {
         "time_weights": {
-            "short": [0.05, 0.15],
-            "medium": [0.3, 0.4],
-            "long": [0.5, 0.6]
+            "short": {"mean": 0.10, "spread": 0.05},
+            "medium": {"mean": 0.35, "spread": 0.05},
+            "long": {"mean": 0.55, "spread": 0.05}
         },
         "metric_weights": {
-            "tech": [0.0455, 0.0909],
-            "fund": [0.2727, 0.3636],
-            "val": [0.3636, 0.4545],
-            "risk": [0.0455, 0.0909],
-            "conv": [0.0455, 0.0909],
-            "asym": [0.0455, 0.0909]
+            "tech": {"mean": 0.07, "spread": 0.02},
+            "fund": {"mean": 0.32, "spread": 0.045},
+            "val": {"mean": 0.41, "spread": 0.045},
+            "risk": {"mean": 0.07, "spread": 0.02},
+            "conv": {"mean": 0.065, "spread": 0.02},
+            "asym": {"mean": 0.065, "spread": 0.02}
         },
-        "min_exposure": [0.35, 0.45],
-        "aggression_slope": [0.1, 0.15],
-        "exposure_baseline": [5.2, 5.8],
-        "temp": [1.0, 1.5],
-        "rebalance_range": [0.03, 0.06]
+        "min_exposure": {"mean": 0.40, "spread": 0.05},
+        "aggression_slope": {"mean": 0.125, "spread": 0.025},
+        "exposure_baseline": {"mean": 5.5, "spread": 0.3},
+        "temp": {"mean": 1.25, "spread": 0.25},
+        "rebalance_threshold": {"mean": 0.045, "spread": 0.015}
     },
     "degen_trader": {
         "time_weights": {
-            "short": [0.7179, 0.9231],
-            "medium": [0.1026, 0.2051],
-            "long": [0.0, 0.0513]
+            "short": {"mean": 0.82, "spread": 0.10},
+            "medium": {"mean": 0.155, "spread": 0.05},
+            "long": {"mean": 0.025, "spread": 0.025}
         },
         "metric_weights": {
-            "tech": [0.3721, 0.5581],
-            "fund": [0.0, 0.0465],
-            "val": [0.0, 0.0465],
-            "risk": [0.0465, 0.093],
-            "conv": [0.093, 0.186],
-            "asym": [0.186, 0.3721]
+            "tech": {"mean": 0.465, "spread": 0.093},
+            "fund": {"mean": 0.02, "spread": 0.02},
+            "val": {"mean": 0.02, "spread": 0.02},
+            "risk": {"mean": 0.07, "spread": 0.023},
+            "conv": {"mean": 0.14, "spread": 0.046},
+            "asym": {"mean": 0.285, "spread": 0.093}
         },
-        "min_exposure": [0.8, 0.95],
-        "aggression_slope": [0.25, 0.4],
-        "exposure_baseline": [2.5, 3.5],
-        "temp": [0.3, 0.6],
-        "rebalance_range": [0.005, 0.015]
+        "min_exposure": {"mean": 0.875, "spread": 0.075},
+        "aggression_slope": {"mean": 0.325, "spread": 0.075},
+        "exposure_baseline": {"mean": 3.0, "spread": 0.5},
+        "temp": {"mean": 0.45, "spread": 0.15},
+        "rebalance_threshold": {"mean": 0.01, "spread": 0.005}
     },
     "growth_enthusiast": {
         "time_weights": {
-            "short": [0.2, 0.3],
-            "medium": [0.4, 0.5],
-            "long": [0.2, 0.4]
+            "short": {"mean": 0.25, "spread": 0.05},
+            "medium": {"mean": 0.45, "spread": 0.05},
+            "long": {"mean": 0.30, "spread": 0.10}
         },
         "metric_weights": {
-            "tech": [0.1739, 0.2609],
-            "fund": [0.1739, 0.2609],
-            "val": [0.0435, 0.1304],
-            "risk": [0.087, 0.1739],
-            "conv": [0.087, 0.1739],
-            "asym": [0.1739, 0.2609]
+            "tech": {"mean": 0.22, "spread": 0.04},
+            "fund": {"mean": 0.22, "spread": 0.04},
+            "val": {"mean": 0.08, "spread": 0.04},
+            "risk": {"mean": 0.13, "spread": 0.04},
+            "conv": {"mean": 0.13, "spread": 0.04},
+            "asym": {"mean": 0.22, "spread": 0.04}
         },
-        "min_exposure": [0.55, 0.7],
-        "aggression_slope": [0.15, 0.25],
-        "exposure_baseline": [4.2, 4.8],
-        "temp": [0.8, 1.2],
-        "rebalance_range": [0.02, 0.04]
+        "min_exposure": {"mean": 0.625, "spread": 0.075},
+        "aggression_slope": {"mean": 0.20, "spread": 0.05},
+        "exposure_baseline": {"mean": 4.5, "spread": 0.3},
+        "temp": {"mean": 1.0, "spread": 0.2},
+        "rebalance_threshold": {"mean": 0.03, "spread": 0.01}
     },
     "risk_manager": {
         "time_weights": {
-            "short": [0.1, 0.2],
-            "medium": [0.4, 0.4],
-            "long": [0.4, 0.5]
+            "short": {"mean": 0.15, "spread": 0.05},
+            "medium": {"mean": 0.40, "spread": 0.0},
+            "long": {"mean": 0.45, "spread": 0.05}
         },
         "metric_weights": {
-            "tech": [0.0444, 0.0889],
-            "fund": [0.0889, 0.1778],
-            "val": [0.0889, 0.1778],
-            "risk": [0.4444, 0.6222],
-            "conv": [0.0444, 0.0889],
-            "asym": [0.0444, 0.0889]
+            "tech": {"mean": 0.065, "spread": 0.02},
+            "fund": {"mean": 0.135, "spread": 0.04},
+            "val": {"mean": 0.135, "spread": 0.04},
+            "risk": {"mean": 0.53, "spread": 0.09},
+            "conv": {"mean": 0.065, "spread": 0.02},
+            "asym": {"mean": 0.07, "spread": 0.02}
         },
-        "min_exposure": [0.25, 0.35],
-        "aggression_slope": [0.08, 0.12],
-        "exposure_baseline": [5.7, 6.3],
-        "temp": [1.2, 1.6],
-        "rebalance_range": [0.01, 0.03]
+        "min_exposure": {"mean": 0.30, "spread": 0.05},
+        "aggression_slope": {"mean": 0.10, "spread": 0.02},
+        "exposure_baseline": {"mean": 6.0, "spread": 0.3},
+        "temp": {"mean": 1.4, "spread": 0.2},
+        "rebalance_threshold": {"mean": 0.02, "spread": 0.01}
     },
     "balanced_pensioner": {
         "time_weights": {
-            "short": [0.1053, 0.2105],
-            "medium": [0.4211, 0.5263],
-            "long": [0.3158, 0.4211]
+            "short": {"mean": 0.15, "spread": 0.05},
+            "medium": {"mean": 0.47, "spread": 0.05},
+            "long": {"mean": 0.38, "spread": 0.05}
         },
         "metric_weights": {
-            "tech": [0.0976, 0.1951],
-            "fund": [0.1951, 0.2927],
-            "val": [0.1951, 0.2927],
-            "risk": [0.0976, 0.1951],
-            "conv": [0.0976, 0.1463],
-            "asym": [0.0488, 0.1463]
+            "tech": {"mean": 0.145, "spread": 0.05},
+            "fund": {"mean": 0.245, "spread": 0.05},
+            "val": {"mean": 0.245, "spread": 0.05},
+            "risk": {"mean": 0.145, "spread": 0.05},
+            "conv": {"mean": 0.12, "spread": 0.025},
+            "asym": {"mean": 0.10, "spread": 0.05}
         },
-        "min_exposure": [0.45, 0.55],
-        "aggression_slope": [0.1, 0.15],
-        "exposure_baseline": [5.2, 5.8],
-        "temp": [1.0, 1.2],
-        "rebalance_range": [0.04, 0.07]
+        "min_exposure": {"mean": 0.50, "spread": 0.05},
+        "aggression_slope": {"mean": 0.125, "spread": 0.025},
+        "exposure_baseline": {"mean": 5.5, "spread": 0.3},
+        "temp": {"mean": 1.1, "spread": 0.1},
+        "rebalance_threshold": {"mean": 0.055, "spread": 0.015}
     },
     "conviction_heavy": {
         "time_weights": {
-            "short": [0.05, 0.1],
-            "medium": [0.2, 0.3],
-            "long": [0.6, 0.75]
+            "short": {"mean": 0.075, "spread": 0.025},
+            "medium": {"mean": 0.25, "spread": 0.05},
+            "long": {"mean": 0.675, "spread": 0.075}
         },
         "metric_weights": {
-            "tech": [0.0444, 0.0889],
-            "fund": [0.0889, 0.1778],
-            "val": [0.0444, 0.0889],
-            "risk": [0.0444, 0.0889],
-            "conv": [0.4444, 0.6222],
-            "asym": [0.0889, 0.1778]
+            "tech": {"mean": 0.065, "spread": 0.02},
+            "fund": {"mean": 0.135, "spread": 0.04},
+            "val": {"mean": 0.065, "spread": 0.02},
+            "risk": {"mean": 0.065, "spread": 0.02},
+            "conv": {"mean": 0.535, "spread": 0.09},
+            "asym": {"mean": 0.135, "spread": 0.04}
         },
-        "min_exposure": [0.5, 0.6],
-        "aggression_slope": [0.15, 0.22],
-        "exposure_baseline": [4.7, 5.3],
-        "temp": [0.4, 0.7],
-        "rebalance_range": [0.06, 0.12]
+        "min_exposure": {"mean": 0.55, "spread": 0.05},
+        "aggression_slope": {"mean": 0.185, "spread": 0.035},
+        "exposure_baseline": {"mean": 5.0, "spread": 0.3},
+        "temp": {"mean": 0.55, "spread": 0.15},
+        "rebalance_threshold": {"mean": 0.09, "spread": 0.03}
     },
     "asymmetry_seeker": {
         "time_weights": {
-            "short": [0.1053, 0.2105],
-            "medium": [0.3158, 0.4211],
-            "long": [0.4211, 0.5263]
+            "short": {"mean": 0.15, "spread": 0.05},
+            "medium": {"mean": 0.37, "spread": 0.05},
+            "long": {"mean": 0.48, "spread": 0.05}
         },
         "metric_weights": {
-            "tech": [0.087, 0.1304],
-            "fund": [0.0435, 0.087],
-            "val": [0.087, 0.1739],
-            "risk": [0.087, 0.1739],
-            "conv": [0.087, 0.1739],
-            "asym": [0.3478, 0.5217]
+            "tech": {"mean": 0.11, "spread": 0.02},
+            "fund": {"mean": 0.065, "spread": 0.02},
+            "val": {"mean": 0.13, "spread": 0.04},
+            "risk": {"mean": 0.13, "spread": 0.04},
+            "conv": {"mean": 0.13, "spread": 0.04},
+            "asym": {"mean": 0.435, "spread": 0.085}
         },
-        "min_exposure": [0.45, 0.6],
-        "aggression_slope": [0.18, 0.26],
-        "exposure_baseline": [4.2, 4.8],
-        "temp": [0.7, 1.1],
-        "rebalance_range": [0.02, 0.05]
+        "min_exposure": {"mean": 0.525, "spread": 0.075},
+        "aggression_slope": {"mean": 0.22, "spread": 0.04},
+        "exposure_baseline": {"mean": 4.5, "spread": 0.3},
+        "temp": {"mean": 0.9, "spread": 0.2},
+        "rebalance_threshold": {"mean": 0.035, "spread": 0.015}
     },
     "technical_swing": {
         "time_weights": {
-            "short": [0.3, 0.4],
-            "medium": [0.5, 0.6],
-            "long": [0.05, 0.15]
+            "short": {"mean": 0.35, "spread": 0.05},
+            "medium": {"mean": 0.55, "spread": 0.05},
+            "long": {"mean": 0.10, "spread": 0.05}
         },
         "metric_weights": {
-            "tech": [0.4762, 0.6667],
-            "fund": [0.0476, 0.0952],
-            "val": [0.0476, 0.0952],
-            "risk": [0.0952, 0.1905],
-            "conv": [0.0476, 0.0952],
-            "asym": [0.0476, 0.0952]
+            "tech": {"mean": 0.57, "spread": 0.095},
+            "fund": {"mean": 0.07, "spread": 0.025},
+            "val": {"mean": 0.07, "spread": 0.025},
+            "risk": {"mean": 0.15, "spread": 0.05},
+            "conv": {"mean": 0.07, "spread": 0.025},
+            "asym": {"mean": 0.07, "spread": 0.025}
         },
-        "min_exposure": [0.6, 0.75],
-        "aggression_slope": [0.2, 0.3],
-        "exposure_baseline": [3.7, 4.3],
-        "temp": [0.8, 1.0],
-        "rebalance_range": [0.015, 0.035]
+        "min_exposure": {"mean": 0.675, "spread": 0.075},
+        "aggression_slope": {"mean": 0.25, "spread": 0.05},
+        "exposure_baseline": {"mean": 4.0, "spread": 0.3},
+        "temp": {"mean": 0.9, "spread": 0.1},
+        "rebalance_threshold": {"mean": 0.025, "spread": 0.01}
     },
     "macro_fundamentalist": {
         "time_weights": {
-            "short": [0.0, 0.05],
-            "medium": [0.2, 0.3],
-            "long": [0.65, 0.8]
+            "short": {"mean": 0.025, "spread": 0.025},
+            "medium": {"mean": 0.25, "spread": 0.05},
+            "long": {"mean": 0.725, "spread": 0.075}
         },
         "metric_weights": {
-            "tech": [0.0, 0.0488],
-            "fund": [0.4878, 0.6829],
-            "val": [0.0976, 0.1951],
-            "risk": [0.0976, 0.1951],
-            "conv": [0.0488, 0.0976],
-            "asym": [0.0, 0.0488]
+            "tech": {"mean": 0.025, "spread": 0.025},
+            "fund": {"mean": 0.585, "spread": 0.10},
+            "val": {"mean": 0.145, "spread": 0.05},
+            "risk": {"mean": 0.145, "spread": 0.05},
+            "conv": {"mean": 0.075, "spread": 0.025},
+            "asym": {"mean": 0.025, "spread": 0.025}
         },
-        "min_exposure": [0.3, 0.4],
-        "aggression_slope": [0.08, 0.12],
-        "exposure_baseline": [6.2, 6.8],
-        "temp": [1.2, 1.5],
-        "rebalance_range": [0.07, 0.15]
+        "min_exposure": {"mean": 0.35, "spread": 0.05},
+        "aggression_slope": {"mean": 0.10, "spread": 0.02},
+        "exposure_baseline": {"mean": 6.5, "spread": 0.3},
+        "temp": {"mean": 1.35, "spread": 0.15},
+        "rebalance_threshold": {"mean": 0.11, "spread": 0.04}
     }
 }

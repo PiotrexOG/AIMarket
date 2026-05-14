@@ -21,7 +21,7 @@ PARAM_MAP = {
     "risk_tolerance": "risk_tolerance",
     "min_score": "min_score_threshold",
     "temp": "softmax_temp",
-    "rebalance_range": "rebalance_threshold"
+    "rebalance_threshold": "rebalance_threshold"
 }
 
 TIME_MAP = {
