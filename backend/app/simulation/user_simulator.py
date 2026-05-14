@@ -236,13 +236,8 @@ class UserSimulator:
     def _execute_trading_logic(self, analysis_result: dict, date_time: datetime) -> None:
         decisions = self.decision_maker.make_decision(analysis_result["llm_ranker"], self.portfolio, date_time)
 
-        sorted_decisions = dict(sorted(
-            decisions.items(),
-            key=lambda item: 0 if item[1]["DECISION"] == "SELL" else 1
-        ))
-
         pre_state = (self.portfolio.cash, dict(self.portfolio.shares))
-        self._execute_decisions(sorted_decisions, date_time)
+        self._execute_decisions(decisions, date_time)
 
         if self._portfolio_changed(*pre_state):
             history_data = PortfolioHistoryCreate(

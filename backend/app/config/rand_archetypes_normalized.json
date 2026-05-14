@@ -13,8 +13,9 @@
             "conv": [0, 1],
             "asym": [0, 1]
         },
-        "risk_tolerance": [0.15, 1],
-        "min_score": [0, 7.5],
+        "min_exposure": [0.1, 1],
+        "aggression_slope": [0.0, 1.0],
+        "exposure_baseline": [3.0, 7.0],
         "temp": [0, 2],
         "rebalance_range": [0, 0.2]
     },
@@ -32,8 +33,9 @@
             "conv": [0.0, 0.0],
             "asym": [0.0, 0.0]
         },
-        "risk_tolerance": [0.0, 0.0],
-        "min_score": [0.0, 0.0],
+        "min_exposure": [0.0, 0.0],
+        "aggression_slope": [0.0, 0.0],
+        "exposure_baseline": [0.0, 0.0],
         "temp": [0.0, 0.0],
         "rebalance_range": [0.0, 0.0]
     }
