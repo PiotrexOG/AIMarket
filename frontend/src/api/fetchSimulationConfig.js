@@ -11,14 +11,15 @@ export const fetchSimulationConfig = async () => {
   return response.json();
 };
 
-export const startSimulation = async (startDate, endDate, usersPerArchetype, deltaDays, archetypes_config) => {
+export const startSimulation = async (startDate, endDate, usersPerArchetype, deltaDays, archetypes_config, isBatch) => {
   // Ponieważ datetime-local nie ma sekund ani strefy, dodajemy je tutaj:
   const payload = {
     start_time: startDate, 
     end_time: endDate,
     users_per_archetype: usersPerArchetype,
     delta_days: deltaDays,
-    archetypes_config: archetypes_config
+    archetypes_config: archetypes_config,
+    is_batch: isBatch
   };
 
   const response = await fetch(`${BASE_URL}/simulation/start`, {

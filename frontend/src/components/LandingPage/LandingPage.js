@@ -29,6 +29,7 @@ const LandingPage = ({ totalStart, totalEnd }) => {
   const [usersPerArchetype, setUsersPerArchetype] = useState(1);
   const [deltaDays, setDeltaDays] = useState(7);
   const [archetypes_config, setArchetypeConfig] = useState("archetypes_normalized.json");
+  const [isBatch, setIsBatch] = useState(false);
 
   useEffect(() => {
     if (totalStart) setStartDate(formatAsUTCForInput(totalStart));
@@ -44,7 +45,8 @@ const LandingPage = ({ totalStart, totalEnd }) => {
         toUTCISOString(endDate),
         usersPerArchetype,
         deltaDays,
-        archetypes_config
+        archetypes_config,
+        isBatch
 
       );
       navigate("/dashboard");
@@ -145,6 +147,17 @@ const LandingPage = ({ totalStart, totalEnd }) => {
             value={deltaDays}
             onChange={(e) => setDeltaDays(parseInt(e.target.value) || 1)}
           />
+        </div>
+
+        <div className="input-group checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              checked={isBatch}
+              onChange={(e) => setIsBatch(e.target.checked)}
+            />
+            Batch Mode
+          </label>
         </div>
 
         <div className="input-group">

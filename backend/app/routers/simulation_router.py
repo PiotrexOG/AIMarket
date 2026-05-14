@@ -70,13 +70,22 @@ def start_simulation(req: SimulationRequest):
 
             ConfigService.set_archetype_config(req.archetypes_config)
 
-            run_simulation(
-                start_time,
-                req.end_time,
-                req.users_per_archetype,
-                delta,
-                req.archetypes_config
-            )
+            if req.is_batch:
+                run_simulation_batch(
+                    start_time,
+                    req.end_time,
+                    req.users_per_archetype,
+                    delta,
+                    req.archetypes_config
+                )
+            else:
+                run_simulation(
+                    start_time,
+                    req.end_time,
+                    req.users_per_archetype,
+                    delta,
+                    req.archetypes_config
+                )
         except Exception as e:
             print(f"[SIMULATION ERROR] {e}")
         finally:

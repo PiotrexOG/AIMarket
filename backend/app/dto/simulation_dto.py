@@ -15,3 +15,4 @@ class SimulationRequest(BaseModel):
     users_per_archetype: int | None = 1
     delta_days: int | None = 7
     archetypes_config: str
+    is_batch: bool

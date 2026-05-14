@@ -30,6 +30,4 @@ def get_archetype(file_name: str):
 
     archetypes = convert_struct_to_ranges(data)
 
-    print(archetypes)
-
     return archetypes
