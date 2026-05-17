@@ -1,0 +1,174 @@
+{
+    "gmm_archetype_1": {
+        "metadata": {
+            "cluster_id": 0,
+            "selected_n_clusters": 2,
+            "bic_by_clusters": {
+                "2": 18889.196847,
+                "3": 18965.69807,
+                "4": 19304.946217,
+                "5": 19794.580218,
+                "6": 20412.432985,
+                "7": 20886.786057,
+                "8": 21538.649925,
+                "9": 22040.719823,
+                "10": 22875.953392
+            },
+            "cluster_size": 768,
+            "avg_robust_score": 0.284298,
+            "avg_local_mean": 0.284298,
+            "avg_local_median": 0.278446,
+            "avg_local_q10": 0.207027,
+            "avg_local_q90": 0.369269,
+            "avg_local_std": 0.067937,
+            "avg_local_hit_rate": 0.713114,
+            "avg_cluster_confidence": 0.9002
+        },
+        "time_weights": {
+            "short": {
+                "mean": 0.212021,
+                "spread": 0.115002
+            },
+            "medium": {
+                "mean": 0.140084,
+                "spread": 0.077961
+            },
+            "long": {
+                "mean": 0.647895,
+                "spread": 0.106238
+            }
+        },
+        "metric_weights": {
+            "tech": {
+                "mean": 0.11353,
+                "spread": 0.062776
+            },
+            "fund": {
+                "mean": 0.12896,
+                "spread": 0.073061
+            },
+            "val": {
+                "mean": 0.251937,
+                "spread": 0.130844
+            },
+            "risk": {
+                "mean": 0.085971,
+                "spread": 0.048832
+            },
+            "conv": {
+                "mean": 0.229876,
+                "spread": 0.123614
+            },
+            "asym": {
+                "mean": 0.189727,
+                "spread": 0.107266
+            }
+        },
+        "min_exposure": {
+            "mean": 0.655164,
+            "spread": 0.172438
+        },
+        "aggression_slope": {
+            "mean": 0.618937,
+            "spread": 0.194904
+        },
+        "exposure_baseline": {
+            "mean": 4.417837,
+            "spread": 0.752977
+        },
+        "rebalance_threshold": {
+            "mean": 0.103719,
+            "spread": 0.041141
+        },
+        "temp": {
+            "mean": 0.308744,
+            "spread": 0.16793
+        }
+    },
+    "gmm_archetype_2": {
+        "metadata": {
+            "cluster_id": 1,
+            "selected_n_clusters": 2,
+            "bic_by_clusters": {
+                "2": 18889.196847,
+                "3": 18965.69807,
+                "4": 19304.946217,
+                "5": 19794.580218,
+                "6": 20412.432985,
+                "7": 20886.786057,
+                "8": 21538.649925,
+                "9": 22040.719823,
+                "10": 22875.953392
+            },
+            "cluster_size": 871,
+            "avg_robust_score": 0.279877,
+            "avg_local_mean": 0.279877,
+            "avg_local_median": 0.279838,
+            "avg_local_q10": 0.206926,
+            "avg_local_q90": 0.353295,
+            "avg_local_std": 0.060538,
+            "avg_local_hit_rate": 0.737577,
+            "avg_cluster_confidence": 0.935242
+        },
+        "time_weights": {
+            "short": {
+                "mean": 0.116035,
+                "spread": 0.062675
+            },
+            "medium": {
+                "mean": 0.131084,
+                "spread": 0.070878
+            },
+            "long": {
+                "mean": 0.752881,
+                "spread": 0.082519
+            }
+        },
+        "metric_weights": {
+            "tech": {
+                "mean": 0.180035,
+                "spread": 0.104593
+            },
+            "fund": {
+                "mean": 0.197636,
+                "spread": 0.104768
+            },
+            "val": {
+                "mean": 0.178207,
+                "spread": 0.089215
+            },
+            "risk": {
+                "mean": 0.132885,
+                "spread": 0.075248
+            },
+            "conv": {
+                "mean": 0.16136,
+                "spread": 0.088482
+            },
+            "asym": {
+                "mean": 0.149877,
+                "spread": 0.083093
+            }
+        },
+        "min_exposure": {
+            "mean": 0.63144,
+            "spread": 0.20606
+        },
+        "aggression_slope": {
+            "mean": 0.695158,
+            "spread": 0.160738
+        },
+        "exposure_baseline": {
+            "mean": 4.046854,
+            "spread": 0.532719
+        },
+        "rebalance_threshold": {
+            "mean": 0.090944,
+            "spread": 0.03101
+        },
+        "temp": {
+            "mean": 0.932428,
+            "spread": 0.44345
+        }
+    }
+}

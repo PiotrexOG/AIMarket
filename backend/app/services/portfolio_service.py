@@ -1,12 +1,10 @@
-import json
-from datetime import datetime, timedelta
-from typing import List, Optional, Literal
+from datetime import datetime
+from typing import List, Optional
 from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
-from app.config.archetype_config import get_archetype
-from app.config.optimize import process_and_print_results
+from app.portfolio_generation.archetype_config import get_archetype
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, \
     PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
 from app.repositories.portfolio_repository import PortfolioRepository
@@ -257,6 +255,7 @@ class PortfolioService:
             start: datetime,
             end: datetime
     ):
+        from app.config.optimize import process_and_print_results
 
         summaries = self.get_all_portfolios_performance_summary(start, end)
 

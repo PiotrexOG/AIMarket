@@ -5,12 +5,12 @@ from pathlib import Path
 import numpy as np
 from sqlalchemy.orm import Session
 
-from app.config.archetype_config import get_archetype
+from app.portfolio_generation.archetype_config import get_archetype
 from app.config.config import STARTING_CASH
+from app.portfolio_generation.random_users import generate_users
+from app.portfolio_generation.space_filling_users import generate_space_filling_users
 from app.services.layers.market_data_service import MarketDataService
 from app.simulation.batch.helper import get_available_timestamps, fetch_cross_section
-from app.testy.random_users import generate_users
-
 
 TIME_WEIGHT_KEYS = ("long_term_200d", "medium_term_50d", "short_term_14d")
 METRIC_WEIGHT_KEYS = (
@@ -22,8 +22,8 @@ METRIC_WEIGHT_KEYS = (
     "relative_valuation_sustainability",
 )
 
-BASE_DIR = Path(__file__).resolve().parents[3]
-DATA_DIR = BASE_DIR / "data"
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = BASE_DIR / "archetype_results"
 
 
 def smart_round(values: np.ndarray) -> np.ndarray:
@@ -78,7 +78,16 @@ class SimulationBatchService:
         archetypes = get_archetype(self.archetypes_config)
 
         for arc_name in archetypes.keys():
-            users_profiles.update(generate_users(arc_name, users_per_archetype, archetypes))
+            if arc_name == "random":
+                users_profiles.update(
+                    generate_space_filling_users(
+                        arc_name,
+                        users_per_archetype,
+                        archetypes,
+                    )
+                )
+            else:
+                users_profiles.update(generate_users(arc_name, users_per_archetype, archetypes))
 
         self.user_profiles = list(users_profiles.values())
         users_count = len(self.user_profiles)
@@ -421,23 +430,24 @@ class SimulationBatchService:
             end_val = portfolio_values[row_idx]
             change_ratio = ((end_val - STARTING_CASH) / STARTING_CASH) if STARTING_CASH != 0 else 0.0
 
-            results.append(
-                {
-                    "id": int(self.user_ids[row_idx]),
-                    "name": f"rand_{int(self.user_ids[row_idx])}",
-                    "archetype_key": profile["archetype_key"],
-                    "short_term_weight": profile["time_weights"]["short_term_14d"],
-                    "medium_term_weight": profile["time_weights"]["medium_term_50d"],
-                    "long_term_weight": profile["time_weights"]["long_term_200d"],
-                    "min_exposure": profile.get("min_exposure", 0.5),
-                    "aggression_slope": profile.get("aggression_slope", 0.2),
-                    "exposure_baseline": profile.get("exposure_baseline", 5.0),
-                    "rebalance_threshold": profile.get("rebalance_threshold", 0.0),
-                    "softmax_temp": profile.get("softmax_temp", 1.0),
-                    "metric_weights": dict(profile["metric_weights"]),
-                    "change_ratio": round(float(change_ratio), 4),
-                }
-            )
+            if profile["archetype_key"] != "benchmark":
+                results.append(
+                    {
+                        "id": int(self.user_ids[row_idx]),
+                        "name": f"rand_{int(self.user_ids[row_idx])}",
+                        "archetype_key": profile["archetype_key"],
+                        "short_term_weight": profile["time_weights"]["short_term_14d"],
+                        "medium_term_weight": profile["time_weights"]["medium_term_50d"],
+                        "long_term_weight": profile["time_weights"]["long_term_200d"],
+                        "min_exposure": profile.get("min_exposure", 0.5),
+                        "aggression_slope": profile.get("aggression_slope", 0.2),
+                        "exposure_baseline": profile.get("exposure_baseline", 5.0),
+                        "rebalance_threshold": profile.get("rebalance_threshold", 0.0),
+                        "softmax_temp": profile.get("softmax_temp", 1.0),
+                        "metric_weights": dict(profile["metric_weights"]),
+                        "change_ratio": round(float(change_ratio), 4),
+                    }
+                )
 
         output_path = DATA_DIR / "results.json"
         with output_path.open("w", encoding="utf-8") as f:

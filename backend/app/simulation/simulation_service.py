@@ -6,10 +6,10 @@ from typing import Dict
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from app.config.archetype_config import get_archetype
+from app.portfolio_generation.archetype_config import get_archetype
 from app.config.fetch_date import load_last_fetch_date, save_last_fetch_date
 from app.core.yahoo_client import YahooClient
-from app.config.config import STARTING_CASH, END_TIME
+from app.config.config import STARTING_CASH
 from app.db.database import SessionLocal
 from app.db.models.market_data import MarketData
 from app.db.schemas.layers.market_data_scheme import MarketDataCreate
@@ -20,6 +20,7 @@ from app.decisionMakers.horizonRanker.GEMINI_HORIZON import GEMINI_HORIZON
 from app.decisionMakers.tickerMaster.GEMINI_MASTER import GEMINI_MASTER
 from app.decisionMakers.tickerMaster.TickerDataSerializer import TickerDataSerializer
 from app.models.proccess import process_news_range
+from app.portfolio_generation.random_users import generate_users
 from app.services.archetype_service import ArchetypeService
 from app.services.layers.analyst_grades_service import AnalystGradesService
 from app.services.layers.company_daily_summary import CompanyDailySummaryService
@@ -34,7 +35,6 @@ from app.simulation.user_simulator import UserSimulator
 from app.testy.compute import data_fundamentals
 
 from app.testy.compute.news_score import NewsImportanceScorer
-from app.testy.random_users import generate_users
 from app.testy.scrap.analyst_grades import fetch_analyst_grades
 from app.testy.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
 import app.testy.scrap.quarterly as quarterly

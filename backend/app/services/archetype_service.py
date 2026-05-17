@@ -1,8 +1,6 @@
 from typing import List
 
-from sqlalchemy.orm import Session
-
-from app.config.archetype_config import get_archetype
+from app.portfolio_generation.archetype_config import get_archetype
 
 
 class ArchetypeService:

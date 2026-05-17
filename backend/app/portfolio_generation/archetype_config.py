@@ -21,9 +21,12 @@ def convert_struct_to_ranges(d):
         return d
 
 def get_archetype(file_name: str):
-
-    base_dir = Path(__file__).resolve().parent
-    file_path = base_dir / file_name
+    requested_path = Path(file_name)
+    if requested_path.is_absolute():
+        file_path = requested_path
+    else:
+        base_dir = Path(__file__).resolve().parent / "archetype_blueprints"
+        file_path = base_dir / requested_path
 
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
