@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The short-term exhibits indecision with a DOJI pattern, but momentum remains neutral (RSI 54.7) and price is within normal Bollinger Bands. Trend base SMA20 is stable. O: Positive news flow includes Olympic partnership and career growth recognition. T: Potential for range-bound trading with upside capped by the middle of the current range. W: Stagnant velocity (ROC 0.1%) and indecisive candle pattern suggest limited immediate upside. The CEO's warnings of a credit downturn introduce a macro overhang."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "safety": 5.5
+      },
+      "synthesis": "S: The medium-term trend is a gradual bullish ascent, supported by bullish MACD (though fading) and a positive Z-score relative to the SMA50. Price is within the monthly range. O: Strong Q1 earnings and revenue beats, coupled with a dividend increase, provide fundamental support. The Olympic partnership is a significant long-term branding opportunity. T: Continued trend alignment and positive earnings momentum could drive further upside within the established range. W: Fading MACD momentum and the negative earnings growth estimate for the next quarter are cautionary signals. The 'death cross' structure on the long-term chart introduces structural concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safety": 4.0
+      },
+      "synthesis": "S: The long-term picture is mixed, with a bull market correction regime and a 'death cross' structure indicating potential trend weakness. Price is in the mid-cycle neutral zone. O: High business quality (GM: 60.9%) and mega-cap scale provide a solid foundation. Recent earnings beats and dividend increases are positive fundamental developments. T: If the broader market regime shifts back to a stronger bull trend, JPM could benefit from its strong business fundamentals. W: The 'death cross' structure is a significant technical headwind. Stressed balance sheet (NetDebt/Eq: 2.53x) and overpriced implied growth (PEG: 5.94) increase valuation risk. CEO warnings about credit downturns and bond crises add macro-economic risk."
+    }
+  }
+}

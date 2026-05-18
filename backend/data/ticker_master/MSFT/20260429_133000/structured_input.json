@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.2%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 363.07-433.64]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.97%)",
+        "cycle_macd": "BULLISH_FADING (4.072)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.54)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 356.28-433.64]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-15.83%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 425.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.6%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 45.6% | NM: 36.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $281.724B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.9%, EPS: 15.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -6.6%, Next Q Est Growth: 11.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.06, P/S: 11.26)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 9.24)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.0)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft and Open AI loosen terms of partnership. - EU plans to target cloud and AI services under new rules. - Microsoft offers voluntary buyouts to employees. - Microsoft and Postel announce new data and AI solution. - UBS: Microsoft made more concessions than gains in Open AI deal. - Microsoft's $5B Anthropic investment fuels AI growth story. - Elon Musk lawsuit against Open AI and Microsoft nears trial. - Open AI misses new users and revenue targets.",
+      "Microsoft Sovereign Private Cloud scales with Azure Local. - Microsoft shares slip after Open AI amends partnership terms. - Microsoft cuts Open AI revenue share, loosens AI alliance. - Gloat brings Agentic HR to Microsoft 365 Copilot and Teams. - Microsoft & Open AI amend partnership to simplify collaboration. - Microsoft Q3 preview: Jefferies suggests resetting the narrative. - Microsoft Power Apps adoption outpaces governance, risks grow. - Microsoft offers voluntary retirement to 7% of workforce.",
+      "Microsoft Q3 preview: Cap Ex decline expected, management guides for sequential decrease. - Microsoft faces voluntary buyouts as part of turnaround and AI deployment. - Elon Musk's lawsuit against Open AI and Microsoft heads to trial. - Musk's Open AI lawsuit puts Microsoft AI partnership and governance under spotlight."
+    ],
+    "medium_term_50d": [
+      "Microsoft and Open AI loosen terms of partnership. - EU plans to target cloud and AI services under new rules. - Microsoft offers voluntary buyouts to employees. - Microsoft and Postel announce new data and AI solution. - UBS: Microsoft made more concessions than gains in Open AI deal. - Microsoft's $5B Anthropic investment fuels AI growth story. - Elon Musk lawsuit against Open AI and Microsoft nears trial. - Open AI misses new users and revenue targets.",
+      "Microsoft Sovereign Private Cloud scales with Azure Local. - Microsoft shares slip after Open AI amends partnership terms. - Microsoft cuts Open AI revenue share, loosens AI alliance. - Gloat brings Agentic HR to Microsoft 365 Copilot and Teams. - Microsoft & Open AI amend partnership to simplify collaboration. - Microsoft Q3 preview: Jefferies suggests resetting the narrative. - Microsoft Power Apps adoption outpaces governance, risks grow. - Microsoft offers voluntary retirement to 7% of workforce.",
+      "Microsoft Q3 preview: Cap Ex decline expected, management guides for sequential decrease. - Microsoft faces voluntary buyouts as part of turnaround and AI deployment. - Elon Musk's lawsuit against Open AI and Microsoft heads to trial. - Musk's Open AI lawsuit puts Microsoft AI partnership and governance under spotlight."
+    ],
+    "long_term_200d": [
+      "Microsoft and Open AI loosen terms of partnership. - EU plans to target cloud and AI services under new rules. - Microsoft offers voluntary buyouts to employees. - Microsoft and Postel announce new data and AI solution. - UBS: Microsoft made more concessions than gains in Open AI deal. - Microsoft's $5B Anthropic investment fuels AI growth story. - Elon Musk lawsuit against Open AI and Microsoft nears trial. - Open AI misses new users and revenue targets.",
+      "Microsoft Sovereign Private Cloud scales with Azure Local. - Microsoft shares slip after Open AI amends partnership terms. - Microsoft cuts Open AI revenue share, loosens AI alliance. - Gloat brings Agentic HR to Microsoft 365 Copilot and Teams. - Microsoft & Open AI amend partnership to simplify collaboration. - Microsoft Q3 preview: Jefferies suggests resetting the narrative. - Microsoft Power Apps adoption outpaces governance, risks grow. - Microsoft offers voluntary retirement to 7% of workforce.",
+      "Microsoft announces AUD 25 billion investment in Australia for digital infrastructure and AI. - Microsoft plans first-ever voluntary employee buyout for up to 7% of U.S. workforce. - Microsoft stock falls 4% after announcing historic employee buyout. - Microsoft commits A$25B ($18B) to Australia by 2029 for AI infrastructure. - Microsoft to invest $18 billion in Australia for AI push. - Microsoft offers buyouts to employees, Service Now stock sinks. - Microsoft and Meta announce layoffs and voluntary buyouts as AI spending increases. - Microsoft is making history by offering voluntary retirement. - Microsoft offers buyouts to about 7% of US workers"
+    ]
+  }
+}

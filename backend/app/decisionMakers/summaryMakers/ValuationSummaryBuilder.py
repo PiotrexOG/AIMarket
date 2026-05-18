@@ -11,7 +11,7 @@ class ValuationSummaryBuilder:
 
         summary = {
             "pricing_multiples": self._valuation_level(v),
-            "asset_risk_assessment": self._valuation_risk(v),
+            "asset_safety_assessment": self._valuation_safety(v),
             "implied_growth": self._growth_expectation(v),
             "structure_sensitivity": self._capital_structure_impact(v)
         }
@@ -52,7 +52,7 @@ class ValuationSummaryBuilder:
         metrics = f" (P/E: {self._fmt(pe)}, P/S: {self._fmt(ps)})"
         return label + metrics
 
-    def _valuation_risk(self, v: dict) -> str:
+    def _valuation_safety(self, v: dict) -> str:
         """
         Ocena ryzyka 'przepłacenia' za aktywa (Book Value) oraz bufor bezpieczeństwa (Dywidenda).
         """
@@ -63,13 +63,14 @@ class ValuationSummaryBuilder:
 
         label = "MODERATE_ASSET_VALUATION"
         if pb > 20:
-            label = "EXTREME_MULTIPLE_RISK"  # Płacisz głównie za 'goodwill'
+            label = "EXTREMELY_LOW_ASSET_SAFETY"  # Płacisz głównie za 'goodwill'
         elif pb > 8:
-            label = "HIGH_MULTIPLE_RISK"
-        elif pb < 1.5:
-            label = "ASSET_BACKED_SAFETY"  # Cena bliska wartości księgowej
+            label = "LOW_ASSET_SAFETY"
         elif pb < 1.0:
             label = "TRADING_BELOW_BOOK_VALUE"
+        elif pb < 1.5:
+            label = "ASSET_BACKED_SAFETY"  # Cena bliska wartości księgowej
+
 
         # Inline: P/B i Dividend Yield (Yield działa jak poduszka powietrzna)
         div_str = f", DivYld: {self._fmt(div_y * 100, suffix='%')}" if div_y else ""

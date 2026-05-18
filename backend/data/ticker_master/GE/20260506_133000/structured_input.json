@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "STAGNANT (-0.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 268.91-319.14]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.61%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.369)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.0)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 268.91-348.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.68%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 303.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.64%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.24, P/S: 6.59)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 17.64)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.45)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE share price analysis after multi-year rally.",
+      "GE Aerospace wins large aircraft engine order.",
+      "GE Health Care reduces full-year profit and cash flow guidance. - GE Health Care's Q1 earnings missed analyst expectations."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace wins large aircraft engine order.",
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE Aerospace Q1 earnings beat expectations, outlook unchanged. - GE Vernova beats Q1 earnings and revenue estimates. - GE Vernova raises full-year guidance. - GE Vernova surpasses GE Aerospace in market value. - Colibrium Additive awarded $31 million NAVAIR contract. - GE Aerospace faces margin pressures and geopolitical uncertainties."
+    ],
+    "long_term_200d": [
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE Aerospace Q1 earnings beat expectations, outlook unchanged. - GE Vernova beats Q1 earnings and revenue estimates. - GE Vernova raises full-year guidance. - GE Vernova surpasses GE Aerospace in market value. - Colibrium Additive awarded $31 million NAVAIR contract. - GE Aerospace faces margin pressures and geopolitical uncertainties.",
+      "GE Aerospace wins large aircraft engine order."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.43)",
+        "velocity_roc_10": "NORMAL (-1.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 177.74-194.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.15%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.278)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.95)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 177.74-214.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.09%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 185.47,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.44%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.03, P/S: 1.98)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.0)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Shareholders urged to vote AGAINST Chevron's Proposal 6. - Proposal 6 focuses on human rights due diligence in occupied territories. - Chevron's CEO states physical oil shortages are beginning.",
+      "Chevron, Exxon Mobil, Conoco Phillips poised to benefit from disruptions.",
+      "Chevron returns over $5 billion to shareholders."
+    ],
+    "medium_term_50d": [
+      "Chevron in talks to acquire stakes in Iraqi oilfields. - Chevron expands Mediterranean footprint with Malta exploration. - Chevron CEO warns of emerging physical crude oil shortages. - Chevron CEO warns of oil shortages from Strait of Hormuz closure. - Chevron-funded group blamed for price gouging report.",
+      "Chevron Q1 2026 earnings beat estimates, profit hits 5-year low. - Chevron's upstream strength lifts first-quarter earnings past estimate. - Chevron stock gains after beating Q1 profit forecasts. - Chevron, Exxon Show Earnings Resilience But Stocks Fail Key Test. - Chevron CEO says company is recovering debt in Venezuela faster. - Chevron stock wavers after earnings, pumping fuel at record. - Chevron reports first quarter 2026 results. - Chevron reports first-quarter earnings of $2.21 billion. - Chevron stock rises, earnings boosted by Iran war oil price spike. - Chevron says downtime could hit Q2 output by 150,0",
+      "Chevron signals caution on Venezuela investment. - Chevron faces higher supply disruption risk from Hormuz. - Chevron exploring hydrocarbon exploration south of Malta. - Chevron CEO warns of potential oil shortages. - Exxon, Chevron stocks drop on hopes of US-Iran deal."
+    ],
+    "long_term_200d": [
+      "Chevron Q1 2026 earnings beat estimates, profit hits 5-year low. - Chevron's upstream strength lifts first-quarter earnings past estimate. - Chevron stock gains after beating Q1 profit forecasts. - Chevron, Exxon Show Earnings Resilience But Stocks Fail Key Test. - Chevron CEO says company is recovering debt in Venezuela faster. - Chevron stock wavers after earnings, pumping fuel at record. - Chevron reports first quarter 2026 results. - Chevron reports first-quarter earnings of $2.21 billion. - Chevron stock rises, earnings boosted by Iran war oil price spike. - Chevron says downtime could hit Q2 output by 150,0",
+      "Chevron and Venezuela strike deals to expand oil operations. - Chevron deepens Venezuela footprint with strategic asset swap. - Chevron Venezuela asset swap reshapes heavy oil exposure. - Chevron doubles down on Venezuela oil with asset swap. - Chevron increases Venezuela heavy oil stake via asset swap. - Chevron says Venezuelan oil imports curb U.S. gas prices. - Chevron deepens Orinoco footprint with PDVSA asset swap.",
+      "Chevron in talks to acquire stakes in Iraqi oilfields. - Chevron expands Mediterranean footprint with Malta exploration. - Chevron CEO warns of emerging physical crude oil shortages. - Chevron CEO warns of oil shortages from Strait of Hormuz closure. - Chevron-funded group blamed for price gouging report."
+    ]
+  }
+}

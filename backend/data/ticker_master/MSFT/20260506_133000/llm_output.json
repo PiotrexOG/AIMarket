@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safety": 4.5
+      },
+      "synthesis": "S: The short-term trend has shifted from overbought to neutral, with RSI at 50.0 and ROC at -3.1%. The price is now consolidating around the 20-day SMA (0.4%), indicating a pause in momentum. The strong bullish candle pattern suggests underlying support despite the recent pullback. O: Potential for a re-acceleration if the consolidation holds and the price breaks above recent resistance, supported by ongoing AI narrative. T: The neutral RSI and negative ROC suggest a lack of immediate upside conviction, and a break below the 20-day SMA could lead to further downside. W: The shift from overbought to neutral, coupled with negative ROC, increases the risk of a short-term correction. News regarding AI partnerships and potential leadership overhauls at Xbox introduce some uncertainty."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: The medium-term trend shows a gradual ascent (3.18%) with the price positioned bullishly relative to the 50-day SMA (Z:0.94). However, the MACD has turned bearish and is accelerating (-0.865), indicating a loss of upward momentum and potential for a trend reversal. O: Strong Q3 earnings and AI revenue growth (123% YoY) provide a fundamental tailwind. Continued adoption of AI services like Copilot could support the medium-term trend. T: The bearish MACD is a significant warning sign, suggesting a potential trend breakdown. If the MACD continues to accelerate downwards, a deeper correction is likely. W: The bearish MACD divergence is a key risk, contradicting the otherwise positive trend alignment. Elevated capex plans and investor concerns about cloud growth acceleration add to downside risk. News about AI spending and potential shifts in the AI landscape introduce volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safety": 2.5
+      },
+      "synthesis": "S: The long-term technical structure remains bearish, with the secular bear market regime deepening (-11.9%) and the death cross structure persisting (-15.01%). The price is positioned in the lower quadrant of the long-term range (30.0%). O: Despite the bearish technicals, Microsoft's fundamental strengths, including elite business quality, a healthy balance sheet, and strong cash generation, provide a defensive anchor. Continued growth in AI and cloud services offers long-term potential. T: The persistent death cross and bear market regime present significant headwinds. A sustained recovery would require a fundamental shift in market sentiment and a clear break above long-term resistance levels. W: High valuation multiples (P/E 29.51, P/S 10.57) combined with bearish long-term technicals and an expensive PEG ratio (1.86) create substantial downside risk. News regarding EU regulations, lawsuits, and potential shifts in AI partnerships continue to add to long-term uncertainty."
+    }
+  }
+}

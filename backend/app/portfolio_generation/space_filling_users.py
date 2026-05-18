@@ -9,7 +9,7 @@ from scipy.stats import qmc
 
 
 TIME_KEYS = ("short", "medium", "long")
-METRIC_KEYS = ("tech", "fund", "val", "risk", "conv", "asym")
+METRIC_KEYS = ("tech", "fund", "val", "safe", "conv", "asym")
 
 
 @dataclass(frozen=True)
@@ -105,7 +105,7 @@ def generate_space_filling_users(
                     "relative_technical_strength": 0.0,
                     "relative_fundamental_support": 0.0,
                     "relative_valuation_sustainability": 0.0,
-                    "relative_structural_risk": 0.0,
+                    "relative_structural_safety": 0.0,
                     "relative_conviction": 0.0,
                     "relative_asymmetry_profile": 0.0,
                 },
@@ -145,7 +145,7 @@ def generate_space_filling_users(
                 "relative_technical_strength": round(float(metric_weights[index, 0]), 6),
                 "relative_fundamental_support": round(float(metric_weights[index, 1]), 6),
                 "relative_valuation_sustainability": round(float(metric_weights[index, 2]), 6),
-                "relative_structural_risk": round(float(metric_weights[index, 3]), 6),
+                "relative_structural_safety": round(float(metric_weights[index, 3]), 6),
                 "relative_conviction": round(float(metric_weights[index, 4]), 6),
                 "relative_asymmetry_profile": round(float(metric_weights[index, 5]), 6),
             },

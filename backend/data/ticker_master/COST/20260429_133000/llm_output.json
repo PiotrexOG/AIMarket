@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safety": 4.5
+      },
+      "synthesis": "S: Positive news flow regarding earnings, membership fees, and expansion plans provides some support. O: Potential for short-term bounce if range support holds near $966. T: Monitor for any follow-through on positive news, but indecisive candle patterns and bearish RSI suggest caution. W: Bearish RSI in the 35.8 zone and Doji candle pattern indicate waning short-term momentum and potential for consolidation or a minor pullback."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safety": 4.0
+      },
+      "synthesis": "S: The company's core business remains strong with consistent membership renewals and expansion plans. O: Continued consumer trend towards value could benefit COST in the medium term. T: The current consolidation phase near moving averages presents an opportunity if the price can break higher. W: Bearish MACD cross and negative Z-score relative to the 50-day SMA indicate a weakening medium-term trend and potential for further downside if support breaks."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safety": 5.0
+      },
+      "synthesis": "S: COST operates within a secular bull market with a healthy long-term structure and strong balance sheet (NetCash/Eq: 0.21x). O: Consistent dividend increases and membership fee hikes provide a reliable income stream and support valuation. T: The company's scale and ability to tap into consumer value trends are long-term positives. W: High valuation multiples (P/E: 54.12, P/S: 1.6) and weak cash conversion (FCF Mgn: 2.8%) present significant valuation risk and limit upside potential, especially if growth expectations are not met."
+    }
+  }
+}

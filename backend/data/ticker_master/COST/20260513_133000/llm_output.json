@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safety": 5.0
+      },
+      "synthesis": "S: Short-term momentum has cooled, with RSI moving to a neutral 57.0 from a strong bullish zone. The price is now testing critical resistance at the top of its 20-day range. W: Elevated volume at resistance suggests potential for a pullback. O: News flow remains mixed, with some reports indicating a 'hold' rating and others highlighting sales surges. T: The neutral RSI and resistance level indicate a pause in the immediate upward trajectory, increasing the risk of a short-term stall or reversal."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.2,
+        "safety": 5.8
+      },
+      "synthesis": "S: The medium-term trend shows strengthening bullish signals, with MACD confirming a bullish zero cross and the Z-score relative to the 50-day SMA rising significantly to 2.09, indicating strong upward momentum. O: The price is consolidating at monthly resistance, supported by elevated volume and continued positive news regarding sales and membership growth. T: The compressed moving averages (0.55%) suggest potential for a breakout, and the strong position relative to the 50-day SMA reinforces the bullish trend. W: While the trend is strong, the continued hyper-premium valuation (P/E: 56.49) and weak cash conversion remain underlying risks, though currently overshadowed by strong price action."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.9,
+        "conv": 7.3,
+        "safety": 4.7
+      },
+      "synthesis": "S: The long-term secular bull market regime persists, with the price now at the top of its cycle (97.5% position) and a healthy golden cross structure intact. O: Consistent dividend increases and membership fee hikes continue to support the company's financial strength and shareholder returns. T: The company's scale and ability to leverage consumer value trends remain enduring strengths, providing a solid foundation. W: The extremely high valuation multiples (P/E: 56.49, P/B: 15.72) and implied growth (PEG: 5.68) represent a significant long-term risk. Any deceleration in growth or shift in market sentiment could lead to a substantial valuation correction, despite the strong operational performance."
+    }
+  }
+}

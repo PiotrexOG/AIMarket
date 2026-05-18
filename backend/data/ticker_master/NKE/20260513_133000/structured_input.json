@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (26.6)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.04)",
+        "velocity_roc_10": "NORMAL (-5.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 42.06-46.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.23%)",
+        "cycle_macd": "BULLISH_FADING (0.161)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.2)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 42.06-60.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-32.7%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-22.79%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 0.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 42.13,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.39%))",
+      "volume_dynamics": "AVERAGE (1.09)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.5, P/S: 1.34)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.71)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike CEO says company's turnaround needs more time. - Nike valuation check after steep share price slide.",
+      "Nike faces proposed US class action over tariff pricing. - Nike CEO bought $2 million worth of shares. - Nike's retail pivot aims to restore full-price sales.",
+      "Nike faces class action over tariff refunds. - Nike faces lawsuit over pocketing tariff refunds. - Nike tariff lawsuit tests pricing story and brand trust. - Nike committed to Snkrs app amid speculation."
+    ],
+    "medium_term_50d": [
+      "Nike faces class action over tariff refunds. - Nike faces lawsuit over pocketing tariff refunds. - Nike tariff lawsuit tests pricing story and brand trust. - Nike committed to Snkrs app amid speculation.",
+      "Nike slashes 1,400 jobs as stock crashes 70%.",
+      "Nike faces proposed US class action over tariff pricing. - Nike CEO bought $2 million worth of shares. - Nike's retail pivot aims to restore full-price sales."
+    ],
+    "long_term_200d": [
+      "Nike slashes 1,400 jobs as stock crashes 70%.",
+      "Nike cuts 1,400 jobs in restructuring plan. - Nike announces second round of layoffs this year. - Nike slashes headcount again to accelerate turnaround. - Nike cutting 1,400 jobs across tech, operations. - Nike to cut 1,400 jobs amid sales slowdown. - Nike cutting 1,400 jobs in second layoff round. - Nike reshapes technology team with 1,400 job cuts.",
+      "Nike cuts jobs again to revive sales and margins."
+    ]
+  }
+}

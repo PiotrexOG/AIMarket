@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "safety": 2.5
+      },
+      "synthesis": "S: The RSI has moved into extreme oversold territory (28.3), suggesting a potential for a short-term bounce. The price is consolidating near the 20-day SMA, but with a significant downward velocity (ROC: -7.3%). The DOJI candle pattern indicates indecision. O: A short-term rebound is possible due to oversold conditions, but the sharp price decline and indecisive candle suggest fragility. T: The news narrative highlights significant negative price action and market impatience, overshadowing any potential positive impact from job cuts. W: The extreme oversold RSI is a contrarian signal, but the implosive downward velocity and bearish news sentiment create substantial downside risk. The price is also nearing the lower bound of its short-term range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safety": 3.0
+      },
+      "synthesis": "S: The MACD shows fading bullish momentum, and the price remains below the 50-day SMA with a negative Z-score (-1.06), indicating a persistent bearish trend. The trend alignment has slightly improved but remains bearish. O: The slight improvement in trend alignment and fading MACD divergence offer a sliver of hope for a potential short-term reversion, but the overall trend is still strongly negative. T: The ongoing restructuring and job cuts are still in play, but the narrative has shifted to include significant stock price declines and market impatience, suggesting these measures are not yet alleviating fundamental concerns. W: The bearish trend alignment and negative MACD signal continue to dominate. Analyst conviction remains low, and sentiment is deteriorating, reinforcing the weak medium-term outlook. The price is within a wide monthly range, but the current position suggests continued downside pressure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "safety": 2.5
+      },
+      "synthesis": "S: The stock is trading at multi-month lows, now at the lower end of its long-term range (3.9%), and the 'EXTREME_BEARISH_STRETCH_REBOUND_LIKELY' signal persists. The secular bear market regime remains in place. O: The company's fundamental quality and balance sheet remain stable, providing a baseline of resilience. Valuation multiples are fair, and the scale of the company offers some long-term stability. T: The news narrative has intensified with reports of a significant stock crash and market impatience, suggesting that the restructuring efforts are not yet translating into market confidence. W: The deterioration in analyst sentiment and the persistent negative news flow, coupled with the secular bear market, significantly increase downside risk. The fundamental growth profile remains stagnant, and earnings momentum continues to deteriorate, making a long-term recovery challenging despite the oversold technicals."
+    }
+  }
+}

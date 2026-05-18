@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.52)",
+        "velocity_roc_10": "NORMAL (-3.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 367.05-433.64]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.18%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.865)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.94)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 356.28-433.64]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-11.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-15.01%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 30.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 416.03,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.74%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 46.3% | NM: 35.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $293.812B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 15.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -8.1%, Next Q Est Growth: 13.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.51, P/S: 10.57)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 8.55)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.86)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nscale to deliver 66,000+ NVIDIA GPUs to Microsoft. - Microsoft's Portugal AI data center expansion includes NVIDIA GPUs. - Microsoft Xbox CEO overhauls leadership amid sinking sales. - Service Now expands AI agent governance with Microsoft integration. - Microsoft signs AI testing agreement with UK AI Security Institute. - Microsoft and others sign agreements for frontier AI national security testing. - Microsoft's order book exceeds combined size of IBM, Salesforce, Dell, Adobe. - Microsoft-backed Open AI discussed spinning off robotics, hardware divisions.",
+      "CGI earns Microsoft Copilot specialization for AI integration. - Nerdio launches MSP 7.0 amid triple-digit Microsoft 365 growth. - Microsoft secures major Pentagon agreement for AI tools. - Microsoft's Mpower AI supply chain tech developed with Medline. - Microsoft FY Q3 2026: Multi-Model Mirage, Copilot Momentum. - Microsoft stock needs faster cloud growth, AI gap fix. - Microsoft's AI capex budget for FY26 remains elevated. - Ingram Micro earns AI Apps on Microsoft Azure specialization. - Microsoft's AI and software concerns noted. - Microsoft's shifting AI landscape spooks investors.",
+      "Microsoft secures largest enterprise Copilot win with Accenture. - Microsoft announces new AI partnerships and product integrations. - Microsoft expands international AI initiatives following record quarter."
+    ],
+    "medium_term_50d": [
+      "Microsoft (MSFT) beats Q3 earnings and revenue estimates. - Microsoft stock trying to bounce back on strong Azure growth outlook. - Microsoft beats fiscal Q3 views on cloud computing, AI strength. - Microsoft Q3 highlights: AI revenue up 123% Yo Y, hits annual run rate $37 billion. - Microsoft Copilot adoption hits 89% monthly usage among Accenture staff. - Microsoft AI explodes 123% to $37B annual run rate. - Linked In's AI hiring agents on track for $450 million in yearly revenue. - China patent case puts Microsoft interface IP and valuation in focus. - Elon Musk seeks $150 billion from",
+      "Microsoft Q3 earnings beat estimates, AI business grew 123%. - Microsoft stock drops despite Q3 earnings beat and AI growth. - Microsoft's aggressive capex plans could pressure free cash flow. - NSA tests Anthropic's AI to find vulnerabilities in Microsoft products. - Google cloud growth tops Microsoft and Amazon as AI demand accelerates. - Microsoft Q3: Azure grew 40% year-over-year, outperforming guidance. - Microsoft Q3 earnings call highlights strong cloud and AI adoption. - Microsoft stock falls 5% despite Q3 beat and AI spending. - Microsoft preserves earliest discovered DOS source code. - Meta, Microsoft, Amazon, Alphabet beat Q1 estimates",
+      "Nscale to deliver 66,000+ NVIDIA GPUs to Microsoft. - Microsoft's Portugal AI data center expansion includes NVIDIA GPUs. - Microsoft Xbox CEO overhauls leadership amid sinking sales. - Service Now expands AI agent governance with Microsoft integration. - Microsoft signs AI testing agreement with UK AI Security Institute. - Microsoft and others sign agreements for frontier AI national security testing. - Microsoft's order book exceeds combined size of IBM, Salesforce, Dell, Adobe. - Microsoft-backed Open AI discussed spinning off robotics, hardware divisions."
+    ],
+    "long_term_200d": [
+      "Microsoft (MSFT) beats Q3 earnings and revenue estimates. - Microsoft stock trying to bounce back on strong Azure growth outlook. - Microsoft beats fiscal Q3 views on cloud computing, AI strength. - Microsoft Q3 highlights: AI revenue up 123% Yo Y, hits annual run rate $37 billion. - Microsoft Copilot adoption hits 89% monthly usage among Accenture staff. - Microsoft AI explodes 123% to $37B annual run rate. - Linked In's AI hiring agents on track for $450 million in yearly revenue. - China patent case puts Microsoft interface IP and valuation in focus. - Elon Musk seeks $150 billion from",
+      "Microsoft and Open AI loosen terms of partnership. - EU plans to target cloud and AI services under new rules. - Microsoft offers voluntary buyouts to employees. - Microsoft and Postel announce new data and AI solution. - UBS: Microsoft made more concessions than gains in Open AI deal. - Microsoft's $5B Anthropic investment fuels AI growth story. - Elon Musk lawsuit against Open AI and Microsoft nears trial. - Open AI misses new users and revenue targets.",
+      "Microsoft Sovereign Private Cloud scales with Azure Local. - Microsoft shares slip after Open AI amends partnership terms. - Microsoft cuts Open AI revenue share, loosens AI alliance. - Gloat brings Agentic HR to Microsoft 365 Copilot and Teams. - Microsoft & Open AI amend partnership to simplify collaboration. - Microsoft Q3 preview: Jefferies suggests resetting the narrative. - Microsoft Power Apps adoption outpaces governance, risks grow. - Microsoft offers voluntary retirement to 7% of workforce."
+    ]
+  }
+}

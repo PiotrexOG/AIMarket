@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "NORMAL (2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 215.4-241.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.01%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.719)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.58)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 187.72-241.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (7.8%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.93%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 238.41,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.6%))",
+      "volume_dynamics": "AVERAGE (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 98.52, P/S: 2.12)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 32.58)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.87)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing secures potential order for over 500 aircraft from China. - Boeing booked 135 net new orders in April. - Boeing delivered 47 planes in April, booked 136 orders. - Boeing expands workforce pipelines with college partnership. - Mobix Labs wins additional Boeing 737 aerospace order. - Boeing trails Airbus in April deliveries, beats in orders.",
+      "Lufthansa orders 10 Boeing 787-9s and 10 A350-900s. - FAA approves Boeing protocol for returning MD-11 planes to service. - LOT Polish Airlines says Boeing hid 737 MAX safety concerns. - Boeing stock surges 6.9% on strong aircraft orders. - Boeing is mentioned in a business jet industry report. - Boeing is included in a space economy ETF. - Boeing provides an entry for investors. - Kelly Ortberg to join Trump's China trip.",
+      "Boeing CEO joins Trump on China visit, eyeing major deal. - Boeing wins Air Force One contract modification. - Ukraine approved for Boeing bomb kit purchase. - Boeing secures large 737 MAX and 787 orders. - Boeing ties aircraft sales, defense, and training deals."
+    ],
+    "medium_term_50d": [
+      "Boeing secures potential order for over 500 aircraft from China. - Boeing booked 135 net new orders in April. - Boeing delivered 47 planes in April, booked 136 orders. - Boeing expands workforce pipelines with college partnership. - Mobix Labs wins additional Boeing 737 aerospace order. - Boeing trails Airbus in April deliveries, beats in orders.",
+      "Lufthansa orders 10 Boeing 787-9s and 10 A350-900s. - FAA approves Boeing protocol for returning MD-11 planes to service. - LOT Polish Airlines says Boeing hid 737 MAX safety concerns. - Boeing stock surges 6.9% on strong aircraft orders. - Boeing is mentioned in a business jet industry report. - Boeing is included in a space economy ETF. - Boeing provides an entry for investors. - Kelly Ortberg to join Trump's China trip.",
+      "Boeing CEO joins Trump on China visit, eyeing major deal. - Boeing wins Air Force One contract modification. - Ukraine approved for Boeing bomb kit purchase. - Boeing secures large 737 MAX and 787 orders. - Boeing ties aircraft sales, defense, and training deals."
+    ],
+    "long_term_200d": [
+      "Boeing CEO joins Trump on China visit, eyeing major deal. - Boeing wins Air Force One contract modification. - Ukraine approved for Boeing bomb kit purchase. - Boeing secures large 737 MAX and 787 orders. - Boeing ties aircraft sales, defense, and training deals.",
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year",
+      "Boeing reports narrowing loss, points to progress on turnaround. - Boeing Q1 earnings beat estimates, stock jumps on deliveries. - Boeing loss shrinks, backlog hits record $695 billion. - Boeing's commercial jet business improves, reducing quarterly loss. - Boeing shares trading higher after reporting better-than-expected Q1 results. - Boeing CEO says improvements needed in Spirit, 787 engine deliveries behind. - Boeing CFO expects positive free cash flow of $1B-$3B this year. - Boeing CEO confident summit will include aircraft orders from China. - Boeing CFO on track for positive cash flow in 2H. - Boeing CFO reduced 787 rework hours by"
+    ]
+  }
+}

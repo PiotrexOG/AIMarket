@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: The RSI is in a bullish zone (61.1), indicating some underlying buying interest despite bearish candle patterns. The price is consolidating near the 20-day SMA, suggesting a pause in recent downward momentum. O: Potential for a short-term bounce if consolidation holds, supported by bullish RSI. T: The recent job cuts and restructuring news, while negative operationally, could signal a proactive management effort to improve future efficiency, which might be a longer-term positive catalyst if successful. W: Bearish candle patterns and mixed analyst sentiment pose immediate headwinds. The price is currently in the middle of its 20-day range, offering limited immediate upside potential without a clear breakout."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: The MACD is showing bullish fading momentum, but the overall trend alignment is bearish with prices below the 50-day SMA (Z-score: -1.11). The price is within the monthly range, indicating a lack of strong directional conviction. O: A potential for a short-term reversion to the mean is possible given the MACD signal, but the underlying trend remains weak. T: The ongoing restructuring and job cuts, while disruptive, are aimed at improving operational efficiency and sales, which could eventually support a medium-term recovery if the turnaround strategy proves effective. W: The dominant bearish trend and negative trend alignment are significant headwinds. The lack of strong conviction from analysts (LOW conviction) and mixed sentiment further dampen the outlook. The price is trading within a wide monthly range, suggesting significant volatility and uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safety": 3.0
+      },
+      "synthesis": "S: The stock is trading at multi-month lows, positioned at the lower end of its long-term range (6.0%), suggesting potential for a rebound from oversold conditions, especially given the 'EXTREME_BEARISH_STRETCH_REBOUND_LIKELY' signal from major crosses. O: The current valuation multiples appear fair, and the balance sheet is healthy, providing a stable foundation. The company's scale and average business quality metrics offer some resilience. T: The aggressive job cuts and restructuring efforts, if successful, could lead to a significant improvement in profitability and margins over the long term, potentially reversing the current stagnation in growth. W: The secular bear market regime and the significant deterioration in earnings momentum (-42.4% EPS growth) are major concerns. The fundamental growth profile is currently stagnant, and the news narrative is dominated by negative restructuring and job cuts, indicating significant operational challenges. Valuation risk is moderate, but the declining implied growth and current earnings deterioration present a substantial downside."
+    }
+  }
+}

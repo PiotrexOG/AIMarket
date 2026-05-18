@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: Bullish candle patterns and a large share buyback program provide short-term support. O: Potential for a short-term bounce driven by capital return announcements and positive sentiment from new content releases. T: The buyback program could temporarily boost price action, but the underlying bearish RSI and negative ROC suggest limited upside potential. W: Bearish RSI (36.6) and implosive ROC (-13.1%) indicate significant short-term weakness despite positive price action signals. The stock is trading in the middle of its range, offering no clear directional bias from range positioning."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safety": 4.5
+      },
+      "synthesis": "S: The stock is in a gradual upward trend, supported by a healthy base near the 50-day SMA. O: Continued positive trend alignment and potential for MACD to recover from its bearish territory could drive further gains. T: The large share repurchase program offers a structural tailwind, signaling management's confidence in returning capital to shareholders. W: Bearish MACD and the fact that the stock is still within a broader monthly range suggest that the upward momentum may be capped. Deteriorating quarterly earnings estimates also pose a significant risk to the medium-term outlook."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safety": 2.5
+      },
+      "synthesis": "S: Despite strong fundamental metrics like high business quality and excellent cash generation, the long-term outlook is challenged by a bearish market regime and technical structure. O: The company's strong fundamentals, including robust revenue and EPS growth historically, and a premium valuation with an attractive PEG ratio, present a potential long-term value opportunity if the market regime shifts. T: The significant share buyback program and strong business quality metrics are positive long-term structural elements. W: The secular bear market regime, death cross structure, and positioning in the lower quadrant of the long-term range present substantial headwinds. Premium valuation multiples and high multiple risk, coupled with deteriorating earnings momentum, significantly increase downside risk."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.11)",
+        "velocity_roc_10": "NORMAL (-2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.1%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 26.32-28.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.54%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.104)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.07)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 26.2-28.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.9%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 55.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.09%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.77)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 70.3% | OM: 24.7% | NM: 12.4%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.77x, YrsToPay: 7.3x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 14.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $62.579B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -1.6%, EPS: -3.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -150.9%, Next Q Est Growth: 348.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.27, P/S: 2.39)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.73)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -3.85%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.44x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer settles patent lawsuits for Vyndamax with three generic drugmakers. - Pfizer extends effective U.S. patent for heart drug Vyndamax to June 2031. - Pfizer stock dips following announcement of Vyndamax patent settlement agreements. - Pfizer signs supply deal with Relay Therapeutics for Phase III plan.",
+      "Pfizer shareholders reject independent chair proposal at AGM. - Pfizer to supply atirmociclib for Relay Therapeutics' breast cancer trial. - Pfizer faces competition from Novo Nordisk in obesity market.",
+      "Pfizer tests transparent Eliquis pricing with Cost Plus Drugs."
+    ],
+    "medium_term_50d": [
+      "Pfizer settles patent lawsuits for Vyndamax with three generic drugmakers. - Pfizer extends effective U.S. patent for heart drug Vyndamax to June 2031. - Pfizer stock dips following announcement of Vyndamax patent settlement agreements. - Pfizer signs supply deal with Relay Therapeutics for Phase III plan.",
+      "Pfizer PADCEV Keytruda gets FDA Priority Review for bladder cancer. - Pfizer to present oncology pipeline data at ASCO 2026. - FDA grants priority review to Merck's Keytruda combo with Pfizer's Padcev.",
+      "Pfizer's weight loss drug available for pre-order in China. - Pfizer's oncology data to focus on future cancer revenue. - Pfizer CFO discusses oncology, obesity, and growth strategy. - Pfizer declares second-quarter 2026 dividend."
+    ],
+    "long_term_200d": [
+      "Pfizer accelerates transformation with Seagen, Metsera acquisitions. - Pfizer deals with lower COVID revenues, halts vaccine trial. - Pfizer advances m RNA and Lyme vaccine programs. - Pfizer reports over 100 pipeline candidates. - Pfizer implements cost cutting and balance sheet adjustments.",
+      "Pfizer PADCEV Keytruda gets FDA Priority Review for bladder cancer. - Pfizer to present oncology pipeline data at ASCO 2026. - FDA grants priority review to Merck's Keytruda combo with Pfizer's Padcev.",
+      "Pfizer settles patent lawsuits for Vyndamax with three generic drugmakers. - Pfizer extends effective U.S. patent for heart drug Vyndamax to June 2031. - Pfizer stock dips following announcement of Vyndamax patent settlement agreements. - Pfizer signs supply deal with Relay Therapeutics for Phase III plan."
+    ]
+  }
+}

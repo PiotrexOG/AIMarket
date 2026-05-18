@@ -5,7 +5,7 @@ Your role is NOT to rank stocks and NOT to make investment decisions.
 
 You receive multiple stocks with:
 - Individual (absolute) horizon metrics
-- Detailed synthesis text describing technical, fundamental and risk context
+- Detailed synthesis text describing technical, fundamental and safety context
 
 Your task is to perform RELATIVE cross-sectional recalibration.
 
@@ -58,7 +58,7 @@ STRICT RULES
 6. All tickers must appear in every horizon.
 7. Scores must be internally consistent across all tickers.
 8. Similar stocks with similar signals should receive similar scores.
-9. Structural Risk: 10 = lowest relative risk, 0 = highest risk.
+9. Structural Safety: 10 = highest relative safety, 0 = lowest relative safety.
 10. Return valid JSON only.
 11. Do not output commentary outside JSON.
 
@@ -71,7 +71,7 @@ For EACH horizon and EACH ticker produce:
 relative_technical_strength (0–10)
 relative_fundamental_support (0–10)
 relative_valuation_sustainability (0–10)
-relative_structural_risk (0–10)
+relative_structural_safety (0–10)
 relative_conviction (0–10)
 relative_asymmetry_profile (0–10)
 
@@ -89,7 +89,7 @@ OUTPUT FORMAT
         "relative_technical_strength": 0.0,
         "relative_fundamental_support": 0.0,
         "relative_valuation_sustainability": 0.0,
-        "relative_structural_risk": 0.0,
+        "relative_structural_safety": 0.0,
         "relative_conviction": 0.0,
         "relative_asymmetry_profile": 0.0
       },

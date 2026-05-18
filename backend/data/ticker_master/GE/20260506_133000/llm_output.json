@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: Short-term momentum has weakened further with RSI dropping to 34.9, and velocity (ROC) is stagnant. Price remains stable near the 20-day SMA, but the slight negative deviation (-3.0%) suggests limited immediate upside. Elevated volume from the previous period has normalized to average (0.86x). O: The neutral candle pattern and position within the mid-range offer potential for range-bound trading. T: News of GE Health Care missing Q1 earnings expectations introduces a new negative catalyst. W: The deteriorating short-term momentum and negative news from a segment of the business increase downside risk. Conviction is reduced due to mixed signals and weakening momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safety": 5.0
+      },
+      "synthesis": "S: The medium-term trend alignment has improved slightly, showing a less pronounced descent (-2.61%) compared to the previous period. MACD is still bearish but recovering (-0.369), and price has moved to a neutral Z-score (0.0) relative to the 50-day SMA, indicating a healthier base. O: The strong fundamental support from hyper-growth, solid business quality, and robust cash generation remains a key positive. Analyst consensus is still strongly bullish, providing a tailwind. T: Continued positive news from GE Aerospace orders and earnings provides ongoing support. W: The underlying trend is still technically bearish, and conviction is lowered due to the shift in price positioning and the negative news from GE Health Care. Risk is moderate, reflecting the improved technical positioning but still acknowledging the premium valuation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safety": 6.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, supported by a healthy golden cross structure, although the percentage alignment has slightly decreased (1.68%). Price has moved into a neutral mid-cycle zone (52.1% position), indicating a more balanced long-term technical picture. O: The fundamental strengths of solid business quality, strong cash generation, and hyper-growth profile are unchanged and continue to underpin the long-term view. T: The positive narrative around GE Aerospace's orders and earnings persists, contributing to the long-term bullish case. W: The market regime remains a bear market relief rally, and the overall market environment could still pose risks. However, the improved long-term price positioning and consistent fundamentals reduce the perceived risk."
+    }
+  }
+}

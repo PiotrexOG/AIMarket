@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (64.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 268.91-318.58]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.15%)",
+        "cycle_macd": "BULLISH_FADING (1.892)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.3)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 268.91-341.81]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.05%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 294.47,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.22%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.13, P/S: 6.39)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 17.11)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.4)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace clears assembly readiness review for U.S. Air Force engine. - GE Vernova stock gains, benefits from AI data center electricity demand. - GE's shareholder proposal on defense report rejected at annual meeting.",
+      "GE Aerospace to supply F404 engines to Turkish Aerospace Industries.",
+      "GE Aerospace research highlighted by declassified Pentagon files."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace clears assembly readiness review for U.S. Air Force engine. - GE Vernova stock gains, benefits from AI data center electricity demand. - GE's shareholder proposal on defense report rejected at annual meeting.",
+      "GE Aerospace to supply F404 engines to Turkish Aerospace Industries.",
+      "GE Aerospace wins large aircraft engine order."
+    ],
+    "long_term_200d": [
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results.",
+      "GE Aerospace Q1 earnings beat expectations, outlook unchanged. - GE Vernova beats Q1 earnings and revenue estimates. - GE Vernova raises full-year guidance. - GE Vernova surpasses GE Aerospace in market value. - Colibrium Additive awarded $31 million NAVAIR contract. - GE Aerospace faces margin pressures and geopolitical uncertainties.",
+      "GE Aerospace clears assembly readiness review for U.S. Air Force engine. - GE Vernova stock gains, benefits from AI data center electricity demand. - GE's shareholder proposal on defense report rejected at annual meeting."
+    ]
+  }
+}

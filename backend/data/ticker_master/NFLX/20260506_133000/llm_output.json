@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safety": 3.0
+      },
+      "synthesis": "S: The stock is at critical support levels with an extremely oversold RSI, indicating potential for a short-term bounce. Elevated volume suggests increased activity around this support. O: Positive news regarding theatrical releases for upcoming movies and the acquisition of an AI content production startup could provide a catalyst for a short-term recovery. T: The strong bullish candle pattern at support, combined with oversold conditions, suggests a potential reversal. W: The RSI is in extreme oversold territory (11.4), and the price is significantly overstretched below the 20-day SMA (-9.0%), indicating high downside risk despite the potential for a bounce. The ROC is still negative, and the overall market regime remains bearish."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: The stock is consolidating near the 50-day SMA, but the MACD is accelerating bearishly, and the Z-score indicates a bearish trend position. O: Continued positive news flow regarding content and strategic initiatives could offer some support. T: The company's strong fundamentals and historical growth profile remain a long-term positive, but the current technical picture is deteriorating. W: The bearish MACD acceleration and the bearish trend position relative to the 50-day SMA are significant headwinds. Quarterly earnings estimates continue to deteriorate, increasing the risk of further downside. The stock remains within a broader monthly range, limiting upside potential."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "safety": 2.0
+      },
+      "synthesis": "S: The long-term outlook remains challenged by a persistent secular bear market regime and a death cross technical structure. O: Despite the bearish technicals, the company's high business quality, strong cash generation, and historically robust growth profile present a potential long-term value proposition if market conditions improve. The attractive PEG ratio suggests growth is potentially undervalued. T: The ongoing share repurchase program and strong fundamental metrics provide some structural support. W: The stock is positioned in the lower quadrant of its long-term range, and the market regime is strongly bearish. Premium valuation multiples and high multiple risk, coupled with deteriorating earnings momentum, significantly increase downside risk. The risk metric has increased due to the further deterioration in long-term range positioning and continued bearish market regime."
+    }
+  }
+}

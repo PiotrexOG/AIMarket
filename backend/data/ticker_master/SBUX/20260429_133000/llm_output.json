@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The stock is exhibiting short-term strength with a breakout above its 20-day high, supported by elevated volume. Momentum indicators are neutral, suggesting a consolidation phase. O: Positive news flow regarding Q2 earnings beat and raised guidance provides a tailwind. T: Potential for continued upward momentum if the breakout sustains, though lack of strong momentum signals warrants caution."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 4.5,
+        "safety": 4.0
+      },
+      "synthesis": "S: Medium-term trend alignment is consolidating, with MACD showing fading bullish momentum. The price is overextended relative to the 50-day SMA, indicating potential mean reversion risk. O: The recent monthly breakout above range levels provides a structural positive, but the overextended nature of the price action is a concern. T: The risk of a pullback increases due to the stretched valuation relative to the 50-day moving average, despite the bullish breakout signal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safety": 2.5
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market, and the major crosses are healthy. However, the stock is trading at the top of its cycle or near all-time highs. W: Fundamental growth profiles show stagnation with significant profit issues (EPS down 61.0%), and valuation multiples are hyper-premium (P/E 86.58). Financial health is stressed with high debt sensitivity. O: The positive news on guidance and turnaround plan offers some hope for future performance. T: Significant downside risk exists due to the combination of extremely high valuation, deteriorating fundamental earnings, and stressed balance sheet, despite the favorable long-term technical regime."
+    }
+  }
+}

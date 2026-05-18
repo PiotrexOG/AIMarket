@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.36)",
+        "velocity_roc_10": "NORMAL (-1.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 304.26-320.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.72%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.714)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.39)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.1-320.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.75%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 314.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.68%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.02, P/S: 3.08)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.41)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.01)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase bets on fintech playbook to lure Gen Z customers. - Chase accelerates support for young adults with modern banking solutions. - JPMorgan Chase & Co. believes Glass Lewis report on shareholder proposal merits revised analysis. - Corpay adds stablecoin and tokenized-Fiat settlement through JPMorgan and BVNK. - Millrose Properties amended credit facility with JPMorgan Chase Bank.",
+      "JPMorgan Chase subsidiary holds Hexagon Composites ASA shares. - JPMorgan Chase, other banks seek to offload data center risks. - Chase survey finds small businesses unprepared for succession. - JPMorgan hires Will Boyle as global head of secondary advisory. - Meta taps JPMorgan for $13 billion El Paso data center deal.",
+      "J.P. Morgan and Fact Set launch Whole Portfolio Distribution solution. - Jamie Dimon warns of a severe credit crisis."
+    ],
+    "medium_term_50d": [
+      "Jamie Dimon warns of bond crisis and stagflation due to deficits. - JPMorgan Chase expands $1.5 trillion initiative into Europe. - JPMorgan Chase becomes Global Banking Partner of the Olympic Games. - JPMorgan Chase inks $800 million private credit deal with Ares. - JPMorgan hires KBW's Chris Mihok as managing director.",
+      "J.P. Morgan and Fact Set launch Whole Portfolio Distribution solution. - Jamie Dimon warns of a severe credit crisis.",
+      "JPMorgan Chase bets on fintech playbook to lure Gen Z customers. - Chase accelerates support for young adults with modern banking solutions. - JPMorgan Chase & Co. believes Glass Lewis report on shareholder proposal merits revised analysis. - Corpay adds stablecoin and tokenized-Fiat settlement through JPMorgan and BVNK. - Millrose Properties amended credit facility with JPMorgan Chase Bank."
+    ],
+    "long_term_200d": [
+      "Jamie Dimon warns of bond crisis and stagflation due to deficits. - JPMorgan Chase expands $1.5 trillion initiative into Europe. - JPMorgan Chase becomes Global Banking Partner of the Olympic Games. - JPMorgan Chase inks $800 million private credit deal with Ares. - JPMorgan hires KBW's Chris Mihok as managing director.",
+      "JPMorgan reports higher profit and revenue for Q1. - JPMorgan raises dividend by 7.1%. - JPMorgan CFO supports ending mandatory quarterly reporting. - JPMorgan traders post highest-ever quarterly revenue. - JPMorgan profit rises as volatile markets boost trading. - JPMorgan Q1 earnings and revenue beat estimates. - JPMorgan executives discuss proposed US capital rules.",
+      "JPMorgan Chase named first-ever Global Banking Partner of the Olympic Games. - JPMorgan Chase becomes Official Bank of Team USA and LA28 Games. - Campbell Global, a J.P. Morgan company, acquires Sandpiper Forest. - JPMorgan CEO Jamie Dimon warns of credit downturn and bond crisis. - JPMorgan Chase ranked No. 1 U.S. company for career growth by Linked In. - JPMorgan Chase expands quantum computing research, rolls out blockchain."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "STAGNANT (0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 177.74-213.1]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.92%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.51)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.28)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 177.74-214.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (15.96%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 190.05,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.56%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 14.7% | OM: 5.5% | NM: 6.6%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.941B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.9%, EPS: -31.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -3.5%, Next Q Est Growth: -30.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 28.45, P/S: 2.04)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.04)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -31.42%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron close to finalizing sale of Asian assets to Eneos. - Chevron to sell Singapore refinery stake and other assets to Eneos. - Chevron signs deal with Libya's NOC to evaluate shale resources. - Chevron sees progress in Venezuela oil reforms, more needed.",
+      "Chevron CEO warns of worsening aviation strain due to jet fuel crunch.",
+      "Chevron CEO warns Iran war could push up jet fuel prices. - Chevron (CVX) Q1 earnings expected to decline. - Chevron (CVX) valuation check as oil price shock reshapes outlook. - Suelopetrol not informed of Chevron's Venezuela expansion."
+    ],
+    "medium_term_50d": [
+      "Chevron close to finalizing sale of Asian assets to Eneos. - Chevron to sell Singapore refinery stake and other assets to Eneos. - Chevron signs deal with Libya's NOC to evaluate shale resources. - Chevron sees progress in Venezuela oil reforms, more needed.",
+      "Chevron CEO warns of worsening aviation strain due to jet fuel crunch.",
+      "Chevron and Venezuela strike deals to expand oil operations. - Chevron deepens Venezuela footprint with strategic asset swap. - Chevron Venezuela asset swap reshapes heavy oil exposure. - Chevron doubles down on Venezuela oil with asset swap. - Chevron increases Venezuela heavy oil stake via asset swap. - Chevron says Venezuelan oil imports curb U.S. gas prices. - Chevron deepens Orinoco footprint with PDVSA asset swap."
+    ],
+    "long_term_200d": [
+      "Chevron and Venezuela strike deals to expand oil operations. - Chevron deepens Venezuela footprint with strategic asset swap. - Chevron Venezuela asset swap reshapes heavy oil exposure. - Chevron doubles down on Venezuela oil with asset swap. - Chevron increases Venezuela heavy oil stake via asset swap. - Chevron says Venezuelan oil imports curb U.S. gas prices. - Chevron deepens Orinoco footprint with PDVSA asset swap.",
+      "Chevron signs deal with Venezuela's PDVSA to increase production. - Chevron expands operations in Venezuela's Orinoco Belt. - Chevron consolidates Venezuela heavy oil position in asset swap. - Chevron increases stake in Petroindependencia joint venture to 49%. - Chevron, PDVSA add Ayacucho 8 area to Petropiar joint venture.",
+      "Chevron expands Venezuela heavy oil footprint in asset swap. - Chevron inks more surprising Venezuela deals. - Chevron expands Venezuela footprint with Orinoco deals. - Chevron confirms new oil discovery in Gulf of America."
+    ]
+  }
+}

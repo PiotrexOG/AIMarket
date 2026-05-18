@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safety": 5.5
+      },
+      "synthesis": "S: The short-term outlook is bullish, with a strong bullish candle pattern and RSI in the strong bullish zone (65.7). Price is testing upper bands of Bollinger Bands (1.04) and is stable near the short-term base (SMA20 +5.7%), indicating upward momentum. Velocity (ROC 10) is normal at 6.7%. W: Price is at critical resistance at the 20-day range (256.07-287.21), suggesting potential for a pause or pullback. O: A decisive break above the current resistance could lead to further upside, supported by strong momentum indicators and positive news flow regarding buybacks and AI investments. T: Risk has slightly increased due to price testing resistance and being at the upper band of Bollinger Bands. However, the strong bullish signals and positive news mitigate immediate downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: Medium-term trend alignment is strongly bullish with gradual ascent (2.66%), and MACD is accelerating bullishly (1.26). Price is strengthening at monthly resistance (245.51-287.21), and the Z-score relative to SMA50 is significantly positive (2.63), indicating strong upward momentum. W: The Z-score indicates potential overextension, suggesting a risk of mean reversion. Price is at the upper end of the monthly range, which could act as resistance. O: Positive earnings surprises (46.9%) and strong revenue growth forecasts (14-17% for Q3) combined with significant buyback authorizations ($100B) and dividend increases support continued strength. The CEO transition news is being framed positively. T: Risk is moderate, primarily stemming from the overextended Z-score and price reaching monthly resistance. However, strong fundamental catalysts and positive analyst outlooks provide support."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.2,
+        "safety": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, with a secular bull market regime and a healthy golden cross structure. Price is at the top of the long-term cycle (97.1% position), indicating sustained bullishness. W: Valuation remains a key concern, with premium multiples (P/E 36.12, P/S 9.73) and extreme multiple risk (P/B 48.05). While PEG is fair (1.42), the current price level at the top of the range amplifies valuation risk. The quarterly earnings momentum shows a sharp decline in next quarter's estimated growth (-33.3%), which contrasts with current strong performance. O: Fundamentals have improved, with stronger revenue growth (10.1%) and EPS growth (25.5%), excellent cash generation (FCF Mgn 28.3%), and moderate leverage (NetDebt/Eq: 0.51x). The company's scale and business quality remain high. T: Risk has increased due to the price reaching the top of its long-term range and the concerning drop in next quarter's earnings growth expectations, despite current strong performance. Valuation fragility at these levels is a significant risk factor."
+    }
+  }
+}

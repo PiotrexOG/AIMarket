@@ -1,0 +1,29 @@
+{
+  "ticker": "PFE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: The stock is testing critical support at $26.32, a level that has historically provided a floor. Momentum indicators like RSI are in bearish territory, but the velocity (ROC) is normalizing, suggesting a potential pause in the decline. W: The bearish RSI and the proximity to support indicate a fragile short-term outlook. The recent news regarding Vyndamax patent settlements, while extending exclusivity, has also led to a stock dip, adding to short-term pressure. O: A bounce from current support levels could be triggered by positive market sentiment or a shift in analyst outlook. T: Downside risk remains elevated due to the bearish momentum and the immediate support level being tested, with potential for further downside if broken."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: The medium-term trend is characterized by consolidation, with price action compressed around moving averages. However, the MACD is bearish and accelerating, and the Z-score relative to the 50-day SMA is significantly negative (-2.07), indicating a strong bearish trend position. W: The accelerating bearish MACD and the deep negative Z-score suggest that the current consolidation may be a temporary pause before further downside. The strengthening at monthly support zones is a positive structural element, but it's overshadowed by the bearish momentum. O: A sustained break above the compressed moving averages and a bullish MACD crossover would be required to signal a medium-term reversal. Positive news flow around pipeline advancements, such as PADCEV and weight loss drugs, could provide a catalyst. T: Downside risk is substantial given the bearish trend alignment and accelerating negative momentum. The valuation remains a concern if earnings growth does not materialize."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: The long-term outlook remains neutral to cautiously optimistic, supported by a healthy golden cross structure and a mid-cycle neutral position within the long-term range. The company's business quality, scale, and cash generation remain solid, providing a fundamental floor. W: The primary weakness lies in the stagnation of revenue and EPS growth, coupled with declining implied earnings growth. While acquisitions like Seagen and Metsera signal strategic intent, the integration and realization of synergies present execution risks. The halt in COVID revenues and the need for cost-cutting also temper the long-term outlook. O: Successful integration of recent acquisitions and a turnaround in the growth profile, particularly in oncology and obesity markets, could drive significant upside. Advancements in mRNA and Lyme vaccine programs offer potential future revenue streams. T: Downside risk is moderate, stemming from the persistent growth challenges and the sensitivity of the valuation to debt levels. The market regime remains a secular bull market, which provides a supportive backdrop, but the company-specific headwinds are notable."
+    }
+  }
+}

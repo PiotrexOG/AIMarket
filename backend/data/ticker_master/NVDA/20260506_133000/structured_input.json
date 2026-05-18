@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "NORMAL (-1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 180.31-216.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.27%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.193)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.27-216.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.8%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 203.95,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.11%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 68.67, P/S: 38.61)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 63.52)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.47)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia and Service Now partner on new autonomous AI agents. - E-Power hires engineers with NVIDIA AI solutions background. - Alphabet aims to challenge Nvidia with custom AI chips. - Broadcom announces VMware Cloud Foundation 9.1 for AI. - Nvidia faces competition from Broadcom in custom AI chips. - Alphabet is close to overtaking Nvidia in market value. - Nvidia stock is considered undervalued amid AI demand. - Nvidia faces a rival in Alphabet's custom AI chip strategy.",
+      "Nvidia announces $2 billion investment in Marvell. - Nvidia stock off 1% as AMD sinks 6%. - Nvidia rival Cerebras targets $3.5 billion IPO.",
+      "Nvidia's China export claims probed by Senator Coons. - Nvidia's new Quantum-AI models impress, market reaction uncertain. - Nvidia's Blackwell and Vera Rubin transition to AI factory systems. - Nvidia's H200 chip export to China under scrutiny. - Nvidia's B300 servers priced at $1 million each in China. - Nvidia jumps back above $5 trillion market cap. - Nvidia's next leg of growth hidden in AI factory systems. - Nvidia invests $1 billion in Nokia for mobile network tech. - Nvidia is using AI to fix quantum computing problems. - Nvidia's shareholders celebrate hyperscalers' earnings reports."
+    ],
+    "medium_term_50d": [
+      "Nvidia and Service Now partner on new autonomous AI agents. - E-Power hires engineers with NVIDIA AI solutions background. - Alphabet aims to challenge Nvidia with custom AI chips. - Broadcom announces VMware Cloud Foundation 9.1 for AI. - Nvidia faces competition from Broadcom in custom AI chips. - Alphabet is close to overtaking Nvidia in market value. - Nvidia stock is considered undervalued amid AI demand. - Nvidia faces a rival in Alphabet's custom AI chip strategy.",
+      "Nvidia's China export claims probed by Senator Coons. - Nvidia's new Quantum-AI models impress, market reaction uncertain. - Nvidia's Blackwell and Vera Rubin transition to AI factory systems. - Nvidia's H200 chip export to China under scrutiny. - Nvidia's B300 servers priced at $1 million each in China. - Nvidia jumps back above $5 trillion market cap. - Nvidia's next leg of growth hidden in AI factory systems. - Nvidia invests $1 billion in Nokia for mobile network tech. - Nvidia is using AI to fix quantum computing problems. - Nvidia's shareholders celebrate hyperscalers' earnings reports.",
+      "Nvidia B300 servers hit $1M in China amid export curbs. - Nvidia stock plunges amid rising competition from Google, Amazon. - Alphabet's AI surge stuns street, driving Google cloud growth. - Samsung Electronics sees robust AI demand, profit surges. - Nvidia has powered one-third of Magnificent 7's bull market gains. - AMD stock rises, becoming more competitive with Nvidia. - Google cloud growth tops Microsoft and Amazon on AI demand. - Samsung profit jumps as AI chip demand soars."
+    ],
+    "long_term_200d": [
+      "Nvidia stock hits new all-time high above $5 trillion. - Nvidia's $20T path faces a 2026 hurdle. - Nvidia stock reaches record close, Big Tech earnings loom. - Nvidia stock rises to record highs on AI buildout momentum. - Nvidia stock approaching all-time high, customers await earnings. - Arista stock shakes off Nvidia headline, rebounds. - Marvell stock skyrockets after Alphabet and Nvidia deals.",
+      "Nvidia, AI chip stocks fall on Open AI funding concerns. - Open AI miss sparks sell-off for Oracle, Nvidia, Core Weave stocks. - Open AI revenue report stings AI stocks, Nvidia falls. - Open AI hit a speed bump, Nvidia's story still intact. - Nvidia chipmaker TSMC in buy zones. - Vanguard Capital Management reports 7.31% passive stake in Nvidia. - Nvidia GW-Scale AI factory standards mentioned for Croatia campus. - Nvidia rally has room to run despite Open AI news.",
+      "Nvidia B300 servers hit $1M in China amid export curbs. - Nvidia stock plunges amid rising competition from Google, Amazon. - Alphabet's AI surge stuns street, driving Google cloud growth. - Samsung Electronics sees robust AI demand, profit surges. - Nvidia has powered one-third of Magnificent 7's bull market gains. - AMD stock rises, becoming more competitive with Nvidia. - Google cloud growth tops Microsoft and Amazon on AI demand. - Samsung profit jumps as AI chip demand soars."
+    ]
+  }
+}

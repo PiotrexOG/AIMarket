@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.04)",
+        "velocity_roc_10": "NORMAL (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 256.07-287.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.66%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.26)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.63)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 245.51-287.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.32%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 286.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.37%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.12, P/S: 9.73)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 48.05)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple confirms John Ternus as new CEO effective September 1. - Apple announces $100 billion share buyback authorization. - Apple plans new \"Create a Pass\" feature for i OS 27 Wallet app. - Apple Watch Pride Edition Sport Loop and watch face launched. - Apple anticipates price increases due to rising memory costs. - Apple reports record Mac demand, causing supply shortage. - Apple partners with Amazon for satellite internet service on i Phone. - Intel reportedly close to securing chip manufacturing deals with Apple. - Apple's AI ambitions with i OS 27 could make stock a buy. - Apple weighs major AI acquisition, departing from usual approach.",
+      "Apple explores Intel and Samsung as potential chip suppliers. - Apple reaches $250 million settlement over delayed Siri AI features. - Apple to let users choose rival AI models across i OS 27 features. - Apple asks Supreme Court to pause contempt ruling in Epic Games fight. - Apple Manufacturing Academy accelerates AI use in U.S. supply chains.",
+      "Apple ramps $100B buybacks and 4% dividend. - Apple stock jumps 4% on strong Q1 2026 results. - Apple commits $9 trillion to U.S. manufacturing investment. - Apple rewriting financial and strategic playbook before Tim Cook exits."
+    ],
+    "medium_term_50d": [
+      "Apple crushes Q2 estimates on surging i Phone and China sales. - Apple forecasts Q3 sales growth above estimates. - Apple stock rises after earnings beat; strong i Phone demand drives growth. - Apple Q2 results show big growth, driven by strong i Phone sales. - Apple stock guided for fiscal third-quarter revenue growth above expectations. - Apple's CEO transition set for September, marking a new era. - Apple earnings beat estimates, forecast tops expectations on i Phone demand. - Apple's Mac Book Neo and services growth support outlook despite supply constraints. - Apple stock climbs more than 3% in premarket after earnings beat. - Apple's Q2 earnings and revenue beat expectations.",
+      "Apple ramps $100B buybacks and 4% dividend. - Apple stock jumps 4% on strong Q1 2026 results. - Apple commits $9 trillion to U.S. manufacturing investment. - Apple rewriting financial and strategic playbook before Tim Cook exits.",
+      "Apple Q2 earnings beat expectations; revenue up 16.6%. - Apple forecasts 14-17% sales growth for Q3. - Apple CEO Tim Cook to step down in September. - Apple plans to reinvest tariff refunds into U.S. innovation. - Apple reports record March-quarter revenue, services hit all-time high. - Apple faces chip supply constraints impacting i Phone sales. - Apple's active installed base hits all-time high. - Apple ends 'net-cash neutral' policy. - Apple faces Mac mini supply constraints due to AI demand. - Apple's Q2 profit $29.58 billion."
+    ],
+    "long_term_200d": [
+      "Apple crushes Q2 estimates on surging i Phone and China sales. - Apple forecasts Q3 sales growth above estimates. - Apple stock rises after earnings beat; strong i Phone demand drives growth. - Apple Q2 results show big growth, driven by strong i Phone sales. - Apple stock guided for fiscal third-quarter revenue growth above expectations. - Apple's CEO transition set for September, marking a new era. - Apple earnings beat estimates, forecast tops expectations on i Phone demand. - Apple's Mac Book Neo and services growth support outlook despite supply constraints. - Apple stock climbs more than 3% in premarket after earnings beat. - Apple's Q2 earnings and revenue beat expectations.",
+      "Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.",
+      "John Ternus to replace Tim Cook as Apple CEO in Q3 2026. - Apple's leadership change to boost AI integration? - Apple enters new era under John Ternus amid rising AI pressure. - Johny Srouji appointed new chief hardware officer at Apple. - Apple's hardware leadership to drive next wave of innovation. - John Ternus's hardware engineering background impacts AI strategy. - Apple stock may flourish under new CEO John Ternus. - Apple i Phone shipments in China rose 20% in Q1. - Trump threatens US retaliation if Britain targets Apple. - Apple suppliers boost green energy but stagnate on emissions. - Apple's Q2"
+    ]
+  }
+}

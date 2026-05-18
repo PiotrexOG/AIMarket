@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safety": 4.5
+      },
+      "synthesis": "S: The short-term outlook has dramatically improved. RSI has surged into the bullish zone (64.3), and the price is testing the upper Bollinger Band (0.97). ROC is positive (3.6%), and the price is now well above the 20-day SMA (7.3%), indicating strong upward momentum. W: The \"DOJI_INDECISION\" candle pattern at critical resistance (223.75) suggests potential for a pause or reversal. While momentum is strong, the price is at a key resistance level, increasing the risk of a pullback. O: The shift from neutral to bullish momentum is significant, but the proximity to resistance warrants caution. The \"UNCONFINED_BULLISH\" bias in the SR landscape supports further upside, but the indecision candle at resistance is a key short-term threat. T: Risk has decreased due to the strong bullish momentum, but remains elevated due to the critical resistance level and indecision candle pattern."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: The medium-term trend has strengthened considerably. Trend alignment is expanding bullishly (8.23%), and the MACD has turned strongly bullish and is accelerating (1.057). The price is now in an overextended bullish statistical outlier position (Z:2.33) relative to the 50-day SMA. W: The overextended Z-score indicates the price is significantly above its historical average, increasing the risk of a mean reversion. The price is also strengthening at monthly resistance (223.75). O: The accelerating bullish MACD and strong trend alignment suggest continued upside potential, but the overextended nature of the move and resistance zone pose a risk. The \"UNCONFINED_BULLISH\" bias supports the current trend. T: Risk has decreased due to the strong bullish MACD and trend alignment, but remains moderate due to the overextended price action and resistance zone."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 9.0,
+        "conv": 8.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The long-term outlook remains exceptionally strong, with a secular bull market regime (19.3%) and a healthy golden cross structure (2.73%). The price is at an all-time high (101.2% of long-term range), indicating sustained bullish conviction. W: While the price is at an all-time high, the \"HYPER_PREMIUM_PRICED\" multiples (P/E: 75.57, P/S: 42.49) and \"EXTREMELY_LOW_ASSET_SAFETY\" (P/B: 69.9) are significant concerns. However, the \"GROWTH_UNDERRATED\" PEG (0.52) suggests growth expectations may still justify the premium. O: The fundamental strength (elite moat, hyper growth) and strong long-term technicals provide a robust foundation. The news narrative highlights continued AI investment and expansion, reinforcing the long-term growth narrative. T: Risk has decreased due to the strong secular trend and fundamental support, but remains moderate due to the extreme valuation multiples. The \"UNCONFINED_BULLISH\" bias in the SR landscape supports continued upside."
+    }
+  }
+}

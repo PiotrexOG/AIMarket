@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safety": 3.5
+      },
+      "synthesis": "S: Explosive upward velocity (ROC 8.5%) and elevated volume (1.24x) suggest strong short-term momentum. The RSI at 81.6 indicates extreme overbought conditions, while the price is extended above the 20-day SMA (10.3%). W: Extreme overbought RSI and price extension present a risk of near-term pullback or consolidation. The \"NEUTRAL\" candle pattern offers no directional conviction. O: Potential for continued upward pressure if AI narrative remains dominant, despite technical overextension. T: High volatility and potential for sharp reversals due to stretched technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safety": 4.5
+      },
+      "synthesis": "S: The trend alignment (3.76%) and MACD (2.292) remain bullish, indicating a positive medium-term trajectory. The price is inside the monthly range and showing a gradual ascent. W: The MACD is fading, and the price is statistically an outlier above the 50-day SMA (Z:2.2), suggesting some loss of upward momentum and potential for mean reversion. O: Continued AI buildout and strong fundamental growth support the bullish trend. The \"BULLISH_FADING\" MACD warrants monitoring for potential trend exhaustion. T: While the trend is strong, the overextended position above the 50-day SMA increases downside risk if momentum falters."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.5,
+        "conv": 8.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The secular bull market regime (16.3%) and healthy golden cross structure (1.57%) provide a strong long-term bullish backdrop. The price is positioned in the upper quadrant (89.6%) of its long-term range, supported by elite business quality (GM: 75.0%, OM: 62.4%), excellent cash generation (FCF Mgn: 46.6%), and hyper-growth (Rev: 114.2%). W: Hyper-premium valuation multiples (P/E: 71.08, P/S: 39.97) and extreme multiple risk (P/B: 65.75) are significant headwinds. The \"RANGE\" bias in the SR landscape suggests potential consolidation. O: Despite valuation concerns, the strong fundamentals, growth profile, and market regime create a compelling long-term investment case. The \"GROWTH_UNDERRATED\" PEG (0.49) suggests the market may be underestimating future growth. T: Valuation risk is the primary concern, but the underlying business strength and market environment mitigate some of this risk."
+    }
+  }
+}

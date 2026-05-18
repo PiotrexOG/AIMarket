@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "NORMAL (-5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 85.1-108.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.46%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.777)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.56)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 85.1-108.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-14.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.65%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 23.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 87.27,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.57%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.62, P/S: 8.0)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 12.05)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Texas sues Netflix for allegedly spying on children. - Netflix calls Texas lawsuit accusing it of spying \"meritless\". - Netflix reports $135 billion in content spending over decade.",
+      "Texas sues Netflix over data collection allegations. - Netflix sued by Texas for allegedly spying on consumers. - Netflix sued by Texas for spying on children.",
+      "Netflix announces $25 billion share repurchase plan. - Netflix co-founder Reed Hastings to leave board. - Netflix reports Q1 results beating expectations. - Netflix provides softer Q2 guidance."
+    ],
+    "medium_term_50d": [
+      "Texas sues Netflix over data collection allegations. - Netflix sued by Texas for allegedly spying on consumers. - Netflix sued by Texas for spying on children.",
+      "Texas sues Netflix for allegedly spying on children. - Netflix calls Texas lawsuit accusing it of spying \"meritless\". - Netflix reports $135 billion in content spending over decade.",
+      "Netflix announces $25 billion share repurchase plan. - Netflix co-founder Reed Hastings to leave board. - Netflix reports Q1 results beating expectations. - Netflix provides softer Q2 guidance."
+    ],
+    "long_term_200d": [
+      "Texas sues Netflix over data collection allegations. - Netflix sued by Texas for allegedly spying on consumers. - Netflix sued by Texas for spying on children.",
+      "Texas sues Netflix for allegedly spying on children. - Netflix calls Texas lawsuit accusing it of spying \"meritless\". - Netflix reports $135 billion in content spending over decade.",
+      "Netflix reports Q1 results, issues Q2 guidance below estimates. - Netflix co-founder Reed Hastings to step down from board. - Netflix shares slump after weak guidance and chairman exit."
+    ]
+  }
+}

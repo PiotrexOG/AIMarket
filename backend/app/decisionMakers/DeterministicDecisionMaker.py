@@ -86,6 +86,9 @@ class DeterministicDecisionMaker:
 
         # 2. Obliczanie wag i wycena
         raw_scores = {t: self.calculate_score(t, market_scores, profile) for t in all_tickers}
+
+        print (raw_scores)
+
         final_weights = self._compute_final_weights(raw_scores, params)
 
         valuation = self.valuation_service.calculate_portfolio_details(portfolio.cash, portfolio.shares, date_time)

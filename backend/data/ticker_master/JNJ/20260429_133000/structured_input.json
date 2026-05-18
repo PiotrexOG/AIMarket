@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (29.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.2)",
+        "velocity_roc_10": "NORMAL (-5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 223.77-247.21]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.66%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.101)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.45)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 223.77-251.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.71%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 224.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.14%))",
+      "volume_dynamics": "AVERAGE (0.97)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 25.94, P/S: 5.71)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.77)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JNJ shareholders elect all director nominees to board. - JNJ to participate in Bernstein's 42nd Annual Strategic Decisions Conference. - JNJ starts head-to-head PFA trial against Boston Scientific device. - JNJ Med Tech unit gains momentum, eyes better 2026.",
+      "Johnson & Johnson to acquire Atraverse Medical for cardiac ablation technology. - Johnson & Johnson's drug Imaavy receives FDA Priority Review for rare blood disorder. - Johnson & Johnson using AI to halve drug development lead generation time. - Johnson & Johnson to present at Bernstein's 42nd Annual Strategic Decisions Conference.",
+      "Johnson & Johnson CEO touts catalyst year, sales growth, and investment push."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson launches landmark head-to-head trial. - Johnson & Johnson strikes agreement to acquire Atraverse Medical. - Johnson & Johnson to acquire Atraverse Medical to bolster cardiac devices. - J&J lands CE mark for surgical stapler for robot use. - Johnson & Johnson to acquire Atraverse Medical in cardiac device expansion. - Johnson & Johnson exceeds first-quarter earnings projections. - Johnson & Johnson to offer four prescription medicines on Trump Rx website. - Johnson & Johnson had a strong start to 2026 earnings.",
+      "Johnson & Johnson to acquire Atraverse Medical for cardiac ablation technology. - Johnson & Johnson's drug Imaavy receives FDA Priority Review for rare blood disorder. - Johnson & Johnson using AI to halve drug development lead generation time. - Johnson & Johnson to present at Bernstein's 42nd Annual Strategic Decisions Conference.",
+      "JNJ shareholders elect all director nominees to board. - JNJ to participate in Bernstein's 42nd Annual Strategic Decisions Conference. - JNJ starts head-to-head PFA trial against Boston Scientific device. - JNJ Med Tech unit gains momentum, eyes better 2026."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson launches landmark head-to-head trial. - Johnson & Johnson strikes agreement to acquire Atraverse Medical. - Johnson & Johnson to acquire Atraverse Medical to bolster cardiac devices. - J&J lands CE mark for surgical stapler for robot use. - Johnson & Johnson to acquire Atraverse Medical in cardiac device expansion. - Johnson & Johnson exceeds first-quarter earnings projections. - Johnson & Johnson to offer four prescription medicines on Trump Rx website. - Johnson & Johnson had a strong start to 2026 earnings.",
+      "Johnson & Johnson raises 2026 outlook after strong Q1 earnings. - Johnson & Johnson declares 3.1% increase in quarterly dividend. - Johnson & Johnson beats Q1 earnings and sales estimates. - Johnson & Johnson working towards mid-2027 separation for orthopedic business. - Johnson & Johnson's cardiovascular unit shows strong growth in Q1. - Johnson & Johnson raises full-year sales and earnings guidance.",
+      "Johnson & Johnson raises 2026 outlook as sales jump. - Johnson & Johnson Q1 earnings beat expectations, sales jump. - Johnson & Johnson highlights pipeline catalysts, reaffirms growth. - Johnson & Johnson Q1 results reinforce growth outlook. - Johnson & Johnson reports above-peer topline growth in Q1. - Johnson & Johnson to participate in Bank of America conference."
+    ]
+  }
+}

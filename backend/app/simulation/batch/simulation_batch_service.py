@@ -17,7 +17,7 @@ METRIC_WEIGHT_KEYS = (
     "relative_asymmetry_profile",
     "relative_conviction",
     "relative_fundamental_support",
-    "relative_structural_risk",
+    "relative_structural_safety",
     "relative_technical_strength",
     "relative_valuation_sustainability",
 )

@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (11.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.15)",
+        "velocity_roc_10": "NORMAL (-5.1%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-9.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 87.57-108.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.55%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.052)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.23)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 75.21-108.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-15.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.33%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 25.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 88.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.54%))",
+      "volume_dynamics": "ELEVATED (1.22)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.97, P/S: 8.1)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 12.2)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix shares buyback capacity increases. - Netflix movie \"Narnia\" gets theatrical release. - Netflix releases trailer for \"Four Seasons\" Season 2.",
+      "Netflix acquires AI content production startup Inter Positive.",
+      "Netflix to give Greta Gerwig's 'Narnia' wide theatrical release. - Netflix's 'Narnia' movie to have theatrical and IMAX release. - Netflix makes strategic shift with wide theatrical release for 'Narnia'."
+    ],
+    "medium_term_50d": [
+      "Netflix to give Greta Gerwig's 'Narnia' wide theatrical release. - Netflix's 'Narnia' movie to have theatrical and IMAX release. - Netflix makes strategic shift with wide theatrical release for 'Narnia'.",
+      "Netflix acquires AI content production startup Inter Positive.",
+      "Netflix shares buyback capacity increases. - Netflix movie \"Narnia\" gets theatrical release. - Netflix releases trailer for \"Four Seasons\" Season 2."
+    ],
+    "long_term_200d": [
+      "Netflix reports Q1 results, issues Q2 guidance below estimates. - Netflix co-founder Reed Hastings to step down from board. - Netflix shares slump after weak guidance and chairman exit.",
+      "Netflix authorizes additional $25 billion share repurchase. - Netflix boosts stock-buyback program by $25 billion. - Netflix announces $25 billion share buyback. - Netflix resumes capital returns after walking away from acquisition. - Netflix plans to buy back another $25 billion in stock.",
+      "Netflix raises US subscription prices across all tiers. - Netflix increases subscription costs for all plans. - Netflix announces second price hike in two years. - Netflix subscription prices are going up again. - Netflix raises prices on all US streaming tiers."
+    ]
+  }
+}

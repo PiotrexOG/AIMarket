@@ -341,7 +341,7 @@ class SimulationService:
                                                 "relative_technical_strength": 0.0,
                                                 "relative_fundamental_support": 0.0,
                                                 "relative_valuation_sustainability": 0.0,
-                                                "relative_structural_risk": 0.0,
+                                                "relative_structural_safety": 0.0,
                                                 "relative_conviction": 0.0,
                                                 "relative_asymmetry_profile": 0.0,
                                             })
@@ -418,11 +418,11 @@ class SimulationService:
         current_time = self.start_time
 
         with SessionLocal() as session:
-            while current_time <= self.end_time:
+            if self.end_time.date() > load_last_fetch_date():
+                self._fetch_data()
+                save_last_fetch_date(self.end_time.date())
 
-                if current_time.date() > load_last_fetch_date():
-                    self._fetch_data()
-                    save_last_fetch_date(self.end_time.date())
+            while current_time <= self.end_time:
 
                 current_time = self._get_earliest_datetime_for_day(
                     session, current_time.date()

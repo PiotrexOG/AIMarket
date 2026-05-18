@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. While velocity (ROC 10) remains explosive (8.9%), the candle pattern is now neutral, and RSI has moved into extreme overbought territory (75.7). The price is testing upper bands of Bollinger Bands (0.96) and is overstretched above the SMA20 (+6.6%), indicating a potential for exhaustion. W: Price is at critical resistance at the 20-day range (257.82-295.27), and the overbought RSI suggests a high probability of a pullback. The neutral candle pattern offers no immediate bullish conviction. O: News flow is mixed, with some positive developments like a preliminary chip deal with Intel and new features, but also concerns about supply chain issues and director share sales. A decisive break above resistance is unlikely given the current technical setup. T: Risk has significantly increased due to the extreme overbought conditions, price testing resistance at the top of its range, and the overstretched position above the SMA20. The neutral candle pattern and fading MACD add to downside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.8,
+        "safety": 4.0
+      },
+      "synthesis": "S: The medium-term trend is showing expanding bullish momentum (4.82%), but the MACD is fading (1.961), suggesting a loss of upward steam. Price is still strengthening at monthly resistance (245.51-295.27), and the Z-score relative to SMA50 remains high (2.45), indicating continued bullishness but also potential for mean reversion. W: The fading MACD and high Z-score suggest that the upward momentum may not be sustainable. Price is at the upper end of the monthly range, which is a significant resistance zone. O: Fundamental news remains supportive with strong Q2 earnings and revenue growth, and positive outlooks. However, the ongoing legal settlements and potential supply chain issues could weigh on future performance. The CEO transition is still a factor, but its immediate impact is less clear. T: Risk has increased due to the fading MACD, the high Z-score indicating overextension, and price testing monthly resistance. While fundamentals are still strong, the technical signals suggest caution."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: The long-term outlook remains bullish, with a secular bull market regime and a healthy golden cross structure. Price has reached the absolute top of its long-term cycle (99.9% position), indicating sustained strength. W: Valuation remains a significant concern, with premium multiples (P/E 37.27, P/S 10.03) and extreme multiple risk (P/B 49.57). The implied growth (PEG 1.46) is still fair but at these elevated levels, the valuation is fragile. The quarterly earnings momentum continues to show a sharp decline in next quarter's estimated growth (-33.3%), which is a stark contrast to current strong performance. O: Fundamentals remain robust with high business quality, excellent cash generation, and strong historical growth. The company's scale and financial health are solid. The news flow regarding leadership changes and potential AI integration is generally positive for the long term. T: Risk has increased due to the price reaching an all-time high at the top of its long-term range, amplifying valuation fragility. The persistent negative outlook for next quarter's earnings growth, despite current strong results, is a key risk factor. The high multiples leave little room for error."
+    }
+  }
+}

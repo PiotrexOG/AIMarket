@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (3.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 302.34-341.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.34%)",
+        "cycle_macd": "BULLISH_FADING (1.652)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.41)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.43%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 323.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.34%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.33, P/S: 15.1)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.12)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.13)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launches new in-game experiences with EA SPORTS. - Visa expands AI-commerce program across Asia Pacific and Latin America. - Visa adds five new blockchains to stablecoin settlement pilot. - Visa expands travel program 'Visa Destinations' into Asia Pacific. - Visa Canada and Wealthsimple pilot stablecoin settlement. - Visa expands 'Agentic Ready' program to Canada for AI commerce. - Visa to participate in upcoming investor conferences.",
+      "Visa partners with Electronic Arts for EA SPORTS franchises. - Visa partners with Rain to issue stablecoin-backed cards.",
+      "Visa launches Agentic Ready program in Asia Pacific. - Visa launches Agentic Ready program in Singapore. - Visa gains $50B in market value after earnings. - Visa reports Q2 2026 results, announces $20B buyback. - Visa expands stablecoin settlement pilot to nine blockchains. - Ethiopian Airlines and Visa strengthen collaboration on co-branded cards. - Visa CEO discusses AI and blockchain impact on commerce. - Visa raises full-year guidance after strong quarterly earnings. - Visa announces $20 billion share repurchase program."
+    ],
+    "medium_term_50d": [
+      "Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history.",
+      "Visa launches new in-game experiences with EA SPORTS. - Visa expands AI-commerce program across Asia Pacific and Latin America. - Visa adds five new blockchains to stablecoin settlement pilot. - Visa expands travel program 'Visa Destinations' into Asia Pacific. - Visa Canada and Wealthsimple pilot stablecoin settlement. - Visa expands 'Agentic Ready' program to Canada for AI commerce. - Visa to participate in upcoming investor conferences.",
+      "Visa launches Agentic Ready program in Asia Pacific. - Visa launches Agentic Ready program in Singapore. - Visa gains $50B in market value after earnings. - Visa reports Q2 2026 results, announces $20B buyback. - Visa expands stablecoin settlement pilot to nine blockchains. - Ethiopian Airlines and Visa strengthen collaboration on co-branded cards. - Visa CEO discusses AI and blockchain impact on commerce. - Visa raises full-year guidance after strong quarterly earnings. - Visa announces $20 billion share repurchase program."
+    ],
+    "long_term_200d": [
+      "Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history.",
+      "Visa launches Agentic Ready program in Asia Pacific. - Visa launches Agentic Ready program in Singapore. - Visa gains $50B in market value after earnings. - Visa reports Q2 2026 results, announces $20B buyback. - Visa expands stablecoin settlement pilot to nine blockchains. - Ethiopian Airlines and Visa strengthen collaboration on co-branded cards. - Visa CEO discusses AI and blockchain impact on commerce. - Visa raises full-year guidance after strong quarterly earnings. - Visa announces $20 billion share repurchase program.",
+      "Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes."
+    ]
+  }
+}

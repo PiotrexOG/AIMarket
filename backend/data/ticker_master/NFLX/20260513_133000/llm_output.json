@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safety": 3.5
+      },
+      "synthesis": "S: The stock has moved from critical support to the middle of its 20-day range, with RSI improving from extreme oversold to the bearish zone (32.0). The 20-day SMA is now stable, indicating a less overstretched condition. O: Positive news regarding share buybacks and content spending, alongside a strong bullish candle pattern, provides a short-term tailwind. The lawsuit from Texas is being countered as meritless, mitigating some negative sentiment. T: The improvement in RSI and stabilization near the 20-day SMA suggest a potential for further upside, moving away from the extreme bearishness of the previous period. W: While improved, the RSI is still in the bearish zone, and the price is still below the 20-day SMA, indicating lingering weakness. Elevated volume dynamics have normalized, suggesting less conviction behind the recent move."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.2,
+        "conv": 3.8,
+        "safety": 3.7
+      },
+      "synthesis": "S: The stock remains in a bearish trend position relative to the 50-day SMA, but the MACD is showing signs of recovery from its previous bearish acceleration. The trend alignment has slightly improved from consolidation to a gradual descent. O: Continued positive news on capital returns and content spending, coupled with the company's strong fundamental profile, offers some support against the bearish technicals. T: The recovery in MACD and the less severe trend alignment suggest a potential stabilization, moving away from the previous period's accelerating bearish momentum. W: The Z-score remains significantly negative, indicating a persistent bearish trend. Quarterly earnings estimates continue to deteriorate, and the stock is still within a broad monthly range, limiting significant upside potential."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.2,
+        "conv": 2.7,
+        "safety": 2.2
+      },
+      "synthesis": "S: The long-term outlook remains challenged by the secular bear market regime and the death cross structure, although the negative market regime has slightly improved. The stock's position in the lower quadrant of its long-term range has also seen a marginal improvement. O: The company's high business quality, strong cash generation, and robust historical growth profile continue to be fundamental strengths. The attractive PEG ratio suggests potential undervaluation if market conditions normalize. T: The ongoing share repurchase program and strong balance sheet provide structural support. W: The market regime remains bearish, and the death cross structure persists. Premium valuation multiples and high multiple risk, coupled with deteriorating earnings momentum, continue to weigh on the outlook. The risk metric remains elevated due to the persistent bearish technicals and valuation concerns."
+    }
+  }
+}

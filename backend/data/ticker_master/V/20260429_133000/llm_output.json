@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safety": 6.0
+      },
+      "synthesis": "S: Strong short-term momentum indicated by a breakout above the 20-day high, supported by elevated volume (1.28x). The RSI is neutral but trending upwards. O: Potential for continued upside as the price consolidates near the 20-day SMA, suggesting underlying strength. T: The ECB's challenge to card networks presents a regulatory overhang, though recent news shows Visa actively pursuing blockchain solutions. W: The neutral candle pattern and stagnant ROC suggest a pause before the next move, requiring confirmation of sustained upward momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: The price is significantly overextended relative to the 50-day SMA (Z-score: 4.06), indicating strong bullish momentum but also potential for mean reversion. MACD is bullish but fading, suggesting the trend may be losing steam. O: A monthly breakout above the previous range confirms a bullish trend. Continued strong spending and earnings growth provide fundamental support. T: Visa's robust business quality (GM: 81.1%, OM: 59.2%) and healthy balance sheet (NetDebt/Eq: 0.17x) underpin the medium-term outlook. W: The overextended Z-score and fading MACD signal a heightened risk of a pullback. The \"DEATH_CROSS_STRUCTURE\" in the long-term chart adds a layer of structural concern."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safety": 3.5
+      },
+      "synthesis": "S: Despite a secular bear market regime (-7.1%) and a death cross structure (-6.91%), Visa is positioned in the upper quadrant (69.1%) of its long-term range, indicating relative strength. O: Visa's elite business quality (GM: 81.1%, OM: 59.2%, NM: 50.2%) and excellent cash generation (FCF Mgn: 55.4%) provide a strong foundation for long-term value. The company's scale and moderate growth profile are attractive. W: The \"HYPER_PREMIUM_PRICED\" multiples (P/E: 31.75, P/S: 15.81) and high valuation risk (P/B: 16.87, PEG: 4.32) are significant headwinds. The secular bear market regime and death cross structure suggest a challenging macro environment for equities."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (5.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 304.5-341.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.2%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.361)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.01%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 322.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.45%))",
+      "volume_dynamics": "AVERAGE (0.91)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.27, P/S: 15.07)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.09)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.12)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launches Visa Flexible Credential in UK with Zilch. - Visa launches Tap to Confirm and Tap to Activate. - Visa settles exchange offer for Class B-1 and B-2 stock. - Commerce Bancshares announces Visa's acceptance of Class B-2 stock. - Visa CEO joins White House delegation to China.",
+      "Visa partners with Remit Bee for global payment expansion. - Visa announces expiration of exchange offer for common stock. - Visa tests AI commerce and concert payments. - Visa launches Tap to Confirm and Tap to Activate technology. - Visa is Official Payment Partner for The Weeknd's Asia tour.",
+      "Visa expands global stablecoin settlement program to nine blockchains. - Visa partners with Lightspark for stablecoin and Bitcoin debit cards. - Visa rolls out Agentic Ready AI-commerce initiative in Asia Pacific and Latin America."
+    ],
+    "medium_term_50d": [
+      "Visa launches Visa Flexible Credential in UK with Zilch. - Visa launches Tap to Confirm and Tap to Activate. - Visa settles exchange offer for Class B-1 and B-2 stock. - Commerce Bancshares announces Visa's acceptance of Class B-2 stock. - Visa CEO joins White House delegation to China.",
+      "Visa partners with Remit Bee for global payment expansion. - Visa announces expiration of exchange offer for common stock. - Visa tests AI commerce and concert payments. - Visa launches Tap to Confirm and Tap to Activate technology. - Visa is Official Payment Partner for The Weeknd's Asia tour.",
+      "Visa expands global stablecoin settlement program to nine blockchains. - Visa partners with Lightspark for stablecoin and Bitcoin debit cards. - Visa rolls out Agentic Ready AI-commerce initiative in Asia Pacific and Latin America."
+    ],
+    "long_term_200d": [
+      "Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history.",
+      "Visa launches Agentic Ready program in Asia Pacific. - Visa launches Agentic Ready program in Singapore. - Visa gains $50B in market value after earnings. - Visa reports Q2 2026 results, announces $20B buyback. - Visa expands stablecoin settlement pilot to nine blockchains. - Ethiopian Airlines and Visa strengthen collaboration on co-branded cards. - Visa CEO discusses AI and blockchain impact on commerce. - Visa raises full-year guidance after strong quarterly earnings. - Visa announces $20 billion share repurchase program.",
+      "Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 5.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: Explosive price velocity (ROC 9.2%) and extreme RSI (76.3) indicate strong short-term bullish momentum, despite a Doji candle suggesting indecision. The price is overstretched above the 20-day SMA (7.6%). O: Continued upside driven by AI narrative and potential for range breakout if conviction builds. T: Potential for a short-term pullback or consolidation due to overbought conditions and indecision candle. W: Extreme overbought RSI and overstretched SMA position increase the risk of a reversal. News flow is mixed, with some positive AI developments but also concerns around OpenAI partnership and voluntary buyouts."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: The trend is consolidating (MAS 0.97%) but remains bullishly positioned relative to the 50-day SMA (Z:1.54). MACD is bullish but fading, indicating a potential loss of upward momentum. O: Continued strength in cloud and AI services could drive medium-term upside, supported by the overall bullish trend alignment. T: Risk of trend breakdown if consolidation breaks to the downside, especially if MACD crosses bearishly. W: Fading MACD and consolidation suggest a loss of conviction in the immediate upward trend. News regarding OpenAI partnership adjustments and voluntary buyouts could weigh on sentiment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safety": 3.0
+      },
+      "synthesis": "S: The long-term technical picture is bearish, with a secular bear market regime (-8.5%) and a death cross structure (-15.83%). Price is in the lower quadrant of the long-term range (34.6%). O: Despite the bearish technicals, Microsoft's strong fundamental profile (elite business quality, healthy balance sheet, strong cash generation) provides a potential anchor against further downside and offers long-term growth prospects. T: The death cross and bear market regime pose significant headwinds. A sustained recovery would require a fundamental shift in market sentiment and a clear break above long-term resistance. W: High valuation multiples (P/E 31.06, P/S 11.26) combined with bearish long-term technicals create significant downside risk. The PEG ratio (2.0) suggests growth is priced in, making the stock vulnerable to any growth disappointments. News regarding EU regulations and lawsuits adds to long-term uncertainty."
+    }
+  }
+}

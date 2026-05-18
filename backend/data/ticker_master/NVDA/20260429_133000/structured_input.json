@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "EXPLOSIVE_UP (8.5%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (10.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 166.96-216.82]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.76%)",
+        "cycle_macd": "BULLISH_FADING (2.292)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.2)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.27-216.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.57%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 211.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.7%))",
+      "volume_dynamics": "ELEVATED (1.24)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(4)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 75.0% | OM: 62.4% | NM: 55.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.02x, YrsToPay: 0.0x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 46.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $130.497B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 114.2%, EPS: 144.8%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -41.6%, Next Q Est Growth: 96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 71.08, P/S: 39.97)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 65.75)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia, AI chip stocks fall on Open AI funding concerns. - Open AI miss sparks sell-off for Oracle, Nvidia, Core Weave stocks. - Open AI revenue report stings AI stocks, Nvidia falls. - Open AI hit a speed bump, Nvidia's story still intact. - Nvidia chipmaker TSMC in buy zones. - Vanguard Capital Management reports 7.31% passive stake in Nvidia. - Nvidia GW-Scale AI factory standards mentioned for Croatia campus. - Nvidia rally has room to run despite Open AI news.",
+      "Nvidia stock hits new all-time high above $5 trillion. - Nvidia's $20T path faces a 2026 hurdle. - Nvidia stock reaches record close, Big Tech earnings loom. - Nvidia stock rises to record highs on AI buildout momentum. - Nvidia stock approaching all-time high, customers await earnings. - Arista stock shakes off Nvidia headline, rebounds. - Marvell stock skyrockets after Alphabet and Nvidia deals.",
+      "Nvidia invested $1 billion in Nokia. - Nvidia deploys Open AI's Codex across 10,000 employees. - Nvidia trades at half AMD's multiple. - Nvidia is the ticket to an AI win. - Broadcom and Nvidia are premier AI investments."
+    ],
+    "medium_term_50d": [
+      "Nvidia stock hits new all-time high above $5 trillion. - Nvidia's $20T path faces a 2026 hurdle. - Nvidia stock reaches record close, Big Tech earnings loom. - Nvidia stock rises to record highs on AI buildout momentum. - Nvidia stock approaching all-time high, customers await earnings. - Arista stock shakes off Nvidia headline, rebounds. - Marvell stock skyrockets after Alphabet and Nvidia deals.",
+      "Nvidia, AI chip stocks fall on Open AI funding concerns. - Open AI miss sparks sell-off for Oracle, Nvidia, Core Weave stocks. - Open AI revenue report stings AI stocks, Nvidia falls. - Open AI hit a speed bump, Nvidia's story still intact. - Nvidia chipmaker TSMC in buy zones. - Vanguard Capital Management reports 7.31% passive stake in Nvidia. - Nvidia GW-Scale AI factory standards mentioned for Croatia campus. - Nvidia rally has room to run despite Open AI news.",
+      "Nvidia invested $1 billion in Nokia. - Nvidia deploys Open AI's Codex across 10,000 employees. - Nvidia trades at half AMD's multiple. - Nvidia is the ticket to an AI win. - Broadcom and Nvidia are premier AI investments."
+    ],
+    "long_term_200d": [
+      "Nvidia stock hits new all-time high above $5 trillion. - Nvidia's $20T path faces a 2026 hurdle. - Nvidia stock reaches record close, Big Tech earnings loom. - Nvidia stock rises to record highs on AI buildout momentum. - Nvidia stock approaching all-time high, customers await earnings. - Arista stock shakes off Nvidia headline, rebounds. - Marvell stock skyrockets after Alphabet and Nvidia deals.",
+      "Nvidia, AI chip stocks fall on Open AI funding concerns. - Open AI miss sparks sell-off for Oracle, Nvidia, Core Weave stocks. - Open AI revenue report stings AI stocks, Nvidia falls. - Open AI hit a speed bump, Nvidia's story still intact. - Nvidia chipmaker TSMC in buy zones. - Vanguard Capital Management reports 7.31% passive stake in Nvidia. - Nvidia GW-Scale AI factory standards mentioned for Croatia campus. - Nvidia rally has room to run despite Open AI news.",
+      "Nvidia launches next-generation AI training GPU. - Nvidia expands Taiwan packaging capacity for AI accelerators. - Nvidia signs multibillion AI chip supply deal with cloud provider. - US export rules restrict Nvidia chip sales to China. - Nvidia launches open-source quantum AI models. - Nvidia's acquisition of Slurm software maker questioned by Senator Warren. - Nvidia invests $2 billion into Marvell Technology. - Nvidia's Ising models fuel quantum stock rally. - Matlantis integrates NVIDIA ALCHEMI Toolkit for materials discovery. - XRNotify uses NVIDIA Nemo Claw for real-time XRP Ledger events."
+    ]
+  }
+}

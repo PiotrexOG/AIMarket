@@ -15,7 +15,7 @@ def generate_users(archetype_key, count, archetypes):
                 "relative_technical_strength": 0,
                 "relative_fundamental_support": 0,
                 "relative_valuation_sustainability": 0,
-                "relative_structural_risk": 0,
+                "relative_structural_safety": 0,
                 "relative_conviction": 0,
                 "relative_asymmetry_profile": 0,
             },
@@ -48,7 +48,7 @@ def generate_users(archetype_key, count, archetypes):
             "relative_technical_strength": round(mw_raw["tech"] / mw_sum, 3),
             "relative_fundamental_support": round(mw_raw["fund"] / mw_sum, 3),
             "relative_valuation_sustainability": round(mw_raw["val"] / mw_sum, 3),
-            "relative_structural_risk": round(mw_raw["risk"] / mw_sum, 3),
+            "relative_structural_safety": round(mw_raw["safe"] / mw_sum, 3),
             "relative_conviction": round(mw_raw["conv"] / mw_sum, 3),
             "relative_asymmetry_profile": round(mw_raw["asym"] / mw_sum, 3),
         }

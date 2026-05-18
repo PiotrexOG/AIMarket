@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (3.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 190.35-236.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.03%)",
+        "cycle_macd": "BULLISH_FADING (1.708)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.43)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-245.42]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (5.0%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.67%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 224.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.89%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.57)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 92.59, P/S: 1.99)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 30.62)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing completes MQ-25A unmanned aerial refueler operational test flight. - Copa Airlines to purchase up to 60 Boeing 737 Max aircraft. - Copa Airlines orders 40 Boeing 737 Max jets with options.",
+      "Boeing and U.S. Navy achieve successful MQ-25A test flight. - Boeing and U.S. Navy complete first operational MQ-25A test flight.",
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year"
+    ],
+    "medium_term_50d": [
+      "Boeing completes MQ-25A unmanned aerial refueler operational test flight. - Copa Airlines to purchase up to 60 Boeing 737 Max aircraft. - Copa Airlines orders 40 Boeing 737 Max jets with options.",
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year",
+      "Boeing reports narrowing loss, points to progress on turnaround. - Boeing Q1 earnings beat estimates, stock jumps on deliveries. - Boeing loss shrinks, backlog hits record $695 billion. - Boeing's commercial jet business improves, reducing quarterly loss. - Boeing shares trading higher after reporting better-than-expected Q1 results. - Boeing CEO says improvements needed in Spirit, 787 engine deliveries behind. - Boeing CFO expects positive free cash flow of $1B-$3B this year. - Boeing CEO confident summit will include aircraft orders from China. - Boeing CFO on track for positive cash flow in 2H. - Boeing CFO reduced 787 rework hours by"
+    ],
+    "long_term_200d": [
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year",
+      "Boeing reports narrowing loss, points to progress on turnaround. - Boeing Q1 earnings beat estimates, stock jumps on deliveries. - Boeing loss shrinks, backlog hits record $695 billion. - Boeing's commercial jet business improves, reducing quarterly loss. - Boeing shares trading higher after reporting better-than-expected Q1 results. - Boeing CEO says improvements needed in Spirit, 787 engine deliveries behind. - Boeing CFO expects positive free cash flow of $1B-$3B this year. - Boeing CEO confident summit will include aircraft orders from China. - Boeing CFO on track for positive cash flow in 2H. - Boeing CFO reduced 787 rework hours by",
+      "Boeing completes MQ-25A unmanned aerial refueler operational test flight. - Copa Airlines to purchase up to 60 Boeing 737 Max aircraft. - Copa Airlines orders 40 Boeing 737 Max jets with options."
+    ]
+  }
+}

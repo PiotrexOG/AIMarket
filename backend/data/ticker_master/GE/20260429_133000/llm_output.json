@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safety": 4.0
+      },
+      "synthesis": "S: Momentum indicators are in a bearish zone (RSI 38.9), but price action is stable near the short-term base (SMA20 -2.3%) and within normal Bollinger Bands. Elevated volume (1.22x) suggests potential underlying activity despite neutral candle patterns. O: Potential for a short-term bounce if price can hold the SMA20 support. T: Geopolitical uncertainties and margin pressures mentioned in news could cap upside. W: Bearish RSI and lack of clear directional momentum limit upside potential. Risk is elevated due to the premium valuation multiples and potential for volatility."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.5,
+        "safety": 4.5
+      },
+      "synthesis": "S: The medium-term trend shows a gradual descent (-4.04%) with MACD in a bearish recovering state. Price is positioned below the 50-day SMA (Z:-1.19), indicating a bearish trend position. However, the analyst consensus is strongly bullish, providing some counter-signal. O: Positive earnings momentum (Q surprise 5.8%, next Q est growth 1.1%) and strong cash generation (FCF Mgn: 15.4%) offer fundamental support. T: The company's hyper-growth profile (Rev: 21.9%, EPS: 25.8%) is a key long-term driver. W: The current technical trend is bearish, and the conviction level from analysts is low, creating uncertainty. Risk is moderate due to the bearish technicals and premium valuation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 7.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: Despite being in a bear market relief rally, the long-term structure shows a healthy golden cross (3.52%), indicating underlying strength. The company operates in a solid core business (GM: 34.8%) with strong cash generation and hyper-growth. O: The company's scale (Rev: $48.352B) and established business quality provide a robust foundation. The long-term range position is bearish (29.6%), suggesting potential for mean reversion. T: Positive news regarding large orders and earnings beats for both GE Aerospace and GE Vernova support the long-term outlook. W: The current long-term range position is bearish, and the market regime is still characterized as a bear market rally. Risk is relatively low due to strong fundamentals and business quality, despite premium valuation multiples."
+    }
+  }
+}

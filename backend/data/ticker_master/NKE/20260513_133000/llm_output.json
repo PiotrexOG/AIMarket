@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safety": 3.0
+      },
+      "synthesis": "S: The RSI remains in extreme oversold territory (26.6), and the price is testing the lower band of the Bollinger Bands (0.04) at critical support (42.06). The DOJI pattern persists, indicating indecision. Velocity has normalized slightly, but the price is still below the 20-day SMA. O: The oversold conditions and testing of critical support present a potential for a short-term bounce, but the indecisive candle and continued proximity to the 20-day SMA suggest fragility. T: News is mixed, with some positive developments like CEO share purchases and a retail pivot, but also ongoing legal challenges and the narrative that the turnaround needs more time. W: While oversold conditions and support testing offer some tactical upside, the persistent indecision, proximity to the 20-day SMA, and mixed news sentiment create significant downside risk if support fails. The risk metric has slightly improved due to normalized velocity."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.8,
+        "conv": 3.2,
+        "safety": 3.2
+      },
+      "synthesis": "S: The price is strengthening at monthly support (42.06), and the MACD shows fading bullish momentum. However, the trend alignment remains bearish with expanding momentum, and the price is further below the 50-day SMA (Z:-1.2). O: The price action at monthly support and the fading MACD divergence offer a slight improvement in the medium-term outlook. The trend alignment, while still bearish, has shown some deceleration in its negative momentum. T: The news narrative is evolving, with ongoing legal issues but also strategic initiatives like the retail pivot and CEO confidence shown through share purchases. The previous narrative of job cuts and stock crashes is less prominent. W: The bearish trend alignment and negative Z-score below the 50-day SMA continue to weigh on the score. However, the strengthening at support and slightly less negative trend momentum have marginally reduced the risk. Analyst conviction remains low, but the shift in news narrative provides a slight boost to conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.2,
+        "conv": 2.8,
+        "safety": 2.7
+      },
+      "synthesis": "S: The price is now at 0.2% of its multi-month low accumulation range, indicating extreme downside positioning. The 'EXTREME_BEARISH_STRETCH_REBOUND_LIKELY' signal persists, and the secular bear market regime remains. O: The fundamental quality, balance sheet health, and company scale remain stable, providing a floor. Valuation multiples are fair, and the implied growth is still negative. T: The long-term news narrative remains dominated by past restructuring and job cuts, with little new information to suggest a fundamental shift. The secular bear market regime continues to be a significant headwind. W: The extreme positioning at multi-month lows and the persistent 'rebound likely' signal offer some long-term speculative appeal, but the stagnant growth profile, deteriorating earnings momentum, and ongoing secular bear market regime contribute to elevated risk. The risk metric has slightly increased due to the price moving further into the lower end of the long-term range, despite the 'rebound likely' signal."
+    }
+  }
+}

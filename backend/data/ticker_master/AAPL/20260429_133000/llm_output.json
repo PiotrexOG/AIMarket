@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: RSI is in a strong bullish zone (62.9), indicating positive momentum. Price is stable near the short-term base (SMA20 +2.7%), suggesting consolidation before potential upside. Velocity (ROC 10) is normal, and Bollinger Bands show price within normal flux. W: Candle patterns are neutral, and the price is in the middle of its 20-day range, lacking strong directional conviction. O: Potential for continued upward momentum if price breaks above the current range, supported by bullish RSI. T: Limited downside risk in the short term due to stable price action and normal volatility, but a break below the SMA20 could signal weakness."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "safety": 5.5
+      },
+      "synthesis": "S: The trend alignment is a gradual ascent (SMA50 +1.15%), and the MACD is in bullish territory, albeit fading. Z-score relative to SMA50 is positive (1.15), confirming trend adherence. W: MACD fading suggests momentum may be waning. Price is within the monthly range, indicating potential for range-bound trading. O: Continued positive trend alignment could support further gains if momentum re-accelerates. The company's strong fundamentals provide a solid base for medium-term appreciation. T: Moderate risk due to the fading MACD and the potential for mean reversion within the broader monthly range. Premium valuation multiples also add to downside risk if growth falters."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.0,
+        "safety": 5.0
+      },
+      "synthesis": "S: The market regime is a secular bull market, and the long-term structure shows a healthy golden cross. Price is positioned in the upper quadrant of its long-term range (77.9%), indicating strong secular uptrend. W: High valuation multiples (P/E 36.02, P/S 9.71) and expensive implied growth (PEG 1.58) present significant risk. Balance sheet is stressed (NetDebt/Eq: 1.04x). O: The company's high business quality (GM 46.9%, OM 32.0%) and strong cash generation (FCF Mgn 23.7%) provide a robust foundation. Moderate long-term growth (Rev 6.4%, EPS 22.8%) supports the premium. T: Valuation risk is the primary concern, amplified by a stressed balance sheet. Any slowdown in growth or a shift in market regime could lead to significant downside."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 6.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The short-term exhibits a HAMMER_PINBAR_BULLISH candle pattern, indicating potential reversal. RSI has declined to 41.6, and price is consolidating near the SMA20, showing stability. Bollinger Bands indicate reduced volatility (0.23). O: News highlights continued investment in anti-fraud projects and philanthropic initiatives, alongside exploration of tokenized money market funds on Ethereum. T: The bullish pinbar suggests a potential upward move, supported by consolidation near the SMA20 and reduced volatility. W: Velocity (ROC -2.1%) is negative, and the CEO's warnings about market exuberance and potential bond crises persist as macro concerns. The RSI decline suggests weakening short-term momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safety": 4.5
+      },
+      "synthesis": "S: Medium-term trend alignment shows slightly decelerating momentum (3.15%), and price has moved closer to the SMA50, now at a healthy base (Z:0.15). The MACD is still bearish but recovering (-1.585). O: Strategic initiatives like fintech-style accounts for Gen Z and leveraging XRP Ledger for treasury redemptions are ongoing. T: The shift in Z-score towards the mean and the recovering MACD suggest a stabilization of the medium-term trend, though momentum is not yet strongly positive. W: The underlying bearish MACD trend and the continued presence of the long-term death cross structure remain significant headwinds. Elevated volume dynamics (1.32) could indicate increased market interest or pressure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safety": 3.0
+      },
+      "synthesis": "S: The long-term market regime has shifted to a secular bear market (-0.1%), and the 'death cross' structure persists, indicating persistent technical weakness. Price position within the long-term range has decreased to 39.0%. O: Business quality and scale remain high, providing a fundamental floor. T: The slight decrease in long-term range position and the continued high business quality offer some stability. W: The shift to a secular bear market regime and the persistent death cross are major technical impediments. Valuation risk remains elevated with implied growth still overpriced (PEG: 5.77), and the stressed balance sheet (NetDebt/Eq: 2.53x) amplifies downside potential. CEO warnings about bond crises and fiscal risks in other regions add to macro uncertainty."
+    }
+  }
+}

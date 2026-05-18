@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "STAGNANT (0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 141.97-174.38]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.51%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.538)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.37)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.97-176.41]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.46%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 152.02,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.63%))",
+      "volume_dynamics": "AVERAGE (0.75)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 21.7% | OM: 10.5% | NM: 8.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.23x, YrsToPay: 2.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $323.905B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.5%, EPS: -15.2%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -9.6%, Next Q Est Growth: -34.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.83, P/S: 1.99)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.48)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -15.16%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.09x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil in talks to sell Hong Kong fuel-station network. - Rystad sees potential production upside at Guyana Stabroek projects.",
+      "Exxon Mobil stock performance examined ahead of earnings. - Exxon Mobil stock shows mixed performance over various periods. - Oil prices substantially up in 2026 impacting oil giants.",
+      "Golden Pass LNG ships first cargo to Belgium."
+    ],
+    "medium_term_50d": [
+      "Qatar Energy and Exxon Mobil load first LNG cargo from Golden Pass terminal. - Golden Pass LNG begins exports from Sabine Pass terminal. - Qatar Energy, Exxon Mobil ship 1st cargo from Texas LNG project. - Qatar Energy launches first LNG exports from Golden Pass project. - Exxon Mobil awards Saipem $150M contract for Longtail project.",
+      "Exxon Mobil in talks to sell Hong Kong fuel-station network. - Rystad sees potential production upside at Guyana Stabroek projects.",
+      "Golden Pass LNG ships first cargo to Belgium."
+    ],
+    "long_term_200d": [
+      "Qatar Energy and Exxon Mobil load first LNG cargo from Golden Pass terminal. - Golden Pass LNG begins exports from Sabine Pass terminal. - Qatar Energy, Exxon Mobil ship 1st cargo from Texas LNG project. - Qatar Energy launches first LNG exports from Golden Pass project. - Exxon Mobil awards Saipem $150M contract for Longtail project.",
+      "Exxon Mobil gains influence as Hormuz blockade disrupts oil trade. - Exxon Mobil sees higher realized oil prices and export demand. - Institutional investors prioritize Exxon Mobil due to high oil prices. - Exxon Mobil & Partners plan deepwater drilling offshore Greece.",
+      "Exxon Mobil announces major oil find in Guyana."
+    ]
+  }
+}

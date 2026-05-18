@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.54)",
+        "velocity_roc_10": "STAGNANT (-0.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.3%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 293.89-319.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.47%)",
+        "cycle_macd": "BULLISH_FADING (0.197)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:4.06)",
+        "range_levels_50": "MONTHLY_BREAKOUT_ABOVE_RANGE [Zone: 293.89-325.77]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-7.1%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-6.91%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 69.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 338.49,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.6%))",
+      "volume_dynamics": "ELEVATED (1.28)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.75, P/S: 15.81)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.87)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes.",
+      "ECB sidelines Visa and Mastercard for digital euro. - Visa launches validator node on Tempo blockchain.",
+      "ECB steps up its challenge to Visa and Mastercard."
+    ],
+    "medium_term_50d": [
+      "Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes.",
+      "ECB sidelines Visa and Mastercard for digital euro. - Visa launches validator node on Tempo blockchain.",
+      "ECB steps up its challenge to Visa and Mastercard."
+    ],
+    "long_term_200d": [
+      "Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes.",
+      "ECB sidelines Visa and Mastercard for digital euro. - Visa launches validator node on Tempo blockchain.",
+      "ECB steps up its challenge to Visa and Mastercard."
+    ]
+  }
+}

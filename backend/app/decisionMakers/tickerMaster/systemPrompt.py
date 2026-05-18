@@ -15,15 +15,15 @@ Return valid JSON only. No commentary.
   "ticker": "...",
   "horizons": {
     "short_term_14d": {
-      "metrics": {"score": X.X, "conv": X.X, "risk": X.X},
+      "metrics": {"score": X.X, "conv": X.X, "safe": X.X},
       "synthesis": "..."
     },
     "medium_term_50d": {
-      "metrics": {"score": X.X, "conv": X.X, "risk": X.X},
+      "metrics": {"score": X.X, "conv": X.X, "safe": X.X},
       "synthesis": "..."
     },
     "long_term_200d": {
-      "metrics": {"score": X.X, "conv": X.X, "risk": X.X},
+      "metrics": {"score": X.X, "conv": X.X, "safe": X.X},
       "synthesis": "..."
     }
   }
@@ -42,12 +42,15 @@ conv:
 Structural confidence and durability of the signal.
 Reflects clarity of trend, quality of fundamentals, earnings visibility.
 
-risk:
-Downside exposure including:
-- volatility (ATR, regime instability)
-- valuation fragility
-- balance sheet stress
-- structural trend weakness
+safe:
+Structural safety and resilience of the asset.
+Higher values indicate stronger downside protection and stability.
+
+Includes:
+- lower volatility (ATR stability, regime consistency)
+- healthier valuation profile
+- stronger balance sheet quality
+- structural trend stability
 
 All metrics MUST be floats between 0.0 and 10.0.
 
@@ -62,11 +65,12 @@ If PREVIOUS_INPUT and PREVIOUS_OUTPUT are provided:
 3. Do NOT increase or decrease score by more than 2.5 points unless:
    - market regime changed (bull ↔ bear)
    - major structural breakdown (death cross, earnings collapse)
-4. If valuation risk increased → risk must increase.
-5. If volatility increased → risk must increase.
-6. If earnings momentum improved → score and/or conv may increase.
-7. If signals are mixed → avoid aggressive changes.
-8. Maintain logical continuity.
+4. If valuation fragility increased → safe must decrease.
+5. If volatility increased → safe must decrease.
+7. If balance sheet quality improved → safe may increase.
+8. If earnings momentum improved → score and/or conv may increase.
+9. If signals are mixed → avoid aggressive changes.
+10. Maintain logical continuity.
 
 If no previous data provided:
 → evaluate independently.

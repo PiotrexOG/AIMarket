@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (2.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 968.3-1031.26]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.55%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.407)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.09)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 960.46-1035.82]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.83%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 1031.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.88%))",
+      "volume_dynamics": "ELEVATED (1.38)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.2%, Next Q Est Growth: -16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 56.49, P/S: 1.67)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 15.72)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.68)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco stock performance and valuation discussed. - Costco's April sales surge and e-commerce acceleration noted. - Costco's membership-driven earnings and business model highlighted. - Costco's potential hidden long-term growth engine explored. - Costco's stock is a hold at $1,008.79. - Costco's potential to beat Wall Street earnings this season. - Costco's stock has trailed the market over the past year. - Costco's stock movement and market performance detailed.",
+      "Costco posts 11.6% April comps and 13% net sales growth. - Costco's digitally enabled comps rise 18.8% in April. - Costco adds chicken tenders to its food court menu. - Costco members can redeem perks online instead of warehouses.",
+      "Costco adds popular item to food court menu. - Costco signals firmer US demand despite high gasoline prices. - Costco is going to court over tariff refunds. - Costco April sales surged 13%."
+    ],
+    "medium_term_50d": [
+      "Costco stock performance and valuation discussed. - Costco's April sales surge and e-commerce acceleration noted. - Costco's membership-driven earnings and business model highlighted. - Costco's potential hidden long-term growth engine explored. - Costco's stock is a hold at $1,008.79. - Costco's potential to beat Wall Street earnings this season. - Costco's stock has trailed the market over the past year. - Costco's stock movement and market performance detailed.",
+      "Costco posts 11.6% April comps and 13% net sales growth. - Costco's digitally enabled comps rise 18.8% in April. - Costco adds chicken tenders to its food court menu. - Costco members can redeem perks online instead of warehouses.",
+      "Amy's Kitchen expands to 150+ Costco warehouses. - Costco expands organic prepared meal offerings. - Costco plans 28 new warehouse openings. - Costco membership fees climb 13.6%."
+    ],
+    "long_term_200d": [
+      "Costco posts strong earnings, comparable traffic climbs. - Costco membership fees jump, Kirkland expands, digital sales grow. - Costco plans 28 new warehouses for fiscal 2026. - Costco taps consumer trend as shoppers look to save money.",
+      "Costco stock performance and valuation discussed. - Costco's April sales surge and e-commerce acceleration noted. - Costco's membership-driven earnings and business model highlighted. - Costco's potential hidden long-term growth engine explored. - Costco's stock is a hold at $1,008.79. - Costco's potential to beat Wall Street earnings this season. - Costco's stock has trailed the market over the past year. - Costco's stock movement and market performance detailed.",
+      "Costco raises quarterly cash dividend to $1.47 per share. - Costco announces 13% increase in quarterly dividend. - Costco declares quarterly cash dividend increase from $1.30 to $1.47."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "safety": 6.5
+      },
+      "synthesis": "S: Short-term momentum has softened, with RSI moving to a neutral zone (59.3) and the candle pattern becoming neutral. The price is now testing critical resistance at the 20-day range high (414.5). Velocity (ROC 10) has increased, but the price is only 3.1% above the 20-day SMA. W: The stock is at a significant resistance level, and the shift from bullish to neutral technical indicators suggests a potential pause or pullback. News regarding potential reduced reliance from Apple introduces some uncertainty. O: Continued strong AI demand and capacity expansion plans remain supportive, but the immediate technical picture suggests caution. T: Risk of consolidation or a short-term pullback increases as the stock faces resistance. The \"major_crosses\" indicator in the long-term horizon still signals potential exhaustion risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 6.5,
+        "safety": 7.0
+      },
+      "synthesis": "S: The medium-term trend shows expanding bullish momentum, with the price well-positioned relative to the 50-day SMA (Z-score: 2.05). However, the MACD is still fading, indicating that the upward thrust may be losing steam. The stock is strengthening at the monthly resistance zone. W: The fading MACD and the approach to significant resistance levels suggest that further upside may be challenging in the near term. The \"major_crosses\" indicator in the long-term horizon indicates potential exhaustion risk. O: Investment in AI chip production and capacity expansion plans provide a solid fundamental underpinning for the medium term. T: The bullish trend is likely to be tested at current resistance levels, with potential for a period of consolidation before further significant moves."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.0,
+        "safety": 6.5
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong, with the stock near all-time highs (97.4% of range) within a secular bull market. The \"major_crosses\" indicator has shifted to a healthy golden cross structure, reducing immediate exhaustion risk. Fundamentals remain exceptional with elite business quality, a fortress balance sheet, and hyper-growth. W: The stock is trading at the very top of its long-term range, increasing valuation fragility and the risk of a significant correction if growth expectations are not met or if market sentiment shifts. The \"earnings_momentum_quarterly\" shows a sharp expected decline next quarter, which could be a headwind. O: Deep value discount multiples and underrated implied growth continue to offer a compelling long-term case, supported by massive AI-driven demand. T: While the long-term trend is robust, the extreme position in the range and potential earnings deceleration warrant increased caution and a higher risk assessment."
+    }
+  }
+}

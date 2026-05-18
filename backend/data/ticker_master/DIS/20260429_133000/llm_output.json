@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The short-term technicals show consolidation, with the RSI in the neutral zone (58.1) and price hugging the SMA20. This suggests a pause rather than a strong directional move. The MACD is fading but still in bullish territory. O: Potential for a short-term bounce if resistance levels are overcome, supported by analyst consensus. T: News flow is mixed, with regulatory reviews and lawsuits creating uncertainty, but also positive initiatives like \"Disney Week of Wishes.\" The DOJI candle pattern indicates indecision."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safety": 5.5
+      },
+      "synthesis": "S: Medium-term trend alignment is compressed, indicating a lack of strong directional conviction. The MACD is bullish but fading, and price is showing mean reversion around the SMA50. Fundamentals show strong EPS growth momentum (104.1% next Q est.), which supports the score. W: The fading MACD and compressed moving averages suggest a lack of sustained upward momentum. O: Positive earnings surprise and strong next quarter estimates provide a foundation for potential upside. T: Continued news regarding job cuts and reorganizations could weigh on sentiment, but the underlying business quality and financial health remain solid."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safety": 3.5
+      },
+      "synthesis": "S: The long-term outlook is challenged by a secular bear market regime and a death cross structure, placing the price in the lower quadrant of its long-term range (27.8%). However, fundamental strengths like healthy balance sheets and moderate growth provide some support. W: The prevailing market regime and technical structure are strongly bearish, indicating significant headwinds. Valuation multiples are at a moderate discount, but this is offset by the negative technicals and debt sensitivity. T: Ongoing news about job cuts and restructuring, while potentially positive for long-term efficiency, creates short-to-medium term uncertainty. The lawsuit and regulatory reviews add to the long-term risk profile."
+    }
+  }
+}

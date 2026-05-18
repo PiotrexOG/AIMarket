@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.48)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 215.4-236.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.58%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.503)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.93)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-236.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.1%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 67.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 228.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.07%))",
+      "volume_dynamics": "AVERAGE (0.62)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.58, P/S: 2.03)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 31.28)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.83)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Alaska Airlines adopts Boeing's Virtual Airplane platform for pilot training. - Boeing announces Alaska Airlines signs license for Virtual Airplane platform. - Boeing's digital training solutions highlighted by Alaska Airlines deal. - US approves potential C-17 support sale to Canada, Boeing is contractor.",
+      "Boeing expands 737 MAX footprint with Egypt Air delivery. - Egypt Air takes delivery of first Boeing 737 MAX jet.",
+      "Egypt Air takes delivery of first Boeing 737 Max jet. - Israel approves plan to buy F-35 and F-15I aircraft from Boeing. - Boeing wins new orders from Biman Bangladesh Airlines and SCAT Airlines."
+    ],
+    "medium_term_50d": [
+      "Bangladesh signs $3.7 billion deal for 14 Boeing aircraft. - Biman Bangladesh Airlines orders 14 Boeing 787 Dreamliner and 737 MAX jets. - US Air Force plans to buy five more Boeing E-7A surveillance aircraft.",
+      "Boeing completes MQ-25A unmanned aerial refueler operational test flight. - Copa Airlines to purchase up to 60 Boeing 737 Max aircraft. - Copa Airlines orders 40 Boeing 737 Max jets with options.",
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year"
+    ],
+    "long_term_200d": [
+      "Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year",
+      "Boeing reports narrowing loss, points to progress on turnaround. - Boeing Q1 earnings beat estimates, stock jumps on deliveries. - Boeing loss shrinks, backlog hits record $695 billion. - Boeing's commercial jet business improves, reducing quarterly loss. - Boeing shares trading higher after reporting better-than-expected Q1 results. - Boeing CEO says improvements needed in Spirit, 787 engine deliveries behind. - Boeing CFO expects positive free cash flow of $1B-$3B this year. - Boeing CEO confident summit will include aircraft orders from China. - Boeing CFO on track for positive cash flow in 2H. - Boeing CFO reduced 787 rework hours by",
+      "Bangladesh signs $3.7 billion deal for 14 Boeing aircraft. - Biman Bangladesh Airlines orders 14 Boeing 787 Dreamliner and 737 MAX jets. - US Air Force plans to buy five more Boeing E-7A surveillance aircraft."
+    ]
+  }
+}

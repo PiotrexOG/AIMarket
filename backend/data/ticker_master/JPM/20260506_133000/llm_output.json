@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safety": 6.5
+      },
+      "synthesis": "S: The short-term exhibits a STRONG_BULLISH candle pattern, with RSI holding steady in the neutral zone (54.8) and price consolidating near the SMA20. Bollinger Bands show reduced volatility (0.36). O: News flow highlights fintech initiatives for Gen Z and stablecoin settlement capabilities, indicating innovation. T: The strong bullish candle suggests potential for an upward move, supported by consolidation near the SMA20. W: Velocity (ROC -1.1%) is slightly negative, and the CEO's continued warnings of a credit crisis remain a macro overhang, though the immediate technical picture is constructive."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.5,
+        "safety": 5.0
+      },
+      "synthesis": "S: Medium-term trend alignment shows expanding momentum (3.72%), and price is well-positioned relative to the SMA50 (Z:1.39). O: The Olympic partnership and expansion into Europe are significant strategic initiatives. T: Despite the positive trend alignment, the accelerating bearish MACD (-0.714) is a significant concern, suggesting momentum may be waning despite recent price strength. W: The divergence between price action and the deteriorating MACD momentum indicates a potential for a trend reversal or at least a pause. The 'death cross' structure on the long-term chart continues to cast a shadow."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safety": 3.5
+      },
+      "synthesis": "S: The long-term regime remains a bull market correction, and the 'death cross' structure persists, indicating underlying technical weakness. Price is now at the higher end of the mid-cycle neutral zone (60.6%). O: Business quality remains high, and the company scale is immense. Recent Q1 earnings beats and dividend increases provide some fundamental resilience. T: The slight improvement in long-term range position offers a marginal positive. W: The persistent 'death cross' structure is a major technical impediment. Valuation risk remains elevated with implied growth still overpriced (PEG: 6.01), and the stressed balance sheet (NetDebt/Eq: 2.53x) adds to downside potential. CEO warnings about bond crises and stagflation amplify macro risks."
+    }
+  }
+}

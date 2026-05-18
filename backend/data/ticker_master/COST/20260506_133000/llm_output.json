@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safety": 5.5
+      },
+      "synthesis": "S: Significant improvement in short-term momentum with RSI moving strongly into bullish territory (68.4) and a neutral candle pattern suggesting a lack of immediate selling pressure. O: Positive news flow regarding membership fee increases and expansion plans provides a tailwind. T: The price is stable near the 20-day SMA, indicating a potential for continued upward movement. W: While momentum has improved, the price remains within a defined range, and the underlying business quality (thin margins) and valuation risk persist, capping upside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safety": 6.0
+      },
+      "synthesis": "S: The medium-term trend has decisively shifted bullish with MACD accelerating positively (1.185) and the price moving to a healthy Z-score (0.38) relative to the 50-day SMA. O: Continued consumer preference for value and Costco's strong membership renewal rates are supportive factors. T: The compressed moving averages suggest a potential for a sustained upward trend breakout. W: Despite the positive shift, the valuation remains stretched (P/E: 54.99), and the weak cash conversion (FCF Mgn: 2.8%) could become a concern if growth falters, though the current momentum mitigates this risk in the medium term."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safety": 4.8
+      },
+      "synthesis": "S: The long-term secular bull market regime remains intact, with a healthy golden cross structure and the price positioned in the upper quadrant of its long-term range (83.2%). O: Consistent dividend increases and membership fee hikes provide a stable income stream and support the premium valuation. T: The company's scale and ability to leverage consumer value trends are enduring strengths. W: The hyper-premium valuation multiples (P/E: 54.99, P/S: 1.62) and high multiple risk (P/B: 15.3) continue to be the primary long-term concern, as any slowdown in growth could lead to a significant valuation reset, despite the strong operational backdrop."
+    }
+  }
+}

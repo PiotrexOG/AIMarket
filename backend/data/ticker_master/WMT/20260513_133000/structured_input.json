@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 123.18-133.37]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.26%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.187)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 118.02-133.37]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.21%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 90.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 131.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.95%))",
+      "volume_dynamics": "ELEVATED (1.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 4.0x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 1.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $680.985B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.1%, EPS: 25.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -11.0%, Next Q Est Growth: 1.5%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 54.36, P/S: 1.55)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 11.63)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Buda Juice expands distribution into 246 Walmart stores. - Hidden Valley Ranch Dippers rolling out at select retailers including Walmart. - Rogue secures launch in 2,800 Walmart stores nationwide. - Walmart's category mix pressures margins, more pain ahead. - Walmart leans deeper into automation and fintech. - Walmart (WMT) stock sinks as market gains.",
+      "Walmart expands wellness product distribution with new brands. - JAKKS Pacific unveils DC Super-Villains fashion dolls exclusively at Walmart. - Walmart invests heavily in the future of shopping.",
+      "Walmart partners with P&G for Native Boba Cafe Collection launch."
+    ],
+    "medium_term_50d": [
+      "Buda Juice expands distribution into 246 Walmart stores. - Hidden Valley Ranch Dippers rolling out at select retailers including Walmart. - Rogue secures launch in 2,800 Walmart stores nationwide. - Walmart's category mix pressures margins, more pain ahead. - Walmart leans deeper into automation and fintech. - Walmart (WMT) stock sinks as market gains.",
+      "Maryland bans surveillance-based dynamic pricing, affecting Walmart. - Walmart launches exclusive ARIH Western-Korean fusion brand nationwide. - Barri\u00e8re launches lactose intolerance patch in 1,700 Walmart stores. - Supreme Court tariff reversal triggers refunds benefiting Walmart. - Interlink Commerce approved as Walmart Marketplace Solution Provider. - Walmart Canada kicks off annual fundraising campaign for children's health.",
+      "Walmart expands wellness product distribution with new brands. - JAKKS Pacific unveils DC Super-Villains fashion dolls exclusively at Walmart. - Walmart invests heavily in the future of shopping."
+    ],
+    "long_term_200d": [
+      "Sam's Club launches delivery within an hour. - Walmart appoints John Furner as new CEO. - Sam's Club launches enhanced express delivery service. - Walmart diversifies into maintenance services. - California alleges Amazon price-fixing involving Walmart.",
+      "Walmart plans to sell investment-grade bonds. - Walmart revenue rises by 4.7% in fiscal 2026. - Walmart bets big on fermented foods. - Walmart's grocery sales growth slows. - Walmart's 2026 annual report shows e-commerce growth, Supercenter openings, AI initiatives. - Walmart's Q4 profits outpace sales; ads, memberships, e-commerce surge. - Walmart plans $3 billion bond sale. - Walmart stock drops despite market gains.",
+      "Walmart targets Amazon's delivery speed with store back rooms. - Walmart plans over 650 store remodels and new stores. - Walmart could receive billions in tariff refunds. - Walmart surpasses Berkshire Hathaway in market capitalization. - Amazon allegedly pressured Walmart to raise prices."
+    ]
+  }
+}

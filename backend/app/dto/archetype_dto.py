@@ -14,7 +14,7 @@ class ArchetypeMetricWeightsDTO(BaseModel):
     tech: Tuple[float, float]
     fund: Tuple[float, float]
     val: Tuple[float, float]
-    risk: Tuple[float, float]
+    safe: Tuple[float, float]
     conv: Tuple[float, float]
     asym: Tuple[float, float]
 

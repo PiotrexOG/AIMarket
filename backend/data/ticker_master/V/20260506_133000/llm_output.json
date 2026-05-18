@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.3,
+        "safety": 5.8
+      },
+      "synthesis": "S: Short-term momentum shows a slight improvement with RSI moving to 55.8 and ROC at 3.9%, indicating a normal upward velocity. The price is consolidating near the 20-day SMA, suggesting stability. O: Elevated volume dynamics (0.87x) and positive news flow around AI and blockchain initiatives offer potential for upside. T: The 'DOJI_INDECISION' candle pattern suggests caution, and the price is now in the middle of its 20-day range, reducing immediate breakout conviction. W: The previous breakout above the 20-day high has been negated, and the price is no longer in the upper quadrant of its short-term range, indicating a loss of immediate upward thrust."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.3,
+        "safety": 5.2
+      },
+      "synthesis": "S: The medium-term trend alignment shows a gradual ascent (1.34%) with a bullish MACD, though it is fading. The Z-score of 1.41 indicates a bullish trend position, a significant improvement from the previous overextended state. O: Visa's strong Q2 earnings beat and raised full-year guidance, along with a substantial share buyback program, provide strong fundamental support. Expansion into AI and blockchain initiatives offers future growth avenues. T: The price is now within the monthly range, reducing the immediate mean reversion risk associated with the previous overextension. W: The MACD is still fading, and the conviction level remains low, suggesting that the current bullish trend may not be sustainable without further fundamental catalysts or a shift in market regime."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.3,
+        "conv": 3.8,
+        "safety": 3.7
+      },
+      "synthesis": "S: The long-term outlook remains challenged by the secular bear market regime (-3.1%) and the persistent death cross structure (-6.43%). However, the price has moved to the mid-cycle neutral zone (45.7%), indicating a less precarious position than before. O: Visa's elite business quality, healthy balance sheet, and excellent cash generation continue to provide a strong fundamental floor. Moderate growth and stable earnings expectations offer resilience. T: The \"HYPER_PREMIUM_PRICED\" multiples persist, with P/E at 30.33 and P/S at 15.1, contributing to high valuation risk. W: The shift from the upper quadrant to the mid-cycle neutral zone, while reducing immediate downside from range position, also diminishes the relative strength argument. The overall market regime and structural technicals remain bearish."
+    }
+  }
+}

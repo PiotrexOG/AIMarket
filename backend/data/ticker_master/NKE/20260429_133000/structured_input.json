@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 42.09-53.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-14.47%)",
+        "cycle_macd": "BULLISH_FADING (0.529)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 42.09-68.49]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-30.2%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-18.31%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 6.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 44.37,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.71%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.4)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.54, P/S: 1.42)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.96)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike cuts jobs again to revive sales and margins.",
+      "NKE faces job cuts amid turnaround strategies and AI deployment.",
+      "Nike cuts 1,400 jobs in restructuring plan. - Nike announces second round of layoffs this year. - Nike slashes headcount again to accelerate turnaround. - Nike cutting 1,400 jobs across tech, operations. - Nike to cut 1,400 jobs amid sales slowdown. - Nike cutting 1,400 jobs in second layoff round. - Nike reshapes technology team with 1,400 job cuts."
+    ],
+    "medium_term_50d": [
+      "Nike cuts jobs again to revive sales and margins.",
+      "Nike cuts 1,400 jobs in restructuring plan. - Nike announces second round of layoffs this year. - Nike slashes headcount again to accelerate turnaround. - Nike cutting 1,400 jobs across tech, operations. - Nike to cut 1,400 jobs amid sales slowdown. - Nike cutting 1,400 jobs in second layoff round. - Nike reshapes technology team with 1,400 job cuts.",
+      "Nike cuts 1,400 roles in global operations. - Nike announces global operations changes. - Nike cutting jobs in efficiency push."
+    ],
+    "long_term_200d": [
+      "Nike cuts 1,400 jobs in restructuring plan. - Nike announces second round of layoffs this year. - Nike slashes headcount again to accelerate turnaround. - Nike cutting 1,400 jobs across tech, operations. - Nike to cut 1,400 jobs amid sales slowdown. - Nike cutting 1,400 jobs in second layoff round. - Nike reshapes technology team with 1,400 job cuts.",
+      "Nike cuts jobs again to revive sales and margins.",
+      "Nike cuts 1,400 roles in global operations. - Nike announces global operations changes. - Nike cutting jobs in efficiency push."
+    ]
+  }
+}
