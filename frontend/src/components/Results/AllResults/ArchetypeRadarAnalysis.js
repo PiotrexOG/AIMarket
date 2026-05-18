@@ -13,7 +13,7 @@ const ArchetypeRadarAnalysis = ({ data }) => {
     { label: "Tech", key: "metric_weights.relative_technical_strength", max: 1 },
     { label: "Fund", key: "metric_weights.relative_fundamental_support", max: 1 },
     { label: "Val", key: "metric_weights.relative_valuation_sustainability", max: 1 },
-    { label: "Risk W.", key: "metric_weights.relative_structural_risk", max: 1 },
+    { label: "Safety W.", key: "metric_weights.relative_structural_safety", max: 1 },
     { label: "Conv", key: "metric_weights.relative_conviction", max: 1 },
     { label: "Asym", key: "metric_weights.relative_asymmetry_profile", max: 1 },
     { label: "S-Term", key: "short_term_weight", max: 1 },

@@ -79,7 +79,7 @@ function AllResults({ totalStart, totalEnd }) {
     temp: "softmax_temp",
     asym: "metric_weights.relative_asymmetry_profile",
     conv: "metric_weights.relative_conviction",
-    risk: "metric_weights.relative_structural_risk",
+    safe: "metric_weights.relative_structural_safety",
     val: "metric_weights.relative_valuation_sustainability",
     fund: "metric_weights.relative_fundamental_support",
     tech: "metric_weights.relative_technical_strength",

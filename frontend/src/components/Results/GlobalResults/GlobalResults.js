@@ -65,7 +65,7 @@ function GlobalResults({ totalStart, totalEnd }) {
     temp: "softmax_temp",
     asym: "metric_weights.relative_asymmetry_profile",
     conv: "metric_weights.relative_conviction",
-    struct_risk: "metric_weights.relative_structural_risk",
+    struct_safety: "metric_weights.relative_structural_safety",
     val: "metric_weights.relative_valuation_sustainability",
     fund: "metric_weights.relative_fundamental_support",
     tech: "metric_weights.relative_technical_strength",
@@ -218,8 +218,8 @@ function GlobalResults({ totalStart, totalEnd }) {
                       Conv {sortConfig.key === "conv" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
-                    <th onClick={() => handleSort("struct_risk")} className="sortable">
-                      Risk {sortConfig.key === "struct_risk" && (sortConfig.direction === "asc" ? "▲" : "▼")}
+                    <th onClick={() => handleSort("struct_safety")} className="sortable">
+                      Safety {sortConfig.key === "struct_safety" && (sortConfig.direction === "asc" ? "▲" : "▼")}
                     </th>
 
                     <th onClick={() => handleSort("val")} className="sortable">
@@ -254,7 +254,7 @@ function GlobalResults({ totalStart, totalEnd }) {
                     <td>{fmtRange(arch.temp, false)}</td>
                     <td>{fmtRange(arch.metric_weights.asym)}</td>
                     <td>{fmtRange(arch.metric_weights.conv)}</td>
-                    <td>{fmtRange(arch.metric_weights.risk)}</td>
+                    <td>{fmtRange(arch.metric_weights.safe)}</td>
                     <td>{fmtRange(arch.metric_weights.val)}</td>
                     <td>{fmtRange(arch.metric_weights.fund)}</td>
                     <td>{fmtRange(arch.metric_weights.tech)}</td>
@@ -282,7 +282,7 @@ function GlobalResults({ totalStart, totalEnd }) {
                         <td>{p.softmax_temp}</td>
                         <td>{(p.metric_weights.relative_asymmetry_profile * 100).toFixed(1)}%</td>
                         <td>{(p.metric_weights.relative_conviction * 100).toFixed(1)}%</td>
-                        <td>{(p.metric_weights.relative_structural_risk * 100).toFixed(1)}%</td>
+                        <td>{(p.metric_weights.relative_structural_safety * 100).toFixed(1)}%</td>
                         <td>{(p.metric_weights.relative_valuation_sustainability * 100).toFixed(1)}%</td>
                         <td>{(p.metric_weights.relative_fundamental_support * 100).toFixed(1)}%</td>
                         <td>{(p.metric_weights.relative_technical_strength * 100).toFixed(1)}%</td>
@@ -312,7 +312,7 @@ function GlobalResults({ totalStart, totalEnd }) {
                     {renderStatsCell(relatedPortfolios, keyMap.temp, false)}
                     {renderStatsCell(relatedPortfolios, keyMap.asym)}
                     {renderStatsCell(relatedPortfolios, keyMap.conv)}
-                    {renderStatsCell(relatedPortfolios, keyMap.struct_risk)}
+                    {renderStatsCell(relatedPortfolios, keyMap.struct_safety)}
                     {renderStatsCell(relatedPortfolios, keyMap.val)}
                     {renderStatsCell(relatedPortfolios, keyMap.fund)}
                     {renderStatsCell(relatedPortfolios, keyMap.tech)}
@@ -337,7 +337,7 @@ function GlobalResults({ totalStart, totalEnd }) {
 
                     {renderStatsCell(relatedPortfolios, keyMap.asym, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.conv, true, 2, false, 0.3)}
-                    {renderStatsCell(relatedPortfolios, keyMap.struct_risk, true, 2, false, 0.3)}
+                    {renderStatsCell(relatedPortfolios, keyMap.struct_safety, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.val, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.fund, true, 2, false, 0.3)}
                     {renderStatsCell(relatedPortfolios, keyMap.tech, true, 2, false, 0.3)}

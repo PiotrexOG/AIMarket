@@ -30,7 +30,7 @@ const CorrelationCharts = ({ data, archColorMap }) => {
     { label: "Softmax Temp", key: "softmax_temp" },
     { label: "Asymmetry", key: "metric_weights.relative_asymmetry_profile" },
     { label: "Conviction", key: "metric_weights.relative_conviction" },
-    { label: "Structural Risk", key: "metric_weights.relative_structural_risk" },
+    { label: "Structural Safety", key: "metric_weights.relative_structural_safety" },
     { label: "Valuation", key: "metric_weights.relative_valuation_sustainability" },
     { label: "Fundamental", key: "metric_weights.relative_fundamental_support" },
     { label: "Technical", key: "metric_weights.relative_technical_strength" },

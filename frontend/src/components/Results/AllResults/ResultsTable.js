@@ -23,7 +23,7 @@ const ResultsTable = ({
           </tr>
           <tr className="th-row">
             <th className="sticky-col">ID / Archetype</th>
-            {["short", "mid", "long", "risk", "rebal", "min", "temp", "asym", "conv", "risk", "val", "fund", "tech"].map(key => (
+            {["short", "mid", "long", "aggr", "expo", "rebal", "min", "temp", "asym", "conv", "safe", "val", "fund", "tech"].map(key => (
               <th key={key} onClick={() => onSort(key)} className="sortable">
                 {key.charAt(0).toUpperCase() + key.slice(1)} 
                 {sortConfig.key === key && (sortConfig.direction === "asc" ? " ▲" : " ▼")}
@@ -72,7 +72,7 @@ const ResultsTable = ({
                 <td>{p.softmax_temp}</td>
                 <td>{(p.metric_weights.relative_asymmetry_profile * 100).toFixed(1)}%</td>
                 <td>{(p.metric_weights.relative_conviction * 100).toFixed(1)}%</td>
-                <td>{(p.metric_weights.relative_structural_risk * 100).toFixed(1)}%</td>
+                <td>{(p.metric_weights.relative_structural_safety * 100).toFixed(1)}%</td>
                 <td>{(p.metric_weights.relative_valuation_sustainability * 100).toFixed(1)}%</td>
                 <td>{(p.metric_weights.relative_fundamental_support * 100).toFixed(1)}%</td>
                 <td>{(p.metric_weights.relative_technical_strength * 100).toFixed(1)}%</td>

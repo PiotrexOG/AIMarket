@@ -15,7 +15,7 @@ const ArchetypeAverageChart = ({ data }) => {
   const metrics = [
     { label: "Asymmetry", key: "metric_weights.relative_asymmetry_profile", color: "#8884d8" },
     { label: "Conviction", key: "metric_weights.relative_conviction", color: "#82ca9d" },
-    { label: "Structural Risk", key: "metric_weights.relative_structural_risk", color: "#ffc658" },
+    { label: "Structural Safety", key: "metric_weights.relative_structural_safety", color: "#ffc658" },
     { label: "Valuation", key: "metric_weights.relative_valuation_sustainability", color: "#ff8042" },
     { label: "Fundamental", key: "metric_weights.relative_fundamental_support", color: "#0088FE" },
     { label: "Technical", key: "metric_weights.relative_technical_strength", color: "#00C49F" },

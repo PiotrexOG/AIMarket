@@ -45,7 +45,7 @@ const ArchetypeCorrelationHeatmap = ({ data }) => {
   const params = [
     { label: "Asym", key: "metric_weights.relative_asymmetry_profile" },
     { label: "Conv", key: "metric_weights.relative_conviction" },
-    { label: "Risk W.", key: "metric_weights.relative_structural_risk" },
+    { label: "Safety W.", key: "metric_weights.relative_structural_safety" },
     { label: "Val", key: "metric_weights.relative_valuation_sustainability" },
     { label: "Fund", key: "metric_weights.relative_fundamental_support" },
     { label: "Tech", key: "metric_weights.relative_technical_strength" },
