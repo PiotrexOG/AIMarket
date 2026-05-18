@@ -1,5 +1,5 @@
 {
-    "benchmark": {
+    "buy_and_hold": {
         "time_weights": {
             "short": {"mean": 0.0, "spread": 0.0},
             "medium": {"mean": 0.0, "spread": 0.0},
@@ -12,6 +12,26 @@
             "safe": {"mean": 0.0, "spread": 0.0},
             "conv": {"mean": 0.0, "spread": 0.0},
             "asym": {"mean": 0.0, "spread": 0.0}
+        },
+        "min_exposure": {"mean": 0.0, "spread": 0.0},
+        "aggression_slope": {"mean": 0.0, "spread": 0.0},
+        "exposure_baseline": {"mean": 0.0, "spread": 0.0},
+        "temp": {"mean": 0.0, "spread": 0.0},
+        "rebalance_threshold": {"mean": 0.0, "spread": 0.0}
+    },
+    "benchmark": {
+        "time_weights": {
+            "short": {"mean": 0.33, "spread": 0.0},
+            "medium": {"mean": 0.33, "spread": 0.0},
+            "long": {"mean": 0.33, "spread": 0.0}
+        },
+        "metric_weights": {
+            "tech": {"mean": 0.166, "spread": 0.0},
+            "fund": {"mean": 0.166, "spread": 0.0},
+            "val": {"mean": 0.166, "spread": 0.0},
+            "safe": {"mean": 0.166, "spread": 0.0},
+            "conv": {"mean": 0.166, "spread": 0.0},
+            "asym": {"mean": 0.166, "spread": 0.0}
         },
         "min_exposure": {"mean": 0.0, "spread": 0.0},
         "aggression_slope": {"mean": 0.0, "spread": 0.0},

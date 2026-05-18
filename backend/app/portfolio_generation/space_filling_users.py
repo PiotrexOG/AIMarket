@@ -90,12 +90,12 @@ def generate_space_filling_users(
     - 5 for 6 metric weights on the simplex
     - 5 independent scalar parameters
     """
-    if archetype_key == "benchmark":
+    if archetype_key == "buy_and_hold":
         return {
-            "benchmark": {
-                "name": "benchmark",
+            "buy_and_hold": {
+                "name": "buy_and_hold",
                 "id": "0",
-                "archetype_key": "benchmark",
+                "archetype_key": "buy_and_hold",
                 "time_weights": {
                     "short_term_14d": 0.0,
                     "medium_term_50d": 0.0,
@@ -116,6 +116,27 @@ def generate_space_filling_users(
                 "softmax_temp": 0.0,
             }
         }
+
+    if archetype_key == "benchmark":
+        return {"benchmark": {
+            "name": "benchmark",
+            "id": "0",
+            "archetype_key": "benchmark",
+            "time_weights": {"short_term_14d": 0.333, "medium_term_50d": 0.333, "long_term_200d": 0.333},
+            "metric_weights": {
+                "relative_technical_strength": 0.166,
+                "relative_fundamental_support": 0.166,
+                "relative_valuation_sustainability": 0.166,
+                "relative_structural_safety": 0.166,
+                "relative_conviction": 0.166,
+                "relative_asymmetry_profile": 0.166,
+            },
+            "min_exposure": 0,
+            "aggression_slope": 0,
+            "exposure_baseline": 0,
+            "rebalance_threshold": 0,
+            "softmax_temp": 0
+        }}
 
     archetype = archetypes[archetype_key]
     points = _sobol_points(count=count, dimensions=12, seed=seed)

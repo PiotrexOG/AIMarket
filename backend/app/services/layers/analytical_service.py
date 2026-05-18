@@ -175,7 +175,7 @@ class AnalyticalService:
         # 2. ATR 14 (standardowa zmienność krótkoterminowa)
         df[f"ATR_{period_1}"] = tr.rolling(window=period_1).mean()
 
-        # 3. ATR_SMA_50 (benchmark zmienności - "normalna" zmienność dla tej spółki)
+        # 3. ATR_SMA_50 (buy_and_hold zmienności - "normalna" zmienność dla tej spółki)
         # Najpierw liczymy ATR 14, a potem wyciągamy z niego średnią z 50 sesji
         df[f"ATR_SMA_{period_2}"] = df[f"ATR_{period_1}"].rolling(window=period_2).mean()
 

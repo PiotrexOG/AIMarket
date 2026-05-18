@@ -327,7 +327,7 @@ class SimulationService:
                 # Tworzymy portfel przekazując wszystkie parametry z konfiguracji
                 self.portfolio_service.create_portfolio(PortfolioCreate(
                     name=name,
-                    archetype_key=config.get("archetype_key", "benchmark"),
+                    archetype_key=config.get("archetype_key", "buy_and_hold"),
                     user_id=user.id,
                     short_term_weight=config.get("time_weights", {}).get("short_term_14d", 0.0),
                     medium_term_weight=config.get("time_weights", {}).get("medium_term_50d", 0.0),

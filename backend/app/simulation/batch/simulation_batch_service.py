@@ -69,7 +69,7 @@ class SimulationBatchService:
         self.exposure_baseline: np.ndarray = np.empty(0, dtype=np.float64)
         self.rebalance_threshold: np.ndarray = np.empty(0, dtype=np.float64)
         self.softmax_temp: np.ndarray = np.empty(0, dtype=np.float64)
-        self.is_benchmark: np.ndarray = np.empty(0, dtype=bool)
+        self.is_buy_and_hold: np.ndarray = np.empty(0, dtype=bool)
 
         self.initialize_users(users_per_archetype)
 
@@ -132,8 +132,8 @@ class SimulationBatchService:
             ),
             1e-6,
         )
-        self.is_benchmark = np.array(
-            [profile.get("name") == "benchmark" for profile in self.user_profiles],
+        self.is_buy_and_hold = np.array(
+            [profile.get("name") == "buy_and_hold" for profile in self.user_profiles],
             dtype=bool,
         )
 
@@ -180,10 +180,10 @@ class SimulationBatchService:
 
         price_vector = self._price_vector(prices)
 
-        if current_time.date() == self.start_time.date() and np.any(self.is_benchmark):
-            self._process_benchmark_buy(ticker_indices, price_vector)
+        if current_time.date() == self.start_time.date() and np.any(self.is_buy_and_hold):
+            self._process_buy_and_hold_buy(ticker_indices, price_vector)
 
-        active_users = ~self.is_benchmark
+        active_users = ~self.is_buy_and_hold
         if not np.any(active_users):
             return
 
@@ -198,7 +198,7 @@ class SimulationBatchService:
             price_vector=price_vector,
         )
 
-        trade_quantities[self.is_benchmark, :] = 0.0
+        trade_quantities[self.is_buy_and_hold, :] = 0.0
         self._apply_trades(trade_quantities, price_vector, ticker_indices)
 
     def _collect_ticker_indices(self, market_scores: dict) -> np.ndarray:
@@ -221,9 +221,9 @@ class SimulationBatchService:
 
         return portfolio_values, current_values
 
-    def _process_benchmark_buy(self, ticker_indices: np.ndarray, price_vector: np.ndarray) -> None:
-        benchmark_rows = np.flatnonzero(self.is_benchmark)
-        if benchmark_rows.size == 0:
+    def _process_buy_and_hold_buy(self, ticker_indices: np.ndarray, price_vector: np.ndarray) -> None:
+        buy_and_hold_rows = np.flatnonzero(self.is_buy_and_hold)
+        if buy_and_hold_rows.size == 0:
             return
 
         n = ticker_indices.size
@@ -231,7 +231,7 @@ class SimulationBatchService:
             return
 
         portfolio_values, _ = self._calculate_portfolio_values(price_vector)
-        target_per_ticker = portfolio_values[benchmark_rows] / n
+        target_per_ticker = portfolio_values[buy_and_hold_rows] / n
 
         valid_prices = price_vector[ticker_indices] > 0
         valid_indices = ticker_indices[valid_prices]
@@ -244,11 +244,11 @@ class SimulationBatchService:
         for local_idx, ticker_idx in enumerate(valid_indices):
             quantity = quantities[:, local_idx]
             costs = money_round(quantity * price_vector[ticker_idx])
-            can_buy = (quantity > 0) & (costs <= self.cash[benchmark_rows])
+            can_buy = (quantity > 0) & (costs <= self.cash[buy_and_hold_rows])
             if not np.any(can_buy):
                 continue
 
-            rows = benchmark_rows[can_buy]
+            rows = buy_and_hold_rows[can_buy]
             self.cash[rows] -= costs[can_buy]
             self.shares[rows, ticker_idx] = np.round(
                 self.shares[rows, ticker_idx] + quantity[can_buy],
@@ -283,7 +283,7 @@ class SimulationBatchService:
         if ticker_indices.size == 0:
             return target_weights
 
-        active_rows = ~self.is_benchmark
+        active_rows = ~self.is_buy_and_hold
         if not np.any(active_rows):
             return target_weights
 
@@ -430,7 +430,7 @@ class SimulationBatchService:
             end_val = portfolio_values[row_idx]
             change_ratio = ((end_val - STARTING_CASH) / STARTING_CASH) if STARTING_CASH != 0 else 0.0
 
-            if profile["archetype_key"] != "benchmark":
+            if profile["archetype_key"] != "buy_and_hold":
                 results.append(
                     {
                         "id": int(self.user_ids[row_idx]),

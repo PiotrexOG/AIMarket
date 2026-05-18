@@ -103,17 +103,17 @@ def _scale_to_unit_box(matrix: np.ndarray) -> np.ndarray:
 
 
 def _resolve_hit_threshold(rows: list[dict], fallback: float | None) -> float:
-    benchmark_rows = [
+    buy_and_hold_rows = [
         row for row in rows
-        if row.get("archetype_key") == "benchmark" or row.get("name") == "benchmark"
+        if row.get("archetype_key") == "buy_and_hold" or row.get("name") == "buy_and_hold"
     ]
-    if benchmark_rows:
-        return float(benchmark_rows[0]["change_ratio"])
+    if buy_and_hold_rows:
+        return float(buy_and_hold_rows[0]["change_ratio"])
 
     if fallback is None:
         raise ValueError(
-            "No benchmark row found. Pass hit_threshold explicitly, "
-            "for example the benchmark change_ratio from a separate run."
+            "No buy_and_hold row found. Pass hit_threshold explicitly, "
+            "for example the buy_and_hold change_ratio from a separate run."
         )
 
     return float(fallback)
@@ -206,7 +206,7 @@ if __name__ == "__main__":
     scored_rows = add_robust_scores(
         rows,
         k_neighbors=128,
-        # If your current results file has no benchmark row, set it here manually.
+        # If your current results file has no buy_and_hold row, set it here manually.
         # Example: hit_threshold=0.2445
         hit_threshold=0.2445,
     )

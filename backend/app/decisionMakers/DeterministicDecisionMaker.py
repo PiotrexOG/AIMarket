@@ -7,7 +7,7 @@ class DeterministicDecisionMaker:
         self.valuation_service = valuation_service
         self.start_time = start_time
 
-    def benchmark_equal_weight_buy(self, market_scores, portfolio, date_time):
+    def buy_and_hold_equal_weight_buy(self, market_scores, portfolio, date_time):
         all_tickers = sorted({t for tf in market_scores for t in market_scores[tf].keys()})
         if not all_tickers:
             return {}
@@ -73,10 +73,10 @@ class DeterministicDecisionMaker:
     def make_decision(self, market_scores, portfolio, date_time):
         profile = portfolio.user_profile
 
-        # Obsługa benchmarku
-        if profile.get("name") == "benchmark":
+        # Obsługa buy_and_holdu
+        if profile.get("name") == "buy_and_hold":
             if date_time.date() == self.start_time.date():
-                return self.benchmark_equal_weight_buy(market_scores, portfolio, date_time)
+                return self.buy_and_hold_equal_weight_buy(market_scores, portfolio, date_time)
             return {}
 
         # 1. Przygotowanie danych
@@ -87,7 +87,18 @@ class DeterministicDecisionMaker:
         # 2. Obliczanie wag i wycena
         raw_scores = {t: self.calculate_score(t, market_scores, profile) for t in all_tickers}
 
-        final_weights = self._compute_final_weights(raw_scores, params)
+        if profile.get("name") == "benchmark":
+            total = sum(max(v, 0.0) for v in raw_scores.values())
+
+            if total > 0:
+                raw_scores = {
+                    t: max(v, 0.0) / total
+                    for t, v in raw_scores.items()
+                }
+            else:
+                raw_scores = {t: 0.0 for t in raw_scores}
+        else:
+            raw_scores = self._compute_final_weights(raw_scores, params)
 
         valuation = self.valuation_service.calculate_portfolio_details(portfolio.cash, portfolio.shares, date_time)
         pos_info = {p.ticker: (p.value, p.shares) for p in valuation.positions}
@@ -96,7 +107,7 @@ class DeterministicDecisionMaker:
         must_sell, must_buy, lazy = {}, {}, {}
 
         for ticker in all_tickers:
-            target_w = final_weights.get(ticker, 0.0)
+            target_w = raw_scores.get(ticker, 0.0)
             cur_val, cur_shares = pos_info.get(ticker, (0.0, 0))
             cur_w = cur_val / valuation.portfolio_value if valuation.portfolio_value > 0 else 0.0
 
