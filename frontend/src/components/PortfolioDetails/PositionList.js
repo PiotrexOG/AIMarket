@@ -13,6 +13,7 @@ function PositionList({ positions }) {
           <div className="col-shares">{p.shares}</div>
           <div className="col-price">${p.price.toFixed(2)}</div>
           <div className="col-value">${p.value.toFixed(2)}</div>
+          <div className="col-value">{(p.value_of_portfolio * 100).toFixed(2)}</div>
         </div>
       ))}
     </div>

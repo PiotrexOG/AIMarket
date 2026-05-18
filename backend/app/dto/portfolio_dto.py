@@ -8,6 +8,7 @@ class PositionDetail(BaseModel):
     shares: float
     price: float
     value: float
+    value_of_portfolio: float
 
 class PortfolioStateDTO(BaseModel):
     user_id: int

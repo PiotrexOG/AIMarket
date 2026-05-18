@@ -28,7 +28,8 @@ def _create_valuation_dto(valuation, user_id: int = None, detailed: bool = False
                     ticker=p.ticker,
                     shares=p.shares,
                     price=p.price,
-                    value=p.value
+                    value=p.value,
+                    value_of_portfolio=p.value/valuation.portfolio_value,
                 ) for p in valuation.positions
             ],
         )
@@ -81,7 +82,12 @@ class PortfolioService:
 
     def _create_dto_from_history_entry(self, history_entry, date: datetime, detailed: bool = True):
         """Tworzy DTO na podstawie pojedynczego wpisu historii portfela."""
-        shares_dict = {share.ticker: share.amount for share in history_entry.shares}
+        shares_dict = {
+            share.ticker: share.amount
+            for share in history_entry.shares
+            if share.amount != 0.0
+        }
+
         valuation = self.portfolio_valuation_service.calculate_portfolio_details(
             cash=history_entry.cash,
             shares=shares_dict,
@@ -248,38 +254,5 @@ class PortfolioService:
         ]
 
         return sorted(summaries, key=lambda x: x.change_ratio, reverse=True)
-
-
-    def siema(
-            self,
-            start: datetime,
-            end: datetime
-    ):
-        from app.config.optimize import process_and_print_results
-
-        summaries = self.get_all_portfolios_performance_summary(start, end)
-
-        original_json_dict = get_archetype("archetypes_normalized.json")
-
-        optimized_json = process_and_print_results(summaries, original_json_dict)
-
-        return optimized_json
-
-
-    # def tree(
-    #         self,
-    #         start: datetime,
-    #         end: datetime
-    # ):
-    #
-    #     summaries = self.get_all_portfolios_performance_summary(start, end)
-    #
-    #     archetypes_data = [p.model_dump() for p in summaries]
-    #
-    #
-    #     archetypy = generate_tree_archetypes(archetypes_data)
-    #     print(json.dumps(archetypy, indent=4))
-    #
-    #     return archetypy
 
 

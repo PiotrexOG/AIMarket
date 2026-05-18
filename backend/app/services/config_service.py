@@ -4,7 +4,7 @@ from app.dto.simulation_dto import SimulationDetail, ArchetypeDetail
 
 class ConfigService:
     _start_date: datetime = datetime(2025, 3, 19, 13, 30, tzinfo=timezone.utc)
-    _end_date: datetime = datetime(2026, 4, 22, 20, 30, tzinfo=timezone.utc)
+    _end_date: datetime = datetime(2026, 5, 13, 20, 30, tzinfo=timezone.utc)
     _archetype_config = "archetypes_normalized.json"
 
 
