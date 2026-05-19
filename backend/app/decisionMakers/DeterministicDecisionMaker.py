@@ -88,15 +88,15 @@ class DeterministicDecisionMaker:
         raw_scores = {t: self.calculate_score(t, market_scores, profile) for t in all_tickers}
 
         if profile.get("name") == "benchmark":
-            total = sum(max(v, 0.0) for v in raw_scores.values())
+            top_n = 5
+            sorted_tickers = sorted([t for t, v in raw_scores.items() if v > 0],
+                                    key=lambda x: raw_scores[x], reverse=True)[:top_n]
 
-            if total > 0:
-                raw_scores = {
-                    t: max(v, 0.0) / total
-                    for t, v in raw_scores.items()
-                }
-            else:
-                raw_scores = {t: 0.0 for t in raw_scores}
+            total = sum(raw_scores[t] for t in sorted_tickers)
+            raw_scores = {
+                t: (raw_scores[t] / total if t in sorted_tickers and total > 0 else 0.0)
+                for t in all_tickers
+            }
         else:
             raw_scores = self._compute_final_weights(raw_scores, params)
 
