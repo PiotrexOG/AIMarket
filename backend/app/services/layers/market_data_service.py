@@ -1,4 +1,5 @@
 from datetime import datetime
+from statistics import median
 from typing import Optional
 
 import numpy as np
@@ -32,6 +33,42 @@ class MarketDataService:
         """
         market_data = self.repo.get_price_at_date(ticker, date_time)
         return market_data.close if market_data else None
+
+    def get_window_price(
+        self,
+        ticker: str,
+        date_time: datetime,
+        window_positions: int = 2,
+    ) -> Optional[float]:
+        """
+        Zwraca wygladzona cene OHLC4 z okna rekordow wokol timestampu.
+
+        window_positions=2 i side="around" oznacza:
+        2 rekordy przed + rekord bazowy <= timestamp + 2 rekordy po.
+
+        """
+        rows = self.repo.get_price_window_at_date(
+            ticker=ticker,
+            date_time=date_time,
+            window_positions=window_positions
+        )
+
+        values = [
+            (row.open + row.high + row.low + row.close) / 4
+            for row in rows
+            if (
+                row.open is not None
+                and row.high is not None
+                and row.low is not None
+                and row.close is not None
+            )
+        ]
+
+        if not values:
+            return None
+
+        return float(median(values))
+
 
     def check_data_coverage(self, ticker: str, start: datetime, end: datetime
     ) -> tuple[bool, bool]:
@@ -95,7 +132,11 @@ class MarketDataService:
         last = df.iloc[-1].replace({np.nan: None, np.inf: None, -np.inf: None})
         return last.to_dict()
 
-    def get_prices_for_timestamps(self, timestamps: list[datetime]) -> dict[datetime, dict[str, float]]:
+    def get_prices_for_timestamps(
+        self,
+        timestamps: list[datetime],
+        window_positions: int = 0
+    ) -> dict[datetime, dict[str, float]]:
         """
         Dla listy dat zwraca słownik: { timestamp: { ticker: price } }
         """
@@ -105,7 +146,21 @@ class MarketDataService:
         for ts in timestamps:
             # Pobieramy najnowsze ceny dla wszystkich tickerów do danego ts włącznie
             # Wykorzystujemy subquery, aby znaleźć max(datetime) dla każdego tickera <= ts
-            prices_at_ts = self.repo.get_all_prices_at_date(all_tickers, ts)
+            if window_positions <= 0:
+                prices_at_ts = self.repo.get_all_prices_at_date(all_tickers, ts)
+            else:
+                prices_at_ts = {}
+
+                for ticker in all_tickers:
+                    price = self.get_window_price(
+                        ticker=ticker,
+                        date_time=ts,
+                        window_positions=window_positions
+                    )
+
+                    if price is not None:
+                        prices_at_ts[ticker] = price
+
             results[ts] = prices_at_ts
 
         return results

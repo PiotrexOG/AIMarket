@@ -52,6 +52,48 @@ class MarketDataRepository:
             .first()
         )
 
+    def get_price_window_at_date(
+        self,
+        ticker: str,
+        date_time: datetime,
+        window_positions: int = 2,
+    ) -> list[MarketData]:
+        """
+        side="around": anchor <= date_time + N rekordow w lewo i N w prawo.
+        """
+        if window_positions < 0:
+            raise ValueError("window_positions must be >= 0")
+
+        anchor = self.get_price_at_date(ticker, date_time)
+
+        if anchor is None:
+            return []
+
+        left_rows = (
+            self.db.query(MarketData)
+            .filter(
+                MarketData.ticker == ticker,
+                MarketData.datetime <= anchor.datetime,
+            )
+            .order_by(MarketData.datetime.desc())
+            .limit(window_positions + 1)
+            .all()
+        )
+
+        right_rows = (
+            self.db.query(MarketData)
+            .filter(
+                MarketData.ticker == ticker,
+                MarketData.datetime > anchor.datetime,
+            )
+            .order_by(MarketData.datetime.asc())
+            .limit(window_positions)
+            .all()
+        )
+
+        rows_by_id = {row.id: row for row in left_rows + right_rows}
+        return sorted(rows_by_id.values(), key=lambda row: row.datetime)
+
     def check_data_coverage(
             self, ticker: str, start: datetime, end: datetime, tolerance_days: int = 4
     ) -> tuple[bool, bool]:
