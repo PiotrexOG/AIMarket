@@ -14,7 +14,8 @@ from datetime import datetime
 API_KEY = os.environ.get("FIN_API_KEY")
 FINNHUB_URL = "https://finnhub.io/api/v1/company-news"
 
-BASE_DATA_PATH = Path("data")
+BASE_DIR = Path(__file__).resolve().parents[3]
+BASE_DATA_PATH = BASE_DIR / "data"
 COMPANY_NEWS_PATH = BASE_DATA_PATH / "news" / "company_news"
 
 

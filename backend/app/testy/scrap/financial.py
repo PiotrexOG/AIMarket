@@ -1,5 +1,6 @@
 import os
 import json
+import time
 from pathlib import Path
 from typing import Optional, Tuple
 
@@ -8,7 +9,9 @@ import requests
 API_KEY = os.environ.get("FMP_API_KEY")
 BASE_URL = "https://financialmodelingprep.com/stable"
 
-BASE_DATA_PATH = Path("data") / "fundaments"
+BASE_DIR = Path(__file__).resolve().parents[3]
+BASE_DATA_PATH = BASE_DIR / "data" / "fundaments"
+
 
 INPUT_DIR = BASE_DATA_PATH / "financial_data"
 INPUT_DIR.mkdir(exist_ok=True, parents=True)
@@ -77,6 +80,47 @@ def should_fetch_quarter(symbol: str, period: str, target_year: int, target_q: i
 # FETCH
 # =========================
 
+def get_with_retry(url, params, max_retries=10, initial_delay=2):
+    delay = initial_delay
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.get(url, params=params)
+
+            # sukces
+            response.raise_for_status()
+
+            return response.json()
+
+        except requests.exceptions.HTTPError as e:
+            status_code = e.response.status_code
+
+            # retry tylko dla 429
+            if status_code == 429:
+                print(
+                    f"[429] Rate limit. "
+                    f"Próba {attempt}/{max_retries}. "
+                    f"Czekam {delay}s..."
+                )
+
+                time.sleep(delay)
+                delay *= 2
+            else:
+                raise
+
+        except requests.exceptions.RequestException as e:
+            print(
+                f"[REQUEST ERROR] "
+                f"Próba {attempt}/{max_retries}. "
+                f"Czekam {delay}s..."
+            )
+
+            time.sleep(delay)
+            delay *= 2
+
+    raise Exception(f"Nie udało się pobrać danych po {max_retries} próbach")
+
+
 def fetch_and_save(symbol: str, period: str, limit: int = 5):
     urls = {
         "income": f"{BASE_URL}/income-statement",
@@ -91,13 +135,10 @@ def fetch_and_save(symbol: str, period: str, limit: int = 5):
         "apikey": API_KEY,
     }
 
-    (INPUT_DIR / symbol).mkdir(exist_ok=True)
+    (INPUT_DIR / symbol).mkdir(parents=True, exist_ok=True)
 
     for name, url in urls.items():
-        response = requests.get(url, params=params)
-        response.raise_for_status()
-
-        data = response.json()
+        data = get_with_retry(url, params)
 
         file_path = INPUT_DIR / symbol / f"{period}_{name}.json"
 

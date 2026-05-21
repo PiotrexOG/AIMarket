@@ -175,7 +175,7 @@ class SimulationService:
             scorer.process_ticker(ticker, from_date_str, to_date_str)
 
     # Rozszerzona wersja Twojej metody
-    def fetch_company_news_summary_with_score(self):
+    def save_company_news_summary_with_score(self):
         base_path = BASE_DIR / "data" / "news" / "company_news_scored"
 
         for ticker in self.tickers:

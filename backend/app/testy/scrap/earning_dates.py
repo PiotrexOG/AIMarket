@@ -4,7 +4,8 @@ import yfinance as yf
 import pandas as pd
 
 # Konfiguracja katalogu wyjściowego
-BASE_DATA_PATH = Path("data") / "fundaments"
+BASE_DIR = Path(__file__).resolve().parents[3]
+BASE_DATA_PATH = BASE_DIR / "data" / "fundaments"
 
 OUTPUT_DIR = BASE_DATA_PATH / "quarterly_compact"
 OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
