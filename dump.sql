@@ -2,10 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict BSNdxM43JJxJ65PQqwy4T6SoFZbdkFxjVuobVnLSgXdLowv9whHX6P1PQ7KuvyR
+\restrict 56fezK8RDcDbf2fLsp2o4cz2TzS7XY4wzA2xjV7NoOd1Ugus5NeTOOVadevzry9
 
--- Dumped from database version 15.17 (Debian 15.17-1.pgdg13+1)
--- Dumped by pg_dump version 15.17 (Debian 15.17-1.pgdg13+1)
+-- Dumped from database version 15.14 (Debian 15.14-1.pgdg13+1)
+-- Dumped by pg_dump version 15.14 (Debian 15.14-1.pgdg13+1)
+
+-- Started on 2026-05-21 20:03:32 UTC
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,6 +21,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
+-- TOC entry 868 (class 1247 OID 21457)
 -- Name: transaction_type; Type: TYPE; Schema: public; Owner: postgres
 --
 
@@ -35,6 +38,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- TOC entry 214 (class 1259 OID 16391)
 -- Name: analyst_grades; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -53,6 +57,7 @@ CREATE TABLE public.analyst_grades (
 ALTER TABLE public.analyst_grades OWNER TO postgres;
 
 --
+-- TOC entry 215 (class 1259 OID 16396)
 -- Name: analyst_grades_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -68,6 +73,8 @@ CREATE SEQUENCE public.analyst_grades_id_seq
 ALTER TABLE public.analyst_grades_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3529 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: analyst_grades_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -75,6 +82,7 @@ ALTER SEQUENCE public.analyst_grades_id_seq OWNED BY public.analyst_grades.id;
 
 
 --
+-- TOC entry 216 (class 1259 OID 16397)
 -- Name: company_daily_summary; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -90,6 +98,7 @@ CREATE TABLE public.company_daily_summary (
 ALTER TABLE public.company_daily_summary OWNER TO postgres;
 
 --
+-- TOC entry 217 (class 1259 OID 16402)
 -- Name: company_daily_summary_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -105,6 +114,8 @@ CREATE SEQUENCE public.company_daily_summary_id_seq
 ALTER TABLE public.company_daily_summary_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3530 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: company_daily_summary_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -112,6 +123,7 @@ ALTER SEQUENCE public.company_daily_summary_id_seq OWNED BY public.company_daily
 
 
 --
+-- TOC entry 218 (class 1259 OID 16403)
 -- Name: fundamental_snapshot; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -140,6 +152,7 @@ CREATE TABLE public.fundamental_snapshot (
 ALTER TABLE public.fundamental_snapshot OWNER TO postgres;
 
 --
+-- TOC entry 219 (class 1259 OID 16408)
 -- Name: fundamental_snapshot_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -155,6 +168,8 @@ CREATE SEQUENCE public.fundamental_snapshot_id_seq
 ALTER TABLE public.fundamental_snapshot_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3531 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: fundamental_snapshot_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -162,6 +177,7 @@ ALTER SEQUENCE public.fundamental_snapshot_id_seq OWNED BY public.fundamental_sn
 
 
 --
+-- TOC entry 220 (class 1259 OID 16409)
 -- Name: market_data; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -180,6 +196,7 @@ CREATE TABLE public.market_data (
 ALTER TABLE public.market_data OWNER TO postgres;
 
 --
+-- TOC entry 221 (class 1259 OID 16414)
 -- Name: market_data_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -195,6 +212,8 @@ CREATE SEQUENCE public.market_data_id_seq
 ALTER TABLE public.market_data_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3532 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: market_data_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -202,6 +221,7 @@ ALTER SEQUENCE public.market_data_id_seq OWNED BY public.market_data.id;
 
 
 --
+-- TOC entry 229 (class 1259 OID 21499)
 -- Name: portfolio_history; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -216,6 +236,7 @@ CREATE TABLE public.portfolio_history (
 ALTER TABLE public.portfolio_history OWNER TO postgres;
 
 --
+-- TOC entry 228 (class 1259 OID 21498)
 -- Name: portfolio_history_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -231,6 +252,8 @@ CREATE SEQUENCE public.portfolio_history_id_seq
 ALTER TABLE public.portfolio_history_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3533 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: portfolio_history_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -238,6 +261,7 @@ ALTER SEQUENCE public.portfolio_history_id_seq OWNED BY public.portfolio_history
 
 
 --
+-- TOC entry 227 (class 1259 OID 21485)
 -- Name: portfolio_metric_weights; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -252,6 +276,7 @@ CREATE TABLE public.portfolio_metric_weights (
 ALTER TABLE public.portfolio_metric_weights OWNER TO postgres;
 
 --
+-- TOC entry 226 (class 1259 OID 21484)
 -- Name: portfolio_metric_weights_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -267,6 +292,8 @@ CREATE SEQUENCE public.portfolio_metric_weights_id_seq
 ALTER TABLE public.portfolio_metric_weights_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3534 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: portfolio_metric_weights_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -274,6 +301,7 @@ ALTER SEQUENCE public.portfolio_metric_weights_id_seq OWNED BY public.portfolio_
 
 
 --
+-- TOC entry 233 (class 1259 OID 21527)
 -- Name: portfolio_shares; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -281,13 +309,14 @@ CREATE TABLE public.portfolio_shares (
     id integer NOT NULL,
     portfolio_history_id integer NOT NULL,
     ticker character varying NOT NULL,
-    amount integer NOT NULL
+    amount double precision NOT NULL
 );
 
 
 ALTER TABLE public.portfolio_shares OWNER TO postgres;
 
 --
+-- TOC entry 232 (class 1259 OID 21526)
 -- Name: portfolio_shares_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -303,6 +332,8 @@ CREATE SEQUENCE public.portfolio_shares_id_seq
 ALTER TABLE public.portfolio_shares_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3535 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: portfolio_shares_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -310,6 +341,7 @@ ALTER SEQUENCE public.portfolio_shares_id_seq OWNED BY public.portfolio_shares.i
 
 
 --
+-- TOC entry 231 (class 1259 OID 21512)
 -- Name: portfolio_transactions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -319,7 +351,7 @@ CREATE TABLE public.portfolio_transactions (
     datetime timestamp with time zone NOT NULL,
     ticker character varying NOT NULL,
     type public.transaction_type NOT NULL,
-    quantity integer NOT NULL,
+    quantity double precision NOT NULL,
     price double precision NOT NULL,
     total_value double precision NOT NULL
 );
@@ -328,6 +360,7 @@ CREATE TABLE public.portfolio_transactions (
 ALTER TABLE public.portfolio_transactions OWNER TO postgres;
 
 --
+-- TOC entry 230 (class 1259 OID 21511)
 -- Name: portfolio_transactions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -343,6 +376,8 @@ CREATE SEQUENCE public.portfolio_transactions_id_seq
 ALTER TABLE public.portfolio_transactions_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3536 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: portfolio_transactions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -350,6 +385,7 @@ ALTER SEQUENCE public.portfolio_transactions_id_seq OWNED BY public.portfolio_tr
 
 
 --
+-- TOC entry 225 (class 1259 OID 21471)
 -- Name: portfolios; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -361,9 +397,10 @@ CREATE TABLE public.portfolios (
     short_term_weight double precision,
     medium_term_weight double precision,
     long_term_weight double precision,
-    risk_tolerance double precision,
+    min_exposure double precision,
+    aggression_slope double precision,
+    exposure_baseline double precision,
     rebalance_threshold double precision,
-    min_score_threshold double precision,
     softmax_temp double precision
 );
 
@@ -371,6 +408,7 @@ CREATE TABLE public.portfolios (
 ALTER TABLE public.portfolios OWNER TO postgres;
 
 --
+-- TOC entry 224 (class 1259 OID 21470)
 -- Name: portfolios_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -386,6 +424,8 @@ CREATE SEQUENCE public.portfolios_id_seq
 ALTER TABLE public.portfolios_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3537 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: portfolios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -393,6 +433,7 @@ ALTER SEQUENCE public.portfolios_id_seq OWNED BY public.portfolios.id;
 
 
 --
+-- TOC entry 223 (class 1259 OID 21462)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -405,6 +446,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
+-- TOC entry 222 (class 1259 OID 21461)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -420,6 +462,8 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3538 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -427,6 +471,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- TOC entry 3311 (class 2604 OID 16449)
 -- Name: analyst_grades id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -434,6 +479,7 @@ ALTER TABLE ONLY public.analyst_grades ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
+-- TOC entry 3312 (class 2604 OID 16450)
 -- Name: company_daily_summary id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -441,6 +487,7 @@ ALTER TABLE ONLY public.company_daily_summary ALTER COLUMN id SET DEFAULT nextva
 
 
 --
+-- TOC entry 3313 (class 2604 OID 16451)
 -- Name: fundamental_snapshot id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -448,6 +495,7 @@ ALTER TABLE ONLY public.fundamental_snapshot ALTER COLUMN id SET DEFAULT nextval
 
 
 --
+-- TOC entry 3314 (class 2604 OID 16452)
 -- Name: market_data id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -455,6 +503,7 @@ ALTER TABLE ONLY public.market_data ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
+-- TOC entry 3318 (class 2604 OID 21502)
 -- Name: portfolio_history id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -462,6 +511,7 @@ ALTER TABLE ONLY public.portfolio_history ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- TOC entry 3317 (class 2604 OID 21488)
 -- Name: portfolio_metric_weights id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -469,6 +519,7 @@ ALTER TABLE ONLY public.portfolio_metric_weights ALTER COLUMN id SET DEFAULT nex
 
 
 --
+-- TOC entry 3320 (class 2604 OID 21530)
 -- Name: portfolio_shares id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -476,6 +527,7 @@ ALTER TABLE ONLY public.portfolio_shares ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
+-- TOC entry 3319 (class 2604 OID 21515)
 -- Name: portfolio_transactions id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -483,6 +535,7 @@ ALTER TABLE ONLY public.portfolio_transactions ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- TOC entry 3316 (class 2604 OID 21474)
 -- Name: portfolios id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -490,6 +543,7 @@ ALTER TABLE ONLY public.portfolios ALTER COLUMN id SET DEFAULT nextval('public.p
 
 
 --
+-- TOC entry 3315 (class 2604 OID 21465)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -497,6 +551,8 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
+-- TOC entry 3504 (class 0 OID 16391)
+-- Dependencies: 214
 -- Data for Name: analyst_grades; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -771,10 +827,30 @@ COPY public.analyst_grades (id, ticker, as_of_date, "analystRatingsStrongBuy", "
 726	CVX	2026-04-01 00:00:00+00	5	12	7	1	1
 741	GE	2026-04-01 00:00:00+00	3	15	2	0	1
 756	SBUX	2026-04-01 00:00:00+00	4	12	19	3	1
+1918	AAPL	2026-05-01 00:00:00+00	7	25	16	1	1
+1934	NVDA	2026-05-01 00:00:00+00	10	48	3	1	0
+1950	MSFT	2026-05-01 00:00:00+00	11	42	3	0	0
+1966	JPM	2026-05-01 00:00:00+00	5	8	12	0	0
+1982	XOM	2026-05-01 00:00:00+00	4	7	13	1	0
+1998	JNJ	2026-05-01 00:00:00+00	5	10	10	0	1
+2014	BA	2026-05-01 00:00:00+00	4	17	5	0	1
+2030	COST	2026-05-01 00:00:00+00	3	19	12	2	0
+2046	TSM	2026-05-01 00:00:00+00	5	12	2	0	0
+2062	NKE	2026-05-01 00:00:00+00	2	15	20	1	1
+2078	V	2026-05-01 00:00:00+00	7	28	3	0	0
+2094	DIS	2026-05-01 00:00:00+00	7	21	3	1	0
+2110	NFLX	2026-05-01 00:00:00+00	8	29	13	0	1
+2126	PFE	2026-05-01 00:00:00+00	2	9	15	1	2
+2142	WMT	2026-05-01 00:00:00+00	9	30	3	1	0
+2158	CVX	2026-05-01 00:00:00+00	5	13	6	1	0
+2174	GE	2026-05-01 00:00:00+00	3	15	2	0	1
+2190	SBUX	2026-05-01 00:00:00+00	5	13	18	2	2
 \.
 
 
 --
+-- TOC entry 3506 (class 0 OID 16397)
+-- Dependencies: 216
 -- Data for Name: company_daily_summary; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1372,6 +1448,7 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 20888	NVDA	2025-09-25	TSMC shows off new strategy to boost energy efficiency of Nvidia chips by 10x. - NVDA and Open AI partnership could generate $50B revenue.	8.5
 20889	NVDA	2025-09-26	Hitachi announces NVIDia AI Factory to accelerate physical AI innovation. - Trump approves Hitachi's acquisition of NVIDIA technology. Note: Based on information available in data point #2, which directly mentions NVIDIA and an action taken by the president that affects the company. All other data points were either irrelevant or had indirect impacts on NVID	7
 20890	NVDA	2025-09-27	Nvidia invests up to $₁ᴏ₀₋ billon in Open AI, ramps up demand for AI-enabeling products. - Red Cloud Hold INGS joins NVIDIAConnect program, advances tech dev for FMCG supply chains. - Chevron restricted from exporting full Venezuelan oil production capacity due to new US rules	8
+36254	XOM	2026-04-26	Golden Pass LNG ships first cargo to Belgium.	7.1
 20891	NVDA	2025-09-28	China allows Nvidia competition in China. Note: I am assuming this event directly affects NVDA based on the information provided in event #13. However, please double-check if there is any ambiguity or additional context required.	7
 20892	NVDA	2025-09-29	Nvidia invests up to $₁₀₀ billion in Open AI collaboration. - British driverlesscar company Oxa receives Nvidia investment.	8
 20893	NVDA	2025-09-30	Ui Path collaborates with NVIDia to help enterpaces fortify existing automate workflows with AI capabilities. - Open AI' revenues reach $4. three billion in first half of year. - Ui Path receives $10o billion investment from NVDIA. - M\\&A deals surpass $1 trillon in Q3, including	7
@@ -5579,6 +5656,7 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 34888	AAPL	2026-04-15	Apple sends Siri staff to coding bootcamp in shakeup. - Apple faces lawsuit over Apple Pay gambling transactions. - Apple eyes OLED upgrade for future i Pad Air. - Apple's latest product announcements signal significant company shift. - Rising memory costs trigger Apple's premium power play. - Apple's valuation assessed amid tariffs and production shifts. - Tim Cook buys Nike stock, serving as Nike board member.	7.5
 34889	AAPL	2026-04-16	Apple accelerates environmental progress with highest-ever recycled material. - Apple increases Mac Book Neo orders due to strong demand. - Apple stock jumps on new i Phone satellite feature partnership news. - TSMC's strong results could impact Apple's chip sourcing strategy. - Apple and Google offer 'nudify' apps despite policies against them.	7
 34890	AAPL	2026-04-17	Apple marketing chief for Watch, Air Pods, Health retires. - Apple faces key leadership change in Devices Team. - Apple's Wearables Shakeup And AI Security Push Shape Long Term Story. - Apple defeats bid for new Apple Watch import ban. - Apple i Phone shipments jump 20% in China. - Apple stock rises as i Phone shipments surge 20% in China. - Apple continues to gain market share in China. - Apple upgrade hinges on cost advantage shift. - Apple stands out as AI volatility rises. - Independently commissioned studies support PFAS class action challenging Apple Sports Bands.	8.5
+31601	JNJ	2026-04-10	Johnson & Johnson to present data on FDA-approved intraocular lens. - Johnson & Johnson Q1 earnings preview and growth outlook. - Johnson & Johnson to report Q1 earnings.	7
 34891	AAPL	2026-04-18	Apple wins ITC ruling, rejecting Masimo's Apple Watch import ban bid. - Apple i Phone shipments in China grew 20% in Q1. - Apple's smart glasses potentially launching in 2027. - Apple Maps village names in Lebanon claims unfounded. - Apple among 15 companies to announce dividend increases.	7.5
 34892	AAPL	2026-04-19	Apple i Phone shipments surge 20% in China. - Apple gains market share in China. - E-commerce discounts, subsidies boost Apple sales.	7
 34893	AAPL	2026-04-20	Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.	10
@@ -5677,8 +5755,6 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 36251	XOM	2026-04-22	Exxon Mobil considers sale of Hong Kong gas stations. - Gabon expects to sign production sharing contracts with Exxon. - Exxon Mobil commended for 20 years of ERHA production. - Exxon Mobil is hiking plastics prices.	5.8
 36252	XOM	2026-04-23	Qatar Energy and Exxon Mobil load first LNG cargo from Golden Pass terminal. - Golden Pass LNG begins exports from Sabine Pass terminal. - Qatar Energy, Exxon Mobil ship 1st cargo from Texas LNG project. - Qatar Energy launches first LNG exports from Golden Pass project. - Exxon Mobil awards Saipem $150M contract for Longtail project.	9
 36253	XOM	2026-04-24	Exxon Mobil explores sale of Hong Kong Esso gas station network.	5.2
-36254	XOM	2026-04-26	Golden Pass LNG ships first cargo to Belgium.	7.1
-31601	JNJ	2026-04-10	Johnson & Johnson to present data on FDA-approved intraocular lens. - Johnson & Johnson Q1 earnings preview and growth outlook. - Johnson & Johnson to report Q1 earnings.	7
 31603	JNJ	2026-04-13	Johnson & Johnson showcases new clinical data for TECNIS Pure See IOL. - Johnson & Johnson highlights favorable 12-month interim results for VARIPULSE Platform. - Johnson & Johnson's innovative medicine growth is strong. - Johnson & Johnson earnings: Oncology powers growth, talc lawsuits persist. - JNJ edges out LLY in pharma investment face-off.	8
 36530	JNJ	2026-04-14	Johnson & Johnson raises 2026 outlook after strong Q1 earnings. - Johnson & Johnson declares 3.1% increase in quarterly dividend. - Johnson & Johnson beats Q1 earnings and sales estimates. - Johnson & Johnson working towards mid-2027 separation for orthopedic business. - Johnson & Johnson's cardiovascular unit shows strong growth in Q1. - Johnson & Johnson raises full-year sales and earnings guidance.	9.5
 36531	JNJ	2026-04-15	Johnson & Johnson raises 2026 outlook as sales jump. - Johnson & Johnson Q1 earnings beat expectations, sales jump. - Johnson & Johnson highlights pipeline catalysts, reaffirms growth. - Johnson & Johnson Q1 results reinforce growth outlook. - Johnson & Johnson reports above-peer topline growth in Q1. - Johnson & Johnson to participate in Bank of America conference.	9.3
@@ -5708,6 +5784,7 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 36817	BA	2026-04-20	Boeing Q1 earnings preview: turnaround under scrutiny. - Boeing's commercial jet business gains momentum. - Boeing is ramping up hiring factory workers weekly. - Ethiopian Airlines buying six more Boeing 787-9 airplanes.	7
 36818	BA	2026-04-21	Ethiopian Airlines converts options for six Boeing 787 Dreamliner jets. - Boeing 737 Max 7, 10 models on track for 2026 certification. - Boeing begins certification trials for 737 Max engine anti-ice fix.	7.5
 36819	BA	2026-04-22	Boeing reports narrowing loss, points to progress on turnaround. - Boeing Q1 earnings beat estimates, stock jumps on deliveries. - Boeing loss shrinks, backlog hits record $695 billion. - Boeing's commercial jet business improves, reducing quarterly loss. - Boeing shares trading higher after reporting better-than-expected Q1 results. - Boeing CEO says improvements needed in Spirit, 787 engine deliveries behind. - Boeing CFO expects positive free cash flow of $1B-$3B this year. - Boeing CEO confident summit will include aircraft orders from China. - Boeing CFO on track for positive cash flow in 2H. - Boeing CFO reduced 787 rework hours by	9.5
+39231	CVX	2026-04-22	Chevron expands stake in Venezuela oil operations. - Chevron's Venezuela opening and Hormuz shock reframe valuation.	7
 36820	BA	2026-04-23	Ethiopian Airlines orders six additional Boeing 787-9 Dreamliner aircraft. - Boeing reports higher first-quarter revenue and deliveries, narrowing losses. - Boeing CEO confident about upcoming US-China summit including aircraft orders. - Boeing stock price resets after earnings report shows revenue increase. - Boeing Co (BA) reports 14% revenue increase despite production challenges. - Boeing vs GE Aerospace: Market picks Boeing over GE after earnings. - Southwest Airlines exec confident about what they are seeing from Boeing. - Boeing hires 100-140 factory workers weekly, fastest pace since 2024. - Boeing's Q1 operating cash flow deficit improves significantly year-over-year	9.5
 36821	BA	2026-04-24	Boeing Q1 earnings show improved performance and production stability.	8.5
 32163	COST	2026-04-09	Costco reports strong March 2026 sales, e-commerce surges. - Edna's Margarita Mix returns to Costco locations in Western Canada. - Costco shares rally on strong March sales beating forecasts. - Costco's comparable sales remain resilient despite calendar headwind.	9
@@ -5792,6 +5869,7 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 38302	NFLX	2026-04-19	Reed Hastings to exit Netflix board in June.	5
 38303	NFLX	2026-04-20	Netflix stock drops on weak second-quarter guidance. - Netflix stock downgraded from Strong Buy to Buy. - Netflix Q1 subscriber outlook is murky. - Netflix shares drop on soft outlook, Reed Hastings exit. - Italian court rules Netflix price hikes unlawful, orders refunds. - Netflix stock trades lower on softer forward guidance. - Netflix's ad strategy adds to streaming giant's appeal. - Italian court ruling tests Netflix pricing power and growth plans.	8
 38304	NFLX	2026-04-21	Netflix stock trending down on leadership transition. - Netflix stock a "Buy" after Q1 dip and price increases. - Netflix Q1 2026 earnings good, investors worried about future. - Netflix normalized expenses in 2H FY2026 could boost earnings. - Obamas to explore content beyond Netflix exclusivity. - Netflix stock a buy on the dip, smart money betting. - Netflix chairman and co-founder Reed Hastings not seeking re-election. - Netflix plans to buy historic Radford Studio Center.	7.5
+39232	CVX	2026-04-23	Chevron highlighted as Zacks Bull of the Day. - Warren Buffett's confidence in Chevron deepens growth pipeline.	6
 38305	NFLX	2026-04-22	Netflix in talks to buy historic Los Angeles movie studio. - Netflix launches new Tik Tok-style vertical video feed. - Netflix engagement hits record, boosting retention and pricing power. - Netflix leadership transition signals strategic shift. - Netflix stock dips after respectable quarterly results and softer guide.	7
 38306	NFLX	2026-04-23	Netflix authorizes additional $25 billion share repurchase. - Netflix boosts stock-buyback program by $25 billion. - Netflix announces $25 billion share buyback. - Netflix resumes capital returns after walking away from acquisition. - Netflix plans to buy back another $25 billion in stock.	8.5
 38307	NFLX	2026-04-24	Netflix announces 'buyback-and-chill' strategy amid weak guidance.	6
@@ -5825,8 +5903,6 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 39228	CVX	2026-04-19	Chevron's Louisiana coastal lawsuits moved to federal court. - Chevron positioned to ramp up Venezuelan oil production.	6
 39229	CVX	2026-04-20	Chevron expanded its footprint in Venezuela.	5.5
 39230	CVX	2026-04-21	Exxon Mobil and Chevron leverage diversified models for volatile markets.	4.5
-39231	CVX	2026-04-22	Chevron expands stake in Venezuela oil operations. - Chevron's Venezuela opening and Hormuz shock reframe valuation.	7
-39232	CVX	2026-04-23	Chevron highlighted as Zacks Bull of the Day. - Warren Buffett's confidence in Chevron deepens growth pipeline.	6
 39233	CVX	2026-04-24	Chevron CEO warns Iran war could push up jet fuel prices. - Chevron (CVX) Q1 earnings expected to decline. - Chevron (CVX) valuation check as oil price shock reshapes outlook. - Suelopetrol not informed of Chevron's Venezuela expansion.	7.2
 39234	CVX	2026-04-26	Chevron faces governance questions in Venezuela oil project.	5
 39469	GE	2026-04-14	GE Aerospace signs contract with Indian Air Force.	7.5
@@ -5850,10 +5926,285 @@ COPY public.company_daily_summary (id, ticker, date, summary, importance) FROM s
 39669	SBUX	2026-04-24	Starbucks reveals new artificial intelligence platform. - Starbucks Q2 earnings report expected.	8.3
 39670	SBUX	2026-04-25	Starbucks invests $100M and creates 2,000 jobs in Nashville.	9.2
 39671	SBUX	2026-04-26	Starbucks commits $100 million to new Nashville headquarters. - Starbucks shifts some operations from Seattle to Nashville. - Starbucks emphasizes Southeast and exurban market growth. - Starbucks plans urban store closures in some cities.	9.5
+39971	AAPL	2026-04-27	Apple CEO Tim Cook to step down September 1. - Apple Inc. receives rating upgrade to Buy. - Apple shares down 1.3%. - Open AI phone plans could hurt Apple. - Apple earnings expected to reinforce AI theme.	8
+39972	AAPL	2026-04-28	EU regulators to target cloud and AI services under DMA. - Apple's CEO John Ternus had early VR career. - Apple turns memory chip price increases to its advantage. - Apple poised to become "Invisible AI King". - Apple heads into earnings with expectations picking up. - Apple likely to post slight fiscal Q2 upside. - UBS sees slight beat and stronger guidance for Apple. - Apple's Q1 earnings to be reported this week. - Apple's Q2 earnings to be reported this week.	7.5
+39973	AAPL	2026-04-29	Apple loses bid to pause App Store fee changes. - Apple plans Siri camera mode and upgraded visual AI in i OS 27. - Apple to report Q2 earnings, first since announcing Ternus as CEO. - Apple's Q2 Earnings: Strong i Phone 17 Shipment to Aid Top-Line Growth. - Apple TV+ to stream Formula 1 Miami Grand Prix live. - Apple's Services Growth Rides on Strong Content & Games.	8
+39974	AAPL	2026-04-30	Apple Q2 earnings beat expectations; revenue up 16.6%. - Apple forecasts 14-17% sales growth for Q3. - Apple CEO Tim Cook to step down in September. - Apple plans to reinvest tariff refunds into U.S. innovation. - Apple reports record March-quarter revenue, services hit all-time high. - Apple faces chip supply constraints impacting i Phone sales. - Apple's active installed base hits all-time high. - Apple ends 'net-cash neutral' policy. - Apple faces Mac mini supply constraints due to AI demand. - Apple's Q2 profit $29.58 billion.	9
+40003	AAPL	2026-05-01	Apple crushes Q2 estimates on surging i Phone and China sales. - Apple forecasts Q3 sales growth above estimates. - Apple stock rises after earnings beat; strong i Phone demand drives growth. - Apple Q2 results show big growth, driven by strong i Phone sales. - Apple stock guided for fiscal third-quarter revenue growth above expectations. - Apple's CEO transition set for September, marking a new era. - Apple earnings beat estimates, forecast tops expectations on i Phone demand. - Apple's Mac Book Neo and services growth support outlook despite supply constraints. - Apple stock climbs more than 3% in premarket after earnings beat. - Apple's Q2 earnings and revenue beat expectations.	9.5
+40004	AAPL	2026-05-02	Apple reports record March quarter results, double-digit growth. - Apple seeks tariff refunds, plans US innovation reinvestment. - Apple faces "RAMageddon" risks, memory chip shortage pressure. - Apple's Q2 results show strong i Phone and Services growth. - Apple's CFO notes rising memory costs impacting margins.	8
+40005	AAPL	2026-05-03	Apple ramps $100B buybacks and 4% dividend. - Apple stock jumps 4% on strong Q1 2026 results. - Apple commits $9 trillion to U.S. manufacturing investment. - Apple rewriting financial and strategic playbook before Tim Cook exits.	8.5
+40006	AAPL	2026-05-04	Apple confirms John Ternus as new CEO effective September 1. - Apple announces $100 billion share buyback authorization. - Apple plans new "Create a Pass" feature for i OS 27 Wallet app. - Apple Watch Pride Edition Sport Loop and watch face launched. - Apple anticipates price increases due to rising memory costs. - Apple reports record Mac demand, causing supply shortage. - Apple partners with Amazon for satellite internet service on i Phone. - Intel reportedly close to securing chip manufacturing deals with Apple. - Apple's AI ambitions with i OS 27 could make stock a buy. - Apple weighs major AI acquisition, departing from usual approach.	8
+40007	AAPL	2026-05-05	Apple explores Intel and Samsung as potential chip suppliers. - Apple reaches $250 million settlement over delayed Siri AI features. - Apple to let users choose rival AI models across i OS 27 features. - Apple asks Supreme Court to pause contempt ruling in Epic Games fight. - Apple Manufacturing Academy accelerates AI use in U.S. supply chains.	7
+40008	AAPL	2026-05-06	Supreme Court declines to pause order holding Apple in contempt. - Apple explores Intel and Samsung as chip constraints hit growth. - Apple opens AI platform to rivals across 2 billion devices. - Some i Phone owners could get up to $95 payment after Apple settlement. - Apple to pay $250 million to settle deceptive AI advertising lawsuit. - Apple's R&D investments top 10% of sales as AI race creates urgency. - Apple to let users choose rival AI models. - Apple pays $250M to settle with shareholders. - Apple Q2 earnings beat, revenue +16.6%, China +28.1%. - Apple stock tracking a record high	8.5
+40009	AAPL	2026-05-07	Rave files antitrust lawsuit against Apple over app removal. - Apple agrees to $250 million settlement for Siri AI claims. - Apple's camera-equipped Air Pods reach late testing stage. - Apple stock hits a record high ahead of WWDC news. - Apple expands renewable energy and recycling initiatives in India. - Apple's low-cost Mac Book Neo making a big impact. - Apple rumored to be working on a crease-free foldable phone. - Apple stock at $284 looks compelling after strong March quarter. - Apple's AI restraint looks smart compared to Microsoft's spending.	8
+40010	AAPL	2026-05-08	Apple, Intel reach preliminary chip-making agreement. - Apple agrees to $250 million settlement in Siri lawsuit. - Apple smart glasses delayed to Q2 2027.	7
+40011	AAPL	2026-05-09	MP Materials formalizes $500 million partnership with Apple. - Intel to manufacture some chips for Apple devices. - Apple stock shows strong financial health and growth. - Apple launches new features, driving stock interest. - Apple dominates chip market, leaving Google partners behind.	7.5
+40012	AAPL	2026-05-10	Apple allocates over 10% of revenue to R&D. - Apple accelerates AI-powered device development. - Apple plans mac OS 27 design changes.	6
+40013	AAPL	2026-05-11	Apple and Intel reach preliminary chip deal to diversify supply. - Apple's flagship product shifts from i Phone to Vision/smart glasses. - Apple Director Arthur Levinson sells $71 million in shares. - Apple and Google roll out end-to-end encrypted RCS messaging. - Apple is about to seal a chip deal with Intel. - Apple's supply chain headache forces surprise Intel partnership. - Apple stock is at risk from Nintendo's memory-chip crisis. - Apple board veteran sells $71 million in stock after earnings. - Apple Q2 2026 earnings review shows record margins, growth. - FTC sends warning to Big Tech about Take It Down Act compliance.	8
+40014	AAPL	2026-05-12	Apple Arcade adds Bluey games on May 21. - Apple plans customizable camera, Siri changes for i OS 27. - Apple, Google roll out end-to-end encrypted RCS messaging. - Apple held talks with Intel, Samsung for processor production. - Apple may be more aggressive in pursuing growth opportunities.	6.5
+40015	AAPL	2026-05-13	Apple explores AI agents in App Store. - Apple plans i Phone software updates including new Camera app, Siri. - Apple partners with Clean Max for India clean energy. - Apple criticizes EU measures for AI rivals accessing Google services. - Apple in talks with Intel for US processor manufacturing. - Apple and Intel discuss foundry agreement for chip manufacturing.	7
+40339	NVDA	2026-04-27	Nvidia stock hits new all-time high above $5 trillion. - Nvidia's $20T path faces a 2026 hurdle. - Nvidia stock reaches record close, Big Tech earnings loom. - Nvidia stock rises to record highs on AI buildout momentum. - Nvidia stock approaching all-time high, customers await earnings. - Arista stock shakes off Nvidia headline, rebounds. - Marvell stock skyrockets after Alphabet and Nvidia deals.	9.5
+40340	NVDA	2026-04-28	Nvidia, AI chip stocks fall on Open AI funding concerns. - Open AI miss sparks sell-off for Oracle, Nvidia, Core Weave stocks. - Open AI revenue report stings AI stocks, Nvidia falls. - Open AI hit a speed bump, Nvidia's story still intact. - Nvidia chipmaker TSMC in buy zones. - Vanguard Capital Management reports 7.31% passive stake in Nvidia. - Nvidia GW-Scale AI factory standards mentioned for Croatia campus. - Nvidia rally has room to run despite Open AI news.	9
+40341	NVDA	2026-04-29	LG Electronics, Nvidia in talks over robots, AI data centres and mobility. - Nvidia official to meet with Samsung, SK hynix executives for physical AI partnership. - Lattice recognized for Edge AI solution developed with NVIDIA. - Nvidia and Alphabet both stand to profit from Space X's upcoming IPO. - Nvidia is up 20% in April.	8.3
+40342	NVDA	2026-04-30	Nvidia B300 servers hit $1M in China amid export curbs. - Nvidia stock plunges amid rising competition from Google, Amazon. - Alphabet's AI surge stuns street, driving Google cloud growth. - Samsung Electronics sees robust AI demand, profit surges. - Nvidia has powered one-third of Magnificent 7's bull market gains. - AMD stock rises, becoming more competitive with Nvidia. - Google cloud growth tops Microsoft and Amazon on AI demand. - Samsung profit jumps as AI chip demand soars.	8.9
+40368	NVDA	2026-05-01	Nvidia faces China scarcity premiums, customers launch rival AI chips. - Nvidia, Google, Microsoft win major Pentagon AI contracts. - Intel CEO joins Nvidia-backed quantum computing firm board.	7.6
+40369	NVDA	2026-05-02	Nvidia's China export claims probed by Senator Coons. - Nvidia's new Quantum-AI models impress, market reaction uncertain. - Nvidia's Blackwell and Vera Rubin transition to AI factory systems. - Nvidia's H200 chip export to China under scrutiny. - Nvidia's B300 servers priced at $1 million each in China. - Nvidia jumps back above $5 trillion market cap. - Nvidia's next leg of growth hidden in AI factory systems. - Nvidia invests $1 billion in Nokia for mobile network tech. - Nvidia is using AI to fix quantum computing problems. - Nvidia's shareholders celebrate hyperscalers' earnings reports.	8.6
+40370	NVDA	2026-05-03	Nvidia partners with Oklo for reliable energy sources. - Nvidia invests in quantum computing firm Psi Quantum. - Nvidia commits $9 trillion to US manufacturing investment.	7.4
+40371	NVDA	2026-05-04	Nvidia announces $2 billion investment in Marvell. - Nvidia stock off 1% as AMD sinks 6%. - Nvidia rival Cerebras targets $3.5 billion IPO.	7.1
+40372	NVDA	2026-05-05	Nvidia and Service Now partner on new autonomous AI agents. - E-Power hires engineers with NVIDIA AI solutions background. - Alphabet aims to challenge Nvidia with custom AI chips. - Broadcom announces VMware Cloud Foundation 9.1 for AI. - Nvidia faces competition from Broadcom in custom AI chips. - Alphabet is close to overtaking Nvidia in market value. - Nvidia stock is considered undervalued amid AI demand. - Nvidia faces a rival in Alphabet's custom AI chip strategy.	8.4
+40373	NVDA	2026-05-06	Nvidia partners with Corning to expand US fiber optic output. - Nvidia partners with Total Energies on AI supercomputer. - Nvidia's Head of Sustainability shares insights on AI's role. - Nvidia selected Global Mofy AI for its Inception Program. - Nvidia GPUs to power Anthropic's AI supercomputer access via Space X. - Nvidia collaborates with Dell on Total Energies' Pangea 5 supercomputer. - Nvidia collaborates with Open AI, Microsoft, AMD, Intel, Broadcom. - Nvidia's AI strategy includes quantum computing play with Ion Q. - Nvidia's next-generation AI training GPU is anticipated. - Nvidia's AI chip sales to China are restricted by US export	8.8
+40374	NVDA	2026-05-07	IREN partners with NVIDIA on AI infrastructure buildout. - NVIDIA and Service Now partner on autonomous AI agents. - Corning and NVIDIA partner on AI data center fiber. - Softbank in talks with Nvidia for homegrown AI servers. - Nvidia gets a sell rating on AI infrastructure economics.	7.3
+40375	NVDA	2026-05-08	Nvidia expands AI infrastructure to homes and distributed data centers. - Nvidia partners with IREN for 5 GW of next-gen AI infrastructure. - Nvidia signs $3.4 billion AI cloud deal with IREN. - Nvidia deal pumps IREN stock; $2.1 billion share investment option. - US suspects OBON Corp smuggled Nvidia AI chips to Alibaba. - Nvidia's AI dominance faces new reality, market scrutiny. - Nvidia FQ1 earnings preview: focus on cash flow, dividends, buybacks. - Zacks highlights Nvidia's AI growth combined with dividend payouts.	8.1
+40376	NVDA	2026-05-09	Nvidia embraces role of AI investor, pushing past $40 billion in equity bets. - Nvidia's AI Investment Bets Top $40 Billion In 2026, Led By Open AI Stake. - NVIDIA Pushes AI Into Drug Development With Simulations Plus Collaboration. - Jensen Huang Just Made a Major Announcement. Here's What It Means for Nvidia Investors. - Nvidia, Boeing Lead 5 Dow Stocks Near Buy Points. They Share This Flaw.	9.1
+40377	NVDA	2026-05-10	Nvidia expands collaboration with Service Now on AI agents. - Nvidia invests $2 billion in AI optics company Coherent. - Nvidia partners with Dell on AI supercomputer for energy research. - Nvidia-backed Nebius Group secures AI compute contracts. - Nvidia CEO Jensen Huang speaks at Carnegie Mellon graduation. - Nvidia CEO Jensen Huang discusses AI making intelligence a commodity. - Nvidia faces scrutiny over alleged smuggling of GPUs to China. - Nvidia's AI capacity expansion is crucial amid competition. - Nvidia is predicted to outperform Alphabet and Amazon combined. - Nvidia is mentioned as a potential top AI stock.	8.5
+40378	NVDA	2026-05-11	Nvidia signs deal to back glass maker Corning Inc. - Nvidia stock advances after CEO exclusion from Trump-Xi summit. - Nvidia's IREN deal compared to Core Weave financing. - Nvidia stock heads higher as Trump-Xi talks loom. - Intel stock rises, touting new products with Nvidia.	7.7
+40379	NVDA	2026-05-12	NVIDIA Corp earns perfect CANSLIM technical score. - Nvidia is 3 companies in one, market pricing only one. - Chip stocks see red, Nasdaq under pressure.	6.5
+40380	NVDA	2026-05-13	Nvidia CEO Jensen Huang joins Trump's China delegation. - Nvidia CEO's foundation buys AI computing from Core Weave. - Green Century Equity Fund files solicitation statement for Nvidia. - Nebius announces Nvidia backing and Meta megadeal. - Nvidia earnings may matter more to S&P 500 than Fed minutes. - ASML is sole provider of EUV machines for Nvidia chips. - Nvidia bulls watching Nebius ahead of NVDA earnings. - AI chip stocks surge as Nvidia's Huang joins Trump in China. - San Disk stock dips as Trump taps Nvidia CEO for China trip. - Intel stock surges as Jensen Huang joins Trump's China trip.	9.3
+40714	MSFT	2026-04-27	Microsoft Sovereign Private Cloud scales with Azure Local. - Microsoft shares slip after Open AI amends partnership terms. - Microsoft cuts Open AI revenue share, loosens AI alliance. - Gloat brings Agentic HR to Microsoft 365 Copilot and Teams. - Microsoft & Open AI amend partnership to simplify collaboration. - Microsoft Q3 preview: Jefferies suggests resetting the narrative. - Microsoft Power Apps adoption outpaces governance, risks grow. - Microsoft offers voluntary retirement to 7% of workforce.	8.8
+40715	MSFT	2026-04-28	Microsoft and Open AI loosen terms of partnership. - EU plans to target cloud and AI services under new rules. - Microsoft offers voluntary buyouts to employees. - Microsoft and Postel announce new data and AI solution. - UBS: Microsoft made more concessions than gains in Open AI deal. - Microsoft's $5B Anthropic investment fuels AI growth story. - Elon Musk lawsuit against Open AI and Microsoft nears trial. - Open AI misses new users and revenue targets.	8.9
+40716	MSFT	2026-04-29	Microsoft (MSFT) beats Q3 earnings and revenue estimates. - Microsoft stock trying to bounce back on strong Azure growth outlook. - Microsoft beats fiscal Q3 views on cloud computing, AI strength. - Microsoft Q3 highlights: AI revenue up 123% Yo Y, hits annual run rate $37 billion. - Microsoft Copilot adoption hits 89% monthly usage among Accenture staff. - Microsoft AI explodes 123% to $37B annual run rate. - Linked In's AI hiring agents on track for $450 million in yearly revenue. - China patent case puts Microsoft interface IP and valuation in focus. - Elon Musk seeks $150 billion from	9
+40717	MSFT	2026-04-30	Microsoft Q3 earnings beat estimates, AI business grew 123%. - Microsoft stock drops despite Q3 earnings beat and AI growth. - Microsoft's aggressive capex plans could pressure free cash flow. - NSA tests Anthropic's AI to find vulnerabilities in Microsoft products. - Google cloud growth tops Microsoft and Amazon as AI demand accelerates. - Microsoft Q3: Azure grew 40% year-over-year, outperforming guidance. - Microsoft Q3 earnings call highlights strong cloud and AI adoption. - Microsoft stock falls 5% despite Q3 beat and AI spending. - Microsoft preserves earliest discovered DOS source code. - Meta, Microsoft, Amazon, Alphabet beat Q1 estimates	8.5
+40743	MSFT	2026-05-01	Zensai launches AI agent for Microsoft 365. - Pay Pal Store Sync connects merchants to Microsoft Copilot. - Bank of America resets Microsoft stock forecast after earnings. - Yield Max offers high yield on Microsoft stock. - Pentagon expands AI partnerships with major tech firms. - Microsoft: Heavy Cap Ex, Clear AI Payoff Path. - Inquiry into Microsoft's competitor dynamics in software industry. - Amazon vs. Microsoft: Great AI Capex Divergence. - Mag 7 earnings: Microsoft beats estimates on leverage and CAPEX. - Google is biggest AI winner, Microsoft's AI standing discussed. - Is Microsoft stock undervalued at $400? - Pentagon reaches agreements with	7
+40744	MSFT	2026-05-02	Microsoft Corporation 2026 Q3 earnings call presentation. - Microsoft, Amazon hand Pentagon more control over AI systems. - China patent ruling on Microsoft interfaces weighed against valuation upside. - Microsoft shares slide 4% on AI spending concerns.	6.5
+40745	MSFT	2026-05-03	Microsoft secures largest enterprise Copilot win with Accenture. - Microsoft announces new AI partnerships and product integrations. - Microsoft expands international AI initiatives following record quarter.	7.5
+40746	MSFT	2026-05-04	CGI earns Microsoft Copilot specialization for AI integration. - Nerdio launches MSP 7.0 amid triple-digit Microsoft 365 growth. - Microsoft secures major Pentagon agreement for AI tools. - Microsoft's Mpower AI supply chain tech developed with Medline. - Microsoft FY Q3 2026: Multi-Model Mirage, Copilot Momentum. - Microsoft stock needs faster cloud growth, AI gap fix. - Microsoft's AI capex budget for FY26 remains elevated. - Ingram Micro earns AI Apps on Microsoft Azure specialization. - Microsoft's AI and software concerns noted. - Microsoft's shifting AI landscape spooks investors.	7
+40747	MSFT	2026-05-05	Nscale to deliver 66,000+ NVIDIA GPUs to Microsoft. - Microsoft's Portugal AI data center expansion includes NVIDIA GPUs. - Microsoft Xbox CEO overhauls leadership amid sinking sales. - Service Now expands AI agent governance with Microsoft integration. - Microsoft signs AI testing agreement with UK AI Security Institute. - Microsoft and others sign agreements for frontier AI national security testing. - Microsoft's order book exceeds combined size of IBM, Salesforce, Dell, Adobe. - Microsoft-backed Open AI discussed spinning off robotics, hardware divisions.	7.5
+40748	MSFT	2026-05-06	Microsoft may abandon 2030 clean energy target due to AI power needs. - Microsoft Q3 revenues jump 18% on AI & Cloud surge. - Red Cloud appoints former Microsoft Exec as CRO to expand AI ventures. - Service Now expands partnerships with Nvidia, Microsoft, Google Cloud. - Cayosoft launches Microsoft Migration Services for identity modernization. - Inspira Enterprise expands Security Copilot Agent Portfolio on Microsoft Store. - Microsoft shifts Open AI agreement to a non-exclusive structure.	7
+40749	MSFT	2026-05-07	Microsoft considers shelving clean energy target due to data center demand. - Service Now extends AI governance into Microsoft Agent 365. - Microsoft's Azure growth drives strong FQ3 2026 results. - Microsoft's AI thesis: Azure growth, Copilot monetization, risks. - Microsoft drops Copilot for Xbox, scaling back AI plans. - FPT becomes first SEA Microsoft Enterprise System Integrator Frontier Partner. - Microsoft's margins face temporary headwind despite strong earnings.	7.5
+40750	MSFT	2026-05-08	Microsoft secures new IP licensing agreements with partners. - Microsoft offers voluntary retirement buyout package to U.S. employees. - Inriver's AI platform gains Microsoft Certified Software Designation. - TCI reportedly reduced its Microsoft stake over AI competition concerns. - Broadcom's $18B Open AI chip deal faces financing gaps; Microsoft's commitment is key.	6.5
+40751	MSFT	2026-05-09	Microsoft invests in European data centers for cloud and AI demand. - Microsoft partners on global AI safety standards and talent pipeline. - Microsoft Teams targeted by Iranian state-sponsored ransomware attacks.	6
+40752	MSFT	2026-05-10	Microsoft data center site in East Africa delayed by Kenyan government. - Microsoft faces China patent ruling risk over touchscreen technology. - Microsoft's Agent 365 now generally available as AI control plane. - Pay Pal integrates Microsoft Copilot for AI-driven shopping channels. - Crowd Strike brings AI threat hunting to Microsoft Defender. - Microsoft's African data center delayed by payment disagreements. - Microsoft's African data center falters on payment demands.	6.5
+40753	MSFT	2026-05-11	Microsoft launches voluntary retirement buyout program for US employees. - Microsoft Kenya data center project stalls over payment dispute. - Microsoft CEO Satya Nadella to testify in Musk v. Open AI trial. - Microsoft and eclicktech launch Shenzhen Global Expansion Center. - Microsoft and G42 Kenya data centre project stalls. - Microsoft Xbox Game Pass and Discord expand partnership. - Microsoft, Google, x AI security test details deleted from website. - Microsoft CFO Amy Hood discusses career uncertainty in speech. - Dooap Studio launches, an AI platform for Microsoft Dynamics 365 Finance. - Microsoft and Open AI cap revenue-sharing at $38 billion. - EU considers restricting US cloud providers for sensitive	7.5
+40754	MSFT	2026-05-12	Microsoft's Open AI investment revenue doubles $13 billion. - Microsoft's Open AI deal could save $97 billion by 2030. - US Cloud launches white label Microsoft support program. - Microsoft stock screens as attractive at current prices. - Microsoft's Saa S death is exaggerated, reiterates strong buy. - Micron pre-sold all HBM production through 2026 to hyperscalers including Microsoft.	7
+40755	MSFT	2026-05-13	Linked In planning to lay off 5% of staff. - Microsoft eyeing startup deals for future independent of Open AI. - Linked In to announce layoffs on Wednesday. - Linked In planning to lay off 5% of staff in tech cuts. - Microsoft's Linked In preparing to announce layoffs. - Linked In planning layoffs as part of tech sector cuts. - Amdocs Entitlement Server sets benchmark on Microsoft Azure. - Microsoft's Linked In to announce layoffs. - Linked In planning to lay off 5% of staff. - HR Tech 2026 event to feature Microsoft keynote.	7.5
+41063	JPM	2026-04-27	JPMorgan moves some Paris traders to London. - JPMorgan among banks providing financing for Kuwaiti oil pipeline. - Goldman Sachs, JPMorgan diverge on quantum computing strategy. - JPMorgan expands quantum computing research and hiring. - JPMorgan Chase to present at Bernstein conference. - JPMorgan Chase received millions in tax breaks for data center. - KBRA assigns preliminary ratings to J.P. Morgan Mortgage Trust.	7
+41064	JPM	2026-04-28	JPMorgan Chase named first-ever Global Banking Partner of the Olympic Games. - JPMorgan Chase becomes Official Bank of Team USA and LA28 Games. - Campbell Global, a J.P. Morgan company, acquires Sandpiper Forest. - JPMorgan CEO Jamie Dimon warns of credit downturn and bond crisis. - JPMorgan Chase ranked No. 1 U.S. company for career growth by Linked In. - JPMorgan Chase expands quantum computing research, rolls out blockchain.	9
+41065	JPM	2026-04-29	JPMorgan Chase announces €3.3 million for European energy sector jobs. - JPMorgan Chase becomes first global banking partner of Olympic Games. - Fact Set and J.P. Morgan expand collaboration on portfolio analytics. - JPMorgan Chase CEO Jamie Dimon warns of potential debt crisis. - JPMorgan Chase CIO discusses $19.8 billion tech and AI budget. - JPMorgan Chase CEO Jamie Dimon discusses bureaucracy's impact. - JPMorgan Chase Bank leads $2 billion credit facility for FTAI Aviation.	8.7
+41066	JPM	2026-04-30	Jamie Dimon warns of bond crisis and stagflation due to deficits. - JPMorgan Chase expands $1.5 trillion initiative into Europe. - JPMorgan Chase becomes Global Banking Partner of the Olympic Games. - JPMorgan Chase inks $800 million private credit deal with Ares. - JPMorgan hires KBW's Chris Mihok as managing director.	9.1
+41088	JPM	2026-05-01	Chase Sapphire Reserve launches highest-ever 150,000-point bonus. - JPMorgan Chase files Form 10-Q for the quarter ended March 31, 2026. - JPMorgan is betting on tokenization, but ETF exec says 'good use cases' are years away. - Jamie Dimon says problem is killing companies, blames 'jerks'. - JPMorgan Chase & Co. shows breakout potential with strong ratings. - JPMorgan Chase & Co. is attracting investor attention. - JPMorgan Chase, Bank of America, Wells Fargo, and Citigroup exposure to private credit.	8.3
+41089	JPM	2026-05-02	J.P. Morgan and Fact Set launch Whole Portfolio Distribution solution. - Jamie Dimon warns of a severe credit crisis.	8.5
+41090	JPM	2026-05-03	J.P. Morgan picks 2 stocks with direct AI exposure.	7
+41091	JPM	2026-05-04	JPMorgan Chase subsidiary holds Hexagon Composites ASA shares. - JPMorgan Chase, other banks seek to offload data center risks. - Chase survey finds small businesses unprepared for succession. - JPMorgan hires Will Boyle as global head of secondary advisory. - Meta taps JPMorgan for $13 billion El Paso data center deal.	7.5
+41092	JPM	2026-05-05	JPMorgan Chase bets on fintech playbook to lure Gen Z customers. - Chase accelerates support for young adults with modern banking solutions. - JPMorgan Chase & Co. believes Glass Lewis report on shareholder proposal merits revised analysis. - Corpay adds stablecoin and tokenized-Fiat settlement through JPMorgan and BVNK. - Millrose Properties amended credit facility with JPMorgan Chase Bank.	7.8
+42333	COST	2026-05-01	Amy's Kitchen lands Costco distribution in three major markets.	5
+41093	JPM	2026-05-06	JPMorgan Chase & Co. no longer has a notifiable interest in Hexagon Composites ASA. - JPMorgan Chase CEO Jamie Dimon discusses AI boom with Anthropic CEO. - Barclays maintains Buy rating on JPM with a target price of USD 391. - Bitcoin price rises as Black Rock, JPMorgan rush into tokenized stocks. - JPMorgan Chase created a new index tracking 6,400 private companies. - JPMorgan Chase tried to settle sexual assault claims before lawsuit. - JP Morgan Asset Management Holdings Inc. crossed voting rights thresholds for Umicore. - JPMorgan Chase is assisting Seattle's NBA expansion bid. - J.P. Morgan Commercial Banking supports Women Presidents Organization list. -	8.1
+41094	JPM	2026-05-07	JPMorgan, Ripple, Mastercard, Ondo settle tokenized US Treasury redemption. - JPMorgan sued by HY Energy over alleged failure of funds transfer. - Goldman Sachs, J.P. Morgan, TD Securities, Morgan Stanley, Bof A join LTX. - JPMorgan offered $1 million to settle sexual assault claims. - JPMorgan weighs tokenized treasury pilot against sanctions lawsuit risks. - JPMorgan Asset Management Holdings Inc. crossed 3% voting rights threshold. - JPMorgan allows employees to trade on prediction markets with rules. - JPMorgan Chase Bank, N.A. involved in UMH Properties credit agreement.	8.2
+41095	JPM	2026-05-08	AT&T to webcast fireside chat at J.P. Morgan conference on May 19. - J.P. Morgan leads $150mn credit facility for Colombian fintech Addi. - J.P. Morgan involved in Con Edison's $2 billion equity offering program. - JPMorgan Chase seeks crypto talent amid industry-wide demand.	7.3
+41096	JPM	2026-05-09	JPMorgan CEO warns of potential bond crisis due to government debt. - JPMorgan faces lawsuit over alleged sexual harassment and retaliation. - JPMorgan flags fiscal risks in Chile's economic reform package.	8
+41097	JPM	2026-05-10	JPMorgan partners with Ripple on payment network expansion.	7
+41098	JPM	2026-05-11	JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan Chase-led bank group reins in credit line to KKR fund. - JPMorgan Chase & Co. is preparing its first Swiss franc bond sale. - JPMorgan Chase & Co. is rolling out fintech-style accounts for Gen Z. - JPMorgan Chase & Co. and Mastercard leverage XRP Ledger for treasury redemptions. - JPMorgan Chase & Co. issues warning on gas prices and inflation. - JPMorgan Chase & Co. expects Brent crude to remain in low-$100s. - JPMorgan Chase & Co. raised its Kospi targets again. - JPMorgan Private Bank releases 2026 Mid-Year Global Investment Outlook. - Cognizant	8.6
+41099	JPM	2026-05-12	JPMorgan invests $14M in anti-fraud projects. - JPMorgan Chase announces nearly $14 million in philanthropic investments. - JPMorgan Chase & Co. subsidiary crossed 3% voting rights threshold. - JPMorgan CEO Dimon warns of "too much exuberance" in markets. - JPMorgan Chase & Co. to potentially scrap UK HQ over bank taxes. - JPMorgan files to launch tokenized money market fund on Ethereum. - JPMorgan set to reshuffle investment bank chiefs amid shake-up.	8.8
+41100	JPM	2026-05-13	JPMorgan launches new tokenized money market fund on Ethereum. - JPMorgan warns UK investment may be cut if Labour shifts left. - JPMorgan may reconsider London HQ if UK becomes hostile to banks. - JPMorgan plans investment banking leadership reshuffle. - JPMorgan's Asset & Wealth Management business shows strong Q1 revenue. - JPMorgan executive open to talks with France's far-right National Rally. - JPMorgan provides analysis on Strait of Hormuz and oil prices. - JPMorgan Chase working with Morgan Stanley on Meta data center financing.	8.4
+41394	XOM	2026-04-27	Exxon Mobil in talks to sell Hong Kong fuel-station network. - Rystad sees potential production upside at Guyana Stabroek projects.	7.4
+41395	XOM	2026-04-28	Exxon Mobil stock performance examined ahead of earnings. - Exxon Mobil stock shows mixed performance over various periods. - Oil prices substantially up in 2026 impacting oil giants.	6.3
+41396	XOM	2026-04-29	Exxon Mobil's Guyana oil output steady at 914,000 b/d.	5.5
+41397	XOM	2026-04-30	Exxon Mobil faces lawsuit over orphaned well accounting. - Exxon Mobil awarded Angola subsea contract by Subsea 7. - Exxon Mobil Q1 earnings preview: EPS seen at $1.07. - Exxon Mobil production to be reduced by 6% due to Iran war.	7.5
+41419	XOM	2026-05-01	Exxon Mobil awarded subsea EPCI contract for Likembe Redevelopment 2.0 Project offshore Angola. - Exxon Mobil reports Q1 2026 earnings results. - Exxon Mobil Q1 earnings beat estimates on higher upstream production. - Exxon Mobil CEO expects higher oil prices due to Iran war. - Exxon Mobil's Q1 production down nearly 8% due to Strait of Hormuz disruptions. - Exxon Mobil profit sinks on higher costs, Middle East production hit. - Exxon Mobil CEO estimates 1-2 months for normal flows after Strait of Hormuz reopens. - Exxon Mobil CEO says Middle East production can return quickly once strait reopens. - Exxon Mobil beat first-quarter earnings	9.5
+41420	XOM	2026-05-02	Exxon Mobil reports record production and strategic expansions. - Exxon Mobil mitigates Middle East disruptions effectively. - Exxon Mobil faced headwinds causing Q1 profits to fall. - Exxon Mobil executives emphasize operational execution and flexibility.	8
+41421	XOM	2026-05-04	Exxon Mobil weighs potential investments in Venezuela. - Exxon Mobil Q1 earnings beat; Permian/Guyana output jumps. - Exxon Mobil Q1 EPS beat estimates by 15%. - US Justice Dept sues to block Minnesota lawsuit against Exxon. - Exxon Mobil VP, controller, and tax Len M. Fox to retire. - Exxon Mobil elects Susan Buchanan as vice president.	8.5
+41422	XOM	2026-05-05	Exxon using AI for faster analysis of Guyana's oil fields. - Exxon expects to determine viability of Trinidad and Tobago prospects. - Exxon Mobil Guyana projects Longtail emissions at 0.003% of global output. - Exxon Mobil beat Q1 EPS and revenue; Permian and Guyana surged.	8
+41423	XOM	2026-05-06	Exxon expresses optimism on Venezuela re-entry. - Exxon Mobil sees silver lining in global oil disruption. - Exxon is using AI to speed up oil exploration. - Trump met with Exxon chairman last night. - Exxon, Chevron stocks drop along with oil prices.	7.5
+41424	XOM	2026-05-07	Exxon Mobil uses AI seismic tools to reshape Guyana project. - Exxon Mobil's $30bn LNG project in Mozambique to generate $150bn. - Exxon Mobil among CEOs invited on China trip by Trump administration. - Exxon Mobil notes critically low refined fuel inventories.	7
+41425	XOM	2026-05-08	Exxon Mobil reshuffles Asia leadership, names new China chairman. - Exxon Mobil reports gas leak at Joliet, Illinois, refinery. - Exxon Mobil files supplemental disclosure to SEC. - Exxon Mobil provides 2025 executive compensation overview.	5.5
+41426	XOM	2026-05-09	Iran war impacts global energy markets and oil supply.	6
+41427	XOM	2026-05-11	Guyana court overturns ruling forcing Exxon Mobil spill guarantee. - Exxon Mobil pitches Guyana as investment hub for northern Brazil. - Exxon Mobil weighs Venezuela reentry against valuation concerns.	7
+41428	XOM	2026-05-12	Proxy advisor ISS recommends Exxon shareholders vote against incorporation change. - Exxon Mobil credits Guyana partnership model for avoiding local content pitfalls.	6.5
+41429	XOM	2026-05-13	Mozambique partners Exxon Mobil to build hydrocarbon skills centre. - Exxon Mobil eyes ultra-deepwater Guyana discoveries. - Exxon Mobil, Chevron face dissent from proxy firms. - Exxon Mobil insists Texas move won't erode shareholder rights.	7.5
+42019	BA	2026-05-01	Boeing continues to show turnaround progress, keeping Bank of America bullish.	6
+42020	BA	2026-05-02	Boeing's Navy drone program still years from revenue.	4
+41697	JNJ	2026-04-27	Johnson & Johnson to acquire Atraverse Medical for cardiac ablation technology. - Johnson & Johnson's drug Imaavy receives FDA Priority Review for rare blood disorder. - Johnson & Johnson using AI to halve drug development lead generation time. - Johnson & Johnson to present at Bernstein's 42nd Annual Strategic Decisions Conference.	8.5
+41698	JNJ	2026-04-28	JNJ shareholders elect all director nominees to board. - JNJ to participate in Bernstein's 42nd Annual Strategic Decisions Conference. - JNJ starts head-to-head PFA trial against Boston Scientific device. - JNJ Med Tech unit gains momentum, eyes better 2026.	8
+41699	JNJ	2026-04-29	FDA grants Priority Review for Johnson & Johnson’s IMAAVY. - FDA approves supplemental New Drug Application for CAPLYTA. - Johnson & Johnson presents cancer care innovation at ASCO 2026.	8
+41700	JNJ	2026-04-30	Johnson & Johnson highlights sustained efficacy in trial. - Johnson & Johnson appoints new Vice President, Investor Relations. - Johnson & Johnson discontinues CAR-T programs for lymphoma.	6.5
+41719	JNJ	2026-05-01	Johnson & Johnson receives FDA approval for STELARA. - FDA approves STELARA for pediatric Crohn's disease.	8
+41720	JNJ	2026-05-02	Halozyme Therapeutics hires former Johnson & Johnson executive as CFO.	4
+41721	JNJ	2026-05-04	Johnson & Johnson to present vision portfolio data at ARVO 2026. - Johnson & Johnson announces CAPLYTA findings at NEI Spring Congress. - Johnson & Johnson's CAPLYTA shows efficacy in major depressive disorder. - Johnson & Johnson study shows Impella 5.5 use is safe. - Johnson & Johnson receives FDA Priority Review for IMAAVY. - Johnson & Johnson's CAPLYTA approved for schizophrenia relapse prevention. - Johnson & Johnson's NANORAY-312 study protocol amended.	8.5
+41722	JNJ	2026-05-05	Johnson & Johnson study shows TREMFYA® efficacy in Crohn's disease. - Johnson & Johnson announces Phase 3 FUZION study results for TREMFYA®. - Johnson & Johnson announces Phase 2B data for JNJ-4804 therapy. - CVS to drop J&J's Stelara from its main formularies. - Johnson & Johnson announces clinical study results for OTTAVA™ Robotic Surgical System. - Johnson & Johnson study shows TREMFYA® efficacy in perianal fistulizing Crohn's disease. - Johnson & Johnson expands clinical pipeline in immunology, Med Tech, AI. - J&J’s soft tissue surgical robot succeeds in gastric bypass study.	9
+41723	JNJ	2026-05-06	J & J Snack Foods reports Q2 earnings with margin expansion. - Abb Vie or Johnson & Johnson: Safer dividend king to buy?	4.5
+41724	JNJ	2026-05-07	Johnson & Johnson faces lawsuit over Stelara biosimilar launch. - Johnson & Johnson launches "Generation Fine" depression campaign. - Johnson & Johnson's oncology sales grow on Darzalex, Erleada. - Johnson & Johnson advances head and neck cancer drug registration. - Johnson & Johnson's IBD drug fails Phase 2b trial.	7
+41725	JNJ	2026-05-09	Johnson & Johnson CEO discusses innovation and manufacturing.	6
+41726	JNJ	2026-05-11	Johnson & Johnson presents neuropsychiatry data at scientific meetings. - Talvey market research report released by Research And Markets. - Johnson & Johnson to participate in Goldman Sachs Healthcare Conference. - Johnson & Johnson highlights strong Phase 3 results for TREMFYA.	7.5
+41727	JNJ	2026-05-12	Johnson & Johnson launches Shockwave C2 Aero coronary IVL catheter. - JNJ presents hematology leadership at EHA Congress 2026. - Johnson & Johnson presents at Bank of America Healthcare Conference. - Tremfya, Icotyde lead JNJ's post-Stelara immunology strategy.	8
+41728	JNJ	2026-05-13	JNJ launches improved Shockwave catheter. - Johnson & Johnson has AAA credit rating.	7
+41990	BA	2026-04-27	Boeing and U.S. Navy achieve successful MQ-25A test flight. - Boeing and U.S. Navy complete first operational MQ-25A test flight.	7.5
+41991	BA	2026-04-28	Boeing completes MQ-25A unmanned aerial refueler operational test flight. - Copa Airlines to purchase up to 60 Boeing 737 Max aircraft. - Copa Airlines orders 40 Boeing 737 Max jets with options.	8.5
+41992	BA	2026-04-29	Boeing forms strategic financial partnership with Light Solver. - SCAT Airlines expands fleet with five Boeing 737 MAX jets. - Boeing donates $380,000 to Wichita STEM, veterans, and food programs.	6.5
+41993	BA	2026-04-30	Bangladesh signs $3.7 billion deal for 14 Boeing aircraft. - Biman Bangladesh Airlines orders 14 Boeing 787 Dreamliner and 737 MAX jets. - US Air Force plans to buy five more Boeing E-7A surveillance aircraft.	8.8
+42021	BA	2026-05-03	Egypt Air takes delivery of first Boeing 737 Max jet. - Israel approves plan to buy F-35 and F-15I aircraft from Boeing. - Boeing wins new orders from Biman Bangladesh Airlines and SCAT Airlines.	7
+42022	BA	2026-05-04	Boeing expands 737 MAX footprint with Egypt Air delivery. - Egypt Air takes delivery of first Boeing 737 MAX jet.	6.8
+42023	BA	2026-05-05	Alaska Airlines adopts Boeing's Virtual Airplane platform for pilot training. - Boeing announces Alaska Airlines signs license for Virtual Airplane platform. - Boeing's digital training solutions highlighted by Alaska Airlines deal. - US approves potential C-17 support sale to Canada, Boeing is contractor.	6.5
+42024	BA	2026-05-06	Boeing completes first test flight of MQ-25A Stingray with US Navy.	7
+42025	BA	2026-05-07	Boeing CEO joins Trump on China visit, eyeing major deal. - Boeing wins Air Force One contract modification. - Ukraine approved for Boeing bomb kit purchase. - Boeing secures large 737 MAX and 787 orders. - Boeing ties aircraft sales, defense, and training deals.	9
+42026	BA	2026-05-08	Boeing CEO invited to accompany Trump on China visit.	6
+42027	BA	2026-05-09	Nvidia, Boeing lead Dow stocks near buy points.	5
+42028	BA	2026-05-10	Boeing (BA) stock price and value under review.	4.5
+42029	BA	2026-05-11	Lufthansa orders 10 Boeing 787-9s and 10 A350-900s. - FAA approves Boeing protocol for returning MD-11 planes to service. - LOT Polish Airlines says Boeing hid 737 MAX safety concerns. - Boeing stock surges 6.9% on strong aircraft orders. - Boeing is mentioned in a business jet industry report. - Boeing is included in a space economy ETF. - Boeing provides an entry for investors. - Kelly Ortberg to join Trump's China trip.	8.2
+42030	BA	2026-05-12	Boeing secures potential order for over 500 aircraft from China. - Boeing booked 135 net new orders in April. - Boeing delivered 47 planes in April, booked 136 orders. - Boeing expands workforce pipelines with college partnership. - Mobix Labs wins additional Boeing 737 aerospace order. - Boeing trails Airbus in April deliveries, beats in orders.	8
+42031	BA	2026-05-13	Boeing CEO to speak at Bernstein Strategic Decisions Conference. - Boeing plans $1B investment in Kansas facilities. - Trump to announce aircraft purchases from Boeing in China. - Boeing pursues massive China jet deal as CEO joins delegation. - PMGC Holdings acquires A&B Aerospace, Inc., a Boeing supplier.	9.3
+42314	COST	2026-04-27	Costco renewal rates stay near record highs. - Costco targets digital members for auto-renewal.	7
+42315	COST	2026-04-28	Costco posts strong earnings, comparable traffic climbs. - Costco membership fees jump, Kirkland expands, digital sales grow. - Costco plans 28 new warehouses for fiscal 2026. - Costco taps consumer trend as shoppers look to save money.	9.5
+42316	COST	2026-04-29	Costco changes its famous $1.50 hot dog combo. - Costco widens value gap amid consumer price sensitivity.	7.5
+42317	COST	2026-04-30	Analyst recommends buying Costco stock due to value proposition. - Investor questions if Costco stock still offers solid value. - Costco stock price shows mixed signals over different periods. - Costco stock price increased by 1.59% in latest session.	6.5
+42334	COST	2026-05-02	Costco's membership resilience and value strategy under review. - Costco adds new prepared-meal offerings to its product line.	6
+42335	COST	2026-05-03	Costco announces 13% dividend increase.	6
+42336	COST	2026-05-04	Amy's Kitchen expands to 150+ Costco warehouses. - Costco expands organic prepared meal offerings. - Costco plans 28 new warehouse openings. - Costco membership fees climb 13.6%.	8.5
+42337	COST	2026-05-06	Costco reports April net sales increased 13.0 percent year-over-year. - Costco reports 35-week net sales increased 9.5 percent year-over-year. - Costco's U.S. comparable sales increased 11.7% for April.	8
+42338	COST	2026-05-07	Costco releases sales results for April 2026. - GEN Korean BBQ launches roadshow series at Costco. - APR plans Costco expansion across US, Canada, Europe. - Costco makes key self-checkout changes.	6.5
+42339	COST	2026-05-08	Costco adds popular item to food court menu. - Costco signals firmer US demand despite high gasoline prices. - Costco is going to court over tariff refunds. - Costco April sales surged 13%.	7.5
+42340	COST	2026-05-09	Costco stock benefiting from jump in April sales. - T-Mobile lifts perk restriction for Costco members.	6
+42341	COST	2026-05-10	Costco faces lawsuit over tariff refund distribution method.	5
+42342	COST	2026-05-11	Costco posts 11.6% April comps and 13% net sales growth. - Costco's digitally enabled comps rise 18.8% in April. - Costco adds chicken tenders to its food court menu. - Costco members can redeem perks online instead of warehouses.	7.5
+42343	COST	2026-05-12	Costco stock performance and valuation discussed. - Costco's April sales surge and e-commerce acceleration noted. - Costco's membership-driven earnings and business model highlighted. - Costco's potential hidden long-term growth engine explored. - Costco's stock is a hold at $1,008.79. - Costco's potential to beat Wall Street earnings this season. - Costco's stock has trailed the market over the past year. - Costco's stock movement and market performance detailed.	8.5
+42344	COST	2026-05-13	GEN Korean BBQ secures Costco purchase order for 40 locations. - Costco acquires 55-acre development site in Fort Myers.	7
+42539	TSM	2026-04-28	TSMC ramps up 2nm chip capacity by 70% for AI.	9
+42540	TSM	2026-04-29	TSMC: Expect More All-Time Highs Ahead	8
+42541	TSM	2026-04-30	TSMC signs power purchase agreement for offshore wind project. - TSMC invests $56 billion to scale AI chip production.	8.9
+42547	TSM	2026-05-05	TSMC faces potential reduced reliance from Apple. - TSMC stock holds firm amid Apple supply chain rumors.	7.2
+42548	TSM	2026-05-06	TSMC announces $56 billion AI expansion plan. - Elon Musk plans chip plant to take on TSMC. - TSMC stock rallies on massive AI expansion news. - TSMC faces formidable foundry competition.	9.1
+42549	TSM	2026-05-11	Intel partners with Apple, reducing Apple's reliance on TSMC. - Report suggests TSMC's dominance makes it vulnerable to risks.	7.7
+42550	TSM	2026-05-12	TSM mentioned as final trade, citing partnership with Applied Materials.	6
+42551	TSM	2026-05-13	TSM accelerates AI production with $31.28B new spending. - TSM boosts Arizona operations with $20B investment.	8.6
+42725	NKE	2026-04-27	Nike to streamline operations with supply chain shake up. - Nike's "Win Now" strategy targets growth revival. - Nike's wholesale rebound clashes with Under Armour's freefall.	6.5
+42726	NKE	2026-04-28	Nike cuts jobs again to revive sales and margins.	8.5
+42727	NKE	2026-04-29	Nike announces new round of layoffs, affecting 1,400 employees.	7.5
+42728	NKE	2026-04-30	Nike cuts 1,400 jobs as part of turnaround plan.	7.5
+42746	NKE	2026-05-01	Nike's share price slumps significantly year to date.	6
+42747	NKE	2026-05-02	Nike slashes 1,400 jobs as stock crashes 70%.	9.5
+42748	NKE	2026-05-03	Nike stock tumbled on earnings, never recovered.	8
+42749	NKE	2026-05-04	Nike declares quarterly cash dividend of $0.41 per share.	4
+42750	NKE	2026-05-05	Nike losing market share, Wall Street impatient. - Nike faces pressure to clear inventory.	7
+42751	NKE	2026-05-06	Nike faces federal investigation over DEI practices. - Nike wins trademark dispute over Air Jordan 4 slogan.	6.5
+42752	NKE	2026-05-07	Nike declares quarterly cash dividend of US$0.41 per share. - Nike plans nearly 1,400 job cuts to streamline operations.	6
+42753	NKE	2026-05-08	Nike sued by consumers for tariff refund. - Wells Fargo downgrades Nike stock.	7
+42754	NKE	2026-05-09	Nike faces class action over tariff refunds. - Nike faces lawsuit over pocketing tariff refunds. - Nike tariff lawsuit tests pricing story and brand trust. - Nike committed to Snkrs app amid speculation.	8
+42755	NKE	2026-05-11	Nike faces proposed US class action over tariff pricing. - Nike CEO bought $2 million worth of shares. - Nike's retail pivot aims to restore full-price sales.	7.5
+42756	NKE	2026-05-12	Nike CEO says company's turnaround needs more time. - Nike valuation check after steep share price slide.	7
+42757	NKE	2026-05-13	State Street takes 5% stake in Nike. - Nike faces lawsuits over tariff price increases. - Nike's profit margins are under pressure. - Nike sued for refunds over tariff price hikes.	7.5
+42974	V	2026-04-27	Commerce Bancshares participates in Visa exchange offer.	3
+42975	V	2026-04-28	Visa reports Q2 2026 earnings, beating estimates. - Visa's Q2 revenue climbs 17% on strong spending. - Visa announces $20 billion share buyback authorization. - Visa partners with We Fi on stablecoin payments. - Visa, Mastercard defend card fee settlement in court. - Visa's Q2 profit rises on robust card spending volumes.	9
+42976	V	2026-04-29	Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history.	9.5
+42977	V	2026-04-30	Visa launches Agentic Ready program in Asia Pacific. - Visa launches Agentic Ready program in Singapore. - Visa gains $50B in market value after earnings. - Visa reports Q2 2026 results, announces $20B buyback. - Visa expands stablecoin settlement pilot to nine blockchains. - Ethiopian Airlines and Visa strengthen collaboration on co-branded cards. - Visa CEO discusses AI and blockchain impact on commerce. - Visa raises full-year guidance after strong quarterly earnings. - Visa announces $20 billion share repurchase program.	9
+42992	V	2026-05-01	Visa adds Polygon to stablecoin settlement for 24/7 payments. - Visa captures 90% share of surging crypto card spending. - JPMorgan tenders Visa B-2 shares for exchange offer. - Visa exec discusses AI integration at Human X Conference.	7.5
+42993	V	2026-05-02	Visa expands crypto role with stablecoin and Bitcoin debit cards.	7
+42994	V	2026-05-04	Visa partners with Electronic Arts for EA SPORTS franchises. - Visa partners with Rain to issue stablecoin-backed cards.	7
+42995	V	2026-05-05	Visa launches new in-game experiences with EA SPORTS. - Visa expands AI-commerce program across Asia Pacific and Latin America. - Visa adds five new blockchains to stablecoin settlement pilot. - Visa expands travel program 'Visa Destinations' into Asia Pacific. - Visa Canada and Wealthsimple pilot stablecoin settlement. - Visa expands 'Agentic Ready' program to Canada for AI commerce. - Visa to participate in upcoming investor conferences.	8
+42996	V	2026-05-06	Visa Canada partners with Remit Bee for cross-border payments. - Visa A2A integrated into HES Loan Box for recurring payments. - UK regulator investigates Visa for anti-competitive conduct. - Visa's Q2 earnings beat estimates, but risks remain.	7.5
+42997	V	2026-05-07	Visa faces UK antitrust probe over Pay Pal wallet. - UK FCA opens competition investigation into Visa. - FCA probe tests Visa's UK wallet economics.	8
+42998	V	2026-05-08	Visa valuation scrutinized after share price swings. - Visa posts strongest revenue growth since 2022.	7
+42999	V	2026-05-09	Visa beats earnings expectations despite recession fears.	6.5
+43000	V	2026-05-10	Visa expands global stablecoin settlement program to nine blockchains. - Visa partners with Lightspark for stablecoin and Bitcoin debit cards. - Visa rolls out Agentic Ready AI-commerce initiative in Asia Pacific and Latin America.	7.5
+43001	V	2026-05-11	Visa partners with Remit Bee for global payment expansion. - Visa announces expiration of exchange offer for common stock. - Visa tests AI commerce and concert payments. - Visa launches Tap to Confirm and Tap to Activate technology. - Visa is Official Payment Partner for The Weeknd's Asia tour.	7.5
+43002	V	2026-05-12	Visa launches Visa Flexible Credential in UK with Zilch. - Visa launches Tap to Confirm and Tap to Activate. - Visa settles exchange offer for Class B-1 and B-2 stock. - Commerce Bancshares announces Visa's acceptance of Class B-2 stock. - Visa CEO joins White House delegation to China.	8
+43003	V	2026-05-13	Visa Flexible Credential debuts on Zilch cards in UK. - Commerce Bancshares books $99M Visa exchange gain. - Visa expands flexible payments in UK with Zilch.	7.5
+43276	DIS	2026-05-02	Disney earnings report scheduled for next week.	7.5
+43277	DIS	2026-05-03	Disney to report earnings this week.	7.5
+43251	DIS	2026-04-27	Disney launches "Disney Week of Wishes" with Make-A-Wish. - Trump calls for Jimmy Kimmel's firing by Disney and ABC.	6.5
+43252	DIS	2026-04-28	FCC prepares review of Disney's TV licenses. - Copyright lawsuit accuses Disney of Avatar franchise infringement. - FCC orders early license reviews of Disney-owned ABC stations. - Trump demands Disney CEO fire Jimmy Kimmel.	7
+43253	DIS	2026-04-29	Disney keeps ESPN in-house, scraps spinoff plans. - Disney expands ESPN streaming app strategy to $30/month. - FCC begins early review of Disney-owned broadcast licenses.	7.5
+43254	DIS	2026-04-30	Disney cutting stock-based compensation for tech employees. - FCC launches early review of Disney broadcast licenses.	6.5
+43275	DIS	2026-05-01	Disney's Q2 earnings projections analyzed by Wall Street. - Inter Digital obtained patent enforcement outcomes against Disney. - Disney (DIS) among companies with upcoming earnings reports.	8
+43278	DIS	2026-05-04	Disney stock movement expected after Q2 earnings report. - Disney's "The Devil Wears Prada 2" opens summer movie season. - Disney faces copyright lawsuit over Avatar franchise. - Disney partners with W.K. Kellogg for Toy Story 5 tie-in. - Disney stock faces pressure from higher sports, experiences costs.	7
+43279	DIS	2026-05-05	Disney set to report earnings tomorrow. - Papa Johns collaborates with Disney, Pixar over Toy Story 5. - Assessing Walt Disney (DIS) valuation as ESPN growth narrative signals undervaluation. - Can Disney keep treading above $100 after earnings tomorrow? - The Walt Disney Company to report fiscal second quarter 2026 financial results tomorrow. - ESPN & Disney Take Back Sports.	8.5
+43280	DIS	2026-05-06	Disney CEO Josh D'Amaro unveils new 3-pillar growth plan. - Disney Q2 FY2026 earnings beat estimates, raises full-year forecast. - Disney's Q2 results surpass Wall Street expectations. - Disney's Parks, Films boost profit in CEO's debut quarter. - Disney raises $8B buyback target, forecasts faster growth. - Disney beats revenue estimates, streaming growth accelerates. - Disney's theme parks revenue holds steady, boosts operating income. - Disney stock pops 8% after Q2 earnings beat. - Disney's new CEO tenure starts with soaring streaming profits. - India's Zee sues Reliance-Disney joint venture over	9.5
+43281	DIS	2026-05-07	Disney exceeds Q2 earnings expectations under new CEO. - Disney CEO Josh D'Amaro outlines vision for company. - Disney plans to create a unified 'super app'. - Democratic senators question Disney station license review. - Disney parks show strength in U.S. consumer spending. - Disney's Q2 earnings beat boosts ETFs with heavy exposure. - Bath & Body Works partners with Disney for Star Wars collection.	9
+43282	DIS	2026-05-08	Disney CFO to participate in Moffett Nathanson conference. - Disney CEO notes shift to domestic consumer spending. - CIBC announces new collaboration with Disney+.	7
+43283	DIS	2026-05-09	Disney CFO: Relationship with NFL remains 'broad and deep'. - Disney insiders bought US$2.11m of stock.	6.5
+43284	DIS	2026-05-10	Disney Q2 earnings beat guidance, streaming losses narrow. - Disney cancels cruise sailing, offers refunds. - Disney stock popped on earnings results. - Disney parks and cruises show pricing power. - Disney partners with Five Below on vacation essentials range.	7.5
+43285	DIS	2026-05-11	Disney cruise sailing cancelled due to engine issue. - Disney shifts "Tracker" production to California for tax incentives. - Disney expands streaming in Canada via CIBC partnership. - FCC commissioner alleges censorship campaign against Disney. - Trump administration targets Disney for censorship, says FCC commissioner. - Disney Star Wars film faces boycott calls.	6
+43286	DIS	2026-05-12	Disney reports fiscal Q2 FY26 earnings results. - Disney exec teases upcoming Upfront event. - Disney and Pixar partner for "Toy Story 5" product collection. - Disney achieves streaming profitability milestone and record parks revenue.	8.5
+43287	DIS	2026-05-13	FCC scrutinizing Disney's media operations after legal settlement. - FM and Disney relaunch safety education program for families.	7
+43569	NFLX	2026-04-28	Netflix renews animated series 'Stranger Things: Tales From '85'.	5.5
+43568	NFLX	2026-04-27	Netflix weighs profit discipline against growth in sports, gaming. - Netflix co-founder Reed Hastings is leaving the company. - 'Enola Holmes 3' gets July release date on Netflix.	7.5
+43570	NFLX	2026-04-29	Netflix Q1 2026 revenue above guidance, driven by membership and pricing. - Netflix's Harlan Coben series 'The Woods' to star Tom Bateman. - Netflix among firms pledging to halve direct emissions by 2030.	6.5
+43571	NFLX	2026-04-30	Netflix faces shareholder proposals on governance and transparency. - Netflix introduces 'Clips,' a new vertical video feed. - Netflix expands share repurchase authorization by $25 billion.	7
+43587	NFLX	2026-05-01	Netflix to give Greta Gerwig's 'Narnia' wide theatrical release. - Netflix's 'Narnia' movie to have theatrical and IMAX release. - Netflix makes strategic shift with wide theatrical release for 'Narnia'.	7.5
+43588	NFLX	2026-05-03	Netflix acquires AI content production startup Inter Positive.	7
+43589	NFLX	2026-05-04	Netflix shares buyback capacity increases. - Netflix movie "Narnia" gets theatrical release. - Netflix releases trailer for "Four Seasons" Season 2.	6.5
+43590	NFLX	2026-05-05	AMC Entertainment partners with Netflix.	5
+43591	NFLX	2026-05-06	Fisher Asset Management cuts stake in Netflix.	5.5
+43592	NFLX	2026-05-07	Oscar Isaac to star in new Netflix gambling drama. - Netflix shares teaser trailer for Harlan Coben series.	6
+43593	NFLX	2026-05-08	Netflix announces $25 billion share repurchase plan. - Netflix co-founder Reed Hastings to leave board. - Netflix reports Q1 results beating expectations. - Netflix provides softer Q2 guidance.	8
+43594	NFLX	2026-05-10	NFLX stock performance post-historic split.	4.5
+43595	NFLX	2026-05-11	Texas sues Netflix over data collection allegations. - Netflix sued by Texas for allegedly spying on consumers. - Netflix sued by Texas for spying on children.	8.5
+43596	NFLX	2026-05-12	Texas sues Netflix for allegedly spying on children. - Netflix calls Texas lawsuit accusing it of spying "meritless". - Netflix reports $135 billion in content spending over decade.	8
+43597	NFLX	2026-05-13	Netflix highlights US$325b economic impact and $20b content budget. - Netflix expands NFL game inventory through 2029. - Netflix's "KPop Demon Hunters" announce global world tour. - Netflix raises subscription prices, signaling end of passive era.	9
+43850	PFE	2026-04-27	Pfizer shareholders reject independent chair proposal at AGM. - Pfizer to supply atirmociclib for Relay Therapeutics' breast cancer trial. - Pfizer faces competition from Novo Nordisk in obesity market.	6.5
+43851	PFE	2026-04-28	Pfizer settles patent lawsuits for Vyndamax with three generic drugmakers. - Pfizer extends effective U.S. patent for heart drug Vyndamax to June 2031. - Pfizer stock dips following announcement of Vyndamax patent settlement agreements. - Pfizer signs supply deal with Relay Therapeutics for Phase III plan.	7.5
+43852	PFE	2026-04-29	Pfizer announces positive Phase 3 results for ELREXFIO in multiple myeloma. - Pfizer's blood-cancer treatment meets primary endpoint in late-stage study. - Pfizer's ELREXFIO shows significant progression-free survival improvement. - Pfizer protects heart disease drug Vyndamax from generics until 2031.	9
+43853	PFE	2026-04-30	Pfizer settles patent litigation, extending VYNDAMAX protection until 2031. - Pfizer receives FDA priority review for PADCEV supplemental BLA.	8.5
+43878	PFE	2026-05-01	Pfizer and Arvinas' breast cancer drug approved by FDA. - FDA approves Pfizer and Arvinas' VEPPANU for breast cancer.	9
+43879	PFE	2026-05-02	Pfizer to release key earnings report next week.	7
+43880	PFE	2026-05-03	Pfizer to report earnings this week.	7
+43881	PFE	2026-05-04	Pfizer and Arvinas win FDA approval for breast cancer therapy. - Guardant Health receives FDA approval for companion diagnostic for Pfizer's therapy. - Pfizer to report earnings on May 5th.	8.5
+43882	PFE	2026-05-05	Pfizer reports strong Q1 results, reaffirms 2026 guidance. - Pfizer Q1 earnings beat estimates on newer drug growth. - FDA approves VEPPANU for advanced breast cancer. - Pfizer's ELREXFIO trial shows positive outcomes for multiple myeloma. - Pfizer beats Q1 profit estimates on strong demand for Eliquis. - Pfizer stock edges higher on earnings and revenue beat. - Pfizer tops Wall Street estimates, reaffirms outlook. - Pfizer backs 2026 outlook as revenue advances in Q1. - Pfizer beats Q1 earnings, new drugs drive sales growth. - Pfizer beats Q1 revenue and profit estimates, reaffirms guidance. - Pfizer's	9.5
+43883	PFE	2026-05-06	Pfizer's COVID revenue declines, newer medicines gain importance. - Pfizer CEO supports Trump's CDC nominee amid vaccine policy shifts. - Pfizer faces revenue void despite exceeding earnings estimates.	7.5
+43884	PFE	2026-05-07	Pfizer reaffirms full-year revenue guidance. - Pfizer files $8.42 billion employee share offering. - Pfizer advances oncology franchise with positive Phase 3 data. - Pfizer secures first-ever FDA approval for multiple myeloma drug.	8.5
+43885	PFE	2026-05-08	Pfizer supports Giants of Cancer Care recognition program.	5
+43886	PFE	2026-05-09	Pfizer reports strong Q1 2026 revenues of $14.5 billion.	8
+43887	PFE	2026-05-10	Pfizer receives FDA approval for VEPPANU cancer therapy. - Pfizer reports positive Phase 3 data for ELREXFIO. - Pfizer extends U.S. patent protection for VYNDAMAX.	8.5
+43888	PFE	2026-05-11	Pfizer's aggressive growth strategy shows signs of paying off. - Pfizer vs. Eli Lilly: Different bets on pharma M&A. - Atgam market report details Pfizer's strategic labeling updates.	7
+43889	PFE	2026-05-12	Pfizer, Arvinas, Rigel strike licensing deal for breast cancer drug. - Pfizer and Arvinas tap Rigel to bring Veppanu to market. - Pfizer's Q1 net income drops, dividend sustainability debated. - Bridge Bio's drug challenges Pfizer's legacy in ATTR trial.	7.5
+43890	PFE	2026-05-13	Pfizer gets expanded European approval for Hympavzi hemophilia drug. - European Commission approves Pfizer's Hympavzi for hemophilia A or B. - Pfizer transfers VEPPANU rights to Rigel Pharmaceuticals. - Pfizer Inc approves Hympavzi for treatment of adults and adolescents. - European Commission approves Pfizer’s HYMPAVZI for hemophilia treatment.	8
+44194	WMT	2026-04-27	Walmart plans to sell investment-grade bonds. - Walmart revenue rises by 4.7% in fiscal 2026. - Walmart bets big on fermented foods. - Walmart's grocery sales growth slows. - Walmart's 2026 annual report shows e-commerce growth, Supercenter openings, AI initiatives. - Walmart's Q4 profits outpace sales; ads, memberships, e-commerce surge. - Walmart plans $3 billion bond sale. - Walmart stock drops despite market gains.	9.2
+44195	WMT	2026-04-28	Walmart faces ESG proxy fight over governance and social responsibility. - Holy Crap Foods launches on Walmart Canada's digital marketplace. - Walmart eliminates store lead positions, changing managerial roles. - Walmart launches pop-up for elevated fashion offerings. - Walmart prepares to offer services beyond traditional retail.	8
+44196	WMT	2026-04-29	Walmart expands Axil Brands product offering to ~1,250 stores. - Walmart reshapes store leadership and accelerates fashion push. - Walmart opens $350 million milk processing facility in Texas. - Sam's Club hikes membership prices.	7.6
+44197	WMT	2026-04-30	Walmart expands local products to boost sales and traffic. - Walmart expands beauty expert associates to hundreds of stores. - Walmart's Acres for America program awards $5.4 million in grants. - Walmart opens $350M milk facility in Texas, creating 400 jobs.	7.4
+44226	WMT	2026-05-01	Kraft Heinz Capri Sun Hydrate rolling out across Walmart. - Walmart makes in-store move to challenge Target.	6.2
+44227	WMT	2026-05-04	Walmart opens third milk processing facility in Texas. - Walmart rolls out new in-store "Beauty Expert" roles. - Mama's Creations launches in 2,000 Walmart locations. - Maryland bans AI-powered grocery pricing affecting Walmart. - Walmart's health business sees rising sales and pharmacy scripts.	7.7
+44228	WMT	2026-05-05	Ooma product available nationwide on Walmart.com and in stores. - Walmart stores in Texas targeted for modernization and upgrades.	6.5
+44229	WMT	2026-05-06	Maryland bans surveillance-based dynamic pricing, affecting Walmart. - Walmart launches exclusive ARIH Western-Korean fusion brand nationwide. - Barrière launches lactose intolerance patch in 1,700 Walmart stores. - Supreme Court tariff reversal triggers refunds benefiting Walmart. - Interlink Commerce approved as Walmart Marketplace Solution Provider. - Walmart Canada kicks off annual fundraising campaign for children's health.	8.2
+44230	WMT	2026-05-07	Walmart opens third milk processing facility in US.	5
+44231	WMT	2026-05-08	Walmart expands wellness aisles with exclusive product lines. - Unifor ratifies first Walmart union contract in North America.	7
+44232	WMT	2026-05-09	Walmart among Dow stocks near buy points.	5.5
+44233	WMT	2026-05-10	Walmart partners with P&G for Native Boba Cafe Collection launch.	6
+44234	WMT	2026-05-11	Buda Juice expands distribution into 246 Walmart stores. - Hidden Valley Ranch Dippers rolling out at select retailers including Walmart. - Rogue secures launch in 2,800 Walmart stores nationwide. - Walmart's category mix pressures margins, more pain ahead. - Walmart leans deeper into automation and fintech. - Walmart (WMT) stock sinks as market gains.	8.1
+44235	WMT	2026-05-12	Walmart expands wellness product distribution with new brands. - JAKKS Pacific unveils DC Super-Villains fashion dolls exclusively at Walmart. - Walmart invests heavily in the future of shopping.	7
+44236	WMT	2026-05-13	Walmart cuts or relocates 1,000 corporate workers. - Walmart expands dairy processing and brand partnerships. - Walmart restructures tech teams, impacting 1,000 employees. - Walmart cuts 1,000 tech and product jobs in AI push. - Walmart lays off or relocates 1,000 tech, product workers. - John Deere launches grooming line at Walmart. - Bayer campaign includes Walmart community food drive. - Walmart layoffs bring attention to stock price. - Walmart reshapes corporate teams for AI push. - Walmart tightens tech structure to deepen AI use. - Walmart cuts corporate staff, affecting 1,000 jobs.	9.5
+44540	CVX	2026-04-27	Chevron CEO warns of worsening aviation strain due to jet fuel crunch.	7
+44541	CVX	2026-04-28	Chevron close to finalizing sale of Asian assets to Eneos. - Chevron to sell Singapore refinery stake and other assets to Eneos. - Chevron signs deal with Libya's NOC to evaluate shale resources. - Chevron sees progress in Venezuela oil reforms, more needed.	8
+44542	CVX	2026-04-29	Chevron CEO met with President Trump and energy CEOs. - Chevron exec comments on Venezuelan crude imports easing prices.	6.9
+44543	CVX	2026-04-30	Chevron earnings carry a cash-flow warning. - Chevron earnings set to fall hard. - Chevron, Exxon Mobil Q1 earnings preview. - Chevron CEO remarks on Venezuela oil policy.	7.3
+44566	CVX	2026-05-01	Chevron Q1 2026 earnings beat estimates, profit hits 5-year low. - Chevron's upstream strength lifts first-quarter earnings past estimate. - Chevron stock gains after beating Q1 profit forecasts. - Chevron, Exxon Show Earnings Resilience But Stocks Fail Key Test. - Chevron CEO says company is recovering debt in Venezuela faster. - Chevron stock wavers after earnings, pumping fuel at record. - Chevron reports first quarter 2026 results. - Chevron reports first-quarter earnings of $2.21 billion. - Chevron stock rises, earnings boosted by Iran war oil price spike. - Chevron says downtime could hit Q2 output by 150,0	9
+44567	CVX	2026-05-02	Chevron sells Singapore Refining Company stake. - Chevron increases Venezuelan heavy oil project presence. - Chevron Q1 earnings disappoint investors. - Chevron production soared, but profits fell in Q1. - Chevron faces war-driven headwinds in Q1.	7.7
+44568	CVX	2026-05-03	Chevron reports Q1 2026 earnings beat, affirms dividend.	7.5
+44569	CVX	2026-05-04	Chevron reports $2.2 billion earnings for Q1 2026. - Chevron negotiating for stake in Iraq oilfield. - Chevron CEO voices concern over Strait of Hormuz safety.	7.6
+44570	CVX	2026-05-05	Chevron in talks to acquire stakes in Iraqi oilfields. - Chevron expands Mediterranean footprint with Malta exploration. - Chevron CEO warns of emerging physical crude oil shortages. - Chevron CEO warns of oil shortages from Strait of Hormuz closure. - Chevron-funded group blamed for price gouging report.	8.2
+44571	CVX	2026-05-06	Chevron signals caution on Venezuela investment. - Chevron faces higher supply disruption risk from Hormuz. - Chevron exploring hydrocarbon exploration south of Malta. - Chevron CEO warns of potential oil shortages. - Exxon, Chevron stocks drop on hopes of US-Iran deal.	7.8
+44572	CVX	2026-05-07	Chevron reports Q1 EPS beat, revenue misses estimates. - Chevron expects Middle East conflict to impact business. - Chevron California refiner margins reported at $1.11 per gallon. - Chevron releases May 2026 sensitivities and forward guidance.	7
+44573	CVX	2026-05-08	Chevron reports Q1 earnings, key metrics analyzed. - Chevron's South Asian LNG strategy aims for long-term growth. - California scrutinizes Chevron's gasoline prices and ESG risks.	6.5
+44574	CVX	2026-05-09	Chevron CEO comments on global supply outages.	6
+44575	CVX	2026-05-10	Chevron returns over $5 billion to shareholders.	5.5
+44576	CVX	2026-05-11	Chevron, Exxon Mobil, Conoco Phillips poised to benefit from disruptions.	6.3
+44577	CVX	2026-05-12	Shareholders urged to vote AGAINST Chevron's Proposal 6. - Proposal 6 focuses on human rights due diligence in occupied territories. - Chevron's CEO states physical oil shortages are beginning.	6.7
+44578	CVX	2026-05-13	CVX's strong Q1 output growth sparks optimism.	7
+44803	GE	2026-04-28	GE Aerospace wins large aircraft engine order.	8
+44804	GE	2026-04-29	GE Health Care reduces full-year profit and cash flow guidance. - GE Health Care's Q1 earnings missed analyst expectations.	7
+44805	GE	2026-04-30	GE Aerospace faces rare earth supply chain reset due to US rules.	6
+44818	GE	2026-05-05	GE share price analysis after multi-year rally.	5
+44819	GE	2026-05-07	GE Health Care Technologies addresses tariffs and inflation at AGM.	5.5
+44820	GE	2026-05-08	GE Aerospace to supply F404 engines to Turkish Aerospace Industries.	7
+44821	GE	2026-05-09	GE Aerospace potentially benefits from advanced propulsion technology.	6
+44822	GE	2026-05-10	GE Aerospace research highlighted by declassified Pentagon files.	5.5
+44823	GE	2026-05-11	GE Aerospace clears assembly readiness review for U.S. Air Force engine. - GE Vernova stock gains, benefits from AI data center electricity demand. - GE's shareholder proposal on defense report rejected at annual meeting.	7.5
+44824	GE	2026-05-13	GE Aerospace unit surges on strong airline demand.	7.5
+45004	SBUX	2026-04-27	Starbucks to report Q1 earnings results. - Starbucks Nashville expansion faces employee resistance.	7.5
+45005	SBUX	2026-04-28	Starbucks beats Q2 revenue and profit estimates. - Starbucks raises full-year 2026 guidance. - Starbucks reports Q2 global comparable store sales up 6.2%. - Starbucks China joint venture with Boyu Capital finalized. - Starbucks turnaround plan shows positive momentum.	10
+45006	SBUX	2026-04-29	Starbucks raises full-year 2026 guidance. - Starbucks Q2 earnings beat estimates, revenues rise. - Starbucks CEO discusses turnaround strategy and results. - Starbucks sees sales growth across income cohorts. - Starbucks Rewards membership grows to record high. - Starbucks valuation hits all-time high. - Starbucks price hikes absorbed well by customers.	9.5
+45007	SBUX	2026-04-30	Starbucks CEO signals turnaround plan success. - Starbucks speeds up wait times with new technology. - Starbucks invests $500 million in turnaround strategy.	9
+45025	SBUX	2026-05-01	Starbucks locations opening in Comstock developments. - Starbucks' same-store sales show strong recovery. - Starbucks stock outperforms peers, driven by turnaround efforts.	8
+45026	SBUX	2026-05-02	Starbucks revamps rewards program, removes free drink perk.	7
+45027	SBUX	2026-05-04	Starbucks reports mixed Q2 results, raises full-year guidance. - Starbucks commences cash tender offers for eight series of notes.	8
+45028	SBUX	2026-05-05	Starbucks same-store sales jump 6.2% after 7 quarters of decline.	8.5
+45029	SBUX	2026-05-06	Starbucks shares trading higher on Q2 results. - Starbucks demonstrates improvement in second quarter.	8
+45030	SBUX	2026-05-10	Starbucks finalized sale of China business to local partner.	7.5
+45031	SBUX	2026-05-11	Starbucks lays off 61 technology workers in Seattle. - Starbucks opens first store in Chile.	6.5
+45032	SBUX	2026-05-12	Starbucks and Dollar Tree opening hundreds of new stores. - Tennessee lawmakers debate $30M incentive deal with Starbucks. - Starbucks Q2 FY26 comps rose 6.2% as operations improved. - Rising coffee prices eating into Starbucks' margins. - Vornado JV refinances property fully leased to Starbucks.	8
 \.
 
 
 --
+-- TOC entry 3508 (class 0 OID 16403)
+-- Dependencies: 218
 -- Data for Name: fundamental_snapshot; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5955,10 +6306,20 @@ COPY public.fundamental_snapshot (id, ticker, as_of_date, shares_outstanding, eq
 95	SBUX	2025-07-29 20:00:00+00	1140000000	-7622500000	26009500000	2671400000	36347200000	2765100000	2.76	0.34	0.56	0.65	0.249667	0.125102	0.086086	-0.00501	-0.243836
 96	SBUX	2025-10-29 20:00:00+00	1139800000	-7686000000	27886100000	4172600000	36689300000	2253600000	2.32	0.49	0.59	0.56	0.236758	0.108075	0.071751	0.005853	-0.351955
 97	SBUX	2026-01-28 12:00:00+00	1140900000	-8096600000	26611500000	3219800000	37184400000	2442000000	1.64	0.12	0.44	0.59	0.229032	0.096984	0.049924	0.027872	-0.504532
+103	AAPL	2026-04-30 20:00:00+00	14810356000	88190000000	90509000000	45317000000	435617000000	123324000000	7.92	2.85	1.9	1.94	0.473253	0.32384	0.270368	0.10071	0.255151
+400	SBUX	2026-04-28 20:00:00+00	1141900000	-8388700000	33518500000	3413400000	37695000000	2336900000	1.21	0.26	0.65	0.44	0.205966	0.090049	0.036315	0.042779	-0.609677
+114	MSFT	2026-04-29 20:00:00+00	7466000000	363076000000	120375000000	28849000000	293812000000	78017000000	14.1	3.73	4.24	4.06	0.68764	0.462667	0.357072	0.155876	0.158587
+126	XOM	2026-05-01 10:00:00+00	4183000000	254381000000	47661000000	8435000000	326008000000	18792000000	5.9	1	3.56	0.89	0.254923	0.090111	0.077648	-0.040854	-0.218543
+161	V	2026-04-28 20:00:00+00	1933000000	38777000000	21177000000	14756000000	41391000000	22928000000	10.66	3.03	3.22	3.1	0.81078	0.591844	0.502331	0.124694	0.073515
+167	DIS	2026-05-06 10:00:00+00	1793000000	108476000000	46640000000	5678000000	95716000000	7060000000	6.8	1.34	1.87	1.5	0.372843	0.14239	0.128004	0.034745	1.201288
+179	PFE	2026-05-05 10:00:00+00	5731000000	90101000000	64455000000	1703000000	63315000000	9484000000	1.31	0.47	0.68	0.72	0.693469	0.234463	0.118313	0.01364	-0.056672
+190	CVX	2026-05-01 10:00:00+00	1985900000	183715000000	45428000000	5323000000	185887000000	13371000000	5.79	1.12	4.94	0.97	0.254305	0.084013	0.059224	-0.03653	-0.340547
 \.
 
 
 --
+-- TOC entry 3510 (class 0 OID 16409)
+-- Dependencies: 220
 -- Data for Name: market_data; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -72185,42 +72546,2260 @@ COPY public.market_data (id, datetime, ticker, open, high, low, close, volume) F
 66220	2026-04-24 17:30:00+00	SBUX	99.08	99.22	98.86	99.2	395641
 66221	2026-04-24 18:30:00+00	SBUX	99.2	99.22	98.82	98.96	540445
 66222	2026-04-24 19:30:00+00	SBUX	98.95	98.99	98.62	98.65	1218521
+66223	2026-04-27 13:30:00+00	AAPL	266.09	268.36	265.07	267.36	10219067
+66224	2026-04-27 14:30:00+00	AAPL	267.39	267.8	266.62	267.11	3251687
+66225	2026-04-27 15:30:00+00	AAPL	267.14	267.64	266.26	266.3	2679704
+66226	2026-04-27 16:30:00+00	AAPL	266.29	267.03	266.29	266.84	2950643
+66227	2026-04-27 17:30:00+00	AAPL	266.83	267.05	266.09	266.35	2558668
+66228	2026-04-27 18:30:00+00	AAPL	266.35	267.21	266.13	267.15	2713356
+66229	2026-04-27 19:30:00+00	AAPL	267.16	267.96	267.05	267.68	4077895
+66230	2026-04-28 13:30:00+00	AAPL	272.33	273.22	268.66	271.28	9095136
+66231	2026-04-28 14:30:00+00	AAPL	271.28	271.83	270.29	270.33	5340855
+66232	2026-04-28 15:30:00+00	AAPL	270.33	270.57	269.33	269.52	2719213
+66233	2026-04-28 16:30:00+00	AAPL	269.49	270.13	269.44	269.87	1855230
+66234	2026-04-28 17:30:00+00	AAPL	269.87	270.92	269.79	270.5	2765318
+66235	2026-04-28 18:30:00+00	AAPL	270.5	270.63	269.89	270.23	2300165
+66236	2026-04-28 19:30:00+00	AAPL	270.23	270.95	269.99	270.76	3115541
+66237	2026-04-29 13:30:00+00	AAPL	267.55	270.31	267.04	269.4	5646330
+66238	2026-04-29 14:30:00+00	AAPL	269.41	269.93	268.73	268.84	2444917
+66239	2026-04-29 15:30:00+00	AAPL	268.82	270.15	268.2	269.83	2865276
+66240	2026-04-29 16:30:00+00	AAPL	269.83	271.04	269.75	270.2	2163618
+66241	2026-04-29 17:30:00+00	AAPL	270.21	270.59	269.64	269.74	1643753
+66242	2026-04-29 18:30:00+00	AAPL	269.73	270.45	269.37	270.28	1887172
+66243	2026-04-29 19:30:00+00	AAPL	270.27	270.36	269.61	270.19	3057478
+66244	2026-04-30 13:30:00+00	AAPL	270.5	272.2	268.14	271.92	9777419
+66245	2026-04-30 14:30:00+00	AAPL	271.88	272.21	270.73	271.52	4122597
+66246	2026-04-30 15:30:00+00	AAPL	271.52	273.1	271.18	273.06	4223495
+66247	2026-04-30 16:30:00+00	AAPL	273.08	273.76	271.68	272.79	4454018
+66248	2026-04-30 17:30:00+00	AAPL	272.81	274.2	272.8	273.6	4048045
+66249	2026-04-30 18:30:00+00	AAPL	273.58	274.49	272.82	274.49	4534270
+66250	2026-04-30 19:30:00+00	AAPL	274.47	275.94	270.34	271.36	14238265
+66251	2026-05-01 13:30:00+00	AAPL	278.94	287.21	278.37	285.34	30058496
+66252	2026-05-01 14:30:00+00	AAPL	285.34	285.6	281.46	283.95	9289199
+66253	2026-05-01 15:30:00+00	AAPL	283.95	285.49	283.2	283.95	9693580
+66254	2026-05-01 16:30:00+00	AAPL	283.95	284.11	282.4	282.81	5060158
+66255	2026-05-01 17:30:00+00	AAPL	282.8	282.82	280.64	281.23	4791832
+66256	2026-05-01 18:30:00+00	AAPL	281.24	281.24	279.74	280.35	4824175
+66257	2026-05-01 19:30:00+00	AAPL	280.34	280.69	279.61	280.15	5835825
+66258	2026-05-04 13:30:00+00	AAPL	279.65	280.63	274.86	276.25	11843656
+66259	2026-05-04 14:30:00+00	AAPL	276.27	278	276.07	276.83	5095476
+66260	2026-05-04 15:30:00+00	AAPL	276.85	277.37	275.45	276.09	3294311
+66261	2026-05-04 16:30:00+00	AAPL	276.1	277.34	275.98	277.04	2386442
+66262	2026-05-04 17:30:00+00	AAPL	277.06	277.42	276.63	276.77	2422618
+66263	2026-05-04 18:30:00+00	AAPL	276.77	277.67	276.26	277.08	3114535
+66264	2026-05-04 19:30:00+00	AAPL	277.08	277.32	276.51	276.84	4124586
+66265	2026-05-05 13:30:00+00	AAPL	276.9	281.38	276.5	281.19	9001566
+66266	2026-05-05 14:30:00+00	AAPL	281.18	283.21	279.71	280.22	6121481
+66267	2026-05-05 15:30:00+00	AAPL	280.23	281.56	279.85	281.4	3040049
+66268	2026-05-05 16:30:00+00	AAPL	281.39	284.57	281.33	282.82	5146396
+66269	2026-05-05 17:30:00+00	AAPL	282.81	284.28	282.35	284.25	3957543
+66270	2026-05-05 18:30:00+00	AAPL	284.26	284.45	283.42	284.21	3606272
+66271	2026-05-05 19:30:00+00	AAPL	284.22	284.33	283.45	284.17	4695212
+66272	2026-05-06 13:30:00+00	AAPL	281.92	286.72	281.08	286.11	11276788
+66273	2026-05-06 14:30:00+00	AAPL	286.13	286.34	283.88	284.74	6691628
+66274	2026-05-06 15:30:00+00	AAPL	284.74	286.37	284.65	286.26	4527443
+66275	2026-05-06 16:30:00+00	AAPL	286.26	287.13	285.71	286.73	3689933
+66276	2026-05-06 17:30:00+00	AAPL	286.73	287.85	286.57	287.18	3878452
+66277	2026-05-06 18:30:00+00	AAPL	287.17	287.9	286.67	287.76	4158472
+66278	2026-05-06 19:30:00+00	AAPL	287.76	288.03	287.04	287.53	5753679
+66279	2026-05-07 13:30:00+00	AAPL	289.27	292.13	288.2	290.47	11895992
+66280	2026-05-07 14:30:00+00	AAPL	290.47	291.39	289.92	290.2	4189077
+66281	2026-05-07 15:30:00+00	AAPL	290.2	290.74	288.78	289.41	3696404
+66282	2026-05-07 16:30:00+00	AAPL	289.42	289.65	288.24	288.77	3128156
+66283	2026-05-07 17:30:00+00	AAPL	288.74	289.77	287.9	288.27	3005520
+66284	2026-05-07 18:30:00+00	AAPL	288.28	288.34	285.78	286.74	4941011
+66285	2026-05-07 19:30:00+00	AAPL	286.73	287.56	286.28	287.47	3254466
+66286	2026-05-08 13:30:00+00	AAPL	290.11	294.55	290	293.79	11356891
+66287	2026-05-08 14:30:00+00	AAPL	293.77	294.76	292.42	292.85	7279310
+66288	2026-05-08 15:30:00+00	AAPL	292.85	293.04	292.18	292.8	3193255
+66289	2026-05-08 16:30:00+00	AAPL	292.8	292.8	291.75	292.15	4004012
+66290	2026-05-08 17:30:00+00	AAPL	292.14	292.86	292.07	292.72	2447225
+66291	2026-05-08 18:30:00+00	AAPL	292.77	293.6	292.39	293.43	3970671
+66292	2026-05-08 19:30:00+00	AAPL	293.45	294.25	293.1	293.28	6088657
+66293	2026-05-11 13:30:00+00	AAPL	291.98	293.15	290.23	292.05	9227947
+66294	2026-05-11 14:30:00+00	AAPL	292.05	293.59	291.75	293.37	4290117
+66295	2026-05-11 15:30:00+00	AAPL	293.37	293.88	291.82	292.42	3777650
+66296	2026-05-11 16:30:00+00	AAPL	292.42	292.7	290.63	291.94	3556324
+66297	2026-05-11 17:30:00+00	AAPL	291.94	292.98	291.73	291.74	2587000
+66298	2026-05-11 18:30:00+00	AAPL	291.74	292.21	290.86	292.15	2874040
+66299	2026-05-11 19:30:00+00	AAPL	292.15	292.8	291.81	292.74	3307424
+66300	2026-05-12 13:30:00+00	AAPL	292.76	294.81	292.61	293.94	11112742
+66301	2026-05-12 14:30:00+00	AAPL	293.91	294.9	293.25	294.37	4316772
+66302	2026-05-12 15:30:00+00	AAPL	294.36	294.78	293.46	293.96	2815308
+66303	2026-05-12 16:30:00+00	AAPL	293.95	294.59	293.38	293.9	3097799
+66304	2026-05-12 17:30:00+00	AAPL	293.9	294.66	293.69	294.65	3363937
+66305	2026-05-12 18:30:00+00	AAPL	294.62	294.92	294	294.8	3451447
+66306	2026-05-12 19:30:00+00	AAPL	294.8	295.27	294.36	294.87	4049102
+66307	2026-05-13 13:30:00+00	AAPL	293.63	297.51	293.56	295.15	10759628
+66308	2026-05-13 14:30:00+00	AAPL	295.17	297.25	295.16	296.94	4349742
+66309	2026-05-13 15:30:00+00	AAPL	296.93	298.55	296.72	298.4	4139107
+66310	2026-05-13 16:30:00+00	AAPL	298.39	300.37	298.33	300.12	6943795
+66311	2026-05-13 17:30:00+00	AAPL	300.11	300.92	299.71	299.71	4870507
+66312	2026-05-13 18:30:00+00	AAPL	299.71	299.72	298.61	299.15	3364858
+66313	2026-05-13 19:30:00+00	AAPL	299.15	299.48	298.85	298.88	3870507
+66314	2026-04-27 13:30:00+00	NVDA	209.65	211.95	208.4	208.7	46698474
+66315	2026-04-27 14:30:00+00	NVDA	208.7	209.93	207.38	209.88	18121354
+66316	2026-04-27 15:30:00+00	NVDA	209.89	211.64	209.77	211.46	16541416
+66317	2026-04-27 16:30:00+00	NVDA	211.46	214.26	211.4	213.61	25911233
+66318	2026-04-27 17:30:00+00	NVDA	213.62	216.26	213.58	215.7	24409920
+66319	2026-04-27 18:30:00+00	NVDA	215.66	216.38	214.82	215.49	20512380
+66320	2026-04-27 19:30:00+00	NVDA	215.49	216.82	215.3	216.63	15881349
+66321	2026-04-28 13:30:00+00	NVDA	209.51	213.67	208.2	212.38	57845453
+66322	2026-04-28 14:30:00+00	NVDA	212.37	212.74	208.35	209.1	28861244
+66323	2026-04-28 15:30:00+00	NVDA	209.11	210.65	208.59	210.11	15869340
+66324	2026-04-28 16:30:00+00	NVDA	210.1	210.96	209.31	210.79	12687956
+66325	2026-04-28 17:30:00+00	NVDA	210.79	213	210.79	212.85	13579691
+66326	2026-04-28 18:30:00+00	NVDA	212.85	214.73	212.47	214.07	20176181
+66327	2026-04-28 19:30:00+00	NVDA	214.06	214.43	213	213.15	12274582
+66328	2026-04-29 13:30:00+00	NVDA	212.71	212.71	209.75	211.11	29242173
+66329	2026-04-29 14:30:00+00	NVDA	211.11	211.95	210.24	210.8	14808343
+66330	2026-04-29 15:30:00+00	NVDA	210.81	211.4	209.66	209.67	12425477
+66331	2026-04-29 16:30:00+00	NVDA	209.66	209.86	208.56	209.44	12347642
+66332	2026-04-29 17:30:00+00	NVDA	209.45	209.69	207.59	208.04	11516524
+66333	2026-04-29 18:30:00+00	NVDA	208.05	209.5	207.58	209.32	12534333
+66334	2026-04-29 19:30:00+00	NVDA	209.31	209.44	208.6	209.32	10887753
+66335	2026-04-30 13:30:00+00	NVDA	209.94	210.3	199.44	200.62	59635866
+66336	2026-04-30 14:30:00+00	NVDA	200.61	202.46	198.7	201.32	35542478
+66337	2026-04-30 15:30:00+00	NVDA	201.3	201.82	199.42	200.14	20337941
+66338	2026-04-30 16:30:00+00	NVDA	200.15	201.05	199.32	200.48	16011538
+66339	2026-04-30 17:30:00+00	NVDA	200.48	201.73	200.26	200.77	15835798
+66340	2026-04-30 18:30:00+00	NVDA	200.77	202	200.74	200.82	17412627
+66341	2026-04-30 19:30:00+00	NVDA	200.81	201.01	199.5	199.53	19896461
+66342	2026-05-01 13:30:00+00	NVDA	201.28	203	199.14	199.3	34778623
+66343	2026-05-01 14:30:00+00	NVDA	199.3	200.05	197.12	198.93	23090117
+66344	2026-05-01 15:30:00+00	NVDA	198.93	199.85	198.48	198.65	12209876
+66345	2026-05-01 16:30:00+00	NVDA	198.64	200.2	198.56	199.85	9257649
+66346	2026-05-01 17:30:00+00	NVDA	199.85	200.29	198.93	199.13	8524596
+66347	2026-05-01 18:30:00+00	NVDA	199.13	199.83	198.18	199.71	12173166
+66348	2026-05-01 19:30:00+00	NVDA	199.72	199.92	198.22	198.42	11233757
+66349	2026-05-04 13:30:00+00	NVDA	199.54	201.73	197.34	197.38	34264236
+66350	2026-05-04 14:30:00+00	NVDA	197.38	198.4	194.74	195.76	21273947
+66351	2026-05-04 15:30:00+00	NVDA	195.8	196.59	194.86	196.22	16464990
+66352	2026-05-04 16:30:00+00	NVDA	196.23	197.82	196.11	197.3	9864130
+66353	2026-05-04 17:30:00+00	NVDA	197.29	199.2	196.91	198.23	12057359
+66354	2026-05-04 18:30:00+00	NVDA	198.24	198.73	197.35	198.64	10677768
+66355	2026-05-04 19:30:00+00	NVDA	198.63	199.18	198	198.56	9210772
+66356	2026-05-05 13:30:00+00	NVDA	199.3	200.24	197.5	198.52	30544680
+66357	2026-05-05 14:30:00+00	NVDA	198.52	198.7	196.66	197.03	16517010
+66358	2026-05-05 15:30:00+00	NVDA	197.04	198.5	196.83	197.98	11108907
+66359	2026-05-05 16:30:00+00	NVDA	197.97	198.1	197.15	197.79	7386811
+66360	2026-05-05 17:30:00+00	NVDA	197.79	197.98	196.99	197.5	8102043
+66361	2026-05-05 18:30:00+00	NVDA	197.5	197.65	196.24	196.31	11553147
+66362	2026-05-05 19:30:00+00	NVDA	196.3	196.6	196.03	196.5	9641519
+66363	2026-05-06 13:30:00+00	NVDA	199.81	205.83	198.61	203.95	57596744
+66364	2026-05-06 14:30:00+00	NVDA	203.97	206.8	203.51	206.35	22958803
+66365	2026-05-06 15:30:00+00	NVDA	206.38	207.18	204.6	205.27	16072083
+66366	2026-05-06 16:30:00+00	NVDA	205.26	205.52	203.95	205.07	11073902
+66367	2026-05-06 17:30:00+00	NVDA	205.07	207.21	204.96	207.02	12300158
+66368	2026-05-06 18:30:00+00	NVDA	207.04	208.05	206.51	207.62	16853634
+66369	2026-05-06 19:30:00+00	NVDA	207.61	208.26	206.89	207.66	17143139
+66370	2026-05-07 13:30:00+00	NVDA	208.32	214.03	206.5	213.13	51861512
+66371	2026-05-07 14:30:00+00	NVDA	213.13	214.2	210.73	211.96	25332727
+66372	2026-05-07 15:30:00+00	NVDA	211.99	213.86	210.62	213.57	20878280
+66373	2026-05-07 16:30:00+00	NVDA	213.57	214.15	210.95	212	15159167
+66374	2026-05-07 17:30:00+00	NVDA	211.95	213.25	211.44	212.79	13016589
+66375	2026-05-07 18:30:00+00	NVDA	212.77	213.26	211.42	212.03	11919279
+66376	2026-05-07 19:30:00+00	NVDA	212.03	212.58	211.23	211.51	10318267
+66377	2026-05-08 13:30:00+00	NVDA	213.03	217.8	212.89	215.29	43322899
+66378	2026-05-08 14:30:00+00	NVDA	215.31	216.8	214.31	216.26	18072660
+66379	2026-05-08 15:30:00+00	NVDA	216.28	217.2	215.16	215.89	13308112
+66380	2026-05-08 16:30:00+00	NVDA	215.9	216.1	215.01	215.68	8779609
+66381	2026-05-08 17:30:00+00	NVDA	215.68	215.8	214.85	215.36	8972004
+66382	2026-05-08 18:30:00+00	NVDA	215.37	215.82	214.82	214.85	9641300
+66383	2026-05-08 19:30:00+00	NVDA	214.85	215.47	214.68	215.21	11516279
+66384	2026-05-11 13:30:00+00	NVDA	213.93	220.9	213.93	217.97	48204003
+66385	2026-05-11 14:30:00+00	NVDA	217.99	222.29	217.37	221.99	29227300
+66386	2026-05-11 15:30:00+00	NVDA	221.99	222.3	220.97	221.99	14795865
+66387	2026-05-11 16:30:00+00	NVDA	221.98	222.09	219.88	220.76	11200648
+66388	2026-05-11 17:30:00+00	NVDA	220.72	221.44	220.37	221.43	8563105
+66389	2026-05-11 18:30:00+00	NVDA	221.41	221.57	218.94	219.14	12472914
+66390	2026-05-11 19:30:00+00	NVDA	219.15	219.59	218.92	219.48	10509450
+66391	2026-05-12 13:30:00+00	NVDA	218.54	223.75	217.01	218.92	45254879
+66392	2026-05-12 14:30:00+00	NVDA	218.9	219.1	214.92	215.46	27061151
+66393	2026-05-12 15:30:00+00	NVDA	215.42	218.26	215.14	217.51	15568727
+66394	2026-05-12 16:30:00+00	NVDA	217.52	218.09	215.53	217.72	15677842
+66395	2026-05-12 17:30:00+00	NVDA	217.72	219.2	217.67	218.96	9893599
+66396	2026-05-12 18:30:00+00	NVDA	218.95	221.14	218.89	220.73	14638529
+66397	2026-05-12 19:30:00+00	NVDA	220.74	221.74	220.15	220.87	12903996
+66398	2026-05-13 13:30:00+00	NVDA	224.93	227.16	221.57	224.44	46864063
+66399	2026-05-13 14:30:00+00	NVDA	224.46	227.57	223.7	226.21	24274192
+66400	2026-05-13 15:30:00+00	NVDA	226.22	227.84	225.71	227.33	15288462
+66401	2026-05-13 16:30:00+00	NVDA	227.3	227.65	226.66	226.95	10556665
+66402	2026-05-13 17:30:00+00	NVDA	226.93	227.43	225.41	226.96	12329697
+66403	2026-05-13 18:30:00+00	NVDA	226.96	227.2	226.3	226.78	9649273
+66404	2026-05-13 19:30:00+00	NVDA	226.79	226.81	225.08	225.87	11059959
+66405	2026-04-27 13:30:00+00	MSFT	422.38	424.67	417.07	424.62	8655272
+66406	2026-04-27 14:30:00+00	MSFT	424.58	424.64	421.37	422.89	3395861
+66407	2026-04-27 15:30:00+00	MSFT	422.92	424.02	421.58	423.62	2140357
+66408	2026-04-27 16:30:00+00	MSFT	423.6	425.18	423.2	425.08	1819194
+66409	2026-04-27 17:30:00+00	MSFT	425.08	426.85	425.03	426.64	2191234
+66410	2026-04-27 18:30:00+00	MSFT	426.64	427.08	424.28	424.66	2475589
+66411	2026-04-27 19:30:00+00	MSFT	424.67	426.18	424.16	425.06	3086645
+66412	2026-04-28 13:30:00+00	MSFT	424.72	428.08	421.9	426.39	6859940
+66413	2026-04-28 14:30:00+00	MSFT	426.42	426.98	424.87	425.8	3134259
+66414	2026-04-28 15:30:00+00	MSFT	425.75	428.58	425.55	428.49	4087614
+66415	2026-04-28 16:30:00+00	MSFT	428.48	429.19	427.39	428.73	2187584
+66416	2026-04-28 17:30:00+00	MSFT	428.74	429.03	426.31	426.61	2124864
+66417	2026-04-28 18:30:00+00	MSFT	426.59	429.06	426.08	428.99	3605498
+66418	2026-04-28 19:30:00+00	MSFT	429.01	429.91	428.6	429.36	3221736
+66419	2026-04-29 13:30:00+00	MSFT	424.58	426.82	421.78	425.2	7244875
+66420	2026-04-29 14:30:00+00	MSFT	425.23	425.83	424.04	424.36	2856491
+66421	2026-04-29 15:30:00+00	MSFT	424.37	425.3	421.74	422.01	2733407
+66422	2026-04-29 16:30:00+00	MSFT	422	423.19	420.29	423.16	2613587
+66423	2026-04-29 17:30:00+00	MSFT	423.14	424.23	422.52	423.65	2275697
+66424	2026-04-29 18:30:00+00	MSFT	423.65	425.43	422.98	424.98	3422105
+66425	2026-04-29 19:30:00+00	MSFT	424.97	425.2	423.17	424.64	4140048
+66426	2026-04-30 13:30:00+00	MSFT	410.79	414.42	400.13	401.65	19834660
+66427	2026-04-30 14:30:00+00	MSFT	401.62	406.97	401.12	403.05	7818336
+66428	2026-04-30 15:30:00+00	MSFT	403.08	403.88	400.85	400.93	5193311
+66429	2026-04-30 16:30:00+00	MSFT	400.91	401.67	398.01	401.02	6219459
+66430	2026-04-30 17:30:00+00	MSFT	400.98	406.17	400.93	406.15	5287522
+66431	2026-04-30 18:30:00+00	MSFT	406.15	408.94	406.1	408.34	5536518
+66432	2026-04-30 19:30:00+00	MSFT	408.32	410.12	407.5	407.78	6805448
+66433	2026-05-01 13:30:00+00	MSFT	412.8	416.27	410.43	412.3	8478441
+66434	2026-05-01 14:30:00+00	MSFT	412.37	414.75	411.08	414.59	4810770
+66435	2026-05-01 15:30:00+00	MSFT	414.57	417.11	413	414.33	4024906
+66436	2026-05-01 16:30:00+00	MSFT	414.31	414.62	412.76	414.48	1944469
+66437	2026-05-01 17:30:00+00	MSFT	414.5	416	413.91	415.59	2215033
+66438	2026-05-01 18:30:00+00	MSFT	415.55	416.31	414.41	416.23	2235578
+66439	2026-05-01 19:30:00+00	MSFT	416.25	417.09	413.5	414.51	3455074
+66440	2026-05-04 13:30:00+00	MSFT	411.55	420.78	410.8	419.88	7493876
+66441	2026-05-04 14:30:00+00	MSFT	419.89	420.5	415.48	415.9	3295665
+66442	2026-05-04 15:30:00+00	MSFT	415.93	416.48	413.02	415.71	2832640
+66443	2026-05-04 16:30:00+00	MSFT	415.72	416.29	413.74	414.58	2220992
+66444	2026-05-04 17:30:00+00	MSFT	414.58	415.54	414.18	414.68	1509856
+66445	2026-05-04 18:30:00+00	MSFT	414.69	414.77	412.05	413.17	2382482
+66446	2026-05-04 19:30:00+00	MSFT	413.17	413.76	411.98	413.71	3718725
+66447	2026-05-05 13:30:00+00	MSFT	415.32	416.78	409.36	410.6	6431001
+66448	2026-05-05 14:30:00+00	MSFT	410.64	411.55	409.66	411.3	2789881
+66449	2026-05-05 15:30:00+00	MSFT	411.35	411.6	408.8	409.78	2519647
+66450	2026-05-05 16:30:00+00	MSFT	409.79	410.45	409.03	410.14	2460233
+66451	2026-05-05 17:30:00+00	MSFT	410.14	410.95	409.74	410	1541825
+66452	2026-05-05 18:30:00+00	MSFT	409.98	413.39	409.67	412.6	2162122
+66453	2026-05-05 19:30:00+00	MSFT	412.6	412.77	411.15	411.27	2009727
+66454	2026-05-06 13:30:00+00	MSFT	407.95	416.42	405.11	416.03	9510425
+66455	2026-05-06 14:30:00+00	MSFT	416.01	418.42	413.12	413.41	3924671
+66456	2026-05-06 15:30:00+00	MSFT	413.49	416.28	413.46	414.2	2068090
+66457	2026-05-06 16:30:00+00	MSFT	414.22	414.3	412.2	413.45	1641918
+66458	2026-05-06 17:30:00+00	MSFT	413.43	414.1	412.26	413.86	1654075
+66459	2026-05-06 18:30:00+00	MSFT	413.84	414.39	413.02	413.27	1678365
+66460	2026-05-06 19:30:00+00	MSFT	413.27	414.45	412.62	413.76	2569770
+66461	2026-05-07 13:30:00+00	MSFT	420.11	427.98	418.8	424.24	8565880
+66462	2026-05-07 14:30:00+00	MSFT	424.24	426.52	422.63	424.55	4344103
+66463	2026-05-07 15:30:00+00	MSFT	424.56	426.55	423.08	424.89	2617659
+66464	2026-05-07 16:30:00+00	MSFT	424.84	424.88	420.62	421.21	2668261
+66465	2026-05-07 17:30:00+00	MSFT	421.17	423.65	420.5	423.19	2983201
+66466	2026-05-07 18:30:00+00	MSFT	423.19	424.28	421	421.5	4638742
+66467	2026-05-07 19:30:00+00	MSFT	421.55	422.09	420	420.99	2763817
+66468	2026-05-08 13:30:00+00	MSFT	417.39	418.63	414.98	415.83	7129822
+66469	2026-05-08 14:30:00+00	MSFT	415.8	417.23	414.36	416.92	3749886
+66470	2026-05-08 15:30:00+00	MSFT	416.92	417.15	415.35	415.82	2164087
+66471	2026-05-08 16:30:00+00	MSFT	415.86	417.4	415.4	417.2	2135193
+66472	2026-05-08 17:30:00+00	MSFT	417.2	417.35	415.37	416.04	2532844
+66473	2026-05-08 18:30:00+00	MSFT	416.05	416.12	414.19	414.83	3307488
+66474	2026-05-08 19:30:00+00	MSFT	414.85	415.95	414	415.15	4482518
+66475	2026-05-11 13:30:00+00	MSFT	407.77	411.6	405.5	410.67	8560941
+66476	2026-05-11 14:30:00+00	MSFT	410.67	412.21	408.96	411.88	3588751
+66477	2026-05-11 15:30:00+00	MSFT	411.83	411.85	410.14	410.91	1920942
+66478	2026-05-11 16:30:00+00	MSFT	410.91	411.2	408.58	409.1	2429200
+66479	2026-05-11 17:30:00+00	MSFT	409.11	411.94	409.1	411.38	2029634
+66480	2026-05-11 18:30:00+00	MSFT	411.39	411.6	409.7	411.58	1932936
+66481	2026-05-11 19:30:00+00	MSFT	411.55	412.68	411.25	412.68	2154109
+66482	2026-05-12 13:30:00+00	MSFT	414.42	415.5	406.65	409.01	7544349
+66483	2026-05-12 14:30:00+00	MSFT	409.01	409.65	407.86	408.33	3105501
+66484	2026-05-12 15:30:00+00	MSFT	408.36	409.92	407.39	409.5	2546370
+66485	2026-05-12 16:30:00+00	MSFT	409.51	410.44	407.75	408.89	1956769
+66486	2026-05-12 17:30:00+00	MSFT	408.86	409.68	407.92	408.35	1703801
+66487	2026-05-12 18:30:00+00	MSFT	408.32	409.08	407.28	408.95	3356346
+66488	2026-05-12 19:30:00+00	MSFT	408.97	408.97	407.16	407.76	3298310
+66489	2026-05-13 13:30:00+00	MSFT	402.97	404.78	401.03	403.04	5979150
+66490	2026-05-13 14:30:00+00	MSFT	403.12	404.24	402.05	403.29	3351925
+66491	2026-05-13 15:30:00+00	MSFT	403.27	405.86	403.02	405.65	2377627
+66492	2026-05-13 16:30:00+00	MSFT	405.63	406.31	404.02	404.09	1797026
+66493	2026-05-13 17:30:00+00	MSFT	404.08	405.35	403.71	405.35	1883383
+66494	2026-05-13 18:30:00+00	MSFT	405.33	406.17	404.41	404.6	2602360
+66495	2026-05-13 19:30:00+00	MSFT	404.61	405.9	404.31	405.12	2445001
+66496	2026-04-27 13:30:00+00	JPM	306.88	311.19	306.88	310.77	1578458
+66497	2026-04-27 14:30:00+00	JPM	310.78	311.88	310.06	310.23	591082
+66498	2026-04-27 15:30:00+00	JPM	310.29	311.01	310.05	310.55	435634
+66499	2026-04-27 16:30:00+00	JPM	310.57	310.87	310.29	310.66	345367
+66500	2026-04-27 17:30:00+00	JPM	310.6	311.19	310.6	310.79	346880
+66501	2026-04-27 18:30:00+00	JPM	310.78	312.58	310.7	312.32	1134293
+66502	2026-04-27 19:30:00+00	JPM	312.28	312.49	311.5	311.73	776117
+66503	2026-04-28 13:30:00+00	JPM	315.2	315.45	312.01	312.57	1163539
+66504	2026-04-28 14:30:00+00	JPM	312.6	313.85	312.28	312.98	504860
+66505	2026-04-28 15:30:00+00	JPM	312.95	313.38	312.79	312.84	294331
+66506	2026-04-28 16:30:00+00	JPM	312.85	312.94	312.04	312.45	377152
+66507	2026-04-28 17:30:00+00	JPM	312.51	312.78	311.51	311.53	361997
+66508	2026-04-28 18:30:00+00	JPM	311.53	311.73	311.17	311.6	773097
+66509	2026-04-28 19:30:00+00	JPM	311.59	311.9	311.38	311.52	597930
+66510	2026-04-29 13:30:00+00	JPM	310.57	312.05	307.29	310.27	1269394
+66511	2026-04-29 14:30:00+00	JPM	310.16	310.41	308.78	308.84	568865
+66512	2026-04-29 15:30:00+00	JPM	308.83	308.86	307.45	307.89	480488
+66513	2026-04-29 16:30:00+00	JPM	307.84	308.52	307.78	308.47	306358
+66514	2026-04-29 17:30:00+00	JPM	308.53	308.86	307.82	308.22	377821
+66515	2026-04-29 18:30:00+00	JPM	308.19	309.55	307.92	309.54	568014
+66516	2026-04-29 19:30:00+00	JPM	309.53	309.79	309.05	309.28	1323587
+66517	2026-04-30 13:30:00+00	JPM	307.07	313.09	306.57	313.02	1317785
+66518	2026-04-30 14:30:00+00	JPM	313.06	313.93	312.51	312.76	689279
+66519	2026-04-30 15:30:00+00	JPM	312.76	313.83	312.4	313.79	450844
+66520	2026-04-30 16:30:00+00	JPM	313.79	313.84	312.88	313.1	397627
+66521	2026-04-30 17:30:00+00	JPM	313.13	313.75	312.88	313.71	390449
+66522	2026-04-30 18:30:00+00	JPM	313.76	314.1	313.42	313.86	485111
+66523	2026-04-30 19:30:00+00	JPM	313.89	313.95	313.05	313.27	1031370
+66524	2026-05-01 13:30:00+00	JPM	313.95	316.08	311.83	315.3	978971
+66525	2026-05-01 14:30:00+00	JPM	315.19	315.68	314	314.23	539265
+66526	2026-05-01 15:30:00+00	JPM	314.23	314.42	312.5	312.54	430535
+66527	2026-05-01 16:30:00+00	JPM	312.53	313.8	312.19	313.72	390679
+66528	2026-05-01 17:30:00+00	JPM	313.69	314.62	313.03	313.32	392581
+66529	2026-05-01 18:30:00+00	JPM	313.35	314.34	312.8	314.28	506292
+66530	2026-05-01 19:30:00+00	JPM	314.26	314.44	312.42	312.46	809950
+66531	2026-05-04 13:30:00+00	JPM	310.62	310.65	308.23	309.71	1187574
+66532	2026-05-04 14:30:00+00	JPM	309.74	309.97	306.99	307.56	819553
+66533	2026-05-04 15:30:00+00	JPM	307.54	308.13	306.58	307.11	715793
+66534	2026-05-04 16:30:00+00	JPM	307.11	308.29	306.51	308.28	550250
+66535	2026-05-04 17:30:00+00	JPM	308.26	308.82	307.85	307.9	389540
+66536	2026-05-04 18:30:00+00	JPM	307.92	308.55	307.08	307.96	620179
+66537	2026-05-04 19:30:00+00	JPM	307.96	308.19	307.36	307.7	994471
+66538	2026-05-05 13:30:00+00	JPM	307.71	309.67	306.8	309.55	1950858
+66539	2026-05-05 14:30:00+00	JPM	309.48	310.97	308.8	310.17	510722
+66540	2026-05-05 15:30:00+00	JPM	310.2	310.23	309	309.36	393528
+66541	2026-05-05 16:30:00+00	JPM	309.36	309.96	309.03	309.86	340069
+66542	2026-05-05 17:30:00+00	JPM	309.89	310.11	309.09	309.55	309254
+66543	2026-05-05 18:30:00+00	JPM	309.55	310.55	309.19	310.33	465071
+66544	2026-05-05 19:30:00+00	JPM	310.3	310.47	309.21	309.47	716089
+66545	2026-05-06 13:30:00+00	JPM	311.45	315.76	311.35	314.32	1598169
+66546	2026-05-06 14:30:00+00	JPM	314.32	316.26	313.65	315.41	682808
+66547	2026-05-06 15:30:00+00	JPM	315.44	316.15	315.12	315.45	444042
+66548	2026-05-06 16:30:00+00	JPM	315.46	316	314.43	314.7	337400
+66549	2026-05-06 17:30:00+00	JPM	314.7	315.61	313.95	315.08	472898
+66550	2026-05-06 18:30:00+00	JPM	315.12	315.89	314.98	315.53	601716
+66551	2026-05-06 19:30:00+00	JPM	315.56	316.13	314.8	314.88	949324
+66552	2026-05-07 13:30:00+00	JPM	314.65	316.3	308.43	308.67	1504788
+66553	2026-05-07 14:30:00+00	JPM	308.69	311.39	308.63	310.8	735762
+66554	2026-05-07 15:30:00+00	JPM	310.84	311.03	309.25	309.7	486418
+66555	2026-05-07 16:30:00+00	JPM	309.65	310.12	307.7	307.88	662715
+66556	2026-05-07 17:30:00+00	JPM	307.93	308.04	307.3	307.43	527683
+66557	2026-05-07 18:30:00+00	JPM	307.44	307.5	306.14	307.16	617810
+66558	2026-05-07 19:30:00+00	JPM	307.16	307.37	306.21	306.38	951027
+66559	2026-05-08 13:30:00+00	JPM	308.25	308.99	305.02	305.24	1279649
+66560	2026-05-08 14:30:00+00	JPM	305.32	305.62	301.52	301.75	1086791
+66561	2026-05-08 15:30:00+00	JPM	301.76	303.24	300.8	302.08	755160
+66562	2026-05-08 16:30:00+00	JPM	302.08	302.26	300.65	301.78	642934
+66563	2026-05-08 17:30:00+00	JPM	301.78	302.3	300.5	301.89	548463
+66564	2026-05-08 18:30:00+00	JPM	301.87	302.2	300.68	302	727429
+66565	2026-05-08 19:30:00+00	JPM	302.01	302.45	301.54	302.17	1003635
+66566	2026-05-11 13:30:00+00	JPM	302.1	303.19	299.89	302.76	1447551
+66567	2026-05-11 14:30:00+00	JPM	302.72	302.8	299.5	299.74	802845
+66568	2026-05-11 15:30:00+00	JPM	299.79	299.93	298.88	299.55	791449
+66569	2026-05-11 16:30:00+00	JPM	299.52	300.79	299.36	300.68	632284
+66570	2026-05-11 17:30:00+00	JPM	300.7	301.18	300.19	300.97	552232
+66571	2026-05-11 18:30:00+00	JPM	301	301.38	299.77	300.33	718381
+66572	2026-05-11 19:30:00+00	JPM	300.31	300.35	298.91	299.94	958827
+66573	2026-05-12 13:30:00+00	JPM	300.02	300.41	295.55	298.15	2123536
+66574	2026-05-12 14:30:00+00	JPM	298.19	300.06	297.45	299.95	831988
+66575	2026-05-12 15:30:00+00	JPM	299.95	302.8	299.87	302.57	758206
+66576	2026-05-12 16:30:00+00	JPM	302.56	305.14	302.51	304.88	831675
+66577	2026-05-12 17:30:00+00	JPM	304.85	306.06	304.56	305.8	745525
+66578	2026-05-12 18:30:00+00	JPM	305.8	305.89	305.18	305.49	717640
+66579	2026-05-12 19:30:00+00	JPM	305.5	305.56	304.47	304.99	1135406
+66580	2026-05-13 13:30:00+00	JPM	302.27	303	300.74	301.8	1336092
+66581	2026-05-13 14:30:00+00	JPM	301.79	302.28	300.82	301.56	625017
+66582	2026-05-13 15:30:00+00	JPM	301.58	301.97	300.97	301.81	472945
+66583	2026-05-13 16:30:00+00	JPM	301.82	302.03	301.11	301.7	485453
+66584	2026-05-13 17:30:00+00	JPM	301.7	301.78	300.36	300.63	539552
+66585	2026-05-13 18:30:00+00	JPM	300.66	301.73	300.07	301.41	567446
+66586	2026-05-13 19:30:00+00	JPM	301.4	301.62	300.25	300.32	1087623
+66587	2026-04-27 13:30:00+00	XOM	149.15	151.18	148.97	150.14	2528537
+66588	2026-04-27 14:30:00+00	XOM	150.16	150.34	149.05	149.1	1228664
+66589	2026-04-27 15:30:00+00	XOM	149.09	149.21	148.27	148.34	1001103
+66590	2026-04-27 16:30:00+00	XOM	148.33	148.72	147.97	148.4	939070
+66591	2026-04-27 17:30:00+00	XOM	148.38	148.74	147.99	148.67	656796
+66592	2026-04-27 18:30:00+00	XOM	148.67	149.21	148.53	148.7	1009530
+66593	2026-04-27 19:30:00+00	XOM	148.7	148.93	148.08	148.19	2345157
+66594	2026-04-28 13:30:00+00	XOM	151.63	151.92	149.83	150.44	3141211
+66595	2026-04-28 14:30:00+00	XOM	150.44	152.07	150.24	151.89	2569740
+66596	2026-04-28 15:30:00+00	XOM	151.89	152.31	151.57	151.73	1474558
+66597	2026-04-28 16:30:00+00	XOM	151.73	151.85	151.39	151.42	1118399
+66598	2026-04-28 17:30:00+00	XOM	151.42	151.46	150.75	150.95	1052452
+66599	2026-04-28 18:30:00+00	XOM	150.95	150.99	150.34	150.8	1028051
+66600	2026-04-28 19:30:00+00	XOM	150.8	150.9	150.44	150.6	1982803
+66601	2026-04-29 13:30:00+00	XOM	152.01	152.87	151.01	152.02	2300839
+66602	2026-04-29 14:30:00+00	XOM	152.02	152.66	151.93	152.56	1385591
+66603	2026-04-29 15:30:00+00	XOM	152.58	154.53	152.46	154.49	1758352
+66604	2026-04-29 16:30:00+00	XOM	154.5	154.95	153.88	154.43	1530434
+66605	2026-04-29 17:30:00+00	XOM	154.43	154.83	153.82	154.16	985692
+66606	2026-04-29 18:30:00+00	XOM	154.16	154.34	153.57	154.21	1233354
+66607	2026-04-29 19:30:00+00	XOM	154.22	154.73	154.09	154.67	2586605
+66608	2026-04-30 13:30:00+00	XOM	152.43	154.6	151.34	154.2	2652299
+66609	2026-04-30 14:30:00+00	XOM	154.23	155.12	154.19	155.08	1634561
+66610	2026-04-30 15:30:00+00	XOM	155.09	155.58	154.93	155.35	1119155
+66611	2026-04-30 16:30:00+00	XOM	155.35	155.46	154.16	154.29	1293248
+66612	2026-04-30 17:30:00+00	XOM	154.28	154.29	153.6	154.26	1869025
+66613	2026-04-30 18:30:00+00	XOM	154.27	154.77	154.27	154.72	1387187
+66614	2026-04-30 19:30:00+00	XOM	154.72	155.69	154.39	154.39	3401646
+66615	2026-05-01 13:30:00+00	XOM	152.61	155.01	151.13	153.07	4881189
+66616	2026-05-01 14:30:00+00	XOM	153.05	154.2	152.81	153.23	1960626
+66617	2026-05-01 15:30:00+00	XOM	153.22	153.29	152.17	152.36	1199840
+66618	2026-05-01 16:30:00+00	XOM	152.38	152.62	151.8	152.47	1032268
+66619	2026-05-01 17:30:00+00	XOM	152.45	153.18	152.03	153.07	907154
+66620	2026-05-01 18:30:00+00	XOM	153.06	153.75	152.98	153.44	1103955
+66621	2026-05-01 19:30:00+00	XOM	153.42	153.83	152.74	152.79	2169246
+66622	2026-05-04 13:30:00+00	XOM	152.67	153.24	149.51	153.21	2843903
+66623	2026-05-04 14:30:00+00	XOM	153.21	153.28	152.22	153.23	1769837
+66624	2026-05-04 15:30:00+00	XOM	153.25	154.33	153.09	153.4	1728022
+66625	2026-05-04 16:30:00+00	XOM	153.4	154.47	153.26	153.44	1353510
+66626	2026-05-04 17:30:00+00	XOM	153.45	154.01	153.36	153.74	1537153
+66627	2026-05-04 18:30:00+00	XOM	153.74	154.05	152.93	153.29	954024
+66628	2026-05-04 19:30:00+00	XOM	153.29	153.88	153.07	153.77	1942512
+66629	2026-05-05 13:30:00+00	XOM	153.1	155	152.41	154.12	3292815
+66630	2026-05-05 14:30:00+00	XOM	154.08	154.58	153.5	154.43	1001217
+66631	2026-05-05 15:30:00+00	XOM	154.42	155.18	154.21	155.05	793828
+66632	2026-05-05 16:30:00+00	XOM	155.05	155.22	154.51	154.51	681848
+66633	2026-05-05 17:30:00+00	XOM	154.51	155.07	154.5	154.93	857122
+66634	2026-05-05 18:30:00+00	XOM	154.91	155.15	154.63	155.1	794073
+66635	2026-05-05 19:30:00+00	XOM	155.1	155.29	154.79	154.88	2206760
+66636	2026-05-06 13:30:00+00	XOM	149.07	150.33	147.55	149.09	3914343
+66637	2026-05-06 14:30:00+00	XOM	149.05	149.49	147.55	147.87	2431350
+66638	2026-05-06 15:30:00+00	XOM	147.87	148.24	147.21	148.17	1787987
+66639	2026-05-06 16:30:00+00	XOM	148.16	148.68	148.07	148.07	1330153
+66640	2026-05-06 17:30:00+00	XOM	148.07	148.49	147.54	147.58	1417121
+66641	2026-05-06 18:30:00+00	XOM	147.57	148	147.09	147.87	1711662
+66642	2026-05-06 19:30:00+00	XOM	147.86	148.88	147.75	148.56	2840179
+66643	2026-05-07 13:30:00+00	XOM	146.8	146.8	144.19	144.49	3371109
+66644	2026-05-07 14:30:00+00	XOM	144.46	145.36	144.3	145.23	1629094
+66645	2026-05-07 15:30:00+00	XOM	145.21	146.23	144.61	145.35	1518511
+66646	2026-05-07 16:30:00+00	XOM	145.35	146.78	145.28	146.63	1423832
+66647	2026-05-07 17:30:00+00	XOM	146.63	147.08	145.68	146.02	1390755
+66648	2026-05-07 18:30:00+00	XOM	146.02	146.77	145.84	146.47	1287999
+66649	2026-05-07 19:30:00+00	XOM	146.5	146.62	146.03	146.49	2006883
+66650	2026-05-08 13:30:00+00	XOM	145.85	146.5	144.25	145.79	2474139
+66651	2026-05-08 14:30:00+00	XOM	145.78	145.93	144.53	144.81	1294889
+66652	2026-05-08 15:30:00+00	XOM	144.77	145.43	144.52	145.04	1701012
+66653	2026-05-08 16:30:00+00	XOM	145.04	145.13	144.21	144.21	1047257
+66654	2026-05-08 17:30:00+00	XOM	144.21	145.15	144.2	144.83	2175059
+66655	2026-05-08 18:30:00+00	XOM	144.81	144.91	144.2	144.55	1240571
+66656	2026-05-08 19:30:00+00	XOM	144.55	144.59	143.92	144.4	2224181
+66657	2026-05-11 13:30:00+00	XOM	146.02	147.43	146	147.19	2081750
+66658	2026-05-11 14:30:00+00	XOM	147.2	148.26	147.02	148.15	1540728
+66659	2026-05-11 15:30:00+00	XOM	148.15	148.27	147.82	148.18	1175731
+66660	2026-05-11 16:30:00+00	XOM	148.18	149.12	148.16	148.85	1273280
+66661	2026-05-11 17:30:00+00	XOM	148.86	149.27	148.79	149.1	1007411
+66662	2026-05-11 18:30:00+00	XOM	149.11	149.39	148.88	149.26	1350684
+66663	2026-05-11 19:30:00+00	XOM	149.26	149.72	149.11	149.68	3189753
+66664	2026-05-12 13:30:00+00	XOM	151.25	151.46	149.77	150.35	2603883
+66665	2026-05-12 14:30:00+00	XOM	150.37	150.83	149.89	150.7	1637056
+66666	2026-05-12 15:30:00+00	XOM	150.73	151.69	150.43	151.48	1644448
+66667	2026-05-12 16:30:00+00	XOM	151.46	151.81	150.73	151.12	1426334
+66668	2026-05-12 17:30:00+00	XOM	151.11	151.27	150.61	151.11	1295042
+66669	2026-05-12 18:30:00+00	XOM	151.11	151.52	150.89	151.03	1862065
+66670	2026-05-12 19:30:00+00	XOM	151.02	151.24	150.5	150.66	1960047
+66671	2026-05-13 13:30:00+00	XOM	150.06	151.79	149.68	151.28	1716108
+66672	2026-05-13 14:30:00+00	XOM	151.34	151.45	150.14	150.4	1239466
+66673	2026-05-13 15:30:00+00	XOM	150.42	150.97	150.17	150.43	820429
+66674	2026-05-13 16:30:00+00	XOM	150.41	151.47	150.36	151.2	1808198
+66675	2026-05-13 17:30:00+00	XOM	151.23	151.32	150.75	150.97	605263
+66676	2026-05-13 18:30:00+00	XOM	150.98	151.48	150.73	151.4	892624
+66677	2026-05-13 19:30:00+00	XOM	151.39	151.74	151.26	151.59	1546456
+66678	2026-04-27 13:30:00+00	JNJ	225.77	227.91	224.35	225.93	1193067
+66679	2026-04-27 14:30:00+00	JNJ	225.96	226.81	225.48	225.53	846816
+66680	2026-04-27 15:30:00+00	JNJ	225.55	226.13	225.31	226	553400
+66681	2026-04-27 16:30:00+00	JNJ	226.01	226.15	225.48	225.53	497578
+66682	2026-04-27 17:30:00+00	JNJ	225.52	225.88	225.4	225.79	408506
+66683	2026-04-27 18:30:00+00	JNJ	225.79	226.01	225.05	225.48	679824
+66684	2026-04-27 19:30:00+00	JNJ	225.47	225.52	224.66	225.34	1318409
+66685	2026-04-28 13:30:00+00	JNJ	227.73	229.86	227.07	229.86	1157001
+66686	2026-04-28 14:30:00+00	JNJ	229.79	231.03	229.52	230.01	766617
+66687	2026-04-28 15:30:00+00	JNJ	230.01	230.27	228.64	228.92	810111
+66688	2026-04-28 16:30:00+00	JNJ	228.93	228.96	226.37	226.71	933199
+66689	2026-04-28 17:30:00+00	JNJ	226.77	227.27	226.66	226.74	444564
+66690	2026-04-28 18:30:00+00	JNJ	226.73	227.78	226.48	227.54	532795
+66691	2026-04-28 19:30:00+00	JNJ	227.54	228	227.08	227.78	790798
+66692	2026-04-29 13:30:00+00	JNJ	225.52	226.32	224.89	224.89	674508
+66693	2026-04-29 14:30:00+00	JNJ	224.86	226.96	224.86	226.96	527938
+66694	2026-04-29 15:30:00+00	JNJ	226.93	228.35	226.8	228.35	601890
+66695	2026-04-29 16:30:00+00	JNJ	228.43	228.71	227.82	227.95	713974
+66696	2026-04-29 17:30:00+00	JNJ	227.9	228.07	227.5	227.64	412295
+66697	2026-04-29 18:30:00+00	JNJ	227.6	227.9	226.75	227	1032084
+66698	2026-04-29 19:30:00+00	JNJ	226.91	227.58	226.52	227.33	1689974
+66699	2026-04-30 13:30:00+00	JNJ	227.95	231.14	227.81	230.99	1052588
+66700	2026-04-30 14:30:00+00	JNJ	230.9	231.16	228.68	229.23	831176
+66701	2026-04-30 15:30:00+00	JNJ	229.18	230.28	228.98	230.18	451121
+66702	2026-04-30 16:30:00+00	JNJ	230.18	230.42	229.81	229.85	440577
+66703	2026-04-30 17:30:00+00	JNJ	229.85	229.97	229	229.31	381365
+66704	2026-04-30 18:30:00+00	JNJ	229.34	229.78	229.26	229.54	493384
+66705	2026-04-30 19:30:00+00	JNJ	229.56	230.31	229.36	229.86	1014718
+66706	2026-05-01 13:30:00+00	JNJ	229.06	229.77	227.02	229.35	850648
+66707	2026-05-01 14:30:00+00	JNJ	229.41	229.66	228.51	228.53	1243781
+66708	2026-05-01 15:30:00+00	JNJ	228.53	228.78	227.92	228.43	500866
+66709	2026-05-01 16:30:00+00	JNJ	228.42	228.92	227.86	228	492113
+66710	2026-05-01 17:30:00+00	JNJ	227.97	228.46	227.78	228.13	497757
+66711	2026-05-01 18:30:00+00	JNJ	228.1	228.67	228	228	476449
+66712	2026-05-01 19:30:00+00	JNJ	227.91	228.32	227.16	227.2	919730
+66713	2026-05-04 13:30:00+00	JNJ	225.51	227.07	224.74	226.46	961059
+66714	2026-05-04 14:30:00+00	JNJ	226.46	226.55	224.72	224.77	659937
+66715	2026-05-04 15:30:00+00	JNJ	224.77	225.46	224.08	224.41	694571
+66716	2026-05-04 16:30:00+00	JNJ	224.4	225.37	224.18	225.37	739648
+66717	2026-05-04 17:30:00+00	JNJ	225.37	225.41	224.74	224.82	677574
+66718	2026-05-04 18:30:00+00	JNJ	224.82	224.99	223.8	223.8	769613
+66719	2026-05-04 19:30:00+00	JNJ	223.84	224.65	223.58	224.2	1547839
+66720	2026-05-05 13:30:00+00	JNJ	225.39	226.53	224.9	225.53	775832
+66721	2026-05-05 14:30:00+00	JNJ	225.5	226.53	225.43	225.93	465278
+66722	2026-05-05 15:30:00+00	JNJ	225.9	226.13	225.38	225.93	396404
+66723	2026-05-05 16:30:00+00	JNJ	225.93	226.3	225.4	225.6	309587
+66724	2026-05-05 17:30:00+00	JNJ	225.6	226.08	225.59	225.99	353077
+66725	2026-05-05 18:30:00+00	JNJ	226	226.45	225.85	225.92	454810
+66726	2026-05-05 19:30:00+00	JNJ	225.91	226.15	225.51	225.58	781183
+66727	2026-05-06 13:30:00+00	JNJ	225.25	226.34	224.46	225.5	901201
+66728	2026-05-06 14:30:00+00	JNJ	225.46	225.59	223.5	223.66	840852
+66729	2026-05-06 15:30:00+00	JNJ	223.66	224.91	223.01	223.69	838555
+66730	2026-05-06 16:30:00+00	JNJ	223.68	223.79	222.95	223.36	498985
+66731	2026-05-06 17:30:00+00	JNJ	223.35	224	223.15	223.61	447801
+66732	2026-05-06 18:30:00+00	JNJ	223.61	224.07	223.32	223.94	644516
+66733	2026-05-06 19:30:00+00	JNJ	223.95	224.81	223.84	224.5	1277386
+66734	2026-05-07 13:30:00+00	JNJ	224.78	224.78	221	221.17	923888
+66735	2026-05-07 14:30:00+00	JNJ	221.1	221.94	221.02	221.11	736682
+66736	2026-05-07 15:30:00+00	JNJ	221.11	222.07	220.63	221.48	758129
+66737	2026-05-07 16:30:00+00	JNJ	221.51	221.92	221.23	221.79	445975
+66738	2026-05-07 17:30:00+00	JNJ	221.78	222.67	221.57	222.55	333966
+66739	2026-05-07 18:30:00+00	JNJ	222.57	222.57	221.98	222.26	631080
+66740	2026-05-07 19:30:00+00	JNJ	222.26	222.62	221.81	222.5	930428
+66741	2026-05-08 13:30:00+00	JNJ	222.94	223.37	221.28	222.01	675298
+66742	2026-05-08 14:30:00+00	JNJ	221.93	222.38	221.04	221.49	369748
+66743	2026-05-08 15:30:00+00	JNJ	221.54	221.93	221.05	221.34	345951
+66744	2026-05-08 16:30:00+00	JNJ	221.28	221.54	220.92	221.32	345020
+66745	2026-05-08 17:30:00+00	JNJ	221.29	222	221.11	221.89	352594
+66746	2026-05-08 18:30:00+00	JNJ	221.9	222.16	221.21	221.33	990278
+66747	2026-05-08 19:30:00+00	JNJ	221.33	221.79	221.11	221.35	775303
+66748	2026-05-11 13:30:00+00	JNJ	221.32	223.28	220.69	223	923319
+66749	2026-05-11 14:30:00+00	JNJ	223.07	223.15	221.21	221.3	423024
+66750	2026-05-11 15:30:00+00	JNJ	221.23	221.38	220.46	220.51	386829
+66751	2026-05-11 16:30:00+00	JNJ	220.51	221.44	220.37	221.32	389253
+66752	2026-05-11 17:30:00+00	JNJ	221.36	221.9	220.95	221.01	375983
+66753	2026-05-11 18:30:00+00	JNJ	221.01	221.07	220.37	220.79	455858
+66754	2026-05-11 19:30:00+00	JNJ	220.79	221.49	220.47	221.44	674483
+66755	2026-05-12 13:30:00+00	JNJ	223	224.14	221.65	224.12	1616808
+66756	2026-05-12 14:30:00+00	JNJ	224.08	226.34	223.76	226.27	593405
+66757	2026-05-12 15:30:00+00	JNJ	226.25	226.52	225.32	226.4	562939
+66758	2026-05-12 16:30:00+00	JNJ	226.34	227.65	226.26	226.66	507691
+66759	2026-05-12 17:30:00+00	JNJ	226.64	226.64	225.3	225.74	868015
+66760	2026-05-12 18:30:00+00	JNJ	225.74	225.9	225.09	225.22	516784
+66761	2026-05-12 19:30:00+00	JNJ	225.18	225.19	224.29	224.34	1063407
+66762	2026-05-13 13:30:00+00	JNJ	225.82	229.53	225.44	227.7	1257245
+66763	2026-05-13 14:30:00+00	JNJ	227.63	227.96	226.46	227.82	663689
+66764	2026-05-13 15:30:00+00	JNJ	227.84	229.43	227.48	229.32	642859
+66765	2026-05-13 16:30:00+00	JNJ	229.34	229.88	228.88	229.45	475207
+66766	2026-05-13 17:30:00+00	JNJ	229.46	229.89	229.38	229.77	386635
+66767	2026-05-13 18:30:00+00	JNJ	229.76	230.8	229.59	230.52	756852
+66768	2026-05-13 19:30:00+00	JNJ	230.5	230.7	230.03	230.44	1149575
+66769	2026-04-27 13:30:00+00	BA	233	235.45	231.84	231.99	971328
+66770	2026-04-27 14:30:00+00	BA	232.07	232.07	229.54	230.16	714940
+66771	2026-04-27 15:30:00+00	BA	230.09	231.48	229.39	231.14	420975
+66772	2026-04-27 16:30:00+00	BA	231.18	231.45	230.65	231.23	300876
+66773	2026-04-27 17:30:00+00	BA	231.27	231.46	230.78	231.35	266781
+66774	2026-04-27 18:30:00+00	BA	231.31	232.1	230.82	232.05	377129
+66775	2026-04-27 19:30:00+00	BA	231.93	232.09	230.54	231.32	631560
+66776	2026-04-28 13:30:00+00	BA	231.05	231.33	228.4	228.4	662043
+66777	2026-04-28 14:30:00+00	BA	228.43	229.07	228.11	228.21	420263
+66778	2026-04-28 15:30:00+00	BA	228.23	229.17	227.07	228.58	612654
+66779	2026-04-28 16:30:00+00	BA	228.59	228.76	227.61	228.52	329842
+66780	2026-04-28 17:30:00+00	BA	228.58	229.52	228.5	229.49	275013
+66781	2026-04-28 18:30:00+00	BA	229.55	230.28	229.24	229.79	411933
+66782	2026-04-28 19:30:00+00	BA	229.78	230.78	229.51	230.73	498534
+66783	2026-04-29 13:30:00+00	BA	230.22	230.26	224.04	224.06	992591
+66784	2026-04-29 14:30:00+00	BA	224.04	224.51	222.11	222.88	1221835
+66785	2026-04-29 15:30:00+00	BA	222.9	223	221.9	222.1	658018
+66786	2026-04-29 16:30:00+00	BA	222	223.15	221.15	222.57	452751
+66787	2026-04-29 17:30:00+00	BA	222.63	222.92	221.24	221.7	643422
+66788	2026-04-29 18:30:00+00	BA	221.7	223.54	221.22	223.12	915231
+66789	2026-04-29 19:30:00+00	BA	223.17	224.22	222.67	224.13	876737
+66790	2026-04-30 13:30:00+00	BA	225.9	227.4	224.61	227.35	958411
+66791	2026-04-30 14:30:00+00	BA	227.31	227.77	225.55	226.5	500717
+66792	2026-04-30 15:30:00+00	BA	226.54	229.43	226.45	229.24	553439
+66793	2026-04-30 16:30:00+00	BA	229.17	229.22	228.32	228.99	288678
+66794	2026-04-30 17:30:00+00	BA	229.06	229.55	228.93	229	324983
+66795	2026-04-30 18:30:00+00	BA	228.99	229.15	227.98	228.93	411486
+66796	2026-04-30 19:30:00+00	BA	229.03	229.41	228.64	228.98	763843
+66797	2026-05-01 13:30:00+00	BA	230.4	231.51	229.35	230.65	861143
+66798	2026-05-01 14:30:00+00	BA	230.61	231.38	230.11	230.98	328565
+66799	2026-05-01 15:30:00+00	BA	230.96	231.39	229.16	229.33	313625
+66800	2026-05-01 16:30:00+00	BA	229.34	229.77	228.75	229.17	323082
+66801	2026-05-01 17:30:00+00	BA	229.2	229.86	228.5	228.82	286910
+66802	2026-05-01 18:30:00+00	BA	228.83	228.87	228.1	228.4	307341
+66803	2026-05-01 19:30:00+00	BA	228.38	228.61	227.26	227.43	573222
+66804	2026-05-04 13:30:00+00	BA	226.49	227.86	224.68	227.54	715911
+66805	2026-05-04 14:30:00+00	BA	227.51	227.87	222.86	223.16	651377
+66806	2026-05-04 15:30:00+00	BA	223.24	224	222.37	223.46	811187
+66807	2026-05-04 16:30:00+00	BA	223.46	224.2	223.03	223.93	339475
+66808	2026-05-04 17:30:00+00	BA	223.96	224.04	222.74	222.96	339095
+66809	2026-05-04 18:30:00+00	BA	222.96	222.96	221.58	222	537438
+66810	2026-05-04 19:30:00+00	BA	222	222.67	221.04	221.35	832834
+66811	2026-05-05 13:30:00+00	BA	223.1	224.68	221.74	223.92	722888
+66812	2026-05-05 14:30:00+00	BA	223.93	224.51	223.04	224	614623
+66813	2026-05-05 15:30:00+00	BA	223.94	224.97	223.26	224.76	411029
+66814	2026-05-05 16:30:00+00	BA	224.76	225.56	224.47	224.82	349287
+66815	2026-05-05 17:30:00+00	BA	224.76	225.21	223.66	224.57	260965
+66816	2026-05-05 18:30:00+00	BA	224.57	224.99	223.71	224.77	317443
+66817	2026-05-05 19:30:00+00	BA	224.71	225.28	224.19	224.45	530422
+66818	2026-05-06 13:30:00+00	BA	230.93	232.08	228.1	228.88	1454334
+66819	2026-05-06 14:30:00+00	BA	228.88	231.25	228.88	229.99	841547
+66820	2026-05-06 15:30:00+00	BA	230.12	230.77	229.07	229.73	543977
+66821	2026-05-06 16:30:00+00	BA	229.72	230.1	229.09	229.4	639010
+66822	2026-05-06 17:30:00+00	BA	229.42	229.93	228.47	229.93	399128
+66823	2026-05-06 18:30:00+00	BA	229.98	230.88	229.87	230.26	527999
+66824	2026-05-06 19:30:00+00	BA	230.24	230.44	229.6	229.9	681061
+66825	2026-05-07 13:30:00+00	BA	231.45	232.58	229.9	231.74	1071871
+66826	2026-05-07 14:30:00+00	BA	231.71	236.63	231.09	235.32	2414315
+66827	2026-05-07 15:30:00+00	BA	235.23	235.91	230.22	231.5	1203229
+66828	2026-05-07 16:30:00+00	BA	231.65	232.16	230.67	231.01	610307
+66829	2026-05-07 17:30:00+00	BA	231.01	232.16	230.46	230.64	514656
+66830	2026-05-07 18:30:00+00	BA	230.68	230.93	229.6	230.04	741116
+66831	2026-05-07 19:30:00+00	BA	229.99	231.19	229.77	231.04	633942
+66832	2026-05-08 13:30:00+00	BA	233.8	236.5	231.75	235.56	1499851
+66833	2026-05-08 14:30:00+00	BA	235.6	238.54	235.25	236.1	1477924
+66834	2026-05-08 15:30:00+00	BA	236.04	237.41	235.68	236.94	511039
+66835	2026-05-08 16:30:00+00	BA	236.94	237.9	236.68	237.12	713413
+66836	2026-05-08 17:30:00+00	BA	237.18	237.18	235.8	236.33	354137
+66837	2026-05-08 18:30:00+00	BA	236.27	236.99	235.68	236.74	571524
+66838	2026-05-08 19:30:00+00	BA	236.68	237.95	235.9	237.39	1161567
+66839	2026-05-11 13:30:00+00	BA	239.44	239.89	236.52	238.43	1584686
+66840	2026-05-11 14:30:00+00	BA	238.29	241.17	237.98	240.24	1285797
+66841	2026-05-11 15:30:00+00	BA	240.23	241.21	240.07	240.07	533303
+66842	2026-05-11 16:30:00+00	BA	240.03	240.5	239.39	240	473142
+66843	2026-05-11 17:30:00+00	BA	240.1	240.15	239.13	239.35	433941
+66844	2026-05-11 18:30:00+00	BA	239.35	240	239.11	239.17	414792
+66845	2026-05-11 19:30:00+00	BA	239.22	239.27	237.79	238.31	629735
+66846	2026-05-12 13:30:00+00	BA	239	239.02	231.96	232.44	1747034
+66847	2026-05-12 14:30:00+00	BA	232.52	233.84	231.11	231.63	1261103
+66848	2026-05-12 15:30:00+00	BA	231.79	234.23	231.78	233.64	802234
+66849	2026-05-12 16:30:00+00	BA	233.51	234.23	233	234.22	592092
+66850	2026-05-12 17:30:00+00	BA	234.16	235.04	233.75	234.7	533050
+66851	2026-05-12 18:30:00+00	BA	234.79	237.27	234.7	236.65	683565
+66852	2026-05-12 19:30:00+00	BA	236.62	237.5	236.6	236.87	559790
+66853	2026-05-13 13:30:00+00	BA	237.23	238.88	234.4	238.41	1412222
+66854	2026-05-13 14:30:00+00	BA	238.31	240.98	237.64	240.9	841425
+66855	2026-05-13 15:30:00+00	BA	240.93	242.27	239.61	240.58	1048328
+66856	2026-05-13 16:30:00+00	BA	240.56	241.89	240.06	240.07	560161
+66857	2026-05-13 17:30:00+00	BA	240.08	241.5	239.55	240.95	1021685
+66858	2026-05-13 18:30:00+00	BA	240.95	241.07	239.78	240.71	768298
+66859	2026-05-13 19:30:00+00	BA	240.64	241.36	240.26	240.64	778679
+66860	2026-04-27 13:30:00+00	COST	1008.62	1014.41	1002.01	1010.71	236966
+66861	2026-04-27 14:30:00+00	COST	1010.83	1013.01	1007.67	1008.34	124761
+66862	2026-04-27 15:30:00+00	COST	1008.43	1010.85	1006.68	1006.71	86174
+66863	2026-04-27 16:30:00+00	COST	1006.55	1007.64	1003.68	1006.02	97185
+66864	2026-04-27 17:30:00+00	COST	1005.8	1007.8	1005.02	1006.83	98630
+66865	2026-04-27 18:30:00+00	COST	1006.22	1006.27	1001.21	1003.1	145822
+66866	2026-04-27 19:30:00+00	COST	1003.1	1003.89	996.63	998.04	279207
+66867	2026-04-28 13:30:00+00	COST	1010.47	1012.65	989.55	994.47	226575
+66868	2026-04-28 14:30:00+00	COST	994.16	1000.91	993.59	997.03	162478
+66869	2026-04-28 15:30:00+00	COST	997.03	998.47	996.17	997.4	68565
+66870	2026-04-28 16:30:00+00	COST	997.2	997.41	995	996.54	51308
+66871	2026-04-28 17:30:00+00	COST	996.59	996.59	986	987.67	128735
+66872	2026-04-28 18:30:00+00	COST	987.94	991.9	986.73	990.41	103772
+66873	2026-04-28 19:30:00+00	COST	989.98	994.48	988.37	994	167776
+66874	2026-04-29 13:30:00+00	COST	988.37	992.18	985.21	987.66	186953
+66875	2026-04-29 14:30:00+00	COST	987.86	990.58	986.29	990.26	99300
+66876	2026-04-29 15:30:00+00	COST	990.22	995.47	988.34	994.35	227655
+66877	2026-04-29 16:30:00+00	COST	994.7	996.52	993.49	995.63	77901
+66878	2026-04-29 17:30:00+00	COST	995.58	997.15	993.98	994.12	70574
+66879	2026-04-29 18:30:00+00	COST	994.45	995.85	992.53	994.88	100105
+66880	2026-04-29 19:30:00+00	COST	995.04	998.97	994.13	998.82	155923
+66881	2026-04-30 13:30:00+00	COST	999.42	1016.61	996.32	1013.92	312276
+66882	2026-04-30 14:30:00+00	COST	1014.75	1016.02	1006	1008.7	165353
+66883	2026-04-30 15:30:00+00	COST	1008.26	1012.54	1007.26	1012.37	100624
+66884	2026-04-30 16:30:00+00	COST	1012.26	1014.08	1011.69	1013.96	105443
+66885	2026-04-30 17:30:00+00	COST	1013.99	1017.64	1013.1	1013.57	160283
+66886	2026-04-30 18:30:00+00	COST	1013.43	1016.76	1012.66	1014.97	164675
+66887	2026-04-30 19:30:00+00	COST	1014.56	1017.37	1013.5	1014.27	242661
+66888	2026-05-01 13:30:00+00	COST	1014.85	1029.4	1011.42	1027.6	269753
+66889	2026-05-01 14:30:00+00	COST	1027.6	1031.26	1022.59	1022.66	161369
+66890	2026-05-01 15:30:00+00	COST	1022.18	1022.6	1015.85	1016.2	116355
+66891	2026-05-01 16:30:00+00	COST	1016.16	1016.21	1013.17	1015.28	83137
+66892	2026-05-01 17:30:00+00	COST	1015.26	1016.2	1008.19	1009.36	133260
+66893	2026-05-01 18:30:00+00	COST	1009.52	1011.8	1006.32	1011.27	123064
+66894	2026-05-01 19:30:00+00	COST	1011.26	1013.35	1010.63	1011.7	182606
+66895	2026-05-04 13:30:00+00	COST	1007.02	1024.72	1002.23	1023.64	232796
+66896	2026-05-04 14:30:00+00	COST	1023.97	1024.09	1016.41	1016.87	132382
+66897	2026-05-04 15:30:00+00	COST	1017.39	1019.16	1014	1016.22	106170
+66898	2026-05-04 16:30:00+00	COST	1016.34	1017.29	1010.39	1013.68	96524
+66899	2026-05-04 17:30:00+00	COST	1013.2	1014.16	1009.93	1009.93	131962
+66900	2026-05-04 18:30:00+00	COST	1010.17	1012.93	1009.03	1010.98	91788
+66901	2026-05-04 19:30:00+00	COST	1010.98	1013.27	1009.25	1012.83	171814
+66902	2026-05-05 13:30:00+00	COST	1010.02	1020.68	1009.07	1013.24	230078
+66903	2026-05-05 14:30:00+00	COST	1013.58	1014.46	1010.82	1013.85	98013
+66904	2026-05-05 15:30:00+00	COST	1013.32	1015.5	1011.64	1015.17	67513
+66905	2026-05-05 16:30:00+00	COST	1015.54	1017.49	1013.84	1015.29	77804
+66906	2026-05-05 17:30:00+00	COST	1015.49	1020.18	1015.07	1016.88	159759
+66907	2026-05-05 18:30:00+00	COST	1016.88	1020.78	1015.53	1018.98	134687
+66908	2026-05-05 19:30:00+00	COST	1018.67	1019.38	1013.71	1016.47	200905
+66909	2026-05-06 13:30:00+00	COST	1011.5	1012.23	999.01	1003.65	475946
+66910	2026-05-06 14:30:00+00	COST	1003.32	1004.44	992.5	994.8	264613
+66911	2026-05-06 15:30:00+00	COST	994.39	997.9	993.91	995.53	180673
+66912	2026-05-06 16:30:00+00	COST	995	998	992.65	993	128326
+66913	2026-05-06 17:30:00+00	COST	993.18	996.4	992.61	994.22	178092
+66914	2026-05-06 18:30:00+00	COST	994.37	997.84	993.22	996.24	158816
+66915	2026-05-06 19:30:00+00	COST	996.47	997.99	995	995.36	277720
+66916	2026-05-07 13:30:00+00	COST	993.5	1002.87	990.66	992.58	287064
+66917	2026-05-07 14:30:00+00	COST	992.9	998.73	992.45	996.64	124861
+66918	2026-05-07 15:30:00+00	COST	996.94	1002	994.45	999.78	116975
+66919	2026-05-07 16:30:00+00	COST	999.48	1006.49	998.82	1004.68	141059
+66920	2026-05-07 17:30:00+00	COST	1004.78	1008.3	1000.94	1008.07	113056
+66921	2026-05-07 18:30:00+00	COST	1007.68	1009.23	1006.2	1008.62	125543
+66922	2026-05-07 19:30:00+00	COST	1008.01	1012.66	1007.13	1011.99	279506
+66923	2026-05-08 13:30:00+00	COST	1011.76	1014.41	1007	1011.03	242165
+66924	2026-05-08 14:30:00+00	COST	1011.12	1014.2	1008.58	1012.2	160823
+66925	2026-05-08 15:30:00+00	COST	1012.34	1014.72	1010.28	1011.29	125646
+66926	2026-05-08 16:30:00+00	COST	1011.32	1016	1010.95	1010.95	137200
+66927	2026-05-08 17:30:00+00	COST	1010.96	1012.22	1007.54	1007.79	102120
+66928	2026-05-08 18:30:00+00	COST	1007.79	1010.17	1005.11	1007.47	153501
+66929	2026-05-08 19:30:00+00	COST	1007.45	1010.02	1005.45	1008.78	342678
+66930	2026-05-11 13:30:00+00	COST	1005.82	1007	995.02	999.54	302502
+66931	2026-05-11 14:30:00+00	COST	999.08	1000.79	988.21	989.16	265081
+66932	2026-05-11 15:30:00+00	COST	989.19	993.5	985.15	990.87	242099
+66933	2026-05-11 16:30:00+00	COST	990.35	994.08	989.63	993.82	146805
+66934	2026-05-11 17:30:00+00	COST	993.82	996	991.53	991.83	140967
+66935	2026-05-11 18:30:00+00	COST	991.54	997.36	990.52	996.62	201931
+66936	2026-05-11 19:30:00+00	COST	996.62	999.94	994.53	999.3	234918
+66937	2026-05-12 13:30:00+00	COST	1004.15	1017	1001.14	1017	385128
+66938	2026-05-12 14:30:00+00	COST	1016.81	1024.46	1009	1023.36	329652
+66939	2026-05-12 15:30:00+00	COST	1022.8	1022.8	1017.2	1020	182443
+66940	2026-05-12 16:30:00+00	COST	1020.03	1026	1019.1	1021.72	217078
+66941	2026-05-12 17:30:00+00	COST	1021.52	1021.91	1018.62	1019.5	133183
+66942	2026-05-12 18:30:00+00	COST	1019.47	1022.47	1017.72	1021.31	157314
+66943	2026-05-12 19:30:00+00	COST	1020.91	1023.53	1018.23	1021.89	232041
+66944	2026-05-13 13:30:00+00	COST	1021.04	1042.52	1019	1031.01	428991
+66945	2026-05-13 14:30:00+00	COST	1030.82	1030.82	1022.56	1025.25	149868
+66946	2026-05-13 15:30:00+00	COST	1025.1	1028.25	1023.71	1024.08	114474
+66947	2026-05-13 16:30:00+00	COST	1024.12	1028.06	1022.69	1027.2	83964
+66948	2026-05-13 17:30:00+00	COST	1026.95	1029.8	1025.83	1029.58	87609
+66949	2026-05-13 18:30:00+00	COST	1029.23	1033.5	1029.2	1032.82	106010
+66950	2026-05-13 19:30:00+00	COST	1032.81	1034	1031.45	1032.99	176119
+66951	2026-04-27 13:30:00+00	TSM	413.75	414.5	400.94	402.49	7282774
+66952	2026-04-27 14:30:00+00	TSM	402.44	404.64	400.4	404.4	2124005
+66953	2026-04-27 15:30:00+00	TSM	404.45	405.36	403.3	403.49	1569055
+66954	2026-04-27 16:30:00+00	TSM	403.55	404.27	401	402.38	1120388
+66955	2026-04-27 17:30:00+00	TSM	402.36	403.78	402.34	402.82	721306
+66956	2026-04-27 18:30:00+00	TSM	402.81	405	402.13	404.02	1031012
+66957	2026-04-27 19:30:00+00	TSM	403.96	405.31	403.16	404.96	1469389
+66958	2026-04-28 13:30:00+00	TSM	392.12	397.87	386.12	391.13	5234943
+66959	2026-04-28 14:30:00+00	TSM	391.13	391.43	384.7	387.51	3252600
+66960	2026-04-28 15:30:00+00	TSM	387.58	390.01	386.2	389.1	1411174
+66961	2026-04-28 16:30:00+00	TSM	389.11	390.62	388.29	390.59	880210
+66962	2026-04-28 17:30:00+00	TSM	390.55	393.11	390.47	392.98	874058
+66963	2026-04-28 18:30:00+00	TSM	392.95	393.75	391.98	392.49	997796
+66964	2026-04-28 19:30:00+00	TSM	392.5	392.87	391.37	392.12	1213371
+66965	2026-04-29 13:30:00+00	TSM	392.91	395.85	388.18	394.93	2752828
+66966	2026-04-29 14:30:00+00	TSM	394.9	395.55	391.95	392.35	1364948
+66967	2026-04-29 15:30:00+00	TSM	392.29	393.63	390.88	390.92	1036554
+66968	2026-04-29 16:30:00+00	TSM	390.85	394.28	389.85	393.74	1064382
+66969	2026-04-29 17:30:00+00	TSM	393.8	394.94	391.88	391.96	898043
+66970	2026-04-29 18:30:00+00	TSM	392.01	395.47	391.21	394.64	1028957
+66971	2026-04-29 19:30:00+00	TSM	394.62	394.67	392.48	393.85	951190
+66972	2026-04-30 13:30:00+00	TSM	397.8	398.79	387.05	387.19	3699661
+66973	2026-04-30 14:30:00+00	TSM	387.15	392.85	385.71	391.67	2570934
+66974	2026-04-30 15:30:00+00	TSM	391.63	394.55	391.1	394.36	1260557
+66975	2026-04-30 16:30:00+00	TSM	394.39	395.22	392.63	394.91	881230
+66976	2026-04-30 17:30:00+00	TSM	394.87	395.91	393.77	394.31	907156
+66977	2026-04-30 18:30:00+00	TSM	394.33	396.75	394.13	395.9	992299
+66978	2026-04-30 19:30:00+00	TSM	395.91	396.52	395.24	396.03	1206431
+66979	2026-05-01 13:30:00+00	TSM	393.44	403.99	392.13	399.08	2719320
+66980	2026-05-01 14:30:00+00	TSM	399.13	399.67	394.96	399.23	1188706
+66981	2026-05-01 15:30:00+00	TSM	399.32	399.71	396.86	397.77	899611
+66982	2026-05-01 16:30:00+00	TSM	397.83	398.76	397.5	398.67	500274
+66983	2026-05-01 17:30:00+00	TSM	398.69	400.27	398.01	398.42	2027009
+66984	2026-05-01 18:30:00+00	TSM	398.42	399.29	397.42	398.93	894213
+66985	2026-05-01 19:30:00+00	TSM	398.89	398.98	397.49	397.84	981854
+66986	2026-05-04 13:30:00+00	TSM	404.52	407.7	401.86	402.06	3873001
+66987	2026-05-04 14:30:00+00	TSM	402.1	404.36	396.5	399	1325602
+66988	2026-05-04 15:30:00+00	TSM	399.11	399.36	395.2	398.07	1194824
+66989	2026-05-04 16:30:00+00	TSM	398.06	401	397.2	400.98	729471
+66990	2026-05-04 17:30:00+00	TSM	400.94	401.19	398.79	399.42	752585
+66991	2026-05-04 18:30:00+00	TSM	399.49	401.35	399.2	400.56	915469
+66992	2026-05-04 19:30:00+00	TSM	400.51	401.87	400.47	401.68	761923
+66993	2026-05-05 13:30:00+00	TSM	404.6	406.13	396.21	398.17	3705330
+66994	2026-05-05 14:30:00+00	TSM	398.29	398.52	394	394.34	2439037
+66995	2026-05-05 15:30:00+00	TSM	394.42	398.96	392.6	396.13	2402710
+66996	2026-05-05 16:30:00+00	TSM	396.1	397.44	395.45	396.89	875044
+66997	2026-05-05 17:30:00+00	TSM	396.78	398.18	396.48	396.91	867328
+66998	2026-05-05 18:30:00+00	TSM	396.91	397.8	393.91	394.04	1293712
+66999	2026-05-05 19:30:00+00	TSM	394.04	395.19	393.27	394.36	1611399
+67000	2026-05-06 13:30:00+00	TSM	402.4	417.69	400.65	409.59	7086564
+67001	2026-05-06 14:30:00+00	TSM	409.62	418.47	408.85	417.26	2415624
+67002	2026-05-06 15:30:00+00	TSM	417.24	417.8	414.7	416.31	1739226
+67003	2026-05-06 16:30:00+00	TSM	416.33	417.18	414.37	415.55	1030025
+67004	2026-05-06 17:30:00+00	TSM	415.51	417.1	415.2	416.63	816459
+67005	2026-05-06 18:30:00+00	TSM	416.63	419.06	416.49	418.93	1410062
+67006	2026-05-06 19:30:00+00	TSM	418.75	419.68	418.14	419.44	1804986
+67007	2026-05-07 13:30:00+00	TSM	418.09	420	414.02	417.02	4114734
+67008	2026-05-07 14:30:00+00	TSM	417.19	419	415.6	417.61	1503088
+67009	2026-05-07 15:30:00+00	TSM	417.73	419.8	410	411.92	2274236
+67010	2026-05-07 16:30:00+00	TSM	411.93	413.49	408.11	409.09	1351618
+67011	2026-05-07 17:30:00+00	TSM	409.11	412.83	408.88	411.41	818549
+67012	2026-05-07 18:30:00+00	TSM	411.39	413.69	410.9	412.02	973855
+67013	2026-05-07 19:30:00+00	TSM	412.16	416.32	412	414.25	1421054
+67014	2026-05-08 13:30:00+00	TSM	416.95	417	411.3	411.52	3667279
+67015	2026-05-08 14:30:00+00	TSM	411.52	415.96	411.1	413.25	1816149
+67016	2026-05-08 15:30:00+00	TSM	413.24	414.18	412.2	413.36	1140992
+67017	2026-05-08 16:30:00+00	TSM	413.31	413.55	400.88	407.82	5003287
+67018	2026-05-08 17:30:00+00	TSM	407.86	410	406.9	409.65	1124158
+67019	2026-05-08 18:30:00+00	TSM	409.64	410.32	407.64	408.34	2956285
+67020	2026-05-08 19:30:00+00	TSM	408.2	411.54	408.14	411.53	1396295
+67021	2026-05-11 13:30:00+00	TSM	406.74	407.73	398.19	401	5613998
+67022	2026-05-11 14:30:00+00	TSM	401.1	406.2	400.38	406.12	2193357
+67023	2026-05-11 15:30:00+00	TSM	406.1	407.09	404.85	405.57	1134339
+67024	2026-05-11 16:30:00+00	TSM	405.53	405.98	403.45	405.08	1028155
+67025	2026-05-11 17:30:00+00	TSM	405.15	405.65	404	404.53	868467
+67026	2026-05-11 18:30:00+00	TSM	404.52	405.2	403.39	403.61	1081541
+67027	2026-05-11 19:30:00+00	TSM	403.59	405.81	403.38	404.45	1696265
+67028	2026-05-12 13:30:00+00	TSM	397.75	402.23	393.71	393.95	5348173
+67029	2026-05-12 14:30:00+00	TSM	393.95	395.5	386.12	386.69	3547008
+67030	2026-05-12 15:30:00+00	TSM	386.72	390.4	386.72	388.59	1884963
+67031	2026-05-12 16:30:00+00	TSM	388.59	393	387.61	391.61	2263044
+67032	2026-05-12 17:30:00+00	TSM	391.62	395.68	391.51	395.41	1332969
+67033	2026-05-12 18:30:00+00	TSM	395.44	396.91	394.11	396.14	1152426
+67034	2026-05-12 19:30:00+00	TSM	396.18	398.1	396.15	397.27	1530973
+67035	2026-05-13 13:30:00+00	TSM	398.27	399	391.47	395.68	3307680
+67036	2026-05-13 14:30:00+00	TSM	395.51	396.86	393.94	396.48	1662494
+67037	2026-05-13 15:30:00+00	TSM	396.7	400.25	395.95	400.25	1401397
+67038	2026-05-13 16:30:00+00	TSM	400.14	404.47	399.55	404.38	1606981
+67039	2026-05-13 17:30:00+00	TSM	404.44	404.68	402.61	402.74	1064218
+67040	2026-05-13 18:30:00+00	TSM	402.77	402.77	400.41	400.98	1148289
+67041	2026-05-13 19:30:00+00	TSM	400.96	401.11	398.76	399.7	1913943
+67042	2026-04-27 13:30:00+00	NKE	44.6	45.4	44.49	45.19	2984721
+67043	2026-04-27 14:30:00+00	NKE	45.19	45.41	45.1	45.16	1587064
+67044	2026-04-27 15:30:00+00	NKE	45.15	45.22	45.01	45.1	1178254
+67045	2026-04-27 16:30:00+00	NKE	45.1	45.11	44.99	45.06	1044754
+67046	2026-04-27 17:30:00+00	NKE	45.06	45.12	44.88	45.01	1016994
+67047	2026-04-27 18:30:00+00	NKE	45	45.19	44.99	45.01	1410351
+67048	2026-04-27 19:30:00+00	NKE	45.01	45.29	44.98	45.17	3033276
+67049	2026-04-28 13:30:00+00	NKE	45.38	45.71	44.88	44.94	2671642
+67050	2026-04-28 14:30:00+00	NKE	44.94	45.08	44.75	44.91	1822654
+67051	2026-04-28 15:30:00+00	NKE	44.9	45.03	44.86	45.03	906302
+67052	2026-04-28 16:30:00+00	NKE	45.03	45.1	44.9	45.09	1593037
+67053	2026-04-28 17:30:00+00	NKE	45.09	45.14	44.81	44.83	981575
+67054	2026-04-28 18:30:00+00	NKE	44.83	44.97	44.79	44.9	962939
+67055	2026-04-28 19:30:00+00	NKE	44.9	45.07	44.86	45.02	1717148
+67056	2026-04-29 13:30:00+00	NKE	44.92	45.16	44.31	44.37	2827969
+67057	2026-04-29 14:30:00+00	NKE	44.37	44.43	44.17	44.26	1626930
+67058	2026-04-29 15:30:00+00	NKE	44.26	44.31	44.15	44.21	1078878
+67059	2026-04-29 16:30:00+00	NKE	44.2	44.57	44.17	44.57	1368258
+67060	2026-04-29 17:30:00+00	NKE	44.57	44.67	44.32	44.35	1137815
+67061	2026-04-29 18:30:00+00	NKE	44.35	44.47	44.22	44.33	1254476
+67062	2026-04-29 19:30:00+00	NKE	44.33	44.41	44.16	44.39	2302368
+67063	2026-04-30 13:30:00+00	NKE	44.09	44.21	43.51	43.86	4298388
+67064	2026-04-30 14:30:00+00	NKE	43.86	44.18	43.8	44.17	2275086
+67065	2026-04-30 15:30:00+00	NKE	44.16	44.22	43.96	43.97	1669315
+67066	2026-04-30 16:30:00+00	NKE	43.98	44.03	43.93	44.03	1464866
+67067	2026-04-30 17:30:00+00	NKE	44.04	44.4	44.03	44.36	1355519
+67068	2026-04-30 18:30:00+00	NKE	44.37	44.79	44.37	44.79	1748424
+67069	2026-04-30 19:30:00+00	NKE	44.79	44.81	44.36	44.36	3093953
+67070	2026-05-01 13:30:00+00	NKE	44.82	44.96	44.48	44.62	2105346
+67071	2026-05-01 14:30:00+00	NKE	44.63	44.63	44.38	44.48	1260238
+67072	2026-05-01 15:30:00+00	NKE	44.49	44.71	44.41	44.61	1565230
+67073	2026-05-01 16:30:00+00	NKE	44.6	44.61	44.43	44.45	805927
+67074	2026-05-01 17:30:00+00	NKE	44.45	44.5	44.26	44.33	961939
+67075	2026-05-01 18:30:00+00	NKE	44.33	44.44	44.22	44.3	1415588
+67076	2026-05-01 19:30:00+00	NKE	44.3	44.51	44.28	44.4	1906499
+67077	2026-05-04 13:30:00+00	NKE	44.19	44.34	43.99	44.21	4306679
+67078	2026-05-04 14:30:00+00	NKE	44.21	44.32	43.6	43.62	3144235
+67079	2026-05-04 15:30:00+00	NKE	43.63	43.63	43.3	43.33	7628582
+67080	2026-05-04 16:30:00+00	NKE	43.34	43.47	43.25	43.4	5108185
+67081	2026-05-04 17:30:00+00	NKE	43.4	43.48	43.26	43.38	2088565
+67082	2026-05-04 18:30:00+00	NKE	43.38	43.43	43.15	43.16	2013255
+67083	2026-05-04 19:30:00+00	NKE	43.16	43.27	43.09	43.09	2884454
+67084	2026-05-05 13:30:00+00	NKE	43.04	43.3	42.65	42.85	3752806
+67085	2026-05-05 14:30:00+00	NKE	42.85	43.14	42.72	43.13	1890269
+67086	2026-05-05 15:30:00+00	NKE	43.13	43.2	43.02	43.06	1718218
+67087	2026-05-05 16:30:00+00	NKE	43.06	43.06	42.87	42.88	1415334
+67088	2026-05-05 17:30:00+00	NKE	42.88	42.99	42.76	42.94	2350780
+67089	2026-05-05 18:30:00+00	NKE	42.94	43.08	42.76	43.06	2387156
+67090	2026-05-05 19:30:00+00	NKE	43.06	43.14	42.99	43.05	2933250
+67091	2026-05-06 13:30:00+00	NKE	43.63	44.07	43.19	43.57	5291846
+67092	2026-05-06 14:30:00+00	NKE	43.57	43.71	43.35	43.37	2174499
+67093	2026-05-06 15:30:00+00	NKE	43.37	43.49	43.29	43.41	1542302
+67094	2026-05-06 16:30:00+00	NKE	43.41	43.52	43.35	43.44	1750450
+67095	2026-05-06 17:30:00+00	NKE	43.44	43.63	43.43	43.54	1564362
+67096	2026-05-06 18:30:00+00	NKE	43.55	43.83	43.46	43.74	2378627
+67097	2026-05-06 19:30:00+00	NKE	43.74	43.92	43.57	43.85	2385820
+67098	2026-05-07 13:30:00+00	NKE	44.05	44.48	44.01	44.11	3690178
+67099	2026-05-07 14:30:00+00	NKE	44.12	44.56	44.1	44.44	2383688
+67100	2026-05-07 15:30:00+00	NKE	44.44	44.6	44.35	44.53	1563897
+67101	2026-05-07 16:30:00+00	NKE	44.53	44.53	44.24	44.26	1407477
+67102	2026-05-07 17:30:00+00	NKE	44.26	44.54	44.15	44.42	1966904
+67103	2026-05-07 18:30:00+00	NKE	44.42	44.64	44.37	44.44	1841786
+67104	2026-05-07 19:30:00+00	NKE	44.44	44.47	44.32	44.41	1939386
+67105	2026-05-08 13:30:00+00	NKE	44.26	44.38	43.8	44.33	3920094
+67106	2026-05-08 14:30:00+00	NKE	44.33	44.66	44.27	44.35	2249360
+67107	2026-05-08 15:30:00+00	NKE	44.36	44.51	44.21	44.33	1815348
+67108	2026-05-08 16:30:00+00	NKE	44.32	44.4	44.21	44.26	1072622
+67109	2026-05-08 17:30:00+00	NKE	44.26	44.27	44.12	44.13	1220270
+67110	2026-05-08 18:30:00+00	NKE	44.13	44.17	43.96	44.15	1636966
+67111	2026-05-08 19:30:00+00	NKE	44.15	44.21	44.04	44.16	2975768
+67112	2026-05-11 13:30:00+00	NKE	44.06	44.06	42.85	43.18	5107006
+67113	2026-05-11 14:30:00+00	NKE	43.17	43.23	42.84	42.94	2088039
+67114	2026-05-11 15:30:00+00	NKE	42.94	43.06	42.81	42.92	1770955
+67115	2026-05-11 16:30:00+00	NKE	42.92	42.96	42.63	42.72	1951338
+67116	2026-05-11 17:30:00+00	NKE	42.72	42.81	42.57	42.58	3685554
+67117	2026-05-11 18:30:00+00	NKE	42.58	42.68	42.44	42.55	3495975
+67118	2026-05-11 19:30:00+00	NKE	42.55	42.55	42.39	42.4	3314562
+67119	2026-05-12 13:30:00+00	NKE	42.3	42.47	42.09	42.38	3817700
+67120	2026-05-12 14:30:00+00	NKE	42.37	42.4	42.06	42.22	2783095
+67121	2026-05-12 15:30:00+00	NKE	42.22	42.32	42.08	42.28	2678771
+67122	2026-05-12 16:30:00+00	NKE	42.28	42.45	42.19	42.29	2421512
+67123	2026-05-12 17:30:00+00	NKE	42.28	42.51	42.26	42.45	2135873
+67124	2026-05-12 18:30:00+00	NKE	42.45	42.5	42.35	42.4	2939213
+67125	2026-05-12 19:30:00+00	NKE	42.4	42.49	42.3	42.37	2304489
+67126	2026-05-13 13:30:00+00	NKE	42.2	42.25	41.7	42.13	5290923
+67127	2026-05-13 14:30:00+00	NKE	42.12	42.25	41.95	42.06	3107073
+67128	2026-05-13 15:30:00+00	NKE	42.06	42.3	42.03	42.29	1808719
+67129	2026-05-13 16:30:00+00	NKE	42.28	42.4	42.09	42.19	2193401
+67130	2026-05-13 17:30:00+00	NKE	42.19	42.35	42.13	42.19	1616337
+67131	2026-05-13 18:30:00+00	NKE	42.19	42.6	42.17	42.58	2248846
+67132	2026-05-13 19:30:00+00	NKE	42.58	42.61	42.33	42.35	2603885
+67133	2026-04-27 13:30:00+00	V	307.51	310.67	306.06	310.26	1439643
+67134	2026-04-27 14:30:00+00	V	310.26	310.82	308.95	310.13	720085
+67135	2026-04-27 15:30:00+00	V	310.14	310.31	309.14	310.17	426780
+67136	2026-04-27 16:30:00+00	V	310.17	310.28	308.96	309.46	476181
+67137	2026-04-27 17:30:00+00	V	309.45	309.73	308.9	309.36	400476
+67138	2026-04-27 18:30:00+00	V	309.36	309.59	308.85	309.4	561070
+67139	2026-04-27 19:30:00+00	V	309.4	309.74	309.12	309.71	778231
+67140	2026-04-28 13:30:00+00	V	312.2	313.96	311.18	312.34	1513140
+67141	2026-04-28 14:30:00+00	V	312.35	313.57	312.22	312.99	717272
+67142	2026-04-28 15:30:00+00	V	312.96	313.76	311.36	311.69	643075
+67143	2026-04-28 16:30:00+00	V	311.68	311.68	310.7	311.5	551489
+67144	2026-04-28 17:30:00+00	V	311.53	311.73	309.81	310.02	517177
+67145	2026-04-28 18:30:00+00	V	310.01	310.34	309.24	309.62	897622
+67146	2026-04-28 19:30:00+00	V	309.62	309.82	308.74	309.43	1249576
+67147	2026-04-29 13:30:00+00	V	336.4	341.98	333.79	338.49	6632635
+67148	2026-04-29 14:30:00+00	V	338.49	339.89	334.57	337.12	1773927
+67149	2026-04-29 15:30:00+00	V	337.12	338.25	335.58	337.83	1226048
+67150	2026-04-29 16:30:00+00	V	337.82	338.2	335.8	336.61	877595
+67151	2026-04-29 17:30:00+00	V	336.64	337.5	335.85	337.05	1092918
+67152	2026-04-29 18:30:00+00	V	337.04	337.2	335.39	335.57	1462951
+67153	2026-04-29 19:30:00+00	V	335.59	336.34	334.33	334.85	2048879
+67154	2026-04-30 13:30:00+00	V	332.12	332.5	328.56	329.56	2013470
+67155	2026-04-30 14:30:00+00	V	329.51	331	328.08	329.57	1282513
+67156	2026-04-30 15:30:00+00	V	329.62	330.37	328.1	330.08	715336
+67157	2026-04-30 16:30:00+00	V	330.05	331.09	329.25	330.89	659293
+67158	2026-04-30 17:30:00+00	V	330.88	331.55	330.08	330.88	787546
+67159	2026-04-30 18:30:00+00	V	330.88	331.48	330.24	330.96	644484
+67160	2026-04-30 19:30:00+00	V	330.98	331.69	330.04	330.04	1545253
+67161	2026-05-01 13:30:00+00	V	332.88	335.85	330.29	333.13	1262646
+67162	2026-05-01 14:30:00+00	V	333.15	334.07	332.04	332.89	959839
+67163	2026-05-01 15:30:00+00	V	332.85	334.12	332.33	333.59	666355
+67164	2026-05-01 16:30:00+00	V	333.53	333.64	332.36	332.92	437274
+67165	2026-05-01 17:30:00+00	V	332.92	333.31	329.07	329.3	856639
+67166	2026-05-01 18:30:00+00	V	329.33	329.46	328.57	328.64	607258
+67167	2026-05-01 19:30:00+00	V	328.59	329.64	327.92	328.03	1049324
+67168	2026-05-04 13:30:00+00	V	328	329.18	325.4	329.15	1104437
+67169	2026-05-04 14:30:00+00	V	329.18	329.28	327.36	327.83	759046
+67170	2026-05-04 15:30:00+00	V	327.89	329.79	327.51	329.05	769392
+67171	2026-05-04 16:30:00+00	V	329.1	329.6	327.58	328.96	598862
+67172	2026-05-04 17:30:00+00	V	329.02	329.1	327.09	327.38	495674
+67173	2026-05-04 18:30:00+00	V	327.39	328.08	326.88	326.92	553509
+67174	2026-05-04 19:30:00+00	V	326.95	327.23	326.3	326.99	1040775
+67175	2026-05-05 13:30:00+00	V	325.11	325.58	320.73	321.96	1150957
+67176	2026-05-05 14:30:00+00	V	321.98	323.23	321.1	321.32	722064
+67177	2026-05-05 15:30:00+00	V	321.24	321.44	319.64	320.08	668884
+67178	2026-05-05 16:30:00+00	V	320.08	321.56	319.98	320.43	436754
+67179	2026-05-05 17:30:00+00	V	320.47	322.45	320.33	322.06	385467
+67180	2026-05-05 18:30:00+00	V	322.1	323.36	320.64	322.98	623702
+67181	2026-05-05 19:30:00+00	V	322.96	323.56	322.03	322.08	769105
+67182	2026-05-06 13:30:00+00	V	323.75	324.58	321.5	323.34	1006478
+67183	2026-05-06 14:30:00+00	V	323.37	323.37	318.18	318.18	647028
+67184	2026-05-06 15:30:00+00	V	318.27	319.44	318.02	318.36	641076
+67185	2026-05-06 16:30:00+00	V	318.27	319.25	318	319.22	509173
+67186	2026-05-06 17:30:00+00	V	319.2	319.99	318.42	319.36	496097
+67187	2026-05-06 18:30:00+00	V	319.36	319.68	318.74	319.41	732385
+67188	2026-05-06 19:30:00+00	V	319.4	319.64	318.57	318.7	838784
+67189	2026-05-07 13:30:00+00	V	319.54	323.69	319.54	320.32	1222513
+67190	2026-05-07 14:30:00+00	V	320.31	322.68	319.87	321.56	708949
+67191	2026-05-07 15:30:00+00	V	321.63	322.9	321.21	322.86	566346
+67192	2026-05-07 16:30:00+00	V	322.84	322.95	320.9	321.42	538656
+67193	2026-05-07 17:30:00+00	V	321.45	322.5	320.7	322.3	541652
+67194	2026-05-07 18:30:00+00	V	322.33	323.5	321.49	321.61	695161
+67195	2026-05-07 19:30:00+00	V	321.52	322.11	321.3	321.32	823966
+67196	2026-05-08 13:30:00+00	V	320.98	321.07	316.16	318.7	1245635
+67197	2026-05-08 14:30:00+00	V	318.69	319.64	318.23	319.58	688649
+67198	2026-05-08 15:30:00+00	V	319.64	320.18	318.23	320.1	568157
+67199	2026-05-08 16:30:00+00	V	320.07	320.22	318.83	319.98	404961
+67200	2026-05-08 17:30:00+00	V	319.99	320.88	319.47	320.67	573514
+67201	2026-05-08 18:30:00+00	V	320.67	320.75	317.89	318.92	745908
+67202	2026-05-08 19:30:00+00	V	318.95	319.14	318.35	318.75	713478
+67203	2026-05-11 13:30:00+00	V	319.1	322.74	318.01	322.42	1115538
+67204	2026-05-11 14:30:00+00	V	322.34	323.3	321.74	322.99	615283
+67205	2026-05-11 15:30:00+00	V	323.03	324.7	322.76	324.66	477829
+67206	2026-05-11 16:30:00+00	V	324.66	325.18	323.64	323.72	486670
+67207	2026-05-11 17:30:00+00	V	323.75	324.52	323.39	324.33	424663
+67208	2026-05-11 18:30:00+00	V	324.35	324.52	323.1	324.32	758073
+67209	2026-05-11 19:30:00+00	V	324.27	324.7	323.77	323.87	879384
+67210	2026-05-12 13:30:00+00	V	324.32	327.27	324.2	326.42	1173155
+67211	2026-05-12 14:30:00+00	V	326.39	327.29	324.76	327.29	775170
+67212	2026-05-12 15:30:00+00	V	327.31	328.29	326.69	327.81	555752
+67213	2026-05-12 16:30:00+00	V	327.87	328.91	327.67	328.02	598452
+67214	2026-05-12 17:30:00+00	V	328.01	328.5	327.23	327.74	580966
+67215	2026-05-12 18:30:00+00	V	327.72	327.94	327.03	327.24	719883
+67216	2026-05-12 19:30:00+00	V	327.22	327.55	326.15	326.48	752587
+67217	2026-05-13 13:30:00+00	V	323.79	325.42	322.34	322.73	968520
+67218	2026-05-13 14:30:00+00	V	322.78	322.81	319.95	320.2	662679
+67219	2026-05-13 15:30:00+00	V	320.2	321.05	319.85	320.95	523080
+67220	2026-05-13 16:30:00+00	V	320.96	321.75	319.92	320.11	559229
+67221	2026-05-13 17:30:00+00	V	320.1	322.14	319.8	321.75	684037
+67222	2026-05-13 18:30:00+00	V	321.76	322.11	321.07	321.45	961839
+67223	2026-05-13 19:30:00+00	V	321.45	322.08	320.28	320.35	1218863
+67224	2026-04-27 13:30:00+00	DIS	102.62	103.61	102.62	103.58	805452
+67225	2026-04-27 14:30:00+00	DIS	103.6	103.81	103.27	103.42	673417
+67226	2026-04-27 15:30:00+00	DIS	103.41	103.45	103.2	103.25	392810
+67227	2026-04-27 16:30:00+00	DIS	103.27	103.29	102.55	102.55	633907
+67228	2026-04-27 17:30:00+00	DIS	102.57	102.71	102.06	102.26	1366779
+67229	2026-04-27 18:30:00+00	DIS	102.25	102.47	102.07	102.41	702946
+67230	2026-04-27 19:30:00+00	DIS	102.4	102.54	102.26	102.36	813239
+67231	2026-04-28 13:30:00+00	DIS	102.66	103.29	100.61	101.5	1812616
+67232	2026-04-28 14:30:00+00	DIS	101.48	101.99	101.38	101.61	896171
+67233	2026-04-28 15:30:00+00	DIS	101.63	101.93	101.49	101.93	502743
+67234	2026-04-28 16:30:00+00	DIS	101.93	101.96	101.69	101.8	408753
+67235	2026-04-28 17:30:00+00	DIS	101.81	101.83	101.36	101.55	388456
+67236	2026-04-28 18:30:00+00	DIS	101.55	101.58	101.26	101.26	618625
+67237	2026-04-28 19:30:00+00	DIS	101.27	101.6	101.15	101.48	746921
+67238	2026-04-29 13:30:00+00	DIS	100.94	101.48	100.74	100.87	695320
+67239	2026-04-29 14:30:00+00	DIS	100.87	101.14	100.73	100.84	570819
+67240	2026-04-29 15:30:00+00	DIS	100.85	101.02	100.69	100.95	515675
+67241	2026-04-29 16:30:00+00	DIS	100.94	100.96	100.6	100.81	613596
+67242	2026-04-29 17:30:00+00	DIS	100.8	100.93	100.66	100.78	418935
+67243	2026-04-29 18:30:00+00	DIS	100.78	101.23	100.69	101.18	631594
+67244	2026-04-29 19:30:00+00	DIS	101.18	101.31	101	101.3	720066
+67245	2026-04-30 13:30:00+00	DIS	100.91	102.25	100.42	102.25	2034480
+67246	2026-04-30 14:30:00+00	DIS	102.25	102.9	102.25	102.84	761736
+67247	2026-04-30 15:30:00+00	DIS	102.83	102.9	102.7	102.89	507780
+67248	2026-04-30 16:30:00+00	DIS	102.89	102.97	102.65	102.89	540221
+67249	2026-04-30 17:30:00+00	DIS	102.9	103.41	102.9	103.29	471034
+67250	2026-04-30 18:30:00+00	DIS	103.29	103.79	103.25	103.65	698254
+67251	2026-04-30 19:30:00+00	DIS	103.64	104.12	103.62	103.74	1428584
+67252	2026-05-01 13:30:00+00	DIS	104.4	104.83	103.2	103.43	942935
+67253	2026-05-01 14:30:00+00	DIS	103.44	103.83	103.44	103.71	651905
+67254	2026-05-01 15:30:00+00	DIS	103.72	103.88	103.53	103.56	568047
+67255	2026-05-01 16:30:00+00	DIS	103.54	103.68	103.44	103.5	426213
+67256	2026-05-01 17:30:00+00	DIS	103.48	103.55	103.15	103.23	596468
+67257	2026-05-01 18:30:00+00	DIS	103.24	103.72	102.97	103.71	884632
+67258	2026-05-01 19:30:00+00	DIS	103.71	103.72	103.06	103.09	919129
+67259	2026-05-04 13:30:00+00	DIS	102.74	103	101.68	102.94	1706203
+67260	2026-05-04 14:30:00+00	DIS	102.94	103.05	102.05	102.1	829407
+67261	2026-05-04 15:30:00+00	DIS	102.1	102.33	101.76	102.12	1240054
+67262	2026-05-04 16:30:00+00	DIS	102.11	102.2	101.63	102.02	657415
+67263	2026-05-04 17:30:00+00	DIS	102.03	102.03	101.72	101.86	533586
+67264	2026-05-04 18:30:00+00	DIS	101.87	102	101.71	101.71	677813
+67265	2026-05-04 19:30:00+00	DIS	101.73	101.77	101.27	101.34	1222023
+67266	2026-05-05 13:30:00+00	DIS	101.53	101.73	100.49	100.52	2033544
+67267	2026-05-05 14:30:00+00	DIS	100.52	100.94	100.17	100.93	1657931
+67268	2026-05-05 15:30:00+00	DIS	100.94	100.95	100.43	100.85	1150287
+67269	2026-05-05 16:30:00+00	DIS	100.85	100.98	100.67	100.75	911815
+67270	2026-05-05 17:30:00+00	DIS	100.75	101.24	100.62	101.19	1363821
+67271	2026-05-05 18:30:00+00	DIS	101.19	101.24	100.86	101.02	1177106
+67272	2026-05-05 19:30:00+00	DIS	101.02	101.04	100.06	100.48	3009628
+67273	2026-05-06 13:30:00+00	DIS	106.51	109.14	105.31	108.2	7937244
+67274	2026-05-06 14:30:00+00	DIS	108.23	108.75	106.92	106.97	3894035
+67275	2026-05-06 15:30:00+00	DIS	106.98	107.51	106.47	107.32	1950516
+67276	2026-05-06 16:30:00+00	DIS	107.32	107.58	106.69	106.97	1688328
+67277	2026-05-06 17:30:00+00	DIS	106.99	108.03	106.92	108	1460297
+67278	2026-05-06 18:30:00+00	DIS	108	108.1	107.26	107.93	1615840
+67279	2026-05-06 19:30:00+00	DIS	107.93	108.36	107.9	107.97	2528452
+67280	2026-05-07 13:30:00+00	DIS	109.05	110.48	108.97	109.51	3054947
+67281	2026-05-07 14:30:00+00	DIS	109.53	110.4	109.44	110.29	1429441
+67282	2026-05-07 15:30:00+00	DIS	110.29	110.47	109.89	110.22	1146679
+67283	2026-05-07 16:30:00+00	DIS	110.22	110.23	108.31	108.33	1409604
+67284	2026-05-07 17:30:00+00	DIS	108.34	108.36	107.09	108.29	1823666
+67285	2026-05-07 18:30:00+00	DIS	108.29	108.47	107.7	108.46	1465014
+67286	2026-05-07 19:30:00+00	DIS	108.46	108.92	108.38	108.72	1956389
+67287	2026-05-08 13:30:00+00	DIS	109.03	109.21	107.78	108.34	1232091
+67288	2026-05-08 14:30:00+00	DIS	108.33	108.6	108.13	108.5	1062909
+67289	2026-05-08 15:30:00+00	DIS	108.51	108.67	108.21	108.61	603442
+67290	2026-05-08 16:30:00+00	DIS	108.61	108.62	108.12	108.33	447681
+67291	2026-05-08 17:30:00+00	DIS	108.32	108.39	108.05	108.18	535431
+67292	2026-05-08 18:30:00+00	DIS	108.17	108.2	107.62	107.9	795195
+67293	2026-05-08 19:30:00+00	DIS	107.89	108.01	107.54	107.99	1597937
+67294	2026-05-11 13:30:00+00	DIS	108	108.39	106.65	106.94	1897304
+67295	2026-05-11 14:30:00+00	DIS	106.93	107.08	105.71	105.81	1242853
+67296	2026-05-11 15:30:00+00	DIS	105.81	105.82	104.61	105.18	1062316
+67297	2026-05-11 16:30:00+00	DIS	105.18	105.31	104.61	104.65	943667
+67298	2026-05-11 17:30:00+00	DIS	104.65	104.85	104.54	104.59	702318
+67299	2026-05-11 18:30:00+00	DIS	104.59	105.12	104.44	104.98	1097857
+67300	2026-05-11 19:30:00+00	DIS	105	105.04	104.38	104.7	1619625
+67301	2026-05-12 13:30:00+00	DIS	104.99	105.24	104.21	104.93	1196078
+67302	2026-05-12 14:30:00+00	DIS	104.95	105.23	104.59	105.21	865236
+67303	2026-05-12 15:30:00+00	DIS	105.21	105.86	105.01	105.61	742246
+67304	2026-05-12 16:30:00+00	DIS	105.63	105.9	105.27	105.39	558407
+67305	2026-05-12 17:30:00+00	DIS	105.39	105.79	105.27	105.64	750219
+67306	2026-05-12 18:30:00+00	DIS	105.64	105.99	105.44	105.99	796028
+67307	2026-05-12 19:30:00+00	DIS	106	106.27	105.87	106.17	1333897
+67308	2026-05-13 13:30:00+00	DIS	105.35	105.88	104.36	104.88	885275
+67309	2026-05-13 14:30:00+00	DIS	104.9	104.9	104.29	104.4	797379
+67310	2026-05-13 15:30:00+00	DIS	104.39	104.57	104.02	104.5	542320
+67311	2026-05-13 16:30:00+00	DIS	104.5	104.56	103.86	104.12	696376
+67312	2026-05-13 17:30:00+00	DIS	104.13	105.18	104.07	105.14	1011095
+67313	2026-05-13 18:30:00+00	DIS	105.14	105.61	104.98	105.1	887679
+67314	2026-05-13 19:30:00+00	DIS	105.12	105.18	104.75	104.9	1093672
+67315	2026-04-27 13:30:00+00	NFLX	92.05	92.83	91.3	92.81	6971012
+67316	2026-04-27 14:30:00+00	NFLX	92.81	92.84	92.42	92.68	3403780
+67317	2026-04-27 15:30:00+00	NFLX	92.69	92.71	92.22	92.31	2559959
+67318	2026-04-27 16:30:00+00	NFLX	92.31	92.32	92.02	92.07	1874179
+67319	2026-04-27 17:30:00+00	NFLX	92.07	92.15	91.89	91.96	1953518
+67320	2026-04-27 18:30:00+00	NFLX	91.95	91.96	91.35	91.83	4435770
+67321	2026-04-27 19:30:00+00	NFLX	91.84	91.84	91.35	91.39	4131193
+67322	2026-04-28 13:30:00+00	NFLX	91.4	91.63	90.02	90.85	8269857
+67323	2026-04-28 14:30:00+00	NFLX	90.85	91.04	90.41	90.55	3565418
+67324	2026-04-28 15:30:00+00	NFLX	90.55	90.7	90.39	90.53	2174104
+67325	2026-04-28 16:30:00+00	NFLX	90.53	90.96	90.32	90.95	2325938
+67326	2026-04-28 17:30:00+00	NFLX	90.94	91.56	90.75	91.56	4270969
+67327	2026-04-28 18:30:00+00	NFLX	91.56	92.27	91.53	92.21	3203296
+67328	2026-04-28 19:30:00+00	NFLX	92.21	92.34	91.96	92.31	4871273
+67329	2026-04-29 13:30:00+00	NFLX	91.22	92.16	90.86	92.02	6066054
+67330	2026-04-29 14:30:00+00	NFLX	92.01	92.86	91.93	92.52	3337039
+67331	2026-04-29 15:30:00+00	NFLX	92.53	92.57	91.82	92.15	2234205
+67332	2026-04-29 16:30:00+00	NFLX	92.14	92.34	91.96	92.24	1656775
+67333	2026-04-29 17:30:00+00	NFLX	92.24	92.51	92.06	92.14	1796610
+67334	2026-04-29 18:30:00+00	NFLX	92.14	92.41	92.04	92.26	2572237
+67335	2026-04-29 19:30:00+00	NFLX	92.26	92.42	92.04	92.16	4399567
+67336	2026-04-30 13:30:00+00	NFLX	91.34	92.73	90.77	92.69	9151134
+67337	2026-04-30 14:30:00+00	NFLX	92.69	93.26	92.31	93.03	4772051
+67338	2026-04-30 15:30:00+00	NFLX	93.04	93.49	92.94	93.32	3106521
+67339	2026-04-30 16:30:00+00	NFLX	93.32	93.47	93	93.38	2365085
+67340	2026-04-30 17:30:00+00	NFLX	93.38	94.05	93.33	93.78	3142229
+67341	2026-04-30 18:30:00+00	NFLX	93.78	94.16	93.75	94.03	2837037
+67342	2026-04-30 19:30:00+00	NFLX	94.04	94.22	93.55	93.55	4209011
+67343	2026-05-01 13:30:00+00	NFLX	94.47	94.7	93.61	93.88	5519911
+67344	2026-05-01 14:30:00+00	NFLX	93.89	94.32	93.79	94.3	2574801
+67345	2026-05-01 15:30:00+00	NFLX	94.31	94.39	93.25	93.29	2640663
+67346	2026-05-01 16:30:00+00	NFLX	93.29	93.37	92.62	92.82	2713209
+67347	2026-05-01 17:30:00+00	NFLX	92.82	92.84	92.28	92.33	2949164
+67348	2026-05-01 18:30:00+00	NFLX	92.36	92.36	92.07	92.25	4089172
+67349	2026-05-01 19:30:00+00	NFLX	92.25	92.38	91.9	92.1	4974393
+67350	2026-05-04 13:30:00+00	NFLX	92.03	92.33	91.12	92.11	6369196
+67351	2026-05-04 14:30:00+00	NFLX	92.14	92.3	91.62	91.72	2908633
+67352	2026-05-04 15:30:00+00	NFLX	91.73	91.78	91.3	91.49	2324740
+67353	2026-05-04 16:30:00+00	NFLX	91.49	91.61	91.17	91.36	1890566
+67354	2026-05-04 17:30:00+00	NFLX	91.35	91.35	91	91.17	1894089
+67355	2026-05-04 18:30:00+00	NFLX	91.17	91.39	91.07	91.15	2184515
+67356	2026-05-04 19:30:00+00	NFLX	91.15	91.29	90.92	91.04	3609258
+67357	2026-05-05 13:30:00+00	NFLX	91.21	91.23	88.88	88.89	10267636
+67358	2026-05-05 14:30:00+00	NFLX	88.89	89.22	88.11	88.14	7581185
+67359	2026-05-05 15:30:00+00	NFLX	88.15	88.31	87.57	88	7638169
+67360	2026-05-05 16:30:00+00	NFLX	88	88.4	87.88	87.94	4561014
+67361	2026-05-05 17:30:00+00	NFLX	87.93	88.28	87.82	87.93	3642638
+67362	2026-05-05 18:30:00+00	NFLX	87.93	88.18	87.62	88.06	4054428
+67363	2026-05-05 19:30:00+00	NFLX	88.06	88.16	87.64	87.9	5691135
+67364	2026-05-06 13:30:00+00	NFLX	87.01	88.45	86.72	88.38	10031262
+67365	2026-05-06 14:30:00+00	NFLX	88.41	88.55	87.71	87.75	4294295
+67366	2026-05-06 15:30:00+00	NFLX	87.76	88.01	87.64	87.86	3118592
+67367	2026-05-06 16:30:00+00	NFLX	87.86	88.19	87.75	88.02	4413254
+67368	2026-05-06 17:30:00+00	NFLX	88.01	88.14	87.83	88.1	2374237
+67369	2026-05-06 18:30:00+00	NFLX	88.09	88.11	87.87	88.08	2596445
+67370	2026-05-06 19:30:00+00	NFLX	88.09	88.39	87.97	88.22	3947739
+67371	2026-05-07 13:30:00+00	NFLX	88.2	89.4	88.17	88.61	6269843
+67372	2026-05-07 14:30:00+00	NFLX	88.6	89.15	88.43	88.59	3206936
+67373	2026-05-07 15:30:00+00	NFLX	88.6	88.96	88.56	88.74	3012775
+67374	2026-05-07 16:30:00+00	NFLX	88.74	88.89	88.36	88.39	2547526
+67375	2026-05-07 17:30:00+00	NFLX	88.4	88.6	88.19	88.53	2311640
+67376	2026-05-07 18:30:00+00	NFLX	88.53	88.79	88.31	88.4	2418412
+67377	2026-05-07 19:30:00+00	NFLX	88.4	88.68	88.13	88.26	4117619
+67378	2026-05-08 13:30:00+00	NFLX	87.71	88.02	87.21	87.56	6517722
+67379	2026-05-08 14:30:00+00	NFLX	87.55	88.04	87.46	87.68	3853361
+67380	2026-05-08 15:30:00+00	NFLX	87.68	87.89	87.44	87.63	3033851
+67381	2026-05-08 16:30:00+00	NFLX	87.63	87.98	87.42	87.43	2925608
+67382	2026-05-08 17:30:00+00	NFLX	87.43	87.66	87.4	87.56	2265394
+67383	2026-05-08 18:30:00+00	NFLX	87.56	87.89	87.39	87.74	3217617
+67384	2026-05-08 19:30:00+00	NFLX	87.74	87.79	87.39	87.45	5810488
+67385	2026-05-11 13:30:00+00	NFLX	86.52	87.34	86.28	87.31	7337222
+67386	2026-05-11 14:30:00+00	NFLX	87.31	87.34	86.51	86.58	3179028
+67387	2026-05-11 15:30:00+00	NFLX	86.59	86.66	86.3	86.39	3140664
+67388	2026-05-11 16:30:00+00	NFLX	86.39	86.4	85.28	85.31	4984803
+67389	2026-05-11 17:30:00+00	NFLX	85.31	85.53	85.12	85.26	4121654
+67390	2026-05-11 18:30:00+00	NFLX	85.26	85.5	85.2	85.43	4289416
+67391	2026-05-11 19:30:00+00	NFLX	85.43	85.46	85.1	85.45	5746679
+67392	2026-05-12 13:30:00+00	NFLX	85.9	88.28	85.81	88.2	8394008
+67393	2026-05-12 14:30:00+00	NFLX	88.21	89	87.91	88.83	7946322
+67394	2026-05-12 15:30:00+00	NFLX	88.84	88.97	88.39	88.82	3719105
+67395	2026-05-12 16:30:00+00	NFLX	88.82	89.16	88	88.22	4060904
+67396	2026-05-12 17:30:00+00	NFLX	88.21	88.21	87.33	87.36	3559935
+67397	2026-05-12 18:30:00+00	NFLX	87.36	87.77	87.29	87.64	3055701
+67398	2026-05-12 19:30:00+00	NFLX	87.64	87.79	87.5	87.68	3920840
+67399	2026-05-13 13:30:00+00	NFLX	86.48	87.36	86.28	87.27	6638372
+67400	2026-05-13 14:30:00+00	NFLX	87.27	87.29	86.8	87.02	2852999
+67401	2026-05-13 15:30:00+00	NFLX	87.02	87.55	86.85	87.55	2753173
+67402	2026-05-13 16:30:00+00	NFLX	87.55	87.94	87.55	87.84	2403164
+67403	2026-05-13 17:30:00+00	NFLX	87.83	88.05	87.67	87.94	2636529
+67404	2026-05-13 18:30:00+00	NFLX	87.94	88.62	87.86	88.08	4816904
+67405	2026-05-13 19:30:00+00	NFLX	88.08	88.24	87.5	87.57	3126219
+67406	2026-04-27 13:30:00+00	PFE	27.06	27.34	26.9	27.06	7515123
+67407	2026-04-27 14:30:00+00	PFE	27.07	27.14	26.94	26.94	3170034
+67408	2026-04-27 15:30:00+00	PFE	26.94	26.96	26.9	26.95	2125893
+67409	2026-04-27 16:30:00+00	PFE	26.95	26.97	26.87	26.89	2741072
+67410	2026-04-27 17:30:00+00	PFE	26.89	26.92	26.84	26.86	2043164
+67411	2026-04-27 18:30:00+00	PFE	26.86	26.92	26.84	26.86	4168109
+67412	2026-04-27 19:30:00+00	PFE	26.85	26.89	26.8	26.81	3301529
+67413	2026-04-28 13:30:00+00	PFE	27.53	27.58	26.38	26.42	20264816
+67414	2026-04-28 14:30:00+00	PFE	26.43	26.84	26.4	26.77	7018216
+67415	2026-04-28 15:30:00+00	PFE	26.77	26.82	26.67	26.77	3981534
+67416	2026-04-28 16:30:00+00	PFE	26.77	26.77	26.56	26.6	2736217
+67417	2026-04-28 17:30:00+00	PFE	26.6	26.64	26.49	26.5	3009789
+67418	2026-04-28 18:30:00+00	PFE	26.5	26.52	26.36	26.41	5192496
+67419	2026-04-28 19:30:00+00	PFE	26.4	26.48	26.32	26.48	7130446
+67420	2026-04-29 13:30:00+00	PFE	26.36	26.55	26.2	26.26	6004407
+67421	2026-04-29 14:30:00+00	PFE	26.26	26.41	26.25	26.38	3325176
+67422	2026-04-29 15:30:00+00	PFE	26.38	26.45	26.27	26.44	2228227
+67423	2026-04-29 16:30:00+00	PFE	26.44	26.47	26.3	26.31	1708667
+67424	2026-04-29 17:30:00+00	PFE	26.3	26.31	26.25	26.26	2271585
+67425	2026-04-29 18:30:00+00	PFE	26.26	26.28	26.22	26.25	3041548
+67426	2026-04-29 19:30:00+00	PFE	26.25	26.3	26.21	26.27	3971412
+67427	2026-04-30 13:30:00+00	PFE	26.39	26.84	26.27	26.83	7363464
+67428	2026-04-30 14:30:00+00	PFE	26.84	26.91	26.65	26.72	5574483
+67429	2026-04-30 15:30:00+00	PFE	26.72	26.79	26.67	26.75	2369911
+67430	2026-04-30 16:30:00+00	PFE	26.75	26.78	26.68	26.7	1777541
+67431	2026-04-30 17:30:00+00	PFE	26.7	26.72	26.6	26.65	1866807
+67432	2026-04-30 18:30:00+00	PFE	26.65	26.73	26.64	26.65	2019654
+67433	2026-04-30 19:30:00+00	PFE	26.66	26.75	26.62	26.7	5272338
+67434	2026-05-01 13:30:00+00	PFE	26.6	26.61	26.29	26.49	7152556
+67435	2026-05-01 14:30:00+00	PFE	26.49	26.54	26.42	26.45	3107390
+67436	2026-05-01 15:30:00+00	PFE	26.45	26.49	26.39	26.42	2781856
+67437	2026-05-01 16:30:00+00	PFE	26.42	26.45	26.38	26.44	2064068
+67438	2026-05-01 17:30:00+00	PFE	26.44	26.49	26.42	26.44	1970812
+67439	2026-05-01 18:30:00+00	PFE	26.44	26.52	26.4	26.41	2655881
+67440	2026-05-01 19:30:00+00	PFE	26.41	26.42	26.32	26.33	5529154
+67441	2026-05-04 13:30:00+00	PFE	26.24	26.51	26.15	26.38	7913305
+67442	2026-05-04 14:30:00+00	PFE	26.39	26.49	26.36	26.41	3241636
+67443	2026-05-04 15:30:00+00	PFE	26.41	26.49	26.31	26.32	3159109
+67444	2026-05-04 16:30:00+00	PFE	26.32	26.41	26.3	26.4	2666677
+67445	2026-05-04 17:30:00+00	PFE	26.41	26.42	26.33	26.35	2607411
+67446	2026-05-04 18:30:00+00	PFE	26.34	26.39	26.28	26.29	4101410
+67447	2026-05-04 19:30:00+00	PFE	26.28	26.39	26.25	26.32	5853723
+67448	2026-05-05 13:30:00+00	PFE	26.59	26.75	26.01	26.03	13697063
+67449	2026-05-05 14:30:00+00	PFE	26.02	26.38	26.01	26.25	7412156
+67450	2026-05-05 15:30:00+00	PFE	26.24	26.25	26.07	26.16	4641885
+67451	2026-05-05 16:30:00+00	PFE	26.16	26.2	26.05	26.08	4627521
+67452	2026-05-05 17:30:00+00	PFE	26.08	26.44	26.08	26.33	5766667
+67453	2026-05-05 18:30:00+00	PFE	26.33	26.67	26.32	26.56	7462049
+67454	2026-05-05 19:30:00+00	PFE	26.56	26.58	26.38	26.44	5249931
+67455	2026-05-06 13:30:00+00	PFE	26.56	26.68	26.38	26.54	7510581
+67456	2026-05-06 14:30:00+00	PFE	26.54	26.61	26.43	26.49	3912472
+67457	2026-05-06 15:30:00+00	PFE	26.49	26.51	26.28	26.28	4058648
+67458	2026-05-06 16:30:00+00	PFE	26.28	26.33	26.21	26.3	3838884
+67459	2026-05-06 17:30:00+00	PFE	26.3	26.48	26.3	26.47	2973308
+67460	2026-05-06 18:30:00+00	PFE	26.47	26.5	26.42	26.49	3197186
+67461	2026-05-06 19:30:00+00	PFE	26.49	26.54	26.47	26.5	4738358
+67462	2026-05-07 13:30:00+00	PFE	26.51	26.72	26.19	26.2	10238956
+67463	2026-05-07 14:30:00+00	PFE	26.2	26.37	26.17	26.17	6744943
+67464	2026-05-07 15:30:00+00	PFE	26.17	26.27	26.16	26.22	5648007
+67465	2026-05-07 16:30:00+00	PFE	26.22	26.34	26.19	26.32	4136434
+67466	2026-05-07 17:30:00+00	PFE	26.32	26.44	26.3	26.42	3068597
+67467	2026-05-07 18:30:00+00	PFE	26.42	26.53	26.38	26.47	3575026
+67468	2026-05-07 19:30:00+00	PFE	26.46	26.51	26.43	26.49	5481998
+67469	2026-05-08 13:30:00+00	PFE	26.16	26.19	25.75	25.91	8623008
+67470	2026-05-08 14:30:00+00	PFE	25.92	25.98	25.79	25.82	4664410
+67471	2026-05-08 15:30:00+00	PFE	25.83	25.86	25.75	25.79	3947525
+67472	2026-05-08 16:30:00+00	PFE	25.78	25.86	25.75	25.81	3281198
+67473	2026-05-08 17:30:00+00	PFE	25.81	25.82	25.73	25.75	2865230
+67474	2026-05-08 18:30:00+00	PFE	25.75	25.76	25.68	25.7	3435780
+67475	2026-05-08 19:30:00+00	PFE	25.7	25.75	25.6	25.67	5622842
+67476	2026-05-11 13:30:00+00	PFE	25.79	26.16	25.79	26.16	9694234
+67477	2026-05-11 14:30:00+00	PFE	26.15	26.18	25.95	25.95	4456902
+67478	2026-05-11 15:30:00+00	PFE	25.95	25.97	25.75	25.75	3560708
+67479	2026-05-11 16:30:00+00	PFE	25.75	25.82	25.72	25.78	2490459
+67480	2026-05-11 17:30:00+00	PFE	25.78	25.87	25.68	25.69	2890011
+67481	2026-05-11 18:30:00+00	PFE	25.69	25.8	25.69	25.73	3011350
+67482	2026-05-11 19:30:00+00	PFE	25.73	25.82	25.68	25.82	3312389
+67483	2026-05-12 13:30:00+00	PFE	25.82	26.05	25.8	25.89	4672788
+67484	2026-05-12 14:30:00+00	PFE	25.89	25.96	25.74	25.94	4000251
+67485	2026-05-12 15:30:00+00	PFE	25.95	26.03	25.89	25.97	2544702
+67486	2026-05-12 16:30:00+00	PFE	25.98	26.09	25.96	26.08	2922591
+67487	2026-05-12 17:30:00+00	PFE	26.07	26.07	25.96	26.01	2202522
+67488	2026-05-12 18:30:00+00	PFE	26.01	26.03	25.92	25.94	2325423
+67489	2026-05-12 19:30:00+00	PFE	25.94	25.94	25.84	25.89	3126943
+67490	2026-05-13 13:30:00+00	PFE	25.8	26.09	25.75	25.86	3983468
+67491	2026-05-13 14:30:00+00	PFE	25.85	25.88	25.64	25.76	3785014
+67492	2026-05-13 15:30:00+00	PFE	25.77	25.82	25.7	25.8	2294444
+67493	2026-05-13 16:30:00+00	PFE	25.8	25.85	25.74	25.84	1924844
+67494	2026-05-13 17:30:00+00	PFE	25.84	25.9	25.81	25.89	4979821
+67495	2026-05-13 18:30:00+00	PFE	25.89	26	25.86	25.95	3752597
+67496	2026-05-13 19:30:00+00	PFE	25.95	25.97	25.89	25.96	3003044
+67497	2026-04-27 13:30:00+00	WMT	129.62	129.81	128.33	128.49	4484859
+67498	2026-04-27 14:30:00+00	WMT	128.52	128.91	128.38	128.39	1150489
+67499	2026-04-27 15:30:00+00	WMT	128.4	128.67	128.27	128.31	770258
+67500	2026-04-27 16:30:00+00	WMT	128.3	128.36	128.07	128.11	947696
+67501	2026-04-27 17:30:00+00	WMT	128.1	128.1	127.75	127.88	810274
+67502	2026-04-27 18:30:00+00	WMT	127.87	127.87	127.53	127.67	820538
+67503	2026-04-27 19:30:00+00	WMT	127.66	127.8	127.39	127.57	1518160
+67504	2026-04-28 13:30:00+00	WMT	129.63	129.77	126.89	127.58	2991309
+67505	2026-04-28 14:30:00+00	WMT	127.58	128.74	127.38	128.38	1838565
+67506	2026-04-28 15:30:00+00	WMT	128.38	128.65	128.13	128.18	865978
+67507	2026-04-28 16:30:00+00	WMT	128.18	128.19	127.52	127.6	746185
+67508	2026-04-28 17:30:00+00	WMT	127.59	127.6	126.78	126.9	1079608
+67509	2026-04-28 18:30:00+00	WMT	126.88	127.45	126.83	127.04	3500884
+67510	2026-04-28 19:30:00+00	WMT	127.05	127.76	126.8	127.59	1584018
+67511	2026-04-29 13:30:00+00	WMT	126.68	127.2	125.91	126.39	2201274
+67512	2026-04-29 14:30:00+00	WMT	126.4	127.07	126.16	126.95	1064115
+67513	2026-04-29 15:30:00+00	WMT	126.96	127.61	126.86	127.27	1359721
+67514	2026-04-29 16:30:00+00	WMT	127.28	127.82	127.21	127.81	909841
+67515	2026-04-29 17:30:00+00	WMT	127.83	128.04	127.57	127.58	846858
+67516	2026-04-29 18:30:00+00	WMT	127.59	127.84	127.32	127.63	1179943
+67517	2026-04-29 19:30:00+00	WMT	127.61	128.08	127.53	128.05	1601306
+67518	2026-04-30 13:30:00+00	WMT	128.02	131.21	127.95	131.11	3111350
+67519	2026-04-30 14:30:00+00	WMT	131.14	131.37	130.4	131.08	1696512
+67520	2026-04-30 15:30:00+00	WMT	131.08	131.86	130.87	131.85	1299377
+67521	2026-04-30 16:30:00+00	WMT	131.85	131.88	131.45	131.62	1179678
+67522	2026-04-30 17:30:00+00	WMT	131.62	131.92	131.56	131.68	861618
+67523	2026-04-30 18:30:00+00	WMT	131.68	132.05	131.68	131.81	1036771
+67524	2026-04-30 19:30:00+00	WMT	131.82	132.43	131.68	131.9	2263271
+67525	2026-05-01 13:30:00+00	WMT	131.91	133.35	131.46	132.71	2122718
+67526	2026-05-01 14:30:00+00	WMT	132.72	133.37	132.47	132.55	1397974
+67527	2026-05-01 15:30:00+00	WMT	132.55	132.55	131.88	131.89	983803
+67528	2026-05-01 16:30:00+00	WMT	131.9	131.91	131.54	131.74	691569
+67529	2026-05-01 17:30:00+00	WMT	131.73	132.02	131.16	131.25	878336
+67530	2026-05-01 18:30:00+00	WMT	131.26	131.84	130.98	131.79	1025190
+67531	2026-05-01 19:30:00+00	WMT	131.79	132.03	131.49	131.6	1330608
+67532	2026-05-04 13:30:00+00	WMT	130.36	131.57	129.8	131.51	1767147
+67533	2026-05-04 14:30:00+00	WMT	131.54	131.73	130.78	130.89	1022310
+67534	2026-05-04 15:30:00+00	WMT	130.88	131.13	130.1	130.36	1058164
+67535	2026-05-04 16:30:00+00	WMT	130.36	130.52	129.8	130.22	844530
+67536	2026-05-04 17:30:00+00	WMT	130.21	130.38	129.84	129.85	582065
+67537	2026-05-04 18:30:00+00	WMT	129.83	130.11	129.75	129.91	731298
+67538	2026-05-04 19:30:00+00	WMT	129.93	130.37	129.7	130.36	1404131
+67539	2026-05-05 13:30:00+00	WMT	130.51	131.73	130.3	130.83	2130652
+67540	2026-05-05 14:30:00+00	WMT	130.82	130.9	130.34	130.62	996629
+67541	2026-05-05 15:30:00+00	WMT	130.63	131.06	130.37	131	700768
+67542	2026-05-05 16:30:00+00	WMT	131.03	131.13	130.79	130.79	544579
+67543	2026-05-05 17:30:00+00	WMT	130.8	131.49	130.8	131.39	735368
+67544	2026-05-05 18:30:00+00	WMT	131.38	131.58	131.04	131.48	822545
+67545	2026-05-05 19:30:00+00	WMT	131.48	131.57	130.72	130.81	1384931
+67546	2026-05-06 13:30:00+00	WMT	130.78	131.15	129.94	130.35	2463817
+67547	2026-05-06 14:30:00+00	WMT	130.31	130.48	129.61	129.89	1627216
+67548	2026-05-06 15:30:00+00	WMT	129.88	130.18	129.72	129.85	966570
+67549	2026-05-06 16:30:00+00	WMT	129.84	130.03	129.53	129.68	743984
+67550	2026-05-06 17:30:00+00	WMT	129.68	130.2	129.67	130.07	864223
+67551	2026-05-06 18:30:00+00	WMT	130.07	130.45	129.97	130.28	940904
+67552	2026-05-06 19:30:00+00	WMT	130.28	130.35	129.8	130.06	2807477
+67553	2026-05-07 13:30:00+00	WMT	129.91	130.54	128.66	128.94	2695069
+67554	2026-05-07 14:30:00+00	WMT	128.93	130.07	128.88	129.51	1186447
+67555	2026-05-07 15:30:00+00	WMT	129.52	129.92	129.04	129.49	1644797
+67556	2026-05-07 16:30:00+00	WMT	129.47	130.32	129.4	129.87	1153611
+67557	2026-05-07 17:30:00+00	WMT	129.86	130.16	129.43	130.09	893432
+67558	2026-05-07 18:30:00+00	WMT	130.08	130.44	129.89	130.35	1247755
+67559	2026-05-07 19:30:00+00	WMT	130.32	130.6	129.97	130.24	1811093
+67560	2026-05-08 13:30:00+00	WMT	130.41	131.11	130.25	131.04	2035112
+67561	2026-05-08 14:30:00+00	WMT	130.99	131.37	130.54	131.11	1171046
+67562	2026-05-08 15:30:00+00	WMT	131.09	131.41	130.97	130.99	794451
+67563	2026-05-08 16:30:00+00	WMT	130.99	131.39	130.8	130.82	687694
+67564	2026-05-08 17:30:00+00	WMT	130.8	131.15	130.76	130.79	620876
+67565	2026-05-08 18:30:00+00	WMT	130.79	131.07	130.59	130.81	987574
+67566	2026-05-08 19:30:00+00	WMT	130.8	130.82	130.26	130.38	2250609
+67567	2026-05-11 13:30:00+00	WMT	130.11	130.59	128.4	129.09	2872458
+67568	2026-05-11 14:30:00+00	WMT	129.1	129.19	127.46	127.53	1856064
+67569	2026-05-11 15:30:00+00	WMT	127.54	127.54	126.54	126.75	2316107
+67570	2026-05-11 16:30:00+00	WMT	126.76	127.28	126.5	127.28	1929986
+67571	2026-05-11 17:30:00+00	WMT	127.29	127.54	126.75	126.77	1047785
+67572	2026-05-11 18:30:00+00	WMT	126.76	127.27	126.38	127.21	1517641
+67573	2026-05-11 19:30:00+00	WMT	127.22	127.64	127.01	127.58	2103527
+67574	2026-05-12 13:30:00+00	WMT	128.01	129.55	127.72	129.41	3331992
+67575	2026-05-12 14:30:00+00	WMT	129.4	130.66	129.02	130.47	2195389
+67576	2026-05-12 15:30:00+00	WMT	130.48	130.55	130	130.48	1247516
+67577	2026-05-12 16:30:00+00	WMT	130.46	131.12	130.33	130.64	1506670
+67578	2026-05-12 17:30:00+00	WMT	130.63	130.63	129.93	130.01	1100294
+67579	2026-05-12 18:30:00+00	WMT	130.02	130.44	129.72	130.4	1337197
+67580	2026-05-12 19:30:00+00	WMT	130.4	130.56	130.06	130.39	1655668
+67581	2026-05-13 13:30:00+00	WMT	129.19	132.53	128.77	131	4069817
+67582	2026-05-13 14:30:00+00	WMT	131.03	131.03	130.12	130.32	1270122
+67583	2026-05-13 15:30:00+00	WMT	130.33	130.66	130.24	130.47	936045
+67584	2026-05-13 16:30:00+00	WMT	130.48	131.04	130.16	130.88	872499
+67585	2026-05-13 17:30:00+00	WMT	130.87	131.07	130.57	130.96	671807
+67586	2026-05-13 18:30:00+00	WMT	130.93	131.46	130.88	131.39	892904
+67587	2026-05-13 19:30:00+00	WMT	131.4	131.56	131.15	131.48	1147177
+67588	2026-04-27 13:30:00+00	CVX	186.19	188.37	185.78	186.65	1725699
+67589	2026-04-27 14:30:00+00	CVX	186.65	186.96	185.42	185.48	1109433
+67590	2026-04-27 15:30:00+00	CVX	185.48	185.62	184.18	184.25	917830
+67591	2026-04-27 16:30:00+00	CVX	184.26	184.71	183.95	184.08	880533
+67592	2026-04-27 17:30:00+00	CVX	184.05	185.43	183.67	185.34	1034440
+67593	2026-04-27 18:30:00+00	CVX	185.34	186.01	185.2	185.28	827679
+67594	2026-04-27 19:30:00+00	CVX	185.28	185.43	184.75	184.88	1421320
+67595	2026-04-28 13:30:00+00	CVX	188.28	188.91	186.55	188.19	2646596
+67596	2026-04-28 14:30:00+00	CVX	188.21	189.68	188	189.57	2146150
+67597	2026-04-28 15:30:00+00	CVX	189.57	189.96	189.02	189.23	913306
+67598	2026-04-28 16:30:00+00	CVX	189.21	189.38	188.86	188.97	770354
+67599	2026-04-28 17:30:00+00	CVX	188.97	189.03	188	188.29	814997
+67600	2026-04-28 18:30:00+00	CVX	188.29	188.43	187.8	188.14	815709
+67601	2026-04-28 19:30:00+00	CVX	188.15	188.36	187.91	188.35	1100746
+67602	2026-04-29 13:30:00+00	CVX	190.13	191.49	189.5	190.05	1768017
+67603	2026-04-29 14:30:00+00	CVX	190.04	190.79	190	190.76	758479
+67604	2026-04-29 15:30:00+00	CVX	190.75	192.41	190.55	192.34	1188669
+67605	2026-04-29 16:30:00+00	CVX	192.35	192.62	191.43	191.86	931646
+67606	2026-04-29 17:30:00+00	CVX	191.86	192.25	191.38	191.58	714105
+67607	2026-04-29 18:30:00+00	CVX	191.58	191.84	190.98	191.84	864397
+67608	2026-04-29 19:30:00+00	CVX	191.84	192.29	191.71	192.21	1043212
+67609	2026-04-30 13:30:00+00	CVX	190.25	192.29	188.5	191.65	1559234
+67610	2026-04-30 14:30:00+00	CVX	191.66	193.5	191.62	193.46	1592236
+67611	2026-04-30 15:30:00+00	CVX	193.46	193.96	193.07	193.93	768513
+67612	2026-04-30 16:30:00+00	CVX	193.93	194.13	193.01	193.09	697278
+67613	2026-04-30 17:30:00+00	CVX	193.05	193.43	192.55	193.31	880147
+67614	2026-04-30 18:30:00+00	CVX	193.32	193.51	192.55	193.05	956344
+67615	2026-04-30 19:30:00+00	CVX	193.06	194.09	192.98	193.34	1375591
+67616	2026-05-01 13:30:00+00	CVX	191.3	194.09	189.84	191.33	2306630
+67617	2026-05-01 14:30:00+00	CVX	191.27	192.75	191.14	191.23	988902
+67618	2026-05-01 15:30:00+00	CVX	191.2	191.45	190.02	190.24	1450731
+67619	2026-05-01 16:30:00+00	CVX	190.26	190.4	189.74	190.25	845186
+67620	2026-05-01 17:30:00+00	CVX	190.25	191	190.02	190.8	1202606
+67621	2026-05-01 18:30:00+00	CVX	190.79	190.98	190.55	190.6	979468
+67622	2026-05-01 19:30:00+00	CVX	190.57	191.15	190.27	190.62	1189139
+67623	2026-05-04 13:30:00+00	CVX	190.85	191.64	187.97	191.62	1643937
+67624	2026-05-04 14:30:00+00	CVX	191.61	191.65	190.05	191.39	1100984
+67625	2026-05-04 15:30:00+00	CVX	191.4	193	191.37	191.89	1219104
+67626	2026-05-04 16:30:00+00	CVX	191.88	193.71	191.88	192.66	864593
+67627	2026-05-04 17:30:00+00	CVX	192.62	192.79	192.06	192.18	571401
+67628	2026-05-04 18:30:00+00	CVX	192.16	192.64	191.64	191.88	763823
+67629	2026-05-04 19:30:00+00	CVX	191.88	192.51	191.74	192.35	725929
+67630	2026-05-05 13:30:00+00	CVX	191.22	192.7	190.45	191.86	1051785
+67631	2026-05-05 14:30:00+00	CVX	191.83	192.82	191.4	192.59	659771
+67632	2026-05-05 15:30:00+00	CVX	192.6	193.55	192.2	193.39	421315
+67633	2026-05-05 16:30:00+00	CVX	193.42	193.59	192.47	192.48	392280
+67634	2026-05-05 17:30:00+00	CVX	192.5	193.5	192.34	193.28	571296
+67635	2026-05-05 18:30:00+00	CVX	193.28	193.64	192.94	193.54	534383
+67636	2026-05-05 19:30:00+00	CVX	193.57	193.66	192.51	192.66	731094
+67637	2026-05-06 13:30:00+00	CVX	185.59	186.77	183.13	184.7	2672383
+67638	2026-05-06 14:30:00+00	CVX	184.71	184.9	183.87	184.04	1198217
+67639	2026-05-06 15:30:00+00	CVX	184.01	184.66	183.55	184.66	1007213
+67640	2026-05-06 16:30:00+00	CVX	184.65	185.48	184.6	184.86	862238
+67641	2026-05-06 17:30:00+00	CVX	184.87	185.23	184.21	184.6	691607
+67642	2026-05-06 18:30:00+00	CVX	184.58	185.08	183.68	184.74	1008594
+67643	2026-05-06 19:30:00+00	CVX	184.74	185.62	184.61	185.13	1282116
+67644	2026-05-07 13:30:00+00	CVX	181.58	182.08	179.54	179.73	2460455
+67645	2026-05-07 14:30:00+00	CVX	179.73	181.01	179.53	180.88	1757417
+67646	2026-05-07 15:30:00+00	CVX	180.93	182.24	180.55	181.62	1163643
+67647	2026-05-07 16:30:00+00	CVX	181.6	183.19	181.6	183.02	990987
+67648	2026-05-07 17:30:00+00	CVX	183.07	183.44	182.03	182.42	945817
+67649	2026-05-07 18:30:00+00	CVX	182.43	183.17	182.27	182.84	898403
+67650	2026-05-07 19:30:00+00	CVX	182.85	183.05	182.1	182.54	1310451
+67651	2026-05-08 13:30:00+00	CVX	182.04	182.73	180.87	182.58	1309597
+67652	2026-05-08 14:30:00+00	CVX	182.54	182.67	181.24	181.66	846599
+67653	2026-05-08 15:30:00+00	CVX	181.68	182.34	181.46	181.72	1291603
+67654	2026-05-08 16:30:00+00	CVX	181.71	182.01	181.47	181.49	623919
+67655	2026-05-08 17:30:00+00	CVX	181.46	181.88	181.21	181.54	625830
+67656	2026-05-08 18:30:00+00	CVX	181.52	181.7	181.07	181.23	710296
+67657	2026-05-08 19:30:00+00	CVX	181.23	181.54	180.74	181.46	1247429
+67658	2026-05-11 13:30:00+00	CVX	183	185.2	183	184.37	1428172
+67659	2026-05-11 14:30:00+00	CVX	184.38	184.74	184	184.55	609100
+67660	2026-05-11 15:30:00+00	CVX	184.54	184.64	184.01	184.1	515512
+67661	2026-05-11 16:30:00+00	CVX	184.1	184.91	184.03	184.34	610251
+67662	2026-05-11 17:30:00+00	CVX	184.34	184.88	184.28	184.6	569414
+67663	2026-05-11 18:30:00+00	CVX	184.62	184.98	184.38	184.6	871463
+67664	2026-05-11 19:30:00+00	CVX	184.61	184.91	184.15	184.77	882325
+67665	2026-05-12 13:30:00+00	CVX	186.5	186.59	184.66	186.05	1499271
+67666	2026-05-12 14:30:00+00	CVX	186.04	186.49	185.76	186.16	759054
+67667	2026-05-12 15:30:00+00	CVX	186.2	186.55	185.58	186.44	626279
+67668	2026-05-12 16:30:00+00	CVX	186.43	186.89	186.28	186.77	496801
+67669	2026-05-12 17:30:00+00	CVX	186.75	186.84	186.1	186.23	504188
+67670	2026-05-12 18:30:00+00	CVX	186.25	186.56	185.91	186.26	613370
+67671	2026-05-12 19:30:00+00	CVX	186.26	186.49	185.79	185.98	1065465
+67672	2026-05-13 13:30:00+00	CVX	185.81	186	184.58	185.47	945767
+67673	2026-05-13 14:30:00+00	CVX	185.45	185.65	184.16	184.37	665868
+67674	2026-05-13 15:30:00+00	CVX	184.4	184.98	183.96	184.4	609975
+67675	2026-05-13 16:30:00+00	CVX	184.38	185.18	184.32	184.83	479113
+67676	2026-05-13 17:30:00+00	CVX	184.81	185.03	184.48	184.72	618096
+67677	2026-05-13 18:30:00+00	CVX	184.72	185.49	184.64	185.4	643089
+67678	2026-05-13 19:30:00+00	CVX	185.39	185.99	185.34	185.99	872256
+67679	2026-04-27 13:30:00+00	GE	282.81	284.87	280.1	281.7	1177059
+67680	2026-04-27 14:30:00+00	GE	281.59	282.98	280.28	281.06	598983
+67681	2026-04-27 15:30:00+00	GE	281.11	283.63	280.96	282.93	394377
+67682	2026-04-27 16:30:00+00	GE	282.96	283.24	282.23	282.94	509521
+67683	2026-04-27 17:30:00+00	GE	282.89	283.98	282.39	283.83	364762
+67684	2026-04-27 18:30:00+00	GE	283.83	284.42	282.31	282.31	566892
+67685	2026-04-27 19:30:00+00	GE	282.28	284.62	282.28	284.58	894804
+67686	2026-04-28 13:30:00+00	GE	283.37	286.55	282.06	282.12	1266147
+67687	2026-04-28 14:30:00+00	GE	282.17	285.55	280.55	285.13	1382859
+67688	2026-04-28 15:30:00+00	GE	285.13	285.87	283.34	285.23	757034
+67689	2026-04-28 16:30:00+00	GE	285.23	286.18	284.73	286.03	497578
+67690	2026-04-28 17:30:00+00	GE	286.06	287.09	285.49	285.91	451098
+67691	2026-04-28 18:30:00+00	GE	285.88	288	285.25	287.45	836902
+67692	2026-04-28 19:30:00+00	GE	287.54	289.41	287.49	289.2	1603656
+67693	2026-04-29 13:30:00+00	GE	287.21	289.94	281.61	282.4	1198509
+67694	2026-04-29 14:30:00+00	GE	282.4	282.84	280.17	281.29	906530
+67695	2026-04-29 15:30:00+00	GE	281.37	282.4	280.72	281.24	639983
+67696	2026-04-29 16:30:00+00	GE	281.2	282.42	279.59	282.12	594544
+67697	2026-04-29 17:30:00+00	GE	282.14	283.18	281.45	281.98	679241
+67698	2026-04-29 18:30:00+00	GE	281.89	282.1	280.35	281.76	781346
+67699	2026-04-29 19:30:00+00	GE	281.76	283.75	281.62	283.58	1316988
+67700	2026-04-30 13:30:00+00	GE	285.01	291.5	284.83	290.25	1392931
+67701	2026-04-30 14:30:00+00	GE	290.24	291.57	288.29	289.39	714934
+67702	2026-04-30 15:30:00+00	GE	289.39	291.06	289.21	290.91	565350
+67703	2026-04-30 16:30:00+00	GE	290.91	291.16	289.86	290.55	448084
+67704	2026-04-30 17:30:00+00	GE	290.58	291	288.39	288.55	619993
+67705	2026-04-30 18:30:00+00	GE	288.52	289.2	287.57	288.9	608706
+67706	2026-04-30 19:30:00+00	GE	288.89	290.27	288.53	289.88	960809
+67707	2026-05-01 13:30:00+00	GE	289.05	291.43	286.24	290.78	807609
+67708	2026-05-01 14:30:00+00	GE	290.78	291.76	288.57	288.95	456484
+67709	2026-05-01 15:30:00+00	GE	288.93	289.78	288.07	288.13	302016
+67710	2026-05-01 16:30:00+00	GE	288.14	288.69	287.58	288.14	266161
+67711	2026-05-01 17:30:00+00	GE	288.12	288.71	287.87	288.42	304416
+67712	2026-05-01 18:30:00+00	GE	288.36	289.35	287.51	288.88	399070
+67713	2026-05-01 19:30:00+00	GE	288.85	289	286.36	286.48	632502
+67714	2026-05-04 13:30:00+00	GE	286.4	289.84	286.4	286.9	990713
+67715	2026-05-04 14:30:00+00	GE	287	287.44	279.6	280.17	1020655
+67716	2026-05-04 15:30:00+00	GE	280.17	281.3	279.41	280.4	861912
+67717	2026-05-04 16:30:00+00	GE	280.39	281.21	279.7	280.69	572400
+67718	2026-05-04 17:30:00+00	GE	280.7	281.07	279.9	280.39	395137
+67719	2026-05-04 18:30:00+00	GE	280.39	281.11	279.99	280.64	462924
+67720	2026-05-04 19:30:00+00	GE	280.61	281.27	279.93	280.42	855057
+67721	2026-05-05 13:30:00+00	GE	282.48	286.65	281.61	286.65	1239008
+67722	2026-05-05 14:30:00+00	GE	286.64	288.71	284.37	287.6	713954
+67723	2026-05-05 15:30:00+00	GE	287.61	287.73	286.44	286.88	465706
+67724	2026-05-05 16:30:00+00	GE	286.88	290.66	286.7	287.45	735515
+67725	2026-05-05 17:30:00+00	GE	287.41	287.49	285.3	285.39	500533
+67726	2026-05-05 18:30:00+00	GE	285.4	285.55	284.2	285.19	509825
+67727	2026-05-05 19:30:00+00	GE	285.3	286.89	285.06	286.68	700971
+67728	2026-05-06 13:30:00+00	GE	300.43	306.95	299.86	303.51	3130923
+67729	2026-05-06 14:30:00+00	GE	303.44	307.33	303.25	305.22	1323285
+67730	2026-05-06 15:30:00+00	GE	305.26	305.95	303.8	304.4	640215
+67731	2026-05-06 16:30:00+00	GE	304.39	304.76	303.47	304.14	530108
+67732	2026-05-06 17:30:00+00	GE	304.14	306.79	304.14	306.67	519974
+67733	2026-05-06 18:30:00+00	GE	306.67	308.37	305.62	307.52	802812
+67734	2026-05-06 19:30:00+00	GE	307.41	307.63	305.69	305.74	1066663
+67735	2026-05-07 13:30:00+00	GE	308.01	310	304.64	307.16	943125
+67736	2026-05-07 14:30:00+00	GE	307.26	309	305.85	307.24	499123
+67737	2026-05-07 15:30:00+00	GE	307.4	307.48	302.41	302.5	709006
+67738	2026-05-07 16:30:00+00	GE	302.64	304.66	302.3	303.38	382657
+67739	2026-05-07 17:30:00+00	GE	303.38	304.16	301.91	302.15	450936
+67740	2026-05-07 18:30:00+00	GE	302.13	304.7	302.12	303.51	500504
+67741	2026-05-07 19:30:00+00	GE	303.46	303.51	301.86	302.62	714748
+67742	2026-05-08 13:30:00+00	GE	304.45	305.41	302.03	302.56	714102
+67743	2026-05-08 14:30:00+00	GE	302.59	303.66	301	301.42	334919
+67744	2026-05-08 15:30:00+00	GE	301.36	302.5	300.84	302.2	234521
+67745	2026-05-08 16:30:00+00	GE	302.25	303.2	300.35	301.76	244922
+67746	2026-05-08 17:30:00+00	GE	301.76	301.82	299.5	299.7	284457
+67747	2026-05-08 18:30:00+00	GE	299.74	300.33	297.67	297.85	450481
+67748	2026-05-08 19:30:00+00	GE	297.81	298.23	296.83	297.12	754070
+67749	2026-05-11 13:30:00+00	GE	296.03	300.13	292.85	299.09	920498
+67750	2026-05-11 14:30:00+00	GE	299	301.99	297.66	301.58	596658
+67751	2026-05-11 15:30:00+00	GE	301.5	303.07	301.11	302.01	398307
+67752	2026-05-11 16:30:00+00	GE	302.01	302.52	300.01	300.49	374682
+67753	2026-05-11 17:30:00+00	GE	300.54	301.46	300.16	301.04	396280
+67754	2026-05-11 18:30:00+00	GE	301.07	301.11	300.03	300.43	326762
+67755	2026-05-11 19:30:00+00	GE	300.4	301.16	300.07	300.93	569179
+67756	2026-05-12 13:30:00+00	GE	299.72	300.91	294.77	296.13	871041
+67757	2026-05-12 14:30:00+00	GE	296.12	296.23	293.3	294.21	601894
+67758	2026-05-12 15:30:00+00	GE	294.26	295.63	293.63	295.05	482684
+67759	2026-05-12 16:30:00+00	GE	295.01	297.7	294.68	297.26	331299
+67760	2026-05-12 17:30:00+00	GE	297.28	298.62	296.11	298.31	375283
+67761	2026-05-12 18:30:00+00	GE	298.31	298.7	297.73	298.17	305490
+67762	2026-05-12 19:30:00+00	GE	298.14	298.19	297.26	297.53	516517
+67763	2026-05-13 13:30:00+00	GE	295.97	296.97	291.31	294.47	705236
+67764	2026-05-13 14:30:00+00	GE	294.51	295.76	293.55	295.67	439244
+67765	2026-05-13 15:30:00+00	GE	295.74	298.4	295.74	297.96	389571
+67766	2026-05-13 16:30:00+00	GE	297.96	298.21	296.02	296.21	335657
+67767	2026-05-13 17:30:00+00	GE	296.21	296.28	294.79	295.3	374999
+67768	2026-05-13 18:30:00+00	GE	295.3	295.98	294.71	295.67	372652
+67769	2026-05-13 19:30:00+00	GE	295.62	295.85	294.71	294.76	451826
+67770	2026-04-27 13:30:00+00	SBUX	98.81	99.5	97.94	97.97	801639
+67771	2026-04-27 14:30:00+00	SBUX	97.96	98.7	97.9	98.64	616897
+67772	2026-04-27 15:30:00+00	SBUX	98.62	98.8	98.14	98.25	550736
+67773	2026-04-27 16:30:00+00	SBUX	98.25	98.35	98.1	98.32	315465
+67774	2026-04-27 17:30:00+00	SBUX	98.31	98.41	97.89	97.96	407504
+67775	2026-04-27 18:30:00+00	SBUX	97.95	98.39	97.92	98.25	481428
+67776	2026-04-27 19:30:00+00	SBUX	98.23	98.47	97.83	97.87	1043676
+67777	2026-04-28 13:30:00+00	SBUX	98.48	98.68	96.85	97.12	1523675
+67778	2026-04-28 14:30:00+00	SBUX	97.11	97.36	96.85	96.96	856897
+67779	2026-04-28 15:30:00+00	SBUX	96.96	97.23	96.74	97.17	714898
+67780	2026-04-28 16:30:00+00	SBUX	97.17	97.22	96.57	96.58	761359
+67781	2026-04-28 17:30:00+00	SBUX	96.57	97.01	96.45	96.88	880366
+67782	2026-04-28 18:30:00+00	SBUX	96.87	97.24	96.77	96.85	958521
+67783	2026-04-28 19:30:00+00	SBUX	96.85	97.38	96.68	97.29	1721221
+67784	2026-04-29 13:30:00+00	SBUX	102	104.98	100.08	104.76	7382293
+67785	2026-04-29 14:30:00+00	SBUX	104.79	106.25	104.53	106.25	4096746
+67786	2026-04-29 15:30:00+00	SBUX	106.29	107.27	106.09	106.18	2965415
+67787	2026-04-29 16:30:00+00	SBUX	106.16	106.37	105.33	105.37	2256451
+67788	2026-04-29 17:30:00+00	SBUX	105.37	106.35	105.11	106.12	1967043
+67789	2026-04-29 18:30:00+00	SBUX	106.13	106.59	105.16	105.19	2151319
+67790	2026-04-29 19:30:00+00	SBUX	105.18	105.88	105.04	105.47	2641690
+67791	2026-04-30 13:30:00+00	SBUX	105.55	105.63	103.83	105.46	1569210
+67792	2026-04-30 14:30:00+00	SBUX	105.46	105.76	104.52	104.75	912448
+67793	2026-04-30 15:30:00+00	SBUX	104.77	105.1	104.64	104.9	658494
+67794	2026-04-30 16:30:00+00	SBUX	104.9	105.5	104.79	105.07	876846
+67795	2026-04-30 17:30:00+00	SBUX	105.1	105.78	105.07	105.67	587116
+67796	2026-04-30 18:30:00+00	SBUX	105.67	105.95	105.32	105.6	923185
+67797	2026-04-30 19:30:00+00	SBUX	105.58	105.64	104.93	105.32	1540054
+67798	2026-05-01 13:30:00+00	SBUX	105.51	107.52	105.51	106.85	1037461
+67799	2026-05-01 14:30:00+00	SBUX	106.85	106.93	106.3	106.44	623233
+67800	2026-05-01 15:30:00+00	SBUX	106.4	106.55	105.94	105.97	630843
+67801	2026-05-01 16:30:00+00	SBUX	105.96	106.72	105.68	106.57	467965
+67802	2026-05-01 17:30:00+00	SBUX	106.6	106.75	105.59	105.76	664858
+67803	2026-05-01 18:30:00+00	SBUX	105.75	106.04	105.44	105.5	625965
+67804	2026-05-01 19:30:00+00	SBUX	105.5	105.95	105.43	105.9	1124058
+67805	2026-05-04 13:30:00+00	SBUX	105.86	106.68	105.06	105.96	840625
+67806	2026-05-04 14:30:00+00	SBUX	106.03	106.16	105.19	105.38	435042
+67807	2026-05-04 15:30:00+00	SBUX	105.4	105.67	105.05	105.32	554436
+67808	2026-05-04 16:30:00+00	SBUX	105.3	105.36	104.72	105.08	356333
+67809	2026-05-04 17:30:00+00	SBUX	105.09	105.3	104.9	104.99	373128
+67810	2026-05-04 18:30:00+00	SBUX	105.02	105.29	104.83	105.05	678332
+67811	2026-05-04 19:30:00+00	SBUX	105.05	105.24	104.69	104.97	808592
+67812	2026-05-05 13:30:00+00	SBUX	104.81	106.07	104.59	105.1	939599
+67813	2026-05-05 14:30:00+00	SBUX	105.1	105.1	104.35	104.61	608346
+67814	2026-05-05 15:30:00+00	SBUX	104.64	105.23	104.52	105.22	727850
+67815	2026-05-05 16:30:00+00	SBUX	105.26	105.47	104.95	105.47	514196
+67816	2026-05-05 17:30:00+00	SBUX	105.46	105.74	105.39	105.72	326862
+67817	2026-05-05 18:30:00+00	SBUX	105.71	105.75	105	105.21	569235
+67818	2026-05-05 19:30:00+00	SBUX	105.22	105.44	104.78	104.94	1434195
+67819	2026-05-06 13:30:00+00	SBUX	104.61	106.15	104.4	105.93	1364171
+67820	2026-05-06 14:30:00+00	SBUX	105.91	106.49	105.68	106.23	769376
+67821	2026-05-06 15:30:00+00	SBUX	106.25	106.61	106	106.5	663959
+67822	2026-05-06 16:30:00+00	SBUX	106.5	106.57	105.97	106.28	671099
+67823	2026-05-06 17:30:00+00	SBUX	106.28	107.52	106.28	107.5	709223
+67824	2026-05-06 18:30:00+00	SBUX	107.49	107.55	107.05	107.14	1048764
+67825	2026-05-06 19:30:00+00	SBUX	107.15	107.35	106.36	106.43	1785953
+67826	2026-05-07 13:30:00+00	SBUX	105.95	106.07	102.94	103.31	1373203
+67827	2026-05-07 14:30:00+00	SBUX	103.31	104.79	103.31	104.69	666142
+67828	2026-05-07 15:30:00+00	SBUX	104.7	105.48	104.61	105.29	571207
+67829	2026-05-07 16:30:00+00	SBUX	105.32	105.33	104.77	104.94	454347
+67830	2026-05-07 17:30:00+00	SBUX	104.95	105.11	104.35	104.68	545856
+67831	2026-05-07 18:30:00+00	SBUX	104.69	104.82	104.24	104.74	498956
+67832	2026-05-07 19:30:00+00	SBUX	104.74	105.02	104.06	104.23	1263651
+67833	2026-05-08 13:30:00+00	SBUX	104.6	105.27	104.25	105.17	607537
+67834	2026-05-08 14:30:00+00	SBUX	105.15	105.42	104.84	105.05	464151
+67835	2026-05-08 15:30:00+00	SBUX	105.03	105.23	104.91	105.17	347558
+67836	2026-05-08 16:30:00+00	SBUX	105.18	105.34	104.84	104.98	335555
+67837	2026-05-08 17:30:00+00	SBUX	104.98	105.17	104.58	104.69	218918
+67838	2026-05-08 18:30:00+00	SBUX	104.69	104.95	104.29	104.88	501053
+67839	2026-05-08 19:30:00+00	SBUX	104.9	105.02	104.7	104.94	900033
+67840	2026-05-11 13:30:00+00	SBUX	105.18	108.04	105.13	106.6	1354891
+67841	2026-05-11 14:30:00+00	SBUX	106.62	106.78	106.3	106.59	555123
+67842	2026-05-11 15:30:00+00	SBUX	106.57	106.74	106.04	106.17	771572
+67843	2026-05-11 16:30:00+00	SBUX	106.17	106.45	105.65	105.93	390138
+67844	2026-05-11 17:30:00+00	SBUX	105.94	106.24	105.83	105.88	431278
+67845	2026-05-11 18:30:00+00	SBUX	105.82	106.01	105.36	105.98	507986
+67846	2026-05-11 19:30:00+00	SBUX	105.99	106.24	105.55	105.74	1058891
+67847	2026-05-12 13:30:00+00	SBUX	105.74	106	104.33	105.48	772526
+67848	2026-05-12 14:30:00+00	SBUX	105.47	106.69	105.12	106.59	1033629
+67849	2026-05-12 15:30:00+00	SBUX	106.61	106.61	106.26	106.39	381364
+67850	2026-05-12 16:30:00+00	SBUX	106.36	107.16	106.29	106.92	412213
+67851	2026-05-12 17:30:00+00	SBUX	106.89	106.89	105.81	106.17	732233
+67852	2026-05-12 18:30:00+00	SBUX	106.18	106.57	105.91	106.41	688479
+67853	2026-05-12 19:30:00+00	SBUX	106.42	106.82	106.18	106.58	1038496
+67854	2026-05-13 13:30:00+00	SBUX	106.77	107.94	106.49	107.84	989046
+67855	2026-05-13 14:30:00+00	SBUX	107.83	107.88	107.16	107.81	745838
+67856	2026-05-13 15:30:00+00	SBUX	107.81	108.05	106.75	107.12	646003
+67857	2026-05-13 16:30:00+00	SBUX	107.14	107.18	105.89	106	1014053
+67858	2026-05-13 17:30:00+00	SBUX	105.99	106.12	105.54	105.69	709740
+67859	2026-05-13 18:30:00+00	SBUX	105.67	106.11	105.47	106.1	682916
+67860	2026-05-13 19:30:00+00	SBUX	106.1	106.21	105.48	105.95	1164165
 \.
 
 
 --
+-- TOC entry 3519 (class 0 OID 21499)
+-- Dependencies: 229
 -- Data for Name: portfolio_history; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.portfolio_history (id, portfolio_id, datetime, cash) FROM stdin;
-1	1	2026-04-15 13:30:00+00	100000
-2	2	2026-04-15 13:30:00+00	100000
-3	3	2026-04-15 13:30:00+00	100000
-4	4	2026-04-15 13:30:00+00	100000
-5	5	2026-04-15 13:30:00+00	100000
-6	6	2026-04-15 13:30:00+00	100000
-7	7	2026-04-15 13:30:00+00	100000
-8	8	2026-04-15 13:30:00+00	100000
-9	9	2026-04-15 13:30:00+00	100000
-10	10	2026-04-15 13:30:00+00	100000
-11	11	2026-04-15 13:30:00+00	100000
-12	1	2026-04-15 14:30:00+00	1921.5800000000045
-13	3	2026-04-15 14:30:00+00	58952.44
-14	4	2026-04-15 14:30:00+00	6594.8399999999965
-15	5	2026-04-15 14:30:00+00	38030.69
-16	7	2026-04-15 14:30:00+00	64575.19000000002
-17	8	2026-04-15 14:30:00+00	27139.239999999998
-18	9	2026-04-15 14:30:00+00	42900.35999999999
-19	10	2026-04-15 14:30:00+00	43817.93000000001
-20	11	2026-04-15 14:30:00+00	85557.34
-21	4	2026-04-22 14:30:00+00	9319.779999999999
-22	5	2026-04-22 14:30:00+00	24543.56000000001
-23	9	2026-04-22 14:30:00+00	30214.019999999997
-24	10	2026-04-22 14:30:00+00	28759.930000000004
+1	1	2024-03-15 13:30:00+00	100000
+2	2	2024-03-15 13:30:00+00	100000
+3	3	2024-03-15 13:30:00+00	100000
+4	4	2024-03-15 13:30:00+00	100000
+5	5	2024-03-15 13:30:00+00	100000
+6	6	2024-03-15 13:30:00+00	100000
+7	7	2024-03-15 13:30:00+00	100000
+8	8	2024-03-15 13:30:00+00	100000
+9	9	2024-03-15 13:30:00+00	100000
+10	10	2024-03-15 13:30:00+00	100000
+11	11	2024-03-15 13:30:00+00	100000
+12	12	2024-03-15 13:30:00+00	100000
+13	1	2025-03-19 13:30:00+00	20.21
+14	2	2025-03-19 13:30:00+00	5.02
+15	3	2025-03-19 13:30:00+00	85877.8
+16	4	2025-03-19 13:30:00+00	58487.79
+17	5	2025-03-19 13:30:00+00	14896.65
+18	6	2025-03-19 13:30:00+00	50901.72
+19	7	2025-03-19 13:30:00+00	43575.85
+20	8	2025-03-19 13:30:00+00	86528.88
+21	9	2025-03-19 13:30:00+00	74296.24
+22	10	2025-03-19 13:30:00+00	58596.49
+23	11	2025-03-19 13:30:00+00	27181.41
+24	2	2025-03-26 13:30:00+00	13.5
+25	3	2025-03-26 13:30:00+00	79272.44
+26	4	2025-03-26 13:30:00+00	46332.67
+27	5	2025-03-26 13:30:00+00	7518.47
+28	6	2025-03-26 13:30:00+00	33107.43
+29	7	2025-03-26 13:30:00+00	39362.71
+30	8	2025-03-26 13:30:00+00	70800.61
+31	9	2025-03-26 13:30:00+00	70450.27
+32	10	2025-03-26 13:30:00+00	34050.49
+33	11	2025-03-26 13:30:00+00	16011
+34	2	2025-04-02 13:30:00+00	8.12
+35	4	2025-04-02 13:30:00+00	43554.64
+36	5	2025-04-02 13:30:00+00	11417.38
+37	6	2025-04-02 13:30:00+00	38737.44
+38	7	2025-04-02 13:30:00+00	40097.77
+39	8	2025-04-02 13:30:00+00	67877.55
+40	9	2025-04-02 13:30:00+00	57635.44
+41	10	2025-04-02 13:30:00+00	34807.52
+42	11	2025-04-02 13:30:00+00	22544.5
+43	2	2025-04-09 13:30:00+00	9.65
+44	3	2025-04-09 13:30:00+00	74158.8
+45	4	2025-04-09 13:30:00+00	40173.33
+46	5	2025-04-09 13:30:00+00	17674.22
+47	6	2025-04-09 13:30:00+00	40488.36
+48	7	2025-04-09 13:30:00+00	40825.91
+49	9	2025-04-09 13:30:00+00	42861.32
+50	10	2025-04-09 13:30:00+00	39289.66
+51	11	2025-04-09 13:30:00+00	29914
+52	2	2025-04-16 13:30:00+00	5.05
+53	3	2025-04-16 13:30:00+00	64457.39
+54	4	2025-04-16 13:30:00+00	33940.95
+55	5	2025-04-16 13:30:00+00	8910.19
+56	6	2025-04-16 13:30:00+00	24654.86
+57	7	2025-04-16 13:30:00+00	39232.47
+58	8	2025-04-16 13:30:00+00	46014.42
+59	9	2025-04-16 13:30:00+00	41022.72
+60	10	2025-04-16 13:30:00+00	18088.48
+61	11	2025-04-16 13:30:00+00	18174.7
+62	2	2025-04-23 13:30:00+00	3.43
+63	3	2025-04-23 13:30:00+00	55202.69
+64	4	2025-04-23 13:30:00+00	23061.05
+65	5	2025-04-23 13:30:00+00	6432.09
+66	6	2025-04-23 13:30:00+00	19992.64
+67	7	2025-04-23 13:30:00+00	31507.13
+68	8	2025-04-23 13:30:00+00	42421.95
+69	9	2025-04-23 13:30:00+00	23512.88
+70	10	2025-04-23 13:30:00+00	22005.17
+71	11	2025-04-23 13:30:00+00	12190.75
+72	12	2025-04-23 13:30:00+00	78407.77
+73	2	2025-04-30 13:30:00+00	5.08
+74	3	2025-04-30 13:30:00+00	61248.84
+75	4	2025-04-30 13:30:00+00	37402.21
+76	5	2025-04-30 13:30:00+00	9287.09
+77	6	2025-04-30 13:30:00+00	38811.39
+78	7	2025-04-30 13:30:00+00	42020.87
+79	8	2025-04-30 13:30:00+00	56977.51
+80	9	2025-04-30 13:30:00+00	24934.73
+81	10	2025-04-30 13:30:00+00	32812.3
+82	11	2025-04-30 13:30:00+00	18100.69
+83	12	2025-04-30 13:30:00+00	95389.39
+84	2	2025-05-07 13:30:00+00	5.39
+85	3	2025-05-07 13:30:00+00	54260.99
+86	4	2025-05-07 13:30:00+00	28882.44
+87	5	2025-05-07 13:30:00+00	7131.67
+88	6	2025-05-07 13:30:00+00	36492.29
+89	7	2025-05-07 13:30:00+00	40119.11
+90	8	2025-05-07 13:30:00+00	64566.17
+91	9	2025-05-07 13:30:00+00	27620.11
+92	10	2025-05-07 13:30:00+00	39846.51
+93	11	2025-05-07 13:30:00+00	18966.56
+94	2	2025-05-14 13:30:00+00	4.78
+95	3	2025-05-14 13:30:00+00	47030.45
+96	4	2025-05-14 13:30:00+00	36855.63
+97	5	2025-05-14 13:30:00+00	8872.31
+98	6	2025-05-14 13:30:00+00	36884.71
+99	7	2025-05-14 13:30:00+00	40787.92
+100	8	2025-05-14 13:30:00+00	58447.09
+101	9	2025-05-14 13:30:00+00	10259.58
+102	10	2025-05-14 13:30:00+00	39950.46
+103	11	2025-05-14 13:30:00+00	17922.14
+104	12	2025-05-14 13:30:00+00	79128.09
+105	2	2025-05-21 13:30:00+00	2.95
+106	3	2025-05-21 13:30:00+00	52834.01
+107	4	2025-05-21 13:30:00+00	46855.9
+108	5	2025-05-21 13:30:00+00	9749.34
+109	6	2025-05-21 13:30:00+00	30285.72
+110	7	2025-05-21 13:30:00+00	40676.8
+111	8	2025-05-21 13:30:00+00	64967.16
+112	9	2025-05-21 13:30:00+00	20942.79
+113	10	2025-05-21 13:30:00+00	39509.64
+114	11	2025-05-21 13:30:00+00	17710.73
+115	2	2025-05-28 13:30:00+00	7.19
+116	4	2025-05-28 13:30:00+00	39012.19
+117	5	2025-05-28 13:30:00+00	9239.26
+118	6	2025-05-28 13:30:00+00	25993.66
+119	7	2025-05-28 13:30:00+00	41798.23
+120	8	2025-05-28 13:30:00+00	58314.52
+121	9	2025-05-28 13:30:00+00	7079.88
+122	10	2025-05-28 13:30:00+00	32539.14
+123	11	2025-05-28 13:30:00+00	19346.58
+124	2	2025-06-04 13:30:00+00	5.68
+125	3	2025-06-04 13:30:00+00	45766.18
+126	4	2025-06-04 13:30:00+00	33613.38
+127	5	2025-06-04 13:30:00+00	8299.42
+128	6	2025-06-04 13:30:00+00	36731.99
+129	7	2025-06-04 13:30:00+00	41023.31
+130	8	2025-06-04 13:30:00+00	48770.91
+131	9	2025-06-04 13:30:00+00	34691.78
+132	10	2025-06-04 13:30:00+00	33416.47
+133	11	2025-06-04 13:30:00+00	18192.54
+134	2	2025-06-11 13:30:00+00	5.06
+135	4	2025-06-11 13:30:00+00	41061.28
+136	5	2025-06-11 13:30:00+00	8923.79
+137	6	2025-06-11 13:30:00+00	31734.3
+138	7	2025-06-11 13:30:00+00	44779.36
+139	8	2025-06-11 13:30:00+00	41701.27
+140	9	2025-06-11 13:30:00+00	19859.92
+141	10	2025-06-11 13:30:00+00	35987.73
+142	11	2025-06-11 13:30:00+00	19736.63
+143	2	2025-06-18 13:30:00+00	5.33
+144	4	2025-06-18 13:30:00+00	34141.63
+145	5	2025-06-18 13:30:00+00	9287.21
+146	6	2025-06-18 13:30:00+00	33011.97
+147	7	2025-06-18 13:30:00+00	50561.68
+148	8	2025-06-18 13:30:00+00	36178.96
+149	9	2025-06-18 13:30:00+00	35388.94
+150	10	2025-06-18 13:30:00+00	30726.09
+151	11	2025-06-18 13:30:00+00	19262.2
+152	2	2025-06-25 13:30:00+00	7.01
+153	4	2025-06-25 13:30:00+00	34368.41
+154	5	2025-06-25 13:30:00+00	10103.95
+155	6	2025-06-25 13:30:00+00	31307.89
+156	7	2025-06-25 13:30:00+00	43374.63
+157	8	2025-06-25 13:30:00+00	46253.99
+158	9	2025-06-25 13:30:00+00	13372.5
+159	10	2025-06-25 13:30:00+00	23117.9
+160	11	2025-06-25 13:30:00+00	17774.51
+161	2	2025-07-02 13:30:00+00	5.44
+162	4	2025-07-02 13:30:00+00	42174.1
+163	5	2025-07-02 13:30:00+00	13045.07
+164	6	2025-07-02 13:30:00+00	22796.97
+165	7	2025-07-02 13:30:00+00	40695.37
+166	8	2025-07-02 13:30:00+00	39785.28
+167	9	2025-07-02 13:30:00+00	10899.8
+168	10	2025-07-02 13:30:00+00	27577.17
+169	11	2025-07-02 13:30:00+00	17139.2
+170	2	2025-07-09 13:30:00+00	3.43
+171	4	2025-07-09 13:30:00+00	48537.04
+172	5	2025-07-09 13:30:00+00	10726.02
+173	6	2025-07-09 13:30:00+00	29629.32
+174	7	2025-07-09 13:30:00+00	45741.63
+175	8	2025-07-09 13:30:00+00	33166.6
+176	9	2025-07-09 13:30:00+00	28206.41
+177	10	2025-07-09 13:30:00+00	33476.4
+178	11	2025-07-09 13:30:00+00	19533.49
+179	2	2025-07-16 13:30:00+00	2.28
+180	3	2025-07-16 13:30:00+00	39108.31
+181	4	2025-07-16 13:30:00+00	41892.85
+182	5	2025-07-16 13:30:00+00	9199.5
+183	6	2025-07-16 13:30:00+00	21252.72
+184	7	2025-07-16 13:30:00+00	43048.86
+185	8	2025-07-16 13:30:00+00	39571.47
+186	9	2025-07-16 13:30:00+00	9918.71
+187	10	2025-07-16 13:30:00+00	31816.38
+188	11	2025-07-16 13:30:00+00	17942.38
+189	2	2025-07-23 13:30:00+00	7.05
+190	4	2025-07-23 13:30:00+00	38772.02
+191	5	2025-07-23 13:30:00+00	11228.63
+192	6	2025-07-23 13:30:00+00	34316.45
+193	7	2025-07-23 13:30:00+00	40138.38
+194	8	2025-07-23 13:30:00+00	27667.3
+195	9	2025-07-23 13:30:00+00	2297.88
+196	10	2025-07-23 13:30:00+00	39766.71
+197	11	2025-07-23 13:30:00+00	23405.1
+198	2	2025-07-30 13:30:00+00	10.56
+199	4	2025-07-30 13:30:00+00	27955.22
+200	5	2025-07-30 13:30:00+00	9950.96
+201	6	2025-07-30 13:30:00+00	30044.28
+202	7	2025-07-30 13:30:00+00	46425.49
+203	8	2025-07-30 13:30:00+00	34241.77
+204	9	2025-07-30 13:30:00+00	18216.64
+205	10	2025-07-30 13:30:00+00	34932.78
+206	11	2025-07-30 13:30:00+00	20549.83
+207	2	2025-08-06 13:30:00+00	7.96
+208	4	2025-08-06 13:30:00+00	40604.7
+209	5	2025-08-06 13:30:00+00	12396.33
+210	6	2025-08-06 13:30:00+00	25038.3
+211	7	2025-08-06 13:30:00+00	41990.48
+212	8	2025-08-06 13:30:00+00	33234.95
+213	9	2025-08-06 13:30:00+00	2466.46
+214	10	2025-08-06 13:30:00+00	30463.96
+215	11	2025-08-06 13:30:00+00	19171.96
+216	2	2025-08-13 13:30:00+00	5.43
+217	3	2025-08-13 13:30:00+00	44871.71
+218	4	2025-08-13 13:30:00+00	49846.07
+219	5	2025-08-13 13:30:00+00	11396.2
+220	6	2025-08-13 13:30:00+00	35010.4
+221	7	2025-08-13 13:30:00+00	44761.9
+222	8	2025-08-13 13:30:00+00	37409
+223	9	2025-08-13 13:30:00+00	5033.21
+224	10	2025-08-13 13:30:00+00	36405.78
+225	11	2025-08-13 13:30:00+00	19839.02
+226	2	2025-08-20 13:30:00+00	5.9
+227	3	2025-08-20 13:30:00+00	52026.87
+228	4	2025-08-20 13:30:00+00	40390.81
+229	5	2025-08-20 13:30:00+00	14296.5
+230	6	2025-08-20 13:30:00+00	35049.04
+231	7	2025-08-20 13:30:00+00	44115.82
+232	8	2025-08-20 13:30:00+00	52247.66
+233	9	2025-08-20 13:30:00+00	19436.11
+234	10	2025-08-20 13:30:00+00	41771.66
+235	11	2025-08-20 13:30:00+00	22465.82
+236	12	2025-08-20 13:30:00+00	94719.56
+237	2	2025-08-27 13:30:00+00	3.21
+238	3	2025-08-27 13:30:00+00	45976.29
+239	4	2025-08-27 13:30:00+00	37624.29
+240	5	2025-08-27 13:30:00+00	11107.4
+241	6	2025-08-27 13:30:00+00	30011.03
+242	7	2025-08-27 13:30:00+00	46004.67
+243	8	2025-08-27 13:30:00+00	43778.16
+244	9	2025-08-27 13:30:00+00	28253.53
+245	10	2025-08-27 13:30:00+00	34730.24
+246	11	2025-08-27 13:30:00+00	24000.26
+247	2	2025-09-03 13:30:00+00	5.52
+248	3	2025-09-03 13:30:00+00	37938.41
+249	4	2025-09-03 13:30:00+00	40847.81
+250	5	2025-09-03 13:30:00+00	14561.05
+251	6	2025-09-03 13:30:00+00	36835.26
+252	7	2025-09-03 13:30:00+00	47895.42
+253	8	2025-09-03 13:30:00+00	29856.98
+254	9	2025-09-03 13:30:00+00	45089.58
+255	10	2025-09-03 13:30:00+00	41733.3
+256	11	2025-09-03 13:30:00+00	28083.17
+257	2	2025-09-10 13:30:00+00	9.64
+258	3	2025-09-10 13:30:00+00	29273.63
+259	4	2025-09-10 13:30:00+00	17325.41
+260	5	2025-09-10 13:30:00+00	7655.11
+261	6	2025-09-10 13:30:00+00	23040.78
+262	7	2025-09-10 13:30:00+00	40935.45
+263	8	2025-09-10 13:30:00+00	14523.74
+264	9	2025-09-10 13:30:00+00	1247.34
+265	10	2025-09-10 13:30:00+00	5951.15
+266	11	2025-09-10 13:30:00+00	16760.74
+267	12	2025-09-10 13:30:00+00	71632.78
+268	2	2025-09-17 13:30:00+00	5.27
+269	3	2025-09-17 13:30:00+00	30139.22
+270	4	2025-09-17 13:30:00+00	21626.54
+271	5	2025-09-17 13:30:00+00	10531.21
+272	6	2025-09-17 13:30:00+00	24343.03
+273	7	2025-09-17 13:30:00+00	41810.37
+274	8	2025-09-17 13:30:00+00	23017.03
+275	9	2025-09-17 13:30:00+00	10119.17
+276	10	2025-09-17 13:30:00+00	21160.4
+277	11	2025-09-17 13:30:00+00	19940.4
+278	2	2025-09-24 13:30:00+00	5.77
+279	3	2025-09-24 13:30:00+00	37623.92
+280	4	2025-09-24 13:30:00+00	37867.58
+281	5	2025-09-24 13:30:00+00	11783.24
+282	6	2025-09-24 13:30:00+00	33378.61
+283	7	2025-09-24 13:30:00+00	44177.1
+284	8	2025-09-24 13:30:00+00	24535.72
+285	9	2025-09-24 13:30:00+00	9418.86
+286	10	2025-09-24 13:30:00+00	32556.14
+287	11	2025-09-24 13:30:00+00	22279.44
+288	12	2025-09-24 13:30:00+00	94419.24
+289	2	2025-10-01 13:30:00+00	6.87
+290	4	2025-10-01 13:30:00+00	42698.79
+291	5	2025-10-01 13:30:00+00	10655.66
+292	6	2025-10-01 13:30:00+00	30759.57
+293	7	2025-10-01 13:30:00+00	48145.81
+294	8	2025-10-01 13:30:00+00	22608.33
+295	9	2025-10-01 13:30:00+00	8770.15
+296	10	2025-10-01 13:30:00+00	30193.76
+297	11	2025-10-01 13:30:00+00	23394.56
+298	2	2025-10-08 13:30:00+00	3.84
+299	4	2025-10-08 13:30:00+00	32042.54
+300	5	2025-10-08 13:30:00+00	10026.71
+301	6	2025-10-08 13:30:00+00	31881.61
+302	7	2025-10-08 13:30:00+00	49204.6
+303	8	2025-10-08 13:30:00+00	39255.18
+304	9	2025-10-08 13:30:00+00	35835.37
+305	10	2025-10-08 13:30:00+00	23071.65
+306	11	2025-10-08 13:30:00+00	17935.74
+307	2	2025-10-15 13:30:00+00	3.67
+308	3	2025-10-15 13:30:00+00	31530.86
+309	4	2025-10-15 13:30:00+00	42158.28
+310	5	2025-10-15 13:30:00+00	10902.68
+311	6	2025-10-15 13:30:00+00	33523.33
+312	7	2025-10-15 13:30:00+00	50896.81
+313	8	2025-10-15 13:30:00+00	22034.18
+314	9	2025-10-15 13:30:00+00	4251.46
+315	10	2025-10-15 13:30:00+00	28958.89
+316	11	2025-10-15 13:30:00+00	20903.63
+317	12	2025-10-15 13:30:00+00	74908.97
+318	2	2025-10-22 13:30:00+00	3.28
+319	4	2025-10-22 13:30:00+00	41950.82
+320	5	2025-10-22 13:30:00+00	13276.53
+321	6	2025-10-22 13:30:00+00	41362.4
+322	7	2025-10-22 13:30:00+00	49477.1
+323	8	2025-10-22 13:30:00+00	35664.34
+324	9	2025-10-22 13:30:00+00	23845.08
+325	10	2025-10-22 13:30:00+00	40444.96
+326	11	2025-10-22 13:30:00+00	20686.57
+327	2	2025-10-29 13:30:00+00	8.96
+328	3	2025-10-29 13:30:00+00	32861.57
+329	4	2025-10-29 13:30:00+00	27708.45
+330	5	2025-10-29 13:30:00+00	8855.99
+331	6	2025-10-29 13:30:00+00	23330.48
+332	7	2025-10-29 13:30:00+00	40260.99
+333	8	2025-10-29 13:30:00+00	25973.27
+334	9	2025-10-29 13:30:00+00	28524
+335	10	2025-10-29 13:30:00+00	21635.37
+336	11	2025-10-29 13:30:00+00	15912.95
+337	12	2025-10-29 13:30:00+00	75151.19
+338	2	2025-11-05 14:30:00+00	7.08
+339	3	2025-11-05 14:30:00+00	29857.33
+340	4	2025-11-05 14:30:00+00	34470.63
+341	5	2025-11-05 14:30:00+00	11332.27
+342	6	2025-11-05 14:30:00+00	26303.35
+343	7	2025-11-05 14:30:00+00	43885.91
+344	8	2025-11-05 14:30:00+00	26340.64
+345	9	2025-11-05 14:30:00+00	27992.63
+346	10	2025-11-05 14:30:00+00	32773.97
+347	11	2025-11-05 14:30:00+00	22130.61
+348	12	2025-11-05 14:30:00+00	59605.69
+349	2	2025-11-12 14:30:00+00	4.71
+350	3	2025-11-12 14:30:00+00	37647.24
+351	4	2025-11-12 14:30:00+00	31427.08
+352	5	2025-11-12 14:30:00+00	9425.82
+353	6	2025-11-12 14:30:00+00	28503.19
+354	7	2025-11-12 14:30:00+00	44681.43
+355	8	2025-11-12 14:30:00+00	34572.77
+356	9	2025-11-12 14:30:00+00	26876.97
+357	10	2025-11-12 14:30:00+00	32147.1
+358	11	2025-11-12 14:30:00+00	17685.11
+359	12	2025-11-12 14:30:00+00	39514.67
+360	2	2025-11-19 14:30:00+00	3.28
+361	3	2025-11-19 14:30:00+00	43546.39
+362	4	2025-11-19 14:30:00+00	34258.69
+363	5	2025-11-19 14:30:00+00	10482.15
+364	6	2025-11-19 14:30:00+00	14239.09
+365	7	2025-11-19 14:30:00+00	42333.36
+366	8	2025-11-19 14:30:00+00	28070.53
+367	9	2025-11-19 14:30:00+00	10543.73
+368	10	2025-11-19 14:30:00+00	23484.85
+369	11	2025-11-19 14:30:00+00	15879.76
+370	2	2025-11-26 14:30:00+00	4.83
+371	4	2025-11-26 14:30:00+00	35974.9
+372	5	2025-11-26 14:30:00+00	11920.15
+373	6	2025-11-26 14:30:00+00	32699.7
+374	7	2025-11-26 14:30:00+00	37800.12
+375	8	2025-11-26 14:30:00+00	30744.45
+376	9	2025-11-26 14:30:00+00	16382.51
+377	10	2025-11-26 14:30:00+00	26819.55
+378	11	2025-11-26 14:30:00+00	18924.4
+379	2	2025-12-03 14:30:00+00	4.55
+380	3	2025-12-03 14:30:00+00	37344.22
+381	4	2025-12-03 14:30:00+00	39913.65
+382	5	2025-12-03 14:30:00+00	7819.63
+383	6	2025-12-03 14:30:00+00	25592
+384	7	2025-12-03 14:30:00+00	38784.51
+385	8	2025-12-03 14:30:00+00	20191.67
+386	9	2025-12-03 14:30:00+00	12335.3
+387	10	2025-12-03 14:30:00+00	22489.35
+388	11	2025-12-03 14:30:00+00	15424.33
+389	2	2025-12-10 14:30:00+00	5.64
+390	5	2025-12-10 14:30:00+00	9180.63
+391	6	2025-12-10 14:30:00+00	27504.47
+392	7	2025-12-10 14:30:00+00	41112.59
+393	10	2025-12-10 14:30:00+00	27331.95
+394	11	2025-12-10 14:30:00+00	17439.48
+395	12	2025-12-10 14:30:00+00	54132.58
+396	2	2025-12-17 14:30:00+00	5.9
+397	3	2025-12-17 14:30:00+00	37782.43
+398	4	2025-12-17 14:30:00+00	34566.52
+399	5	2025-12-17 14:30:00+00	9870.61
+400	6	2025-12-17 14:30:00+00	30478.81
+401	7	2025-12-17 14:30:00+00	44453.45
+402	8	2025-12-17 14:30:00+00	22737.42
+403	9	2025-12-17 14:30:00+00	19261.33
+404	10	2025-12-17 14:30:00+00	23592.12
+405	11	2025-12-17 14:30:00+00	17279.5
+406	12	2025-12-17 14:30:00+00	55709.74
+407	2	2025-12-24 14:30:00+00	9.47
+408	3	2025-12-24 14:30:00+00	46673.72
+409	4	2025-12-24 14:30:00+00	42075.39
+410	5	2025-12-24 14:30:00+00	9464.73
+411	6	2025-12-24 14:30:00+00	31970.19
+412	7	2025-12-24 14:30:00+00	42815.02
+413	8	2025-12-24 14:30:00+00	25846.7
+414	9	2025-12-24 14:30:00+00	35876.03
+415	10	2025-12-24 14:30:00+00	25876.94
+416	11	2025-12-24 14:30:00+00	14406.28
+417	2	2025-12-31 14:30:00+00	7
+418	4	2025-12-31 14:30:00+00	46458.53
+419	5	2025-12-31 14:30:00+00	11786.81
+420	6	2025-12-31 14:30:00+00	35833.02
+421	7	2025-12-31 14:30:00+00	43198.65
+422	9	2025-12-31 14:30:00+00	51298.69
+423	10	2025-12-31 14:30:00+00	17288.38
+424	11	2025-12-31 14:30:00+00	24829.49
+425	2	2026-01-07 14:30:00+00	3.6
+426	3	2026-01-07 14:30:00+00	39475.92
+427	4	2026-01-07 14:30:00+00	39925.94
+428	5	2026-01-07 14:30:00+00	12353.04
+429	6	2026-01-07 14:30:00+00	33163.87
+430	7	2026-01-07 14:30:00+00	51614.77
+431	8	2026-01-07 14:30:00+00	33037.02
+432	9	2026-01-07 14:30:00+00	53655.15
+433	10	2026-01-07 14:30:00+00	28434.59
+434	11	2026-01-07 14:30:00+00	24487.22
+435	2	2026-01-14 14:30:00+00	6.04
+436	3	2026-01-14 14:30:00+00	48439.08
+437	4	2026-01-14 14:30:00+00	32261.46
+438	5	2026-01-14 14:30:00+00	5660.64
+439	6	2026-01-14 14:30:00+00	36280.76
+440	7	2026-01-14 14:30:00+00	44781.9
+441	8	2026-01-14 14:30:00+00	31785.59
+442	9	2026-01-14 14:30:00+00	27667.26
+443	10	2026-01-14 14:30:00+00	12718
+444	11	2026-01-14 14:30:00+00	14797.79
+445	2	2026-01-21 14:30:00+00	3.98
+446	4	2026-01-21 14:30:00+00	34550.29
+447	5	2026-01-21 14:30:00+00	9081.69
+448	6	2026-01-21 14:30:00+00	31752.58
+449	7	2026-01-21 14:30:00+00	43504.13
+450	9	2026-01-21 14:30:00+00	5964.22
+451	10	2026-01-21 14:30:00+00	6445.65
+452	11	2026-01-21 14:30:00+00	18152.34
+453	2	2026-01-28 14:30:00+00	4.49
+454	4	2026-01-28 14:30:00+00	37966.22
+455	5	2026-01-28 14:30:00+00	6876.67
+456	6	2026-01-28 14:30:00+00	22402.44
+457	7	2026-01-28 14:30:00+00	44244.93
+458	8	2026-01-28 14:30:00+00	4925.71
+459	9	2026-01-28 14:30:00+00	35183.55
+460	10	2026-01-28 14:30:00+00	22260.55
+461	11	2026-01-28 14:30:00+00	17161.93
+462	2	2026-02-04 14:30:00+00	5.78
+463	4	2026-02-04 14:30:00+00	36391.73
+464	5	2026-02-04 14:30:00+00	7029.52
+465	6	2026-02-04 14:30:00+00	22591.83
+466	7	2026-02-04 14:30:00+00	39210.79
+467	8	2026-02-04 14:30:00+00	10680.21
+468	9	2026-02-04 14:30:00+00	18510.14
+469	10	2026-02-04 14:30:00+00	21166.82
+470	11	2026-02-04 14:30:00+00	13195.32
+471	2	2026-02-11 14:30:00+00	2.27
+472	3	2026-02-11 14:30:00+00	54707.99
+473	4	2026-02-11 14:30:00+00	36304.61
+474	5	2026-02-11 14:30:00+00	6340.61
+475	6	2026-02-11 14:30:00+00	23651.66
+476	7	2026-02-11 14:30:00+00	42195.15
+477	8	2026-02-11 14:30:00+00	18821.64
+478	9	2026-02-11 14:30:00+00	7110.52
+479	10	2026-02-11 14:30:00+00	22606.04
+480	11	2026-02-11 14:30:00+00	18043.65
+481	2	2026-02-18 14:30:00+00	8.06
+482	4	2026-02-18 14:30:00+00	27584.26
+483	5	2026-02-18 14:30:00+00	10239.05
+484	6	2026-02-18 14:30:00+00	29935.19
+485	7	2026-02-18 14:30:00+00	49525
+486	8	2026-02-18 14:30:00+00	10256.64
+487	9	2026-02-18 14:30:00+00	18781.27
+488	10	2026-02-18 14:30:00+00	20104.96
+489	11	2026-02-18 14:30:00+00	21222.6
+490	12	2026-02-18 14:30:00+00	72591.86
+491	2	2026-02-25 14:30:00+00	4.22
+492	4	2026-02-25 14:30:00+00	32755.18
+493	5	2026-02-25 14:30:00+00	9510.01
+494	6	2026-02-25 14:30:00+00	27830.23
+495	7	2026-02-25 14:30:00+00	47192.19
+496	8	2026-02-25 14:30:00+00	12321.03
+497	9	2026-02-25 14:30:00+00	2731.97
+498	10	2026-02-25 14:30:00+00	19475.23
+499	11	2026-02-25 14:30:00+00	22961.74
+500	2	2026-03-04 14:30:00+00	8.17
+501	4	2026-03-04 14:30:00+00	47556.6
+502	5	2026-03-04 14:30:00+00	11451.72
+503	6	2026-03-04 14:30:00+00	34799.95
+504	7	2026-03-04 14:30:00+00	47800.53
+505	8	2026-03-04 14:30:00+00	26151
+506	9	2026-03-04 14:30:00+00	29276.46
+507	10	2026-03-04 14:30:00+00	36226.32
+508	11	2026-03-04 14:30:00+00	19797.26
+509	2	2026-03-11 13:30:00+00	5.52
+510	3	2026-03-11 13:30:00+00	52379.8
+511	4	2026-03-11 13:30:00+00	36272.31
+512	5	2026-03-11 13:30:00+00	12495.74
+513	6	2026-03-11 13:30:00+00	36938.47
+514	7	2026-03-11 13:30:00+00	42790.48
+515	8	2026-03-11 13:30:00+00	10592.46
+516	9	2026-03-11 13:30:00+00	42179.66
+517	10	2026-03-11 13:30:00+00	28700.06
+518	11	2026-03-11 13:30:00+00	22118.8
+519	2	2026-03-18 13:30:00+00	5.83
+520	4	2026-03-18 13:30:00+00	52769.23
+521	5	2026-03-18 13:30:00+00	10731.12
+522	6	2026-03-18 13:30:00+00	37734.45
+523	7	2026-03-18 13:30:00+00	47383.28
+524	8	2026-03-18 13:30:00+00	19570.28
+525	9	2026-03-18 13:30:00+00	60026.61
+526	10	2026-03-18 13:30:00+00	43122.44
+527	11	2026-03-18 13:30:00+00	18745.62
+528	2	2026-03-25 13:30:00+00	6.37
+529	4	2026-03-25 13:30:00+00	44641.6
+530	5	2026-03-25 13:30:00+00	13132.32
+531	6	2026-03-25 13:30:00+00	26351.1
+532	7	2026-03-25 13:30:00+00	43315.08
+533	8	2026-03-25 13:30:00+00	11456.24
+534	9	2026-03-25 13:30:00+00	30452.49
+535	10	2026-03-25 13:30:00+00	22606.41
+536	11	2026-03-25 13:30:00+00	24105.06
+537	2	2026-04-01 13:30:00+00	17.1
+538	4	2026-04-01 13:30:00+00	46652.62
+539	5	2026-04-01 13:30:00+00	12870.69
+540	6	2026-04-01 13:30:00+00	23933.57
+541	7	2026-04-01 13:30:00+00	40312.49
+542	8	2026-04-01 13:30:00+00	25563.32
+543	9	2026-04-01 13:30:00+00	60819.57
+544	10	2026-04-01 13:30:00+00	38258.3
+545	11	2026-04-01 13:30:00+00	19745.85
+546	2	2026-04-08 13:30:00+00	7.81
+547	4	2026-04-08 13:30:00+00	34051.44
+548	5	2026-04-08 13:30:00+00	9251
+549	6	2026-04-08 13:30:00+00	22240.8
+550	7	2026-04-08 13:30:00+00	47252.53
+551	8	2026-04-08 13:30:00+00	22631.55
+552	9	2026-04-08 13:30:00+00	15875.27
+553	10	2026-04-08 13:30:00+00	28424.9
+554	11	2026-04-08 13:30:00+00	20563.49
+555	2	2026-04-15 13:30:00+00	7.7
+556	4	2026-04-15 13:30:00+00	38813.49
+557	5	2026-04-15 13:30:00+00	7676.51
+558	6	2026-04-15 13:30:00+00	30094.83
+559	7	2026-04-15 13:30:00+00	46096.79
+560	8	2026-04-15 13:30:00+00	29020.92
+561	9	2026-04-15 13:30:00+00	24543.82
+562	10	2026-04-15 13:30:00+00	22229.96
+563	11	2026-04-15 13:30:00+00	24097.61
+564	2	2026-04-22 13:30:00+00	15.35
+565	3	2026-04-22 13:30:00+00	58540.24
+566	4	2026-04-22 13:30:00+00	44174.85
+567	5	2026-04-22 13:30:00+00	8987.04
+568	6	2026-04-22 13:30:00+00	25989.64
+569	7	2026-04-22 13:30:00+00	49570.85
+570	9	2026-04-22 13:30:00+00	1959.28
+571	10	2026-04-22 13:30:00+00	15898.93
+572	11	2026-04-22 13:30:00+00	22643.57
+573	2	2026-04-29 13:30:00+00	6.15
+574	3	2026-04-29 13:30:00+00	49780.69
+575	4	2026-04-29 13:30:00+00	42193.91
+576	5	2026-04-29 13:30:00+00	8543.2
+577	6	2026-04-29 13:30:00+00	31158.24
+578	7	2026-04-29 13:30:00+00	44379.76
+579	8	2026-04-29 13:30:00+00	11671.65
+580	10	2026-04-29 13:30:00+00	10963.87
+581	11	2026-04-29 13:30:00+00	18617.67
+582	2	2026-05-06 13:30:00+00	6.96
+583	3	2026-05-06 13:30:00+00	53722.08
+584	4	2026-05-06 13:30:00+00	49822.36
+585	5	2026-05-06 13:30:00+00	11391.9
+586	6	2026-05-06 13:30:00+00	42547.68
+587	7	2026-05-06 13:30:00+00	53207.53
+588	8	2026-05-06 13:30:00+00	25775.66
+589	9	2026-05-06 13:30:00+00	36520.39
+590	10	2026-05-06 13:30:00+00	25923.81
+591	11	2026-05-06 13:30:00+00	20168.72
+592	2	2026-05-13 13:30:00+00	5.06
+593	4	2026-05-13 13:30:00+00	43389.59
+594	5	2026-05-13 13:30:00+00	10047.87
+595	6	2026-05-13 13:30:00+00	30029.9
+596	7	2026-05-13 13:30:00+00	45501
+597	8	2026-05-13 13:30:00+00	22860.23
+598	9	2026-05-13 13:30:00+00	8516.05
+599	10	2026-05-13 13:30:00+00	17309.32
+600	11	2026-05-13 13:30:00+00	19681.29
 \.
 
 
 --
+-- TOC entry 3517 (class 0 OID 21485)
+-- Dependencies: 227
 -- Data for Name: portfolio_metric_weights; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -72228,337 +74807,12053 @@ COPY public.portfolio_metric_weights (id, portfolio_id, metric_name, weight) FRO
 1	1	relative_technical_strength	0
 2	1	relative_fundamental_support	0
 3	1	relative_valuation_sustainability	0
-4	1	relative_structural_risk	0
+4	1	relative_structural_safety	0
 5	1	relative_conviction	0
 6	1	relative_asymmetry_profile	0
-7	2	relative_technical_strength	0.017
-8	2	relative_fundamental_support	0.51
-9	2	relative_valuation_sustainability	0.286
-10	2	relative_structural_risk	0.105
-11	2	relative_conviction	0.044
-12	2	relative_asymmetry_profile	0.038
-13	3	relative_technical_strength	0.059
-14	3	relative_fundamental_support	0.301
-15	3	relative_valuation_sustainability	0.413
-16	3	relative_structural_risk	0.065
-17	3	relative_conviction	0.077
-18	3	relative_asymmetry_profile	0.085
-19	4	relative_technical_strength	0.441
-20	4	relative_fundamental_support	0.046
-21	4	relative_valuation_sustainability	0.027
-22	4	relative_structural_risk	0.087
-23	4	relative_conviction	0.149
-24	4	relative_asymmetry_profile	0.25
-25	5	relative_technical_strength	0.249
-26	5	relative_fundamental_support	0.215
-27	5	relative_valuation_sustainability	0.122
-28	5	relative_structural_risk	0.108
-29	5	relative_conviction	0.086
-30	5	relative_asymmetry_profile	0.22
-31	6	relative_technical_strength	0.083
-32	6	relative_fundamental_support	0.109
-33	6	relative_valuation_sustainability	0.139
-34	6	relative_structural_risk	0.521
-35	6	relative_conviction	0.072
-36	6	relative_asymmetry_profile	0.075
-37	7	relative_technical_strength	0.167
-38	7	relative_fundamental_support	0.243
-39	7	relative_valuation_sustainability	0.227
-40	7	relative_structural_risk	0.137
-41	7	relative_conviction	0.113
-42	7	relative_asymmetry_profile	0.112
-43	8	relative_technical_strength	0.051
-44	8	relative_fundamental_support	0.156
-45	8	relative_valuation_sustainability	0.048
-46	8	relative_structural_risk	0.075
-47	8	relative_conviction	0.523
-48	8	relative_asymmetry_profile	0.148
-49	9	relative_technical_strength	0.123
-50	9	relative_fundamental_support	0.075
-51	9	relative_valuation_sustainability	0.115
-52	9	relative_structural_risk	0.146
-53	9	relative_conviction	0.138
-54	9	relative_asymmetry_profile	0.403
-55	10	relative_technical_strength	0.636
-56	10	relative_fundamental_support	0.052
-57	10	relative_valuation_sustainability	0.064
-58	10	relative_structural_risk	0.122
-59	10	relative_conviction	0.052
-60	10	relative_asymmetry_profile	0.075
-61	11	relative_technical_strength	0.038
-62	11	relative_fundamental_support	0.549
-63	11	relative_valuation_sustainability	0.158
-64	11	relative_structural_risk	0.176
-65	11	relative_conviction	0.058
-66	11	relative_asymmetry_profile	0.02
+7	2	relative_technical_strength	0.166
+8	2	relative_fundamental_support	0.166
+9	2	relative_valuation_sustainability	0.166
+10	2	relative_structural_safety	0.166
+11	2	relative_conviction	0.166
+12	2	relative_asymmetry_profile	0.166
+13	3	relative_technical_strength	0.011
+14	3	relative_fundamental_support	0.48
+15	3	relative_valuation_sustainability	0.321
+16	3	relative_structural_safety	0.165
+17	3	relative_conviction	0.003
+18	3	relative_asymmetry_profile	0.02
+19	4	relative_technical_strength	0.074
+20	4	relative_fundamental_support	0.348
+21	4	relative_valuation_sustainability	0.365
+22	4	relative_structural_safety	0.082
+23	4	relative_conviction	0.073
+24	4	relative_asymmetry_profile	0.059
+25	5	relative_technical_strength	0.452
+26	5	relative_fundamental_support	0.019
+27	5	relative_valuation_sustainability	0.035
+28	5	relative_structural_safety	0.057
+29	5	relative_conviction	0.129
+30	5	relative_asymmetry_profile	0.308
+31	6	relative_technical_strength	0.216
+32	6	relative_fundamental_support	0.205
+33	6	relative_valuation_sustainability	0.068
+34	6	relative_structural_safety	0.153
+35	6	relative_conviction	0.13
+36	6	relative_asymmetry_profile	0.228
+37	7	relative_technical_strength	0.056
+38	7	relative_fundamental_support	0.162
+39	7	relative_valuation_sustainability	0.136
+40	7	relative_structural_safety	0.502
+41	7	relative_conviction	0.067
+42	7	relative_asymmetry_profile	0.078
+43	8	relative_technical_strength	0.126
+44	8	relative_fundamental_support	0.26
+45	8	relative_valuation_sustainability	0.234
+46	8	relative_structural_safety	0.186
+47	8	relative_conviction	0.118
+48	8	relative_asymmetry_profile	0.076
+49	9	relative_technical_strength	0.067
+50	9	relative_fundamental_support	0.104
+51	9	relative_valuation_sustainability	0.048
+52	9	relative_structural_safety	0.05
+53	9	relative_conviction	0.569
+54	9	relative_asymmetry_profile	0.162
+55	10	relative_technical_strength	0.126
+56	10	relative_fundamental_support	0.076
+57	10	relative_valuation_sustainability	0.141
+58	10	relative_structural_safety	0.118
+59	10	relative_conviction	0.149
+60	10	relative_asymmetry_profile	0.39
+61	11	relative_technical_strength	0.596
+62	11	relative_fundamental_support	0.056
+63	11	relative_valuation_sustainability	0.072
+64	11	relative_structural_safety	0.15
+65	11	relative_conviction	0.049
+66	11	relative_asymmetry_profile	0.077
+67	12	relative_technical_strength	0.043
+68	12	relative_fundamental_support	0.561
+69	12	relative_valuation_sustainability	0.104
+70	12	relative_structural_safety	0.188
+71	12	relative_conviction	0.1
+72	12	relative_asymmetry_profile	0.004
 \.
 
 
 --
+-- TOC entry 3523 (class 0 OID 21527)
+-- Dependencies: 233
 -- Data for Name: portfolio_shares; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.portfolio_shares (id, portfolio_history_id, ticker, amount) FROM stdin;
-1	12	CVX	33
-2	12	DIS	61
-3	12	GE	19
-4	12	COST	6
-5	12	AAPL	23
-6	12	V	19
-7	12	SBUX	63
-8	12	WMT	50
-9	12	MSFT	15
-10	12	JPM	20
-11	12	NKE	136
-12	12	NVDA	31
-13	12	NFLX	59
-14	12	BA	28
-15	12	XOM	42
-16	12	TSM	16
-17	13	TSM	108
-18	14	GE	44
-19	14	MSFT	4
-20	14	NFLX	74
-21	14	NVDA	307
-22	14	TSM	23
-23	15	AAPL	16
-24	15	GE	35
-25	15	MSFT	11
-26	15	NFLX	83
-27	15	NVDA	99
-28	15	TSM	36
-29	16	GE	29
-30	16	NVDA	65
-31	16	TSM	35
-32	17	NVDA	144
-33	17	TSM	116
-34	18	AAPL	17
-35	18	GE	31
-36	18	NFLX	44
-37	18	NVDA	98
-38	18	TSM	49
-39	19	GE	30
-40	19	MSFT	8
-41	19	NFLX	91
-42	19	NVDA	118
-43	19	TSM	27
-44	20	TSM	38
-45	21	GE	0
-46	21	MSFT	1
-47	21	NFLX	74
-48	21	NVDA	33
-49	21	TSM	188
-50	21	AAPL	7
-51	21	COST	2
-52	22	AAPL	16
-53	22	GE	20
-54	22	MSFT	11
-55	22	NFLX	83
-56	22	NVDA	66
-57	22	TSM	65
-58	22	COST	5
-59	22	WMT	64
-60	23	AAPL	17
-61	23	GE	31
-62	23	NFLX	44
-63	23	NVDA	74
-64	23	TSM	66
-65	23	COST	5
-66	23	WMT	47
-67	24	GE	7
-68	24	MSFT	8
-69	24	NFLX	91
-70	24	NVDA	57
-71	24	TSM	65
-72	24	AAPL	14
-73	24	COST	5
-74	24	WMT	81
+1	13	AAPL	25.58
+2	13	BA	32.34
+3	13	COST	6.16
+4	13	CVX	34.17
+5	13	DIS	55.26
+6	13	GE	27.23
+7	13	JNJ	34.02
+8	13	JPM	23.44
+9	13	MSFT	14.35
+10	13	NFLX	58.24
+11	13	NKE	75.82
+12	13	NVDA	47.48
+13	13	PFE	209.88
+14	13	SBUX	56
+15	13	TSM	32.14
+16	13	V	16.43
+17	13	WMT	64.38
+18	13	XOM	48.39
+19	14	JPM	81.89
+20	14	NFLX	198.09
+21	14	NVDA	166.99
+22	14	TSM	129.41
+23	14	V	58.57
+24	15	MSFT	14.87
+25	15	TSM	48.41
+26	16	JNJ	27.48
+27	16	JPM	13.86
+28	16	MSFT	15.64
+29	16	NFLX	63.67
+30	16	NVDA	43.8
+31	16	TSM	71.32
+32	16	V	12.32
+33	17	CVX	167.74
+34	17	DIS	34.22
+35	17	GE	136.3
+36	17	MSFT	4.15
+37	17	NFLX	67.16
+38	17	PFE	472.64
+39	17	V	3.75
+40	17	XOM	41.85
+41	18	CVX	29.8
+42	18	GE	23.45
+43	18	JNJ	29.72
+44	18	MSFT	12.64
+45	18	NFLX	73.78
+46	18	NVDA	51.16
+47	18	TSM	35.47
+48	18	V	17.3
+49	18	XOM	41.17
+50	19	AAPL	15.55
+51	19	COST	2.67
+52	19	CVX	18.22
+53	19	DIS	27.89
+54	19	GE	15.22
+55	19	JNJ	30.54
+56	19	JPM	13.8
+57	19	MSFT	10.55
+58	19	NFLX	41.33
+59	19	NKE	43.97
+60	19	NVDA	34.94
+61	19	PFE	66.64
+62	19	SBUX	23.34
+63	19	TSM	23.9
+64	19	V	11.13
+65	19	WMT	37.03
+66	19	XOM	26.25
+67	20	NFLX	61.39
+68	20	TSM	44.07
+69	21	TSM	148.74
+70	22	JNJ	31.11
+71	22	MSFT	12.55
+72	22	NFLX	85.8
+73	22	NVDA	54.54
+74	22	TSM	55.46
+75	22	V	21.65
+76	23	AAPL	6.94
+77	23	CVX	52.94
+78	23	DIS	24.15
+79	23	GE	42.09
+80	23	JNJ	33.35
+81	23	MSFT	9.58
+82	23	NFLX	93.82
+83	23	NKE	30.05
+84	23	NVDA	41.67
+85	23	PFE	160.58
+86	23	SBUX	28.19
+87	23	TSM	25
+88	23	V	17.69
+89	23	WMT	27.04
+90	23	XOM	59.54
+91	24	JPM	86.05
+92	24	NFLX	0
+93	24	NVDA	0
+94	24	TSM	120.91
+95	24	V	59.07
+96	24	COST	20.6
+97	24	MSFT	49.98
+98	25	MSFT	14.87
+99	25	TSM	48.41
+100	25	JPM	25.99
+101	26	JNJ	27.48
+102	26	JPM	49.32
+103	26	MSFT	15.64
+104	26	NFLX	63.67
+105	26	NVDA	43.8
+106	26	TSM	29.13
+107	26	V	12.32
+108	26	BA	18.4
+109	26	DIS	37.15
+110	26	XOM	29.05
+111	27	CVX	1.88
+112	27	DIS	0.01
+113	27	GE	325.83
+114	27	MSFT	0.02
+115	27	NFLX	0.05
+116	27	PFE	0.05
+117	27	V	0.01
+118	27	XOM	74.31
+119	27	BA	47.52
+120	27	JPM	29.44
+121	28	CVX	29.8
+122	28	GE	48.42
+123	28	JNJ	29.72
+124	28	MSFT	12.64
+125	28	NFLX	73.78
+126	28	NVDA	16.25
+127	28	TSM	13.69
+128	28	V	17.3
+129	28	XOM	41.17
+130	28	BA	44.79
+131	28	JPM	47.99
+132	29	AAPL	15.55
+133	29	COST	2.67
+134	29	CVX	18.22
+135	29	DIS	27.89
+136	29	GE	15.22
+137	29	JNJ	30.54
+138	29	JPM	25.12
+139	29	MSFT	10.55
+140	29	NFLX	41.33
+141	29	NKE	3.6
+142	29	NVDA	34.94
+143	29	PFE	66.64
+144	29	SBUX	23.34
+145	29	TSM	23.9
+146	29	V	11.13
+147	29	WMT	37.03
+148	29	XOM	26.25
+149	29	BA	22.06
+150	30	NFLX	61.39
+151	30	TSM	44.07
+152	30	JPM	39.12
+153	30	V	16.69
+154	31	TSM	16.8
+155	31	JPM	106.32
+156	32	JNJ	31.11
+157	32	MSFT	12.55
+158	32	NFLX	34.91
+159	32	NVDA	11.25
+160	32	TSM	15.93
+161	32	V	21.65
+162	32	BA	49.49
+163	32	GE	35.93
+164	32	JPM	73.94
+165	32	XOM	50.74
+166	33	AAPL	6.94
+167	33	CVX	16.7
+168	33	DIS	24.15
+169	33	GE	97.87
+170	33	JNJ	7.62
+171	33	MSFT	9.58
+172	33	NFLX	36.7
+173	33	NKE	0.6
+174	33	NVDA	7.65
+175	33	PFE	20.9
+176	33	SBUX	7.42
+177	33	TSM	6.59
+178	33	V	11.23
+179	33	WMT	27.04
+180	33	XOM	99.9
+181	33	BA	73.19
+182	33	JPM	55.16
+183	34	JPM	79.31
+184	34	NFLX	0
+185	34	NVDA	0
+186	34	TSM	117.36
+187	34	V	56.22
+188	34	COST	21.49
+189	34	MSFT	56.23
+190	35	JNJ	27.48
+191	35	JPM	13.9
+192	35	MSFT	29.71
+193	35	NFLX	63.67
+194	35	NVDA	11.53
+195	35	TSM	29.13
+196	35	V	12.32
+197	35	BA	18.4
+198	35	DIS	37.15
+199	35	XOM	29.05
+200	35	COST	5.48
+201	35	WMT	48.66
+202	36	CVX	1.88
+203	36	DIS	0.01
+204	36	GE	1.48
+205	36	MSFT	22.32
+206	36	NFLX	0.05
+207	36	PFE	0.05
+208	36	V	12.08
+209	36	XOM	74.31
+210	36	BA	1.18
+211	36	JPM	2.45
+212	36	COST	60.08
+213	36	WMT	59.13
+214	37	CVX	29.8
+215	37	GE	13.83
+216	37	JNJ	29.72
+217	37	MSFT	27.12
+218	37	NFLX	21.91
+219	37	NVDA	16.25
+220	37	TSM	13.69
+221	37	V	17.3
+222	37	XOM	41.17
+223	37	BA	11.82
+224	37	JPM	12.21
+225	37	COST	7.77
+226	37	WMT	84.24
+227	38	AAPL	15.55
+228	38	COST	5.08
+229	38	CVX	18.22
+230	38	DIS	27.89
+231	38	GE	15.22
+232	38	JNJ	30.54
+233	38	JPM	11.73
+234	38	MSFT	19.42
+235	38	NFLX	16.87
+236	38	NKE	3.6
+237	38	NVDA	7.66
+238	38	PFE	219.08
+239	38	SBUX	23.34
+240	38	TSM	23.9
+241	38	V	11.13
+242	38	WMT	37.03
+243	38	XOM	26.25
+244	38	BA	12.32
+245	39	NFLX	61.39
+246	39	TSM	44.07
+247	39	JPM	12.58
+248	39	V	16.69
+249	39	MSFT	24.77
+250	40	TSM	16.8
+251	40	JPM	15.25
+252	40	COST	12.53
+253	40	MSFT	60.62
+254	41	JNJ	31.11
+255	41	MSFT	32.5
+256	41	NFLX	34.91
+257	41	NVDA	11.25
+258	41	TSM	15.93
+259	41	V	21.65
+260	41	BA	10.51
+261	41	GE	10.22
+262	41	JPM	13.62
+263	41	XOM	50.74
+264	41	COST	10.49
+265	41	WMT	90.35
+266	42	AAPL	15.72
+267	42	CVX	16.7
+268	42	DIS	24.15
+269	42	GE	15.07
+270	42	JNJ	7.62
+271	42	MSFT	22.7
+272	42	NFLX	14.46
+273	42	NKE	0.6
+274	42	NVDA	7.65
+275	42	PFE	20.9
+276	42	SBUX	7.42
+277	42	TSM	6.59
+278	42	V	28.62
+279	42	WMT	110.22
+280	42	XOM	112.6
+281	42	BA	13.24
+282	42	JPM	12.28
+283	42	COST	11.36
+284	43	JPM	84.55
+285	43	NFLX	188.21
+286	43	NVDA	0
+287	43	TSM	0
+288	43	V	62.32
+289	43	COST	0
+290	43	MSFT	56.43
+291	43	JNJ	113.61
+292	44	MSFT	14.87
+293	44	TSM	48.41
+294	44	JPM	25.99
+295	44	V	16.51
+296	45	JNJ	27.48
+297	45	JPM	29.46
+298	45	MSFT	38.61
+299	45	NFLX	63.67
+300	45	NVDA	11.53
+301	45	TSM	29.13
+302	45	V	12.32
+303	45	BA	18.4
+304	45	DIS	37.15
+305	45	XOM	29.05
+306	45	COST	2
+307	45	WMT	48.66
+308	46	CVX	1.88
+309	46	DIS	0.01
+310	46	GE	1.48
+311	46	MSFT	11.83
+312	46	NFLX	0.05
+313	46	PFE	0.05
+314	46	V	12.08
+315	46	XOM	0.08
+316	46	BA	1.18
+317	46	JPM	197.87
+318	46	COST	1.23
+319	46	WMT	59.13
+320	46	JNJ	113.55
+321	47	CVX	29.8
+322	47	GE	13.83
+323	47	JNJ	29.72
+324	47	MSFT	27.12
+325	47	NFLX	21.91
+326	47	NVDA	16.25
+327	47	TSM	13.69
+328	47	V	17.3
+329	47	XOM	9.76
+330	47	BA	11.82
+331	47	JPM	39.57
+332	47	COST	2.8
+333	47	WMT	84.24
+334	48	AAPL	29.88
+335	48	COST	1.8
+336	48	CVX	18.22
+337	48	DIS	27.89
+338	48	GE	15.22
+339	48	JNJ	20.19
+340	48	JPM	11.73
+341	48	MSFT	12.05
+342	48	NFLX	16.87
+343	48	NKE	3.6
+344	48	NVDA	62.57
+345	48	PFE	143.75
+346	48	SBUX	23.34
+347	48	TSM	23.9
+348	48	V	11.13
+349	48	WMT	37.03
+350	48	XOM	26.25
+351	48	BA	12.32
+352	49	TSM	16.8
+353	49	JPM	15.25
+354	49	COST	12.53
+355	49	MSFT	60.62
+356	49	V	47.7
+357	50	JNJ	31.11
+358	50	MSFT	32.5
+359	50	NFLX	34.91
+360	50	NVDA	11.25
+361	50	TSM	15.93
+362	50	V	21.65
+363	50	BA	10.51
+364	50	GE	10.22
+365	50	JPM	49.84
+366	50	XOM	3.75
+367	50	COST	2.13
+368	50	WMT	90.35
+369	51	AAPL	4.85
+370	51	CVX	16.7
+371	51	DIS	5.79
+372	51	GE	15.07
+373	51	JNJ	44.88
+374	51	MSFT	22.7
+375	51	NFLX	35.4
+376	51	NKE	0.6
+377	51	NVDA	7.65
+378	51	PFE	20.9
+379	51	SBUX	28.64
+380	51	TSM	6.59
+381	51	V	22.71
+382	51	WMT	74.14
+383	51	XOM	10.97
+384	51	BA	13.24
+385	51	JPM	57.45
+386	51	COST	2.94
+387	52	JPM	87.48
+388	52	NFLX	218.14
+389	52	NVDA	0
+390	52	TSM	0
+391	52	V	53.44
+392	52	COST	19.88
+393	52	MSFT	0
+394	52	JNJ	0
+395	52	WMT	202.79
+396	53	MSFT	14.87
+397	53	TSM	9.08
+398	53	JPM	25.99
+399	53	V	16.51
+400	53	COST	6.06
+401	53	NFLX	100.5
+402	54	JNJ	27.48
+403	54	JPM	29.46
+404	54	MSFT	17.94
+405	54	NFLX	174.28
+406	54	NVDA	11.53
+407	54	TSM	7.31
+408	54	V	12.32
+409	54	BA	18.4
+410	54	DIS	37.15
+411	54	XOM	29.05
+412	54	COST	8.78
+413	54	WMT	48.66
+414	55	CVX	1.88
+415	55	DIS	0.01
+416	55	GE	1.48
+417	55	MSFT	23
+418	55	NFLX	54.06
+419	55	PFE	0.05
+420	55	V	19.9
+421	55	XOM	0.08
+422	55	BA	1.18
+423	55	JPM	9.46
+424	55	COST	30.22
+425	55	WMT	292.65
+426	55	JNJ	19.96
+427	55	NVDA	44.99
+428	56	CVX	3.81
+429	56	GE	13.83
+430	56	JNJ	29.72
+431	56	MSFT	27.12
+432	56	NFLX	141.85
+433	56	NVDA	16.25
+434	56	TSM	13.69
+435	56	V	17.3
+436	56	XOM	9.76
+437	56	BA	11.82
+438	56	JPM	39.57
+439	56	COST	10.7
+440	56	WMT	84.24
+441	57	AAPL	7.11
+442	57	COST	5.91
+443	57	CVX	18.22
+444	57	DIS	27.89
+445	57	GE	15.22
+446	57	JNJ	35.04
+447	57	JPM	25.34
+448	57	MSFT	12.05
+449	57	NFLX	69.07
+450	57	NKE	3.6
+451	57	NVDA	24.63
+452	57	PFE	19.82
+453	57	SBUX	23.34
+454	57	TSM	12.9
+455	57	V	11.13
+456	57	WMT	37.03
+457	57	XOM	26.25
+458	57	BA	12.32
+459	58	NFLX	133.48
+460	58	TSM	44.07
+461	58	JPM	12.58
+462	58	V	16.69
+463	58	MSFT	24.77
+464	58	COST	8.73
+465	58	WMT	68.34
+466	59	TSM	16.8
+467	59	JPM	15.25
+468	59	COST	12.53
+469	59	MSFT	5.99
+470	59	V	10.14
+471	59	NFLX	359.97
+472	60	JNJ	31.11
+473	60	MSFT	18.37
+474	60	NFLX	202.96
+475	60	NVDA	11.25
+476	60	TSM	15.93
+477	60	V	21.65
+478	60	BA	10.51
+479	60	GE	10.22
+480	60	JPM	49.84
+481	60	XOM	3.75
+482	60	COST	12.57
+483	60	WMT	90.35
+484	61	AAPL	4.85
+485	61	CVX	2.87
+486	61	DIS	5.79
+487	61	GE	15.07
+488	61	JNJ	31.1
+489	61	MSFT	22.7
+490	61	NFLX	143.49
+491	61	NKE	0.6
+492	61	NVDA	32.4
+493	61	PFE	20.9
+494	61	SBUX	3.15
+495	61	TSM	6.59
+496	61	V	22.71
+497	61	WMT	98.96
+498	61	XOM	10.97
+499	61	BA	13.24
+500	61	JPM	24.07
+501	61	COST	13.34
+502	62	JPM	79.08
+503	62	NFLX	222.87
+504	62	NVDA	0
+505	62	TSM	0
+506	62	V	0
+507	62	COST	0
+508	62	MSFT	0
+509	62	JNJ	0
+510	62	WMT	195.68
+511	62	BA	108.08
+512	62	GE	109.59
+513	63	MSFT	14.87
+514	63	TSM	9.08
+515	63	JPM	25.99
+516	63	V	16.51
+517	63	COST	6.06
+518	63	NFLX	100.5
+519	63	GE	47.46
+520	64	JNJ	27.48
+521	64	JPM	29.46
+522	64	MSFT	2.06
+523	64	NFLX	262.81
+524	64	NVDA	11.53
+525	64	TSM	7.31
+526	64	V	12.32
+527	64	BA	18.4
+528	64	DIS	37.15
+529	64	XOM	29.05
+530	64	COST	1.86
+531	64	WMT	48.66
+532	64	GE	73.7
+533	65	CVX	1.88
+534	65	DIS	0.01
+535	65	GE	66.42
+536	65	MSFT	0
+537	65	NFLX	708.72
+538	65	PFE	0.05
+539	65	V	0.31
+540	65	XOM	0.08
+541	65	BA	1.18
+542	65	JPM	9.46
+543	65	COST	0.01
+544	65	WMT	17.89
+545	65	JNJ	0.32
+546	65	NVDA	0
+547	66	CVX	3.81
+548	66	GE	77.88
+549	66	JNJ	29.72
+550	66	MSFT	1.3
+551	66	NFLX	280.82
+552	66	NVDA	16.25
+553	66	TSM	13.69
+554	66	V	7.47
+555	66	XOM	9.76
+556	66	BA	34.62
+557	66	JPM	20.75
+558	66	COST	1.89
+559	66	WMT	84.24
+560	67	AAPL	7.11
+561	67	COST	2.96
+562	67	CVX	3.46
+563	67	DIS	27.89
+564	67	GE	51.69
+565	67	JNJ	23.74
+566	67	JPM	25.34
+567	67	MSFT	3.16
+568	67	NFLX	169.57
+569	67	NKE	3.6
+570	67	NVDA	2.11
+571	67	PFE	19.82
+572	67	SBUX	23.34
+573	67	TSM	12.9
+574	67	V	11.13
+575	67	WMT	58.16
+576	67	XOM	5.45
+577	67	BA	27.5
+578	68	NFLX	236.79
+579	68	TSM	7.37
+580	68	JPM	12.58
+581	68	V	16.69
+582	68	MSFT	2.28
+583	68	COST	2.27
+584	68	WMT	68.34
+585	68	GE	68.72
+586	69	TSM	16.8
+587	69	JPM	15.25
+588	69	COST	12.53
+589	69	MSFT	5.99
+590	69	V	10.14
+591	69	NFLX	525.83
+592	70	JNJ	31.11
+593	70	MSFT	0.52
+594	70	NFLX	373.12
+595	70	NVDA	11.25
+596	70	TSM	15.93
+597	70	V	4.74
+598	70	BA	10.51
+599	70	GE	85.51
+600	70	JPM	17.23
+601	70	XOM	3.75
+602	70	COST	1.11
+603	70	WMT	41.03
+604	71	AAPL	4.85
+605	71	CVX	2.87
+606	71	DIS	5.79
+607	71	GE	91.94
+608	71	JNJ	14.42
+609	71	MSFT	0.46
+610	71	NFLX	363.79
+611	71	NKE	0.6
+612	71	NVDA	0.39
+613	71	PFE	20.9
+614	71	SBUX	3.15
+615	71	TSM	6.59
+616	71	V	5.63
+617	71	WMT	55.14
+618	71	XOM	10.97
+619	71	BA	36.12
+620	71	JPM	24.07
+621	71	COST	1.35
+622	72	NFLX	204.53
+623	73	JPM	83.45
+624	73	NFLX	185.81
+625	73	NVDA	0
+626	73	TSM	0
+627	73	V	0
+628	73	COST	0
+629	73	MSFT	0
+630	73	JNJ	0
+631	73	WMT	207.21
+632	73	BA	113.1
+633	73	GE	114.89
+634	74	MSFT	14.87
+635	74	TSM	9.08
+636	74	JPM	25.99
+637	74	V	16.51
+638	74	COST	6.06
+639	74	NFLX	46.04
+640	74	GE	47.46
+641	75	JNJ	27.48
+642	75	JPM	29.46
+643	75	MSFT	11.99
+644	75	NFLX	51.11
+645	75	NVDA	11.53
+646	75	TSM	39.48
+647	75	V	12.32
+648	75	BA	18.4
+649	75	DIS	37.15
+650	75	XOM	29.05
+651	75	COST	1.86
+652	75	WMT	48.66
+653	75	GE	73.7
+654	76	CVX	1.88
+655	76	DIS	0.01
+656	76	GE	34.15
+657	76	MSFT	11.26
+658	76	NFLX	0.11
+659	76	PFE	54.24
+660	76	V	64.16
+661	76	XOM	0.08
+662	76	BA	323.46
+663	76	JPM	2.85
+664	76	COST	0.01
+665	76	WMT	0.62
+666	76	JNJ	0.32
+667	76	NVDA	0
+668	77	CVX	3.81
+669	77	GE	77.88
+670	77	JNJ	29.72
+671	77	MSFT	15.22
+672	77	NFLX	40.22
+673	77	NVDA	16.25
+674	77	TSM	13.69
+675	77	V	28.37
+676	77	XOM	9.76
+677	77	BA	34.62
+678	77	JPM	20.75
+679	77	COST	1.89
+680	77	WMT	35.97
+681	78	AAPL	7.11
+682	78	COST	2.96
+683	78	CVX	3.46
+684	78	DIS	27.89
+685	78	GE	51.69
+686	78	JNJ	23.74
+687	78	JPM	18.02
+688	78	MSFT	9.37
+689	78	NFLX	34.1
+690	78	NKE	3.6
+691	78	NVDA	23.11
+692	78	PFE	19.82
+693	78	SBUX	23.34
+694	78	TSM	25.05
+695	78	V	16.16
+696	78	WMT	36.56
+697	78	XOM	5.45
+698	78	BA	27.5
+699	79	NFLX	46.86
+700	79	TSM	7.37
+701	79	JPM	12.58
+702	79	V	16.69
+703	79	MSFT	2.28
+704	79	COST	2.27
+705	79	WMT	68.34
+706	79	GE	68.72
+707	79	BA	36.22
+708	80	TSM	16.8
+709	80	JPM	15.25
+710	80	COST	12.53
+711	80	MSFT	5.99
+712	80	V	10.14
+713	80	NFLX	58.45
+714	80	BA	73
+715	80	GE	187.32
+716	81	JNJ	31.11
+717	81	MSFT	0.52
+718	81	NFLX	44.15
+719	81	NVDA	11.25
+720	81	TSM	15.93
+721	81	V	26.61
+722	81	BA	76.7
+723	81	GE	117.42
+724	81	JPM	17.23
+725	81	XOM	3.75
+726	81	COST	1.11
+727	81	WMT	41.03
+728	82	AAPL	4.85
+729	82	CVX	2.87
+730	82	DIS	24.15
+731	82	GE	91.94
+732	82	JNJ	14.42
+733	82	MSFT	20
+734	82	NFLX	36.39
+735	82	NKE	0.6
+736	82	NVDA	27.23
+737	82	PFE	125.1
+738	82	SBUX	3.15
+739	82	TSM	28.68
+740	82	V	31.52
+741	82	WMT	27.09
+742	82	XOM	10.97
+743	82	BA	85.09
+744	82	JPM	12.59
+745	82	COST	1.35
+746	83	NFLX	51.57
+747	84	JPM	78.91
+748	84	NFLX	0
+749	84	NVDA	0
+750	84	TSM	0
+751	84	V	62.33
+752	84	COST	0
+753	84	MSFT	0
+754	84	JNJ	0
+755	84	WMT	222.81
+756	84	BA	117.13
+757	84	GE	108.13
+758	85	MSFT	14.87
+759	85	TSM	9.08
+760	85	JPM	25.99
+761	85	V	16.51
+762	85	COST	6.06
+763	85	NFLX	46.04
+764	85	GE	47.46
+765	85	WMT	70.62
+766	86	JNJ	27.48
+767	86	JPM	29.46
+768	86	MSFT	11.99
+769	86	NFLX	51.11
+770	86	NVDA	11.53
+771	86	TSM	39.48
+772	86	V	37.4
+773	86	BA	39.26
+774	86	DIS	37.15
+775	86	XOM	29.05
+776	86	COST	1.86
+777	86	WMT	94.22
+778	86	GE	32.61
+779	87	CVX	1.88
+780	87	DIS	24.52
+781	87	GE	0.27
+782	87	MSFT	0.89
+783	87	NFLX	0.11
+784	87	PFE	54.24
+785	87	V	1.92
+786	87	XOM	0.08
+787	87	BA	19.88
+788	87	JPM	2.85
+789	87	COST	0.01
+790	87	WMT	16.97
+791	87	JNJ	0.32
+792	87	NVDA	20.19
+793	87	TSM	489.32
+794	88	CVX	3.81
+795	88	GE	28.18
+796	88	JNJ	29.72
+797	88	MSFT	15.22
+798	88	NFLX	40.22
+799	88	NVDA	16.25
+800	88	TSM	49.11
+801	88	V	28.37
+802	88	XOM	9.76
+803	88	BA	34.62
+804	88	JPM	20.75
+805	88	COST	1.89
+806	88	WMT	102.37
+807	89	AAPL	7.11
+808	89	COST	2.96
+809	89	CVX	3.46
+810	89	DIS	27.89
+811	89	GE	29.68
+812	89	JNJ	23.74
+813	89	JPM	18.02
+814	89	MSFT	9.37
+815	89	NFLX	34.1
+816	89	NKE	3.6
+817	89	NVDA	23.11
+818	89	PFE	19.82
+819	89	SBUX	23.34
+820	89	TSM	25.05
+821	89	V	16.16
+822	89	WMT	69.51
+823	89	XOM	5.45
+824	89	BA	45.15
+825	90	NFLX	46.86
+826	90	TSM	7.37
+827	90	JPM	12.58
+828	90	V	16.69
+829	90	MSFT	2.28
+830	90	COST	2.27
+831	90	WMT	68.34
+832	90	GE	32.48
+833	90	BA	36.22
+834	91	TSM	16.8
+835	91	JPM	15.25
+836	91	COST	12.53
+837	91	MSFT	5.99
+838	91	V	10.14
+839	91	NFLX	58.45
+840	91	BA	73
+841	91	GE	86.23
+842	91	WMT	186.79
+843	92	JNJ	31.11
+844	92	MSFT	0.52
+845	92	NFLX	44.15
+846	92	NVDA	11.25
+847	92	TSM	15.93
+848	92	V	26.61
+849	92	BA	76.7
+850	92	GE	44.64
+851	92	JPM	17.23
+852	92	XOM	3.75
+853	92	COST	1.11
+854	92	WMT	123.96
+855	93	AAPL	4.85
+856	93	CVX	2.87
+857	93	DIS	40.33
+858	93	GE	25.98
+859	93	JNJ	14.42
+860	93	MSFT	9.05
+861	93	NFLX	57.16
+862	93	NKE	0.6
+863	93	NVDA	27.23
+864	93	PFE	26.04
+865	93	SBUX	3.15
+866	93	TSM	70.36
+867	93	V	24.37
+868	93	WMT	112.18
+869	93	XOM	10.97
+870	93	BA	85.09
+871	93	JPM	12.59
+872	93	COST	4.08
+873	94	JPM	0
+874	94	NFLX	189.34
+875	94	NVDA	0
+876	94	TSM	131.1
+877	94	V	66.93
+878	94	COST	0
+879	94	MSFT	0
+880	94	JNJ	0
+881	94	WMT	219.5
+882	94	BA	0
+883	94	GE	92.19
+884	95	MSFT	14.87
+885	95	TSM	79.87
+886	95	JPM	25.99
+887	95	V	16.51
+888	95	COST	6.06
+889	95	NFLX	46.04
+890	95	GE	17.81
+891	95	WMT	70.62
+892	96	JNJ	27.48
+893	96	JPM	14.3
+894	96	MSFT	11.99
+895	96	NFLX	51.11
+896	96	NVDA	11.53
+897	96	TSM	112.71
+898	96	V	19.73
+899	96	BA	2.27
+900	96	DIS	37.15
+901	96	XOM	29.05
+902	96	COST	1.86
+903	96	WMT	49.99
+904	96	GE	32.61
+905	97	CVX	1.88
+906	97	DIS	24.52
+907	97	GE	250.13
+908	97	MSFT	0.89
+909	97	NFLX	21.45
+910	97	PFE	54.24
+911	97	V	8.74
+912	97	XOM	0.08
+913	97	BA	0.28
+914	97	JPM	115.57
+915	97	COST	0.01
+916	97	WMT	0.87
+917	97	JNJ	0.32
+918	97	NVDA	20.19
+919	97	TSM	47.15
+920	98	CVX	3.81
+921	98	GE	28.18
+922	98	JNJ	29.72
+923	98	MSFT	15.22
+924	98	NFLX	40.22
+925	98	NVDA	57.22
+926	98	TSM	72.22
+927	98	V	28.37
+928	98	XOM	9.76
+929	98	BA	4.93
+930	98	JPM	20.75
+931	98	COST	1.89
+932	98	WMT	59.2
+933	99	AAPL	15.21
+934	99	COST	2.96
+935	99	CVX	3.46
+936	99	DIS	27.89
+937	99	GE	29.68
+938	99	JNJ	23.74
+939	99	JPM	18.02
+940	99	MSFT	9.37
+941	99	NFLX	34.1
+942	99	NKE	3.6
+943	99	NVDA	23.11
+944	99	PFE	19.82
+945	99	SBUX	23.34
+946	99	TSM	47.5
+947	99	V	21.22
+948	99	WMT	69.51
+949	99	XOM	5.45
+950	99	BA	3.68
+951	100	NFLX	46.86
+952	100	TSM	72.86
+953	100	JPM	12.58
+954	100	V	16.69
+955	100	MSFT	2.28
+956	100	COST	2.27
+957	100	WMT	68.34
+958	100	GE	32.48
+959	100	BA	4.04
+960	101	TSM	183.19
+961	101	JPM	15.25
+962	101	COST	12.53
+963	101	MSFT	5.99
+964	101	V	52.77
+965	101	NFLX	58.45
+966	101	BA	0.06
+967	101	GE	17.68
+968	101	WMT	186.79
+969	102	JNJ	31.11
+970	102	MSFT	0.52
+971	102	NFLX	44.15
+972	102	NVDA	11.25
+973	102	TSM	94.58
+974	102	V	26.61
+975	102	BA	2.04
+976	102	GE	44.64
+977	102	JPM	17.23
+978	102	XOM	3.75
+979	102	COST	1.11
+980	102	WMT	123.96
+981	103	AAPL	4.85
+982	103	CVX	2.87
+983	103	DIS	40.33
+984	103	GE	83.15
+985	103	JNJ	14.42
+986	103	MSFT	9.05
+987	103	NFLX	37.82
+988	103	NKE	0.6
+989	103	NVDA	51.18
+990	103	PFE	26.04
+991	103	SBUX	3.15
+992	103	TSM	70.36
+993	103	V	29.49
+994	103	WMT	47.44
+995	103	XOM	10.97
+996	103	BA	8.04
+997	103	JPM	42.1
+998	103	COST	4.08
+999	104	NFLX	51.57
+1000	104	TSM	83.34
+1001	105	JPM	0
+1002	105	NFLX	192.96
+1003	105	NVDA	0
+1004	105	TSM	119.75
+1005	105	V	68.67
+1006	105	COST	0
+1007	105	MSFT	0
+1008	105	JNJ	0
+1009	105	WMT	228.84
+1010	105	BA	0
+1011	105	GE	93.1
+1012	106	MSFT	14.87
+1013	106	TSM	49.82
+1014	106	JPM	25.99
+1015	106	V	16.51
+1016	106	COST	6.06
+1017	106	NFLX	46.04
+1018	106	GE	17.81
+1019	106	WMT	70.62
+1020	107	JNJ	27.48
+1021	107	JPM	14.3
+1022	107	MSFT	11.99
+1023	107	NFLX	51.11
+1024	107	NVDA	11.53
+1025	107	TSM	60.93
+1026	107	V	19.73
+1027	107	BA	2.27
+1028	107	DIS	37.15
+1029	107	XOM	29.05
+1030	107	COST	1.86
+1031	107	WMT	49.99
+1032	107	GE	32.61
+1033	108	CVX	1.88
+1034	108	DIS	0.26
+1035	108	GE	293.66
+1036	108	MSFT	0.89
+1037	108	NFLX	292.69
+1038	108	PFE	54.24
+1039	108	V	0.36
+1040	108	XOM	0.08
+1041	108	BA	0.28
+1042	108	JPM	2.74
+1043	108	COST	3.37
+1044	108	WMT	0.87
+1045	108	JNJ	0.32
+1046	108	NVDA	0.78
+1047	108	TSM	0.63
+1048	109	CVX	3.81
+1049	109	GE	51.83
+1050	109	JNJ	29.72
+1051	109	MSFT	15.22
+1052	109	NFLX	116.25
+1053	109	NVDA	57.22
+1054	109	TSM	30.21
+1055	109	V	28.37
+1056	109	XOM	9.76
+1057	109	BA	4.93
+1058	109	JPM	20.75
+1059	109	COST	1.89
+1060	109	WMT	59.2
+1061	110	AAPL	5.41
+1062	110	COST	2.96
+1063	110	CVX	3.46
+1064	110	DIS	27.89
+1065	110	GE	29.68
+1066	110	JNJ	23.74
+1067	110	JPM	18.02
+1068	110	MSFT	9.37
+1069	110	NFLX	60.75
+1070	110	NKE	3.6
+1071	110	NVDA	23.11
+1072	110	PFE	125.21
+1073	110	SBUX	23.34
+1074	110	TSM	29.17
+1075	110	V	21.22
+1076	110	WMT	69.51
+1077	110	XOM	5.45
+1078	110	BA	3.68
+1079	111	NFLX	46.86
+1080	111	TSM	39.1
+1081	111	JPM	12.58
+1082	111	V	16.69
+1083	111	MSFT	2.28
+1084	111	COST	2.27
+1085	111	WMT	68.34
+1086	111	GE	32.48
+1087	111	BA	4.04
+1088	112	TSM	33.66
+1089	112	JPM	15.25
+1090	112	COST	12.53
+1091	112	MSFT	5.99
+1092	112	V	52.77
+1093	112	NFLX	209.89
+1094	112	BA	0.06
+1095	112	GE	17.68
+1096	112	WMT	186.79
+1097	113	JNJ	31.11
+1098	113	MSFT	0.52
+1099	113	NFLX	147.43
+1100	113	NVDA	11.25
+1101	113	TSM	32.61
+1102	113	V	26.61
+1103	113	BA	2.04
+1104	113	GE	44.64
+1105	113	JPM	17.23
+1106	113	XOM	3.75
+1107	113	COST	1.11
+1108	113	WMT	123.96
+1109	114	AAPL	4.85
+1110	114	CVX	2.87
+1111	114	DIS	23.24
+1112	114	GE	97.66
+1113	114	JNJ	14.42
+1114	114	MSFT	9.05
+1115	114	NFLX	139.22
+1116	114	NKE	0.6
+1117	114	NVDA	30.73
+1118	114	PFE	113.8
+1119	114	SBUX	3.15
+1120	114	TSM	25.84
+1121	114	V	24.01
+1122	114	WMT	47.44
+1123	114	XOM	10.97
+1124	114	BA	8.04
+1125	114	JPM	19.79
+1126	114	COST	7.65
+1127	115	JPM	0
+1128	115	NFLX	194.54
+1129	115	NVDA	0
+1130	115	TSM	117.67
+1131	115	V	66.42
+1132	115	COST	0
+1133	115	MSFT	0
+1134	115	JNJ	0
+1135	115	WMT	238.59
+1136	115	BA	0
+1137	115	GE	93.39
+1138	116	JNJ	27.48
+1139	116	JPM	14.3
+1140	116	MSFT	11.99
+1141	116	NFLX	51.11
+1142	116	NVDA	11.53
+1143	116	TSM	42.25
+1144	116	V	19.73
+1145	116	BA	2.27
+1146	116	DIS	37.15
+1147	116	XOM	29.05
+1148	116	COST	1.86
+1149	116	WMT	49.99
+1150	116	GE	55.61
+1151	116	PFE	250.48
+1152	117	CVX	1.88
+1153	117	DIS	0.26
+1154	117	GE	454.17
+1155	117	MSFT	0.89
+1156	117	NFLX	0.67
+1157	117	PFE	54.24
+1158	117	V	0.36
+1159	117	XOM	0.08
+1160	117	BA	0.28
+1161	117	JPM	2.74
+1162	117	COST	0
+1163	117	WMT	0.87
+1164	117	JNJ	0.32
+1165	117	NVDA	0.78
+1166	117	TSM	0.63
+1167	118	CVX	3.81
+1168	118	GE	97.96
+1169	118	JNJ	29.72
+1170	118	MSFT	5.73
+1171	118	NFLX	42.02
+1172	118	NVDA	57.22
+1173	118	TSM	30.21
+1174	118	V	13.02
+1175	118	XOM	9.76
+1176	118	BA	4.93
+1177	118	JPM	20.75
+1178	118	COST	1.89
+1179	118	WMT	59.2
+1180	118	DIS	33.02
+1181	118	PFE	347.36
+1182	119	AAPL	5.41
+1183	119	COST	2.96
+1184	119	CVX	3.46
+1185	119	DIS	27.89
+1186	119	GE	29.68
+1187	119	JNJ	23.74
+1188	119	JPM	18.02
+1189	119	MSFT	9.37
+1190	119	NFLX	33.38
+1191	119	NKE	40.08
+1192	119	NVDA	23.11
+1193	119	PFE	239.63
+1194	119	SBUX	23.34
+1195	119	TSM	29.17
+1196	119	V	13.47
+1197	119	WMT	69.51
+1198	119	XOM	5.45
+1199	119	BA	3.68
+1200	120	NFLX	46.86
+1201	120	TSM	39.1
+1202	120	JPM	12.58
+1203	120	V	16.69
+1204	120	MSFT	2.28
+1205	120	COST	2.27
+1206	120	WMT	68.34
+1207	120	GE	32.48
+1208	120	BA	4.04
+1209	120	PFE	282.73
+1210	121	TSM	33.66
+1211	121	JPM	15.25
+1212	121	COST	12.53
+1213	121	MSFT	5.99
+1214	121	V	52.77
+1215	121	NFLX	107.38
+1216	121	BA	0.06
+1217	121	GE	125.11
+1218	121	WMT	186.79
+1219	122	JNJ	31.11
+1220	122	MSFT	0.52
+1221	122	NFLX	47.77
+1222	122	NVDA	11.25
+1223	122	TSM	32.61
+1224	122	V	26.61
+1225	122	BA	2.04
+1226	122	GE	131.08
+1227	122	JPM	17.23
+1228	122	XOM	3.75
+1229	122	COST	1.11
+1230	122	WMT	36.4
+1231	122	PFE	273.15
+1232	123	AAPL	4.85
+1233	123	CVX	2.87
+1234	123	DIS	23.24
+1235	123	GE	203.86
+1236	123	JNJ	14.42
+1237	123	MSFT	2.22
+1238	123	NFLX	27.82
+1239	123	NKE	34.56
+1240	123	NVDA	30.73
+1241	123	PFE	343.73
+1242	123	SBUX	3.15
+1243	123	TSM	25.84
+1244	123	V	9.3
+1245	123	WMT	13.88
+1246	123	XOM	10.97
+1247	123	BA	8.04
+1248	123	JPM	4.26
+1249	123	COST	1.9
+1250	124	JPM	0
+1251	124	NFLX	0
+1252	124	NVDA	169.26
+1253	124	TSM	114.63
+1254	124	V	73.3
+1255	124	COST	0
+1256	124	MSFT	0
+1257	124	JNJ	0
+1258	124	WMT	241.09
+1259	124	BA	0
+1260	124	GE	85.05
+1261	125	MSFT	14.87
+1262	125	TSM	49.82
+1263	125	JPM	25.99
+1264	125	V	16.51
+1265	125	COST	6.06
+1266	125	NFLX	46.04
+1267	125	GE	17.81
+1268	125	WMT	70.62
+1269	125	NVDA	50.13
+1270	126	JNJ	27.48
+1271	126	JPM	14.3
+1272	126	MSFT	11.99
+1273	126	NFLX	51.11
+1274	126	NVDA	75.88
+1275	126	TSM	42.25
+1276	126	V	19.73
+1277	126	BA	2.27
+1278	126	DIS	37.15
+1279	126	XOM	29.05
+1280	126	COST	1.86
+1281	126	WMT	125.36
+1282	126	GE	28.97
+1283	126	PFE	58.45
+1284	127	CVX	1.88
+1285	127	DIS	0.26
+1286	127	GE	88.84
+1287	127	MSFT	0.89
+1288	127	NFLX	0.67
+1289	127	PFE	54.24
+1290	127	V	10.97
+1291	127	XOM	0.08
+1292	127	BA	0.28
+1293	127	JPM	2.74
+1294	127	COST	2.62
+1295	127	WMT	76.97
+1296	127	JNJ	19.39
+1297	127	NVDA	16.51
+1298	127	TSM	361.05
+1299	128	CVX	3.81
+1300	128	GE	38.26
+1301	128	JNJ	29.72
+1302	128	MSFT	5.73
+1303	128	NFLX	42.02
+1304	128	NVDA	57.22
+1305	128	TSM	30.21
+1306	128	V	24.59
+1307	128	XOM	9.76
+1308	128	BA	4.93
+1309	128	JPM	4.52
+1310	128	COST	1.89
+1311	128	WMT	164.9
+1312	128	DIS	33.02
+1313	128	PFE	80.94
+1314	129	AAPL	5.41
+1315	129	COST	2.96
+1316	129	CVX	3.46
+1317	129	DIS	12.03
+1318	129	GE	29.68
+1319	129	JNJ	23.74
+1320	129	JPM	6.65
+1321	129	MSFT	4.24
+1322	129	NFLX	33.38
+1323	129	NKE	40.08
+1324	129	NVDA	48.2
+1325	129	PFE	137.57
+1326	129	SBUX	23.34
+1327	129	TSM	29.17
+1328	129	V	19.77
+1329	129	WMT	96.58
+1330	129	XOM	5.45
+1331	129	BA	12.2
+1332	130	NFLX	46.86
+1333	130	TSM	39.1
+1334	130	JPM	12.58
+1335	130	V	16.69
+1336	130	MSFT	2.28
+1337	130	COST	2.27
+1338	130	WMT	68.34
+1339	130	GE	32.48
+1340	130	BA	4.04
+1341	130	PFE	282.73
+1342	130	NVDA	67.69
+1343	131	TSM	33.66
+1344	131	JPM	15.25
+1345	131	COST	12.53
+1346	131	MSFT	5.99
+1347	131	V	52.77
+1348	131	NFLX	107.38
+1349	131	BA	0.06
+1350	131	GE	15.19
+1351	131	WMT	186.79
+1352	132	JNJ	31.11
+1353	132	MSFT	0.52
+1354	132	NFLX	47.77
+1355	132	NVDA	90.47
+1356	132	TSM	32.61
+1357	132	V	26.61
+1358	132	BA	2.04
+1359	132	GE	38.09
+1360	132	JPM	17.23
+1361	132	XOM	3.75
+1362	132	COST	1.11
+1363	132	WMT	203.88
+1364	132	PFE	42.86
+1365	133	AAPL	4.85
+1366	133	CVX	2.87
+1367	133	DIS	23.24
+1368	133	GE	56.41
+1369	133	JNJ	35.52
+1370	133	MSFT	2.22
+1371	133	NFLX	27.82
+1372	133	NKE	34.56
+1373	133	NVDA	85.76
+1374	133	PFE	69.77
+1375	133	SBUX	3.15
+1376	133	TSM	47.6
+1377	133	V	29.02
+1378	133	WMT	186.19
+1379	133	XOM	10.97
+1380	133	BA	8.04
+1381	133	JPM	4.26
+1382	133	COST	6.37
+1383	134	JPM	0
+1384	134	NFLX	0
+1385	134	NVDA	0
+1386	134	TSM	124.77
+1387	134	V	72.44
+1388	134	COST	0
+1389	134	MSFT	46.06
+1390	134	JNJ	0
+1391	134	WMT	237.24
+1392	134	BA	0
+1393	134	GE	89.46
+1394	135	JNJ	27.48
+1395	135	JPM	14.3
+1396	135	MSFT	11.99
+1397	135	NFLX	19.16
+1398	135	NVDA	27.18
+1399	135	TSM	99.53
+1400	135	V	19.73
+1401	135	BA	2.27
+1402	135	DIS	37.15
+1403	135	XOM	29.05
+1404	135	COST	1.86
+1405	135	WMT	43.45
+1406	135	GE	8.84
+1407	135	PFE	217.44
+1408	136	CVX	1.88
+1409	136	DIS	0.26
+1410	136	GE	0
+1411	136	MSFT	0.89
+1412	136	NFLX	0.67
+1413	136	PFE	144.82
+1414	136	V	2.65
+1415	136	XOM	0.08
+1416	136	BA	0.28
+1417	136	JPM	2.74
+1418	136	COST	0
+1419	136	WMT	0
+1420	136	JNJ	0.18
+1421	136	NVDA	0.02
+1422	136	TSM	534.09
+1423	137	CVX	3.81
+1424	137	GE	5.86
+1425	137	JNJ	29.72
+1426	137	MSFT	5.73
+1427	137	NFLX	42.02
+1428	137	NVDA	24.75
+1429	137	TSM	101.25
+1430	137	V	24.59
+1431	137	XOM	69.34
+1432	137	BA	4.93
+1433	137	JPM	4.52
+1434	137	COST	1.89
+1435	137	WMT	34.94
+1436	137	DIS	33.02
+1437	137	PFE	424.03
+1438	138	AAPL	5.41
+1439	138	COST	0.91
+1440	138	CVX	3.46
+1441	138	DIS	12.03
+1442	138	GE	11.2
+1443	138	JNJ	23.74
+1444	138	JPM	6.65
+1445	138	MSFT	9.5
+1446	138	NFLX	16.89
+1447	138	NKE	40.08
+1448	138	NVDA	24.44
+1449	138	PFE	254.29
+1450	138	SBUX	23.34
+1451	138	TSM	44.37
+1452	138	V	19.77
+1453	138	WMT	48.03
+1454	138	XOM	45.75
+1455	138	BA	12.2
+1456	139	NFLX	46.86
+1457	139	TSM	71.67
+1458	139	JPM	12.58
+1459	139	V	16.69
+1460	139	MSFT	2.28
+1461	139	COST	2.27
+1462	139	WMT	68.34
+1463	139	GE	32.48
+1464	139	BA	4.04
+1465	139	PFE	282.73
+1466	139	NVDA	67.69
+1467	140	TSM	168
+1468	140	JPM	15.25
+1469	140	COST	12.53
+1470	140	MSFT	5.99
+1471	140	V	52.77
+1472	140	NFLX	107.38
+1473	140	BA	0.06
+1474	140	GE	15.19
+1475	140	WMT	38.59
+1476	141	JNJ	31.11
+1477	141	MSFT	0.52
+1478	141	NFLX	47.77
+1479	141	NVDA	21.57
+1480	141	TSM	149.54
+1481	141	V	26.61
+1482	141	BA	2.04
+1483	141	GE	4.92
+1484	141	JPM	17.23
+1485	141	XOM	3.75
+1486	141	COST	1.11
+1487	141	WMT	34.41
+1488	141	PFE	309.07
+1489	142	AAPL	4.85
+1490	142	CVX	2.87
+1491	142	DIS	23.24
+1492	142	GE	2.95
+1493	142	JNJ	35.52
+1494	142	MSFT	2.22
+1495	142	NFLX	7.65
+1496	142	NKE	34.56
+1497	142	NVDA	20.55
+1498	142	PFE	697.53
+1499	142	SBUX	35.33
+1500	142	TSM	147.42
+1501	142	V	29.02
+1502	142	WMT	19.44
+1503	142	XOM	62.95
+1504	142	BA	8.04
+1505	142	JPM	4.26
+1506	142	COST	0.29
+1507	143	JPM	83.89
+1508	143	NFLX	0
+1509	143	NVDA	0
+1510	143	TSM	117.76
+1511	143	V	67.96
+1512	143	COST	0
+1513	143	MSFT	0
+1514	143	JNJ	0
+1515	143	WMT	243.67
+1516	143	BA	0
+1517	143	GE	94.98
+1518	144	JNJ	27.48
+1519	144	JPM	30.29
+1520	144	MSFT	11.99
+1521	144	NFLX	19.16
+1522	144	NVDA	27.18
+1523	144	TSM	72.33
+1524	144	V	19.73
+1525	144	BA	2.27
+1526	144	DIS	37.15
+1527	144	XOM	101.99
+1528	144	COST	1.86
+1529	144	WMT	43.45
+1530	144	GE	8.84
+1531	144	PFE	217.44
+1532	145	CVX	55.9
+1533	145	DIS	0.26
+1534	145	GE	0
+1535	145	MSFT	0.89
+1536	145	NFLX	0.67
+1537	145	PFE	2.42
+1538	145	V	2.65
+1539	145	XOM	887
+1540	145	BA	0.28
+1541	145	JPM	28.76
+1542	145	COST	0
+1543	145	WMT	0
+1544	145	JNJ	0.18
+1545	145	NVDA	0.02
+1546	145	TSM	4.95
+1547	146	CVX	32.98
+1548	146	GE	5.86
+1549	146	JNJ	5.76
+1550	146	MSFT	5.73
+1551	146	NFLX	42.02
+1552	146	NVDA	24.75
+1553	146	TSM	54.78
+1554	146	V	9.05
+1555	146	XOM	170.82
+1556	146	BA	4.93
+1557	146	JPM	33.82
+1558	146	COST	1.89
+1559	146	WMT	34.94
+1560	146	DIS	33.02
+1561	146	PFE	166.19
+1562	147	AAPL	5.41
+1563	147	COST	0.91
+1564	147	CVX	19.86
+1565	147	DIS	12.03
+1566	147	GE	11.2
+1567	147	JNJ	7.67
+1568	147	JPM	14.51
+1569	147	MSFT	9.5
+1570	147	NFLX	16.89
+1571	147	NKE	40.08
+1572	147	NVDA	24.44
+1573	147	PFE	163.93
+1574	147	SBUX	23.34
+1575	147	TSM	31.05
+1576	147	V	11.52
+1577	147	WMT	48.03
+1578	147	XOM	45.75
+1579	147	BA	12.2
+1580	148	NFLX	46.86
+1581	148	TSM	71.67
+1582	148	JPM	12.58
+1583	148	V	16.69
+1584	148	MSFT	2.28
+1585	148	COST	2.27
+1586	148	WMT	68.34
+1587	148	GE	32.48
+1588	148	BA	4.04
+1589	148	PFE	282.73
+1590	148	NVDA	24.74
+1591	148	XOM	103
+1592	149	TSM	95.58
+1593	149	JPM	15.25
+1594	149	COST	12.53
+1595	149	MSFT	5.99
+1596	149	V	52.77
+1597	149	NFLX	107.38
+1598	149	BA	0.06
+1599	149	GE	15.19
+1600	149	WMT	38.59
+1601	150	JNJ	31.11
+1602	150	MSFT	0.52
+1603	150	NFLX	47.77
+1604	150	NVDA	21.57
+1605	150	TSM	69.72
+1606	150	V	10.52
+1607	150	BA	2.04
+1608	150	GE	4.92
+1609	150	JPM	43.55
+1610	150	XOM	186.43
+1611	150	COST	1.11
+1612	150	WMT	34.41
+1613	150	PFE	309.07
+1614	151	AAPL	4.85
+1615	151	CVX	61.27
+1616	151	DIS	23.24
+1617	151	GE	2.95
+1618	151	JNJ	3.01
+1619	151	MSFT	2.22
+1620	151	NFLX	7.65
+1621	151	NKE	34.56
+1622	151	NVDA	20.55
+1623	151	PFE	201.25
+1624	151	SBUX	35.33
+1625	151	TSM	59.34
+1626	151	V	5.26
+1627	151	WMT	19.44
+1628	151	XOM	277.58
+1629	151	BA	8.04
+1630	151	JPM	45.63
+1631	151	COST	0.29
+1632	152	JPM	80.54
+1633	152	NFLX	0
+1634	152	NVDA	162.04
+1635	152	TSM	115.11
+1636	152	V	0
+1637	152	COST	0
+1638	152	MSFT	46.58
+1639	152	JNJ	0
+1640	152	WMT	256.19
+1641	152	BA	0
+1642	152	GE	0
+1643	153	JNJ	27.48
+1644	153	JPM	30.29
+1645	153	MSFT	11.99
+1646	153	NFLX	67.14
+1647	153	NVDA	73.29
+1648	153	TSM	40.41
+1649	153	V	4.29
+1650	153	BA	2.27
+1651	153	DIS	37.15
+1652	153	XOM	20.41
+1653	153	COST	1.86
+1654	153	WMT	124.46
+1655	153	GE	8.84
+1656	153	PFE	217.44
+1657	154	CVX	0.12
+1658	154	DIS	0.26
+1659	154	GE	0
+1660	154	MSFT	58.46
+1661	154	NFLX	234.16
+1662	154	PFE	150.38
+1663	154	V	2.65
+1664	154	XOM	1.55
+1665	154	BA	0.28
+1666	154	JPM	19.05
+1667	154	COST	0
+1668	154	WMT	0
+1669	154	JNJ	0.18
+1670	154	NVDA	102.12
+1671	154	TSM	133.36
+1672	155	CVX	7.49
+1673	155	GE	5.86
+1674	155	JNJ	5.76
+1675	155	MSFT	17.57
+1676	155	NFLX	42.02
+1677	155	NVDA	81.09
+1678	155	TSM	54.78
+1679	155	V	9.05
+1680	155	XOM	21.78
+1681	155	BA	4.93
+1682	155	JPM	33.82
+1683	155	COST	1.89
+1684	155	WMT	108.13
+1685	155	DIS	33.02
+1686	155	PFE	166.19
+1687	156	AAPL	5.41
+1688	156	COST	0.91
+1689	156	CVX	19.86
+1690	156	DIS	12.03
+1691	156	GE	11.2
+1692	156	JNJ	7.67
+1693	156	JPM	14.51
+1694	156	MSFT	9.5
+1695	156	NFLX	32.83
+1696	156	NKE	40.08
+1697	156	NVDA	46.04
+1698	156	PFE	163.93
+1699	156	SBUX	23.34
+1700	156	TSM	41.04
+1701	156	V	4.87
+1702	156	WMT	93.69
+1703	156	XOM	22.45
+1704	156	BA	12.2
+1705	157	NFLX	46.86
+1706	157	TSM	37.69
+1707	157	JPM	12.58
+1708	157	V	16.69
+1709	157	MSFT	2.28
+1710	157	COST	2.27
+1711	157	WMT	68.34
+1712	157	GE	32.48
+1713	157	BA	4.04
+1714	157	PFE	282.73
+1715	157	NVDA	65.88
+1716	157	XOM	22.42
+1717	158	TSM	95.58
+1718	158	JPM	15.25
+1719	158	COST	12.53
+1720	158	MSFT	5.99
+1721	158	V	1.15
+1722	158	NFLX	107.38
+1723	158	BA	0.06
+1724	158	GE	15.19
+1725	158	WMT	219.87
+1726	158	NVDA	146.33
+1727	159	JNJ	31.11
+1728	159	MSFT	19.15
+1729	159	NFLX	47.77
+1730	159	NVDA	105.58
+1731	159	TSM	40.46
+1732	159	V	10.52
+1733	159	BA	2.04
+1734	159	GE	4.92
+1735	159	JPM	43.55
+1736	159	XOM	12.2
+1737	159	COST	1.11
+1738	159	WMT	147.8
+1739	159	PFE	309.07
+1740	160	AAPL	4.85
+1741	160	CVX	6.76
+1742	160	DIS	23.24
+1743	160	GE	2.95
+1744	160	JNJ	3.01
+1745	160	MSFT	17.77
+1746	160	NFLX	82.88
+1747	160	NKE	34.56
+1748	160	NVDA	99.35
+1749	160	PFE	201.25
+1750	160	SBUX	35.33
+1751	160	TSM	88.69
+1752	160	V	5.26
+1753	160	WMT	80.16
+1754	160	XOM	17.04
+1755	160	BA	8.04
+1756	160	JPM	30.76
+1757	160	COST	0.29
+1758	161	JPM	80.07
+1759	161	NFLX	0
+1760	161	NVDA	156.81
+1761	161	TSM	121.09
+1762	161	V	0
+1763	161	COST	0
+1764	161	MSFT	0
+1765	161	JNJ	0
+1766	161	WMT	257.67
+1767	161	BA	106.03
+1768	161	GE	0
+1769	162	JNJ	27.48
+1770	162	JPM	13.67
+1771	162	MSFT	4.19
+1772	162	NFLX	16.15
+1773	162	NVDA	48.21
+1774	162	TSM	69.27
+1775	162	V	4.29
+1776	162	BA	24.74
+1777	162	DIS	37.15
+1778	162	XOM	20.41
+1779	162	COST	1.86
+1780	162	WMT	124.46
+1781	162	GE	8.84
+1782	162	PFE	217.44
+1783	163	CVX	0.12
+1784	163	DIS	152.14
+1785	163	GE	0
+1786	163	MSFT	0.01
+1787	163	NFLX	1.64
+1788	163	PFE	150.38
+1789	163	V	2.65
+1790	163	XOM	1.55
+1791	163	BA	0.28
+1792	163	JPM	0.68
+1793	163	COST	0
+1794	163	WMT	0
+1795	163	JNJ	0.18
+1796	163	NVDA	5.36
+1797	163	TSM	21.47
+1798	163	NKE	1098.03
+1799	164	CVX	7.49
+1800	164	GE	5.86
+1801	164	JNJ	48.66
+1802	164	MSFT	3.42
+1803	164	NFLX	42.02
+1804	164	NVDA	34.23
+1805	164	TSM	54.78
+1806	164	V	9.05
+1807	164	XOM	21.78
+1808	164	BA	31.67
+1809	164	JPM	14.33
+1810	164	COST	1.89
+1811	164	WMT	108.13
+1812	164	DIS	75.17
+1813	164	PFE	397.26
+1814	164	NKE	67.62
+1815	165	AAPL	15.55
+1816	165	COST	0.91
+1817	165	CVX	5.14
+1818	165	DIS	31.1
+1819	165	GE	11.2
+1820	165	JNJ	37.43
+1821	165	JPM	14.51
+1822	165	MSFT	4.84
+1823	165	NFLX	15.16
+1824	165	NKE	40.08
+1825	165	NVDA	24.7
+1826	165	PFE	262.75
+1827	165	SBUX	23.34
+1828	165	TSM	29.63
+1829	165	V	4.87
+1830	165	WMT	93.69
+1831	165	XOM	22.45
+1832	165	BA	29.91
+1833	166	NFLX	46.86
+1834	166	TSM	37.69
+1835	166	JPM	12.58
+1836	166	V	16.69
+1837	166	MSFT	2.28
+1838	166	COST	2.27
+1839	166	WMT	68.34
+1840	166	GE	32.48
+1841	166	BA	4.04
+1842	166	PFE	282.73
+1843	166	NVDA	65.88
+1844	166	XOM	22.42
+1845	166	JNJ	41.49
+1846	167	TSM	170.84
+1847	167	JPM	15.25
+1848	167	COST	12.53
+1849	167	MSFT	5.99
+1850	167	V	1.15
+1851	167	NFLX	107.38
+1852	167	BA	0.06
+1853	167	GE	15.19
+1854	167	WMT	219.87
+1855	167	NVDA	51.11
+1856	168	JNJ	31.11
+1857	168	MSFT	2.45
+1858	168	NFLX	47.77
+1859	168	NVDA	40.97
+1860	168	TSM	73.4
+1861	168	V	10.52
+1862	168	BA	34.92
+1863	168	GE	4.92
+1864	168	JPM	16.26
+1865	168	XOM	12.2
+1866	168	COST	1.11
+1867	168	WMT	147.8
+1868	168	PFE	309.07
+1869	168	DIS	59.17
+1870	169	AAPL	4.85
+1871	169	CVX	6.76
+1872	169	DIS	112.53
+1873	169	GE	2.95
+1874	169	JNJ	56.32
+1875	169	MSFT	2.01
+1876	169	NFLX	15.14
+1877	169	NKE	159.05
+1878	169	NVDA	30.76
+1879	169	PFE	494.72
+1880	169	SBUX	11.53
+1881	169	TSM	56.12
+1882	169	V	5.26
+1883	169	WMT	80.16
+1884	169	XOM	17.04
+1885	169	BA	36.64
+1886	169	JPM	15.08
+1887	169	COST	0.29
+1888	170	JPM	0
+1889	170	NFLX	0
+1890	170	NVDA	158.37
+1891	170	TSM	129.8
+1892	170	V	63.61
+1893	170	COST	0
+1894	170	MSFT	45.75
+1895	170	JNJ	0
+1896	170	WMT	242.26
+1897	170	BA	0
+1898	170	GE	0
+1899	171	JNJ	27.48
+1900	171	JPM	13.67
+1901	171	MSFT	4.19
+1902	171	NFLX	16.15
+1903	171	NVDA	48.21
+1904	171	TSM	69.27
+1905	171	V	4.29
+1906	171	BA	24.74
+1907	171	DIS	37.15
+1908	171	XOM	20.41
+1909	171	COST	1.86
+1910	171	WMT	58.91
+1911	171	GE	8.84
+1912	171	PFE	217.44
+1913	172	CVX	18.03
+1914	172	DIS	0.32
+1915	172	GE	0
+1916	172	MSFT	0.01
+1917	172	NFLX	1.64
+1918	172	PFE	14
+1919	172	V	2.65
+1920	172	XOM	1.55
+1921	172	BA	319.6
+1922	172	JPM	0.68
+1923	172	COST	0
+1924	172	WMT	0
+1925	172	JNJ	0.18
+1926	172	NVDA	210.65
+1927	172	TSM	4.32
+1928	172	NKE	25.36
+1929	173	CVX	7.49
+1930	173	GE	5.86
+1931	173	JNJ	48.66
+1932	173	MSFT	3.42
+1933	173	NFLX	12.81
+1934	173	NVDA	74.66
+1935	173	TSM	54.78
+1936	173	V	9.05
+1937	173	XOM	54.4
+1938	173	BA	57.78
+1939	173	JPM	14.33
+1940	173	COST	1.89
+1941	173	WMT	49.04
+1942	173	DIS	11.9
+1943	173	PFE	169.55
+1944	173	NKE	67.62
+1945	174	AAPL	15.55
+1946	174	COST	0.91
+1947	174	CVX	19.13
+1948	174	DIS	31.1
+1949	174	GE	11.2
+1950	174	JNJ	37.43
+1951	174	JPM	6.29
+1952	174	MSFT	4.84
+1953	174	NFLX	15.16
+1954	174	NKE	40.08
+1955	174	NVDA	38.08
+1956	174	PFE	163.72
+1957	174	SBUX	23.34
+1958	174	TSM	29.63
+1959	174	V	4.87
+1960	174	WMT	47.32
+1961	174	XOM	22.45
+1962	174	BA	29.91
+1963	175	NFLX	46.86
+1964	175	TSM	37.69
+1965	175	JPM	12.58
+1966	175	V	16.69
+1967	175	MSFT	2.28
+1968	175	COST	2.27
+1969	175	WMT	68.34
+1970	175	GE	32.48
+1971	175	BA	33.56
+1972	175	PFE	282.73
+1973	175	NVDA	65.88
+1974	175	XOM	22.42
+1975	175	JNJ	41.49
+1976	176	TSM	170.84
+1977	176	JPM	15.25
+1978	176	COST	12.53
+1979	176	MSFT	5.99
+1980	176	V	1.15
+1981	176	NFLX	107.38
+1982	176	BA	0.06
+1983	176	GE	15.19
+1984	176	WMT	41.58
+1985	176	NVDA	51.11
+1986	177	JNJ	31.11
+1987	177	MSFT	2.45
+1988	177	NFLX	47.77
+1989	177	NVDA	100.32
+1990	177	TSM	73.4
+1991	177	V	10.52
+1992	177	BA	34.92
+1993	177	GE	4.92
+1994	177	JPM	16.26
+1995	177	XOM	12.2
+1996	177	COST	1.11
+1997	177	WMT	53.35
+1998	177	PFE	309.07
+1999	177	DIS	6.45
+2000	178	AAPL	4.85
+2001	178	CVX	46.59
+2002	178	DIS	6.31
+2003	178	GE	2.95
+2004	178	JNJ	30.27
+2005	178	MSFT	6.88
+2006	178	NFLX	15.14
+2007	178	NKE	41.01
+2008	178	NVDA	86.69
+2009	178	PFE	248.16
+2010	178	SBUX	11.53
+2011	178	TSM	32.67
+2012	178	V	5.26
+2013	178	WMT	27.16
+2014	178	XOM	48.58
+2015	178	BA	137.43
+2016	178	JPM	2.23
+2017	178	COST	0.29
+2018	179	JPM	76.39
+2019	179	NFLX	0
+2020	179	NVDA	157.45
+2021	179	TSM	123.64
+2022	179	V	0
+2023	179	COST	0
+2024	179	MSFT	49.75
+2025	179	JNJ	0
+2026	179	WMT	0
+2027	179	BA	0
+2028	179	GE	0
+2029	179	PFE	923.4
+2030	180	MSFT	14.87
+2031	180	TSM	49.82
+2032	180	JPM	25.99
+2033	180	V	16.51
+2034	180	COST	6.06
+2035	180	NFLX	46.04
+2036	180	GE	17.81
+2037	180	WMT	70.62
+2038	180	NVDA	50.13
+2039	180	PFE	268.03
+2040	181	JNJ	27.48
+2041	181	JPM	13.67
+2042	181	MSFT	15.69
+2043	181	NFLX	16.15
+2044	181	NVDA	109.74
+2045	181	TSM	69.27
+2046	181	V	4.29
+2047	181	BA	2.5
+2048	181	DIS	37.15
+2049	181	XOM	20.41
+2050	181	COST	1.86
+2051	181	WMT	11.64
+2052	181	GE	8.84
+2053	181	PFE	217.44
+2054	182	CVX	0.21
+2055	182	DIS	0.32
+2056	182	GE	32.4
+2057	182	MSFT	0.01
+2058	182	NFLX	1.64
+2059	182	PFE	14
+2060	182	V	2.65
+2061	182	XOM	1.55
+2062	182	BA	0
+2063	182	JPM	0.68
+2064	182	COST	0
+2065	182	WMT	0
+2066	182	JNJ	375.08
+2067	182	NVDA	210.65
+2068	182	TSM	45.52
+2069	182	NKE	0.38
+2070	183	CVX	7.49
+2071	183	GE	37.87
+2072	183	JNJ	48.66
+2073	183	MSFT	13.72
+2074	183	NFLX	12.81
+2075	183	NVDA	110.21
+2076	183	TSM	54.78
+2077	183	V	9.05
+2078	183	XOM	54.4
+2079	183	BA	5.16
+2080	183	JPM	14.33
+2081	183	COST	1.89
+2082	183	WMT	7.11
+2083	183	DIS	11.9
+2084	183	PFE	169.55
+2085	183	NKE	67.62
+2086	183	AAPL	22.53
+2087	184	AAPL	15.55
+2088	184	COST	0.91
+2089	184	CVX	19.13
+2090	184	DIS	14.29
+2091	184	GE	21.61
+2092	184	JNJ	37.43
+2093	184	JPM	6.29
+2094	184	MSFT	13.06
+2095	184	NFLX	15.16
+2096	184	NKE	40.08
+2097	184	NVDA	38.08
+2098	184	PFE	238.57
+2099	184	SBUX	23.34
+2100	184	TSM	39.97
+2101	184	V	4.87
+2102	184	WMT	18.61
+2103	184	XOM	22.45
+2104	184	BA	13.62
+2105	185	NFLX	46.86
+2106	185	TSM	37.69
+2107	185	JPM	12.58
+2108	185	V	16.69
+2109	185	MSFT	2.28
+2110	185	COST	2.27
+2111	185	WMT	68.34
+2112	185	GE	32.48
+2113	185	BA	5.72
+2114	185	PFE	282.73
+2115	185	NVDA	65.88
+2116	185	XOM	22.42
+2117	185	JNJ	41.49
+2118	186	TSM	170.84
+2119	186	JPM	15.25
+2120	186	COST	12.53
+2121	186	MSFT	5.99
+2122	186	V	1.15
+2123	186	NFLX	107.38
+2124	186	BA	0.06
+2125	186	GE	15.19
+2126	186	WMT	41.58
+2127	186	NVDA	158.71
+2128	187	JNJ	31.11
+2129	187	MSFT	15.2
+2130	187	NFLX	4.64
+2131	187	NVDA	146.46
+2132	187	TSM	97.45
+2133	187	V	10.52
+2134	187	BA	2.31
+2135	187	GE	4.92
+2136	187	JPM	16.26
+2137	187	XOM	12.2
+2138	187	COST	1.11
+2139	187	WMT	53.35
+2140	187	PFE	93.58
+2141	187	DIS	6.45
+2142	188	AAPL	28.46
+2143	188	CVX	15.1
+2144	188	DIS	6.31
+2145	188	GE	58.13
+2146	188	JNJ	71.58
+2147	188	MSFT	11.37
+2148	188	NFLX	15.14
+2149	188	NKE	41.01
+2150	188	NVDA	148.68
+2151	188	PFE	52.38
+2152	188	SBUX	11.53
+2153	188	TSM	54.15
+2154	188	V	5.26
+2155	188	WMT	2.3
+2156	188	XOM	48.58
+2157	188	BA	4.23
+2158	188	JPM	2.23
+2159	188	COST	0.29
+2160	189	JPM	92.01
+2161	189	NFLX	0
+2162	189	NVDA	145.22
+2163	189	TSM	121.64
+2164	189	V	67.04
+2165	189	COST	0
+2166	189	MSFT	0
+2167	189	JNJ	0
+2168	189	WMT	0
+2169	189	BA	0
+2170	189	GE	0
+2171	189	PFE	892.52
+2172	190	JNJ	27.48
+2173	190	JPM	60.12
+2174	190	MSFT	6.71
+2175	190	NFLX	16.15
+2176	190	NVDA	48.96
+2177	190	TSM	69.27
+2178	190	V	16.36
+2179	190	BA	2.5
+2180	190	DIS	37.15
+2181	190	XOM	20.41
+2182	190	COST	1.86
+2183	190	WMT	11.64
+2184	190	GE	8.84
+2185	190	PFE	217.44
+2186	191	CVX	0.21
+2187	191	DIS	0.32
+2188	191	GE	9.84
+2189	191	MSFT	0.01
+2190	191	NFLX	1.64
+2191	191	PFE	14
+2192	191	V	2.65
+2193	191	XOM	1.55
+2194	191	BA	0
+2195	191	JPM	76.58
+2196	191	COST	0
+2197	191	WMT	0
+2198	191	JNJ	208.22
+2199	191	NVDA	43.01
+2200	191	TSM	7.09
+2201	191	NKE	574.58
+2202	191	SBUX	28.5
+2203	192	CVX	7.49
+2204	192	GE	11.57
+2205	192	JNJ	48.66
+2206	192	MSFT	4.94
+2207	192	NFLX	12.81
+2208	192	NVDA	47.16
+2209	192	TSM	54.78
+2210	192	V	9.05
+2211	192	XOM	4.22
+2212	192	BA	5.16
+2213	192	JPM	61.35
+2214	192	COST	1.89
+2215	192	WMT	7.11
+2216	192	DIS	11.9
+2217	192	PFE	169.55
+2218	192	NKE	67.62
+2219	192	AAPL	4.08
+2220	192	SBUX	46.29
+2221	193	AAPL	3.8
+2222	193	COST	0.91
+2223	193	CVX	19.13
+2224	193	DIS	14.29
+2225	193	GE	6.48
+2226	193	JNJ	37.43
+2227	193	JPM	42.25
+2228	193	MSFT	6.85
+2229	193	NFLX	15.16
+2230	193	NKE	40.08
+2231	193	NVDA	38.08
+2232	193	PFE	238.57
+2233	193	SBUX	23.34
+2234	193	TSM	39.97
+2235	193	V	16.66
+2236	193	WMT	18.61
+2237	193	XOM	22.45
+2238	193	BA	3.83
+2239	194	NFLX	46.86
+2240	194	TSM	37.69
+2241	194	JPM	53.12
+2242	194	V	16.69
+2243	194	MSFT	2.28
+2244	194	COST	2.27
+2245	194	WMT	68.34
+2246	194	GE	32.48
+2247	194	BA	5.72
+2248	194	PFE	282.73
+2249	194	NVDA	65.88
+2250	194	XOM	22.42
+2251	194	JNJ	41.49
+2252	195	TSM	170.84
+2253	195	JPM	112.82
+2254	195	COST	12.53
+2255	195	MSFT	5.99
+2256	195	V	1.15
+2257	195	NFLX	107.38
+2258	195	BA	0.06
+2259	195	GE	15.19
+2260	195	WMT	41.58
+2261	195	NVDA	34.37
+2262	196	JNJ	31.11
+2263	196	MSFT	4.19
+2264	196	NFLX	4.64
+2265	196	NVDA	49.92
+2266	196	TSM	61.97
+2267	196	V	10.52
+2268	196	BA	2.31
+2269	196	GE	4.92
+2270	196	JPM	92.37
+2271	196	XOM	12.2
+2272	196	COST	1.11
+2273	196	WMT	53.35
+2274	196	PFE	93.58
+2275	196	DIS	6.45
+2276	197	AAPL	3.67
+2277	197	CVX	15.1
+2278	197	DIS	6.31
+2279	197	GE	11.7
+2280	197	JNJ	97.26
+2281	197	MSFT	2.95
+2282	197	NFLX	15.14
+2283	197	NKE	179.86
+2284	197	NVDA	49.64
+2285	197	PFE	120.61
+2286	197	SBUX	72.03
+2287	197	TSM	28.26
+2288	197	V	10.86
+2289	197	WMT	2.3
+2290	197	XOM	2.53
+2291	197	BA	4.23
+2292	197	JPM	68.81
+2293	197	COST	0.29
+2294	198	JPM	84.99
+2295	198	NFLX	0
+2296	198	NVDA	139.29
+2297	198	TSM	122.21
+2298	198	V	0
+2299	198	COST	0
+2300	198	MSFT	47.34
+2301	198	JNJ	0
+2302	198	WMT	245.46
+2303	198	BA	0
+2304	198	GE	0
+2305	198	PFE	0
+2306	199	JNJ	27.48
+2307	199	JPM	41
+2308	199	MSFT	15.67
+2309	199	NFLX	16.15
+2310	199	NVDA	48.96
+2311	199	TSM	69.27
+2312	199	V	16.36
+2313	199	BA	2.5
+2314	199	DIS	37.15
+2315	199	XOM	20.41
+2316	199	COST	1.86
+2317	199	WMT	133.57
+2318	199	GE	8.84
+2319	199	PFE	217.44
+2320	200	CVX	0.21
+2321	200	DIS	0.32
+2322	200	GE	0.5
+2323	200	MSFT	3.24
+2324	200	NFLX	1.64
+2325	200	PFE	14
+2326	200	V	2.65
+2327	200	XOM	1.55
+2328	200	BA	0
+2329	200	JPM	232.52
+2330	200	COST	0
+2331	200	WMT	360.96
+2332	200	JNJ	35.59
+2333	200	NVDA	10.77
+2334	200	TSM	7.09
+2335	200	NKE	22.19
+2336	200	SBUX	0.01
+2337	201	CVX	7.49
+2338	201	GE	11.57
+2339	201	JNJ	48.66
+2340	201	MSFT	4.94
+2341	201	NFLX	12.81
+2342	201	NVDA	47.16
+2343	201	TSM	30.02
+2344	201	V	9.05
+2345	201	XOM	4.22
+2346	201	BA	5.16
+2347	201	JPM	40.03
+2348	201	COST	1.89
+2349	201	WMT	177.4
+2350	201	DIS	11.9
+2351	201	PFE	169.55
+2352	201	NKE	67.62
+2353	201	AAPL	4.08
+2354	201	SBUX	46.29
+2355	202	AAPL	3.8
+2356	202	COST	0.91
+2357	202	CVX	19.13
+2358	202	DIS	14.29
+2359	202	GE	18.73
+2360	202	JNJ	37.43
+2361	202	JPM	15.63
+2362	202	MSFT	6.85
+2363	202	NFLX	15.16
+2364	202	NKE	40.08
+2365	202	NVDA	26.34
+2366	202	PFE	135.25
+2367	202	SBUX	23.34
+2368	202	TSM	31.03
+2369	202	V	8.54
+2370	202	WMT	60.26
+2371	202	XOM	22.45
+2372	202	BA	20.82
+2373	203	NFLX	46.86
+2374	203	TSM	37.69
+2375	203	JPM	53.12
+2376	203	V	16.69
+2377	203	MSFT	2.28
+2378	203	COST	2.27
+2379	203	WMT	68.34
+2380	203	GE	32.48
+2381	203	BA	5.72
+2382	203	PFE	282.73
+2383	203	NVDA	29.04
+2384	203	XOM	22.42
+2385	203	JNJ	41.49
+2386	204	TSM	170.84
+2387	204	JPM	59.58
+2388	204	COST	12.53
+2389	204	MSFT	5.99
+2390	204	V	1.15
+2391	204	NFLX	107.38
+2392	204	BA	0.06
+2393	204	GE	15.19
+2394	204	WMT	41.58
+2395	204	NVDA	34.37
+2396	205	JNJ	31.11
+2397	205	MSFT	4.19
+2398	205	NFLX	4.64
+2399	205	NVDA	49.92
+2400	205	TSM	61.97
+2401	205	V	10.52
+2402	205	BA	2.31
+2403	205	GE	4.92
+2404	205	JPM	53.04
+2405	205	XOM	12.2
+2406	205	COST	1.11
+2407	205	WMT	222.88
+2408	205	PFE	93.58
+2409	205	DIS	6.45
+2410	206	AAPL	3.67
+2411	206	CVX	15.1
+2412	206	DIS	6.31
+2413	206	GE	11.7
+2414	206	JNJ	63.9
+2415	206	MSFT	8.72
+2416	206	NFLX	15.14
+2417	206	NKE	120.75
+2418	206	NVDA	22.07
+2419	206	PFE	30.26
+2420	206	SBUX	5.96
+2421	206	TSM	19.88
+2422	206	V	10.86
+2423	206	WMT	260.85
+2424	206	XOM	44.1
+2425	206	BA	4.23
+2426	206	JPM	53.05
+2427	206	COST	0.29
+2428	207	JPM	82.32
+2429	207	NFLX	0
+2430	207	NVDA	141.41
+2431	207	TSM	115.78
+2432	207	V	0
+2433	207	COST	0
+2434	207	MSFT	50.61
+2435	207	JNJ	0
+2436	207	WMT	247.06
+2437	207	BA	0
+2438	207	GE	0
+2439	207	PFE	0
+2440	208	JNJ	27.48
+2441	208	JPM	14.43
+2442	208	MSFT	27.22
+2443	208	NFLX	16.15
+2444	208	NVDA	48.96
+2445	208	TSM	21.62
+2446	208	V	2.5
+2447	208	BA	2.5
+2448	208	DIS	37.15
+2449	208	XOM	20.41
+2450	208	COST	1.86
+2451	208	WMT	179.34
+2452	208	GE	8.84
+2453	208	PFE	217.44
+2454	209	CVX	0.21
+2455	209	DIS	0.32
+2456	209	GE	0.5
+2457	209	MSFT	0.23
+2458	209	NFLX	1.64
+2459	209	PFE	14
+2460	209	V	2.65
+2461	209	XOM	1.55
+2462	209	BA	0
+2463	209	JPM	0.06
+2464	209	COST	0
+2465	209	WMT	1053.29
+2466	209	JNJ	46.76
+2467	209	NVDA	0.21
+2468	209	TSM	0
+2469	209	NKE	0.85
+2470	209	SBUX	0.01
+2471	210	CVX	7.49
+2472	210	GE	11.57
+2473	210	JNJ	48.66
+2474	210	MSFT	19.62
+2475	210	NFLX	12.81
+2476	210	NVDA	47.16
+2477	210	TSM	8.12
+2478	210	V	9.05
+2479	210	XOM	4.22
+2480	210	BA	5.16
+2481	210	JPM	11.4
+2482	210	COST	1.89
+2483	210	WMT	265.89
+2484	210	DIS	11.9
+2485	210	PFE	400.86
+2486	210	NKE	67.62
+2487	210	AAPL	4.08
+2488	210	SBUX	2.77
+2489	211	AAPL	3.8
+2490	211	COST	0.91
+2491	211	CVX	19.13
+2492	211	DIS	14.29
+2493	211	GE	3.24
+2494	211	JNJ	37.43
+2495	211	JPM	15.63
+2496	211	MSFT	15.78
+2497	211	NFLX	15.16
+2498	211	NKE	40.08
+2499	211	NVDA	46.93
+2500	211	PFE	315.72
+2501	211	SBUX	23.34
+2502	211	TSM	19.94
+2503	211	V	8.54
+2504	211	WMT	86.45
+2505	211	XOM	22.45
+2506	211	BA	2.16
+2507	212	NFLX	46.86
+2508	212	TSM	37.69
+2509	212	JPM	13.49
+2510	212	V	16.69
+2511	212	MSFT	21.43
+2512	212	COST	2.27
+2513	212	WMT	169.35
+2514	212	GE	3.95
+2515	212	BA	5.72
+2516	212	PFE	282.73
+2517	212	NVDA	29.04
+2518	212	XOM	22.42
+2519	212	JNJ	41.49
+2520	213	TSM	12.98
+2521	213	JPM	59.58
+2522	213	COST	12.53
+2523	213	MSFT	49.41
+2524	213	V	1.15
+2525	213	NFLX	107.38
+2526	213	BA	0.06
+2527	213	GE	15.19
+2528	213	WMT	329.98
+2529	213	NVDA	34.37
+2530	214	JNJ	31.11
+2531	214	MSFT	24.66
+2532	214	NFLX	4.64
+2533	214	NVDA	49.92
+2534	214	TSM	7.98
+2535	214	V	10.52
+2536	214	BA	2.31
+2537	214	GE	4.92
+2538	214	JPM	11.4
+2539	214	XOM	12.2
+2540	214	COST	1.11
+2541	214	WMT	332.2
+2542	214	PFE	390.46
+2543	214	DIS	6.45
+2544	215	AAPL	3.67
+2545	215	CVX	15.1
+2546	215	DIS	6.31
+2547	215	GE	3.72
+2548	215	JNJ	84.99
+2549	215	MSFT	12.92
+2550	215	NFLX	15.14
+2551	215	NKE	39.34
+2552	215	NVDA	22.07
+2553	215	PFE	365.84
+2554	215	SBUX	5.96
+2555	215	TSM	2.73
+2556	215	V	0.36
+2557	215	WMT	445.97
+2558	215	XOM	2.27
+2559	215	BA	4.23
+2560	215	JPM	6.9
+2561	215	COST	2.85
+2562	216	JPM	83.74
+2563	216	NFLX	0
+2564	216	NVDA	0
+2565	216	TSM	116.89
+2566	216	V	0
+2567	216	COST	0
+2568	216	MSFT	47.84
+2569	216	JNJ	0
+2570	216	WMT	267.04
+2571	216	BA	0
+2572	216	GE	0
+2573	216	PFE	976.88
+2574	217	MSFT	14.87
+2575	217	TSM	49.82
+2576	217	JPM	25.99
+2577	217	V	16.51
+2578	217	COST	6.06
+2579	217	NFLX	46.04
+2580	217	GE	17.81
+2581	217	WMT	70.62
+2582	217	NVDA	18.36
+2583	217	PFE	268.03
+2584	218	JNJ	27.48
+2585	218	JPM	14.43
+2586	218	MSFT	7.32
+2587	218	NFLX	16.15
+2588	218	NVDA	20.86
+2589	218	TSM	37.89
+2590	218	V	2.5
+2591	218	BA	2.5
+2592	218	DIS	37.15
+2593	218	XOM	20.41
+2594	218	COST	1.86
+2595	218	WMT	119.12
+2596	218	GE	8.84
+2597	218	PFE	217.44
+2598	218	AAPL	37.02
+2599	219	CVX	0.21
+2600	219	DIS	0.32
+2601	219	GE	0.5
+2602	219	MSFT	0.23
+2603	219	NFLX	15.32
+2604	219	PFE	14
+2605	219	V	2.65
+2606	219	XOM	1.55
+2607	219	BA	0
+2608	219	JPM	0.06
+2609	219	COST	0
+2610	219	WMT	1.51
+2611	219	JNJ	0.38
+2612	219	NVDA	0.21
+2613	219	TSM	0
+2614	219	NKE	0.85
+2615	219	SBUX	0.01
+2616	219	AAPL	495.83
+2617	220	CVX	7.49
+2618	220	GE	11.57
+2619	220	JNJ	48.66
+2620	220	MSFT	3.89
+2621	220	NFLX	12.81
+2622	220	NVDA	22.12
+2623	220	TSM	8.12
+2624	220	V	9.05
+2625	220	XOM	4.22
+2626	220	BA	5.16
+2627	220	JPM	11.4
+2628	220	COST	1.89
+2629	220	WMT	98.47
+2630	220	DIS	11.9
+2631	220	PFE	400.86
+2632	220	NKE	67.62
+2633	220	AAPL	90.46
+2634	220	SBUX	2.77
+2635	221	AAPL	32.89
+2636	221	COST	4.99
+2637	221	CVX	19.13
+2638	221	DIS	14.29
+2639	221	GE	3.24
+2640	221	JNJ	18.6
+2641	221	JPM	15.63
+2642	221	MSFT	6.87
+2643	221	NFLX	15.16
+2644	221	NKE	40.08
+2645	221	NVDA	16.05
+2646	221	PFE	315.72
+2647	221	SBUX	23.34
+2648	221	TSM	28.48
+2649	221	V	8.54
+2650	221	WMT	86.45
+2651	221	XOM	3.87
+2652	221	BA	2.16
+2653	222	NFLX	46.86
+2654	222	TSM	37.69
+2655	222	JPM	13.49
+2656	222	V	16.69
+2657	222	MSFT	5.92
+2658	222	COST	2.27
+2659	222	WMT	99.98
+2660	222	GE	3.95
+2661	222	BA	5.72
+2662	222	PFE	282.73
+2663	222	NVDA	29.04
+2664	222	XOM	22.42
+2665	222	JNJ	41.49
+2666	222	AAPL	48.04
+2667	223	TSM	92.03
+2668	223	JPM	59.58
+2669	223	COST	12.53
+2670	223	MSFT	8.11
+2671	223	V	1.15
+2672	223	NFLX	107.38
+2673	223	BA	0.06
+2674	223	GE	15.19
+2675	223	WMT	329.98
+2676	223	NVDA	34.37
+2677	224	JNJ	31.11
+2678	224	MSFT	4.81
+2679	224	NFLX	4.64
+2680	224	NVDA	49.92
+2681	224	TSM	33.88
+2682	224	V	10.52
+2683	224	BA	2.31
+2684	224	GE	4.92
+2685	224	JPM	11.4
+2686	224	XOM	12.2
+2687	224	COST	1.11
+2688	224	WMT	145.92
+2689	224	PFE	390.46
+2690	224	DIS	6.45
+2691	224	AAPL	74.61
+2692	225	AAPL	174.09
+2693	225	CVX	15.1
+2694	225	DIS	6.31
+2695	225	GE	3.72
+2696	225	JNJ	26.24
+2697	225	MSFT	1.69
+2698	225	NFLX	53.79
+2699	225	NKE	39.34
+2700	225	NVDA	22.07
+2701	225	PFE	365.84
+2702	225	SBUX	29.97
+2703	225	TSM	16.37
+2704	225	V	5.64
+2705	225	WMT	92.79
+2706	225	XOM	2.27
+2707	225	BA	4.23
+2708	225	JPM	6.9
+2709	225	COST	2.85
+2710	226	JPM	79.99
+2711	226	NFLX	0
+2712	226	NVDA	0
+2713	226	TSM	104.87
+2714	226	V	74.2
+2715	226	COST	0
+2716	226	MSFT	0
+2717	226	JNJ	0
+2718	226	WMT	279.89
+2719	226	BA	0
+2720	226	GE	0
+2721	226	PFE	1020.2
+2722	227	MSFT	14.87
+2723	227	TSM	17.93
+2724	227	JPM	25.99
+2725	227	V	16.51
+2726	227	COST	6.06
+2727	227	NFLX	46.04
+2728	227	GE	17.81
+2729	227	WMT	70.62
+2730	227	NVDA	18.36
+2731	227	PFE	268.03
+2732	228	JNJ	27.48
+2733	228	JPM	14.43
+2734	228	MSFT	7.32
+2735	228	NFLX	16.15
+2736	228	NVDA	20.86
+2737	228	TSM	9.22
+2738	228	V	25.22
+2739	228	BA	2.5
+2740	228	DIS	37.15
+2741	228	XOM	20.41
+2742	228	COST	1.86
+2743	228	WMT	190.58
+2744	228	GE	8.84
+2745	228	PFE	502.52
+2746	228	AAPL	8.22
+2747	229	CVX	0.21
+2748	229	DIS	0.32
+2749	229	GE	0.5
+2750	229	MSFT	0.23
+2751	229	NFLX	0.02
+2752	229	PFE	544.11
+2753	229	V	2.65
+2754	229	XOM	1.55
+2755	229	BA	0
+2756	229	JPM	0.06
+2757	229	COST	0
+2758	229	WMT	956.89
+2759	229	JNJ	0.38
+2760	229	NVDA	0.21
+2761	229	TSM	0
+2762	229	NKE	0.85
+2763	229	SBUX	0.01
+2764	229	AAPL	0.21
+2765	230	CVX	7.49
+2766	230	GE	11.57
+2767	230	JNJ	48.66
+2768	230	MSFT	3.89
+2769	230	NFLX	12.81
+2770	230	NVDA	22.12
+2771	230	TSM	8.12
+2772	230	V	9.05
+2773	230	XOM	4.22
+2774	230	BA	5.16
+2775	230	JPM	11.4
+2776	230	COST	1.89
+2777	230	WMT	203.36
+2778	230	DIS	11.9
+2779	230	PFE	671.62
+2780	230	NKE	67.62
+2781	230	AAPL	12.55
+2782	230	SBUX	2.77
+2783	231	AAPL	10.78
+2784	231	COST	4.99
+2785	231	CVX	19.13
+2786	231	DIS	14.29
+2787	231	GE	13.44
+2788	231	JNJ	18.6
+2789	231	JPM	15.63
+2790	231	MSFT	6.87
+2791	231	NFLX	15.16
+2792	231	NKE	40.08
+2793	231	NVDA	16.05
+2794	231	PFE	315.72
+2795	231	SBUX	23.34
+2796	231	TSM	12.41
+2797	231	V	14.5
+2798	231	WMT	86.45
+2799	231	XOM	27.97
+2800	231	BA	10.55
+2801	232	NFLX	46.86
+2802	232	TSM	8.68
+2803	232	JPM	13.49
+2804	232	V	16.69
+2805	232	MSFT	5.92
+2806	232	COST	2.27
+2807	232	WMT	99.98
+2808	232	GE	3.95
+2809	232	BA	5.72
+2810	232	PFE	282.73
+2811	232	NVDA	29.04
+2812	232	XOM	22.42
+2813	232	JNJ	41.49
+2814	232	AAPL	11.3
+2815	233	TSM	5.68
+2816	233	JPM	5.48
+2817	233	COST	12.53
+2818	233	MSFT	8.11
+2819	233	V	1.15
+2820	233	NFLX	107.38
+2821	233	BA	0.06
+2822	233	GE	15.19
+2823	233	WMT	329.98
+2824	233	NVDA	34.37
+2825	233	PFE	813.21
+2826	234	JNJ	31.11
+2827	234	MSFT	4.81
+2828	234	NFLX	4.64
+2829	234	NVDA	5.63
+2830	234	TSM	4.43
+2831	234	V	10.52
+2832	234	BA	2.31
+2833	234	GE	4.92
+2834	234	JPM	11.4
+2835	234	XOM	12.2
+2836	234	COST	1.11
+2837	234	WMT	287.28
+2838	234	PFE	770.77
+2839	234	DIS	6.45
+2840	234	AAPL	6.86
+2841	235	AAPL	11.35
+2842	235	CVX	15.1
+2843	235	DIS	6.31
+2844	235	GE	3.72
+2845	235	JNJ	26.24
+2846	235	MSFT	1.69
+2847	235	NFLX	6.25
+2848	235	NKE	101.68
+2849	235	NVDA	5.15
+2850	235	PFE	1082.91
+2851	235	SBUX	3.48
+2852	235	TSM	2.08
+2853	235	V	15.61
+2854	235	WMT	268.24
+2855	235	XOM	39.3
+2856	235	BA	4.23
+2857	235	JPM	6.9
+2858	235	COST	2.85
+2859	236	NFLX	51.57
+2860	236	TSM	13.85
+2861	237	JPM	90.32
+2862	237	NFLX	0
+2863	237	NVDA	0
+2864	237	TSM	116.42
+2865	237	V	68.44
+2866	237	COST	0
+2867	237	MSFT	0
+2868	237	JNJ	132.04
+2869	237	WMT	0
+2870	237	BA	0
+2871	237	GE	0
+2872	237	PFE	0
+2873	237	XOM	224.57
+2874	238	MSFT	14.87
+2875	238	TSM	17.93
+2876	238	JPM	25.99
+2877	238	V	16.51
+2878	238	COST	6.06
+2879	238	NFLX	46.04
+2880	238	GE	17.81
+2881	238	WMT	70.62
+2882	238	NVDA	18.36
+2883	238	PFE	268.03
+2884	238	XOM	53.97
+2885	239	JNJ	27.48
+2886	239	JPM	35.32
+2887	239	MSFT	7.32
+2888	239	NFLX	16.15
+2889	239	NVDA	20.86
+2890	239	TSM	33.55
+2891	239	V	12.99
+2892	239	BA	2.5
+2893	239	DIS	37.15
+2894	239	XOM	113.24
+2895	239	COST	1.86
+2896	239	WMT	9.96
+2897	239	GE	8.84
+2898	239	PFE	68.11
+2899	239	AAPL	8.22
+2900	239	CVX	31.09
+2901	239	NKE	101.18
+2902	240	CVX	42.02
+2903	240	DIS	16.96
+2904	240	GE	0.5
+2905	240	MSFT	0.23
+2906	240	NFLX	0.02
+2907	240	PFE	0.26
+2908	240	V	9.6
+2909	240	XOM	433.5
+2910	240	BA	0
+2911	240	JPM	86.39
+2912	240	COST	0
+2913	240	WMT	0
+2914	240	JNJ	0.38
+2915	240	NVDA	0.21
+2916	240	TSM	0
+2917	240	NKE	300.65
+2918	240	SBUX	0.01
+2919	240	AAPL	0.21
+2920	241	CVX	52.52
+2921	241	GE	11.57
+2922	241	JNJ	48.66
+2923	241	MSFT	3.89
+2924	241	NFLX	12.81
+2925	241	NVDA	22.12
+2926	241	TSM	26.15
+2927	241	V	9.05
+2928	241	XOM	143.88
+2929	241	BA	5.16
+2930	241	JPM	32.86
+2931	241	COST	1.89
+2932	241	WMT	5.72
+2933	241	DIS	11.9
+2934	241	PFE	66.18
+2935	241	NKE	139.65
+2936	241	AAPL	12.55
+2937	241	SBUX	2.77
+2938	242	AAPL	10.78
+2939	242	COST	1.08
+2940	242	CVX	19.13
+2941	242	DIS	14.29
+2942	242	GE	13.44
+2943	242	JNJ	18.6
+2944	242	JPM	23.79
+2945	242	MSFT	3.19
+2946	242	NFLX	15.16
+2947	242	NKE	85.91
+2948	242	NVDA	16.05
+2949	242	PFE	180.85
+2950	242	SBUX	23.34
+2951	242	TSM	34.35
+2952	242	V	14.5
+2953	242	WMT	11.53
+2954	242	XOM	54.67
+2955	242	BA	10.55
+2956	243	NFLX	46.86
+2957	243	TSM	8.68
+2958	243	JPM	13.49
+2959	243	V	16.69
+2960	243	MSFT	5.92
+2961	243	COST	2.27
+2962	243	WMT	9.77
+2963	243	GE	3.95
+2964	243	BA	5.72
+2965	243	PFE	282.73
+2966	243	NVDA	29.04
+2967	243	XOM	102.47
+2968	243	JNJ	41.49
+2969	243	AAPL	11.3
+2970	243	NKE	104.34
+2971	244	TSM	5.68
+2972	244	JPM	60.98
+2973	244	COST	12.53
+2974	244	MSFT	8.11
+2975	244	V	1.15
+2976	244	NFLX	107.38
+2977	244	BA	0.06
+2978	244	GE	15.19
+2979	244	WMT	5.09
+2980	244	NVDA	34.37
+2981	244	PFE	4.58
+2982	244	XOM	231.69
+2983	245	JNJ	31.11
+2984	245	MSFT	4.81
+2985	245	NFLX	4.64
+2986	245	NVDA	5.63
+2987	245	TSM	37.38
+2988	245	V	10.52
+2989	245	BA	2.31
+2990	245	GE	4.92
+2991	245	JPM	42.76
+2992	245	XOM	167.49
+2993	245	COST	1.11
+2994	245	WMT	4.92
+2995	245	PFE	31.22
+2996	245	DIS	6.45
+2997	245	AAPL	6.86
+2998	245	CVX	47.21
+2999	245	NKE	134.56
+3000	246	AAPL	11.35
+3001	246	CVX	77.4
+3002	246	DIS	29.38
+3003	246	GE	3.72
+3004	246	JNJ	26.24
+3005	246	MSFT	1.69
+3006	246	NFLX	6.25
+3007	246	NKE	173.97
+3008	246	NVDA	5.15
+3009	246	PFE	51.35
+3010	246	SBUX	3.48
+3011	246	TSM	22.38
+3012	246	V	15.61
+3013	246	WMT	1.87
+3014	246	XOM	201.33
+3015	246	BA	4.23
+3016	246	JPM	43.66
+3017	246	COST	0.26
+3018	247	JPM	88.01
+3019	247	NFLX	0
+3020	247	NVDA	0
+3021	247	TSM	111.08
+3022	247	V	67.36
+3023	247	COST	0
+3024	247	MSFT	0
+3025	247	JNJ	152.12
+3026	247	WMT	0
+3027	247	BA	0
+3028	247	GE	0
+3029	247	PFE	0
+3030	247	XOM	213.35
+3031	248	MSFT	14.87
+3032	248	TSM	17.93
+3033	248	JPM	25.99
+3034	248	V	16.51
+3035	248	COST	6.06
+3036	248	NFLX	46.04
+3037	248	GE	17.81
+3038	248	WMT	70.62
+3039	248	NVDA	18.36
+3040	248	PFE	268.03
+3041	248	XOM	53.97
+3042	248	JNJ	45.44
+3043	249	JNJ	27.48
+3044	249	JPM	35.32
+3045	249	MSFT	7.32
+3046	249	NFLX	16.15
+3047	249	NVDA	20.86
+3048	249	TSM	33.55
+3049	249	V	12.99
+3050	249	BA	2.5
+3051	249	DIS	37.15
+3052	249	XOM	70.83
+3053	249	COST	1.86
+3054	249	WMT	82.8
+3055	249	GE	8.84
+3056	249	PFE	68.11
+3057	249	AAPL	8.22
+3058	249	CVX	31.09
+3059	249	NKE	25.62
+3060	250	CVX	491.77
+3061	250	DIS	210.26
+3062	250	GE	0.5
+3063	250	MSFT	0.23
+3064	250	NFLX	0.02
+3065	250	PFE	0.26
+3066	250	V	0.35
+3067	250	XOM	0.78
+3068	250	BA	0
+3069	250	JPM	0.7
+3070	250	COST	0
+3071	250	WMT	25.84
+3072	250	JNJ	0.38
+3073	250	NVDA	0.21
+3074	250	TSM	0
+3075	250	NKE	0.1
+3076	250	SBUX	0.01
+3077	250	AAPL	0.21
+3078	251	CVX	79.55
+3079	251	GE	11.57
+3080	251	JNJ	48.66
+3081	251	MSFT	3.89
+3082	251	NFLX	12.81
+3083	251	NVDA	22.12
+3084	251	TSM	26.15
+3085	251	V	9.05
+3086	251	XOM	68.11
+3087	251	BA	5.16
+3088	251	JPM	18.52
+3089	251	COST	1.89
+3090	251	WMT	107.5
+3091	251	DIS	11.9
+3092	251	PFE	66.18
+3093	251	NKE	27.89
+3094	251	AAPL	12.55
+3095	251	SBUX	2.77
+3096	252	AAPL	10.78
+3097	252	COST	1.08
+3098	252	CVX	19.13
+3099	252	DIS	14.29
+3100	252	GE	13.44
+3101	252	JNJ	37.82
+3102	252	JPM	12.93
+3103	252	MSFT	7.5
+3104	252	NFLX	15.16
+3105	252	NKE	29.57
+3106	252	NVDA	16.05
+3107	252	PFE	180.85
+3108	252	SBUX	23.34
+3109	252	TSM	16.23
+3110	252	V	14.5
+3111	252	WMT	53.86
+3112	252	XOM	54.67
+3113	252	BA	10.55
+3114	253	NFLX	46.86
+3115	253	TSM	8.68
+3116	253	JPM	13.49
+3117	253	V	16.69
+3118	253	MSFT	5.92
+3119	253	COST	2.27
+3120	253	WMT	82.58
+3121	253	GE	3.95
+3122	253	BA	5.72
+3123	253	PFE	282.73
+3124	253	NVDA	29.04
+3125	253	XOM	102.47
+3126	253	JNJ	41.49
+3127	253	AAPL	11.3
+3128	253	NKE	104.34
+3129	253	CVX	42.95
+3130	254	TSM	5.68
+3131	254	JPM	60.98
+3132	254	COST	12.53
+3133	254	MSFT	8.11
+3134	254	V	1.15
+3135	254	NFLX	107.38
+3136	254	BA	0.06
+3137	254	GE	15.19
+3138	254	WMT	5.09
+3139	254	NVDA	34.37
+3140	254	PFE	4.58
+3141	254	XOM	81.18
+3142	255	JNJ	31.11
+3143	255	MSFT	4.81
+3144	255	NFLX	4.64
+3145	255	NVDA	5.63
+3146	255	TSM	37.38
+3147	255	V	10.52
+3148	255	BA	2.31
+3149	255	GE	4.92
+3150	255	JPM	42.76
+3151	255	XOM	77.24
+3152	255	COST	1.11
+3153	255	WMT	118.29
+3154	255	PFE	31.22
+3155	255	DIS	6.45
+3156	255	AAPL	6.86
+3157	255	CVX	47.21
+3158	255	NKE	26.72
+3159	256	AAPL	11.35
+3160	256	CVX	159.52
+3161	256	DIS	51
+3162	256	GE	16.95
+3163	256	JNJ	26.24
+3164	256	MSFT	7.23
+3165	256	NFLX	6.25
+3166	256	NKE	24.84
+3167	256	NVDA	5.15
+3168	256	PFE	51.35
+3169	256	SBUX	3.48
+3170	256	TSM	8.92
+3171	256	V	10.08
+3172	256	WMT	112.81
+3173	256	XOM	64.05
+3174	256	BA	16.68
+3175	256	JPM	15.89
+3176	256	COST	0.26
+3177	257	JPM	88.71
+3178	257	NFLX	0
+3179	257	NVDA	123.15
+3180	257	TSM	121.6
+3181	257	V	0
+3182	257	COST	23.95
+3183	257	MSFT	0
+3184	257	JNJ	0
+3185	257	WMT	249.9
+3186	257	BA	0
+3187	257	GE	0
+3188	257	PFE	0
+3189	257	XOM	0
+3190	258	MSFT	3.42
+3191	258	TSM	72.85
+3192	258	JPM	25.99
+3193	258	V	16.51
+3194	258	COST	6.06
+3195	258	NFLX	46.04
+3196	258	GE	17.81
+3197	258	WMT	70.62
+3198	258	NVDA	18.36
+3199	258	PFE	268.03
+3200	258	XOM	53.97
+3201	258	JNJ	45.44
+3202	259	JNJ	27.48
+3203	259	JPM	35.32
+3204	259	MSFT	7.32
+3205	259	NFLX	16.15
+3206	259	NVDA	20.86
+3207	259	TSM	148.17
+3208	259	V	12.99
+3209	259	BA	2.5
+3210	259	DIS	37.15
+3211	259	XOM	12.28
+3212	259	COST	1.86
+3213	259	WMT	82.8
+3214	259	GE	8.84
+3215	259	PFE	68.11
+3216	259	AAPL	8.22
+3217	259	CVX	31.09
+3218	259	NKE	25.62
+3219	260	CVX	0
+3220	260	DIS	0
+3221	260	GE	0.5
+3222	260	MSFT	0.23
+3223	260	NFLX	0.02
+3224	260	PFE	0.26
+3225	260	V	0.35
+3226	260	XOM	0.78
+3227	260	BA	0
+3228	260	JPM	0.7
+3229	260	COST	0
+3230	260	WMT	4.93
+3231	260	JNJ	0.38
+3232	260	NVDA	0.21
+3233	260	TSM	421.12
+3234	260	NKE	0.1
+3235	260	SBUX	0.01
+3236	260	AAPL	0.21
+3237	261	CVX	10.12
+3238	261	GE	11.57
+3239	261	JNJ	4.95
+3240	261	MSFT	3.89
+3241	261	NFLX	12.81
+3242	261	NVDA	22.12
+3243	261	TSM	174.62
+3244	261	V	9.05
+3245	261	XOM	8.97
+3246	261	BA	5.16
+3247	261	JPM	18.52
+3248	261	COST	1.89
+3249	261	WMT	107.5
+3250	261	DIS	11.9
+3251	261	PFE	66.18
+3252	261	NKE	27.89
+3253	261	AAPL	12.55
+3254	261	SBUX	2.77
+3255	262	AAPL	10.78
+3256	262	COST	4.48
+3257	262	CVX	19.13
+3258	262	DIS	14.29
+3259	262	GE	3.73
+3260	262	JNJ	9.72
+3261	262	JPM	21.9
+3262	262	MSFT	2.74
+3263	262	NFLX	15.16
+3264	262	NKE	29.57
+3265	262	NVDA	16.05
+3266	262	PFE	46.33
+3267	262	SBUX	1.6
+3268	262	TSM	115.71
+3269	262	V	3.72
+3270	262	WMT	53.86
+3271	262	XOM	15.45
+3272	262	BA	2.04
+3273	263	NFLX	46.86
+3274	263	TSM	133.04
+3275	263	JPM	13.49
+3276	263	V	16.69
+3277	263	MSFT	5.92
+3278	263	COST	2.27
+3279	263	WMT	82.58
+3280	263	GE	3.95
+3281	263	BA	5.72
+3282	263	PFE	282.73
+3283	263	NVDA	29.04
+3284	263	XOM	13.29
+3285	263	JNJ	41.49
+3286	263	AAPL	11.3
+3287	263	NKE	5.51
+3288	263	CVX	42.95
+3289	264	TSM	275.45
+3290	264	JPM	15
+3291	264	COST	12.53
+3292	264	MSFT	8.11
+3293	264	V	1.15
+3294	264	NFLX	3.38
+3295	264	BA	0.06
+3296	264	GE	15.19
+3297	264	WMT	5.09
+3298	264	NVDA	34.37
+3299	264	PFE	4.58
+3300	264	XOM	81.18
+3301	265	JNJ	31.11
+3302	265	MSFT	4.81
+3303	265	NFLX	4.64
+3304	265	NVDA	5.63
+3305	265	TSM	229.73
+3306	265	V	10.52
+3307	265	BA	2.31
+3308	265	GE	4.92
+3309	265	JPM	42.76
+3310	265	XOM	4.85
+3311	265	COST	1.11
+3312	265	WMT	118.29
+3313	265	PFE	31.22
+3314	265	DIS	6.45
+3315	265	AAPL	6.86
+3316	265	CVX	5.16
+3317	265	NKE	26.72
+3318	266	AAPL	0.65
+3319	266	CVX	7.1
+3320	266	DIS	2.74
+3321	266	GE	5.13
+3322	266	JNJ	1.2
+3323	266	MSFT	0.4
+3324	266	NFLX	26.35
+3325	266	NKE	1.12
+3326	266	NVDA	5.15
+3327	266	PFE	51.35
+3328	266	SBUX	3.48
+3329	266	TSM	235.42
+3330	266	V	0.51
+3331	266	WMT	112.81
+3332	266	XOM	3.97
+3333	266	BA	0.4
+3334	266	JPM	30.83
+3335	266	COST	3.72
+3336	267	NFLX	51.57
+3337	267	TSM	101.86
+3338	268	JPM	79.05
+3339	268	NFLX	0
+3340	268	NVDA	0
+3341	268	TSM	109.52
+3342	268	V	0
+3343	268	COST	0
+3344	268	MSFT	0
+3345	268	JNJ	0
+3346	268	WMT	261.69
+3347	268	BA	0
+3348	268	GE	0
+3349	268	PFE	0
+3350	268	XOM	207.65
+3351	268	AAPL	104.03
+3352	269	MSFT	3.42
+3353	269	TSM	46.37
+3354	269	JPM	25.99
+3355	269	V	16.51
+3356	269	COST	6.06
+3357	269	NFLX	46.04
+3358	269	GE	17.81
+3359	269	WMT	70.62
+3360	269	NVDA	18.36
+3361	269	PFE	268.03
+3362	269	XOM	53.97
+3363	269	JNJ	45.44
+3364	269	AAPL	25.3
+3365	270	JNJ	27.48
+3366	270	JPM	35.32
+3367	270	MSFT	7.32
+3368	270	NFLX	16.15
+3369	270	NVDA	20.86
+3370	270	TSM	76.96
+3371	270	V	0.73
+3372	270	BA	2.5
+3373	270	DIS	37.15
+3374	270	XOM	83.73
+3375	270	COST	1.86
+3376	270	WMT	134.87
+3377	270	GE	8.84
+3378	270	PFE	68.11
+3379	270	AAPL	28.24
+3380	270	CVX	31.09
+3381	270	NKE	25.62
+3382	271	CVX	0
+3383	271	DIS	0
+3384	271	GE	0.5
+3385	271	MSFT	4.69
+3386	271	NFLX	0.02
+3387	271	PFE	0.26
+3388	271	V	0.35
+3389	271	XOM	0.78
+3390	271	BA	0
+3391	271	JPM	15.25
+3392	271	COST	0
+3393	271	WMT	324.51
+3394	271	JNJ	0.38
+3395	271	NVDA	0.21
+3396	271	TSM	255.73
+3397	271	NKE	0.1
+3398	271	SBUX	0.01
+3399	271	AAPL	0.21
+3400	272	CVX	36.13
+3401	272	GE	11.57
+3402	272	JNJ	4.95
+3403	272	MSFT	3.89
+3404	272	NFLX	12.81
+3405	272	NVDA	22.12
+3406	272	TSM	80.65
+3407	272	V	9.05
+3408	272	XOM	98.68
+3409	272	BA	5.16
+3410	272	JPM	30.79
+3411	272	COST	1.89
+3412	272	WMT	154.6
+3413	272	DIS	11.9
+3414	272	PFE	66.18
+3415	272	NKE	27.89
+3416	272	AAPL	12.55
+3417	272	SBUX	2.77
+3418	273	AAPL	22.2
+3419	273	COST	1.02
+3420	273	CVX	35.86
+3421	273	DIS	14.29
+3422	273	GE	3.73
+3423	273	JNJ	9.72
+3424	273	JPM	21.9
+3425	273	MSFT	7.71
+3426	273	NFLX	15.16
+3427	273	NKE	29.57
+3428	273	NVDA	5.06
+3429	273	PFE	46.33
+3430	273	SBUX	1.6
+3431	273	TSM	54.14
+3432	273	V	3.72
+3433	273	WMT	96.03
+3434	273	XOM	85.26
+3435	273	BA	2.04
+3436	274	NFLX	46.86
+3437	274	TSM	65.42
+3438	274	JPM	13.49
+3439	274	V	16.69
+3440	274	MSFT	5.92
+3441	274	COST	2.27
+3442	274	WMT	82.58
+3443	274	GE	3.95
+3444	274	BA	5.72
+3445	274	PFE	282.73
+3446	274	NVDA	29.04
+3447	274	XOM	93.12
+3448	274	JNJ	41.49
+3449	274	AAPL	11.3
+3450	274	NKE	5.51
+3451	274	CVX	42.95
+3452	275	TSM	155.12
+3453	275	JPM	15
+3454	275	COST	12.53
+3455	275	MSFT	8.11
+3456	275	V	1.15
+3457	275	NFLX	3.38
+3458	275	BA	0.06
+3459	275	GE	15.19
+3460	275	WMT	220.19
+3461	275	NVDA	34.37
+3462	275	PFE	4.58
+3463	275	XOM	81.18
+3464	276	JNJ	31.11
+3465	276	MSFT	4.81
+3466	276	NFLX	4.64
+3467	276	NVDA	5.63
+3468	276	TSM	110.4
+3469	276	V	10.52
+3470	276	BA	2.31
+3471	276	GE	4.92
+3472	276	JPM	42.76
+3473	276	XOM	79.23
+3474	276	COST	1.11
+3475	276	WMT	189.08
+3476	276	PFE	31.22
+3477	276	DIS	6.45
+3478	276	AAPL	6.86
+3479	276	CVX	5.16
+3480	276	NKE	26.72
+3481	277	AAPL	20.78
+3482	277	CVX	45.02
+3483	277	DIS	2.74
+3484	277	GE	5.13
+3485	277	JNJ	1.2
+3486	277	MSFT	8.89
+3487	277	NFLX	2.13
+3488	277	NKE	1.12
+3489	277	NVDA	5.15
+3490	277	PFE	51.35
+3491	277	SBUX	3.48
+3492	277	TSM	90.83
+3493	277	V	0.51
+3494	277	WMT	217.39
+3495	277	XOM	127.77
+3496	277	BA	0.4
+3497	277	JPM	30.83
+3498	277	COST	0.73
+3499	278	JPM	84.56
+3500	278	NFLX	0
+3501	278	NVDA	0
+3502	278	TSM	92.35
+3503	278	V	0
+3504	278	COST	0
+3505	278	MSFT	0
+3506	278	JNJ	0
+3507	278	WMT	266.25
+3508	278	BA	0
+3509	278	GE	0
+3510	278	PFE	0
+3511	278	XOM	226.44
+3512	278	AAPL	105.7
+3513	279	MSFT	3.42
+3514	279	TSM	19.57
+3515	279	JPM	25.99
+3516	279	V	16.51
+3517	279	COST	6.06
+3518	279	NFLX	46.04
+3519	279	GE	17.81
+3520	279	WMT	70.62
+3521	279	NVDA	18.36
+3522	279	PFE	268.03
+3523	279	XOM	53.97
+3524	279	JNJ	45.44
+3525	279	AAPL	25.3
+3526	280	JNJ	27.48
+3527	280	JPM	35.32
+3528	280	MSFT	7.32
+3529	280	NFLX	16.15
+3530	280	NVDA	20.86
+3531	280	TSM	34
+3532	280	V	0.73
+3533	280	BA	2.5
+3534	280	DIS	2.71
+3535	280	XOM	83.73
+3536	280	COST	1.86
+3537	280	WMT	80.28
+3538	280	GE	8.84
+3539	280	PFE	68.11
+3540	280	AAPL	49.12
+3541	280	CVX	31.09
+3542	280	NKE	25.62
+3543	281	CVX	10.76
+3544	281	DIS	0
+3545	281	GE	0.5
+3546	281	MSFT	23.98
+3547	281	NFLX	0.02
+3548	281	PFE	0.26
+3549	281	V	0.35
+3550	281	XOM	0.78
+3551	281	BA	0
+3552	281	JPM	264.33
+3553	281	COST	0
+3554	281	WMT	25.78
+3555	281	JNJ	0.38
+3556	281	NVDA	25.76
+3557	281	TSM	8.85
+3558	281	NKE	0.1
+3559	281	SBUX	0.01
+3560	281	AAPL	14.35
+3561	282	CVX	36.13
+3562	282	GE	11.57
+3563	282	JNJ	4.95
+3564	282	MSFT	3.89
+3565	282	NFLX	12.81
+3566	282	NVDA	22.12
+3567	282	TSM	38.43
+3568	282	V	9.05
+3569	282	XOM	98.68
+3570	282	BA	5.16
+3571	282	JPM	30.79
+3572	282	COST	1.89
+3573	282	WMT	83.59
+3574	282	DIS	11.9
+3575	282	PFE	66.18
+3576	282	NKE	27.89
+3577	282	AAPL	52.29
+3578	282	SBUX	2.77
+3579	283	AAPL	22.2
+3580	283	COST	1.02
+3581	283	CVX	35.86
+3582	283	DIS	14.29
+3583	283	GE	3.73
+3584	283	JNJ	9.72
+3585	283	JPM	21.9
+3586	283	MSFT	7.71
+3587	283	NFLX	15.16
+3588	283	NKE	29.57
+3589	283	NVDA	25.27
+3590	283	PFE	46.33
+3591	283	SBUX	1.6
+3592	283	TSM	21.02
+3593	283	V	3.72
+3594	283	WMT	96.03
+3595	283	XOM	85.26
+3596	283	BA	17.13
+3597	284	NFLX	46.86
+3598	284	TSM	31.67
+3599	284	JPM	13.49
+3600	284	V	16.69
+3601	284	MSFT	5.92
+3602	284	COST	2.27
+3603	284	WMT	82.58
+3604	284	GE	3.95
+3605	284	BA	5.72
+3606	284	PFE	282.73
+3607	284	NVDA	29.04
+3608	284	XOM	93.12
+3609	284	JNJ	41.49
+3610	284	AAPL	42.6
+3611	284	NKE	5.51
+3612	284	CVX	42.95
+3613	285	TSM	54.32
+3614	285	JPM	15
+3615	285	COST	12.53
+3616	285	MSFT	8.11
+3617	285	V	1.15
+3618	285	NFLX	3.38
+3619	285	BA	0.06
+3620	285	GE	15.19
+3621	285	WMT	220.19
+3622	285	NVDA	34.37
+3623	285	PFE	4.58
+3624	285	XOM	81.18
+3625	285	AAPL	114.21
+3626	286	JNJ	31.11
+3627	286	MSFT	4.81
+3628	286	NFLX	4.64
+3629	286	NVDA	5.63
+3630	286	TSM	46.19
+3631	286	V	10.52
+3632	286	BA	2.31
+3633	286	GE	4.92
+3634	286	JPM	42.76
+3635	286	XOM	79.23
+3636	286	COST	1.11
+3637	286	WMT	93.83
+3638	286	PFE	31.22
+3639	286	DIS	6.45
+3640	286	AAPL	71.41
+3641	286	CVX	5.16
+3642	286	NKE	26.72
+3643	287	AAPL	68.52
+3644	287	CVX	45.02
+3645	287	DIS	2.74
+3646	287	GE	5.13
+3647	287	JNJ	1.2
+3648	287	MSFT	8.89
+3649	287	NFLX	2.13
+3650	287	NKE	1.12
+3651	287	NVDA	37.36
+3652	287	PFE	51.35
+3653	287	SBUX	3.48
+3654	287	TSM	41.98
+3655	287	V	0.51
+3656	287	WMT	88.95
+3657	287	XOM	127.77
+3658	287	BA	0.4
+3659	287	JPM	51.95
+3660	287	COST	0.73
+3661	288	NFLX	51.57
+3662	288	TSM	20.27
+3663	289	JPM	82.36
+3664	289	NFLX	0
+3665	289	NVDA	144.65
+3666	289	TSM	86.59
+3667	289	V	0
+3668	289	COST	0
+3669	289	MSFT	49.93
+3670	289	JNJ	0
+3671	289	WMT	0
+3672	289	BA	0
+3673	289	GE	0
+3674	289	PFE	1095.04
+3675	289	XOM	0
+3676	289	AAPL	0
+3677	290	JNJ	27.48
+3678	290	JPM	21.14
+3679	290	MSFT	7.32
+3680	290	NFLX	16.15
+3681	290	NVDA	100.3
+3682	290	TSM	18.88
+3683	290	V	0.73
+3684	290	BA	2.5
+3685	290	DIS	2.71
+3686	290	XOM	20.45
+3687	290	COST	1.86
+3688	290	WMT	34.72
+3689	290	GE	8.84
+3690	290	PFE	647.32
+3691	290	AAPL	7.88
+3692	290	CVX	4.9
+3693	290	NKE	25.62
+3694	291	CVX	0
+3695	291	DIS	0
+3696	291	GE	0.5
+3697	291	MSFT	0.28
+3698	291	NFLX	0.02
+3699	291	PFE	2415.74
+3700	291	V	0.35
+3701	291	XOM	0.78
+3702	291	BA	0
+3703	291	JPM	1
+3704	291	COST	0
+3705	291	WMT	0.13
+3706	291	JNJ	0.38
+3707	291	NVDA	250.46
+3708	291	TSM	0.23
+3709	291	NKE	0.1
+3710	291	SBUX	0.01
+3711	291	AAPL	0
+3712	292	CVX	3.76
+3713	292	GE	11.57
+3714	292	JNJ	4.95
+3715	292	MSFT	11.52
+3716	292	NFLX	12.81
+3717	292	NVDA	117.17
+3718	292	TSM	16.28
+3719	292	V	9.05
+3720	292	XOM	16.2
+3721	292	BA	5.16
+3722	292	JPM	30.79
+3723	292	COST	1.89
+3724	292	WMT	30.18
+3725	292	DIS	11.9
+3726	292	PFE	763.64
+3727	292	NKE	27.89
+3728	292	AAPL	6.96
+3729	292	SBUX	2.77
+3730	293	AAPL	10.45
+3731	293	COST	1.02
+3732	293	CVX	8.03
+3733	293	DIS	14.29
+3734	293	GE	3.73
+3735	293	JNJ	9.72
+3736	293	JPM	14.32
+3737	293	MSFT	7.71
+3738	293	NFLX	15.16
+3739	293	NKE	29.57
+3740	293	NVDA	35.82
+3741	293	PFE	588.6
+3742	293	SBUX	36.37
+3743	293	TSM	21.02
+3744	293	V	3.72
+3745	293	WMT	29.77
+3746	293	XOM	23.56
+3747	293	BA	17.13
+3748	294	NFLX	46.86
+3749	294	TSM	31.67
+3750	294	JPM	13.49
+3751	294	V	16.69
+3752	294	MSFT	5.92
+3753	294	COST	2.27
+3754	294	WMT	82.58
+3755	294	GE	3.95
+3756	294	BA	5.72
+3757	294	PFE	607.67
+3758	294	NVDA	82.52
+3759	294	XOM	21.23
+3760	294	JNJ	41.49
+3761	294	AAPL	8.98
+3762	294	NKE	5.51
+3763	294	CVX	42.95
+3764	295	TSM	54.32
+3765	295	JPM	15
+3766	295	COST	12.53
+3767	295	MSFT	8.11
+3768	295	V	1.15
+3769	295	NFLX	3.38
+3770	295	BA	0.06
+3771	295	GE	15.19
+3772	295	WMT	32.6
+3773	295	NVDA	182.08
+3774	295	PFE	771.67
+3775	295	XOM	81.18
+3776	295	AAPL	3.56
+3777	296	JNJ	31.11
+3778	296	MSFT	4.81
+3779	296	NFLX	4.64
+3780	296	NVDA	130.56
+3781	296	TSM	14.52
+3782	296	V	10.52
+3783	296	BA	2.31
+3784	296	GE	4.92
+3785	296	JPM	21.6
+3786	296	XOM	11.7
+3787	296	COST	1.11
+3788	296	WMT	26.59
+3789	296	PFE	1012.61
+3790	296	DIS	6.45
+3791	296	AAPL	5.08
+3792	296	CVX	5.16
+3793	296	NKE	26.72
+3794	297	AAPL	4.7
+3795	297	CVX	1.29
+3796	297	DIS	20.6
+3797	297	GE	5.13
+3798	297	JNJ	25
+3799	297	MSFT	8.89
+3800	297	NFLX	2.13
+3801	297	NKE	1.12
+3802	297	NVDA	169.04
+3803	297	PFE	1023.34
+3804	297	SBUX	3.48
+3805	297	TSM	16.37
+3806	297	V	6.51
+3807	297	WMT	17.59
+3808	297	XOM	8.21
+3809	297	BA	0.4
+3810	297	JPM	23
+3811	297	COST	0.73
+3812	298	JPM	0
+3813	298	NFLX	0
+3814	298	NVDA	0
+3815	298	TSM	0
+3816	298	V	74.93
+3817	298	COST	0
+3818	298	MSFT	48.86
+3819	298	JNJ	0
+3820	298	WMT	273.39
+3821	298	BA	0
+3822	298	GE	0
+3823	298	PFE	1015.51
+3824	298	XOM	235.45
+3825	298	AAPL	0
+3826	299	JNJ	27.48
+3827	299	JPM	4.44
+3828	299	MSFT	18.65
+3829	299	NFLX	16.15
+3830	299	NVDA	46.26
+3831	299	TSM	18.88
+3832	299	V	28.67
+3833	299	BA	33.66
+3834	299	DIS	2.71
+3835	299	XOM	81.97
+3836	299	COST	1.86
+3837	299	WMT	100.91
+3838	299	GE	8.84
+3839	299	PFE	240.12
+3840	299	AAPL	7.88
+3841	299	CVX	4.9
+3842	299	NKE	25.62
+3843	300	CVX	0
+3844	300	DIS	0
+3845	300	GE	0.5
+3846	300	MSFT	19.62
+3847	300	NFLX	0.02
+3848	300	PFE	302.47
+3849	300	V	165.56
+3850	300	XOM	23.38
+3851	300	BA	38.76
+3852	300	JPM	1
+3853	300	COST	0
+3854	300	WMT	16.09
+3855	300	JNJ	0.38
+3856	300	NVDA	114.41
+3857	300	TSM	0.23
+3858	300	NKE	0.1
+3859	300	SBUX	0.01
+3860	300	AAPL	0
+3861	301	CVX	3.76
+3862	301	GE	11.57
+3863	301	JNJ	4.95
+3864	301	MSFT	11.52
+3865	301	NFLX	12.81
+3866	301	NVDA	55.78
+3867	301	TSM	16.28
+3868	301	V	36.33
+3869	301	XOM	89.37
+3870	301	BA	39.55
+3871	301	JPM	4.94
+3872	301	COST	1.89
+3873	301	WMT	88.07
+3874	301	DIS	11.9
+3875	301	PFE	257.23
+3876	301	NKE	27.89
+3877	301	AAPL	6.96
+3878	301	SBUX	2.77
+3879	302	AAPL	10.45
+3880	302	COST	1.02
+3881	302	CVX	8.03
+3882	302	DIS	14.29
+3883	302	GE	3.73
+3884	302	JNJ	9.72
+3885	302	JPM	6.98
+3886	302	MSFT	12.47
+3887	302	NFLX	15.16
+3888	302	NKE	29.57
+3889	302	NVDA	35.82
+3890	302	PFE	280.97
+3891	302	SBUX	8.52
+3892	302	TSM	12.86
+3893	302	V	16.16
+3894	302	WMT	67.5
+3895	302	XOM	51.29
+3896	302	BA	17.13
+3897	303	NFLX	46.86
+3898	303	TSM	31.67
+3899	303	JPM	13.49
+3900	303	V	16.69
+3901	303	MSFT	5.92
+3902	303	COST	2.27
+3903	303	WMT	82.58
+3904	303	GE	3.95
+3905	303	BA	5.72
+3906	303	PFE	244.26
+3907	303	NVDA	44.75
+3908	303	XOM	21.23
+3909	303	JNJ	41.49
+3910	303	AAPL	8.98
+3911	303	NKE	5.51
+3912	303	CVX	42.95
+3913	304	TSM	6.74
+3914	304	JPM	15
+3915	304	COST	12.53
+3916	304	MSFT	8.11
+3917	304	V	44.71
+3918	304	NFLX	3.38
+3919	304	BA	0.06
+3920	304	GE	15.19
+3921	304	WMT	32.6
+3922	304	NVDA	33.43
+3923	304	PFE	771.67
+3924	304	XOM	81.18
+3925	304	AAPL	3.56
+3926	305	JNJ	31.11
+3927	305	MSFT	19.55
+3928	305	NFLX	4.64
+3929	305	NVDA	52.82
+3930	305	TSM	14.52
+3931	305	V	42.01
+3932	305	BA	42.5
+3933	305	GE	4.92
+3934	305	JPM	3.2
+3935	305	XOM	103.19
+3936	305	COST	1.11
+3937	305	WMT	107.53
+3938	305	PFE	279.01
+3939	305	DIS	6.45
+3940	305	AAPL	5.08
+3941	305	CVX	5.16
+3942	305	NKE	26.72
+3943	306	AAPL	4.7
+3944	306	CVX	1.29
+3945	306	DIS	2.36
+3946	306	GE	5.13
+3947	306	JNJ	25
+3948	306	MSFT	18.36
+3949	306	NFLX	16.48
+3950	306	NKE	1.12
+3951	306	NVDA	67.11
+3952	306	PFE	301.92
+3953	306	SBUX	3.48
+3954	306	TSM	16.37
+3955	306	V	50.2
+3956	306	WMT	88.72
+3957	306	XOM	106.13
+3958	306	BA	48.05
+3959	306	JPM	4.47
+3960	306	COST	0.73
+3961	307	JPM	0
+3962	307	NFLX	0
+3963	307	NVDA	0
+3964	307	TSM	85.63
+3965	307	V	74.43
+3966	307	COST	0
+3967	307	MSFT	0
+3968	307	JNJ	127.3
+3969	307	WMT	283.55
+3970	307	BA	0
+3971	307	GE	0
+3972	307	PFE	0
+3973	307	XOM	224.22
+3974	307	AAPL	0
+3975	308	MSFT	3.42
+3976	308	TSM	19.57
+3977	308	JPM	25.99
+3978	308	V	16.51
+3979	308	COST	6.06
+3980	308	NFLX	46.04
+3981	308	GE	17.81
+3982	308	WMT	126.3
+3983	308	NVDA	18.36
+3984	308	PFE	268.03
+3985	308	XOM	53.97
+3986	308	JNJ	45.44
+3987	308	AAPL	25.3
+3988	309	JNJ	27.48
+3989	309	JPM	4.44
+3990	309	MSFT	3.23
+3991	309	NFLX	16.15
+3992	309	NVDA	9.08
+3993	309	TSM	18.88
+3994	309	V	28.67
+3995	309	BA	4.68
+3996	309	DIS	2.71
+3997	309	XOM	43.91
+3998	309	COST	1.86
+3999	309	WMT	286.48
+4000	309	GE	8.84
+4001	309	PFE	29.97
+4002	309	AAPL	7.88
+4003	309	CVX	4.9
+4004	309	NKE	25.62
+4005	310	CVX	0
+4006	310	DIS	0
+4007	310	GE	0.5
+4008	310	MSFT	0
+4009	310	NFLX	0.02
+4010	310	PFE	0.01
+4011	310	V	19.36
+4012	310	XOM	0.03
+4013	310	BA	0
+4014	310	JPM	1
+4015	310	COST	0
+4016	310	WMT	926.01
+4017	310	JNJ	0.38
+4018	310	NVDA	0
+4019	310	TSM	0.23
+4020	310	NKE	0.1
+4021	310	SBUX	0.01
+4022	310	AAPL	0
+4023	311	CVX	3.76
+4024	311	GE	11.57
+4025	311	JNJ	31.16
+4026	311	MSFT	3.02
+4027	311	NFLX	12.81
+4028	311	NVDA	6.89
+4029	311	TSM	16.28
+4030	311	V	36.33
+4031	311	XOM	39.95
+4032	311	BA	3.39
+4033	311	JPM	4.94
+4034	311	COST	1.89
+4035	311	WMT	320.41
+4036	311	DIS	11.9
+4037	311	PFE	36.62
+4038	311	NKE	27.89
+4039	311	AAPL	6.96
+4040	311	SBUX	2.77
+4041	312	AAPL	10.45
+4042	312	COST	1.02
+4043	312	CVX	8.03
+4044	312	DIS	14.29
+4045	312	GE	3.73
+4046	312	JNJ	9.72
+4047	312	JPM	6.98
+4048	312	MSFT	5.53
+4049	312	NFLX	35.54
+4050	312	NKE	29.57
+4051	312	NVDA	14.29
+4052	312	PFE	60.42
+4053	312	SBUX	8.52
+4054	312	TSM	12.86
+4055	312	V	26.28
+4056	312	WMT	132.12
+4057	312	XOM	51.29
+4058	312	BA	8.44
+4059	313	NFLX	46.86
+4060	313	TSM	31.67
+4061	313	JPM	13.49
+4062	313	V	16.69
+4063	313	MSFT	5.92
+4064	313	COST	2.27
+4065	313	WMT	239.95
+4066	313	GE	3.95
+4067	313	BA	5.72
+4068	313	PFE	244.26
+4069	313	NVDA	44.75
+4070	313	XOM	21.23
+4071	313	JNJ	41.49
+4072	313	AAPL	8.98
+4073	313	NKE	5.51
+4074	313	CVX	42.95
+4075	314	TSM	6.74
+4076	314	JPM	15
+4077	314	COST	0.09
+4078	314	MSFT	8.11
+4079	314	V	44.71
+4080	314	NFLX	3.38
+4081	314	BA	0.06
+4082	314	GE	15.19
+4083	314	WMT	602.52
+4084	314	NVDA	33.43
+4085	314	PFE	2
+4086	314	XOM	81.18
+4087	314	AAPL	3.56
+4088	315	JNJ	31.11
+4089	315	MSFT	1.96
+4090	315	NFLX	4.64
+4091	315	NVDA	4.49
+4092	315	TSM	14.52
+4093	315	V	42.01
+4094	315	BA	2.12
+4095	315	GE	4.92
+4096	315	JPM	3.2
+4097	315	XOM	34.3
+4098	315	COST	1.11
+4099	315	WMT	426.67
+4100	315	PFE	16.06
+4101	315	DIS	6.45
+4102	315	AAPL	5.08
+4103	315	CVX	5.16
+4104	315	NKE	26.72
+4105	316	AAPL	4.7
+4106	316	CVX	1.29
+4107	316	DIS	2.36
+4108	316	GE	5.13
+4109	316	JNJ	25
+4110	316	MSFT	1.64
+4111	316	NFLX	16.48
+4112	316	NKE	1.12
+4113	316	NVDA	2.97
+4114	316	PFE	18.47
+4115	316	SBUX	3.48
+4116	316	TSM	8.17
+4117	316	V	39.88
+4118	316	WMT	503.68
+4119	316	XOM	23.4
+4120	316	BA	1.3
+4121	316	JPM	4.47
+4122	316	COST	5.32
+4123	317	NFLX	51.57
+4124	317	TSM	20.27
+4125	317	WMT	178.29
+4126	318	JPM	0
+4127	318	NFLX	0
+4128	318	NVDA	0
+4129	318	TSM	79.43
+4130	318	V	0
+4131	318	COST	0
+4132	318	MSFT	47.96
+4133	318	JNJ	0
+4134	318	WMT	276.33
+4135	318	BA	118.09
+4136	318	GE	0
+4137	318	PFE	0
+4138	318	XOM	245.64
+4139	318	AAPL	0
+4140	319	JNJ	27.48
+4141	319	JPM	4.44
+4142	319	MSFT	14.26
+4143	319	NFLX	16.15
+4144	319	NVDA	9.08
+4145	319	TSM	18.88
+4146	319	V	8.48
+4147	319	BA	23
+4148	319	DIS	2.71
+4149	319	XOM	160.59
+4150	319	COST	1.86
+4151	319	WMT	138.57
+4152	319	GE	8.84
+4153	319	PFE	29.97
+4154	319	AAPL	7.88
+4155	319	CVX	4.9
+4156	319	NKE	25.62
+4157	320	CVX	0
+4158	320	DIS	0
+4159	320	GE	0.5
+4160	320	MSFT	0
+4161	320	NFLX	0.02
+4162	320	PFE	0.01
+4163	320	V	0.01
+4164	320	XOM	822.33
+4165	320	BA	0
+4166	320	JPM	1
+4167	320	COST	0
+4168	320	WMT	65.23
+4169	320	JNJ	13.47
+4170	320	NVDA	0
+4171	320	TSM	0.23
+4172	320	NKE	0.1
+4173	320	SBUX	0.01
+4174	320	AAPL	0
+4175	321	CVX	3.76
+4176	321	GE	11.57
+4177	321	JNJ	31.16
+4178	321	MSFT	11.33
+4179	321	NFLX	12.81
+4180	321	NVDA	6.89
+4181	321	TSM	16.28
+4182	321	V	6.01
+4183	321	XOM	201.87
+4184	321	BA	3.39
+4185	321	JPM	4.94
+4186	321	COST	1.89
+4187	321	WMT	132.01
+4188	321	DIS	11.9
+4189	321	PFE	36.62
+4190	321	NKE	27.89
+4191	321	AAPL	6.96
+4192	321	SBUX	2.77
+4193	322	AAPL	10.45
+4194	322	COST	1.02
+4195	322	CVX	8.03
+4196	322	DIS	34.63
+4197	322	GE	3.73
+4198	322	JNJ	19.98
+4199	322	JPM	6.98
+4200	322	MSFT	12.96
+4201	322	NFLX	15.06
+4202	322	NKE	29.57
+4203	322	NVDA	14.29
+4204	322	PFE	215.21
+4205	322	SBUX	8.52
+4206	322	TSM	12.86
+4207	322	V	8
+4208	322	WMT	96.61
+4209	322	XOM	51.29
+4210	322	BA	16.94
+4211	323	NFLX	46.86
+4212	323	TSM	8.38
+4213	323	JPM	13.49
+4214	323	V	16.69
+4215	323	MSFT	5.92
+4216	323	COST	2.27
+4217	323	WMT	119.91
+4218	323	GE	3.95
+4219	323	BA	5.72
+4220	323	PFE	244.26
+4221	323	NVDA	5.64
+4222	323	XOM	135.31
+4223	323	JNJ	41.49
+4224	323	AAPL	8.98
+4225	323	NKE	5.51
+4226	323	CVX	42.95
+4227	324	TSM	6.74
+4228	324	JPM	15
+4229	324	COST	0.09
+4230	324	MSFT	8.11
+4231	324	V	1.16
+4232	324	NFLX	3.38
+4233	324	BA	0.06
+4234	324	GE	15.19
+4235	324	WMT	226.75
+4236	324	NVDA	33.43
+4237	324	PFE	2
+4238	324	XOM	394.05
+4239	324	AAPL	3.56
+4240	325	JNJ	31.11
+4241	325	MSFT	1.96
+4242	325	NFLX	4.64
+4243	325	NVDA	4.49
+4244	325	TSM	14.52
+4245	325	V	3.83
+4246	325	BA	2.12
+4247	325	GE	4.92
+4248	325	JPM	3.2
+4249	325	XOM	262.84
+4250	325	COST	1.11
+4251	325	WMT	199.16
+4252	325	PFE	16.06
+4253	325	DIS	6.45
+4254	325	AAPL	5.08
+4255	325	CVX	5.16
+4256	325	NKE	26.72
+4257	326	AAPL	17.54
+4258	326	CVX	21.34
+4259	326	DIS	35.45
+4260	326	GE	5.13
+4261	326	JNJ	45.63
+4262	326	MSFT	8.1
+4263	326	NFLX	16.48
+4264	326	NKE	1.12
+4265	326	NVDA	2.97
+4266	326	PFE	168.71
+4267	326	SBUX	31.61
+4268	326	TSM	8.17
+4269	326	V	3.95
+4270	326	WMT	156.93
+4271	326	XOM	285.92
+4272	326	BA	1.3
+4273	326	JPM	4.47
+4274	326	COST	1.18
+4275	327	JPM	85.57
+4276	327	NFLX	0
+4277	327	NVDA	0
+4278	327	TSM	0
+4279	327	V	0
+4280	327	COST	0
+4281	327	MSFT	51.34
+4282	327	JNJ	0
+4283	327	WMT	0
+4284	327	BA	110.43
+4285	327	GE	0
+4286	327	PFE	0
+4287	327	XOM	261.79
+4288	327	AAPL	91.07
+4289	328	MSFT	16.87
+4290	328	TSM	19.57
+4291	328	JPM	25.99
+4292	328	V	16.51
+4293	328	COST	6.06
+4294	328	NFLX	46.04
+4295	328	GE	17.81
+4296	328	WMT	40.22
+4297	328	NVDA	18.36
+4298	328	PFE	268.03
+4299	328	XOM	109.16
+4300	328	JNJ	12.74
+4301	328	AAPL	25.3
+4302	329	JNJ	27.48
+4303	329	JPM	23.02
+4304	329	MSFT	27.52
+4305	329	NFLX	16.15
+4306	329	NVDA	45.46
+4307	329	TSM	18.88
+4308	329	V	8.48
+4309	329	BA	23
+4310	329	DIS	2.71
+4311	329	XOM	160.59
+4312	329	COST	1.86
+4313	329	WMT	30.09
+4314	329	GE	8.84
+4315	329	PFE	29.97
+4316	329	AAPL	26.31
+4317	329	CVX	4.9
+4318	329	NKE	25.62
+4319	330	CVX	0
+4320	330	DIS	0
+4321	330	GE	0.5
+4322	330	MSFT	4.51
+4323	330	NFLX	0.02
+4324	330	PFE	0.01
+4325	330	V	0.01
+4326	330	XOM	95.92
+4327	330	BA	0
+4328	330	JPM	1
+4329	330	COST	0
+4330	330	WMT	0.03
+4331	330	JNJ	0
+4332	330	NVDA	439.31
+4333	330	TSM	0.23
+4334	330	NKE	0.1
+4335	330	SBUX	0.01
+4336	330	AAPL	10.67
+4337	331	CVX	3.76
+4338	331	GE	11.57
+4339	331	JNJ	4.42
+4340	331	MSFT	26.85
+4341	331	NFLX	12.81
+4342	331	NVDA	87.27
+4343	331	TSM	16.28
+4344	331	V	6.01
+4345	331	XOM	168.29
+4346	331	BA	3.39
+4347	331	JPM	17.42
+4348	331	COST	1.89
+4349	331	WMT	19.87
+4350	331	DIS	11.9
+4351	331	PFE	36.62
+4352	331	NKE	27.89
+4353	331	AAPL	41.66
+4354	331	SBUX	2.77
+4355	332	AAPL	27.78
+4356	332	COST	1.02
+4357	332	CVX	8.03
+4358	332	DIS	8.76
+4359	332	GE	3.73
+4360	332	JNJ	7.22
+4361	332	JPM	21.32
+4362	332	MSFT	17.21
+4363	332	NFLX	15.06
+4364	332	NKE	29.57
+4365	332	NVDA	28.16
+4366	332	PFE	87.21
+4367	332	SBUX	8.52
+4368	332	TSM	12.86
+4369	332	V	8
+4370	332	WMT	24.3
+4371	332	XOM	144.38
+4372	332	BA	16.94
+4373	333	NFLX	46.86
+4374	333	TSM	8.38
+4375	333	JPM	13.49
+4376	333	V	16.69
+4377	333	MSFT	24.52
+4378	333	COST	2.27
+4379	333	WMT	26.5
+4380	333	GE	3.95
+4381	333	BA	5.72
+4382	333	PFE	244.26
+4383	333	NVDA	49.97
+4384	333	XOM	135.31
+4385	333	JNJ	41.49
+4386	333	AAPL	8.98
+4387	333	NKE	5.51
+4388	333	CVX	42.95
+4389	334	TSM	6.74
+4390	334	JPM	15
+4391	334	COST	0.09
+4392	334	MSFT	40.24
+4393	334	V	1.16
+4394	334	NFLX	3.38
+4395	334	BA	0.06
+4396	334	GE	15.19
+4397	334	WMT	14.2
+4398	334	NVDA	33.43
+4399	334	PFE	2
+4400	334	XOM	394.05
+4401	334	AAPL	3.56
+4402	335	JNJ	31.11
+4403	335	MSFT	29.44
+4404	335	NFLX	4.64
+4405	335	NVDA	70.68
+4406	335	TSM	14.52
+4407	335	V	3.83
+4408	335	BA	2.12
+4409	335	GE	4.92
+4410	335	JPM	3.2
+4411	335	XOM	262.84
+4412	335	COST	1.11
+4413	335	WMT	17.41
+4414	335	PFE	16.06
+4415	335	DIS	6.45
+4416	335	AAPL	37.87
+4417	335	CVX	5.16
+4418	335	NKE	26.72
+4419	336	AAPL	51.19
+4420	336	CVX	6.52
+4421	336	DIS	1.59
+4422	336	GE	5.13
+4423	336	JNJ	2.22
+4424	336	MSFT	29.75
+4425	336	NFLX	0.4
+4426	336	NKE	1.12
+4427	336	NVDA	135.6
+4428	336	PFE	25.56
+4429	336	SBUX	31.61
+4430	336	TSM	8.17
+4431	336	V	3.95
+4432	336	WMT	10.49
+4433	336	XOM	186.05
+4434	336	BA	1.3
+4435	336	JPM	11.63
+4436	336	COST	1.18
+4437	337	NFLX	51.57
+4438	337	TSM	20.27
+4439	337	WMT	34.16
+4440	337	XOM	126.48
+4441	338	JPM	0
+4442	338	NFLX	0
+4443	338	NVDA	0
+4444	338	TSM	105.53
+4445	338	V	0
+4446	338	COST	0
+4447	338	MSFT	48.39
+4448	338	JNJ	146.83
+4449	338	WMT	0
+4450	338	BA	0
+4451	338	GE	0
+4452	338	PFE	0
+4453	338	XOM	189.37
+4454	338	AAPL	88.62
+4455	339	MSFT	16.87
+4456	339	TSM	57.9
+4457	339	JPM	6.49
+4458	339	V	16.51
+4459	339	COST	6.06
+4460	339	NFLX	46.04
+4461	339	GE	17.81
+4462	339	WMT	40.22
+4463	339	NVDA	18.36
+4464	339	PFE	268.03
+4465	339	XOM	17.64
+4466	339	JNJ	56.57
+4467	339	AAPL	25.3
+4468	340	JNJ	73.44
+4469	340	JPM	6.99
+4470	340	MSFT	9.51
+4471	340	NFLX	16.15
+4472	340	NVDA	26.01
+4473	340	TSM	97.84
+4474	340	V	8.48
+4475	340	BA	1.55
+4476	340	DIS	2.71
+4477	340	XOM	17.74
+4478	340	COST	1.86
+4479	340	WMT	30.09
+4480	340	GE	8.84
+4481	340	PFE	29.97
+4482	340	AAPL	26.31
+4483	340	CVX	4.9
+4484	340	NKE	25.62
+4485	341	CVX	0
+4486	341	DIS	0
+4487	341	GE	0.5
+4488	341	MSFT	1.31
+4489	341	NFLX	0.02
+4490	341	PFE	0.01
+4491	341	V	0.01
+4492	341	XOM	18.45
+4493	341	BA	0
+4494	341	JPM	1
+4495	341	COST	0
+4496	341	WMT	0.03
+4497	341	JNJ	0
+4498	341	NVDA	390.36
+4499	341	TSM	18.85
+4500	341	NKE	0.1
+4501	341	SBUX	0.01
+4502	341	AAPL	56.65
+4503	342	CVX	3.76
+4504	342	GE	11.57
+4505	342	JNJ	49.58
+4506	342	MSFT	11.8
+4507	342	NFLX	12.81
+4508	342	NVDA	58.11
+4509	342	TSM	76.6
+4510	342	V	6.01
+4511	342	XOM	31.62
+4512	342	BA	3.39
+4513	342	JPM	17.42
+4514	342	COST	1.89
+4515	342	WMT	19.87
+4516	342	DIS	11.9
+4517	342	PFE	36.62
+4518	342	NKE	27.89
+4519	342	AAPL	41.66
+4520	342	SBUX	2.77
+4521	343	AAPL	27.78
+4522	343	COST	1.02
+4523	343	CVX	8.03
+4524	343	DIS	8.76
+4525	343	GE	3.73
+4526	343	JNJ	58.69
+4527	343	JPM	8.79
+4528	343	MSFT	8.56
+4529	343	NFLX	15.06
+4530	343	NKE	29.57
+4531	343	NVDA	28.16
+4532	343	PFE	87.21
+4533	343	SBUX	8.52
+4534	343	TSM	48.43
+4535	343	V	8
+4536	343	WMT	24.3
+4537	343	XOM	32.68
+4538	343	BA	3.6
+4539	344	NFLX	46.86
+4540	344	TSM	74.42
+4541	344	JPM	13.49
+4542	344	V	16.69
+4543	344	MSFT	10.28
+4544	344	COST	2.27
+4545	344	WMT	26.5
+4546	344	GE	3.95
+4547	344	BA	5.72
+4548	344	PFE	244.26
+4549	344	NVDA	49.97
+4550	344	XOM	25.41
+4551	344	JNJ	41.49
+4552	344	AAPL	8.98
+4553	344	NKE	5.51
+4554	344	CVX	42.95
+4555	345	TSM	215.63
+4556	345	JPM	15
+4557	345	COST	0.09
+4558	345	MSFT	7.39
+4559	345	V	1.16
+4560	345	NFLX	3.38
+4561	345	BA	0.06
+4562	345	GE	15.19
+4563	345	WMT	14.2
+4564	345	NVDA	33.43
+4565	345	PFE	2
+4566	345	XOM	6.59
+4567	345	AAPL	3.56
+4568	346	JNJ	31.11
+4569	346	MSFT	10.68
+4570	346	NFLX	4.64
+4571	346	NVDA	40.36
+4572	346	TSM	121.07
+4573	346	V	3.83
+4574	346	BA	2.12
+4575	346	GE	4.92
+4576	346	JPM	3.2
+4577	346	XOM	27.81
+4578	346	COST	1.11
+4579	346	WMT	17.41
+4580	346	PFE	16.06
+4581	346	DIS	6.45
+4582	346	AAPL	37.87
+4583	346	CVX	5.16
+4584	346	NKE	26.72
+4585	347	AAPL	57.84
+4586	347	CVX	6.52
+4587	347	DIS	1.59
+4588	347	GE	10.55
+4589	347	JNJ	32.81
+4590	347	MSFT	12.65
+4591	347	NFLX	0.4
+4592	347	NKE	1.12
+4593	347	NVDA	85.99
+4594	347	PFE	25.56
+4595	347	SBUX	2.08
+4596	347	TSM	85.35
+4597	347	V	3.95
+4598	347	WMT	10.49
+4599	347	XOM	36.57
+4600	347	BA	1.3
+4601	347	JPM	11.63
+4602	347	COST	1.18
+4603	348	NFLX	51.57
+4604	348	TSM	72.7
+4605	348	WMT	34.16
+4606	348	XOM	126.48
+4607	349	JPM	0
+4608	349	NFLX	210.01
+4609	349	NVDA	0
+4610	349	TSM	94.4
+4611	349	V	0
+4612	349	COST	0
+4613	349	MSFT	0
+4614	349	JNJ	158.4
+4615	349	WMT	0
+4616	349	BA	0
+4617	349	GE	0
+4618	349	PFE	1030.81
+4619	349	XOM	185.02
+4620	349	AAPL	0
+4621	350	MSFT	16.87
+4622	350	TSM	31.41
+4623	350	JPM	6.49
+4624	350	V	16.51
+4625	350	COST	6.06
+4626	350	NFLX	46.04
+4627	350	GE	17.81
+4628	350	WMT	40.22
+4629	350	NVDA	18.36
+4630	350	PFE	268.03
+4631	350	XOM	17.64
+4632	350	JNJ	56.57
+4633	350	AAPL	25.3
+4634	351	JNJ	123.2
+4635	351	JPM	6.99
+4636	351	MSFT	9.51
+4637	351	NFLX	16.15
+4638	351	NVDA	26.01
+4639	351	TSM	58.36
+4640	351	V	8.48
+4641	351	BA	1.55
+4642	351	DIS	2.71
+4643	351	XOM	17.74
+4644	351	COST	1.86
+4645	351	WMT	30.09
+4646	351	GE	8.84
+4647	351	PFE	424.56
+4648	351	AAPL	7.78
+4649	351	CVX	4.9
+4650	351	NKE	25.62
+4651	352	CVX	0
+4652	352	DIS	0
+4653	352	GE	0.5
+4654	352	MSFT	1.31
+4655	352	NFLX	0.02
+4656	352	PFE	2179.37
+4657	352	V	0.01
+4658	352	XOM	327.9
+4659	352	BA	0
+4660	352	JPM	13.41
+4661	352	COST	0
+4662	352	WMT	0.03
+4663	352	JNJ	0
+4664	352	NVDA	0.01
+4665	352	TSM	0.71
+4666	352	NKE	0.1
+4667	352	SBUX	17.62
+4668	352	AAPL	0
+4669	353	CVX	3.76
+4670	353	GE	11.57
+4671	353	JNJ	86.26
+4672	353	MSFT	2.97
+4673	353	NFLX	12.81
+4674	353	NVDA	12.54
+4675	353	TSM	30.33
+4676	353	V	6.01
+4677	353	XOM	78.43
+4678	353	BA	3.39
+4679	353	JPM	17.42
+4680	353	COST	1.89
+4681	353	WMT	19.87
+4682	353	DIS	11.9
+4683	353	PFE	671.9
+4684	353	NKE	27.89
+4685	353	AAPL	7.62
+4686	353	SBUX	60.04
+4687	354	AAPL	9.27
+4688	354	COST	1.02
+4689	354	CVX	8.03
+4690	354	DIS	26.85
+4691	354	GE	3.73
+4692	354	JNJ	76.36
+4693	354	JPM	8.79
+4694	354	MSFT	8.56
+4695	354	NFLX	37.9
+4696	354	NKE	29.57
+4697	354	NVDA	16.6
+4698	354	PFE	385.91
+4699	354	SBUX	30.18
+4700	354	TSM	10.46
+4701	354	V	8
+4702	354	WMT	24.3
+4703	354	XOM	32.68
+4704	354	BA	3.6
+4705	355	NFLX	46.86
+4706	355	TSM	33.4
+4707	355	JPM	13.49
+4708	355	V	16.69
+4709	355	MSFT	10.28
+4710	355	COST	2.27
+4711	355	WMT	26.5
+4712	355	GE	3.95
+4713	355	BA	5.72
+4714	355	PFE	244.26
+4715	355	NVDA	12.68
+4716	355	XOM	25.41
+4717	355	JNJ	98.3
+4718	355	AAPL	8.98
+4719	355	NKE	5.51
+4720	355	CVX	42.95
+4721	356	TSM	79.71
+4722	356	JPM	15
+4723	356	COST	0.09
+4724	356	MSFT	7.39
+4725	356	V	1.16
+4726	356	NFLX	3.38
+4727	356	BA	0.06
+4728	356	GE	15.19
+4729	356	WMT	14.2
+4730	356	NVDA	33.43
+4731	356	PFE	2
+4732	356	XOM	6.59
+4733	356	AAPL	3.56
+4734	356	JNJ	211.88
+4735	357	JNJ	126.79
+4736	357	MSFT	10.68
+4737	357	NFLX	4.64
+4738	357	NVDA	6.5
+4739	357	TSM	47.29
+4740	357	V	3.83
+4741	357	BA	2.12
+4742	357	GE	4.92
+4743	357	JPM	3.2
+4744	357	XOM	27.81
+4745	357	COST	1.11
+4746	357	WMT	17.41
+4747	357	PFE	769.13
+4748	357	DIS	6.45
+4749	357	AAPL	5.23
+4750	357	CVX	5.16
+4751	357	NKE	26.72
+4752	358	AAPL	3.39
+4753	358	CVX	6.52
+4754	358	DIS	28.8
+4755	358	GE	10.55
+4756	358	JNJ	59.77
+4757	358	MSFT	1.31
+4758	358	NFLX	17.49
+4759	358	NKE	1.12
+4760	358	NVDA	7.09
+4761	358	PFE	909.78
+4762	358	SBUX	110.53
+4763	358	TSM	21.8
+4764	358	V	3.95
+4765	358	WMT	10.49
+4766	358	XOM	152.26
+4767	358	BA	1.3
+4768	358	JPM	20.09
+4769	358	COST	1.18
+4770	359	NFLX	51.57
+4771	359	TSM	72.7
+4772	359	WMT	34.16
+4773	359	XOM	126.48
+4774	359	JNJ	103.61
+4775	360	JPM	0
+4776	360	NFLX	0
+4777	360	NVDA	0
+4778	360	TSM	98.2
+4779	360	V	0
+4780	360	COST	0
+4781	360	MSFT	47.93
+4782	360	JNJ	149.78
+4783	360	WMT	0
+4784	360	BA	0
+4785	360	GE	0
+4786	360	PFE	995.11
+4787	360	XOM	195.09
+4788	360	AAPL	0
+4789	361	MSFT	16.87
+4790	361	TSM	31.41
+4791	361	JPM	6.49
+4792	361	V	16.51
+4793	361	COST	6.06
+4794	361	NFLX	46.04
+4795	361	GE	17.81
+4796	361	WMT	40.22
+4797	361	NVDA	18.36
+4798	361	PFE	268.03
+4799	361	XOM	17.64
+4800	361	JNJ	56.57
+4801	361	AAPL	3.6
+4802	362	JNJ	161.96
+4803	362	JPM	6.99
+4804	362	MSFT	9.51
+4805	362	NFLX	16.15
+4806	362	NVDA	3.98
+4807	362	TSM	35.36
+4808	362	V	8.48
+4809	362	BA	1.55
+4810	362	DIS	2.71
+4811	362	XOM	17.74
+4812	362	COST	1.86
+4813	362	WMT	30.09
+4814	362	GE	8.84
+4815	362	PFE	424.56
+4816	362	AAPL	7.78
+4817	362	CVX	4.9
+4818	362	NKE	25.62
+4819	363	CVX	0
+4820	363	DIS	0
+4821	363	GE	0.5
+4822	363	MSFT	1.31
+4823	363	NFLX	0.02
+4824	363	PFE	98.63
+4825	363	V	0.01
+4826	363	XOM	1.31
+4827	363	BA	0
+4828	363	JPM	0
+4829	363	COST	0
+4830	363	WMT	0.03
+4831	363	JNJ	471.42
+4832	363	NVDA	0.01
+4833	363	TSM	0.71
+4834	363	NKE	0.1
+4835	363	SBUX	0
+4836	363	AAPL	0
+4837	364	CVX	3.76
+4838	364	GE	11.57
+4839	364	JNJ	174.59
+4840	364	MSFT	12.6
+4841	364	NFLX	12.81
+4842	364	NVDA	12.54
+4843	364	TSM	30.33
+4844	364	V	6.01
+4845	364	XOM	78.43
+4846	364	BA	3.39
+4847	364	JPM	3.83
+4848	364	COST	1.89
+4849	364	WMT	19.87
+4850	364	DIS	11.9
+4851	364	PFE	671.9
+4852	364	NKE	27.89
+4853	364	AAPL	7.62
+4854	364	SBUX	10.18
+4855	365	AAPL	9.27
+4856	365	COST	1.02
+4857	365	CVX	8.03
+4858	365	DIS	26.85
+4859	365	GE	3.73
+4860	365	JNJ	76.36
+4861	365	JPM	8.79
+4862	365	MSFT	8.56
+4863	365	NFLX	37.9
+4864	365	NKE	29.57
+4865	365	NVDA	4.59
+4866	365	PFE	385.91
+4867	365	SBUX	30.18
+4868	365	TSM	26.71
+4869	365	V	8
+4870	365	WMT	24.3
+4871	365	XOM	32.68
+4872	365	BA	3.6
+4873	366	NFLX	46.86
+4874	366	TSM	33.4
+4875	366	JPM	13.49
+4876	366	V	16.69
+4877	366	MSFT	10.28
+4878	366	COST	2.27
+4879	366	WMT	26.5
+4880	366	GE	3.95
+4881	366	BA	5.72
+4882	366	PFE	244.26
+4883	366	NVDA	12.68
+4884	366	XOM	25.41
+4885	366	JNJ	130.55
+4886	366	AAPL	8.98
+4887	366	NKE	5.51
+4888	366	CVX	42.95
+4889	367	TSM	79.71
+4890	367	JPM	15
+4891	367	COST	0.09
+4892	367	MSFT	7.39
+4893	367	V	1.16
+4894	367	NFLX	3.38
+4895	367	BA	0.06
+4896	367	GE	15.19
+4897	367	WMT	14.2
+4898	367	NVDA	33.43
+4899	367	PFE	2
+4900	367	XOM	6.59
+4901	367	AAPL	3.56
+4902	367	JNJ	292.89
+4903	368	JNJ	240.3
+4904	368	MSFT	10.68
+4905	368	NFLX	4.64
+4906	368	NVDA	6.5
+4907	368	TSM	24.17
+4908	368	V	3.83
+4909	368	BA	2.12
+4910	368	GE	4.92
+4911	368	JPM	3.2
+4912	368	XOM	27.81
+4913	368	COST	1.11
+4914	368	WMT	17.41
+4915	368	PFE	464.98
+4916	368	DIS	6.45
+4917	368	AAPL	5.23
+4918	368	CVX	5.16
+4919	368	NKE	26.72
+4920	369	AAPL	3.39
+4921	369	CVX	6.52
+4922	369	DIS	2.82
+4923	369	GE	1.87
+4924	369	JNJ	241.24
+4925	369	MSFT	11.37
+4926	369	NFLX	17.49
+4927	369	NKE	1.12
+4928	369	NVDA	7.09
+4929	369	PFE	584.61
+4930	369	SBUX	8.2
+4931	369	TSM	21.8
+4932	369	V	3.95
+4933	369	WMT	10.49
+4934	369	XOM	48.36
+4935	369	BA	1.3
+4936	369	JPM	2.05
+4937	369	COST	1.18
+4938	370	JPM	0
+4939	370	NFLX	0
+4940	370	NVDA	0
+4941	370	TSM	98.05
+4942	370	V	0
+4943	370	COST	0
+4944	370	MSFT	0
+4945	370	JNJ	132.37
+4946	370	WMT	258.76
+4947	370	BA	0
+4948	370	GE	0
+4949	370	PFE	962.62
+4950	370	XOM	0
+4951	370	AAPL	79.45
+4952	371	JNJ	73.09
+4953	371	JPM	6.99
+4954	371	MSFT	9.51
+4955	371	NFLX	16.15
+4956	371	NVDA	3.98
+4957	371	TSM	51.6
+4958	371	V	8.48
+4959	371	BA	1.55
+4960	371	DIS	2.71
+4961	371	XOM	17.74
+4962	371	COST	1.86
+4963	371	WMT	140.97
+4964	371	GE	8.84
+4965	371	PFE	424.56
+4966	371	AAPL	7.78
+4967	371	CVX	4.9
+4968	371	NKE	25.62
+4969	372	CVX	0
+4970	372	DIS	0
+4971	372	GE	0.5
+4972	372	MSFT	1.31
+4973	372	NFLX	0.02
+4974	372	PFE	40.49
+4975	372	V	0.01
+4976	372	XOM	1.31
+4977	372	BA	0
+4978	372	JPM	0
+4979	372	COST	0
+4980	372	WMT	831.37
+4981	372	JNJ	37.18
+4982	372	NVDA	0.01
+4983	372	TSM	0.71
+4984	372	NKE	0.1
+4985	372	SBUX	0
+4986	372	AAPL	0
+4987	373	CVX	3.76
+4988	373	GE	11.57
+4989	373	JNJ	61.97
+4990	373	MSFT	4.37
+4991	373	NFLX	12.81
+4992	373	NVDA	12.54
+4993	373	TSM	30.33
+4994	373	V	6.01
+4995	373	XOM	24.05
+4996	373	BA	3.39
+4997	373	JPM	3.83
+4998	373	COST	1.89
+4999	373	WMT	203.75
+5000	373	DIS	11.9
+5001	373	PFE	485.31
+5002	373	NKE	27.89
+5003	373	AAPL	7.62
+5004	373	SBUX	10.18
+5005	374	AAPL	9.27
+5006	374	COST	1.02
+5007	374	CVX	8.03
+5008	374	DIS	26.85
+5009	374	GE	3.73
+5010	374	JNJ	37.77
+5011	374	JPM	8.79
+5012	374	MSFT	8.56
+5013	374	NFLX	37.9
+5014	374	NKE	29.57
+5015	374	NVDA	4.59
+5016	374	PFE	385.91
+5017	374	SBUX	30.18
+5018	374	TSM	37.74
+5019	374	V	8
+5020	374	WMT	110.55
+5021	374	XOM	32.68
+5022	374	BA	3.6
+5023	375	NFLX	46.86
+5024	375	TSM	33.4
+5025	375	JPM	13.49
+5026	375	V	16.69
+5027	375	MSFT	10.28
+5028	375	COST	2.27
+5029	375	WMT	142.18
+5030	375	GE	3.95
+5031	375	BA	5.72
+5032	375	PFE	244.26
+5033	375	NVDA	12.68
+5034	375	XOM	25.41
+5035	375	JNJ	57.19
+5036	375	AAPL	8.98
+5037	375	NKE	5.51
+5038	375	CVX	42.95
+5039	376	TSM	79.71
+5040	376	JPM	15
+5041	376	COST	0.09
+5042	376	MSFT	7.39
+5043	376	V	1.16
+5044	376	NFLX	3.38
+5045	376	BA	0.06
+5046	376	GE	15.19
+5047	376	WMT	352.17
+5048	376	NVDA	33.43
+5049	376	PFE	2
+5050	376	XOM	6.59
+5051	376	AAPL	3.56
+5052	376	JNJ	88.08
+5053	377	JNJ	80.7
+5054	377	MSFT	10.68
+5055	377	NFLX	4.64
+5056	377	NVDA	6.5
+5057	377	TSM	44.14
+5058	377	V	3.83
+5059	377	BA	2.12
+5060	377	GE	4.92
+5061	377	JPM	3.2
+5062	377	XOM	27.81
+5063	377	COST	1.11
+5064	377	WMT	238.73
+5065	377	PFE	464.98
+5066	377	DIS	6.45
+5067	377	AAPL	5.23
+5068	377	CVX	5.16
+5069	377	NKE	26.72
+5070	378	AAPL	18.04
+5071	378	CVX	6.52
+5072	378	DIS	2.82
+5073	378	GE	1.87
+5074	378	JNJ	62.91
+5075	378	MSFT	2.74
+5076	378	NFLX	17.49
+5077	378	NKE	1.12
+5078	378	NVDA	7.09
+5079	378	PFE	584.61
+5080	378	SBUX	69.5
+5081	378	TSM	30.82
+5082	378	V	3.95
+5083	378	WMT	285.84
+5084	378	XOM	15.89
+5085	378	BA	1.3
+5086	378	JPM	2.05
+5087	378	COST	1.18
+5088	379	JPM	0
+5089	379	NFLX	0
+5090	379	NVDA	0
+5091	379	TSM	105.23
+5092	379	V	0
+5093	379	COST	0
+5094	379	MSFT	0
+5095	379	JNJ	130.34
+5096	379	WMT	244.82
+5097	379	BA	110.07
+5098	379	GE	0
+5099	379	PFE	973.96
+5100	379	XOM	0
+5101	379	AAPL	0
+5102	380	MSFT	16.87
+5103	380	TSM	52.58
+5104	380	JPM	6.49
+5105	380	V	16.51
+5106	380	COST	6.06
+5107	380	NFLX	46.04
+5108	380	GE	17.81
+5109	380	WMT	40.22
+5110	380	NVDA	18.36
+5111	380	PFE	268.03
+5112	380	XOM	17.64
+5113	380	JNJ	56.57
+5114	380	AAPL	3.6
+5115	381	JNJ	53.96
+5116	381	JPM	6.99
+5117	381	MSFT	9.51
+5118	381	NFLX	16.15
+5119	381	NVDA	3.98
+5120	381	TSM	95.6
+5121	381	V	8.48
+5122	381	BA	1.55
+5123	381	DIS	2.71
+5124	381	XOM	17.74
+5125	381	COST	1.86
+5126	381	WMT	78.15
+5127	381	GE	8.84
+5128	381	PFE	200.46
+5129	381	AAPL	7.78
+5130	381	CVX	4.9
+5131	381	NKE	25.62
+5132	382	CVX	0
+5133	382	DIS	0
+5134	382	GE	0.5
+5135	382	MSFT	1.31
+5136	382	NFLX	0.02
+5137	382	PFE	40.49
+5138	382	V	0.01
+5139	382	XOM	1.31
+5140	382	BA	17.58
+5141	382	JPM	13.72
+5142	382	COST	0
+5143	382	WMT	662.81
+5144	382	JNJ	1.49
+5145	382	NVDA	0.01
+5146	382	TSM	6.72
+5147	382	NKE	0.1
+5148	382	SBUX	0
+5149	382	AAPL	73.08
+5150	383	CVX	3.76
+5151	383	GE	11.57
+5152	383	JNJ	35.09
+5153	383	MSFT	4.37
+5154	383	NFLX	12.81
+5155	383	NVDA	12.54
+5156	383	TSM	60.11
+5157	383	V	6.01
+5158	383	XOM	24.05
+5159	383	BA	3.39
+5160	383	JPM	18.83
+5161	383	COST	1.89
+5162	383	WMT	203.75
+5163	383	DIS	11.9
+5164	383	PFE	187.65
+5165	383	NKE	27.89
+5166	383	AAPL	31.77
+5167	383	SBUX	10.18
+5168	384	AAPL	9.27
+5169	384	COST	1.02
+5170	384	CVX	8.03
+5171	384	DIS	26.85
+5172	384	GE	3.73
+5173	384	JNJ	27.13
+5174	384	JPM	8.79
+5175	384	MSFT	8.56
+5176	384	NFLX	37.9
+5177	384	NKE	29.57
+5178	384	NVDA	4.59
+5179	384	PFE	243.37
+5180	384	SBUX	30.18
+5181	384	TSM	50.51
+5182	384	V	8
+5183	384	WMT	90.28
+5184	384	XOM	32.68
+5185	384	BA	20.43
+5186	385	NFLX	46.86
+5187	385	TSM	69.42
+5188	385	JPM	13.49
+5189	385	V	16.69
+5190	385	MSFT	10.28
+5191	385	COST	2.27
+5192	385	WMT	142.18
+5193	385	GE	3.95
+5194	385	BA	5.72
+5195	385	PFE	244.26
+5196	385	NVDA	12.68
+5197	385	XOM	25.41
+5198	385	JNJ	57.19
+5199	385	AAPL	8.98
+5200	385	NKE	5.51
+5201	385	CVX	42.95
+5202	386	TSM	149.78
+5203	386	JPM	15
+5204	386	COST	0.09
+5205	386	MSFT	7.39
+5206	386	V	1.16
+5207	386	NFLX	3.38
+5208	386	BA	0.06
+5209	386	GE	15.19
+5210	386	WMT	206.91
+5211	386	NVDA	33.43
+5212	386	PFE	2
+5213	386	XOM	6.59
+5214	386	AAPL	3.56
+5215	386	JNJ	88.08
+5216	387	JNJ	37.3
+5217	387	MSFT	10.68
+5218	387	NFLX	4.64
+5219	387	NVDA	6.5
+5220	387	TSM	94.92
+5221	387	V	3.83
+5222	387	BA	2.12
+5223	387	GE	4.92
+5224	387	JPM	3.2
+5225	387	XOM	27.81
+5226	387	COST	1.11
+5227	387	WMT	238.73
+5228	387	PFE	194.22
+5229	387	DIS	6.45
+5230	387	AAPL	23.87
+5231	387	CVX	5.16
+5232	387	NKE	26.72
+5233	388	AAPL	41.7
+5234	388	CVX	6.52
+5235	388	DIS	2.82
+5236	388	GE	1.87
+5237	388	JNJ	29.47
+5238	388	MSFT	2.74
+5239	388	NFLX	17.49
+5240	388	NKE	1.12
+5241	388	NVDA	7.09
+5242	388	PFE	124.07
+5243	388	SBUX	15.93
+5244	388	TSM	44.83
+5245	388	V	3.95
+5246	388	WMT	323.56
+5247	388	XOM	15.89
+5248	388	BA	20.89
+5249	388	JPM	26.83
+5250	388	COST	1.18
+5251	389	JPM	0
+5252	389	NFLX	0
+5253	389	NVDA	0
+5254	389	TSM	101.72
+5255	389	V	0
+5256	389	COST	0
+5257	389	MSFT	0
+5258	389	JNJ	134.07
+5259	389	WMT	237.68
+5260	389	BA	0
+5261	389	GE	0
+5262	389	PFE	931.87
+5263	389	XOM	204.28
+5264	389	AAPL	0
+5265	390	CVX	0
+5266	390	DIS	15.78
+5267	390	GE	0.5
+5268	390	MSFT	1.31
+5269	390	NFLX	0.02
+5270	390	PFE	40.49
+5271	390	V	0.01
+5272	390	XOM	1.31
+5273	390	BA	46.91
+5274	390	JPM	0.38
+5275	390	COST	0
+5276	390	WMT	202.89
+5277	390	JNJ	48.48
+5278	390	NVDA	0.01
+5279	390	TSM	200.24
+5280	390	NKE	0.1
+5281	390	SBUX	0
+5282	390	AAPL	0.15
+5283	391	CVX	3.76
+5284	391	GE	11.57
+5285	391	JNJ	35.09
+5286	391	MSFT	4.37
+5287	391	NFLX	12.81
+5288	391	NVDA	12.54
+5289	391	TSM	91.02
+5290	391	V	6.01
+5291	391	XOM	59.29
+5292	391	BA	3.39
+5293	391	JPM	18.83
+5294	391	COST	1.89
+5295	391	WMT	130.79
+5296	391	DIS	11.9
+5297	391	PFE	187.65
+5298	391	NKE	27.89
+5299	391	AAPL	6.18
+5300	391	SBUX	10.18
+5301	392	AAPL	9.27
+5302	392	COST	1.02
+5303	392	CVX	8.03
+5304	392	DIS	26.85
+5305	392	GE	3.73
+5306	392	JNJ	27.13
+5307	392	JPM	8.79
+5308	392	MSFT	8.56
+5309	392	NFLX	6.87
+5310	392	NKE	29.57
+5311	392	NVDA	17.87
+5312	392	PFE	142.22
+5313	392	SBUX	7.21
+5314	392	TSM	50.51
+5315	392	V	8
+5316	392	WMT	90.28
+5317	392	XOM	54.94
+5318	392	BA	20.43
+5319	393	JNJ	37.3
+5320	393	MSFT	10.68
+5321	393	NFLX	4.64
+5322	393	NVDA	6.5
+5323	393	TSM	134.17
+5324	393	V	3.83
+5325	393	BA	2.12
+5326	393	GE	4.92
+5327	393	JPM	3.2
+5328	393	XOM	27.81
+5329	393	COST	1.11
+5330	393	WMT	141.6
+5331	393	PFE	194.22
+5332	393	DIS	6.45
+5333	393	AAPL	3.75
+5334	393	CVX	5.16
+5335	393	NKE	26.72
+5336	394	AAPL	3.34
+5337	394	CVX	6.52
+5338	394	DIS	40.72
+5339	394	GE	1.87
+5340	394	JNJ	29.47
+5341	394	MSFT	2.74
+5342	394	NFLX	17.49
+5343	394	NKE	1.12
+5344	394	NVDA	7.09
+5345	394	PFE	45.18
+5346	394	SBUX	15.93
+5347	394	TSM	130.87
+5348	394	V	3.95
+5349	394	WMT	146.96
+5350	394	XOM	71.83
+5351	394	BA	20.89
+5352	394	JPM	7.39
+5353	394	COST	1.18
+5354	395	NFLX	51.57
+5355	395	TSM	72.7
+5356	395	WMT	34.16
+5357	395	XOM	126.48
+5358	395	JNJ	31.38
+5359	396	JPM	90.83
+5360	396	NFLX	0
+5361	396	NVDA	0
+5362	396	TSM	87.72
+5363	396	V	0
+5364	396	COST	0
+5365	396	MSFT	0
+5366	396	JNJ	122.88
+5367	396	WMT	0
+5368	396	BA	0
+5369	396	GE	90.7
+5370	396	PFE	981.39
+5371	396	XOM	0
+5372	396	AAPL	0
+5373	397	MSFT	16.87
+5374	397	TSM	18.96
+5375	397	JPM	35
+5376	397	V	16.51
+5377	397	COST	6.06
+5378	397	NFLX	46.04
+5379	397	GE	17.81
+5380	397	WMT	40.22
+5381	397	NVDA	18.36
+5382	397	PFE	268.03
+5383	397	XOM	17.64
+5384	397	JNJ	56.57
+5385	397	AAPL	3.6
+5386	398	JNJ	53.96
+5387	398	JPM	71.34
+5388	398	MSFT	9.51
+5389	398	NFLX	16.15
+5390	398	NVDA	3.98
+5391	398	TSM	12.78
+5392	398	V	8.48
+5393	398	BA	1.55
+5394	398	DIS	45.02
+5395	398	XOM	17.74
+5396	398	COST	1.86
+5397	398	WMT	14.65
+5398	398	GE	45.12
+5399	398	PFE	200.46
+5400	398	AAPL	7.78
+5401	398	CVX	4.9
+5402	398	NKE	25.62
+5403	399	CVX	0
+5404	399	DIS	381.01
+5405	399	GE	0.5
+5406	399	MSFT	1.31
+5407	399	NFLX	0.02
+5408	399	PFE	40.49
+5409	399	V	0.01
+5410	399	XOM	1.31
+5411	399	BA	0.84
+5412	399	JPM	170.82
+5413	399	COST	0
+5414	399	WMT	0.64
+5415	399	JNJ	19.46
+5416	399	NVDA	0.01
+5417	399	TSM	0
+5418	399	NKE	0.1
+5419	399	SBUX	0
+5420	399	AAPL	0.15
+5421	400	CVX	3.76
+5422	400	GE	44.38
+5423	400	JNJ	35.09
+5424	400	MSFT	4.37
+5425	400	NFLX	12.81
+5426	400	NVDA	12.54
+5427	400	TSM	6.11
+5428	400	V	6.01
+5429	400	XOM	17.53
+5430	400	BA	3.39
+5431	400	JPM	84.26
+5432	400	COST	1.89
+5433	400	WMT	19.85
+5434	400	DIS	83.55
+5435	400	PFE	187.65
+5436	400	NKE	27.89
+5437	400	AAPL	6.18
+5438	400	SBUX	10.18
+5439	401	AAPL	9.27
+5440	401	COST	1.02
+5441	401	CVX	8.03
+5442	401	DIS	26.85
+5443	401	GE	38.69
+5444	401	JNJ	27.13
+5445	401	JPM	48.7
+5446	401	MSFT	4.24
+5447	401	NFLX	6.87
+5448	401	NKE	29.57
+5449	401	NVDA	3.82
+5450	401	PFE	260.65
+5451	401	SBUX	7.21
+5452	401	TSM	10.49
+5453	401	V	8
+5454	401	WMT	19.03
+5455	401	XOM	25.12
+5456	401	BA	10.79
+5457	402	NFLX	46.86
+5458	402	TSM	10.16
+5459	402	JPM	65.91
+5460	402	V	16.69
+5461	402	MSFT	10.28
+5462	402	COST	2.27
+5463	402	WMT	18.8
+5464	402	GE	43.17
+5465	402	BA	5.72
+5466	402	PFE	244.26
+5467	402	NVDA	12.68
+5468	402	XOM	25.41
+5469	402	JNJ	57.19
+5470	402	AAPL	8.98
+5471	402	NKE	5.51
+5472	402	CVX	42.95
+5473	403	TSM	9.74
+5474	403	JPM	142.12
+5475	403	COST	0.09
+5476	403	MSFT	7.39
+5477	403	V	1.16
+5478	403	NFLX	3.38
+5479	403	BA	0.06
+5480	403	GE	66.32
+5481	403	WMT	6.67
+5482	403	NVDA	33.43
+5483	403	PFE	2
+5484	403	XOM	6.59
+5485	403	AAPL	3.56
+5486	403	JNJ	88.08
+5487	404	JNJ	37.3
+5488	404	MSFT	10.68
+5489	404	NFLX	4.64
+5490	404	NVDA	6.5
+5491	404	TSM	6.72
+5492	404	V	3.83
+5493	404	BA	2.12
+5494	404	GE	54.35
+5495	404	JPM	110.63
+5496	404	XOM	27.81
+5497	404	COST	1.11
+5498	404	WMT	14.97
+5499	404	PFE	194.22
+5500	404	DIS	54.58
+5501	404	AAPL	3.75
+5502	404	CVX	5.16
+5503	404	NKE	26.72
+5504	405	AAPL	3.34
+5505	405	CVX	6.52
+5506	405	DIS	131.83
+5507	405	GE	37.93
+5508	405	JNJ	29.47
+5509	405	MSFT	2.74
+5510	405	NFLX	17.49
+5511	405	NKE	1.12
+5512	405	NVDA	7.09
+5513	405	PFE	139.44
+5514	405	SBUX	15.93
+5515	405	TSM	2.1
+5516	405	V	9.49
+5517	405	WMT	19.99
+5518	405	XOM	10.35
+5519	405	BA	8.18
+5520	405	JPM	119.63
+5521	405	COST	1.18
+5522	406	NFLX	51.57
+5523	406	TSM	14.79
+5524	406	WMT	34.16
+5525	406	XOM	126.48
+5526	406	JNJ	31.38
+5527	406	JPM	46.52
+5528	407	JPM	82.13
+5529	407	NFLX	0
+5530	407	NVDA	140.72
+5531	407	TSM	101.79
+5532	407	V	0
+5533	407	COST	0
+5534	407	MSFT	0
+5535	407	JNJ	0
+5536	407	WMT	0
+5537	407	BA	0
+5538	407	GE	78.58
+5539	407	PFE	0
+5540	407	XOM	218.65
+5541	407	AAPL	0
+5542	408	MSFT	16.87
+5543	408	TSM	41.02
+5544	408	JPM	14.35
+5545	408	V	16.51
+5546	408	COST	6.06
+5547	408	NFLX	46.04
+5548	408	GE	17.81
+5549	408	WMT	40.22
+5550	408	NVDA	18.36
+5551	408	PFE	268.03
+5552	408	XOM	17.64
+5553	408	JNJ	14.69
+5554	408	AAPL	3.6
+5555	409	JNJ	10.61
+5556	409	JPM	27.02
+5557	409	MSFT	9.51
+5558	409	NFLX	16.15
+5559	409	NVDA	40.39
+5560	409	TSM	54.03
+5561	409	V	8.48
+5562	409	BA	1.55
+5563	409	DIS	45.02
+5564	409	XOM	94.69
+5565	409	COST	1.86
+5566	409	WMT	14.65
+5567	409	GE	18.86
+5568	409	PFE	41.64
+5569	409	AAPL	7.78
+5570	409	CVX	4.9
+5571	409	NKE	25.62
+5572	410	CVX	0
+5573	410	DIS	49.26
+5574	410	GE	0.5
+5575	410	MSFT	1.31
+5576	410	NFLX	0.02
+5577	410	PFE	40.49
+5578	410	V	0.01
+5579	410	XOM	1.31
+5580	410	BA	0.84
+5581	410	JPM	299.67
+5582	410	COST	0
+5583	410	WMT	0.64
+5584	410	JNJ	0.01
+5585	410	NVDA	0.01
+5586	410	TSM	0
+5587	410	NKE	0.1
+5588	410	SBUX	0
+5589	410	AAPL	0.15
+5590	411	CVX	3.76
+5591	411	GE	27.38
+5592	411	JNJ	7.34
+5593	411	MSFT	4.37
+5594	411	NFLX	12.81
+5595	411	NVDA	39.03
+5596	411	TSM	26.04
+5597	411	V	6.01
+5598	411	XOM	111.18
+5599	411	BA	3.39
+5600	411	JPM	58.35
+5601	411	COST	1.89
+5602	411	WMT	19.85
+5603	411	DIS	83.55
+5604	411	PFE	29.22
+5605	411	NKE	27.89
+5606	411	AAPL	6.18
+5607	411	SBUX	10.18
+5608	412	AAPL	9.27
+5609	412	COST	1.02
+5610	412	CVX	31.32
+5611	412	DIS	46.81
+5612	412	GE	17.64
+5613	412	JNJ	10.15
+5614	412	JPM	22.05
+5615	412	MSFT	7.98
+5616	412	NFLX	6.87
+5617	412	NKE	29.57
+5618	412	NVDA	26.53
+5619	412	PFE	62.14
+5620	412	SBUX	7.21
+5621	412	TSM	33.99
+5622	412	V	8
+5623	412	WMT	19.03
+5624	412	XOM	80.88
+5625	412	BA	10.79
+5626	413	NFLX	46.86
+5627	413	TSM	39.1
+5628	413	JPM	32.13
+5629	413	V	16.69
+5630	413	MSFT	10.28
+5631	413	COST	2.27
+5632	413	WMT	18.8
+5633	413	GE	21.65
+5634	413	BA	5.72
+5635	413	PFE	244.26
+5636	413	NVDA	12.68
+5637	413	XOM	98.06
+5638	413	JNJ	9.88
+5639	413	AAPL	8.98
+5640	413	NKE	5.51
+5641	413	CVX	42.95
+5642	413	DIS	63.74
+5643	414	TSM	79
+5644	414	JPM	82.24
+5645	414	COST	0.09
+5646	414	MSFT	7.39
+5647	414	V	1.16
+5648	414	NFLX	3.38
+5649	414	BA	0.06
+5650	414	GE	66.32
+5651	414	WMT	6.67
+5652	414	NVDA	33.43
+5653	414	PFE	2
+5654	414	XOM	6.59
+5655	414	AAPL	3.56
+5656	414	JNJ	3.33
+5657	415	JNJ	6.31
+5658	415	MSFT	10.68
+5659	415	NFLX	4.64
+5660	415	NVDA	47.74
+5661	415	TSM	40.56
+5662	415	V	3.83
+5663	415	BA	2.12
+5664	415	GE	22.48
+5665	415	JPM	66.79
+5666	415	XOM	118.09
+5667	415	COST	1.11
+5668	415	WMT	14.97
+5669	415	PFE	194.22
+5670	415	DIS	54.58
+5671	415	AAPL	3.75
+5672	415	CVX	5.16
+5673	415	NKE	26.72
+5674	416	AAPL	3.34
+5675	416	CVX	18.67
+5676	416	DIS	89.81
+5677	416	GE	25.54
+5678	416	JNJ	4.51
+5679	416	MSFT	2.74
+5680	416	NFLX	17.49
+5681	416	NKE	1.12
+5682	416	NVDA	32.8
+5683	416	PFE	14.61
+5684	416	SBUX	15.93
+5685	416	TSM	13.85
+5686	416	V	15.76
+5687	416	WMT	4.61
+5688	416	XOM	119.45
+5689	416	BA	8.18
+5690	416	JPM	107.93
+5691	416	COST	1.18
+5692	417	JPM	87.11
+5693	417	NFLX	0
+5694	417	NVDA	0
+5695	417	TSM	98.01
+5696	417	V	0
+5697	417	COST	0
+5698	417	MSFT	0
+5699	417	JNJ	124.02
+5700	417	WMT	0
+5701	417	BA	0
+5702	417	GE	80.15
+5703	417	PFE	0
+5704	417	XOM	218.63
+5705	417	AAPL	0
+5706	418	JNJ	10.61
+5707	418	JPM	27.02
+5708	418	MSFT	9.51
+5709	418	NFLX	16.15
+5710	418	NVDA	17.2
+5711	418	TSM	54.03
+5712	418	V	8.48
+5713	418	BA	1.55
+5714	418	DIS	45.02
+5715	418	XOM	94.69
+5716	418	COST	1.86
+5717	418	WMT	14.65
+5718	418	GE	18.86
+5719	418	PFE	41.64
+5720	418	AAPL	7.78
+5721	418	CVX	4.9
+5722	418	NKE	25.62
+5723	419	CVX	30.26
+5724	419	DIS	49.26
+5725	419	GE	0.5
+5726	419	MSFT	1.31
+5727	419	NFLX	0.02
+5728	419	PFE	40.49
+5729	419	V	0.01
+5730	419	XOM	1.31
+5731	419	BA	0.84
+5732	419	JPM	82.97
+5733	419	COST	0
+5734	419	WMT	0.64
+5735	419	JNJ	0.01
+5736	419	NVDA	0.01
+5737	419	TSM	205.99
+5738	419	NKE	0.1
+5739	419	SBUX	0
+5740	419	AAPL	0.15
+5741	420	CVX	3.76
+5742	420	GE	27.38
+5743	420	JNJ	7.34
+5744	420	MSFT	4.37
+5745	420	NFLX	12.81
+5746	420	NVDA	14.65
+5747	420	TSM	65.53
+5748	420	V	6.01
+5749	420	XOM	66.13
+5750	420	BA	3.39
+5751	420	JPM	39.97
+5752	420	COST	1.89
+5753	420	WMT	19.85
+5754	420	DIS	83.55
+5755	420	PFE	29.22
+5756	420	NKE	27.89
+5757	420	AAPL	6.18
+5758	420	SBUX	10.18
+5759	421	AAPL	9.27
+5760	421	COST	1.02
+5761	421	CVX	31.32
+5762	421	DIS	46.81
+5763	421	GE	17.64
+5764	421	JNJ	26.54
+5765	421	JPM	22.05
+5766	421	MSFT	7.98
+5767	421	NFLX	6.87
+5768	421	NKE	29.57
+5769	421	NVDA	15.64
+5770	421	PFE	62.14
+5771	421	SBUX	7.21
+5772	421	TSM	43.88
+5773	421	V	8
+5774	421	WMT	19.03
+5775	421	XOM	41.39
+5776	421	BA	10.79
+5777	422	TSM	79
+5778	422	JPM	82.24
+5779	422	COST	0.09
+5780	422	MSFT	7.39
+5781	422	V	1.16
+5782	422	NFLX	3.38
+5783	422	BA	0.06
+5784	422	GE	16.64
+5785	422	WMT	6.67
+5786	422	NVDA	33.43
+5787	422	PFE	2
+5788	422	XOM	6.59
+5789	422	AAPL	3.56
+5790	422	JNJ	3.33
+5791	423	JNJ	6.31
+5792	423	MSFT	10.68
+5793	423	NFLX	4.64
+5794	423	NVDA	12.67
+5795	423	TSM	90.2
+5796	423	V	3.83
+5797	423	BA	2.12
+5798	423	GE	22.48
+5799	423	JPM	66.79
+5800	423	XOM	118.09
+5801	423	COST	1.11
+5802	423	WMT	14.97
+5803	423	PFE	194.22
+5804	423	DIS	54.58
+5805	423	AAPL	3.75
+5806	423	CVX	5.16
+5807	423	NKE	26.72
+5808	424	AAPL	3.34
+5809	424	CVX	30.81
+5810	424	DIS	89.81
+5811	424	GE	16.5
+5812	424	JNJ	4.51
+5813	424	MSFT	2.74
+5814	424	NFLX	17.49
+5815	424	NKE	1.12
+5816	424	NVDA	9.52
+5817	424	PFE	14.61
+5818	424	SBUX	15.93
+5819	424	TSM	97.09
+5820	424	V	8.38
+5821	424	WMT	4.61
+5822	424	XOM	54.68
+5823	424	BA	8.18
+5824	424	JPM	45.5
+5825	424	COST	1.18
+5826	425	JPM	0
+5827	425	NFLX	0
+5828	425	NVDA	139.85
+5829	425	TSM	91.44
+5830	425	V	0
+5831	425	COST	0
+5832	425	MSFT	0
+5833	425	JNJ	0
+5834	425	WMT	0
+5835	425	BA	0
+5836	425	GE	83.33
+5837	425	PFE	0
+5838	425	XOM	218.09
+5839	425	AAPL	0
+5840	425	CVX	182.34
+5841	426	MSFT	16.87
+5842	426	TSM	41.02
+5843	426	JPM	14.35
+5844	426	V	16.51
+5845	426	COST	6.06
+5846	426	NFLX	46.04
+5847	426	GE	17.81
+5848	426	WMT	40.22
+5849	426	NVDA	18.36
+5850	426	PFE	268.03
+5851	426	XOM	17.64
+5852	426	JNJ	14.69
+5853	426	AAPL	3.6
+5854	426	CVX	46.06
+5855	427	JNJ	10.61
+5856	427	JPM	27.02
+5857	427	MSFT	9.51
+5858	427	NFLX	16.15
+5859	427	NVDA	17.2
+5860	427	TSM	54.03
+5861	427	V	8.48
+5862	427	BA	1.55
+5863	427	DIS	45.02
+5864	427	XOM	45.18
+5865	427	COST	1.86
+5866	427	WMT	14.65
+5867	427	GE	18.86
+5868	427	PFE	41.64
+5869	427	AAPL	7.78
+5870	427	CVX	84.57
+5871	427	NKE	25.62
+5872	428	CVX	127.97
+5873	428	DIS	0.24
+5874	428	GE	5.3
+5875	428	MSFT	1.31
+5876	428	NFLX	0.02
+5877	428	PFE	40.49
+5878	428	V	0.01
+5879	428	XOM	1.31
+5880	428	BA	0.84
+5881	428	JPM	0.17
+5882	428	COST	1.95
+5883	428	WMT	0.64
+5884	428	JNJ	0.01
+5885	428	NVDA	69.92
+5886	428	TSM	205.99
+5887	428	NKE	0.1
+5888	428	SBUX	0
+5889	428	AAPL	0.15
+5890	429	CVX	76.95
+5891	429	GE	27.38
+5892	429	JNJ	7.34
+5893	429	MSFT	4.37
+5894	429	NFLX	12.81
+5895	429	NVDA	38.74
+5896	429	TSM	65.53
+5897	429	V	6.01
+5898	429	XOM	66.13
+5899	429	BA	3.39
+5900	429	JPM	19.28
+5901	429	COST	1.89
+5902	429	WMT	19.85
+5903	429	DIS	24.98
+5904	429	PFE	29.22
+5905	429	NKE	27.89
+5906	429	AAPL	6.18
+5907	429	SBUX	10.18
+5908	430	AAPL	9.27
+5909	430	COST	1.02
+5910	430	CVX	31.32
+5911	430	DIS	25.96
+5912	430	GE	17.64
+5913	430	JNJ	14.19
+5914	430	JPM	11.56
+5915	430	MSFT	7.98
+5916	430	NFLX	6.87
+5917	430	NKE	29.57
+5918	430	NVDA	15.64
+5919	430	PFE	62.14
+5920	430	SBUX	35.35
+5921	430	TSM	36.02
+5922	430	V	8
+5923	430	WMT	19.03
+5924	430	XOM	41.39
+5925	430	BA	10.79
+5926	431	NFLX	46.86
+5927	431	TSM	39.1
+5928	431	JPM	32.13
+5929	431	V	16.69
+5930	431	MSFT	10.28
+5931	431	COST	2.27
+5932	431	WMT	18.8
+5933	431	GE	21.65
+5934	431	BA	5.72
+5935	431	PFE	244.26
+5936	431	NVDA	12.68
+5937	431	XOM	37.9
+5938	431	JNJ	9.88
+5939	431	AAPL	8.98
+5940	431	NKE	5.51
+5941	431	CVX	42.95
+5942	431	DIS	63.74
+5943	432	TSM	79
+5944	432	JPM	15.38
+5945	432	COST	0.09
+5946	432	MSFT	7.39
+5947	432	V	1.16
+5948	432	NFLX	3.38
+5949	432	BA	0.06
+5950	432	GE	16.64
+5951	432	WMT	6.67
+5952	432	NVDA	33.43
+5953	432	PFE	2
+5954	432	XOM	6.59
+5955	432	AAPL	3.56
+5956	432	JNJ	3.33
+5957	432	CVX	124.07
+5958	433	JNJ	6.31
+5959	433	MSFT	10.68
+5960	433	NFLX	4.64
+5961	433	NVDA	42.21
+5962	433	TSM	65.34
+5963	433	V	3.83
+5964	433	BA	2.12
+5965	433	GE	22.48
+5966	433	JPM	19.4
+5967	433	XOM	40.8
+5968	433	COST	1.11
+5969	433	WMT	14.97
+5970	433	PFE	194.22
+5971	433	DIS	54.58
+5972	433	AAPL	3.75
+5973	433	CVX	106.73
+5974	433	NKE	26.72
+5975	434	AAPL	3.34
+5976	434	CVX	73.35
+5977	434	DIS	18.49
+5978	434	GE	25.13
+5979	434	JNJ	4.51
+5980	434	MSFT	2.74
+5981	434	NFLX	17.49
+5982	434	NKE	1.12
+5983	434	NVDA	31.05
+5984	434	PFE	14.61
+5985	434	SBUX	46.37
+5986	434	TSM	111.68
+5987	434	V	8.38
+5988	434	WMT	4.61
+5989	434	XOM	28.75
+5990	434	BA	8.18
+5991	434	JPM	16.58
+5992	434	COST	1.18
+5993	435	JPM	0
+5994	435	NFLX	0
+5995	435	NVDA	0
+5996	435	TSM	0
+5997	435	V	0
+5998	435	COST	0
+5999	435	MSFT	0
+6000	435	JNJ	137.62
+6001	435	WMT	229.95
+6002	435	BA	0
+6003	435	GE	78.82
+6004	435	PFE	0
+6005	435	XOM	222.58
+6006	435	AAPL	0
+6007	435	CVX	175.61
+6008	436	MSFT	3.87
+6009	436	TSM	12.14
+6010	436	JPM	14.35
+6011	436	V	16.51
+6012	436	COST	6.06
+6013	436	NFLX	46.04
+6014	436	GE	17.81
+6015	436	WMT	40.22
+6016	436	NVDA	18.36
+6017	436	PFE	268.03
+6018	436	XOM	17.64
+6019	436	JNJ	44.78
+6020	436	AAPL	3.6
+6021	436	CVX	46.06
+6022	437	JNJ	84.47
+6023	437	JPM	4.76
+6024	437	MSFT	9.51
+6025	437	NFLX	16.15
+6026	437	NVDA	17.2
+6027	437	TSM	12.41
+6028	437	V	8.48
+6029	437	BA	1.55
+6030	437	DIS	45.02
+6031	437	XOM	89.29
+6032	437	COST	1.86
+6033	437	WMT	68.46
+6034	437	GE	18.86
+6035	437	PFE	41.64
+6036	437	AAPL	7.78
+6037	437	CVX	84.57
+6038	437	NKE	25.62
+6039	438	CVX	127.97
+6040	438	DIS	0.24
+6041	438	GE	0.03
+6042	438	MSFT	1.31
+6043	438	NFLX	0.02
+6044	438	PFE	40.49
+6045	438	V	0.01
+6046	438	XOM	121.04
+6047	438	BA	0.84
+6048	438	JPM	0.17
+6049	438	COST	1.95
+6050	438	WMT	78.12
+6051	438	JNJ	291.99
+6052	438	NVDA	0
+6053	438	TSM	1.35
+6054	438	NKE	0.1
+6055	438	SBUX	0
+6056	438	AAPL	0.15
+6057	439	CVX	109.3
+6058	439	GE	14.08
+6059	439	JNJ	71.31
+6060	439	MSFT	4.37
+6061	439	NFLX	12.81
+6062	439	NVDA	5.12
+6063	439	TSM	15.42
+6064	439	V	6.01
+6065	439	XOM	66.13
+6066	439	BA	3.39
+6067	439	JPM	3.85
+6068	439	COST	1.89
+6069	439	WMT	96.34
+6070	439	DIS	24.98
+6071	439	PFE	29.22
+6072	439	NKE	27.89
+6073	439	AAPL	6.18
+6074	439	SBUX	10.18
+6075	440	AAPL	9.27
+6076	440	COST	3.68
+6077	440	CVX	58.61
+6078	440	DIS	25.96
+6079	440	GE	17.64
+6080	440	JNJ	30.76
+6081	440	JPM	11.56
+6082	440	MSFT	3.45
+6083	440	NFLX	6.87
+6084	440	NKE	29.57
+6085	440	NVDA	15.64
+6086	440	PFE	144.08
+6087	440	SBUX	35.35
+6088	440	TSM	10.63
+6089	440	V	8
+6090	440	WMT	56.87
+6091	440	XOM	41.39
+6092	440	BA	10.79
+6093	441	NFLX	46.86
+6094	441	TSM	13.29
+6095	441	JPM	5.42
+6096	441	V	16.69
+6097	441	MSFT	10.28
+6098	441	COST	2.27
+6099	441	WMT	18.8
+6100	441	GE	21.65
+6101	441	BA	5.72
+6102	441	PFE	244.26
+6103	441	NVDA	12.68
+6104	441	XOM	37.9
+6105	441	JNJ	59.61
+6106	441	AAPL	8.98
+6107	441	NKE	5.51
+6108	441	CVX	85.68
+6109	441	DIS	63.74
+6110	442	TSM	9.09
+6111	442	JPM	15.38
+6112	442	COST	0.09
+6113	442	MSFT	7.39
+6114	442	V	1.16
+6115	442	NFLX	3.38
+6116	442	BA	0.06
+6117	442	GE	16.64
+6118	442	WMT	6.67
+6119	442	NVDA	33.43
+6120	442	PFE	2
+6121	442	XOM	131.3
+6122	442	AAPL	3.56
+6123	442	JNJ	154.36
+6124	442	CVX	124.07
+6125	443	JNJ	88.85
+6126	443	MSFT	10.68
+6127	443	NFLX	4.64
+6128	443	NVDA	2.95
+6129	443	TSM	12.83
+6130	443	V	3.83
+6131	443	BA	2.12
+6132	443	GE	22.48
+6133	443	JPM	19.4
+6134	443	XOM	125.9
+6135	443	COST	1.11
+6136	443	WMT	108.39
+6137	443	PFE	194.22
+6138	443	DIS	54.58
+6139	443	AAPL	3.75
+6140	443	CVX	106.73
+6141	443	NKE	26.72
+6142	444	AAPL	3.34
+6143	444	CVX	138.62
+6144	444	DIS	18.49
+6145	444	GE	9.15
+6146	444	JNJ	74.67
+6147	444	MSFT	2.74
+6148	444	NFLX	17.49
+6149	444	NKE	1.12
+6150	444	NVDA	1.73
+6151	444	PFE	14.61
+6152	444	SBUX	46.37
+6153	444	TSM	17.13
+6154	444	V	0.47
+6155	444	WMT	131.75
+6156	444	XOM	126.7
+6157	444	BA	8.18
+6158	444	JPM	1.48
+6159	444	COST	5.86
+6160	445	JPM	0
+6161	445	NFLX	0
+6162	445	NVDA	0
+6163	445	TSM	88.72
+6164	445	V	0
+6165	445	COST	0
+6166	445	MSFT	0
+6167	445	JNJ	132.24
+6168	445	WMT	0
+6169	445	BA	0
+6170	445	GE	79.6
+6171	445	PFE	0
+6172	445	XOM	214.34
+6173	445	AAPL	0
+6174	445	CVX	174.68
+6175	446	JNJ	42.48
+6176	446	JPM	4.76
+6177	446	MSFT	9.51
+6178	446	NFLX	16.15
+6179	446	NVDA	17.2
+6180	446	TSM	44.99
+6181	446	V	8.48
+6182	446	BA	1.55
+6183	446	DIS	8.47
+6184	446	XOM	89.29
+6185	446	COST	1.86
+6186	446	WMT	68.46
+6187	446	GE	18.86
+6188	446	PFE	41.64
+6189	446	AAPL	7.78
+6190	446	CVX	84.57
+6191	446	NKE	25.62
+6192	447	CVX	15.83
+6193	447	DIS	0.24
+6194	447	GE	0.03
+6195	447	MSFT	1.31
+6196	447	NFLX	0.02
+6197	447	PFE	40.49
+6198	447	V	0.01
+6199	447	XOM	86.45
+6200	447	BA	0.84
+6201	447	JPM	0.17
+6202	447	COST	57.5
+6203	447	WMT	39.13
+6204	447	JNJ	90.94
+6205	447	NVDA	0
+6206	447	TSM	33.67
+6207	447	NKE	44.95
+6208	447	SBUX	0
+6209	447	AAPL	0.15
+6210	448	CVX	80.6
+6211	448	GE	14.08
+6212	448	JNJ	51.81
+6213	448	MSFT	4.37
+6214	448	NFLX	12.81
+6215	448	NVDA	5.12
+6216	448	TSM	36.63
+6217	448	V	6.01
+6218	448	XOM	66.13
+6219	448	BA	3.39
+6220	448	JPM	3.85
+6221	448	COST	8.54
+6222	448	WMT	96.34
+6223	448	DIS	24.98
+6224	448	PFE	29.22
+6225	448	NKE	27.89
+6226	448	AAPL	6.18
+6227	448	SBUX	10.18
+6228	449	AAPL	9.27
+6229	449	COST	3.68
+6230	449	CVX	58.61
+6231	449	DIS	25.96
+6232	449	GE	17.64
+6233	449	JNJ	30.76
+6234	449	JPM	11.56
+6235	449	MSFT	3.45
+6236	449	NFLX	6.87
+6237	449	NKE	29.57
+6238	449	NVDA	15.64
+6239	449	PFE	144.08
+6240	449	SBUX	35.35
+6241	449	TSM	17.89
+6242	449	V	8
+6243	449	WMT	29.11
+6244	449	XOM	57.66
+6245	449	BA	10.79
+6246	450	TSM	74.5
+6247	450	JPM	15.38
+6248	450	COST	0.09
+6249	450	MSFT	7.39
+6250	450	V	1.16
+6251	450	NFLX	3.38
+6252	450	BA	0.06
+6253	450	GE	16.64
+6254	450	WMT	6.67
+6255	450	NVDA	33.43
+6256	450	PFE	2
+6257	450	XOM	131.3
+6258	450	AAPL	3.56
+6259	450	JNJ	154.36
+6260	450	CVX	124.07
+6261	451	JNJ	55.04
+6262	451	MSFT	10.68
+6263	451	NFLX	4.64
+6264	451	NVDA	2.95
+6265	451	TSM	53.63
+6266	451	V	3.83
+6267	451	BA	2.12
+6268	451	GE	22.48
+6269	451	JPM	19.4
+6270	451	XOM	125.9
+6271	451	COST	1.11
+6272	451	WMT	108.39
+6273	451	PFE	194.22
+6274	451	DIS	54.58
+6275	451	AAPL	3.75
+6276	451	CVX	106.73
+6277	451	NKE	26.72
+6278	452	AAPL	3.34
+6279	452	CVX	73.43
+6280	452	DIS	18.49
+6281	452	GE	9.15
+6282	452	JNJ	74.67
+6283	452	MSFT	2.74
+6284	452	NFLX	17.49
+6285	452	NKE	51.08
+6286	452	NVDA	1.73
+6287	452	PFE	14.61
+6288	452	SBUX	46.37
+6289	452	TSM	36.06
+6290	452	V	0.47
+6291	452	WMT	82.52
+6292	452	XOM	107.19
+6293	452	BA	8.18
+6294	452	JPM	1.48
+6295	452	COST	12.47
+6296	453	JPM	0
+6297	453	NFLX	0
+6298	453	NVDA	148.83
+6299	453	TSM	0
+6300	453	V	0
+6301	453	COST	0
+6302	453	MSFT	0
+6303	453	JNJ	124.9
+6304	453	WMT	0
+6305	453	BA	0
+6306	453	GE	0
+6307	453	PFE	0
+6308	453	XOM	211.23
+6309	453	AAPL	0
+6310	453	CVX	173.43
+6311	453	SBUX	276.19
+6312	454	JNJ	42.48
+6313	454	JPM	4.76
+6314	454	MSFT	9.51
+6315	454	NFLX	16.15
+6316	454	NVDA	81.77
+6317	454	TSM	9.08
+6318	454	V	8.48
+6319	454	BA	1.55
+6320	454	DIS	8.47
+6321	454	XOM	126.18
+6322	454	COST	1.86
+6323	454	WMT	10.77
+6324	454	GE	4.5
+6325	454	PFE	41.64
+6326	454	AAPL	7.78
+6327	454	CVX	58.53
+6328	454	NKE	25.62
+6329	454	SBUX	68.28
+6330	455	CVX	15.83
+6331	455	DIS	0.24
+6332	455	GE	0.03
+6333	455	MSFT	1.31
+6334	455	NFLX	0.02
+6335	455	PFE	40.49
+6336	455	V	0.01
+6337	455	XOM	749.78
+6338	455	BA	0.84
+6339	455	JPM	0.17
+6340	455	COST	0.04
+6341	455	WMT	0
+6342	455	JNJ	3.26
+6343	455	NVDA	28.49
+6344	455	TSM	0.01
+6345	455	NKE	0
+6346	455	SBUX	0
+6347	455	AAPL	0.15
+6348	456	CVX	52.55
+6349	456	GE	14.08
+6350	456	JNJ	51.81
+6351	456	MSFT	15.61
+6352	456	NFLX	12.81
+6353	456	NVDA	86.01
+6354	456	TSM	8.57
+6355	456	V	6.01
+6356	456	XOM	154.3
+6357	456	BA	3.39
+6358	456	JPM	3.85
+6359	456	COST	3.36
+6360	456	WMT	9.2
+6361	456	DIS	24.98
+6362	456	PFE	29.22
+6363	456	NKE	27.89
+6364	456	AAPL	6.18
+6365	456	SBUX	69.41
+6366	457	AAPL	9.27
+6367	457	COST	3.68
+6368	457	CVX	29.1
+6369	457	DIS	25.96
+6370	457	GE	7.5
+6371	457	JNJ	30.76
+6372	457	JPM	11.56
+6373	457	MSFT	9.92
+6374	457	NFLX	6.87
+6375	457	NKE	29.57
+6376	457	NVDA	28.14
+6377	457	PFE	144.08
+6378	457	SBUX	77.82
+6379	457	TSM	10.64
+6380	457	V	8
+6381	457	WMT	29.11
+6382	457	XOM	57.66
+6383	457	BA	10.79
+6384	458	NFLX	46.86
+6385	458	TSM	13.29
+6386	458	JPM	5.42
+6387	458	V	16.69
+6388	458	MSFT	10.28
+6389	458	COST	2.27
+6390	458	WMT	18.8
+6391	458	GE	21.65
+6392	458	BA	5.72
+6393	458	PFE	244.26
+6394	458	NVDA	66.77
+6395	458	XOM	104.79
+6396	458	JNJ	59.61
+6397	458	AAPL	8.98
+6398	458	NKE	5.51
+6399	458	CVX	85.68
+6400	458	DIS	63.74
+6401	458	SBUX	74
+6402	459	TSM	3.06
+6403	459	JPM	15.38
+6404	459	COST	0.09
+6405	459	MSFT	7.39
+6406	459	V	1.16
+6407	459	NFLX	3.38
+6408	459	BA	0.06
+6409	459	GE	16.64
+6410	459	WMT	6.67
+6411	459	NVDA	144.08
+6412	459	PFE	2
+6413	459	XOM	131.3
+6414	459	AAPL	3.56
+6415	459	JNJ	39.04
+6416	459	CVX	124.07
+6417	460	JNJ	55.04
+6418	460	MSFT	10.68
+6419	460	NFLX	4.64
+6420	460	NVDA	99.83
+6421	460	TSM	6.18
+6422	460	V	3.83
+6423	460	BA	2.12
+6424	460	GE	2.11
+6425	460	JPM	0.31
+6426	460	XOM	201.3
+6427	460	COST	1.11
+6428	460	WMT	5.41
+6429	460	PFE	194.22
+6430	460	DIS	1.56
+6431	460	AAPL	3.75
+6432	460	CVX	68.17
+6433	460	NKE	26.72
+6434	460	SBUX	76.45
+6435	461	AAPL	3.34
+6436	461	CVX	54.11
+6437	461	DIS	2.37
+6438	461	GE	1.53
+6439	461	JNJ	32.43
+6440	461	MSFT	17.89
+6441	461	NFLX	17.49
+6442	461	NKE	0.56
+6443	461	NVDA	105.49
+6444	461	PFE	116.1
+6445	461	SBUX	66.16
+6446	461	TSM	7.88
+6447	461	V	0.47
+6448	461	WMT	5.34
+6449	461	XOM	231.76
+6450	461	BA	8.18
+6451	461	JPM	1.48
+6452	461	COST	2.99
+6453	462	JPM	85.53
+6454	462	NFLX	0
+6455	462	NVDA	0
+6456	462	TSM	0
+6457	462	V	0
+6458	462	COST	0
+6459	462	MSFT	0
+6460	462	JNJ	121.56
+6461	462	WMT	243.19
+6462	462	BA	0
+6463	462	GE	0
+6464	462	PFE	0
+6465	462	XOM	186.85
+6466	462	AAPL	0
+6467	462	CVX	168.55
+6468	462	SBUX	0
+6469	463	JNJ	42.48
+6470	463	JPM	22.24
+6471	463	MSFT	9.51
+6472	463	NFLX	16.15
+6473	463	NVDA	8.65
+6474	463	TSM	9.08
+6475	463	V	8.48
+6476	463	BA	1.55
+6477	463	DIS	8.47
+6478	463	XOM	47.37
+6479	463	COST	1.86
+6480	463	WMT	132.34
+6481	463	GE	4.5
+6482	463	PFE	41.64
+6483	463	AAPL	25.35
+6484	463	CVX	58.53
+6485	463	NKE	25.62
+6486	463	SBUX	68.28
+6487	464	CVX	62.33
+6488	464	DIS	0.24
+6489	464	GE	0.03
+6490	464	MSFT	1.31
+6491	464	NFLX	0.02
+6492	464	PFE	40.49
+6493	464	V	0.01
+6494	464	XOM	16.1
+6495	464	BA	0.84
+6496	464	JPM	0.17
+6497	464	COST	0.04
+6498	464	WMT	677.1
+6499	464	JNJ	3.26
+6500	464	NVDA	0
+6501	464	TSM	0.01
+6502	464	NKE	0
+6503	464	SBUX	0
+6504	464	AAPL	58.88
+6505	465	CVX	81.44
+6506	465	GE	14.08
+6507	465	JNJ	25.7
+6508	465	MSFT	0.55
+6509	465	NFLX	12.81
+6510	465	NVDA	4.38
+6511	465	TSM	8.57
+6512	465	V	6.01
+6513	465	XOM	58.73
+6514	465	BA	3.39
+6515	465	JPM	20.91
+6516	465	COST	3.36
+6517	465	WMT	174.79
+6518	465	DIS	24.98
+6519	465	PFE	29.22
+6520	465	NKE	27.89
+6521	465	AAPL	37.89
+6522	465	SBUX	69.41
+6523	466	AAPL	23.58
+6524	466	COST	3.68
+6525	466	CVX	58.35
+6526	466	DIS	25.96
+6527	466	GE	7.5
+6528	466	JNJ	30.76
+6529	466	JPM	17.5
+6530	466	MSFT	2.48
+6531	466	NFLX	6.87
+6532	466	NKE	29.57
+6533	466	NVDA	12.12
+6534	466	PFE	144.08
+6535	466	SBUX	52.43
+6536	466	TSM	10.64
+6537	466	V	8
+6538	466	WMT	66.16
+6539	466	XOM	41.1
+6540	466	BA	10.79
+6541	467	NFLX	46.86
+6542	467	TSM	13.29
+6543	467	JPM	5.42
+6544	467	V	16.69
+6545	467	MSFT	10.28
+6546	467	COST	2.27
+6547	467	WMT	117.52
+6548	467	GE	21.65
+6549	467	BA	5.72
+6550	467	PFE	244.26
+6551	467	NVDA	8.44
+6552	467	XOM	49.32
+6553	467	JNJ	59.61
+6554	467	AAPL	8.98
+6555	467	NKE	5.51
+6556	467	CVX	85.68
+6557	467	DIS	63.74
+6558	467	SBUX	74
+6559	468	TSM	3.06
+6560	468	JPM	15.38
+6561	468	COST	0.09
+6562	468	MSFT	7.39
+6563	468	V	1.16
+6564	468	NFLX	3.38
+6565	468	BA	0.06
+6566	468	GE	16.64
+6567	468	WMT	334.31
+6568	468	NVDA	2.04
+6569	468	PFE	2
+6570	468	XOM	131.3
+6571	468	AAPL	3.56
+6572	468	JNJ	39.04
+6573	468	CVX	124.07
+6574	469	JNJ	22.1
+6575	469	MSFT	10.68
+6576	469	NFLX	4.64
+6577	469	NVDA	2.71
+6578	469	TSM	6.18
+6579	469	V	3.83
+6580	469	BA	2.12
+6581	469	GE	2.11
+6582	469	JPM	18.39
+6583	469	XOM	52.46
+6584	469	COST	1.11
+6585	469	WMT	271.13
+6586	469	PFE	194.22
+6587	469	DIS	1.56
+6588	469	AAPL	32.3
+6589	469	CVX	68.17
+6590	469	NKE	26.72
+6591	469	SBUX	76.45
+6592	470	AAPL	43.53
+6593	470	CVX	94.28
+6594	470	DIS	2.37
+6595	470	GE	1.53
+6596	470	JNJ	17.36
+6597	470	MSFT	0.17
+6598	470	NFLX	17.49
+6599	470	NKE	0.56
+6600	470	NVDA	1.4
+6601	470	PFE	116.1
+6602	470	SBUX	47.85
+6603	470	TSM	7.88
+6604	470	V	0.47
+6605	470	WMT	287.21
+6606	470	XOM	63.75
+6607	470	BA	8.18
+6608	470	JPM	17.56
+6609	470	COST	2.99
+6610	471	JPM	0
+6611	471	NFLX	0
+6612	471	NVDA	154.73
+6613	471	TSM	79.05
+6614	471	V	0
+6615	471	COST	0
+6616	471	MSFT	0
+6617	471	JNJ	0
+6618	471	WMT	232.06
+6619	471	BA	0
+6620	471	GE	0
+6621	471	PFE	1053.43
+6622	471	XOM	0
+6623	471	AAPL	0
+6624	471	CVX	163.5
+6625	471	SBUX	0
+6626	472	MSFT	3.87
+6627	472	TSM	12.14
+6628	472	JPM	14.35
+6629	472	V	16.51
+6630	472	COST	6.06
+6631	472	NFLX	46.04
+6632	472	GE	17.81
+6633	472	WMT	40.22
+6634	472	NVDA	18.36
+6635	472	PFE	268.03
+6636	472	XOM	17.64
+6637	472	JNJ	18.69
+6638	472	AAPL	3.6
+6639	472	CVX	46.06
+6640	473	JNJ	15.43
+6641	473	JPM	5.72
+6642	473	MSFT	9.51
+6643	473	NFLX	16.15
+6644	473	NVDA	63.66
+6645	473	TSM	43.5
+6646	473	V	8.48
+6647	473	BA	1.55
+6648	473	DIS	8.47
+6649	473	XOM	47.37
+6650	473	COST	1.86
+6651	473	WMT	66.68
+6652	473	GE	4.5
+6653	473	PFE	287.45
+6654	473	AAPL	9.44
+6655	473	CVX	58.53
+6656	473	NKE	25.62
+6657	473	SBUX	13.98
+6658	474	CVX	13.71
+6659	474	DIS	0.24
+6660	474	GE	0.03
+6661	474	MSFT	1.31
+6662	474	NFLX	0.02
+6663	474	PFE	40.49
+6664	474	V	0.01
+6665	474	XOM	76.19
+6666	474	BA	0.84
+6667	474	JPM	0.17
+6668	474	COST	0.04
+6669	474	WMT	11.53
+6670	474	JNJ	3.26
+6671	474	NVDA	26.7
+6672	474	TSM	261.82
+6673	474	NKE	0
+6674	474	SBUX	0
+6675	474	AAPL	0.12
+6676	475	CVX	45.02
+6677	475	GE	14.08
+6678	475	JNJ	25.7
+6679	475	MSFT	0.55
+6680	475	NFLX	12.81
+6681	475	NVDA	69.31
+6682	475	TSM	56.59
+6683	475	V	6.01
+6684	475	XOM	58.73
+6685	475	BA	3.39
+6686	475	JPM	3.64
+6687	475	COST	3.36
+6688	475	WMT	59.93
+6689	475	DIS	24.98
+6690	475	PFE	363.45
+6691	475	NKE	27.89
+6692	475	AAPL	9.89
+6693	475	SBUX	11.15
+6694	476	AAPL	16.21
+6695	476	COST	3.68
+6696	476	CVX	44.4
+6697	476	DIS	8.11
+6698	476	GE	20.06
+6699	476	JNJ	11.8
+6700	476	JPM	9.06
+6701	476	MSFT	2.48
+6702	476	NFLX	6.87
+6703	476	NKE	29.57
+6704	476	NVDA	36.69
+6705	476	PFE	220.68
+6706	476	SBUX	21.4
+6707	476	TSM	19.05
+6708	476	V	8
+6709	476	WMT	66.16
+6710	476	XOM	41.1
+6711	476	BA	10.79
+6712	477	NFLX	46.86
+6713	477	TSM	37.33
+6714	477	JPM	5.42
+6715	477	V	16.69
+6716	477	MSFT	10.28
+6717	477	COST	2.27
+6718	477	WMT	58.99
+6719	477	GE	21.65
+6720	477	BA	5.72
+6721	477	PFE	244.26
+6722	477	NVDA	56.2
+6723	477	XOM	49.32
+6724	477	JNJ	14.06
+6725	477	AAPL	8.98
+6726	477	NKE	5.51
+6727	477	CVX	44.47
+6728	477	DIS	63.74
+6729	477	SBUX	74
+6730	478	TSM	86.08
+6731	478	JPM	15.38
+6732	478	COST	0.09
+6733	478	MSFT	7.39
+6734	478	V	1.16
+6735	478	NFLX	3.38
+6736	478	BA	0.06
+6737	478	GE	16.64
+6738	478	WMT	48.75
+6739	478	NVDA	2.04
+6740	478	PFE	624.36
+6741	478	XOM	131.3
+6742	478	AAPL	3.56
+6743	478	JNJ	39.04
+6744	478	CVX	124.07
+6745	479	JNJ	22.1
+6746	479	MSFT	10.68
+6747	479	NFLX	4.64
+6748	479	NVDA	82.62
+6749	479	TSM	66.5
+6750	479	V	3.83
+6751	479	BA	2.12
+6752	479	GE	2.11
+6753	479	JPM	18.39
+6754	479	XOM	52.46
+6755	479	COST	1.11
+6756	479	WMT	74.49
+6757	479	PFE	194.22
+6758	479	DIS	1.56
+6759	479	AAPL	6.89
+6760	479	CVX	68.17
+6761	479	NKE	26.72
+6762	479	SBUX	8.65
+6763	480	AAPL	8.23
+6764	480	CVX	50.64
+6765	480	DIS	2.37
+6766	480	GE	10.89
+6767	480	JNJ	6.31
+6768	480	MSFT	0.17
+6769	480	NFLX	17.49
+6770	480	NKE	0.56
+6771	480	NVDA	76.22
+6772	480	PFE	391.18
+6773	480	SBUX	6.59
+6774	480	TSM	77.97
+6775	480	V	0.47
+6776	480	WMT	59.92
+6777	480	XOM	99.64
+6778	480	BA	8.18
+6779	480	JPM	1.48
+6780	480	COST	0.61
+6781	481	JPM	0
+6782	481	NFLX	0
+6783	481	NVDA	145.99
+6784	481	TSM	79.55
+6785	481	V	0
+6786	481	COST	26.62
+6787	481	MSFT	0
+6788	481	JNJ	0
+6789	481	WMT	237.1
+6790	481	BA	0
+6791	481	GE	98.69
+6792	481	PFE	0
+6793	481	XOM	0
+6794	481	AAPL	0
+6795	481	CVX	0
+6796	481	SBUX	0
+6797	482	JNJ	15.43
+6798	482	JPM	5.72
+6799	482	MSFT	9.51
+6800	482	NFLX	16.15
+6801	482	NVDA	40.74
+6802	482	TSM	43.5
+6803	482	V	8.48
+6804	482	BA	1.55
+6805	482	DIS	8.47
+6806	482	XOM	14.32
+6807	482	COST	6.61
+6808	482	WMT	66.68
+6809	482	GE	66.81
+6810	482	PFE	287.45
+6811	482	AAPL	9.44
+6812	482	CVX	18.4
+6813	482	NKE	25.62
+6814	482	SBUX	13.98
+6815	483	CVX	13.71
+6816	483	DIS	0.24
+6817	483	GE	129.59
+6818	483	MSFT	1.31
+6819	483	NFLX	0.02
+6820	483	PFE	40.49
+6821	483	V	0.01
+6822	483	XOM	2.19
+6823	483	BA	0.84
+6824	483	JPM	0.17
+6825	483	COST	7.44
+6826	483	WMT	156.32
+6827	483	JNJ	3.26
+6828	483	NVDA	6.64
+6829	483	TSM	104.88
+6830	483	NKE	0
+6831	483	SBUX	0
+6832	483	AAPL	0.12
+6833	484	CVX	22
+6834	484	GE	56.82
+6835	484	JNJ	25.7
+6836	484	MSFT	0.55
+6837	484	NFLX	12.81
+6838	484	NVDA	41
+6839	484	TSM	40.64
+6840	484	V	6.01
+6841	484	XOM	17.9
+6842	484	BA	3.39
+6843	484	JPM	3.64
+6844	484	COST	9.24
+6845	484	WMT	59.93
+6846	484	DIS	24.98
+6847	484	PFE	188.73
+6848	484	NKE	27.89
+6849	484	AAPL	9.89
+6850	484	SBUX	11.15
+6851	485	AAPL	16.21
+6852	485	COST	6.42
+6853	485	CVX	22.17
+6854	485	DIS	8.11
+6855	485	GE	20.06
+6856	485	JNJ	11.8
+6857	485	JPM	9.06
+6858	485	MSFT	2.48
+6859	485	NFLX	6.87
+6860	485	NKE	29.57
+6861	485	NVDA	36.69
+6862	485	PFE	106.12
+6863	485	SBUX	21.4
+6864	485	TSM	24.28
+6865	485	V	8
+6866	485	WMT	50.16
+6867	485	XOM	22.38
+6868	485	BA	10.79
+6869	486	NFLX	46.86
+6870	486	TSM	37.33
+6871	486	JPM	5.42
+6872	486	V	16.69
+6873	486	MSFT	10.28
+6874	486	COST	2.27
+6875	486	WMT	58.99
+6876	486	GE	47.67
+6877	486	BA	5.72
+6878	486	PFE	244.26
+6879	486	NVDA	56.2
+6880	486	XOM	49.32
+6881	486	JNJ	14.06
+6882	486	AAPL	8.98
+6883	486	NKE	5.51
+6884	486	CVX	44.47
+6885	486	DIS	63.74
+6886	486	SBUX	74
+6887	487	TSM	25.85
+6888	487	JPM	15.38
+6889	487	COST	0.09
+6890	487	MSFT	7.39
+6891	487	V	1.16
+6892	487	NFLX	3.38
+6893	487	BA	0.06
+6894	487	GE	170.28
+6895	487	WMT	48.75
+6896	487	NVDA	2.04
+6897	487	PFE	624.36
+6898	487	XOM	5
+6899	487	AAPL	3.56
+6900	487	JNJ	39.04
+6901	487	CVX	7.6
+6902	488	JNJ	22.1
+6903	488	MSFT	10.68
+6904	488	NFLX	4.64
+6905	488	NVDA	37.29
+6906	488	TSM	41.3
+6907	488	V	3.83
+6908	488	BA	2.12
+6909	488	GE	86.8
+6910	488	JPM	18.39
+6911	488	XOM	13.97
+6912	488	COST	8.21
+6913	488	WMT	74.49
+6914	488	PFE	194.22
+6915	488	DIS	1.56
+6916	488	AAPL	6.89
+6917	488	CVX	19.15
+6918	488	NKE	26.72
+6919	488	SBUX	8.65
+6920	489	AAPL	8.23
+6921	489	CVX	24.16
+6922	489	DIS	2.37
+6923	489	GE	70.08
+6924	489	JNJ	6.31
+6925	489	MSFT	0.17
+6926	489	NFLX	17.49
+6927	489	NKE	67.35
+6928	489	NVDA	41.1
+6929	489	PFE	156.59
+6930	489	SBUX	6.59
+6931	489	TSM	50.04
+6932	489	V	0.47
+6933	489	WMT	78.18
+6934	489	XOM	18.06
+6935	489	BA	8.18
+6936	489	JPM	1.48
+6937	489	COST	11.48
+6938	490	NFLX	51.57
+6939	490	TSM	14.79
+6940	490	WMT	34.16
+6941	490	XOM	13.2
+6942	490	JNJ	31.38
+6943	490	JPM	46.52
+6944	491	JPM	0
+6945	491	NFLX	0
+6946	491	NVDA	162.26
+6947	491	TSM	0
+6948	491	V	0
+6949	491	COST	0
+6950	491	MSFT	0
+6951	491	JNJ	118.21
+6952	491	WMT	0
+6953	491	BA	0
+6954	491	GE	97.71
+6955	491	PFE	1032.89
+6956	491	XOM	0
+6957	491	AAPL	0
+6958	491	CVX	149.89
+6959	491	SBUX	0
+6960	492	JNJ	15.43
+6961	492	JPM	5.72
+6962	492	MSFT	9.51
+6963	492	NFLX	16.15
+6964	492	NVDA	102.82
+6965	492	TSM	12.35
+6966	492	V	8.48
+6967	492	BA	1.55
+6968	492	DIS	8.47
+6969	492	XOM	14.32
+6970	492	COST	6.61
+6971	492	WMT	24.73
+6972	492	GE	66.81
+6973	492	PFE	287.45
+6974	492	AAPL	9.44
+6975	492	CVX	18.4
+6976	492	NKE	25.62
+6977	492	SBUX	13.98
+6978	493	CVX	0.01
+6979	493	DIS	0.24
+6980	493	GE	0.44
+6981	493	MSFT	1.31
+6982	493	NFLX	0.02
+6983	493	PFE	40.49
+6984	493	V	0.01
+6985	493	XOM	2.19
+6986	493	BA	0.84
+6987	493	JPM	0.17
+6988	493	COST	0.01
+6989	493	WMT	0.05
+6990	493	JNJ	3.26
+6991	493	NVDA	579.33
+6992	493	TSM	0.01
+6993	493	NKE	0
+6994	493	SBUX	0
+6995	493	AAPL	9.23
+6996	494	CVX	22
+6997	494	GE	43.07
+6998	494	JNJ	25.7
+6999	494	MSFT	0.55
+7000	494	NFLX	12.81
+7001	494	NVDA	148.57
+7002	494	TSM	11.88
+7003	494	V	6.01
+7004	494	XOM	17.9
+7005	494	BA	3.39
+7006	494	JPM	3.64
+7007	494	COST	3.56
+7008	494	WMT	24.31
+7009	494	DIS	24.98
+7010	494	PFE	188.73
+7011	494	NKE	27.89
+7012	494	AAPL	35.28
+7013	494	SBUX	11.15
+7014	495	AAPL	16.21
+7015	495	COST	4.27
+7016	495	CVX	22.17
+7017	495	DIS	8.11
+7018	495	GE	32.54
+7019	495	JNJ	22.16
+7020	495	JPM	9.06
+7021	495	MSFT	2.48
+7022	495	NFLX	34.21
+7023	495	NKE	29.57
+7024	495	NVDA	46.95
+7025	495	PFE	106.12
+7026	495	SBUX	21.4
+7027	495	TSM	13.46
+7028	495	V	8
+7029	495	WMT	31.4
+7030	495	XOM	22.38
+7031	495	BA	10.79
+7032	496	NFLX	46.86
+7033	496	TSM	13.54
+7034	496	JPM	5.42
+7035	496	V	16.69
+7036	496	MSFT	10.28
+7037	496	COST	2.27
+7038	496	WMT	58.99
+7039	496	GE	47.67
+7040	496	BA	5.72
+7041	496	PFE	244.26
+7042	496	NVDA	92.63
+7043	496	XOM	49.32
+7044	496	JNJ	14.06
+7045	496	AAPL	8.98
+7046	496	NKE	5.51
+7047	496	CVX	44.47
+7048	496	DIS	63.74
+7049	496	SBUX	74
+7050	497	TSM	25.85
+7051	497	JPM	15.38
+7052	497	COST	0.09
+7053	497	MSFT	7.39
+7054	497	V	1.16
+7055	497	NFLX	3.38
+7056	497	BA	0.06
+7057	497	GE	73.42
+7058	497	WMT	48.75
+7059	497	NVDA	251.71
+7060	497	PFE	624.36
+7061	497	XOM	5
+7062	497	AAPL	3.56
+7063	497	JNJ	39.04
+7064	497	CVX	7.6
+7065	498	JNJ	22.1
+7066	498	MSFT	10.68
+7067	498	NFLX	4.64
+7068	498	NVDA	191.7
+7069	498	TSM	7.2
+7070	498	V	3.83
+7071	498	BA	2.12
+7072	498	GE	57.76
+7073	498	JPM	18.39
+7074	498	XOM	13.97
+7075	498	COST	8.21
+7076	498	WMT	22.26
+7077	498	PFE	194.22
+7078	498	DIS	1.56
+7079	498	AAPL	6.89
+7080	498	CVX	19.15
+7081	498	NKE	26.72
+7082	498	SBUX	8.65
+7083	499	AAPL	44.12
+7084	499	CVX	7.55
+7085	499	DIS	2.37
+7086	499	GE	37.64
+7087	499	JNJ	6.31
+7088	499	MSFT	0.17
+7089	499	NFLX	17.49
+7090	499	NKE	21.91
+7091	499	NVDA	238.1
+7092	499	PFE	75.83
+7093	499	SBUX	6.59
+7094	499	TSM	10.4
+7095	499	V	0.47
+7096	499	WMT	20.33
+7097	499	XOM	18.06
+7098	499	BA	8.18
+7099	499	JPM	1.48
+7100	499	COST	3.02
+7101	500	JPM	0
+7102	500	NFLX	0
+7103	500	NVDA	0
+7104	500	TSM	0
+7105	500	V	0
+7106	500	COST	27.75
+7107	500	MSFT	0
+7108	500	JNJ	113.48
+7109	500	WMT	232.34
+7110	500	BA	0
+7111	500	GE	94.17
+7112	500	PFE	0
+7113	500	XOM	0
+7114	500	AAPL	0
+7115	500	CVX	161.42
+7116	500	SBUX	0
+7117	501	JNJ	15.43
+7118	501	JPM	5.72
+7119	501	MSFT	9.51
+7120	501	NFLX	66.79
+7121	501	NVDA	16.23
+7122	501	TSM	12.35
+7123	501	V	8.48
+7124	501	BA	1.55
+7125	501	DIS	8.47
+7126	501	XOM	14.32
+7127	501	COST	6.61
+7128	501	WMT	24.73
+7129	501	GE	54.65
+7130	501	PFE	119.01
+7131	501	AAPL	9.44
+7132	501	CVX	43.5
+7133	501	NKE	25.62
+7134	501	SBUX	13.98
+7135	502	CVX	0.01
+7136	502	DIS	0.24
+7137	502	GE	14.98
+7138	502	MSFT	6.68
+7139	502	NFLX	1004.01
+7140	502	PFE	40.49
+7141	502	V	0.01
+7142	502	XOM	2.19
+7143	502	BA	0.84
+7144	502	JPM	0.17
+7145	502	COST	0.01
+7146	502	WMT	0.05
+7147	502	JNJ	3.26
+7148	502	NVDA	0.02
+7149	502	TSM	0.01
+7150	502	NKE	0
+7151	502	SBUX	0
+7152	502	AAPL	0.01
+7153	503	CVX	22
+7154	503	GE	43.07
+7155	503	JNJ	25.7
+7156	503	MSFT	19.84
+7157	503	NFLX	123.17
+7158	503	NVDA	14.03
+7159	503	TSM	11.88
+7160	503	V	6.01
+7161	503	XOM	17.9
+7162	503	BA	3.39
+7163	503	JPM	3.64
+7164	503	COST	9.59
+7165	503	WMT	24.31
+7166	503	DIS	24.98
+7167	503	PFE	188.73
+7168	503	NKE	27.89
+7169	503	AAPL	8.35
+7170	503	SBUX	11.15
+7171	504	AAPL	16.21
+7172	504	COST	7.19
+7173	504	CVX	22.17
+7174	504	DIS	8.11
+7175	504	GE	22.22
+7176	504	JNJ	22.16
+7177	504	JPM	9.06
+7178	504	MSFT	13.41
+7179	504	NFLX	63.83
+7180	504	NKE	29.57
+7181	504	NVDA	22.11
+7182	504	PFE	106.12
+7183	504	SBUX	21.4
+7184	504	TSM	5.53
+7185	504	V	8
+7186	504	WMT	31.4
+7187	504	XOM	22.38
+7188	504	BA	10.79
+7189	505	NFLX	46.86
+7190	505	TSM	13.54
+7191	505	JPM	5.42
+7192	505	V	16.69
+7193	505	MSFT	10.28
+7194	505	COST	2.27
+7195	505	WMT	58.99
+7196	505	GE	47.67
+7197	505	BA	5.72
+7198	505	PFE	244.26
+7199	505	NVDA	17.25
+7200	505	XOM	49.32
+7201	505	JNJ	14.06
+7202	505	AAPL	8.98
+7203	505	NKE	5.51
+7204	505	CVX	44.47
+7205	505	DIS	63.74
+7206	505	SBUX	74
+7207	506	TSM	25.85
+7208	506	JPM	15.38
+7209	506	COST	0.09
+7210	506	MSFT	7.39
+7211	506	V	1.16
+7212	506	NFLX	3.38
+7213	506	BA	0.06
+7214	506	GE	127.96
+7215	506	WMT	48.75
+7216	506	NVDA	6.3
+7217	506	PFE	624.36
+7218	506	XOM	5
+7219	506	AAPL	3.56
+7220	506	JNJ	39.04
+7221	506	CVX	7.6
+7222	507	JNJ	22.1
+7223	507	MSFT	10.68
+7224	507	NFLX	113.55
+7225	507	NVDA	10.64
+7226	507	TSM	7.2
+7227	507	V	3.83
+7228	507	BA	2.12
+7229	507	GE	74.45
+7230	507	JPM	18.39
+7231	507	XOM	13.97
+7232	507	COST	8.21
+7233	507	WMT	22.26
+7234	507	PFE	194.22
+7235	507	DIS	1.56
+7236	507	AAPL	6.89
+7237	507	CVX	19.15
+7238	507	NKE	26.72
+7239	507	SBUX	8.65
+7240	508	AAPL	5.47
+7241	508	CVX	36.82
+7242	508	DIS	2.37
+7243	508	GE	61.29
+7244	508	JNJ	17.77
+7245	508	MSFT	20.61
+7246	508	NFLX	201.8
+7247	508	NKE	21.91
+7248	508	NVDA	8.29
+7249	508	PFE	75.83
+7250	508	SBUX	6.59
+7251	508	TSM	4.57
+7252	508	V	8.66
+7253	508	WMT	50.42
+7254	508	XOM	18.06
+7255	508	BA	8.18
+7256	508	JPM	1.48
+7257	508	COST	11.28
+7258	509	JPM	0
+7259	509	NFLX	0
+7260	509	NVDA	143.29
+7261	509	TSM	87.59
+7262	509	V	0
+7263	509	COST	0
+7264	509	MSFT	0
+7265	509	JNJ	124.54
+7266	509	WMT	0
+7267	509	BA	0
+7268	509	GE	88.86
+7269	509	PFE	0
+7270	509	XOM	0
+7271	509	AAPL	108.16
+7272	509	CVX	0
+7273	509	SBUX	0
+7274	510	MSFT	3.87
+7275	510	TSM	37.87
+7276	510	JPM	14.35
+7277	510	V	16.51
+7278	510	COST	6.06
+7279	510	NFLX	46.04
+7280	510	GE	17.81
+7281	510	WMT	40.22
+7282	510	NVDA	18.36
+7283	510	PFE	268.03
+7284	510	XOM	17.64
+7285	510	JNJ	18.69
+7286	510	AAPL	3.6
+7287	510	CVX	10.02
+7288	511	JNJ	64.47
+7289	511	JPM	5.72
+7290	511	MSFT	9.51
+7291	511	NFLX	66.79
+7292	511	NVDA	16.23
+7293	511	TSM	73.62
+7294	511	V	8.48
+7295	511	BA	1.55
+7296	511	DIS	8.47
+7297	511	XOM	14.32
+7298	511	COST	1.9
+7299	511	WMT	24.73
+7300	511	GE	19.92
+7301	511	PFE	119.01
+7302	511	AAPL	9.44
+7303	511	CVX	9.46
+7304	511	NKE	25.62
+7305	511	SBUX	13.98
+7306	512	CVX	74.46
+7307	512	DIS	0.24
+7308	512	GE	0.01
+7309	512	MSFT	0.46
+7310	512	NFLX	135.83
+7311	512	PFE	40.49
+7312	512	V	0.01
+7313	512	XOM	2.19
+7314	512	BA	0.84
+7315	512	JPM	0.17
+7316	512	COST	0.01
+7317	512	WMT	0.05
+7318	512	JNJ	3.26
+7319	512	NVDA	0.02
+7320	512	TSM	212.54
+7321	512	NKE	0
+7322	512	SBUX	0
+7323	512	AAPL	0.01
+7324	513	CVX	22
+7325	513	GE	14.76
+7326	513	JNJ	57.1
+7327	513	MSFT	4.19
+7328	513	NFLX	71.79
+7329	513	NVDA	14.03
+7330	513	TSM	59.37
+7331	513	V	6.01
+7332	513	XOM	17.9
+7333	513	BA	3.39
+7334	513	JPM	3.64
+7335	513	COST	3.35
+7336	513	WMT	24.31
+7337	513	DIS	24.98
+7338	513	PFE	188.73
+7339	513	NKE	27.89
+7340	513	AAPL	8.35
+7341	513	SBUX	11.15
+7342	514	AAPL	25.36
+7343	514	COST	2.82
+7344	514	CVX	22.17
+7345	514	DIS	8.11
+7346	514	GE	14.67
+7347	514	JNJ	42.82
+7348	514	JPM	9.06
+7349	514	MSFT	5.55
+7350	514	NFLX	35.26
+7351	514	NKE	29.57
+7352	514	NVDA	22.11
+7353	514	PFE	106.12
+7354	514	SBUX	21.4
+7355	514	TSM	40.27
+7356	514	V	8
+7357	514	WMT	15.2
+7358	514	XOM	22.38
+7359	514	BA	10.79
+7360	515	NFLX	46.86
+7361	515	TSM	55.55
+7362	515	JPM	5.42
+7363	515	V	16.69
+7364	515	MSFT	10.28
+7365	515	COST	2.27
+7366	515	WMT	58.99
+7367	515	GE	18.17
+7368	515	BA	5.72
+7369	515	PFE	244.26
+7370	515	NVDA	17.25
+7371	515	XOM	49.32
+7372	515	JNJ	56.15
+7373	515	AAPL	8.98
+7374	515	NKE	5.51
+7375	515	CVX	44.47
+7376	515	DIS	63.74
+7377	515	SBUX	74
+7378	516	TSM	72.16
+7379	516	JPM	15.38
+7380	516	COST	0.09
+7381	516	MSFT	7.39
+7382	516	V	1.16
+7383	516	NFLX	3.38
+7384	516	BA	0.06
+7385	516	GE	34.23
+7386	516	WMT	48.75
+7387	516	NVDA	6.3
+7388	516	PFE	31.56
+7389	516	XOM	5
+7390	516	AAPL	3.56
+7391	516	JNJ	109.49
+7392	516	CVX	7.6
+7393	517	JNJ	69.06
+7394	517	MSFT	10.68
+7395	517	NFLX	43.76
+7396	517	NVDA	10.64
+7397	517	TSM	84.99
+7398	517	V	3.83
+7399	517	BA	2.12
+7400	517	GE	16.29
+7401	517	JPM	18.39
+7402	517	XOM	13.97
+7403	517	COST	2.21
+7404	517	WMT	22.26
+7405	517	PFE	194.22
+7406	517	DIS	1.56
+7407	517	AAPL	6.89
+7408	517	CVX	19.15
+7409	517	NKE	26.72
+7410	517	SBUX	8.65
+7411	518	AAPL	14.65
+7412	518	CVX	36.82
+7413	518	DIS	2.37
+7414	518	GE	9.18
+7415	518	JNJ	52.23
+7416	518	MSFT	3.49
+7417	518	NFLX	109.84
+7418	518	NKE	21.91
+7419	518	NVDA	18.34
+7420	518	PFE	75.83
+7421	518	SBUX	6.59
+7422	518	TSM	79.71
+7423	518	V	2.49
+7424	518	WMT	30.11
+7425	518	XOM	40.82
+7426	518	BA	8.18
+7427	518	JPM	1.48
+7428	518	COST	3.22
+7429	519	JPM	0
+7430	519	NFLX	0
+7431	519	NVDA	151.34
+7432	519	TSM	91.54
+7433	519	V	0
+7434	519	COST	0
+7435	519	MSFT	0
+7436	519	JNJ	114.2
+7437	519	WMT	205.9
+7438	519	BA	0
+7439	519	GE	94.22
+7440	519	PFE	0
+7441	519	XOM	0
+7442	519	AAPL	0
+7443	519	CVX	0
+7444	519	SBUX	0
+7445	520	JNJ	32.31
+7446	520	JPM	5.72
+7447	520	MSFT	9.51
+7448	520	NFLX	66.79
+7449	520	NVDA	16.23
+7450	520	TSM	47.91
+7451	520	V	8.48
+7452	520	BA	1.55
+7453	520	DIS	8.47
+7454	520	XOM	14.32
+7455	520	COST	1.9
+7456	520	WMT	24.73
+7457	520	GE	19.92
+7458	520	PFE	119.01
+7459	520	AAPL	9.44
+7460	520	CVX	9.46
+7461	520	NKE	25.62
+7462	520	SBUX	13.98
+7463	521	CVX	413.17
+7464	521	DIS	0.24
+7465	521	GE	0.01
+7466	521	MSFT	0.46
+7467	521	NFLX	24
+7468	521	PFE	40.49
+7469	521	V	0.01
+7470	521	XOM	114.39
+7471	521	BA	0.84
+7472	521	JPM	0.17
+7473	521	COST	0.01
+7474	521	WMT	0.05
+7475	521	JNJ	3.26
+7476	521	NVDA	0.02
+7477	521	TSM	0.14
+7478	521	NKE	0
+7479	521	SBUX	0
+7480	521	AAPL	0.01
+7481	522	CVX	44.47
+7482	522	GE	14.76
+7483	522	JNJ	22.98
+7484	522	MSFT	4.19
+7485	522	NFLX	122.62
+7486	522	NVDA	14.03
+7487	522	TSM	24.66
+7488	522	V	6.01
+7489	522	XOM	80.9
+7490	522	BA	3.39
+7491	522	JPM	3.64
+7492	522	COST	3.35
+7493	522	WMT	24.31
+7494	522	DIS	24.98
+7495	522	PFE	188.73
+7496	522	NKE	27.89
+7497	522	AAPL	8.35
+7498	522	SBUX	11.15
+7499	523	AAPL	13.91
+7500	523	COST	2.82
+7501	523	CVX	22.17
+7502	523	DIS	8.11
+7503	523	GE	14.67
+7504	523	JNJ	30.23
+7505	523	JPM	9.06
+7506	523	MSFT	5.55
+7507	523	NFLX	63.86
+7508	523	NKE	29.57
+7509	523	NVDA	22.11
+7510	523	PFE	206.37
+7511	523	SBUX	21.4
+7512	523	TSM	15.76
+7513	523	V	8
+7514	523	WMT	50.34
+7515	523	XOM	22.38
+7516	523	BA	10.79
+7517	524	NFLX	46.86
+7518	524	TSM	29.4
+7519	524	JPM	5.42
+7520	524	V	16.69
+7521	524	MSFT	10.28
+7522	524	COST	2.27
+7523	524	WMT	58.99
+7524	524	GE	18.17
+7525	524	BA	5.72
+7526	524	PFE	244.26
+7527	524	NVDA	17.25
+7528	524	XOM	49.32
+7529	524	JNJ	56.15
+7530	524	AAPL	8.98
+7531	524	NKE	5.51
+7532	524	CVX	44.47
+7533	524	DIS	63.74
+7534	524	SBUX	74
+7535	525	TSM	72.16
+7536	525	JPM	15.38
+7537	525	COST	0.09
+7538	525	MSFT	7.39
+7539	525	V	1.16
+7540	525	NFLX	3.38
+7541	525	BA	0.06
+7542	525	GE	34.23
+7543	525	WMT	48.75
+7544	525	NVDA	6.3
+7545	525	PFE	31.56
+7546	525	XOM	5
+7547	525	AAPL	3.56
+7548	525	JNJ	34.66
+7549	525	CVX	7.6
+7550	526	JNJ	24.07
+7551	526	MSFT	10.68
+7552	526	NFLX	43.76
+7553	526	NVDA	10.64
+7554	526	TSM	43.13
+7555	526	V	3.83
+7556	526	BA	2.12
+7557	526	GE	16.29
+7558	526	JPM	18.39
+7559	526	XOM	81.13
+7560	526	COST	2.21
+7561	526	WMT	22.26
+7562	526	PFE	194.22
+7563	526	DIS	1.56
+7564	526	AAPL	6.89
+7565	526	CVX	19.15
+7566	526	NKE	26.72
+7567	526	SBUX	8.65
+7568	527	AAPL	7.99
+7569	527	CVX	83.15
+7570	527	DIS	2.37
+7571	527	GE	9.18
+7572	527	JNJ	13.75
+7573	527	MSFT	3.49
+7574	527	NFLX	145.4
+7575	527	NKE	21.91
+7576	527	NVDA	7.34
+7577	527	PFE	264.27
+7578	527	SBUX	6.59
+7579	527	TSM	16.78
+7580	527	V	2.49
+7581	527	WMT	45.9
+7582	527	XOM	141.91
+7583	527	BA	8.18
+7584	527	JPM	9.1
+7585	527	COST	3.22
+7586	528	JPM	0
+7587	528	NFLX	0
+7588	528	NVDA	153.16
+7589	528	TSM	81.87
+7590	528	V	0
+7591	528	COST	0
+7592	528	MSFT	0
+7593	528	JNJ	131.4
+7594	528	WMT	221.22
+7595	528	BA	0
+7596	528	GE	0
+7597	528	PFE	0
+7598	528	XOM	0
+7599	528	AAPL	98.23
+7600	528	CVX	0
+7601	528	SBUX	0
+7602	529	JNJ	100.66
+7603	529	JPM	5.72
+7604	529	MSFT	9.51
+7605	529	NFLX	66.79
+7606	529	NVDA	16.23
+7607	529	TSM	24.31
+7608	529	V	8.48
+7609	529	BA	1.55
+7610	529	DIS	8.47
+7611	529	XOM	14.32
+7612	529	COST	1.9
+7613	529	WMT	24.73
+7614	529	GE	19.92
+7615	529	PFE	119.01
+7616	529	AAPL	9.44
+7617	529	CVX	9.46
+7618	529	NKE	25.62
+7619	529	SBUX	13.98
+7620	530	CVX	6.7
+7621	530	DIS	0.24
+7622	530	GE	0.01
+7623	530	MSFT	0.46
+7624	530	NFLX	0.32
+7625	530	PFE	40.49
+7626	530	V	0.01
+7627	530	XOM	3.94
+7628	530	BA	0.84
+7629	530	JPM	0.17
+7630	530	COST	0.01
+7631	530	WMT	0.05
+7632	530	JNJ	427.27
+7633	530	NVDA	0.02
+7634	530	TSM	0.14
+7635	530	NKE	0
+7636	530	SBUX	0
+7637	530	AAPL	0.01
+7638	531	CVX	44.47
+7639	531	GE	14.76
+7640	531	JNJ	131.45
+7641	531	MSFT	4.19
+7642	531	NFLX	39.06
+7643	531	NVDA	14.03
+7644	531	TSM	24.66
+7645	531	V	6.01
+7646	531	XOM	39.1
+7647	531	BA	3.39
+7648	531	JPM	3.64
+7649	531	COST	3.35
+7650	531	WMT	24.31
+7651	531	DIS	24.98
+7652	531	PFE	188.73
+7653	531	NKE	27.89
+7654	531	AAPL	8.35
+7655	531	SBUX	11.15
+7656	532	AAPL	13.91
+7657	532	COST	2.82
+7658	532	CVX	22.17
+7659	532	DIS	8.11
+7660	532	GE	14.67
+7661	532	JNJ	61.83
+7662	532	JPM	9.06
+7663	532	MSFT	5.55
+7664	532	NFLX	26.03
+7665	532	NKE	29.57
+7666	532	NVDA	22.11
+7667	532	PFE	206.37
+7668	532	SBUX	21.4
+7669	532	TSM	15.76
+7670	532	V	8
+7671	532	WMT	50.34
+7672	532	XOM	22.38
+7673	532	BA	10.79
+7674	533	NFLX	46.86
+7675	533	TSM	29.4
+7676	533	JPM	5.42
+7677	533	V	16.69
+7678	533	MSFT	10.28
+7679	533	COST	2.27
+7680	533	WMT	58.99
+7681	533	GE	18.17
+7682	533	BA	5.72
+7683	533	PFE	244.26
+7684	533	NVDA	17.25
+7685	533	XOM	49.32
+7686	533	JNJ	90.09
+7687	533	AAPL	8.98
+7688	533	NKE	5.51
+7689	533	CVX	44.47
+7690	533	DIS	63.74
+7691	533	SBUX	74
+7692	534	TSM	10.17
+7693	534	JPM	15.38
+7694	534	COST	0.09
+7695	534	MSFT	7.39
+7696	534	V	1.16
+7697	534	NFLX	3.38
+7698	534	BA	0.06
+7699	534	GE	34.23
+7700	534	WMT	48.75
+7701	534	NVDA	6.3
+7702	534	PFE	31.56
+7703	534	XOM	5
+7704	534	AAPL	3.56
+7705	534	JNJ	248.6
+7706	534	CVX	7.6
+7707	535	JNJ	187.87
+7708	535	MSFT	10.68
+7709	535	NFLX	43.76
+7710	535	NVDA	10.64
+7711	535	TSM	14.36
+7712	535	V	3.83
+7713	535	BA	2.12
+7714	535	GE	16.29
+7715	535	JPM	18.39
+7716	535	XOM	28.44
+7717	535	COST	2.21
+7718	535	WMT	22.26
+7719	535	PFE	194.22
+7720	535	DIS	1.56
+7721	535	AAPL	6.89
+7722	535	CVX	19.15
+7723	535	NKE	26.72
+7724	535	SBUX	8.65
+7725	536	AAPL	7.99
+7726	536	CVX	33.11
+7727	536	DIS	2.37
+7728	536	GE	9.18
+7729	536	JNJ	150.32
+7730	536	MSFT	3.49
+7731	536	NFLX	40.99
+7732	536	NKE	21.91
+7733	536	NVDA	7.34
+7734	536	PFE	138.95
+7735	536	SBUX	6.59
+7736	536	TSM	16.78
+7737	536	V	2.49
+7738	536	WMT	45.9
+7739	536	XOM	52.25
+7740	536	BA	8.18
+7741	536	JPM	9.1
+7742	536	COST	3.22
+7743	537	JPM	90.34
+7744	537	NFLX	0
+7745	537	NVDA	0
+7746	537	TSM	84.25
+7747	537	V	0
+7748	537	COST	26.79
+7749	537	MSFT	0
+7750	537	JNJ	113.56
+7751	537	WMT	0
+7752	537	BA	0
+7753	537	GE	0
+7754	537	PFE	1050.23
+7755	537	XOM	0
+7756	537	AAPL	0
+7757	537	CVX	0
+7758	537	SBUX	0
+7759	538	JNJ	36.54
+7760	538	JPM	24.06
+7761	538	MSFT	9.51
+7762	538	NFLX	66.79
+7763	538	NVDA	16.23
+7764	538	TSM	24.31
+7765	538	V	8.48
+7766	538	BA	1.55
+7767	538	DIS	8.47
+7768	538	XOM	14.32
+7769	538	COST	5.88
+7770	538	WMT	24.73
+7771	538	GE	6.41
+7772	538	PFE	414.56
+7773	538	AAPL	9.44
+7774	538	CVX	9.46
+7775	538	NKE	25.62
+7776	538	SBUX	13.98
+7777	539	CVX	6.7
+7778	539	DIS	0.24
+7779	539	GE	0.01
+7780	539	MSFT	0.46
+7781	539	NFLX	518.9
+7782	539	PFE	303.79
+7783	539	V	0.01
+7784	539	XOM	3.94
+7785	539	BA	0.84
+7786	539	JPM	129.83
+7787	539	COST	3.14
+7788	539	WMT	40.29
+7789	539	JNJ	0.32
+7790	539	NVDA	0.02
+7791	539	TSM	5.53
+7792	539	NKE	0
+7793	539	SBUX	0
+7794	539	AAPL	0.01
+7795	540	CVX	23.87
+7796	540	GE	14.76
+7797	540	JNJ	27.03
+7798	540	MSFT	4.19
+7799	540	NFLX	105.03
+7800	540	NVDA	14.03
+7801	540	TSM	24.66
+7802	540	V	6.01
+7803	540	XOM	39.1
+7804	540	BA	3.39
+7805	540	JPM	35.99
+7806	540	COST	9.22
+7807	540	WMT	62.36
+7808	540	DIS	24.98
+7809	540	PFE	393.44
+7810	540	NKE	27.89
+7811	540	AAPL	8.35
+7812	540	SBUX	11.15
+7813	541	AAPL	13.91
+7814	541	COST	5.29
+7815	541	CVX	22.17
+7816	541	DIS	8.11
+7817	541	GE	6.62
+7818	541	JNJ	23.11
+7819	541	JPM	19.86
+7820	541	MSFT	5.55
+7821	541	NFLX	54.64
+7822	541	NKE	104.05
+7823	541	NVDA	22.11
+7824	541	PFE	317.49
+7825	541	SBUX	21.4
+7826	541	TSM	15.76
+7827	541	V	8
+7828	541	WMT	50.34
+7829	541	XOM	22.38
+7830	541	BA	10.79
+7831	542	NFLX	46.86
+7832	542	TSM	29.4
+7833	542	JPM	5.42
+7834	542	V	16.69
+7835	542	MSFT	10.28
+7836	542	COST	2.27
+7837	542	WMT	58.99
+7838	542	GE	18.17
+7839	542	BA	5.72
+7840	542	PFE	244.26
+7841	542	NVDA	17.25
+7842	542	XOM	49.32
+7843	542	JNJ	32.55
+7844	542	AAPL	8.98
+7845	542	NKE	5.51
+7846	542	CVX	44.47
+7847	542	DIS	63.74
+7848	542	SBUX	74
+7849	543	TSM	56.74
+7850	543	JPM	15.38
+7851	543	COST	0.09
+7852	543	MSFT	7.39
+7853	543	V	1.16
+7854	543	NFLX	3.38
+7855	543	BA	0.06
+7856	543	GE	34.23
+7857	543	WMT	48.75
+7858	543	NVDA	6.3
+7859	543	PFE	31.56
+7860	543	XOM	5
+7861	543	AAPL	3.56
+7862	543	JNJ	58.79
+7863	543	CVX	7.6
+7864	544	JNJ	32.22
+7865	544	MSFT	10.68
+7866	544	NFLX	43.76
+7867	544	NVDA	10.64
+7868	544	TSM	14.36
+7869	544	V	3.83
+7870	544	BA	2.12
+7871	544	GE	16.29
+7872	544	JPM	40.31
+7873	544	XOM	28.44
+7874	544	COST	9.21
+7875	544	WMT	22.26
+7876	544	PFE	517.1
+7877	544	DIS	1.56
+7878	544	AAPL	6.89
+7879	544	CVX	19.15
+7880	544	NKE	26.72
+7881	544	SBUX	8.65
+7882	545	AAPL	7.99
+7883	545	CVX	33.11
+7884	545	DIS	2.37
+7885	545	GE	1.91
+7886	545	JNJ	19.29
+7887	545	MSFT	3.49
+7888	545	NFLX	156.68
+7889	545	NKE	21.91
+7890	545	NVDA	7.34
+7891	545	PFE	640.3
+7892	545	SBUX	6.59
+7893	545	TSM	16.78
+7894	545	V	2.49
+7895	545	WMT	77.58
+7896	545	XOM	16.83
+7897	545	BA	8.18
+7898	545	JPM	39
+7899	545	COST	9.75
+7900	546	JPM	79.73
+7901	546	NFLX	0
+7902	546	NVDA	153.32
+7903	546	TSM	82.87
+7904	546	V	0
+7905	546	COST	31.07
+7906	546	MSFT	0
+7907	546	JNJ	0
+7908	546	WMT	0
+7909	546	BA	0
+7910	546	GE	0
+7911	546	PFE	0
+7912	546	XOM	0
+7913	546	AAPL	0
+7914	546	CVX	0
+7915	546	SBUX	278.16
+7916	547	JNJ	11.24
+7917	547	JPM	24.06
+7918	547	MSFT	9.51
+7919	547	NFLX	66.79
+7920	547	NVDA	40.47
+7921	547	TSM	37.76
+7922	547	V	8.48
+7923	547	BA	1.55
+7924	547	DIS	8.47
+7925	547	XOM	14.32
+7926	547	COST	19.26
+7927	547	WMT	24.73
+7928	547	GE	6.41
+7929	547	PFE	75.44
+7930	547	AAPL	9.44
+7931	547	CVX	9.46
+7932	547	NKE	25.62
+7933	547	SBUX	64.36
+7934	548	CVX	6.7
+7935	548	DIS	0.24
+7936	548	GE	0.01
+7937	548	MSFT	0.46
+7938	548	NFLX	18.12
+7939	548	PFE	0
+7940	548	V	0.01
+7941	548	XOM	3.94
+7942	548	BA	0.84
+7943	548	JPM	7.79
+7944	548	COST	102.1
+7945	548	WMT	0.14
+7946	548	JNJ	0.32
+7947	548	NVDA	0.02
+7948	548	TSM	15
+7949	548	NKE	0
+7950	548	SBUX	0
+7951	548	AAPL	0.01
+7952	549	CVX	23.87
+7953	549	GE	14.76
+7954	549	JNJ	8.62
+7955	549	MSFT	4.19
+7956	549	NFLX	105.03
+7957	549	NVDA	37.58
+7958	549	TSM	24.66
+7959	549	V	6.01
+7960	549	XOM	2.18
+7961	549	BA	3.39
+7962	549	JPM	21.67
+7963	549	COST	27.32
+7964	549	WMT	21.77
+7965	549	DIS	24.98
+7966	549	PFE	51.47
+7967	549	NKE	27.89
+7968	549	AAPL	8.35
+7969	549	SBUX	91.63
+7970	550	AAPL	13.91
+7971	550	COST	13.5
+7972	550	CVX	7.88
+7973	550	DIS	8.11
+7974	550	GE	6.62
+7975	550	JNJ	14.2
+7976	550	JPM	19.86
+7977	550	MSFT	5.55
+7978	550	NFLX	54.64
+7979	550	NKE	4.71
+7980	550	NVDA	22.11
+7981	550	PFE	105.49
+7982	550	SBUX	78.48
+7983	550	TSM	15.76
+7984	550	V	8
+7985	550	WMT	25.98
+7986	550	XOM	3.79
+7987	550	BA	10.79
+7988	551	NFLX	46.86
+7989	551	TSM	29.4
+7990	551	JPM	5.42
+7991	551	V	16.69
+7992	551	MSFT	10.28
+7993	551	COST	18.95
+7994	551	WMT	58.99
+7995	551	GE	18.17
+7996	551	BA	5.72
+7997	551	PFE	244.26
+7998	551	NVDA	17.25
+7999	551	XOM	3.84
+8000	551	JNJ	32.55
+8001	551	AAPL	8.98
+8002	551	NKE	5.51
+8003	551	CVX	7.58
+8004	551	DIS	63.74
+8005	551	SBUX	74
+8006	552	TSM	56.74
+8007	552	JPM	15.38
+8008	552	COST	44.33
+8009	552	MSFT	7.39
+8010	552	V	1.16
+8011	552	NFLX	3.38
+8012	552	BA	0.06
+8013	552	GE	34.23
+8014	552	WMT	48.75
+8015	552	NVDA	6.3
+8016	552	PFE	31.56
+8017	552	XOM	5
+8018	552	AAPL	3.56
+8019	552	JNJ	58.79
+8020	552	CVX	7.6
+8021	553	JNJ	6.53
+8022	553	MSFT	10.68
+8023	553	NFLX	43.76
+8024	553	NVDA	10.64
+8025	553	TSM	14.36
+8026	553	V	3.83
+8027	553	BA	2.12
+8028	553	GE	16.29
+8029	553	JPM	16.12
+8030	553	XOM	28.44
+8031	553	COST	38.09
+8032	553	WMT	22.26
+8033	553	PFE	38.49
+8034	553	DIS	1.56
+8035	553	AAPL	6.89
+8036	553	CVX	19.15
+8037	553	NKE	26.72
+8038	553	SBUX	80.83
+8039	554	AAPL	7.99
+8040	554	CVX	2.93
+8041	554	DIS	2.37
+8042	554	GE	1.91
+8043	554	JNJ	4.19
+8044	554	MSFT	3.49
+8045	554	NFLX	102.41
+8046	554	NKE	21.91
+8047	554	NVDA	31.04
+8048	554	PFE	26.93
+8049	554	SBUX	89.94
+8050	554	TSM	16.78
+8051	554	V	2.49
+8052	554	WMT	15.87
+8053	554	XOM	0.85
+8054	554	BA	16.01
+8055	554	JPM	26.17
+8056	554	COST	39.76
+8057	555	JPM	0
+8058	555	NFLX	0
+8059	555	NVDA	148.57
+8060	555	TSM	87.95
+8061	555	V	0
+8062	555	COST	0
+8063	555	MSFT	0
+8064	555	JNJ	112.44
+8065	555	WMT	0
+8066	555	BA	0
+8067	555	GE	90.62
+8068	555	PFE	0
+8069	555	XOM	0
+8070	555	AAPL	99.2
+8071	555	CVX	0
+8072	555	SBUX	0
+8073	556	JNJ	29.74
+8074	556	JPM	6.8
+8075	556	MSFT	9.51
+8076	556	NFLX	66.79
+8077	556	NVDA	61.94
+8078	556	TSM	54.03
+8079	556	V	8.48
+8080	556	BA	1.55
+8081	556	DIS	8.47
+8082	556	XOM	14.32
+8083	556	COST	1.57
+8084	556	WMT	24.73
+8085	556	GE	33.5
+8086	556	PFE	75.44
+8087	556	AAPL	9.44
+8088	556	CVX	9.46
+8089	556	NKE	25.62
+8090	556	SBUX	7.41
+8091	557	CVX	6.7
+8092	557	DIS	0.24
+8093	557	GE	11.8
+8094	557	MSFT	0.46
+8095	557	NFLX	33.74
+8096	557	PFE	0
+8097	557	V	0.01
+8098	557	XOM	3.94
+8099	557	BA	0.84
+8100	557	JPM	0.33
+8101	557	COST	0
+8102	557	WMT	0.14
+8103	557	JNJ	0.32
+8104	557	NVDA	491.69
+8105	557	TSM	15
+8106	557	NKE	0
+8107	557	SBUX	0
+8108	557	AAPL	0.01
+8109	558	CVX	23.87
+8110	558	GE	29.53
+8111	558	JNJ	25.96
+8112	558	MSFT	4.19
+8113	558	NFLX	67.94
+8114	558	NVDA	107.92
+8115	558	TSM	37.63
+8116	558	V	6.01
+8117	558	XOM	2.18
+8118	558	BA	3.39
+8119	558	JPM	21.67
+8120	558	COST	2.37
+8121	558	WMT	21.77
+8122	558	DIS	24.98
+8123	558	PFE	51.47
+8124	558	NKE	27.89
+8125	558	AAPL	8.35
+8126	558	SBUX	16.99
+8127	559	AAPL	13.91
+8128	559	COST	2.51
+8129	559	CVX	7.88
+8130	559	DIS	26.71
+8131	559	GE	19.73
+8132	559	JNJ	30.44
+8133	559	JPM	7.3
+8134	559	MSFT	5.55
+8135	559	NFLX	54.64
+8136	559	NKE	4.71
+8137	559	NVDA	42.73
+8138	559	PFE	105.49
+8139	559	SBUX	15.61
+8140	559	TSM	36.63
+8141	559	V	8
+8142	559	WMT	25.98
+8143	559	XOM	3.79
+8144	559	BA	10.79
+8145	560	NFLX	46.86
+8146	560	TSM	29.4
+8147	560	JPM	5.42
+8148	560	V	16.69
+8149	560	MSFT	10.28
+8150	560	COST	2.26
+8151	560	WMT	58.99
+8152	560	GE	18.17
+8153	560	BA	5.72
+8154	560	PFE	244.26
+8155	560	NVDA	66.78
+8156	560	XOM	3.84
+8157	560	JNJ	32.55
+8158	560	AAPL	8.98
+8159	560	NKE	5.51
+8160	560	CVX	7.58
+8161	560	DIS	63.74
+8162	560	SBUX	74
+8163	561	TSM	56.74
+8164	561	JPM	15.38
+8165	561	COST	1.85
+8166	561	MSFT	7.39
+8167	561	V	1.16
+8168	561	NFLX	3.38
+8169	561	BA	0.06
+8170	561	GE	34.23
+8171	561	WMT	48.75
+8172	561	NVDA	170.48
+8173	561	PFE	31.56
+8174	561	XOM	5
+8175	561	AAPL	3.56
+8176	561	JNJ	58.79
+8177	561	CVX	7.6
+8178	562	JNJ	29.43
+8179	562	MSFT	10.68
+8180	562	NFLX	43.76
+8181	562	NVDA	117.96
+8182	562	TSM	52.79
+8183	562	V	3.83
+8184	562	BA	2.12
+8185	562	GE	37.9
+8186	562	JPM	16.12
+8187	562	XOM	28.44
+8188	562	COST	2.29
+8189	562	WMT	22.26
+8190	562	PFE	38.49
+8191	562	DIS	1.56
+8192	562	AAPL	6.89
+8193	562	CVX	19.15
+8194	562	NKE	26.72
+8195	562	SBUX	8.02
+8196	563	AAPL	7.99
+8197	563	CVX	2.93
+8198	563	DIS	2.37
+8199	563	GE	30.27
+8200	563	JNJ	16.45
+8201	563	MSFT	3.49
+8202	563	NFLX	102.41
+8203	563	NKE	21.91
+8204	563	NVDA	162.1
+8205	563	PFE	26.93
+8206	563	SBUX	21.84
+8207	563	TSM	45.99
+8208	563	V	2.49
+8209	563	WMT	15.87
+8210	563	XOM	0.85
+8211	563	BA	3.57
+8212	563	JPM	8.69
+8213	563	COST	1.04
+8214	564	JPM	0
+8215	564	NFLX	0
+8216	564	NVDA	153.94
+8217	564	TSM	81.03
+8218	564	V	0
+8219	564	COST	25.92
+8220	564	MSFT	0
+8221	564	JNJ	0
+8222	564	WMT	0
+8223	564	BA	0
+8224	564	GE	97.46
+8225	564	PFE	0
+8226	564	XOM	0
+8227	564	AAPL	95.72
+8228	564	CVX	0
+8229	564	SBUX	0
+8230	565	MSFT	3.87
+8231	565	TSM	21.4
+8232	565	JPM	14.35
+8233	565	V	16.51
+8234	565	COST	6.06
+8235	565	NFLX	46.04
+8236	565	GE	17.81
+8237	565	WMT	40.22
+8238	565	NVDA	18.36
+8239	565	PFE	268.03
+8240	565	XOM	17.64
+8241	565	JNJ	18.69
+8242	565	AAPL	3.6
+8243	565	CVX	10.02
+8244	566	JNJ	29.74
+8245	566	JPM	6.8
+8246	566	MSFT	9.51
+8247	566	NFLX	9.59
+8248	566	NVDA	61.94
+8249	566	TSM	54.03
+8250	566	V	8.48
+8251	566	BA	1.55
+8252	566	DIS	8.47
+8253	566	XOM	14.32
+8254	566	COST	1.57
+8255	566	WMT	24.73
+8256	566	GE	33.5
+8257	566	PFE	75.44
+8258	566	AAPL	9.44
+8259	566	CVX	9.46
+8260	566	NKE	25.62
+8261	566	SBUX	7.41
+8262	567	CVX	6.7
+8263	567	DIS	0.24
+8264	567	GE	0
+8265	567	MSFT	0.46
+8266	567	NFLX	0
+8267	567	PFE	0
+8268	567	V	0.01
+8269	567	XOM	3.94
+8270	567	BA	0.84
+8271	567	JPM	0.33
+8272	567	COST	0
+8273	567	WMT	22.27
+8274	567	JNJ	0.32
+8275	567	NVDA	5.74
+8276	567	TSM	281.2
+8277	567	NKE	0
+8278	567	SBUX	0
+8279	567	AAPL	0.01
+8280	568	CVX	23.87
+8281	568	GE	29.53
+8282	568	JNJ	25.96
+8283	568	MSFT	4.19
+8284	568	NFLX	7.75
+8285	568	NVDA	64.7
+8286	568	TSM	72.96
+8287	568	V	6.01
+8288	568	XOM	2.18
+8289	568	BA	3.39
+8290	568	JPM	21.67
+8291	568	COST	2.37
+8292	568	WMT	61.89
+8293	568	DIS	24.98
+8294	568	PFE	51.47
+8295	568	NKE	27.89
+8296	568	AAPL	8.35
+8297	568	SBUX	16.99
+8298	569	AAPL	13.91
+8299	569	COST	2.51
+8300	569	CVX	7.88
+8301	569	DIS	26.71
+8302	569	GE	19.73
+8303	569	JNJ	15.53
+8304	569	JPM	7.3
+8305	569	MSFT	5.55
+8306	569	NFLX	18.96
+8307	569	NKE	65.97
+8308	569	NVDA	42.73
+8309	569	PFE	105.49
+8310	569	SBUX	37.32
+8311	569	TSM	26.71
+8312	569	V	8
+8313	569	WMT	25.98
+8314	569	XOM	16.98
+8315	569	BA	10.79
+8316	570	TSM	117.12
+8317	570	JPM	15.38
+8318	570	COST	1.85
+8319	570	MSFT	7.39
+8320	570	V	1.16
+8321	570	NFLX	3.38
+8322	570	BA	0.06
+8323	570	GE	34.23
+8324	570	WMT	48.75
+8325	570	NVDA	170.48
+8326	570	PFE	31.56
+8327	570	XOM	5
+8328	570	AAPL	3.56
+8329	570	JNJ	58.79
+8330	570	CVX	7.6
+8331	571	JNJ	29.43
+8332	571	MSFT	10.68
+8333	571	NFLX	43.76
+8334	571	NVDA	74.81
+8335	571	TSM	92.83
+8336	571	V	3.83
+8337	571	BA	2.12
+8338	571	GE	37.9
+8339	571	JPM	16.12
+8340	571	XOM	28.44
+8341	571	COST	2.29
+8342	571	WMT	22.26
+8343	571	PFE	38.49
+8344	571	DIS	1.56
+8345	571	AAPL	6.89
+8346	571	CVX	19.15
+8347	571	NKE	26.72
+8348	571	SBUX	8.02
+8349	572	AAPL	7.99
+8350	572	CVX	2.93
+8351	572	DIS	2.37
+8352	572	GE	8.6
+8353	572	JNJ	3.98
+8354	572	MSFT	7.6
+8355	572	NFLX	4
+8356	572	NKE	21.91
+8357	572	NVDA	72.39
+8358	572	PFE	26.93
+8359	572	SBUX	21.84
+8360	572	TSM	98.43
+8361	572	V	2.49
+8362	572	WMT	88.6
+8363	572	XOM	0.85
+8364	572	BA	11.74
+8365	572	JPM	8.69
+8366	572	COST	5.75
+8367	573	JPM	0
+8368	573	NFLX	0
+8369	573	NVDA	135.39
+8370	573	TSM	82.59
+8371	573	V	0
+8372	573	COST	0
+8373	573	MSFT	0
+8374	573	JNJ	130.09
+8375	573	WMT	206.2
+8376	573	BA	0
+8377	573	GE	0
+8378	573	PFE	0
+8379	573	XOM	176.96
+8380	573	AAPL	0
+8381	573	CVX	0
+8382	573	SBUX	0
+8383	574	MSFT	3.87
+8384	574	TSM	43.58
+8385	574	JPM	14.35
+8386	574	V	16.51
+8387	574	COST	6.06
+8388	574	NFLX	46.04
+8389	574	GE	17.81
+8390	574	WMT	40.22
+8391	574	NVDA	18.36
+8392	574	PFE	268.03
+8393	574	XOM	17.64
+8394	574	JNJ	18.69
+8395	574	AAPL	3.6
+8396	574	CVX	10.02
+8397	575	JNJ	29.74
+8398	575	JPM	6.8
+8399	575	MSFT	9.51
+8400	575	NFLX	9.59
+8401	575	NVDA	27.24
+8402	575	TSM	94.17
+8403	575	V	8.48
+8404	575	BA	1.55
+8405	575	DIS	8.47
+8406	575	XOM	14.32
+8407	575	COST	1.57
+8408	575	WMT	24.73
+8409	575	GE	10.32
+8410	575	PFE	75.44
+8411	575	AAPL	9.44
+8412	575	CVX	9.46
+8413	575	NKE	25.62
+8414	575	SBUX	7.41
+8415	576	CVX	6.7
+8416	576	DIS	0.24
+8417	576	GE	0
+8418	576	MSFT	0.46
+8419	576	NFLX	0
+8420	576	PFE	0
+8421	576	V	5.95
+8422	576	XOM	3.94
+8423	576	BA	0.84
+8424	576	JPM	0.33
+8425	576	COST	0
+8426	576	WMT	0.19
+8427	576	JNJ	0.32
+8428	576	NVDA	149.56
+8429	576	TSM	207.42
+8430	576	NKE	0
+8431	576	SBUX	0
+8432	576	AAPL	0.01
+8433	577	CVX	23.87
+8434	577	GE	5.66
+8435	577	JNJ	25.96
+8436	577	MSFT	4.19
+8437	577	NFLX	7.75
+8438	577	NVDA	64.7
+8439	577	TSM	88.27
+8440	577	V	6.01
+8441	577	XOM	2.18
+8442	577	BA	3.39
+8443	577	JPM	7.25
+8444	577	COST	2.37
+8445	577	WMT	61.89
+8446	577	DIS	24.98
+8447	577	PFE	51.47
+8448	577	NKE	27.89
+8449	577	AAPL	8.35
+8450	577	SBUX	16.99
+8451	578	AAPL	13.91
+8452	578	COST	2.51
+8453	578	CVX	7.88
+8454	578	DIS	26.71
+8455	578	GE	10.38
+8456	578	JNJ	15.53
+8457	578	JPM	7.3
+8458	578	MSFT	5.55
+8459	578	NFLX	18.96
+8460	578	NKE	13.94
+8461	578	NVDA	33.68
+8462	578	PFE	105.49
+8463	578	SBUX	10.1
+8464	578	TSM	53.79
+8465	578	V	8
+8466	578	WMT	59.27
+8467	578	XOM	16.98
+8468	578	BA	10.79
+8469	579	NFLX	46.86
+8470	579	TSM	73.33
+8471	579	JPM	5.42
+8472	579	V	16.69
+8473	579	MSFT	10.28
+8474	579	COST	2.26
+8475	579	WMT	58.99
+8476	579	GE	18.17
+8477	579	BA	5.72
+8478	579	PFE	244.26
+8479	579	NVDA	66.78
+8480	579	XOM	3.84
+8481	579	JNJ	32.55
+8482	579	AAPL	8.98
+8483	579	NKE	5.51
+8484	579	CVX	7.58
+8485	579	DIS	63.74
+8486	579	SBUX	74
+8487	580	JNJ	29.43
+8488	580	MSFT	10.68
+8489	580	NFLX	43.76
+8490	580	NVDA	74.81
+8491	580	TSM	128.68
+8492	580	V	3.83
+8493	580	BA	2.12
+8494	580	GE	5.24
+8495	580	JPM	16.12
+8496	580	XOM	28.44
+8497	580	COST	2.29
+8498	580	WMT	22.26
+8499	580	PFE	38.49
+8500	580	DIS	1.56
+8501	580	AAPL	6.89
+8502	580	CVX	19.15
+8503	580	NKE	26.72
+8504	580	SBUX	8.02
+8505	581	AAPL	15.07
+8506	581	CVX	2.93
+8507	581	DIS	2.37
+8508	581	GE	2.05
+8509	581	JNJ	3.98
+8510	581	MSFT	7.6
+8511	581	NFLX	4
+8512	581	NKE	21.91
+8513	581	NVDA	134.86
+8514	581	PFE	26.93
+8515	581	SBUX	21.84
+8516	581	TSM	98.43
+8517	581	V	15.37
+8518	581	WMT	36.47
+8519	581	XOM	0.85
+8520	581	BA	3.99
+8521	581	JPM	8.69
+8522	581	COST	0.43
+8523	582	JPM	0
+8524	582	NFLX	0
+8525	582	NVDA	147.98
+8526	582	TSM	0
+8527	582	V	0
+8528	582	COST	0
+8529	582	MSFT	0
+8530	582	JNJ	131.44
+8531	582	WMT	207.97
+8532	582	BA	0
+8533	582	GE	92.89
+8534	582	PFE	0
+8535	582	XOM	0
+8536	582	AAPL	101.06
+8537	582	CVX	0
+8538	582	SBUX	0
+8539	583	MSFT	3.87
+8540	583	TSM	16.04
+8541	583	JPM	14.35
+8542	583	V	16.51
+8543	583	COST	6.06
+8544	583	NFLX	46.04
+8545	583	GE	17.81
+8546	583	WMT	40.22
+8547	583	NVDA	18.36
+8548	583	PFE	268.03
+8549	583	XOM	17.64
+8550	583	JNJ	18.69
+8551	583	AAPL	29.25
+8552	583	CVX	10.02
+8553	584	JNJ	29.74
+8554	584	JPM	6.8
+8555	584	MSFT	9.51
+8556	584	NFLX	9.59
+8557	584	NVDA	27.24
+8558	584	TSM	24.1
+8559	584	V	8.48
+8560	584	BA	1.55
+8561	584	DIS	8.47
+8562	584	XOM	14.32
+8563	584	COST	6.41
+8564	584	WMT	24.73
+8565	584	GE	10.32
+8566	584	PFE	75.44
+8567	584	AAPL	66.11
+8568	584	CVX	9.46
+8569	584	NKE	25.62
+8570	584	SBUX	7.41
+8571	585	CVX	24.3
+8572	585	DIS	0.24
+8573	585	GE	0
+8574	585	MSFT	0.46
+8575	585	NFLX	0
+8576	585	PFE	0
+8577	585	V	0.48
+8578	585	XOM	3.94
+8579	585	BA	0.84
+8580	585	JPM	0.33
+8581	585	COST	28.13
+8582	585	WMT	28.8
+8583	585	JNJ	0.32
+8584	585	NVDA	0
+8585	585	TSM	5.57
+8586	585	NKE	0
+8587	585	SBUX	145.71
+8588	585	AAPL	214.79
+8589	586	CVX	23.87
+8590	586	GE	5.66
+8591	586	JNJ	6.4
+8592	586	MSFT	4.19
+8593	586	NFLX	7.75
+8594	586	NVDA	14.08
+8595	586	TSM	26.62
+8596	586	V	6.01
+8597	586	XOM	2.18
+8598	586	BA	3.39
+8599	586	JPM	7.25
+8600	586	COST	10.5
+8601	586	WMT	61.89
+8602	586	DIS	24.98
+8603	586	PFE	51.47
+8604	586	NKE	27.89
+8605	586	AAPL	79.78
+8606	586	SBUX	16.99
+8607	587	AAPL	31.98
+8608	587	COST	4.44
+8609	587	CVX	19.15
+8610	587	DIS	26.71
+8611	587	GE	10.38
+8612	587	JNJ	15.53
+8613	587	JPM	7.3
+8614	587	MSFT	5.55
+8615	587	NFLX	18.96
+8616	587	NKE	13.94
+8617	587	NVDA	19.05
+8618	587	PFE	105.49
+8619	587	SBUX	10.1
+8620	587	TSM	22.75
+8621	587	V	8
+8622	587	WMT	41.48
+8623	587	XOM	16.98
+8624	587	BA	10.79
+8625	588	NFLX	46.86
+8626	588	TSM	25.3
+8627	588	JPM	5.42
+8628	588	V	16.69
+8629	588	MSFT	10.28
+8630	588	COST	2.26
+8631	588	WMT	58.99
+8632	588	GE	18.17
+8633	588	BA	5.72
+8634	588	PFE	244.26
+8635	588	NVDA	23.17
+8636	588	XOM	3.84
+8637	588	JNJ	32.55
+8638	588	AAPL	59.53
+8639	588	NKE	5.51
+8640	588	CVX	7.58
+8641	588	DIS	63.74
+8642	588	SBUX	74
+8643	589	TSM	13.8
+8644	589	JPM	15.38
+8645	589	COST	1.85
+8646	589	MSFT	7.39
+8647	589	V	1.16
+8648	589	NFLX	3.38
+8649	589	BA	0.06
+8650	589	GE	34.23
+8651	589	WMT	48.75
+8652	589	NVDA	45.03
+8653	589	PFE	31.56
+8654	589	XOM	5
+8655	589	AAPL	120.1
+8656	589	JNJ	58.79
+8657	589	CVX	7.6
+8658	590	JNJ	29.43
+8659	590	MSFT	10.68
+8660	590	NFLX	43.76
+8661	590	NVDA	18.56
+8662	590	TSM	22.64
+8663	590	V	3.83
+8664	590	BA	2.12
+8665	590	GE	5.24
+8666	590	JPM	16.12
+8667	590	XOM	28.44
+8668	590	COST	10.62
+8669	590	WMT	74.42
+8670	590	PFE	38.49
+8671	590	DIS	1.56
+8672	590	AAPL	93.52
+8673	590	CVX	19.15
+8674	590	NKE	26.72
+8675	590	SBUX	8.02
+8676	591	AAPL	105.84
+8677	591	CVX	17.7
+8678	591	DIS	35.4
+8679	591	GE	2.05
+8680	591	JNJ	3.98
+8681	591	MSFT	1.58
+8682	591	NFLX	4
+8683	591	NKE	21.91
+8684	591	NVDA	7.11
+8685	591	PFE	26.93
+8686	591	SBUX	72.49
+8687	591	TSM	33.4
+8688	591	V	7.7
+8689	591	WMT	61.83
+8690	591	XOM	18.12
+8691	591	BA	3.99
+8692	591	JPM	8.69
+8693	591	COST	12.99
+8694	592	JPM	0
+8695	592	NFLX	0
+8696	592	NVDA	144.5
+8697	592	TSM	71.77
+8698	592	V	0
+8699	592	COST	0
+8700	592	MSFT	0
+8701	592	JNJ	136.11
+8702	592	WMT	208.76
+8703	592	BA	0
+8704	592	GE	0
+8705	592	PFE	0
+8706	592	XOM	0
+8707	592	AAPL	96.22
+8708	592	CVX	0
+8709	592	SBUX	0
+8710	593	JNJ	29.74
+8711	593	JPM	6.8
+8712	593	MSFT	9.51
+8713	593	NFLX	9.59
+8714	593	NVDA	73.54
+8715	593	TSM	24.1
+8716	593	V	8.48
+8717	593	BA	1.55
+8718	593	DIS	51.35
+8719	593	XOM	14.32
+8720	593	COST	6.41
+8721	593	WMT	24.73
+8722	593	GE	10.32
+8723	593	PFE	75.44
+8724	593	AAPL	37.46
+8725	593	CVX	9.46
+8726	593	NKE	25.62
+8727	593	SBUX	7.41
+8728	594	CVX	0
+8729	594	DIS	18.9
+8730	594	GE	0
+8731	594	MSFT	0.46
+8732	594	NFLX	0
+8733	594	PFE	0
+8734	594	V	0.48
+8735	594	XOM	3.94
+8736	594	BA	14.34
+8737	594	JPM	0.33
+8738	594	COST	0.39
+8739	594	WMT	0.19
+8740	594	JNJ	0.32
+8741	594	NVDA	427.98
+8742	594	TSM	0.02
+8743	594	NKE	0
+8744	594	SBUX	145.71
+8745	594	AAPL	8.67
+8746	595	CVX	23.87
+8747	595	GE	5.66
+8748	595	JNJ	6.4
+8749	595	MSFT	4.19
+8750	595	NFLX	7.75
+8751	595	NVDA	105.39
+8752	595	TSM	7.46
+8753	595	V	6.01
+8754	595	XOM	2.18
+8755	595	BA	32.55
+8756	595	JPM	7.25
+8757	595	COST	10.5
+8758	595	WMT	61.89
+8759	595	DIS	82.47
+8760	595	PFE	51.47
+8761	595	NKE	27.89
+8762	595	AAPL	34.46
+8763	595	SBUX	16.99
+8764	596	AAPL	18.11
+8765	596	COST	4.44
+8766	596	CVX	19.15
+8767	596	DIS	63.43
+8768	596	GE	18
+8769	596	JNJ	31.59
+8770	596	JPM	7.3
+8771	596	MSFT	5.55
+8772	596	NFLX	18.96
+8773	596	NKE	13.94
+8774	596	NVDA	44.29
+8775	596	PFE	105.49
+8776	596	SBUX	10.1
+8777	596	TSM	13.61
+8778	596	V	8
+8779	596	WMT	41.48
+8780	596	XOM	16.98
+8781	596	BA	10.79
+8782	597	NFLX	46.86
+8783	597	TSM	25.3
+8784	597	JPM	5.42
+8785	597	V	16.69
+8786	597	MSFT	10.28
+8787	597	COST	2.26
+8788	597	WMT	58.99
+8789	597	GE	18.17
+8790	597	BA	5.72
+8791	597	PFE	244.26
+8792	597	NVDA	72.35
+8793	597	XOM	3.84
+8794	597	JNJ	32.55
+8795	597	AAPL	32.01
+8796	597	NKE	5.51
+8797	597	CVX	7.58
+8798	597	DIS	63.74
+8799	597	SBUX	74
+8800	598	TSM	13.8
+8801	598	JPM	15.38
+8802	598	COST	1.85
+8803	598	MSFT	7.39
+8804	598	V	1.16
+8805	598	NFLX	3.38
+8806	598	BA	0.06
+8807	598	GE	34.23
+8808	598	WMT	48.75
+8809	598	NVDA	281.36
+8810	598	PFE	31.56
+8811	598	XOM	5
+8812	598	AAPL	35.27
+8813	598	JNJ	58.79
+8814	598	CVX	7.6
+8815	599	JNJ	29.43
+8816	599	MSFT	10.68
+8817	599	NFLX	43.76
+8818	599	NVDA	158.71
+8819	599	TSM	7.47
+8820	599	V	3.83
+8821	599	BA	2.12
+8822	599	GE	5.24
+8823	599	JPM	16.12
+8824	599	XOM	28.44
+8825	599	COST	10.62
+8826	599	WMT	74.42
+8827	599	PFE	38.49
+8828	599	DIS	1.56
+8829	599	AAPL	36.47
+8830	599	CVX	19.15
+8831	599	NKE	26.72
+8832	599	SBUX	8.02
+8833	600	AAPL	35.83
+8834	600	CVX	1.59
+8835	600	DIS	102.7
+8836	600	GE	9.63
+8837	600	JNJ	3.98
+8838	600	MSFT	1.58
+8839	600	NFLX	4
+8840	600	NKE	21.91
+8841	600	NVDA	155.65
+8842	600	PFE	26.93
+8843	600	SBUX	72.49
+8844	600	TSM	3.21
+8845	600	V	7.7
+8846	600	WMT	23.98
+8847	600	XOM	4.08
+8848	600	BA	36.44
+8849	600	JPM	1.27
+8850	600	COST	8.18
 \.
 
 
 --
+-- TOC entry 3521 (class 0 OID 21512)
+-- Dependencies: 231
 -- Data for Name: portfolio_transactions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.portfolio_transactions (id, portfolio_id, datetime, ticker, type, quantity, price, total_value) FROM stdin;
-1	1	2026-04-15 14:30:00+00	CVX	BUY	33	185.39	6117.87
-2	1	2026-04-15 14:30:00+00	DIS	BUY	61	102.34	6242.74
-3	1	2026-04-15 14:30:00+00	GE	BUY	19	314.99	5984.81
-4	1	2026-04-15 14:30:00+00	COST	BUY	6	976.59	5859.54
-5	1	2026-04-15 14:30:00+00	AAPL	BUY	23	263.18	6053.14
-6	1	2026-04-15 14:30:00+00	V	BUY	19	313.51	5956.69
-7	1	2026-04-15 14:30:00+00	SBUX	BUY	63	98.41	6199.83
-8	1	2026-04-15 14:30:00+00	WMT	BUY	50	123.57	6178.5
-9	1	2026-04-15 14:30:00+00	MSFT	BUY	15	407.91	6118.65
-10	1	2026-04-15 14:30:00+00	JPM	BUY	20	306.41	6128.2
-11	1	2026-04-15 14:30:00+00	NKE	BUY	136	45.74	6220.64
-12	1	2026-04-15 14:30:00+00	NVDA	BUY	31	199.81	6194.11
-13	1	2026-04-15 14:30:00+00	NFLX	BUY	59	105.82	6243.38
-14	1	2026-04-15 14:30:00+00	BA	BUY	28	223.2	6249.6
-15	1	2026-04-15 14:30:00+00	XOM	BUY	42	148.8	6249.6
-16	1	2026-04-15 14:30:00+00	TSM	BUY	16	380.07	6081.12
-17	3	2026-04-15 14:30:00+00	TSM	BUY	108	380.07	41047.56
-18	4	2026-04-15 14:30:00+00	GE	BUY	44	314.99	13859.56
-19	4	2026-04-15 14:30:00+00	MSFT	BUY	4	407.91	1631.64
-20	4	2026-04-15 14:30:00+00	NFLX	BUY	74	105.82	7830.68
-21	4	2026-04-15 14:30:00+00	NVDA	BUY	307	199.81	61341.67
-22	4	2026-04-15 14:30:00+00	TSM	BUY	23	380.07	8741.61
-23	5	2026-04-15 14:30:00+00	AAPL	BUY	16	263.18	4210.88
-24	5	2026-04-15 14:30:00+00	GE	BUY	35	314.99	11024.65
-25	5	2026-04-15 14:30:00+00	MSFT	BUY	11	407.91	4487.01
-26	5	2026-04-15 14:30:00+00	NFLX	BUY	83	105.82	8783.06
-27	5	2026-04-15 14:30:00+00	NVDA	BUY	99	199.81	19781.19
-28	5	2026-04-15 14:30:00+00	TSM	BUY	36	380.07	13682.52
-29	7	2026-04-15 14:30:00+00	GE	BUY	29	314.99	9134.71
-30	7	2026-04-15 14:30:00+00	NVDA	BUY	65	199.81	12987.65
-31	7	2026-04-15 14:30:00+00	TSM	BUY	35	380.07	13302.45
-32	8	2026-04-15 14:30:00+00	NVDA	BUY	144	199.81	28772.64
-33	8	2026-04-15 14:30:00+00	TSM	BUY	116	380.07	44088.12
-34	9	2026-04-15 14:30:00+00	AAPL	BUY	17	263.18	4474.06
-35	9	2026-04-15 14:30:00+00	GE	BUY	31	314.99	9764.69
-36	9	2026-04-15 14:30:00+00	NFLX	BUY	44	105.82	4656.08
-37	9	2026-04-15 14:30:00+00	NVDA	BUY	98	199.81	19581.38
-38	9	2026-04-15 14:30:00+00	TSM	BUY	49	380.07	18623.43
-39	10	2026-04-15 14:30:00+00	GE	BUY	30	314.99	9449.7
-40	10	2026-04-15 14:30:00+00	MSFT	BUY	8	407.91	3263.28
-41	10	2026-04-15 14:30:00+00	NFLX	BUY	91	105.82	9629.62
-42	10	2026-04-15 14:30:00+00	NVDA	BUY	118	199.81	23577.58
-43	10	2026-04-15 14:30:00+00	TSM	BUY	27	380.07	10261.89
-44	11	2026-04-15 14:30:00+00	TSM	BUY	38	380.07	14442.66
-45	4	2026-04-22 14:30:00+00	AAPL	BUY	7	272.4	1906.8
-46	4	2026-04-22 14:30:00+00	COST	BUY	2	1006.73	2013.46
-47	4	2026-04-22 14:30:00+00	GE	SELL	44	273.22	12021.68
-48	4	2026-04-22 14:30:00+00	MSFT	SELL	3	432.14	1296.42
-49	4	2026-04-22 14:30:00+00	NVDA	SELL	274	201.6	55238.4
-50	4	2026-04-22 14:30:00+00	TSM	BUY	165	375.22	61911.3
-51	4	2026-04-22 14:30:00+00	WMT	BUY	90	130.05	11704.5
-52	5	2026-04-22 14:30:00+00	COST	BUY	5	1006.73	5033.65
-53	5	2026-04-22 14:30:00+00	GE	SELL	15	273.22	4098.3
-54	5	2026-04-22 14:30:00+00	NVDA	SELL	33	201.6	6652.8
-55	5	2026-04-22 14:30:00+00	TSM	BUY	29	375.22	10881.38
-56	5	2026-04-22 14:30:00+00	WMT	BUY	64	130.05	8323.2
-57	9	2026-04-22 14:30:00+00	COST	BUY	5	1006.73	5033.65
-58	9	2026-04-22 14:30:00+00	NVDA	SELL	24	201.6	4838.4
-59	9	2026-04-22 14:30:00+00	TSM	BUY	17	375.22	6378.74
-60	9	2026-04-22 14:30:00+00	WMT	BUY	47	130.05	6112.35
-61	10	2026-04-22 14:30:00+00	AAPL	BUY	14	272.4	3813.6
-62	10	2026-04-22 14:30:00+00	COST	BUY	5	1006.73	5033.65
-63	10	2026-04-22 14:30:00+00	GE	SELL	23	273.22	6284.06
-64	10	2026-04-22 14:30:00+00	NVDA	SELL	61	201.6	12297.6
-65	10	2026-04-22 14:30:00+00	TSM	BUY	38	375.22	14258.36
-66	10	2026-04-22 14:30:00+00	WMT	BUY	81	130.05	10534.05
+1	1	2025-03-19 13:30:00+00	AAPL	BUY	25.58	217.15	5554.7
+2	1	2025-03-19 13:30:00+00	BA	BUY	32.34	171.75	5554.4
+3	1	2025-03-19 13:30:00+00	COST	BUY	6.16	900.98	5550.04
+4	1	2025-03-19 13:30:00+00	CVX	BUY	34.17	162.57	5555.02
+5	1	2025-03-19 13:30:00+00	DIS	BUY	55.26	100.52	5554.74
+6	1	2025-03-19 13:30:00+00	GE	BUY	27.23	203.96	5553.83
+7	1	2025-03-19 13:30:00+00	JNJ	BUY	34.02	163.3	5555.47
+8	1	2025-03-19 13:30:00+00	JPM	BUY	23.44	237	5555.28
+9	1	2025-03-19 13:30:00+00	MSFT	BUY	14.35	387.12	5555.17
+10	1	2025-03-19 13:30:00+00	NFLX	BUY	58.24	95.38	5554.93
+11	1	2025-03-19 13:30:00+00	NKE	BUY	75.82	73.27	5555.33
+12	1	2025-03-19 13:30:00+00	NVDA	BUY	47.48	116.99	5554.69
+13	1	2025-03-19 13:30:00+00	PFE	BUY	209.88	26.47	5555.52
+14	1	2025-03-19 13:30:00+00	SBUX	BUY	56	99.19	5554.64
+15	1	2025-03-19 13:30:00+00	TSM	BUY	32.14	172.81	5554.11
+16	1	2025-03-19 13:30:00+00	V	BUY	16.43	337.95	5552.52
+17	1	2025-03-19 13:30:00+00	WMT	BUY	64.38	86.28	5554.71
+18	1	2025-03-19 13:30:00+00	XOM	BUY	48.39	114.79	5554.69
+19	2	2025-03-19 13:30:00+00	JPM	BUY	81.89	237	19407.93
+20	2	2025-03-19 13:30:00+00	NFLX	BUY	198.09	95.38	18893.82
+21	2	2025-03-19 13:30:00+00	NVDA	BUY	166.99	116.99	19536.16
+22	2	2025-03-19 13:30:00+00	TSM	BUY	129.41	172.81	22363.34
+23	2	2025-03-19 13:30:00+00	V	BUY	58.57	337.95	19793.73
+24	3	2025-03-19 13:30:00+00	MSFT	BUY	14.87	387.12	5756.47
+25	3	2025-03-19 13:30:00+00	TSM	BUY	48.41	172.81	8365.73
+26	4	2025-03-19 13:30:00+00	JNJ	BUY	27.48	163.3	4487.48
+27	4	2025-03-19 13:30:00+00	JPM	BUY	13.86	237	3284.82
+28	4	2025-03-19 13:30:00+00	MSFT	BUY	15.64	387.12	6054.56
+29	4	2025-03-19 13:30:00+00	NFLX	BUY	63.67	95.38	6072.84
+30	4	2025-03-19 13:30:00+00	NVDA	BUY	43.8	116.99	5124.16
+31	4	2025-03-19 13:30:00+00	TSM	BUY	71.32	172.81	12324.81
+32	4	2025-03-19 13:30:00+00	V	BUY	12.32	337.95	4163.54
+33	5	2025-03-19 13:30:00+00	CVX	BUY	167.74	162.57	27269.49
+34	5	2025-03-19 13:30:00+00	DIS	BUY	34.22	100.52	3439.79
+35	5	2025-03-19 13:30:00+00	GE	BUY	136.3	203.96	27799.75
+36	5	2025-03-19 13:30:00+00	MSFT	BUY	4.15	387.12	1606.55
+37	5	2025-03-19 13:30:00+00	NFLX	BUY	67.16	95.38	6405.72
+38	5	2025-03-19 13:30:00+00	PFE	BUY	472.64	26.47	12510.78
+39	5	2025-03-19 13:30:00+00	V	BUY	3.75	337.95	1267.31
+40	5	2025-03-19 13:30:00+00	XOM	BUY	41.85	114.79	4803.96
+41	6	2025-03-19 13:30:00+00	CVX	BUY	29.8	162.57	4844.59
+42	6	2025-03-19 13:30:00+00	GE	BUY	23.45	203.96	4782.86
+43	6	2025-03-19 13:30:00+00	JNJ	BUY	29.72	163.3	4853.28
+44	6	2025-03-19 13:30:00+00	MSFT	BUY	12.64	387.12	4893.2
+45	6	2025-03-19 13:30:00+00	NFLX	BUY	73.78	95.38	7037.14
+46	6	2025-03-19 13:30:00+00	NVDA	BUY	51.16	116.99	5985.21
+47	6	2025-03-19 13:30:00+00	TSM	BUY	35.47	172.81	6129.57
+48	6	2025-03-19 13:30:00+00	V	BUY	17.3	337.95	5846.53
+49	6	2025-03-19 13:30:00+00	XOM	BUY	41.17	114.79	4725.9
+50	7	2025-03-19 13:30:00+00	AAPL	BUY	15.55	217.15	3376.68
+51	7	2025-03-19 13:30:00+00	COST	BUY	2.67	900.98	2405.62
+52	7	2025-03-19 13:30:00+00	CVX	BUY	18.22	162.57	2962.03
+53	7	2025-03-19 13:30:00+00	DIS	BUY	27.89	100.52	2803.5
+54	7	2025-03-19 13:30:00+00	GE	BUY	15.22	203.96	3104.27
+55	7	2025-03-19 13:30:00+00	JNJ	BUY	30.54	163.3	4987.18
+56	7	2025-03-19 13:30:00+00	JPM	BUY	13.8	237	3270.6
+57	7	2025-03-19 13:30:00+00	MSFT	BUY	10.55	387.12	4084.12
+58	7	2025-03-19 13:30:00+00	NFLX	BUY	41.33	95.38	3942.06
+59	7	2025-03-19 13:30:00+00	NKE	BUY	43.97	73.27	3221.68
+60	7	2025-03-19 13:30:00+00	NVDA	BUY	34.94	116.99	4087.63
+61	7	2025-03-19 13:30:00+00	PFE	BUY	66.64	26.47	1763.96
+62	7	2025-03-19 13:30:00+00	SBUX	BUY	23.34	99.19	2315.09
+63	7	2025-03-19 13:30:00+00	TSM	BUY	23.9	172.81	4130.16
+64	7	2025-03-19 13:30:00+00	V	BUY	11.13	337.95	3761.38
+65	7	2025-03-19 13:30:00+00	WMT	BUY	37.03	86.28	3194.95
+66	7	2025-03-19 13:30:00+00	XOM	BUY	26.25	114.79	3013.24
+67	8	2025-03-19 13:30:00+00	NFLX	BUY	61.39	95.38	5855.38
+68	8	2025-03-19 13:30:00+00	TSM	BUY	44.07	172.81	7615.74
+69	9	2025-03-19 13:30:00+00	TSM	BUY	148.74	172.81	25703.76
+70	10	2025-03-19 13:30:00+00	JNJ	BUY	31.11	163.3	5080.26
+71	10	2025-03-19 13:30:00+00	MSFT	BUY	12.55	387.12	4858.36
+72	10	2025-03-19 13:30:00+00	NFLX	BUY	85.8	95.38	8183.6
+73	10	2025-03-19 13:30:00+00	NVDA	BUY	54.54	116.99	6380.63
+74	10	2025-03-19 13:30:00+00	TSM	BUY	55.46	172.81	9584.04
+75	10	2025-03-19 13:30:00+00	V	BUY	21.65	337.95	7316.62
+76	11	2025-03-19 13:30:00+00	AAPL	BUY	6.94	217.15	1507.02
+77	11	2025-03-19 13:30:00+00	CVX	BUY	52.94	162.57	8606.46
+78	11	2025-03-19 13:30:00+00	DIS	BUY	24.15	100.52	2427.56
+79	11	2025-03-19 13:30:00+00	GE	BUY	42.09	203.96	8584.68
+80	11	2025-03-19 13:30:00+00	JNJ	BUY	33.35	163.3	5446.06
+81	11	2025-03-19 13:30:00+00	MSFT	BUY	9.58	387.12	3708.61
+82	11	2025-03-19 13:30:00+00	NFLX	BUY	93.82	95.38	8948.55
+83	11	2025-03-19 13:30:00+00	NKE	BUY	30.05	73.27	2201.76
+84	11	2025-03-19 13:30:00+00	NVDA	BUY	41.67	116.99	4874.97
+85	11	2025-03-19 13:30:00+00	PFE	BUY	160.58	26.47	4250.55
+86	11	2025-03-19 13:30:00+00	SBUX	BUY	28.19	99.19	2796.17
+87	11	2025-03-19 13:30:00+00	TSM	BUY	25	172.81	4320.25
+88	11	2025-03-19 13:30:00+00	V	BUY	17.69	337.95	5978.34
+89	11	2025-03-19 13:30:00+00	WMT	BUY	27.04	86.28	2333.01
+90	11	2025-03-19 13:30:00+00	XOM	BUY	59.54	114.79	6834.6
+91	2	2025-03-26 13:30:00+00	NFLX	SELL	198.09	97.81	19375.18
+92	2	2025-03-26 13:30:00+00	NVDA	SELL	166.99	115.11	19222.22
+93	2	2025-03-26 13:30:00+00	TSM	SELL	8.5	175.65	1493.03
+94	2	2025-03-26 13:30:00+00	COST	BUY	20.6	932.51	19209.71
+95	2	2025-03-26 13:30:00+00	JPM	BUY	4.16	254.15	1057.26
+96	2	2025-03-26 13:30:00+00	MSFT	BUY	49.98	392.99	19641.64
+97	2	2025-03-26 13:30:00+00	V	BUY	0.5	346.67	173.34
+98	3	2025-03-26 13:30:00+00	JPM	BUY	25.99	254.15	6605.36
+99	4	2025-03-26 13:30:00+00	TSM	SELL	42.19	175.65	7410.67
+100	4	2025-03-26 13:30:00+00	BA	BUY	18.4	181.35	3336.84
+101	4	2025-03-26 13:30:00+00	DIS	BUY	37.15	101.34	3764.78
+102	4	2025-03-26 13:30:00+00	JPM	BUY	35.46	254.15	9012.16
+103	4	2025-03-26 13:30:00+00	XOM	BUY	29.05	118.83	3452.01
+104	5	2025-03-26 13:30:00+00	CVX	SELL	165.86	168.38	27927.51
+105	5	2025-03-26 13:30:00+00	DIS	SELL	34.21	101.34	3466.84
+106	5	2025-03-26 13:30:00+00	MSFT	SELL	4.13	392.99	1623.05
+107	5	2025-03-26 13:30:00+00	NFLX	SELL	67.11	97.81	6564.03
+108	5	2025-03-26 13:30:00+00	PFE	SELL	472.59	25.55	12074.67
+109	5	2025-03-26 13:30:00+00	V	SELL	3.74	346.67	1296.55
+110	5	2025-03-26 13:30:00+00	BA	BUY	47.52	181.35	8617.75
+111	5	2025-03-26 13:30:00+00	GE	BUY	189.53	213.02	40373.68
+112	5	2025-03-26 13:30:00+00	JPM	BUY	29.44	254.15	7482.18
+113	5	2025-03-26 13:30:00+00	XOM	BUY	32.46	118.83	3857.22
+114	6	2025-03-26 13:30:00+00	NVDA	SELL	34.91	115.11	4018.49
+115	6	2025-03-26 13:30:00+00	TSM	SELL	21.78	175.65	3825.66
+116	6	2025-03-26 13:30:00+00	BA	BUY	44.79	181.35	8122.67
+117	6	2025-03-26 13:30:00+00	GE	BUY	24.97	213.02	5319.11
+118	6	2025-03-26 13:30:00+00	JPM	BUY	47.99	254.15	12196.66
+119	7	2025-03-26 13:30:00+00	NKE	SELL	40.37	66	2664.42
+120	7	2025-03-26 13:30:00+00	BA	BUY	22.06	181.35	4000.58
+121	7	2025-03-26 13:30:00+00	JPM	BUY	11.32	254.15	2876.98
+122	8	2025-03-26 13:30:00+00	JPM	BUY	39.12	254.15	9942.35
+123	8	2025-03-26 13:30:00+00	V	BUY	16.69	346.67	5785.92
+124	9	2025-03-26 13:30:00+00	TSM	SELL	131.94	175.65	23175.26
+125	9	2025-03-26 13:30:00+00	JPM	BUY	106.32	254.15	27021.23
+126	10	2025-03-26 13:30:00+00	NFLX	SELL	50.89	97.81	4977.55
+127	10	2025-03-26 13:30:00+00	NVDA	SELL	43.29	115.11	4983.11
+128	10	2025-03-26 13:30:00+00	TSM	SELL	39.53	175.65	6943.44
+129	10	2025-03-26 13:30:00+00	BA	BUY	49.49	181.35	8975.01
+130	10	2025-03-26 13:30:00+00	GE	BUY	35.93	213.02	7653.81
+131	10	2025-03-26 13:30:00+00	JPM	BUY	73.94	254.15	18791.85
+132	10	2025-03-26 13:30:00+00	XOM	BUY	50.74	118.83	6029.43
+133	11	2025-03-26 13:30:00+00	CVX	SELL	36.24	168.38	6102.09
+134	11	2025-03-26 13:30:00+00	JNJ	SELL	25.73	162.14	4171.86
+135	11	2025-03-26 13:30:00+00	NFLX	SELL	57.12	97.81	5586.91
+136	11	2025-03-26 13:30:00+00	NKE	SELL	29.45	66	1943.7
+137	11	2025-03-26 13:30:00+00	NVDA	SELL	34.02	115.11	3916.04
+138	11	2025-03-26 13:30:00+00	PFE	SELL	139.68	25.55	3568.82
+139	11	2025-03-26 13:30:00+00	SBUX	SELL	20.77	98.08	2037.12
+140	11	2025-03-26 13:30:00+00	TSM	SELL	18.41	175.65	3233.72
+141	11	2025-03-26 13:30:00+00	V	SELL	6.46	346.67	2239.49
+142	11	2025-03-26 13:30:00+00	BA	BUY	73.19	181.35	13273.01
+143	11	2025-03-26 13:30:00+00	GE	BUY	55.78	213.02	11882.26
+144	11	2025-03-26 13:30:00+00	JPM	BUY	55.16	254.15	14018.91
+145	11	2025-03-26 13:30:00+00	XOM	BUY	40.36	118.83	4795.98
+146	2	2025-04-02 13:30:00+00	JPM	SELL	6.74	245.91	1657.43
+147	2	2025-04-02 13:30:00+00	TSM	SELL	3.55	168.4	597.82
+148	2	2025-04-02 13:30:00+00	V	SELL	2.85	344.56	982
+149	2	2025-04-02 13:30:00+00	COST	BUY	0.89	964.4	858.32
+150	2	2025-04-02 13:30:00+00	MSFT	BUY	6.25	381.49	2384.31
+151	4	2025-04-02 13:30:00+00	JPM	SELL	35.42	245.91	8710.13
+152	4	2025-04-02 13:30:00+00	NVDA	SELL	32.27	109	3517.43
+153	4	2025-04-02 13:30:00+00	COST	BUY	5.48	964.4	5284.91
+154	4	2025-04-02 13:30:00+00	MSFT	BUY	14.07	381.49	5367.56
+155	4	2025-04-02 13:30:00+00	WMT	BUY	48.66	89.46	4353.12
+156	5	2025-04-02 13:30:00+00	BA	SELL	46.34	168.09	7789.29
+157	5	2025-04-02 13:30:00+00	GE	SELL	324.35	201.54	65369.5
+158	5	2025-04-02 13:30:00+00	JPM	SELL	26.99	245.91	6637.11
+159	5	2025-04-02 13:30:00+00	COST	BUY	60.08	964.4	57941.15
+160	5	2025-04-02 13:30:00+00	MSFT	BUY	22.3	381.49	8507.23
+161	5	2025-04-02 13:30:00+00	V	BUY	12.07	344.56	4158.84
+162	5	2025-04-02 13:30:00+00	WMT	BUY	59.13	89.46	5289.77
+163	6	2025-04-02 13:30:00+00	BA	SELL	32.97	168.09	5541.93
+164	6	2025-04-02 13:30:00+00	GE	SELL	34.59	201.54	6971.27
+165	6	2025-04-02 13:30:00+00	JPM	SELL	35.78	245.91	8798.66
+166	6	2025-04-02 13:30:00+00	NFLX	SELL	51.87	93.92	4871.63
+167	6	2025-04-02 13:30:00+00	COST	BUY	7.77	964.4	7493.39
+168	6	2025-04-02 13:30:00+00	MSFT	BUY	14.48	381.49	5523.98
+169	6	2025-04-02 13:30:00+00	WMT	BUY	84.24	89.46	7536.11
+170	7	2025-04-02 13:30:00+00	BA	SELL	9.74	168.09	1637.2
+171	7	2025-04-02 13:30:00+00	JPM	SELL	13.39	245.91	3292.73
+172	7	2025-04-02 13:30:00+00	NFLX	SELL	24.46	93.92	2297.28
+173	7	2025-04-02 13:30:00+00	NVDA	SELL	27.28	109	2973.52
+174	7	2025-04-02 13:30:00+00	COST	BUY	2.41	964.4	2324.2
+175	7	2025-04-02 13:30:00+00	MSFT	BUY	8.87	381.49	3383.82
+176	7	2025-04-02 13:30:00+00	PFE	BUY	152.44	24.65	3757.65
+177	8	2025-04-02 13:30:00+00	JPM	SELL	26.54	245.91	6526.45
+178	8	2025-04-02 13:30:00+00	MSFT	BUY	24.77	381.49	9449.51
+179	9	2025-04-02 13:30:00+00	JPM	SELL	91.07	245.91	22395.02
+180	9	2025-04-02 13:30:00+00	COST	BUY	12.53	964.4	12083.93
+181	9	2025-04-02 13:30:00+00	MSFT	BUY	60.62	381.49	23125.92
+182	10	2025-04-02 13:30:00+00	BA	SELL	38.98	168.09	6552.15
+183	10	2025-04-02 13:30:00+00	GE	SELL	25.71	201.54	5181.59
+184	10	2025-04-02 13:30:00+00	JPM	SELL	60.32	245.91	14833.29
+185	10	2025-04-02 13:30:00+00	COST	BUY	10.49	964.4	10116.56
+186	10	2025-04-02 13:30:00+00	MSFT	BUY	19.95	381.49	7610.73
+187	10	2025-04-02 13:30:00+00	WMT	BUY	90.35	89.46	8082.71
+188	11	2025-04-02 13:30:00+00	BA	SELL	59.95	168.09	10077
+189	11	2025-04-02 13:30:00+00	GE	SELL	82.8	201.54	16687.51
+190	11	2025-04-02 13:30:00+00	JPM	SELL	42.88	245.91	10544.62
+191	11	2025-04-02 13:30:00+00	NFLX	SELL	22.24	93.92	2088.78
+192	11	2025-04-02 13:30:00+00	AAPL	BUY	8.78	224.04	1967.07
+193	11	2025-04-02 13:30:00+00	COST	BUY	11.36	964.4	10955.58
+194	11	2025-04-02 13:30:00+00	MSFT	BUY	13.12	381.49	5005.15
+195	11	2025-04-02 13:30:00+00	V	BUY	17.39	344.56	5991.9
+196	11	2025-04-02 13:30:00+00	WMT	BUY	83.18	89.46	7441.28
+197	11	2025-04-02 13:30:00+00	XOM	BUY	12.7	118.38	1503.43
+198	2	2025-04-09 13:30:00+00	COST	SELL	21.49	915.83	19681.19
+199	2	2025-04-09 13:30:00+00	TSM	SELL	117.36	140.79	16523.11
+200	2	2025-04-09 13:30:00+00	JNJ	BUY	113.61	146.31	16622.28
+201	2	2025-04-09 13:30:00+00	JPM	BUY	5.24	215.62	1129.85
+202	2	2025-04-09 13:30:00+00	MSFT	BUY	0.2	361.05	72.21
+203	2	2025-04-09 13:30:00+00	NFLX	BUY	188.21	87.61	16489.08
+204	2	2025-04-09 13:30:00+00	V	BUY	6.1	309.73	1889.35
+205	3	2025-04-09 13:30:00+00	V	BUY	16.51	309.73	5113.64
+206	4	2025-04-09 13:30:00+00	COST	SELL	3.48	915.83	3187.09
+207	4	2025-04-09 13:30:00+00	JPM	BUY	15.56	215.62	3355.05
+208	4	2025-04-09 13:30:00+00	MSFT	BUY	8.9	361.05	3213.35
+209	5	2025-04-09 13:30:00+00	COST	SELL	58.85	915.83	53896.6
+210	5	2025-04-09 13:30:00+00	MSFT	SELL	10.49	361.05	3787.41
+211	5	2025-04-09 13:30:00+00	XOM	SELL	74.23	98.65	7322.79
+212	5	2025-04-09 13:30:00+00	JNJ	BUY	113.55	146.31	16613.5
+213	5	2025-04-09 13:30:00+00	JPM	BUY	195.42	215.62	42136.46
+214	6	2025-04-09 13:30:00+00	COST	SELL	4.97	915.83	4551.68
+215	6	2025-04-09 13:30:00+00	XOM	SELL	31.41	98.65	3098.6
+216	6	2025-04-09 13:30:00+00	JPM	BUY	27.36	215.62	5899.36
+217	7	2025-04-09 13:30:00+00	COST	SELL	3.28	915.83	3003.92
+218	7	2025-04-09 13:30:00+00	JNJ	SELL	10.35	146.31	1514.31
+219	7	2025-04-09 13:30:00+00	MSFT	SELL	7.37	361.05	2660.94
+220	7	2025-04-09 13:30:00+00	PFE	SELL	75.33	21.18	1595.49
+221	7	2025-04-09 13:30:00+00	AAPL	BUY	14.33	178.41	2556.62
+222	7	2025-04-09 13:30:00+00	NVDA	BUY	54.91	99.98	5489.9
+223	9	2025-04-09 13:30:00+00	V	BUY	47.7	309.73	14774.12
+224	10	2025-04-09 13:30:00+00	COST	SELL	8.36	915.83	7656.34
+225	10	2025-04-09 13:30:00+00	XOM	SELL	46.99	98.65	4635.56
+226	10	2025-04-09 13:30:00+00	JPM	BUY	36.22	215.62	7809.76
+227	11	2025-04-09 13:30:00+00	AAPL	SELL	10.87	178.41	1939.32
+228	11	2025-04-09 13:30:00+00	COST	SELL	8.42	915.83	7711.29
+229	11	2025-04-09 13:30:00+00	DIS	SELL	18.36	82.38	1512.5
+230	11	2025-04-09 13:30:00+00	V	SELL	5.91	309.73	1830.5
+231	11	2025-04-09 13:30:00+00	WMT	SELL	36.08	84.61	3052.73
+232	11	2025-04-09 13:30:00+00	XOM	SELL	101.63	98.65	10025.8
+233	11	2025-04-09 13:30:00+00	JNJ	BUY	37.26	146.31	5451.51
+234	11	2025-04-09 13:30:00+00	JPM	BUY	45.17	215.62	9739.56
+235	11	2025-04-09 13:30:00+00	NFLX	BUY	20.94	87.61	1834.55
+236	11	2025-04-09 13:30:00+00	SBUX	BUY	21.22	79.03	1677.02
+237	2	2025-04-16 13:30:00+00	JNJ	SELL	113.61	153.18	17402.78
+238	2	2025-04-16 13:30:00+00	MSFT	SELL	56.43	378.64	21366.66
+239	2	2025-04-16 13:30:00+00	V	SELL	8.88	334.85	2973.47
+240	2	2025-04-16 13:30:00+00	COST	BUY	19.88	973.64	19355.96
+241	2	2025-04-16 13:30:00+00	JPM	BUY	2.93	231.57	678.5
+242	2	2025-04-16 13:30:00+00	NFLX	BUY	29.93	97.51	2918.47
+243	2	2025-04-16 13:30:00+00	WMT	BUY	202.79	92.68	18794.58
+244	3	2025-04-16 13:30:00+00	TSM	SELL	39.33	152.52	5998.61
+245	3	2025-04-16 13:30:00+00	COST	BUY	6.06	973.64	5900.26
+246	3	2025-04-16 13:30:00+00	NFLX	BUY	100.5	97.51	9799.76
+247	4	2025-04-16 13:30:00+00	MSFT	SELL	20.67	378.64	7826.49
+248	4	2025-04-16 13:30:00+00	TSM	SELL	21.82	152.52	3327.99
+249	4	2025-04-16 13:30:00+00	COST	BUY	6.78	973.64	6601.28
+250	4	2025-04-16 13:30:00+00	NFLX	BUY	110.61	97.51	10785.58
+251	5	2025-04-16 13:30:00+00	JNJ	SELL	93.59	153.18	14336.12
+252	5	2025-04-16 13:30:00+00	JPM	SELL	188.41	231.57	43630.1
+253	5	2025-04-16 13:30:00+00	COST	BUY	28.99	973.64	28225.82
+254	5	2025-04-16 13:30:00+00	MSFT	BUY	11.17	378.64	4229.41
+255	5	2025-04-16 13:30:00+00	NFLX	BUY	54.01	97.51	5266.52
+256	5	2025-04-16 13:30:00+00	NVDA	BUY	44.99	105.52	4747.34
+257	5	2025-04-16 13:30:00+00	V	BUY	7.82	334.85	2618.53
+258	5	2025-04-16 13:30:00+00	WMT	BUY	233.52	92.68	21642.63
+259	6	2025-04-16 13:30:00+00	CVX	SELL	25.99	136.73	3553.61
+260	6	2025-04-16 13:30:00+00	COST	BUY	7.9	973.64	7691.76
+261	6	2025-04-16 13:30:00+00	NFLX	BUY	119.94	97.51	11695.35
+262	7	2025-04-16 13:30:00+00	AAPL	SELL	22.77	197.07	4487.28
+263	7	2025-04-16 13:30:00+00	NVDA	SELL	37.94	105.52	4003.43
+264	7	2025-04-16 13:30:00+00	PFE	SELL	123.93	22.24	2756.2
+265	7	2025-04-16 13:30:00+00	TSM	SELL	11	152.52	1677.72
+266	7	2025-04-16 13:30:00+00	COST	BUY	4.11	973.64	4001.66
+267	7	2025-04-16 13:30:00+00	JNJ	BUY	14.85	153.18	2274.72
+268	7	2025-04-16 13:30:00+00	JPM	BUY	13.61	231.57	3151.67
+269	7	2025-04-16 13:30:00+00	NFLX	BUY	52.2	97.51	5090.02
+270	8	2025-04-16 13:30:00+00	COST	BUY	8.73	973.64	8499.88
+271	8	2025-04-16 13:30:00+00	NFLX	BUY	72.09	97.51	7029.5
+272	8	2025-04-16 13:30:00+00	WMT	BUY	68.34	92.68	6333.75
+273	9	2025-04-16 13:30:00+00	MSFT	SELL	54.63	378.64	20685.1
+274	9	2025-04-16 13:30:00+00	V	SELL	37.56	334.85	12576.97
+275	9	2025-04-16 13:30:00+00	NFLX	BUY	359.97	97.51	35100.67
+276	10	2025-04-16 13:30:00+00	MSFT	SELL	14.13	378.64	5350.18
+277	10	2025-04-16 13:30:00+00	COST	BUY	10.44	973.64	10164.8
+278	10	2025-04-16 13:30:00+00	NFLX	BUY	168.05	97.51	16386.56
+279	11	2025-04-16 13:30:00+00	CVX	SELL	13.83	136.73	1890.98
+280	11	2025-04-16 13:30:00+00	JNJ	SELL	13.78	153.18	2110.82
+281	11	2025-04-16 13:30:00+00	JPM	SELL	33.38	231.57	7729.81
+282	11	2025-04-16 13:30:00+00	SBUX	SELL	25.49	82.65	2106.75
+283	11	2025-04-16 13:30:00+00	COST	BUY	10.4	973.64	10125.86
+284	11	2025-04-16 13:30:00+00	NFLX	BUY	108.09	97.51	10539.86
+285	11	2025-04-16 13:30:00+00	NVDA	BUY	24.75	105.52	2611.62
+286	11	2025-04-16 13:30:00+00	WMT	BUY	24.82	92.68	2300.32
+287	2	2025-04-23 13:30:00+00	COST	SELL	19.88	985.73	19596.31
+288	2	2025-04-23 13:30:00+00	JPM	SELL	8.4	245.67	2063.63
+289	2	2025-04-23 13:30:00+00	V	SELL	53.44	340.52	18197.39
+290	2	2025-04-23 13:30:00+00	WMT	SELL	7.11	95.97	682.35
+291	2	2025-04-23 13:30:00+00	BA	BUY	108.08	172.76	18671.9
+292	2	2025-04-23 13:30:00+00	GE	BUY	109.59	195	21370.05
+293	2	2025-04-23 13:30:00+00	NFLX	BUY	4.73	105.57	499.35
+294	3	2025-04-23 13:30:00+00	GE	BUY	47.46	195	9254.7
+295	4	2025-04-23 13:30:00+00	COST	SELL	6.92	985.73	6821.25
+296	4	2025-04-23 13:30:00+00	MSFT	SELL	15.88	378.87	6016.46
+297	4	2025-04-23 13:30:00+00	GE	BUY	73.7	195	14371.5
+298	4	2025-04-23 13:30:00+00	NFLX	BUY	88.53	105.57	9346.11
+299	5	2025-04-23 13:30:00+00	COST	SELL	30.21	985.73	29778.9
+300	5	2025-04-23 13:30:00+00	JNJ	SELL	19.64	156.73	3078.18
+301	5	2025-04-23 13:30:00+00	MSFT	SELL	23	378.87	8714.01
+302	5	2025-04-23 13:30:00+00	NVDA	SELL	44.99	104.18	4687.06
+303	5	2025-04-23 13:30:00+00	V	SELL	19.59	340.52	6670.79
+304	5	2025-04-23 13:30:00+00	WMT	SELL	274.76	95.97	26368.72
+305	5	2025-04-23 13:30:00+00	GE	BUY	64.94	195	12663.3
+306	5	2025-04-23 13:30:00+00	NFLX	BUY	654.66	105.57	69112.46
+307	6	2025-04-23 13:30:00+00	COST	SELL	8.81	985.73	8684.28
+308	6	2025-04-23 13:30:00+00	JPM	SELL	18.82	245.67	4623.51
+309	6	2025-04-23 13:30:00+00	MSFT	SELL	25.82	378.87	9782.42
+310	6	2025-04-23 13:30:00+00	V	SELL	9.83	340.52	3347.31
+311	6	2025-04-23 13:30:00+00	BA	BUY	22.8	172.76	3938.93
+312	6	2025-04-23 13:30:00+00	GE	BUY	64.05	195	12489.75
+313	6	2025-04-23 13:30:00+00	NFLX	BUY	138.97	105.57	14671.06
+314	7	2025-04-23 13:30:00+00	COST	SELL	2.95	985.73	2907.9
+315	7	2025-04-23 13:30:00+00	CVX	SELL	14.76	136.4	2013.26
+316	7	2025-04-23 13:30:00+00	JNJ	SELL	11.3	156.73	1771.05
+317	7	2025-04-23 13:30:00+00	MSFT	SELL	8.89	378.87	3368.15
+318	7	2025-04-23 13:30:00+00	NVDA	SELL	22.52	104.18	2346.13
+319	7	2025-04-23 13:30:00+00	XOM	SELL	20.8	107.69	2239.95
+320	7	2025-04-23 13:30:00+00	BA	BUY	15.18	172.76	2622.5
+321	7	2025-04-23 13:30:00+00	GE	BUY	36.47	195	7111.65
+322	7	2025-04-23 13:30:00+00	NFLX	BUY	100.5	105.57	10609.78
+323	7	2025-04-23 13:30:00+00	WMT	BUY	21.13	95.97	2027.85
+324	8	2025-04-23 13:30:00+00	COST	SELL	6.46	985.73	6367.82
+325	8	2025-04-23 13:30:00+00	MSFT	SELL	22.49	378.87	8520.79
+326	8	2025-04-23 13:30:00+00	TSM	SELL	36.7	158.74	5825.76
+327	8	2025-04-23 13:30:00+00	GE	BUY	68.72	195	13400.4
+328	8	2025-04-23 13:30:00+00	NFLX	BUY	103.31	105.57	10906.44
+329	9	2025-04-23 13:30:00+00	NFLX	BUY	165.86	105.57	17509.84
+330	10	2025-04-23 13:30:00+00	COST	SELL	11.46	985.73	11296.47
+331	10	2025-04-23 13:30:00+00	JPM	SELL	32.61	245.67	8011.3
+332	10	2025-04-23 13:30:00+00	MSFT	SELL	17.85	378.87	6762.83
+333	10	2025-04-23 13:30:00+00	V	SELL	16.91	340.52	5758.19
+334	10	2025-04-23 13:30:00+00	WMT	SELL	49.32	95.97	4733.24
+335	10	2025-04-23 13:30:00+00	GE	BUY	75.29	195	14681.55
+336	10	2025-04-23 13:30:00+00	NFLX	BUY	170.16	105.57	17963.79
+337	11	2025-04-23 13:30:00+00	COST	SELL	11.99	985.73	11818.9
+338	11	2025-04-23 13:30:00+00	JNJ	SELL	16.68	156.73	2614.26
+339	11	2025-04-23 13:30:00+00	MSFT	SELL	22.24	378.87	8426.07
+340	11	2025-04-23 13:30:00+00	NVDA	SELL	32.01	104.18	3334.8
+341	11	2025-04-23 13:30:00+00	V	SELL	17.08	340.52	5816.08
+342	11	2025-04-23 13:30:00+00	WMT	SELL	43.82	95.97	4205.41
+343	11	2025-04-23 13:30:00+00	BA	BUY	22.88	172.76	3952.75
+344	11	2025-04-23 13:30:00+00	GE	BUY	76.87	195	14989.65
+345	11	2025-04-23 13:30:00+00	NFLX	BUY	220.3	105.57	23257.07
+346	12	2025-04-23 13:30:00+00	NFLX	BUY	204.53	105.57	21592.23
+347	2	2025-04-30 13:30:00+00	NFLX	SELL	37.06	111.02	4114.4
+348	2	2025-04-30 13:30:00+00	BA	BUY	5.02	180.3	905.11
+349	2	2025-04-30 13:30:00+00	GE	BUY	5.3	199.15	1055.49
+350	2	2025-04-30 13:30:00+00	JPM	BUY	4.37	240.38	1050.46
+351	2	2025-04-30 13:30:00+00	WMT	BUY	11.53	95.55	1101.69
+352	3	2025-04-30 13:30:00+00	NFLX	SELL	54.46	111.02	6046.15
+353	4	2025-04-30 13:30:00+00	NFLX	SELL	211.7	111.02	23502.93
+354	4	2025-04-30 13:30:00+00	MSFT	BUY	9.93	388.51	3857.9
+355	4	2025-04-30 13:30:00+00	TSM	BUY	32.17	164.87	5303.87
+356	5	2025-04-30 13:30:00+00	GE	SELL	32.27	199.15	6426.57
+357	5	2025-04-30 13:30:00+00	JPM	SELL	6.61	240.38	1588.91
+358	5	2025-04-30 13:30:00+00	NFLX	SELL	708.61	111.02	78669.88
+359	5	2025-04-30 13:30:00+00	WMT	SELL	17.27	95.55	1650.15
+360	5	2025-04-30 13:30:00+00	BA	BUY	322.28	180.3	58107.08
+361	5	2025-04-30 13:30:00+00	MSFT	BUY	11.26	388.51	4374.62
+362	5	2025-04-30 13:30:00+00	PFE	BUY	54.19	24.32	1317.9
+363	5	2025-04-30 13:30:00+00	V	BUY	63.85	339.56	21680.91
+364	6	2025-04-30 13:30:00+00	NFLX	SELL	240.6	111.02	26711.41
+365	6	2025-04-30 13:30:00+00	WMT	SELL	48.27	95.55	4612.2
+366	6	2025-04-30 13:30:00+00	MSFT	BUY	13.92	388.51	5408.06
+367	6	2025-04-30 13:30:00+00	V	BUY	20.9	339.56	7096.8
+368	7	2025-04-30 13:30:00+00	JPM	SELL	7.32	240.38	1759.58
+369	7	2025-04-30 13:30:00+00	NFLX	SELL	135.47	111.02	15039.88
+370	7	2025-04-30 13:30:00+00	WMT	SELL	21.6	95.55	2063.88
+371	7	2025-04-30 13:30:00+00	MSFT	BUY	6.21	388.51	2412.65
+372	7	2025-04-30 13:30:00+00	NVDA	BUY	21	105.99	2225.79
+373	7	2025-04-30 13:30:00+00	TSM	BUY	12.15	164.87	2003.17
+374	7	2025-04-30 13:30:00+00	V	BUY	5.03	339.56	1707.99
+375	8	2025-04-30 13:30:00+00	NFLX	SELL	189.93	111.02	21086.03
+376	8	2025-04-30 13:30:00+00	BA	BUY	36.22	180.3	6530.47
+377	9	2025-04-30 13:30:00+00	NFLX	SELL	467.38	111.02	51888.53
+378	9	2025-04-30 13:30:00+00	BA	BUY	73	180.3	13161.9
+379	9	2025-04-30 13:30:00+00	GE	BUY	187.32	199.15	37304.78
+380	10	2025-04-30 13:30:00+00	NFLX	SELL	328.97	111.02	36522.25
+381	10	2025-04-30 13:30:00+00	BA	BUY	66.19	180.3	11934.06
+382	10	2025-04-30 13:30:00+00	GE	BUY	31.91	199.15	6354.88
+383	10	2025-04-30 13:30:00+00	V	BUY	21.87	339.56	7426.18
+384	11	2025-04-30 13:30:00+00	JPM	SELL	11.48	240.38	2759.56
+385	11	2025-04-30 13:30:00+00	NFLX	SELL	327.4	111.02	36347.95
+386	11	2025-04-30 13:30:00+00	WMT	SELL	28.05	95.55	2680.18
+387	11	2025-04-30 13:30:00+00	BA	BUY	48.97	180.3	8829.29
+388	11	2025-04-30 13:30:00+00	DIS	BUY	18.36	89.59	1644.87
+389	11	2025-04-30 13:30:00+00	MSFT	BUY	19.54	388.51	7591.49
+390	11	2025-04-30 13:30:00+00	NVDA	BUY	26.84	105.99	2844.77
+391	11	2025-04-30 13:30:00+00	PFE	BUY	104.2	24.32	2534.14
+392	11	2025-04-30 13:30:00+00	TSM	BUY	22.09	164.87	3641.98
+393	11	2025-04-30 13:30:00+00	V	BUY	25.89	339.56	8791.21
+394	12	2025-04-30 13:30:00+00	NFLX	SELL	152.96	111.02	16981.62
+395	2	2025-05-07 13:30:00+00	GE	SELL	6.76	209.4	1415.54
+396	2	2025-05-07 13:30:00+00	JPM	SELL	4.54	250.7	1138.18
+397	2	2025-05-07 13:30:00+00	NFLX	SELL	185.81	115.92	21539.1
+398	2	2025-05-07 13:30:00+00	BA	BUY	4.03	184.15	742.12
+399	2	2025-05-07 13:30:00+00	V	BUY	62.33	349.86	21806.77
+400	2	2025-05-07 13:30:00+00	WMT	BUY	15.6	98.95	1543.62
+401	3	2025-05-07 13:30:00+00	WMT	BUY	70.62	98.95	6987.85
+402	4	2025-05-07 13:30:00+00	GE	SELL	41.09	209.4	8604.25
+403	4	2025-05-07 13:30:00+00	BA	BUY	20.86	184.15	3841.37
+404	4	2025-05-07 13:30:00+00	V	BUY	25.08	349.86	8774.49
+405	4	2025-05-07 13:30:00+00	WMT	BUY	45.56	98.95	4508.16
+406	5	2025-05-07 13:30:00+00	BA	SELL	303.58	184.15	55904.26
+407	5	2025-05-07 13:30:00+00	GE	SELL	33.88	209.4	7094.47
+408	5	2025-05-07 13:30:00+00	MSFT	SELL	10.37	435.23	4513.34
+409	5	2025-05-07 13:30:00+00	V	SELL	62.24	349.86	21775.29
+410	5	2025-05-07 13:30:00+00	DIS	BUY	24.51	101.59	2489.97
+411	5	2025-05-07 13:30:00+00	NVDA	BUY	20.19	113.48	2291.16
+412	5	2025-05-07 13:30:00+00	TSM	BUY	489.32	173.8	85043.82
+413	5	2025-05-07 13:30:00+00	WMT	BUY	16.35	98.95	1617.83
+414	6	2025-05-07 13:30:00+00	GE	SELL	49.7	209.4	10407.18
+415	6	2025-05-07 13:30:00+00	TSM	BUY	35.42	173.8	6156
+416	6	2025-05-07 13:30:00+00	WMT	BUY	66.4	98.95	6570.28
+417	7	2025-05-07 13:30:00+00	GE	SELL	22.01	209.4	4608.89
+418	7	2025-05-07 13:30:00+00	BA	BUY	17.65	184.15	3250.25
+419	7	2025-05-07 13:30:00+00	WMT	BUY	32.95	98.95	3260.4
+420	8	2025-05-07 13:30:00+00	GE	SELL	36.24	209.4	7588.66
+421	9	2025-05-07 13:30:00+00	GE	SELL	101.09	209.4	21168.25
+422	9	2025-05-07 13:30:00+00	WMT	BUY	186.79	98.95	18482.87
+423	10	2025-05-07 13:30:00+00	GE	SELL	72.78	209.4	15240.13
+424	10	2025-05-07 13:30:00+00	WMT	BUY	82.93	98.95	8205.92
+425	11	2025-05-07 13:30:00+00	GE	SELL	65.96	209.4	13812.02
+426	11	2025-05-07 13:30:00+00	MSFT	SELL	10.95	435.23	4765.77
+427	11	2025-05-07 13:30:00+00	PFE	SELL	99.06	22.85	2263.52
+428	11	2025-05-07 13:30:00+00	V	SELL	7.15	349.86	2501.5
+429	11	2025-05-07 13:30:00+00	COST	BUY	2.73	1011.69	2761.91
+430	11	2025-05-07 13:30:00+00	DIS	BUY	16.18	101.59	1643.73
+431	11	2025-05-07 13:30:00+00	NFLX	BUY	20.77	115.92	2407.66
+432	11	2025-05-07 13:30:00+00	TSM	BUY	41.68	173.8	7243.98
+433	11	2025-05-07 13:30:00+00	WMT	BUY	85.09	98.95	8419.66
+434	2	2025-05-14 13:30:00+00	BA	SELL	117.13	206.94	24238.88
+435	2	2025-05-14 13:30:00+00	GE	SELL	15.94	221.99	3538.52
+436	2	2025-05-14 13:30:00+00	JPM	SELL	78.91	264.42	20865.38
+437	2	2025-05-14 13:30:00+00	WMT	SELL	3.31	97.12	321.47
+438	2	2025-05-14 13:30:00+00	NFLX	BUY	189.34	114.84	21743.81
+439	2	2025-05-14 13:30:00+00	TSM	BUY	131.1	195.12	25580.23
+440	2	2025-05-14 13:30:00+00	V	BUY	4.6	356.7	1640.82
+441	3	2025-05-14 13:30:00+00	GE	SELL	29.65	221.99	6582
+442	3	2025-05-14 13:30:00+00	TSM	BUY	70.79	195.12	13812.54
+443	4	2025-05-14 13:30:00+00	BA	SELL	36.99	206.94	7654.71
+444	4	2025-05-14 13:30:00+00	JPM	SELL	15.16	264.42	4008.61
+445	4	2025-05-14 13:30:00+00	V	SELL	17.67	356.7	6302.89
+446	4	2025-05-14 13:30:00+00	WMT	SELL	44.23	97.12	4295.62
+447	4	2025-05-14 13:30:00+00	TSM	BUY	73.23	195.12	14288.64
+448	5	2025-05-14 13:30:00+00	BA	SELL	19.6	206.94	4056.02
+449	5	2025-05-14 13:30:00+00	TSM	SELL	442.17	195.12	86276.21
+450	5	2025-05-14 13:30:00+00	WMT	SELL	16.1	97.12	1563.63
+451	5	2025-05-14 13:30:00+00	GE	BUY	249.86	221.99	55466.42
+452	5	2025-05-14 13:30:00+00	JPM	BUY	112.72	264.42	29805.42
+453	5	2025-05-14 13:30:00+00	NFLX	BUY	21.34	114.84	2450.69
+454	5	2025-05-14 13:30:00+00	V	BUY	6.82	356.7	2432.69
+455	6	2025-05-14 13:30:00+00	BA	SELL	29.69	206.94	6144.05
+456	6	2025-05-14 13:30:00+00	WMT	SELL	43.17	97.12	4192.67
+457	6	2025-05-14 13:30:00+00	NVDA	BUY	40.97	132.66	5435.08
+458	6	2025-05-14 13:30:00+00	TSM	BUY	23.11	195.12	4509.22
+459	7	2025-05-14 13:30:00+00	BA	SELL	41.47	206.94	8581.8
+460	7	2025-05-14 13:30:00+00	AAPL	BUY	8.1	213.29	1727.65
+461	7	2025-05-14 13:30:00+00	TSM	BUY	22.45	195.12	4380.44
+462	7	2025-05-14 13:30:00+00	V	BUY	5.06	356.7	1804.9
+463	8	2025-05-14 13:30:00+00	BA	SELL	32.18	206.94	6659.33
+464	8	2025-05-14 13:30:00+00	TSM	BUY	65.49	195.12	12778.41
+465	9	2025-05-14 13:30:00+00	BA	SELL	72.94	206.94	15094.2
+466	9	2025-05-14 13:30:00+00	GE	SELL	68.55	221.99	15217.41
+467	9	2025-05-14 13:30:00+00	TSM	BUY	166.39	195.12	32466.02
+468	9	2025-05-14 13:30:00+00	V	BUY	42.63	356.7	15206.12
+469	10	2025-05-14 13:30:00+00	BA	SELL	74.66	206.94	15450.14
+470	10	2025-05-14 13:30:00+00	TSM	BUY	78.65	195.12	15346.19
+471	11	2025-05-14 13:30:00+00	BA	SELL	77.05	206.94	15944.73
+472	11	2025-05-14 13:30:00+00	NFLX	SELL	19.34	114.84	2221.01
+473	11	2025-05-14 13:30:00+00	WMT	SELL	64.74	97.12	6287.55
+474	11	2025-05-14 13:30:00+00	GE	BUY	57.17	221.99	12691.17
+475	11	2025-05-14 13:30:00+00	JPM	BUY	29.51	264.42	7803.03
+476	11	2025-05-14 13:30:00+00	NVDA	BUY	23.95	132.66	3177.21
+477	11	2025-05-14 13:30:00+00	V	BUY	5.12	356.7	1826.3
+478	12	2025-05-14 13:30:00+00	TSM	BUY	83.34	195.12	16261.3
+479	2	2025-05-21 13:30:00+00	TSM	SELL	11.35	193.13	2192.03
+480	2	2025-05-21 13:30:00+00	GE	BUY	0.91	235.83	214.61
+481	2	2025-05-21 13:30:00+00	NFLX	BUY	3.62	120.15	434.94
+482	2	2025-05-21 13:30:00+00	V	BUY	1.74	363.8	633.01
+483	2	2025-05-21 13:30:00+00	WMT	BUY	9.34	97.57	911.3
+484	3	2025-05-21 13:30:00+00	TSM	SELL	30.05	193.13	5803.56
+485	4	2025-05-21 13:30:00+00	TSM	SELL	51.78	193.13	10000.27
+486	5	2025-05-21 13:30:00+00	DIS	SELL	24.26	111.5	2704.99
+487	5	2025-05-21 13:30:00+00	JPM	SELL	112.83	264.76	29872.87
+488	5	2025-05-21 13:30:00+00	NVDA	SELL	19.41	134.09	2602.69
+489	5	2025-05-21 13:30:00+00	TSM	SELL	46.52	193.13	8984.41
+490	5	2025-05-21 13:30:00+00	V	SELL	8.38	363.8	3048.64
+491	5	2025-05-21 13:30:00+00	COST	BUY	3.36	1036.13	3481.4
+492	5	2025-05-21 13:30:00+00	GE	BUY	43.53	235.83	10265.68
+493	5	2025-05-21 13:30:00+00	NFLX	BUY	271.24	120.15	32589.49
+494	6	2025-05-21 13:30:00+00	TSM	SELL	42.01	193.13	8113.39
+495	6	2025-05-21 13:30:00+00	GE	BUY	23.65	235.83	5577.38
+496	6	2025-05-21 13:30:00+00	NFLX	BUY	76.03	120.15	9135
+497	7	2025-05-21 13:30:00+00	AAPL	SELL	9.8	205.81	2016.94
+498	7	2025-05-21 13:30:00+00	TSM	SELL	18.33	193.13	3540.07
+499	7	2025-05-21 13:30:00+00	NFLX	BUY	26.65	120.15	3202
+500	7	2025-05-21 13:30:00+00	PFE	BUY	105.39	23.4	2466.13
+501	8	2025-05-21 13:30:00+00	TSM	SELL	33.76	193.13	6520.07
+502	9	2025-05-21 13:30:00+00	TSM	SELL	149.53	193.13	28878.73
+503	9	2025-05-21 13:30:00+00	NFLX	BUY	151.44	120.15	18195.52
+504	10	2025-05-21 13:30:00+00	TSM	SELL	61.97	193.13	11968.27
+505	10	2025-05-21 13:30:00+00	NFLX	BUY	103.28	120.15	12409.09
+506	11	2025-05-21 13:30:00+00	DIS	SELL	17.09	111.5	1905.54
+507	11	2025-05-21 13:30:00+00	JPM	SELL	22.31	264.76	5906.8
+508	11	2025-05-21 13:30:00+00	NVDA	SELL	20.45	134.09	2742.14
+509	11	2025-05-21 13:30:00+00	TSM	SELL	44.52	193.13	8598.15
+510	11	2025-05-21 13:30:00+00	V	SELL	5.48	363.8	1993.62
+511	11	2025-05-21 13:30:00+00	COST	BUY	3.57	1036.13	3698.98
+512	11	2025-05-21 13:30:00+00	GE	BUY	14.51	235.83	3421.89
+513	11	2025-05-21 13:30:00+00	NFLX	BUY	101.4	120.15	12183.21
+514	11	2025-05-21 13:30:00+00	PFE	BUY	87.76	23.4	2053.58
+515	2	2025-05-28 13:30:00+00	TSM	SELL	2.08	196.4	408.51
+516	2	2025-05-28 13:30:00+00	V	SELL	2.25	359.08	807.93
+517	2	2025-05-28 13:30:00+00	GE	BUY	0.29	244.29	70.84
+518	2	2025-05-28 13:30:00+00	NFLX	BUY	1.58	120.78	190.83
+519	2	2025-05-28 13:30:00+00	WMT	BUY	9.75	97.49	950.53
+520	4	2025-05-28 13:30:00+00	TSM	SELL	18.68	196.4	3668.75
+521	4	2025-05-28 13:30:00+00	GE	BUY	23	244.29	5618.67
+522	4	2025-05-28 13:30:00+00	PFE	BUY	250.48	23.53	5893.79
+523	5	2025-05-28 13:30:00+00	COST	SELL	3.37	1018.02	3430.73
+524	5	2025-05-28 13:30:00+00	NFLX	SELL	292.02	120.78	35270.18
+525	5	2025-05-28 13:30:00+00	GE	BUY	160.51	244.29	39210.99
+526	6	2025-05-28 13:30:00+00	MSFT	SELL	9.49	459.61	4361.7
+527	6	2025-05-28 13:30:00+00	NFLX	SELL	74.23	120.78	8965.5
+528	6	2025-05-28 13:30:00+00	V	SELL	15.35	359.08	5511.88
+529	6	2025-05-28 13:30:00+00	DIS	BUY	33.02	111.71	3688.66
+530	6	2025-05-28 13:30:00+00	GE	BUY	46.13	244.29	11269.1
+531	6	2025-05-28 13:30:00+00	PFE	BUY	347.36	23.53	8173.38
+532	7	2025-05-28 13:30:00+00	NFLX	SELL	27.37	120.78	3305.75
+533	7	2025-05-28 13:30:00+00	V	SELL	7.75	359.08	2782.87
+534	7	2025-05-28 13:30:00+00	NKE	BUY	36.48	62.36	2274.89
+535	7	2025-05-28 13:30:00+00	PFE	BUY	114.42	23.53	2692.3
+536	8	2025-05-28 13:30:00+00	PFE	BUY	282.73	23.53	6652.64
+537	9	2025-05-28 13:30:00+00	NFLX	SELL	102.51	120.78	12381.16
+538	9	2025-05-28 13:30:00+00	GE	BUY	107.43	244.29	26244.07
+539	10	2025-05-28 13:30:00+00	NFLX	SELL	99.66	120.78	12036.93
+540	10	2025-05-28 13:30:00+00	WMT	SELL	87.56	97.49	8536.22
+541	10	2025-05-28 13:30:00+00	GE	BUY	86.44	244.29	21116.43
+542	10	2025-05-28 13:30:00+00	PFE	BUY	273.15	23.53	6427.22
+543	11	2025-05-28 13:30:00+00	COST	SELL	5.75	1018.02	5853.61
+544	11	2025-05-28 13:30:00+00	JPM	SELL	15.53	264.39	4105.98
+545	11	2025-05-28 13:30:00+00	MSFT	SELL	6.83	459.61	3139.14
+546	11	2025-05-28 13:30:00+00	NFLX	SELL	111.4	120.78	13454.89
+547	11	2025-05-28 13:30:00+00	V	SELL	14.71	359.08	5282.07
+548	11	2025-05-28 13:30:00+00	WMT	SELL	33.56	97.49	3271.76
+549	11	2025-05-28 13:30:00+00	GE	BUY	106.2	244.29	25943.6
+550	11	2025-05-28 13:30:00+00	NKE	BUY	33.96	62.36	2117.75
+551	11	2025-05-28 13:30:00+00	PFE	BUY	229.93	23.53	5410.25
+552	2	2025-06-04 13:30:00+00	GE	SELL	8.34	251.2	2095.01
+553	2	2025-06-04 13:30:00+00	NFLX	SELL	194.54	123.05	23938.15
+554	2	2025-06-04 13:30:00+00	TSM	SELL	3.04	203.33	618.12
+555	2	2025-06-04 13:30:00+00	NVDA	BUY	169.26	140.99	23863.97
+556	2	2025-06-04 13:30:00+00	V	BUY	6.88	369.09	2539.34
+557	2	2025-06-04 13:30:00+00	WMT	BUY	2.5	99.79	249.48
+558	3	2025-06-04 13:30:00+00	NVDA	BUY	50.13	140.99	7067.83
+559	4	2025-06-04 13:30:00+00	GE	SELL	26.64	251.2	6691.97
+560	4	2025-06-04 13:30:00+00	PFE	SELL	192.03	23.45	4503.1
+561	4	2025-06-04 13:30:00+00	NVDA	BUY	64.35	140.99	9072.71
+562	4	2025-06-04 13:30:00+00	WMT	BUY	75.37	99.79	7521.17
+563	5	2025-06-04 13:30:00+00	GE	SELL	365.33	251.2	91770.9
+564	5	2025-06-04 13:30:00+00	COST	BUY	2.62	1054.1	2761.74
+565	5	2025-06-04 13:30:00+00	JNJ	BUY	19.07	154.01	2936.97
+566	5	2025-06-04 13:30:00+00	NVDA	BUY	15.73	140.99	2217.77
+567	5	2025-06-04 13:30:00+00	TSM	BUY	360.42	203.33	73284.2
+568	5	2025-06-04 13:30:00+00	V	BUY	10.61	369.09	3916.04
+569	5	2025-06-04 13:30:00+00	WMT	BUY	76.1	99.79	7594.02
+570	6	2025-06-04 13:30:00+00	GE	SELL	59.7	251.2	14996.64
+571	6	2025-06-04 13:30:00+00	JPM	SELL	16.23	265.7	4312.31
+572	6	2025-06-04 13:30:00+00	PFE	SELL	266.42	23.45	6247.55
+573	6	2025-06-04 13:30:00+00	V	BUY	11.57	369.09	4270.37
+574	6	2025-06-04 13:30:00+00	WMT	BUY	105.7	99.79	10547.8
+575	7	2025-06-04 13:30:00+00	DIS	SELL	15.86	113.53	1800.59
+576	7	2025-06-04 13:30:00+00	JPM	SELL	11.37	265.7	3021.01
+577	7	2025-06-04 13:30:00+00	MSFT	SELL	5.13	464.92	2385.04
+578	7	2025-06-04 13:30:00+00	PFE	SELL	102.06	23.45	2393.31
+579	7	2025-06-04 13:30:00+00	BA	BUY	8.52	212.54	1810.84
+580	7	2025-06-04 13:30:00+00	NVDA	BUY	25.09	140.99	3537.44
+581	7	2025-06-04 13:30:00+00	V	BUY	6.3	369.09	2325.27
+582	7	2025-06-04 13:30:00+00	WMT	BUY	27.07	99.79	2701.32
+583	8	2025-06-04 13:30:00+00	NVDA	BUY	67.69	140.99	9543.61
+584	9	2025-06-04 13:30:00+00	GE	SELL	109.92	251.2	27611.9
+585	10	2025-06-04 13:30:00+00	GE	SELL	92.99	251.2	23359.09
+586	10	2025-06-04 13:30:00+00	PFE	SELL	230.29	23.45	5400.3
+587	10	2025-06-04 13:30:00+00	NVDA	BUY	79.22	140.99	11169.23
+588	10	2025-06-04 13:30:00+00	WMT	BUY	167.48	99.79	16712.83
+589	11	2025-06-04 13:30:00+00	GE	SELL	147.45	251.2	37039.44
+590	11	2025-06-04 13:30:00+00	PFE	SELL	273.96	23.45	6424.36
+591	11	2025-06-04 13:30:00+00	COST	BUY	4.47	1054.1	4711.83
+592	11	2025-06-04 13:30:00+00	JNJ	BUY	21.1	154.01	3249.61
+593	11	2025-06-04 13:30:00+00	NVDA	BUY	55.03	140.99	7758.68
+594	11	2025-06-04 13:30:00+00	TSM	BUY	21.76	203.33	4424.46
+595	11	2025-06-04 13:30:00+00	V	BUY	19.72	369.09	7278.45
+596	11	2025-06-04 13:30:00+00	WMT	BUY	172.31	99.79	17194.81
+597	2	2025-06-11 13:30:00+00	NVDA	SELL	169.26	144.48	24454.68
+598	2	2025-06-11 13:30:00+00	V	SELL	0.86	373.88	321.54
+599	2	2025-06-11 13:30:00+00	WMT	SELL	3.85	96.68	372.22
+600	2	2025-06-11 13:30:00+00	GE	BUY	4.41	245.98	1084.77
+601	2	2025-06-11 13:30:00+00	MSFT	BUY	46.06	474.67	21863.3
+602	2	2025-06-11 13:30:00+00	TSM	BUY	10.14	217.06	2200.99
+603	4	2025-06-11 13:30:00+00	GE	SELL	20.13	245.98	4951.58
+604	4	2025-06-11 13:30:00+00	NFLX	SELL	31.95	121.56	3883.84
+605	4	2025-06-11 13:30:00+00	NVDA	SELL	48.7	144.48	7036.18
+606	4	2025-06-11 13:30:00+00	WMT	SELL	81.91	96.68	7919.06
+607	4	2025-06-11 13:30:00+00	PFE	BUY	158.99	24.59	3909.56
+608	4	2025-06-11 13:30:00+00	TSM	BUY	57.28	217.06	12433.2
+609	5	2025-06-11 13:30:00+00	COST	SELL	2.62	1000.9	2622.36
+610	5	2025-06-11 13:30:00+00	GE	SELL	88.84	245.98	21852.86
+611	5	2025-06-11 13:30:00+00	JNJ	SELL	19.21	156.27	3001.95
+612	5	2025-06-11 13:30:00+00	NVDA	SELL	16.49	144.48	2382.48
+613	5	2025-06-11 13:30:00+00	V	SELL	8.32	373.88	3110.68
+614	5	2025-06-11 13:30:00+00	WMT	SELL	76.97	96.68	7441.46
+615	5	2025-06-11 13:30:00+00	PFE	BUY	90.58	24.59	2227.36
+616	5	2025-06-11 13:30:00+00	TSM	BUY	173.04	217.06	37560.06
+617	6	2025-06-11 13:30:00+00	GE	SELL	32.4	245.98	7969.75
+618	6	2025-06-11 13:30:00+00	NVDA	SELL	32.47	144.48	4691.27
+619	6	2025-06-11 13:30:00+00	WMT	SELL	129.96	96.68	12564.53
+620	6	2025-06-11 13:30:00+00	PFE	BUY	343.09	24.59	8436.58
+621	6	2025-06-11 13:30:00+00	TSM	BUY	71.04	217.06	15419.94
+622	6	2025-06-11 13:30:00+00	XOM	BUY	59.58	106.86	6366.72
+623	7	2025-06-11 13:30:00+00	COST	SELL	2.05	1000.9	2051.84
+624	7	2025-06-11 13:30:00+00	GE	SELL	18.48	245.98	4545.71
+625	7	2025-06-11 13:30:00+00	NFLX	SELL	16.49	121.56	2004.52
+626	7	2025-06-11 13:30:00+00	NVDA	SELL	23.76	144.48	3432.84
+627	7	2025-06-11 13:30:00+00	WMT	SELL	48.55	96.68	4693.81
+628	7	2025-06-11 13:30:00+00	MSFT	BUY	5.26	474.67	2496.76
+629	7	2025-06-11 13:30:00+00	PFE	BUY	116.72	24.59	2870.14
+630	7	2025-06-11 13:30:00+00	TSM	BUY	15.2	217.06	3299.31
+631	7	2025-06-11 13:30:00+00	XOM	BUY	40.3	106.86	4306.46
+632	8	2025-06-11 13:30:00+00	TSM	BUY	32.57	217.06	7069.64
+633	9	2025-06-11 13:30:00+00	WMT	SELL	148.2	96.68	14327.98
+634	9	2025-06-11 13:30:00+00	TSM	BUY	134.34	217.06	29159.84
+635	10	2025-06-11 13:30:00+00	GE	SELL	33.17	245.98	8159.16
+636	10	2025-06-11 13:30:00+00	NVDA	SELL	68.9	144.48	9954.67
+637	10	2025-06-11 13:30:00+00	WMT	SELL	169.47	96.68	16384.36
+638	10	2025-06-11 13:30:00+00	PFE	BUY	266.21	24.59	6546.1
+639	10	2025-06-11 13:30:00+00	TSM	BUY	116.93	217.06	25380.83
+640	11	2025-06-11 13:30:00+00	COST	SELL	6.08	1000.9	6085.47
+641	11	2025-06-11 13:30:00+00	GE	SELL	53.46	245.98	13150.09
+642	11	2025-06-11 13:30:00+00	NFLX	SELL	20.17	121.56	2451.87
+643	11	2025-06-11 13:30:00+00	NVDA	SELL	65.21	144.48	9421.54
+644	11	2025-06-11 13:30:00+00	WMT	SELL	166.75	96.68	16121.39
+645	11	2025-06-11 13:30:00+00	PFE	BUY	627.76	24.59	15436.62
+646	11	2025-06-11 13:30:00+00	SBUX	BUY	32.18	94.1	3028.14
+647	11	2025-06-11 13:30:00+00	TSM	BUY	99.82	217.06	21666.93
+648	11	2025-06-11 13:30:00+00	XOM	BUY	51.98	106.86	5554.58
+649	2	2025-06-18 13:30:00+00	MSFT	SELL	46.06	478.36	22033.26
+650	2	2025-06-18 13:30:00+00	TSM	SELL	7.01	214.43	1503.15
+651	2	2025-06-18 13:30:00+00	V	SELL	4.48	358.12	1604.38
+652	2	2025-06-18 13:30:00+00	GE	BUY	5.52	238.62	1317.18
+653	2	2025-06-18 13:30:00+00	JPM	BUY	83.89	276.71	23213.2
+654	2	2025-06-18 13:30:00+00	WMT	BUY	6.43	94.89	610.14
+655	4	2025-06-18 13:30:00+00	TSM	SELL	27.2	214.43	5832.5
+656	4	2025-06-18 13:30:00+00	JPM	BUY	15.99	276.71	4424.59
+657	4	2025-06-18 13:30:00+00	XOM	BUY	72.94	114.17	8327.56
+658	5	2025-06-18 13:30:00+00	PFE	SELL	142.4	23.91	3404.78
+659	5	2025-06-18 13:30:00+00	TSM	SELL	529.14	214.43	113463.49
+660	5	2025-06-18 13:30:00+00	CVX	BUY	54.02	148.93	8045.2
+661	5	2025-06-18 13:30:00+00	JPM	BUY	26.02	276.71	7199.99
+662	5	2025-06-18 13:30:00+00	XOM	BUY	886.92	114.17	101259.66
+663	6	2025-06-18 13:30:00+00	JNJ	SELL	23.96	151.12	3620.84
+664	6	2025-06-18 13:30:00+00	PFE	SELL	257.84	23.91	6164.95
+665	6	2025-06-18 13:30:00+00	TSM	SELL	46.47	214.43	9964.56
+666	6	2025-06-18 13:30:00+00	V	SELL	15.54	358.12	5565.18
+667	6	2025-06-18 13:30:00+00	CVX	BUY	29.17	148.93	4344.29
+668	6	2025-06-18 13:30:00+00	JPM	BUY	29.3	276.71	8107.6
+669	6	2025-06-18 13:30:00+00	XOM	BUY	101.48	114.17	11585.97
+670	7	2025-06-18 13:30:00+00	JNJ	SELL	16.07	151.12	2428.5
+671	7	2025-06-18 13:30:00+00	PFE	SELL	90.36	23.91	2160.51
+672	7	2025-06-18 13:30:00+00	TSM	SELL	13.32	214.43	2856.21
+673	7	2025-06-18 13:30:00+00	V	SELL	8.25	358.12	2954.49
+674	7	2025-06-18 13:30:00+00	CVX	BUY	16.4	148.93	2442.45
+675	7	2025-06-18 13:30:00+00	JPM	BUY	7.86	276.71	2174.94
+676	8	2025-06-18 13:30:00+00	NVDA	SELL	42.95	145.22	6237.2
+677	8	2025-06-18 13:30:00+00	XOM	BUY	103	114.17	11759.51
+678	9	2025-06-18 13:30:00+00	TSM	SELL	72.42	214.43	15529.02
+679	10	2025-06-18 13:30:00+00	TSM	SELL	79.82	214.43	17115.8
+680	10	2025-06-18 13:30:00+00	V	SELL	16.09	358.12	5762.15
+681	10	2025-06-18 13:30:00+00	JPM	BUY	26.32	276.71	7283.01
+682	10	2025-06-18 13:30:00+00	XOM	BUY	182.68	114.17	20856.58
+683	11	2025-06-18 13:30:00+00	JNJ	SELL	32.51	151.12	4912.91
+684	11	2025-06-18 13:30:00+00	PFE	SELL	496.28	23.91	11866.05
+685	11	2025-06-18 13:30:00+00	TSM	SELL	88.08	214.43	18886.99
+686	11	2025-06-18 13:30:00+00	V	SELL	23.76	358.12	8508.93
+687	11	2025-06-18 13:30:00+00	CVX	BUY	58.4	148.93	8697.51
+688	11	2025-06-18 13:30:00+00	JPM	BUY	41.37	276.71	11447.49
+689	11	2025-06-18 13:30:00+00	XOM	BUY	214.63	114.17	24504.31
+690	2	2025-06-25 13:30:00+00	GE	SELL	94.98	248.9	23640.52
+691	2	2025-06-25 13:30:00+00	JPM	SELL	3.35	282.02	944.77
+692	2	2025-06-25 13:30:00+00	TSM	SELL	2.65	222.75	590.29
+693	2	2025-06-25 13:30:00+00	V	SELL	67.96	348.81	23705.13
+694	2	2025-06-25 13:30:00+00	MSFT	BUY	46.58	493.54	22989.09
+695	2	2025-06-25 13:30:00+00	NVDA	BUY	162.04	152.21	24664.11
+696	2	2025-06-25 13:30:00+00	WMT	BUY	12.52	97.91	1225.83
+697	4	2025-06-25 13:30:00+00	TSM	SELL	31.92	222.75	7110.18
+698	4	2025-06-25 13:30:00+00	V	SELL	15.44	348.81	5385.63
+699	4	2025-06-25 13:30:00+00	XOM	SELL	81.58	108.81	8876.72
+700	4	2025-06-25 13:30:00+00	NFLX	BUY	47.98	129.13	6195.66
+701	4	2025-06-25 13:30:00+00	NVDA	BUY	46.11	152.21	7018.4
+702	4	2025-06-25 13:30:00+00	WMT	BUY	81.01	97.91	7931.69
+703	5	2025-06-25 13:30:00+00	CVX	SELL	55.78	143.74	8017.82
+704	5	2025-06-25 13:30:00+00	JPM	SELL	9.71	282.02	2738.41
+705	5	2025-06-25 13:30:00+00	XOM	SELL	885.45	108.81	96345.81
+706	5	2025-06-25 13:30:00+00	MSFT	BUY	57.57	493.54	28413.1
+707	5	2025-06-25 13:30:00+00	NFLX	BUY	233.49	129.13	30150.56
+708	5	2025-06-25 13:30:00+00	NVDA	BUY	102.1	152.21	15540.64
+709	5	2025-06-25 13:30:00+00	PFE	BUY	147.96	24.18	3577.67
+710	5	2025-06-25 13:30:00+00	TSM	BUY	128.41	222.75	28603.33
+711	6	2025-06-25 13:30:00+00	CVX	SELL	25.49	143.74	3663.93
+712	6	2025-06-25 13:30:00+00	XOM	SELL	149.04	108.81	16217.04
+713	6	2025-06-25 13:30:00+00	MSFT	BUY	11.84	493.54	5843.51
+714	6	2025-06-25 13:30:00+00	NVDA	BUY	56.34	152.21	8575.51
+715	6	2025-06-25 13:30:00+00	WMT	BUY	73.19	97.91	7166.03
+716	7	2025-06-25 13:30:00+00	V	SELL	6.65	348.81	2319.59
+717	7	2025-06-25 13:30:00+00	XOM	SELL	23.3	108.81	2535.27
+718	7	2025-06-25 13:30:00+00	NFLX	BUY	15.94	129.13	2058.33
+719	7	2025-06-25 13:30:00+00	NVDA	BUY	21.6	152.21	3287.74
+720	7	2025-06-25 13:30:00+00	TSM	BUY	9.99	222.75	2225.27
+721	7	2025-06-25 13:30:00+00	WMT	BUY	45.66	97.91	4470.57
+722	8	2025-06-25 13:30:00+00	TSM	SELL	33.98	222.75	7569.04
+723	8	2025-06-25 13:30:00+00	XOM	SELL	80.58	108.81	8767.91
+724	8	2025-06-25 13:30:00+00	NVDA	BUY	41.14	152.21	6261.92
+725	9	2025-06-25 13:30:00+00	V	SELL	51.62	348.81	18005.57
+726	9	2025-06-25 13:30:00+00	NVDA	BUY	146.33	152.21	22272.89
+727	9	2025-06-25 13:30:00+00	WMT	BUY	181.28	97.91	17749.12
+728	10	2025-06-25 13:30:00+00	TSM	SELL	29.26	222.75	6517.66
+729	10	2025-06-25 13:30:00+00	XOM	SELL	174.23	108.81	18957.97
+730	10	2025-06-25 13:30:00+00	MSFT	BUY	18.63	493.54	9194.65
+731	10	2025-06-25 13:30:00+00	NVDA	BUY	84.01	152.21	12787.16
+732	10	2025-06-25 13:30:00+00	WMT	BUY	113.39	97.91	11102.01
+733	11	2025-06-25 13:30:00+00	CVX	SELL	54.51	143.74	7835.27
+734	11	2025-06-25 13:30:00+00	JPM	SELL	14.87	282.02	4193.64
+735	11	2025-06-25 13:30:00+00	XOM	SELL	260.54	108.81	28349.36
+736	11	2025-06-25 13:30:00+00	MSFT	BUY	15.55	493.54	7674.55
+737	11	2025-06-25 13:30:00+00	NFLX	BUY	75.23	129.13	9714.45
+738	11	2025-06-25 13:30:00+00	NVDA	BUY	78.8	152.21	11994.15
+739	11	2025-06-25 13:30:00+00	TSM	BUY	29.35	222.75	6537.71
+740	11	2025-06-25 13:30:00+00	WMT	BUY	60.72	97.91	5945.1
+741	2	2025-07-02 13:30:00+00	JPM	SELL	0.47	291.45	136.98
+742	2	2025-07-02 13:30:00+00	MSFT	SELL	46.58	491.77	22906.65
+743	2	2025-07-02 13:30:00+00	NVDA	SELL	5.23	156.08	816.3
+744	2	2025-07-02 13:30:00+00	BA	BUY	106.03	210.69	22339.46
+745	2	2025-07-02 13:30:00+00	TSM	BUY	5.98	230.33	1377.37
+746	2	2025-07-02 13:30:00+00	WMT	BUY	1.48	97.75	144.67
+747	4	2025-07-02 13:30:00+00	JPM	SELL	16.62	291.45	4843.9
+748	4	2025-07-02 13:30:00+00	MSFT	SELL	7.8	491.77	3835.81
+749	4	2025-07-02 13:30:00+00	NFLX	SELL	50.99	129.3	6593.01
+750	4	2025-07-02 13:30:00+00	NVDA	SELL	25.08	156.08	3914.49
+751	4	2025-07-02 13:30:00+00	BA	BUY	22.47	210.69	4734.2
+752	4	2025-07-02 13:30:00+00	TSM	BUY	28.86	230.33	6647.32
+753	5	2025-07-02 13:30:00+00	JPM	SELL	18.37	291.45	5353.94
+754	5	2025-07-02 13:30:00+00	MSFT	SELL	58.45	491.77	28743.96
+755	5	2025-07-02 13:30:00+00	NFLX	SELL	232.52	129.3	30064.84
+756	5	2025-07-02 13:30:00+00	NVDA	SELL	96.76	156.08	15102.3
+757	5	2025-07-02 13:30:00+00	TSM	SELL	111.89	230.33	25771.62
+758	5	2025-07-02 13:30:00+00	DIS	BUY	151.88	122.98	18678.2
+759	5	2025-07-02 13:30:00+00	NKE	BUY	1098.03	75.97	83417.34
+760	6	2025-07-02 13:30:00+00	JPM	SELL	19.49	291.45	5680.36
+761	6	2025-07-02 13:30:00+00	MSFT	SELL	14.15	491.77	6958.55
+762	6	2025-07-02 13:30:00+00	NVDA	SELL	46.86	156.08	7313.91
+763	6	2025-07-02 13:30:00+00	BA	BUY	26.74	210.69	5633.85
+764	6	2025-07-02 13:30:00+00	DIS	BUY	42.15	122.98	5183.61
+765	6	2025-07-02 13:30:00+00	JNJ	BUY	42.9	155.91	6688.54
+766	6	2025-07-02 13:30:00+00	NKE	BUY	67.62	75.97	5137.09
+767	6	2025-07-02 13:30:00+00	PFE	BUY	231.07	25.19	5820.65
+768	7	2025-07-02 13:30:00+00	CVX	SELL	14.72	145.65	2143.97
+769	7	2025-07-02 13:30:00+00	MSFT	SELL	4.66	491.77	2291.65
+770	7	2025-07-02 13:30:00+00	NFLX	SELL	17.67	129.3	2284.73
+771	7	2025-07-02 13:30:00+00	NVDA	SELL	21.34	156.08	3330.75
+772	7	2025-07-02 13:30:00+00	TSM	SELL	11.41	230.33	2628.07
+773	7	2025-07-02 13:30:00+00	AAPL	BUY	10.14	212.3	2152.72
+774	7	2025-07-02 13:30:00+00	BA	BUY	17.71	210.69	3731.32
+775	7	2025-07-02 13:30:00+00	DIS	BUY	19.07	122.98	2345.23
+776	7	2025-07-02 13:30:00+00	JNJ	BUY	29.76	155.91	4639.88
+777	7	2025-07-02 13:30:00+00	PFE	BUY	98.82	25.19	2489.28
+778	8	2025-07-02 13:30:00+00	JNJ	BUY	41.49	155.91	6468.71
+779	9	2025-07-02 13:30:00+00	NVDA	SELL	95.22	156.08	14861.94
+780	9	2025-07-02 13:30:00+00	TSM	BUY	75.26	230.33	17334.64
+781	10	2025-07-02 13:30:00+00	JPM	SELL	27.29	291.45	7953.67
+782	10	2025-07-02 13:30:00+00	MSFT	SELL	16.7	491.77	8212.56
+783	10	2025-07-02 13:30:00+00	NVDA	SELL	64.61	156.08	10084.33
+784	10	2025-07-02 13:30:00+00	BA	BUY	32.88	210.69	6927.49
+785	10	2025-07-02 13:30:00+00	DIS	BUY	59.17	122.98	7276.73
+786	10	2025-07-02 13:30:00+00	TSM	BUY	32.94	230.33	7587.07
+787	11	2025-07-02 13:30:00+00	JPM	SELL	15.68	291.45	4569.94
+788	11	2025-07-02 13:30:00+00	MSFT	SELL	15.76	491.77	7750.3
+789	11	2025-07-02 13:30:00+00	NFLX	SELL	67.74	129.3	8758.78
+790	11	2025-07-02 13:30:00+00	NVDA	SELL	68.59	156.08	10705.53
+791	11	2025-07-02 13:30:00+00	SBUX	SELL	23.8	94.39	2246.48
+792	11	2025-07-02 13:30:00+00	TSM	SELL	32.57	230.33	7501.85
+793	11	2025-07-02 13:30:00+00	BA	BUY	28.6	210.69	6025.73
+794	11	2025-07-02 13:30:00+00	DIS	BUY	89.29	122.98	10980.88
+795	11	2025-07-02 13:30:00+00	JNJ	BUY	53.31	155.91	8311.56
+796	11	2025-07-02 13:30:00+00	NKE	BUY	124.49	75.97	9457.51
+797	11	2025-07-02 13:30:00+00	PFE	BUY	293.47	25.19	7392.51
+798	2	2025-07-09 13:30:00+00	BA	SELL	106.03	224.21	23772.99
+799	2	2025-07-09 13:30:00+00	JPM	SELL	80.07	283.89	22731.07
+800	2	2025-07-09 13:30:00+00	WMT	SELL	15.41	97.07	1495.85
+801	2	2025-07-09 13:30:00+00	MSFT	BUY	45.75	504.56	23083.62
+802	2	2025-07-09 13:30:00+00	NVDA	BUY	1.56	163.07	254.39
+803	2	2025-07-09 13:30:00+00	TSM	BUY	8.71	231.19	2013.66
+804	2	2025-07-09 13:30:00+00	V	BUY	63.61	356.08	22650.25
+805	4	2025-07-09 13:30:00+00	WMT	SELL	65.55	97.07	6362.94
+806	5	2025-07-09 13:30:00+00	DIS	SELL	151.82	121.57	18456.76
+807	5	2025-07-09 13:30:00+00	NKE	SELL	1072.67	74.19	79581.39
+808	5	2025-07-09 13:30:00+00	PFE	SELL	136.38	25.58	3488.6
+809	5	2025-07-09 13:30:00+00	TSM	SELL	17.15	231.19	3964.91
+810	5	2025-07-09 13:30:00+00	BA	BUY	319.32	224.21	71594.74
+811	5	2025-07-09 13:30:00+00	CVX	BUY	17.91	152.95	2739.33
+812	5	2025-07-09 13:30:00+00	NVDA	BUY	205.29	163.07	33476.64
+813	6	2025-07-09 13:30:00+00	DIS	SELL	63.27	121.57	7691.73
+814	6	2025-07-09 13:30:00+00	NFLX	SELL	29.21	127.83	3733.91
+815	6	2025-07-09 13:30:00+00	PFE	SELL	227.71	25.58	5824.82
+816	6	2025-07-09 13:30:00+00	WMT	SELL	59.09	97.07	5735.87
+817	6	2025-07-09 13:30:00+00	BA	BUY	26.11	224.21	5854.12
+818	6	2025-07-09 13:30:00+00	NVDA	BUY	40.43	163.07	6592.92
+819	6	2025-07-09 13:30:00+00	XOM	BUY	32.62	113.64	3706.94
+820	7	2025-07-09 13:30:00+00	JPM	SELL	8.22	283.89	2333.58
+821	7	2025-07-09 13:30:00+00	PFE	SELL	99.03	25.58	2533.19
+822	7	2025-07-09 13:30:00+00	WMT	SELL	46.37	97.07	4501.14
+823	7	2025-07-09 13:30:00+00	CVX	BUY	13.99	152.95	2139.77
+824	7	2025-07-09 13:30:00+00	NVDA	BUY	13.38	163.07	2181.88
+825	8	2025-07-09 13:30:00+00	BA	BUY	29.52	224.21	6618.68
+826	9	2025-07-09 13:30:00+00	WMT	SELL	178.29	97.07	17306.61
+827	10	2025-07-09 13:30:00+00	DIS	SELL	52.72	121.57	6409.17
+828	10	2025-07-09 13:30:00+00	WMT	SELL	94.45	97.07	9168.26
+829	10	2025-07-09 13:30:00+00	NVDA	BUY	59.35	163.07	9678.2
+830	11	2025-07-09 13:30:00+00	DIS	SELL	106.22	121.57	12913.17
+831	11	2025-07-09 13:30:00+00	JNJ	SELL	26.05	155.65	4054.68
+832	11	2025-07-09 13:30:00+00	JPM	SELL	12.85	283.89	3647.99
+833	11	2025-07-09 13:30:00+00	NKE	SELL	118.04	74.19	8757.39
+834	11	2025-07-09 13:30:00+00	PFE	SELL	246.56	25.58	6307
+835	11	2025-07-09 13:30:00+00	TSM	SELL	23.45	231.19	5421.41
+836	11	2025-07-09 13:30:00+00	WMT	SELL	53	97.07	5144.71
+837	11	2025-07-09 13:30:00+00	BA	BUY	100.79	224.21	22598.13
+838	11	2025-07-09 13:30:00+00	CVX	BUY	39.83	152.95	6092
+839	11	2025-07-09 13:30:00+00	MSFT	BUY	4.87	504.56	2457.21
+840	11	2025-07-09 13:30:00+00	NVDA	BUY	55.93	163.07	9120.51
+841	11	2025-07-09 13:30:00+00	XOM	BUY	31.54	113.64	3584.21
+842	2	2025-07-16 13:30:00+00	NVDA	SELL	0.92	169.96	156.36
+843	2	2025-07-16 13:30:00+00	TSM	SELL	6.16	235.9	1453.14
+844	2	2025-07-16 13:30:00+00	V	SELL	63.61	347.99	22135.64
+845	2	2025-07-16 13:30:00+00	WMT	SELL	242.26	94.98	23009.85
+846	2	2025-07-16 13:30:00+00	JPM	BUY	76.39	285.43	21804
+847	2	2025-07-16 13:30:00+00	MSFT	BUY	4	503.72	2014.88
+848	2	2025-07-16 13:30:00+00	PFE	BUY	923.4	24.84	22937.26
+849	3	2025-07-16 13:30:00+00	PFE	BUY	268.03	24.84	6657.87
+850	4	2025-07-16 13:30:00+00	BA	SELL	22.24	230.06	5116.53
+851	4	2025-07-16 13:30:00+00	WMT	SELL	47.27	94.98	4489.7
+852	4	2025-07-16 13:30:00+00	MSFT	BUY	11.5	503.72	5792.78
+853	4	2025-07-16 13:30:00+00	NVDA	BUY	61.53	169.96	10457.64
+854	5	2025-07-16 13:30:00+00	BA	SELL	319.6	230.06	73527.18
+855	5	2025-07-16 13:30:00+00	CVX	SELL	17.82	150.51	2682.09
+856	5	2025-07-16 13:30:00+00	NKE	SELL	24.98	72.1	1801.06
+857	5	2025-07-16 13:30:00+00	GE	BUY	32.4	264.17	8559.11
+858	5	2025-07-16 13:30:00+00	JNJ	BUY	374.9	163.4	61258.66
+859	5	2025-07-16 13:30:00+00	TSM	BUY	41.2	235.9	9719.08
+860	6	2025-07-16 13:30:00+00	BA	SELL	52.62	230.06	12105.76
+861	6	2025-07-16 13:30:00+00	WMT	SELL	41.93	94.98	3982.51
+862	6	2025-07-16 13:30:00+00	AAPL	BUY	22.53	212.09	4778.39
+863	6	2025-07-16 13:30:00+00	GE	BUY	32.01	264.17	8456.08
+864	6	2025-07-16 13:30:00+00	MSFT	BUY	10.3	503.72	5188.32
+865	6	2025-07-16 13:30:00+00	NVDA	BUY	35.55	169.96	6042.08
+866	7	2025-07-16 13:30:00+00	BA	SELL	16.29	230.06	3747.68
+867	7	2025-07-16 13:30:00+00	DIS	SELL	16.81	120.27	2021.74
+868	7	2025-07-16 13:30:00+00	WMT	SELL	28.71	94.98	2726.88
+869	7	2025-07-16 13:30:00+00	GE	BUY	10.41	264.17	2750.01
+870	7	2025-07-16 13:30:00+00	MSFT	BUY	8.22	503.72	4140.58
+871	7	2025-07-16 13:30:00+00	PFE	BUY	74.85	24.84	1859.27
+872	7	2025-07-16 13:30:00+00	TSM	BUY	10.34	235.9	2439.21
+873	8	2025-07-16 13:30:00+00	BA	SELL	27.84	230.06	6404.87
+874	9	2025-07-16 13:30:00+00	NVDA	BUY	107.6	169.96	18287.7
+875	10	2025-07-16 13:30:00+00	BA	SELL	32.61	230.06	7502.26
+876	10	2025-07-16 13:30:00+00	NFLX	SELL	43.13	125.73	5422.73
+877	10	2025-07-16 13:30:00+00	PFE	SELL	215.49	24.84	5352.77
+878	10	2025-07-16 13:30:00+00	MSFT	BUY	12.75	503.72	6422.43
+879	10	2025-07-16 13:30:00+00	NVDA	BUY	46.14	169.96	7841.95
+880	10	2025-07-16 13:30:00+00	TSM	BUY	24.05	235.9	5673.4
+881	11	2025-07-16 13:30:00+00	BA	SELL	133.2	230.06	30643.99
+882	11	2025-07-16 13:30:00+00	CVX	SELL	31.49	150.51	4739.56
+883	11	2025-07-16 13:30:00+00	PFE	SELL	195.78	24.84	4863.18
+884	11	2025-07-16 13:30:00+00	WMT	SELL	24.86	94.98	2361.2
+885	11	2025-07-16 13:30:00+00	AAPL	BUY	23.61	212.09	5007.44
+886	11	2025-07-16 13:30:00+00	GE	BUY	55.18	264.17	14576.9
+887	11	2025-07-16 13:30:00+00	JNJ	BUY	41.31	163.4	6750.05
+888	11	2025-07-16 13:30:00+00	MSFT	BUY	4.49	503.72	2261.7
+889	11	2025-07-16 13:30:00+00	NVDA	BUY	61.99	169.96	10535.82
+890	11	2025-07-16 13:30:00+00	TSM	BUY	21.48	235.9	5067.13
+891	2	2025-07-23 13:30:00+00	MSFT	SELL	49.75	502.63	25005.84
+892	2	2025-07-23 13:30:00+00	NVDA	SELL	12.23	169.13	2068.46
+893	2	2025-07-23 13:30:00+00	PFE	SELL	30.88	25.38	783.73
+894	2	2025-07-23 13:30:00+00	TSM	SELL	2	237.81	475.62
+895	2	2025-07-23 13:30:00+00	JPM	BUY	15.62	293.64	4586.66
+896	2	2025-07-23 13:30:00+00	V	BUY	67.04	354.15	23742.22
+897	4	2025-07-23 13:30:00+00	MSFT	SELL	8.98	502.63	4513.62
+898	4	2025-07-23 13:30:00+00	NVDA	SELL	60.78	169.13	10279.72
+899	4	2025-07-23 13:30:00+00	JPM	BUY	46.45	293.64	13639.58
+900	4	2025-07-23 13:30:00+00	V	BUY	12.07	354.15	4274.59
+901	5	2025-07-23 13:30:00+00	GE	SELL	22.56	260.86	5885
+902	5	2025-07-23 13:30:00+00	JNJ	SELL	166.86	167.15	27890.65
+903	5	2025-07-23 13:30:00+00	NVDA	SELL	167.64	169.13	28352.95
+904	5	2025-07-23 13:30:00+00	TSM	SELL	38.43	237.81	9139.04
+905	5	2025-07-23 13:30:00+00	JPM	BUY	75.9	293.64	22287.28
+906	5	2025-07-23 13:30:00+00	NKE	BUY	574.2	76.96	44190.43
+907	5	2025-07-23 13:30:00+00	SBUX	BUY	28.5	96.87	2760.8
+908	6	2025-07-23 13:30:00+00	AAPL	SELL	18.45	212.94	3928.74
+909	6	2025-07-23 13:30:00+00	GE	SELL	26.3	260.86	6860.62
+910	6	2025-07-23 13:30:00+00	MSFT	SELL	8.78	502.63	4413.09
+911	6	2025-07-23 13:30:00+00	NVDA	SELL	63.05	169.13	10663.65
+912	6	2025-07-23 13:30:00+00	XOM	SELL	50.18	109.38	5488.69
+913	6	2025-07-23 13:30:00+00	JPM	BUY	47.02	293.64	13806.95
+914	6	2025-07-23 13:30:00+00	SBUX	BUY	46.29	96.87	4484.11
+915	7	2025-07-23 13:30:00+00	AAPL	SELL	11.75	212.94	2502.05
+916	7	2025-07-23 13:30:00+00	BA	SELL	9.79	230.24	2254.05
+917	7	2025-07-23 13:30:00+00	GE	SELL	15.13	260.86	3946.81
+918	7	2025-07-23 13:30:00+00	MSFT	SELL	6.21	502.63	3121.33
+919	7	2025-07-23 13:30:00+00	JPM	BUY	35.96	293.64	10559.29
+920	7	2025-07-23 13:30:00+00	V	BUY	11.79	354.15	4175.43
+921	8	2025-07-23 13:30:00+00	JPM	BUY	40.54	293.64	11904.17
+922	9	2025-07-23 13:30:00+00	NVDA	SELL	124.34	169.13	21029.62
+923	9	2025-07-23 13:30:00+00	JPM	BUY	97.57	293.64	28650.45
+924	10	2025-07-23 13:30:00+00	MSFT	SELL	11.01	502.63	5533.96
+925	10	2025-07-23 13:30:00+00	NVDA	SELL	96.54	169.13	16327.81
+926	10	2025-07-23 13:30:00+00	TSM	SELL	35.48	237.81	8437.5
+927	10	2025-07-23 13:30:00+00	JPM	BUY	76.11	293.64	22348.94
+928	11	2025-07-23 13:30:00+00	AAPL	SELL	24.79	212.94	5278.78
+929	11	2025-07-23 13:30:00+00	GE	SELL	46.43	260.86	12111.73
+930	11	2025-07-23 13:30:00+00	MSFT	SELL	8.42	502.63	4232.14
+931	11	2025-07-23 13:30:00+00	NVDA	SELL	99.04	169.13	16750.64
+932	11	2025-07-23 13:30:00+00	TSM	SELL	25.89	237.81	6156.9
+933	11	2025-07-23 13:30:00+00	XOM	SELL	46.05	109.38	5036.95
+934	11	2025-07-23 13:30:00+00	JNJ	BUY	25.68	167.15	4292.41
+935	11	2025-07-23 13:30:00+00	JPM	BUY	66.58	293.64	19550.55
+936	11	2025-07-23 13:30:00+00	NKE	BUY	138.85	76.96	10685.9
+937	11	2025-07-23 13:30:00+00	PFE	BUY	68.23	25.38	1731.68
+938	11	2025-07-23 13:30:00+00	SBUX	BUY	60.5	96.87	5860.64
+939	11	2025-07-23 13:30:00+00	V	BUY	5.6	354.15	1983.24
+940	2	2025-07-30 13:30:00+00	JPM	SELL	7.02	299	2098.98
+941	2	2025-07-30 13:30:00+00	NVDA	SELL	5.93	178.46	1058.27
+942	2	2025-07-30 13:30:00+00	PFE	SELL	892.52	24.22	21616.83
+943	2	2025-07-30 13:30:00+00	V	SELL	67.04	353.42	23693.28
+944	2	2025-07-30 13:30:00+00	MSFT	BUY	47.34	513.3	24299.62
+945	2	2025-07-30 13:30:00+00	TSM	BUY	0.57	243.18	138.61
+946	2	2025-07-30 13:30:00+00	WMT	BUY	245.46	97.88	24025.62
+947	4	2025-07-30 13:30:00+00	JPM	SELL	19.12	299	5716.88
+948	4	2025-07-30 13:30:00+00	MSFT	BUY	8.96	513.3	4599.17
+949	4	2025-07-30 13:30:00+00	WMT	BUY	121.93	97.88	11934.51
+950	5	2025-07-30 13:30:00+00	GE	SELL	9.34	270.94	2530.58
+951	5	2025-07-30 13:30:00+00	JNJ	SELL	172.63	168.17	29031.19
+952	5	2025-07-30 13:30:00+00	NKE	SELL	552.39	76.77	42406.98
+953	5	2025-07-30 13:30:00+00	NVDA	SELL	32.24	178.46	5753.55
+954	5	2025-07-30 13:30:00+00	SBUX	SELL	28.49	91.78	2614.81
+955	5	2025-07-30 13:30:00+00	JPM	BUY	155.94	299	46626.06
+956	5	2025-07-30 13:30:00+00	MSFT	BUY	3.23	513.3	1657.96
+957	5	2025-07-30 13:30:00+00	WMT	BUY	360.96	97.88	35330.76
+958	6	2025-07-30 13:30:00+00	JPM	SELL	21.32	299	6374.68
+959	6	2025-07-30 13:30:00+00	TSM	SELL	24.76	243.18	6021.14
+960	6	2025-07-30 13:30:00+00	WMT	BUY	170.29	97.88	16667.99
+961	7	2025-07-30 13:30:00+00	JPM	SELL	26.62	299	7959.38
+962	7	2025-07-30 13:30:00+00	NVDA	SELL	11.74	178.46	2095.12
+963	7	2025-07-30 13:30:00+00	PFE	SELL	103.32	24.22	2502.41
+964	7	2025-07-30 13:30:00+00	TSM	SELL	8.94	243.18	2174.03
+965	7	2025-07-30 13:30:00+00	V	SELL	8.12	353.42	2869.77
+966	7	2025-07-30 13:30:00+00	BA	BUY	16.99	230.6	3917.89
+967	7	2025-07-30 13:30:00+00	GE	BUY	12.25	270.94	3319.01
+968	7	2025-07-30 13:30:00+00	WMT	BUY	41.65	97.88	4076.7
+969	8	2025-07-30 13:30:00+00	NVDA	SELL	36.84	178.46	6574.47
+970	9	2025-07-30 13:30:00+00	JPM	SELL	53.24	299	15918.76
+971	10	2025-07-30 13:30:00+00	JPM	SELL	39.33	299	11759.67
+972	10	2025-07-30 13:30:00+00	WMT	BUY	169.53	97.88	16593.6
+973	11	2025-07-30 13:30:00+00	JNJ	SELL	33.36	168.17	5610.15
+974	11	2025-07-30 13:30:00+00	JPM	SELL	15.76	299	4712.24
+975	11	2025-07-30 13:30:00+00	NKE	SELL	59.11	76.77	4537.87
+976	11	2025-07-30 13:30:00+00	NVDA	SELL	27.57	178.46	4920.14
+977	11	2025-07-30 13:30:00+00	PFE	SELL	90.35	24.22	2188.28
+978	11	2025-07-30 13:30:00+00	SBUX	SELL	66.07	91.78	6063.9
+979	11	2025-07-30 13:30:00+00	TSM	SELL	8.38	243.18	2037.85
+980	11	2025-07-30 13:30:00+00	MSFT	BUY	5.77	513.3	2961.74
+981	11	2025-07-30 13:30:00+00	WMT	BUY	258.55	97.88	25306.87
+982	11	2025-07-30 13:30:00+00	XOM	BUY	41.57	112.03	4657.09
+983	2	2025-08-06 13:30:00+00	JPM	SELL	2.67	291.61	778.6
+984	2	2025-08-06 13:30:00+00	TSM	SELL	6.43	230.08	1479.41
+985	2	2025-08-06 13:30:00+00	MSFT	BUY	3.27	526.32	1721.07
+986	2	2025-08-06 13:30:00+00	NVDA	BUY	2.12	178.04	377.44
+987	2	2025-08-06 13:30:00+00	WMT	BUY	1.6	101.31	162.1
+988	4	2025-08-06 13:30:00+00	JPM	SELL	26.57	291.61	7748.08
+989	4	2025-08-06 13:30:00+00	TSM	SELL	47.65	230.08	10963.31
+990	4	2025-08-06 13:30:00+00	V	SELL	13.86	335.79	4654.05
+991	4	2025-08-06 13:30:00+00	MSFT	BUY	11.55	526.32	6079
+992	4	2025-08-06 13:30:00+00	WMT	BUY	45.77	101.31	4636.96
+993	5	2025-08-06 13:30:00+00	JPM	SELL	232.46	291.61	67787.66
+994	5	2025-08-06 13:30:00+00	MSFT	SELL	3.01	526.32	1584.22
+995	5	2025-08-06 13:30:00+00	NKE	SELL	21.34	75.43	1609.68
+996	5	2025-08-06 13:30:00+00	NVDA	SELL	10.56	178.04	1880.1
+997	5	2025-08-06 13:30:00+00	TSM	SELL	7.09	230.08	1631.27
+998	5	2025-08-06 13:30:00+00	JNJ	BUY	11.17	170.78	1907.61
+999	5	2025-08-06 13:30:00+00	WMT	BUY	692.33	101.31	70139.95
+1000	6	2025-08-06 13:30:00+00	JPM	SELL	28.63	291.61	8348.79
+1001	6	2025-08-06 13:30:00+00	SBUX	SELL	43.52	89.51	3895.48
+1002	6	2025-08-06 13:30:00+00	TSM	SELL	21.9	230.08	5038.75
+1003	6	2025-08-06 13:30:00+00	MSFT	BUY	14.68	526.32	7726.38
+1004	6	2025-08-06 13:30:00+00	PFE	BUY	231.31	24.2	5597.7
+1005	6	2025-08-06 13:30:00+00	WMT	BUY	88.49	101.31	8964.92
+1006	7	2025-08-06 13:30:00+00	BA	SELL	18.66	224.69	4192.72
+1007	7	2025-08-06 13:30:00+00	GE	SELL	15.49	271.61	4207.24
+1008	7	2025-08-06 13:30:00+00	TSM	SELL	11.09	230.08	2551.59
+1009	7	2025-08-06 13:30:00+00	MSFT	BUY	8.93	526.32	4700.04
+1010	7	2025-08-06 13:30:00+00	NVDA	BUY	20.59	178.04	3665.84
+1011	7	2025-08-06 13:30:00+00	PFE	BUY	180.47	24.2	4367.37
+1012	7	2025-08-06 13:30:00+00	WMT	BUY	26.19	101.31	2653.31
+1013	8	2025-08-06 13:30:00+00	GE	SELL	28.53	271.61	7749.03
+1014	8	2025-08-06 13:30:00+00	JPM	SELL	39.63	291.61	11556.5
+1015	8	2025-08-06 13:30:00+00	MSFT	BUY	19.15	526.32	10079.03
+1016	8	2025-08-06 13:30:00+00	WMT	BUY	101.01	101.31	10233.32
+1017	9	2025-08-06 13:30:00+00	TSM	SELL	157.86	230.08	36320.43
+1018	9	2025-08-06 13:30:00+00	MSFT	BUY	43.42	526.32	22852.81
+1019	9	2025-08-06 13:30:00+00	WMT	BUY	288.4	101.31	29217.8
+1020	10	2025-08-06 13:30:00+00	JPM	SELL	41.64	291.61	12142.64
+1021	10	2025-08-06 13:30:00+00	TSM	SELL	53.99	230.08	12422.02
+1022	10	2025-08-06 13:30:00+00	MSFT	BUY	20.47	526.32	10773.77
+1023	10	2025-08-06 13:30:00+00	PFE	BUY	296.88	24.2	7184.5
+1024	10	2025-08-06 13:30:00+00	WMT	BUY	109.32	101.31	11075.21
+1025	11	2025-08-06 13:30:00+00	GE	SELL	7.98	271.61	2167.45
+1026	11	2025-08-06 13:30:00+00	JPM	SELL	46.15	291.61	13457.8
+1027	11	2025-08-06 13:30:00+00	NKE	SELL	81.41	75.43	6140.76
+1028	11	2025-08-06 13:30:00+00	TSM	SELL	17.15	230.08	3945.87
+1029	11	2025-08-06 13:30:00+00	V	SELL	10.5	335.79	3525.8
+1030	11	2025-08-06 13:30:00+00	XOM	SELL	41.83	108.05	4519.73
+1031	11	2025-08-06 13:30:00+00	COST	BUY	2.56	956.03	2447.44
+1032	11	2025-08-06 13:30:00+00	JNJ	BUY	21.09	170.78	3601.75
+1033	11	2025-08-06 13:30:00+00	MSFT	BUY	4.2	526.32	2210.54
+1034	11	2025-08-06 13:30:00+00	PFE	BUY	335.58	24.2	8121.04
+1035	11	2025-08-06 13:30:00+00	WMT	BUY	185.12	101.31	18754.51
+1036	2	2025-08-13 13:30:00+00	MSFT	SELL	2.77	529.75	1467.41
+1037	2	2025-08-13 13:30:00+00	NVDA	SELL	141.41	181.41	25653.19
+1038	2	2025-08-13 13:30:00+00	JPM	BUY	1.42	293.04	416.12
+1039	2	2025-08-13 13:30:00+00	PFE	BUY	976.88	24.97	24392.69
+1040	2	2025-08-13 13:30:00+00	TSM	BUY	1.11	244.3	271.17
+1041	2	2025-08-13 13:30:00+00	WMT	BUY	19.98	102.26	2043.15
+1042	3	2025-08-13 13:30:00+00	NVDA	SELL	31.77	181.41	5763.4
+1043	4	2025-08-13 13:30:00+00	MSFT	SELL	19.9	529.75	10542.02
+1044	4	2025-08-13 13:30:00+00	NVDA	SELL	28.1	181.41	5097.62
+1045	4	2025-08-13 13:30:00+00	WMT	SELL	60.22	102.26	6158.1
+1046	4	2025-08-13 13:30:00+00	AAPL	BUY	37.02	231.81	8581.61
+1047	4	2025-08-13 13:30:00+00	TSM	BUY	16.27	244.3	3974.76
+1048	5	2025-08-13 13:30:00+00	JNJ	SELL	46.38	173.66	8054.35
+1049	5	2025-08-13 13:30:00+00	WMT	SELL	1051.78	102.26	107555.02
+1050	5	2025-08-13 13:30:00+00	AAPL	BUY	495.83	231.81	114938.35
+1051	5	2025-08-13 13:30:00+00	NFLX	BUY	13.68	122.16	1671.15
+1052	6	2025-08-13 13:30:00+00	MSFT	SELL	15.73	529.75	8332.97
+1053	6	2025-08-13 13:30:00+00	NVDA	SELL	25.04	181.41	4542.51
+1054	6	2025-08-13 13:30:00+00	WMT	SELL	167.42	102.26	17120.37
+1055	6	2025-08-13 13:30:00+00	AAPL	BUY	86.38	231.81	20023.75
+1056	7	2025-08-13 13:30:00+00	JNJ	SELL	18.83	173.66	3270.02
+1057	7	2025-08-13 13:30:00+00	MSFT	SELL	8.91	529.75	4720.07
+1058	7	2025-08-13 13:30:00+00	NVDA	SELL	30.88	181.41	5601.94
+1059	7	2025-08-13 13:30:00+00	XOM	SELL	18.58	106.54	1979.51
+1060	7	2025-08-13 13:30:00+00	AAPL	BUY	29.09	231.81	6743.35
+1061	7	2025-08-13 13:30:00+00	COST	BUY	4.08	973.15	3970.45
+1062	7	2025-08-13 13:30:00+00	TSM	BUY	8.54	244.3	2086.32
+1063	8	2025-08-13 13:30:00+00	MSFT	SELL	15.51	529.75	8216.42
+1064	8	2025-08-13 13:30:00+00	WMT	SELL	69.37	102.26	7093.78
+1065	8	2025-08-13 13:30:00+00	AAPL	BUY	48.04	231.81	11136.15
+1066	9	2025-08-13 13:30:00+00	MSFT	SELL	41.3	529.75	21878.67
+1067	9	2025-08-13 13:30:00+00	TSM	BUY	79.05	244.3	19311.92
+1068	10	2025-08-13 13:30:00+00	MSFT	SELL	19.85	529.75	10515.54
+1069	10	2025-08-13 13:30:00+00	WMT	SELL	186.28	102.26	19048.99
+1070	10	2025-08-13 13:30:00+00	AAPL	BUY	74.61	231.81	17295.34
+1071	10	2025-08-13 13:30:00+00	TSM	BUY	25.9	244.3	6327.37
+1072	11	2025-08-13 13:30:00+00	JNJ	SELL	58.75	173.66	10202.52
+1073	11	2025-08-13 13:30:00+00	MSFT	SELL	11.23	529.75	5949.09
+1074	11	2025-08-13 13:30:00+00	WMT	SELL	353.18	102.26	36116.19
+1075	11	2025-08-13 13:30:00+00	AAPL	BUY	170.42	231.81	39505.06
+1076	11	2025-08-13 13:30:00+00	NFLX	BUY	38.65	122.16	4721.48
+1077	11	2025-08-13 13:30:00+00	SBUX	BUY	24.01	93.05	2234.13
+1078	11	2025-08-13 13:30:00+00	TSM	BUY	13.64	244.3	3332.25
+1079	11	2025-08-13 13:30:00+00	V	BUY	5.28	342.39	1807.82
+1080	2	2025-08-20 13:30:00+00	JPM	SELL	3.75	290.36	1088.85
+1081	2	2025-08-20 13:30:00+00	MSFT	SELL	47.84	507.37	24272.58
+1082	2	2025-08-20 13:30:00+00	TSM	SELL	12.02	224.37	2696.93
+1083	2	2025-08-20 13:30:00+00	PFE	BUY	43.32	25.43	1101.63
+1084	2	2025-08-20 13:30:00+00	V	BUY	74.2	345.56	25640.55
+1085	2	2025-08-20 13:30:00+00	WMT	BUY	12.85	102.39	1315.71
+1086	3	2025-08-20 13:30:00+00	TSM	SELL	31.89	224.37	7155.16
+1087	4	2025-08-20 13:30:00+00	AAPL	SELL	28.8	226.72	6529.54
+1088	4	2025-08-20 13:30:00+00	TSM	SELL	28.67	224.37	6432.69
+1089	4	2025-08-20 13:30:00+00	PFE	BUY	285.08	25.43	7249.58
+1090	4	2025-08-20 13:30:00+00	V	BUY	22.72	345.56	7851.12
+1091	4	2025-08-20 13:30:00+00	WMT	BUY	71.46	102.39	7316.79
+1092	5	2025-08-20 13:30:00+00	AAPL	SELL	495.62	226.72	112366.97
+1093	5	2025-08-20 13:30:00+00	NFLX	SELL	15.3	119.96	1835.39
+1094	5	2025-08-20 13:30:00+00	PFE	BUY	530.11	25.43	13480.7
+1095	5	2025-08-20 13:30:00+00	WMT	BUY	955.38	102.39	97821.36
+1096	6	2025-08-20 13:30:00+00	AAPL	SELL	77.91	226.72	17663.76
+1097	6	2025-08-20 13:30:00+00	PFE	BUY	270.76	25.43	6885.43
+1098	6	2025-08-20 13:30:00+00	WMT	BUY	104.89	102.39	10739.69
+1099	7	2025-08-20 13:30:00+00	AAPL	SELL	22.11	226.72	5012.78
+1100	7	2025-08-20 13:30:00+00	TSM	SELL	16.07	224.37	3605.63
+1101	7	2025-08-20 13:30:00+00	BA	BUY	8.39	224.14	1880.53
+1102	7	2025-08-20 13:30:00+00	GE	BUY	10.2	264.58	2698.72
+1103	7	2025-08-20 13:30:00+00	V	BUY	5.96	345.56	2059.54
+1104	7	2025-08-20 13:30:00+00	XOM	BUY	24.1	108.95	2625.7
+1105	8	2025-08-20 13:30:00+00	AAPL	SELL	36.74	226.72	8329.69
+1106	8	2025-08-20 13:30:00+00	TSM	SELL	29.01	224.37	6508.97
+1107	9	2025-08-20 13:30:00+00	JPM	SELL	54.1	290.36	15708.48
+1108	9	2025-08-20 13:30:00+00	TSM	SELL	86.35	224.37	19374.35
+1109	9	2025-08-20 13:30:00+00	PFE	BUY	813.21	25.43	20679.93
+1110	10	2025-08-20 13:30:00+00	AAPL	SELL	67.75	226.72	15360.28
+1111	10	2025-08-20 13:30:00+00	NVDA	SELL	44.29	170.31	7543.03
+1112	10	2025-08-20 13:30:00+00	TSM	SELL	29.45	224.37	6607.7
+1113	10	2025-08-20 13:30:00+00	PFE	BUY	380.31	25.43	9671.28
+1114	10	2025-08-20 13:30:00+00	WMT	BUY	141.36	102.39	14473.85
+1115	11	2025-08-20 13:30:00+00	AAPL	SELL	162.74	226.72	36896.41
+1116	11	2025-08-20 13:30:00+00	NFLX	SELL	47.54	119.96	5702.9
+1117	11	2025-08-20 13:30:00+00	NVDA	SELL	16.92	170.31	2881.65
+1118	11	2025-08-20 13:30:00+00	SBUX	SELL	26.49	90.37	2393.9
+1119	11	2025-08-20 13:30:00+00	TSM	SELL	14.29	224.37	3206.25
+1120	11	2025-08-20 13:30:00+00	NKE	BUY	62.34	76.6	4775.24
+1121	11	2025-08-20 13:30:00+00	PFE	BUY	717.07	25.43	18235.09
+1122	11	2025-08-20 13:30:00+00	V	BUY	9.97	345.56	3445.23
+1123	11	2025-08-20 13:30:00+00	WMT	BUY	175.45	102.39	17964.33
+1124	11	2025-08-20 13:30:00+00	XOM	BUY	37.03	108.95	4034.42
+1125	12	2025-08-20 13:30:00+00	TSM	SELL	69.49	224.37	15591.47
+1126	2	2025-08-27 13:30:00+00	PFE	SELL	1020.2	24.91	25413.18
+1127	2	2025-08-27 13:30:00+00	V	SELL	5.76	352.77	2031.96
+1128	2	2025-08-27 13:30:00+00	WMT	SELL	279.89	96.15	26911.42
+1129	2	2025-08-27 13:30:00+00	JNJ	BUY	132.04	176.89	23356.56
+1130	2	2025-08-27 13:30:00+00	JPM	BUY	10.33	298.9	3087.64
+1131	2	2025-08-27 13:30:00+00	TSM	BUY	11.55	237.1	2738.51
+1132	2	2025-08-27 13:30:00+00	XOM	BUY	224.57	112.11	25176.54
+1133	3	2025-08-27 13:30:00+00	XOM	BUY	53.97	112.11	6050.58
+1134	4	2025-08-27 13:30:00+00	PFE	SELL	434.41	24.91	10821.15
+1135	4	2025-08-27 13:30:00+00	V	SELL	12.23	352.77	4314.38
+1136	4	2025-08-27 13:30:00+00	WMT	SELL	180.62	96.15	17366.61
+1137	4	2025-08-27 13:30:00+00	CVX	BUY	31.09	158.49	4927.45
+1138	4	2025-08-27 13:30:00+00	JPM	BUY	20.89	298.9	6244.02
+1139	4	2025-08-27 13:30:00+00	NKE	BUY	101.18	78.29	7921.38
+1140	4	2025-08-27 13:30:00+00	TSM	BUY	24.33	237.1	5768.64
+1141	4	2025-08-27 13:30:00+00	XOM	BUY	92.83	112.11	10407.17
+1142	5	2025-08-27 13:30:00+00	PFE	SELL	543.85	24.91	13547.3
+1143	5	2025-08-27 13:30:00+00	WMT	SELL	956.89	96.15	92004.97
+1144	5	2025-08-27 13:30:00+00	CVX	BUY	41.81	158.49	6626.47
+1145	5	2025-08-27 13:30:00+00	DIS	BUY	16.64	117.9	1961.86
+1146	5	2025-08-27 13:30:00+00	JPM	BUY	86.33	298.9	25804.04
+1147	5	2025-08-27 13:30:00+00	NKE	BUY	299.8	78.29	23471.34
+1148	5	2025-08-27 13:30:00+00	V	BUY	6.95	352.77	2451.75
+1149	5	2025-08-27 13:30:00+00	XOM	BUY	431.95	112.11	48425.91
+1150	6	2025-08-27 13:30:00+00	PFE	SELL	605.44	24.91	15081.51
+1151	6	2025-08-27 13:30:00+00	WMT	SELL	197.64	96.15	19003.09
+1152	6	2025-08-27 13:30:00+00	CVX	BUY	45.03	158.49	7136.8
+1153	6	2025-08-27 13:30:00+00	JPM	BUY	21.46	298.9	6414.39
+1154	6	2025-08-27 13:30:00+00	NKE	BUY	72.03	78.29	5639.23
+1155	6	2025-08-27 13:30:00+00	TSM	BUY	18.03	237.1	4274.91
+1156	6	2025-08-27 13:30:00+00	XOM	BUY	139.66	112.11	15657.28
+1157	7	2025-08-27 13:30:00+00	COST	SELL	3.91	944.45	3692.8
+1158	7	2025-08-27 13:30:00+00	MSFT	SELL	3.68	504.14	1855.24
+1159	7	2025-08-27 13:30:00+00	PFE	SELL	134.87	24.91	3359.61
+1160	7	2025-08-27 13:30:00+00	WMT	SELL	74.92	96.15	7203.56
+1161	7	2025-08-27 13:30:00+00	JPM	BUY	8.16	298.9	2439.02
+1162	7	2025-08-27 13:30:00+00	NKE	BUY	45.83	78.29	3588.03
+1163	7	2025-08-27 13:30:00+00	TSM	BUY	21.94	237.1	5201.97
+1164	7	2025-08-27 13:30:00+00	XOM	BUY	26.7	112.11	2993.34
+1165	8	2025-08-27 13:30:00+00	WMT	SELL	90.21	96.15	8673.69
+1166	8	2025-08-27 13:30:00+00	NKE	BUY	104.34	78.29	8168.78
+1167	8	2025-08-27 13:30:00+00	XOM	BUY	80.05	112.11	8974.41
+1168	9	2025-08-27 13:30:00+00	PFE	SELL	808.63	24.91	20142.97
+1169	9	2025-08-27 13:30:00+00	WMT	SELL	324.89	96.15	31238.17
+1170	9	2025-08-27 13:30:00+00	JPM	BUY	55.5	298.9	16588.95
+1171	9	2025-08-27 13:30:00+00	XOM	BUY	231.69	112.11	25974.77
+1172	10	2025-08-27 13:30:00+00	PFE	SELL	739.55	24.91	18422.19
+1173	10	2025-08-27 13:30:00+00	WMT	SELL	282.36	96.15	27148.91
+1174	10	2025-08-27 13:30:00+00	CVX	BUY	47.21	158.49	7482.31
+1175	10	2025-08-27 13:30:00+00	JPM	BUY	31.36	298.9	9373.5
+1176	10	2025-08-27 13:30:00+00	NKE	BUY	134.56	78.29	10534.7
+1177	10	2025-08-27 13:30:00+00	TSM	BUY	32.95	237.1	7812.45
+1178	10	2025-08-27 13:30:00+00	XOM	BUY	155.29	112.11	17409.56
+1179	11	2025-08-27 13:30:00+00	COST	SELL	2.59	944.45	2446.13
+1180	11	2025-08-27 13:30:00+00	PFE	SELL	1031.56	24.91	25696.16
+1181	11	2025-08-27 13:30:00+00	WMT	SELL	266.37	96.15	25611.48
+1182	11	2025-08-27 13:30:00+00	CVX	BUY	62.3	158.49	9873.93
+1183	11	2025-08-27 13:30:00+00	DIS	BUY	23.07	117.9	2719.95
+1184	11	2025-08-27 13:30:00+00	JPM	BUY	36.76	298.9	10987.56
+1185	11	2025-08-27 13:30:00+00	NKE	BUY	72.29	78.29	5659.58
+1186	11	2025-08-27 13:30:00+00	TSM	BUY	20.3	237.1	4813.13
+1187	11	2025-08-27 13:30:00+00	XOM	BUY	162.03	112.11	18165.18
+1188	2	2025-09-03 13:30:00+00	JPM	SELL	2.31	298.8	690.23
+1189	2	2025-09-03 13:30:00+00	TSM	SELL	5.34	230.71	1231.99
+1190	2	2025-09-03 13:30:00+00	V	SELL	1.08	349.05	376.97
+1191	2	2025-09-03 13:30:00+00	XOM	SELL	11.22	111.86	1255.07
+1192	2	2025-09-03 13:30:00+00	JNJ	BUY	20.08	176.89	3551.95
+1193	3	2025-09-03 13:30:00+00	JNJ	BUY	45.44	176.89	8037.88
+1194	4	2025-09-03 13:30:00+00	NKE	SELL	75.56	74.34	5617.13
+1195	4	2025-09-03 13:30:00+00	XOM	SELL	42.41	111.86	4743.98
+1196	4	2025-09-03 13:30:00+00	WMT	BUY	72.84	97.99	7137.59
+1197	5	2025-09-03 13:30:00+00	JPM	SELL	85.69	298.8	25604.17
+1198	5	2025-09-03 13:30:00+00	NKE	SELL	300.55	74.34	22342.89
+1199	5	2025-09-03 13:30:00+00	V	SELL	9.25	349.05	3228.71
+1200	5	2025-09-03 13:30:00+00	XOM	SELL	432.72	111.86	48404.06
+1201	5	2025-09-03 13:30:00+00	CVX	BUY	449.75	158.01	71065
+1202	5	2025-09-03 13:30:00+00	DIS	BUY	193.3	116.55	22529.12
+1203	5	2025-09-03 13:30:00+00	WMT	BUY	25.84	97.99	2532.06
+1204	6	2025-09-03 13:30:00+00	JPM	SELL	14.34	298.8	4284.79
+1205	6	2025-09-03 13:30:00+00	NKE	SELL	111.76	74.34	8308.24
+1206	6	2025-09-03 13:30:00+00	XOM	SELL	75.77	111.86	8475.63
+1207	6	2025-09-03 13:30:00+00	CVX	BUY	27.03	158.01	4271.01
+1208	6	2025-09-03 13:30:00+00	WMT	BUY	101.78	97.99	9973.42
+1209	7	2025-09-03 13:30:00+00	JPM	SELL	10.86	298.8	3244.97
+1210	7	2025-09-03 13:30:00+00	NKE	SELL	56.34	74.34	4188.32
+1211	7	2025-09-03 13:30:00+00	TSM	SELL	18.12	230.71	4180.47
+1212	7	2025-09-03 13:30:00+00	JNJ	BUY	19.22	176.89	3399.83
+1213	7	2025-09-03 13:30:00+00	MSFT	BUY	4.31	504.7	2175.26
+1214	7	2025-09-03 13:30:00+00	WMT	BUY	42.33	97.99	4147.92
+1215	8	2025-09-03 13:30:00+00	CVX	BUY	42.95	158.01	6786.53
+1216	8	2025-09-03 13:30:00+00	WMT	BUY	72.81	97.99	7134.65
+1217	9	2025-09-03 13:30:00+00	XOM	SELL	150.51	111.86	16836.05
+1218	10	2025-09-03 13:30:00+00	NKE	SELL	107.84	74.34	8016.83
+1219	10	2025-09-03 13:30:00+00	XOM	SELL	90.25	111.86	10095.36
+1220	10	2025-09-03 13:30:00+00	WMT	BUY	113.37	97.99	11109.13
+1221	11	2025-09-03 13:30:00+00	JPM	SELL	27.77	298.8	8297.68
+1222	11	2025-09-03 13:30:00+00	NKE	SELL	149.13	74.34	11086.32
+1223	11	2025-09-03 13:30:00+00	TSM	SELL	13.46	230.71	3105.36
+1224	11	2025-09-03 13:30:00+00	V	SELL	5.53	349.05	1930.25
+1225	11	2025-09-03 13:30:00+00	XOM	SELL	137.28	111.86	15356.14
+1226	11	2025-09-03 13:30:00+00	BA	BUY	12.45	232.37	2893.01
+1227	11	2025-09-03 13:30:00+00	CVX	BUY	82.12	158.01	12975.78
+1228	11	2025-09-03 13:30:00+00	DIS	BUY	21.62	116.55	2519.81
+1229	11	2025-09-03 13:30:00+00	GE	BUY	13.23	274.92	3637.19
+1230	11	2025-09-03 13:30:00+00	MSFT	BUY	5.54	504.7	2796.04
+1231	11	2025-09-03 13:30:00+00	WMT	BUY	110.94	97.99	10871.01
+1232	2	2025-09-10 13:30:00+00	JNJ	SELL	152.12	175.51	26698.58
+1233	2	2025-09-10 13:30:00+00	V	SELL	67.36	339.31	22855.92
+1234	2	2025-09-10 13:30:00+00	XOM	SELL	213.35	111.78	23848.26
+1235	2	2025-09-10 13:30:00+00	COST	BUY	23.95	966.33	23143.6
+1236	2	2025-09-10 13:30:00+00	JPM	BUY	0.7	300.72	210.5
+1237	2	2025-09-10 13:30:00+00	NVDA	BUY	123.15	177.65	21877.6
+1238	2	2025-09-10 13:30:00+00	TSM	BUY	10.52	262.32	2759.61
+1239	2	2025-09-10 13:30:00+00	WMT	BUY	249.9	101.67	25407.33
+1240	3	2025-09-10 13:30:00+00	MSFT	SELL	11.45	501.47	5741.83
+1241	3	2025-09-10 13:30:00+00	TSM	BUY	54.92	262.32	14406.61
+1242	4	2025-09-10 13:30:00+00	XOM	SELL	58.55	111.78	6544.72
+1243	4	2025-09-10 13:30:00+00	TSM	BUY	114.62	262.32	30067.12
+1244	5	2025-09-10 13:30:00+00	CVX	SELL	491.77	156.56	76991.51
+1245	5	2025-09-10 13:30:00+00	DIS	SELL	210.26	116.26	24444.83
+1246	5	2025-09-10 13:30:00+00	WMT	SELL	20.91	101.67	2125.92
+1247	5	2025-09-10 13:30:00+00	TSM	BUY	421.12	262.32	110468.2
+1248	6	2025-09-10 13:30:00+00	CVX	SELL	69.43	156.56	10869.96
+1249	6	2025-09-10 13:30:00+00	JNJ	SELL	43.71	175.51	7671.54
+1250	6	2025-09-10 13:30:00+00	XOM	SELL	59.14	111.78	6610.67
+1251	6	2025-09-10 13:30:00+00	TSM	BUY	148.47	262.32	38946.65
+1252	7	2025-09-10 13:30:00+00	BA	SELL	8.51	227.42	1935.34
+1253	7	2025-09-10 13:30:00+00	GE	SELL	9.71	279.53	2714.24
+1254	7	2025-09-10 13:30:00+00	JNJ	SELL	28.1	175.51	4931.83
+1255	7	2025-09-10 13:30:00+00	MSFT	SELL	4.76	501.47	2387
+1256	7	2025-09-10 13:30:00+00	PFE	SELL	134.52	24.5	3295.74
+1257	7	2025-09-10 13:30:00+00	SBUX	SELL	21.74	83.38	1812.68
+1258	7	2025-09-10 13:30:00+00	V	SELL	10.78	339.31	3657.76
+1259	7	2025-09-10 13:30:00+00	XOM	SELL	39.22	111.78	4384.01
+1260	7	2025-09-10 13:30:00+00	COST	BUY	3.4	966.33	3285.52
+1261	7	2025-09-10 13:30:00+00	JPM	BUY	8.97	300.72	2697.46
+1262	7	2025-09-10 13:30:00+00	TSM	BUY	99.48	262.32	26095.59
+1263	8	2025-09-10 13:30:00+00	NKE	SELL	98.83	74.07	7320.34
+1264	8	2025-09-10 13:30:00+00	XOM	SELL	89.18	111.78	9968.54
+1265	8	2025-09-10 13:30:00+00	TSM	BUY	124.36	262.32	32622.12
+1266	9	2025-09-10 13:30:00+00	JPM	SELL	45.98	300.72	13827.11
+1267	9	2025-09-10 13:30:00+00	NFLX	SELL	104	125.93	13096.72
+1268	9	2025-09-10 13:30:00+00	TSM	BUY	269.77	262.32	70766.07
+1269	10	2025-09-10 13:30:00+00	CVX	SELL	42.05	156.56	6583.35
+1270	10	2025-09-10 13:30:00+00	XOM	SELL	72.39	111.78	8091.75
+1271	10	2025-09-10 13:30:00+00	TSM	BUY	192.35	262.32	50457.25
+1272	11	2025-09-10 13:30:00+00	AAPL	SELL	10.7	228.11	2440.78
+1273	11	2025-09-10 13:30:00+00	BA	SELL	16.28	227.42	3702.4
+1274	11	2025-09-10 13:30:00+00	CVX	SELL	152.42	156.56	23862.88
+1275	11	2025-09-10 13:30:00+00	DIS	SELL	48.26	116.26	5610.71
+1276	11	2025-09-10 13:30:00+00	GE	SELL	11.82	279.53	3304.04
+1277	11	2025-09-10 13:30:00+00	JNJ	SELL	25.04	175.51	4394.77
+1278	11	2025-09-10 13:30:00+00	MSFT	SELL	6.83	501.47	3425.04
+1279	11	2025-09-10 13:30:00+00	NKE	SELL	23.72	74.07	1756.94
+1280	11	2025-09-10 13:30:00+00	V	SELL	9.57	339.31	3247.2
+1281	11	2025-09-10 13:30:00+00	XOM	SELL	60.08	111.78	6715.74
+1282	11	2025-09-10 13:30:00+00	COST	BUY	3.46	966.33	3343.5
+1283	11	2025-09-10 13:30:00+00	JPM	BUY	14.94	300.72	4492.76
+1284	11	2025-09-10 13:30:00+00	NFLX	BUY	20.1	125.93	2531.19
+1285	11	2025-09-10 13:30:00+00	TSM	BUY	226.5	262.32	59415.48
+1286	12	2025-09-10 13:30:00+00	TSM	BUY	88.01	262.32	23086.78
+1287	2	2025-09-17 13:30:00+00	COST	SELL	23.95	959.04	22969.01
+1288	2	2025-09-17 13:30:00+00	JPM	SELL	9.66	311.73	3011.31
+1289	2	2025-09-17 13:30:00+00	NVDA	SELL	123.15	170.12	20950.28
+1290	2	2025-09-17 13:30:00+00	TSM	SELL	12.08	261.64	3160.61
+1291	2	2025-09-17 13:30:00+00	AAPL	BUY	104.03	239.63	24928.71
+1292	2	2025-09-17 13:30:00+00	WMT	BUY	11.79	105.12	1239.36
+1293	2	2025-09-17 13:30:00+00	XOM	BUY	207.65	115.23	23927.51
+1294	3	2025-09-17 13:30:00+00	TSM	SELL	26.48	261.64	6928.23
+1295	3	2025-09-17 13:30:00+00	AAPL	BUY	25.3	239.63	6062.64
+1296	4	2025-09-17 13:30:00+00	TSM	SELL	71.21	261.64	18631.38
+1297	4	2025-09-17 13:30:00+00	V	SELL	12.26	340.45	4173.92
+1298	4	2025-09-17 13:30:00+00	AAPL	BUY	20.02	239.63	4797.39
+1299	4	2025-09-17 13:30:00+00	WMT	BUY	52.07	105.12	5473.6
+1300	4	2025-09-17 13:30:00+00	XOM	BUY	71.45	115.23	8233.18
+1301	5	2025-09-17 13:30:00+00	TSM	SELL	165.39	261.64	43272.64
+1302	5	2025-09-17 13:30:00+00	JPM	BUY	14.55	311.73	4535.67
+1303	5	2025-09-17 13:30:00+00	MSFT	BUY	4.46	508.21	2266.62
+1304	5	2025-09-17 13:30:00+00	WMT	BUY	319.58	105.12	33594.25
+1305	6	2025-09-17 13:30:00+00	TSM	SELL	93.97	261.64	24586.31
+1306	6	2025-09-17 13:30:00+00	CVX	BUY	26.01	160.35	4170.7
+1307	6	2025-09-17 13:30:00+00	JPM	BUY	12.27	311.73	3824.93
+1308	6	2025-09-17 13:30:00+00	WMT	BUY	47.1	105.12	4951.15
+1309	6	2025-09-17 13:30:00+00	XOM	BUY	89.71	115.23	10337.28
+1310	7	2025-09-17 13:30:00+00	COST	SELL	3.46	959.04	3318.28
+1311	7	2025-09-17 13:30:00+00	NVDA	SELL	10.99	170.12	1869.62
+1312	7	2025-09-17 13:30:00+00	TSM	SELL	61.57	261.64	16109.17
+1313	7	2025-09-17 13:30:00+00	AAPL	BUY	11.42	239.63	2736.57
+1314	7	2025-09-17 13:30:00+00	CVX	BUY	16.73	160.35	2682.66
+1315	7	2025-09-17 13:30:00+00	MSFT	BUY	4.97	508.21	2525.8
+1316	7	2025-09-17 13:30:00+00	WMT	BUY	42.17	105.12	4432.91
+1317	7	2025-09-17 13:30:00+00	XOM	BUY	69.81	115.23	8044.21
+1318	8	2025-09-17 13:30:00+00	TSM	SELL	67.62	261.64	17692.1
+1319	8	2025-09-17 13:30:00+00	XOM	BUY	79.83	115.23	9198.81
+1320	9	2025-09-17 13:30:00+00	TSM	SELL	120.33	261.64	31483.14
+1321	9	2025-09-17 13:30:00+00	WMT	BUY	215.1	105.12	22611.31
+1322	10	2025-09-17 13:30:00+00	TSM	SELL	119.33	261.64	31221.5
+1323	10	2025-09-17 13:30:00+00	WMT	BUY	70.79	105.12	7441.44
+1324	10	2025-09-17 13:30:00+00	XOM	BUY	74.38	115.23	8570.81
+1325	11	2025-09-17 13:30:00+00	COST	SELL	2.99	959.04	2867.53
+1326	11	2025-09-17 13:30:00+00	NFLX	SELL	24.22	122.19	2959.44
+1327	11	2025-09-17 13:30:00+00	TSM	SELL	144.59	261.64	37830.53
+1328	11	2025-09-17 13:30:00+00	AAPL	BUY	20.13	239.63	4823.75
+1329	11	2025-09-17 13:30:00+00	CVX	BUY	37.92	160.35	6080.47
+1330	11	2025-09-17 13:30:00+00	MSFT	BUY	8.49	508.21	4314.7
+1331	11	2025-09-17 13:30:00+00	WMT	BUY	104.58	105.12	10993.45
+1332	11	2025-09-17 13:30:00+00	XOM	BUY	123.8	115.23	14265.47
+1333	2	2025-09-24 13:30:00+00	TSM	SELL	17.17	279.28	4795.24
+1334	2	2025-09-24 13:30:00+00	AAPL	BUY	1.67	252.62	421.88
+1335	2	2025-09-24 13:30:00+00	JPM	BUY	5.51	315.75	1739.78
+1336	2	2025-09-24 13:30:00+00	WMT	BUY	4.56	102.57	467.72
+1337	2	2025-09-24 13:30:00+00	XOM	BUY	18.79	115.24	2165.36
+1338	3	2025-09-24 13:30:00+00	TSM	SELL	26.8	279.28	7484.7
+1339	4	2025-09-24 13:30:00+00	DIS	SELL	34.44	113.78	3918.58
+1340	4	2025-09-24 13:30:00+00	TSM	SELL	42.96	279.28	11997.87
+1341	4	2025-09-24 13:30:00+00	WMT	SELL	54.59	102.57	5599.3
+1342	4	2025-09-24 13:30:00+00	AAPL	BUY	20.88	252.62	5274.71
+1343	5	2025-09-24 13:30:00+00	TSM	SELL	246.88	279.28	68948.65
+1344	5	2025-09-24 13:30:00+00	WMT	SELL	298.73	102.57	30640.74
+1345	5	2025-09-24 13:30:00+00	AAPL	BUY	14.14	252.62	3572.05
+1346	5	2025-09-24 13:30:00+00	CVX	BUY	10.76	159.76	1719.02
+1347	5	2025-09-24 13:30:00+00	JPM	BUY	249.08	315.75	78647.01
+1348	5	2025-09-24 13:30:00+00	MSFT	BUY	19.29	510.05	9838.86
+1349	5	2025-09-24 13:30:00+00	NVDA	BUY	25.55	178.49	4560.42
+1350	6	2025-09-24 13:30:00+00	TSM	SELL	42.22	279.28	11791.2
+1351	6	2025-09-24 13:30:00+00	WMT	SELL	71.01	102.57	7283.5
+1352	6	2025-09-24 13:30:00+00	AAPL	BUY	39.74	252.62	10039.12
+1353	7	2025-09-24 13:30:00+00	TSM	SELL	33.12	279.28	9249.75
+1354	7	2025-09-24 13:30:00+00	BA	BUY	15.09	217.08	3275.74
+1355	7	2025-09-24 13:30:00+00	NVDA	BUY	20.21	178.49	3607.28
+1356	8	2025-09-24 13:30:00+00	TSM	SELL	33.75	279.28	9425.7
+1357	8	2025-09-24 13:30:00+00	AAPL	BUY	31.3	252.62	7907.01
+1358	9	2025-09-24 13:30:00+00	TSM	SELL	100.8	279.28	28151.42
+1359	9	2025-09-24 13:30:00+00	AAPL	BUY	114.21	252.62	28851.73
+1360	10	2025-09-24 13:30:00+00	TSM	SELL	64.21	279.28	17932.57
+1361	10	2025-09-24 13:30:00+00	WMT	SELL	95.25	102.57	9769.79
+1362	10	2025-09-24 13:30:00+00	AAPL	BUY	64.55	252.62	16306.62
+1363	11	2025-09-24 13:30:00+00	TSM	SELL	48.85	279.28	13642.83
+1364	11	2025-09-24 13:30:00+00	WMT	SELL	128.44	102.57	13174.09
+1365	11	2025-09-24 13:30:00+00	AAPL	BUY	47.74	252.62	12060.08
+1366	11	2025-09-24 13:30:00+00	JPM	BUY	21.12	315.75	6668.64
+1367	11	2025-09-24 13:30:00+00	NVDA	BUY	32.21	178.49	5749.16
+1368	12	2025-09-24 13:30:00+00	TSM	SELL	81.59	279.28	22786.46
+1369	2	2025-10-01 13:30:00+00	AAPL	SELL	105.7	256.16	27076.11
+1370	2	2025-10-01 13:30:00+00	JPM	SELL	2.2	312.64	687.81
+1371	2	2025-10-01 13:30:00+00	TSM	SELL	5.76	284.77	1640.28
+1372	2	2025-10-01 13:30:00+00	WMT	SELL	266.25	100.82	26843.32
+1373	2	2025-10-01 13:30:00+00	XOM	SELL	226.44	112.07	25377.13
+1374	2	2025-10-01 13:30:00+00	MSFT	BUY	49.93	512.62	25595.12
+1375	2	2025-10-01 13:30:00+00	NVDA	BUY	144.65	186.65	26998.92
+1376	2	2025-10-01 13:30:00+00	PFE	BUY	1095.04	26.51	29029.51
+1377	4	2025-10-01 13:30:00+00	AAPL	SELL	41.24	256.16	10564.04
+1378	4	2025-10-01 13:30:00+00	CVX	SELL	26.19	153.7	4025.4
+1379	4	2025-10-01 13:30:00+00	JPM	SELL	14.18	312.64	4433.24
+1380	4	2025-10-01 13:30:00+00	TSM	SELL	15.12	284.77	4305.72
+1381	4	2025-10-01 13:30:00+00	WMT	SELL	45.56	100.82	4593.36
+1382	4	2025-10-01 13:30:00+00	XOM	SELL	63.28	112.07	7091.79
+1383	4	2025-10-01 13:30:00+00	NVDA	BUY	79.44	186.65	14827.48
+1384	4	2025-10-01 13:30:00+00	PFE	BUY	579.21	26.51	15354.86
+1385	5	2025-10-01 13:30:00+00	AAPL	SELL	14.35	256.16	3675.9
+1386	5	2025-10-01 13:30:00+00	CVX	SELL	10.76	153.7	1653.81
+1387	5	2025-10-01 13:30:00+00	JPM	SELL	263.33	312.64	82327.49
+1388	5	2025-10-01 13:30:00+00	MSFT	SELL	23.7	512.62	12149.09
+1389	5	2025-10-01 13:30:00+00	TSM	SELL	8.62	284.77	2454.72
+1390	5	2025-10-01 13:30:00+00	WMT	SELL	25.65	100.82	2586.03
+1391	5	2025-10-01 13:30:00+00	NVDA	BUY	224.7	186.65	41940.25
+1392	5	2025-10-01 13:30:00+00	PFE	BUY	2415.48	26.51	64034.37
+1393	6	2025-10-01 13:30:00+00	AAPL	SELL	45.33	256.16	11611.73
+1394	6	2025-10-01 13:30:00+00	CVX	SELL	32.37	153.7	4975.27
+1395	6	2025-10-01 13:30:00+00	TSM	SELL	22.15	284.77	6307.66
+1396	6	2025-10-01 13:30:00+00	WMT	SELL	53.41	100.82	5384.8
+1397	6	2025-10-01 13:30:00+00	XOM	SELL	82.48	112.07	9243.53
+1398	6	2025-10-01 13:30:00+00	MSFT	BUY	7.63	512.62	3911.29
+1399	6	2025-10-01 13:30:00+00	NVDA	BUY	95.05	186.65	17741.08
+1400	6	2025-10-01 13:30:00+00	PFE	BUY	697.46	26.51	18489.66
+1401	7	2025-10-01 13:30:00+00	AAPL	SELL	11.75	256.16	3009.88
+1402	7	2025-10-01 13:30:00+00	CVX	SELL	27.83	153.7	4277.47
+1403	7	2025-10-01 13:30:00+00	JPM	SELL	7.58	312.64	2369.81
+1404	7	2025-10-01 13:30:00+00	WMT	SELL	66.26	100.82	6680.33
+1405	7	2025-10-01 13:30:00+00	XOM	SELL	61.7	112.07	6914.72
+1406	7	2025-10-01 13:30:00+00	NVDA	BUY	10.55	186.65	1969.16
+1407	7	2025-10-01 13:30:00+00	PFE	BUY	542.27	26.51	14375.58
+1408	7	2025-10-01 13:30:00+00	SBUX	BUY	34.77	84.52	2938.76
+1409	8	2025-10-01 13:30:00+00	AAPL	SELL	33.62	256.16	8612.1
+1410	8	2025-10-01 13:30:00+00	XOM	SELL	71.89	112.07	8056.71
+1411	8	2025-10-01 13:30:00+00	NVDA	BUY	53.48	186.65	9982.04
+1412	8	2025-10-01 13:30:00+00	PFE	BUY	324.94	26.51	8614.16
+1413	9	2025-10-01 13:30:00+00	AAPL	SELL	110.65	256.16	28344.1
+1414	9	2025-10-01 13:30:00+00	WMT	SELL	187.59	100.82	18912.82
+1415	9	2025-10-01 13:30:00+00	NVDA	BUY	147.71	186.65	27570.07
+1416	9	2025-10-01 13:30:00+00	PFE	BUY	767.09	26.51	20335.56
+1417	10	2025-10-01 13:30:00+00	AAPL	SELL	66.33	256.16	16991.09
+1418	10	2025-10-01 13:30:00+00	JPM	SELL	21.16	312.64	6615.46
+1419	10	2025-10-01 13:30:00+00	TSM	SELL	31.67	284.77	9018.67
+1420	10	2025-10-01 13:30:00+00	WMT	SELL	67.24	100.82	6779.14
+1421	10	2025-10-01 13:30:00+00	XOM	SELL	67.53	112.07	7568.09
+1422	10	2025-10-01 13:30:00+00	NVDA	BUY	124.93	186.65	23318.18
+1423	10	2025-10-01 13:30:00+00	PFE	BUY	981.39	26.51	26016.65
+1424	11	2025-10-01 13:30:00+00	AAPL	SELL	63.82	256.16	16348.13
+1425	11	2025-10-01 13:30:00+00	CVX	SELL	43.73	153.7	6721.3
+1426	11	2025-10-01 13:30:00+00	JPM	SELL	28.95	312.64	9050.93
+1427	11	2025-10-01 13:30:00+00	TSM	SELL	25.61	284.77	7292.96
+1428	11	2025-10-01 13:30:00+00	WMT	SELL	71.36	100.82	7194.52
+1429	11	2025-10-01 13:30:00+00	XOM	SELL	119.56	112.07	13399.09
+1430	11	2025-10-01 13:30:00+00	DIS	BUY	17.86	115.34	2059.97
+1431	11	2025-10-01 13:30:00+00	JNJ	BUY	23.8	184.99	4402.76
+1432	11	2025-10-01 13:30:00+00	NVDA	BUY	131.68	186.65	24578.07
+1433	11	2025-10-01 13:30:00+00	PFE	BUY	971.99	26.51	25767.45
+1434	11	2025-10-01 13:30:00+00	V	BUY	6	347.26	2083.56
+1435	2	2025-10-08 13:30:00+00	JPM	SELL	82.36	307.14	25296.05
+1436	2	2025-10-08 13:30:00+00	MSFT	SELL	1.07	525.14	561.9
+1437	2	2025-10-08 13:30:00+00	NVDA	SELL	144.65	189.04	27344.64
+1438	2	2025-10-08 13:30:00+00	PFE	SELL	79.53	26.16	2080.5
+1439	2	2025-10-08 13:30:00+00	TSM	SELL	86.59	302.82	26221.18
+1440	2	2025-10-08 13:30:00+00	V	BUY	74.93	354.54	26565.68
+1441	2	2025-10-08 13:30:00+00	WMT	BUY	273.39	102.69	28074.42
+1442	2	2025-10-08 13:30:00+00	XOM	BUY	235.45	114.11	26867.2
+1443	4	2025-10-08 13:30:00+00	JPM	SELL	16.7	307.14	5129.24
+1444	4	2025-10-08 13:30:00+00	NVDA	SELL	54.04	189.04	10215.72
+1445	4	2025-10-08 13:30:00+00	PFE	SELL	407.2	26.16	10652.35
+1446	4	2025-10-08 13:30:00+00	BA	BUY	31.16	224.03	6980.77
+1447	4	2025-10-08 13:30:00+00	MSFT	BUY	11.33	525.14	5949.84
+1448	4	2025-10-08 13:30:00+00	V	BUY	27.94	354.54	9905.85
+1449	4	2025-10-08 13:30:00+00	WMT	BUY	66.19	102.69	6797.05
+1450	4	2025-10-08 13:30:00+00	XOM	BUY	61.52	114.11	7020.05
+1451	5	2025-10-08 13:30:00+00	NVDA	SELL	136.05	189.04	25718.89
+1452	5	2025-10-08 13:30:00+00	PFE	SELL	2113.27	26.16	55283.14
+1453	5	2025-10-08 13:30:00+00	BA	BUY	38.76	224.03	8683.4
+1454	5	2025-10-08 13:30:00+00	MSFT	BUY	19.34	525.14	10156.21
+1455	5	2025-10-08 13:30:00+00	V	BUY	165.21	354.54	58573.55
+1456	5	2025-10-08 13:30:00+00	WMT	BUY	15.96	102.69	1638.93
+1457	5	2025-10-08 13:30:00+00	XOM	BUY	22.6	114.11	2578.89
+1458	6	2025-10-08 13:30:00+00	JPM	SELL	25.85	307.14	7939.57
+1459	6	2025-10-08 13:30:00+00	NVDA	SELL	61.39	189.04	11605.17
+1460	6	2025-10-08 13:30:00+00	PFE	SELL	506.41	26.16	13247.69
+1461	6	2025-10-08 13:30:00+00	BA	BUY	34.39	224.03	7704.39
+1462	6	2025-10-08 13:30:00+00	V	BUY	27.28	354.54	9671.85
+1463	6	2025-10-08 13:30:00+00	WMT	BUY	57.89	102.69	5944.72
+1464	6	2025-10-08 13:30:00+00	XOM	BUY	73.17	114.11	8349.43
+1465	7	2025-10-08 13:30:00+00	JPM	SELL	7.34	307.14	2254.41
+1466	7	2025-10-08 13:30:00+00	PFE	SELL	307.63	26.16	8047.6
+1467	7	2025-10-08 13:30:00+00	SBUX	SELL	27.85	80.24	2234.68
+1468	7	2025-10-08 13:30:00+00	TSM	SELL	8.16	302.82	2471.01
+1469	7	2025-10-08 13:30:00+00	MSFT	BUY	4.76	525.14	2499.67
+1470	7	2025-10-08 13:30:00+00	V	BUY	12.44	354.54	4410.48
+1471	7	2025-10-08 13:30:00+00	WMT	BUY	37.73	102.69	3874.49
+1472	7	2025-10-08 13:30:00+00	XOM	BUY	27.73	114.11	3164.27
+1473	8	2025-10-08 13:30:00+00	NVDA	SELL	37.77	189.04	7140.04
+1474	8	2025-10-08 13:30:00+00	PFE	SELL	363.41	26.16	9506.81
+1475	9	2025-10-08 13:30:00+00	NVDA	SELL	148.65	189.04	28100.8
+1476	9	2025-10-08 13:30:00+00	TSM	SELL	47.58	302.82	14408.18
+1477	9	2025-10-08 13:30:00+00	V	BUY	43.56	354.54	15443.76
+1478	10	2025-10-08 13:30:00+00	JPM	SELL	18.4	307.14	5651.38
+1479	10	2025-10-08 13:30:00+00	NVDA	SELL	77.74	189.04	14695.97
+1480	10	2025-10-08 13:30:00+00	PFE	SELL	733.6	26.16	19190.98
+1481	10	2025-10-08 13:30:00+00	BA	BUY	40.19	224.03	9003.77
+1482	10	2025-10-08 13:30:00+00	MSFT	BUY	14.74	525.14	7740.56
+1483	10	2025-10-08 13:30:00+00	V	BUY	31.49	354.54	11164.46
+1484	10	2025-10-08 13:30:00+00	WMT	BUY	80.94	102.69	8311.73
+1485	10	2025-10-08 13:30:00+00	XOM	BUY	91.49	114.11	10439.92
+1486	11	2025-10-08 13:30:00+00	DIS	SELL	18.24	112.78	2057.11
+1487	11	2025-10-08 13:30:00+00	JPM	SELL	18.53	307.14	5691.3
+1488	11	2025-10-08 13:30:00+00	NVDA	SELL	101.93	189.04	19268.85
+1489	11	2025-10-08 13:30:00+00	PFE	SELL	721.42	26.16	18872.35
+1490	11	2025-10-08 13:30:00+00	BA	BUY	47.65	224.03	10675.03
+1491	11	2025-10-08 13:30:00+00	MSFT	BUY	9.47	525.14	4973.08
+1492	11	2025-10-08 13:30:00+00	NFLX	BUY	14.35	120.73	1732.48
+1493	11	2025-10-08 13:30:00+00	V	BUY	43.69	354.54	15489.85
+1494	11	2025-10-08 13:30:00+00	WMT	BUY	71.13	102.69	7304.34
+1495	11	2025-10-08 13:30:00+00	XOM	BUY	97.92	114.11	11173.65
+1496	2	2025-10-15 13:30:00+00	MSFT	SELL	48.86	515.9	25206.87
+1497	2	2025-10-15 13:30:00+00	PFE	SELL	1015.51	24.47	24849.53
+1498	2	2025-10-15 13:30:00+00	V	SELL	0.5	349.36	174.68
+1499	2	2025-10-15 13:30:00+00	XOM	SELL	11.23	113.2	1271.24
+1500	2	2025-10-15 13:30:00+00	JNJ	BUY	127.3	191.09	24325.76
+1501	2	2025-10-15 13:30:00+00	TSM	BUY	85.63	304.39	26064.92
+1502	2	2025-10-15 13:30:00+00	WMT	BUY	10.16	109.43	1111.81
+1503	3	2025-10-15 13:30:00+00	WMT	BUY	55.68	109.43	6093.06
+1504	4	2025-10-15 13:30:00+00	BA	SELL	28.98	215.19	6236.21
+1505	4	2025-10-15 13:30:00+00	MSFT	SELL	15.42	515.9	7955.18
+1506	4	2025-10-15 13:30:00+00	NVDA	SELL	37.18	182.37	6780.52
+1507	4	2025-10-15 13:30:00+00	PFE	SELL	210.15	24.47	5142.37
+1508	4	2025-10-15 13:30:00+00	XOM	SELL	38.06	113.2	4308.39
+1509	4	2025-10-15 13:30:00+00	WMT	BUY	185.57	109.43	20306.93
+1510	5	2025-10-15 13:30:00+00	BA	SELL	38.76	215.19	8340.76
+1511	5	2025-10-15 13:30:00+00	MSFT	SELL	19.62	515.9	10121.96
+1512	5	2025-10-15 13:30:00+00	NVDA	SELL	114.41	182.37	20864.95
+1513	5	2025-10-15 13:30:00+00	PFE	SELL	302.46	24.47	7401.2
+1514	5	2025-10-15 13:30:00+00	V	SELL	146.2	349.36	51076.43
+1515	5	2025-10-15 13:30:00+00	XOM	SELL	23.35	113.2	2643.22
+1516	5	2025-10-15 13:30:00+00	WMT	BUY	909.92	109.43	99572.55
+1517	6	2025-10-15 13:30:00+00	BA	SELL	36.16	215.19	7781.27
+1518	6	2025-10-15 13:30:00+00	MSFT	SELL	8.5	515.9	4385.15
+1519	6	2025-10-15 13:30:00+00	NVDA	SELL	48.89	182.37	8916.07
+1520	6	2025-10-15 13:30:00+00	PFE	SELL	220.61	24.47	5398.33
+1521	6	2025-10-15 13:30:00+00	XOM	SELL	49.42	113.2	5594.34
+1522	6	2025-10-15 13:30:00+00	JNJ	BUY	26.21	191.09	5008.47
+1523	6	2025-10-15 13:30:00+00	WMT	BUY	232.34	109.43	25424.97
+1524	7	2025-10-15 13:30:00+00	BA	SELL	8.69	215.19	1870
+1525	7	2025-10-15 13:30:00+00	MSFT	SELL	6.94	515.9	3580.35
+1526	7	2025-10-15 13:30:00+00	NVDA	SELL	21.53	182.37	3926.43
+1527	7	2025-10-15 13:30:00+00	PFE	SELL	220.55	24.47	5396.86
+1528	7	2025-10-15 13:30:00+00	NFLX	BUY	20.38	121.42	2474.54
+1529	7	2025-10-15 13:30:00+00	V	BUY	10.12	349.36	3535.52
+1530	7	2025-10-15 13:30:00+00	WMT	BUY	64.62	109.43	7071.37
+1531	8	2025-10-15 13:30:00+00	WMT	BUY	157.37	109.43	17221
+1532	9	2025-10-15 13:30:00+00	PFE	SELL	769.67	24.47	18833.82
+1533	9	2025-10-15 13:30:00+00	COST	SELL	12.44	960.5	11948.62
+1534	9	2025-10-15 13:30:00+00	WMT	BUY	569.92	109.43	62366.35
+1535	10	2025-10-15 13:30:00+00	BA	SELL	40.38	215.19	8689.37
+1536	10	2025-10-15 13:30:00+00	MSFT	SELL	17.59	515.9	9074.68
+1537	10	2025-10-15 13:30:00+00	NVDA	SELL	48.33	182.37	8813.94
+1538	10	2025-10-15 13:30:00+00	PFE	SELL	262.95	24.47	6434.39
+1539	10	2025-10-15 13:30:00+00	XOM	SELL	68.89	113.2	7798.35
+1540	10	2025-10-15 13:30:00+00	WMT	BUY	319.14	109.43	34923.49
+1541	11	2025-10-15 13:30:00+00	BA	SELL	46.75	215.19	10060.13
+1542	11	2025-10-15 13:30:00+00	MSFT	SELL	16.72	515.9	8625.85
+1543	11	2025-10-15 13:30:00+00	NVDA	SELL	64.14	182.37	11697.21
+1544	11	2025-10-15 13:30:00+00	PFE	SELL	283.45	24.47	6936.02
+1545	11	2025-10-15 13:30:00+00	TSM	SELL	8.2	304.39	2496
+1546	11	2025-10-15 13:30:00+00	V	SELL	10.32	349.36	3605.4
+1547	11	2025-10-15 13:30:00+00	XOM	SELL	82.73	113.2	9365.04
+1548	11	2025-10-15 13:30:00+00	COST	BUY	4.59	960.5	4408.69
+1549	11	2025-10-15 13:30:00+00	WMT	BUY	414.96	109.43	45409.07
+1550	12	2025-10-15 13:30:00+00	WMT	BUY	178.29	109.43	19510.27
+1551	2	2025-10-22 13:30:00+00	JNJ	SELL	127.3	193.1	24581.63
+1552	2	2025-10-22 13:30:00+00	TSM	SELL	6.2	290.23	1799.43
+1553	2	2025-10-22 13:30:00+00	V	SELL	74.43	346.95	25823.49
+1554	2	2025-10-22 13:30:00+00	WMT	SELL	7.22	107.2	773.98
+1555	2	2025-10-22 13:30:00+00	BA	BUY	118.09	215.28	25422.42
+1556	2	2025-10-22 13:30:00+00	MSFT	BUY	47.96	523.47	25105.62
+1557	2	2025-10-22 13:30:00+00	XOM	BUY	21.42	114.42	2450.88
+1558	4	2025-10-22 13:30:00+00	V	SELL	20.19	346.95	7004.92
+1559	4	2025-10-22 13:30:00+00	WMT	SELL	147.91	107.2	15855.95
+1560	4	2025-10-22 13:30:00+00	BA	BUY	18.32	215.28	3943.93
+1561	4	2025-10-22 13:30:00+00	MSFT	BUY	11.03	523.47	5773.87
+1562	4	2025-10-22 13:30:00+00	XOM	BUY	116.68	114.42	13350.53
+1563	5	2025-10-22 13:30:00+00	V	SELL	19.35	346.95	6713.48
+1564	5	2025-10-22 13:30:00+00	WMT	SELL	860.78	107.2	92275.62
+1565	5	2025-10-22 13:30:00+00	JNJ	BUY	13.09	193.1	2527.68
+1566	5	2025-10-22 13:30:00+00	XOM	BUY	822.3	114.42	94087.57
+1567	6	2025-10-22 13:30:00+00	V	SELL	30.32	346.95	10519.52
+1568	6	2025-10-22 13:30:00+00	WMT	SELL	188.4	107.2	20196.48
+1569	6	2025-10-22 13:30:00+00	MSFT	BUY	8.31	523.47	4350.04
+1570	6	2025-10-22 13:30:00+00	XOM	BUY	161.92	114.42	18526.89
+1571	7	2025-10-22 13:30:00+00	NFLX	SELL	20.48	112.27	2299.29
+1572	7	2025-10-22 13:30:00+00	V	SELL	18.28	346.95	6342.25
+1573	7	2025-10-22 13:30:00+00	WMT	SELL	35.51	107.2	3806.67
+1574	7	2025-10-22 13:30:00+00	BA	BUY	8.5	215.28	1829.88
+1575	7	2025-10-22 13:30:00+00	DIS	BUY	20.34	114.03	2319.37
+1576	7	2025-10-22 13:30:00+00	JNJ	BUY	10.26	193.1	1981.21
+1577	7	2025-10-22 13:30:00+00	MSFT	BUY	7.43	523.47	3889.38
+1578	7	2025-10-22 13:30:00+00	PFE	BUY	154.79	24.86	3848.08
+1579	8	2025-10-22 13:30:00+00	NVDA	SELL	39.11	180.4	7055.44
+1580	8	2025-10-22 13:30:00+00	TSM	SELL	23.29	290.23	6759.46
+1581	8	2025-10-22 13:30:00+00	WMT	SELL	120.04	107.2	12868.29
+1582	8	2025-10-22 13:30:00+00	XOM	BUY	114.08	114.42	13053.03
+1583	9	2025-10-22 13:30:00+00	V	SELL	43.55	346.95	15109.67
+1584	9	2025-10-22 13:30:00+00	WMT	SELL	375.77	107.2	40282.54
+1585	9	2025-10-22 13:30:00+00	XOM	BUY	312.87	114.42	35798.59
+1586	10	2025-10-22 13:30:00+00	V	SELL	38.18	346.95	13246.55
+1587	10	2025-10-22 13:30:00+00	WMT	SELL	227.51	107.2	24389.07
+1588	10	2025-10-22 13:30:00+00	XOM	BUY	228.54	114.42	26149.55
+1589	11	2025-10-22 13:30:00+00	COST	SELL	4.14	944.63	3910.77
+1590	11	2025-10-22 13:30:00+00	V	SELL	35.93	346.95	12465.91
+1591	11	2025-10-22 13:30:00+00	WMT	SELL	346.75	107.2	37171.6
+1592	11	2025-10-22 13:30:00+00	AAPL	BUY	12.84	260.05	3339.04
+1593	11	2025-10-22 13:30:00+00	CVX	BUY	20.05	155.12	3110.16
+1594	11	2025-10-22 13:30:00+00	DIS	BUY	33.09	114.03	3773.25
+1595	11	2025-10-22 13:30:00+00	JNJ	BUY	20.63	193.1	3983.65
+1596	11	2025-10-22 13:30:00+00	MSFT	BUY	6.46	523.47	3381.62
+1597	11	2025-10-22 13:30:00+00	PFE	BUY	150.24	24.86	3734.97
+1598	11	2025-10-22 13:30:00+00	SBUX	BUY	28.13	85.5	2405.11
+1599	11	2025-10-22 13:30:00+00	XOM	BUY	262.52	114.42	30037.54
+1600	2	2025-10-29 13:30:00+00	BA	SELL	7.66	217.58	1666.66
+1601	2	2025-10-29 13:30:00+00	TSM	SELL	79.43	304.95	24222.18
+1602	2	2025-10-29 13:30:00+00	WMT	SELL	276.33	103.37	28564.23
+1603	2	2025-10-29 13:30:00+00	AAPL	BUY	91.07	270.42	24627.15
+1604	2	2025-10-29 13:30:00+00	JPM	BUY	85.57	305.36	26129.66
+1605	2	2025-10-29 13:30:00+00	MSFT	BUY	3.38	538.2	1819.12
+1606	2	2025-10-29 13:30:00+00	XOM	BUY	16.15	115.88	1871.46
+1607	3	2025-10-29 13:30:00+00	JNJ	SELL	32.7	185.53	6066.83
+1608	3	2025-10-29 13:30:00+00	WMT	SELL	86.08	103.37	8898.09
+1609	3	2025-10-29 13:30:00+00	MSFT	BUY	13.45	538.2	7238.79
+1610	3	2025-10-29 13:30:00+00	XOM	BUY	55.19	115.88	6395.42
+1611	4	2025-10-29 13:30:00+00	WMT	SELL	108.48	103.37	11213.58
+1612	4	2025-10-29 13:30:00+00	AAPL	BUY	18.43	270.42	4983.84
+1613	4	2025-10-29 13:30:00+00	JPM	BUY	18.58	305.36	5673.59
+1614	4	2025-10-29 13:30:00+00	MSFT	BUY	13.26	538.2	7136.53
+1615	4	2025-10-29 13:30:00+00	NVDA	BUY	36.38	210.61	7661.99
+1616	5	2025-10-29 13:30:00+00	JNJ	SELL	13.47	185.53	2499.09
+1617	5	2025-10-29 13:30:00+00	WMT	SELL	65.2	103.37	6739.72
+1618	5	2025-10-29 13:30:00+00	XOM	SELL	726.41	115.88	84176.39
+1619	5	2025-10-29 13:30:00+00	AAPL	BUY	10.67	270.42	2885.38
+1620	5	2025-10-29 13:30:00+00	MSFT	BUY	4.51	538.2	2427.28
+1621	5	2025-10-29 13:30:00+00	NVDA	BUY	439.31	210.61	92523.08
+1622	6	2025-10-29 13:30:00+00	JNJ	SELL	26.74	185.53	4961.07
+1623	6	2025-10-29 13:30:00+00	WMT	SELL	112.14	103.37	11591.91
+1624	6	2025-10-29 13:30:00+00	XOM	SELL	33.58	115.88	3891.25
+1625	6	2025-10-29 13:30:00+00	AAPL	BUY	34.7	270.42	9383.57
+1626	6	2025-10-29 13:30:00+00	JPM	BUY	12.48	305.36	3810.89
+1627	6	2025-10-29 13:30:00+00	MSFT	BUY	15.52	538.2	8352.86
+1628	6	2025-10-29 13:30:00+00	NVDA	BUY	80.38	210.61	16928.83
+1629	7	2025-10-29 13:30:00+00	DIS	SELL	25.87	110.67	2863.03
+1630	7	2025-10-29 13:30:00+00	JNJ	SELL	12.76	185.53	2367.36
+1631	7	2025-10-29 13:30:00+00	PFE	SELL	128	24.53	3139.84
+1632	7	2025-10-29 13:30:00+00	WMT	SELL	72.31	103.37	7474.68
+1633	7	2025-10-29 13:30:00+00	AAPL	BUY	17.33	270.42	4686.38
+1634	7	2025-10-29 13:30:00+00	JPM	BUY	14.34	305.36	4378.86
+1635	7	2025-10-29 13:30:00+00	MSFT	BUY	4.25	538.2	2287.35
+1636	7	2025-10-29 13:30:00+00	NVDA	BUY	13.87	210.61	2921.16
+1637	7	2025-10-29 13:30:00+00	XOM	BUY	93.09	115.88	10787.27
+1638	8	2025-10-29 13:30:00+00	WMT	SELL	93.41	103.37	9655.79
+1639	8	2025-10-29 13:30:00+00	MSFT	BUY	18.6	538.2	10010.52
+1640	8	2025-10-29 13:30:00+00	NVDA	BUY	44.33	210.61	9336.34
+1641	9	2025-10-29 13:30:00+00	WMT	SELL	212.55	103.37	21971.29
+1642	9	2025-10-29 13:30:00+00	MSFT	BUY	32.13	538.2	17292.37
+1643	10	2025-10-29 13:30:00+00	WMT	SELL	181.75	103.37	18787.5
+1644	10	2025-10-29 13:30:00+00	AAPL	BUY	32.79	270.42	8867.07
+1645	10	2025-10-29 13:30:00+00	MSFT	BUY	27.48	538.2	14789.74
+1646	10	2025-10-29 13:30:00+00	NVDA	BUY	66.19	210.61	13940.28
+1647	11	2025-10-29 13:30:00+00	CVX	SELL	14.82	154.89	2295.47
+1648	11	2025-10-29 13:30:00+00	DIS	SELL	33.86	110.67	3747.29
+1649	11	2025-10-29 13:30:00+00	JNJ	SELL	43.41	185.53	8053.86
+1650	11	2025-10-29 13:30:00+00	NFLX	SELL	16.08	110.64	1779.09
+1651	11	2025-10-29 13:30:00+00	PFE	SELL	143.15	24.53	3511.47
+1652	11	2025-10-29 13:30:00+00	WMT	SELL	146.44	103.37	15137.5
+1653	11	2025-10-29 13:30:00+00	XOM	SELL	99.87	115.88	11572.94
+1654	11	2025-10-29 13:30:00+00	AAPL	BUY	33.65	270.42	9099.63
+1655	11	2025-10-29 13:30:00+00	JPM	BUY	7.16	305.36	2186.38
+1656	11	2025-10-29 13:30:00+00	MSFT	BUY	21.65	538.2	11652.03
+1657	11	2025-10-29 13:30:00+00	NVDA	BUY	132.63	210.61	27933.2
+1658	12	2025-10-29 13:30:00+00	WMT	SELL	144.13	103.37	14898.72
+1659	12	2025-10-29 13:30:00+00	XOM	BUY	126.48	115.88	14656.5
+1660	2	2025-11-05 14:30:00+00	AAPL	SELL	2.45	269.01	659.07
+1661	2	2025-11-05 14:30:00+00	BA	SELL	110.43	196.9	21743.67
+1662	2	2025-11-05 14:30:00+00	JPM	SELL	85.57	309.29	26465.95
+1663	2	2025-11-05 14:30:00+00	MSFT	SELL	2.95	514.25	1517.04
+1664	2	2025-11-05 14:30:00+00	XOM	SELL	72.42	114.88	8319.61
+1665	2	2025-11-05 14:30:00+00	JNJ	BUY	146.83	186.73	27417.57
+1666	2	2025-11-05 14:30:00+00	TSM	BUY	105.53	296.5	31289.65
+1667	3	2025-11-05 14:30:00+00	JPM	SELL	19.5	309.29	6031.16
+1668	3	2025-11-05 14:30:00+00	XOM	SELL	91.52	114.88	10513.82
+1669	3	2025-11-05 14:30:00+00	JNJ	BUY	43.83	186.73	8184.38
+1670	3	2025-11-05 14:30:00+00	TSM	BUY	38.33	296.5	11364.84
+1671	4	2025-11-05 14:30:00+00	BA	SELL	21.45	196.9	4223.51
+1672	4	2025-11-05 14:30:00+00	JPM	SELL	16.03	309.29	4957.92
+1673	4	2025-11-05 14:30:00+00	MSFT	SELL	18.01	514.25	9261.64
+1674	4	2025-11-05 14:30:00+00	NVDA	SELL	19.45	200.63	3902.25
+1675	4	2025-11-05 14:30:00+00	XOM	SELL	142.85	114.88	16410.61
+1676	4	2025-11-05 14:30:00+00	JNJ	BUY	45.96	186.73	8582.11
+1677	4	2025-11-05 14:30:00+00	TSM	BUY	78.96	296.5	23411.64
+1678	5	2025-11-05 14:30:00+00	MSFT	SELL	3.2	514.25	1645.6
+1679	5	2025-11-05 14:30:00+00	NVDA	SELL	48.95	200.63	9820.84
+1680	5	2025-11-05 14:30:00+00	XOM	SELL	77.47	114.88	8899.75
+1681	5	2025-11-05 14:30:00+00	AAPL	BUY	45.98	269.01	12369.08
+1682	5	2025-11-05 14:30:00+00	TSM	BUY	18.62	296.5	5520.83
+1683	6	2025-11-05 14:30:00+00	MSFT	SELL	15.05	514.25	7739.46
+1684	6	2025-11-05 14:30:00+00	NVDA	SELL	29.16	200.63	5850.37
+1685	6	2025-11-05 14:30:00+00	XOM	SELL	136.67	114.88	15700.65
+1686	6	2025-11-05 14:30:00+00	JNJ	BUY	45.16	186.73	8432.73
+1687	6	2025-11-05 14:30:00+00	TSM	BUY	60.32	296.5	17884.88
+1688	7	2025-11-05 14:30:00+00	BA	SELL	13.34	196.9	2626.65
+1689	7	2025-11-05 14:30:00+00	JPM	SELL	12.53	309.29	3875.4
+1690	7	2025-11-05 14:30:00+00	MSFT	SELL	8.65	514.25	4448.26
+1691	7	2025-11-05 14:30:00+00	XOM	SELL	111.7	114.88	12832.1
+1692	7	2025-11-05 14:30:00+00	JNJ	BUY	51.47	186.73	9610.99
+1693	7	2025-11-05 14:30:00+00	TSM	BUY	35.57	296.5	10546.5
+1694	8	2025-11-05 14:30:00+00	MSFT	SELL	14.24	514.25	7322.92
+1695	8	2025-11-05 14:30:00+00	XOM	SELL	109.9	114.88	12625.31
+1696	8	2025-11-05 14:30:00+00	TSM	BUY	66.04	296.5	19580.86
+1697	9	2025-11-05 14:30:00+00	MSFT	SELL	32.85	514.25	16893.11
+1698	9	2025-11-05 14:30:00+00	XOM	SELL	387.46	114.88	44511.4
+1699	9	2025-11-05 14:30:00+00	TSM	BUY	208.89	296.5	61935.88
+1700	10	2025-11-05 14:30:00+00	MSFT	SELL	18.76	514.25	9647.33
+1701	10	2025-11-05 14:30:00+00	NVDA	SELL	30.32	200.63	6083.1
+1702	10	2025-11-05 14:30:00+00	XOM	SELL	235.03	114.88	27000.25
+1703	10	2025-11-05 14:30:00+00	TSM	BUY	106.55	296.5	31592.08
+1704	11	2025-11-05 14:30:00+00	MSFT	SELL	17.1	514.25	8793.68
+1705	11	2025-11-05 14:30:00+00	NVDA	SELL	49.61	200.63	9953.25
+1706	11	2025-11-05 14:30:00+00	SBUX	SELL	29.53	79.53	2348.52
+1707	11	2025-11-05 14:30:00+00	XOM	SELL	149.48	114.88	17172.26
+1708	11	2025-11-05 14:30:00+00	AAPL	BUY	6.65	269.01	1788.92
+1709	11	2025-11-05 14:30:00+00	GE	BUY	5.42	307.23	1665.19
+1710	11	2025-11-05 14:30:00+00	JNJ	BUY	30.59	186.73	5712.07
+1711	11	2025-11-05 14:30:00+00	TSM	BUY	77.18	296.5	22883.87
+1712	12	2025-11-05 14:30:00+00	TSM	BUY	52.43	296.5	15545.5
+1713	2	2025-11-12 14:30:00+00	AAPL	SELL	88.62	272.94	24187.94
+1714	2	2025-11-12 14:30:00+00	MSFT	SELL	48.39	505.7	24470.82
+1715	2	2025-11-12 14:30:00+00	TSM	SELL	11.13	294.07	3273
+1716	2	2025-11-12 14:30:00+00	XOM	SELL	4.35	118.92	517.3
+1717	2	2025-11-12 14:30:00+00	JNJ	BUY	11.57	193.91	2243.54
+1718	2	2025-11-12 14:30:00+00	NFLX	BUY	210.01	113.91	23922.24
+1719	2	2025-11-12 14:30:00+00	PFE	BUY	1030.81	25.5	26285.65
+1720	3	2025-11-12 14:30:00+00	TSM	SELL	26.49	294.07	7789.91
+1721	4	2025-11-12 14:30:00+00	AAPL	SELL	18.53	272.94	5057.58
+1722	4	2025-11-12 14:30:00+00	TSM	SELL	39.48	294.07	11609.88
+1723	4	2025-11-12 14:30:00+00	JNJ	BUY	49.76	193.91	9648.96
+1724	4	2025-11-12 14:30:00+00	PFE	BUY	394.59	25.5	10062.05
+1725	5	2025-11-12 14:30:00+00	AAPL	SELL	56.65	272.94	15462.05
+1726	5	2025-11-12 14:30:00+00	NVDA	SELL	390.35	192.69	75216.54
+1727	5	2025-11-12 14:30:00+00	TSM	SELL	18.14	294.07	5334.43
+1728	5	2025-11-12 14:30:00+00	JPM	BUY	12.41	321.4	3988.57
+1729	5	2025-11-12 14:30:00+00	PFE	BUY	2179.36	25.5	55573.68
+1730	5	2025-11-12 14:30:00+00	SBUX	BUY	17.61	88.44	1557.43
+1731	5	2025-11-12 14:30:00+00	XOM	BUY	309.45	118.92	36799.79
+1732	6	2025-11-12 14:30:00+00	AAPL	SELL	34.04	272.94	9290.88
+1733	6	2025-11-12 14:30:00+00	MSFT	SELL	8.83	505.7	4465.33
+1734	6	2025-11-12 14:30:00+00	NVDA	SELL	45.57	192.69	8780.88
+1735	6	2025-11-12 14:30:00+00	TSM	SELL	46.27	294.07	13606.62
+1736	6	2025-11-12 14:30:00+00	JNJ	BUY	36.68	193.91	7112.62
+1737	6	2025-11-12 14:30:00+00	PFE	BUY	635.28	25.5	16199.64
+1738	6	2025-11-12 14:30:00+00	SBUX	BUY	57.27	88.44	5064.96
+1739	6	2025-11-12 14:30:00+00	XOM	BUY	46.81	118.92	5566.65
+1740	7	2025-11-12 14:30:00+00	AAPL	SELL	18.51	272.94	5052.12
+1741	7	2025-11-12 14:30:00+00	NVDA	SELL	11.56	192.69	2227.5
+1742	7	2025-11-12 14:30:00+00	TSM	SELL	37.97	294.07	11165.84
+1743	7	2025-11-12 14:30:00+00	DIS	BUY	18.09	115.5	2089.39
+1744	7	2025-11-12 14:30:00+00	JNJ	BUY	17.67	193.91	3426.39
+1745	7	2025-11-12 14:30:00+00	NFLX	BUY	22.84	113.91	2601.7
+1746	7	2025-11-12 14:30:00+00	PFE	BUY	298.7	25.5	7616.85
+1747	7	2025-11-12 14:30:00+00	SBUX	BUY	21.66	88.44	1915.61
+1748	8	2025-11-12 14:30:00+00	NVDA	SELL	37.29	192.69	7185.41
+1749	8	2025-11-12 14:30:00+00	TSM	SELL	41.02	294.07	12062.75
+1750	8	2025-11-12 14:30:00+00	JNJ	BUY	56.81	193.91	11016.03
+1751	9	2025-11-12 14:30:00+00	TSM	SELL	135.92	294.07	39969.99
+1752	9	2025-11-12 14:30:00+00	JNJ	BUY	211.88	193.91	41085.65
+1753	10	2025-11-12 14:30:00+00	AAPL	SELL	32.64	272.94	8908.76
+1754	10	2025-11-12 14:30:00+00	NVDA	SELL	33.86	192.69	6524.48
+1755	10	2025-11-12 14:30:00+00	TSM	SELL	73.78	294.07	21696.48
+1756	10	2025-11-12 14:30:00+00	JNJ	BUY	95.68	193.91	18553.31
+1757	10	2025-11-12 14:30:00+00	PFE	BUY	753.07	25.5	19203.28
+1758	11	2025-11-12 14:30:00+00	AAPL	SELL	54.45	272.94	14861.58
+1759	11	2025-11-12 14:30:00+00	MSFT	SELL	11.34	505.7	5734.64
+1760	11	2025-11-12 14:30:00+00	NVDA	SELL	78.9	192.69	15203.24
+1761	11	2025-11-12 14:30:00+00	TSM	SELL	63.55	294.07	18688.15
+1762	11	2025-11-12 14:30:00+00	DIS	BUY	27.21	115.5	3142.76
+1763	11	2025-11-12 14:30:00+00	JNJ	BUY	26.96	193.91	5227.81
+1764	11	2025-11-12 14:30:00+00	JPM	BUY	8.46	321.4	2719.04
+1765	11	2025-11-12 14:30:00+00	NFLX	BUY	17.09	113.91	1946.72
+1766	11	2025-11-12 14:30:00+00	PFE	BUY	884.22	25.5	22547.61
+1767	11	2025-11-12 14:30:00+00	SBUX	BUY	108.45	88.44	9591.32
+1768	11	2025-11-12 14:30:00+00	XOM	BUY	115.69	118.92	13757.85
+1769	12	2025-11-12 14:30:00+00	JNJ	BUY	103.61	193.91	20091.02
+1770	2	2025-11-19 14:30:00+00	JNJ	SELL	8.62	201.62	1737.96
+1771	2	2025-11-19 14:30:00+00	NFLX	SELL	210.01	111.04	23319.51
+1772	2	2025-11-19 14:30:00+00	PFE	SELL	35.7	25.24	901.07
+1773	2	2025-11-19 14:30:00+00	MSFT	BUY	47.93	494.7	23710.97
+1774	2	2025-11-19 14:30:00+00	TSM	BUY	3.8	283.17	1076.05
+1775	2	2025-11-19 14:30:00+00	XOM	BUY	10.07	116.48	1172.95
+1776	3	2025-11-19 14:30:00+00	AAPL	SELL	21.7	271.85	5899.15
+1777	4	2025-11-19 14:30:00+00	NVDA	SELL	22.03	187.63	4133.49
+1778	4	2025-11-19 14:30:00+00	TSM	SELL	23	283.17	6512.91
+1779	4	2025-11-19 14:30:00+00	JNJ	BUY	38.76	201.62	7814.79
+1780	5	2025-11-19 14:30:00+00	JPM	SELL	13.41	303.07	4064.17
+1781	5	2025-11-19 14:30:00+00	PFE	SELL	2080.74	25.24	52517.88
+1782	5	2025-11-19 14:30:00+00	SBUX	SELL	17.62	84.04	1480.78
+1783	5	2025-11-19 14:30:00+00	XOM	SELL	326.59	116.48	38041.2
+1784	5	2025-11-19 14:30:00+00	JNJ	BUY	471.42	201.62	95047.7
+1785	6	2025-11-19 14:30:00+00	JPM	SELL	13.59	303.07	4118.72
+1786	6	2025-11-19 14:30:00+00	SBUX	SELL	49.86	84.04	4190.23
+1787	6	2025-11-19 14:30:00+00	JNJ	BUY	88.33	201.62	17809.09
+1788	6	2025-11-19 14:30:00+00	MSFT	BUY	9.63	494.7	4763.96
+1789	7	2025-11-19 14:30:00+00	NVDA	SELL	12.01	187.63	2253.44
+1790	7	2025-11-19 14:30:00+00	TSM	BUY	16.25	283.17	4601.51
+1791	8	2025-11-19 14:30:00+00	JNJ	BUY	32.25	201.62	6502.24
+1792	9	2025-11-19 14:30:00+00	JNJ	BUY	81.01	201.62	16333.24
+1793	10	2025-11-19 14:30:00+00	PFE	SELL	304.15	25.24	7676.75
+1794	10	2025-11-19 14:30:00+00	TSM	SELL	23.12	283.17	6546.89
+1795	10	2025-11-19 14:30:00+00	JNJ	BUY	113.51	201.62	22885.89
+1796	11	2025-11-19 14:30:00+00	DIS	SELL	25.98	106.84	2775.7
+1797	11	2025-11-19 14:30:00+00	GE	SELL	8.68	300.33	2606.86
+1798	11	2025-11-19 14:30:00+00	JPM	SELL	18.04	303.07	5467.38
+1799	11	2025-11-19 14:30:00+00	PFE	SELL	325.17	25.24	8207.29
+1800	11	2025-11-19 14:30:00+00	SBUX	SELL	102.33	84.04	8599.81
+1801	11	2025-11-19 14:30:00+00	XOM	SELL	103.9	116.48	12102.27
+1802	11	2025-11-19 14:30:00+00	JNJ	BUY	181.47	201.62	36587.98
+1803	11	2025-11-19 14:30:00+00	MSFT	BUY	10.06	494.7	4976.68
+1804	2	2025-11-26 14:30:00+00	JNJ	SELL	17.41	207.32	3609.44
+1805	2	2025-11-26 14:30:00+00	MSFT	SELL	47.93	483.24	23161.69
+1806	2	2025-11-26 14:30:00+00	PFE	SELL	32.49	25.72	835.64
+1807	2	2025-11-26 14:30:00+00	TSM	SELL	0.15	289	43.35
+1808	2	2025-11-26 14:30:00+00	XOM	SELL	195.09	115.14	22462.66
+1809	2	2025-11-26 14:30:00+00	AAPL	BUY	79.45	277.81	22072
+1810	2	2025-11-26 14:30:00+00	WMT	BUY	258.76	108.36	28039.23
+1811	4	2025-11-26 14:30:00+00	JNJ	SELL	88.87	207.32	18424.53
+1812	4	2025-11-26 14:30:00+00	TSM	BUY	16.24	289	4693.36
+1813	4	2025-11-26 14:30:00+00	WMT	BUY	110.88	108.36	12014.96
+1814	5	2025-11-26 14:30:00+00	JNJ	SELL	434.24	207.32	90026.64
+1815	5	2025-11-26 14:30:00+00	PFE	SELL	58.14	25.72	1495.36
+1816	5	2025-11-26 14:30:00+00	WMT	BUY	831.34	108.36	90084
+1817	6	2025-11-26 14:30:00+00	JNJ	SELL	112.62	207.32	23348.38
+1818	6	2025-11-26 14:30:00+00	MSFT	SELL	8.23	483.24	3977.07
+1819	6	2025-11-26 14:30:00+00	PFE	SELL	186.59	25.72	4799.09
+1820	6	2025-11-26 14:30:00+00	XOM	SELL	54.38	115.14	6261.31
+1821	6	2025-11-26 14:30:00+00	WMT	BUY	183.88	108.36	19925.24
+1822	7	2025-11-26 14:30:00+00	JNJ	SELL	38.59	207.32	8000.48
+1823	7	2025-11-26 14:30:00+00	TSM	BUY	11.03	289	3187.67
+1824	7	2025-11-26 14:30:00+00	WMT	BUY	86.25	108.36	9346.05
+1825	8	2025-11-26 14:30:00+00	JNJ	SELL	73.36	207.32	15209
+1826	8	2025-11-26 14:30:00+00	WMT	BUY	115.68	108.36	12535.08
+1827	9	2025-11-26 14:30:00+00	JNJ	SELL	204.81	207.32	42461.21
+1828	9	2025-11-26 14:30:00+00	WMT	BUY	337.97	108.36	36622.43
+1829	10	2025-11-26 14:30:00+00	JNJ	SELL	159.6	207.32	33088.27
+1830	10	2025-11-26 14:30:00+00	TSM	BUY	19.97	289	5771.33
+1831	10	2025-11-26 14:30:00+00	WMT	BUY	221.32	108.36	23982.24
+1832	11	2025-11-26 14:30:00+00	JNJ	SELL	178.33	207.32	36971.38
+1833	11	2025-11-26 14:30:00+00	MSFT	SELL	8.63	483.24	4170.36
+1834	11	2025-11-26 14:30:00+00	XOM	SELL	32.47	115.14	3738.6
+1835	11	2025-11-26 14:30:00+00	AAPL	BUY	14.65	277.81	4069.92
+1836	11	2025-11-26 14:30:00+00	SBUX	BUY	61.3	86.82	5322.07
+1837	11	2025-11-26 14:30:00+00	TSM	BUY	9.02	289	2606.78
+1838	11	2025-11-26 14:30:00+00	WMT	BUY	275.35	108.36	29836.93
+1839	2	2025-12-03 14:30:00+00	AAPL	SELL	79.45	287.34	22829.16
+1840	2	2025-12-03 14:30:00+00	JNJ	SELL	2.03	206.09	418.36
+1841	2	2025-12-03 14:30:00+00	WMT	SELL	13.94	113.46	1581.63
+1842	2	2025-12-03 14:30:00+00	BA	BUY	110.07	203.82	22434.47
+1843	2	2025-12-03 14:30:00+00	PFE	BUY	11.34	25.7	291.44
+1844	2	2025-12-03 14:30:00+00	TSM	BUY	7.18	292.97	2103.52
+1845	3	2025-12-03 14:30:00+00	TSM	BUY	21.17	292.97	6202.17
+1846	4	2025-12-03 14:30:00+00	JNJ	SELL	19.13	206.09	3942.5
+1847	4	2025-12-03 14:30:00+00	PFE	SELL	224.1	25.7	5759.37
+1848	4	2025-12-03 14:30:00+00	WMT	SELL	62.82	113.46	7127.56
+1849	4	2025-12-03 14:30:00+00	TSM	BUY	44	292.97	12890.68
+1850	5	2025-12-03 14:30:00+00	JNJ	SELL	35.69	206.09	7355.35
+1851	5	2025-12-03 14:30:00+00	WMT	SELL	168.56	113.46	19124.82
+1852	5	2025-12-03 14:30:00+00	AAPL	BUY	73.08	287.34	20998.81
+1853	5	2025-12-03 14:30:00+00	BA	BUY	17.58	203.82	3583.16
+1854	5	2025-12-03 14:30:00+00	JPM	BUY	13.72	308.89	4237.97
+1855	5	2025-12-03 14:30:00+00	TSM	BUY	6.01	292.97	1760.75
+1856	6	2025-12-03 14:30:00+00	JNJ	SELL	26.88	206.09	5539.7
+1857	6	2025-12-03 14:30:00+00	PFE	SELL	297.66	25.7	7649.86
+1858	6	2025-12-03 14:30:00+00	AAPL	BUY	24.15	287.34	6939.26
+1859	6	2025-12-03 14:30:00+00	JPM	BUY	15	308.89	4633.35
+1860	6	2025-12-03 14:30:00+00	TSM	BUY	29.78	292.97	8724.65
+1861	7	2025-12-03 14:30:00+00	JNJ	SELL	10.64	206.09	2192.8
+1862	7	2025-12-03 14:30:00+00	PFE	SELL	142.54	25.7	3663.28
+1863	7	2025-12-03 14:30:00+00	WMT	SELL	20.27	113.46	2299.83
+1864	7	2025-12-03 14:30:00+00	BA	BUY	16.83	203.82	3430.29
+1865	7	2025-12-03 14:30:00+00	TSM	BUY	12.77	292.97	3741.23
+1866	8	2025-12-03 14:30:00+00	TSM	BUY	36.02	292.97	10552.78
+1867	9	2025-12-03 14:30:00+00	WMT	SELL	145.26	113.46	16481.2
+1868	9	2025-12-03 14:30:00+00	TSM	BUY	70.07	292.97	20528.41
+1869	10	2025-12-03 14:30:00+00	JNJ	SELL	43.4	206.09	8944.31
+1870	10	2025-12-03 14:30:00+00	PFE	SELL	270.76	25.7	6958.53
+1871	10	2025-12-03 14:30:00+00	AAPL	BUY	18.64	287.34	5356.02
+1872	10	2025-12-03 14:30:00+00	TSM	BUY	50.78	292.97	14877.02
+1873	11	2025-12-03 14:30:00+00	JNJ	SELL	33.44	206.09	6891.65
+1874	11	2025-12-03 14:30:00+00	PFE	SELL	460.54	25.7	11835.88
+1875	11	2025-12-03 14:30:00+00	SBUX	SELL	53.57	85.91	4602.2
+1876	11	2025-12-03 14:30:00+00	AAPL	BUY	23.66	287.34	6798.46
+1877	11	2025-12-03 14:30:00+00	BA	BUY	19.59	203.82	3992.83
+1878	11	2025-12-03 14:30:00+00	JPM	BUY	24.78	308.89	7654.29
+1879	11	2025-12-03 14:30:00+00	TSM	BUY	14.01	292.97	4104.51
+1880	11	2025-12-03 14:30:00+00	WMT	BUY	37.72	113.46	4279.71
+1881	2	2025-12-10 14:30:00+00	BA	SELL	110.07	201.05	22129.57
+1882	2	2025-12-10 14:30:00+00	PFE	SELL	42.09	25.32	1065.72
+1883	2	2025-12-10 14:30:00+00	TSM	SELL	3.51	304.42	1068.51
+1884	2	2025-12-10 14:30:00+00	WMT	SELL	7.14	115.4	823.96
+1885	2	2025-12-10 14:30:00+00	JNJ	BUY	3.73	202.38	754.88
+1886	2	2025-12-10 14:30:00+00	XOM	BUY	204.28	119.11	24331.79
+1887	5	2025-12-10 14:30:00+00	AAPL	SELL	72.93	277.45	20234.43
+1888	5	2025-12-10 14:30:00+00	JPM	SELL	13.34	304.88	4067.1
+1889	5	2025-12-10 14:30:00+00	WMT	SELL	459.92	115.4	53074.77
+1890	5	2025-12-10 14:30:00+00	BA	BUY	29.33	201.05	5896.8
+1891	5	2025-12-10 14:30:00+00	DIS	BUY	15.78	107.56	1697.3
+1892	5	2025-12-10 14:30:00+00	JNJ	BUY	46.99	202.38	9509.84
+1893	5	2025-12-10 14:30:00+00	TSM	BUY	193.52	304.42	58911.36
+1894	6	2025-12-10 14:30:00+00	AAPL	SELL	25.59	277.45	7099.95
+1895	6	2025-12-10 14:30:00+00	WMT	SELL	72.96	115.4	8419.58
+1896	6	2025-12-10 14:30:00+00	TSM	BUY	30.91	304.42	9409.62
+1897	6	2025-12-10 14:30:00+00	XOM	BUY	35.24	119.11	4197.44
+1898	7	2025-12-10 14:30:00+00	NFLX	SELL	31.03	95.53	2964.3
+1899	7	2025-12-10 14:30:00+00	PFE	SELL	101.15	25.32	2561.12
+1900	7	2025-12-10 14:30:00+00	SBUX	SELL	22.97	82.53	1895.71
+1901	7	2025-12-10 14:30:00+00	NVDA	BUY	13.28	183.86	2441.66
+1902	7	2025-12-10 14:30:00+00	XOM	BUY	22.26	119.11	2651.39
+1903	10	2025-12-10 14:30:00+00	AAPL	SELL	20.12	277.45	5582.29
+1904	10	2025-12-10 14:30:00+00	WMT	SELL	97.13	115.4	11208.8
+1905	10	2025-12-10 14:30:00+00	TSM	BUY	39.25	304.42	11948.49
+1906	11	2025-12-10 14:30:00+00	AAPL	SELL	38.36	277.45	10642.98
+1907	11	2025-12-10 14:30:00+00	JPM	SELL	19.44	304.88	5926.87
+1908	11	2025-12-10 14:30:00+00	PFE	SELL	78.89	25.32	1997.49
+1909	11	2025-12-10 14:30:00+00	WMT	SELL	176.6	115.4	20379.64
+1910	11	2025-12-10 14:30:00+00	DIS	BUY	37.9	107.56	4076.52
+1911	11	2025-12-10 14:30:00+00	TSM	BUY	86.04	304.42	26192.3
+1912	11	2025-12-10 14:30:00+00	XOM	BUY	55.94	119.11	6663.01
+1913	12	2025-12-10 14:30:00+00	JNJ	SELL	72.23	202.38	14617.91
+1914	2	2025-12-17 14:30:00+00	JNJ	SELL	11.19	208.77	2336.14
+1915	2	2025-12-17 14:30:00+00	TSM	SELL	14	282.48	3954.72
+1916	2	2025-12-17 14:30:00+00	WMT	SELL	237.68	115.48	27447.29
+1917	2	2025-12-17 14:30:00+00	XOM	SELL	204.28	115.67	23629.07
+1918	2	2025-12-17 14:30:00+00	GE	BUY	90.7	300.51	27256.26
+1919	2	2025-12-17 14:30:00+00	JPM	BUY	90.83	317.74	28860.32
+1920	2	2025-12-17 14:30:00+00	PFE	BUY	49.52	25.25	1250.38
+1921	3	2025-12-17 14:30:00+00	TSM	SELL	33.62	282.48	9496.98
+1922	3	2025-12-17 14:30:00+00	JPM	BUY	28.51	317.74	9058.77
+1923	4	2025-12-17 14:30:00+00	TSM	SELL	82.82	282.48	23394.99
+1924	4	2025-12-17 14:30:00+00	WMT	SELL	63.5	115.48	7332.98
+1925	4	2025-12-17 14:30:00+00	DIS	BUY	42.31	111.7	4726.03
+1926	4	2025-12-17 14:30:00+00	GE	BUY	36.28	300.51	10902.5
+1927	4	2025-12-17 14:30:00+00	JPM	BUY	64.35	317.74	20446.57
+1928	5	2025-12-17 14:30:00+00	BA	SELL	46.07	209.76	9663.64
+1929	5	2025-12-17 14:30:00+00	JNJ	SELL	29.02	208.77	6058.51
+1930	5	2025-12-17 14:30:00+00	TSM	SELL	200.24	282.48	56563.8
+1931	5	2025-12-17 14:30:00+00	WMT	SELL	202.25	115.48	23355.83
+1932	5	2025-12-17 14:30:00+00	DIS	BUY	365.23	111.7	40796.19
+1933	5	2025-12-17 14:30:00+00	JPM	BUY	170.44	317.74	54155.61
+1934	6	2025-12-17 14:30:00+00	TSM	SELL	84.91	282.48	23985.38
+1935	6	2025-12-17 14:30:00+00	WMT	SELL	110.94	115.48	12811.35
+1936	6	2025-12-17 14:30:00+00	XOM	SELL	41.76	115.67	4830.38
+1937	6	2025-12-17 14:30:00+00	DIS	BUY	71.65	111.7	8003.31
+1938	6	2025-12-17 14:30:00+00	GE	BUY	32.81	300.51	9859.73
+1939	6	2025-12-17 14:30:00+00	JPM	BUY	65.43	317.74	20789.73
+1940	7	2025-12-17 14:30:00+00	BA	SELL	9.64	209.76	2022.09
+1941	7	2025-12-17 14:30:00+00	MSFT	SELL	4.32	477.74	2063.84
+1942	7	2025-12-17 14:30:00+00	NVDA	SELL	14.05	174.38	2450.04
+1943	7	2025-12-17 14:30:00+00	TSM	SELL	40.02	282.48	11304.85
+1944	7	2025-12-17 14:30:00+00	WMT	SELL	71.25	115.48	8227.95
+1945	7	2025-12-17 14:30:00+00	XOM	SELL	29.82	115.67	3449.28
+1946	7	2025-12-17 14:30:00+00	GE	BUY	34.96	300.51	10505.83
+1947	7	2025-12-17 14:30:00+00	JPM	BUY	39.91	317.74	12681
+1948	7	2025-12-17 14:30:00+00	PFE	BUY	118.43	25.25	2990.36
+1949	8	2025-12-17 14:30:00+00	TSM	SELL	59.26	282.48	16739.76
+1950	8	2025-12-17 14:30:00+00	WMT	SELL	123.38	115.48	14247.92
+1951	8	2025-12-17 14:30:00+00	GE	BUY	39.22	300.51	11786
+1952	8	2025-12-17 14:30:00+00	JPM	BUY	52.42	317.74	16655.93
+1953	9	2025-12-17 14:30:00+00	TSM	SELL	140.04	282.48	39558.5
+1954	9	2025-12-17 14:30:00+00	WMT	SELL	200.24	115.48	23123.72
+1955	9	2025-12-17 14:30:00+00	GE	BUY	51.13	300.51	15365.08
+1956	9	2025-12-17 14:30:00+00	JPM	BUY	127.12	317.74	40391.11
+1957	10	2025-12-17 14:30:00+00	TSM	SELL	127.45	282.48	36002.08
+1958	10	2025-12-17 14:30:00+00	WMT	SELL	126.63	115.48	14623.23
+1959	10	2025-12-17 14:30:00+00	DIS	BUY	48.13	111.7	5376.12
+1960	10	2025-12-17 14:30:00+00	GE	BUY	49.43	300.51	14854.21
+1961	10	2025-12-17 14:30:00+00	JPM	BUY	107.43	317.74	34134.81
+1962	11	2025-12-17 14:30:00+00	BA	SELL	12.71	209.76	2666.05
+1963	11	2025-12-17 14:30:00+00	TSM	SELL	128.77	282.48	36374.95
+1964	11	2025-12-17 14:30:00+00	WMT	SELL	126.97	115.48	14662.5
+1965	11	2025-12-17 14:30:00+00	XOM	SELL	61.48	115.67	7111.39
+1966	11	2025-12-17 14:30:00+00	DIS	BUY	91.11	111.7	10176.99
+1967	11	2025-12-17 14:30:00+00	GE	BUY	36.06	300.51	10836.39
+1968	11	2025-12-17 14:30:00+00	JPM	BUY	112.24	317.74	35663.14
+1969	11	2025-12-17 14:30:00+00	PFE	BUY	94.26	25.25	2380.07
+1970	11	2025-12-17 14:30:00+00	V	BUY	5.54	346.26	1918.28
+1971	12	2025-12-17 14:30:00+00	TSM	SELL	57.91	282.48	16358.42
+1972	12	2025-12-17 14:30:00+00	JPM	BUY	46.52	317.74	14781.26
+1973	2	2025-12-24 14:30:00+00	GE	SELL	12.12	316.23	3832.71
+1974	2	2025-12-24 14:30:00+00	JNJ	SELL	122.88	207.02	25438.62
+1975	2	2025-12-24 14:30:00+00	JPM	SELL	8.7	328.07	2854.21
+1976	2	2025-12-24 14:30:00+00	PFE	SELL	981.39	25.07	24603.45
+1977	2	2025-12-24 14:30:00+00	NVDA	BUY	140.72	187.23	26347.01
+1978	2	2025-12-24 14:30:00+00	TSM	BUY	14.07	297.07	4179.77
+1979	2	2025-12-24 14:30:00+00	XOM	BUY	218.65	119.82	26198.64
+1980	3	2025-12-24 14:30:00+00	JNJ	SELL	41.88	207.02	8670
+1981	3	2025-12-24 14:30:00+00	JPM	SELL	20.65	328.07	6774.65
+1982	3	2025-12-24 14:30:00+00	TSM	BUY	22.06	297.07	6553.36
+1983	4	2025-12-24 14:30:00+00	GE	SELL	26.26	316.23	8304.2
+1984	4	2025-12-24 14:30:00+00	JNJ	SELL	43.35	207.02	8974.32
+1985	4	2025-12-24 14:30:00+00	JPM	SELL	44.32	328.07	14540.06
+1986	4	2025-12-24 14:30:00+00	PFE	SELL	158.82	25.07	3981.62
+1987	4	2025-12-24 14:30:00+00	NVDA	BUY	36.41	187.23	6817.04
+1988	4	2025-12-24 14:30:00+00	TSM	BUY	41.25	297.07	12254.14
+1989	4	2025-12-24 14:30:00+00	XOM	BUY	76.95	119.82	9220.15
+1990	5	2025-12-24 14:30:00+00	DIS	SELL	331.75	114.06	37839.4
+1991	5	2025-12-24 14:30:00+00	JNJ	SELL	19.45	207.02	4026.54
+1992	5	2025-12-24 14:30:00+00	JPM	BUY	128.85	328.07	42271.82
+1993	6	2025-12-24 14:30:00+00	GE	SELL	17	316.23	5375.91
+1994	6	2025-12-24 14:30:00+00	JNJ	SELL	27.75	207.02	5744.81
+1995	6	2025-12-24 14:30:00+00	JPM	SELL	25.91	328.07	8500.29
+1996	6	2025-12-24 14:30:00+00	PFE	SELL	158.43	25.07	3971.84
+1997	6	2025-12-24 14:30:00+00	NVDA	BUY	26.49	187.23	4959.72
+1998	6	2025-12-24 14:30:00+00	TSM	BUY	19.93	297.07	5920.61
+1999	6	2025-12-24 14:30:00+00	XOM	BUY	93.65	119.82	11221.14
+2000	7	2025-12-24 14:30:00+00	GE	SELL	21.05	316.23	6656.64
+2001	7	2025-12-24 14:30:00+00	JNJ	SELL	16.98	207.02	3515.2
+2002	7	2025-12-24 14:30:00+00	JPM	SELL	26.65	328.07	8743.07
+2003	7	2025-12-24 14:30:00+00	PFE	SELL	198.51	25.07	4976.65
+2004	7	2025-12-24 14:30:00+00	CVX	BUY	23.29	150.91	3514.69
+2005	7	2025-12-24 14:30:00+00	DIS	BUY	19.96	114.06	2276.64
+2006	7	2025-12-24 14:30:00+00	MSFT	BUY	3.74	487.8	1824.37
+2007	7	2025-12-24 14:30:00+00	NVDA	BUY	22.71	187.23	4251.99
+2008	7	2025-12-24 14:30:00+00	TSM	BUY	23.5	297.07	6981.14
+2009	7	2025-12-24 14:30:00+00	XOM	BUY	55.76	119.82	6681.16
+2010	8	2025-12-24 14:30:00+00	GE	SELL	21.52	316.23	6805.27
+2011	8	2025-12-24 14:30:00+00	JNJ	SELL	47.31	207.02	9794.12
+2012	8	2025-12-24 14:30:00+00	JPM	SELL	33.78	328.07	11082.2
+2013	8	2025-12-24 14:30:00+00	DIS	BUY	63.74	114.06	7270.18
+2014	8	2025-12-24 14:30:00+00	TSM	BUY	28.94	297.07	8597.21
+2015	8	2025-12-24 14:30:00+00	XOM	BUY	72.65	119.82	8704.92
+2016	9	2025-12-24 14:30:00+00	JNJ	SELL	84.75	207.02	17544.94
+2017	9	2025-12-24 14:30:00+00	JPM	SELL	59.88	328.07	19644.83
+2018	9	2025-12-24 14:30:00+00	TSM	BUY	69.26	297.07	20575.07
+2019	10	2025-12-24 14:30:00+00	GE	SELL	31.87	316.23	10078.25
+2020	10	2025-12-24 14:30:00+00	JNJ	SELL	30.99	207.02	6415.55
+2021	10	2025-12-24 14:30:00+00	JPM	SELL	43.84	328.07	14382.59
+2022	10	2025-12-24 14:30:00+00	NVDA	BUY	41.24	187.23	7721.37
+2023	10	2025-12-24 14:30:00+00	TSM	BUY	33.84	297.07	10052.85
+2024	10	2025-12-24 14:30:00+00	XOM	BUY	90.28	119.82	10817.35
+2025	11	2025-12-24 14:30:00+00	DIS	SELL	42.02	114.06	4792.8
+2026	11	2025-12-24 14:30:00+00	GE	SELL	12.39	316.23	3918.09
+2027	11	2025-12-24 14:30:00+00	JNJ	SELL	24.96	207.02	5167.22
+2028	11	2025-12-24 14:30:00+00	JPM	SELL	11.7	328.07	3838.42
+2029	11	2025-12-24 14:30:00+00	PFE	SELL	124.83	25.07	3129.49
+2030	11	2025-12-24 14:30:00+00	WMT	SELL	15.38	111.31	1711.95
+2031	11	2025-12-24 14:30:00+00	CVX	BUY	12.15	150.91	1833.56
+2032	11	2025-12-24 14:30:00+00	NVDA	BUY	25.71	187.23	4813.68
+2033	11	2025-12-24 14:30:00+00	TSM	BUY	11.75	297.07	3490.57
+2034	11	2025-12-24 14:30:00+00	V	BUY	6.27	354.23	2221.02
+2035	11	2025-12-24 14:30:00+00	XOM	BUY	109.1	119.82	13072.36
+2036	2	2025-12-31 14:30:00+00	NVDA	SELL	140.72	189.01	26597.49
+2037	2	2025-12-31 14:30:00+00	TSM	SELL	3.78	306.55	1158.76
+2038	2	2025-12-31 14:30:00+00	XOM	SELL	0.02	120.25	2.41
+2039	2	2025-12-31 14:30:00+00	GE	BUY	1.57	310.44	487.39
+2040	2	2025-12-31 14:30:00+00	JNJ	BUY	124.02	206.93	25663.46
+2041	2	2025-12-31 14:30:00+00	JPM	BUY	4.98	323.35	1610.28
+2042	4	2025-12-31 14:30:00+00	NVDA	SELL	23.19	189.01	4383.14
+2043	5	2025-12-31 14:30:00+00	JPM	SELL	216.7	323.35	70069.95
+2044	5	2025-12-31 14:30:00+00	CVX	BUY	30.26	152.07	4601.64
+2045	5	2025-12-31 14:30:00+00	TSM	BUY	205.99	306.55	63146.23
+2046	6	2025-12-31 14:30:00+00	JPM	SELL	18.38	323.35	5943.17
+2047	6	2025-12-31 14:30:00+00	NVDA	SELL	24.38	189.01	4608.06
+2048	6	2025-12-31 14:30:00+00	XOM	SELL	45.05	120.25	5417.26
+2049	6	2025-12-31 14:30:00+00	TSM	BUY	39.49	306.55	12105.66
+2050	7	2025-12-31 14:30:00+00	NVDA	SELL	10.89	189.01	2058.32
+2051	7	2025-12-31 14:30:00+00	XOM	SELL	39.49	120.25	4748.67
+2052	7	2025-12-31 14:30:00+00	JNJ	BUY	16.39	206.93	3391.58
+2053	7	2025-12-31 14:30:00+00	TSM	BUY	9.89	306.55	3031.78
+2054	9	2025-12-31 14:30:00+00	GE	SELL	49.68	310.44	15422.66
+2055	10	2025-12-31 14:30:00+00	NVDA	SELL	35.07	189.01	6628.58
+2056	10	2025-12-31 14:30:00+00	TSM	BUY	49.64	306.55	15217.14
+2057	11	2025-12-31 14:30:00+00	GE	SELL	9.04	310.44	2806.38
+2058	11	2025-12-31 14:30:00+00	JPM	SELL	62.43	323.35	20186.74
+2059	11	2025-12-31 14:30:00+00	NVDA	SELL	23.28	189.01	4400.15
+2060	11	2025-12-31 14:30:00+00	V	SELL	7.38	352.94	2604.7
+2061	11	2025-12-31 14:30:00+00	XOM	SELL	64.77	120.25	7788.59
+2062	11	2025-12-31 14:30:00+00	CVX	BUY	12.14	152.07	1846.13
+2063	11	2025-12-31 14:30:00+00	TSM	BUY	83.24	306.55	25517.22
+2064	2	2026-01-07 14:30:00+00	JNJ	SELL	124.02	207.46	25729.19
+2065	2	2026-01-07 14:30:00+00	JPM	SELL	87.11	325.23	28330.79
+2066	2	2026-01-07 14:30:00+00	TSM	SELL	6.57	322.23	2117.05
+2067	2	2026-01-07 14:30:00+00	XOM	SELL	0.54	119.52	64.54
+2068	2	2026-01-07 14:30:00+00	CVX	BUY	182.34	156.27	28494.27
+2069	2	2026-01-07 14:30:00+00	GE	BUY	3.18	326.4	1037.95
+2070	2	2026-01-07 14:30:00+00	NVDA	BUY	139.85	191.01	26712.75
+2071	3	2026-01-07 14:30:00+00	CVX	BUY	46.06	156.27	7197.8
+2072	4	2026-01-07 14:30:00+00	XOM	SELL	49.51	119.52	5917.44
+2073	4	2026-01-07 14:30:00+00	CVX	BUY	79.67	156.27	12450.03
+2074	5	2026-01-07 14:30:00+00	DIS	SELL	49.02	113.38	5557.89
+2075	5	2026-01-07 14:30:00+00	JPM	SELL	82.8	325.23	26929.04
+2076	5	2026-01-07 14:30:00+00	COST	BUY	1.95	887.86	1731.33
+2077	5	2026-01-07 14:30:00+00	CVX	BUY	97.71	156.27	15269.14
+2078	5	2026-01-07 14:30:00+00	GE	BUY	4.8	326.4	1566.72
+2079	5	2026-01-07 14:30:00+00	NVDA	BUY	69.91	191.01	13353.51
+2080	6	2026-01-07 14:30:00+00	DIS	SELL	58.57	113.38	6640.67
+2081	6	2026-01-07 14:30:00+00	JPM	SELL	20.69	325.23	6729.01
+2082	6	2026-01-07 14:30:00+00	CVX	BUY	73.19	156.27	11437.4
+2083	6	2026-01-07 14:30:00+00	NVDA	BUY	24.09	191.01	4601.43
+2084	7	2026-01-07 14:30:00+00	DIS	SELL	20.85	113.38	2363.97
+2085	7	2026-01-07 14:30:00+00	JNJ	SELL	12.35	207.46	2562.13
+2086	7	2026-01-07 14:30:00+00	JPM	SELL	10.49	325.23	3411.66
+2087	7	2026-01-07 14:30:00+00	TSM	SELL	7.86	322.23	2532.73
+2088	7	2026-01-07 14:30:00+00	SBUX	BUY	28.14	87.22	2454.37
+2089	8	2026-01-07 14:30:00+00	XOM	SELL	60.16	119.52	7190.32
+2090	9	2026-01-07 14:30:00+00	JPM	SELL	66.86	325.23	21744.88
+2091	9	2026-01-07 14:30:00+00	CVX	BUY	124.07	156.27	19388.42
+2092	10	2026-01-07 14:30:00+00	JPM	SELL	47.39	325.23	15412.65
+2093	10	2026-01-07 14:30:00+00	TSM	SELL	24.86	322.23	8010.64
+2094	10	2026-01-07 14:30:00+00	XOM	SELL	77.29	119.52	9237.7
+2095	10	2026-01-07 14:30:00+00	CVX	BUY	101.57	156.27	15872.34
+2096	10	2026-01-07 14:30:00+00	NVDA	BUY	29.54	191.01	5642.44
+2097	11	2026-01-07 14:30:00+00	DIS	SELL	71.32	113.38	8086.26
+2098	11	2026-01-07 14:30:00+00	JPM	SELL	28.92	325.23	9405.65
+2099	11	2026-01-07 14:30:00+00	XOM	SELL	25.93	119.52	3099.15
+2100	11	2026-01-07 14:30:00+00	CVX	BUY	42.54	156.27	6647.73
+2101	11	2026-01-07 14:30:00+00	GE	BUY	8.63	326.4	2816.83
+2102	11	2026-01-07 14:30:00+00	NVDA	BUY	21.53	191.01	4112.45
+2103	11	2026-01-07 14:30:00+00	SBUX	BUY	30.44	87.22	2654.98
+2104	11	2026-01-07 14:30:00+00	TSM	BUY	14.59	322.23	4701.34
+2105	2	2026-01-14 14:30:00+00	CVX	SELL	6.73	166.81	1122.63
+2106	2	2026-01-14 14:30:00+00	GE	SELL	4.51	320.78	1446.72
+2107	2	2026-01-14 14:30:00+00	NVDA	SELL	139.85	181.68	25407.95
+2108	2	2026-01-14 14:30:00+00	TSM	SELL	91.44	327.63	29958.49
+2109	2	2026-01-14 14:30:00+00	JNJ	BUY	137.62	217.34	29910.33
+2110	2	2026-01-14 14:30:00+00	WMT	BUY	229.95	119.35	27444.53
+2111	2	2026-01-14 14:30:00+00	XOM	BUY	4.49	128.84	578.49
+2112	3	2026-01-14 14:30:00+00	MSFT	SELL	13	464.69	6040.97
+2113	3	2026-01-14 14:30:00+00	TSM	SELL	28.88	327.63	9461.95
+2114	3	2026-01-14 14:30:00+00	JNJ	BUY	30.09	217.34	6539.76
+2115	4	2026-01-14 14:30:00+00	JPM	SELL	22.26	308.07	6857.64
+2116	4	2026-01-14 14:30:00+00	TSM	SELL	41.62	327.63	13635.96
+2117	4	2026-01-14 14:30:00+00	JNJ	BUY	73.86	217.34	16052.73
+2118	4	2026-01-14 14:30:00+00	WMT	BUY	53.81	119.35	6422.22
+2119	4	2026-01-14 14:30:00+00	XOM	BUY	44.11	128.84	5683.13
+2120	5	2026-01-14 14:30:00+00	GE	SELL	5.27	320.78	1690.51
+2121	5	2026-01-14 14:30:00+00	NVDA	SELL	69.92	181.68	12703.07
+2122	5	2026-01-14 14:30:00+00	TSM	SELL	204.64	327.63	67046.2
+2123	5	2026-01-14 14:30:00+00	JNJ	BUY	291.98	217.34	63458.93
+2124	5	2026-01-14 14:30:00+00	WMT	BUY	77.48	119.35	9247.24
+2125	5	2026-01-14 14:30:00+00	XOM	BUY	119.73	128.84	15426.01
+2126	6	2026-01-14 14:30:00+00	GE	SELL	13.3	320.78	4266.37
+2127	6	2026-01-14 14:30:00+00	JPM	SELL	15.43	308.07	4753.52
+2128	6	2026-01-14 14:30:00+00	NVDA	SELL	33.62	181.68	6108.08
+2129	6	2026-01-14 14:30:00+00	TSM	SELL	50.11	327.63	16417.54
+2130	6	2026-01-14 14:30:00+00	CVX	BUY	32.35	166.81	5396.3
+2131	6	2026-01-14 14:30:00+00	JNJ	BUY	63.97	217.34	13903.24
+2132	6	2026-01-14 14:30:00+00	WMT	BUY	76.49	119.35	9129.08
+2133	7	2026-01-14 14:30:00+00	MSFT	SELL	4.53	464.69	2105.05
+2134	7	2026-01-14 14:30:00+00	TSM	SELL	25.39	327.63	8318.53
+2135	7	2026-01-14 14:30:00+00	COST	BUY	2.66	946.2	2516.89
+2136	7	2026-01-14 14:30:00+00	CVX	BUY	27.29	166.81	4552.24
+2137	7	2026-01-14 14:30:00+00	JNJ	BUY	16.57	217.34	3601.32
+2138	7	2026-01-14 14:30:00+00	PFE	BUY	81.94	25.26	2069.8
+2139	7	2026-01-14 14:30:00+00	WMT	BUY	37.84	119.35	4516.2
+2140	8	2026-01-14 14:30:00+00	JPM	SELL	26.71	308.07	8228.55
+2141	8	2026-01-14 14:30:00+00	TSM	SELL	25.81	327.63	8456.13
+2142	8	2026-01-14 14:30:00+00	CVX	BUY	42.73	166.81	7127.79
+2143	8	2026-01-14 14:30:00+00	JNJ	BUY	49.73	217.34	10808.32
+2144	9	2026-01-14 14:30:00+00	TSM	SELL	69.91	327.63	22904.61
+2145	9	2026-01-14 14:30:00+00	JNJ	BUY	151.03	217.34	32824.86
+2146	9	2026-01-14 14:30:00+00	XOM	BUY	124.71	128.84	16067.64
+2147	10	2026-01-14 14:30:00+00	NVDA	SELL	39.26	181.68	7132.76
+2148	10	2026-01-14 14:30:00+00	TSM	SELL	52.51	327.63	17203.85
+2149	10	2026-01-14 14:30:00+00	JNJ	BUY	82.54	217.34	17939.24
+2150	10	2026-01-14 14:30:00+00	WMT	BUY	93.42	119.35	11149.68
+2151	10	2026-01-14 14:30:00+00	XOM	BUY	85.1	128.84	10964.28
+2152	11	2026-01-14 14:30:00+00	GE	SELL	15.98	320.78	5126.06
+2153	11	2026-01-14 14:30:00+00	JPM	SELL	15.1	308.07	4651.86
+2154	11	2026-01-14 14:30:00+00	NVDA	SELL	29.32	181.68	5326.86
+2155	11	2026-01-14 14:30:00+00	TSM	SELL	94.55	327.63	30977.42
+2156	11	2026-01-14 14:30:00+00	V	SELL	7.91	327.04	2586.89
+2157	11	2026-01-14 14:30:00+00	COST	BUY	4.68	946.2	4428.22
+2158	11	2026-01-14 14:30:00+00	CVX	BUY	65.27	166.81	10887.69
+2159	11	2026-01-14 14:30:00+00	JNJ	BUY	70.16	217.34	15248.57
+2160	11	2026-01-14 14:30:00+00	WMT	BUY	127.14	119.35	15174.16
+2161	11	2026-01-14 14:30:00+00	XOM	BUY	97.95	128.84	12619.88
+2162	2	2026-01-21 14:30:00+00	CVX	SELL	0.93	167.07	155.38
+2163	2	2026-01-21 14:30:00+00	JNJ	SELL	5.38	214.88	1156.05
+2164	2	2026-01-21 14:30:00+00	WMT	SELL	229.95	118.62	27276.67
+2165	2	2026-01-21 14:30:00+00	XOM	SELL	8.24	132.87	1094.85
+2166	2	2026-01-21 14:30:00+00	GE	BUY	0.78	317.58	247.71
+2167	2	2026-01-21 14:30:00+00	TSM	BUY	88.72	331.8	29437.3
+2168	4	2026-01-21 14:30:00+00	DIS	SELL	36.55	111.52	4076.06
+2169	4	2026-01-21 14:30:00+00	JNJ	SELL	41.99	214.88	9022.81
+2170	4	2026-01-21 14:30:00+00	TSM	BUY	32.58	331.8	10810.04
+2171	5	2026-01-21 14:30:00+00	CVX	SELL	112.14	167.07	18735.23
+2172	5	2026-01-21 14:30:00+00	JNJ	SELL	201.05	214.88	43201.62
+2173	5	2026-01-21 14:30:00+00	WMT	SELL	38.99	118.62	4624.99
+2174	5	2026-01-21 14:30:00+00	XOM	SELL	34.59	132.87	4595.97
+2175	5	2026-01-21 14:30:00+00	COST	BUY	55.55	973.8	54094.59
+2176	5	2026-01-21 14:30:00+00	NKE	BUY	44.85	65.07	2918.39
+2177	5	2026-01-21 14:30:00+00	TSM	BUY	32.32	331.8	10723.78
+2178	6	2026-01-21 14:30:00+00	CVX	SELL	28.7	167.07	4794.91
+2179	6	2026-01-21 14:30:00+00	JNJ	SELL	19.5	214.88	4190.16
+2180	6	2026-01-21 14:30:00+00	COST	BUY	6.65	973.8	6475.77
+2181	6	2026-01-21 14:30:00+00	TSM	BUY	21.21	331.8	7037.48
+2182	7	2026-01-21 14:30:00+00	WMT	SELL	27.76	118.62	3292.89
+2183	7	2026-01-21 14:30:00+00	TSM	BUY	7.26	331.8	2408.87
+2184	7	2026-01-21 14:30:00+00	XOM	BUY	16.27	132.87	2161.79
+2185	9	2026-01-21 14:30:00+00	TSM	BUY	65.41	331.8	21703.04
+2186	10	2026-01-21 14:30:00+00	JNJ	SELL	33.81	214.88	7265.09
+2187	10	2026-01-21 14:30:00+00	TSM	BUY	40.8	331.8	13537.44
+2188	11	2026-01-21 14:30:00+00	CVX	SELL	65.19	167.07	10891.29
+2189	11	2026-01-21 14:30:00+00	WMT	SELL	49.23	118.62	5839.66
+2190	11	2026-01-21 14:30:00+00	XOM	SELL	19.51	132.87	2592.29
+2191	11	2026-01-21 14:30:00+00	COST	BUY	6.61	973.8	6436.82
+2192	11	2026-01-21 14:30:00+00	NKE	BUY	49.96	65.07	3250.9
+2193	11	2026-01-21 14:30:00+00	TSM	BUY	18.93	331.8	6280.97
+2194	2	2026-01-28 14:30:00+00	CVX	SELL	1.25	169.69	212.11
+2195	2	2026-01-28 14:30:00+00	GE	SELL	79.6	294.73	23460.51
+2196	2	2026-01-28 14:30:00+00	JNJ	SELL	7.34	226.8	1664.71
+2197	2	2026-01-28 14:30:00+00	TSM	SELL	88.72	339.35	30107.13
+2198	2	2026-01-28 14:30:00+00	XOM	SELL	3.11	137.09	426.35
+2199	2	2026-01-28 14:30:00+00	NVDA	BUY	148.83	191.4	28486.06
+2200	2	2026-01-28 14:30:00+00	SBUX	BUY	276.19	99.15	27384.24
+2201	4	2026-01-28 14:30:00+00	CVX	SELL	26.04	169.69	4418.73
+2202	4	2026-01-28 14:30:00+00	GE	SELL	14.36	294.73	4232.32
+2203	4	2026-01-28 14:30:00+00	TSM	SELL	35.91	339.35	12186.06
+2204	4	2026-01-28 14:30:00+00	WMT	SELL	57.69	117.26	6764.73
+2205	4	2026-01-28 14:30:00+00	NVDA	BUY	64.57	191.4	12358.7
+2206	4	2026-01-28 14:30:00+00	SBUX	BUY	68.28	99.15	6769.96
+2207	4	2026-01-28 14:30:00+00	XOM	BUY	36.89	137.09	5057.25
+2208	5	2026-01-28 14:30:00+00	COST	SELL	57.46	965.01	55449.47
+2209	5	2026-01-28 14:30:00+00	JNJ	SELL	87.68	226.8	19885.82
+2210	5	2026-01-28 14:30:00+00	NKE	SELL	44.95	63.13	2837.69
+2211	5	2026-01-28 14:30:00+00	TSM	SELL	33.66	339.35	11422.52
+2212	5	2026-01-28 14:30:00+00	WMT	SELL	39.13	117.26	4588.38
+2213	5	2026-01-28 14:30:00+00	NVDA	BUY	28.49	191.4	5452.99
+2214	5	2026-01-28 14:30:00+00	XOM	BUY	663.33	137.09	90935.91
+2215	6	2026-01-28 14:30:00+00	COST	SELL	5.18	965.01	4998.75
+2216	6	2026-01-28 14:30:00+00	CVX	SELL	28.05	169.69	4759.8
+2217	6	2026-01-28 14:30:00+00	TSM	SELL	28.06	339.35	9522.16
+2218	6	2026-01-28 14:30:00+00	WMT	SELL	87.14	117.26	10218.04
+2219	6	2026-01-28 14:30:00+00	MSFT	BUY	11.24	481.02	5406.66
+2220	6	2026-01-28 14:30:00+00	NVDA	BUY	80.89	191.4	15482.35
+2221	6	2026-01-28 14:30:00+00	SBUX	BUY	59.23	99.15	5872.65
+2222	6	2026-01-28 14:30:00+00	XOM	BUY	88.17	137.09	12087.23
+2223	7	2026-01-28 14:30:00+00	CVX	SELL	29.51	169.69	5007.55
+2224	7	2026-01-28 14:30:00+00	GE	SELL	10.14	294.73	2988.56
+2225	7	2026-01-28 14:30:00+00	TSM	SELL	7.25	339.35	2460.29
+2226	7	2026-01-28 14:30:00+00	MSFT	BUY	6.47	481.02	3112.2
+2227	7	2026-01-28 14:30:00+00	NVDA	BUY	12.5	191.4	2392.5
+2228	7	2026-01-28 14:30:00+00	SBUX	BUY	42.47	99.15	4210.9
+2229	8	2026-01-28 14:30:00+00	NVDA	BUY	54.09	191.4	10352.83
+2230	8	2026-01-28 14:30:00+00	SBUX	BUY	74	99.15	7337.1
+2231	8	2026-01-28 14:30:00+00	XOM	BUY	66.89	137.09	9169.95
+2232	9	2026-01-28 14:30:00+00	JNJ	SELL	115.32	226.8	26154.58
+2233	9	2026-01-28 14:30:00+00	TSM	SELL	71.44	339.35	24243.16
+2234	9	2026-01-28 14:30:00+00	NVDA	BUY	110.65	191.4	21178.41
+2235	10	2026-01-28 14:30:00+00	CVX	SELL	38.56	169.69	6543.25
+2236	10	2026-01-28 14:30:00+00	DIS	SELL	53.02	110.36	5851.29
+2237	10	2026-01-28 14:30:00+00	GE	SELL	20.37	294.73	6003.65
+2238	10	2026-01-28 14:30:00+00	JPM	SELL	19.09	298.51	5698.56
+2239	10	2026-01-28 14:30:00+00	TSM	SELL	47.45	339.35	16102.16
+2240	10	2026-01-28 14:30:00+00	WMT	SELL	102.98	117.26	12075.43
+2241	10	2026-01-28 14:30:00+00	NVDA	BUY	96.88	191.4	18542.83
+2242	10	2026-01-28 14:30:00+00	SBUX	BUY	76.45	99.15	7580.02
+2243	10	2026-01-28 14:30:00+00	XOM	BUY	75.4	137.09	10336.59
+2244	11	2026-01-28 14:30:00+00	COST	SELL	9.48	965.01	9148.29
+2245	11	2026-01-28 14:30:00+00	CVX	SELL	19.32	169.69	3278.41
+2246	11	2026-01-28 14:30:00+00	DIS	SELL	16.12	110.36	1779
+2247	11	2026-01-28 14:30:00+00	GE	SELL	7.62	294.73	2245.84
+2248	11	2026-01-28 14:30:00+00	JNJ	SELL	42.24	226.8	9580.03
+2249	11	2026-01-28 14:30:00+00	NKE	SELL	50.52	63.13	3189.33
+2250	11	2026-01-28 14:30:00+00	TSM	SELL	28.18	339.35	9562.88
+2251	11	2026-01-28 14:30:00+00	WMT	SELL	77.18	117.26	9050.13
+2252	11	2026-01-28 14:30:00+00	MSFT	BUY	15.15	481.02	7287.45
+2253	11	2026-01-28 14:30:00+00	NVDA	BUY	103.76	191.4	19859.66
+2254	11	2026-01-28 14:30:00+00	PFE	BUY	101.49	25.99	2637.73
+2255	11	2026-01-28 14:30:00+00	SBUX	BUY	19.79	99.15	1962.18
+2256	11	2026-01-28 14:30:00+00	XOM	BUY	124.57	137.09	17077.3
+2257	2	2026-02-04 14:30:00+00	CVX	SELL	4.88	179.87	877.77
+2258	2	2026-02-04 14:30:00+00	JNJ	SELL	3.34	234.58	783.5
+2259	2	2026-02-04 14:30:00+00	NVDA	SELL	148.83	177.2	26372.68
+2260	2	2026-02-04 14:30:00+00	SBUX	SELL	276.19	96.64	26691
+2261	2	2026-02-04 14:30:00+00	XOM	SELL	24.38	144.69	3527.54
+2262	2	2026-02-04 14:30:00+00	JPM	BUY	85.53	317.94	27193.41
+2263	2	2026-02-04 14:30:00+00	WMT	BUY	243.19	127.71	31057.79
+2264	4	2026-02-04 14:30:00+00	NVDA	SELL	73.12	177.2	12956.86
+2265	4	2026-02-04 14:30:00+00	XOM	SELL	78.81	144.69	11403.02
+2266	4	2026-02-04 14:30:00+00	AAPL	BUY	17.57	276.1	4851.08
+2267	4	2026-02-04 14:30:00+00	JPM	BUY	17.48	317.94	5557.59
+2268	4	2026-02-04 14:30:00+00	WMT	BUY	121.57	127.71	15525.7
+2269	5	2026-02-04 14:30:00+00	NVDA	SELL	28.49	177.2	5048.43
+2270	5	2026-02-04 14:30:00+00	XOM	SELL	733.68	144.69	106156.16
+2271	5	2026-02-04 14:30:00+00	AAPL	BUY	58.73	276.1	16215.35
+2272	5	2026-02-04 14:30:00+00	CVX	BUY	46.5	179.87	8363.95
+2273	5	2026-02-04 14:30:00+00	WMT	BUY	677.1	127.71	86472.44
+2274	6	2026-02-04 14:30:00+00	JNJ	SELL	26.11	234.58	6124.88
+2275	6	2026-02-04 14:30:00+00	MSFT	SELL	15.06	417.98	6294.78
+2276	6	2026-02-04 14:30:00+00	NVDA	SELL	81.63	177.2	14464.84
+2277	6	2026-02-04 14:30:00+00	XOM	SELL	95.57	144.69	13828.02
+2278	6	2026-02-04 14:30:00+00	AAPL	BUY	31.71	276.1	8755.13
+2279	6	2026-02-04 14:30:00+00	CVX	BUY	28.89	179.87	5196.44
+2280	6	2026-02-04 14:30:00+00	JPM	BUY	17.06	317.94	5424.06
+2281	6	2026-02-04 14:30:00+00	WMT	BUY	165.59	127.71	21147.5
+2282	7	2026-02-04 14:30:00+00	MSFT	SELL	7.44	417.98	3109.77
+2283	7	2026-02-04 14:30:00+00	NVDA	SELL	16.02	177.2	2838.74
+2284	7	2026-02-04 14:30:00+00	SBUX	SELL	25.39	96.64	2453.69
+2285	7	2026-02-04 14:30:00+00	XOM	SELL	16.56	144.69	2396.07
+2286	7	2026-02-04 14:30:00+00	AAPL	BUY	14.31	276.1	3950.99
+2287	7	2026-02-04 14:30:00+00	CVX	BUY	29.25	179.87	5261.2
+2288	7	2026-02-04 14:30:00+00	JPM	BUY	5.94	317.94	1888.56
+2289	7	2026-02-04 14:30:00+00	WMT	BUY	37.05	127.71	4731.66
+2290	8	2026-02-04 14:30:00+00	NVDA	SELL	58.33	177.2	10336.08
+2291	8	2026-02-04 14:30:00+00	XOM	SELL	55.47	144.69	8025.95
+2292	8	2026-02-04 14:30:00+00	WMT	BUY	98.72	127.71	12607.53
+2293	9	2026-02-04 14:30:00+00	NVDA	SELL	142.04	177.2	25169.49
+2294	9	2026-02-04 14:30:00+00	WMT	BUY	327.64	127.71	41842.9
+2295	10	2026-02-04 14:30:00+00	JNJ	SELL	32.94	234.58	7727.07
+2296	10	2026-02-04 14:30:00+00	NVDA	SELL	97.12	177.2	17209.66
+2297	10	2026-02-04 14:30:00+00	XOM	SELL	148.84	144.69	21535.66
+2298	10	2026-02-04 14:30:00+00	AAPL	BUY	28.55	276.1	7882.66
+2299	10	2026-02-04 14:30:00+00	JPM	BUY	18.08	317.94	5748.36
+2300	10	2026-02-04 14:30:00+00	WMT	BUY	265.72	127.71	33935.1
+2301	11	2026-02-04 14:30:00+00	JNJ	SELL	15.07	234.58	3535.12
+2302	11	2026-02-04 14:30:00+00	MSFT	SELL	17.72	417.98	7406.61
+2303	11	2026-02-04 14:30:00+00	NVDA	SELL	104.09	177.2	18444.75
+2304	11	2026-02-04 14:30:00+00	SBUX	SELL	18.31	96.64	1769.48
+2305	11	2026-02-04 14:30:00+00	XOM	SELL	168.01	144.69	24309.37
+2306	11	2026-02-04 14:30:00+00	AAPL	BUY	40.19	276.1	11096.46
+2307	11	2026-02-04 14:30:00+00	CVX	BUY	40.17	179.87	7225.38
+2308	11	2026-02-04 14:30:00+00	JPM	BUY	16.08	317.94	5112.48
+2309	11	2026-02-04 14:30:00+00	WMT	BUY	281.87	127.71	35997.62
+2310	2	2026-02-11 14:30:00+00	CVX	SELL	5.05	184.75	932.99
+2311	2	2026-02-11 14:30:00+00	JNJ	SELL	121.56	240.28	29208.44
+2312	2	2026-02-11 14:30:00+00	JPM	SELL	85.53	317.06	27118.14
+2313	2	2026-02-11 14:30:00+00	WMT	SELL	11.13	128.07	1425.42
+2314	2	2026-02-11 14:30:00+00	XOM	SELL	186.85	155.25	29008.46
+2315	2	2026-02-11 14:30:00+00	NVDA	BUY	154.73	188.92	29231.59
+2316	2	2026-02-11 14:30:00+00	PFE	BUY	1053.43	27.75	29232.68
+2317	2	2026-02-11 14:30:00+00	TSM	BUY	79.05	369.8	29232.69
+2318	3	2026-02-11 14:30:00+00	JNJ	SELL	26.09	240.28	6268.91
+2319	4	2026-02-11 14:30:00+00	AAPL	SELL	15.91	277.05	4407.87
+2320	4	2026-02-11 14:30:00+00	JNJ	SELL	27.05	240.28	6499.57
+2321	4	2026-02-11 14:30:00+00	JPM	SELL	16.52	317.06	5237.83
+2322	4	2026-02-11 14:30:00+00	SBUX	SELL	54.3	97.62	5300.77
+2323	4	2026-02-11 14:30:00+00	WMT	SELL	65.66	128.07	8409.08
+2324	4	2026-02-11 14:30:00+00	NVDA	BUY	55.01	188.92	10392.49
+2325	4	2026-02-11 14:30:00+00	PFE	BUY	245.81	27.75	6821.23
+2326	4	2026-02-11 14:30:00+00	TSM	BUY	34.42	369.8	12728.52
+2327	5	2026-02-11 14:30:00+00	AAPL	SELL	58.76	277.05	16279.46
+2328	5	2026-02-11 14:30:00+00	CVX	SELL	48.62	184.75	8982.55
+2329	5	2026-02-11 14:30:00+00	WMT	SELL	665.57	128.07	85239.55
+2330	5	2026-02-11 14:30:00+00	NVDA	BUY	26.7	188.92	5044.16
+2331	5	2026-02-11 14:30:00+00	TSM	BUY	261.81	369.8	96817.34
+2332	5	2026-02-11 14:30:00+00	XOM	BUY	60.09	155.25	9328.97
+2333	6	2026-02-11 14:30:00+00	AAPL	SELL	28	277.05	7757.4
+2334	6	2026-02-11 14:30:00+00	CVX	SELL	36.42	184.75	6728.6
+2335	6	2026-02-11 14:30:00+00	JPM	SELL	17.27	317.06	5475.63
+2336	6	2026-02-11 14:30:00+00	SBUX	SELL	58.26	97.62	5687.34
+2337	6	2026-02-11 14:30:00+00	WMT	SELL	114.86	128.07	14710.12
+2338	6	2026-02-11 14:30:00+00	NVDA	BUY	64.93	188.92	12266.58
+2339	6	2026-02-11 14:30:00+00	PFE	BUY	334.23	27.75	9274.88
+2340	6	2026-02-11 14:30:00+00	TSM	BUY	48.02	369.8	17757.8
+2341	7	2026-02-11 14:30:00+00	AAPL	SELL	7.37	277.05	2041.86
+2342	7	2026-02-11 14:30:00+00	CVX	SELL	13.95	184.75	2577.26
+2343	7	2026-02-11 14:30:00+00	DIS	SELL	17.85	108.64	1939.22
+2344	7	2026-02-11 14:30:00+00	JNJ	SELL	18.96	240.28	4555.71
+2345	7	2026-02-11 14:30:00+00	JPM	SELL	8.44	317.06	2675.99
+2346	7	2026-02-11 14:30:00+00	SBUX	SELL	31.03	97.62	3029.15
+2347	7	2026-02-11 14:30:00+00	GE	BUY	12.56	315.08	3957.4
+2348	7	2026-02-11 14:30:00+00	NVDA	BUY	24.57	188.92	4641.76
+2349	7	2026-02-11 14:30:00+00	PFE	BUY	76.6	27.75	2125.65
+2350	7	2026-02-11 14:30:00+00	TSM	BUY	8.41	369.8	3110.02
+2351	8	2026-02-11 14:30:00+00	CVX	SELL	41.21	184.75	7613.55
+2352	8	2026-02-11 14:30:00+00	JNJ	SELL	45.55	240.28	10944.75
+2353	8	2026-02-11 14:30:00+00	WMT	SELL	58.53	128.07	7495.94
+2354	8	2026-02-11 14:30:00+00	NVDA	BUY	47.76	188.92	9022.82
+2355	8	2026-02-11 14:30:00+00	TSM	BUY	24.04	369.8	8889.99
+2356	9	2026-02-11 14:30:00+00	WMT	SELL	285.56	128.07	36571.67
+2357	9	2026-02-11 14:30:00+00	PFE	BUY	622.36	27.75	17270.49
+2358	9	2026-02-11 14:30:00+00	TSM	BUY	83.02	369.8	30700.8
+2359	10	2026-02-11 14:30:00+00	AAPL	SELL	25.41	277.05	7039.84
+2360	10	2026-02-11 14:30:00+00	SBUX	SELL	67.8	97.62	6618.64
+2361	10	2026-02-11 14:30:00+00	WMT	SELL	196.64	128.07	25183.68
+2362	10	2026-02-11 14:30:00+00	NVDA	BUY	79.91	188.92	15096.6
+2363	10	2026-02-11 14:30:00+00	TSM	BUY	60.32	369.8	22306.34
+2364	11	2026-02-11 14:30:00+00	AAPL	SELL	35.3	277.05	9779.86
+2365	11	2026-02-11 14:30:00+00	COST	SELL	2.38	976.7	2324.55
+2366	11	2026-02-11 14:30:00+00	CVX	SELL	43.64	184.75	8062.49
+2367	11	2026-02-11 14:30:00+00	JNJ	SELL	11.05	240.28	2655.09
+2368	11	2026-02-11 14:30:00+00	JPM	SELL	16.08	317.06	5098.32
+2369	11	2026-02-11 14:30:00+00	SBUX	SELL	41.26	97.62	4027.8
+2370	11	2026-02-11 14:30:00+00	WMT	SELL	227.29	128.07	29109.03
+2371	11	2026-02-11 14:30:00+00	GE	BUY	9.36	315.08	2949.15
+2372	11	2026-02-11 14:30:00+00	NVDA	BUY	74.82	188.92	14134.99
+2373	11	2026-02-11 14:30:00+00	PFE	BUY	275.08	27.75	7633.47
+2374	11	2026-02-11 14:30:00+00	TSM	BUY	70.09	369.8	25919.28
+2375	11	2026-02-11 14:30:00+00	XOM	BUY	35.89	155.25	5571.92
+2376	2	2026-02-18 14:30:00+00	CVX	SELL	163.5	182.42	29825.67
+2377	2	2026-02-18 14:30:00+00	NVDA	SELL	8.74	189.78	1658.68
+2378	2	2026-02-18 14:30:00+00	PFE	SELL	1053.43	27.31	28769.17
+2379	2	2026-02-18 14:30:00+00	COST	BUY	26.62	1011.68	26930.92
+2380	2	2026-02-18 14:30:00+00	GE	BUY	98.69	329.17	32485.79
+2381	2	2026-02-18 14:30:00+00	TSM	BUY	0.5	368.18	184.09
+2382	2	2026-02-18 14:30:00+00	WMT	BUY	5.04	128.36	646.93
+2383	4	2026-02-18 14:30:00+00	CVX	SELL	40.13	182.42	7320.51
+2384	4	2026-02-18 14:30:00+00	NVDA	SELL	22.92	189.78	4349.76
+2385	4	2026-02-18 14:30:00+00	XOM	SELL	33.05	149.03	4925.44
+2386	4	2026-02-18 14:30:00+00	COST	BUY	4.75	1011.68	4805.48
+2387	4	2026-02-18 14:30:00+00	GE	BUY	62.31	329.17	20510.58
+2388	5	2026-02-18 14:30:00+00	NVDA	SELL	20.06	189.78	3806.99
+2389	5	2026-02-18 14:30:00+00	TSM	SELL	156.94	368.18	57782.17
+2390	5	2026-02-18 14:30:00+00	XOM	SELL	74	149.03	11028.22
+2391	5	2026-02-18 14:30:00+00	COST	BUY	7.4	1011.68	7486.43
+2392	5	2026-02-18 14:30:00+00	GE	BUY	129.56	329.17	42647.27
+2393	5	2026-02-18 14:30:00+00	WMT	BUY	144.79	128.36	18585.24
+2394	6	2026-02-18 14:30:00+00	CVX	SELL	23.02	182.42	4199.31
+2395	6	2026-02-18 14:30:00+00	NVDA	SELL	28.31	189.78	5372.67
+2396	6	2026-02-18 14:30:00+00	PFE	SELL	174.72	27.31	4771.6
+2397	6	2026-02-18 14:30:00+00	TSM	SELL	15.95	368.18	5872.47
+2398	6	2026-02-18 14:30:00+00	XOM	SELL	40.83	149.03	6084.89
+2399	6	2026-02-18 14:30:00+00	COST	BUY	5.88	1011.68	5948.68
+2400	6	2026-02-18 14:30:00+00	GE	BUY	42.74	329.17	14068.73
+2401	7	2026-02-18 14:30:00+00	CVX	SELL	22.23	182.42	4055.2
+2402	7	2026-02-18 14:30:00+00	PFE	SELL	114.56	27.31	3128.63
+2403	7	2026-02-18 14:30:00+00	WMT	SELL	16	128.36	2053.76
+2404	7	2026-02-18 14:30:00+00	XOM	SELL	18.72	149.03	2789.84
+2405	7	2026-02-18 14:30:00+00	COST	BUY	2.74	1011.68	2772
+2406	7	2026-02-18 14:30:00+00	TSM	BUY	5.23	368.18	1925.58
+2407	8	2026-02-18 14:30:00+00	GE	BUY	26.02	329.17	8565
+2408	9	2026-02-18 14:30:00+00	CVX	SELL	116.47	182.42	21246.46
+2409	9	2026-02-18 14:30:00+00	TSM	SELL	60.23	368.18	22175.48
+2410	9	2026-02-18 14:30:00+00	XOM	SELL	126.3	149.03	18822.49
+2411	9	2026-02-18 14:30:00+00	GE	BUY	153.64	329.17	50573.68
+2412	10	2026-02-18 14:30:00+00	CVX	SELL	49.02	182.42	8942.23
+2413	10	2026-02-18 14:30:00+00	NVDA	SELL	45.33	189.78	8602.73
+2414	10	2026-02-18 14:30:00+00	TSM	SELL	25.2	368.18	9278.14
+2415	10	2026-02-18 14:30:00+00	XOM	SELL	38.49	149.03	5736.16
+2416	10	2026-02-18 14:30:00+00	COST	BUY	7.1	1011.68	7182.93
+2417	10	2026-02-18 14:30:00+00	GE	BUY	84.69	329.17	27877.41
+2418	11	2026-02-18 14:30:00+00	CVX	SELL	26.48	182.42	4830.48
+2419	11	2026-02-18 14:30:00+00	NVDA	SELL	35.12	189.78	6665.07
+2420	11	2026-02-18 14:30:00+00	PFE	SELL	234.59	27.31	6406.65
+2421	11	2026-02-18 14:30:00+00	TSM	SELL	27.93	368.18	10283.27
+2422	11	2026-02-18 14:30:00+00	XOM	SELL	81.58	149.03	12157.87
+2423	11	2026-02-18 14:30:00+00	COST	BUY	10.87	1011.68	10996.96
+2424	11	2026-02-18 14:30:00+00	GE	BUY	59.19	329.17	19483.57
+2425	11	2026-02-18 14:30:00+00	NKE	BUY	66.79	64.98	4340.01
+2426	11	2026-02-18 14:30:00+00	WMT	BUY	18.26	128.36	2343.85
+2427	12	2026-02-18 14:30:00+00	XOM	SELL	113.28	149.03	16882.12
+2428	2	2026-02-25 14:30:00+00	COST	SELL	26.62	993.38	26443.78
+2429	2	2026-02-25 14:30:00+00	GE	SELL	0.98	339.65	332.86
+2430	2	2026-02-25 14:30:00+00	TSM	SELL	79.55	386.99	30785.05
+2431	2	2026-02-25 14:30:00+00	WMT	SELL	237.1	126.03	29881.71
+2432	2	2026-02-25 14:30:00+00	CVX	BUY	149.89	183.55	27512.31
+2433	2	2026-02-25 14:30:00+00	JNJ	BUY	118.21	244.38	28888.16
+2434	2	2026-02-25 14:30:00+00	NVDA	BUY	16.27	196.05	3189.73
+2435	2	2026-02-25 14:30:00+00	PFE	BUY	1032.89	26.97	27857.04
+2436	4	2026-02-25 14:30:00+00	TSM	SELL	31.15	386.99	12054.74
+2437	4	2026-02-25 14:30:00+00	WMT	SELL	41.95	126.03	5286.96
+2438	4	2026-02-25 14:30:00+00	NVDA	BUY	62.08	196.05	12170.78
+2439	5	2026-02-25 14:30:00+00	COST	SELL	7.43	993.38	7380.81
+2440	5	2026-02-25 14:30:00+00	CVX	SELL	13.7	183.55	2514.64
+2441	5	2026-02-25 14:30:00+00	GE	SELL	129.15	339.65	43865.8
+2442	5	2026-02-25 14:30:00+00	TSM	SELL	104.87	386.99	40583.64
+2443	5	2026-02-25 14:30:00+00	WMT	SELL	156.27	126.03	19694.71
+2444	5	2026-02-25 14:30:00+00	AAPL	BUY	9.11	273.63	2492.77
+2445	5	2026-02-25 14:30:00+00	NVDA	BUY	572.69	196.05	112275.87
+2446	6	2026-02-25 14:30:00+00	COST	SELL	5.68	993.38	5642.4
+2447	6	2026-02-25 14:30:00+00	GE	SELL	13.75	339.65	4670.19
+2448	6	2026-02-25 14:30:00+00	TSM	SELL	28.76	386.99	11129.83
+2449	6	2026-02-25 14:30:00+00	WMT	SELL	35.62	126.03	4489.19
+2450	6	2026-02-25 14:30:00+00	AAPL	BUY	25.39	273.63	6947.47
+2451	6	2026-02-25 14:30:00+00	NVDA	BUY	107.57	196.05	21089.1
+2452	7	2026-02-25 14:30:00+00	COST	SELL	2.15	993.38	2135.77
+2453	7	2026-02-25 14:30:00+00	TSM	SELL	10.82	386.99	4187.23
+2454	7	2026-02-25 14:30:00+00	WMT	SELL	18.76	126.03	2364.32
+2455	7	2026-02-25 14:30:00+00	GE	BUY	12.48	339.65	4238.83
+2456	7	2026-02-25 14:30:00+00	JNJ	BUY	10.36	244.38	2531.78
+2457	7	2026-02-25 14:30:00+00	NFLX	BUY	27.34	81.86	2238.05
+2458	7	2026-02-25 14:30:00+00	NVDA	BUY	10.26	196.05	2011.47
+2459	8	2026-02-25 14:30:00+00	TSM	SELL	23.79	386.99	9206.49
+2460	8	2026-02-25 14:30:00+00	NVDA	BUY	36.43	196.05	7142.1
+2461	9	2026-02-25 14:30:00+00	GE	SELL	96.86	339.65	32898.5
+2462	9	2026-02-25 14:30:00+00	NVDA	BUY	249.67	196.05	48947.8
+2463	10	2026-02-25 14:30:00+00	GE	SELL	29.04	339.65	9863.44
+2464	10	2026-02-25 14:30:00+00	TSM	SELL	34.1	386.99	13196.36
+2465	10	2026-02-25 14:30:00+00	WMT	SELL	52.23	126.03	6582.55
+2466	10	2026-02-25 14:30:00+00	NVDA	BUY	154.41	196.05	30272.08
+2467	11	2026-02-25 14:30:00+00	COST	SELL	8.46	993.38	8403.99
+2468	11	2026-02-25 14:30:00+00	CVX	SELL	16.61	183.55	3048.77
+2469	11	2026-02-25 14:30:00+00	GE	SELL	32.44	339.65	11018.25
+2470	11	2026-02-25 14:30:00+00	NKE	SELL	45.44	63.85	2901.34
+2471	11	2026-02-25 14:30:00+00	PFE	SELL	80.76	26.97	2178.1
+2472	11	2026-02-25 14:30:00+00	TSM	SELL	39.64	386.99	15340.28
+2473	11	2026-02-25 14:30:00+00	WMT	SELL	57.85	126.03	7290.84
+2474	11	2026-02-25 14:30:00+00	AAPL	BUY	35.89	273.63	9820.58
+2475	11	2026-02-25 14:30:00+00	NVDA	BUY	197	196.05	38621.85
+2476	2	2026-03-04 14:30:00+00	GE	SELL	3.54	338.85	1199.53
+2477	2	2026-03-04 14:30:00+00	JNJ	SELL	4.73	245.45	1160.98
+2478	2	2026-03-04 14:30:00+00	NVDA	SELL	162.26	183.47	29769.84
+2479	2	2026-03-04 14:30:00+00	PFE	SELL	1032.89	26.61	27485.2
+2480	2	2026-03-04 14:30:00+00	COST	BUY	27.75	1003.68	27852.12
+2481	2	2026-03-04 14:30:00+00	CVX	BUY	11.53	185.67	2140.78
+2482	2	2026-03-04 14:30:00+00	WMT	BUY	232.34	127.48	29618.7
+2483	4	2026-03-04 14:30:00+00	GE	SELL	12.16	338.85	4120.42
+2484	4	2026-03-04 14:30:00+00	NVDA	SELL	86.59	183.47	15886.67
+2485	4	2026-03-04 14:30:00+00	PFE	SELL	168.44	26.61	4482.19
+2486	4	2026-03-04 14:30:00+00	CVX	BUY	25.1	185.67	4660.32
+2487	4	2026-03-04 14:30:00+00	NFLX	BUY	50.64	99.28	5027.54
+2488	5	2026-03-04 14:30:00+00	AAPL	SELL	9.22	264.13	2435.28
+2489	5	2026-03-04 14:30:00+00	NVDA	SELL	579.31	183.47	106286.01
+2490	5	2026-03-04 14:30:00+00	GE	BUY	14.54	338.85	4926.88
+2491	5	2026-03-04 14:30:00+00	MSFT	BUY	5.37	405.32	2176.57
+2492	5	2026-03-04 14:30:00+00	NFLX	BUY	1003.99	99.28	99676.13
+2493	6	2026-03-04 14:30:00+00	AAPL	SELL	26.93	264.13	7113.02
+2494	6	2026-03-04 14:30:00+00	NVDA	SELL	134.54	183.47	24684.05
+2495	6	2026-03-04 14:30:00+00	COST	BUY	6.03	1003.68	6052.19
+2496	6	2026-03-04 14:30:00+00	MSFT	BUY	19.29	405.32	7818.62
+2497	6	2026-03-04 14:30:00+00	NFLX	BUY	110.36	99.28	10956.54
+2498	7	2026-03-04 14:30:00+00	GE	SELL	10.32	338.85	3496.93
+2499	7	2026-03-04 14:30:00+00	NVDA	SELL	24.84	183.47	4557.39
+2500	7	2026-03-04 14:30:00+00	TSM	SELL	7.93	360.1	2855.59
+2501	7	2026-03-04 14:30:00+00	COST	BUY	2.92	1003.68	2930.75
+2502	7	2026-03-04 14:30:00+00	MSFT	BUY	10.93	405.32	4430.15
+2503	7	2026-03-04 14:30:00+00	NFLX	BUY	29.62	99.28	2940.67
+2504	8	2026-03-04 14:30:00+00	NVDA	SELL	75.38	183.47	13829.97
+2505	9	2026-03-04 14:30:00+00	NVDA	SELL	245.41	183.47	45025.37
+2506	9	2026-03-04 14:30:00+00	GE	BUY	54.54	338.85	18480.88
+2507	10	2026-03-04 14:30:00+00	NVDA	SELL	181.06	183.47	33219.08
+2508	10	2026-03-04 14:30:00+00	GE	BUY	16.69	338.85	5655.41
+2509	10	2026-03-04 14:30:00+00	NFLX	BUY	108.91	99.28	10812.58
+2510	11	2026-03-04 14:30:00+00	AAPL	SELL	38.65	264.13	10208.62
+2511	11	2026-03-04 14:30:00+00	NVDA	SELL	229.81	183.47	42163.24
+2512	11	2026-03-04 14:30:00+00	TSM	SELL	5.83	360.1	2099.38
+2513	11	2026-03-04 14:30:00+00	COST	BUY	8.26	1003.68	8290.4
+2514	11	2026-03-04 14:30:00+00	CVX	BUY	29.27	185.67	5434.56
+2515	11	2026-03-04 14:30:00+00	GE	BUY	23.65	338.85	8013.8
+2516	11	2026-03-04 14:30:00+00	JNJ	BUY	11.46	245.45	2812.86
+2517	11	2026-03-04 14:30:00+00	MSFT	BUY	20.44	405.32	8284.74
+2518	11	2026-03-04 14:30:00+00	NFLX	BUY	184.31	99.28	18298.3
+2519	11	2026-03-04 14:30:00+00	V	BUY	8.19	325.42	2665.19
+2520	11	2026-03-04 14:30:00+00	WMT	BUY	30.09	127.48	3835.87
+2521	2	2026-03-11 13:30:00+00	COST	SELL	27.75	991.06	27501.91
+2522	2	2026-03-11 13:30:00+00	CVX	SELL	161.42	189.18	30537.44
+2523	2	2026-03-11 13:30:00+00	GE	SELL	5.31	324	1720.44
+2524	2	2026-03-11 13:30:00+00	WMT	SELL	232.34	124.61	28951.89
+2525	2	2026-03-11 13:30:00+00	AAPL	BUY	108.16	259.99	28120.52
+2526	2	2026-03-11 13:30:00+00	JNJ	BUY	11.06	241.94	2675.86
+2527	2	2026-03-11 13:30:00+00	NVDA	BUY	143.29	186.91	26782.33
+2528	2	2026-03-11 13:30:00+00	TSM	BUY	87.59	355.47	31135.62
+2529	3	2026-03-11 13:30:00+00	CVX	SELL	36.04	189.18	6818.05
+2530	3	2026-03-11 13:30:00+00	TSM	BUY	25.73	355.47	9146.24
+2531	4	2026-03-11 13:30:00+00	COST	SELL	4.71	991.06	4667.89
+2532	4	2026-03-11 13:30:00+00	CVX	SELL	34.04	189.18	6439.69
+2533	4	2026-03-11 13:30:00+00	GE	SELL	34.73	324	11252.52
+2534	4	2026-03-11 13:30:00+00	JNJ	BUY	49.04	241.94	11864.74
+2535	4	2026-03-11 13:30:00+00	TSM	BUY	61.27	355.47	21779.65
+2536	5	2026-03-11 13:30:00+00	GE	SELL	14.97	324	4850.28
+2537	5	2026-03-11 13:30:00+00	MSFT	SELL	6.22	404.45	2515.68
+2538	5	2026-03-11 13:30:00+00	NFLX	SELL	868.18	95.96	83310.55
+2539	5	2026-03-11 13:30:00+00	CVX	BUY	74.45	189.18	14084.45
+2540	5	2026-03-11 13:30:00+00	TSM	BUY	212.53	355.47	75548.04
+2541	6	2026-03-11 13:30:00+00	COST	SELL	6.24	991.06	6184.21
+2542	6	2026-03-11 13:30:00+00	GE	SELL	28.31	324	9172.44
+2543	6	2026-03-11 13:30:00+00	MSFT	SELL	15.65	404.45	6329.64
+2544	6	2026-03-11 13:30:00+00	NFLX	SELL	51.38	95.96	4930.42
+2545	6	2026-03-11 13:30:00+00	JNJ	BUY	31.4	241.94	7596.92
+2546	6	2026-03-11 13:30:00+00	TSM	BUY	47.49	355.47	16881.27
+2547	7	2026-03-11 13:30:00+00	COST	SELL	4.37	991.06	4330.93
+2548	7	2026-03-11 13:30:00+00	GE	SELL	7.55	324	2446.2
+2549	7	2026-03-11 13:30:00+00	MSFT	SELL	7.86	404.45	3178.98
+2550	7	2026-03-11 13:30:00+00	NFLX	SELL	28.57	95.96	2741.58
+2551	7	2026-03-11 13:30:00+00	WMT	SELL	16.2	124.61	2018.68
+2552	7	2026-03-11 13:30:00+00	AAPL	BUY	9.15	259.99	2378.91
+2553	7	2026-03-11 13:30:00+00	JNJ	BUY	20.66	241.94	4998.48
+2554	7	2026-03-11 13:30:00+00	TSM	BUY	34.74	355.47	12349.03
+2555	8	2026-03-11 13:30:00+00	GE	SELL	29.5	324	9558
+2556	8	2026-03-11 13:30:00+00	JNJ	BUY	42.09	241.94	10183.25
+2557	8	2026-03-11 13:30:00+00	TSM	BUY	42.01	355.47	14933.29
+2558	9	2026-03-11 13:30:00+00	GE	SELL	93.73	324	30368.52
+2559	9	2026-03-11 13:30:00+00	PFE	SELL	592.8	27.06	16041.17
+2560	9	2026-03-11 13:30:00+00	JNJ	BUY	70.45	241.94	17044.67
+2561	9	2026-03-11 13:30:00+00	TSM	BUY	46.31	355.47	16461.82
+2562	10	2026-03-11 13:30:00+00	COST	SELL	6	991.06	5946.36
+2563	10	2026-03-11 13:30:00+00	GE	SELL	58.16	324	18843.84
+2564	10	2026-03-11 13:30:00+00	NFLX	SELL	69.79	95.96	6697.05
+2565	10	2026-03-11 13:30:00+00	JNJ	BUY	46.96	241.94	11361.5
+2566	10	2026-03-11 13:30:00+00	TSM	BUY	77.79	355.47	27652.01
+2567	11	2026-03-11 13:30:00+00	COST	SELL	8.06	991.06	7987.94
+2568	11	2026-03-11 13:30:00+00	GE	SELL	52.11	324	16883.64
+2569	11	2026-03-11 13:30:00+00	MSFT	SELL	17.12	404.45	6924.18
+2570	11	2026-03-11 13:30:00+00	NFLX	SELL	91.96	95.96	8824.48
+2571	11	2026-03-11 13:30:00+00	V	SELL	6.17	311.57	1922.39
+2572	11	2026-03-11 13:30:00+00	WMT	SELL	20.31	124.61	2530.83
+2573	11	2026-03-11 13:30:00+00	AAPL	BUY	9.18	259.99	2386.71
+2574	11	2026-03-11 13:30:00+00	JNJ	BUY	34.46	241.94	8337.25
+2575	11	2026-03-11 13:30:00+00	NVDA	BUY	10.05	186.91	1878.45
+2576	11	2026-03-11 13:30:00+00	TSM	BUY	75.14	355.47	26710.02
+2577	11	2026-03-11 13:30:00+00	XOM	BUY	22.76	151.12	3439.49
+2578	2	2026-03-18 13:30:00+00	AAPL	SELL	108.16	252.35	27294.18
+2579	2	2026-03-18 13:30:00+00	JNJ	SELL	10.34	238.5	2466.09
+2580	2	2026-03-18 13:30:00+00	GE	BUY	5.36	302.06	1619.04
+2581	2	2026-03-18 13:30:00+00	NVDA	BUY	8.05	182.28	1467.35
+2582	2	2026-03-18 13:30:00+00	TSM	BUY	3.95	343.32	1356.11
+2583	2	2026-03-18 13:30:00+00	WMT	BUY	205.9	122.96	25317.46
+2584	4	2026-03-18 13:30:00+00	JNJ	SELL	32.16	238.5	7670.16
+2585	4	2026-03-18 13:30:00+00	TSM	SELL	25.71	343.32	8826.76
+2586	5	2026-03-18 13:30:00+00	NFLX	SELL	111.83	93.9	10500.84
+2587	5	2026-03-18 13:30:00+00	TSM	SELL	212.4	343.32	72921.17
+2588	5	2026-03-18 13:30:00+00	CVX	BUY	338.71	198.83	67345.71
+2589	5	2026-03-18 13:30:00+00	XOM	BUY	112.2	159.01	17840.92
+2590	6	2026-03-18 13:30:00+00	JNJ	SELL	34.12	238.5	8137.62
+2591	6	2026-03-18 13:30:00+00	TSM	SELL	34.71	343.32	11916.64
+2592	6	2026-03-18 13:30:00+00	CVX	BUY	22.47	198.83	4467.71
+2593	6	2026-03-18 13:30:00+00	NFLX	BUY	50.83	93.9	4772.94
+2594	6	2026-03-18 13:30:00+00	XOM	BUY	63	159.01	10017.63
+2595	7	2026-03-18 13:30:00+00	AAPL	SELL	11.45	252.35	2889.41
+2596	7	2026-03-18 13:30:00+00	JNJ	SELL	12.59	238.5	3002.72
+2597	7	2026-03-18 13:30:00+00	TSM	SELL	24.51	343.32	8414.77
+2598	7	2026-03-18 13:30:00+00	NFLX	BUY	28.6	93.9	2685.54
+2599	7	2026-03-18 13:30:00+00	PFE	BUY	100.25	27.01	2707.75
+2600	7	2026-03-18 13:30:00+00	WMT	BUY	35.14	122.96	4320.81
+2601	8	2026-03-18 13:30:00+00	TSM	SELL	26.15	343.32	8977.82
+2602	9	2026-03-18 13:30:00+00	JNJ	SELL	74.83	238.5	17846.95
+2603	10	2026-03-18 13:30:00+00	JNJ	SELL	44.99	238.5	10730.11
+2604	10	2026-03-18 13:30:00+00	TSM	SELL	41.86	343.32	14371.38
+2605	10	2026-03-18 13:30:00+00	XOM	BUY	67.16	159.01	10679.11
+2606	11	2026-03-18 13:30:00+00	AAPL	SELL	6.66	252.35	1680.65
+2607	11	2026-03-18 13:30:00+00	JNJ	SELL	38.48	238.5	9177.48
+2608	11	2026-03-18 13:30:00+00	NVDA	SELL	11	182.28	2005.08
+2609	11	2026-03-18 13:30:00+00	TSM	SELL	62.93	343.32	21605.13
+2610	11	2026-03-18 13:30:00+00	CVX	BUY	46.33	198.83	9211.79
+2611	11	2026-03-18 13:30:00+00	JPM	BUY	7.62	286.75	2185.03
+2612	11	2026-03-18 13:30:00+00	NFLX	BUY	35.56	93.9	3339.08
+2613	11	2026-03-18 13:30:00+00	PFE	BUY	188.44	27.01	5089.76
+2614	11	2026-03-18 13:30:00+00	WMT	BUY	15.79	122.96	1941.54
+2615	11	2026-03-18 13:30:00+00	XOM	BUY	101.09	159.01	16074.32
+2616	2	2026-03-25 13:30:00+00	GE	SELL	94.22	294.9	27785.48
+2617	2	2026-03-25 13:30:00+00	TSM	SELL	9.67	348	3365.16
+2618	2	2026-03-25 13:30:00+00	AAPL	BUY	98.23	252.86	24838.44
+2619	2	2026-03-25 13:30:00+00	JNJ	BUY	17.2	239.07	4112
+2620	2	2026-03-25 13:30:00+00	NVDA	BUY	1.82	180.06	327.71
+2621	2	2026-03-25 13:30:00+00	WMT	BUY	15.32	122.19	1871.95
+2622	4	2026-03-25 13:30:00+00	TSM	SELL	23.6	348	8212.8
+2623	4	2026-03-25 13:30:00+00	JNJ	BUY	68.35	239.07	16340.43
+2624	5	2026-03-25 13:30:00+00	CVX	SELL	406.47	205.41	83493
+2625	5	2026-03-25 13:30:00+00	NFLX	SELL	23.68	92.16	2182.35
+2626	5	2026-03-25 13:30:00+00	XOM	SELL	110.45	163.82	18093.92
+2627	5	2026-03-25 13:30:00+00	JNJ	BUY	424.01	239.07	101368.07
+2628	6	2026-03-25 13:30:00+00	NFLX	SELL	83.56	92.16	7700.89
+2629	6	2026-03-25 13:30:00+00	XOM	SELL	41.8	163.82	6847.68
+2630	6	2026-03-25 13:30:00+00	JNJ	BUY	108.47	239.07	25931.92
+2631	7	2026-03-25 13:30:00+00	NFLX	SELL	37.83	92.16	3486.41
+2632	7	2026-03-25 13:30:00+00	JNJ	BUY	31.6	239.07	7554.61
+2633	8	2026-03-25 13:30:00+00	JNJ	BUY	33.94	239.07	8114.04
+2634	9	2026-03-25 13:30:00+00	TSM	SELL	61.99	348	21572.52
+2635	9	2026-03-25 13:30:00+00	JNJ	BUY	213.94	239.07	51146.64
+2636	10	2026-03-25 13:30:00+00	TSM	SELL	28.77	348	10011.96
+2637	10	2026-03-25 13:30:00+00	XOM	SELL	52.69	163.82	8631.68
+2638	10	2026-03-25 13:30:00+00	JNJ	BUY	163.8	239.07	39159.67
+2639	11	2026-03-25 13:30:00+00	CVX	SELL	50.04	205.41	10278.72
+2640	11	2026-03-25 13:30:00+00	NFLX	SELL	104.41	92.16	9622.43
+2641	11	2026-03-25 13:30:00+00	PFE	SELL	125.32	27.29	3419.98
+2642	11	2026-03-25 13:30:00+00	XOM	SELL	89.66	163.82	14688.1
+2643	11	2026-03-25 13:30:00+00	JNJ	BUY	136.57	239.07	32649.79
+2644	2	2026-04-01 13:30:00+00	AAPL	SELL	98.23	254.12	24962.21
+2645	2	2026-04-01 13:30:00+00	JNJ	SELL	17.84	245.17	4373.83
+2646	2	2026-04-01 13:30:00+00	NVDA	SELL	153.16	176.2	26986.79
+2647	2	2026-04-01 13:30:00+00	WMT	SELL	221.22	123.54	27329.52
+2648	2	2026-04-01 13:30:00+00	COST	BUY	26.79	992.93	26600.59
+2649	2	2026-04-01 13:30:00+00	JPM	BUY	90.34	294.54	26608.74
+2650	2	2026-04-01 13:30:00+00	PFE	BUY	1050.23	28.19	29605.98
+2651	2	2026-04-01 13:30:00+00	TSM	BUY	2.38	347.19	826.31
+2652	4	2026-04-01 13:30:00+00	GE	SELL	13.51	294.3	3975.99
+2653	4	2026-04-01 13:30:00+00	JNJ	SELL	64.12	245.17	15720.3
+2654	4	2026-04-01 13:30:00+00	COST	BUY	3.98	992.93	3951.86
+2655	4	2026-04-01 13:30:00+00	JPM	BUY	18.34	294.54	5401.86
+2656	4	2026-04-01 13:30:00+00	PFE	BUY	295.55	28.19	8331.55
+2657	5	2026-04-01 13:30:00+00	JNJ	SELL	426.95	245.17	104675.33
+2658	5	2026-04-01 13:30:00+00	COST	BUY	3.13	992.93	3107.87
+2659	5	2026-04-01 13:30:00+00	JPM	BUY	129.66	294.54	38190.06
+2660	5	2026-04-01 13:30:00+00	NFLX	BUY	518.58	95.21	49374
+2661	5	2026-04-01 13:30:00+00	PFE	BUY	263.3	28.19	7422.43
+2662	5	2026-04-01 13:30:00+00	TSM	BUY	5.39	347.19	1871.35
+2663	5	2026-04-01 13:30:00+00	WMT	BUY	40.24	123.54	4971.25
+2664	6	2026-04-01 13:30:00+00	CVX	SELL	20.6	198.6	4091.16
+2665	6	2026-04-01 13:30:00+00	JNJ	SELL	104.42	245.17	25600.65
+2666	6	2026-04-01 13:30:00+00	COST	BUY	5.87	992.93	5828.5
+2667	6	2026-04-01 13:30:00+00	JPM	BUY	32.35	294.54	9528.37
+2668	6	2026-04-01 13:30:00+00	NFLX	BUY	65.97	95.21	6281
+2669	6	2026-04-01 13:30:00+00	PFE	BUY	204.71	28.19	5770.77
+2670	6	2026-04-01 13:30:00+00	WMT	BUY	38.05	123.54	4700.7
+2671	7	2026-04-01 13:30:00+00	GE	SELL	8.05	294.3	2369.12
+2672	7	2026-04-01 13:30:00+00	JNJ	SELL	38.72	245.17	9492.98
+2673	7	2026-04-01 13:30:00+00	COST	BUY	2.47	992.93	2452.54
+2674	7	2026-04-01 13:30:00+00	JPM	BUY	10.8	294.54	3181.03
+2675	7	2026-04-01 13:30:00+00	NFLX	BUY	28.61	95.21	2723.96
+2676	7	2026-04-01 13:30:00+00	NKE	BUY	74.48	45.31	3374.69
+2677	7	2026-04-01 13:30:00+00	PFE	BUY	111.12	28.19	3132.47
+2678	8	2026-04-01 13:30:00+00	JNJ	SELL	57.54	245.17	14107.08
+2679	9	2026-04-01 13:30:00+00	JNJ	SELL	189.81	245.17	46535.72
+2680	9	2026-04-01 13:30:00+00	TSM	BUY	46.57	347.19	16168.64
+2681	10	2026-04-01 13:30:00+00	JNJ	SELL	155.65	245.17	38160.71
+2682	10	2026-04-01 13:30:00+00	COST	BUY	7	992.93	6950.51
+2683	10	2026-04-01 13:30:00+00	JPM	BUY	21.92	294.54	6456.32
+2684	10	2026-04-01 13:30:00+00	PFE	BUY	322.88	28.19	9101.99
+2685	11	2026-04-01 13:30:00+00	GE	SELL	7.27	294.3	2139.56
+2686	11	2026-04-01 13:30:00+00	JNJ	SELL	131.03	245.17	32124.63
+2687	11	2026-04-01 13:30:00+00	XOM	SELL	35.42	161.74	5728.83
+2688	11	2026-04-01 13:30:00+00	COST	BUY	6.53	992.93	6483.83
+2689	11	2026-04-01 13:30:00+00	JPM	BUY	29.9	294.54	8806.75
+2690	11	2026-04-01 13:30:00+00	NFLX	BUY	115.69	95.21	11014.84
+2691	11	2026-04-01 13:30:00+00	PFE	BUY	501.35	28.19	14133.06
+2692	11	2026-04-01 13:30:00+00	WMT	BUY	31.68	123.54	3913.75
+2693	2	2026-04-08 13:30:00+00	JNJ	SELL	113.56	236.65	26873.97
+2694	2	2026-04-08 13:30:00+00	JPM	SELL	10.61	307.48	3262.36
+2695	2	2026-04-08 13:30:00+00	PFE	SELL	1050.23	27.08	28440.23
+2696	2	2026-04-08 13:30:00+00	TSM	SELL	1.38	364.74	503.34
+2697	2	2026-04-08 13:30:00+00	COST	BUY	4.28	1015.92	4348.14
+2698	2	2026-04-08 13:30:00+00	NVDA	BUY	153.32	181.8	27873.58
+2699	2	2026-04-08 13:30:00+00	SBUX	BUY	278.16	96.59	26867.47
+2700	4	2026-04-08 13:30:00+00	JNJ	SELL	25.3	236.65	5987.24
+2701	4	2026-04-08 13:30:00+00	PFE	SELL	339.12	27.08	9183.37
+2702	4	2026-04-08 13:30:00+00	COST	BUY	13.38	1015.92	13593.01
+2703	4	2026-04-08 13:30:00+00	NVDA	BUY	24.24	181.8	4406.83
+2704	4	2026-04-08 13:30:00+00	SBUX	BUY	50.38	96.59	4866.2
+2705	4	2026-04-08 13:30:00+00	TSM	BUY	13.45	364.74	4905.75
+2706	5	2026-04-08 13:30:00+00	JPM	SELL	122.04	307.48	37524.86
+2707	5	2026-04-08 13:30:00+00	NFLX	SELL	500.78	99.1	49627.3
+2708	5	2026-04-08 13:30:00+00	PFE	SELL	303.79	27.08	8226.63
+2709	5	2026-04-08 13:30:00+00	WMT	SELL	40.15	124.31	4991.05
+2710	5	2026-04-08 13:30:00+00	COST	BUY	98.96	1015.92	100535.44
+2711	5	2026-04-08 13:30:00+00	TSM	BUY	9.47	364.74	3454.09
+2712	6	2026-04-08 13:30:00+00	JNJ	SELL	18.41	236.65	4356.73
+2713	6	2026-04-08 13:30:00+00	JPM	SELL	14.32	307.48	4403.11
+2714	6	2026-04-08 13:30:00+00	PFE	SELL	341.97	27.08	9260.55
+2715	6	2026-04-08 13:30:00+00	WMT	SELL	40.59	124.31	5045.74
+2716	6	2026-04-08 13:30:00+00	XOM	SELL	36.92	153.96	5684.2
+2717	6	2026-04-08 13:30:00+00	COST	BUY	18.1	1015.92	18388.15
+2718	6	2026-04-08 13:30:00+00	NVDA	BUY	23.55	181.8	4281.39
+2719	6	2026-04-08 13:30:00+00	SBUX	BUY	80.48	96.59	7773.56
+2720	7	2026-04-08 13:30:00+00	CVX	SELL	14.29	190.07	2716.1
+2721	7	2026-04-08 13:30:00+00	JNJ	SELL	8.91	236.65	2108.55
+2722	7	2026-04-08 13:30:00+00	NKE	SELL	99.34	43.67	4338.18
+2723	7	2026-04-08 13:30:00+00	PFE	SELL	212	27.08	5740.96
+2724	7	2026-04-08 13:30:00+00	WMT	SELL	24.36	124.31	3028.19
+2725	7	2026-04-08 13:30:00+00	XOM	SELL	18.59	153.96	2862.12
+2726	7	2026-04-08 13:30:00+00	COST	BUY	8.21	1015.92	8340.7
+2727	7	2026-04-08 13:30:00+00	SBUX	BUY	57.08	96.59	5513.36
+2728	8	2026-04-08 13:30:00+00	CVX	SELL	36.89	190.07	7011.68
+2729	8	2026-04-08 13:30:00+00	XOM	SELL	45.48	153.96	7002.1
+2730	8	2026-04-08 13:30:00+00	COST	BUY	16.68	1015.92	16945.55
+2731	9	2026-04-08 13:30:00+00	COST	BUY	44.24	1015.92	44944.3
+2732	10	2026-04-08 13:30:00+00	JNJ	SELL	25.69	236.65	6079.54
+2733	10	2026-04-08 13:30:00+00	JPM	SELL	24.19	307.48	7437.94
+2734	10	2026-04-08 13:30:00+00	PFE	SELL	478.61	27.08	12960.76
+2735	10	2026-04-08 13:30:00+00	COST	BUY	28.88	1015.92	29339.77
+2736	10	2026-04-08 13:30:00+00	SBUX	BUY	72.18	96.59	6971.87
+2737	11	2026-04-08 13:30:00+00	CVX	SELL	30.18	190.07	5736.31
+2738	11	2026-04-08 13:30:00+00	JNJ	SELL	15.1	236.65	3573.41
+2739	11	2026-04-08 13:30:00+00	JPM	SELL	12.83	307.48	3944.97
+2740	11	2026-04-08 13:30:00+00	NFLX	SELL	54.27	99.1	5378.16
+2741	11	2026-04-08 13:30:00+00	PFE	SELL	613.37	27.08	16610.06
+2742	11	2026-04-08 13:30:00+00	WMT	SELL	61.71	124.31	7671.17
+2743	11	2026-04-08 13:30:00+00	XOM	SELL	15.98	153.96	2460.28
+2744	11	2026-04-08 13:30:00+00	BA	BUY	7.83	218.33	1709.52
+2745	11	2026-04-08 13:30:00+00	COST	BUY	30.01	1015.92	30487.76
+2746	11	2026-04-08 13:30:00+00	NVDA	BUY	23.7	181.8	4308.66
+2747	11	2026-04-08 13:30:00+00	SBUX	BUY	83.35	96.59	8050.78
+2748	2	2026-04-15 13:30:00+00	COST	SELL	31.07	974.1	30265.29
+2749	2	2026-04-15 13:30:00+00	JPM	SELL	79.73	308.88	24627
+2750	2	2026-04-15 13:30:00+00	NVDA	SELL	4.75	199.24	946.39
+2751	2	2026-04-15 13:30:00+00	SBUX	SELL	278.16	98.53	27407.1
+2752	2	2026-04-15 13:30:00+00	AAPL	BUY	99.2	260.68	25859.46
+2753	2	2026-04-15 13:30:00+00	GE	BUY	90.62	315.39	28580.64
+2754	2	2026-04-15 13:30:00+00	JNJ	BUY	112.44	239.06	26879.91
+2755	2	2026-04-15 13:30:00+00	TSM	BUY	5.08	379.11	1925.88
+2756	4	2026-04-15 13:30:00+00	COST	SELL	17.69	974.1	17231.83
+2757	4	2026-04-15 13:30:00+00	JPM	SELL	17.26	308.88	5331.27
+2758	4	2026-04-15 13:30:00+00	SBUX	SELL	56.95	98.53	5611.28
+2759	4	2026-04-15 13:30:00+00	GE	BUY	27.09	315.39	8543.92
+2760	4	2026-04-15 13:30:00+00	JNJ	BUY	18.5	239.06	4422.61
+2761	4	2026-04-15 13:30:00+00	NVDA	BUY	21.47	199.24	4277.68
+2762	4	2026-04-15 13:30:00+00	TSM	BUY	16.27	379.11	6168.12
+2763	5	2026-04-15 13:30:00+00	COST	SELL	102.1	974.1	99455.61
+2764	5	2026-04-15 13:30:00+00	JPM	SELL	7.46	308.88	2304.24
+2765	5	2026-04-15 13:30:00+00	GE	BUY	11.79	315.39	3718.45
+2766	5	2026-04-15 13:30:00+00	NFLX	BUY	15.62	105.99	1655.56
+2767	5	2026-04-15 13:30:00+00	NVDA	BUY	491.67	199.24	97960.33
+2768	6	2026-04-15 13:30:00+00	COST	SELL	24.95	974.1	24303.79
+2769	6	2026-04-15 13:30:00+00	NFLX	SELL	37.09	105.99	3931.17
+2770	6	2026-04-15 13:30:00+00	SBUX	SELL	74.64	98.53	7354.28
+2771	6	2026-04-15 13:30:00+00	GE	BUY	14.77	315.39	4658.31
+2772	6	2026-04-15 13:30:00+00	JNJ	BUY	17.34	239.06	4145.3
+2773	6	2026-04-15 13:30:00+00	NVDA	BUY	70.34	199.24	14014.54
+2774	6	2026-04-15 13:30:00+00	TSM	BUY	12.97	379.11	4917.06
+2775	7	2026-04-15 13:30:00+00	COST	SELL	10.99	974.1	10705.36
+2776	7	2026-04-15 13:30:00+00	JPM	SELL	12.56	308.88	3879.53
+2777	7	2026-04-15 13:30:00+00	SBUX	SELL	62.87	98.53	6194.58
+2778	7	2026-04-15 13:30:00+00	DIS	BUY	18.6	102.03	1897.76
+2779	7	2026-04-15 13:30:00+00	GE	BUY	13.11	315.39	4134.76
+2780	7	2026-04-15 13:30:00+00	JNJ	BUY	16.24	239.06	3882.33
+2781	7	2026-04-15 13:30:00+00	NVDA	BUY	20.62	199.24	4108.33
+2782	7	2026-04-15 13:30:00+00	TSM	BUY	20.87	379.11	7912.03
+2783	8	2026-04-15 13:30:00+00	COST	SELL	16.69	974.1	16257.73
+2784	8	2026-04-15 13:30:00+00	NVDA	BUY	49.53	199.24	9868.36
+2785	9	2026-04-15 13:30:00+00	COST	SELL	42.48	974.1	41379.77
+2786	9	2026-04-15 13:30:00+00	NVDA	BUY	164.18	199.24	32711.22
+2787	10	2026-04-15 13:30:00+00	COST	SELL	35.8	974.1	34872.78
+2788	10	2026-04-15 13:30:00+00	SBUX	SELL	72.81	98.53	7173.97
+2789	10	2026-04-15 13:30:00+00	GE	BUY	21.61	315.39	6815.58
+2790	10	2026-04-15 13:30:00+00	JNJ	BUY	22.9	239.06	5474.47
+2791	10	2026-04-15 13:30:00+00	NVDA	BUY	107.32	199.24	21382.44
+2792	10	2026-04-15 13:30:00+00	TSM	BUY	38.43	379.11	14569.2
+2793	11	2026-04-15 13:30:00+00	BA	SELL	12.44	222.62	2769.39
+2794	11	2026-04-15 13:30:00+00	COST	SELL	38.72	974.1	37717.15
+2795	11	2026-04-15 13:30:00+00	JPM	SELL	17.48	308.88	5399.22
+2796	11	2026-04-15 13:30:00+00	SBUX	SELL	68.1	98.53	6709.89
+2797	11	2026-04-15 13:30:00+00	GE	BUY	28.36	315.39	8944.46
+2798	11	2026-04-15 13:30:00+00	JNJ	BUY	12.26	239.06	2930.88
+2799	11	2026-04-15 13:30:00+00	NVDA	BUY	131.06	199.24	26112.39
+2800	11	2026-04-15 13:30:00+00	TSM	BUY	29.21	379.11	11073.8
+2801	2	2026-04-22 13:30:00+00	AAPL	SELL	3.48	271.94	946.35
+2802	2	2026-04-22 13:30:00+00	JNJ	SELL	112.44	226.21	25435.05
+2803	2	2026-04-22 13:30:00+00	TSM	SELL	6.92	374.04	2588.36
+2804	2	2026-04-22 13:30:00+00	COST	BUY	25.92	1003.93	26021.87
+2805	2	2026-04-22 13:30:00+00	GE	BUY	6.84	272.56	1864.31
+2806	2	2026-04-22 13:30:00+00	NVDA	BUY	5.37	200.36	1075.93
+2807	3	2026-04-22 13:30:00+00	TSM	SELL	16.47	374.04	6160.44
+2808	4	2026-04-22 13:30:00+00	NFLX	SELL	57.2	93.73	5361.36
+2809	5	2026-04-22 13:30:00+00	GE	SELL	11.8	272.56	3216.21
+2810	5	2026-04-22 13:30:00+00	NFLX	SELL	33.74	93.73	3162.45
+2811	5	2026-04-22 13:30:00+00	NVDA	SELL	485.95	200.36	97364.94
+2812	5	2026-04-22 13:30:00+00	TSM	BUY	266.2	374.04	99569.45
+2813	5	2026-04-22 13:30:00+00	WMT	BUY	22.13	129.4	2863.62
+2814	6	2026-04-22 13:30:00+00	NFLX	SELL	60.19	93.73	5641.61
+2815	6	2026-04-22 13:30:00+00	NVDA	SELL	43.22	200.36	8659.56
+2816	6	2026-04-22 13:30:00+00	TSM	BUY	35.33	374.04	13214.83
+2817	6	2026-04-22 13:30:00+00	WMT	BUY	40.12	129.4	5191.53
+2818	7	2026-04-22 13:30:00+00	JNJ	SELL	14.91	226.21	3372.79
+2819	7	2026-04-22 13:30:00+00	NFLX	SELL	35.68	93.73	3344.29
+2820	7	2026-04-22 13:30:00+00	TSM	SELL	9.92	374.04	3710.48
+2821	7	2026-04-22 13:30:00+00	NKE	BUY	61.26	46.42	2843.69
+2822	7	2026-04-22 13:30:00+00	SBUX	BUY	21.71	98.53	2139.09
+2823	7	2026-04-22 13:30:00+00	XOM	BUY	13.19	149.41	1970.72
+2824	9	2026-04-22 13:30:00+00	TSM	BUY	60.38	374.04	22584.54
+2825	10	2026-04-22 13:30:00+00	NVDA	SELL	43.15	200.36	8645.53
+2826	10	2026-04-22 13:30:00+00	TSM	BUY	40.04	374.04	14976.56
+2827	11	2026-04-22 13:30:00+00	GE	SELL	21.67	272.56	5906.38
+2828	11	2026-04-22 13:30:00+00	JNJ	SELL	12.47	226.21	2820.84
+2829	11	2026-04-22 13:30:00+00	NFLX	SELL	98.41	93.73	9223.97
+2830	11	2026-04-22 13:30:00+00	NVDA	SELL	89.71	200.36	17974.3
+2831	11	2026-04-22 13:30:00+00	BA	BUY	8.17	226.83	1853.2
+2832	11	2026-04-22 13:30:00+00	COST	BUY	4.71	1003.93	4728.51
+2833	11	2026-04-22 13:30:00+00	MSFT	BUY	4.11	431.12	1771.9
+2834	11	2026-04-22 13:30:00+00	TSM	BUY	52.44	374.04	19614.66
+2835	11	2026-04-22 13:30:00+00	WMT	BUY	72.73	129.4	9411.26
+2836	2	2026-04-29 13:30:00+00	AAPL	SELL	95.72	269.4	25786.97
+2837	2	2026-04-29 13:30:00+00	COST	SELL	25.92	987.66	25600.15
+2838	2	2026-04-29 13:30:00+00	GE	SELL	97.46	282.4	27522.7
+2839	2	2026-04-29 13:30:00+00	NVDA	SELL	18.55	211.11	3916.09
+2840	2	2026-04-29 13:30:00+00	JNJ	BUY	130.09	224.89	29255.94
+2841	2	2026-04-29 13:30:00+00	TSM	BUY	1.56	394.93	616.09
+2842	2	2026-04-29 13:30:00+00	WMT	BUY	206.2	126.39	26061.62
+2843	2	2026-04-29 13:30:00+00	XOM	BUY	176.96	152.02	26901.46
+2844	3	2026-04-29 13:30:00+00	TSM	BUY	22.18	394.93	8759.55
+2845	4	2026-04-29 13:30:00+00	GE	SELL	23.18	282.4	6546.03
+2846	4	2026-04-29 13:30:00+00	NVDA	SELL	34.7	211.11	7325.52
+2847	4	2026-04-29 13:30:00+00	TSM	BUY	40.14	394.93	15852.49
+2848	5	2026-04-29 13:30:00+00	TSM	SELL	73.78	394.93	29137.94
+2849	5	2026-04-29 13:30:00+00	WMT	SELL	22.08	126.39	2790.69
+2850	5	2026-04-29 13:30:00+00	NVDA	BUY	143.82	211.11	30361.84
+2851	5	2026-04-29 13:30:00+00	V	BUY	5.94	338.49	2010.63
+2852	6	2026-04-29 13:30:00+00	GE	SELL	23.87	282.4	6740.89
+2853	6	2026-04-29 13:30:00+00	JPM	SELL	14.42	310.27	4474.09
+2854	6	2026-04-29 13:30:00+00	TSM	BUY	15.31	394.93	6046.38
+2855	7	2026-04-29 13:30:00+00	GE	SELL	9.35	282.4	2640.44
+2856	7	2026-04-29 13:30:00+00	NKE	SELL	52.03	44.37	2308.57
+2857	7	2026-04-29 13:30:00+00	NVDA	SELL	9.05	211.11	1910.55
+2858	7	2026-04-29 13:30:00+00	SBUX	SELL	27.22	104.76	2851.57
+2859	7	2026-04-29 13:30:00+00	TSM	BUY	27.08	394.93	10694.7
+2860	7	2026-04-29 13:30:00+00	WMT	BUY	33.29	126.39	4207.52
+2861	8	2026-04-29 13:30:00+00	TSM	BUY	43.93	394.93	17349.27
+2862	10	2026-04-29 13:30:00+00	GE	SELL	32.66	282.4	9223.18
+2863	10	2026-04-29 13:30:00+00	TSM	BUY	35.85	394.93	14158.24
+2864	11	2026-04-29 13:30:00+00	BA	SELL	7.75	224.06	1736.46
+2865	11	2026-04-29 13:30:00+00	COST	SELL	5.32	987.66	5254.35
+2866	11	2026-04-29 13:30:00+00	GE	SELL	6.55	282.4	1849.72
+2867	11	2026-04-29 13:30:00+00	WMT	SELL	52.13	126.39	6588.71
+2868	11	2026-04-29 13:30:00+00	AAPL	BUY	7.08	269.4	1907.35
+2869	11	2026-04-29 13:30:00+00	NVDA	BUY	62.47	211.11	13188.04
+2870	11	2026-04-29 13:30:00+00	V	BUY	12.88	338.49	4359.75
+2871	2	2026-05-06 13:30:00+00	TSM	SELL	82.59	409.59	33828.04
+2872	2	2026-05-06 13:30:00+00	XOM	SELL	176.96	149.09	26382.97
+2873	2	2026-05-06 13:30:00+00	AAPL	BUY	101.06	286.11	28914.28
+2874	2	2026-05-06 13:30:00+00	GE	BUY	92.89	303.51	28193.04
+2875	2	2026-05-06 13:30:00+00	JNJ	BUY	1.35	225.5	304.43
+2876	2	2026-05-06 13:30:00+00	NVDA	BUY	12.59	203.95	2567.73
+2877	2	2026-05-06 13:30:00+00	WMT	BUY	1.77	130.35	230.72
+2878	3	2026-05-06 13:30:00+00	TSM	SELL	27.54	409.59	11280.11
+2879	3	2026-05-06 13:30:00+00	AAPL	BUY	25.65	286.11	7338.72
+2880	4	2026-05-06 13:30:00+00	TSM	SELL	70.07	409.59	28699.97
+2881	4	2026-05-06 13:30:00+00	AAPL	BUY	56.67	286.11	16213.85
+2882	4	2026-05-06 13:30:00+00	COST	BUY	4.84	1003.65	4857.67
+2883	5	2026-05-06 13:30:00+00	NVDA	SELL	149.56	203.95	30502.76
+2884	5	2026-05-06 13:30:00+00	TSM	SELL	201.85	409.59	82675.74
+2885	5	2026-05-06 13:30:00+00	V	SELL	5.47	323.34	1768.67
+2886	5	2026-05-06 13:30:00+00	AAPL	BUY	214.78	286.11	61450.71
+2887	5	2026-05-06 13:30:00+00	COST	BUY	28.13	1003.65	28232.67
+2888	5	2026-05-06 13:30:00+00	CVX	BUY	17.6	184.7	3250.72
+2889	5	2026-05-06 13:30:00+00	SBUX	BUY	145.71	105.93	15435.06
+2890	5	2026-05-06 13:30:00+00	WMT	BUY	28.61	130.35	3729.31
+2891	6	2026-05-06 13:30:00+00	JNJ	SELL	19.56	225.5	4410.78
+2892	6	2026-05-06 13:30:00+00	NVDA	SELL	50.62	203.95	10323.95
+2893	6	2026-05-06 13:30:00+00	TSM	SELL	61.65	409.59	25251.22
+2894	6	2026-05-06 13:30:00+00	AAPL	BUY	71.43	286.11	20436.84
+2895	6	2026-05-06 13:30:00+00	COST	BUY	8.13	1003.65	8159.67
+2896	7	2026-05-06 13:30:00+00	NVDA	SELL	14.63	203.95	2983.79
+2897	7	2026-05-06 13:30:00+00	TSM	SELL	31.04	409.59	12713.67
+2898	7	2026-05-06 13:30:00+00	WMT	SELL	17.79	130.35	2318.93
+2899	7	2026-05-06 13:30:00+00	AAPL	BUY	18.07	286.11	5170.01
+2900	7	2026-05-06 13:30:00+00	COST	BUY	1.93	1003.65	1937.04
+2901	7	2026-05-06 13:30:00+00	CVX	BUY	11.27	184.7	2081.57
+2902	8	2026-05-06 13:30:00+00	NVDA	SELL	43.61	203.95	8894.26
+2903	8	2026-05-06 13:30:00+00	TSM	SELL	48.03	409.59	19672.61
+2904	8	2026-05-06 13:30:00+00	AAPL	BUY	50.55	286.11	14462.86
+2905	9	2026-05-06 13:30:00+00	NVDA	SELL	125.45	203.95	25585.53
+2906	9	2026-05-06 13:30:00+00	TSM	SELL	103.32	409.59	42318.84
+2907	9	2026-05-06 13:30:00+00	AAPL	BUY	116.54	286.11	33343.26
+2908	10	2026-05-06 13:30:00+00	NVDA	SELL	56.25	203.95	11472.19
+2909	10	2026-05-06 13:30:00+00	TSM	SELL	106.04	409.59	43432.92
+2910	10	2026-05-06 13:30:00+00	AAPL	BUY	86.63	286.11	24785.71
+2911	10	2026-05-06 13:30:00+00	COST	BUY	8.33	1003.65	8360.4
+2912	10	2026-05-06 13:30:00+00	WMT	BUY	52.16	130.35	6799.06
+2913	11	2026-05-06 13:30:00+00	MSFT	SELL	6.02	416.03	2504.5
+2914	11	2026-05-06 13:30:00+00	NVDA	SELL	127.75	203.95	26054.61
+2915	11	2026-05-06 13:30:00+00	TSM	SELL	65.03	409.59	26635.64
+2916	11	2026-05-06 13:30:00+00	V	SELL	7.67	323.34	2480.02
+2917	11	2026-05-06 13:30:00+00	AAPL	BUY	90.77	286.11	25970.2
+2918	11	2026-05-06 13:30:00+00	COST	BUY	12.56	1003.65	12605.84
+2919	11	2026-05-06 13:30:00+00	CVX	BUY	14.77	184.7	2728.02
+2920	11	2026-05-06 13:30:00+00	DIS	BUY	33.03	108.2	3573.85
+2921	11	2026-05-06 13:30:00+00	SBUX	BUY	50.65	105.93	5365.35
+2922	11	2026-05-06 13:30:00+00	WMT	BUY	25.36	130.35	3305.68
+2923	11	2026-05-06 13:30:00+00	XOM	BUY	17.27	149.09	2574.78
+2924	2	2026-05-13 13:30:00+00	AAPL	SELL	4.84	295.15	1428.53
+2925	2	2026-05-13 13:30:00+00	GE	SELL	92.89	294.47	27353.32
+2926	2	2026-05-13 13:30:00+00	NVDA	SELL	3.48	224.44	781.05
+2927	2	2026-05-13 13:30:00+00	JNJ	BUY	4.67	227.7	1063.36
+2928	2	2026-05-13 13:30:00+00	TSM	BUY	71.77	395.68	28397.95
+2929	2	2026-05-13 13:30:00+00	WMT	BUY	0.79	131	103.49
+2930	4	2026-05-13 13:30:00+00	AAPL	SELL	28.65	295.15	8456.05
+2931	4	2026-05-13 13:30:00+00	DIS	BUY	42.88	104.88	4497.25
+2932	4	2026-05-13 13:30:00+00	NVDA	BUY	46.3	224.44	10391.57
+2933	5	2026-05-13 13:30:00+00	AAPL	SELL	206.12	295.15	60836.32
+2934	5	2026-05-13 13:30:00+00	COST	SELL	27.74	1031.01	28600.22
+2935	5	2026-05-13 13:30:00+00	CVX	SELL	24.3	185.47	4506.92
+2936	5	2026-05-13 13:30:00+00	TSM	SELL	5.55	395.68	2196.02
+2937	5	2026-05-13 13:30:00+00	WMT	SELL	28.61	131	3747.91
+2938	5	2026-05-13 13:30:00+00	BA	BUY	13.5	238.41	3218.53
+2939	5	2026-05-13 13:30:00+00	DIS	BUY	18.66	104.88	1957.06
+2940	5	2026-05-13 13:30:00+00	NVDA	BUY	427.98	224.44	96055.83
+2941	6	2026-05-13 13:30:00+00	AAPL	SELL	45.32	295.15	13376.2
+2942	6	2026-05-13 13:30:00+00	TSM	SELL	19.16	395.68	7581.23
+2943	6	2026-05-13 13:30:00+00	BA	BUY	29.16	238.41	6952.04
+2944	6	2026-05-13 13:30:00+00	DIS	BUY	57.49	104.88	6029.55
+2945	6	2026-05-13 13:30:00+00	NVDA	BUY	91.31	224.44	20493.62
+2946	7	2026-05-13 13:30:00+00	AAPL	SELL	13.87	295.15	4093.73
+2947	7	2026-05-13 13:30:00+00	TSM	SELL	9.14	395.68	3616.52
+2948	7	2026-05-13 13:30:00+00	DIS	BUY	36.72	104.88	3851.19
+2949	7	2026-05-13 13:30:00+00	GE	BUY	7.62	294.47	2243.86
+2950	7	2026-05-13 13:30:00+00	JNJ	BUY	16.06	227.7	3656.86
+2951	7	2026-05-13 13:30:00+00	NVDA	BUY	25.24	224.44	5664.87
+2952	8	2026-05-13 13:30:00+00	AAPL	SELL	27.52	295.15	8122.53
+2953	8	2026-05-13 13:30:00+00	NVDA	BUY	49.18	224.44	11037.96
+2954	9	2026-05-13 13:30:00+00	AAPL	SELL	84.83	295.15	25037.57
+2955	9	2026-05-13 13:30:00+00	NVDA	BUY	236.33	224.44	53041.91
+2956	10	2026-05-13 13:30:00+00	AAPL	SELL	57.05	295.15	16838.31
+2957	10	2026-05-13 13:30:00+00	TSM	SELL	15.17	395.68	6002.47
+2958	10	2026-05-13 13:30:00+00	NVDA	BUY	140.15	224.44	31455.27
+2959	11	2026-05-13 13:30:00+00	AAPL	SELL	70.01	295.15	20663.45
+2960	11	2026-05-13 13:30:00+00	COST	SELL	4.81	1031.01	4959.16
+2961	11	2026-05-13 13:30:00+00	CVX	SELL	16.11	185.47	2987.92
+2962	11	2026-05-13 13:30:00+00	JPM	SELL	7.42	301.8	2239.36
+2963	11	2026-05-13 13:30:00+00	TSM	SELL	30.19	395.68	11945.58
+2964	11	2026-05-13 13:30:00+00	WMT	SELL	37.85	131	4958.35
+2965	11	2026-05-13 13:30:00+00	XOM	SELL	14.04	151.28	2123.97
+2966	11	2026-05-13 13:30:00+00	BA	BUY	32.45	238.41	7736.4
+2967	11	2026-05-13 13:30:00+00	DIS	BUY	67.3	104.88	7058.42
+2968	11	2026-05-13 13:30:00+00	GE	BUY	7.58	294.47	2232.08
+2969	11	2026-05-13 13:30:00+00	NVDA	BUY	148.54	224.44	33338.32
 \.
 
 
 --
+-- TOC entry 3515 (class 0 OID 21471)
+-- Dependencies: 225
 -- Data for Name: portfolios; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.portfolios (id, user_id, archetype_key, name, short_term_weight, medium_term_weight, long_term_weight, risk_tolerance, rebalance_threshold, min_score_threshold, softmax_temp) FROM stdin;
-1	1	benchmark	benchmark	0	0	0	0	0	0	0
-2	2	conservative_grandpa	conservative_grandpa_01	0.048	0.137	0.815	0.17	0.0835	6.06	1.91
-3	3	value_hunter	value_hunter_01	0.099	0.38	0.52	0.41	0.0562	6.35	1.45
-4	4	degen_trader	degen_trader_01	0.791	0.159	0.05	0.96	0.0122	3.6	0.46
-5	5	growth_enthusiast	growth_enthusiast_01	0.278	0.469	0.253	0.76	0.039	4.7	1.17
-6	6	risk_manager	risk_manager_01	0.185	0.392	0.424	0.23	0.0272	5.84	1.59
-7	7	balanced_pensioner	balanced_pensioner_01	0.198	0.424	0.377	0.45	0.0675	5.07	1.08
-8	8	conviction_heavy	conviction_heavy_01	0.074	0.228	0.698	0.73	0.0771	7.22	0.67
-9	9	asymmetry_seeker	asymmetry_seeker_01	0.162	0.351	0.487	0.74	0.0376	4.08	0.95
-10	10	technical_swing	technical_swing_01	0.356	0.543	0.101	0.64	0.0268	4.87	0.91
-11	11	macro_fundamentalist	macro_fundamentalist_01	0.042	0.259	0.699	0.49	0.1236	5.62	1.31
+COPY public.portfolios (id, user_id, archetype_key, name, short_term_weight, medium_term_weight, long_term_weight, min_exposure, aggression_slope, exposure_baseline, rebalance_threshold, softmax_temp) FROM stdin;
+1	1	buy_and_hold	buy_and_hold	0	0	0	0	0	0	0	0
+2	2	benchmark	benchmark	0	0	1	0	0	0	0	0
+3	3	conservative_grandpa	conservative_grandpa_01	0.035	0.111	0.855	0.15	0.06	6.5	0.0513	1.6
+4	4	value_hunter	value_hunter_01	0.116	0.358	0.527	0.37	0.15	5.4	0.0328	1.05
+5	5	degen_trader	degen_trader_01	0.812	0.151	0.037	0.89	0.38	3.08	0.012	0.31
+6	6	growth_enthusiast	growth_enthusiast_01	0.257	0.494	0.249	0.58	0.18	4.76	0.033	1.04
+7	7	risk_manager	risk_manager_01	0.125	0.429	0.446	0.33	0.09	5.72	0.0163	1.31
+8	8	balanced_pensioner	balanced_pensioner_01	0.115	0.488	0.397	0.47	0.13	5.36	0.0575	1.18
+9	9	conviction_heavy	conviction_heavy_01	0.067	0.213	0.72	0.54	0.15	4.93	0.1198	0.56
+10	10	asymmetry_seeker	asymmetry_seeker_01	0.191	0.393	0.417	0.52	0.22	4.77	0.0463	0.81
+11	11	technical_swing	technical_swing_01	0.347	0.513	0.14	0.68	0.28	4.02	0.015	0.86
+12	12	macro_fundamentalist	macro_fundamentalist_01	0.001	0.272	0.727	0.35	0.08	6.66	0.1313	1.24
 \.
 
 
 --
+-- TOC entry 3513 (class 0 OID 21462)
+-- Dependencies: 223
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.users (id, name) FROM stdin;
-1	benchmark
-2	conservative_grandpa_01
-3	value_hunter_01
-4	degen_trader_01
-5	growth_enthusiast_01
-6	risk_manager_01
-7	balanced_pensioner_01
-8	conviction_heavy_01
-9	asymmetry_seeker_01
-10	technical_swing_01
-11	macro_fundamentalist_01
+1	buy_and_hold
+2	benchmark
+3	conservative_grandpa_01
+4	value_hunter_01
+5	degen_trader_01
+6	growth_enthusiast_01
+7	risk_manager_01
+8	balanced_pensioner_01
+9	conviction_heavy_01
+10	asymmetry_seeker_01
+11	technical_swing_01
+12	macro_fundamentalist_01
 \.
 
 
 --
+-- TOC entry 3539 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: analyst_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.analyst_grades_id_seq', 1902, true);
+SELECT pg_catalog.setval('public.analyst_grades_id_seq', 2478, true);
 
 
 --
+-- TOC entry 3540 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: company_daily_summary_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.company_daily_summary_id_seq', 39819, true);
+SELECT pg_catalog.setval('public.company_daily_summary_id_seq', 45163, true);
 
 
 --
+-- TOC entry 3541 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: fundamental_snapshot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.fundamental_snapshot_id_seq', 97, true);
+SELECT pg_catalog.setval('public.fundamental_snapshot_id_seq', 400, true);
 
 
 --
+-- TOC entry 3542 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: market_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.market_data_id_seq', 66222, true);
+SELECT pg_catalog.setval('public.market_data_id_seq', 67860, true);
 
 
 --
+-- TOC entry 3543 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: portfolio_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.portfolio_history_id_seq', 24, true);
+SELECT pg_catalog.setval('public.portfolio_history_id_seq', 600, true);
 
 
 --
+-- TOC entry 3544 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: portfolio_metric_weights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.portfolio_metric_weights_id_seq', 66, true);
+SELECT pg_catalog.setval('public.portfolio_metric_weights_id_seq', 72, true);
 
 
 --
+-- TOC entry 3545 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: portfolio_shares_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.portfolio_shares_id_seq', 74, true);
+SELECT pg_catalog.setval('public.portfolio_shares_id_seq', 8850, true);
 
 
 --
+-- TOC entry 3546 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: portfolio_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.portfolio_transactions_id_seq', 66, true);
+SELECT pg_catalog.setval('public.portfolio_transactions_id_seq', 2969, true);
 
 
 --
+-- TOC entry 3547 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: portfolios_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.portfolios_id_seq', 11, true);
+SELECT pg_catalog.setval('public.portfolios_id_seq', 12, true);
 
 
 --
+-- TOC entry 3548 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 11, true);
+SELECT pg_catalog.setval('public.users_id_seq', 12, true);
 
 
 --
+-- TOC entry 3322 (class 2606 OID 16460)
 -- Name: analyst_grades analyst_grades_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72567,6 +86862,7 @@ ALTER TABLE ONLY public.analyst_grades
 
 
 --
+-- TOC entry 3324 (class 2606 OID 16462)
 -- Name: analyst_grades analyst_grades_ticker_as_of_date_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72575,6 +86871,7 @@ ALTER TABLE ONLY public.analyst_grades
 
 
 --
+-- TOC entry 3328 (class 2606 OID 16464)
 -- Name: company_daily_summary company_daily_summary_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72583,6 +86880,7 @@ ALTER TABLE ONLY public.company_daily_summary
 
 
 --
+-- TOC entry 3330 (class 2606 OID 16466)
 -- Name: company_daily_summary company_daily_summary_ticker_date_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72591,6 +86889,7 @@ ALTER TABLE ONLY public.company_daily_summary
 
 
 --
+-- TOC entry 3334 (class 2606 OID 16468)
 -- Name: fundamental_snapshot fundamental_snapshot_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72599,6 +86898,7 @@ ALTER TABLE ONLY public.fundamental_snapshot
 
 
 --
+-- TOC entry 3336 (class 2606 OID 16470)
 -- Name: fundamental_snapshot fundamental_snapshot_ticker_as_of_date_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72607,6 +86907,7 @@ ALTER TABLE ONLY public.fundamental_snapshot
 
 
 --
+-- TOC entry 3342 (class 2606 OID 16472)
 -- Name: market_data market_data_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72615,6 +86916,7 @@ ALTER TABLE ONLY public.market_data
 
 
 --
+-- TOC entry 3351 (class 2606 OID 21504)
 -- Name: portfolio_history portfolio_history_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72623,6 +86925,7 @@ ALTER TABLE ONLY public.portfolio_history
 
 
 --
+-- TOC entry 3348 (class 2606 OID 21492)
 -- Name: portfolio_metric_weights portfolio_metric_weights_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72631,6 +86934,7 @@ ALTER TABLE ONLY public.portfolio_metric_weights
 
 
 --
+-- TOC entry 3356 (class 2606 OID 21534)
 -- Name: portfolio_shares portfolio_shares_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72639,6 +86943,7 @@ ALTER TABLE ONLY public.portfolio_shares
 
 
 --
+-- TOC entry 3354 (class 2606 OID 21519)
 -- Name: portfolio_transactions portfolio_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72647,6 +86952,7 @@ ALTER TABLE ONLY public.portfolio_transactions
 
 
 --
+-- TOC entry 3346 (class 2606 OID 21478)
 -- Name: portfolios portfolios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72655,6 +86961,7 @@ ALTER TABLE ONLY public.portfolios
 
 
 --
+-- TOC entry 3344 (class 2606 OID 21469)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72663,6 +86970,7 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- TOC entry 3325 (class 1259 OID 16485)
 -- Name: ix_analyst_grades_as_of_date; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72670,6 +86978,7 @@ CREATE INDEX ix_analyst_grades_as_of_date ON public.analyst_grades USING btree (
 
 
 --
+-- TOC entry 3326 (class 1259 OID 16486)
 -- Name: ix_analyst_grades_ticker; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72677,6 +86986,7 @@ CREATE INDEX ix_analyst_grades_ticker ON public.analyst_grades USING btree (tick
 
 
 --
+-- TOC entry 3331 (class 1259 OID 16487)
 -- Name: ix_company_daily_summary_date; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72684,6 +86994,7 @@ CREATE INDEX ix_company_daily_summary_date ON public.company_daily_summary USING
 
 
 --
+-- TOC entry 3332 (class 1259 OID 16488)
 -- Name: ix_company_daily_summary_ticker; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72691,6 +87002,7 @@ CREATE INDEX ix_company_daily_summary_ticker ON public.company_daily_summary USI
 
 
 --
+-- TOC entry 3337 (class 1259 OID 16489)
 -- Name: ix_fundamental_snapshot_as_of_date; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72698,6 +87010,7 @@ CREATE INDEX ix_fundamental_snapshot_as_of_date ON public.fundamental_snapshot U
 
 
 --
+-- TOC entry 3338 (class 1259 OID 16490)
 -- Name: ix_fundamental_snapshot_ticker; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72705,6 +87018,7 @@ CREATE INDEX ix_fundamental_snapshot_ticker ON public.fundamental_snapshot USING
 
 
 --
+-- TOC entry 3339 (class 1259 OID 16491)
 -- Name: ix_market_data_datetime; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72712,6 +87026,7 @@ CREATE INDEX ix_market_data_datetime ON public.market_data USING btree (datetime
 
 
 --
+-- TOC entry 3340 (class 1259 OID 16492)
 -- Name: ix_market_data_ticker; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72719,6 +87034,7 @@ CREATE INDEX ix_market_data_ticker ON public.market_data USING btree (ticker);
 
 
 --
+-- TOC entry 3349 (class 1259 OID 21510)
 -- Name: ix_portfolio_history_datetime; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72726,6 +87042,7 @@ CREATE INDEX ix_portfolio_history_datetime ON public.portfolio_history USING btr
 
 
 --
+-- TOC entry 3352 (class 1259 OID 21525)
 -- Name: ix_portfolio_transactions_datetime; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -72733,6 +87050,7 @@ CREATE INDEX ix_portfolio_transactions_datetime ON public.portfolio_transactions
 
 
 --
+-- TOC entry 3359 (class 2606 OID 21505)
 -- Name: portfolio_history portfolio_history_portfolio_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72741,6 +87059,7 @@ ALTER TABLE ONLY public.portfolio_history
 
 
 --
+-- TOC entry 3358 (class 2606 OID 21493)
 -- Name: portfolio_metric_weights portfolio_metric_weights_portfolio_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72749,6 +87068,7 @@ ALTER TABLE ONLY public.portfolio_metric_weights
 
 
 --
+-- TOC entry 3361 (class 2606 OID 21535)
 -- Name: portfolio_shares portfolio_shares_portfolio_history_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72757,6 +87077,7 @@ ALTER TABLE ONLY public.portfolio_shares
 
 
 --
+-- TOC entry 3360 (class 2606 OID 21520)
 -- Name: portfolio_transactions portfolio_transactions_portfolio_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72765,6 +87086,7 @@ ALTER TABLE ONLY public.portfolio_transactions
 
 
 --
+-- TOC entry 3357 (class 2606 OID 21479)
 -- Name: portfolios portfolios_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -72772,9 +87094,11 @@ ALTER TABLE ONLY public.portfolios
     ADD CONSTRAINT portfolios_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
+-- Completed on 2026-05-21 20:03:32 UTC
+
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict BSNdxM43JJxJ65PQqwy4T6SoFZbdkFxjVuobVnLSgXdLowv9whHX6P1PQ7KuvyR
+\unrestrict 56fezK8RDcDbf2fLsp2o4cz2TzS7XY4wzA2xjV7NoOd1Ugus5NeTOOVadevzry9
 
