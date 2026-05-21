@@ -1,23 +1,54 @@
 import json
+import sys
+from datetime import timedelta
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
-
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
+from score_correlation_plotting import (
+    plot_average_metric_values,
+    plot_horizon_pearson,
+    plot_horizon_quantile_pearson,
+    plot_metric_summary,
+    plot_return_distribution,
+    plot_scatter_by_timeframe,
+    plot_score_buckets,
+    plot_ticker_score_timeline,
+    plot_timeframe_ticker_score_timeline,
+)
+
 
 ROOT_FOLDER = Path(__file__).resolve().parents[2]
+
+if str(ROOT_FOLDER) not in sys.path:
+    sys.path.append(str(ROOT_FOLDER))
+
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 
 INPUT_FILE = CROSS_SECTION_DIR / "score_vs_returns.json"
 OUTPUT_DIR = CROSS_SECTION_DIR / "correlation_plots"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
+
+# Same smoothing windows as in cross_section_pipeline.py. The horizon analysis
+# changes only the end-date distance, not the left/right price smoothing window.
+TIMEFRAME_PRICE_WINDOW_MAP = {
+    "short_term_14d": 6,
+    "medium_term_50d": 21,
+    "long_term_200d": 84,
+}
+
+HORIZON_DAY_RANGE_MAP = {
+    "short_term_14d": range(1, 420),
+    "medium_term_50d": range(1, 420),
+    "long_term_200d": range(1, 420),
+}
+
+TOP_SCORE_SHARES = [0.10, 0.20, 0.30, 0.40, 0.50]
+
+MARKET_DATA_BUFFER_DAYS = 420
 
 
 def load_json(path):
@@ -84,17 +115,22 @@ def get_score_columns(df, include_equal_weight=True):
     return sorted(columns)
 
 
-def safe_name(value):
-    return value.replace("/", "_").replace(" ", "_")
+def calculate_correlations(group, score_column, return_column="future_return"):
+    if score_column not in group.columns or return_column not in group.columns:
+        return {
+            "count": 0,
+            "pearson": None,
+            "pearson_p": None,
+            "spearman": None,
+            "spearman_p": None,
+        }
 
-
-def calculate_correlations(group, score_column):
-    clean = group[[score_column, "future_return"]].dropna()
+    clean = group[[score_column, return_column]].dropna()
 
     if (
         len(clean) < 3
         or clean[score_column].nunique() < 2
-        or clean["future_return"].nunique() < 2
+        or clean[return_column].nunique() < 2
     ):
         return {
             "count": len(clean),
@@ -104,8 +140,8 @@ def calculate_correlations(group, score_column):
             "spearman_p": None,
         }
 
-    pearson_corr, pearson_p = pearsonr(clean[score_column], clean["future_return"])
-    spearman_corr, spearman_p = spearmanr(clean[score_column], clean["future_return"])
+    pearson_corr, pearson_p = pearsonr(clean[score_column], clean[return_column])
+    spearman_corr, spearman_p = spearmanr(clean[score_column], clean[return_column])
 
     return {
         "count": len(clean),
@@ -146,281 +182,270 @@ def save_summary(df, score_columns):
     return summary
 
 
-def add_regression_line(ax, group, score_column):
-    line = group[[score_column, "future_return"]].dropna()
+def to_python_datetime(value):
+    if hasattr(value, "to_pydatetime"):
+        return value.to_pydatetime()
 
-    if len(line) < 2 or line[score_column].nunique() < 2:
-        return
-
-    slope, intercept = np.polyfit(line[score_column], line["future_return"], 1)
-    x_min = line[score_column].min()
-    x_max = line[score_column].max()
-    xs = [x_min, x_max]
-    ys = [slope * x + intercept for x in xs]
-    ax.plot(xs, ys, color="#d62728", linewidth=2, label="linear fit")
+    return pd.Timestamp(value).to_pydatetime()
 
 
-def add_baseline_y(ax, baseline_return):
-    ax.axhline(
-        baseline_return,
-        color="#111111",
-        linewidth=2,
-        linestyle="--",
-        label=f"equal-weight hold baseline: {baseline_return:.2%}",
+def calculate_return_stats(group):
+    if "future_return" not in group.columns or group.empty:
+        return {
+            "avg_return": None,
+            "median_return": None,
+            "win_rate": None,
+        }
+
+    returns = group["future_return"].dropna()
+
+    if returns.empty:
+        return {
+            "avg_return": None,
+            "median_return": None,
+            "win_rate": None,
+        }
+
+    return {
+        "avg_return": round(float(returns.mean()), 6),
+        "median_return": round(float(returns.median()), 6),
+        "win_rate": round(float((returns > 0).mean()), 6),
+    }
+
+
+def load_market_data_frame(session, tickers, min_timestamp, max_timestamp):
+    from app.db.models.market_data import MarketData
+
+    rows = (
+        session.query(
+            MarketData.ticker,
+            MarketData.datetime,
+            MarketData.open,
+            MarketData.high,
+            MarketData.low,
+            MarketData.close,
+        )
+        .filter(
+            MarketData.ticker.in_(sorted(tickers)),
+            MarketData.datetime >= min_timestamp,
+            MarketData.datetime <= max_timestamp,
+        )
+        .order_by(MarketData.ticker, MarketData.datetime)
+        .all()
     )
 
-
-def add_baseline_x(ax, baseline_return):
-    ax.axvline(
-        baseline_return,
-        color="#111111",
-        linewidth=2,
-        linestyle="--",
-        label=f"equal-weight hold baseline: {baseline_return:.2%}",
+    market_df = pd.DataFrame(
+        rows,
+        columns=["ticker", "datetime", "open", "high", "low", "close"],
     )
 
+    if market_df.empty:
+        return market_df
 
-def plot_scatter_by_timeframe(df, summary):
-    score_column = EQUAL_WEIGHT_SCORE_COLUMN
+    market_df["datetime"] = pd.to_datetime(market_df["datetime"])
+    market_df["ohlc4"] = market_df[["open", "high", "low", "close"]].mean(axis=1)
+    return market_df
 
-    if score_column not in df.columns:
-        return
 
-    for timeframe, group in df.groupby("timeframe"):
-        stats = summary[
-            (summary["timeframe"] == timeframe)
-            & (summary["ticker"] == "ALL")
-            & (summary["score_column"] == score_column)
-        ].iloc[0]
+def build_market_lookup(market_df):
+    lookup = {}
 
-        baseline_return = float(group["future_return"].mean())
+    for ticker, group in market_df.groupby("ticker", sort=False):
+        group = group.sort_values("datetime")
+        lookup[ticker] = {
+            "datetimes": group["datetime"].to_numpy(dtype="datetime64[ns]"),
+            "close": group["close"].to_numpy(dtype=float),
+            "ohlc4": group["ohlc4"].to_numpy(dtype=float),
+        }
 
-        fig, ax = plt.subplots(figsize=(10, 7))
-        ax.scatter(
-            group[score_column],
-            group["future_return"],
-            alpha=0.65,
-            s=42,
-            edgecolors="none",
+    return lookup
+
+
+def lookup_asof_close(market_lookup, ticker, timestamp):
+    ticker_data = market_lookup.get(ticker)
+
+    if ticker_data is None:
+        return np.nan
+
+    timestamp_value = np.datetime64(pd.Timestamp(timestamp).to_datetime64())
+    idx = np.searchsorted(ticker_data["datetimes"], timestamp_value, side="right") - 1
+
+    if idx < 0:
+        return np.nan
+
+    return ticker_data["close"][idx]
+
+
+def lookup_window_median_ohlc4(market_lookup, ticker, timestamp, window_positions):
+    ticker_data = market_lookup.get(ticker)
+
+    if ticker_data is None:
+        return np.nan
+
+    timestamp_value = np.datetime64(pd.Timestamp(timestamp).to_datetime64())
+    anchor_idx = np.searchsorted(
+        ticker_data["datetimes"],
+        timestamp_value,
+        side="right",
+    ) - 1
+
+    if anchor_idx < 0:
+        return np.nan
+
+    left_idx = max(0, anchor_idx - window_positions)
+    right_idx = min(len(ticker_data["ohlc4"]), anchor_idx + window_positions + 1)
+    values = ticker_data["ohlc4"][left_idx:right_idx]
+
+    if len(values) == 0:
+        return np.nan
+
+    return float(np.nanmedian(values))
+
+
+def add_current_prices(df, market_lookup):
+    priced_df = df.copy()
+    priced_df["current_price"] = [
+        lookup_asof_close(market_lookup, row.ticker, row.start_timestamp)
+        for row in priced_df.itertuples(index=False)
+    ]
+    return priced_df
+
+
+def build_horizon_return_frame(group, market_lookup, horizon_days, window_positions):
+    horizon_df = group[
+        ["ticker", "start_timestamp", EQUAL_WEIGHT_SCORE_COLUMN, "current_price"]
+    ].copy()
+    horizon_df["future_timestamp"] = (
+        horizon_df["start_timestamp"] + pd.to_timedelta(horizon_days, unit="D")
+    )
+    horizon_df["future_price"] = [
+        lookup_window_median_ohlc4(
+            market_lookup,
+            row.ticker,
+            row.future_timestamp,
+            window_positions,
         )
-        add_regression_line(ax, group, score_column)
-        add_baseline_y(ax, baseline_return)
+        for row in horizon_df.itertuples(index=False)
+    ]
+    horizon_df = horizon_df.dropna(subset=["current_price", "future_price"])
+    horizon_df = horizon_df[horizon_df["current_price"] > 0].copy()
+    horizon_df["future_return"] = (
+        horizon_df["future_price"] - horizon_df["current_price"]
+    ) / horizon_df["current_price"]
+    return horizon_df
 
-        ax.axhline(0, color="#888888", linewidth=1, linestyle=":")
-        ax.set_title(
-            f"{timeframe}: equal-weight score vs future return\n"
-            f"pearson={stats['pearson']} | spearman={stats['spearman']} | n={stats['count']}"
+
+def calculate_horizon_summaries(df):
+    if EQUAL_WEIGHT_SCORE_COLUMN not in df.columns:
+        return pd.DataFrame(), pd.DataFrame()
+
+    from app.db.database import SessionLocal
+
+    horizon_rows = []
+    quantile_rows = []
+    max_horizon_days = max(
+        max(horizon_days_values)
+        for horizon_days_values in HORIZON_DAY_RANGE_MAP.values()
+    )
+    min_timestamp = to_python_datetime(df["start_timestamp"].min()) - timedelta(
+        days=MARKET_DATA_BUFFER_DAYS,
+    )
+    max_timestamp = to_python_datetime(df["start_timestamp"].max()) + timedelta(
+        days=max_horizon_days + MARKET_DATA_BUFFER_DAYS,
+    )
+
+    with SessionLocal() as session:
+        market_df = load_market_data_frame(
+            session,
+            tickers=set(df["ticker"].dropna().unique()),
+            min_timestamp=min_timestamp,
+            max_timestamp=max_timestamp,
         )
-        ax.set_xlabel("Equal-weight score")
-        ax.set_ylabel("Future return")
-        ax.grid(True, alpha=0.25)
-        ax.legend()
 
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{timeframe}_equal_weight_scatter.png", dpi=160)
-        plt.close(fig)
+    if market_df.empty:
+        return pd.DataFrame(), pd.DataFrame()
 
+    market_lookup = build_market_lookup(market_df)
+    priced_df = add_current_prices(df, market_lookup)
 
-def plot_return_distribution(df):
-    for timeframe, group in df.groupby("timeframe"):
-        baseline_return = float(group["future_return"].mean())
+    for timeframe, group in priced_df.groupby("timeframe"):
+        horizon_days_values = HORIZON_DAY_RANGE_MAP.get(timeframe)
 
-        fig, ax = plt.subplots(figsize=(10, 6))
-        ax.hist(group["future_return"], bins=30, color="#1f77b4", alpha=0.8)
-        add_baseline_x(ax, baseline_return)
-        ax.axvline(0, color="#444444", linewidth=1, linestyle=":")
-        ax.set_title(f"{timeframe}: future return distribution")
-        ax.set_xlabel("Future return")
-        ax.set_ylabel("Count")
-        ax.grid(True, axis="y", alpha=0.25)
-        ax.legend()
-
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{timeframe}_return_distribution.png", dpi=160)
-        plt.close(fig)
-
-
-def plot_score_buckets(df, score_columns):
-    for score_column in score_columns:
-        for timeframe, group in df.groupby("timeframe"):
-            clean = group.dropna(subset=[score_column, "future_return"]).copy()
-
-            if clean.empty or clean[score_column].nunique() < 2:
-                continue
-
-            baseline_return = float(clean["future_return"].mean())
-            clean["score_bucket"] = pd.qcut(
-                clean[score_column],
-                q=min(5, clean[score_column].nunique()),
-                duplicates="drop",
-            )
-            bucket_summary = (
-                clean
-                .groupby("score_bucket", observed=True)["future_return"]
-                .mean()
-                .reset_index()
-            )
-
-            if bucket_summary.empty:
-                continue
-
-            labels = [str(value) for value in bucket_summary["score_bucket"]]
-
-            fig, ax = plt.subplots(figsize=(11, 6))
-            ax.bar(labels, bucket_summary["future_return"], color="#9467bd", alpha=0.85)
-            add_baseline_y(ax, baseline_return)
-            ax.axhline(0, color="#444444", linewidth=1, linestyle=":")
-            ax.set_title(f"{timeframe}: average return by {score_column} bucket")
-            ax.set_xlabel(f"{score_column} bucket")
-            ax.set_ylabel("Average future return")
-            ax.tick_params(axis="x", rotation=25)
-            ax.grid(True, axis="y", alpha=0.25)
-            ax.legend()
-
-            fig.tight_layout()
-            fig.savefig(
-                OUTPUT_DIR / f"{timeframe}_{safe_name(score_column)}_score_buckets.png",
-                dpi=160,
-            )
-            plt.close(fig)
-
-
-def plot_metric_summary(summary):
-    all_summary = summary[summary["ticker"] == "ALL"]
-
-    for timeframe, group in all_summary.groupby("timeframe"):
-        baseline_return = group["baseline_return"].dropna().iloc[0]
-        plot_data = group.dropna(subset=["spearman"])[
-            ["score_column", "spearman"]
-        ].copy()
-        plot_data = pd.concat(
-            [
-                plot_data,
-                pd.DataFrame([{
-                    "score_column": "avg_future_return",
-                    "spearman": baseline_return,
-                }]),
-            ],
-            ignore_index=True,
-        ).sort_values("spearman")
-
-        if plot_data.empty:
+        if not horizon_days_values:
             continue
 
-        fig, ax = plt.subplots(figsize=(11, 7))
-        colors = [
-            "#555555" if row.score_column == "avg_future_return"
-            else "#2ca02c" if row.spearman >= 0
-            else "#d62728"
-            for row in plot_data.itertuples()
-        ]
-        ax.barh(plot_data["score_column"], plot_data["spearman"], color=colors)
-        ax.axvline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: Spearman by score component")
-        ax.set_xlabel("Spearman correlation / average future return")
-        ax.grid(True, axis="x", alpha=0.25)
+        window_positions = TIMEFRAME_PRICE_WINDOW_MAP.get(timeframe, 0)
 
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{timeframe}_metric_spearman_summary.png", dpi=160)
-        plt.close(fig)
+        for horizon_days in horizon_days_values:
+            horizon_df = build_horizon_return_frame(
+                group,
+                market_lookup=market_lookup,
+                horizon_days=horizon_days,
+                window_positions=window_positions,
+            )
+            stats = calculate_correlations(
+                horizon_df,
+                EQUAL_WEIGHT_SCORE_COLUMN,
+                return_column="future_return",
+            )
+            horizon_rows.append({
+                "timeframe": timeframe,
+                "horizon_days": horizon_days,
+                "window_positions": window_positions,
+                **stats,
+                **calculate_return_stats(horizon_df),
+            })
+
+            for top_share in TOP_SCORE_SHARES:
+                if (
+                    EQUAL_WEIGHT_SCORE_COLUMN not in horizon_df.columns
+                    or horizon_df.empty
+                ):
+                    selected = pd.DataFrame()
+                    min_score = None
+                else:
+                    min_score = horizon_df[EQUAL_WEIGHT_SCORE_COLUMN].quantile(
+                        1 - top_share
+                    )
+                    selected = horizon_df[
+                        horizon_df[EQUAL_WEIGHT_SCORE_COLUMN] >= min_score
+                    ]
+
+                selected_stats = calculate_correlations(
+                    selected,
+                    EQUAL_WEIGHT_SCORE_COLUMN,
+                    return_column="future_return",
+                )
+                quantile_rows.append({
+                    "timeframe": timeframe,
+                    "horizon_days": horizon_days,
+                    "window_positions": window_positions,
+                    "top_share": top_share,
+                    "top_percent": int(top_share * 100),
+                    "min_score": None if min_score is None else round(float(min_score), 6),
+                    **selected_stats,
+                    **calculate_return_stats(selected),
+                })
+
+    return pd.DataFrame(horizon_rows), pd.DataFrame(quantile_rows)
 
 
-def plot_average_metric_values(df):
-    metric_columns = get_score_columns(df, include_equal_weight=False)
+def save_horizon_summaries(df):
+    horizon_summary, quantile_summary = calculate_horizon_summaries(df)
 
-    if not metric_columns:
-        return
-
-    for timeframe, group in df.groupby("timeframe"):
-        averages = (
-            group[metric_columns]
-            .mean()
-            .sort_values()
+    if not horizon_summary.empty:
+        horizon_summary.to_csv(
+            OUTPUT_DIR / "horizon_pearson_summary.csv",
+            index=False,
         )
 
-        if averages.empty:
-            continue
+    if not quantile_summary.empty:
+        quantile_summary.to_csv(
+            OUTPUT_DIR / "horizon_quantile_pearson_summary.csv",
+            index=False,
+        )
 
-        fig, ax = plt.subplots(figsize=(11, 7))
-        ax.barh(averages.index, averages.values, color="#1f77b4", alpha=0.85)
-        ax.set_title(f"{timeframe}: average relative score values")
-        ax.set_xlabel("Average metric value")
-        ax.set_xlim(0, max(10, float(averages.max()) * 1.05))
-        ax.grid(True, axis="x", alpha=0.25)
-
-        for idx, value in enumerate(averages.values):
-            ax.text(
-                value + 0.05,
-                idx,
-                f"{value:.2f}",
-                va="center",
-                fontsize=9,
-            )
-
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{timeframe}_average_metric_values.png", dpi=160)
-        plt.close(fig)
-
-
-def plot_ticker_score_timeline(df):
-    if EQUAL_WEIGHT_SCORE_COLUMN not in df.columns:
-        return
-
-    for ticker, group in df.groupby("ticker"):
-        fig, ax = plt.subplots(figsize=(12, 6))
-
-        for timeframe, timeframe_group in group.groupby("timeframe"):
-            plot_data = timeframe_group.sort_values("start_timestamp")
-            ax.plot(
-                plot_data["start_timestamp"],
-                plot_data[EQUAL_WEIGHT_SCORE_COLUMN],
-                marker="o",
-                linewidth=1.7,
-                markersize=3,
-                label=timeframe,
-            )
-
-        ax.set_title(f"{ticker}: equal-weight score over time")
-        ax.set_xlabel("Date")
-        ax.set_ylabel("Equal-weight score")
-        ax.set_ylim(0, 10)
-        ax.grid(True, alpha=0.25)
-        ax.legend()
-        fig.autofmt_xdate()
-
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{ticker}_score_timeline.png", dpi=160)
-        plt.close(fig)
-
-
-def plot_timeframe_ticker_score_timeline(df):
-    if EQUAL_WEIGHT_SCORE_COLUMN not in df.columns:
-        return
-
-    for timeframe, group in df.groupby("timeframe"):
-        fig, ax = plt.subplots(figsize=(14, 8))
-
-        for ticker, ticker_group in group.groupby("ticker"):
-            plot_data = ticker_group.sort_values("start_timestamp")
-            ax.plot(
-                plot_data["start_timestamp"],
-                plot_data[EQUAL_WEIGHT_SCORE_COLUMN],
-                linewidth=1.3,
-                alpha=0.85,
-                label=ticker,
-            )
-
-        ax.set_title(f"{timeframe}: equal-weight scores by ticker over time")
-        ax.set_xlabel("Date")
-        ax.set_ylabel("Equal-weight score")
-        ax.set_ylim(0, 10)
-        ax.grid(True, alpha=0.25)
-        ax.legend(ncol=3, fontsize=8)
-        fig.autofmt_xdate()
-
-        fig.tight_layout()
-        fig.savefig(OUTPUT_DIR / f"{timeframe}_ticker_scores_timeline.png", dpi=160)
-        plt.close(fig)
+    return horizon_summary, quantile_summary
 
 
 def main():
@@ -439,15 +464,19 @@ def main():
         print("[EMPTY] No score columns found.")
         return
 
+    metric_columns = get_score_columns(df, include_equal_weight=False)
     summary = save_summary(df, score_columns)
+    horizon_summary, quantile_summary = save_horizon_summaries(df)
 
-    plot_scatter_by_timeframe(df, summary)
-    plot_return_distribution(df)
-    plot_score_buckets(df, score_columns)
-    plot_metric_summary(summary)
-    plot_average_metric_values(df)
-    plot_ticker_score_timeline(df)
-    plot_timeframe_ticker_score_timeline(df)
+    plot_scatter_by_timeframe(df, summary, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
+    plot_return_distribution(df, OUTPUT_DIR)
+    plot_score_buckets(df, score_columns, OUTPUT_DIR)
+    plot_metric_summary(summary, OUTPUT_DIR)
+    plot_average_metric_values(df, OUTPUT_DIR, metric_columns)
+    plot_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
+    plot_timeframe_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
+    plot_horizon_pearson(horizon_summary, OUTPUT_DIR)
+    plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
 
     print("[OK] Saved plots and summary:")
     print(OUTPUT_DIR)

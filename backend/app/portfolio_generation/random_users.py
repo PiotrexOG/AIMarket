@@ -31,7 +31,7 @@ def generate_users(archetype_key, count, archetypes):
             "name": "benchmark",
             "id": "0",
             "archetype_key": "benchmark",
-            "time_weights": {"short_term_14d": 0.333, "medium_term_50d": 0.333, "long_term_200d": 0.333},
+            "time_weights": {"short_term_14d": 0.0, "medium_term_50d": 0.0, "long_term_200d": 1.0},
             "metric_weights": {
                 "relative_technical_strength": 0.166,
                 "relative_fundamental_support": 0.166,
