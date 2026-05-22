@@ -18,6 +18,12 @@ from score_correlation_plotting import (
     plot_ticker_score_timeline,
     plot_timeframe_ticker_score_timeline,
 )
+from top_bucket_performance import (
+    DEBUG_BENCHMARK_HORIZON_DAYS,
+    add_benchmark_columns,
+    build_benchmark_debug_dict,
+)
+from top_bucket_performance_plotting import plot_top_bucket_performance
 
 
 ROOT_FOLDER = Path(__file__).resolve().parents[2]
@@ -213,6 +219,19 @@ def calculate_return_stats(group):
     }
 
 
+def calculate_sample_stats(group):
+    if group.empty:
+        return {
+            "unique_start_dates": 0,
+            "unique_tickers": 0,
+        }
+
+    return {
+        "unique_start_dates": int(group["start_timestamp"].nunique()),
+        "unique_tickers": int(group["ticker"].nunique()),
+    }
+
+
 def load_market_data_frame(session, tickers, min_timestamp, max_timestamp):
     from app.db.models.market_data import MarketData
 
@@ -249,65 +268,116 @@ def load_market_data_frame(session, tickers, min_timestamp, max_timestamp):
 
 def build_market_lookup(market_df):
     lookup = {}
+    window_positions_values = sorted(set(TIMEFRAME_PRICE_WINDOW_MAP.values()))
 
     for ticker, group in market_df.groupby("ticker", sort=False):
         group = group.sort_values("datetime")
+        ohlc4 = group["ohlc4"].to_numpy(dtype=float)
+        window_medians = {}
+
+        for window_positions in window_positions_values:
+            if window_positions <= 0:
+                window_medians[window_positions] = ohlc4
+                continue
+
+            window_medians[window_positions] = (
+                pd.Series(ohlc4)
+                .rolling(
+                    window=window_positions * 2 + 1,
+                    center=True,
+                    min_periods=1,
+                )
+                .median()
+                .to_numpy(dtype=float)
+            )
+
         lookup[ticker] = {
             "datetimes": group["datetime"].to_numpy(dtype="datetime64[ns]"),
+            "max_datetime": group["datetime"].max().to_datetime64(),
             "close": group["close"].to_numpy(dtype=float),
             "ohlc4": group["ohlc4"].to_numpy(dtype=float),
+            "window_medians": window_medians,
         }
 
     return lookup
 
 
-def lookup_asof_close(market_lookup, ticker, timestamp):
-    ticker_data = market_lookup.get(ticker)
+def lookup_window_median_ohlc4_many(
+    market_lookup,
+    tickers,
+    timestamps,
+    window_positions,
+):
+    result = np.full(len(tickers), np.nan, dtype=float)
+    tickers_array = np.asarray(tickers)
+    timestamps_array = pd.to_datetime(timestamps).to_numpy(dtype="datetime64[ns]")
 
-    if ticker_data is None:
-        return np.nan
+    for ticker in pd.unique(tickers_array):
+        ticker_data = market_lookup.get(ticker)
 
-    timestamp_value = np.datetime64(pd.Timestamp(timestamp).to_datetime64())
-    idx = np.searchsorted(ticker_data["datetimes"], timestamp_value, side="right") - 1
+        if ticker_data is None:
+            continue
 
-    if idx < 0:
-        return np.nan
+        mask = tickers_array == ticker
+        target_timestamps = timestamps_array[mask]
+        inside_available_data = target_timestamps <= ticker_data["max_datetime"]
+        anchor_indices = np.searchsorted(
+            ticker_data["datetimes"],
+            target_timestamps,
+            side="right",
+        ) - 1
+        valid = (anchor_indices >= 0) & inside_available_data
 
-    return ticker_data["close"][idx]
+        if not valid.any():
+            continue
+
+        window_values = ticker_data["window_medians"].get(window_positions)
+
+        if window_values is None:
+            continue
+
+        target_positions = np.flatnonzero(mask)
+        result[target_positions[valid]] = window_values[anchor_indices[valid]]
+
+    return result
 
 
-def lookup_window_median_ohlc4(market_lookup, ticker, timestamp, window_positions):
-    ticker_data = market_lookup.get(ticker)
+def lookup_asof_close_many(market_lookup, tickers, timestamps):
+    result = np.full(len(tickers), np.nan, dtype=float)
+    tickers_array = np.asarray(tickers)
+    timestamps_array = pd.to_datetime(timestamps).to_numpy(dtype="datetime64[ns]")
 
-    if ticker_data is None:
-        return np.nan
+    for ticker in pd.unique(tickers_array):
+        ticker_data = market_lookup.get(ticker)
 
-    timestamp_value = np.datetime64(pd.Timestamp(timestamp).to_datetime64())
-    anchor_idx = np.searchsorted(
-        ticker_data["datetimes"],
-        timestamp_value,
-        side="right",
-    ) - 1
+        if ticker_data is None:
+            continue
 
-    if anchor_idx < 0:
-        return np.nan
+        mask = tickers_array == ticker
+        target_timestamps = timestamps_array[mask]
+        anchor_indices = np.searchsorted(
+            ticker_data["datetimes"],
+            target_timestamps,
+            side="right",
+        ) - 1
+        valid = anchor_indices >= 0
 
-    left_idx = max(0, anchor_idx - window_positions)
-    right_idx = min(len(ticker_data["ohlc4"]), anchor_idx + window_positions + 1)
-    values = ticker_data["ohlc4"][left_idx:right_idx]
+        if not valid.any():
+            continue
 
-    if len(values) == 0:
-        return np.nan
+        target_positions = np.flatnonzero(mask)
+        result[target_positions[valid]] = ticker_data["close"][anchor_indices[valid]]
 
-    return float(np.nanmedian(values))
+    return result
 
 
 def add_current_prices(df, market_lookup):
     priced_df = df.copy()
-    priced_df["current_price"] = [
-        lookup_asof_close(market_lookup, row.ticker, row.start_timestamp)
-        for row in priced_df.itertuples(index=False)
-    ]
+    priced_df["current_price"] = lookup_asof_close_many(
+        market_lookup,
+        priced_df["ticker"],
+        priced_df["start_timestamp"],
+    )
     return priced_df
 
 
@@ -318,15 +388,12 @@ def build_horizon_return_frame(group, market_lookup, horizon_days, window_positi
     horizon_df["future_timestamp"] = (
         horizon_df["start_timestamp"] + pd.to_timedelta(horizon_days, unit="D")
     )
-    horizon_df["future_price"] = [
-        lookup_window_median_ohlc4(
-            market_lookup,
-            row.ticker,
-            row.future_timestamp,
-            window_positions,
-        )
-        for row in horizon_df.itertuples(index=False)
-    ]
+    horizon_df["future_price"] = lookup_window_median_ohlc4_many(
+        market_lookup,
+        horizon_df["ticker"],
+        horizon_df["future_timestamp"],
+        window_positions,
+    )
     horizon_df = horizon_df.dropna(subset=["current_price", "future_price"])
     horizon_df = horizon_df[horizon_df["current_price"] > 0].copy()
     horizon_df["future_return"] = (
@@ -394,6 +461,7 @@ def calculate_horizon_summaries(df):
                 "window_positions": window_positions,
                 **stats,
                 **calculate_return_stats(horizon_df),
+                **calculate_sample_stats(horizon_df),
             })
 
             for top_share in TOP_SCORE_SHARES:
@@ -432,6 +500,7 @@ def calculate_horizon_summaries(df):
 
 def save_horizon_summaries(df):
     horizon_summary, quantile_summary = calculate_horizon_summaries(df)
+    quantile_summary = add_benchmark_columns(horizon_summary, quantile_summary)
 
     if not horizon_summary.empty:
         horizon_summary.to_csv(
@@ -467,6 +536,10 @@ def main():
     metric_columns = get_score_columns(df, include_equal_weight=False)
     summary = save_summary(df, score_columns)
     horizon_summary, quantile_summary = save_horizon_summaries(df)
+    benchmark_debug = build_benchmark_debug_dict(
+        horizon_summary,
+        DEBUG_BENCHMARK_HORIZON_DAYS,
+    )
 
     plot_scatter_by_timeframe(df, summary, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_return_distribution(df, OUTPUT_DIR)
@@ -477,7 +550,10 @@ def main():
     plot_timeframe_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_horizon_pearson(horizon_summary, OUTPUT_DIR)
     plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
+    plot_top_bucket_performance(quantile_summary, OUTPUT_DIR)
 
+    print(f"[DEBUG] Benchmark for {DEBUG_BENCHMARK_HORIZON_DAYS} days:")
+    print(json.dumps(benchmark_debug, indent=2))
     print("[OK] Saved plots and summary:")
     print(OUTPUT_DIR)
 

@@ -329,10 +329,12 @@ def plot_horizon_pearson(horizon_summary, output_dir):
 
     for timeframe, group in plot_data.groupby("timeframe"):
         group = group.sort_values("horizon_days")
+        markevery = max(1, len(group) // 30)
         ax.plot(
             group["horizon_days"],
             group["pearson"],
             marker="o",
+            markevery=markevery,
             linewidth=1.8,
             markersize=3.5,
             label=timeframe,
@@ -369,12 +371,14 @@ def plot_horizon_pearson(horizon_summary, output_dir):
 
     for timeframe, group in plot_data.groupby("timeframe"):
         group = group.sort_values("horizon_days")
+        markevery = max(1, len(group) // 30)
 
         fig, ax = plt.subplots(figsize=(11, 6))
         ax.plot(
             group["horizon_days"],
             group["pearson"],
             marker="o",
+            markevery=markevery,
             linewidth=1.8,
             markersize=3.5,
             color="#1f77b4",
@@ -411,10 +415,12 @@ def plot_horizon_quantile_pearson(quantile_summary, output_dir):
 
         for top_percent, group in timeframe_group.groupby("top_percent"):
             group = group.sort_values("horizon_days")
+            markevery = max(1, len(group) // 30)
             ax.plot(
                 group["horizon_days"],
                 group["pearson"],
                 marker="o",
+                markevery=markevery,
                 linewidth=1.7,
                 markersize=3,
                 label=f"top {int(top_percent)}%",
@@ -445,3 +451,4 @@ def plot_horizon_quantile_pearson(quantile_summary, output_dir):
             dpi=160,
         )
         plt.close(fig)
+
