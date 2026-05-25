@@ -19,11 +19,18 @@ from score_correlation_plotting import (
     plot_timeframe_ticker_score_timeline,
 )
 from top_bucket_performance import (
+    ABSOLUTE_SCORE_THRESHOLDS,
     DEBUG_BENCHMARK_HORIZON_DAYS,
     add_benchmark_columns,
     build_benchmark_debug_dict,
+    build_policy_stability_summary,
+    build_score_distribution_summaries,
 )
-from top_bucket_performance_plotting import plot_top_bucket_performance
+from top_bucket_performance_plotting import (
+    plot_absolute_threshold_performance,
+    plot_score_distributions,
+    plot_top_bucket_performance,
+)
 
 
 ROOT_FOLDER = Path(__file__).resolve().parents[2]
@@ -404,12 +411,13 @@ def build_horizon_return_frame(group, market_lookup, horizon_days, window_positi
 
 def calculate_horizon_summaries(df):
     if EQUAL_WEIGHT_SCORE_COLUMN not in df.columns:
-        return pd.DataFrame(), pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
     from app.db.database import SessionLocal
 
     horizon_rows = []
     quantile_rows = []
+    absolute_threshold_rows = []
     max_horizon_days = max(
         max(horizon_days_values)
         for horizon_days_values in HORIZON_DAY_RANGE_MAP.values()
@@ -430,7 +438,7 @@ def calculate_horizon_summaries(df):
         )
 
     if market_df.empty:
-        return pd.DataFrame(), pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
     market_lookup = build_market_lookup(market_df)
     priced_df = add_current_prices(df, market_lookup)
@@ -495,12 +503,41 @@ def calculate_horizon_summaries(df):
                     **calculate_return_stats(selected),
                 })
 
-    return pd.DataFrame(horizon_rows), pd.DataFrame(quantile_rows)
+            for score_threshold in ABSOLUTE_SCORE_THRESHOLDS:
+                selected = horizon_df[
+                    horizon_df[EQUAL_WEIGHT_SCORE_COLUMN] >= score_threshold
+                ]
+                selected_stats = calculate_correlations(
+                    selected,
+                    EQUAL_WEIGHT_SCORE_COLUMN,
+                    return_column="future_return",
+                )
+                absolute_threshold_rows.append({
+                    "timeframe": timeframe,
+                    "horizon_days": horizon_days,
+                    "window_positions": window_positions,
+                    "score_threshold": score_threshold,
+                    **selected_stats,
+                    **calculate_return_stats(selected),
+                    **calculate_sample_stats(selected),
+                })
+
+    return (
+        pd.DataFrame(horizon_rows),
+        pd.DataFrame(quantile_rows),
+        pd.DataFrame(absolute_threshold_rows),
+    )
 
 
 def save_horizon_summaries(df):
-    horizon_summary, quantile_summary = calculate_horizon_summaries(df)
+    horizon_summary, quantile_summary, absolute_threshold_summary = (
+        calculate_horizon_summaries(df)
+    )
     quantile_summary = add_benchmark_columns(horizon_summary, quantile_summary)
+    absolute_threshold_summary = add_benchmark_columns(
+        horizon_summary,
+        absolute_threshold_summary,
+    )
 
     if not horizon_summary.empty:
         horizon_summary.to_csv(
@@ -514,7 +551,13 @@ def save_horizon_summaries(df):
             index=False,
         )
 
-    return horizon_summary, quantile_summary
+    if not absolute_threshold_summary.empty:
+        absolute_threshold_summary.to_csv(
+            OUTPUT_DIR / "horizon_absolute_score_performance_summary.csv",
+            index=False,
+        )
+
+    return horizon_summary, quantile_summary, absolute_threshold_summary
 
 
 def main():
@@ -535,7 +578,33 @@ def main():
 
     metric_columns = get_score_columns(df, include_equal_weight=False)
     summary = save_summary(df, score_columns)
-    horizon_summary, quantile_summary = save_horizon_summaries(df)
+    score_distribution, score_threshold_mapping = build_score_distribution_summaries(
+        df,
+        EQUAL_WEIGHT_SCORE_COLUMN,
+        TOP_SCORE_SHARES,
+    )
+    score_distribution.to_csv(OUTPUT_DIR / "score_distribution_summary.csv", index=False)
+    score_threshold_mapping.to_csv(
+        OUTPUT_DIR / "score_quantile_threshold_mapping.csv",
+        index=False,
+    )
+    horizon_summary, quantile_summary, absolute_threshold_summary = (
+        save_horizon_summaries(df)
+    )
+    quantile_stability = build_policy_stability_summary(
+        quantile_summary,
+        "top_percent",
+        "top_percent",
+    )
+    absolute_stability = build_policy_stability_summary(
+        absolute_threshold_summary,
+        "score_threshold",
+        "minimum_score",
+    )
+    pd.concat([quantile_stability, absolute_stability], ignore_index=True).to_csv(
+        OUTPUT_DIR / "selection_policy_stability_summary.csv",
+        index=False,
+    )
     benchmark_debug = build_benchmark_debug_dict(
         horizon_summary,
         DEBUG_BENCHMARK_HORIZON_DAYS,
@@ -550,7 +619,14 @@ def main():
     plot_timeframe_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_horizon_pearson(horizon_summary, OUTPUT_DIR)
     plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
+    plot_score_distributions(
+        df,
+        EQUAL_WEIGHT_SCORE_COLUMN,
+        score_threshold_mapping,
+        OUTPUT_DIR,
+    )
     plot_top_bucket_performance(quantile_summary, OUTPUT_DIR)
+    plot_absolute_threshold_performance(absolute_threshold_summary, OUTPUT_DIR)
 
     print(f"[DEBUG] Benchmark for {DEBUG_BENCHMARK_HORIZON_DAYS} days:")
     print(json.dumps(benchmark_debug, indent=2))
