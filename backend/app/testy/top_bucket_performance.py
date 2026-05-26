@@ -3,7 +3,7 @@ import pandas as pd
 
 
 DEBUG_BENCHMARK_HORIZON_DAYS = 300
-ABSOLUTE_SCORE_THRESHOLDS = [5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0]
+ABSOLUTE_SCORE_THRESHOLDS = [0.0, 7.0, 7.25, 7.5, 7.75, 8.0]
 STABILITY_HORIZON_WINDOWS = [
     ("all_horizons", 1, 419),
     ("days_1_30", 1, 30),

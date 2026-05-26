@@ -8,10 +8,8 @@ import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
 from score_correlation_plotting import (
-    plot_average_metric_values,
     plot_horizon_pearson,
     plot_horizon_quantile_pearson,
-    plot_metric_summary,
     plot_return_distribution,
     plot_scatter_by_timeframe,
     plot_score_buckets,
@@ -613,8 +611,6 @@ def main():
     plot_scatter_by_timeframe(df, summary, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_return_distribution(df, OUTPUT_DIR)
     plot_score_buckets(df, score_columns, OUTPUT_DIR)
-    plot_metric_summary(summary, OUTPUT_DIR)
-    plot_average_metric_values(df, OUTPUT_DIR, metric_columns)
     plot_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_timeframe_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_horizon_pearson(horizon_summary, OUTPUT_DIR)
