@@ -9,12 +9,7 @@ from scipy.stats import pearsonr, spearmanr
 
 from score_correlation_plotting import (
     plot_horizon_pearson,
-    plot_horizon_quantile_pearson,
-    plot_return_distribution,
-    plot_scatter_by_timeframe,
-    plot_score_buckets,
-    plot_ticker_score_timeline,
-    plot_timeframe_ticker_score_timeline,
+    plot_horizon_quantile_pearson
 )
 from top_bucket_performance import (
     ABSOLUTE_SCORE_THRESHOLDS,
@@ -57,7 +52,7 @@ HORIZON_DAY_RANGE_MAP = {
     "long_term_200d": range(1, 420),
 }
 
-TOP_SCORE_SHARES = [0.10, 0.20, 0.30, 0.40, 0.50]
+TOP_SCORE_SHARES = [0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50]
 
 MARKET_DATA_BUFFER_DAYS = 420
 
@@ -161,37 +156,6 @@ def calculate_correlations(group, score_column, return_column="future_return"):
         "spearman": round(float(spearman_corr), 6),
         "spearman_p": round(float(spearman_p), 6),
     }
-
-
-def save_summary(df, score_columns):
-    rows = []
-
-    for score_column in score_columns:
-        for timeframe, group in df.groupby("timeframe"):
-            row = {
-                "timeframe": timeframe,
-                "ticker": "ALL",
-                "score_column": score_column,
-                "baseline_return": round(float(group["future_return"].mean()), 6),
-            }
-            row.update(calculate_correlations(group, score_column))
-            rows.append(row)
-
-        for (timeframe, ticker), group in df.groupby(["timeframe", "ticker"]):
-            row = {
-                "timeframe": timeframe,
-                "ticker": ticker,
-                "score_column": score_column,
-                "baseline_return": round(float(group["future_return"].mean()), 6),
-            }
-            row.update(calculate_correlations(group, score_column))
-            rows.append(row)
-
-    summary = pd.DataFrame(rows)
-    summary.to_csv(OUTPUT_DIR / "correlation_summary.csv", index=False)
-
-    return summary
-
 
 def to_python_datetime(value):
     if hasattr(value, "to_pydatetime"):
@@ -574,8 +538,6 @@ def main():
         print("[EMPTY] No score columns found.")
         return
 
-    metric_columns = get_score_columns(df, include_equal_weight=False)
-    summary = save_summary(df, score_columns)
     score_distribution, score_threshold_mapping = build_score_distribution_summaries(
         df,
         EQUAL_WEIGHT_SCORE_COLUMN,
@@ -608,11 +570,6 @@ def main():
         DEBUG_BENCHMARK_HORIZON_DAYS,
     )
 
-    plot_scatter_by_timeframe(df, summary, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
-    plot_return_distribution(df, OUTPUT_DIR)
-    plot_score_buckets(df, score_columns, OUTPUT_DIR)
-    plot_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
-    plot_timeframe_ticker_score_timeline(df, OUTPUT_DIR, EQUAL_WEIGHT_SCORE_COLUMN)
     plot_horizon_pearson(horizon_summary, OUTPUT_DIR)
     plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
     plot_score_distributions(
