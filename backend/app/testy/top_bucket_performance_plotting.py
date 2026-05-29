@@ -225,14 +225,3 @@ def plot_top_bucket_performance(quantile_summary, output_dir):
         label_formatter=lambda value: f"top {int(value)}%",
         folder_prefix="top_bucket",
     )
-
-
-def plot_absolute_threshold_performance(threshold_summary, output_dir):
-    plot_selection_performance(
-        threshold_summary,
-        output_dir,
-        policy_column="score_threshold",
-        policy_title="Minimum score",
-        label_formatter=lambda value: f"score >= {value:.1f}",
-        folder_prefix="absolute_score",
-    )
