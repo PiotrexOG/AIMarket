@@ -183,7 +183,7 @@ def plot_selection_performance(
                         label="equal-weight benchmark",
                     )
 
-            for policy_value, group in timeframe_group.groupby(policy_column):
+            for policy_value, group in timeframe_group.groupby(policy_column, sort=False):
                 group = group.sort_values("horizon_days")
                 markevery = max(1, len(group) // 30)
                 ax.plot(
@@ -224,4 +224,19 @@ def plot_top_bucket_performance(quantile_summary, output_dir):
         policy_title="Top score share",
         label_formatter=lambda value: f"top {int(value)}%",
         folder_prefix="top_bucket",
+    )
+
+
+def plot_daily_top_n_performance(daily_top_n_summary, output_dir):
+    plot_selection_performance(
+        daily_top_n_summary,
+        output_dir,
+        policy_column="top_n",
+        policy_title="Daily top N stocks",
+        label_formatter=lambda value: (
+            "top 100%"
+            if value == "all"
+            else f"top {int(value)}"
+        ),
+        folder_prefix="daily_top_n",
     )

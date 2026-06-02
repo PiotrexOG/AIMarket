@@ -30,8 +30,10 @@ def build_dataframe(data, equal_weight_score_column):
                 "timeframe": timeframe,
                 "ticker": observation["ticker"],
                 "start_timestamp": observation["start_timestamp"],
-                "future_return": observation["future_return"],
             }
+
+            if "future_return" in observation:
+                row["future_return"] = observation["future_return"]
 
             relative_scores = observation.get("relative_scores")
 
@@ -48,7 +50,9 @@ def build_dataframe(data, equal_weight_score_column):
         return df
 
     df["start_timestamp"] = pd.to_datetime(df["start_timestamp"])
-    df["future_return"] = pd.to_numeric(df["future_return"], errors="coerce")
+
+    if "future_return" in df.columns:
+        df["future_return"] = pd.to_numeric(df["future_return"], errors="coerce")
 
     score_columns = get_score_columns(
         df,
@@ -68,4 +72,4 @@ def build_dataframe(data, equal_weight_score_column):
             errors="coerce",
         )
 
-    return df.dropna(subset=["future_return"])
+    return df.dropna(subset=["ticker", "start_timestamp"])

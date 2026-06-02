@@ -1,5 +1,4 @@
 import json
-import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -10,29 +9,9 @@ from pathlib import Path
 
 ROOT_FOLDER = Path(__file__).resolve().parents[2]
 
-if str(ROOT_FOLDER) not in sys.path:
-    sys.path.append(str(ROOT_FOLDER))
-
-from app.db.database import SessionLocal
-from app.services.layers.market_data_service import MarketDataService
-
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 INPUT_FILENAME = "llm_ranker.json"
-OUTPUT_FILE = CROSS_SECTION_DIR / "score_vs_returns.json"
-
-# Ile kolejnych cross-sections do przodu liczymy zwrot.
-TIMEFRAME_FORWARD_MAP = {
-    "short_term_14d": 2,
-    "medium_term_50d": 7,
-    "long_term_200d": 28,
-}
-
-# Jedna pozycja w oknie cenowym = jedna swieca 1h.
-# Zakres rosnie proporcjonalnie do horyzontu timeframe.
-TIMEFRAME_PRICE_WINDOW_MAP = {
-    timeframe: forward_steps * 3
-    for timeframe, forward_steps in TIMEFRAME_FORWARD_MAP.items()
-}
+OUTPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
 
 
 # =========================================================
@@ -136,10 +115,10 @@ def load_normalized_cross_sections(folders):
 
 
 # =========================================================
-# SCORE VS RETURNS
+# SCORE OBSERVATIONS
 # =========================================================
 
-def build_score_return_dataset(folders, normalized_by_folder):
+def build_score_observation_dataset(folders, normalized_by_folder):
     timestamps = [
         extract_timestamp_from_folder(folder.name)
         for folder in folders
@@ -147,29 +126,7 @@ def build_score_return_dataset(folders, normalized_by_folder):
 
     print(f"Cross sections: {len(timestamps)}")
 
-    with SessionLocal() as session:
-        market_data_service = MarketDataService(session)
-        current_prices = market_data_service.get_prices_for_timestamps(
-            timestamps,
-            window_positions=0
-        )
-        prices_by_timeframe = {
-            timeframe: market_data_service.get_prices_for_timestamps(
-                timestamps,
-                window_positions=window_positions
-            )
-            for timeframe, window_positions in TIMEFRAME_PRICE_WINDOW_MAP.items()
-        }
-
-    result = {
-        "by_timeframe": {
-            timeframe: {
-                "observations": [],
-                "by_ticker": {},
-            }
-            for timeframe in TIMEFRAME_FORWARD_MAP
-        },
-    }
+    result = {"by_timeframe": {}}
 
     for current_idx, folder in enumerate(folders):
         data = normalized_by_folder.get(folder)
@@ -183,57 +140,24 @@ def build_score_return_dataset(folders, normalized_by_folder):
 
         for ticker, ticker_data in data.items():
             for timeframe, timeframe_data in ticker_data.items():
-                forward_steps = TIMEFRAME_FORWARD_MAP.get(timeframe)
-
-                if forward_steps is None:
-                    continue
-
-                future_idx = current_idx + forward_steps
-
-                if future_idx >= len(timestamps):
-                    continue
-
-                future_timestamp = timestamps[future_idx]
-
-                current_price = (
-                    current_prices
-                    .get(current_timestamp, {})
-                    .get(ticker)
-                )
-
-                future_price = (
-                    prices_by_timeframe[timeframe]
-                    .get(future_timestamp, {})
-                    .get(ticker)
-                )
-
-                if current_price is None or future_price is None:
-                    continue
-
                 relative_scores = timeframe_data.get("relative_scores", {})
 
                 if not relative_scores:
                     continue
 
-                score = timeframe_data.get("score")
-
-                if score is None:
-                    continue
-
-                future_return = (
-                    (future_price - current_price)
-                    / current_price
-                )
-
                 observation = {
                     "ticker": ticker,
                     "start_timestamp": current_timestamp.isoformat(),
                     "relative_scores": relative_scores,
-                    "score": score,
-                    "future_return": round(future_return, 6),
                 }
 
-                timeframe_result = result["by_timeframe"][timeframe]
+                timeframe_result = result["by_timeframe"].setdefault(
+                    timeframe,
+                    {
+                        "observations": [],
+                        "by_ticker": {},
+                    },
+                )
                 timeframe_result["observations"].append(observation)
 
                 if ticker not in timeframe_result["by_ticker"]:
@@ -242,6 +166,10 @@ def build_score_return_dataset(folders, normalized_by_folder):
                 timeframe_result["by_ticker"][ticker].append(observation)
 
     return result
+
+
+def build_score_return_dataset(folders, normalized_by_folder):
+    return build_score_observation_dataset(folders, normalized_by_folder)
 
 
 # =========================================================
@@ -256,7 +184,7 @@ def run_pipeline():
     normalized_by_folder = load_normalized_cross_sections(folders)
     print(f"Loaded and normalized in memory: {len(normalized_by_folder)}")
 
-    return build_score_return_dataset(folders, normalized_by_folder)
+    return build_score_observation_dataset(folders, normalized_by_folder)
 
 
 if __name__ == "__main__":

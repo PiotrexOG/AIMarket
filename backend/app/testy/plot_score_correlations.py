@@ -2,9 +2,11 @@ import sys
 from pathlib import Path
 
 from horizon_quantile_analysis import (
+    calculate_horizon_daily_top_n_summaries,
     calculate_horizon_quantile_summaries,
 )
 from score_correlation_plotting import (
+    plot_horizon_daily_top_n_pearson,
     plot_horizon_quantile_pearson
 )
 from score_dataset import (
@@ -15,8 +17,10 @@ from score_dataset import (
 from top_bucket_performance import (
     add_benchmark_columns,
     build_score_distribution_summaries,
+    build_timeframe_score_thresholds,
 )
 from top_bucket_performance_plotting import (
+    plot_daily_top_n_performance,
     plot_score_distributions,
     plot_top_bucket_performance,
 )
@@ -29,7 +33,7 @@ if str(ROOT_FOLDER) not in sys.path:
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 
-INPUT_FILE = CROSS_SECTION_DIR / "score_vs_returns.json"
+INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
 OUTPUT_DIR = CROSS_SECTION_DIR / "correlation_plots"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
@@ -48,12 +52,19 @@ HORIZON_DAY_RANGE_MAP = {
     "long_term_200d": range(1, 420),
 }
 
-TOP_SCORE_SHARES = [0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50]
+TOP_SCORE_SHARES = [0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 1.00]
+TOP_DAILY_COUNTS = [1, 2, 3, 5, 10, "all"]
 
 MARKET_DATA_BUFFER_DAYS = 420
 
 
-def save_horizon_summaries(df):
+def save_csv_for_excel(df, path):
+    with open(path, "w", encoding="utf-8-sig", newline="") as f:
+        f.write("sep=,\n")
+        df.to_csv(f, index=False)
+
+
+def save_horizon_summaries(df, timeframe_score_thresholds):
     horizon_summary, quantile_summary = calculate_horizon_quantile_summaries(
         df,
         score_column=EQUAL_WEIGHT_SCORE_COLUMN,
@@ -61,16 +72,40 @@ def save_horizon_summaries(df):
         smoothing_window_map=TIMEFRAME_PRICE_WINDOW_MAP,
         top_score_shares=TOP_SCORE_SHARES,
         market_data_buffer_days=MARKET_DATA_BUFFER_DAYS,
+        timeframe_score_thresholds=timeframe_score_thresholds,
     )
     quantile_summary = add_benchmark_columns(horizon_summary, quantile_summary)
 
     if not quantile_summary.empty:
-        quantile_summary.to_csv(
+        save_csv_for_excel(
+            quantile_summary,
             OUTPUT_DIR / "horizon_quantile_pearson_summary.csv",
-            index=False,
         )
 
     return quantile_summary
+
+
+def save_daily_top_n_summaries(df):
+    benchmark_summary, daily_top_n_summary = calculate_horizon_daily_top_n_summaries(
+        df,
+        score_column=EQUAL_WEIGHT_SCORE_COLUMN,
+        horizon_day_range_map=HORIZON_DAY_RANGE_MAP,
+        smoothing_window_map=TIMEFRAME_PRICE_WINDOW_MAP,
+        top_n_values=TOP_DAILY_COUNTS,
+        market_data_buffer_days=MARKET_DATA_BUFFER_DAYS,
+    )
+    daily_top_n_summary = add_benchmark_columns(
+        benchmark_summary,
+        daily_top_n_summary,
+    )
+
+    if not daily_top_n_summary.empty:
+        save_csv_for_excel(
+            daily_top_n_summary,
+            OUTPUT_DIR / "horizon_daily_top_n_summary.csv",
+        )
+
+    return daily_top_n_summary
 
 
 def main():
@@ -94,14 +129,24 @@ def main():
         EQUAL_WEIGHT_SCORE_COLUMN,
         TOP_SCORE_SHARES,
     )
-    score_distribution.to_csv(OUTPUT_DIR / "score_distribution_summary.csv", index=False)
-    score_threshold_mapping.to_csv(
-        OUTPUT_DIR / "score_quantile_threshold_mapping.csv",
-        index=False,
+    timeframe_score_thresholds = build_timeframe_score_thresholds(
+        df,
+        EQUAL_WEIGHT_SCORE_COLUMN,
+        TOP_SCORE_SHARES,
     )
-    quantile_summary = save_horizon_summaries(df)
+    save_csv_for_excel(
+        score_distribution,
+        OUTPUT_DIR / "score_distribution_summary.csv",
+    )
+    save_csv_for_excel(
+        score_threshold_mapping,
+        OUTPUT_DIR / "score_quantile_threshold_mapping.csv",
+    )
+    quantile_summary = save_horizon_summaries(df, timeframe_score_thresholds)
+    daily_top_n_summary = save_daily_top_n_summaries(df)
 
     plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
+    plot_horizon_daily_top_n_pearson(daily_top_n_summary, OUTPUT_DIR)
     plot_score_distributions(
         df,
         EQUAL_WEIGHT_SCORE_COLUMN,
@@ -109,6 +154,7 @@ def main():
         OUTPUT_DIR,
     )
     plot_top_bucket_performance(quantile_summary, OUTPUT_DIR)
+    plot_daily_top_n_performance(daily_top_n_summary, OUTPUT_DIR)
 
     print("[OK] Saved plots and summary:")
     print(OUTPUT_DIR)

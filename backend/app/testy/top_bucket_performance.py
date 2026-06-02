@@ -111,6 +111,12 @@ def build_score_distribution_summaries(df, score_column, top_shares):
     if score_column not in df.columns:
         return pd.DataFrame(), pd.DataFrame()
 
+    timeframe_thresholds = build_timeframe_score_thresholds(
+        df,
+        score_column,
+        top_shares,
+    )
+
     for timeframe, group in df.groupby("timeframe"):
         scores = group[score_column].dropna()
 
@@ -128,12 +134,17 @@ def build_score_distribution_summaries(df, score_column, top_shares):
         })
 
         for top_share in top_shares:
-            min_score = scores.quantile(1 - top_share)
+            min_score = timeframe_thresholds.get(timeframe, {}).get(top_share)
+
+            if min_score is None:
+                continue
+
             selected_count = int((scores >= min_score).sum())
             threshold_rows.append({
                 "timeframe": timeframe,
                 "top_share": top_share,
                 "top_percent": int(top_share * 100),
+                "threshold_scope": "timeframe",
                 "min_score": round(float(min_score), 6),
                 "selected_count": selected_count,
                 "selected_share": round(float(selected_count / len(scores)), 6),
@@ -141,3 +152,23 @@ def build_score_distribution_summaries(df, score_column, top_shares):
             })
 
     return pd.DataFrame(distribution_rows), pd.DataFrame(threshold_rows)
+
+
+def build_timeframe_score_thresholds(df, score_column, top_shares):
+    if score_column not in df.columns:
+        return {}
+
+    thresholds = {}
+
+    for timeframe, group in df.groupby("timeframe"):
+        scores = group[score_column].dropna()
+
+        if scores.empty:
+            continue
+
+        thresholds[timeframe] = {
+            top_share: scores.quantile(1 - top_share)
+            for top_share in top_shares
+        }
+
+    return thresholds
