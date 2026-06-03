@@ -3,6 +3,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
 
 
 def plot_path(output_dir, plot_type, filename):
@@ -120,3 +121,100 @@ def plot_horizon_daily_top_n_pearson(daily_top_n_summary, output_dir):
             dpi=160,
         )
         plt.close(fig)
+
+
+def plot_horizon_daily_cross_section_ic(daily_ic_summary, output_dir):
+    if daily_ic_summary.empty:
+        return
+
+    plot_configs = [
+        {
+            "folder": "horizon_daily_cross_section_pearson_ic",
+            "filename_suffix": "daily_cross_section_pearson_ic",
+            "columns": [
+                ("mean_pearson_ic", "mean Pearson IC"),
+                ("median_pearson_ic", "median Pearson IC"),
+            ],
+            "title": "Daily cross-sectional Pearson IC",
+            "ylabel": "Pearson IC across stocks, averaged over days",
+            "percent": False,
+        },
+        {
+            "folder": "horizon_daily_cross_section_spearman_ic",
+            "filename_suffix": "daily_cross_section_spearman_ic",
+            "columns": [
+                ("mean_spearman_ic", "mean Spearman IC"),
+                ("median_spearman_ic", "median Spearman IC"),
+            ],
+            "title": "Daily cross-sectional Spearman IC",
+            "ylabel": "Spearman IC across stocks, averaged over days",
+            "percent": False,
+        },
+        {
+            "folder": "horizon_daily_cross_section_positive_ic_share",
+            "filename_suffix": "daily_cross_section_positive_ic_share",
+            "columns": [
+                ("positive_pearson_ic_share", "positive Pearson IC days"),
+                ("positive_spearman_ic_share", "positive Spearman IC days"),
+            ],
+            "title": "Share of days with positive daily IC",
+            "ylabel": "Share of days",
+            "percent": True,
+        },
+    ]
+
+    for config in plot_configs:
+        available_columns = [
+            item
+            for item in config["columns"]
+            if item[0] in daily_ic_summary.columns
+        ]
+
+        if not available_columns:
+            continue
+
+        for timeframe, timeframe_group in daily_ic_summary.groupby("timeframe"):
+            fig, ax = plt.subplots(figsize=(12, 7))
+
+            for column, label in available_columns:
+                plot_data = (
+                    timeframe_group
+                    .dropna(subset=[column])
+                    .sort_values("horizon_days")
+                )
+
+                if plot_data.empty:
+                    continue
+
+                markevery = max(1, len(plot_data) // 30)
+                ax.plot(
+                    plot_data["horizon_days"],
+                    plot_data[column],
+                    marker="o",
+                    markevery=markevery,
+                    linewidth=1.8,
+                    markersize=3,
+                    label=label,
+                )
+
+            ax.axhline(0, color="#444444", linewidth=1)
+            ax.set_title(f"{timeframe}: {config['title']} by return horizon")
+            ax.set_xlabel("Return horizon in days")
+            ax.set_ylabel(config["ylabel"])
+            ax.grid(True, alpha=0.25)
+            ax.legend()
+
+            if config["percent"]:
+                ax.set_ylim(0, 1)
+                ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+            fig.tight_layout()
+            fig.savefig(
+                plot_path(
+                    output_dir,
+                    config["folder"],
+                    f"{timeframe}_{config['filename_suffix']}.png",
+                ),
+                dpi=160,
+            )
+            plt.close(fig)

@@ -11,6 +11,88 @@ from top_bucket_performance import (
 )
 
 
+def calculate_daily_score_return_correlations(group, score_column):
+    clean = group[[score_column, "future_return"]].dropna()
+
+    if (
+        len(clean) < 3
+        or clean[score_column].nunique() < 2
+        or clean["future_return"].nunique() < 2
+    ):
+        return {
+            "observation_count": int(len(clean)),
+            "pearson_ic": None,
+            "spearman_ic": None,
+        }
+
+    return {
+        "observation_count": int(len(clean)),
+        "pearson_ic": round(
+            float(clean[score_column].corr(clean["future_return"], method="pearson")),
+            6,
+        ),
+        "spearman_ic": round(
+            float(clean[score_column].corr(clean["future_return"], method="spearman")),
+            6,
+        ),
+    }
+
+
+def summarize_daily_ic(daily_ic_df):
+    if daily_ic_df.empty:
+        return {
+            "days_count": 0,
+            "avg_observation_count": None,
+            "mean_pearson_ic": None,
+            "median_pearson_ic": None,
+            "positive_pearson_ic_share": None,
+            "mean_spearman_ic": None,
+            "median_spearman_ic": None,
+            "positive_spearman_ic_share": None,
+        }
+
+    pearson = daily_ic_df["pearson_ic"].dropna()
+    spearman = daily_ic_df["spearman_ic"].dropna()
+
+    return {
+        "days_count": int(len(daily_ic_df)),
+        "avg_observation_count": round(
+            float(daily_ic_df["observation_count"].mean()),
+            6,
+        ),
+        "mean_pearson_ic": (
+            None
+            if pearson.empty
+            else round(float(pearson.mean()), 6)
+        ),
+        "median_pearson_ic": (
+            None
+            if pearson.empty
+            else round(float(pearson.median()), 6)
+        ),
+        "positive_pearson_ic_share": (
+            None
+            if pearson.empty
+            else round(float((pearson > 0).mean()), 6)
+        ),
+        "mean_spearman_ic": (
+            None
+            if spearman.empty
+            else round(float(spearman.mean()), 6)
+        ),
+        "median_spearman_ic": (
+            None
+            if spearman.empty
+            else round(float(spearman.median()), 6)
+        ),
+        "positive_spearman_ic_share": (
+            None
+            if spearman.empty
+            else round(float((spearman > 0).mean()), 6)
+        ),
+    }
+
+
 def calculate_horizon_quantile_summaries(
     df,
     score_column,
@@ -206,4 +288,76 @@ def calculate_horizon_daily_top_n_summaries(
     return (
         pd.DataFrame(benchmark_rows),
         pd.DataFrame(daily_top_n_rows),
+    )
+
+
+def calculate_horizon_daily_ic_summaries(
+    df,
+    score_column,
+    horizon_day_range_map,
+    smoothing_window_map,
+    market_data_buffer_days,
+):
+    if score_column not in df.columns:
+        return pd.DataFrame(), pd.DataFrame()
+
+    market_lookup = load_market_lookup_for_analysis(
+        df,
+        horizon_day_range_map=horizon_day_range_map,
+        smoothing_window_map=smoothing_window_map,
+        buffer_days=market_data_buffer_days,
+    )
+
+    if not market_lookup:
+        return pd.DataFrame(), pd.DataFrame()
+
+    summary_rows = []
+    detail_rows = []
+    priced_df = add_current_prices(df, market_lookup)
+
+    for timeframe, group in priced_df.groupby("timeframe"):
+        horizon_days_values = horizon_day_range_map.get(timeframe)
+
+        if not horizon_days_values:
+            continue
+
+        window_positions = smoothing_window_map.get(timeframe, 0)
+
+        for horizon_days in horizon_days_values:
+            horizon_df = build_horizon_return_frame(
+                group,
+                market_lookup=market_lookup,
+                score_column=score_column,
+                horizon_days=horizon_days,
+                window_positions=window_positions,
+            )
+
+            daily_rows = []
+
+            for start_timestamp, day_group in horizon_df.groupby("start_timestamp"):
+                daily_stats = calculate_daily_score_return_correlations(
+                    day_group,
+                    score_column,
+                )
+                daily_row = {
+                    "timeframe": timeframe,
+                    "horizon_days": horizon_days,
+                    "window_positions": window_positions,
+                    "start_timestamp": start_timestamp,
+                    **daily_stats,
+                }
+                daily_rows.append(daily_row)
+                detail_rows.append(daily_row)
+
+            daily_ic_df = pd.DataFrame(daily_rows)
+            summary_rows.append({
+                "timeframe": timeframe,
+                "horizon_days": horizon_days,
+                "window_positions": window_positions,
+                **summarize_daily_ic(daily_ic_df),
+            })
+
+    return (
+        pd.DataFrame(summary_rows),
+        pd.DataFrame(detail_rows),
     )

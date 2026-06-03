@@ -2,11 +2,12 @@ import sys
 from pathlib import Path
 
 from horizon_quantile_analysis import (
+    calculate_horizon_daily_ic_summaries,
     calculate_horizon_daily_top_n_summaries,
     calculate_horizon_quantile_summaries,
 )
 from score_correlation_plotting import (
-    plot_horizon_daily_top_n_pearson,
+    plot_horizon_daily_cross_section_ic,
     plot_horizon_quantile_pearson
 )
 from score_dataset import (
@@ -53,7 +54,7 @@ HORIZON_DAY_RANGE_MAP = {
 }
 
 TOP_SCORE_SHARES = [0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 1.00]
-TOP_DAILY_COUNTS = [1, 2, 3, 5, 10, "all"]
+TOP_DAILY_COUNTS = [1, 2, 3, 5, 9, "all"]
 
 MARKET_DATA_BUFFER_DAYS = 420
 
@@ -108,6 +109,30 @@ def save_daily_top_n_summaries(df):
     return daily_top_n_summary
 
 
+def save_daily_ic_summaries(df):
+    daily_ic_summary, daily_ic_detail = calculate_horizon_daily_ic_summaries(
+        df,
+        score_column=EQUAL_WEIGHT_SCORE_COLUMN,
+        horizon_day_range_map=HORIZON_DAY_RANGE_MAP,
+        smoothing_window_map=TIMEFRAME_PRICE_WINDOW_MAP,
+        market_data_buffer_days=MARKET_DATA_BUFFER_DAYS,
+    )
+
+    if not daily_ic_summary.empty:
+        save_csv_for_excel(
+            daily_ic_summary,
+            OUTPUT_DIR / "horizon_daily_cross_section_ic_summary.csv",
+        )
+
+    if not daily_ic_detail.empty:
+        save_csv_for_excel(
+            daily_ic_detail,
+            OUTPUT_DIR / "horizon_daily_cross_section_ic_detail.csv",
+        )
+
+    return daily_ic_summary
+
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -144,9 +169,10 @@ def main():
     )
     quantile_summary = save_horizon_summaries(df, timeframe_score_thresholds)
     daily_top_n_summary = save_daily_top_n_summaries(df)
+    daily_ic_summary = save_daily_ic_summaries(df)
 
     plot_horizon_quantile_pearson(quantile_summary, OUTPUT_DIR)
-    plot_horizon_daily_top_n_pearson(daily_top_n_summary, OUTPUT_DIR)
+    plot_horizon_daily_cross_section_ic(daily_ic_summary, OUTPUT_DIR)
     plot_score_distributions(
         df,
         EQUAL_WEIGHT_SCORE_COLUMN,
