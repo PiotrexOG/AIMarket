@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (11.6)",
+        "mean_reversion_bb": "PANIC_DUMP_BELOW_LOWER_BAND (-0.1)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-10.4%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-7.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 95.41-108.88]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.28%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.411)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.35)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 85.6-108.88]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.92%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 97.44,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.64%))",
+      "volume_dynamics": "ELEVATED (1.14)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 20.6% | OM: 9.0% | NM: 3.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 12.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.695B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -61.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -40.9%, Next Q Est Growth: 150.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 80.53, P/S: 2.95)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: -13.26)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -60.97%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.27x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks reintroduces S'mores Frappuccino, launches s'mores cold brew. - Starbucks to participate in Evercore Consumer and Retail Conference. - Starbucks-anchored retail development announced in Tennessee.",
+      "Starbucks brings back viral drink after 7 years. - Starbucks China JV shift reshapes revenue and margin outlook.",
+      "Starbucks AI agent miscounted inventory, slowed baristas. - Starbucks South Korea sales drop due to backlash. - Starbucks presents at Bernstein Annual Strategic Decisions Conference. - Starbucks AI usage considered for tech worker bonuses. - Starbucks turnaround efforts show rising afternoon traffic."
+    ],
+    "medium_term_50d": [
+      "Starbucks announces corporate restructuring, cutting 300 roles. - Starbucks expects $400 million charge from restructuring. - Starbucks plans $2 billion cost-saving effort. - Starbucks to consolidate US and international support functions. - Starbucks to open new corporate office in Nashville.",
+      "Starbucks AI agent miscounted inventory, slowed baristas. - Starbucks South Korea sales drop due to backlash. - Starbucks presents at Bernstein Annual Strategic Decisions Conference. - Starbucks AI usage considered for tech worker bonuses. - Starbucks turnaround efforts show rising afternoon traffic.",
+      "Starbucks brings back viral drink after 7 years. - Starbucks China JV shift reshapes revenue and margin outlook."
+    ],
+    "long_term_200d": [
+      "Starbucks announces corporate restructuring, cutting 300 roles. - Starbucks expects $400 million charge from restructuring. - Starbucks plans $2 billion cost-saving effort. - Starbucks to consolidate US and international support functions. - Starbucks to open new corporate office in Nashville.",
+      "Starbucks beats Q2 revenue and profit estimates. - Starbucks raises full-year 2026 guidance. - Starbucks reports Q2 global comparable store sales up 6.2%. - Starbucks China joint venture with Boyu Capital finalized. - Starbucks turnaround plan shows positive momentum.",
+      "Starbucks lays off 300 US corporate employees. - Starbucks closes regional support offices in US. - Starbucks expects $400 million in restructuring charges. - Starbucks reviews international support organization for cuts."
+    ]
+  }
+}

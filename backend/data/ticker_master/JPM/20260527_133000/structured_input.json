@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 293.67-316.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.03%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.001)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.17)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 281.75-320.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.4%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-1.15%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 36.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 300.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.07%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.37, P/S: 2.94)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.31)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.75)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan expands AI push in investment banking. - JPMorgan Chase & Co. named among best blue chip stocks. - JPMorgan's Matejka sees stocks overpricing rate hike risk. - JPMorgan Chase & Co. is comfortable with $50 billion in private credit. - Softbank taps JPMorgan for SB Energy and robotics IPOs. - J.P. Morgan pays $4.25 million in fight with broker. - JPMorgan believes current market backdrop differs from 2022.",
+      "JPMorgan declares quarterly dividend of $1.50 per share. - JPMorgan launches US$1.5t Security and Resiliency Initiative. - JPMorgan accelerates AI transformation across global operations.",
+      "Jamie Dimon sends stark message on defense contractors. - Jamie Dimon has bad news for JPMorgan bankers."
+    ],
+    "medium_term_50d": [
+      "JPMorgan Chase downgraded to Hold by analysts. - Cohen & Steers partners with J.P. Morgan for global wealth management. - Jamie Dimon warns interest rates could rise much higher. - JPMorgan's Kevin Foley sees strong IPO growth in China. - Jamie Dimon signals AI pivot, hiring more AI specialists. - JPMorgan launches digital bank in Germany with promo rate. - JPMorgan CEO signals AI hiring shift, fewer bankers needed. - JPMorgan rolls out AI tools in investment banking globally. - JPMorgan battles over comics in Diamond bankruptcy. - JPMorgan Chase Financial Company LLC declares coupon on ETN. - KBRA assigns preliminary ratings to J.P. Morgan Mortgage Trust.",
+      "JPMorgan expands AI push in investment banking. - JPMorgan Chase & Co. named among best blue chip stocks. - JPMorgan's Matejka sees stocks overpricing rate hike risk. - JPMorgan Chase & Co. is comfortable with $50 billion in private credit. - Softbank taps JPMorgan for SB Energy and robotics IPOs. - J.P. Morgan pays $4.25 million in fight with broker. - JPMorgan believes current market backdrop differs from 2022.",
+      "JPMorgan looking to offload $4bn in private equity-linked loans. - JPMorgan Chase reorganizes its investment banking division. - JPMorgan Chase partners with Google on Chicago redevelopment. - JPMorgan Chase to offer new hybrid credit fund outside U.S. - JPMorgan Chase CEO Jamie Dimon discusses AI's impact on jobs. - JPMorgan Chase leads financing for Warner Bros. Discovery deal."
+    ],
+    "long_term_200d": [
+      "JPMorgan Chase downgraded to Hold by analysts. - Cohen & Steers partners with J.P. Morgan for global wealth management. - Jamie Dimon warns interest rates could rise much higher. - JPMorgan's Kevin Foley sees strong IPO growth in China. - Jamie Dimon signals AI pivot, hiring more AI specialists. - JPMorgan launches digital bank in Germany with promo rate. - JPMorgan CEO signals AI hiring shift, fewer bankers needed. - JPMorgan rolls out AI tools in investment banking globally. - JPMorgan battles over comics in Diamond bankruptcy. - JPMorgan Chase Financial Company LLC declares coupon on ETN. - KBRA assigns preliminary ratings to J.P. Morgan Mortgage Trust.",
+      "JPMorgan invests $14M in anti-fraud projects. - JPMorgan Chase announces nearly $14 million in philanthropic investments. - JPMorgan Chase & Co. subsidiary crossed 3% voting rights threshold. - JPMorgan CEO Dimon warns of \"too much exuberance\" in markets. - JPMorgan Chase & Co. to potentially scrap UK HQ over bank taxes. - JPMorgan files to launch tokenized money market fund on Ethereum. - JPMorgan set to reshuffle investment bank chiefs amid shake-up.",
+      "Jamie Dimon warns of bond crisis and stagflation due to deficits. - JPMorgan Chase expands $1.5 trillion initiative into Europe. - JPMorgan Chase becomes Global Banking Partner of the Olympic Games. - JPMorgan Chase inks $800 million private credit deal with Ares. - JPMorgan hires KBW's Chris Mihok as managing director."
+    ]
+  }
+}

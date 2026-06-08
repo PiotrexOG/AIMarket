@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly, with RSI plunging into extreme oversold territory (11.6) and velocity showing implosive downward momentum (-10.4%). The price is trading below the lower Bollinger Band, indicating a panic sell-off. O: While the news narrative has shifted to product launches and conference participation, the underlying technicals suggest extreme bearishness. The previous concerns about AI inventory and South Korea sales remain relevant. T: The price is near the middle of its 20-day range, but the extreme oversold conditions and bearish momentum suggest a high probability of a short-term bounce, though the underlying trend remains weak. W: The extreme oversold RSI and negative velocity indicate a loss of short-term momentum, increasing downside risk and suggesting a potential for further declines if support fails."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "safe": 3.5
+      },
+      "synthesis": "S: Medium-term trend alignment has weakened (4.28%), and the MACD has accelerated its bearish trend (-1.411), signaling a significant loss of upward momentum. The Z-score relative to the SMA50 has moved towards mean reversion, indicating a healthier base but still below the trend. O: The ongoing restructuring and cost-saving efforts are still relevant, but the recent operational issues like AI inventory miscounts and South Korea sales drops continue to weigh on sentiment. T: The stock remains within its monthly range, but the deteriorating MACD and weakening trend alignment suggest a higher probability of testing lower support levels. The elevated volume indicates selling pressure. W: The accelerating bearish MACD divergence is a significant concern, overriding the positive trend alignment and suggesting a potential trend reversal. The fundamental growth profile remains a concern, and the stressed balance sheet limits the safe score."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The long-term technical structure remains intact with a healthy golden cross within a secular bull market, but the price position has moved to a mid-cycle neutral zone (63.0%). Fundamentals continue to show stagnation with profit issues and a stressed balance sheet. O: The long-term news narrative has not significantly changed, with previous positive turnaround plans still in play, but recent negative operational news adds a layer of caution. The market regime has also weakened. T: The stock is still trading at a premium valuation, and the implied growth remains risky given the persistent profit issues. The stressed balance sheet and debt sensitivity remain structural weaknesses. W: The combination of stagnant long-term growth, stressed financials, and high valuation multiples, coupled with recent operational setbacks, limits the long-term score. The safe score has been reduced due to increased volatility context and persistent financial health concerns, as well as a less favorable long-term range position."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: Short-term momentum has deteriorated significantly, with RSI falling to 35.4 and ROC showing an implosive down move of -11.4%. The price is now trading 6.3% below the 20-day SMA, indicating a sharp loss of upward momentum. W: The \"STRONG_BULLISH\" candle pattern is contradicted by the weak RSI and implosive ROC, suggesting a potential bull trap or exhaustion. The price is in the middle of its 20-day range, but the sharp downward velocity negates any bullish signal. O: Recent news highlights strong Q3 comparable sales growth and digital sales, but also mentions a profit margin compression and a stock price fall despite an earnings beat. This mixed signal suggests underlying operational challenges despite top-line strength. T: The score has been significantly reduced due to the sharp deterioration in momentum indicators and price action. Conviction is lowered due to conflicting signals between the candle pattern and momentum metrics. Safety is also reduced as volatility is expanding and price is breaking down."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 1.5,
+        "conv": 2.5,
+        "safe": 3.5
+      },
+      "synthesis": "S: The medium-term trend has shifted decisively bearish, with the MACD accelerating downwards to -12.385. The price is now in a bearish trend position relative to the 50-day SMA (Z:-1.4), indicating a loss of previous support. W: The consolidation pattern is now overshadowed by the accelerating bearish MACD and the negative Z-score, suggesting a breakdown in the trend. The previous bullish gradual ascent has completely reversed. O: Q3 earnings showed a revenue beat driven by gas sales, but profit margins compressed, and the stock fell despite the beat. This indicates that while top-line growth is present, profitability is under pressure, which is a concern for the medium term. T: The score and conviction have been drastically reduced due to the accelerating bearish MACD and the shift to a bearish trend position. The previous positive trend alignment has been completely erased. Safety remains somewhat stable due to the overall range-bound nature of the stock and the underlying business, but the deteriorating trend poses a risk."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term market regime has shifted to a \"BEAR_MARKET_RELIEF_RALLY\" (-0.3%), indicating a less favorable macro environment. The price has moved lower within the long-term range to 47.9%, indicating a loss of previous upside positioning. W: While the \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" remains, the shift in market regime and lower price position suggest a potential weakening of the long-term trend. The previous mid-cycle neutral zone has moved towards the lower end. O: Fundamentals remain strong with moderate growth and a fortress balance sheet. However, the Q3 earnings report showed a temporary stumble with a negative surprise, although next quarter's estimated growth is strong. The news highlights margin compression due to higher fuel costs, which is a concern for long-term profitability. T: The score and conviction have decreased due to the shift in the market regime and the lower long-term price positioning. The previous bullish outlook is tempered by the current macro environment and operational headwinds. Safety remains relatively stable due to the company's strong balance sheet and scale, but the valuation remains a long-term concern."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: The short-term outlook for MSFT is neutral to slightly bullish, characterized by consolidation around the 20-day SMA. The RSI is in a neutral zone (45.4), and Bollinger Bands indicate normal price action. Velocity is normal, suggesting no immediate parabolic move. O: Potential for a breakout if consolidation resolves upwards, supported by positive analyst sentiment and news flow around AI advancements and strategic partnerships. T: The primary risk is a failure to break out of the current range, leading to a potential retest of lower support levels. News regarding regulatory scrutiny or competitive pressures could also weigh on sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend for MSFT is bullish, with expanding momentum and the price positioned favorably relative to the 50-day SMA (Z-score of 0.66). While the MACD shows a slight bearish recovery, the overall trend alignment is positive. O: Continued strength in enterprise AI adoption and strategic partnerships, coupled with strong fundamental business quality (GM: 68.8%, OM: 46.3%), provides a solid foundation for upside. Analyst conviction, though currently low, could improve with sustained positive price action. T: The primary concern is the 'secular bear market' regime indicated in the long-term view, which could cap upside potential. A significant shift in market sentiment or a broader economic downturn could impact MSFT's performance despite its strong fundamentals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term outlook is mixed, with strong fundamental underpinnings contrasting with a challenging market regime. MSFT exhibits ultra-elite business quality, a healthy balance sheet, and strong cash generation. However, the 'secular bear market' regime and the presence of a death cross structure (-13.54%) indicate significant headwinds. O: The company's robust growth profile (Rev: 15.6%, EPS: 15.9%) and dominant market position provide resilience. Strategic investments in AI and cloud services position it well for future secular trends, potentially outperforming in a challenging macro environment. T: Valuation remains a key concern, with premium multiples (P/E: 29.35, P/S: 10.51) and an expensive PEG ratio (1.85) suggesting limited room for error. The 'low asset safety' assessment (P/B: 8.51) and the long-term bearish technical structure warrant caution despite strong fundamentals."
+    }
+  }
+}

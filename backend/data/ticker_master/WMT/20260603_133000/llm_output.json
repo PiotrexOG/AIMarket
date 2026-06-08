@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The short-term outlook remains bearish, with RSI deeply oversold at 18.5, indicating extreme selling pressure. The price is within normal Bollinger Bands but the velocity and trend base remain significantly overstretched to the downside. W: The strong bullish candle pattern is a contrarian signal against the prevailing bearish momentum. The implosive down velocity and extended bearish overstretch suggest a potential for a short-term bounce, but the overall trend is still weak. O: While oversold conditions persist, the underlying bearish technicals limit upside potential. A short-term bounce is possible, but conviction is low due to the prevailing trend. T: The short-term trend remains weak, with bearish technicals dominating despite some positive news on delivery expansion. The score reflects the extreme oversold condition but also the lack of conviction in a sustainable reversal."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.2,
+        "safe": 4.8
+      },
+      "synthesis": "S: The medium-term trend is consolidating with a bearish bias. The MACD continues to accelerate negatively, and the Z-score relative to the 50-day SMA remains deeply negative, indicating persistent selling pressure. W: The trend alignment has weakened into consolidation, but the price is holding within the monthly support zone. The bearish MACD and Z-score suggest a lack of conviction for a sustained upward move. O: The price is showing some resilience at support, but the bearish momentum indicators suggest that any upside will face significant resistance. The consolidation pattern indicates indecision among market participants. T: The medium-term trend remains under pressure, with bearish technicals persisting. The score reflects the consolidation pattern and the price's ability to hold support, but the underlying bearish momentum limits upside potential."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 5.8,
+        "safe": 4.8
+      },
+      "synthesis": "S: The long-term market regime has shifted to a bear market relief rally, with the price moving slightly lower within the mid-cycle neutral zone. The golden cross structure remains intact, providing some structural support. W: The fundamentals remain unchanged, showing thin margins, moderate leverage, and weak cash conversion. The valuation remains hyper-premium, and implied growth is negative, indicating significant risk. O: The company's mega-cap scale and established long-term structure offer some resilience. However, the current market regime and persistent fundamental weaknesses temper the long-term outlook. T: The shift in market regime to a bear market relief rally, coupled with unchanged fundamental weaknesses and premium valuation, has slightly decreased the score and safe metrics. The price's position in the mid-cycle neutral zone suggests a less favorable risk-reward compared to previous periods."
+    }
+  }
+}

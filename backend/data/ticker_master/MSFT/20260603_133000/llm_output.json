@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 6.8
+      },
+      "synthesis": "S: The short-term outlook shows a shift from consolidation to a strong bearish candle pattern, despite a strong RSI in the bullish zone. Velocity has normalized, and the price is stable near the 20-day SMA, indicating a potential pause or reversal. W: The 'STRONG_BEARISH' candle pattern is a significant concern, overriding the positive RSI and velocity. The increasing polarization in analyst sentiment suggests potential for sharp moves. O: Elevated volume dynamics (1.15) accompanying the bearish candle could signal increased selling pressure. News regarding AI revenue scrutiny or potential regulatory actions could exacerbate downside. T: The strong RSI and stable price near the SMA suggest that the bearish signal may not immediately lead to a sharp decline, but the bearish candle pattern and increased polarization warrant caution."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend remains bullish with gradual ascent and a strong Z-score above the 50-day SMA. However, the MACD is showing fading bullish momentum, suggesting a potential loss of upward steam. W: The fading bullish MACD is a key warning sign for the medium-term trend's sustainability. While the price action is still constructive, the diminishing momentum indicates that upside may be limited. O: Continued strong fundamental business quality and cash generation provide a robust foundation. The $37B AI run rate and ongoing strategic partnerships, including the Pentagon software deal, are significant positives. T: The premium valuation (P/E: 30.55) and expensive PEG ratio (1.93) leave little room for error if the fading MACD momentum translates into a trend reversal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term technical structure remains challenged by the secular bear market regime and death cross, though the price has moved to a more neutral position within the long-term range. Fundamental strengths in business quality, financial health, and cash generation persist. W: The persistent death cross structure and secular bear market regime continue to weigh on the long-term outlook, limiting upside potential. The valuation remains stretched, with low asset safety (P/B: 8.86). O: The company's scale, strong growth profile, and continued AI investments provide underlying resilience and long-term potential. The recent news flow highlights ongoing AI development and strategic wins, such as the Pentagon deal. T: The premium valuation and the bearish long-term technical structure suggest that significant upside is unlikely until the broader market regime shifts or the valuation becomes more reasonable."
+    }
+  }
+}

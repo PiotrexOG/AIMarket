@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Short-term momentum has weakened significantly. The RSI has moved to neutral (43.9), the candle pattern indicates indecision (DOJI), and price action is stable near the SMA20 (-2.1%), within normal Bollinger Bands (0.32). W: The shift from bullish to neutral/weak short-term indicators suggests a loss of upward momentum and potential for further downside. O: News flow remains mixed, with some positive developments in exploration and potential re-entry into Venezuela, but no strong immediate catalysts. T: The technical deterioration from overbought conditions to neutral/weak signals a decrease in short-term attractiveness, warranting a lower score and conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment has weakened, with a bearish descent (-1.53%) and the MACD fading (0.176). Crucially, the price is now below the 50-day SMA (Z:-1.26), indicating a shift in trend. W: The bearish positioning relative to the 50-day SMA and fading MACD suggest a potential for a more sustained downtrend. O: While long-term positive news persists, the immediate medium-term technicals are deteriorating. T: The shift in trend alignment and MACD momentum, coupled with a bearish Z-score, significantly reduces the medium-term score and conviction, reflecting a more cautious outlook."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The long-term outlook remains anchored by a secular bull market regime, although the price position has moved to a mid-cycle neutral zone (58.8%). Fundamentals remain robust with a healthy balance sheet and consistent cash generation. W: The risk of bullish stretch exhaustion persists (18.42%), and the price has moved lower within the long-term range, indicating reduced upside potential from current levels. O: Continued positive news regarding LNG projects and exploration provides some support, but the overall long-term narrative is less compelling than before. T: While the secular regime and fundamental strength offer a degree of safety, the shift in price position and persistent exhaustion risk temper the long-term score, reflecting a more neutral long-term stance."
+    }
+  }
+}

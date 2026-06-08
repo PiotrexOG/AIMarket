@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term outlook for JPM is neutral to slightly bearish, with a score of 3.5. Technical indicators show a bearish RSI (37.0) and the price is testing the lower Bollinger Band (0.04). While momentum (ROC: -4.4%) and trend base (SMA20: -3.5%) are stable near their base, the price is in the middle of its 20-day range. W: The bearish RSI and lower band test suggest potential downside. O: News flow is mixed, with dividend increases and new HQ announcements offset by warnings of weak US growth. T: The current technical setup lacks strong conviction (conv: 4.0), but the stock exhibits some resilience due to its large cap status and stable volatility context, contributing to a moderate safety score (safe: 6.0)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term outlook for JPM is cautiously bullish, reflected in a score of 4.5. The trend alignment shows a gradual ascent (1.98%), and the price is near a healthy base (SMA50 Z-score: -0.14). However, the MACD is bearish and accelerating (-1.723), indicating potential headwinds. W: The accelerating bearish MACD and the fact that the price is inside a wide monthly range present challenges. O: Fundamental data shows moderate growth (Rev: 4.3%, EPS: 2.5%) but a concerning earnings surprise for the next quarter (-9.6%). T: Conviction remains moderate (conv: 5.0) due to conflicting technical and fundamental signals. Safety is reduced (safe: 5.5) by the stressed balance sheet (NetDebt/Eq: 2.53x) and the negative earnings momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook for JPM is bearish, with a score of 3.0. The market regime is characterized as a secular bear market (-3.1%), and the presence of a death cross structure (-1.56%) further reinforces this negative bias. The stock is positioned in the lower quadrant of its long-term range (Pos: 34.6%). W: The secular bear market regime, death cross, and bearish long-term range position are significant structural weaknesses. O: While business quality is high (GM: 60.9%), the stressed balance sheet and negative earnings momentum for the next quarter are concerning. T: Conviction is low (conv: 3.5) due to the prevailing negative market structure. Safety is significantly impaired (safe: 4.5) by the combination of a stressed balance sheet, negative long-term technicals, and the broader bear market environment."
+    }
+  }
+}

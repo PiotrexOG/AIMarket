@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "IMPROVING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "STAGNANT (-0.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 179.53-198.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.97%)",
+        "cycle_macd": "BULLISH_FADING (0.229)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.46)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 177.74-214.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (13.95%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 181.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.63%))",
+      "volume_dynamics": "ELEVATED (1.44)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.4% | OM: 8.4% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -34.1%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.32, P/S: 1.94)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.96)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -34.05%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron starts drilling Narges natural gas field in Egypt. - Chevron secures 20-year natural gas supply agreement in Israel.",
+      "Chevron begins drilling new well at Egypt's Narges gas field. - Chevron insiders sell US$179m of stock.",
+      "Chevron faces investor pushback on board proposals."
+    ],
+    "medium_term_50d": [
+      "Chevron starts drilling Narges natural gas field in Egypt. - Chevron secures 20-year natural gas supply agreement in Israel.",
+      "Eneos to buy Chevron's stake in Singapore Refining and other assets for $2.2 billion. - Chevron to sell some Asia-Pacific assets to Japan's Eneos for $2.17 billion. - Chevron pens $2.17 billion downstream asset sale. - ENEOS to buy certain Chevron downstream assets in APAC for $2.2bn. - Chevron considering investment opportunities in Tanzania's oil and gas sector.",
+      "Chevron sells Asia-Pacific downstream and refining assets to ENEOS."
+    ],
+    "long_term_200d": [
+      "Eneos to buy Chevron's stake in Singapore Refining and other assets for $2.2 billion. - Chevron to sell some Asia-Pacific assets to Japan's Eneos for $2.17 billion. - Chevron pens $2.17 billion downstream asset sale. - ENEOS to buy certain Chevron downstream assets in APAC for $2.2bn. - Chevron considering investment opportunities in Tanzania's oil and gas sector.",
+      "Chevron sells Asia-Pacific downstream and refining assets to ENEOS.",
+      "Chevron Q1 2026 earnings beat estimates, profit hits 5-year low. - Chevron's upstream strength lifts first-quarter earnings past estimate. - Chevron stock gains after beating Q1 profit forecasts. - Chevron, Exxon Show Earnings Resilience But Stocks Fail Key Test. - Chevron CEO says company is recovering debt in Venezuela faster. - Chevron stock wavers after earnings, pumping fuel at record. - Chevron reports first quarter 2026 results. - Chevron reports first-quarter earnings of $2.21 billion. - Chevron stock rises, earnings boosted by Iran war oil price spike. - Chevron says downtime could hit Q2 output by 150,0"
+    ]
+  }
+}

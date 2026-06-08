@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook for AAPL is deteriorating. Despite a strong bullish candle pattern, the RSI has moved to an extreme 87.3, indicating significant overbought conditions. The price is now at critical resistance (311.82) and the 20-day SMA is overstretched. W: The extreme overbought RSI and the price testing critical resistance suggest a high probability of a pullback. The \"RANGE\" bias and \"TESTING\" resistance barriers in the SR landscape reinforce this view. O: A short-term consolidation or reversal is likely as the market digests the rapid ascent and faces significant overhead resistance. T: The \"EXPLOSIVE_UP\" velocity is unsustainable at these levels, and the \"OVERSTRETCHED\" SMA20 points to a potential for mean reversion."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend remains bullish, with expanding momentum and a strong position above the 50-day SMA (Z-score 2.08). However, the MACD is fading, and the price is consolidating at monthly resistance. W: The fading MACD suggests momentum is waning, and the proximity to the upper bound of the 50-day range (311.82) presents a significant hurdle. The \"BULLISH_FADING\" MACD indicates a loss of upward thrust. O: A breach of the current resistance zone could lead to further upside, but a failure to do so may result in a period of consolidation or a retracement. T: While the trend alignment is positive, the confluence of resistance and fading momentum introduces a degree of caution for sustained upside in the near term."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: AAPL continues to operate within a secular bull market, maintaining a healthy golden cross structure and trading at new all-time highs (99.4% of long-term range). Fundamentals remain strong, characterized by high business quality, excellent cash generation, and stable growth. W: Valuation multiples remain premium (P/E: 39.3, P/S: 10.58), and asset safety is extremely low (P/B: 52.27), offering minimal downside protection. The \"EXPENSIVE_VS_GROWTH\" PEG ratio (1.54) highlights this concern. O: The company's scale, robust business model, and ongoing AI initiatives provide a solid foundation for future growth. T: The \"SECULAR_BULL_MARKET\" regime and \"ATH_OR_TOP_OF_CYCLE\" position are significant tailwinds, but the elevated valuation and low asset safety metrics warrant careful monitoring."
+    }
+  }
+}

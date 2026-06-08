@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.75)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 304.5-341.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (2.91%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.542)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.52)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.63%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 52.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 327.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.89%))",
+      "volume_dynamics": "AVERAGE (1.04)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 6.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.75, P/S: 15.31)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.34)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.18)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launches \"Tap In\" campaign tied to FIFA World Cup 2026. - Visa partners with Trip.com Group for Asia Pacific travel. - Berkshire Hathaway exits stake in Visa. - Visa advances investments in agentic payments. - Visa presents at J.P. Morgan Global Technology Conference.",
+      "Visa launches new global campaign for FIFA World Cup 2026. - Visa-powered debit card to launch for businesses, supports charities. - Visa announces $20 billion share buyback plan. - bp offers new rewards Visa cardmembers fuel discounts. - Visa and Mastercard pursue different strategic frontiers.",
+      "Trump urges China to expand market access for Visa. - Visa rolls out new digital identity and card activation tools. - Value Act Capital increases stake in Visa. - Berkshire Hathaway exits stake in Visa."
+    ],
+    "medium_term_50d": [
+      "Visa launches new global campaign for FIFA World Cup 2026. - Visa-powered debit card to launch for businesses, supports charities. - Visa announces $20 billion share buyback plan. - bp offers new rewards Visa cardmembers fuel discounts. - Visa and Mastercard pursue different strategic frontiers.",
+      "Visa launches \"Tap In\" campaign tied to FIFA World Cup 2026. - Visa partners with Trip.com Group for Asia Pacific travel. - Berkshire Hathaway exits stake in Visa. - Visa advances investments in agentic payments. - Visa presents at J.P. Morgan Global Technology Conference.",
+      "Trump urges China to expand market access for Visa. - Visa rolls out new digital identity and card activation tools. - Value Act Capital increases stake in Visa. - Berkshire Hathaway exits stake in Visa."
+    ],
+    "long_term_200d": [
+      "Visa launches new global campaign for FIFA World Cup 2026. - Visa-powered debit card to launch for businesses, supports charities. - Visa announces $20 billion share buyback plan. - bp offers new rewards Visa cardmembers fuel discounts. - Visa and Mastercard pursue different strategic frontiers.",
+      "Trump urges China to expand market access for Visa. - Visa rolls out new digital identity and card activation tools. - Value Act Capital increases stake in Visa. - Berkshire Hathaway exits stake in Visa.",
+      "Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history."
+    ]
+  }
+}

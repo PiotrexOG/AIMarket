@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.3)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.06)",
+        "velocity_roc_10": "NORMAL (4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (7.0%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 279.41-314.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.11%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.362)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.75)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 268.91-319.14]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (4.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.04%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 313.33,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.06%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.45, P/S: 6.8)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 18.21)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.49)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace sees strong engine demand and defense contract wins.",
+      "GE Aerospace wins contract for new defense engine.",
+      "GE Aerospace wins 3-year Boeing Defense contract for Apache engines."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace sees strong engine demand and defense contract wins.",
+      "GE Aerospace awarded U.S. Air Force contract for GE426 engine. - GE Aerospace uses generative AI to design hypersonic engine. - GE Aerospace secures Air Force engine contract and Boeing 787 deal.",
+      "GE Aerospace wins 3-year Boeing Defense contract for Apache engines."
+    ],
+    "long_term_200d": [
+      "GE Aerospace awarded U.S. Air Force contract for GE426 engine. - GE Aerospace uses generative AI to design hypersonic engine. - GE Aerospace secures Air Force engine contract and Boeing 787 deal.",
+      "GE Aerospace sees strong engine demand and defense contract wins.",
+      "GE Vernova reports blowout earnings. - GE Aerospace CEO meets with China's state planner. - GE shareholders decline proposal on defense product reporting. - GE Aerospace sees strong commercial engine and services activity."
+    ]
+  }
+}

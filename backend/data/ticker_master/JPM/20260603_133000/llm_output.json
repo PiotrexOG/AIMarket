@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term score for JPM has decreased to 4.5. RSI has moved lower to 45.6, and velocity (ROC) has stagnated at 0.1%. The price is consolidating near the SMA20 (-0.4%), indicating a loss of upward momentum. W: The lack of directional conviction and stagnant momentum are key weaknesses. O: News flow highlights potential acquisition spending and a debate on crypto, but also includes warnings about market bubble risks from Jamie Dimon, creating a mixed short-term narrative. T: Conviction has decreased to 4.5 due to weakening momentum and mixed analyst sentiment. Safety remains stable at 6.0, supported by the stock's large-cap status and generally stable volatility, despite the price being in the middle of its 20-day range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term outlook has deteriorated significantly, with the score dropping to 3.5. The MACD has turned bearish (-0.389), and the price is now in a bearish trend position relative to the SMA50 (Z:-0.66). Trend alignment has also compressed (-0.37%). W: The bearish MACD crossover and negative positioning relative to the 50-day moving average are significant headwinds. O: News indicates Jamie Dimon's comments on market exuberance and potential over-earning, alongside rising cost concerns. This suggests a more cautious medium-term outlook. T: Conviction has fallen to 3.5, reflecting the bearish technical signals and cautious fundamental commentary. Safety has been slightly reduced to 5.5, as the price is now in a more bearish trend position, although the core business quality and scale remain supportive."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 2.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The long-term score has declined sharply to 2.5. The market regime has shifted to a secular bear market (-1.6%), and the stock is positioned in the bearish lower quadrant (32.3%). While major crosses are still potentially pivotal (-0.83%), the overall long-term trend is now negative. W: The shift to a secular bear market regime and the lower range position are major structural weaknesses. O: Jamie Dimon's warnings about potential higher interest rates, stagflation, and market bubbles, coupled with rising cost projections for the bank, paint a challenging long-term picture. T: Conviction has decreased to 2.5 due to the negative secular market regime and concerning long-term fundamental outlook. Safety has been reduced to 4.0, reflecting the stressed balance sheet, potential for higher rates, and the overall bearish market environment, despite the company's scale."
+    }
+  }
+}

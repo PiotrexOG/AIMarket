@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.5)",
+        "velocity_roc_10": "NORMAL (-2.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 194.74-236.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.69%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.35)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.67)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.27-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.5%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 209.92,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (4.01%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 66.85, P/S: 34.79)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 61.62)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia earnings beat, valuation concerns persist. - Huawei chip breakthrough may challenge Nvidia. - Nvidia sees China as a very important market. - Fortinet expands AI security using Nvidia platforms. - Cisco, Nvidia post record results due to AI buildout. - Michael Burry flags demand and concentration risks for Nvidia.",
+      "Nvidia announces 2,400% dividend raise. - Trump's tariffs on Nvidia chips backfire; China rejects H200. - Nvidia chips integrated into Global Mofy AI platform. - Nvidia's stock portfolio seen as long-term catalyst. - Nvidia's AI dominance continues, but risks exist. - Nvidia's AI chip demand drives expansion. - Nvidia's H200 AI chips rejected by China. - Nvidia's stock performance discussed in market context. - Nvidia's AI chip sales outpace packaging capacity. - Nvidia's AI chip costs and usage by Microsoft noted.",
+      "Nvidia reports record sales and income driven by AI demand. - Nvidia CEO pitches $200 billion CPU market opportunity. - Nvidia enters new phase in AI dominance with surprise announcement. - Nvidia invests up to $3.2 billion in Corning for optical solutions. - Nvidia's H200 chip faces hurdles in China despite US license. - Nvidia CEO expects Vera Rubin platform to surpass Blackwell. - Nvidia partners with Uber for global Robotaxi expansion. - Nvidia's CPU market forecast includes China. - Nvidia's AI inference dominance is rapidly expanding. - Nvidia's hidden networking business poised to overtake Broadcom."
+    ],
+    "medium_term_50d": [
+      "Nvidia reports record sales and income driven by AI demand. - Nvidia CEO pitches $200 billion CPU market opportunity. - Nvidia enters new phase in AI dominance with surprise announcement. - Nvidia invests up to $3.2 billion in Corning for optical solutions. - Nvidia's H200 chip faces hurdles in China despite US license. - Nvidia CEO expects Vera Rubin platform to surpass Blackwell. - Nvidia partners with Uber for global Robotaxi expansion. - Nvidia's CPU market forecast includes China. - Nvidia's AI inference dominance is rapidly expanding. - Nvidia's hidden networking business poised to overtake Broadcom.",
+      "Nvidia earnings beat, valuation concerns persist. - Huawei chip breakthrough may challenge Nvidia. - Nvidia sees China as a very important market. - Fortinet expands AI security using Nvidia platforms. - Cisco, Nvidia post record results due to AI buildout. - Michael Burry flags demand and concentration risks for Nvidia.",
+      "Nvidia reports blockbuster quarter, revenue $82 billion. - Nvidia concedes China market, focuses on other regions. - Nvidia's AI revenue surges, driving semiconductor growth. - Nvidia GPUs used in White Fiber's $160 million AI deal. - Nvidia's Q1 earnings expected to be strong. - Author claims Nvidia is undervalued despite fundamentals. - Nvidia's CEO building a large AI investment empire. - Congressman sold Nvidia stock before record earnings. - Space X names Nvidia primary chip supplier for AI clusters. - Ideal Power secures NVIDIA GPU opportunity via LOI. - Cerebras Systems chips compared to Nvidia's Blackwell models. - Alphabet's overlap with Nvidia is growing"
+    ],
+    "long_term_200d": [
+      "Nvidia Q1 earnings exceed estimates; AI infrastructure outlook strong. - Nvidia CFO: H100 GPU rental prices up 20% year-to-date. - Nvidia's Blackwell GPUs used by all major hyperscalers and cloud providers. - Nvidia reports record Q1 fiscal 2027 results, surpassing prior highs. - Oracle to deploy Nvidia's next-generation Vera CPUs at hyperscale. - Nvidia partners with QIAGEN on AI drug discovery. - Alibaba launches new AI chip, potentially competing with Nvidia. - Nvidia's equity investments generated $16 billion gain in Q1. - Nvidia's market cap faces tough test ahead of earnings. - Nvidia stock",
+      "Nvidia reports record sales and income driven by AI demand. - Nvidia CEO pitches $200 billion CPU market opportunity. - Nvidia enters new phase in AI dominance with surprise announcement. - Nvidia invests up to $3.2 billion in Corning for optical solutions. - Nvidia's H200 chip faces hurdles in China despite US license. - Nvidia CEO expects Vera Rubin platform to surpass Blackwell. - Nvidia partners with Uber for global Robotaxi expansion. - Nvidia's CPU market forecast includes China. - Nvidia's AI inference dominance is rapidly expanding. - Nvidia's hidden networking business poised to overtake Broadcom.",
+      "Nvidia reports blockbuster quarter, revenue $82 billion. - Nvidia concedes China market, focuses on other regions. - Nvidia's AI revenue surges, driving semiconductor growth. - Nvidia GPUs used in White Fiber's $160 million AI deal. - Nvidia's Q1 earnings expected to be strong. - Author claims Nvidia is undervalued despite fundamentals. - Nvidia's CEO building a large AI investment empire. - Congressman sold Nvidia stock before record earnings. - Space X names Nvidia primary chip supplier for AI clusters. - Ideal Power secures NVIDIA GPU opportunity via LOI. - Cerebras Systems chips compared to Nvidia's Blackwell models. - Alphabet's overlap with Nvidia is growing"
+    ]
+  }
+}

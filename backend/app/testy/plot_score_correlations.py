@@ -47,16 +47,18 @@ TIMEFRAME_PRICE_WINDOW_MAP = {
     "long_term_200d": 84,
 }
 
+MARKET_DATA_BUFFER_DAYS = 441
+
 HORIZON_DAY_RANGE_MAP = {
-    "short_term_14d": range(1, 420),
-    "medium_term_50d": range(1, 420),
-    "long_term_200d": range(1, 420),
+    "short_term_14d": range(1, MARKET_DATA_BUFFER_DAYS),
+    "medium_term_50d": range(1, MARKET_DATA_BUFFER_DAYS),
+    "long_term_200d": range(1, MARKET_DATA_BUFFER_DAYS),
 }
 
 TOP_SCORE_SHARES = [0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 1.00]
 TOP_DAILY_COUNTS = [1, 2, 3, 5, 9, "all"]
 
-MARKET_DATA_BUFFER_DAYS = 420
+
 
 
 def save_csv_for_excel(df, path):

@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.44)",
+        "velocity_roc_10": "STAGNANT (0.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 293.67-316.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.37%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.389)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.66)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 281.75-320.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.6%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.83%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 32.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 297.87,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.89%))",
+      "volume_dynamics": "ELEVATED (1.1)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.24, P/S: 2.92)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.29)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.7)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan weighs US$20b deal, expands in Europe, and debates crypto. - Jamie Dimon says blockchain will replace financial market infrastructure.",
+      "JPMorgan CEO Jamie Dimon sees market bubble risks. - JPMorgan CEO Jamie Dimon comments on exuberant market. - JPMorgan could spend $10-20 billion on acquisitions. - JPMorgan Chase & Co. notified of Umicore voting rights change. - JPMorgan Securities ordered to pay $4.25 million in dispute. - JPMorgan CEO Jamie Dimon vows to fight CLARITY Act. - JPMorgan Chase & Co. to present at Bernstein conference. - JPMorgan Chase & Co. among companies announcing dividend increases. - Open AI discussed adding JPMorgan to IPO bank lineup.",
+      "JPMorgan's Q2 outlook predicts surge in fee income. - JPMorgan provides credit facility for Dropbox's $400 million borrowing. - JPMorgan moves Arbor Realty Trust assets into repurchase facilities."
+    ],
+    "medium_term_50d": [
+      "JPMorgan CEO Jamie Dimon sees market bubble risks. - JPMorgan CEO Jamie Dimon comments on exuberant market. - JPMorgan could spend $10-20 billion on acquisitions. - JPMorgan Chase & Co. notified of Umicore voting rights change. - JPMorgan Securities ordered to pay $4.25 million in dispute. - JPMorgan CEO Jamie Dimon vows to fight CLARITY Act. - JPMorgan Chase & Co. to present at Bernstein conference. - JPMorgan Chase & Co. among companies announcing dividend increases. - Open AI discussed adding JPMorgan to IPO bank lineup.",
+      "JPMorgan CEO Jamie Dimon sees firm 'over-earning' as costs may rise. - JPMorgan CEO Jamie Dimon says the bank is currently overearning. - JPMorgan CEO Jamie Dimon says there could be opportunities for M&A. - JPMorgan CEO Jamie Dimon says the bank is on the lookout for acquisitions. - JPMorgan CEO Jamie Dimon says the bank could spend $20 billion on acquisition. - JPMorgan CEO Jamie Dimon says cyber is our biggest risk. - JPMorgan CEO Jamie Dimon says potential successors are inside the company. - JPMorgan CEO Jamie Dimon says investment banking in Q2 could be up 10%. - JPMorgan CEO Jamie Dimon says trading could be up by",
+      "JPMorgan's costs could hit $106 billion. - J.P. Morgan Asset Management launches new ETF. - JPMorgan could deploy up to $20B for deals. - JPMorgan joins IBM's open-source cybersecurity effort. - JPMorgan completes XRP tokenized Treasury settlement. - JPMorgan says Bitcoin ETF outflows signal cooling. - JPMorgan to challenge $4.25 million penalty. - Jamie Dimon discusses next big JPMorgan deal."
+    ],
+    "long_term_200d": [
+      "JPMorgan CEO Jamie Dimon sees firm 'over-earning' as costs may rise. - JPMorgan CEO Jamie Dimon says the bank is currently overearning. - JPMorgan CEO Jamie Dimon says there could be opportunities for M&A. - JPMorgan CEO Jamie Dimon says the bank is on the lookout for acquisitions. - JPMorgan CEO Jamie Dimon says the bank could spend $20 billion on acquisition. - JPMorgan CEO Jamie Dimon says cyber is our biggest risk. - JPMorgan CEO Jamie Dimon says potential successors are inside the company. - JPMorgan CEO Jamie Dimon says investment banking in Q2 could be up 10%. - JPMorgan CEO Jamie Dimon says trading could be up by",
+      "JPMorgan CEO Jamie Dimon sees market bubble risks. - JPMorgan CEO Jamie Dimon comments on exuberant market. - JPMorgan could spend $10-20 billion on acquisitions. - JPMorgan Chase & Co. notified of Umicore voting rights change. - JPMorgan Securities ordered to pay $4.25 million in dispute. - JPMorgan CEO Jamie Dimon vows to fight CLARITY Act. - JPMorgan Chase & Co. to present at Bernstein conference. - JPMorgan Chase & Co. among companies announcing dividend increases. - Open AI discussed adding JPMorgan to IPO bank lineup.",
+      "JPMorgan's costs could hit $106 billion. - J.P. Morgan Asset Management launches new ETF. - JPMorgan could deploy up to $20B for deals. - JPMorgan joins IBM's open-source cybersecurity effort. - JPMorgan completes XRP tokenized Treasury settlement. - JPMorgan says Bitcoin ETF outflows signal cooling. - JPMorgan to challenge $4.25 million penalty. - Jamie Dimon discusses next big JPMorgan deal."
+    ]
+  }
+}

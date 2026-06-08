@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.37)",
+        "velocity_roc_10": "STAGNANT (-0.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 268.91-310.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.92%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.5)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 268.91-331.88]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-1.57%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 38.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 296.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.07%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.32, P/S: 6.42)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 17.2)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.41)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace awarded U.S. Air Force contract for GE426 engine. - GE Aerospace uses generative AI to design hypersonic engine. - GE Aerospace secures Air Force engine contract and Boeing 787 deal.",
+      "GE engines needed for Trump's China aircraft deal.",
+      "GE Aerospace to supply engines for Boeing China deal."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace awarded U.S. Air Force contract for GE426 engine. - GE Aerospace uses generative AI to design hypersonic engine. - GE Aerospace secures Air Force engine contract and Boeing 787 deal.",
+      "GE Vernova reports blowout earnings. - GE Aerospace CEO meets with China's state planner. - GE shareholders decline proposal on defense product reporting. - GE Aerospace sees strong commercial engine and services activity.",
+      "GE Aerospace to supply engines for Boeing China deal."
+    ],
+    "long_term_200d": [
+      "GE Aerospace awarded U.S. Air Force contract for GE426 engine. - GE Aerospace uses generative AI to design hypersonic engine. - GE Aerospace secures Air Force engine contract and Boeing 787 deal.",
+      "GE Vernova reports blowout earnings. - GE Aerospace CEO meets with China's state planner. - GE shareholders decline proposal on defense product reporting. - GE Aerospace sees strong commercial engine and services activity.",
+      "GE Aerospace reports strong Q1 earnings, exceeding estimates. - GE Aerospace revenue rises on surging orders and commercial services. - GE Aerospace maintains full-year 2026 guidance. - GE Aerospace warns of risks from oil prices and global growth. - General Electric Company reports Q1 earnings results."
+    ]
+  }
+}

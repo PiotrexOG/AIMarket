@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.22)",
+        "velocity_roc_10": "NORMAL (-2.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 220.37-235.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.01%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.293)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-247.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.24%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 223.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.9%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 25.81, P/S: 5.68)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.74)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson wins FDA approval for TREMFYA in psoriatic arthritis. - J&J CEO discusses oncology mission and drug pipeline. - Johnson & Johnson announces positive Phase 3 data for TECVAYLI. - New TECVAYLI data shows improved survival in multiple myeloma. - Johnson & Johnson announces updated Phase 1/1b study results for RYBREVANT. - RYBREVANT plus LAZCLUZE shows prolonged benefit in lung cancer. - Johnson & Johnson stock slides as market rises.",
+      "JNJ prostate cancer study shows ERLEADA reduces metastasis or death. - JNJ RYBREVANT shows strong responses in head and neck cancer.",
+      "Nanobiotix presents data from J&J sponsored Phase 2 study."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson wins FDA approval for TREMFYA in psoriatic arthritis. - J&J CEO discusses oncology mission and drug pipeline. - Johnson & Johnson announces positive Phase 3 data for TECVAYLI. - New TECVAYLI data shows improved survival in multiple myeloma. - Johnson & Johnson announces updated Phase 1/1b study results for RYBREVANT. - RYBREVANT plus LAZCLUZE shows prolonged benefit in lung cancer. - Johnson & Johnson stock slides as market rises.",
+      "Johnson & Johnson receives $250K order for laser drilling system. - Johnson & Johnson's acquisition of Atraverse Medical strengthens cardiac portfolio. - FDA approves label expansion for Johnson & Johnson's TREMFYA\u00ae drug.",
+      "Johnson & Johnson found liable in Minnesota talc lawsuit."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson wins FDA approval for TREMFYA in psoriatic arthritis. - J&J CEO discusses oncology mission and drug pipeline. - Johnson & Johnson announces positive Phase 3 data for TECVAYLI. - New TECVAYLI data shows improved survival in multiple myeloma. - Johnson & Johnson announces updated Phase 1/1b study results for RYBREVANT. - RYBREVANT plus LAZCLUZE shows prolonged benefit in lung cancer. - Johnson & Johnson stock slides as market rises.",
+      "Johnson & Johnson found liable in Minnesota talc lawsuit.",
+      "Johnson & Johnson study shows TREMFYA\u00ae efficacy in Crohn's disease. - Johnson & Johnson announces Phase 3 FUZION study results for TREMFYA\u00ae. - Johnson & Johnson announces Phase 2B data for JNJ-4804 therapy. - CVS to drop J&J's Stelara from its main formularies. - Johnson & Johnson announces clinical study results for OTTAVA\u2122 Robotic Surgical System. - Johnson & Johnson study shows TREMFYA\u00ae efficacy in perianal fistulizing Crohn's disease. - Johnson & Johnson expands clinical pipeline in immunology, Med Tech, AI. - J&J\u2019s soft tissue surgical robot succeeds in gastric bypass study."
+    ]
+  }
+}

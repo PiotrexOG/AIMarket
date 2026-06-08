@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term outlook for AAPL is showing signs of indecision and potential reversal. The candle pattern has shifted to a 'DOJI_INDECISION', and while momentum remains explosive (ROC 5.8%), the RSI has cooled slightly to 75.6, still in overbought territory. The price is testing critical resistance at 315.45, and the 20-day SMA remains overstretched (4.8%). W: The 'DOJI_INDECISION' at resistance, coupled with extreme overbought conditions, suggests a high probability of a short-term pullback or consolidation. The 'RANGE' bias and 'TESTING' resistance barriers reinforce this cautionary stance. O: A period of consolidation or a minor retracement is likely as the market digests the recent rally and faces significant overhead resistance. T: The 'EXPLOSIVE_UP' velocity is becoming less sustainable at these resistance levels, and the 'OVERSTRETCHED' SMA20 indicates a potential for mean reversion."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend remains bullish with expanding momentum (8.29%) and accelerating MACD. The price is holding a strong bullish position above the 50-day SMA (Z-score 1.74) and is strengthening at the monthly resistance zone (up to 315.45). W: Despite positive momentum indicators, the price is still testing a significant resistance zone. The 'BULLISH_ACCELERATING' MACD is a positive sign, but sustained upside will depend on breaking through this key level. O: A decisive break above the current resistance zone could lead to further upside, potentially re-testing previous highs. However, failure to break through may result in a period of consolidation or a retracement. T: The trend alignment and momentum are constructive, but the proximity to significant resistance introduces a degree of caution for immediate, strong upside continuation without a clear breakout."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: AAPL continues to operate within a secular bull market regime (19.4%), maintaining a healthy golden cross structure and trading near all-time highs (98.8% of long-term range). Fundamentals remain robust, characterized by high business quality, excellent cash generation, and stable growth. W: Valuation multiples remain premium (P/E: 39.69, P/S: 10.69), and asset safety is extremely low (P/B: 52.79), offering minimal downside protection. The 'EXPENSIVE_VS_GROWTH' PEG ratio (1.56) highlights this concern. O: The company's scale, robust business model, and ongoing AI initiatives provide a solid foundation for future growth, with potential catalysts from upcoming WWDC announcements. T: The 'SECULAR_BULL_MARKET' regime and 'ATH_OR_TOP_OF_CYCLE' position are significant tailwinds, but the elevated valuation and low asset safety metrics warrant careful monitoring, especially given the 'Q_PEAK_PERFORMANCE_SKEPTIC' earnings momentum."
+    }
+  }
+}

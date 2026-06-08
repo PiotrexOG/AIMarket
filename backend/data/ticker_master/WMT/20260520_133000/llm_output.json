@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 7.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Momentum is strong, with RSI in the bullish zone (66.9) and price testing the upper Bollinger Band. Velocity is normal, and the price is stable near its short-term base. O: Potential for continued upside if the upper band is broken decisively. T: Upcoming Q1 earnings report could be a catalyst for volatility. W: The price is currently within a defined range, suggesting potential resistance. The candle pattern is neutral, indicating indecision."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.2,
+        "safe": 6.8
+      },
+      "synthesis": "S: The medium-term trend is a gradual ascent, supported by bullish MACD acceleration and a positive Z-score relative to the 50-day SMA. The price is well within its monthly range. O: Continued positive trend alignment suggests further upside potential. T: The accelerating MACD indicates building bullish momentum. W: The overall trend is positive but gradual, implying a lack of explosive momentum. The price is still within a broad range, which could cap significant moves."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The long-term regime is a secular bull market, with a healthy golden cross structure. The price is near the top of its cycle, indicating strong historical performance. O: The established bull market regime and strong long-term structure provide a supportive backdrop. T: The proximity to all-time highs suggests potential for further gains if the regime holds. W: The valuation is hyper-premium (P/E: 54.72, P/S: 1.56), and implied growth is overpriced (PEG: 2.18), significantly increasing risk. Cash generation is weak (FCF Mgn: 1.9%), and margins are thin (NM: 2.9%), raising concerns about fundamental sustainability at current prices. This elevated valuation and weaker fundamentals reduce the 'safe' score."
+    }
+  }
+}

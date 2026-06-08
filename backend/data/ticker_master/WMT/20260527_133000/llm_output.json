@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. RSI is oversold (28.1), and the price has broken below the lower Bollinger Band, indicating extreme selling pressure. The price is also at critical support. W: The shooting star candle pattern suggests potential for further downside. The velocity and trend base are bearishly overstretched, indicating a sharp reversal from the previous bullish stance. O: A bounce from oversold conditions is possible, but the bearish technicals suggest limited upside potential in the immediate term. T: The significant price drop and bearish signals indicate a shift in short-term momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend has turned bearish, with the MACD accelerating negatively and the Z-score relative to the 50-day SMA now deeply negative (Z:-2.01). The price is strengthening at monthly support, which offers some resilience. W: The trend alignment has weakened, and the accelerating bearish MACD signals a loss of upward momentum. O: While the price is at support, the bearish technical indicators suggest a potential for further downside if support fails. T: The shift from a bullish to a bearish MACD and Z-score indicates a structural change in the medium-term trend. The high institutional activity suggests significant market participants are reacting to the price action."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market with a healthy golden cross structure, but the price has moved to a neutral zone within the cycle. Fundamentals show stagnation in revenue growth and a decline in EPS, with weak cash conversion. W: The valuation remains hyper-premium despite the recent price drop, and implied growth is negative, indicating significant risk. The business quality has thin margins, and financial health shows moderate leverage. O: The established long-term bull market structure and scale of the company provide some underlying support. T: The sharp price decline and concerning fundamental shifts (EPS decline, negative implied growth) have increased risk, leading to a decrease in the 'safe' score. The current price position at mid-cycle suggests a less favorable risk-reward compared to the previous ATH position."
+    }
+  }
+}

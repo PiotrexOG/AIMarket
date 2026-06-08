@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.83)",
+        "velocity_roc_10": "NORMAL (6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 41.35-45.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.73%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.495)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 41.35-55.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-26.9%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-24.85%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 13.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 46.53,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.42%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.54, P/S: 1.48)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.2)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike shifts manufacturing away from China.",
+      "Nike's AI push and 2026 World Cup presence may reframe brand. - Nike faces falling sales, restructuring, China pressure, and tariffs. - Nike's role in 2026 World Cup aims to reinvigorate demand. - Nike stock jumps 4% on market sentiment. - Nike's global dominance faces new tests.",
+      "Nike leans on innovation to offset softer demand."
+    ],
+    "medium_term_50d": [
+      "Nike's AI push and 2026 World Cup presence may reframe brand. - Nike faces falling sales, restructuring, China pressure, and tariffs. - Nike's role in 2026 World Cup aims to reinvigorate demand. - Nike stock jumps 4% on market sentiment. - Nike's global dominance faces new tests.",
+      "Nike confronts China pressures as new CEO resets growth narrative. - Nike expanding vision to elevate and integrate marketplace with AI. - Nike's China recovery faces ongoing pressure and weak demand.",
+      "Nike shifts manufacturing away from China."
+    ],
+    "long_term_200d": [
+      "Nike's AI push and 2026 World Cup presence may reframe brand. - Nike faces falling sales, restructuring, China pressure, and tariffs. - Nike's role in 2026 World Cup aims to reinvigorate demand. - Nike stock jumps 4% on market sentiment. - Nike's global dominance faces new tests.",
+      "Nike slashes 1,400 jobs as stock crashes 70%.",
+      "Nike confronts China pressures as new CEO resets growth narrative. - Nike expanding vision to elevate and integrate marketplace with AI. - Nike's China recovery faces ongoing pressure and weak demand."
+    ]
+  }
+}

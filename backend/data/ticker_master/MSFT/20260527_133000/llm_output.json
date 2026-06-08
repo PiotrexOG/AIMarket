@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.2,
+        "safe": 7.0
+      },
+      "synthesis": "S: The short-term outlook for MSFT remains neutral to slightly bullish, with consolidation continuing around the 20-day SMA. The RSI has improved to 54.2, indicating a move out of the neutral zone. Velocity has stagnated, suggesting a lack of immediate upward momentum. O: The 'STRONG_BULLISH' candle pattern and improved RSI suggest potential for a near-term upward resolution of the consolidation. Positive news flow around AI partnerships and potential AI chip supply deals provides a supportive narrative. T: The stagnant velocity and continued range-bound price action indicate that significant upside catalysts are still needed. Any negative news regarding AI revenue scrutiny or regulatory concerns could lead to a downside break."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 6.3
+      },
+      "synthesis": "S: The medium-term trend shows a gradual ascent, though the MACD has accelerated its bearish divergence. The price remains well-positioned relative to the 50-day SMA, but the accelerating bearish MACD is a concern. O: Strong fundamental business quality and cash generation continue to provide a solid base. The significant AI revenue run rate ($37 billion) and strategic partnerships with EY and Amdocs are positive developments. T: The accelerating bearish MACD is a key risk, suggesting potential for trend exhaustion. While fundamentals are strong, the premium valuation (P/E: 29.44) leaves little room for error if the trend falters."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.2,
+        "safe": 4.8
+      },
+      "synthesis": "S: The long-term outlook remains challenged by the secular bear market regime and death cross structure, though the position within the long-term range has slightly improved. Fundamental strengths in business quality, financial health, and cash generation persist. O: The company's scale and strong growth profile provide underlying resilience. Strategic AI investments and partnerships, even with some revenue scrutiny, position MSFT for long-term technological leadership. T: Valuation remains a significant headwind, with premium multiples and an expensive PEG ratio (1.86) indicating low asset safety (P/B: 8.53). The persistent bearish long-term technical structure suggests that upside may be capped until the broader market regime shifts."
+    }
+  }
+}

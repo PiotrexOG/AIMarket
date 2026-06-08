@@ -471,7 +471,7 @@ class SimulationService:
         self.fetch_company_news()
         self.fetch_company_news_summarize()
         self.fetch_company_news_importance()
-        self.fetch_company_news_summary_with_score()
+        self.save_company_news_summary_with_score()
 
 
 

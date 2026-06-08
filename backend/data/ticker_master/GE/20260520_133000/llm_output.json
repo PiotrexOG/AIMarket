@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: Strong bullish candle pattern and positive news flow regarding aerospace contracts provide short-term upside potential. W: Momentum is neutral (RSI 51.1) and velocity is stagnant, indicating a lack of immediate conviction. O: Potential for continued upward movement driven by contract wins and positive sentiment. T: Range-bound trading persists, with price currently in the middle of the 20-day range, suggesting limited immediate breakout potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The stock is showing signs of mean reversion around the 50-day SMA, supported by healthy cash generation and solid business quality. W: Technical trend alignment is bearish, with MACD showing accelerating bearish momentum, suggesting underlying weakness despite short-term positive news. O: Potential for a trend reversal if positive fundamentals can overcome bearish technicals, especially with strong earnings momentum. T: The price remains within the monthly range, indicating a lack of a clear directional trend over this horizon."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: Hyper-growth in revenue and EPS, coupled with strong cash generation, offers long-term fundamental appeal. W: The long-term technical regime is bearish, characterized by a death cross structure, and valuation multiples are at a premium, raising concerns about downside risk. O: If the company can sustain its growth profile and navigate the secular bear market, there is potential for long-term value creation. T: The current mid-cycle neutral zone position suggests neither extreme bullishness nor bearishness from a long-term range perspective, but the overall regime is a significant headwind."
+    }
+  }
+}

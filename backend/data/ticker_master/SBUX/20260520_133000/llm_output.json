@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term technicals are neutral, with RSI in the 54.7 zone and price trading within normal Bollinger Bands. Velocity and trend base SMA20 are stable. O: Improving sentiment and positive news flow regarding restructuring and cost-saving efforts could provide a short-term boost. T: Potential for range-bound trading with upside limited by current resistance levels. W: Corporate restructuring and layoffs introduce near-term uncertainty and potential for negative sentiment shifts, despite cost-saving goals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend alignment shows bullish expanding momentum, supported by a bullish Z-score positioning relative to the SMA50. However, the MACD has confirmed a bearish zero cross, indicating a potential loss of upward momentum. O: The ongoing restructuring and cost-saving initiatives, if successful, could support a medium-term turnaround. The positive surprise in next quarter's estimated earnings growth (150.0%) is a key positive driver. T: The stock is trading within a defined monthly range, suggesting potential for continued consolidation or a breakout depending on the market's reaction to restructuring news and earnings outlook. W: The bearish MACD signal and the mixed analyst consensus (LOW conviction) introduce significant uncertainty. The fundamental growth profile shows stagnation with profit issues, which is a concern despite the positive next quarter estimate."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: Long-term technicals show a healthy golden cross structure within a secular bull market regime, but the price is at the top of its cycle or near ATH. Fundamentals reveal a stagnant growth profile with significant profit issues (EPS -61.0% TTM) and a stressed balance sheet (YrsToPay: 12.9x). O: Positive news regarding potential turnaround efforts and cost savings could offer a long-term catalyst if executed effectively. The company scale is large and established. T: The current valuation is hyper-premium priced (P/E: 88.4), with implied growth expectations being extremely risky given declining earnings. The stock is trading below book value, which is a rare positive for safety assessment but highlights valuation concerns. W: The significant earnings decline and stressed balance sheet are major structural weaknesses. The high valuation multiples are unsustainable without significant future growth, which is currently not evident in the long-term profile. The debt sensitivity is also a concern."
+    }
+  }
+}

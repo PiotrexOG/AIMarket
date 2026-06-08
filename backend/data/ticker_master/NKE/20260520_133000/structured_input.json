@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.24)",
+        "velocity_roc_10": "NORMAL (-1.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 41.35-46.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.18%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.142)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.01)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 41.35-57.6]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-31.7%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-24.24%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 2.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 42.33,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (2.43%))",
+      "volume_dynamics": "ELEVATED (1.18)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.6, P/S: 1.35)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.73)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike confronts China pressures as new CEO resets growth narrative. - Nike expanding vision to elevate and integrate marketplace with AI. - Nike's China recovery faces ongoing pressure and weak demand.",
+      "Mc Donald's partners with Nike on co-branded sneaker launch. - Nike faces mounting pressure in China market.",
+      "Nike stock slide presses on. - Nike's shares trading at a 12-year low."
+    ],
+    "medium_term_50d": [
+      "Nike confronts China pressures as new CEO resets growth narrative. - Nike expanding vision to elevate and integrate marketplace with AI. - Nike's China recovery faces ongoing pressure and weak demand.",
+      "Nike stock slide presses on. - Nike's shares trading at a 12-year low.",
+      "Mc Donald's partners with Nike on co-branded sneaker launch. - Nike faces mounting pressure in China market."
+    ],
+    "long_term_200d": [
+      "Nike slashes 1,400 jobs as stock crashes 70%.",
+      "Nike confronts China pressures as new CEO resets growth narrative. - Nike expanding vision to elevate and integrate marketplace with AI. - Nike's China recovery faces ongoing pressure and weak demand.",
+      "Nike stock slide presses on. - Nike's shares trading at a 12-year low."
+    ]
+  }
+}

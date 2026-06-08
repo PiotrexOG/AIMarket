@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Short-term momentum has improved with a strong bullish candle pattern and RSI moving towards neutral (48.5). Price remains stable near the SMA20 (-1.4%) and within normal Bollinger Bands (0.39). W: While momentum has improved, the velocity ROC is negative (-6.7%), indicating some underlying weakness. The price is still in the middle of its 20-day range. O: News flow is increasingly focused on supply tightness and potential price spikes, providing a bullish narrative. T: The shift to a strong bullish candle and improved RSI suggests a tactical improvement, warranting an increase in score and conviction. Safety remains unchanged due to mixed signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: Medium-term trend alignment remains bearish (-1.73%), but the MACD is recovering (-0.642) and the Z-score relative to the 50-day SMA has improved significantly to -0.19, indicating mean reversion. W: The underlying trend is still negative, and the MACD, while recovering, is still in bearish territory. O: News regarding supply concerns and potential price increases provides some medium-term support, but the core trend is not yet confirmed as bullish. T: The improved Z-score and recovering MACD suggest a stabilization, leading to a slight increase in score and conviction. Safety remains stable as the fundamental balance sheet is strong."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: The long-term outlook is strengthening. The market regime remains a secular bull market (13.1%), and the major crosses now indicate a healthy golden cross structure (16.71%). Crucially, the long-term range position has moved into the bullish upper quadrant (67.1%). W: Valuation multiples have moved to premium (P/E: 25.96), and implied earnings growth remains negative (-21.85%), posing a risk. O: Positive news regarding LNG projects and exploration continues, alongside a strong fundamental profile. T: The shift to a bullish upper quadrant and a healthy golden cross structure significantly improves the long-term score and conviction. Safety remains high due to the strong fundamentals and stable volatility, despite the premium valuation."
+    }
+  }
+}

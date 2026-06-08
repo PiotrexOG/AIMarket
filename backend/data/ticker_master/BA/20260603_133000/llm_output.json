@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: The short-term technicals have deteriorated significantly, with a STRONG_BEARISH candle pattern and RSI falling into the BEARISH_ZONE_WEAK (35.3). The price is now at critical support levels, indicating increased downside risk. W: The velocity remains stagnant, suggesting a lack of conviction in the current move, but the overall trend is negative. O: Despite some positive news regarding orders and defense contracts, the bearish technical signals and the price testing support levels dominate the short-term outlook. T: The price is positioned at the lower end of its range, offering limited immediate upside potential and increased risk of further decline. The 'safe' score has decreased due to the bearish momentum and price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 3.0,
+        "safe": 2.8
+      },
+      "synthesis": "S: The medium-term trend alignment has weakened, with the bullish ascent slowing (2.87%) and the MACD accelerating in a bearish direction (-0.661). The price is now showing a healthy base at the 50-day SMA (Z:-0.42), indicating a potential stabilization point. W: While the price is still within the monthly range, the accelerating bearish MACD and the reduced trend alignment suggest a loss of upward momentum. O: Positive news regarding increased 737 MAX production rates and FAA clearance provides some fundamental support, but the bearish technical signals are a concern. T: The 'score' has been adjusted downwards due to the deteriorating medium-term technicals, while 'conv' and 'safe' have also seen modest decreases reflecting the increased risk and reduced clarity."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.7,
+        "conv": 3.5,
+        "safe": 2.5
+      },
+      "synthesis": "S: The long-term market regime is described as a BEAR_MARKET_RELIEF_RALLY (-0.8%), with the price position in the cycle neutral zone decreasing to 49.1%. The potential for a positive major cross is present (0.37%). W: The fundamental picture remains challenging with thin margins, stressed balance sheets, and negative FCF, which significantly cap the 'safe' score. The 'hyper-premium' valuation also continues to be a risk factor. O: Recent news regarding China aircraft orders and defense contracts, along with the company's scale and historical growth, provide some long-term support. T: The 'score' has seen a slight decrease due to the shift in market regime and price position, while 'conv' remains stable. The 'safe' score has been further reduced due to persistent fundamental weaknesses and valuation concerns, despite some positive news flow."
+    }
+  }
+}

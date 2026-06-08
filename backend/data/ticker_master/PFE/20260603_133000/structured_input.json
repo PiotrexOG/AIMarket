@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.25)",
+        "velocity_roc_10": "NORMAL (0.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 25.19-26.75]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-2.88%)",
+        "cycle_macd": "BULLISH_FADING (0.037)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.67)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 25.19-28.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.21%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 34.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.72%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.3% | OM: 23.4% | NM: 11.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.7x, YrsToPay: 6.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 15.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.315B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -5.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -34.7%, Next Q Est Growth: 44.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.34, P/S: 2.29)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.61)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -5.67%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.43x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer partners with Innovent Biologics for oncology programs. - FDA approves companion diagnostics for Pfizer's TALZENNA. - Pfizer to webcast discussion at Goldman Sachs Healthcare Conference. - Pfizer oncology deal includes antibody drug conjugates. - Pfizer's LORBRENA shows sustained protection in lung cancer trial.",
+      "Pfizer CEO discusses obesity drug pipeline. - Pfizer targets 2026 with obesity, oncology studies. - Pfizer and Innovent Biologics announce oncology collaboration.",
+      "Pfizer and Innovent Biologics sign $10.5B cancer drug deal. - Pfizer expands oncology pipeline in $10.5B Innovent deal. - Pfizer announces seven-year follow-up results from CROWN trial."
+    ],
+    "medium_term_50d": [
+      "Pfizer and Innovent Biologics sign $10.5B cancer drug deal. - Pfizer expands oncology pipeline in $10.5B Innovent deal. - Pfizer announces seven-year follow-up results from CROWN trial.",
+      "Pfizer partners with Innovent Biologics for oncology programs. - FDA approves companion diagnostics for Pfizer's TALZENNA. - Pfizer to webcast discussion at Goldman Sachs Healthcare Conference. - Pfizer oncology deal includes antibody drug conjugates. - Pfizer's LORBRENA shows sustained protection in lung cancer trial.",
+      "Pfizer's BRAFTOVI regimen shows improved survival in cancer trial. - Pfizer's Braftovi regimen nearly doubles progression-free survival."
+    ],
+    "long_term_200d": [
+      "Pfizer and Innovent Biologics sign $10.5B cancer drug deal. - Pfizer expands oncology pipeline in $10.5B Innovent deal. - Pfizer announces seven-year follow-up results from CROWN trial.",
+      "Pfizer partners with Innovent Biologics for oncology programs. - FDA approves companion diagnostics for Pfizer's TALZENNA. - Pfizer to webcast discussion at Goldman Sachs Healthcare Conference. - Pfizer oncology deal includes antibody drug conjugates. - Pfizer's LORBRENA shows sustained protection in lung cancer trial.",
+      "Pfizer reports strong Q1 results, reaffirms 2026 guidance. - Pfizer Q1 earnings beat estimates on newer drug growth. - FDA approves VEPPANU for advanced breast cancer. - Pfizer's ELREXFIO trial shows positive outcomes for multiple myeloma. - Pfizer beats Q1 profit estimates on strong demand for Eliquis. - Pfizer stock edges higher on earnings and revenue beat. - Pfizer tops Wall Street estimates, reaffirms outlook. - Pfizer backs 2026 outlook as revenue advances in Q1. - Pfizer beats Q1 earnings, new drugs drive sales growth. - Pfizer beats Q1 revenue and profit estimates, reaffirms guidance. - Pfizer's"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.07)",
+        "velocity_roc_10": "NORMAL (-4.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 313.39-335.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.81%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.431)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.53)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-4.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.38%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 25.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 310.36,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.05%))",
+      "volume_dynamics": "ELEVATED (1.44)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @50d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 6.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 29.11, P/S: 14.49)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 15.47)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 3.96)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa expands B2B automation and fan commerce. - Visa integrates Accounts Receivable Manager into Commercial Solutions Hub. - Visa partners with Men in Blazers for soccer fan commerce. - Visa's AI-powered Receivables Hub may impact investment case.",
+      "Visa expands Visa Commercial Solutions Hub for virtual card programs.",
+      "Visa partners with Replit to expand AI software development."
+    ],
+    "medium_term_50d": [
+      "Visa expands B2B automation and fan commerce. - Visa integrates Accounts Receivable Manager into Commercial Solutions Hub. - Visa partners with Men in Blazers for soccer fan commerce. - Visa's AI-powered Receivables Hub may impact investment case.",
+      "Visa invests in Replit for payments integration. - Visa partners with Trip.com for AI travel tools. - Visa works with fintechs to fill business payment gaps.",
+      "Visa invests in AI platform Replit for commerce growth."
+    ],
+    "long_term_200d": [
+      "Visa launches new global campaign for FIFA World Cup 2026. - Visa-powered debit card to launch for businesses, supports charities. - Visa announces $20 billion share buyback plan. - bp offers new rewards Visa cardmembers fuel discounts. - Visa and Mastercard pursue different strategic frontiers.",
+      "Trump urges China to expand market access for Visa. - Visa rolls out new digital identity and card activation tools. - Value Act Capital increases stake in Visa. - Berkshire Hathaway exits stake in Visa.",
+      "Visa adds five blockchains to stablecoin settlement pilot. - Visa expands global agentic ready program to Asia Pacific and Latin America. - Visa raises full-year growth outlook after strong Q2 earnings. - Visa's Q2 profit beat estimates, company lifts full-year expectations. - Visa declares quarterly cash dividend of $0.670 per share. - Visa Q2 earnings beat estimates on payment volume strength. - Visa stock soars on strong Q2 results and raised forecast. - Visa's revenue growth accelerates, driven by pricing and services. - Visa reports strong Q2 results, highest share buyback in history."
+    ]
+  }
+}

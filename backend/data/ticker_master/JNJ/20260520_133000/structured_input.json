@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.5%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 220.37-232.13]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.16%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.025)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.47)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-247.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.54%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 75.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 230.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.64%))",
+      "volume_dynamics": "ELEVATED (1.19)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.6, P/S: 5.85)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.95)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson launches new coronary IVL catheter. - Johnson & Johnson secures naming rights at NJ innovation hub. - Johnson & Johnson advances immunology, cardiology, surgical robotics.",
+      "Johnson & Johnson presents early lung cancer data at ESTRO meeting. - Johnson & Johnson wearable injectors market trends report released.",
+      "Johnson & Johnson presents data on lung cancer therapy trial."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson to acquire botaretigene sparoparvovec from Meira GTx. - Johnson & Johnson's CAPLYTA shows superior efficacy in new study. - Johnson & Johnson subsidiary's headquarters acquired by Rubicon Point Partners.",
+      "Johnson & Johnson launches new coronary IVL catheter. - Johnson & Johnson secures naming rights at NJ innovation hub. - Johnson & Johnson advances immunology, cardiology, surgical robotics.",
+      "Johnson & Johnson launches Shockwave C2 Aero coronary IVL catheter. - JNJ presents hematology leadership at EHA Congress 2026. - Johnson & Johnson presents at Bank of America Healthcare Conference. - Tremfya, Icotyde lead JNJ's post-Stelara immunology strategy."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson study shows TREMFYA\u00ae efficacy in Crohn's disease. - Johnson & Johnson announces Phase 3 FUZION study results for TREMFYA\u00ae. - Johnson & Johnson announces Phase 2B data for JNJ-4804 therapy. - CVS to drop J&J's Stelara from its main formularies. - Johnson & Johnson announces clinical study results for OTTAVA\u2122 Robotic Surgical System. - Johnson & Johnson study shows TREMFYA\u00ae efficacy in perianal fistulizing Crohn's disease. - Johnson & Johnson expands clinical pipeline in immunology, Med Tech, AI. - J&J\u2019s soft tissue surgical robot succeeds in gastric bypass study.",
+      "Johnson & Johnson launches landmark head-to-head trial. - Johnson & Johnson strikes agreement to acquire Atraverse Medical. - Johnson & Johnson to acquire Atraverse Medical to bolster cardiac devices. - J&J lands CE mark for surgical stapler for robot use. - Johnson & Johnson to acquire Atraverse Medical in cardiac device expansion. - Johnson & Johnson exceeds first-quarter earnings projections. - Johnson & Johnson to offer four prescription medicines on Trump Rx website. - Johnson & Johnson had a strong start to 2026 earnings.",
+      "Johnson & Johnson to acquire botaretigene sparoparvovec from Meira GTx. - Johnson & Johnson's CAPLYTA shows superior efficacy in new study. - Johnson & Johnson subsidiary's headquarters acquired by Rubicon Point Partners."
+    ]
+  }
+}

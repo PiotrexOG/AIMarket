@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term outlook for AAPL is mixed. While the analyst consensus is bullish, the extreme overbought RSI (83.7) and a shooting star candlestick pattern suggest potential for a near-term pullback. The price is currently in the middle of its 20-day range. W: The extreme overbought condition and bearish candle pattern pose immediate downside risk. O: Potential for a short-term consolidation or minor retracement as the market digests recent gains. T: The \"RANGE\" bias in the SR landscape, coupled with \"NEAR\" resistance barriers, indicates a potential for sideways movement or a test of lower levels if selling pressure intensifies."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: The medium-term trend for AAPL remains constructive, supported by expanding bullish momentum and a strong position above the 50-day moving average (Z-score of 1.93). MACD is bullish, though showing signs of fading. W: The stock is approaching monthly resistance, which could present a challenge to further upside. The fading MACD suggests momentum may be peaking. O: Continued strength is possible if the resistance zone is breached, potentially driven by AI-related news or product cycles. T: The \"BULLISH_EXPANDING_MOMENTUM\" and \"BULLISH_TREND_POSITION\" are key strengths, but the \"STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE\" highlights a critical inflection point."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 7.5
+      },
+      "synthesis": "S: AAPL's long-term technicals are robust, situated within a secular bull market and maintaining a healthy golden cross structure. The stock is trading near all-time highs (96.4% of long-term range). Fundamentals are strong, with high business quality, excellent cash generation, and stable growth. W: Valuation multiples (P/E: 37.82, P/S: 10.18) are premium, and asset safety is low (P/B: 50.3), indicating limited downside protection from a valuation perspective. Quarterly earnings momentum shows a significant sequential decline (-33.3% est. growth), raising concerns about near-term earnings acceleration. O: The company's scale, business quality, and consistent growth profile provide a solid foundation. Upcoming AI initiatives and potential product cycles could drive future growth. T: The \"SECULAR_BULL_MARKET\" regime and \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" are significant tailwinds. However, the \"PREMIUM_VALUATION\" and \"EXTREMELY_LOW_ASSET_SAFETY\" metrics warrant caution."
+    }
+  }
+}

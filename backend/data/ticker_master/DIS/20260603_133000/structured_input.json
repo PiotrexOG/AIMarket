@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (35.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "NORMAL (-2.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 100.06-110.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.39%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.388)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.24)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 92.18-110.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-6.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.93%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 31.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 100.81,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.3% | OM: 14.2% | NM: 12.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $95.716B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 120.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.7%, Next Q Est Growth: 39.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.83, P/S: 1.89)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.67)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney fends off bid to dismiss intellectual property theft lawsuit.",
+      "Playtika mentions Disney Solitaire game scaling rapidly. - Netflix hires Disney's Caitlin Conant for policy role.",
+      "Papa Johns partners with Disney for Toy Story 5 release. - Papa Johns launches Pizza Planet pop-ups for Toy Story 5. - Star Wars film has lowest opening since Disney acquisition."
+    ],
+    "medium_term_50d": [
+      "Disney fends off bid to dismiss intellectual property theft lawsuit.",
+      "Papa Johns partners with Disney for Toy Story 5 release. - Papa Johns launches Pizza Planet pop-ups for Toy Story 5. - Star Wars film has lowest opening since Disney acquisition.",
+      "Disney World opens new attraction ahead of schedule. - Disney's Star Wars film opens with $102 million."
+    ],
+    "long_term_200d": [
+      "Disney CEO Josh D'Amaro unveils new 3-pillar growth plan. - Disney Q2 FY2026 earnings beat estimates, raises full-year forecast. - Disney's Q2 results surpass Wall Street expectations. - Disney's Parks, Films boost profit in CEO's debut quarter. - Disney raises $8B buyback target, forecasts faster growth. - Disney beats revenue estimates, streaming growth accelerates. - Disney's theme parks revenue holds steady, boosts operating income. - Disney stock pops 8% after Q2 earnings beat. - Disney's new CEO tenure starts with soaring streaming profits. - India's Zee sues Reliance-Disney joint venture over",
+      "Disney exceeds Q2 earnings expectations under new CEO. - Disney CEO Josh D'Amaro outlines vision for company. - Disney plans to create a unified 'super app'. - Democratic senators question Disney station license review. - Disney parks show strength in U.S. consumer spending. - Disney's Q2 earnings beat boosts ETFs with heavy exposure. - Bath & Body Works partners with Disney for Star Wars collection.",
+      "Disney reports fiscal Q2 FY26 earnings results. - Disney exec teases upcoming Upfront event. - Disney and Pixar partner for \"Toy Story 5\" product collection. - Disney achieves streaming profitability milestone and record parks revenue."
+    ]
+  }
+}

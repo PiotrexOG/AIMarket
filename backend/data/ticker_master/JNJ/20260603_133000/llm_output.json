@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The short-term technicals have weakened significantly. The candle pattern is now neutral, RSI has fallen to 47.9, and ROC is negative (-2.7%). The price is still in the middle of its 20-day range but is now closer to the lower bound. W: The shift from bullish to neutral/bearish momentum indicators suggests a loss of short-term buying interest. The negative ROC and proximity to the 20-day SMA (-1.9%) indicate potential downside risk. O: While recent news includes positive FDA approvals for TREMFYA and TECVAYLI, the overall market reaction appears muted, with the stock sliding as the market rises. T: The deterioration in short-term momentum and lack of a clear bullish signal suggest a cautious outlook. The score has been reduced to reflect the weakening technicals and increased downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The medium-term trend has turned decisively bearish. The MACD has confirmed a bearish zero cross (-0.293), and the price is now in a bearish trend position relative to the 50-day SMA (Z:-1.22). Trend alignment remains in a gradual descent (-2.01%). W: The confirmed bearish MACD cross and negative Z-score indicate a loss of medium-term upward momentum and potential for further decline. The price is now further below the 50-day SMA, suggesting a weaker structural position. O: Despite the negative technicals, the company's strong fundamental quality and cash generation remain intact, providing some underlying support. The news flow is mixed, with some positive drug approvals but also the lingering talc lawsuit issue. T: The bearish technical signals have led to a significant reduction in the medium-term score and conviction. While fundamentals offer some resilience, the technical trend is now a clear headwind, warranting a more defensive stance."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 8.0
+      },
+      "synthesis": "S: The long-term technical structure remains relatively stable, with a healthy golden cross configuration (9.24%) and a secular bull market regime. However, the price position has moved from the upper quadrant to the mid-cycle neutral zone (64.3%), indicating a less bullish long-term posture. W: The shift in long-term range position suggests that the upward momentum has moderated, and the market may be entering a more neutral phase. While the golden cross is still intact, its strength has slightly diminished. O: The company's exceptional business quality, fortress-like balance sheet, and strong cash generation continue to provide a robust fundamental foundation and significant downside protection. Pipeline development in oncology and immunology remains a key long-term positive. T: The long-term score and safety remain high due to the strong fundamental quality and resilient balance sheet. However, the slight weakening in the long-term technical positioning warrants a minor reduction in the score and conviction, reflecting a less overtly bullish long-term technical outlook compared to the previous period."
+    }
+  }
+}

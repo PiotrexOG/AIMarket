@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (78.5)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.19)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.7%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (7.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 985.15-1096.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.55%)",
+        "cycle_macd": "BULLISH_ACCELERATING (8.289)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:3.07)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 961.02-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.12%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 93.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 1081.13,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.71)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.2%, Next Q Est Growth: -16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 59.24, P/S: 1.75)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.49)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.96)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco shares climb, hitting new all-time high. - Oppenheimer: Costco seen missing quarterly earnings views. - Costco raises quarterly dividend 13% to $1.47 per share. - Costco adds new food court item.",
+      "Costco reports April net sales up 13.0% year on year. - Costco purchases land for US$55 million Florida expansion. - Costco faces US$200,000 jury verdict in discrimination case. - Mixsoon skincare brand launching in 500 U.S. Costco stores. - Costco reports 11.6% comparable store sales growth in April.",
+      "Costco reports strong membership renewal rates amid inflation. - Costco buys 55-acre property in Florida for store growth."
+    ],
+    "medium_term_50d": [
+      "Costco shares climb, hitting new all-time high. - Oppenheimer: Costco seen missing quarterly earnings views. - Costco raises quarterly dividend 13% to $1.47 per share. - Costco adds new food court item.",
+      "Costco reports April net sales up 13.0% year on year. - Costco purchases land for US$55 million Florida expansion. - Costco faces US$200,000 jury verdict in discrimination case. - Mixsoon skincare brand launching in 500 U.S. Costco stores. - Costco reports 11.6% comparable store sales growth in April.",
+      "Costco stock performance and valuation discussed. - Costco's April sales surge and e-commerce acceleration noted. - Costco's membership-driven earnings and business model highlighted. - Costco's potential hidden long-term growth engine explored. - Costco's stock is a hold at $1,008.79. - Costco's potential to beat Wall Street earnings this season. - Costco's stock has trailed the market over the past year. - Costco's stock movement and market performance detailed."
+    ],
+    "long_term_200d": [
+      "Costco shares climb, hitting new all-time high. - Oppenheimer: Costco seen missing quarterly earnings views. - Costco raises quarterly dividend 13% to $1.47 per share. - Costco adds new food court item.",
+      "Costco posts strong earnings, comparable traffic climbs. - Costco membership fees jump, Kirkland expands, digital sales grow. - Costco plans 28 new warehouses for fiscal 2026. - Costco taps consumer trend as shoppers look to save money.",
+      "Costco reports April net sales up 13.0% year on year. - Costco purchases land for US$55 million Florida expansion. - Costco faces US$200,000 jury verdict in discrimination case. - Mixsoon skincare brand launching in 500 U.S. Costco stores. - Costco reports 11.6% comparable store sales growth in April."
+    ]
+  }
+}

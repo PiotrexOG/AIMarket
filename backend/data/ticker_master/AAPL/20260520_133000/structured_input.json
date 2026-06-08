@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (83.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "NORMAL (5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 265.07-303.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.23%)",
+        "cycle_macd": "BULLISH_FADING (1.024)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.93)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 245.51-303.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.97%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 299.52,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.22%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.82, P/S: 10.18)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 50.3)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.48)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple's new hardware boss shakes up product design oversight. - Fortnite returns to Apple App Store worldwide amid Supreme Court fight. - Apple unveils new accessibility features powered by Apple Intelligence. - Apple Sports expands to over 90 new countries and regions. - Apple plans major Siri overhaul using new AI capabilities. - Apple unveils AI push beyond Siri with smart writing, accessibility. - Chinese blockade risks put TSMC's chip role under scrutiny for Apple.",
+      "Indian court orders Apple to cooperate in App Store antitrust probe. - Apple China i Phone 17 discounts test ecosystem and margin trade-offs. - Apple India court rejects bid to pause antitrust case. - Apple Worldwide Developers Conference scheduled for June 8\u201312, 2026. - Apple readies AI writing help, app shortcuts for i OS 27. - Apple's Siri overhaul may launch with a privacy focus. - Viking Global opens new Apple stake worth nearly $1 billion. - Apple working on AI writing tools, shortcuts for i OS 27. - Apple's Services ecosystem could generate $13 EPS. - Apple stock downgraded to Hold; solid Q3 guidance",
+      "Apple-Open AI tensions could lead to legal battle. - Open AI considering legal action against Apple. - Intel climbs on preliminary chip manufacturing agreement with Apple. - Apple i Phone sales continue to outpace competitors globally. - Apple slashes i Phone 17 prices in China. - Apple's Q2 earnings show strong i Phone and Services growth. - Mubadala Investment Co. raises stake in Apple. - Viking Global Investors LP reports share stake in Apple. - Apple CEO John Ternus signals hardware and on-device AI push."
+    ],
+    "medium_term_50d": [
+      "Indian court orders Apple to cooperate in App Store antitrust probe. - Apple China i Phone 17 discounts test ecosystem and margin trade-offs. - Apple India court rejects bid to pause antitrust case. - Apple Worldwide Developers Conference scheduled for June 8\u201312, 2026. - Apple readies AI writing help, app shortcuts for i OS 27. - Apple's Siri overhaul may launch with a privacy focus. - Viking Global opens new Apple stake worth nearly $1 billion. - Apple working on AI writing tools, shortcuts for i OS 27. - Apple's Services ecosystem could generate $13 EPS. - Apple stock downgraded to Hold; solid Q3 guidance",
+      "Apple-Open AI tensions could lead to legal battle. - Open AI considering legal action against Apple. - Intel climbs on preliminary chip manufacturing agreement with Apple. - Apple i Phone sales continue to outpace competitors globally. - Apple slashes i Phone 17 prices in China. - Apple's Q2 earnings show strong i Phone and Services growth. - Mubadala Investment Co. raises stake in Apple. - Viking Global Investors LP reports share stake in Apple. - Apple CEO John Ternus signals hardware and on-device AI push.",
+      "Apple's new hardware boss shakes up product design oversight. - Fortnite returns to Apple App Store worldwide amid Supreme Court fight. - Apple unveils new accessibility features powered by Apple Intelligence. - Apple Sports expands to over 90 new countries and regions. - Apple plans major Siri overhaul using new AI capabilities. - Apple unveils AI push beyond Siri with smart writing, accessibility. - Chinese blockade risks put TSMC's chip role under scrutiny for Apple."
+    ],
+    "long_term_200d": [
+      "Apple crushes Q2 estimates on surging i Phone and China sales. - Apple forecasts Q3 sales growth above estimates. - Apple stock rises after earnings beat; strong i Phone demand drives growth. - Apple Q2 results show big growth, driven by strong i Phone sales. - Apple stock guided for fiscal third-quarter revenue growth above expectations. - Apple's CEO transition set for September, marking a new era. - Apple earnings beat estimates, forecast tops expectations on i Phone demand. - Apple's Mac Book Neo and services growth support outlook despite supply constraints. - Apple stock climbs more than 3% in premarket after earnings beat. - Apple's Q2 earnings and revenue beat expectations.",
+      "Apple CEO Tim Cook steps down, John Ternus new CEO. - Apple withholds data in India antitrust case, final hearing set. - Apple names John Ternus as CEO, Tim Cook to become chairman. - Apple shares lower after CEO Tim Cook transition announcement. - Johny Srouji named Apple's chief hardware officer. - Apple names John Ternus as new CEO, Tim Cook transitions. - Tim Cook to step down as Apple CEO, John Ternus successor. - Apple's new CEO John Ternus takes over September 1. - Apple names John Ternus new CEO, Tim Cook executive chairman. - Tim Cook becomes Apple Executive Chairman; John Ternus new CEO.",
+      "John Ternus to replace Tim Cook as Apple CEO in Q3 2026. - Apple's leadership change to boost AI integration? - Apple enters new era under John Ternus amid rising AI pressure. - Johny Srouji appointed new chief hardware officer at Apple. - Apple's hardware leadership to drive next wave of innovation. - John Ternus's hardware engineering background impacts AI strategy. - Apple stock may flourish under new CEO John Ternus. - Apple i Phone shipments in China rose 20% in Q1. - Trump threatens US retaliation if Britain targets Apple. - Apple suppliers boost green energy but stagnate on emissions. - Apple's Q2"
+    ]
+  }
+}

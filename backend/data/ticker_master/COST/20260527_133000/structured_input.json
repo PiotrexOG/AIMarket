@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.29)",
+        "velocity_roc_10": "STAGNANT (0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 985.15-1096.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.88%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-1.771)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 961.02-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.27%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 1005.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.41%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.55)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.8% | OM: 3.8% | NM: 2.9%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.21x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $275.235B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.2%, EPS: 9.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 29.2%, Next Q Est Growth: -16.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 55.1, P/S: 1.62)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 15.33)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.54)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco earnings loom ahead of Q3 report. - Costco stock movement expected after Q3 earnings. - Costco faces disability discrimination lawsuit verdict.",
+      "Costco reports earnings on May 25.",
+      "Costco stock dips after Walmart's Q1 report. - Costco stock moves in sympathy with Walmart's earnings. - Costco stock is off 2% amid Walmart's decline. - Mixsoon beauty brand rolls out nationwide in Costco stores. - Costco expands beauty assortment with K beauty brand Mixsoon. - Costco leverages online trends for in-store traffic and new members. - Costco stock surged to all-time highs. - Kroger plans price cuts to tackle Walmart and Costco."
+    ],
+    "medium_term_50d": [
+      "Costco shares climb, hitting new all-time high. - Oppenheimer: Costco seen missing quarterly earnings views. - Costco raises quarterly dividend 13% to $1.47 per share. - Costco adds new food court item.",
+      "Costco stock tops $1,000 as split speculation builds. - Costco faces high bar ahead of Q3 results. - Higher gas prices increase traffic at Costco. - Costco expected to deliver strong Q3 results.",
+      "Costco stock dips after Walmart's Q1 report. - Costco stock moves in sympathy with Walmart's earnings. - Costco stock is off 2% amid Walmart's decline. - Mixsoon beauty brand rolls out nationwide in Costco stores. - Costco expands beauty assortment with K beauty brand Mixsoon. - Costco leverages online trends for in-store traffic and new members. - Costco stock surged to all-time highs. - Kroger plans price cuts to tackle Walmart and Costco."
+    ],
+    "long_term_200d": [
+      "Costco shares climb, hitting new all-time high. - Oppenheimer: Costco seen missing quarterly earnings views. - Costco raises quarterly dividend 13% to $1.47 per share. - Costco adds new food court item.",
+      "Costco stock tops $1,000 as split speculation builds. - Costco faces high bar ahead of Q3 results. - Higher gas prices increase traffic at Costco. - Costco expected to deliver strong Q3 results.",
+      "Costco stock dips after Walmart's Q1 report. - Costco stock moves in sympathy with Walmart's earnings. - Costco stock is off 2% amid Walmart's decline. - Mixsoon beauty brand rolls out nationwide in Costco stores. - Costco expands beauty assortment with K beauty brand Mixsoon. - Costco leverages online trends for in-store traffic and new members. - Costco stock surged to all-time highs. - Kroger plans price cuts to tackle Walmart and Costco."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "STAGNANT (0.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 196.03-236.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.3%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.018)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.81)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.27-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (18.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.02%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 216.17,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.85%))",
+      "volume_dynamics": "ELEVATED (1.17)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 68.84, P/S: 35.82)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 63.45)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.84)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia CEO highlights Marvell as 'next trillion-dollar company'. - Nvidia partners with Microsoft to run autonomous agents on PCs. - Nvidia expands collaboration with Akamai on AI factory security. - Nvidia's H200 chips are sought by China military-linked universities. - Nvidia announces AI factory platform adoption by ASUS. - Nvidia's reporting change simplifies hyperscaler revenue visibility. - Nvidia's GTC Taipei keynote impacts AI chip cycle outlook. - Nvidia's Jensen Huang comments on paying workers 'as much as possible'. - Nvidia's Blackwell architecture infrastructure investment by YY Group. - Nvidia's collaboration with Foxconn on manufacturing AI verification.",
+      "Nvidia enters PC market with new AI chip. - Nvidia releases open-source tools for physical AI. - Nvidia partners with TSMC for AI in manufacturing. - Nvidia AI chip exports face tighter US controls. - ABB collaborates with NVIDIA on AI infrastructure. - Nvidia partners with Siemens for AI factory. - Uber partners with Nvidia for robotaxi platform. - ZPE Systems introduces expansion card with NVIDIA Jetson. - DDN advances AI factories with NVIDIA GTC Taipei. - ASUS unveils Pro Art PCs powered by NVIDIA RTX Spark. - Nvidia CEO dismisses AI disruption fears. - Nvidia announces new Vera chip users.",
+      "US export rules likely to pressure Nvidia shares. - Nvidia and Infineon partner on AI data center power architecture. - Nvidia CEO to kick off Computex, discuss AI product efforts. - Nvidia plans $150 billion annual investment in Taiwan. - Nvidia's N1X AI PCs could ship 10 million units."
+    ],
+    "medium_term_50d": [
+      "Nvidia CEO highlights Marvell as 'next trillion-dollar company'. - Nvidia partners with Microsoft to run autonomous agents on PCs. - Nvidia expands collaboration with Akamai on AI factory security. - Nvidia's H200 chips are sought by China military-linked universities. - Nvidia announces AI factory platform adoption by ASUS. - Nvidia's reporting change simplifies hyperscaler revenue visibility. - Nvidia's GTC Taipei keynote impacts AI chip cycle outlook. - Nvidia's Jensen Huang comments on paying workers 'as much as possible'. - Nvidia's Blackwell architecture infrastructure investment by YY Group. - Nvidia's collaboration with Foxconn on manufacturing AI verification.",
+      "Nvidia enters PC market with new AI chip. - Nvidia releases open-source tools for physical AI. - Nvidia partners with TSMC for AI in manufacturing. - Nvidia AI chip exports face tighter US controls. - ABB collaborates with NVIDIA on AI infrastructure. - Nvidia partners with Siemens for AI factory. - Uber partners with Nvidia for robotaxi platform. - ZPE Systems introduces expansion card with NVIDIA Jetson. - DDN advances AI factories with NVIDIA GTC Taipei. - ASUS unveils Pro Art PCs powered by NVIDIA RTX Spark. - Nvidia CEO dismisses AI disruption fears. - Nvidia announces new Vera chip users.",
+      "US export rules likely to pressure Nvidia shares. - Nvidia and Infineon partner on AI data center power architecture. - Nvidia CEO to kick off Computex, discuss AI product efforts. - Nvidia plans $150 billion annual investment in Taiwan. - Nvidia's N1X AI PCs could ship 10 million units."
+    ],
+    "long_term_200d": [
+      "Nvidia enters PC market with new AI chip. - Nvidia releases open-source tools for physical AI. - Nvidia partners with TSMC for AI in manufacturing. - Nvidia AI chip exports face tighter US controls. - ABB collaborates with NVIDIA on AI infrastructure. - Nvidia partners with Siemens for AI factory. - Uber partners with Nvidia for robotaxi platform. - ZPE Systems introduces expansion card with NVIDIA Jetson. - DDN advances AI factories with NVIDIA GTC Taipei. - ASUS unveils Pro Art PCs powered by NVIDIA RTX Spark. - Nvidia CEO dismisses AI disruption fears. - Nvidia announces new Vera chip users.",
+      "Nvidia Q1 earnings exceed estimates; AI infrastructure outlook strong. - Nvidia CFO: H100 GPU rental prices up 20% year-to-date. - Nvidia's Blackwell GPUs used by all major hyperscalers and cloud providers. - Nvidia reports record Q1 fiscal 2027 results, surpassing prior highs. - Oracle to deploy Nvidia's next-generation Vera CPUs at hyperscale. - Nvidia partners with QIAGEN on AI drug discovery. - Alibaba launches new AI chip, potentially competing with Nvidia. - Nvidia's equity investments generated $16 billion gain in Q1. - Nvidia's market cap faces tough test ahead of earnings. - Nvidia stock",
+      "Nvidia reports record sales and income driven by AI demand. - Nvidia CEO pitches $200 billion CPU market opportunity. - Nvidia enters new phase in AI dominance with surprise announcement. - Nvidia invests up to $3.2 billion in Corning for optical solutions. - Nvidia's H200 chip faces hurdles in China despite US license. - Nvidia CEO expects Vera Rubin platform to surpass Blackwell. - Nvidia partners with Uber for global Robotaxi expansion. - Nvidia's CPU market forecast includes China. - Nvidia's AI inference dominance is rapidly expanding. - Nvidia's hidden networking business poised to overtake Broadcom."
+    ]
+  }
+}

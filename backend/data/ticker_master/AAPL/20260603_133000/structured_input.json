@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (75.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.9)",
+        "velocity_roc_10": "EXPLOSIVE_UP (5.8%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 276.5-315.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (8.29%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.102)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.74)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 245.51-315.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.22%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 98.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 314.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.79%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.69, P/S: 10.69)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 52.79)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.56)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia challenges Apple and Intel with AI chip for laptops. - Dell unveils XPS 13 laptop, a direct rival to Apple Mac Book Neo. - Apple AI strategy could drive next stock move. - Apple's WWDC 2026 'Key Catalyst' For AAPL Stock, Will Decide AI Positioning. - Apple readies feature to split bills by taking photo of a receipt. - Siri AI update delayed to next i OS release.",
+      "Apple plans bill-splitting feature for Apple Cash. - Apple's WWDC is June 8; one announcement could move stock. - Apple's biggest AI test arrives June 8 at WWDC. - Apple plans i Phone bill splitting as Pay Pal, Block pare gains. - Apple eyes $200B eyewear market in Tim Cook's final hardware bet. - Apple's Mac Book Neo is winning over new buyers. - Microsoft and Apple are quietly launching features to kill rival apps.",
+      "Apple announces AI-driven accessibility upgrades and Siri overhaul. - Apple's in-house modem chips threaten Qualcomm's customer base. - Apple may be an agentic AI era's biggest winner."
+    ],
+    "medium_term_50d": [
+      "Nvidia challenges Apple and Intel with AI chip for laptops. - Dell unveils XPS 13 laptop, a direct rival to Apple Mac Book Neo. - Apple AI strategy could drive next stock move. - Apple's WWDC 2026 'Key Catalyst' For AAPL Stock, Will Decide AI Positioning. - Apple readies feature to split bills by taking photo of a receipt. - Siri AI update delayed to next i OS release.",
+      "Apple plans bill-splitting feature for Apple Cash. - Apple's WWDC is June 8; one announcement could move stock. - Apple's biggest AI test arrives June 8 at WWDC. - Apple plans i Phone bill splitting as Pay Pal, Block pare gains. - Apple eyes $200B eyewear market in Tim Cook's final hardware bet. - Apple's Mac Book Neo is winning over new buyers. - Microsoft and Apple are quietly launching features to kill rival apps.",
+      "China smartphone market rebounded in April, Apple poised to benefit. - Apple stock hits new record highs as AI doubts fade. - Apple keeps smartphone lead despite overall market decline. - i Phone shipments decline forecast improved by IDC. - Apple's AI weakness could become its biggest advantage. - Best Buy expects sales boost from Apple Mac Book Neo launch. - Apple edges Netflix as a stronger buy in 2026. - Bof A sees Apple hitting $380 on agentic AI thesis."
+    ],
+    "long_term_200d": [
+      "Nvidia challenges Apple and Intel with AI chip for laptops. - Dell unveils XPS 13 laptop, a direct rival to Apple Mac Book Neo. - Apple AI strategy could drive next stock move. - Apple's WWDC 2026 'Key Catalyst' For AAPL Stock, Will Decide AI Positioning. - Apple readies feature to split bills by taking photo of a receipt. - Siri AI update delayed to next i OS release.",
+      "China smartphone market rebounded in April, Apple poised to benefit. - Apple stock hits new record highs as AI doubts fade. - Apple keeps smartphone lead despite overall market decline. - i Phone shipments decline forecast improved by IDC. - Apple's AI weakness could become its biggest advantage. - Best Buy expects sales boost from Apple Mac Book Neo launch. - Apple edges Netflix as a stronger buy in 2026. - Bof A sees Apple hitting $380 on agentic AI thesis.",
+      "Apple crushes Q2 estimates on surging i Phone and China sales. - Apple forecasts Q3 sales growth above estimates. - Apple stock rises after earnings beat; strong i Phone demand drives growth. - Apple Q2 results show big growth, driven by strong i Phone sales. - Apple stock guided for fiscal third-quarter revenue growth above expectations. - Apple's CEO transition set for September, marking a new era. - Apple earnings beat estimates, forecast tops expectations on i Phone demand. - Apple's Mac Book Neo and services growth support outlook despite supply constraints. - Apple stock climbs more than 3% in premarket after earnings beat. - Apple's Q2 earnings and revenue beat expectations."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.7)",
+        "velocity_roc_10": "NORMAL (4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 220.37-235.49]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.44%)",
+        "cycle_macd": "BULLISH_FADING (1.16)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-247.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.47%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 76.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 232.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.75%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.81, P/S: 5.9)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.0)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson Innovation Hub Deal announced. - De Puy Synthes (JNJ) secures NOVOSIS distribution partnership. - Johnson & Johnson talc litigation update and valuation.",
+      "Johnson & Johnson found liable in Minnesota talc lawsuit.",
+      "Johnson & Johnson raised full-year guidance after Q1 results. - Johnson & Johnson leans on pharma and Med Tech for growth."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson found liable in Minnesota talc lawsuit.",
+      "Johnson & Johnson Innovation Hub Deal announced. - De Puy Synthes (JNJ) secures NOVOSIS distribution partnership. - Johnson & Johnson talc litigation update and valuation.",
+      "Johnson & Johnson raised full-year guidance after Q1 results. - Johnson & Johnson leans on pharma and Med Tech for growth."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson found liable in Minnesota talc lawsuit.",
+      "Johnson & Johnson study shows TREMFYA\u00ae efficacy in Crohn's disease. - Johnson & Johnson announces Phase 3 FUZION study results for TREMFYA\u00ae. - Johnson & Johnson announces Phase 2B data for JNJ-4804 therapy. - CVS to drop J&J's Stelara from its main formularies. - Johnson & Johnson announces clinical study results for OTTAVA\u2122 Robotic Surgical System. - Johnson & Johnson study shows TREMFYA\u00ae efficacy in perianal fistulizing Crohn's disease. - Johnson & Johnson expands clinical pipeline in immunology, Med Tech, AI. - J&J\u2019s soft tissue surgical robot succeeds in gastric bypass study.",
+      "Johnson & Johnson launches landmark head-to-head trial. - Johnson & Johnson strikes agreement to acquire Atraverse Medical. - Johnson & Johnson to acquire Atraverse Medical to bolster cardiac devices. - J&J lands CE mark for surgical stapler for robot use. - Johnson & Johnson to acquire Atraverse Medical in cardiac device expansion. - Johnson & Johnson exceeds first-quarter earnings projections. - Johnson & Johnson to offer four prescription medicines on Trump Rx website. - Johnson & Johnson had a strong start to 2026 earnings."
+    ]
+  }
+}

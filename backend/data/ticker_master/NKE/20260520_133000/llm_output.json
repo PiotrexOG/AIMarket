@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Bullish hammer pattern suggests potential short-term reversal, supported by price within normal Bollinger Bands and stable near-term SMA. W: RSI in bearish territory (33.9) and price in the middle of the 20-day range indicate limited upside momentum. O: Potential for a bounce towards the upper end of the 20-day range if bullish momentum can be sustained. T: Elevated volume and moderate volatility suggest increased trading activity, but the overall trend remains uncertain."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: MACD shows accelerating bullish momentum, offering a glimmer of hope against a bearish trend. W: Price is positioned below the 50-day SMA (Z-score: -1.01) and within a broad monthly range, indicating a prevailing downtrend. The trend alignment is bearish with expanding momentum. O: A sustained move above the 50-day SMA could signal a shift in the medium-term trend. T: The current range-bound environment limits significant upside potential in the absence of a clear breakout catalyst."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The 'extreme bearish stretch' suggests a potential for rebound, and the stock is trading at multi-month lows, indicating potential value. The balance sheet remains healthy (NetDebt/Eq: 0.27x). W: The long-term market regime is bearish (-31.7%), and recent quarterly earnings show significant deterioration (EPS: -42.4%, Q Surprise: -50.0%). Revenue growth is stagnant. O: A sustained recovery in China and a turnaround in earnings momentum could provide a long-term catalyst. T: Despite current weakness, the established business quality and fair valuation multiples (P/E: 19.6) offer some downside protection."
+    }
+  }
+}

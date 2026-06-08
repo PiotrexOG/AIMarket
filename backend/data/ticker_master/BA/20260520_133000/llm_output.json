@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The short-term outlook for BA is cautiously optimistic, driven by a STRONG_BULLISH candle pattern and a potential mean reversion setup near the lower Bollinger Band. Velocity is normalizing, and the price is stable near the short-term trend base. O: A potential catalyst could emerge from the current range-bound trading if price breaks out. T: The news narrative highlights a significant China order, though it fell short of expectations, creating mixed sentiment. The order's confirmation provides some support, but the disappointment tempers upside potential. W: RSI is in the neutral zone, indicating a lack of strong directional conviction. The price is also in the middle of its range, suggesting further consolidation is likely before a clear trend emerges. The negative velocity suggests some selling pressure remains."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: Medium-term momentum shows expanding bullishness, with price positioning healthy near the 50-day SMA. The trend alignment is positive, suggesting underlying strength. O: Positive news flow regarding potential investments and strategic deals could provide a tailwind. The cyclical MACD is accelerating negatively, but this could represent a buying opportunity if it reverses. T: The confirmation of a large China order, despite initial disappointment, provides a structural demand signal. The company's strategic investments signal long-term commitment and potential growth. W: The accelerating bearish MACD indicates a short-term bearish divergence that needs monitoring. The price is still within a broader monthly range, limiting immediate upside potential. The fundamental picture of thin margins and stressed balance sheets weighs on the safety aspect."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.0,
+        "safe": 2.5
+      },
+      "synthesis": "S: The long-term outlook is challenged by a secular bear market regime and a stressed fundamental profile. While there's potential for a pivot in major crosses, the current environment is unfavorable. O: The potential for a significant China order and ongoing strategic investments offer long-term growth prospects. The company's scale and hyper-growth in revenue and EPS are positive structural factors. T: The news narrative around the China order, though initially disappointing, represents a significant long-term demand signal. The company's scale and hyper-growth in revenue and EPS are positive structural factors. W: The secular bear market regime and the company's thin margins, negative operating income, and negative FCF are significant headwinds. The stressed balance sheet with high net debt and the hyper-premium valuation create substantial risk. The \"hyper-growth\" in EPS is juxtaposed with a sharp decline expected next quarter, indicating earnings fragility."
+    }
+  }
+}

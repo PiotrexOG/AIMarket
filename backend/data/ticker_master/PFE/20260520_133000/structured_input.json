@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 25.19-27.58]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.5%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.065)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 25.19-28.75]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.29%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 46.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.3% | OM: 23.4% | NM: 11.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.7x, YrsToPay: 6.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 15.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.315B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -5.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -34.7%, Next Q Est Growth: 44.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.76, P/S: 2.34)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.65)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -5.67%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer gets EU approval for HYMPAVZI in adolescents with hemophilia.",
+      "Pfizer faces challenges in Medicare drug pricing law. - Pfizer is a key player in the polymyositis market.",
+      "Pfizer gets expanded European approval for Hympavzi hemophilia drug. - European Commission approves Pfizer's Hympavzi for hemophilia A or B. - Pfizer transfers VEPPANU rights to Rigel Pharmaceuticals. - Pfizer Inc approves Hympavzi for treatment of adults and adolescents. - European Commission approves Pfizer\u2019s HYMPAVZI for hemophilia treatment."
+    ],
+    "medium_term_50d": [
+      "Pfizer gets expanded European approval for Hympavzi hemophilia drug. - European Commission approves Pfizer's Hympavzi for hemophilia A or B. - Pfizer transfers VEPPANU rights to Rigel Pharmaceuticals. - Pfizer Inc approves Hympavzi for treatment of adults and adolescents. - European Commission approves Pfizer\u2019s HYMPAVZI for hemophilia treatment.",
+      "Pfizer receives FDA approval for VEPPANU cancer therapy. - Pfizer reports positive Phase 3 data for ELREXFIO. - Pfizer extends U.S. patent protection for VYNDAMAX.",
+      "Pfizer reports strong Q1 results, reaffirms 2026 guidance. - Pfizer Q1 earnings beat estimates on newer drug growth. - FDA approves VEPPANU for advanced breast cancer. - Pfizer's ELREXFIO trial shows positive outcomes for multiple myeloma. - Pfizer beats Q1 profit estimates on strong demand for Eliquis. - Pfizer stock edges higher on earnings and revenue beat. - Pfizer tops Wall Street estimates, reaffirms outlook. - Pfizer backs 2026 outlook as revenue advances in Q1. - Pfizer beats Q1 earnings, new drugs drive sales growth. - Pfizer beats Q1 revenue and profit estimates, reaffirms guidance. - Pfizer's"
+    ],
+    "long_term_200d": [
+      "Pfizer reports strong Q1 results, reaffirms 2026 guidance. - Pfizer Q1 earnings beat estimates on newer drug growth. - FDA approves VEPPANU for advanced breast cancer. - Pfizer's ELREXFIO trial shows positive outcomes for multiple myeloma. - Pfizer beats Q1 profit estimates on strong demand for Eliquis. - Pfizer stock edges higher on earnings and revenue beat. - Pfizer tops Wall Street estimates, reaffirms outlook. - Pfizer backs 2026 outlook as revenue advances in Q1. - Pfizer beats Q1 earnings, new drugs drive sales growth. - Pfizer beats Q1 revenue and profit estimates, reaffirms guidance. - Pfizer's",
+      "Pfizer and Arvinas' breast cancer drug approved by FDA. - FDA approves Pfizer and Arvinas' VEPPANU for breast cancer.",
+      "Pfizer announces positive Phase 3 results for ELREXFIO in multiple myeloma. - Pfizer's blood-cancer treatment meets primary endpoint in late-stage study. - Pfizer's ELREXFIO shows significant progression-free survival improvement. - Pfizer protects heart disease drug Vyndamax from generics until 2031."
+    ]
+  }
+}

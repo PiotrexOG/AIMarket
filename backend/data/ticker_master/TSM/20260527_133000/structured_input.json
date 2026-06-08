@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.78)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 384.7-421.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.57%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.374)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.43)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 313.8-421.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (29.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (17.53%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 97.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 417.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.63%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "TIGHT_SQUEEZE",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 61.9% | OM: 53.3% | NM: 47.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.34x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4125.510324B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.3%, EPS: 49.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3249.8%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.12, P/S: 0.52)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.37)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC stock jumps premarket to $409.94. - Taiwan's stock market overtakes India due to TSMC.",
+      "AMD CEO initiates volume production on 2nm Venice CPU family.",
+      "Nvidia's high margins rely on TSMC's chipmaking dominance."
+    ],
+    "medium_term_50d": [
+      "TSMC stock jumps premarket to $409.94. - Taiwan's stock market overtakes India due to TSMC.",
+      "TSMC accelerates 2nm chip and AI packaging investments. - Appaloosa Management takes new stake in Taiwan Semiconductor. - Appaloosa Management sold stake in Taiwan Semiconductor Manufacturing. - Third Point sells position in Taiwan Semiconductor Manufacturing Company.",
+      "TSM plans ultra-advanced AI chips, including 1nm. - TSM has more room to run, says Cramer. - Insider Bor Zen Tien invests $139K in TSM. - Insider Tzu Sou Chuang sells $13.97M of TSM."
+    ],
+    "long_term_200d": [
+      "TSMC accelerates 2nm chip and AI packaging investments. - Appaloosa Management takes new stake in Taiwan Semiconductor. - Appaloosa Management sold stake in Taiwan Semiconductor Manufacturing. - Third Point sells position in Taiwan Semiconductor Manufacturing Company.",
+      "TSMC announces $56 billion AI expansion plan. - Elon Musk plans chip plant to take on TSMC. - TSMC stock rallies on massive AI expansion news. - TSMC faces formidable foundry competition.",
+      "TSMC stock jumps premarket to $409.94. - Taiwan's stock market overtakes India due to TSMC."
+    ]
+  }
+}

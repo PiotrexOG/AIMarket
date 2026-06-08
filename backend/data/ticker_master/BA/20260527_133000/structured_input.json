@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.23)",
+        "velocity_roc_10": "NORMAL (-8.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 214.0-244.07]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.95%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.953)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.57)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.6%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 225.79,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.22%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 93.3, P/S: 2.0)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 30.86)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing wins US federal jury verdict in 737 MAX fraud case. - Boeing selected for US Air Force's Next Generation Air Dominance program. - Boeing secures contract to upgrade C-17 Globemaster III systems. - Boeing receives China aircraft order.",
+      "Jury clears Boeing of fraud in 737 MAX lawsuit by LOT Polish Airlines. - Alaska Air Group integrates Boeing\u2019s Virtual Airplane technology. - Boeing wins multibillion aircraft deal in China.",
+      "Boeing selected Intellisense for C-17 flight deck replacement program. - Boeing partner Intellisense wins $400M+ C-17 modernization deal. - China confirms order for 200 Boeing aircraft amid trade talks."
+    ],
+    "medium_term_50d": [
+      "Boeing wins US federal jury verdict in 737 MAX fraud case. - Boeing selected for US Air Force's Next Generation Air Dominance program. - Boeing secures contract to upgrade C-17 Globemaster III systems. - Boeing receives China aircraft order.",
+      "Jury clears Boeing of fraud in 737 MAX lawsuit by LOT Polish Airlines. - Alaska Air Group integrates Boeing\u2019s Virtual Airplane technology. - Boeing wins multibillion aircraft deal in China.",
+      "Boeing CEO to speak at Bernstein Strategic Decisions Conference. - Boeing plans $1B investment in Kansas facilities. - Trump to announce aircraft purchases from Boeing in China. - Boeing pursues massive China jet deal as CEO joins delegation. - PMGC Holdings acquires A&B Aerospace, Inc., a Boeing supplier."
+    ],
+    "long_term_200d": [
+      "Boeing CEO to speak at Bernstein Strategic Decisions Conference. - Boeing plans $1B investment in Kansas facilities. - Trump to announce aircraft purchases from Boeing in China. - Boeing pursues massive China jet deal as CEO joins delegation. - PMGC Holdings acquires A&B Aerospace, Inc., a Boeing supplier.",
+      "Trump says China agreed to order 200 Boeing jets. - Boeing shares slide despite 200-plane China deal. - Boeing may get big boost from Trump-Xi summit. - Boeing wins 200-jet plane order from China, Trump says. - Boeing shares advance on expectations of new China aircraft orders. - Jury awards $49.5 million to family of Boeing 737 MAX crash victim. - Boeing lost China; Trump and 500 jets may win it back. - Trump's China summit could mean big things for Boeing. - Boeing shares slip despite growing optimism around China orders. - Investors eye 200-jet Boeing",
+      "China commits to buying 200 Boeing aircraft, potential for 750. - Boeing shares slide as China order disappoints Wall Street. - Boeing confirms China commitment to buy 200 aircraft. - Boeing secures deal for 200 aircraft during Trump's China visit. - Boeing stock drops after China's aircraft order falls short. - Viking Global cuts share stake in Boeing. - Boeing eases after China order, deliveries fall short. - Boeing's 777-9 jet could be a catalyst for stock. - Syensqo SA secures a Boeing deal."
+    ]
+  }
+}
