@@ -59,15 +59,6 @@ def get_sorted_cross_sections(base_dir):
     folders.sort(key=lambda x: x.name)
     return folders
 
-def calculate_average_score(relative_scores):
-    values = list(relative_scores.values())
-
-    if not values:
-        return None
-
-    return round(sum(values) / len(values), 4)
-
-
 def normalize_json_structure(data):
     """
     Zamienia strukture:
@@ -81,15 +72,11 @@ def normalize_json_structure(data):
     for timeframe, tickers_data in data.items():
         for ticker, ticker_data in tickers_data.items():
             relative_scores = ticker_data.get("relative_scores", {})
-            avg_score = calculate_average_score(relative_scores)
 
             if ticker not in result:
                 result[ticker] = {}
 
-            result[ticker][timeframe] = {
-                "relative_scores": relative_scores,
-                "score": avg_score
-            }
+            result[ticker][timeframe] = {"relative_scores": relative_scores}
 
     return result
 
@@ -166,10 +153,6 @@ def build_score_observation_dataset(folders, normalized_by_folder):
                 timeframe_result["by_ticker"][ticker].append(observation)
 
     return result
-
-
-def build_score_return_dataset(folders, normalized_by_folder):
-    return build_score_observation_dataset(folders, normalized_by_folder)
 
 
 # =========================================================

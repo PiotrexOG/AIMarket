@@ -3,6 +3,8 @@ from datetime import timedelta
 import numpy as np
 import pandas as pd
 
+from app.db.models.market_data import MarketData
+from app.db.database import SessionLocal
 
 def to_python_datetime(value):
     if hasattr(value, "to_pydatetime"):
@@ -12,7 +14,7 @@ def to_python_datetime(value):
 
 
 def load_market_data_frame(session, tickers, min_timestamp, max_timestamp):
-    from app.db.models.market_data import MarketData
+
 
     rows = (
         session.query(
@@ -87,7 +89,7 @@ def load_market_lookup_for_analysis(
     smoothing_window_map,
     buffer_days,
 ):
-    from app.db.database import SessionLocal
+
 
     max_horizon_days = max(
         max(horizon_days_values)
