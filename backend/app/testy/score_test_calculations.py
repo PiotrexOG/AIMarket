@@ -8,13 +8,13 @@ from market_return_lookup import (
 )
 
 
-TOP_N_VALUES = [1, 3, 5, 9]
-TOP_SCORE_SHARES = [0.01, 0.05, 0.10, 0.20, 0.50]
-TIMEFRAME_PRICE_WINDOW_MAP = {
-    "short_term_14d": 6,
-    "medium_term_50d": 21,
-    "long_term_200d": 84,
-}
+TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
+TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
+GLOBAL_SCORE_BUCKETS = [
+    (start, start + 10)
+    for start in range(0, 100, 10)
+]
+PRICE_WINDOW_SHARE_OF_HORIZON = 0.42
 
 
 def _round_or_none(value, digits=6):
@@ -52,13 +52,26 @@ def _return_summary(df):
     }
 
 
-def build_horizon_days(df, end_time):
+def _average_score_range_summary(df):
+    if df.empty:
+        return {
+            "avg_score_min": None,
+            "avg_score_max": None,
+        }
+
+    return {
+        "avg_score_min": _round_or_none(df["min_score"].mean()),
+        "avg_score_max": _round_or_none(df["max_score"].mean()),
+    }
+
+
+def build_horizon_days(df):
     if df.empty:
         return []
 
     first_score_date = pd.to_datetime(df["start_timestamp"].min()).normalize()
-    end_time = pd.to_datetime(end_time).normalize()
-    max_horizon_days = int((end_time - first_score_date).days)
+    last_score_date = pd.to_datetime(df["start_timestamp"].max()).normalize()
+    max_horizon_days = int((last_score_date - first_score_date).days)
 
     if max_horizon_days < 1:
         return []
@@ -110,36 +123,28 @@ def add_weekly_score_metrics(df):
 def build_return_panel(
     df,
     horizon_days_values,
-    end_time,
-    market_data_buffer_days,
-    smoothing_window_map=None,
 ):
     if df.empty:
         return pd.DataFrame()
 
-    smoothing_window_map = smoothing_window_map or TIMEFRAME_PRICE_WINDOW_MAP
-    horizon_map = {
-        timeframe: horizon_days_values
-        for timeframe in df["timeframe"].dropna().unique()
-    }
+    score_end_time = pd.to_datetime(df["start_timestamp"].max())
     market_lookup = load_market_lookup_for_analysis(
         df,
-        horizon_day_range_map=horizon_map,
-        smoothing_window_map=smoothing_window_map,
-        buffer_days=market_data_buffer_days,
+        max_timestamp=score_end_time,
     )
 
     if not market_lookup:
         return pd.DataFrame()
 
     priced_df = add_current_prices(df, market_lookup)
-    end_time = pd.to_datetime(end_time)
     rows = []
 
     for timeframe, timeframe_group in priced_df.groupby("timeframe"):
-        window_positions = smoothing_window_map.get(timeframe, 0)
-
         for horizon_days in horizon_days_values:
+            window_positions = max(
+                1,
+                int(horizon_days * PRICE_WINDOW_SHARE_OF_HORIZON),
+            )
             horizon_df = build_horizon_return_frame(
                 timeframe_group,
                 market_lookup=market_lookup,
@@ -151,7 +156,7 @@ def build_return_panel(
             if horizon_df.empty:
                 continue
 
-            horizon_df = horizon_df[horizon_df["future_timestamp"] <= end_time]
+            horizon_df = horizon_df[horizon_df["future_timestamp"] <= score_end_time]
 
             if horizon_df.empty:
                 continue
@@ -251,29 +256,118 @@ def build_weekly_analysis(return_panel, top_n_values=TOP_N_VALUES):
     return pd.DataFrame(rows)
 
 
-def build_global_score_thresholds(df, top_score_shares=TOP_SCORE_SHARES):
-    thresholds = {}
+def build_weekly_bucket_analysis(return_panel, bucket_size=2):
+    rows = []
 
-    if df.empty or "timeframe" not in df.columns or "score" not in df.columns:
-        return thresholds
+    if return_panel.empty:
+        return pd.DataFrame()
 
-    for timeframe, group in df.groupby("timeframe"):
-        scores = group["score"].dropna()
+    ranked = return_panel.sort_values(
+        ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
+        ascending=[True, True, True, False, True],
+    ).copy()
+    ranked["rank_position"] = (
+        ranked.groupby(["timeframe", "horizon_days", "start_timestamp"])
+        .cumcount()
+        + 1
+    )
+    ranked["bucket_start_rank"] = (
+        ((ranked["rank_position"] - 1) // bucket_size) * bucket_size + 1
+    )
+    ranked["bucket_end_rank"] = ranked["bucket_start_rank"] + bucket_size - 1
+    ranked["bucket"] = (
+        "Rank "
+        + ranked["bucket_start_rank"].astype(str)
+        + "-"
+        + ranked["bucket_end_rank"].astype(str)
+    )
 
-        if scores.empty:
-            continue
+    group_columns = [
+        "timeframe",
+        "horizon_days",
+        "bucket_start_rank",
+        "bucket_end_rank",
+        "bucket",
+    ]
 
-        thresholds[timeframe] = {
-            top_share: float(scores.quantile(1 - top_share))
-            for top_share in top_score_shares
-        }
+    for group_key, bucket_group in ranked.groupby(group_columns, sort=False):
+        (
+            timeframe,
+            horizon_days,
+            bucket_start_rank,
+            bucket_end_rank,
+            bucket,
+        ) = group_key
+        weekly_bucket = (
+            bucket_group.groupby("start_timestamp", as_index=False)
+            .agg(
+                future_return=("future_return", "mean"),
+                selected_count=("ticker", "count"),
+                min_score=("score", "min"),
+                max_score=("score", "max"),
+            )
+        )
+        rows.append({
+            "timeframe": timeframe,
+            "horizon_days": int(horizon_days),
+            "bucket": bucket,
+            "bucket_start_rank": int(bucket_start_rank),
+            "bucket_end_rank": int(bucket_end_rank),
+            **_average_score_range_summary(weekly_bucket),
+            **_return_summary(weekly_bucket),
+        })
 
-    return thresholds
+    return pd.DataFrame(rows)
+
+
+def build_global_score_bucket_analysis(
+    return_panel,
+    score_buckets=GLOBAL_SCORE_BUCKETS,
+):
+    rows = []
+
+    if return_panel.empty:
+        return pd.DataFrame()
+
+    for (timeframe, horizon_days), horizon_group in return_panel.groupby(["timeframe", "horizon_days"]):
+        ranked = horizon_group.dropna(subset=["score"]).sort_values(
+            ["score", "start_timestamp", "ticker"],
+            ascending=[False, True, True],
+        )
+        scores = ranked["score"].dropna()
+
+        for bucket_start, bucket_end in score_buckets:
+            if scores.empty:
+                selected = pd.DataFrame()
+                min_score = None
+                max_score = None
+            else:
+                min_score = float(scores.quantile(1 - bucket_end / 100))
+                max_score = float(scores.quantile(1 - bucket_start / 100))
+                selected = ranked[
+                    (ranked["score"] >= min_score)
+                    & (ranked["score"] <= max_score)
+                ]
+
+                if bucket_start > 0:
+                    selected = selected[selected["score"] < max_score]
+
+            rows.append({
+                "timeframe": timeframe,
+                "horizon_days": int(horizon_days),
+                "bucket": f"Top {bucket_start}-{bucket_end}%",
+                "bucket_start_percent": int(bucket_start),
+                "bucket_end_percent": int(bucket_end),
+                "min_score": _round_or_none(min_score),
+                "max_score": _round_or_none(max_score),
+                **_return_summary(selected),
+            })
+
+    return pd.DataFrame(rows)
 
 
 def build_global_analysis(
     return_panel,
-    score_thresholds,
     top_score_shares=TOP_SCORE_SHARES,
 ):
     rows = []
@@ -299,9 +393,14 @@ def build_global_analysis(
             ["score", "start_timestamp", "ticker"],
             ascending=[False, True, True],
         )
+        scores = ranked["score"].dropna()
 
         for top_share in top_score_shares:
-            min_score = score_thresholds.get(timeframe, {}).get(top_share)
+            min_score = (
+                None
+                if scores.empty
+                else float(scores.quantile(1 - top_share))
+            )
             selected = (
                 pd.DataFrame()
                 if min_score is None

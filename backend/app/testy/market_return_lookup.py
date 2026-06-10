@@ -1,5 +1,3 @@
-from datetime import timedelta
-
 import numpy as np
 import pandas as pd
 
@@ -47,37 +45,27 @@ def load_market_data_frame(session, tickers, min_timestamp, max_timestamp):
     return market_df
 
 
-def build_market_lookup(market_df, smoothing_windows):
+def build_market_lookup(market_df):
     lookup = {}
-    smoothing_windows = sorted(set(smoothing_windows))
 
     for ticker, group in market_df.groupby("ticker", sort=False):
         group = group.sort_values("datetime")
         ohlc4 = group["ohlc4"].to_numpy(dtype=float)
-        window_medians = {}
-
-        for window_positions in smoothing_windows:
-            if window_positions <= 0:
-                window_medians[window_positions] = ohlc4
-                continue
-
-            window_medians[window_positions] = (
-                pd.Series(ohlc4)
-                .rolling(
-                    window=window_positions * 2 + 1,
-                    center=True,
-                    min_periods=1,
-                )
-                .median()
-                .to_numpy(dtype=float)
-            )
+        valid_ohlc4 = np.isfinite(ohlc4)
 
         lookup[ticker] = {
             "datetimes": group["datetime"].to_numpy(dtype="datetime64[ns]"),
             "max_datetime": group["datetime"].max().to_datetime64(),
             "close": group["close"].to_numpy(dtype=float),
             "ohlc4": ohlc4,
-            "window_medians": window_medians,
+            "ohlc4_cumsum": np.concatenate((
+                [0.0],
+                np.cumsum(np.where(valid_ohlc4, ohlc4, 0.0)),
+            )),
+            "ohlc4_count_cumsum": np.concatenate((
+                [0],
+                np.cumsum(valid_ohlc4.astype(int)),
+            )),
         }
 
     return lookup
@@ -85,22 +73,12 @@ def build_market_lookup(market_df, smoothing_windows):
 
 def load_market_lookup_for_analysis(
     df,
-    horizon_day_range_map,
-    smoothing_window_map,
-    buffer_days,
+    max_timestamp,
 ):
 
 
-    max_horizon_days = max(
-        max(horizon_days_values)
-        for horizon_days_values in horizon_day_range_map.values()
-    )
-    min_timestamp = to_python_datetime(df["start_timestamp"].min()) - timedelta(
-        days=buffer_days,
-    )
-    max_timestamp = to_python_datetime(df["start_timestamp"].max()) + timedelta(
-        days=max_horizon_days + buffer_days,
-    )
+    min_timestamp = to_python_datetime(df["start_timestamp"].min())
+    max_timestamp = to_python_datetime(max_timestamp)
 
     with SessionLocal() as session:
         market_df = load_market_data_frame(
@@ -113,13 +91,10 @@ def load_market_lookup_for_analysis(
     if market_df.empty:
         return {}
 
-    return build_market_lookup(
-        market_df,
-        smoothing_windows=smoothing_window_map.values(),
-    )
+    return build_market_lookup(market_df)
 
 
-def lookup_smoothed_ohlc4_many(
+def lookup_window_average_ohlc4_many(
     market_lookup,
     tickers,
     timestamps,
@@ -148,13 +123,23 @@ def lookup_smoothed_ohlc4_many(
         if not valid.any():
             continue
 
-        window_values = ticker_data["window_medians"].get(window_positions)
-
-        if window_values is None:
-            continue
-
         target_positions = np.flatnonzero(mask)
-        result[target_positions[valid]] = window_values[anchor_indices[valid]]
+        valid_anchor_indices = anchor_indices[valid]
+        start_indices = np.maximum(0, valid_anchor_indices - window_positions)
+        end_indices = np.minimum(
+            len(ticker_data["ohlc4"]) - 1,
+            valid_anchor_indices + window_positions,
+        )
+        cumsum = ticker_data["ohlc4_cumsum"]
+        count_cumsum = ticker_data["ohlc4_count_cumsum"]
+        window_sums = cumsum[end_indices + 1] - cumsum[start_indices]
+        window_counts = count_cumsum[end_indices + 1] - count_cumsum[start_indices]
+        result[target_positions[valid]] = np.divide(
+            window_sums,
+            window_counts,
+            out=np.full(len(window_sums), np.nan, dtype=float),
+            where=window_counts > 0,
+        )
 
     return result
 
@@ -211,7 +196,7 @@ def build_horizon_return_frame(
     horizon_df["future_timestamp"] = (
         horizon_df["start_timestamp"] + pd.to_timedelta(horizon_days, unit="D")
     )
-    horizon_df["future_price"] = lookup_smoothed_ohlc4_many(
+    horizon_df["future_price"] = lookup_window_average_ohlc4_many(
         market_lookup,
         horizon_df["ticker"],
         horizon_df["future_timestamp"],

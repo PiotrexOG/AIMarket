@@ -1,4 +1,3 @@
-import argparse
 import sys
 import types
 from pathlib import Path
@@ -21,11 +20,12 @@ sys.modules["app"] = app_module
 from score_test_calculations import (
     add_weekly_score_metrics,
     build_horizon_days,
-    build_global_score_thresholds,
+    build_global_score_bucket_analysis,
     build_timeframe_score_observations,
     build_global_analysis,
     build_return_panel,
     build_weekly_analysis,
+    build_weekly_bucket_analysis,
 )
 from score_observations import build_dataframe, load_json
 from score_test_plotting import plot_global_analysis, plot_weekly_analysis
@@ -37,8 +37,6 @@ INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
 OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
-# Extra market-data margin used for smoothed future prices around end_time.
-PRICE_SMOOTHING_BUFFER_DAYS = 90
 
 
 def annualize_return(total_return, horizon_days):
@@ -82,35 +80,15 @@ def clean_csv_outputs(output_dir):
             print(f"[SKIP] Could not delete open file: {csv_file}")
 
 
-def add_excess_return_columns(selection_df):
+def add_annualized_return_column(selection_df):
     if selection_df.empty:
         return selection_df
 
     result = selection_df.copy()
-    benchmark = (
-        result[result["bucket"].isin(["All 18", "All"])]
-        [["timeframe", "horizon_days", "avg_return"]]
-        .rename(columns={"avg_return": "benchmark_avg_return"})
-    )
-    result = result.merge(
-        benchmark,
-        on=["timeframe", "horizon_days"],
-        how="left",
-    )
-    result["excess_avg_return"] = (
-        result["avg_return"] - result["benchmark_avg_return"]
-    ).round(6)
     result["annualized_return"] = [
         annualize_return(row.avg_return, row.horizon_days)
         for row in result.itertuples(index=False)
     ]
-    result["benchmark_annualized_return"] = [
-        annualize_return(row.benchmark_avg_return, row.horizon_days)
-        for row in result.itertuples(index=False)
-    ]
-    result["annualized_excess_return"] = (
-        result["annualized_return"] - result["benchmark_annualized_return"]
-    ).round(6)
     return result
 
 
@@ -142,23 +120,20 @@ def build_combined_correlation_output(analysis_df):
 
 def build_weekly_top_n_output(weekly_analysis):
     output_columns = [
-        "analysis_group",
-        "test",
         "timeframe",
         "horizon_days",
         "bucket",
         "top_n",
         "observation_count",
         "avg_return",
-        "benchmark_avg_return",
-        "excess_avg_return",
         "annualized_return",
-        "benchmark_annualized_return",
-        "annualized_excess_return",
     ]
-    selection = weekly_analysis[weekly_analysis["test"] == "A1_top_n"]
+    selection = weekly_analysis[
+        (weekly_analysis["test"] == "A1_top_n")
+        & (weekly_analysis["bucket"] != "All 18")
+    ]
     return (
-        add_excess_return_columns(selection)[output_columns]
+        add_annualized_return_column(selection)[output_columns]
         .sort_values(["timeframe", "horizon_days", "top_n"])
         .reset_index(drop=True)
     )
@@ -166,8 +141,6 @@ def build_weekly_top_n_output(weekly_analysis):
 
 def build_global_top_percent_output(global_analysis):
     output_columns = [
-        "analysis_group",
-        "test",
         "timeframe",
         "horizon_days",
         "bucket",
@@ -175,21 +148,74 @@ def build_global_top_percent_output(global_analysis):
         "min_score",
         "observation_count",
         "avg_return",
-        "benchmark_avg_return",
-        "excess_avg_return",
         "annualized_return",
-        "benchmark_annualized_return",
-        "annualized_excess_return",
     ]
-    selection = global_analysis[global_analysis["test"] == "B1_top_percent"]
+    selection = global_analysis[
+        (global_analysis["test"] == "B1_top_percent")
+        & (global_analysis["bucket"] != "All")
+    ]
     return (
-        add_excess_return_columns(selection)[output_columns]
+        add_annualized_return_column(selection)[output_columns]
         .sort_values(["timeframe", "horizon_days", "top_percent"])
         .reset_index(drop=True)
     )
 
 
-def save_analysis_outputs(weekly_analysis, global_analysis, output_dir):
+def build_weekly_bucket_output(weekly_bucket_analysis):
+    output_columns = [
+        "timeframe",
+        "horizon_days",
+        "bucket",
+        "bucket_start_rank",
+        "bucket_end_rank",
+        "avg_score_min",
+        "avg_score_max",
+        "observation_count",
+        "avg_return",
+        "annualized_return",
+    ]
+
+    if weekly_bucket_analysis.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    return (
+        add_annualized_return_column(weekly_bucket_analysis)[output_columns]
+        .sort_values(["timeframe", "horizon_days", "bucket_start_rank"])
+        .reset_index(drop=True)
+    )
+
+
+def build_global_score_bucket_output(global_score_bucket_analysis):
+    output_columns = [
+        "timeframe",
+        "horizon_days",
+        "bucket",
+        "bucket_start_percent",
+        "bucket_end_percent",
+        "min_score",
+        "max_score",
+        "observation_count",
+        "avg_return",
+        "annualized_return",
+    ]
+
+    if global_score_bucket_analysis.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    return (
+        add_annualized_return_column(global_score_bucket_analysis)[output_columns]
+        .sort_values(["timeframe", "horizon_days", "bucket_start_percent"])
+        .reset_index(drop=True)
+    )
+
+
+def save_analysis_outputs(
+    weekly_analysis,
+    global_analysis,
+    weekly_bucket_analysis,
+    global_score_bucket_analysis,
+    output_dir,
+):
     output_files = []
 
     weekly_correlation_path = output_dir / "weekly_correlation_analysis.csv"
@@ -206,11 +232,21 @@ def save_analysis_outputs(weekly_analysis, global_analysis, output_dir):
 
     weekly_top_n_path = output_dir / "weekly_top_n_return_analysis.csv"
     global_top_percent_path = output_dir / "global_top_percent_return_analysis.csv"
+    weekly_bucket_path = output_dir / "weekly_rank_bucket_return_analysis.csv"
+    global_score_bucket_path = output_dir / "global_score_bucket_return_analysis.csv"
 
     save_csv_for_excel(build_weekly_top_n_output(weekly_analysis), weekly_top_n_path)
     save_csv_for_excel(
         build_global_top_percent_output(global_analysis),
         global_top_percent_path,
+    )
+    save_csv_for_excel(
+        build_weekly_bucket_output(weekly_bucket_analysis),
+        weekly_bucket_path,
+    )
+    save_csv_for_excel(
+        build_global_score_bucket_output(global_score_bucket_analysis),
+        global_score_bucket_path,
     )
 
     output_files.extend([
@@ -218,28 +254,19 @@ def save_analysis_outputs(weekly_analysis, global_analysis, output_dir):
         global_correlation_path,
         weekly_top_n_path,
         global_top_percent_path,
+        weekly_bucket_path,
+        global_score_bucket_path,
     ])
     return output_files
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Generate focused score tests into data/CROSS_SECTION/score_tests."
-    )
-    parser.add_argument(
-        "--end-time",
-        required=True,
-        help="Last date included in return calculations, for example 2026-06-10.",
-    )
-    return parser.parse_args()
-
-
 def main():
-    args = parse_args()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     data = load_json(INPUT_FILE)
     raw_df = build_dataframe(data, EQUAL_WEIGHT_SCORE_COLUMN)
+
+    print(1)
 
     if raw_df.empty:
         print("[EMPTY] No observations found.")
@@ -251,42 +278,62 @@ def main():
     )
     weekly_score_df = add_weekly_score_metrics(weekly_score_df)
 
+    print(2)
+
     if weekly_score_df.empty:
         print("[EMPTY] No weekly score observations found.")
         return
 
-    horizon_days = build_horizon_days(weekly_score_df, args.end_time)
+    score_start_time = weekly_score_df["start_timestamp"].min()
+    score_end_time = weekly_score_df["start_timestamp"].max()
+    horizon_days = build_horizon_days(weekly_score_df)
+
+    print(3)
 
     if not horizon_days:
-        print("[EMPTY] end_time must be after the first score date.")
+        print("[EMPTY] score_observations.json must contain at least two score dates.")
         return
 
     return_panel = build_return_panel(
         weekly_score_df,
         horizon_days_values=horizon_days,
-        end_time=args.end_time,
-        market_data_buffer_days=PRICE_SMOOTHING_BUFFER_DAYS,
     )
+
+    print(4)
 
     if return_panel.empty:
         print("[EMPTY] No return panel could be built from market data.")
         return
 
-    score_thresholds = build_global_score_thresholds(weekly_score_df)
     weekly_analysis = build_weekly_analysis(return_panel)
-    global_analysis = build_global_analysis(return_panel, score_thresholds)
+    global_analysis = build_global_analysis(return_panel)
+    weekly_bucket_analysis = build_weekly_bucket_analysis(return_panel)
+    global_score_bucket_analysis = build_global_score_bucket_analysis(return_panel)
+
+    print(5)
 
     clean_csv_outputs(OUTPUT_DIR)
     output_files = save_analysis_outputs(
         weekly_analysis,
         global_analysis,
+        weekly_bucket_analysis,
+        global_score_bucket_analysis,
         OUTPUT_DIR,
     )
     clean_plot_outputs(OUTPUT_DIR)
-    plot_weekly_analysis(weekly_analysis, OUTPUT_DIR)
-    plot_global_analysis(global_analysis, OUTPUT_DIR)
+    plot_weekly_analysis(
+        weekly_analysis,
+        OUTPUT_DIR,
+        weekly_bucket_analysis=weekly_bucket_analysis,
+    )
+    plot_global_analysis(
+        global_analysis,
+        OUTPUT_DIR,
+        global_score_bucket_analysis=global_score_bucket_analysis,
+    )
 
     print("[OK] Saved focused weekly/global analysis:")
+    print(f"Score date range: {score_start_time} -> {score_end_time}")
     for output_file in output_files:
         print(output_file)
 
