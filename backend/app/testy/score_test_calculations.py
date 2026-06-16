@@ -10,9 +10,13 @@ from market_return_lookup import (
 
 TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
+
+punkty = np.linspace(0, 100, 19)
+
+
 GLOBAL_SCORE_BUCKETS = [
-    (start, start + 10)
-    for start in range(0, 100, 10)
+    (punkty[i], punkty[i+1])
+    for i in range(len(punkty)-1)
 ]
 PRICE_WINDOW_SHARE_OF_HORIZON = 0.42
 
@@ -256,7 +260,7 @@ def build_weekly_analysis(return_panel, top_n_values=TOP_N_VALUES):
     return pd.DataFrame(rows)
 
 
-def build_weekly_bucket_analysis(return_panel, bucket_size=2):
+def build_weekly_bucket_analysis(return_panel, bucket_size=1):
     rows = []
 
     if return_panel.empty:
@@ -419,10 +423,23 @@ def build_global_analysis(
                 "pearson": None,
             })
 
+        global_metric_group = horizon_group.copy()
+        global_metric_group["global_score_percentile"] = (
+            global_metric_group["score"].rank(pct=True, method="average")
+        )
+        global_score_std = global_metric_group["score"].std(ddof=0)
+        global_metric_group["global_score_zscore"] = (
+            0.0
+            if global_score_std == 0 or pd.isna(global_score_std)
+            else (
+                global_metric_group["score"] - global_metric_group["score"].mean()
+            ) / global_score_std
+        )
+
         for metric_column, metric_label in [
             ("score", "score"),
-            ("score_percentile", "percentile"),
-            ("score_zscore", "z_score"),
+            ("global_score_percentile", "percentile"),
+            ("global_score_zscore", "z_score"),
         ]:
             rows.append({
                 "analysis_group": "B_global",
@@ -433,9 +450,9 @@ def build_global_analysis(
                 "bucket": "All",
                 "top_percent": None,
                 "min_score": None,
-                "observation_count": int(len(horizon_group.dropna(subset=[metric_column, "future_return"]))),
+                "observation_count": int(len(global_metric_group.dropna(subset=[metric_column, "future_return"]))),
                 "avg_return": None,
-                "pearson": _pearson_or_none(horizon_group, metric_column),
+                "pearson": _pearson_or_none(global_metric_group, metric_column),
             })
 
     return pd.DataFrame(rows)
