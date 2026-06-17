@@ -21,6 +21,7 @@ from score_test_calculations import (
     add_weekly_score_metrics,
     build_horizon_days,
     build_global_score_bucket_analysis,
+    build_weekly_fractional_top_analysis,
     build_timeframe_score_observations,
     build_global_analysis,
     build_return_panel,
@@ -37,6 +38,14 @@ INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
 OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
+
+ENABLED_TESTS = {
+    "A1_A2_weekly_top_n_and_correlation": True,
+    "A3_weekly_rank_buckets": True,
+    "A4_weekly_fractional_top_percent_ttest": True,
+    "B1_B2_global_top_percent_and_correlation": True,
+    "B3_global_score_buckets": True,
+}
 
 
 def annualize_return(total_return, horizon_days):
@@ -100,6 +109,10 @@ def build_correlation_output(analysis_df, metric):
         "observation_count",
         "pearson",
     ]
+
+    if analysis_df.empty or not set([*output_columns, "test"]).issubset(analysis_df.columns):
+        return pd.DataFrame(columns=output_columns)
+
     return (
         analysis_df[
             (analysis_df["metric"] == metric)
@@ -128,6 +141,11 @@ def build_weekly_top_n_output(weekly_analysis):
         "avg_return",
         "annualized_return",
     ]
+
+    required_columns = set(output_columns) - {"annualized_return"}
+    if weekly_analysis.empty or not set([*required_columns, "test"]).issubset(weekly_analysis.columns):
+        return pd.DataFrame(columns=output_columns)
+
     selection = weekly_analysis[
         (weekly_analysis["test"] == "A1_top_n")
         & (weekly_analysis["bucket"] != "All 18")
@@ -150,6 +168,11 @@ def build_global_top_percent_output(global_analysis):
         "avg_return",
         "annualized_return",
     ]
+
+    required_columns = set(output_columns) - {"annualized_return"}
+    if global_analysis.empty or not set([*required_columns, "test"]).issubset(global_analysis.columns):
+        return pd.DataFrame(columns=output_columns)
+
     selection = global_analysis[
         (global_analysis["test"] == "B1_top_percent")
         & (global_analysis["bucket"] != "All")
@@ -185,6 +208,52 @@ def build_weekly_bucket_output(weekly_bucket_analysis):
     )
 
 
+def build_weekly_fractional_top_output(weekly_fractional_top_analysis):
+    output_columns = [
+        "timeframe",
+        "horizon_days",
+        "bucket",
+        "top_share",
+        "top_percent",
+        "avg_effective_selected_count",
+        "observation_count",
+        "avg_return",
+        "annualized_return",
+        "std_return",
+        "t_stat",
+        "p_value",
+        "avg_excess_return",
+        "std_excess_return",
+        "excess_t_stat",
+        "excess_p_value",
+        "is_best_t_stat",
+        "is_best_excess_t_stat",
+    ]
+
+    if weekly_fractional_top_analysis.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    result = add_annualized_return_column(weekly_fractional_top_analysis)
+    result["is_best_t_stat"] = False
+    result["is_best_excess_t_stat"] = False
+
+    for _, group in result.groupby(["timeframe", "horizon_days"]):
+        t_stat = pd.to_numeric(group["t_stat"], errors="coerce")
+        excess_t_stat = pd.to_numeric(group["excess_t_stat"], errors="coerce")
+
+        if not t_stat.dropna().empty:
+            result.loc[t_stat.idxmax(), "is_best_t_stat"] = True
+
+        if not excess_t_stat.dropna().empty:
+            result.loc[excess_t_stat.idxmax(), "is_best_excess_t_stat"] = True
+
+    return (
+        result[output_columns]
+        .sort_values(["timeframe", "horizon_days", "top_share"])
+        .reset_index(drop=True)
+    )
+
+
 def build_global_score_bucket_output(global_score_bucket_analysis):
     output_columns = [
         "timeframe",
@@ -213,6 +282,7 @@ def save_analysis_outputs(
     weekly_analysis,
     global_analysis,
     weekly_bucket_analysis,
+    weekly_fractional_top_analysis,
     global_score_bucket_analysis,
     output_dir,
 ):
@@ -231,11 +301,16 @@ def save_analysis_outputs(
     )
 
     weekly_top_n_path = output_dir / "weekly_top_n_return_analysis.csv"
+    weekly_fractional_top_path = output_dir / "weekly_fractional_top_ttest_analysis.csv"
     global_top_percent_path = output_dir / "global_top_percent_return_analysis.csv"
     weekly_bucket_path = output_dir / "weekly_rank_bucket_return_analysis.csv"
     global_score_bucket_path = output_dir / "global_score_bucket_return_analysis.csv"
 
     save_csv_for_excel(build_weekly_top_n_output(weekly_analysis), weekly_top_n_path)
+    save_csv_for_excel(
+        build_weekly_fractional_top_output(weekly_fractional_top_analysis),
+        weekly_fractional_top_path,
+    )
     save_csv_for_excel(
         build_global_top_percent_output(global_analysis),
         global_top_percent_path,
@@ -253,11 +328,43 @@ def save_analysis_outputs(
         weekly_correlation_path,
         global_correlation_path,
         weekly_top_n_path,
+        weekly_fractional_top_path,
         global_top_percent_path,
         weekly_bucket_path,
         global_score_bucket_path,
     ])
     return output_files
+
+
+def run_configured_score_tests(return_panel):
+    weekly_analysis = pd.DataFrame()
+    weekly_bucket_analysis = pd.DataFrame()
+    weekly_fractional_top_analysis = pd.DataFrame()
+    global_analysis = pd.DataFrame()
+    global_score_bucket_analysis = pd.DataFrame()
+
+    if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
+        weekly_analysis = build_weekly_analysis(return_panel)
+
+    if ENABLED_TESTS["A3_weekly_rank_buckets"]:
+        weekly_bucket_analysis = build_weekly_bucket_analysis(return_panel)
+
+    if ENABLED_TESTS["A4_weekly_fractional_top_percent_ttest"]:
+        weekly_fractional_top_analysis = build_weekly_fractional_top_analysis(return_panel)
+
+    if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
+        global_analysis = build_global_analysis(return_panel)
+
+    if ENABLED_TESTS["B3_global_score_buckets"]:
+        global_score_bucket_analysis = build_global_score_bucket_analysis(return_panel)
+
+    return {
+        "weekly_analysis": weekly_analysis,
+        "weekly_bucket_analysis": weekly_bucket_analysis,
+        "weekly_fractional_top_analysis": weekly_fractional_top_analysis,
+        "global_analysis": global_analysis,
+        "global_score_bucket_analysis": global_score_bucket_analysis,
+    }
 
 
 def main():
@@ -305,10 +412,12 @@ def main():
         print("[EMPTY] No return panel could be built from market data.")
         return
 
-    weekly_analysis = build_weekly_analysis(return_panel)
-    global_analysis = build_global_analysis(return_panel)
-    weekly_bucket_analysis = build_weekly_bucket_analysis(return_panel)
-    global_score_bucket_analysis = build_global_score_bucket_analysis(return_panel)
+    score_tests = run_configured_score_tests(return_panel)
+    weekly_analysis = score_tests["weekly_analysis"]
+    weekly_bucket_analysis = score_tests["weekly_bucket_analysis"]
+    weekly_fractional_top_analysis = score_tests["weekly_fractional_top_analysis"]
+    global_analysis = score_tests["global_analysis"]
+    global_score_bucket_analysis = score_tests["global_score_bucket_analysis"]
 
     print(5)
 
@@ -317,6 +426,7 @@ def main():
         weekly_analysis,
         global_analysis,
         weekly_bucket_analysis,
+        weekly_fractional_top_analysis,
         global_score_bucket_analysis,
         OUTPUT_DIR,
     )
@@ -325,6 +435,7 @@ def main():
         weekly_analysis,
         OUTPUT_DIR,
         weekly_bucket_analysis=weekly_bucket_analysis,
+        weekly_fractional_top_analysis=weekly_fractional_top_analysis,
     )
     plot_global_analysis(
         global_analysis,

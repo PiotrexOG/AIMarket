@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from scipy import stats
 
 from market_return_lookup import (
     add_current_prices,
@@ -10,6 +11,9 @@ from market_return_lookup import (
 
 TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
+FRACTIONAL_TOP_SHARE_START = 1 / 18
+FRACTIONAL_TOP_SHARE_END = 9 / 18
+FRACTIONAL_TOP_SHARE_STEP = 0.02
 
 punkty = np.linspace(0, 100, 19)
 
@@ -19,6 +23,27 @@ GLOBAL_SCORE_BUCKETS = [
     for i in range(len(punkty)-1)
 ]
 PRICE_WINDOW_SHARE_OF_HORIZON = 0.42
+
+
+def build_fractional_top_shares(
+    start=FRACTIONAL_TOP_SHARE_START,
+    end=FRACTIONAL_TOP_SHARE_END,
+    step=FRACTIONAL_TOP_SHARE_STEP,
+):
+    shares = []
+    value = start
+
+    while value <= end + 1e-12:
+        shares.append(float(value))
+        value += step
+
+    if shares and not np.isclose(shares[-1], end):
+        shares.append(float(end))
+
+    return shares
+
+
+FRACTIONAL_TOP_SHARES = build_fractional_top_shares()
 
 
 def _round_or_none(value, digits=6):
@@ -53,6 +78,51 @@ def _return_summary(df):
     return {
         "observation_count": int(len(returns)),
         "avg_return": _round_or_none(returns.mean()),
+    }
+
+
+def _one_sample_t_test_summary(df, return_column):
+    return _one_sample_t_test_values(pd.to_numeric(df[return_column], errors="coerce"))
+
+
+def _one_sample_t_test_values(values):
+    returns = pd.Series(values).dropna()
+
+    if returns.empty:
+        return {
+            "observation_count": 0,
+            "avg_return": None,
+            "std_return": None,
+            "t_stat": None,
+            "p_value": None,
+        }
+
+    avg_return = float(returns.mean())
+
+    if len(returns) < 2:
+        return {
+            "observation_count": int(len(returns)),
+            "avg_return": _round_or_none(avg_return),
+            "std_return": None,
+            "t_stat": None,
+            "p_value": None,
+        }
+
+    std_return = float(returns.std(ddof=1))
+
+    if std_return == 0 or pd.isna(std_return):
+        t_stat = 0.0 if avg_return == 0 else np.inf * np.sign(avg_return)
+        p_value = 1.0 if avg_return == 0 else 0.0
+    else:
+        t_stat = avg_return / (std_return / np.sqrt(len(returns)))
+        p_value = float(stats.t.sf(abs(t_stat), df=len(returns) - 1) * 2)
+
+    return {
+        "observation_count": int(len(returns)),
+        "avg_return": _round_or_none(avg_return),
+        "std_return": _round_or_none(std_return),
+        "t_stat": _round_or_none(t_stat),
+        "p_value": _round_or_none(p_value),
     }
 
 
@@ -255,6 +325,90 @@ def build_weekly_analysis(return_panel, top_n_values=TOP_N_VALUES):
                     if not clean_correlations
                     else _round_or_none(np.mean(clean_correlations))
                 ),
+            })
+
+    return pd.DataFrame(rows)
+
+
+def build_weekly_fractional_top_analysis(
+    return_panel,
+    top_shares=FRACTIONAL_TOP_SHARES,
+):
+    rows = []
+
+    if return_panel.empty:
+        return pd.DataFrame()
+
+    ranked = return_panel.dropna(subset=["score", "future_return"]).sort_values(
+        ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
+        ascending=[True, True, True, False, True],
+    )
+
+    for (timeframe, horizon_days), horizon_group in ranked.groupby(["timeframe", "horizon_days"]):
+        start_codes, _ = pd.factorize(horizon_group["start_timestamp"], sort=False)
+        rank_positions = (
+            horizon_group.groupby("start_timestamp").cumcount().to_numpy() + 1
+        )
+        available_counts = np.bincount(start_codes)
+        max_available_count = int(available_counts.max())
+        returns_by_rank = np.full(
+            (len(available_counts), max_available_count),
+            np.nan,
+            dtype=float,
+        )
+        returns_by_rank[start_codes, rank_positions - 1] = (
+            horizon_group["future_return"].to_numpy(dtype=float)
+        )
+        all_returns = np.nanmean(returns_by_rank, axis=1)
+        rank_numbers = np.arange(1, max_available_count + 1, dtype=float)[None, :]
+        available_counts_column = available_counts[:, None].astype(float)
+
+        for top_share in top_shares:
+            target_counts = available_counts_column * float(top_share)
+            full_counts = np.floor(target_counts)
+            fractional_counts = target_counts - full_counts
+            weights = np.where(
+                rank_numbers <= full_counts,
+                1.0,
+                np.where(rank_numbers == full_counts + 1, fractional_counts, 0.0),
+            )
+            weights = np.where(np.isnan(returns_by_rank), 0.0, weights)
+            effective_selected_counts = weights.sum(axis=1)
+            valid_rows = effective_selected_counts > 0
+            weighted_returns = np.nansum(weights * returns_by_rank, axis=1)
+            portfolio_returns = np.full(len(available_counts), np.nan, dtype=float)
+            portfolio_returns[valid_rows] = (
+                weighted_returns[valid_rows]
+                / effective_selected_counts[valid_rows]
+            )
+            excess_returns = portfolio_returns - all_returns
+
+            raw_summary = _one_sample_t_test_values(portfolio_returns)
+            excess_summary = _one_sample_t_test_values(excess_returns)
+
+            rows.append({
+                "analysis_group": "A_weekly",
+                "test": "A4_fractional_top_percent_ttest",
+                "timeframe": timeframe,
+                "horizon_days": int(horizon_days),
+                "metric": "score",
+                "bucket": f"Top {top_share:.2%}",
+                "top_share": float(top_share),
+                "top_percent": _round_or_none(top_share * 100),
+                "avg_effective_selected_count": (
+                    None
+                    if effective_selected_counts.size == 0
+                    else _round_or_none(effective_selected_counts[valid_rows].mean())
+                ),
+                "observation_count": raw_summary["observation_count"],
+                "avg_return": raw_summary["avg_return"],
+                "std_return": raw_summary["std_return"],
+                "t_stat": raw_summary["t_stat"],
+                "p_value": raw_summary["p_value"],
+                "avg_excess_return": excess_summary["avg_return"],
+                "std_excess_return": excess_summary["std_return"],
+                "excess_t_stat": excess_summary["t_stat"],
+                "excess_p_value": excess_summary["p_value"],
             })
 
     return pd.DataFrame(rows)
