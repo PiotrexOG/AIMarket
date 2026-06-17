@@ -40,11 +40,11 @@ OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": True,
-    "A3_weekly_rank_buckets": True,
+    "A1_A2_weekly_top_n_and_correlation": False,
+    "A3_weekly_rank_buckets": False,
     "A4_weekly_fractional_top_percent_ttest": True,
-    "B1_B2_global_top_percent_and_correlation": True,
-    "B3_global_score_buckets": True,
+    "B1_B2_global_top_percent_and_correlation": False,
+    "B3_global_score_buckets": False,
 }
 
 
@@ -222,12 +222,18 @@ def build_weekly_fractional_top_output(weekly_fractional_top_analysis):
         "std_return",
         "t_stat",
         "p_value",
+        "downside_deviation",
+        "sortino_stat",
         "avg_excess_return",
         "std_excess_return",
         "excess_t_stat",
         "excess_p_value",
+        "excess_downside_deviation",
+        "excess_sortino_stat",
         "is_best_t_stat",
         "is_best_excess_t_stat",
+        "is_best_sortino_stat",
+        "is_best_excess_sortino_stat",
     ]
 
     if weekly_fractional_top_analysis.empty:
@@ -236,10 +242,14 @@ def build_weekly_fractional_top_output(weekly_fractional_top_analysis):
     result = add_annualized_return_column(weekly_fractional_top_analysis)
     result["is_best_t_stat"] = False
     result["is_best_excess_t_stat"] = False
+    result["is_best_sortino_stat"] = False
+    result["is_best_excess_sortino_stat"] = False
 
     for _, group in result.groupby(["timeframe", "horizon_days"]):
         t_stat = pd.to_numeric(group["t_stat"], errors="coerce")
         excess_t_stat = pd.to_numeric(group["excess_t_stat"], errors="coerce")
+        sortino_stat = pd.to_numeric(group["sortino_stat"], errors="coerce")
+        excess_sortino_stat = pd.to_numeric(group["excess_sortino_stat"], errors="coerce")
 
         if not t_stat.dropna().empty:
             result.loc[t_stat.idxmax(), "is_best_t_stat"] = True
@@ -247,11 +257,87 @@ def build_weekly_fractional_top_output(weekly_fractional_top_analysis):
         if not excess_t_stat.dropna().empty:
             result.loc[excess_t_stat.idxmax(), "is_best_excess_t_stat"] = True
 
+        if not sortino_stat.dropna().empty:
+            result.loc[sortino_stat.idxmax(), "is_best_sortino_stat"] = True
+
+        if not excess_sortino_stat.dropna().empty:
+            result.loc[excess_sortino_stat.idxmax(), "is_best_excess_sortino_stat"] = True
+
     return (
         result[output_columns]
         .sort_values(["timeframe", "horizon_days", "top_share"])
         .reset_index(drop=True)
     )
+
+
+def build_weekly_fractional_top_t_stat_examples(weekly_fractional_top_analysis):
+    output_columns = [
+        "timeframe",
+        "horizon_days",
+        "top_percent",
+        "observation_count",
+        "avg_return",
+        "std_return",
+        "standard_error",
+        "t_stat",
+        "calculation",
+    ]
+
+    if weekly_fractional_top_analysis.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    required_columns = {
+        "timeframe",
+        "horizon_days",
+        "top_percent",
+        "observation_count",
+        "avg_return",
+        "std_return",
+        "t_stat",
+    }
+    if not required_columns.issubset(weekly_fractional_top_analysis.columns):
+        return pd.DataFrame(columns=output_columns)
+
+    examples = weekly_fractional_top_analysis.copy()
+    examples["top_percent_distance"] = examples["top_percent"].apply(
+        lambda value: min(abs(value - target) for target in [5, 20, 50, 100])
+    )
+    examples = (
+        examples.sort_values(
+            ["timeframe", "horizon_days", "top_percent_distance", "top_percent"]
+        )
+        .groupby(["timeframe", "horizon_days"], as_index=False)
+        .head(4)
+    )
+
+    rows = []
+    for row in examples.itertuples(index=False):
+        observation_count = int(row.observation_count)
+        avg_return = float(row.avg_return)
+        std_return = None if pd.isna(row.std_return) else float(row.std_return)
+        standard_error = (
+            None
+            if std_return is None or observation_count <= 0
+            else std_return / (observation_count ** 0.5)
+        )
+        calculation = (
+            "not enough data"
+            if standard_error in [None, 0]
+            else f"{avg_return:.6f} / ({std_return:.6f} / sqrt({observation_count})) = {row.t_stat:.6f}"
+        )
+        rows.append({
+            "timeframe": row.timeframe,
+            "horizon_days": int(row.horizon_days),
+            "top_percent": row.top_percent,
+            "observation_count": observation_count,
+            "avg_return": row.avg_return,
+            "std_return": row.std_return,
+            "standard_error": None if standard_error is None else round(standard_error, 6),
+            "t_stat": row.t_stat,
+            "calculation": calculation,
+        })
+
+    return pd.DataFrame(rows, columns=output_columns)
 
 
 def build_global_score_bucket_output(global_score_bucket_analysis):
@@ -302,6 +388,7 @@ def save_analysis_outputs(
 
     weekly_top_n_path = output_dir / "weekly_top_n_return_analysis.csv"
     weekly_fractional_top_path = output_dir / "weekly_fractional_top_ttest_analysis.csv"
+    weekly_fractional_top_examples_path = output_dir / "weekly_fractional_top_tstat_examples.csv"
     global_top_percent_path = output_dir / "global_top_percent_return_analysis.csv"
     weekly_bucket_path = output_dir / "weekly_rank_bucket_return_analysis.csv"
     global_score_bucket_path = output_dir / "global_score_bucket_return_analysis.csv"
@@ -310,6 +397,10 @@ def save_analysis_outputs(
     save_csv_for_excel(
         build_weekly_fractional_top_output(weekly_fractional_top_analysis),
         weekly_fractional_top_path,
+    )
+    save_csv_for_excel(
+        build_weekly_fractional_top_t_stat_examples(weekly_fractional_top_analysis),
+        weekly_fractional_top_examples_path,
     )
     save_csv_for_excel(
         build_global_top_percent_output(global_analysis),
@@ -329,6 +420,7 @@ def save_analysis_outputs(
         global_correlation_path,
         weekly_top_n_path,
         weekly_fractional_top_path,
+        weekly_fractional_top_examples_path,
         global_top_percent_path,
         weekly_bucket_path,
         global_score_bucket_path,

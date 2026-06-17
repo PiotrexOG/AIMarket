@@ -12,7 +12,7 @@ from market_return_lookup import (
 TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
 FRACTIONAL_TOP_SHARE_START = 1 / 18
-FRACTIONAL_TOP_SHARE_END = 9 / 18
+FRACTIONAL_TOP_SHARE_END = 1
 FRACTIONAL_TOP_SHARE_STEP = 0.02
 
 punkty = np.linspace(0, 100, 19)
@@ -123,6 +123,35 @@ def _one_sample_t_test_values(values):
         "std_return": _round_or_none(std_return),
         "t_stat": _round_or_none(t_stat),
         "p_value": _round_or_none(p_value),
+    }
+
+
+def _sortino_values(values, target_return=0.0):
+    returns = pd.Series(values).dropna()
+
+    if returns.empty:
+        return {
+            "downside_deviation": None,
+            "sortino_stat": None,
+        }
+
+    avg_excess_return = float(returns.mean() - target_return)
+    downside_returns = returns[returns < target_return] - target_return
+
+    if downside_returns.empty:
+        sortino_stat = 0.0 if avg_excess_return == 0 else np.inf * np.sign(avg_excess_return)
+        downside_deviation = 0.0
+    else:
+        downside_deviation = float(downside_returns.std(ddof=0))
+
+        if downside_deviation == 0 or pd.isna(downside_deviation):
+            sortino_stat = 0.0 if avg_excess_return == 0 else np.inf * np.sign(avg_excess_return)
+        else:
+            sortino_stat = avg_excess_return / downside_deviation
+
+    return {
+        "downside_deviation": _round_or_none(downside_deviation),
+        "sortino_stat": _round_or_none(sortino_stat),
     }
 
 
@@ -385,6 +414,8 @@ def build_weekly_fractional_top_analysis(
 
             raw_summary = _one_sample_t_test_values(portfolio_returns)
             excess_summary = _one_sample_t_test_values(excess_returns)
+            raw_sortino_summary = _sortino_values(portfolio_returns)
+            excess_sortino_summary = _sortino_values(excess_returns)
 
             rows.append({
                 "analysis_group": "A_weekly",
@@ -405,10 +436,14 @@ def build_weekly_fractional_top_analysis(
                 "std_return": raw_summary["std_return"],
                 "t_stat": raw_summary["t_stat"],
                 "p_value": raw_summary["p_value"],
+                "downside_deviation": raw_sortino_summary["downside_deviation"],
+                "sortino_stat": raw_sortino_summary["sortino_stat"],
                 "avg_excess_return": excess_summary["avg_return"],
                 "std_excess_return": excess_summary["std_return"],
                 "excess_t_stat": excess_summary["t_stat"],
                 "excess_p_value": excess_summary["p_value"],
+                "excess_downside_deviation": excess_sortino_summary["downside_deviation"],
+                "excess_sortino_stat": excess_sortino_summary["sortino_stat"],
             })
 
     return pd.DataFrame(rows)

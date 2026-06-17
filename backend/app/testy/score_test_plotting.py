@@ -163,27 +163,42 @@ def _plot_bucket_average(
     plt.close(fig)
 
 
-def _plot_fractional_top_t_stat_average(timeframe_data, output_dir, timeframe):
+def _plot_fractional_top_stat_average(
+    timeframe_data,
+    output_dir,
+    timeframe,
+    metric_columns,
+    title_metric,
+    ylabel,
+    legend_title,
+    filename_suffix,
+):
     clean = timeframe_data.dropna(subset=["top_percent"]).copy()
 
     if clean.empty:
         return
 
+    aggregations = {
+        column: (column, "mean")
+        for column, _ in metric_columns
+        if column in clean.columns
+    }
+
+    if not aggregations:
+        return
+
     average_data = (
         clean.groupby("top_percent", as_index=False)
-        .agg(
-            t_stat=("t_stat", "mean"),
-            excess_t_stat=("excess_t_stat", "mean"),
-        )
+        .agg(**aggregations)
         .sort_values("top_percent")
     )
 
     fig, ax = plt.subplots(figsize=(12, 7))
 
-    for column, label in [
-        ("t_stat", "raw return t-stat"),
-        ("excess_t_stat", "excess vs All 18 t-stat"),
-    ]:
+    for column, label in metric_columns:
+        if column not in average_data.columns:
+            continue
+
         group = average_data.dropna(subset=[column])
 
         if group.empty:
@@ -199,21 +214,53 @@ def _plot_fractional_top_t_stat_average(timeframe_data, output_dir, timeframe):
         )
 
     ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(f"{timeframe}: A4 mean t-stat by fractional Top M%")
+    ax.set_title(f"{timeframe}: A4 mean {title_metric} by fractional Top M%")
     ax.set_xlabel("Weekly selected top share (%)")
-    ax.set_ylabel("Mean t-stat across horizons")
+    ax.set_ylabel(ylabel)
     ax.grid(True, alpha=0.25)
-    ax.legend(title="T-test")
+    ax.legend(title=legend_title)
     fig.tight_layout()
     fig.savefig(
         plot_path(
             output_dir,
             "weekly_analysis",
-            f"{timeframe}_a4_fractional_top_t_stat_average.png",
+            f"{timeframe}_a4_fractional_top_{filename_suffix}_average.png",
         ),
         dpi=160,
     )
     plt.close(fig)
+
+
+def _plot_fractional_top_t_stat_average(timeframe_data, output_dir, timeframe):
+    _plot_fractional_top_stat_average(
+        timeframe_data,
+        output_dir,
+        timeframe,
+        [
+            ("t_stat", "raw return t-stat"),
+            ("excess_t_stat", "excess vs All 18 t-stat"),
+        ],
+        "t-stat",
+        "Mean t-stat across horizons",
+        "T-test",
+        "t_stat",
+    )
+
+
+def _plot_fractional_top_sortino_average(timeframe_data, output_dir, timeframe):
+    _plot_fractional_top_stat_average(
+        timeframe_data,
+        output_dir,
+        timeframe,
+        [
+            ("sortino_stat", "raw return Sortino"),
+            ("excess_sortino_stat", "excess vs All 18 Sortino"),
+        ],
+        "Sortino stat",
+        "Mean Sortino stat across horizons",
+        "Sortino",
+        "sortino_stat",
+    )
 
 
 def _plot_fractional_top_summary_average(
@@ -425,6 +472,7 @@ def plot_weekly_analysis(
 
     if weekly_fractional_top_analysis is not None and not weekly_fractional_top_analysis.empty:
         for timeframe, timeframe_data in weekly_fractional_top_analysis.groupby("timeframe"):
+            timeframe_data = add_annualized_return_column(timeframe_data)
             timeframe_data = limit_horizon_range(timeframe, timeframe_data)
 
             if timeframe_data.empty:
@@ -435,13 +483,18 @@ def plot_weekly_analysis(
                 output_dir,
                 timeframe,
             )
+            _plot_fractional_top_sortino_average(
+                timeframe_data,
+                output_dir,
+                timeframe,
+            )
             _plot_fractional_top_summary_average(
                 timeframe_data,
                 output_dir,
                 timeframe,
-                "avg_return",
-                "weekly return",
-                "mean_return",
+                "annualized_return",
+                "annualized weekly return",
+                "annualized_return",
                 y_formatter=mtick.PercentFormatter(1.0),
             )
             _plot_fractional_top_summary_average(
@@ -468,6 +521,22 @@ def plot_weekly_analysis(
                 "excess_t_stat",
                 "excess vs All 18 t-stat",
                 "excess_t_stat",
+            )
+            _plot_fractional_top_t_stat_heatmap(
+                timeframe_data,
+                output_dir,
+                timeframe,
+                "sortino_stat",
+                "raw return Sortino",
+                "raw_sortino_stat",
+            )
+            _plot_fractional_top_t_stat_heatmap(
+                timeframe_data,
+                output_dir,
+                timeframe,
+                "excess_sortino_stat",
+                "excess vs All 18 Sortino",
+                "excess_sortino_stat",
             )
 
     if weekly_analysis.empty:
