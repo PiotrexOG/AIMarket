@@ -21,6 +21,7 @@ from score_test_calculations import (
     add_weekly_score_metrics,
     build_horizon_days,
     build_global_score_bucket_analysis,
+    build_weekly_fractional_top_sortino_examples,
     build_weekly_fractional_top_analysis,
     build_timeframe_score_observations,
     build_global_analysis,
@@ -45,6 +46,12 @@ ENABLED_TESTS = {
     "A4_weekly_fractional_top_percent_ttest": True,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
+}
+
+ENABLED_TIMEFRAMES = {
+    "short_term_14d": False,
+    "medium_term_50d": False,
+    "long_term_200d": True,
 }
 
 
@@ -94,11 +101,27 @@ def add_annualized_return_column(selection_df):
         return selection_df
 
     result = selection_df.copy()
+    if "annualized_return" in result.columns:
+        return result
+
     result["annualized_return"] = [
         annualize_return(row.avg_return, row.horizon_days)
         for row in result.itertuples(index=False)
     ]
     return result
+
+
+def filter_enabled_timeframes(df):
+    enabled_timeframes = [
+        timeframe
+        for timeframe, is_enabled in ENABLED_TIMEFRAMES.items()
+        if is_enabled
+    ]
+
+    if not enabled_timeframes:
+        return df.iloc[0:0].copy()
+
+    return df[df["timeframe"].isin(enabled_timeframes)].copy()
 
 
 def build_correlation_output(analysis_df, metric):
@@ -219,6 +242,8 @@ def build_weekly_fractional_top_output(weekly_fractional_top_analysis):
         "observation_count",
         "avg_return",
         "annualized_return",
+        "market_annualized_return",
+        "avg_annualized_excess_return",
         "std_return",
         "t_stat",
         "p_value",
@@ -369,6 +394,7 @@ def save_analysis_outputs(
     global_analysis,
     weekly_bucket_analysis,
     weekly_fractional_top_analysis,
+    weekly_fractional_top_sortino_examples,
     global_score_bucket_analysis,
     output_dir,
 ):
@@ -389,6 +415,7 @@ def save_analysis_outputs(
     weekly_top_n_path = output_dir / "weekly_top_n_return_analysis.csv"
     weekly_fractional_top_path = output_dir / "weekly_fractional_top_ttest_analysis.csv"
     weekly_fractional_top_examples_path = output_dir / "weekly_fractional_top_tstat_examples.csv"
+    weekly_fractional_top_sortino_examples_path = output_dir / "weekly_fractional_top_sortino_examples.csv"
     global_top_percent_path = output_dir / "global_top_percent_return_analysis.csv"
     weekly_bucket_path = output_dir / "weekly_rank_bucket_return_analysis.csv"
     global_score_bucket_path = output_dir / "global_score_bucket_return_analysis.csv"
@@ -401,6 +428,10 @@ def save_analysis_outputs(
     save_csv_for_excel(
         build_weekly_fractional_top_t_stat_examples(weekly_fractional_top_analysis),
         weekly_fractional_top_examples_path,
+    )
+    save_csv_for_excel(
+        weekly_fractional_top_sortino_examples,
+        weekly_fractional_top_sortino_examples_path,
     )
     save_csv_for_excel(
         build_global_top_percent_output(global_analysis),
@@ -421,6 +452,7 @@ def save_analysis_outputs(
         weekly_top_n_path,
         weekly_fractional_top_path,
         weekly_fractional_top_examples_path,
+        weekly_fractional_top_sortino_examples_path,
         global_top_percent_path,
         weekly_bucket_path,
         global_score_bucket_path,
@@ -475,6 +507,7 @@ def main():
         raw_df,
         EQUAL_WEIGHT_SCORE_COLUMN,
     )
+    weekly_score_df = filter_enabled_timeframes(weekly_score_df)
     weekly_score_df = add_weekly_score_metrics(weekly_score_df)
 
     print(2)
@@ -510,6 +543,11 @@ def main():
     weekly_fractional_top_analysis = score_tests["weekly_fractional_top_analysis"]
     global_analysis = score_tests["global_analysis"]
     global_score_bucket_analysis = score_tests["global_score_bucket_analysis"]
+    weekly_fractional_top_sortino_examples = (
+        build_weekly_fractional_top_sortino_examples(return_panel)
+        if ENABLED_TESTS["A4_weekly_fractional_top_percent_ttest"]
+        else pd.DataFrame()
+    )
 
     print(5)
 
@@ -519,6 +557,7 @@ def main():
         global_analysis,
         weekly_bucket_analysis,
         weekly_fractional_top_analysis,
+        weekly_fractional_top_sortino_examples,
         global_score_bucket_analysis,
         OUTPUT_DIR,
     )

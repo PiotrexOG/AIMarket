@@ -38,6 +38,9 @@ def annualize_return(total_return, horizon_days):
 
 def add_annualized_return_column(df):
     result = df.copy()
+    if "annualized_return" in result.columns:
+        return result
+
     result["annualized_return"] = [
         annualize_return(row.avg_return, row.horizon_days)
         for row in result.itertuples(index=False)
@@ -253,8 +256,7 @@ def _plot_fractional_top_sortino_average(timeframe_data, output_dir, timeframe):
         output_dir,
         timeframe,
         [
-            ("sortino_stat", "raw return Sortino"),
-            ("excess_sortino_stat", "excess vs All 18 Sortino"),
+            ("excess_sortino_stat", "Sortino vs All 18"),
         ],
         "Sortino stat",
         "Mean Sortino stat across horizons",
@@ -310,75 +312,6 @@ def _plot_fractional_top_summary_average(
         dpi=160,
     )
     plt.close(fig)
-
-
-def _plot_fractional_top_t_stat_heatmap(
-    timeframe_data,
-    output_dir,
-    timeframe,
-    value_column,
-    label,
-    filename_suffix,
-):
-    clean = timeframe_data.dropna(
-        subset=["top_percent", "horizon_days", value_column]
-    ).copy()
-
-    if clean.empty:
-        return
-
-    pivot = clean.pivot_table(
-        index="horizon_days",
-        columns="top_percent",
-        values=value_column,
-        aggfunc="mean",
-    ).sort_index()
-
-    if pivot.empty:
-        return
-
-    fig, ax = plt.subplots(figsize=(12, 7))
-    values = pivot.to_numpy(dtype=float)
-    finite_values = values[np.isfinite(values)]
-    color_limit = (
-        max(abs(finite_values.min()), abs(finite_values.max()))
-        if finite_values.size
-        else 1.0
-    )
-
-    image = ax.imshow(
-        values,
-        aspect="auto",
-        cmap="RdYlGn",
-        vmin=-color_limit,
-        vmax=color_limit,
-        origin="lower",
-    )
-    ax.set_title(f"{timeframe}: A4 {label} heatmap")
-    ax.set_xlabel("Weekly selected top share (%)")
-    ax.set_ylabel("Return horizon in days")
-    ax.set_xticks(np.arange(len(pivot.columns)))
-    ax.set_xticklabels([f"{value:.1f}" for value in pivot.columns], rotation=45)
-
-    y_tick_count = min(12, len(pivot.index))
-    y_tick_positions = np.linspace(0, len(pivot.index) - 1, y_tick_count, dtype=int)
-    ax.set_yticks(y_tick_positions)
-    ax.set_yticklabels([
-        str(int(pivot.index[position]))
-        for position in y_tick_positions
-    ])
-    fig.colorbar(image, ax=ax, label=label)
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(
-            output_dir,
-            "weekly_analysis",
-            f"{timeframe}_a4_fractional_top_{filename_suffix}_heatmap.png",
-        ),
-        dpi=160,
-    )
-    plt.close(fig)
-
 
 def plot_weekly_analysis(
     weekly_analysis,
@@ -505,38 +438,6 @@ def plot_weekly_analysis(
                 "weekly return standard deviation",
                 "std_return",
                 y_formatter=mtick.PercentFormatter(1.0),
-            )
-            _plot_fractional_top_t_stat_heatmap(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "t_stat",
-                "raw return t-stat",
-                "raw_t_stat",
-            )
-            _plot_fractional_top_t_stat_heatmap(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "excess_t_stat",
-                "excess vs All 18 t-stat",
-                "excess_t_stat",
-            )
-            _plot_fractional_top_t_stat_heatmap(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "sortino_stat",
-                "raw return Sortino",
-                "raw_sortino_stat",
-            )
-            _plot_fractional_top_t_stat_heatmap(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "excess_sortino_stat",
-                "excess vs All 18 Sortino",
-                "excess_sortino_stat",
             )
 
     if weekly_analysis.empty:
