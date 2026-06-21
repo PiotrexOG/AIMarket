@@ -2,6 +2,8 @@ import matplotlib
 
 matplotlib.use("Agg")
 
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import numpy as np
@@ -33,7 +35,7 @@ def annualize_return(total_return, horizon_days):
     if total_return <= -1:
         return None
 
-    return float((1 + total_return) ** (365 / horizon_days) - 1)
+    return float((1 + total_return) ** (252 / horizon_days) - 1)
 
 
 def add_annualized_return_column(df):
@@ -166,158 +168,152 @@ def _plot_bucket_average(
     plt.close(fig)
 
 
-def _plot_fractional_top_stat_average(
-    timeframe_data,
+def _plot_relative_sortino_analysis(
+    analysis,
     output_dir,
-    timeframe,
-    metric_columns,
-    title_metric,
-    ylabel,
-    legend_title,
-    filename_suffix,
+    folder_name,
+    horizon_label,
 ):
-    clean = timeframe_data.dropna(subset=["top_percent"]).copy()
+    for timeframe, timeframe_data in analysis.groupby("timeframe"):
+        clean = timeframe_data.dropna(
+            subset=["top_percent", "relative_sortino"]
+        ).sort_values("top_percent")
 
-    if clean.empty:
-        return
-
-    aggregations = {
-        column: (column, "mean")
-        for column, _ in metric_columns
-        if column in clean.columns
-    }
-
-    if not aggregations:
-        return
-
-    average_data = (
-        clean.groupby("top_percent", as_index=False)
-        .agg(**aggregations)
-        .sort_values("top_percent")
-    )
-
-    fig, ax = plt.subplots(figsize=(12, 7))
-
-    for column, label in metric_columns:
-        if column not in average_data.columns:
+        if clean.empty:
             continue
 
-        group = average_data.dropna(subset=[column])
+        plot_directory = Path("global_analysis") / folder_name
 
-        if group.empty:
-            continue
-
+        fig, ax = plt.subplots(figsize=(12, 7))
         ax.plot(
-            group["top_percent"],
-            group[column],
+            clean["top_percent"],
+            clean["mean_annualized_strategy_return"],
             marker="o",
-            linewidth=1.8,
-            markersize=4,
-            label=label,
+            linewidth=2,
+            markersize=6,
+            color="#4C78A8",
+            label="Top M strategy",
         )
+        ax.plot(
+            clean["top_percent"],
+            clean["mean_annualized_benchmark_return"],
+            marker="o",
+            linewidth=2,
+            markersize=5,
+            color="#9C755F",
+            label="Top 100% benchmark",
+        )
+        ax.axhline(0, color="#444444", linewidth=1)
+        ax.set_title(
+            f"{timeframe}: mean annualized return by Top M, "
+            f"equal-weight horizons {horizon_label}"
+        )
+        ax.set_xlabel("Top M share (%)")
+        ax.set_ylabel("Mean annualized return")
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.grid(True, alpha=0.25)
+        ax.legend()
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                f"{timeframe}_global_mean_annualized_return.png",
+            ),
+            dpi=160,
+        )
+        plt.close(fig)
 
-    ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(f"{timeframe}: A4 mean {title_metric} by fractional Top M%")
-    ax.set_xlabel("Weekly selected top share (%)")
-    ax.set_ylabel(ylabel)
-    ax.grid(True, alpha=0.25)
-    ax.legend(title=legend_title)
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(
-            output_dir,
-            "weekly_analysis",
-            f"{timeframe}_a4_fractional_top_{filename_suffix}_average.png",
-        ),
-        dpi=160,
-    )
-    plt.close(fig)
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.plot(
+            clean["top_percent"],
+            clean["relative_downside_deviation"],
+            marker="o",
+            linewidth=2,
+            markersize=6,
+            color="#E15759",
+        )
+        ax.set_title(
+            f"{timeframe}: mean relative downside deviation by Top M, "
+            f"equal-weight horizons {horizon_label}"
+        )
+        ax.set_xlabel("Top M share (%)")
+        ax.set_ylabel("Mean relative downside deviation")
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.grid(True, alpha=0.25)
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                f"{timeframe}_global_mean_downside_deviation.png",
+            ),
+            dpi=160,
+        )
+        plt.close(fig)
 
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.plot(
+            clean["top_percent"],
+            clean["relative_sortino"],
+            marker="o",
+            linewidth=2,
+            markersize=6,
+            color="#4C78A8",
+            label="Relative Sortino",
+        )
+        plateau = clean[clean["is_stability_plateau"]]
+        if not plateau.empty:
+            ax.scatter(
+                plateau["top_percent"],
+                plateau["relative_sortino"],
+                s=90,
+                facecolors="none",
+                edgecolors="#F28E2B",
+                linewidths=2,
+                label="Stability plateau",
+                zorder=3,
+            )
+        recommendation = clean[clean["is_stable_recommendation"]]
+        if not recommendation.empty:
+            point = recommendation.iloc[0]
+            ax.scatter(
+                [point["top_percent"]],
+                [point["relative_sortino"]],
+                marker="*",
+                s=220,
+                color="#59A14F",
+                label=f"Stable recommendation: {point['top_percent']:.2f}%",
+                zorder=4,
+            )
 
-def _plot_fractional_top_t_stat_average(timeframe_data, output_dir, timeframe):
-    _plot_fractional_top_stat_average(
-        timeframe_data,
-        output_dir,
-        timeframe,
-        [
-            ("t_stat", "raw return t-stat"),
-            ("excess_t_stat", "excess vs All 18 t-stat"),
-        ],
-        "t-stat",
-        "Mean t-stat across horizons",
-        "T-test",
-        "t_stat",
-    )
+        ax.axhline(0, color="#444444", linewidth=1)
+        ax.set_title(
+            f"{timeframe}: mean relative Sortino by Top M, "
+            f"equal-weight horizons {horizon_label}"
+        )
+        ax.set_xlabel("Top M share (%)")
+        ax.set_ylabel("Relative Sortino")
+        ax.grid(True, alpha=0.25)
+        ax.legend()
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                f"{timeframe}_global_relative_sortino.png",
+            ),
+            dpi=160,
+        )
+        plt.close(fig)
 
-
-def _plot_fractional_top_sortino_average(timeframe_data, output_dir, timeframe):
-    _plot_fractional_top_stat_average(
-        timeframe_data,
-        output_dir,
-        timeframe,
-        [
-            ("excess_sortino_stat", "Sortino vs All 18"),
-        ],
-        "Sortino stat",
-        "Mean Sortino stat across horizons",
-        "Sortino",
-        "sortino_stat",
-    )
-
-
-def _plot_fractional_top_summary_average(
-    timeframe_data,
-    output_dir,
-    timeframe,
-    value_column,
-    label,
-    filename_suffix,
-    y_formatter=None,
-):
-    clean = timeframe_data.dropna(subset=["top_percent", value_column]).copy()
-
-    if clean.empty:
-        return
-
-    average_data = (
-        clean.groupby("top_percent", as_index=False)
-        .agg(value=(value_column, "mean"))
-        .sort_values("top_percent")
-    )
-
-    fig, ax = plt.subplots(figsize=(12, 7))
-    ax.plot(
-        average_data["top_percent"],
-        average_data["value"],
-        marker="o",
-        linewidth=1.8,
-        markersize=4,
-    )
-    ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(f"{timeframe}: A4 mean {label} by fractional Top M%")
-    ax.set_xlabel("Weekly selected top share (%)")
-    ax.set_ylabel(f"Mean {label} across horizons")
-
-    if y_formatter is not None:
-        ax.yaxis.set_major_formatter(y_formatter)
-
-    ax.grid(True, alpha=0.25)
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(
-            output_dir,
-            "weekly_analysis",
-            f"{timeframe}_a4_fractional_top_{filename_suffix}_average.png",
-        ),
-        dpi=160,
-    )
-    plt.close(fig)
 
 def plot_weekly_analysis(
     weekly_analysis,
     output_dir,
     weekly_bucket_analysis=None,
-    weekly_fractional_top_analysis=None,
+    global_relative_sortino_analysis=None,
+    global_relative_sortino_plot_analyses=None,
 ):
     if not weekly_analysis.empty:
         top_n_data = weekly_analysis[
@@ -403,41 +399,28 @@ def plot_weekly_analysis(
                 score_range_columns=("avg_score_min", "avg_score_max"),
             )
 
-    if weekly_fractional_top_analysis is not None and not weekly_fractional_top_analysis.empty:
-        for timeframe, timeframe_data in weekly_fractional_top_analysis.groupby("timeframe"):
-            timeframe_data = add_annualized_return_column(timeframe_data)
-            timeframe_data = limit_horizon_range(timeframe, timeframe_data)
+    plot_analyses = global_relative_sortino_plot_analyses
+    if plot_analyses is None and global_relative_sortino_analysis is not None:
+        plot_analyses = {
+            "100-300": {
+                "label": "100-300",
+                "analysis": global_relative_sortino_analysis,
+            }
+        }
 
-            if timeframe_data.empty:
+    if plot_analyses:
+        for folder_name, plot_config in plot_analyses.items():
+            analysis = plot_config["analysis"]
+            horizon_label = plot_config["label"]
+
+            if analysis is None or analysis.empty:
                 continue
 
-            _plot_fractional_top_t_stat_average(
-                timeframe_data,
+            _plot_relative_sortino_analysis(
+                analysis,
                 output_dir,
-                timeframe,
-            )
-            _plot_fractional_top_sortino_average(
-                timeframe_data,
-                output_dir,
-                timeframe,
-            )
-            _plot_fractional_top_summary_average(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "annualized_return",
-                "annualized weekly return",
-                "annualized_return",
-                y_formatter=mtick.PercentFormatter(1.0),
-            )
-            _plot_fractional_top_summary_average(
-                timeframe_data,
-                output_dir,
-                timeframe,
-                "std_return",
-                "weekly return standard deviation",
-                "std_return",
-                y_formatter=mtick.PercentFormatter(1.0),
+                folder_name,
+                horizon_label,
             )
 
     if weekly_analysis.empty:

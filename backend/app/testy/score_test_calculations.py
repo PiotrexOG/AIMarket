@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-from scipy import stats
 
 from market_return_lookup import (
     add_current_prices,
@@ -13,9 +12,11 @@ TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
 FRACTIONAL_TOP_SHARE_START = 1 / 18
 FRACTIONAL_TOP_SHARE_END = 1
-FRACTIONAL_TOP_SHARE_STEP = 0.1
-SORTINO_EXAMPLE_TARGET_TOP_PERCENTS = [5, 20, 50, 100]
-SORTINO_EXAMPLE_DOWNSIDE_ROWS = 10
+FRACTIONAL_TOP_SHARE_STEP = 0.01
+RELATIVE_SORTINO_HORIZON_START = 100
+RELATIVE_SORTINO_HORIZON_END = 300
+RELATIVE_SORTINO_ANNUALIZATION_DAYS = 252
+RELATIVE_SORTINO_PLATEAU_TOLERANCE = 0.05
 
 punkty = np.linspace(0, 100, 19)
 
@@ -52,6 +53,9 @@ def _round_or_none(value, digits=6):
     if value is None or pd.isna(value):
         return None
 
+    if np.isinf(value):
+        return float(value)
+
     return round(float(value), digits)
 
 
@@ -80,202 +84,6 @@ def _return_summary(df):
     return {
         "observation_count": int(len(returns)),
         "avg_return": _round_or_none(returns.mean()),
-    }
-
-
-def _one_sample_t_test_summary(df, return_column):
-    return _one_sample_t_test_values(pd.to_numeric(df[return_column], errors="coerce"))
-
-
-def _one_sample_t_test_values(values):
-    returns = pd.Series(values).dropna()
-
-    if returns.empty:
-        return {
-            "observation_count": 0,
-            "avg_return": None,
-            "std_return": None,
-            "t_stat": None,
-            "p_value": None,
-        }
-
-    avg_return = float(returns.mean())
-
-    if len(returns) < 2:
-        return {
-            "observation_count": int(len(returns)),
-            "avg_return": _round_or_none(avg_return),
-            "std_return": None,
-            "t_stat": None,
-            "p_value": None,
-        }
-
-    std_return = float(returns.std(ddof=1))
-
-    if std_return == 0 or pd.isna(std_return):
-        t_stat = 0.0 if avg_return == 0 else np.inf * np.sign(avg_return)
-        p_value = 1.0 if avg_return == 0 else 0.0
-    else:
-        t_stat = avg_return / (std_return / np.sqrt(len(returns)))
-        p_value = float(stats.t.sf(abs(t_stat), df=len(returns) - 1) * 2)
-
-    return {
-        "observation_count": int(len(returns)),
-        "avg_return": _round_or_none(avg_return),
-        "std_return": _round_or_none(std_return),
-        "t_stat": _round_or_none(t_stat),
-        "p_value": _round_or_none(p_value),
-    }
-
-
-def _annualize_return_values(values, horizon_days):
-    returns = pd.to_numeric(pd.Series(values), errors="coerce")
-
-    if horizon_days <= 0:
-        return pd.Series(np.nan, index=returns.index, dtype=float)
-
-    annualized = pd.Series(np.nan, index=returns.index, dtype=float)
-    valid = returns > -1
-    annualized.loc[valid] = (1 + returns.loc[valid]) ** (365 / horizon_days) - 1
-    return annualized
-
-
-def _market_relative_sortino_values(portfolio_values, market_values, horizon_days):
-    portfolio_annualized = _annualize_return_values(portfolio_values, horizon_days)
-    market_annualized = _annualize_return_values(market_values, horizon_days)
-    clean = pd.DataFrame({
-        "portfolio": portfolio_annualized,
-        "market": market_annualized,
-    }).dropna()
-
-    if clean.empty:
-        return {
-            "annualized_return": None,
-            "market_annualized_return": None,
-            "avg_annualized_excess_return": None,
-            "downside_deviation": None,
-            "sortino_stat": None,
-        }
-
-    avg_annualized_return = float(clean["portfolio"].mean())
-    market_annualized_return = float(clean["market"].mean())
-    avg_annualized_excess_return = avg_annualized_return - market_annualized_return
-    downside_returns = clean.loc[
-        clean["portfolio"] < clean["market"],
-        "portfolio",
-    ]
-    downside_market = clean.loc[
-        clean["portfolio"] < clean["market"],
-        "market",
-    ]
-    downside_deviations = downside_returns - downside_market
-
-    if downside_deviations.empty:
-        sortino_stat = (
-            0.0
-            if avg_annualized_excess_return == 0
-            else np.inf * np.sign(avg_annualized_excess_return)
-        )
-        downside_deviation = 0.0
-    else:
-        downside_deviation = float(downside_deviations.std(ddof=0))
-
-        if downside_deviation == 0 or pd.isna(downside_deviation):
-            sortino_stat = (
-                0.0
-                if avg_annualized_excess_return == 0
-                else np.inf * np.sign(avg_annualized_excess_return)
-            )
-        else:
-            sortino_stat = avg_annualized_excess_return / downside_deviation
-
-    return {
-        "annualized_return": _round_or_none(avg_annualized_return),
-        "market_annualized_return": _round_or_none(market_annualized_return),
-        "avg_annualized_excess_return": _round_or_none(avg_annualized_excess_return),
-        "downside_deviation": _round_or_none(downside_deviation),
-        "sortino_stat": _round_or_none(sortino_stat),
-    }
-
-
-def _market_relative_sortino_frame(portfolio_values, market_values, horizon_days, start_timestamps):
-    portfolio_annualized = _annualize_return_values(portfolio_values, horizon_days)
-    market_annualized = _annualize_return_values(market_values, horizon_days)
-    frame = pd.DataFrame({
-        "start_timestamp": start_timestamps,
-        "portfolio_annualized_return": portfolio_annualized,
-        "market_annualized_return": market_annualized,
-    }).dropna(subset=["portfolio_annualized_return", "market_annualized_return"])
-
-    if frame.empty:
-        frame["annualized_excess_return"] = []
-        frame["is_downside"] = []
-        frame["downside_difference"] = []
-        return frame
-
-    frame["annualized_excess_return"] = (
-        frame["portfolio_annualized_return"]
-        - frame["market_annualized_return"]
-    )
-    frame["is_downside"] = (
-        frame["portfolio_annualized_return"]
-        < frame["market_annualized_return"]
-    )
-    frame["downside_difference"] = np.where(
-        frame["is_downside"],
-        frame["annualized_excess_return"],
-        np.nan,
-    )
-    return frame
-
-
-def _market_relative_sortino_summary_from_frame(frame):
-    if frame.empty:
-        return {
-            "observation_count": 0,
-            "downside_count": 0,
-            "annualized_return": None,
-            "market_annualized_return": None,
-            "avg_annualized_excess_return": None,
-            "downside_deviation": None,
-            "sortino_stat": None,
-        }
-
-    avg_annualized_return = float(frame["portfolio_annualized_return"].mean())
-    market_annualized_return = float(frame["market_annualized_return"].mean())
-    avg_annualized_excess_return = avg_annualized_return - market_annualized_return
-    downside_differences = frame.loc[
-        frame["is_downside"],
-        "downside_difference",
-    ].dropna()
-
-    if downside_differences.empty:
-        sortino_stat = (
-            0.0
-            if avg_annualized_excess_return == 0
-            else np.inf * np.sign(avg_annualized_excess_return)
-        )
-        downside_deviation = 0.0
-    else:
-        downside_deviation = float(downside_differences.std(ddof=0))
-
-        if downside_deviation == 0 or pd.isna(downside_deviation):
-            sortino_stat = (
-                0.0
-                if avg_annualized_excess_return == 0
-                else np.inf * np.sign(avg_annualized_excess_return)
-            )
-        else:
-            sortino_stat = avg_annualized_excess_return / downside_deviation
-
-    return {
-        "observation_count": int(len(frame)),
-        "downside_count": int(len(downside_differences)),
-        "annualized_return": _round_or_none(avg_annualized_return),
-        "market_annualized_return": _round_or_none(market_annualized_return),
-        "avg_annualized_excess_return": _round_or_none(avg_annualized_excess_return),
-        "downside_deviation": _round_or_none(downside_deviation),
-        "sortino_stat": _round_or_none(sortino_stat),
     }
 
 
@@ -483,153 +291,35 @@ def build_weekly_analysis(return_panel, top_n_values=TOP_N_VALUES):
     return pd.DataFrame(rows)
 
 
-def build_weekly_fractional_top_analysis(
+def _build_global_relative_sortino_observation_frame(
     return_panel,
-    top_shares=FRACTIONAL_TOP_SHARES,
+    top_shares,
+    horizon_start,
+    horizon_end,
+    annualization_days,
 ):
-    rows = []
-
     if return_panel.empty:
         return pd.DataFrame()
 
-    ranked = return_panel.dropna(subset=["score", "future_return"]).sort_values(
-        ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
-        ascending=[True, True, True, False, True],
+    ranked = (
+        return_panel[
+            return_panel["horizon_days"].between(horizon_start, horizon_end)
+        ]
+        .dropna(subset=["score", "future_return"])
+        .sort_values(
+            ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
+            ascending=[True, True, True, False, True],
+        )
     )
 
-    for (timeframe, horizon_days), horizon_group in ranked.groupby(["timeframe", "horizon_days"]):
-        start_codes, _ = pd.factorize(horizon_group["start_timestamp"], sort=False)
-        rank_positions = (
-            horizon_group.groupby("start_timestamp").cumcount().to_numpy() + 1
-        )
-        available_counts = np.bincount(start_codes)
-        max_available_count = int(available_counts.max())
-        returns_by_rank = np.full(
-            (len(available_counts), max_available_count),
-            np.nan,
-            dtype=float,
-        )
-        returns_by_rank[start_codes, rank_positions - 1] = (
-            horizon_group["future_return"].to_numpy(dtype=float)
-        )
-        all_returns = np.nanmean(returns_by_rank, axis=1)
-        rank_numbers = np.arange(1, max_available_count + 1, dtype=float)[None, :]
-        available_counts_column = available_counts[:, None].astype(float)
+    if ranked.empty:
+        return pd.DataFrame()
 
-        for top_share in top_shares:
-            target_counts = available_counts_column * float(top_share)
-            full_counts = np.floor(target_counts)
-            fractional_counts = target_counts - full_counts
-            weights = np.where(
-                rank_numbers <= full_counts,
-                1.0,
-                np.where(rank_numbers == full_counts + 1, fractional_counts, 0.0),
-            )
-            weights = np.where(np.isnan(returns_by_rank), 0.0, weights)
-            effective_selected_counts = weights.sum(axis=1)
-            valid_rows = effective_selected_counts > 0
-            weighted_returns = np.nansum(weights * returns_by_rank, axis=1)
-            portfolio_returns = np.full(len(available_counts), np.nan, dtype=float)
-            portfolio_returns[valid_rows] = (
-                weighted_returns[valid_rows]
-                / effective_selected_counts[valid_rows]
-            )
-            excess_returns = portfolio_returns - all_returns
+    observation_frames = []
 
-            raw_summary = _one_sample_t_test_values(portfolio_returns)
-            excess_summary = _one_sample_t_test_values(excess_returns)
-            excess_sortino_summary = _market_relative_sortino_values(
-                portfolio_returns,
-                all_returns,
-                horizon_days,
-            )
-
-            rows.append({
-                "analysis_group": "A_weekly",
-                "test": "A4_fractional_top_percent_ttest",
-                "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
-                "metric": "score",
-                "bucket": f"Top {top_share:.2%}",
-                "top_share": float(top_share),
-                "top_percent": _round_or_none(top_share * 100),
-                "avg_effective_selected_count": (
-                    None
-                    if effective_selected_counts.size == 0
-                    else _round_or_none(effective_selected_counts[valid_rows].mean())
-                ),
-                "observation_count": raw_summary["observation_count"],
-                "avg_return": raw_summary["avg_return"],
-                "annualized_return": excess_sortino_summary["annualized_return"],
-                "market_annualized_return": excess_sortino_summary["market_annualized_return"],
-                "avg_annualized_excess_return": excess_sortino_summary["avg_annualized_excess_return"],
-                "std_return": raw_summary["std_return"],
-                "t_stat": raw_summary["t_stat"],
-                "p_value": raw_summary["p_value"],
-                "downside_deviation": excess_sortino_summary["downside_deviation"],
-                "sortino_stat": excess_sortino_summary["sortino_stat"],
-                "avg_excess_return": excess_summary["avg_return"],
-                "std_excess_return": excess_summary["std_return"],
-                "excess_t_stat": excess_summary["t_stat"],
-                "excess_p_value": excess_summary["p_value"],
-                "excess_downside_deviation": excess_sortino_summary["downside_deviation"],
-                "excess_sortino_stat": excess_sortino_summary["sortino_stat"],
-            })
-
-    return pd.DataFrame(rows)
-
-
-def build_weekly_fractional_top_sortino_examples(
-    return_panel,
-    top_shares=FRACTIONAL_TOP_SHARES,
-    target_top_percents=SORTINO_EXAMPLE_TARGET_TOP_PERCENTS,
-    max_downside_rows=SORTINO_EXAMPLE_DOWNSIDE_ROWS,
-):
-    output_columns = [
-        "timeframe",
-        "horizon_days",
-        "bucket",
-        "top_share",
-        "top_percent",
-        "row_type",
-        "start_timestamp",
-        "portfolio_return",
-        "market_return",
-        "portfolio_annualized_return",
-        "market_annualized_return",
-        "annualized_excess_return",
-        "is_downside",
-        "downside_difference",
-        "observation_count",
-        "downside_count",
-        "avg_annualized_top_m_return",
-        "avg_annualized_market_return",
-        "avg_annualized_excess_return",
-        "downside_deviation",
-        "sortino_stat",
-        "calculation",
-    ]
-    rows = []
-
-    if return_panel.empty:
-        return pd.DataFrame(columns=output_columns)
-
-    selected_top_shares = []
-    for target_top_percent in target_top_percents:
-        target_share = target_top_percent / 100
-        closest_share = min(
-            top_shares,
-            key=lambda top_share: abs(float(top_share) - target_share),
-        )
-        if not any(np.isclose(closest_share, existing) for existing in selected_top_shares):
-            selected_top_shares.append(float(closest_share))
-
-    ranked = return_panel.dropna(subset=["score", "future_return"]).sort_values(
-        ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
-        ascending=[True, True, True, False, True],
-    )
-
-    for (timeframe, horizon_days), horizon_group in ranked.groupby(["timeframe", "horizon_days"]):
+    for (timeframe, horizon_days), horizon_group in ranked.groupby(
+        ["timeframe", "horizon_days"]
+    ):
         start_codes, start_timestamps = pd.factorize(
             horizon_group["start_timestamp"],
             sort=False,
@@ -647,112 +337,432 @@ def build_weekly_fractional_top_sortino_examples(
         returns_by_rank[start_codes, rank_positions - 1] = (
             horizon_group["future_return"].to_numpy(dtype=float)
         )
-        all_returns = np.nanmean(returns_by_rank, axis=1)
-        rank_numbers = np.arange(1, max_available_count + 1, dtype=float)[None, :]
+        benchmark_returns = np.nanmean(returns_by_rank, axis=1)
+        rank_numbers = np.arange(
+            1,
+            max_available_count + 1,
+            dtype=float,
+        )[None, :]
         available_counts_column = available_counts[:, None].astype(float)
 
-        for top_share in selected_top_shares:
+        for top_share in top_shares:
             target_counts = available_counts_column * float(top_share)
             full_counts = np.floor(target_counts)
             fractional_counts = target_counts - full_counts
             weights = np.where(
                 rank_numbers <= full_counts,
                 1.0,
-                np.where(rank_numbers == full_counts + 1, fractional_counts, 0.0),
+                np.where(
+                    rank_numbers == full_counts + 1,
+                    fractional_counts,
+                    0.0,
+                ),
             )
             weights = np.where(np.isnan(returns_by_rank), 0.0, weights)
             effective_selected_counts = weights.sum(axis=1)
-            valid_rows = effective_selected_counts > 0
+            valid_selection = effective_selected_counts > 0
             weighted_returns = np.nansum(weights * returns_by_rank, axis=1)
-            portfolio_returns = np.full(len(available_counts), np.nan, dtype=float)
-            portfolio_returns[valid_rows] = (
-                weighted_returns[valid_rows]
-                / effective_selected_counts[valid_rows]
+            strategy_returns = np.full(len(available_counts), np.nan, dtype=float)
+            strategy_returns[valid_selection] = (
+                weighted_returns[valid_selection]
+                / effective_selected_counts[valid_selection]
+            )
+            valid_returns = (
+                np.isfinite(strategy_returns)
+                & np.isfinite(benchmark_returns)
+                & (strategy_returns > -1)
+                & (benchmark_returns > -1)
             )
 
-            sortino_frame = _market_relative_sortino_frame(
-                portfolio_returns,
-                all_returns,
-                horizon_days,
-                start_timestamps,
-            )
-            sortino_frame["portfolio_return"] = (
-                pd.Series(portfolio_returns)
-                .reindex(sortino_frame.index)
-                .to_numpy()
-            )
-            sortino_frame["market_return"] = (
-                pd.Series(all_returns)
-                .reindex(sortino_frame.index)
-                .to_numpy()
-            )
-            sortino_summary = _market_relative_sortino_summary_from_frame(sortino_frame)
-            top_percent = _round_or_none(top_share * 100)
-            bucket = f"Top {top_share:.2%}"
-            calculation = (
-                "not enough data"
-                if sortino_summary["downside_deviation"] in [None, 0]
-                else (
-                    f"({sortino_summary['annualized_return']:.6f} - "
-                    f"{sortino_summary['market_annualized_return']:.6f}) / "
-                    f"{sortino_summary['downside_deviation']:.6f} = "
-                    f"{sortino_summary['sortino_stat']:.6f}"
-                )
-            )
+            if not valid_returns.any():
+                continue
 
-            rows.append({
+            strategy_annualized = (
+                (1 + strategy_returns[valid_returns])
+                ** (annualization_days / horizon_days)
+                - 1
+            )
+            benchmark_annualized = (
+                (1 + benchmark_returns[valid_returns])
+                ** (annualization_days / horizon_days)
+                - 1
+            )
+            annualized_alpha = strategy_annualized - benchmark_annualized
+            observation_frames.append(pd.DataFrame({
                 "timeframe": timeframe,
                 "horizon_days": int(horizon_days),
-                "bucket": bucket,
+                "start_timestamp": pd.to_datetime(
+                    np.asarray(start_timestamps)[valid_returns]
+                ),
                 "top_share": float(top_share),
-                "top_percent": top_percent,
-                "row_type": "summary",
-                "start_timestamp": None,
-                "portfolio_return": None,
-                "market_return": None,
-                "portfolio_annualized_return": None,
-                "market_annualized_return": None,
-                "annualized_excess_return": None,
-                "is_downside": None,
-                "downside_difference": None,
-                **sortino_summary,
-                "avg_annualized_top_m_return": sortino_summary["annualized_return"],
-                "avg_annualized_market_return": sortino_summary["market_annualized_return"],
-                "calculation": calculation,
-            })
+                "top_percent": _round_or_none(top_share * 100),
+                "available_count": available_counts[valid_returns].astype(int),
+                "effective_selected_count": (
+                    effective_selected_counts[valid_returns]
+                ),
+                "strategy_return": strategy_returns[valid_returns],
+                "strategy_annualized": strategy_annualized,
+                "benchmark_return": benchmark_returns[valid_returns],
+                "benchmark_annualized": benchmark_annualized,
+                "annualized_alpha": annualized_alpha,
+                "is_downside": annualized_alpha < 0,
+                "downside_alpha": np.minimum(0.0, annualized_alpha),
+            }))
 
-            downside_examples = (
-                sortino_frame[sortino_frame["is_downside"]]
-                .sort_values("downside_difference")
-                .head(max_downside_rows)
-            )
-            for _, downside_row in downside_examples.iterrows():
-                rows.append({
-                    "timeframe": timeframe,
-                    "horizon_days": int(horizon_days),
-                    "bucket": bucket,
-                    "top_share": float(top_share),
-                    "top_percent": top_percent,
-                    "row_type": "downside_observation",
-                    "start_timestamp": downside_row["start_timestamp"],
-                    "portfolio_return": _round_or_none(downside_row["portfolio_return"]),
-                    "market_return": _round_or_none(downside_row["market_return"]),
-                    "portfolio_annualized_return": _round_or_none(downside_row["portfolio_annualized_return"]),
-                    "market_annualized_return": _round_or_none(downside_row["market_annualized_return"]),
-                    "annualized_excess_return": _round_or_none(downside_row["annualized_excess_return"]),
-                    "is_downside": bool(downside_row["is_downside"]),
-                    "downside_difference": _round_or_none(downside_row["downside_difference"]),
-                    "observation_count": sortino_summary["observation_count"],
-                    "downside_count": sortino_summary["downside_count"],
-                    "avg_annualized_top_m_return": sortino_summary["annualized_return"],
-                    "avg_annualized_market_return": sortino_summary["market_annualized_return"],
-                    "avg_annualized_excess_return": sortino_summary["avg_annualized_excess_return"],
-                    "downside_deviation": sortino_summary["downside_deviation"],
-                    "sortino_stat": sortino_summary["sortino_stat"],
-                    "calculation": "included in downside deviation because Top M annualized return < All 18 annualized return",
-                })
+    if not observation_frames:
+        return pd.DataFrame()
 
-    return pd.DataFrame(rows, columns=output_columns)
+    return pd.concat(observation_frames, ignore_index=True)
+
+
+def _summarize_relative_sortino_group(group):
+    annualized_alpha = group["annualized_alpha"].to_numpy(dtype=float)
+    downside_alpha = np.minimum(0.0, annualized_alpha)
+    mean_alpha = float(annualized_alpha.mean())
+    downside_deviation = float(np.sqrt(np.mean(np.square(downside_alpha))))
+
+    if downside_deviation == 0:
+        relative_sortino = (
+            0.0
+            if mean_alpha == 0
+            else np.inf * np.sign(mean_alpha)
+        )
+    else:
+        relative_sortino = mean_alpha / downside_deviation
+
+    return {
+        "observation_count": int(len(group)),
+        "downside_count": int((annualized_alpha < 0).sum()),
+        "downside_frequency": float((annualized_alpha < 0).mean()),
+        "mean_strategy_return": float(group["strategy_return"].mean()),
+        "mean_annualized_strategy_return": float(
+            group["strategy_annualized"].mean()
+        ),
+        "mean_benchmark_return": float(group["benchmark_return"].mean()),
+        "mean_annualized_benchmark_return": float(
+            group["benchmark_annualized"].mean()
+        ),
+        "mean_annualized_alpha": mean_alpha,
+        "relative_downside_deviation": downside_deviation,
+        "relative_sortino": relative_sortino,
+    }
+
+
+def _build_global_relative_sortino_by_horizon_frame(
+    return_panel,
+    top_shares=FRACTIONAL_TOP_SHARES,
+    horizon_start=RELATIVE_SORTINO_HORIZON_START,
+    horizon_end=RELATIVE_SORTINO_HORIZON_END,
+    annualization_days=RELATIVE_SORTINO_ANNUALIZATION_DAYS,
+):
+    output_columns = [
+        "timeframe",
+        "horizon_days",
+        "annualization_days",
+        "top_share",
+        "top_percent",
+        "observation_count",
+        "downside_count",
+        "downside_frequency",
+        "mean_strategy_return",
+        "mean_annualized_strategy_return",
+        "mean_benchmark_return",
+        "mean_annualized_benchmark_return",
+        "mean_annualized_alpha",
+        "relative_downside_deviation",
+        "relative_sortino",
+    ]
+    observations = _build_global_relative_sortino_observation_frame(
+        return_panel,
+        top_shares=top_shares,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+        annualization_days=annualization_days,
+    )
+
+    if observations.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    rows = []
+    for (timeframe, horizon_days, top_share), group in observations.groupby(
+        ["timeframe", "horizon_days", "top_share"],
+        sort=False,
+    ):
+        summary = _summarize_relative_sortino_group(group)
+        rows.append({
+            "timeframe": timeframe,
+            "horizon_days": int(horizon_days),
+            "annualization_days": int(annualization_days),
+            "top_share": float(top_share),
+            "top_percent": float(top_share * 100),
+            **summary,
+        })
+
+    return (
+        pd.DataFrame(rows, columns=output_columns)
+        .sort_values(["timeframe", "top_share", "horizon_days"])
+        .reset_index(drop=True)
+    )
+
+
+def build_global_relative_sortino_by_horizon(
+    return_panel,
+    top_shares=FRACTIONAL_TOP_SHARES,
+    horizon_start=RELATIVE_SORTINO_HORIZON_START,
+    horizon_end=RELATIVE_SORTINO_HORIZON_END,
+    annualization_days=RELATIVE_SORTINO_ANNUALIZATION_DAYS,
+):
+    result = _build_global_relative_sortino_by_horizon_frame(
+        return_panel,
+        top_shares=top_shares,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+        annualization_days=annualization_days,
+    )
+
+    if result.empty:
+        return result
+
+    rounded = result.copy()
+    for column in rounded.columns:
+        if column not in {
+            "timeframe",
+            "horizon_days",
+            "annualization_days",
+            "observation_count",
+            "downside_count",
+        }:
+            rounded[column] = rounded[column].round(6)
+    return rounded
+
+
+def build_global_relative_sortino_analysis(
+    return_panel,
+    top_shares=FRACTIONAL_TOP_SHARES,
+    horizon_start=RELATIVE_SORTINO_HORIZON_START,
+    horizon_end=RELATIVE_SORTINO_HORIZON_END,
+    annualization_days=RELATIVE_SORTINO_ANNUALIZATION_DAYS,
+    plateau_tolerance=RELATIVE_SORTINO_PLATEAU_TOLERANCE,
+):
+    output_columns = [
+        "timeframe",
+        "horizon_start",
+        "horizon_end",
+        "horizon_count",
+        "annualization_days",
+        "aggregation_method",
+        "top_share",
+        "top_percent",
+        "observation_count",
+        "downside_count",
+        "downside_frequency",
+        "mean_strategy_return",
+        "mean_annualized_strategy_return",
+        "mean_benchmark_return",
+        "mean_annualized_benchmark_return",
+        "mean_annualized_alpha",
+        "relative_downside_deviation",
+        "relative_sortino",
+        "neighbor_mean_sortino",
+        "is_max_sortino",
+        "is_stability_plateau",
+        "is_stable_recommendation",
+    ]
+
+    by_horizon = _build_global_relative_sortino_by_horizon_frame(
+        return_panel,
+        top_shares=top_shares,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+        annualization_days=annualization_days,
+    )
+
+    if by_horizon.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    rows = []
+
+    for (timeframe, top_share), group in by_horizon.groupby(
+        ["timeframe", "top_share"],
+        sort=False,
+    ):
+        rows.append({
+            "timeframe": timeframe,
+            "horizon_start": int(horizon_start),
+            "horizon_end": int(horizon_end),
+            "horizon_count": int(group["horizon_days"].nunique()),
+            "annualization_days": int(annualization_days),
+            "aggregation_method": "equal_weight_mean_across_horizons",
+            "top_share": float(top_share),
+            "top_percent": _round_or_none(top_share * 100),
+            "observation_count": int(group["observation_count"].sum()),
+            "downside_count": int(group["downside_count"].sum()),
+            "downside_frequency": _round_or_none(
+                group["downside_frequency"].mean()
+            ),
+            "mean_strategy_return": _round_or_none(
+                group["mean_strategy_return"].mean()
+            ),
+            "mean_annualized_strategy_return": _round_or_none(
+                group["mean_annualized_strategy_return"].mean()
+            ),
+            "mean_benchmark_return": _round_or_none(
+                group["mean_benchmark_return"].mean()
+            ),
+            "mean_annualized_benchmark_return": _round_or_none(
+                group["mean_annualized_benchmark_return"].mean()
+            ),
+            "mean_annualized_alpha": _round_or_none(
+                group["mean_annualized_alpha"].mean()
+            ),
+            "relative_downside_deviation": _round_or_none(
+                group["relative_downside_deviation"].mean()
+            ),
+            "relative_sortino": _round_or_none(
+                group["relative_sortino"].mean()
+            ),
+        })
+
+    result = pd.DataFrame(rows).sort_values(
+        ["timeframe", "top_share"]
+    ).reset_index(drop=True)
+    result["neighbor_mean_sortino"] = np.nan
+    result["is_max_sortino"] = False
+    result["is_stability_plateau"] = False
+    result["is_stable_recommendation"] = False
+
+    for _, timeframe_group in result.groupby("timeframe", sort=False):
+        finite_group = timeframe_group[
+            np.isfinite(timeframe_group["relative_sortino"])
+        ].copy()
+
+        if finite_group.empty:
+            continue
+
+        neighbor_mean = finite_group["relative_sortino"].rolling(
+            window=3,
+            center=True,
+            min_periods=2,
+        ).mean()
+        result.loc[finite_group.index, "neighbor_mean_sortino"] = (
+            neighbor_mean.round(6)
+        )
+        max_index = finite_group["relative_sortino"].idxmax()
+        max_sortino = float(finite_group.loc[max_index, "relative_sortino"])
+        plateau_margin = plateau_tolerance * max(abs(max_sortino), 1e-12)
+        plateau_mask = (
+            finite_group["relative_sortino"]
+            >= max_sortino - plateau_margin
+        )
+        plateau_indexes = finite_group.index[plateau_mask]
+
+        result.loc[max_index, "is_max_sortino"] = True
+        result.loc[plateau_indexes, "is_stability_plateau"] = True
+
+        recommendation_candidates = result.loc[plateau_indexes].dropna(
+            subset=["neighbor_mean_sortino"]
+        )
+        if recommendation_candidates.empty:
+            recommendation_index = max_index
+        else:
+            recommendation_index = recommendation_candidates[
+                "neighbor_mean_sortino"
+            ].idxmax()
+        result.loc[recommendation_index, "is_stable_recommendation"] = True
+
+    return result[output_columns]
+
+
+def build_global_relative_sortino_observations(
+    return_panel,
+    top_shares=(FRACTIONAL_TOP_SHARES[0], 1.0),
+    horizon_start=RELATIVE_SORTINO_HORIZON_START,
+    horizon_end=RELATIVE_SORTINO_HORIZON_END,
+    annualization_days=RELATIVE_SORTINO_ANNUALIZATION_DAYS,
+):
+    output_columns = [
+        "timeframe",
+        "top_share",
+        "top_percent",
+        "observation_id",
+        "start_timestamp",
+        "horizon_days",
+        "available_count",
+        "effective_selected_count",
+        "strategy_return",
+        "annualized_strategy_return",
+        "benchmark_return",
+        "annualized_benchmark_return",
+        "annualized_alpha",
+        "is_downside",
+        "downside_alpha",
+        "downside_count",
+        "downside_frequency",
+        "mean_strategy_return",
+        "mean_annualized_strategy_return",
+        "mean_benchmark_return",
+        "mean_annualized_benchmark_return",
+        "mean_annualized_alpha",
+        "relative_downside_deviation",
+    ]
+    observations = _build_global_relative_sortino_observation_frame(
+        return_panel,
+        top_shares=top_shares,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+        annualization_days=annualization_days,
+    )
+
+    if observations.empty:
+        return pd.DataFrame(columns=output_columns)
+
+    summary_columns = [
+        "timeframe",
+        "top_share",
+        "downside_count",
+        "downside_frequency",
+        "mean_strategy_return",
+        "mean_annualized_strategy_return",
+        "mean_benchmark_return",
+        "mean_annualized_benchmark_return",
+        "mean_annualized_alpha",
+        "relative_downside_deviation",
+    ]
+    summary = build_global_relative_sortino_analysis(
+        return_panel,
+        top_shares=top_shares,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+        annualization_days=annualization_days,
+    )[summary_columns]
+    result = observations.rename(columns={
+        "strategy_annualized": "annualized_strategy_return",
+        "benchmark_annualized": "annualized_benchmark_return",
+    }).merge(
+        summary,
+        on=["timeframe", "top_share"],
+        how="left",
+        validate="many_to_one",
+    )
+    result = result.sort_values(
+        ["timeframe", "top_share", "horizon_days", "start_timestamp"]
+    ).reset_index(drop=True)
+    result["observation_id"] = (
+        result.groupby(["timeframe", "top_share"]).cumcount() + 1
+    )
+
+    for column in [
+        "effective_selected_count",
+        "strategy_return",
+        "annualized_strategy_return",
+        "benchmark_return",
+        "annualized_benchmark_return",
+        "annualized_alpha",
+        "downside_alpha",
+    ]:
+        result[column] = result[column].round(6)
+
+    return result[output_columns]
 
 
 def build_weekly_bucket_analysis(return_panel, bucket_size=1):
