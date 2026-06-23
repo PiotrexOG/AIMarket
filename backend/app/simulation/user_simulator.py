@@ -8,7 +8,7 @@ from app.config.config import TICKERS
 from app.db.schemas.portfolio import PortfolioHistoryCreate, PortfolioShareCreate
 from app.simulation.portfolio import Portfolio
 from app.core import market_hours
-from app.testy.compute import data_valuation
+from app.scrappers.compute import data_valuation
 
 
 class UserSimulator:

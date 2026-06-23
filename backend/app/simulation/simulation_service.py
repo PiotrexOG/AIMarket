@@ -32,14 +32,14 @@ from app.services.portfolio_transaction_service import PortfolioTransactionServi
 from app.services.user_service import UserService
 from app.services.portfolio_service import PortfolioService, _build_portfolio_base
 from app.simulation.user_simulator import UserSimulator
-from app.testy.compute import data_fundamentals
+from app.scrappers.compute import data_fundamentals
 
-from app.testy.compute.news_score import NewsImportanceScorer
-from app.testy.scrap.analyst_grades import fetch_analyst_grades
-from app.testy.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
-import app.testy.scrap.quarterly as quarterly
-import app.testy.scrap.financial as financial
-import app.testy.scrap.earning_dates as earning_dates
+from app.scrappers.compute.news_score import NewsImportanceScorer
+from app.scrappers.scrap.analyst_grades import fetch_analyst_grades
+from app.scrappers.scrap.company_news import fetch_all_company_news, save_company_news_incremental, get_latest_datetime
+import app.scrappers.scrap.quarterly as quarterly
+import app.scrappers.scrap.financial as financial
+import app.scrappers.scrap.earning_dates as earning_dates
 
 BASE_DIR = Path(__file__).resolve().parents[2]  # backend/
 
