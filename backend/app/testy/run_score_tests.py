@@ -54,6 +54,12 @@ from score_tests.downside_information_ratio.calculation import (
 from score_tests.downside_information_ratio.plotting import (
     plot as plot_downside_information_ratio,
 )
+from score_tests.post_entry_score_path.calculation import (
+    calculate as calculate_post_entry_score_path,
+)
+from score_tests.post_entry_score_path.plotting import (
+    plot as plot_post_entry_score_path,
+)
 
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
@@ -63,11 +69,12 @@ OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": True,
-    "A3_weekly_rank_buckets": True,
-    "downside_information_ratio": True,
-    "B1_B2_global_top_percent_and_correlation": True,
-    "B3_global_score_buckets": True,
+    "A1_A2_weekly_top_n_and_correlation": False,
+    "A3_weekly_rank_buckets": False,
+    "downside_information_ratio": False,
+    "post_entry_score_path": True,
+    "B1_B2_global_top_percent_and_correlation": False,
+    "B3_global_score_buckets": False,
 }
 
 ENABLED_TIMEFRAMES = {
@@ -77,6 +84,7 @@ ENABLED_TIMEFRAMES = {
 }
 
 DOWNSIDE_INFORMATION_RATIO_HORIZON_RANGE = (100, 300)
+POST_ENTRY_SCORE_PATH_HORIZON_RANGE = (100, 300)
 
 
 def filter_enabled_timeframes(df):
@@ -101,6 +109,13 @@ def run_configured_score_tests(context):
             "by_horizon": pd.DataFrame(),
             "observations": pd.DataFrame(),
         },
+        "post_entry_score_path": {
+            "observations": pd.DataFrame(),
+            "path_points": pd.DataFrame(),
+            "correlations_by_horizon": pd.DataFrame(),
+            "horizon_average": pd.DataFrame(),
+            "bucket_summary": pd.DataFrame(),
+        },
         "b1_b2": pd.DataFrame(),
         "b3": pd.DataFrame(),
     }
@@ -118,6 +133,13 @@ def run_configured_score_tests(context):
                 horizon_end=horizon_end,
             )
         )
+    if ENABLED_TESTS["post_entry_score_path"]:
+        horizon_start, horizon_end = POST_ENTRY_SCORE_PATH_HORIZON_RANGE
+        results["post_entry_score_path"] = calculate_post_entry_score_path(
+            context,
+            horizon_start=horizon_start,
+            horizon_end=horizon_end,
+        )
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
         results["b1_b2"] = calculate_b1_b2(context)
     if ENABLED_TESTS["B3_global_score_buckets"]:
@@ -128,6 +150,7 @@ def run_configured_score_tests(context):
 
 def save_analysis_outputs(results, output_dir):
     ratio = results["downside_information_ratio"]
+    path = results["post_entry_score_path"]
     outputs = {
         "weekly_correlation_analysis.csv": build_weekly_correlation_output(
             results["a1_a2"]
@@ -141,6 +164,13 @@ def save_analysis_outputs(results, output_dir):
         "downside_information_ratio_analysis.csv": ratio["analysis"],
         "downside_information_ratio_by_horizon.csv": ratio["by_horizon"],
         "downside_information_ratio_observations.csv": ratio["observations"],
+        "post_entry_score_path_observations.csv": path["observations"],
+        "post_entry_score_path_points.csv": path["path_points"],
+        "post_entry_score_path_correlations_by_horizon.csv": (
+            path["correlations_by_horizon"]
+        ),
+        "post_entry_score_path_horizon_average.csv": path["horizon_average"],
+        "post_entry_score_path_bucket_summary.csv": path["bucket_summary"],
         "global_correlation_analysis.csv": build_global_correlation_output(
             results["b1_b2"]
         ),
@@ -169,6 +199,12 @@ def plot_analysis_outputs(results, output_dir):
     horizon_start, horizon_end = DOWNSIDE_INFORMATION_RATIO_HORIZON_RANGE
     plot_downside_information_ratio(
         results["downside_information_ratio"]["analysis"],
+        output_dir,
+        f"{horizon_start}-{horizon_end}",
+    )
+    horizon_start, horizon_end = POST_ENTRY_SCORE_PATH_HORIZON_RANGE
+    plot_post_entry_score_path(
+        results["post_entry_score_path"],
         output_dir,
         f"{horizon_start}-{horizon_end}",
     )
