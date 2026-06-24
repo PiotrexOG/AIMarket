@@ -16,10 +16,7 @@ LIVE_CORRELATION_METRICS = [
     "current_score_percentile",
     "worst_score_percentile",
     "mean_score_percentile",
-    "rolling_mean_score_percentile_20",
     "rolling_mean_score_percentile_40",
-    "ewma_score_percentile_halflife_10",
-    "ewma_score_percentile_halflife_20",
     "ewma_score_percentile_halflife_40",
 ]
 
@@ -28,10 +25,7 @@ METRIC_LABELS = {
     "current_score_percentile": "Current",
     "mean_score_percentile": "Mean score percentile",
     "worst_score_percentile": "Worst score percentile",
-    "rolling_mean_score_percentile_20": "Rolling mean 20%",
     "rolling_mean_score_percentile_40": "Rolling mean 40%",
-    "ewma_score_percentile_halflife_10": "EWMA half-life 10%",
-    "ewma_score_percentile_halflife_20": "EWMA half-life 20%",
     "ewma_score_percentile_halflife_40": "EWMA half-life 40%",
 }
 
@@ -139,7 +133,6 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
                 [f"{value}%" for value in range(5, 101, 5)],
                 rotation=45,
             )
-            ax.set_ylim(0, 1)
             ax.grid(True, alpha=0.25)
             ax.legend(fontsize=8, ncol=2)
 

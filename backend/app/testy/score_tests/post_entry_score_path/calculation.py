@@ -22,10 +22,7 @@ LIVE_CORRELATION_METRICS = [
     "current_score_percentile",
     "worst_score_percentile",
     "mean_score_percentile",
-    "rolling_mean_score_percentile_20",
     "rolling_mean_score_percentile_40",
-    "ewma_score_percentile_halflife_10",
-    "ewma_score_percentile_halflife_20",
     "ewma_score_percentile_halflife_40",
 ]
 
