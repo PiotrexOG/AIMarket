@@ -6,13 +6,12 @@ TRADING_DAYS_PER_YEAR = 252
 
 def annualize_return(
     total_return,
-    horizon_days,
-    annualization_days=TRADING_DAYS_PER_YEAR,
+    horizon_days
 ):
     """Annualize scalar or array-like total returns for a given horizon."""
     try:
         horizon_days = float(horizon_days)
-        annualization_days = float(annualization_days)
+        annualization_days = float(TRADING_DAYS_PER_YEAR)
         returns = np.asarray(total_return, dtype=float)
     except (TypeError, ValueError):
         return None

@@ -8,8 +8,6 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-DEFAULT_HORIZON_START = 195
-DEFAULT_HORIZON_END = 205
 ENTRY_TOP_N = 1
 PROGRESS_PERCENTAGES = tuple(range(5, 101, 5))
 
@@ -26,8 +24,8 @@ LIVE_CORRELATION_METRICS = [
     "ewma_score_percentile_halflife_40",
 ]
 
-ROLLING_WINDOW_SHARES = (0.20, 0.40)
-EWMA_HALFLIFE_SHARES = (0.10, 0.20, 0.40)
+ROLLING_WINDOW_SHARES = (0.40)
+EWMA_HALFLIFE_SHARES = (0.40)
 
 
 def _weighted_mean(values, weights):
@@ -108,8 +106,7 @@ def _prepare_score_history(return_panel):
 def _prepare_top_entry_observations(
     return_panel,
     horizon_start,
-    horizon_end,
-    annualization_days,
+    horizon_end
 ):
     if return_panel.empty:
         return pd.DataFrame()
@@ -136,9 +133,8 @@ def _prepare_top_entry_observations(
         ["timeframe", "horizon_days", "start_timestamp"]
     )["ticker"].transform("count")
     ranked = ranked[ranked["entry_rank_position"] <= ENTRY_TOP_N].copy()
-    ranked["annualization_days"] = int(annualization_days)
     ranked["annualized_return"] = [
-        annualize_return(total_return, horizon_days, annualization_days)
+        annualize_return(total_return, horizon_days)
         for total_return, horizon_days in zip(
             ranked["future_return"],
             ranked["horizon_days"],
@@ -195,7 +191,6 @@ def _summarize_entry_path(entry, path):
     row = {
         "timeframe": entry["timeframe"],
         "horizon_days": horizon_days,
-        "annualization_days": int(entry["annualization_days"]),
         "observation_id": int(entry["observation_id"]),
         "start_timestamp": entry["start_timestamp"],
         "future_timestamp": entry["future_timestamp"],
@@ -501,7 +496,6 @@ def _round_numeric_columns(df):
     for column in result.select_dtypes(include=[np.number]).columns:
         if column not in {
             "horizon_days",
-            "annualization_days",
             "observation_id",
             "entry_rank_position",
             "entry_available_count",
@@ -515,16 +509,14 @@ def _round_numeric_columns(df):
 
 def calculate(
     context,
-    horizon_start=DEFAULT_HORIZON_START,
-    horizon_end=DEFAULT_HORIZON_END,
-    annualization_days=TRADING_DAYS_PER_YEAR,
+    horizon_start,
+    horizon_end
 ):
     history = _prepare_score_history(context.return_panel)
     entries = _prepare_top_entry_observations(
         context.weekly_ranked,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
-        annualization_days=annualization_days,
     )
     observations, path_points, live_progress_observations = (
         _build_observations_and_paths(entries, history)

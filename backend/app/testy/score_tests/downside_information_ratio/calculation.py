@@ -40,7 +40,6 @@ def _build_downside_information_ratio_observation_frame(
     top_shares,
     horizon_start,
     horizon_end,
-    annualization_days,
     already_ranked=False,
 ):
     if return_panel.empty:
@@ -125,13 +124,11 @@ def _build_downside_information_ratio_observation_frame(
 
             strategy_annualized = annualize_return(
                 strategy_returns[valid_returns],
-                horizon_days,
-                annualization_days,
+                horizon_days
             )
             benchmark_annualized = annualize_return(
                 benchmark_returns[valid_returns],
-                horizon_days,
-                annualization_days,
+                horizon_days
             )
             annualized_alpha = strategy_annualized - benchmark_annualized
             observation_frames.append(pd.DataFrame({
@@ -199,13 +196,11 @@ def _build_downside_information_ratio_by_horizon_frame(
     horizon_start,
     horizon_end,
     top_shares=FRACTIONAL_TOP_SHARES,
-    annualization_days=TRADING_DAYS_PER_YEAR,
     observations=None,
 ):
     output_columns = [
         "timeframe",
         "horizon_days",
-        "annualization_days",
         "top_share",
         "top_percent",
         "observation_count",
@@ -224,8 +219,7 @@ def _build_downside_information_ratio_by_horizon_frame(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end,
-            annualization_days=annualization_days,
+            horizon_end=horizon_end
         )
 
     if observations.empty:
@@ -240,7 +234,6 @@ def _build_downside_information_ratio_by_horizon_frame(
         rows.append({
             "timeframe": timeframe,
             "horizon_days": int(horizon_days),
-            "annualization_days": int(annualization_days),
             "top_share": float(top_share),
             "top_percent": float(top_share * 100),
             **summary,
@@ -258,7 +251,6 @@ def build_downside_information_ratio_by_horizon(
     horizon_start,
     horizon_end,
     top_shares=FRACTIONAL_TOP_SHARES,
-    annualization_days=TRADING_DAYS_PER_YEAR,
     observations=None,
 ):
     result = _build_downside_information_ratio_by_horizon_frame(
@@ -266,7 +258,6 @@ def build_downside_information_ratio_by_horizon(
         top_shares=top_shares,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
-        annualization_days=annualization_days,
         observations=observations,
     )
 
@@ -278,7 +269,6 @@ def build_downside_information_ratio_by_horizon(
         if column not in {
             "timeframe",
             "horizon_days",
-            "annualization_days",
             "observation_count",
             "downside_count",
         }:
@@ -291,7 +281,6 @@ def build_downside_information_ratio_analysis(
     horizon_start,
     horizon_end,
     top_shares=FRACTIONAL_TOP_SHARES,
-    annualization_days=TRADING_DAYS_PER_YEAR,
     plateau_tolerance=PLATEAU_TOLERANCE,
     by_horizon=None,
 ):
@@ -300,7 +289,6 @@ def build_downside_information_ratio_analysis(
         "horizon_start",
         "horizon_end",
         "horizon_count",
-        "annualization_days",
         "aggregation_method",
         "top_share",
         "top_percent",
@@ -325,8 +313,7 @@ def build_downside_information_ratio_analysis(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end,
-            annualization_days=annualization_days,
+            horizon_end=horizon_end
         )
 
     if by_horizon.empty:
@@ -343,7 +330,6 @@ def build_downside_information_ratio_analysis(
             "horizon_start": int(horizon_start),
             "horizon_end": int(horizon_end),
             "horizon_count": int(group["horizon_days"].nunique()),
-            "annualization_days": int(annualization_days),
             "aggregation_method": "equal_weight_mean_across_horizons",
             "top_share": float(top_share),
             "top_percent": round_or_none(top_share * 100),
@@ -432,7 +418,6 @@ def build_downside_information_ratio_observations(
     horizon_start,
     horizon_end,
     top_shares=(FRACTIONAL_TOP_SHARES[0], 1.0),
-    annualization_days=TRADING_DAYS_PER_YEAR,
     observations=None,
     summary=None,
 ):
@@ -466,8 +451,7 @@ def build_downside_information_ratio_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end,
-            annualization_days=annualization_days,
+            horizon_end=horizon_end
         )
 
     if observations.empty:
@@ -490,8 +474,7 @@ def build_downside_information_ratio_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end,
-            annualization_days=annualization_days,
+            horizon_end=horizon_end
         )
     summary = summary[summary_columns]
     result = observations.rename(columns={
@@ -531,7 +514,6 @@ def calculate(context, horizon_start, horizon_end):
         top_shares=FRACTIONAL_TOP_SHARES,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
-        annualization_days=TRADING_DAYS_PER_YEAR,
         already_ranked=True,
     )
     if raw_observations.empty:
