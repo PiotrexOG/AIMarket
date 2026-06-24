@@ -114,7 +114,9 @@ def run_configured_score_tests(context):
             "path_points": pd.DataFrame(),
             "correlations_by_horizon": pd.DataFrame(),
             "horizon_average": pd.DataFrame(),
-            "bucket_summary": pd.DataFrame(),
+            "live_progress_observations": pd.DataFrame(),
+            "live_progress_correlations_by_horizon": pd.DataFrame(),
+            "live_progress_average": pd.DataFrame(),
         },
         "b1_b2": pd.DataFrame(),
         "b3": pd.DataFrame(),
@@ -170,7 +172,15 @@ def save_analysis_outputs(results, output_dir):
             path["correlations_by_horizon"]
         ),
         "post_entry_score_path_horizon_average.csv": path["horizon_average"],
-        "post_entry_score_path_bucket_summary.csv": path["bucket_summary"],
+        "post_entry_score_path_live_progress_observations.csv": (
+            path["live_progress_observations"]
+        ),
+        "post_entry_score_path_live_progress_correlations_by_horizon.csv": (
+            path["live_progress_correlations_by_horizon"]
+        ),
+        "post_entry_score_path_live_progress_average.csv": (
+            path["live_progress_average"]
+        ),
         "global_correlation_analysis.csv": build_global_correlation_output(
             results["b1_b2"]
         ),

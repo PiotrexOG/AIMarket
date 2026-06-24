@@ -11,22 +11,26 @@ from app.testy.score_tests.common.metrics import round_or_none
 DEFAULT_HORIZON_START = 195
 DEFAULT_HORIZON_END = 205
 ENTRY_TOP_N = 1
+PROGRESS_PERCENTAGES = tuple(range(5, 101, 5))
 
-TOP_THRESHOLDS = (0.50, 0.70, 0.90)
 CORRELATION_METRICS = [
-    "mean_rank_share_from_top",
-    "worst_rank_share_from_top",
     "mean_score_percentile",
     "worst_score_percentile",
-    "max_rank_share_drop_from_entry",
-    "horizon_share_score_below_entry",
-    "horizon_share_below_top_50",
-    "horizon_share_below_top_70",
-    "horizon_share_below_top_90",
-    "longest_horizon_share_below_top_50",
-    "longest_horizon_share_below_top_70",
-    "longest_horizon_share_below_top_90",
 ]
+
+LIVE_CORRELATION_METRICS = [
+    "current_score_percentile",
+    "worst_score_percentile",
+    "mean_score_percentile",
+    "rolling_mean_score_percentile_20",
+    "rolling_mean_score_percentile_40",
+    "ewma_score_percentile_halflife_10",
+    "ewma_score_percentile_halflife_20",
+    "ewma_score_percentile_halflife_40",
+]
+
+ROLLING_WINDOW_SHARES = (0.20, 0.40)
+EWMA_HALFLIFE_SHARES = (0.10, 0.20, 0.40)
 
 
 def _weighted_mean(values, weights):
@@ -36,6 +40,36 @@ def _weighted_mean(values, weights):
     if not valid.any():
         return None
     return float(np.average(values[valid], weights=weights[valid]))
+
+
+def _overlap_days(segment_starts, segment_days, window_start, window_end):
+    segment_ends = segment_starts + segment_days
+    return np.maximum(
+        0.0,
+        np.minimum(segment_ends, window_end) - np.maximum(segment_starts, window_start),
+    )
+
+
+def _ewma_time_weights(
+    segment_starts,
+    segment_days,
+    cutoff_days,
+    half_life_days,
+):
+    segment_ends = np.minimum(segment_starts + segment_days, cutoff_days)
+    valid = (segment_starts < cutoff_days) & (segment_ends > segment_starts)
+    weights = np.zeros_like(segment_starts, dtype=float)
+    if not valid.any() or half_life_days <= 0:
+        return weights
+
+    decay = np.log(2.0) / half_life_days
+    starts = segment_starts[valid]
+    ends = segment_ends[valid]
+    weights[valid] = (
+        np.exp(-decay * (cutoff_days - ends))
+        - np.exp(-decay * (cutoff_days - starts))
+    ) / decay
+    return weights
 
 
 def _safe_corr(group, metric, method):
@@ -63,33 +97,15 @@ def _prepare_score_history(return_panel):
     ]
     required = set(columns)
     if return_panel.empty or not required.issubset(return_panel.columns):
-        return pd.DataFrame(columns=[
-            *columns,
-            "rank_position",
-            "available_count",
-            "rank_share_from_top",
-        ])
+        return pd.DataFrame(columns=columns)
 
-    history = (
+    return (
         return_panel[columns]
         .dropna(subset=["timeframe", "ticker", "start_timestamp", "score"])
         .drop_duplicates(["timeframe", "ticker", "start_timestamp"])
-        .sort_values(
-            ["timeframe", "start_timestamp", "score", "ticker"],
-            ascending=[True, True, False, True],
-        )
+        .sort_values(["timeframe", "ticker", "start_timestamp"])
         .reset_index(drop=True)
     )
-    history["rank_position"] = (
-        history.groupby(["timeframe", "start_timestamp"]).cumcount() + 1
-    )
-    history["available_count"] = history.groupby(
-        ["timeframe", "start_timestamp"]
-    )["ticker"].transform("count")
-    history["rank_share_from_top"] = (
-        history["rank_position"] / history["available_count"]
-    )
-    return history
 
 
 def _prepare_top_entry_observations(
@@ -123,9 +139,6 @@ def _prepare_top_entry_observations(
         ["timeframe", "horizon_days", "start_timestamp"]
     )["ticker"].transform("count")
     ranked = ranked[ranked["entry_rank_position"] <= ENTRY_TOP_N].copy()
-    ranked["entry_rank_share_from_top"] = (
-        ranked["entry_rank_position"] / ranked["entry_available_count"]
-    )
     ranked["annualization_days"] = int(annualization_days)
     ranked["annualized_return"] = [
         annualize_return(total_return, horizon_days, annualization_days)
@@ -174,34 +187,7 @@ def _build_path_for_entry(entry, history):
     path["segment_horizon_share"] = (
         path["segment_days"] / float(entry["horizon_days"])
     )
-    path["entry_score"] = float(entry["score"])
-    path["entry_score_percentile"] = float(entry["score_percentile"])
-    path["entry_rank_share_from_top"] = float(entry["entry_rank_share_from_top"])
-    path["rank_share_drop_from_entry"] = (
-        path["rank_share_from_top"] - path["entry_rank_share_from_top"]
-    )
-    path["score_percentile_change_from_entry"] = (
-        path["score_percentile"] - path["entry_score_percentile"]
-    )
-    path["is_score_below_entry"] = path["score"] < float(entry["score"])
-    for threshold in TOP_THRESHOLDS:
-        suffix = int(threshold * 100)
-        path[f"is_below_top_{suffix}"] = (
-            path["rank_share_from_top"] > threshold
-        )
     return path
-
-
-def _longest_weighted_true_share(path, flag_column, horizon_days):
-    longest = 0
-    current = 0
-    for is_flagged, segment_days in zip(path[flag_column], path["segment_days"]):
-        if bool(is_flagged):
-            current += int(segment_days)
-            longest = max(longest, current)
-        else:
-            current = 0
-    return float(longest / horizon_days) if horizon_days else None
 
 
 def _summarize_entry_path(entry, path):
@@ -222,7 +208,6 @@ def _summarize_entry_path(entry, path):
         "entry_score_zscore": float(entry["score_zscore"]),
         "entry_rank_position": int(entry["entry_rank_position"]),
         "entry_available_count": int(entry["entry_available_count"]),
-        "entry_rank_share_from_top": float(entry["entry_rank_share_from_top"]),
         "current_price": float(entry["current_price"]),
         "future_price": float(entry["future_price"]),
         "future_return": float(entry["future_return"]),
@@ -230,42 +215,101 @@ def _summarize_entry_path(entry, path):
         "path_point_count": int(len(path)),
         "path_covered_days": covered_days,
         "path_covered_horizon_share": covered_days / horizon_days,
-        "mean_score": _weighted_mean(path["score"], segment_days),
         "mean_score_percentile": _weighted_mean(
             path["score_percentile"],
             segment_days,
         ),
-        "mean_rank_share_from_top": _weighted_mean(
-            path["rank_share_from_top"],
-            segment_days,
-        ),
         "worst_score_percentile": float(path["score_percentile"].min()),
-        "worst_rank_share_from_top": float(path["rank_share_from_top"].max()),
-        "max_rank_share_drop_from_entry": float(
-            path["rank_share_drop_from_entry"].max()
-        ),
-        "horizon_share_score_below_entry": float(
-            np.nansum(
-                path.loc[path["is_score_below_entry"], "segment_days"]
-            )
-            / horizon_days
-        ),
     }
-
-    for threshold in TOP_THRESHOLDS:
-        suffix = int(threshold * 100)
-        flag_column = f"is_below_top_{suffix}"
-        below_days = float(np.nansum(path.loc[path[flag_column], "segment_days"]))
-        row[f"horizon_share_below_top_{suffix}"] = below_days / horizon_days
-        row[f"longest_horizon_share_below_top_{suffix}"] = (
-            _longest_weighted_true_share(path, flag_column, horizon_days)
-        )
 
     return row
 
 
+def _summarize_live_progress(entry, path):
+    rows = []
+    horizon_days = int(entry["horizon_days"])
+    elapsed_days = path["elapsed_days"].to_numpy(dtype=float)
+    segment_days = path["segment_days"].to_numpy(dtype=float)
+    score_percentiles = path["score_percentile"].to_numpy(dtype=float)
+
+    for progress_percent in PROGRESS_PERCENTAGES:
+        cutoff_days = horizon_days * progress_percent / 100.0
+        live_segment_days = _overlap_days(
+            elapsed_days,
+            segment_days,
+            0.0,
+            cutoff_days,
+        )
+        observed_mask = elapsed_days <= cutoff_days
+        observed_percentiles = score_percentiles[observed_mask]
+        observed_percentiles = observed_percentiles[
+            np.isfinite(observed_percentiles)
+        ]
+        current_percentile = (
+            float(observed_percentiles[-1])
+            if observed_percentiles.size
+            else None
+        )
+
+        row = {
+            "timeframe": entry["timeframe"],
+            "horizon_days": horizon_days,
+            "observation_id": int(entry["observation_id"]),
+            "start_timestamp": entry["start_timestamp"],
+            "future_timestamp": entry["future_timestamp"],
+            "ticker": entry["ticker"],
+            "progress_percent": progress_percent,
+            "progress_share": progress_percent / 100.0,
+            "cutoff_days": cutoff_days,
+            "current_score_percentile": current_percentile,
+            "mean_score_percentile": _weighted_mean(
+                score_percentiles,
+                live_segment_days,
+            ),
+            "worst_score_percentile": (
+                float(np.nanmin(observed_percentiles))
+                if observed_percentiles.size
+                else None
+            ),
+            "future_return": float(entry["future_return"]),
+            "annualized_return": float(entry["annualized_return"]),
+        }
+
+        for window_share in ROLLING_WINDOW_SHARES:
+            suffix = int(window_share * 100)
+            window_days = horizon_days * window_share
+            rolling_weights = _overlap_days(
+                elapsed_days,
+                segment_days,
+                max(0.0, cutoff_days - window_days),
+                cutoff_days,
+            )
+            row[f"rolling_mean_score_percentile_{suffix}"] = _weighted_mean(
+                score_percentiles,
+                rolling_weights,
+            )
+
+        for half_life_share in EWMA_HALFLIFE_SHARES:
+            suffix = int(half_life_share * 100)
+            ewma_weights = _ewma_time_weights(
+                elapsed_days,
+                segment_days,
+                cutoff_days,
+                horizon_days * half_life_share,
+            )
+            row[f"ewma_score_percentile_halflife_{suffix}"] = _weighted_mean(
+                score_percentiles,
+                ewma_weights,
+            )
+
+        rows.append(row)
+
+    return rows
+
+
 def _build_observations_and_paths(entries, history):
     observation_rows = []
+    live_progress_rows = []
     path_frames = []
 
     for _, entry in entries.iterrows():
@@ -274,6 +318,7 @@ def _build_observations_and_paths(entries, history):
             continue
 
         observation_rows.append(_summarize_entry_path(entry, path))
+        live_progress_rows.extend(_summarize_live_progress(entry, path))
         path = path.copy()
         path["timeframe"] = entry["timeframe"]
         path["horizon_days"] = int(entry["horizon_days"])
@@ -290,7 +335,7 @@ def _build_observations_and_paths(entries, history):
         if path_frames
         else pd.DataFrame()
     )
-    return observations, path_points
+    return observations, path_points, pd.DataFrame(live_progress_rows)
 
 
 def _build_correlations_by_horizon(observations):
@@ -368,54 +413,88 @@ def _build_horizon_average(correlations_by_horizon):
     ).reset_index(drop=True)
 
 
-def _build_bucket_summary(observations):
+def _build_live_progress_correlations_by_horizon(live_progress_observations):
     rows = []
-    if observations.empty:
+    if live_progress_observations.empty:
         return pd.DataFrame()
 
-    bucket_metrics = [
-        "worst_rank_share_from_top",
-        "horizon_share_below_top_70",
-        "longest_horizon_share_below_top_70",
-        "max_rank_share_drop_from_entry",
-    ]
-
-    for (timeframe, horizon_days), group in observations.groupby(
-        ["timeframe", "horizon_days"],
+    grouped = live_progress_observations.groupby(
+        ["timeframe", "horizon_days", "progress_percent"],
         sort=False,
-    ):
-        for metric in bucket_metrics:
-            clean = group.dropna(subset=[metric, "annualized_return"])
-            if clean.empty:
-                continue
-            bucket_count = min(4, clean[metric].nunique())
-            if bucket_count < 2:
-                continue
-            bucketed = clean.copy()
-            bucketed["metric_bucket"] = pd.qcut(
-                bucketed[metric],
-                q=bucket_count,
-                duplicates="drop",
-            )
-            for bucket, bucket_group in bucketed.groupby("metric_bucket", observed=True):
-                rows.append({
-                    "timeframe": timeframe,
-                    "horizon_days": int(horizon_days),
-                    "metric": metric,
-                    "bucket": str(bucket),
-                    "observation_count": int(len(bucket_group)),
-                    "min_metric_value": round_or_none(bucket_group[metric].min()),
-                    "max_metric_value": round_or_none(bucket_group[metric].max()),
-                    "mean_metric_value": round_or_none(bucket_group[metric].mean()),
-                    "mean_annualized_return": round_or_none(
-                        bucket_group["annualized_return"].mean()
-                    ),
-                    "median_annualized_return": round_or_none(
-                        bucket_group["annualized_return"].median()
-                    ),
-                })
+    )
+    for (timeframe, horizon_days, progress_percent), group in grouped:
+        for metric in LIVE_CORRELATION_METRICS:
+            rows.append({
+                "timeframe": timeframe,
+                "horizon_days": int(horizon_days),
+                "progress_percent": int(progress_percent),
+                "progress_share": progress_percent / 100.0,
+                "cutoff_days": round_or_none(group["cutoff_days"].mean()),
+                "metric": metric,
+                "observation_count": int(
+                    group[[metric, "annualized_return"]].dropna().shape[0]
+                ),
+                "pearson_to_annualized_return": _safe_corr(
+                    group,
+                    metric,
+                    "pearson",
+                ),
+                "spearman_to_annualized_return": _safe_corr(
+                    group,
+                    metric,
+                    "spearman",
+                ),
+            })
 
     return pd.DataFrame(rows)
+
+
+def _build_live_progress_average(correlations_by_horizon):
+    columns = [
+        "timeframe",
+        "progress_percent",
+        "progress_share",
+        "metric",
+        "horizon_start",
+        "horizon_end",
+        "horizon_count",
+        "mean_cutoff_days",
+        "mean_observation_count",
+        "mean_pearson_to_annualized_return",
+        "mean_spearman_to_annualized_return",
+    ]
+    if correlations_by_horizon.empty:
+        return pd.DataFrame(columns=columns)
+
+    rows = []
+    grouped = correlations_by_horizon.groupby(
+        ["timeframe", "progress_percent", "metric"],
+        sort=False,
+    )
+    for (timeframe, progress_percent, metric), group in grouped:
+        rows.append({
+            "timeframe": timeframe,
+            "progress_percent": int(progress_percent),
+            "progress_share": progress_percent / 100.0,
+            "metric": metric,
+            "horizon_start": int(group["horizon_days"].min()),
+            "horizon_end": int(group["horizon_days"].max()),
+            "horizon_count": int(group["horizon_days"].nunique()),
+            "mean_cutoff_days": round_or_none(group["cutoff_days"].mean()),
+            "mean_observation_count": round_or_none(
+                group["observation_count"].mean()
+            ),
+            "mean_pearson_to_annualized_return": round_or_none(
+                group["pearson_to_annualized_return"].mean()
+            ),
+            "mean_spearman_to_annualized_return": round_or_none(
+                group["spearman_to_annualized_return"].mean()
+            ),
+        })
+
+    return pd.DataFrame(rows, columns=columns).sort_values(
+        ["timeframe", "metric", "progress_percent"]
+    ).reset_index(drop=True)
 
 
 def _round_numeric_columns(df):
@@ -450,15 +529,28 @@ def calculate(
         horizon_end=horizon_end,
         annualization_days=annualization_days,
     )
-    observations, path_points = _build_observations_and_paths(entries, history)
+    observations, path_points, live_progress_observations = (
+        _build_observations_and_paths(entries, history)
+    )
     correlations_by_horizon = _build_correlations_by_horizon(observations)
     horizon_average = _build_horizon_average(correlations_by_horizon)
-    bucket_summary = _build_bucket_summary(observations)
+    live_progress_correlations_by_horizon = (
+        _build_live_progress_correlations_by_horizon(live_progress_observations)
+    )
+    live_progress_average = _build_live_progress_average(
+        live_progress_correlations_by_horizon
+    )
 
     return {
         "observations": _round_numeric_columns(observations),
         "path_points": _round_numeric_columns(path_points),
         "correlations_by_horizon": _round_numeric_columns(correlations_by_horizon),
         "horizon_average": _round_numeric_columns(horizon_average),
-        "bucket_summary": _round_numeric_columns(bucket_summary),
+        "live_progress_observations": _round_numeric_columns(
+            live_progress_observations
+        ),
+        "live_progress_correlations_by_horizon": _round_numeric_columns(
+            live_progress_correlations_by_horizon
+        ),
+        "live_progress_average": _round_numeric_columns(live_progress_average),
     }

@@ -3,39 +3,36 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import numpy as np
-import pandas as pd
 
 from app.testy.score_tests.common.plotting import plot_path
 
 
-SCATTER_METRICS = [
-    "worst_rank_share_from_top",
-    "horizon_share_below_top_70",
-    "longest_horizon_share_below_top_70",
-    "max_rank_share_drop_from_entry",
+BEST_CORRELATION_METRICS = [
+    "mean_score_percentile",
+    "worst_score_percentile",
 ]
 
-BEST_CORRELATION_METRICS = [
+LIVE_CORRELATION_METRICS = [
+    "current_score_percentile",
     "worst_score_percentile",
     "mean_score_percentile",
-    "horizon_share_score_below_entry",
-    "horizon_share_below_top_50",
+    "rolling_mean_score_percentile_20",
+    "rolling_mean_score_percentile_40",
+    "ewma_score_percentile_halflife_10",
+    "ewma_score_percentile_halflife_20",
+    "ewma_score_percentile_halflife_40",
 ]
 
 
 METRIC_LABELS = {
-    "mean_rank_share_from_top": "Mean rank share from top",
-    "worst_rank_share_from_top": "Worst rank share from top",
+    "current_score_percentile": "Current",
     "mean_score_percentile": "Mean score percentile",
     "worst_score_percentile": "Worst score percentile",
-    "max_rank_share_drop_from_entry": "Max rank share drop from entry",
-    "horizon_share_score_below_entry": "Horizon share score below entry",
-    "horizon_share_below_top_50": "Horizon share below top 50%",
-    "horizon_share_below_top_70": "Horizon share below top 70%",
-    "horizon_share_below_top_90": "Horizon share below top 90%",
-    "longest_horizon_share_below_top_50": "Longest share below top 50%",
-    "longest_horizon_share_below_top_70": "Longest share below top 70%",
-    "longest_horizon_share_below_top_90": "Longest share below top 90%",
+    "rolling_mean_score_percentile_20": "Rolling mean 20%",
+    "rolling_mean_score_percentile_40": "Rolling mean 40%",
+    "ewma_score_percentile_halflife_10": "EWMA half-life 10%",
+    "ewma_score_percentile_halflife_20": "EWMA half-life 20%",
+    "ewma_score_percentile_halflife_40": "EWMA half-life 40%",
 }
 
 
@@ -45,15 +42,22 @@ def plot(results, output_dir, horizon_label):
 
     correlations = results.get("horizon_average")
     observations = results.get("observations")
+    live_progress_average = results.get("live_progress_average")
 
     if correlations is not None and not correlations.empty:
         _plot_average_correlations(correlations, output_dir, horizon_label)
 
     if observations is not None and not observations.empty:
-        _plot_scatter_metrics(observations, output_dir, horizon_label)
         _plot_best_correlation_overview(
             observations,
             correlations,
+            output_dir,
+            horizon_label,
+        )
+
+    if live_progress_average is not None and not live_progress_average.empty:
+        _plot_live_progress_correlations(
+            live_progress_average,
             output_dir,
             horizon_label,
         )
@@ -95,43 +99,61 @@ def _plot_average_correlations(correlations, output_dir, horizon_label):
         plt.close(fig)
 
 
-def _plot_scatter_metrics(observations, output_dir, horizon_label):
+def _plot_live_progress_correlations(data, output_dir, horizon_label):
     plot_directory = Path("post_entry_score_path") / horizon_label
 
-    for timeframe, timeframe_data in observations.groupby("timeframe"):
-        for metric in SCATTER_METRICS:
-            clean = timeframe_data.dropna(subset=[metric, "annualized_return"])
-            if clean.empty:
-                continue
+    for timeframe, timeframe_data in data.groupby("timeframe"):
+        correlation_columns = [
+            ("mean_pearson_to_annualized_return", "Pearson"),
+            ("mean_spearman_to_annualized_return", "Spearman"),
+        ]
+        colors = plt.cm.tab10(np.linspace(0, 1, len(LIVE_CORRELATION_METRICS)))
 
-            fig, ax = plt.subplots(figsize=(11, 7))
-            scatter = ax.scatter(
-                clean[metric],
-                clean["annualized_return"],
-                c=clean["horizon_days"],
-                cmap="viridis",
-                alpha=0.65,
-                s=28,
-            )
-            ax.axhline(0, color="#444444", linewidth=1)
+        for correlation_column, correlation_label in correlation_columns:
+            fig, ax = plt.subplots(figsize=(13, 7))
+            for color, metric in zip(colors, LIVE_CORRELATION_METRICS):
+                clean = timeframe_data[
+                    timeframe_data["metric"] == metric
+                ].sort_values("progress_percent")
+                if clean.empty:
+                    continue
+                ax.plot(
+                    clean["progress_percent"],
+                    clean[correlation_column],
+                    color=color,
+                    marker="o",
+                    markevery=2,
+                    markersize=3,
+                    linewidth=1.8,
+                    label=METRIC_LABELS.get(metric, metric),
+                )
+
             ax.set_title(
-                f"{timeframe}: annualized return vs {METRIC_LABELS.get(metric, metric)}"
+                f"{timeframe}: {correlation_label} correlation by elapsed horizon, "
+                f"horizons {horizon_label}"
             )
-            ax.set_xlabel(METRIC_LABELS.get(metric, metric))
-            ax.set_ylabel("Annualized return")
-            ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
-            ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+            ax.set_xlabel("Observed share of investment horizon")
+            ax.set_ylabel("Mean correlation to final annualized return")
+            ax.set_xticks(range(5, 101, 5))
+            ax.set_xticklabels(
+                [f"{value}%" for value in range(5, 101, 5)],
+                rotation=45,
+            )
+            ax.set_ylim(0, 1)
             ax.grid(True, alpha=0.25)
-            colorbar = fig.colorbar(scatter, ax=ax)
-            colorbar.set_label("Horizon days")
+            ax.legend(fontsize=8, ncol=2)
+
             fig.tight_layout()
             fig.savefig(
                 plot_path(
                     output_dir,
                     plot_directory,
-                    f"{timeframe}_{metric}_scatter.png",
+                    (
+                        f"{timeframe}_live_progress_"
+                        f"{correlation_label.lower()}_correlation.png"
+                    ),
                 ),
-                dpi=160,
+                dpi=180,
             )
             plt.close(fig)
 
@@ -154,8 +176,8 @@ def _plot_best_correlation_overview(
                 orient="index"
             )
 
-        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-        for ax, metric in zip(axes.flat, BEST_CORRELATION_METRICS):
+        fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+        for ax, metric in zip(axes, BEST_CORRELATION_METRICS):
             clean = timeframe_data.dropna(subset=[metric, "annualized_return"]).copy()
             if clean.empty:
                 ax.set_visible(False)
@@ -184,29 +206,6 @@ def _plot_best_correlation_overview(
                     color="#E15759",
                     linewidth=2,
                     label="Linear trend",
-                )
-
-                bucket_count = min(10, clean[metric].nunique())
-                clean["metric_bucket"] = pd.qcut(
-                    clean[metric],
-                    q=bucket_count,
-                    duplicates="drop",
-                )
-                bucket_means = clean.groupby(
-                    "metric_bucket",
-                    observed=True,
-                ).agg(
-                    metric_mean=(metric, "mean"),
-                    return_mean=("annualized_return", "mean"),
-                )
-                ax.plot(
-                    bucket_means["metric_mean"],
-                    bucket_means["return_mean"],
-                    color="#F28E2B",
-                    marker="o",
-                    linewidth=2,
-                    markersize=5,
-                    label="Quantile means",
                 )
 
             stats = correlation_lookup.get(metric, {})
