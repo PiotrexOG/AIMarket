@@ -17,6 +17,8 @@ LIVE_CORRELATION_METRICS = [
     "relative_score_percentile_change",
 ]
 
+SCORE_CHANGE_SCATTER_PROGRESS_PERCENT = 35
+
 
 METRIC_LABELS = {
     "mean_score_percentile": "Mean score percentile",
@@ -35,6 +37,7 @@ def plot(results, output_dir, horizon_label):
 
     correlations = results.get("horizon_average")
     observations = results.get("observations")
+    live_progress_observations = results.get("live_progress_observations")
     live_progress_average = results.get("live_progress_average")
 
     if observations is not None and not observations.empty:
@@ -68,6 +71,31 @@ def plot(results, output_dir, horizon_label):
             observations,
             output_dir,
             horizon_label,
+        )
+
+    if (
+        live_progress_observations is not None
+        and not live_progress_observations.empty
+    ):
+        _plot_score_change_at_progress_scatter(
+            live_progress_observations,
+            output_dir,
+            horizon_label,
+            "relative_score_percentile_change",
+            SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
+        )
+        _plot_remaining_return_at_progress_scatter(
+            live_progress_observations,
+            output_dir,
+            horizon_label,
+            "relative_score_percentile_change",
+            SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
+        )
+        _plot_hold_decision_by_score_drop(
+            live_progress_observations,
+            output_dir,
+            horizon_label,
+            SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
         )
 
 
@@ -142,6 +170,467 @@ def _plot_score_change_scatter(
                 output_dir,
                 plot_directory,
                 f"{timeframe}_{metric}_scatter.png",
+            ),
+            dpi=180,
+        )
+        plt.close(fig)
+
+
+def _plot_score_change_at_progress_scatter(
+    live_progress_observations,
+    output_dir,
+    horizon_label,
+    metric,
+    progress_percent,
+):
+    plot_directory = Path("post_entry_score_path") / horizon_label
+    progress_data = live_progress_observations[
+        live_progress_observations["progress_percent"] == progress_percent
+    ]
+
+    for timeframe, timeframe_data in progress_data.groupby("timeframe"):
+        clean = timeframe_data.dropna(
+            subset=[metric, "annualized_return"]
+        ).copy()
+        if clean.empty:
+            continue
+
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.scatter(
+            clean[metric],
+            clean["annualized_return"],
+            color="#4C78A8",
+            alpha=0.10,
+            s=14,
+            edgecolors="none",
+            label="Observations",
+        )
+
+        if clean[metric].nunique() >= 2:
+            slope, intercept = np.polyfit(
+                clean[metric],
+                clean["annualized_return"],
+                1,
+            )
+            trend_x = np.linspace(
+                clean[metric].quantile(0.01),
+                clean[metric].quantile(0.99),
+                100,
+            )
+            ax.plot(
+                trend_x,
+                slope * trend_x + intercept,
+                color="#E15759",
+                linewidth=2.2,
+                label="Linear trend",
+            )
+
+        pearson = clean[metric].corr(
+            clean["annualized_return"],
+            method="pearson",
+        )
+        spearman = clean[metric].corr(
+            clean["annualized_return"],
+            method="spearman",
+        )
+        ax.axvline(0, color="#444444", linewidth=1)
+        ax.axhline(0, color="#444444", linewidth=1)
+        ax.set_title(
+            f"{timeframe}: annualized return versus {METRIC_LABELS[metric]}"
+            f" after {progress_percent}% of the horizon"
+            f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
+        )
+        ax.set_xlabel(
+            f"{METRIC_LABELS[metric]} after {progress_percent}% of the horizon"
+        )
+        ax.set_ylabel("Annualized return")
+        ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.grid(True, alpha=0.2)
+        ax.legend(fontsize=9)
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                (
+                    f"{timeframe}_{metric}_after_"
+                    f"{progress_percent}pct_scatter.png"
+                ),
+            ),
+            dpi=180,
+        )
+        plt.close(fig)
+
+
+def _plot_remaining_return_at_progress_scatter(
+    live_progress_observations,
+    output_dir,
+    horizon_label,
+    metric,
+    progress_percent,
+):
+    plot_directory = Path("post_entry_score_path") / horizon_label
+    progress_data = live_progress_observations[
+        live_progress_observations["progress_percent"] == progress_percent
+    ]
+    return_metric = "remaining_annualized_return"
+
+    for timeframe, timeframe_data in progress_data.groupby("timeframe"):
+        clean = timeframe_data.dropna(
+            subset=[metric, return_metric]
+        ).copy()
+        if clean.empty:
+            continue
+
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.scatter(
+            clean[metric],
+            clean[return_metric],
+            color="#59A14F",
+            alpha=0.10,
+            s=14,
+            edgecolors="none",
+            label="Observations",
+        )
+
+        if clean[metric].nunique() >= 2:
+            slope, intercept = np.polyfit(
+                clean[metric],
+                clean[return_metric],
+                1,
+            )
+            trend_x = np.linspace(
+                clean[metric].quantile(0.01),
+                clean[metric].quantile(0.99),
+                100,
+            )
+            ax.plot(
+                trend_x,
+                slope * trend_x + intercept,
+                color="#E15759",
+                linewidth=2.2,
+                label="Linear trend",
+            )
+
+        pearson = clean[metric].corr(
+            clean[return_metric],
+            method="pearson",
+        )
+        spearman = clean[metric].corr(
+            clean[return_metric],
+            method="spearman",
+        )
+        ax.axvline(0, color="#444444", linewidth=1)
+        ax.axhline(0, color="#444444", linewidth=1)
+        ax.set_title(
+            f"{timeframe}: return still available after {progress_percent}% "
+            f"of the horizon versus {METRIC_LABELS[metric]}"
+            f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
+        )
+        ax.set_xlabel(
+            f"{METRIC_LABELS[metric]} after {progress_percent}% of the horizon"
+        )
+        ax.set_ylabel(
+            f"Annualized return from {progress_percent}% cutoff to horizon end"
+        )
+        ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.grid(True, alpha=0.2)
+        ax.legend(fontsize=9)
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                (
+                    f"{timeframe}_{metric}_after_{progress_percent}pct_"
+                    f"remaining_annualized_return_scatter.png"
+                ),
+            ),
+            dpi=180,
+        )
+        plt.close(fig)
+
+
+def _add_score_drop_band(data):
+    result = data.copy()
+    finite_change = result["relative_score_percentile_change"].replace(
+        [np.inf, -np.inf],
+        np.nan,
+    ).dropna()
+    if finite_change.empty:
+        result["score_drop_band"] = pd.Series(dtype="category")
+        return result, []
+
+    step = 0.05
+    lower = min(-step, np.floor(finite_change.min() / step) * step)
+    upper = max(step, np.ceil(finite_change.max() / step) * step)
+    bins = np.arange(lower, upper + step * 1.01, step)
+    labels = [
+        f"{left:.0%} to {right:.0%}"
+        for left, right in zip(bins[:-1], bins[1:])
+    ]
+    result["score_drop_band"] = pd.cut(
+        result["relative_score_percentile_change"],
+        bins=bins,
+        labels=labels,
+        right=True,
+        include_lowest=True,
+    )
+    return result, labels
+
+
+def _plot_hold_decision_by_score_drop(
+    live_progress_observations,
+    output_dir,
+    horizon_label,
+    progress_percent,
+):
+    plot_directory = Path("post_entry_score_path") / horizon_label
+    progress_data = live_progress_observations[
+        live_progress_observations["progress_percent"] == progress_percent
+    ]
+
+    for timeframe, timeframe_data in progress_data.groupby("timeframe"):
+        clean = timeframe_data.dropna(
+            subset=[
+                "relative_score_percentile_change",
+                "remaining_annualized_return",
+            ]
+        ).copy()
+        clean, labels = _add_score_drop_band(clean)
+        clean = clean.dropna(subset=["score_drop_band"])
+        if clean.empty:
+            continue
+
+        summary = (
+            clean.groupby("score_drop_band", observed=False)[
+                "remaining_annualized_return"
+            ]
+            .agg(["median", "mean", "count"])
+            .reindex(labels)
+        )
+        valid = summary["count"].fillna(0) > 0
+        if not valid.any():
+            continue
+
+        summary = summary[valid]
+        labels = summary.index.astype(str).tolist()
+        x = np.arange(len(summary))
+        overall_median = clean["remaining_annualized_return"].median()
+
+        fig, return_ax = plt.subplots(figsize=(16, 8))
+        colors = [
+            "#E15759" if value < 0 else "#59A14F"
+            for value in summary["median"].fillna(0)
+        ]
+        return_ax.bar(
+            x,
+            summary["median"],
+            color=colors,
+            alpha=0.85,
+            label="Median remaining annualized return",
+        )
+        return_ax.scatter(
+            x,
+            summary["mean"],
+            color="#1F1F1F",
+            marker="D",
+            s=35,
+            zorder=3,
+            label="Mean",
+        )
+        return_ax.axhline(0, color="#444444", linewidth=1)
+        return_ax.axhline(
+            overall_median,
+            color="#4C78A8",
+            linestyle="--",
+            linewidth=2,
+            label=f"All observations median: {overall_median:.0%}",
+        )
+        for index, row in summary.iterrows():
+            if pd.isna(row["count"]) or row["count"] == 0:
+                continue
+            position = labels.index(index)
+            value = row["median"]
+            return_ax.annotate(
+                f"{value:.0%}\nn={int(row['count'])}",
+                (position, value),
+                xytext=(0, 5 if value >= 0 else -5),
+                textcoords="offset points",
+                ha="center",
+                va="bottom" if value >= 0 else "top",
+                fontsize=9,
+            )
+        return_ax.set_ylabel(
+            f"Annualized return from {progress_percent}% cutoff to horizon end"
+        )
+        return_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        return_ax.set_xticks(x)
+        return_ax.set_xticklabels(labels, rotation=45, ha="right")
+        return_ax.set_xlabel(
+            f"Relative score percentile change after {progress_percent}% "
+            f"of the horizon, 5 percentage-point buckets"
+        )
+        return_ax.grid(True, axis="y", alpha=0.2)
+        return_ax.legend(fontsize=9)
+        return_ax.set_title(
+            f"{timeframe}: remaining return by score change after "
+            f"{progress_percent}% of the horizon"
+        )
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                (
+                    f"{timeframe}_hold_decision_by_score_drop_after_"
+                    f"{progress_percent}pct.png"
+                ),
+            ),
+            dpi=180,
+        )
+        plt.close(fig)
+
+
+def _plot_hold_decision_heatmap(
+    live_progress_observations,
+    output_dir,
+    horizon_label,
+    progress_percent,
+):
+    plot_directory = Path("post_entry_score_path") / horizon_label
+    progress_data = live_progress_observations[
+        live_progress_observations["progress_percent"] == progress_percent
+    ]
+    price_bins = [-np.inf, -0.30, -0.15, 0.0, 0.15, np.inf]
+    price_labels = [
+        "price drop >30%",
+        "price drop 15-30%",
+        "price drop 0-15%",
+        "price rise 0-15%",
+        "price rise >15%",
+    ]
+
+    for timeframe, timeframe_data in progress_data.groupby("timeframe"):
+        clean = timeframe_data.dropna(
+            subset=[
+                "relative_score_percentile_change",
+                "price_change_to_cutoff",
+                "remaining_annualized_return",
+            ]
+        ).copy()
+        clean, score_labels = _add_score_drop_band(clean)
+        clean["price_change_band"] = pd.cut(
+            clean["price_change_to_cutoff"],
+            bins=price_bins,
+            labels=price_labels,
+            right=False,
+            include_lowest=True,
+        )
+        clean = clean.dropna(
+            subset=["score_drop_band", "price_change_band"]
+        )
+        if clean.empty:
+            continue
+
+        median_returns = clean.pivot_table(
+            index="score_drop_band",
+            columns="price_change_band",
+            values="remaining_annualized_return",
+            aggfunc="median",
+            observed=False,
+        ).reindex(index=score_labels, columns=price_labels)
+        counts = clean.pivot_table(
+            index="score_drop_band",
+            columns="price_change_band",
+            values="remaining_annualized_return",
+            aggfunc="count",
+            observed=False,
+        ).reindex(index=score_labels, columns=price_labels)
+        positive_share = (
+            clean.assign(
+                positive=clean["remaining_annualized_return"] > 0
+            )
+            .pivot_table(
+                index="score_drop_band",
+                columns="price_change_band",
+                values="positive",
+                aggfunc="mean",
+                observed=False,
+            )
+            .reindex(index=score_labels, columns=price_labels)
+        )
+
+        values = median_returns.to_numpy(dtype=float)
+        finite_values = values[np.isfinite(values)]
+        if finite_values.size == 0:
+            continue
+        color_limit = max(
+            abs(float(np.nanpercentile(finite_values, 10))),
+            abs(float(np.nanpercentile(finite_values, 90))),
+        )
+        if color_limit == 0:
+            color_limit = 1.0
+
+        fig, ax = plt.subplots(figsize=(14, 9))
+        image = ax.imshow(
+            values,
+            cmap="RdYlGn",
+            vmin=-color_limit,
+            vmax=color_limit,
+            aspect="auto",
+        )
+        colorbar = fig.colorbar(image, ax=ax)
+        colorbar.set_label("Median remaining annualized return")
+        colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+        for row_index in range(len(score_labels)):
+            for column_index in range(len(price_labels)):
+                value = values[row_index, column_index]
+                count = counts.iloc[row_index, column_index]
+                probability = positive_share.iloc[
+                    row_index, column_index
+                ]
+                if not np.isfinite(value) or pd.isna(count) or count == 0:
+                    continue
+                ax.text(
+                    column_index,
+                    row_index,
+                    (
+                        f"median {value:.0%}\n"
+                        f"P(>0) {probability:.0%}\n"
+                        f"n={int(count)}"
+                    ),
+                    ha="center",
+                    va="center",
+                    fontsize=8,
+                    color="#111111",
+                )
+
+        ax.set_xticks(range(len(price_labels)))
+        ax.set_xticklabels(price_labels, rotation=20, ha="right")
+        ax.set_yticks(range(len(score_labels)))
+        ax.set_yticklabels(score_labels)
+        ax.set_xlabel(
+            f"Price change from entry to {progress_percent}% cutoff"
+        )
+        ax.set_ylabel(
+            f"Relative score percentile change by {progress_percent}% cutoff"
+        )
+        ax.set_title(
+            f"{timeframe}: remaining return by score and price deterioration"
+        )
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                (
+                    f"{timeframe}_hold_decision_score_drop_by_price_change_"
+                    f"after_{progress_percent}pct_heatmap.png"
+                ),
             ),
             dpi=180,
         )
