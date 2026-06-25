@@ -9,6 +9,7 @@ class ScoreTestContext:
     """Shared prepared data; expensive sorts are computed at most once."""
 
     return_panel: pd.DataFrame
+    score_observations: pd.DataFrame | None = None
 
     @cached_property
     def weekly_ranked(self):

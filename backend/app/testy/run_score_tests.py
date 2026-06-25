@@ -60,6 +60,12 @@ from score_tests.post_entry_score_path.calculation import (
 from score_tests.post_entry_score_path.plotting import (
     plot as plot_post_entry_score_path,
 )
+from score_tests.ticker_percentile_history.calculation import (
+    calculate as calculate_ticker_percentile_history,
+)
+from score_tests.ticker_percentile_history.plotting import (
+    plot as plot_ticker_percentile_history,
+)
 
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
@@ -73,6 +79,7 @@ ENABLED_TESTS = {
     "A3_weekly_rank_buckets": False,
     "downside_information_ratio": False,
     "post_entry_score_path": True,
+    "ticker_percentile_history": True,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
 }
@@ -118,6 +125,10 @@ def run_configured_score_tests(context):
             "live_progress_correlations_by_horizon": pd.DataFrame(),
             "live_progress_average": pd.DataFrame(),
         },
+        "ticker_percentile_history": {
+            "metrics": pd.DataFrame(),
+            "prices": pd.DataFrame(),
+        },
         "b1_b2": pd.DataFrame(),
         "b3": pd.DataFrame(),
     }
@@ -141,6 +152,10 @@ def run_configured_score_tests(context):
             context,
             horizon_start=horizon_start,
             horizon_end=horizon_end,
+        )
+    if ENABLED_TESTS["ticker_percentile_history"]:
+        results["ticker_percentile_history"] = (
+            calculate_ticker_percentile_history(context)
         )
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
         results["b1_b2"] = calculate_b1_b2(context)
@@ -181,6 +196,12 @@ def save_analysis_outputs(results, output_dir):
         "post_entry_score_path_live_progress_average.csv": (
             path["live_progress_average"]
         ),
+        "ticker_percentile_history_metrics.csv": (
+            results["ticker_percentile_history"]["metrics"]
+        ),
+        "ticker_percentile_history_prices.csv": (
+            results["ticker_percentile_history"]["prices"]
+        ),
         "global_correlation_analysis.csv": build_global_correlation_output(
             results["b1_b2"]
         ),
@@ -218,6 +239,10 @@ def plot_analysis_outputs(results, output_dir):
         output_dir,
         f"{horizon_start}-{horizon_end}",
     )
+    plot_ticker_percentile_history(
+        results["ticker_percentile_history"],
+        output_dir,
+    )
 
 
 def main():
@@ -250,7 +275,12 @@ def main():
         return
 
     # One shared panel and two lazily cached rankings feed every enabled test.
-    results = run_configured_score_tests(ScoreTestContext(return_panel))
+    results = run_configured_score_tests(
+        ScoreTestContext(
+            return_panel=return_panel,
+            score_observations=score_df,
+        )
+    )
 
     clean_outputs(OUTPUT_DIR)
     output_files = save_analysis_outputs(results, OUTPUT_DIR)

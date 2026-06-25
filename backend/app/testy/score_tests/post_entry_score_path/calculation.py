@@ -13,19 +13,11 @@ PROGRESS_PERCENTAGES = tuple(range(5, 101, 5))
 
 CORRELATION_METRICS = [
     "mean_score_percentile",
-    "worst_score_percentile",
 ]
 
 LIVE_CORRELATION_METRICS = [
-    "current_score_percentile",
-    "worst_score_percentile",
     "mean_score_percentile",
-    "rolling_mean_score_percentile_40",
-    "ewma_score_percentile_halflife_40",
 ]
-
-ROLLING_WINDOW_SHARES = (0.40)
-EWMA_HALFLIFE_SHARES = (0.40)
 
 
 def _weighted_mean(values, weights):
@@ -43,28 +35,6 @@ def _overlap_days(segment_starts, segment_days, window_start, window_end):
         0.0,
         np.minimum(segment_ends, window_end) - np.maximum(segment_starts, window_start),
     )
-
-
-def _ewma_time_weights(
-    segment_starts,
-    segment_days,
-    cutoff_days,
-    half_life_days,
-):
-    segment_ends = np.minimum(segment_starts + segment_days, cutoff_days)
-    valid = (segment_starts < cutoff_days) & (segment_ends > segment_starts)
-    weights = np.zeros_like(segment_starts, dtype=float)
-    if not valid.any() or half_life_days <= 0:
-        return weights
-
-    decay = np.log(2.0) / half_life_days
-    starts = segment_starts[valid]
-    ends = segment_ends[valid]
-    weights[valid] = (
-        np.exp(-decay * (cutoff_days - ends))
-        - np.exp(-decay * (cutoff_days - starts))
-    ) / decay
-    return weights
 
 
 def _safe_corr(group, metric, method):
@@ -211,7 +181,6 @@ def _summarize_entry_path(entry, path):
             path["score_percentile"],
             segment_days,
         ),
-        "worst_score_percentile": float(path["score_percentile"].min()),
     }
 
     return row
@@ -232,18 +201,7 @@ def _summarize_live_progress(entry, path):
             0.0,
             cutoff_days,
         )
-        observed_mask = elapsed_days <= cutoff_days
-        observed_percentiles = score_percentiles[observed_mask]
-        observed_percentiles = observed_percentiles[
-            np.isfinite(observed_percentiles)
-        ]
-        current_percentile = (
-            float(observed_percentiles[-1])
-            if observed_percentiles.size
-            else None
-        )
-
-        row = {
+        rows.append({
             "timeframe": entry["timeframe"],
             "horizon_days": horizon_days,
             "observation_id": int(entry["observation_id"]),
@@ -253,48 +211,13 @@ def _summarize_live_progress(entry, path):
             "progress_percent": progress_percent,
             "progress_share": progress_percent / 100.0,
             "cutoff_days": cutoff_days,
-            "current_score_percentile": current_percentile,
             "mean_score_percentile": _weighted_mean(
                 score_percentiles,
                 live_segment_days,
             ),
-            "worst_score_percentile": (
-                float(np.nanmin(observed_percentiles))
-                if observed_percentiles.size
-                else None
-            ),
             "future_return": float(entry["future_return"]),
             "annualized_return": float(entry["annualized_return"]),
-        }
-
-        for window_share in ROLLING_WINDOW_SHARES:
-            suffix = int(window_share * 100)
-            window_days = horizon_days * window_share
-            rolling_weights = _overlap_days(
-                elapsed_days,
-                segment_days,
-                max(0.0, cutoff_days - window_days),
-                cutoff_days,
-            )
-            row[f"rolling_mean_score_percentile_{suffix}"] = _weighted_mean(
-                score_percentiles,
-                rolling_weights,
-            )
-
-        for half_life_share in EWMA_HALFLIFE_SHARES:
-            suffix = int(half_life_share * 100)
-            ewma_weights = _ewma_time_weights(
-                elapsed_days,
-                segment_days,
-                cutoff_days,
-                horizon_days * half_life_share,
-            )
-            row[f"ewma_score_percentile_halflife_{suffix}"] = _weighted_mean(
-                score_percentiles,
-                ewma_weights,
-            )
-
-        rows.append(row)
+        })
 
     return rows
 
