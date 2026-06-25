@@ -124,6 +124,8 @@ def run_configured_score_tests(context):
             "live_progress_observations": pd.DataFrame(),
             "live_progress_correlations_by_horizon": pd.DataFrame(),
             "live_progress_average": pd.DataFrame(),
+            "drop_regressions_by_horizon": pd.DataFrame(),
+            "drop_regression_average": pd.DataFrame(),
         },
         "ticker_percentile_history": {
             "metrics": pd.DataFrame(),
@@ -195,6 +197,12 @@ def save_analysis_outputs(results, output_dir):
         ),
         "post_entry_score_path_live_progress_average.csv": (
             path["live_progress_average"]
+        ),
+        "post_entry_score_path_drop_regressions_by_horizon.csv": (
+            path["drop_regressions_by_horizon"]
+        ),
+        "post_entry_score_path_drop_regression_average.csv": (
+            path["drop_regression_average"]
         ),
         "ticker_percentile_history_metrics.csv": (
             results["ticker_percentile_history"]["metrics"]

@@ -8,15 +8,19 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-ENTRY_TOP_N = 1
+ENTRY_MIN_SCORE_PERCENTILE = 0.60
 PROGRESS_PERCENTAGES = tuple(range(5, 101, 5))
 
 CORRELATION_METRICS = [
     "mean_score_percentile",
+    "score_percentile_change",
+    "relative_score_percentile_change",
 ]
 
 LIVE_CORRELATION_METRICS = [
     "mean_score_percentile",
+    "score_percentile_change",
+    "relative_score_percentile_change",
 ]
 
 
@@ -102,7 +106,9 @@ def _prepare_top_entry_observations(
     ranked["entry_available_count"] = ranked.groupby(
         ["timeframe", "horizon_days", "start_timestamp"]
     )["ticker"].transform("count")
-    ranked = ranked[ranked["entry_rank_position"] <= ENTRY_TOP_N].copy()
+    ranked = ranked[
+        ranked["score_percentile"] >= ENTRY_MIN_SCORE_PERCENTILE
+    ].copy()
     ranked["annualized_return"] = [
         annualize_return(total_return, horizon_days)
         for total_return, horizon_days in zip(
@@ -117,17 +123,30 @@ def _prepare_top_entry_observations(
     return ranked.reset_index(drop=True)
 
 
-def _build_path_for_entry(entry, history):
+def _build_history_lookup(history):
+    return {
+        key: group.reset_index(drop=True)
+        for key, group in history.groupby(
+            ["timeframe", "ticker"],
+            sort=False,
+        )
+    }
+
+
+def _build_path_for_entry(entry, history_lookup):
     start_timestamp = pd.Timestamp(entry["start_timestamp"])
     end_timestamp = start_timestamp + pd.to_timedelta(
         int(entry["horizon_days"]),
         unit="D",
     )
-    path = history[
-        (history["timeframe"] == entry["timeframe"])
-        & (history["ticker"] == entry["ticker"])
-        & (history["start_timestamp"] >= start_timestamp)
-        & (history["start_timestamp"] <= end_timestamp)
+    ticker_history = history_lookup.get(
+        (entry["timeframe"], entry["ticker"])
+    )
+    if ticker_history is None:
+        return pd.DataFrame()
+    path = ticker_history[
+        (ticker_history["start_timestamp"] >= start_timestamp)
+        & (ticker_history["start_timestamp"] <= end_timestamp)
     ].copy()
     if path.empty:
         return path
@@ -158,6 +177,32 @@ def _summarize_entry_path(entry, path):
     segment_days = path["segment_days"].to_numpy(dtype=float)
     covered_days = float(np.nansum(segment_days))
 
+    mean_score_percentile = _weighted_mean(
+        path["score_percentile"],
+        segment_days,
+    )
+    score_percentile_drop = (
+        float(entry["score_percentile"]) - mean_score_percentile
+        if mean_score_percentile is not None
+        else None
+    )
+    relative_score_percentile_drop = (
+        score_percentile_drop / float(entry["score_percentile"])
+        if score_percentile_drop is not None
+        and float(entry["score_percentile"]) > 0
+        else None
+    )
+    score_percentile_change = (
+        -score_percentile_drop
+        if score_percentile_drop is not None
+        else None
+    )
+    relative_score_percentile_change = (
+        -relative_score_percentile_drop
+        if relative_score_percentile_drop is not None
+        else None
+    )
+
     row = {
         "timeframe": entry["timeframe"],
         "horizon_days": horizon_days,
@@ -177,10 +222,11 @@ def _summarize_entry_path(entry, path):
         "path_point_count": int(len(path)),
         "path_covered_days": covered_days,
         "path_covered_horizon_share": covered_days / horizon_days,
-        "mean_score_percentile": _weighted_mean(
-            path["score_percentile"],
-            segment_days,
-        ),
+        "mean_score_percentile": mean_score_percentile,
+        "score_percentile_drop": score_percentile_drop,
+        "relative_score_percentile_drop": relative_score_percentile_drop,
+        "score_percentile_change": score_percentile_change,
+        "relative_score_percentile_change": relative_score_percentile_change,
     }
 
     return row
@@ -201,6 +247,22 @@ def _summarize_live_progress(entry, path):
             0.0,
             cutoff_days,
         )
+        entry_score_percentile = float(entry["score_percentile"])
+        mean_score_percentile = _weighted_mean(
+            score_percentiles,
+            live_segment_days,
+        )
+        score_percentile_change = (
+            mean_score_percentile - entry_score_percentile
+            if mean_score_percentile is not None
+            else None
+        )
+        relative_score_percentile_change = (
+            score_percentile_change / entry_score_percentile
+            if score_percentile_change is not None
+            and entry_score_percentile > 0
+            else None
+        )
         rows.append({
             "timeframe": entry["timeframe"],
             "horizon_days": horizon_days,
@@ -211,9 +273,11 @@ def _summarize_live_progress(entry, path):
             "progress_percent": progress_percent,
             "progress_share": progress_percent / 100.0,
             "cutoff_days": cutoff_days,
-            "mean_score_percentile": _weighted_mean(
-                score_percentiles,
-                live_segment_days,
+            "entry_score_percentile": entry_score_percentile,
+            "mean_score_percentile": mean_score_percentile,
+            "score_percentile_change": score_percentile_change,
+            "relative_score_percentile_change": (
+                relative_score_percentile_change
             ),
             "future_return": float(entry["future_return"]),
             "annualized_return": float(entry["annualized_return"]),
@@ -227,8 +291,9 @@ def _build_observations_and_paths(entries, history):
     live_progress_rows = []
     path_frames = []
 
+    history_lookup = _build_history_lookup(history)
     for _, entry in entries.iterrows():
-        path = _build_path_for_entry(entry, history)
+        path = _build_path_for_entry(entry, history_lookup)
         if path.empty:
             continue
 
@@ -412,6 +477,113 @@ def _build_live_progress_average(correlations_by_horizon):
     ).reset_index(drop=True)
 
 
+def _fit_drop_regression(group):
+    columns = [
+        "entry_score_percentile",
+        "score_percentile_drop",
+        "annualized_return",
+    ]
+    clean = group[columns].replace([np.inf, -np.inf], np.nan).dropna()
+    if len(clean) < 8:
+        return None
+
+    entry = clean["entry_score_percentile"].to_numpy(dtype=float)
+    drop = clean["score_percentile_drop"].to_numpy(dtype=float)
+    response = clean["annualized_return"].to_numpy(dtype=float)
+    design = np.column_stack([
+        np.ones(len(clean)),
+        entry,
+        drop,
+        entry * drop,
+    ])
+    if np.linalg.matrix_rank(design) < design.shape[1]:
+        return None
+
+    coefficients, _, _, _ = np.linalg.lstsq(design, response, rcond=None)
+    fitted = design @ coefficients
+    residual_sum_squares = float(np.sum((response - fitted) ** 2))
+    total_sum_squares = float(np.sum((response - response.mean()) ** 2))
+    r_squared = (
+        1.0 - residual_sum_squares / total_sum_squares
+        if total_sum_squares > 0
+        else None
+    )
+    return {
+        "observation_count": int(len(clean)),
+        "intercept": float(coefficients[0]),
+        "entry_score_percentile_coefficient": float(coefficients[1]),
+        "score_percentile_drop_coefficient": float(coefficients[2]),
+        "entry_drop_interaction_coefficient": float(coefficients[3]),
+        "r_squared": r_squared,
+    }
+
+
+def _build_drop_regressions_by_horizon(observations):
+    rows = []
+    if observations.empty:
+        return pd.DataFrame()
+
+    for (timeframe, horizon_days), group in observations.groupby(
+        ["timeframe", "horizon_days"],
+        sort=False,
+    ):
+        regression = _fit_drop_regression(group)
+        if regression is None:
+            continue
+        rows.append({
+            "timeframe": timeframe,
+            "horizon_days": int(horizon_days),
+            **regression,
+        })
+    return pd.DataFrame(rows)
+
+
+def _build_drop_regression_average(regressions):
+    columns = [
+        "timeframe",
+        "horizon_start",
+        "horizon_end",
+        "horizon_count",
+        "mean_observation_count",
+        "mean_intercept",
+        "mean_entry_score_percentile_coefficient",
+        "mean_score_percentile_drop_coefficient",
+        "score_drop_negative_coefficient_share",
+        "mean_entry_drop_interaction_coefficient",
+        "mean_r_squared",
+    ]
+    if regressions.empty:
+        return pd.DataFrame(columns=columns)
+
+    rows = []
+    for timeframe, group in regressions.groupby("timeframe", sort=False):
+        drop_coefficients = group["score_percentile_drop_coefficient"].dropna()
+        rows.append({
+            "timeframe": timeframe,
+            "horizon_start": int(group["horizon_days"].min()),
+            "horizon_end": int(group["horizon_days"].max()),
+            "horizon_count": int(group["horizon_days"].nunique()),
+            "mean_observation_count": group["observation_count"].mean(),
+            "mean_intercept": group["intercept"].mean(),
+            "mean_entry_score_percentile_coefficient": (
+                group["entry_score_percentile_coefficient"].mean()
+            ),
+            "mean_score_percentile_drop_coefficient": (
+                drop_coefficients.mean()
+            ),
+            "score_drop_negative_coefficient_share": (
+                (drop_coefficients < 0).mean()
+                if not drop_coefficients.empty
+                else None
+            ),
+            "mean_entry_drop_interaction_coefficient": (
+                group["entry_drop_interaction_coefficient"].mean()
+            ),
+            "mean_r_squared": group["r_squared"].mean(),
+        })
+    return pd.DataFrame(rows, columns=columns)
+
+
 def _round_numeric_columns(df):
     if df.empty:
         return df
@@ -452,6 +624,12 @@ def calculate(
     live_progress_average = _build_live_progress_average(
         live_progress_correlations_by_horizon
     )
+    drop_regressions_by_horizon = _build_drop_regressions_by_horizon(
+        observations
+    )
+    drop_regression_average = _build_drop_regression_average(
+        drop_regressions_by_horizon
+    )
 
     return {
         "observations": _round_numeric_columns(observations),
@@ -465,4 +643,10 @@ def calculate(
             live_progress_correlations_by_horizon
         ),
         "live_progress_average": _round_numeric_columns(live_progress_average),
+        "drop_regressions_by_horizon": _round_numeric_columns(
+            drop_regressions_by_horizon
+        ),
+        "drop_regression_average": _round_numeric_columns(
+            drop_regression_average
+        ),
     }
