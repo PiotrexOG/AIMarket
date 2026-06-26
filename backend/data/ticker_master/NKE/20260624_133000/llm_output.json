@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated. RSI has fallen to 44.2, and the price is now at critical support near the 20-day SMA, indicating increased downside risk. The Doji pattern suggests indecision, but the overall momentum is negative. W: Velocity has turned negative, and the price is now 5% below the 20-day SMA, signaling a loss of short-term upward momentum. The stock is testing a key support level, increasing the risk of a breakdown. O: The current technical setup points to a heightened risk of a short-term decline if support at 42.32 fails. The elevated volume at this level suggests significant selling pressure. T: News regarding the CFO transition and the CEO admitting the turnaround is taking longer than expected reinforces the cautious short-term view, aligning with the weakening technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 2.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The medium-term trend has turned bearish, with the MACD crossing into negative territory and accelerating, and the Z-score relative to the 50-day SMA now at -1.77. The trend alignment remains compressed, but the overall direction is clearly shifting downwards. W: The stock is testing monthly support, but the bearish MACD and negative Z-score indicate a loss of conviction and increasing downside risk. The compressed trend alignment offers little structural support against further declines. O: The medium-term outlook is now decidedly bearish. A break below the current support zone could lead to a significant decline, especially given the accelerating bearish MACD. The 'conv' score has decreased due to the clear bearish signal. T: News about the CFO transition and the CEO's comments about the turnaround timeline continue to weigh on sentiment, consistent with the deteriorating medium-term technical picture."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: While the long-term regime remains bearish, the stock has moved to multi-month lows (1.7% position), increasing the probability of a rebound from oversold conditions. The 'major crosses' indicator still suggests a potential rebound is likely from an extreme bearish stretch. W: The fundamental growth profile remains stagnant, and while valuation multiples have compressed slightly, they still reflect declining earnings. However, the extreme oversold positioning offers some tactical support. O: The long-term 'score' has been adjusted upwards slightly due to the extreme oversold conditions and potential for a technical rebound, despite persistent fundamental headwinds. The 'safe' score has decreased due to the increased volatility and the stock's proximity to multi-month lows, indicating higher downside risk. T: Long-term news is mixed, with some positive developments like the CFO transition and potential World Cup opportunities, but these are overshadowed by ongoing turnaround challenges and market share concerns."
+    }
+  }
+}

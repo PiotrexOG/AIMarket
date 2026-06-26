@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (19.4)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.02)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-11.9%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-10.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 71.81-88.72]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-7.44%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.706)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.03)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 71.81-108.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-25.6%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-10.01%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 1.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 72.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.19%))",
+      "volume_dynamics": "ELEVATED (1.2)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.94, P/S: 6.64)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.01)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.5)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Omnicom partners with Netflix on AI-powered advertising. - Netflix launches new horror video game on June 30. - Netflix advertising revenue expected to double to $3 billion in 2026.",
+      "Netflix expands video podcast partnership with i Heart Media. - Netflix partners with Omnicom Media for AI ad creatives. - Netflix stock sinks to 52-week low amid market anxiety. - Netflix will not buy Lionsgate after missing out on Roku.",
+      "Netflix makes acquisition that Wall Street likes."
+    ],
+    "medium_term_50d": [
+      "Omnicom partners with Netflix on AI-powered advertising. - Netflix launches new horror video game on June 30. - Netflix advertising revenue expected to double to $3 billion in 2026.",
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans.",
+      "Netflix expands video podcast partnership with i Heart Media. - Netflix partners with Omnicom Media for AI ad creatives. - Netflix stock sinks to 52-week low amid market anxiety. - Netflix will not buy Lionsgate after missing out on Roku."
+    ],
+    "long_term_200d": [
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans.",
+      "Omnicom partners with Netflix on AI-powered advertising. - Netflix launches new horror video game on June 30. - Netflix advertising revenue expected to double to $3 billion in 2026.",
+      "Netflix acquired AI company for $600 million. - Netflix ad business projected to reach $3 billion in 2026. - Netflix raised full-year free cash flow guidance to $12.5 billion. - Netflix criticises German plan for local investment requirements."
+    ]
+  }
+}

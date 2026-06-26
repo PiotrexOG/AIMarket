@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook for AAPL shows signs of stabilization near critical support levels (287.78). The \"HAMMER_PINBAR_BULLISH\" candle pattern suggests potential buying interest at these lows. Momentum indicators like RSI are neutral (42.3), indicating a lack of strong directional conviction but also a potential oversold condition. W: Despite the bullish candle, the price is testing the lower Bollinger Band and momentum is negative (-5.8% ROC), suggesting continued choppiness. The \"RANGE\" bias in the SR landscape implies a lack of clear trend. O: The \"HIGH_INSTITUTIONAL_ACTIVITY\" and \"POWER_ZONE_CONFLUENCE\" suggest that significant market participants are active, potentially supporting the price. T: The \"F:TESTING @20d\" barrier indicates immediate resistance, which needs to be overcome for a sustained move higher."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend for AAPL exhibits \"BULLISH_EXPANDING_MOMENTUM\" (7.61%), supported by a healthy mean reversion Z-score (0.33) around the 50-day SMA. The price remains within a well-defined monthly range, indicating structural stability. W: A key concern is the \"BEARISH_ACCELERATING\" MACD signal, which contradicts the broader momentum trend and suggests potential headwinds. The \"INSIDE_MONTHLY_RANGE\" also implies a lack of decisive breakout. O: Strong \"business_quality_ttm\" and \"cash_generation_ttm\" provide a fundamental underpinning for the stock, mitigating some of the technical concerns. T: The confluence of bullish momentum and a bearish MACD creates a mixed signal, requiring careful monitoring of the MACD trend for confirmation."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: AAPL's long-term outlook remains robust, anchored by a \"SECULAR_BULL_MARKET\" regime and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE.\" The price is positioned favorably in the upper quadrant (70.2%) of its long-term range, indicating sustained upward bias. W: The \"PREMIUM_VALUATION\" (P/E: 36.58) and \"EXTREMELY_LOW_ASSET_SAFETY\" (P/B: 48.66) are significant structural risks that could limit upside or increase downside volatility in a risk-off environment. The \"FAIR_GROWTH_PRICING\" (PEG: 1.43) suggests that current growth expectations are largely priced in. O: \"HIGH_EFFICIENCY_CASH_MACHINE\" fundamentals and \"STRONG_STABLE_GROWTH\" in revenue and EPS provide a strong foundation. The \"MEGA_CAP_TITAN\" scale offers resilience. T: The \"NEUTRAL_STRUCTURE\" (EV/MC: 1.01x) indicates that the market is not currently pricing in extreme structural shifts, but the high valuation multiples present a clear vulnerability."
+    }
+  }
+}

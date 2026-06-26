@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "NORMAL (5.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 220.84-241.6]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.38%)",
+        "cycle_macd": "BULLISH_FADING (0.992)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-244.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.21%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 231.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.09%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.7, P/S: 5.87)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 6.97)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "J&J commits $1B to expand contact lens production in Florida. - J&J CEO says curing certain cancers within a decade is realistic. - J&J drops key cancer trial results as Wall Street eyes stock.",
+      "Johnson & Johnson invests over $1 billion in Florida Vision operations. - J&J's Talvey drug shows positive results in multiple myeloma study. - Johnson & Johnson plans $1B+ investment to strengthen Vision manufacturing.",
+      "Johnson & Johnson to acquire Firefly Bio for $1B. - New TALVEY plus DARZALEX FASPRO data shows strength in multiple myeloma."
+    ],
+    "medium_term_50d": [
+      "J&J commits $1B to expand contact lens production in Florida. - J&J CEO says curing certain cancers within a decade is realistic. - J&J drops key cancer trial results as Wall Street eyes stock.",
+      "Johnson & Johnson to acquire Firefly Bio for $1B. - New TALVEY plus DARZALEX FASPRO data shows strength in multiple myeloma.",
+      "Johnson & Johnson invests over $1 billion in Florida Vision operations. - J&J's Talvey drug shows positive results in multiple myeloma study. - Johnson & Johnson plans $1B+ investment to strengthen Vision manufacturing."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson to acquire Firefly Bio for $1 billion. - J&J acquires Firefly Bio to expand oncology pipeline. - Johnson & Johnson to acquire cancer drug developer Firefly Bio.",
+      "Johnson & Johnson to acquire Firefly Bio for $1B. - New TALVEY plus DARZALEX FASPRO data shows strength in multiple myeloma.",
+      "Johnson & Johnson expands US availability of TECNIS Pure See IOL. - Johnson & Johnson reports strong late-stage results for rare blood disorder therapy. - Johnson & Johnson hits target with IMAAVY in rare blood disorder. - Johnson & Johnson eyes rare disease expansion. - Johnson & Johnson triggers $1 billion oncology bet acquisition."
+    ]
+  }
+}

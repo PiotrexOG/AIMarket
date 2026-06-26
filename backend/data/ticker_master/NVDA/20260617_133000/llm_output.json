@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 3.8
+      },
+      "synthesis": "S: The short-term outlook shows a neutral candle pattern, a slight deterioration from the previous period. RSI has moved closer to the midpoint (46.4), and price is still within normal Bollinger Bands, but the mean reversion band width has widened (0.29). Velocity has decreased, and the price is slightly closer to the 20-day SMA. O: News flow indicates continued strategic partnerships and a significant bond issuance, suggesting ongoing investment in AI infrastructure. The stock has reclaimed a significant market cap milestone. T: The lack of a strong bullish candle pattern and the neutral RSI suggest limited immediate upside momentum. The increased volatility band width could indicate potential for choppier price action. W: The shift from a bullish candle pattern to neutral, coupled with a slight increase in volatility bands, tempers the short-term outlook. Analyst conviction remains low."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safe": 4.3
+      },
+      "synthesis": "S: Medium-term trend alignment has moderated to a gradual ascent (2.41%), a step down from expanding momentum. The MACD is still bearish but recovering (-1.46), and price is now very close to the 50-day SMA (Z:-0.02), indicating a stable base. O: Continued strategic announcements regarding AI infrastructure and new chip deployments (Vera CPU) support the medium-term view. The company's proactive bond issuance suggests confidence in future growth and investment capacity. T: The moderation in trend alignment and the still-bearish MACD signal warrant caution against aggressive bullishness. The price is consolidating near the 50-day SMA, suggesting a potential for sideways movement before the next directional move. W: While the overall trend remains positive and fundamentals are robust, the deceleration in trend momentum and the lingering MACD bearishness suggest a less dynamic medium-term outlook compared to the previous period."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 8.5,
+        "safe": 4.8
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market (9.4%) with a stable golden cross structure (9.84%). The stock's position within the cycle has slightly advanced to 60.5%. Fundamentals remain exceptionally strong with elite business quality, financial health, and hyper-growth. O: The company's continued investment in AI infrastructure, evidenced by bond issuances and new chip deployments, reinforces its long-term strategic positioning. The \"ATTRACTIVE_GROWTH_PRICING\" (PEG: 0.81) remains a key positive despite premium multiples. T: Valuation remains the primary long-term risk, with P/E and P/S multiples still indicating \"EXTREMELY_LOW_ASSET_SAFETY\" (P/B: 61.02). Any slowdown in hyper-growth could lead to significant valuation compression. W: The core strengths of NVDA's business quality and growth profile continue to support a strong long-term score. However, the persistent extreme valuation limits the 'safe' metric and introduces vulnerability to shifts in market sentiment or growth expectations."
+    }
+  }
+}

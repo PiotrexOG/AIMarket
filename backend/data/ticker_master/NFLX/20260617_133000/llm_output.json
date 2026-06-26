@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.2,
+        "safe": 4.8
+      },
+      "synthesis": "S: RSI remains extremely oversold (20.4), and the price is testing critical support at 77.71, suggesting a potential for a short-term bounce. Velocity has normalized slightly from extreme lows. W: The candle pattern is neutral, and the price is still below the 20-day SMA, indicating lingering weakness. The ROC remains negative. O: News regarding potential acquisition interest, though denied, and expansion of content partnerships could provide a catalyst for a short-term upward move. T: The primary risk is a breakdown below the 77.71 support level, which could trigger further selling pressure given the negative trend base."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 1.8,
+        "conv": 2.8,
+        "safe": 4.3
+      },
+      "synthesis": "S: The bearish trend alignment has slightly worsened, and the MACD is accelerating downwards, reinforcing the negative medium-term outlook. The price remains in a bearish trend position relative to the 50-day SMA (Z:-1.69). W: The monthly support zone between 77.71 and 108.94 continues to offer some structural resilience, but the overall trend is clearly deteriorating. O: Despite the bearish technicals, the fundamental strength in cash generation and business quality remains a supportive factor. T: The risk of further downside is elevated as the bearish momentum accelerates, potentially testing the lower bounds of the support zone if market conditions remain unfavorable."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.9,
+        "conv": 3.8,
+        "safe": 5.8
+      },
+      "synthesis": "S: The secular bear market regime persists, and the death cross structure remains in place, indicating a challenging long-term technical environment. The price is at multi-month lows (5.3% position). W: While the technicals are bearish, the company's fundamentals remain robust, with high business quality, a healthy balance sheet, and strong cash generation. The valuation has become more attractive, moving towards fair valuation (P/E 24.61). O: Strategic initiatives in AI and advertising, coupled with strong historical growth, provide a basis for long-term recovery. T: The primary risk remains the prevailing bearish market regime and the potential for further fundamental deterioration if growth expectations are not met, despite the current attractive valuation."
+    }
+  }
+}

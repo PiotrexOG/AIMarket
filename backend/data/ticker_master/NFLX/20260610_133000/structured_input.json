@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (18.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.1)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-7.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 81.0-91.46]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.18%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.31)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.47)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 81.0-108.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-18.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.16%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 12.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 81.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.3%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 25.83, P/S: 7.48)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 11.27)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.57)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Paramount accuses Netflix of campaign against Warner Bros. deal. - Netflix withdraws from acquisition, market approves.",
+      "Netflix board leadership transition: Jay Hoag appointed chairman.",
+      "Netflix integrates Gen AI to help subscribers navigate content."
+    ],
+    "medium_term_50d": [
+      "Netflix board leadership transition: Jay Hoag appointed chairman.",
+      "Paramount accuses Netflix of campaign against Warner Bros. deal. - Netflix withdraws from acquisition, market approves.",
+      "Netflix acquired AI company for $600 million. - Netflix ad business projected to reach $3 billion in 2026. - Netflix raised full-year free cash flow guidance to $12.5 billion. - Netflix criticises German plan for local investment requirements."
+    ],
+    "long_term_200d": [
+      "Netflix acquired AI company for $600 million. - Netflix ad business projected to reach $3 billion in 2026. - Netflix raised full-year free cash flow guidance to $12.5 billion. - Netflix criticises German plan for local investment requirements.",
+      "Netflix highlights US$325b economic impact and $20b content budget. - Netflix expands NFL game inventory through 2029. - Netflix's \"KPop Demon Hunters\" announce global world tour. - Netflix raises subscription prices, signaling end of passive era.",
+      "Netflix refocuses on ads and AI, cooling acquisition talk. - Netflix partners with Ferrero to revive Wonka candy brand. - Netflix ad-supported tier tops 250 million monthly viewers."
+    ]
+  }
+}

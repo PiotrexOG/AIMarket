@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 97.95-105.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.51%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.416)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.55)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 97.95-110.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.82%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 104.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.06%))",
+      "volume_dynamics": "ELEVATED (1.12)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.3% | OM: 14.2% | NM: 12.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $95.716B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 120.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.7%, Next Q Est Growth: 38.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.32, P/S: 1.95)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.72)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.13)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney plans multi-billion dollar Shanghai resort expansion. - Disney's Toy Story 5 breaks franchise opening weekend records. - Walt Disney (DIS) stock drops 1.39%.",
+      "Disney's 'Toy Story 5' has biggest opening weekend.",
+      "Disney Advertising teams up with Omnicom for smarter streaming ads. - Disney Experiences highlights domestic economic impact. - Disney faces fresh Trump-ABC dispute. - Disney discusses 'eventizing' of streaming content."
+    ],
+    "medium_term_50d": [
+      "Disney's 'Toy Story 5' has biggest opening weekend.",
+      "Disney plans multi-billion dollar Shanghai resort expansion. - Disney's Toy Story 5 breaks franchise opening weekend records. - Walt Disney (DIS) stock drops 1.39%.",
+      "Disney faces pan-EU patent injunction for video encoding. - Toy Story 5 set for massive global opening weekend."
+    ],
+    "long_term_200d": [
+      "Disney's 'Toy Story 5' has biggest opening weekend.",
+      "Disney plans multi-billion dollar Shanghai resort expansion. - Disney's Toy Story 5 breaks franchise opening weekend records. - Walt Disney (DIS) stock drops 1.39%.",
+      "Disney faces pan-EU patent injunction for video encoding. - Toy Story 5 set for massive global opening weekend."
+    ]
+  }
+}

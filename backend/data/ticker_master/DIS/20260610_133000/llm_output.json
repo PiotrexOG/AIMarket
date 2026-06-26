@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The stock is testing critical support at the 20-day SMA, indicating potential short-term stabilization. Positive news regarding streaming income and the 'One Disney' strategy provides some tailwind. W: Bearish RSI in the 38.2 zone and neutral candle patterns suggest limited immediate upside momentum. O: A bounce from current support levels could lead to a short-term rally, supported by ongoing positive narrative elements. T: The proximity to support and mixed technical signals create a range-bound scenario with a slight downside bias due to weak momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The stock is consolidating within its monthly range, with MACD showing signs of recovery from a bearish position. Positive earnings surprises and strong forward estimates for next quarter offer fundamental support. W: The 50-day SMA remains in a bearish trend position (Z:-0.97), and trend alignment is compressed, indicating a lack of strong directional conviction. O: A sustained break above the current consolidation range, supported by improving earnings momentum, could signal a medium-term trend reversal. T: The current technical setup suggests a period of consolidation before a potential upward move, contingent on breaking key resistance levels and sustained positive fundamental catalysts."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The company exhibits strong fundamentals with healthy balance sheets, moderate growth, and good business quality metrics. Valuation multiples are at a moderate discount, and implied growth appears underrated (PEG: 0.12). W: The long-term market regime is a secular bear market, and the stock is in a bearish lower quadrant, with a death cross structure present. O: A potential shift in market regime or sustained positive company-specific performance could lead to a significant re-rating, especially given the current valuation discount. T: Despite the bearish long-term technical structure and market regime, the robust fundamental profile and attractive valuation provide a degree of safety and potential for long-term recovery."
+    }
+  }
+}

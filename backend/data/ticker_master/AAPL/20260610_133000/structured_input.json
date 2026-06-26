@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (42.3)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.03)",
+        "velocity_roc_10": "NORMAL (-5.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 287.78-317.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (7.61%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.773)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.33)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 245.51-317.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.45%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 70.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 289.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.47%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.6)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 36.58, P/S: 9.85)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 48.66)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.43)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple introduces new intelligence frameworks and tools for app development. - Apple unveils next generation of Apple Intelligence with new architecture. - Apple announces AI overhaul for i Phone, partnering with Google. - Apple debuts AI-powered Siri assistant at WWDC event. - Apple's WWDC keynote focuses on Apple Intelligence and Siri. - Apple's i OS 27 will extend back to i Phone 11 models. - Apple's new mac OS will be called \"Golden Gate\". - Apple Intelligence features will be integrated across i Phone, i Pad, Mac, Watch, Air Pods, Vision Pro. - Siri improvements will extend to Car Play and Air Pods. - Apple's private cloud compute platform runs its own world knowledge service.",
+      "Apple WWDC preview: Apple gets second shot at AI rollout. - WWDC 2026 puts Apple's AI pivot and services valuation in focus. - Apple plans AI plan, relaunching Siri with Google Gemini. - Apple expected to introduce paid Siri subscription at WWDC. - Apple Intelligence platform to extend across more devices and services. - Citi has a message for Apple stock investors ahead of WWDC. - Apple heads into WWDC with record quarter and high-stakes AI announcements. - Amazon to acquire Apple's 20% stake in Globalstar.",
+      "Apple's new Siri AI upgrade won't work in EU or China. - Apple's AI Siri update raises i Phone upgrade questions. - Apple's AI Siri tool fails to comply with EU regulations. - Apple's AI Siri upgrade has limited use on older i Phones. - Apple's WWDC 2026 shows clearer paths to monetizing AI. - Apple's AI bet relies on NVIDIA chips and Google Cloud. - Tim Cook stepping down as Apple CEO after WWDC 2026. - Waymo acquires Apple's former self-driving car test track."
+    ],
+    "medium_term_50d": [
+      "Apple introduces new intelligence frameworks and tools for app development. - Apple unveils next generation of Apple Intelligence with new architecture. - Apple announces AI overhaul for i Phone, partnering with Google. - Apple debuts AI-powered Siri assistant at WWDC event. - Apple's WWDC keynote focuses on Apple Intelligence and Siri. - Apple's i OS 27 will extend back to i Phone 11 models. - Apple's new mac OS will be called \"Golden Gate\". - Apple Intelligence features will be integrated across i Phone, i Pad, Mac, Watch, Air Pods, Vision Pro. - Siri improvements will extend to Car Play and Air Pods. - Apple's private cloud compute platform runs its own world knowledge service.",
+      "Apple WWDC preview: Apple gets second shot at AI rollout. - WWDC 2026 puts Apple's AI pivot and services valuation in focus. - Apple plans AI plan, relaunching Siri with Google Gemini. - Apple expected to introduce paid Siri subscription at WWDC. - Apple Intelligence platform to extend across more devices and services. - Citi has a message for Apple stock investors ahead of WWDC. - Apple heads into WWDC with record quarter and high-stakes AI announcements. - Amazon to acquire Apple's 20% stake in Globalstar.",
+      "Apple set to introduce AI-powered Siri at WWDC. - Apple expected to detail AI push at developer conference. - Apple bets its AI future on Monday's WWDC. - Apple's WWDC puts Tim Cook's AI legacy on the line. - Apple's AI do-over is here, pressure on for WWDC. - Investors see Apple WWDC as major AI catalyst. - Apple has big week ahead with AI Siri expected. - WSJ columnist on Space X IPO, Apple WWDC 2026. - Hon Hai revenue jumps as AI server demand accelerates. - Taiwan's Foxconn raises guidance for second-quarter outlook."
+    ],
+    "long_term_200d": [
+      "Apple introduces new intelligence frameworks and tools for app development. - Apple unveils next generation of Apple Intelligence with new architecture. - Apple announces AI overhaul for i Phone, partnering with Google. - Apple debuts AI-powered Siri assistant at WWDC event. - Apple's WWDC keynote focuses on Apple Intelligence and Siri. - Apple's i OS 27 will extend back to i Phone 11 models. - Apple's new mac OS will be called \"Golden Gate\". - Apple Intelligence features will be integrated across i Phone, i Pad, Mac, Watch, Air Pods, Vision Pro. - Siri improvements will extend to Car Play and Air Pods. - Apple's private cloud compute platform runs its own world knowledge service.",
+      "Apple WWDC preview: Apple gets second shot at AI rollout. - WWDC 2026 puts Apple's AI pivot and services valuation in focus. - Apple plans AI plan, relaunching Siri with Google Gemini. - Apple expected to introduce paid Siri subscription at WWDC. - Apple Intelligence platform to extend across more devices and services. - Citi has a message for Apple stock investors ahead of WWDC. - Apple heads into WWDC with record quarter and high-stakes AI announcements. - Amazon to acquire Apple's 20% stake in Globalstar.",
+      "Apple set to introduce AI-powered Siri at WWDC. - Apple expected to detail AI push at developer conference. - Apple bets its AI future on Monday's WWDC. - Apple's WWDC puts Tim Cook's AI legacy on the line. - Apple's AI do-over is here, pressure on for WWDC. - Investors see Apple WWDC as major AI catalyst. - Apple has big week ahead with AI Siri expected. - WSJ columnist on Space X IPO, Apple WWDC 2026. - Hon Hai revenue jumps as AI server demand accelerates. - Taiwan's Foxconn raises guidance for second-quarter outlook."
+    ]
+  }
+}

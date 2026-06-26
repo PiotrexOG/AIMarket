@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Extreme oversold RSI (16.1) suggests potential for a short-term bounce. Mean reversion indicators are neutral, and price is stable near the 20-day SMA. O: Potential for a short-term snap-back rally driven by oversold conditions. T: News flow highlights price cuts and digital sales growth, which could provide a catalyst. W: The stock is currently in the middle of its 20-day range, indicating a lack of strong directional conviction in the immediate term."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The MACD is recovering from a bearish signal, but the price remains below the 50-day SMA, indicating a bearish trend position. Trend alignment is compressed, suggesting consolidation. O: Potential for a trend reversal if the price can break above the 50-day SMA and MACD turns bullish. T: Recent earnings beats and strong digital growth provide fundamental support for a potential upward move. W: The current trend is still considered bearish, and conviction is moderate due to the compressed MAS and bearish SMA positioning."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The long-term regime remains bullish with a healthy golden cross structure. The price is positioned neutrally within the long-term cycle. O: Continued participation in the secular bull market and potential for further upside if the company can sustain its growth profile. T: Strong balance sheet (NetCash/Eq: 0.27x) and mega-cap scale provide resilience. W: Valuation is a significant concern, with hyper-premium multiples (P/E: 51.93, P/S: 1.54) and high asset safety assessment (P/B: 14.25), implying limited downside protection and elevated risk if growth falters."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term outlook has weakened, shifting from a potential bullish reversal to indecision, indicated by the \"DOJI_INDECISION\" candle pattern. While the price has moved within normal Bollinger Bands (0.36) and the 20-day SMA is stable (-1.5%), the RSI has dipped slightly to 40.3. The price is now in the middle of the 20-day range, losing the support test from the previous period. W: The \"DOJI\" pattern and neutral RSI suggest a lack of conviction. The \"RANGE\" bias in the SR landscape persists, and the \"AVERAGE\" volume dynamics (0.79) indicate less institutional participation compared to the prior period. O: The \"POWER_ZONE_CONFLUENCE(2)\" remains a structural support, but the \"F:DISTANT @20d\" barrier suggests immediate resistance is further away, implying less immediate upside pressure. T: The shift in candle pattern and range position from testing support to the middle of the range indicates a loss of short-term momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend shows improvement, with the Z-score around the 50-day SMA strengthening to 0.73, indicating a more robust bullish trend position. The \"BULLISH_EXPANDING_MOMENTUM\" has slightly decreased to 5.8%, but the overall trend alignment remains positive. The MACD is showing signs of recovery, moving from -2.773 to -2.614, suggesting a potential easing of bearish momentum. W: Despite the improved Z-score, the MACD is still in bearish territory, indicating lingering caution. The \"INSIDE_MONTHLY_RANGE\" persists, suggesting a lack of a decisive breakout. O: The \"HIGH_EFFICIENCY_CASH_MACHINE\" and \"CASH_COW_EXCELLENT\" fundamentals continue to provide a strong underlying support for the stock, mitigating some of the short-term technical ambiguity. T: The combination of a stronger bullish trend position and a recovering MACD, supported by strong fundamentals, presents a more constructive medium-term picture than the previous period."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The long-term outlook for AAPL remains exceptionally strong, with the market regime still firmly in a \"SECULAR_BULL_MARKET\" (11.9%). The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" is reinforced, and the long-term range position has improved significantly to 81.5% in the upper quadrant. W: The \"PREMIUM_VALUATION\" multiples have slightly expanded (P/E: 37.94, P/S: 10.21), and the \"EXTREMELY_LOW_ASSET_SAFETY\" (P/B: 50.46) remains a persistent structural risk. The implied growth (PEG: 1.49) also reflects these elevated multiples. O: The \"MEGA_CAP_TITAN\" scale, \"HIGH_EFFICIENCY_CASH_MACHINE\" business quality, and \"STRONG_STABLE_GROWTH\" profile provide significant resilience and a solid foundation for the long-term view. T: The improvement in long-term range position and regime strength, despite slightly higher valuations, reinforces the bullish long-term conviction. The \"NEUTRAL_STRUCTURE\" (EV/MC: 1.01x) remains unchanged, indicating no significant structural shifts are being priced in."
+    }
+  }
+}

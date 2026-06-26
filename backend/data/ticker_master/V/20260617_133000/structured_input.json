@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.94)",
+        "velocity_roc_10": "NORMAL (5.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 309.0-335.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.36%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.343)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.84)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 301.12-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (1.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.78%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 335.23,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.24%))",
+      "volume_dynamics": "ELEVATED (1.12)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @50d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.45, P/S: 15.66)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.71)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa unveils findings from global travel intentions study. - Visa executive discusses AI's transformation of payments. - Visa's AI agent and stablecoin push could be game changer. - JPMorgan and Visa helped Dow Jones Industrial Average close higher.",
+      "Visa launches World Cup 2026 gift card with Blackhawk Network. - Visa partners with Electronic Arts for advertising platform. - Visa named Proud Partner of Rockefeller Center's Top of the Rock.",
+      "Visa partners with Open AI for AI agent shopping. - Visa launches AI-enabled agentic commerce tools. - Visa and Open AI embed payment network in Chat GPT. - Visa adds AI agent payments and stablecoin settlement. - Visa and Ping Pong launch B2B card-to-account payments. - Visa partners with Open Way for Asia Pacific payments. - Visa CFO downplays stablecoin and agentic commerce importance. - Judge preliminarily approves Visa, Mastercard $38B swipe fee deal. - Visa, Mastercard face $38B swipe fee settlement. - Visa launches new cross-border payment solution with Ping Pong."
+    ],
+    "medium_term_50d": [
+      "Visa partners with Open AI for AI agent shopping. - Visa launches AI-enabled agentic commerce tools. - Visa and Open AI embed payment network in Chat GPT. - Visa adds AI agent payments and stablecoin settlement. - Visa and Ping Pong launch B2B card-to-account payments. - Visa partners with Open Way for Asia Pacific payments. - Visa CFO downplays stablecoin and agentic commerce importance. - Judge preliminarily approves Visa, Mastercard $38B swipe fee deal. - Visa, Mastercard face $38B swipe fee settlement. - Visa launches new cross-border payment solution with Ping Pong.",
+      "Visa unveils findings from global travel intentions study. - Visa executive discusses AI's transformation of payments. - Visa's AI agent and stablecoin push could be game changer. - JPMorgan and Visa helped Dow Jones Industrial Average close higher.",
+      "US judge OKs Visa, Mastercard $38 billion swipe fee settlement. - Court approves Visa-Mastercard settlement over card-swipe fees. - Visa expands payment network reach with Valor Pay Tech certification. - Visa partners with Open Way to accelerate bank payment rollouts. - Visa joins Agentic Ready Programme to enable AI-driven payments. - Visa tests stablecoins and AI for payment infrastructure rebuild."
+    ],
+    "long_term_200d": [
+      "Visa partners with Open AI for AI agent shopping. - Visa launches AI-enabled agentic commerce tools. - Visa and Open AI embed payment network in Chat GPT. - Visa adds AI agent payments and stablecoin settlement. - Visa and Ping Pong launch B2B card-to-account payments. - Visa partners with Open Way for Asia Pacific payments. - Visa CFO downplays stablecoin and agentic commerce importance. - Judge preliminarily approves Visa, Mastercard $38B swipe fee deal. - Visa, Mastercard face $38B swipe fee settlement. - Visa launches new cross-border payment solution with Ping Pong.",
+      "Visa, Mastercard reportedly backing new stablecoin platform. - Visa, Mastercard collaborate on new stablecoin platform. - Visa-Mastercard swipe fee fund has paid $414M. - Visa Inc. (V) Presents at 2026 Baird Global Consumer, Technology & Services Conference. - Visa stock down 14% in a year, but disruption thesis weakens. - TCI Fund Management boosted Visa stake in Q1 2026. - Tether debuts tokenized gold stablecoin Visa card.",
+      "Cuba to stop Visa and Mastercard payments. - Visa, Mastercard collaborate on new stablecoin platform. - Visa stock valuation assessed after mixed performance."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (17.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-9.2%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-8.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 367.07-466.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.13%)",
+        "cycle_macd": "BEARISH_RECOVERING (-5.062)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.11)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 367.07-466.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-16.9%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.24%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 9.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 374.8,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.13%))",
+      "volume_dynamics": "AVERAGE (1.02)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 46.3% | NM: 35.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $293.812B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 15.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -8.1%, Next Q Est Growth: 13.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.58, P/S: 9.52)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.71)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.68)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron and Microsoft partner on a multi-gigawatt natural gas-powered data center project. - Stagwell and Microsoft Advertising integrate Copilot directly into live media campaigns. - Microsoft's CEO Satya Nadella criticizes AI companies for capturing too much value. - Microsoft's AI run rate points to significant upside potential. - Microsoft stock is performing well despite recent market selloffs. - Microsoft gains 1.8% in the latest trading session. - Microsoft and Chevron build a huge power backing for AI data centers. - Microsoft's $7 billion Texas data center gets 20-year power supply deal. - Microsoft's Legit Script Healthcare Merchant Certification recognized by Visa, Mastercard, Google",
+      "Microsoft faces shareholder lawsuit; TD Cowen maintains Buy rating. - Chevron, Microsoft strike 20-year deal to power AI data center. - Microsoft stock is considered a strong buy at valuation lows. - Microsoft falls on the stock market today. - ICON selects Microsoft as preferred technology partner for AI. - Microsoft plans to construct new datacenter campus in Pecos, Texas. - Microsoft CEO questions industry's current AI path. - Microsoft pushes AI beyond model wars, focusing on access, cost, trust. - Vena earns top ranks as a Microsoft-native planning platform. - Chevron and Microsoft strike 20-year gas deal for AI data centers. - Heidrick & Struggles",
+      "EU probes Microsoft, Amazon cloud services over antitrust concerns. - Microsoft warns of new malware targeting Windows cryptocurrency wallets. - Microsoft faces expectations risk despite strong AI/cloud growth. - Byte Dance to spend over $1 billion annually on Microsoft AI/cloud. - Microsoft secures major China AI deal with Tik Tok parent. - Microsoft's AI spending may pressure return on equity. - Microsoft adds former executive to its board of directors. - Microsoft delivers \"bad news\" to power users of Copilot."
+    ],
+    "medium_term_50d": [
+      "Chevron and Microsoft partner on a multi-gigawatt natural gas-powered data center project. - Stagwell and Microsoft Advertising integrate Copilot directly into live media campaigns. - Microsoft's CEO Satya Nadella criticizes AI companies for capturing too much value. - Microsoft's AI run rate points to significant upside potential. - Microsoft stock is performing well despite recent market selloffs. - Microsoft gains 1.8% in the latest trading session. - Microsoft and Chevron build a huge power backing for AI data centers. - Microsoft's $7 billion Texas data center gets 20-year power supply deal. - Microsoft's Legit Script Healthcare Merchant Certification recognized by Visa, Mastercard, Google",
+      "Microsoft faces shareholder lawsuit; TD Cowen maintains Buy rating. - Chevron, Microsoft strike 20-year deal to power AI data center. - Microsoft stock is considered a strong buy at valuation lows. - Microsoft falls on the stock market today. - ICON selects Microsoft as preferred technology partner for AI. - Microsoft plans to construct new datacenter campus in Pecos, Texas. - Microsoft CEO questions industry's current AI path. - Microsoft pushes AI beyond model wars, focusing on access, cost, trust. - Vena earns top ranks as a Microsoft-native planning platform. - Chevron and Microsoft strike 20-year gas deal for AI data centers. - Heidrick & Struggles",
+      "EU probes Microsoft, Amazon cloud services over antitrust concerns. - Microsoft warns of new malware targeting Windows cryptocurrency wallets. - Microsoft faces expectations risk despite strong AI/cloud growth. - Byte Dance to spend over $1 billion annually on Microsoft AI/cloud. - Microsoft secures major China AI deal with Tik Tok parent. - Microsoft's AI spending may pressure return on equity. - Microsoft adds former executive to its board of directors. - Microsoft delivers \"bad news\" to power users of Copilot."
+    ],
+    "long_term_200d": [
+      "Chevron and Microsoft partner on a multi-gigawatt natural gas-powered data center project. - Stagwell and Microsoft Advertising integrate Copilot directly into live media campaigns. - Microsoft's CEO Satya Nadella criticizes AI companies for capturing too much value. - Microsoft's AI run rate points to significant upside potential. - Microsoft stock is performing well despite recent market selloffs. - Microsoft gains 1.8% in the latest trading session. - Microsoft and Chevron build a huge power backing for AI data centers. - Microsoft's $7 billion Texas data center gets 20-year power supply deal. - Microsoft's Legit Script Healthcare Merchant Certification recognized by Visa, Mastercard, Google",
+      "Microsoft faces shareholder lawsuit; TD Cowen maintains Buy rating. - Chevron, Microsoft strike 20-year deal to power AI data center. - Microsoft stock is considered a strong buy at valuation lows. - Microsoft falls on the stock market today. - ICON selects Microsoft as preferred technology partner for AI. - Microsoft plans to construct new datacenter campus in Pecos, Texas. - Microsoft CEO questions industry's current AI path. - Microsoft pushes AI beyond model wars, focusing on access, cost, trust. - Vena earns top ranks as a Microsoft-native planning platform. - Chevron and Microsoft strike 20-year gas deal for AI data centers. - Heidrick & Struggles",
+      "Microsoft sued by shareholders over Azure growth and AI costs. - Microsoft Xbox division studios brace for closures and spin-offs. - Wix partners with Microsoft 365 Copilot for website creation. - Microsoft CEO Nadella pitches new AI framework with 'human capital'. - Microsoft's Xbox business faces cost shock due to AI demand. - Microsoft stock rises on tech rally, despite shareholder lawsuit. - Microsoft faces Azure and Copilot lawsuit over growth disclosures. - Microsoft CEO Nadella warns on AI 'token capital' importance."
+    ]
+  }
+}

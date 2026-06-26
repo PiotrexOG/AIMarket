@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The short-term outlook for NVDA shows a strong bullish candle pattern, indicating immediate buying interest. However, momentum indicators like RSI are neutral (40.1), and price action is within normal Bollinger Bands and the middle of its recent range. This suggests a lack of strong directional conviction despite positive short-term signals. O: Potential for short-term price appreciation if bullish sentiment continues to build, supported by news flow around AI infrastructure and partnerships. T: The primary risk is a lack of sustained momentum, with the price potentially reverting to the mid-range if buying pressure wanes. W: Neutral RSI and price within the middle of the range suggest limited upside potential without a stronger catalyst. The \"STRONGLY_BULLISH\" analyst consensus is tempered by \"LOW\" conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: Medium-term trend alignment is bullish with expanding momentum (6.45%), but this is contradicted by a bearish and accelerating MACD signal (-2.235). The price is exhibiting healthy mean reversion around the 50-day SMA (Z:0.07), indicating a stable base. O: The strong underlying trend and healthy mean reversion provide a foundation for potential upside. Positive news regarding AI infrastructure and partnerships could reinforce this trend. T: The bearish MACD divergence is a key risk, suggesting potential for a near-term pullback or consolidation. W: The conflicting signals between trend alignment and MACD warrant caution. While fundamentals are strong, the technical divergence requires monitoring."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 8.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: NVDA operates within a secular bull market regime (10.2%) with a healthy golden cross structure (8.52%). The long-term position is neutral within the cycle (58.1%), suggesting room for further expansion. O: The company's \"ULTRA_ELITE\" business quality, \"HYPER_GROWTH\" profile, and \"CASH_COW\" generation are significant long-term strengths. The \"ATTRACTIVE_GROWTH_PRICING\" (PEG: 0.81) despite \"HYPER_PREMIUM\" multiples suggests growth is being priced in, but not excessively beyond expected performance. T: The \"EXTREMELY_LOW_ASSET_SAFETY\" due to high valuation multiples (P/E: 65.67, P/S: 34.17) presents a significant long-term risk, making the stock vulnerable to sentiment shifts or growth disappointments. W: While fundamentals and market regime are highly supportive, the extreme valuation poses a substantial risk to long-term safety and capital preservation."
+    }
+  }
+}

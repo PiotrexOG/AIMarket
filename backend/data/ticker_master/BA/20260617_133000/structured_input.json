@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.81)",
+        "velocity_roc_10": "NORMAL (4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 207.95-232.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.71%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.009)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 206.92-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.34%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 65.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 227.65,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.43%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.58)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 94.07, P/S: 2.02)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 31.11)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.83)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing invests US$2.35b to expand Wichita campus, increase production. - Boeing reports higher aircraft deliveries for May. - U.S. Air Force backs Boeing's KC-46A tanker vision system. - Boeing shares trade higher as oil prices drop. - Boeing stock jumps on broader market rally.",
+      "Boeing stock jumps on Middle East peace deal news. - Boeing faces scrutiny after B-52 bomber crash. - Boeing stock rises in line with S&P 500.",
+      "Boeing's services unit posts higher Q1 revenues and backlog. - Boeing stock jumps on $2.35 billion Wichita campus investment."
+    ],
+    "medium_term_50d": [
+      "Boeing invests US$2.35b to expand Wichita campus, increase production. - Boeing reports higher aircraft deliveries for May. - U.S. Air Force backs Boeing's KC-46A tanker vision system. - Boeing shares trade higher as oil prices drop. - Boeing stock jumps on broader market rally.",
+      "Boeing to start 737 Max production on new assembly line July 6. - Boeing CEO says 737 Max production target is 63 per month. - Boeing opens new 737 Max assembly line in Everett July 2026. - Boeing delivers first two 787 Dreamliner jets to Riyadh Air. - Boeing outlines 737 Max production outlook and 787 manufacturing ramp-up.",
+      "Boeing's services unit posts higher Q1 revenues and backlog. - Boeing stock jumps on $2.35 billion Wichita campus investment."
+    ],
+    "long_term_200d": [
+      "Boeing CEO confident in more China aircraft orders. - Boeing CEO says 737 Max production rate increase planned. - Boeing CEO says 737 Max production rate increase will take longer. - Boeing CEO confident in 737 Max 7 and 10 certification. - Boeing to increase 737 Max production to 47 per month. - Boeing met FAA requirements for 737 Max production increase. - Boeing CEO signals stronger production momentum. - Boeing cleared by FAA to produce 47 737 Max jets monthly. - Boeing stock up after FAA clearance for 737 MAX production increase. - Boeing aims to balance 737 inventory",
+      "Boeing to start 737 Max production on new assembly line July 6. - Boeing CEO says 737 Max production target is 63 per month. - Boeing opens new 737 Max assembly line in Everett July 2026. - Boeing delivers first two 787 Dreamliner jets to Riyadh Air. - Boeing outlines 737 Max production outlook and 787 manufacturing ramp-up.",
+      "Boeing CEO to speak at Bernstein Strategic Decisions Conference. - Boeing plans $1B investment in Kansas facilities. - Trump to announce aircraft purchases from Boeing in China. - Boeing pursues massive China jet deal as CEO joins delegation. - PMGC Holdings acquires A&B Aerospace, Inc., a Boeing supplier."
+    ]
+  }
+}

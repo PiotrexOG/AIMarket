@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (20.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.09)",
+        "velocity_roc_10": "NORMAL (-5.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 77.71-91.46]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-6.48%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.174)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.69)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 77.71-108.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-20.3%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.79%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 5.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 77.77,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.64%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.91)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 24.61, P/S: 7.13)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.74)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.54)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans.",
+      "Netflix to announce second quarter 2026 financial results. - Netflix expands i Heart Media podcast partnership with video. - Netflix shares trade below targets amid live podcast push.",
+      "Netflix launches FIFA World Cup football video game exclusively."
+    ],
+    "medium_term_50d": [
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans.",
+      "Netflix to announce second quarter 2026 financial results. - Netflix expands i Heart Media podcast partnership with video. - Netflix shares trade below targets amid live podcast push.",
+      "Netflix launches FIFA World Cup football video game exclusively."
+    ],
+    "long_term_200d": [
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans.",
+      "Netflix acquired AI company for $600 million. - Netflix ad business projected to reach $3 billion in 2026. - Netflix raised full-year free cash flow guidance to $12.5 billion. - Netflix criticises German plan for local investment requirements.",
+      "Netflix highlights US$325b economic impact and $20b content budget. - Netflix expands NFL game inventory through 2029. - Netflix's \"KPop Demon Hunters\" announce global world tour. - Netflix raises subscription prices, signaling end of passive era."
+    ]
+  }
+}

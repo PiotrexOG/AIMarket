@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term outlook has significantly deteriorated. The RSI has fallen into a bearish zone (32.7), and the ROC has accelerated its decline (-7.0%). The price is now testing critical support for the 20-day range (172.23-192.68), with a strong bearish candle pattern. W: The deterioration in momentum and price action at support indicates a lack of buying interest and increasing downside pressure. The 20-day SMA is now further away at -4.2%. O: News flow remains mixed, with positive developments on the Microsoft AI data center power deal and Greek exploration, but the overall technical weakness is a dominant factor. T: Volatility remains stable (ATR 2.4%), but volume dynamics are slightly lower (0.77), suggesting less conviction behind the current price action. The shift to lower support levels increases downside risk."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The medium-term trend has further weakened, with the MACD accelerating into deeper bearish territory (-1.261). The price is now an overextended bearish statistical outlier relative to the 50-day SMA (Z:-2.95). W: Trend alignment shows a gradual descent (-1.49%), and while the price is strengthening at monthly support (172.23-198.87), the extreme bearish Z-score suggests this support may not hold. O: Continued news on strategic partnerships (Microsoft, Greece) provides some fundamental context, but the technical picture is overwhelmingly bearish. T: The combination of a deeply bearish MACD and an extreme bearish Z-score indicates increased downside risk. The current support zone, while historically significant, is under severe technical pressure."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The long-term secular bull market regime strength has weakened further (2.3%), and the price position within the long-term range has moved lower (37.0%). W: The golden cross structure remains healthy (8.42%), providing some structural support. Fundamentals remain unchanged, with average business quality and a healthy balance sheet, but the growth profile is still concerning. O: Strategic asset sales and expansion into new exploration and technology areas continue to be the narrative. T: Despite the weakening long-term technicals and continued premium valuation (P/E: 29.65), the underlying business and financial health provide some resilience. However, the significant drop in long-term range position and reduced market regime strength warrant a reduction in score and safety."
+    }
+  }
+}

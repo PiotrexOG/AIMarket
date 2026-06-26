@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.61)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 41.35-47.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.22%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.032)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 41.35-53.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-25.5%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-25.71%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 7.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 44.41,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.32%))",
+      "volume_dynamics": "AVERAGE (1.04)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.56, P/S: 1.42)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.97)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike launches operational and brand reset under CEO Elliott Hill. - Nike's footwear business shows early signs of stabilization. - Nike's football push gains Wall Street optimism. - Nike's World Cup football bet aims to recenter brand. - Bell Global Equities Fund sold Nike amid recovery challenges.",
+      "Academy Sports + Outdoors expanding Nike and Jordan brands.",
+      "Stephen Curry partners with Li Ning, challenging Nike in Asia. - Nike launches marketing campaign and expands football products."
+    ],
+    "medium_term_50d": [
+      "Nike launches operational and brand reset under CEO Elliott Hill. - Nike's footwear business shows early signs of stabilization. - Nike's football push gains Wall Street optimism. - Nike's World Cup football bet aims to recenter brand. - Bell Global Equities Fund sold Nike amid recovery challenges.",
+      "Stephen Curry partners with Li Ning, challenging Nike in Asia. - Nike launches marketing campaign and expands football products.",
+      "Nike launches star-studded FIFA World Cup campaign. - Nike stock eyes red week ahead of FIFA World Cup."
+    ],
+    "long_term_200d": [
+      "Nike launches operational and brand reset under CEO Elliott Hill. - Nike's footwear business shows early signs of stabilization. - Nike's football push gains Wall Street optimism. - Nike's World Cup football bet aims to recenter brand. - Bell Global Equities Fund sold Nike amid recovery challenges.",
+      "Nike's AI push and 2026 World Cup presence may reframe brand. - Nike faces falling sales, restructuring, China pressure, and tariffs. - Nike's role in 2026 World Cup aims to reinvigorate demand. - Nike stock jumps 4% on market sentiment. - Nike's global dominance faces new tests.",
+      "Nike slashes 1,400 jobs as stock crashes 70%."
+    ]
+  }
+}

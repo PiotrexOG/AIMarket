@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.57)",
+        "velocity_roc_10": "NORMAL (-4.6%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (1.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 385.06-449.39]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (4.98%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.295)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.5)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 335.65-449.39]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (27.9%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (20.71%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 94.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 437.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.31%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 61.9% | OM: 53.3% | NM: 47.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.34x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4125.510324B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.3%, EPS: 49.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3249.8%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.17, P/S: 0.55)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.39)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC and Amkor announce 10-year deal for packaging services.",
+      "Taiwan Semiconductor May revenue jumps 30.1% year-over-year.",
+      "TSM may hike 3nm chip prices by 15% in late 2026."
+    ],
+    "medium_term_50d": [
+      "Taiwan Semiconductor May revenue jumps 30.1% year-over-year.",
+      "TSMC and Amkor announce 10-year deal for packaging services.",
+      "TSMC CEO hints at potential chip price hikes due to AI demand."
+    ],
+    "long_term_200d": [
+      "Taiwan Semiconductor May revenue jumps 30.1% year-over-year.",
+      "TSMC CEO hints at potential chip price hikes due to AI demand.",
+      "TSMC accelerates 2nm chip and AI packaging investments. - Appaloosa Management takes new stake in Taiwan Semiconductor. - Appaloosa Management sold stake in Taiwan Semiconductor Manufacturing. - Third Point sells position in Taiwan Semiconductor Manufacturing Company."
+    ]
+  }
+}

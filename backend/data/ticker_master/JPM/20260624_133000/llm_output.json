@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.5,
+        "safe": 5.8
+      },
+      "synthesis": "S: Short-term momentum shows mixed signals with an explosive ROC (7.4%) but a neutral candle pattern. RSI remains extremely overbought (76.9), and the price is still extended above the 20-day SMA (6.6%). The price is now within normal Bollinger Bands, indicating a slight cooling from previous extremes. O: The continued positive ROC and the secular bull market regime provide some upside potential. News regarding AI deployment and private market analysis offers a mixed outlook. W: The extremely overbought RSI and extended price action above the 20-day SMA suggest a high probability of consolidation or a pullback. The 'neutral' candle pattern and average volume dynamics further temper short-term bullish conviction. T: The score has decreased due to the shift from a strong bullish candle pattern to neutral and the cooling of Bollinger Band readings. Conviction is slightly reduced by the overbought RSI and extended price. Safety is marginally improved as the price is no longer in a 'blow-off top' scenario."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.2,
+        "conv": 6.8,
+        "safe": 5.2
+      },
+      "synthesis": "S: The medium-term trend shows signs of fading momentum, with MACD bullishness decreasing and the Z-score above the 50-day SMA significantly lower (2.32) than before. The price is consolidating within the monthly range. O: The underlying secular bull market regime and the company's scale and business quality provide a supportive backdrop for potential recovery. Strategic expansion into Europe and positive Q1 earnings reports are supportive factors. W: The fading MACD momentum and the lower Z-score indicate a loss of upward thrust. The 'range' bias in the SR landscape and the 'near' resistance at the 20-day level suggest potential headwinds. T: The score and conviction have decreased due to the fading MACD and lower Z-score, reflecting a less aggressive bullish trend. The 'safe' metric has slightly decreased as the price is now closer to resistance and the bullish momentum is waning, increasing the risk of mean reversion."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.3,
+        "conv": 5.8,
+        "safe": 4.8
+      },
+      "synthesis": "S: The long-term outlook remains within a secular bull market, with the price in the upper quadrant of its long-term range. Potential major crosses are imminent, suggesting continued bullishness. O: The company's strong business quality, scale, and moderate growth profile provide a solid foundation. Strategic expansion plans and recent positive earnings reports are favorable long-term developments. W: The stressed balance sheet (NetDebt/Eq: 2.53x) and overpriced implied growth (PEG: 6.35) remain significant long-term concerns. The next quarter's estimated earnings growth is negative, indicating potential headwinds. T: The score has slightly decreased due to the price moving from ATH/top of cycle to the upper quadrant, indicating a less extreme bullish position. Conviction is lower due to the persistent fundamental concerns like the stressed balance sheet and negative near-term earnings growth outlook. The 'safe' score has decreased as the valuation remains stretched and the balance sheet is a concern, despite the favorable market regime."
+    }
+  }
+}

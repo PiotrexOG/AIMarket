@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.58)",
+        "velocity_roc_10": "NORMAL (3.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 41.81-47.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.87%)",
+        "cycle_macd": "BULLISH_FADING (0.169)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.77)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 41.35-47.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-23.8%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-25.06%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 10.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 45.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.26%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 42.7% | OM: 8.0% | NM: 7.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.27x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.309B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -9.8%, EPS: -42.4%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -50.0%, Next Q Est Growth: -21.4%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 20.97, P/S: 1.45)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 5.07)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -42.4%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike's DTC sales fall in Q3 FY26.",
+      "Nike stock confounded by multiple forms of inflation.",
+      "Nike faces pressure on CEO turnaround amid market share losses. - Nike's recovery slower than expected amid intensifying competition. - Nike guides for declining revenue and margin pressure."
+    ],
+    "medium_term_50d": [
+      "Nike faces pressure on CEO turnaround amid market share losses. - Nike's recovery slower than expected amid intensifying competition. - Nike guides for declining revenue and margin pressure.",
+      "Nike launches operational and brand reset under CEO Elliott Hill. - Nike's footwear business shows early signs of stabilization. - Nike's football push gains Wall Street optimism. - Nike's World Cup football bet aims to recenter brand. - Bell Global Equities Fund sold Nike amid recovery challenges.",
+      "Nike turnaround progress slower than expected. - Nike turnaround could take longer in 2026. - Nike faces slight downside to Q1 guidance."
+    ],
+    "long_term_200d": [
+      "Nike launches operational and brand reset under CEO Elliott Hill. - Nike's footwear business shows early signs of stabilization. - Nike's football push gains Wall Street optimism. - Nike's World Cup football bet aims to recenter brand. - Bell Global Equities Fund sold Nike amid recovery challenges.",
+      "Nike's AI push and 2026 World Cup presence may reframe brand. - Nike faces falling sales, restructuring, China pressure, and tariffs. - Nike's role in 2026 World Cup aims to reinvigorate demand. - Nike stock jumps 4% on market sentiment. - Nike's global dominance faces new tests.",
+      "Nike faces pressure on CEO turnaround amid market share losses. - Nike's recovery slower than expected amid intensifying competition. - Nike guides for declining revenue and margin pressure."
+    ]
+  }
+}

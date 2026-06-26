@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly. The candle pattern is now a 'DOJI_INDECISION', and the RSI has fallen into a bearish zone (34.4). While Bollinger Bands are within normal limits (0.11), the price is now at critical support (199.34) and further from the 20-day SMA (-5.0%). W: The shift to indecision candles and a bearish RSI, coupled with price testing critical support, indicates a weakening short-term momentum and increased downside risk. Analyst conviction remains low, reflecting this uncertainty. O: News flow shows mixed signals, with some expansion announcements but also a notable selloff in the chip sector, impacting Nvidia. T: The bearish technical signals and price action at support suggest a potential for further downside or a period of consolidation before any meaningful recovery. The increased volatility band width from the previous period has narrowed, but the overall trend is negative."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The medium-term trend has shifted from gradual ascent to consolidation (0.21%), with the MACD accelerating in bearish territory (-1.118). Crucially, the price has moved to a bearish trend position relative to the 50-day SMA (Z:-1.04). W: The deterioration in trend alignment and the accelerating bearish MACD signal a clear loss of upward momentum. The price being significantly below the 50-day SMA indicates a shift in the medium-term trend. O: Strategic announcements continue, but the broader chip sector selloff and the negative technicals temper the outlook. The bond issuance from the previous period is now overshadowed by current price weakness. T: The current technical setup suggests a bearish bias for the medium term, with potential for further downside if support levels break. The consolidation phase could be a precursor to a more significant trend change."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 8.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market (5.2%), and the golden cross structure is still healthy (10.4%). However, the price has moved closer to the mid-cycle neutral zone, now at 49.4%. Fundamentals remain exceptionally strong, characterized by elite business quality, financial health, and hyper-growth. W: While the core business strength and long-term market regime are intact, the recent price weakness and shift in long-term range position suggest a slight reduction in the long-term score. The 'safe' metric decreases due to increased price volatility and proximity to critical support levels. O: Continued strategic investments and strong fundamental growth profiles provide a floor for the long-term outlook. The 'ATTRACTIVE_GROWTH_PRICING' (PEG: 0.78) remains a positive, though valuation multiples are still high. T: The long-term outlook is still positive due to robust fundamentals and market regime, but the recent technical deterioration and increased proximity to support levels introduce a degree of caution. Valuation remains a key risk, and any sustained weakness could pressure the 'safe' metric further."
+    }
+  }
+}

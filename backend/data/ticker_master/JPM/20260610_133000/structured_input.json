@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (68.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.95)",
+        "velocity_roc_10": "NORMAL (1.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 293.67-316.42]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.74%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.508)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 282.33-320.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.36%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 312.79,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.05%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.95, P/S: 3.07)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.4)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.98)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase tests tokenized deposits and quantum AI for future payments. - JPMorgan Chase Consumer And Community Banking CEO discusses consumer resilience and spending. - JPMorgan Chase plans to deploy more powerful AI agents this year. - JPMorgan Chase announces cash distributions for JPMorgan ETFs. - Chase expands digital hub for small businesses with new tools. - J.P. Morgan selected as primary bank and lender for ENT & Allergy Associates. - JPMorgan-led banks plan to offload $5.3B in Qualtrics debt. - Phillips 66 to speak at J.P. Morgan Energy, Power, Renewables & Mining Conference. - Wells Fargo, JPMorgan, and other big banks face pressure to address AI risks.",
+      "JPMorgan and Goldman Sachs explore ways to manage AI lending risks. - JPMorgan Asset Management provides financing for Catalyst Investment Partners. - JPMorgan adds positive catalyst watch on Qualcomm ahead of investor day. - JPMorgan sees a bigger data center story emerging for Qualcomm. - JPMorgan reverses course on Tesla, citing AI potential. - Major banks including JPM plan tokenized deposit network by 2027.",
+      "JPMorgan's board approved a $50 billion repurchase authorization."
+    ],
+    "medium_term_50d": [
+      "JPMorgan's board approved a $50 billion repurchase authorization.",
+      "JPMorgan Chase tests tokenized deposits and quantum AI for future payments. - JPMorgan Chase Consumer And Community Banking CEO discusses consumer resilience and spending. - JPMorgan Chase plans to deploy more powerful AI agents this year. - JPMorgan Chase announces cash distributions for JPMorgan ETFs. - Chase expands digital hub for small businesses with new tools. - J.P. Morgan selected as primary bank and lender for ENT & Allergy Associates. - JPMorgan-led banks plan to offload $5.3B in Qualtrics debt. - Phillips 66 to speak at J.P. Morgan Energy, Power, Renewables & Mining Conference. - Wells Fargo, JPMorgan, and other big banks face pressure to address AI risks.",
+      "JPMorgan and Goldman Sachs explore ways to manage AI lending risks. - JPMorgan Asset Management provides financing for Catalyst Investment Partners. - JPMorgan adds positive catalyst watch on Qualcomm ahead of investor day. - JPMorgan sees a bigger data center story emerging for Qualcomm. - JPMorgan reverses course on Tesla, citing AI potential. - Major banks including JPM plan tokenized deposit network by 2027."
+    ],
+    "long_term_200d": [
+      "JPMorgan CEO Jamie Dimon sees firm 'over-earning' as costs may rise. - JPMorgan CEO Jamie Dimon says the bank is currently overearning. - JPMorgan CEO Jamie Dimon says there could be opportunities for M&A. - JPMorgan CEO Jamie Dimon says the bank is on the lookout for acquisitions. - JPMorgan CEO Jamie Dimon says the bank could spend $20 billion on acquisition. - JPMorgan CEO Jamie Dimon says cyber is our biggest risk. - JPMorgan CEO Jamie Dimon says potential successors are inside the company. - JPMorgan CEO Jamie Dimon says investment banking in Q2 could be up 10%. - JPMorgan CEO Jamie Dimon says trading could be up by",
+      "JPMorgan CEO Jamie Dimon sees market bubble risks. - JPMorgan CEO Jamie Dimon comments on exuberant market. - JPMorgan could spend $10-20 billion on acquisitions. - JPMorgan Chase & Co. notified of Umicore voting rights change. - JPMorgan Securities ordered to pay $4.25 million in dispute. - JPMorgan CEO Jamie Dimon vows to fight CLARITY Act. - JPMorgan Chase & Co. to present at Bernstein conference. - JPMorgan Chase & Co. among companies announcing dividend increases. - Open AI discussed adding JPMorgan to IPO bank lineup.",
+      "JPMorgan's costs could hit $106 billion. - J.P. Morgan Asset Management launches new ETF. - JPMorgan could deploy up to $20B for deals. - JPMorgan joins IBM's open-source cybersecurity effort. - JPMorgan completes XRP tokenized Treasury settlement. - JPMorgan says Bitcoin ETF outflows signal cooling. - JPMorgan to challenge $4.25 million penalty. - Jamie Dimon discusses next big JPMorgan deal."
+    ]
+  }
+}

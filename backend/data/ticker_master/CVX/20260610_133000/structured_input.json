@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (1.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 180.4-198.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.75%)",
+        "cycle_macd": "BULLISH_FADING (0.173)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 177.74-214.71]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.91%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 62.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 189.37,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.17%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 32.71, P/S: 2.02)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.05)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron seeks approval for $13.8 billion Argentina shale project.",
+      "Chevron boosted U.S. production 24% in Q1. - Chevron returned $6 billion to shareholders in Q1.",
+      "CVX mentioned as a top energy dividend stock. - HAL, CVX, HASI highlighted as energy stocks for AI boom."
+    ],
+    "medium_term_50d": [
+      "Chevron seeks approval for $13.8 billion Argentina shale project.",
+      "Chevron boosted U.S. production 24% in Q1. - Chevron returned $6 billion to shareholders in Q1.",
+      "Chevron seeks RIGI approval for $13.8bn Vaca Muerta oil project - Chevron Corporation (CVX) Presents at Bernstein 42nd Annual Strategic Decisions Conference"
+    ],
+    "long_term_200d": [
+      "Eneos to buy Chevron's stake in Singapore Refining and other assets for $2.2 billion. - Chevron to sell some Asia-Pacific assets to Japan's Eneos for $2.17 billion. - Chevron pens $2.17 billion downstream asset sale. - ENEOS to buy certain Chevron downstream assets in APAC for $2.2bn. - Chevron considering investment opportunities in Tanzania's oil and gas sector.",
+      "Chevron expands Mediterranean push with 70% Greek offshore stake. - Chevron moves into Greek offshore gas exploration. - Chevron's Tengiz oilfield output drops after accident. - Chevron names new general counsel. - Chevron weighs Tengiz setback against Greek offshore growth.",
+      "Chevron sells Asia-Pacific downstream and refining assets to ENEOS."
+    ]
+  }
+}

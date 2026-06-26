@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.55)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 112.73-135.15]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.21%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.598)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.98)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 112.73-135.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.85%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 119.82,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.34%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.7%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.69x, YrsToPay: 4.3x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $685.086B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.2%, EPS: -0.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -15.2%, Next Q Est Growth: 32.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.21, P/S: 1.41)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 11.51)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.26%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart plans $8M phase of Texas distribution center remodel. - Walmart's advertising revenues soar; retail media paying off. - New Walmart-exclusive air purifier launches. - Walmart faces class action over Massachusetts hiring practices.",
+      "Walmart's Sam's Club faces China market regulator probe. - Walmart stock faces scrutiny over core US business slowdown.",
+      "Walmart expands cross-border e-commerce to Mexico. - Symbotic completes acquisition of Walmart's robotics business. - Walmart partners with Alphabet's Wing for drone delivery."
+    ],
+    "medium_term_50d": [
+      "Walmart expands cross-border e-commerce to Mexico. - Symbotic completes acquisition of Walmart's robotics business. - Walmart partners with Alphabet's Wing for drone delivery.",
+      "Walmart's Sam's Club faces China market regulator probe. - Walmart stock faces scrutiny over core US business slowdown.",
+      "Walmart plans $8M phase of Texas distribution center remodel. - Walmart's advertising revenues soar; retail media paying off. - New Walmart-exclusive air purifier launches. - Walmart faces class action over Massachusetts hiring practices."
+    ],
+    "long_term_200d": [
+      "Walmart reports increased profits, shares fall on forecast disappointment. - Walmart sees consumers struggling with rising costs. - Walmart delivers impressive sales but cautious financial outlook. - Walmart reports revenue growth of 7.3%. - Walmart reports strong Q1 sales, e-commerce and marketplace growth. - Walmart sales rise as higher fuel prices bring more bargain hunters. - Grocers like Walmart expect to cut prices due to soaring gas prices. - Walmart CFO discusses results, gas prices, and financial outlook. - Walmart shares sink 7%, suffer worst day in 13 months. - Walmart Q1 sales gain 7.3 percent, reiterates annual outlook. - Walmart taps into cowboycore trend with new",
+      "Walmart stock experiences biggest wipeout in 4 years. - Walmart sinks 8.1% post Q1 earnings. - Walmart joins Russell 3000 Index, replaces Eli Lilly. - Two senior Walmart executives are leaving the company. - Walmart revamps supply chain to cut costs. - Walmart launches LTL truck consolidation program for suppliers. - Walmart Inc. included among top 12 dividend stock picks. - RBC Capital Markets lowered price recommendation on Walmart Inc. - Walmart's Q1 results and guidance came in below consensus. - Walmart's stock price fall is worst in four years.",
+      "Walmart shareholders reject AI impact disclosure proposal. - Walmart adds 30-minute express delivery from Subway. - Walmart partners with P&G for disaster relief fleet. - Subway to offer delivery from Walmart locations. - Walton Family Holdings Trust sells Walmart shares. - Walmart extends restaurant delivery with Subway deal. - Walmart+ membership scheme expands to Canada. - Walmart tests new restaurant delivery play with Subway. - Walmart expands fast delivery with Subway partnership. - Walmart CEO warns on fuel prices."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The RSI has moved from extreme oversold to a neutral zone (43.6), indicating a stabilization of momentum. Price is now closer to the 20-day SMA (-0.7%), suggesting reduced immediate downside pressure. O: The shift in RSI and price proximity to the 20-day SMA suggest a potential for a neutral to slightly bullish short-term outlook. T: News highlights growing traffic and value strategy, which could support price action. W: Volume dynamics are subdued (0.55), indicating a lack of strong conviction or interest in the current price action, keeping the score moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The MACD has confirmed a bullish zero cross (0.785), indicating a positive shift in medium-term momentum. While still in a bearish trend position relative to the 50-day SMA (Z:-0.84), the trend alignment is consolidating (-1.05%). O: The confirmed bullish MACD cross suggests an improving outlook, with potential for the price to challenge the 50-day SMA. T: Continued positive news on traffic and digital sales growth provide fundamental tailwinds. W: Conviction remains moderate as the price is still below the 50-day SMA, and volume dynamics are weak."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The long-term market regime remains a secular bull market (3.0%), supported by a healthy golden cross structure (4.79%). Price position within the long-term cycle is neutral (52.9%). O: The established long-term bullish structure and stable market regime provide a favorable backdrop for continued investment. T: Fundamental strengths such as a fortress balance sheet (NetCash/Eq: 0.27x) and mega-cap scale offer resilience. W: Valuation remains a significant headwind, with hyper-premium multiples (P/E: 52.25, P/S: 1.55) and low asset safety (P/B: 14.34), indicating limited room for error and elevated risk if growth expectations are not met."
+    }
+  }
+}

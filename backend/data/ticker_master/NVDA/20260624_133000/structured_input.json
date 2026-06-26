@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.11)",
+        "velocity_roc_10": "NORMAL (-4.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 199.34-232.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.21%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.118)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.04)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 185.74-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.4%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 199.87,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.89%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 63.65, P/S: 33.12)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 58.67)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.78)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia Bio Ne Mo Agent Toolkit launches with 50+ adopters. - Nvidia expands AI infrastructure with Amdocs, Supermicro, Red Hat. - Nvidia's network ambitions could reshape AI infrastructure. - Nvidia stock falls amid widespread chip sector selloff. - Nvidia, AMD, Broadcom fall amid chip sector selloff. - Qualcomm is refining low-power computing while Nvidia/AMD focus on AI training. - Nvidia stock holding up better than some peers in tech selloff. - Nvidia's network ambitions could lift telecom sector. - Nvidia targets $300 billion pharma market with Bio Ne Mo. - Super Micro Computer rallies on Nvidia-powered blueprint.",
+      "Nvidia unveils Vera Rubin platform at ISC High Performance 2026. - Nvidia Deepens Humanoid Robot Bet with New Safety Tech. - Tesla Megapod trademark could challenge Nvidia's AI data center dominance. - Nvidia's AI acquisitions and bets strengthen its ecosystem. - Nvidia's Vera Rubin platform gains momentum with new AI systems.",
+      "Nvidia, Oracle, Space X borrowing billions amid AI boom. - Trump signals major US chip alliance with Apple and Nvidia. - Nvidia CEO Jensen Huang comments on AI and jobs. - Nvidia and Space X forecast $1 trillion in revenue. - Nvidia and Space X are stocks to watch."
+    ],
+    "medium_term_50d": [
+      "Nvidia Bio Ne Mo Agent Toolkit launches with 50+ adopters. - Nvidia expands AI infrastructure with Amdocs, Supermicro, Red Hat. - Nvidia's network ambitions could reshape AI infrastructure. - Nvidia stock falls amid widespread chip sector selloff. - Nvidia, AMD, Broadcom fall amid chip sector selloff. - Qualcomm is refining low-power computing while Nvidia/AMD focus on AI training. - Nvidia stock holding up better than some peers in tech selloff. - Nvidia's network ambitions could lift telecom sector. - Nvidia targets $300 billion pharma market with Bio Ne Mo. - Super Micro Computer rallies on Nvidia-powered blueprint.",
+      "Nvidia, Oracle, Space X borrowing billions amid AI boom. - Trump signals major US chip alliance with Apple and Nvidia. - Nvidia CEO Jensen Huang comments on AI and jobs. - Nvidia and Space X forecast $1 trillion in revenue. - Nvidia and Space X are stocks to watch.",
+      "Nvidia unveils Vera Rubin platform at ISC High Performance 2026. - Nvidia Deepens Humanoid Robot Bet with New Safety Tech. - Tesla Megapod trademark could challenge Nvidia's AI data center dominance. - Nvidia's AI acquisitions and bets strengthen its ecosystem. - Nvidia's Vera Rubin platform gains momentum with new AI systems."
+    ],
+    "long_term_200d": [
+      "Nvidia, Oracle, Space X borrowing billions amid AI boom. - Trump signals major US chip alliance with Apple and Nvidia. - Nvidia CEO Jensen Huang comments on AI and jobs. - Nvidia and Space X forecast $1 trillion in revenue. - Nvidia and Space X are stocks to watch.",
+      "Nvidia Bio Ne Mo Agent Toolkit launches with 50+ adopters. - Nvidia expands AI infrastructure with Amdocs, Supermicro, Red Hat. - Nvidia's network ambitions could reshape AI infrastructure. - Nvidia stock falls amid widespread chip sector selloff. - Nvidia, AMD, Broadcom fall amid chip sector selloff. - Qualcomm is refining low-power computing while Nvidia/AMD focus on AI training. - Nvidia stock holding up better than some peers in tech selloff. - Nvidia's network ambitions could lift telecom sector. - Nvidia targets $300 billion pharma market with Bio Ne Mo. - Super Micro Computer rallies on Nvidia-powered blueprint.",
+      "Nvidia unveils RTX Spark chip for Windows laptops. - Nvidia enters personal computer processor market with new chip. - Apple's next Siri may run on Nvidia chips via Google Cloud deal. - Cerebras doubles down on Amazon, Open AI, shutting out Nvidia. - D-Wave Quantum stock soars on government funding, Nvidia's AI push. - e Plus partners with NVIDIA for new AI offerings. - Nvidia CEO calls Marvell Technology the next trillion-dollar company."
+    ]
+  }
+}

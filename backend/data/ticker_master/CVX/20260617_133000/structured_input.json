@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.09)",
+        "velocity_roc_10": "NORMAL (-4.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.7%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 177.8-198.87]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.41%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.619)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.09)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 177.74-204.62]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.45%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 47.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 178.76,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.4%))",
+      "volume_dynamics": "AVERAGE (0.81)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.87, P/S: 1.91)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.93)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron partners with Helleni Q Energy on Greece offshore block. - Chevron takes 70% interest in Greek offshore exploration block. - Chevron secures entry into Greece's offshore Block 10.",
+      "Chevron stock drops as oil prices slump on US-Iran deal.",
+      "Chevron finalizes contracts for $3b Argentina natural gas project. - Chevron pursues participation in $13.8b Argentina oil project."
+    ],
+    "medium_term_50d": [
+      "Chevron partners with Helleni Q Energy on Greece offshore block. - Chevron takes 70% interest in Greek offshore exploration block. - Chevron secures entry into Greece's offshore Block 10.",
+      "Chevron finalizes contracts for $3b Argentina natural gas project. - Chevron pursues participation in $13.8b Argentina oil project.",
+      "Chevron among drillers to feed Argentina shale venture. - Chevron, Exxon Mobil reported $7.6 billion profit in Guyana. - Chevron benefited from escalating conflict in Iran."
+    ],
+    "long_term_200d": [
+      "Eneos to buy Chevron's stake in Singapore Refining and other assets for $2.2 billion. - Chevron to sell some Asia-Pacific assets to Japan's Eneos for $2.17 billion. - Chevron pens $2.17 billion downstream asset sale. - ENEOS to buy certain Chevron downstream assets in APAC for $2.2bn. - Chevron considering investment opportunities in Tanzania's oil and gas sector.",
+      "Chevron partners with Helleni Q Energy on Greece offshore block. - Chevron takes 70% interest in Greek offshore exploration block. - Chevron secures entry into Greece's offshore Block 10.",
+      "Chevron expands Mediterranean push with 70% Greek offshore stake. - Chevron moves into Greek offshore gas exploration. - Chevron's Tengiz oilfield output drops after accident. - Chevron names new general counsel. - Chevron weighs Tengiz setback against Greek offshore growth."
+    ]
+  }
+}

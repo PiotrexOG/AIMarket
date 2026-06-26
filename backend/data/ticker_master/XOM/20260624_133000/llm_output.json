@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The price has fallen to 136.51, now testing critical support at the 20-day SMA (-4.6%). The RSI has weakened further into the bearish zone (33.4), indicating a loss of upward momentum. W: The Doji pattern has been replaced by a neutral candle, but the bearish RSI and continued negative ROC (-7.9%) suggest ongoing weakness. The price is at the lower bound of its 20-day range, offering limited upside potential. T: News is mixed, with a positive Supreme Court ruling and LNG terminal development, but also reports of planned domicile moves and continued negative oil price sentiment. O: The short-term outlook is bearish due to the deteriorating RSI and price testing support. Conviction is low as the price action is range-bound and news is mixed."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 2.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The price has moved further below the 50-day SMA, now at an overextended bearish statistical outlier (Z:-2.56). Trend alignment shows a gradual descent (-2.17%), confirming the bearish trend. W: The MACD is bearish and recovering slightly (-1.046), but the overall trend remains negative. The price is strengthening at monthly support, but the extended bearish position suggests limited immediate upside. T: News flow is mixed, with positive legal rulings and development plans, but also mentions of record oil production and CEO ramping up output, which could imply increased supply pressure. O: The medium-term outlook is bearish due to the overextended bearish technical position and negative trend alignment. Conviction is low as the price is consolidating at support, and the MACD shows only a slight recovery."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The secular bull market regime (3.7%) and healthy golden cross structure (11.04%) continue to provide a supportive long-term foundation. The company's mega-cap scale and healthy balance sheet remain key strengths. W: The market regime percentage has decreased, and the long-term range position has moved lower (41.4%), indicating a slight weakening of the long-term trend. Growth profile remains stagnant, and implied growth is still concerning. T: News flow is dominated by legal rulings, domicile changes, and development plans, with no significant fundamental shifts. Broader energy sector sell-offs are still a concern. O: The long-term score has slightly decreased due to the weakening market regime indicator and lower range position, despite the continued fundamental strength. Conviction is moderate, reflecting the balance between structural support and ongoing growth headwinds."
+    }
+  }
+}

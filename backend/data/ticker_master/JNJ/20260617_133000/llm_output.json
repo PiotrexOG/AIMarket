@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Short-term momentum has softened, with RSI moving to a neutral zone and mean reversion now within normal bands. The price has also retreated to the middle of its 20-day range. Elevated volume has normalized to average. O: The immediate upside momentum appears to have stalled, suggesting a pause or potential pullback. The shift from breakout to range-bound action indicates reduced short-term conviction. T: Monitor for a potential retest of the 20-day SMA and the lower end of the current range. W: The previous breakout has failed to sustain, indicating a loss of short-term bullish momentum and increased risk of consolidation."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains compressed, and the bullish MACD signal is fading. The Z-score relative to the 50-day SMA has reverted to a healthy base, indicating a loss of upward thrust. The price is still within the monthly range. O: While the medium-term trend is not yet bearish, the fading momentum suggests a loss of conviction in further upside. The asset is consolidating, but the weakening MACD warrants caution. T: Watch for a potential break below the 50-day SMA or a sustained move lower within the monthly range. W: The fading bullish momentum and compressed trend alignment indicate that the prior upward impulse is losing steam, increasing the likelihood of a period of sideways movement or a minor correction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.5,
+        "safe": 8.0
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound, with a secular bull market regime and a healthy golden cross structure. Business quality, financial health, and cash generation remain robust. However, the long-term range position has slightly decreased. O: Despite short-term technical weakness, the underlying business fundamentals and long-term structural advantages provide a stable foundation. Strategic investments in oncology and drug development continue to support future growth prospects. T: Continued vigilance is required regarding the premium valuation multiples and the moderate growth profile, which could be exacerbated by any further deterioration in market sentiment or execution. W: The slight pullback in long-term range position and the persistent premium valuation present a minor headwind, though the strong business quality and financial fortress provide significant downside protection."
+    }
+  }
+}

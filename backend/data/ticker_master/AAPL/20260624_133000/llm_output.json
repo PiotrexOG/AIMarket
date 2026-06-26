@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly, with the RSI falling into the \"BEARISH_ZONE_WEAK\" (30.2) and the 20-day SMA showing a slight negative trend (-2.6%). The \"DOJI_INDECISION\" candle pattern persists, but the weakening momentum suggests a higher probability of downside. W: The \"BEARISH_ZONE_WEAK\" RSI and continued \"RANGE\" bias in the SR landscape indicate a lack of buying conviction. The \"AVERAGE\" volume dynamics (0.96) are slightly improved but not yet indicative of strong institutional accumulation. O: The \"POWER_ZONE_CONFLUENCE(2)\" remains a structural support, but the \"F:DISTANT @20d\" barrier suggests immediate resistance is still further away, offering little immediate upside impetus. T: The shift in RSI to a weaker zone and the slight negative drift in the 20-day SMA signal a loss of short-term strength, moving the score lower."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend shows a slight pullback, with the Z-score around the 50-day SMA moving to \"MEAN_REVERSION_HEALTHY_BASE\" (0.33) from a stronger bullish position. The \"BULLISH_EXPANDING_MOMENTUM\" has decreased to 4.17%, and the MACD is still in bearish territory, though recovering (-1.756). W: The shift in the Z-score and the continued bearish MACD indicate a loss of medium-term bullish momentum. The \"INSIDE_MONTHLY_RANGE\" persists, suggesting a lack of decisive upward movement. O: The \"HIGH_EFFICIENCY_CASH_MACHINE\" and \"CASH_COW_EXCELLENT\" fundamentals continue to provide a solid underlying support, mitigating some of the technical weakness. T: The combination of a weakening trend alignment and a still-bearish MACD, despite strong fundamentals, suggests a more cautious medium-term outlook, leading to a slight reduction in score and conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong, though the \"SECULAR_BULL_MARKET\" regime strength has slightly softened (9.5%). The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" is still in place, but the long-term range position has decreased to 76.0% in the upper quadrant. W: The \"PREMIUM_VALUATION\" multiples remain elevated (P/E: 37.31, P/S: 10.05), and the \"EXTREMELY_LOW_ASSET_SAFETY\" (P/B: 49.62) persists as a structural risk. The implied growth (PEG: 1.46) reflects these high valuations. O: The \"MEGA_CAP_TITAN\" scale, \"HIGH_EFFICIENCY_CASH_MACHINE\" business quality, and \"STRONG_STABLE_GROWTH\" profile continue to provide significant long-term resilience. T: The slight decrease in regime strength and long-term range position, coupled with persistent high valuations, warrants a minor reduction in the long-term score and conviction. The \"NEUTRAL_STRUCTURE\" (EV/MC: 1.01x) remains unchanged."
+    }
+  }
+}

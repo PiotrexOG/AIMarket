@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The price has moved lower, now trading at 141.22, and the RSI has normalized to 40.0, indicating a loss of previous oversold momentum. The price is stable near its 20-day SMA (-5.4%), suggesting a potential pause in the decline. W: The Doji candle pattern indicates indecision. Momentum has weakened, and the price is in the middle of its range, offering no clear directional bias. T: News is negative, with reports of shares sliding as oil declines and energy stocks selling off. O: The short-term outlook is bearish due to the price decline and loss of oversold conditions. Conviction is low due to the indecisive candle pattern and range-bound price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The price has moved significantly below the 50-day SMA (Z:-2.15), indicating a bearish trend position. The long-term golden cross structure (12.52%) remains intact, providing some structural support. W: The MACD is bearish and accelerating (-0.924), confirming negative momentum. Trend alignment remains compressed (MAS -0.69%), showing a lack of directional conviction. T: News highlights potential acquisition activity, but also mentions significant price declines and sell-offs in energy stocks. O: The medium-term outlook is bearish due to the deteriorating technical position below the 50-day SMA and accelerating negative MACD. Conviction is low as the price consolidates within a wider range, and news flow is mixed."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The secular bull market regime (5.7%) and healthy golden cross structure (12.52%) continue to provide a supportive long-term foundation. The company's mega-cap scale (Rev: $326.008B) and healthy balance sheet (NetDebt/Eq: 0.15x) offer significant resilience. W: The market regime percentage has decreased, and the long-term range position has moved lower (48.3%). Growth profile remains stagnant (Rev: -4.1%, EPS: -21.9%), and while valuation multiples have moderated slightly, implied growth is still concerning (-21.85%). T: News flow is dominated by potential M&A activity and broader energy sector sell-offs, with no significant fundamental shifts. O: The long-term score has slightly decreased due to the weakening market regime indicator and lower range position, despite the continued fundamental strength. Conviction is moderate, reflecting the balance between structural support and ongoing growth headwinds."
+    }
+  }
+}

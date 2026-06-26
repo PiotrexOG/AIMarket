@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.0)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.01)",
+        "velocity_roc_10": "NORMAL (2.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.4%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 220.84-237.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.87%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.984)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.4)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-247.21]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.22%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 240.42,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.93%))",
+      "volume_dynamics": "ELEVATED (1.35)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.73, P/S: 6.1)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.24)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JNJ's Nipocalimab authorized in UK for myasthenia gravis. - JNJ secures extended NICE approval for Darzalex treatment. - JNJ to acquire Firefly Bio for $1 billion to enhance oncology. - Johnson & Johnson presents at Goldman Sachs Healthcare Conference.",
+      "Johnson & Johnson to acquire Firefly Bio for $1 billion. - J&J acquires Firefly Bio to expand oncology pipeline. - Johnson & Johnson to acquire cancer drug developer Firefly Bio.",
+      "JNJ faces patent, legal, and China risks. - JNJ targets $100B revenues and faster growth in 2026. - JNJ, Medtronic back Cere Vasc\u2019s $85M funding round."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson to acquire Firefly Bio for $1 billion. - J&J acquires Firefly Bio to expand oncology pipeline. - Johnson & Johnson to acquire cancer drug developer Firefly Bio.",
+      "JNJ's Nipocalimab authorized in UK for myasthenia gravis. - JNJ secures extended NICE approval for Darzalex treatment. - JNJ to acquire Firefly Bio for $1 billion to enhance oncology. - Johnson & Johnson presents at Goldman Sachs Healthcare Conference.",
+      "JNJ faces patent, legal, and China risks. - JNJ targets $100B revenues and faster growth in 2026. - JNJ, Medtronic back Cere Vasc\u2019s $85M funding round."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson to acquire Firefly Bio for $1 billion. - J&J acquires Firefly Bio to expand oncology pipeline. - Johnson & Johnson to acquire cancer drug developer Firefly Bio.",
+      "JNJ's Nipocalimab authorized in UK for myasthenia gravis. - JNJ secures extended NICE approval for Darzalex treatment. - JNJ to acquire Firefly Bio for $1 billion to enhance oncology. - Johnson & Johnson presents at Goldman Sachs Healthcare Conference.",
+      "JNJ faces patent, legal, and China risks. - JNJ targets $100B revenues and faster growth in 2026. - JNJ, Medtronic back Cere Vasc\u2019s $85M funding round."
+    ]
+  }
+}

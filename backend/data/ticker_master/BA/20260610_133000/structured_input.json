@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.25)",
+        "velocity_roc_10": "NORMAL (-2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.4%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 209.63-244.07]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.03%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.164)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 187.72-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-2.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.39%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 43.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 210.5,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.29%))",
+      "volume_dynamics": "AVERAGE (0.68)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 86.98, P/S: 1.87)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 28.77)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.77)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing asked to fix KC-46 tanker vision-system issue. - Boeing delivered 60 planes in May, including 51 737 MAX jets. - Boeing May deliveries show 737 Max progress after setbacks. - Brazil regulator expects FAA to certify Boeing 737 MAX 10 this year. - Boeing May deliveries jump 33% after 737 Max wiring fix. - Boeing lags Airbus in May deliveries and orders.",
+      "Riyadh Air takes delivery of first Boeing 787-9 Dreamliners. - Boeing 777X certification testing phase cleared by FAA. - Westjet expects first Boeing 737 Max 10 in Q1 2027. - Boeing clears key 777X certification hurdle. - GE Aerospace optimistic for China deals after Boeing commitments.",
+      "Boeing to start 737 Max production on new assembly line July 6. - Boeing CEO says 737 Max production target is 63 per month. - Boeing opens new 737 Max assembly line in Everett July 2026. - Boeing delivers first two 787 Dreamliner jets to Riyadh Air. - Boeing outlines 737 Max production outlook and 787 manufacturing ramp-up."
+    ],
+    "medium_term_50d": [
+      "Boeing to start 737 Max production on new assembly line July 6. - Boeing CEO says 737 Max production target is 63 per month. - Boeing opens new 737 Max assembly line in Everett July 2026. - Boeing delivers first two 787 Dreamliner jets to Riyadh Air. - Boeing outlines 737 Max production outlook and 787 manufacturing ramp-up.",
+      "Riyadh Air takes delivery of first Boeing 787-9 Dreamliners. - Boeing 777X certification testing phase cleared by FAA. - Westjet expects first Boeing 737 Max 10 in Q1 2027. - Boeing clears key 777X certification hurdle. - GE Aerospace optimistic for China deals after Boeing commitments.",
+      "Boeing MQ-28 Ghost Bat drone cleared a key stealth test. - Boeing awarded $528.32M modification for performance-based support contract. - Boeing spokesperson addresses Lufthansa 787-9 Dreamliner incident. - Qantas weighs order for 20 Boeing or Airbus wide-body jets. - Boeing stock gains as Singapore Airlines, Qantas eye wide-body orders. - Boeing explores hiking 737 production close to Airbus's target. - Boeing boosts aircraft deliveries and production with strong demand."
+    ],
+    "long_term_200d": [
+      "Boeing CEO confident in more China aircraft orders. - Boeing CEO says 737 Max production rate increase planned. - Boeing CEO says 737 Max production rate increase will take longer. - Boeing CEO confident in 737 Max 7 and 10 certification. - Boeing to increase 737 Max production to 47 per month. - Boeing met FAA requirements for 737 Max production increase. - Boeing CEO signals stronger production momentum. - Boeing cleared by FAA to produce 47 737 Max jets monthly. - Boeing stock up after FAA clearance for 737 MAX production increase. - Boeing aims to balance 737 inventory",
+      "Boeing to start 737 Max production on new assembly line July 6. - Boeing CEO says 737 Max production target is 63 per month. - Boeing opens new 737 Max assembly line in Everett July 2026. - Boeing delivers first two 787 Dreamliner jets to Riyadh Air. - Boeing outlines 737 Max production outlook and 787 manufacturing ramp-up.",
+      "Boeing CEO to speak at Bernstein Strategic Decisions Conference. - Boeing plans $1B investment in Kansas facilities. - Trump to announce aircraft purchases from Boeing in China. - Boeing pursues massive China jet deal as CEO joins delegation. - PMGC Holdings acquires A&B Aerospace, Inc., a Boeing supplier."
+    ]
+  }
+}

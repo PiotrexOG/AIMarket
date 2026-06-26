@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.29)",
+        "velocity_roc_10": "NORMAL (-7.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 199.34-232.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.41%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.46)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.02)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 173.66-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.84%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 60.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 207.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.02%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 66.21, P/S: 34.45)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 61.02)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.81)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia announces $25 billion bond issue. - Nvidia Vera CPU added to HPE AI Factory. - Core Weave trains AI model on 8,192 Nvidia GPUs. - Alphabet partners with Nvidia for AI lab GPU cluster. - Nvidia stock reclaims $5 trillion market cap.",
+      "Nvidia plans $20 billion bond sale for AI expansion. - Nvidia hires Washington veteran for policy push. - Nvidia to raise $20 billion in corporate bond sale. - Nvidia taps bond market for the first time in five years. - Nvidia jumps as markets soar on peace hopes.",
+      "Nvidia CEO: Chip not company's most important asset. - Global tensions rise, impacting Nvidia chip export risks. - Nvidia partners with Sharon AI Holdings on data center capacity."
+    ],
+    "medium_term_50d": [
+      "Nvidia announces $25 billion bond issue. - Nvidia Vera CPU added to HPE AI Factory. - Core Weave trains AI model on 8,192 Nvidia GPUs. - Alphabet partners with Nvidia for AI lab GPU cluster. - Nvidia stock reclaims $5 trillion market cap.",
+      "Nvidia plans $20 billion bond sale for AI expansion. - Nvidia hires Washington veteran for policy push. - Nvidia to raise $20 billion in corporate bond sale. - Nvidia taps bond market for the first time in five years. - Nvidia jumps as markets soar on peace hopes.",
+      "Nvidia partners with Sharon AI for Australian GPU expansion. - Core Weave deploys Nvidia's Vera Rubin NVL72 AI system. - Lumentum partners with Nvidia for AI data center optics. - Nvidia's Vera Rubin NVL72 deployed by Core Weave. - HPE Private Cloud AI co-developed with NVIDIA deployed by Sky."
+    ],
+    "long_term_200d": [
+      "Nvidia unveils RTX Spark chip for Windows laptops. - Nvidia enters personal computer processor market with new chip. - Apple's next Siri may run on Nvidia chips via Google Cloud deal. - Cerebras doubles down on Amazon, Open AI, shutting out Nvidia. - D-Wave Quantum stock soars on government funding, Nvidia's AI push. - e Plus partners with NVIDIA for new AI offerings. - Nvidia CEO calls Marvell Technology the next trillion-dollar company.",
+      "Nvidia enters PC market with new AI chip. - Nvidia releases open-source tools for physical AI. - Nvidia partners with TSMC for AI in manufacturing. - Nvidia AI chip exports face tighter US controls. - ABB collaborates with NVIDIA on AI infrastructure. - Nvidia partners with Siemens for AI factory. - Uber partners with Nvidia for robotaxi platform. - ZPE Systems introduces expansion card with NVIDIA Jetson. - DDN advances AI factories with NVIDIA GTC Taipei. - ASUS unveils Pro Art PCs powered by NVIDIA RTX Spark. - Nvidia CEO dismisses AI disruption fears. - Nvidia announces new Vera chip users.",
+      "Nvidia Q1 earnings exceed estimates; AI infrastructure outlook strong. - Nvidia CFO: H100 GPU rental prices up 20% year-to-date. - Nvidia's Blackwell GPUs used by all major hyperscalers and cloud providers. - Nvidia reports record Q1 fiscal 2027 results, surpassing prior highs. - Oracle to deploy Nvidia's next-generation Vera CPUs at hyperscale. - Nvidia partners with QIAGEN on AI drug discovery. - Alibaba launches new AI chip, potentially competing with Nvidia. - Nvidia's equity investments generated $16 billion gain in Q1. - Nvidia's market cap faces tough test ahead of earnings. - Nvidia stock"
+    ]
+  }
+}

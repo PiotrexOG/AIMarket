@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "STAGNANT (-0.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 309.0-335.17]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.2%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.886)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.89-341.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.68%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 42.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 321.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.86)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 30.15, P/S: 15.01)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 16.02)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.1)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US judge OKs Visa, Mastercard $38 billion swipe fee settlement. - Court approves Visa-Mastercard settlement over card-swipe fees. - Visa expands payment network reach with Valor Pay Tech certification. - Visa partners with Open Way to accelerate bank payment rollouts. - Visa joins Agentic Ready Programme to enable AI-driven payments. - Visa tests stablecoins and AI for payment infrastructure rebuild.",
+      "Visa targets B2B payments, including trucking fleet operators. - Valor Pay Tech enables payment capabilities through Visa Platform Connect. - Visa, Mastercard, Stripe, Coinbase reportedly working on rival stablecoin.",
+      "Cuba to stop Visa and Mastercard payments. - Visa, Mastercard collaborate on new stablecoin platform. - Visa stock valuation assessed after mixed performance."
+    ],
+    "medium_term_50d": [
+      "US judge OKs Visa, Mastercard $38 billion swipe fee settlement. - Court approves Visa-Mastercard settlement over card-swipe fees. - Visa expands payment network reach with Valor Pay Tech certification. - Visa partners with Open Way to accelerate bank payment rollouts. - Visa joins Agentic Ready Programme to enable AI-driven payments. - Visa tests stablecoins and AI for payment infrastructure rebuild.",
+      "Visa, Mastercard reportedly backing new stablecoin platform. - Visa, Mastercard collaborate on new stablecoin platform. - Visa-Mastercard swipe fee fund has paid $414M. - Visa Inc. (V) Presents at 2026 Baird Global Consumer, Technology & Services Conference. - Visa stock down 14% in a year, but disruption thesis weakens. - TCI Fund Management boosted Visa stake in Q1 2026. - Tether debuts tokenized gold stablecoin Visa card.",
+      "Cuba to stop Visa and Mastercard payments. - Visa, Mastercard collaborate on new stablecoin platform. - Visa stock valuation assessed after mixed performance."
+    ],
+    "long_term_200d": [
+      "Visa, Mastercard reportedly backing new stablecoin platform. - Visa, Mastercard collaborate on new stablecoin platform. - Visa-Mastercard swipe fee fund has paid $414M. - Visa Inc. (V) Presents at 2026 Baird Global Consumer, Technology & Services Conference. - Visa stock down 14% in a year, but disruption thesis weakens. - TCI Fund Management boosted Visa stake in Q1 2026. - Tether debuts tokenized gold stablecoin Visa card.",
+      "Cuba to stop Visa and Mastercard payments. - Visa, Mastercard collaborate on new stablecoin platform. - Visa stock valuation assessed after mixed performance.",
+      "Visa announces Asia Pacific leadership appointments. - Visa suspends transactions in Cuba. - Visa partners with Brale to explore stablecoin settlement. - Visa nears launch of shared stablecoin platform. - Visa advances stablecoin payment vision with Brale. - Visa shares rise on stablecoin settlement push. - Visa tests new blockchain-based transaction settlement."
+    ]
+  }
+}

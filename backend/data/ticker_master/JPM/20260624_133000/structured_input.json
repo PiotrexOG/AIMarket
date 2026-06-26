@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (76.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.91)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.4%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (6.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 295.2-338.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.14%)",
+        "cycle_macd": "BULLISH_FADING (2.518)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.67-338.09]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.77%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 331.81,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.38%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.86, P/S: 3.25)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.55)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.35)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan Chase deploys agentic AI in banking operations. - JPMorgan Private Bank identifies consumer sectors for 2H rebound. - JPMorgan Chase faces court challenge over $4.25 million award. - JPMorgan Chase joins Bo E private market stress test. - JPMorgan analysis predicts massive wave of institutional selling.",
+      "JPMorgan reports record Q1 2026 profits and revenue.",
+      "JPMorgan Chase is expanding its digital bank into France, Spain, and Italy. - JPMorgan Chase is allowing staff to work remotely for the World Cup."
+    ],
+    "medium_term_50d": [
+      "JPMorgan reports record Q1 2026 profits and revenue.",
+      "JPMorgan Chase plans European digital bank expansion. - JPMorgan Chase limits AI model access for Hong Kong staff. - JPMorgan Chase to speak at Natural Resources Conference. - JPMorgan Chase NAV per share restated for an ETF. - JPMorgan Chase stock sinks as market gains. - JPMorgan Chase quant team notes risk in crowded equity trade. - JPMorgan Chase urges investors to ride equity wave. - JPMorgan Chase strategists predict $165bn stock selling. - JPMorgan Chase and other banks seek Basel relief. - JPMorgan Chase faces scrutiny in DOJ probe of Iran money flows.",
+      "JPMorgan Chase deploys agentic AI in banking operations. - JPMorgan Private Bank identifies consumer sectors for 2H rebound. - JPMorgan Chase faces court challenge over $4.25 million award. - JPMorgan Chase joins Bo E private market stress test. - JPMorgan analysis predicts massive wave of institutional selling."
+    ],
+    "long_term_200d": [
+      "JPMorgan reports record Q1 2026 profits and revenue.",
+      "JPMorgan, Bank of America, Wells Fargo subpoenaed by DOJ. - JPMorgan, Barclays, Fifth Third's Tricolor suit dismissed. - JPMorgan puts $20bn into Gulf amid war. - JPMorgan, Bank of America receive subpoena from DOJ. - JPMorgan sends another message on Strait of Hormuz, oil prices. - Prometheus secured backing from JPMorgan, Goldman Sachs, Black Rock.",
+      "JPMorgan Chase plans European digital bank expansion. - JPMorgan Chase limits AI model access for Hong Kong staff. - JPMorgan Chase to speak at Natural Resources Conference. - JPMorgan Chase NAV per share restated for an ETF. - JPMorgan Chase stock sinks as market gains. - JPMorgan Chase quant team notes risk in crowded equity trade. - JPMorgan Chase urges investors to ride equity wave. - JPMorgan Chase strategists predict $165bn stock selling. - JPMorgan Chase and other banks seek Basel relief. - JPMorgan Chase faces scrutiny in DOJ probe of Iran money flows."
+    ]
+  }
+}

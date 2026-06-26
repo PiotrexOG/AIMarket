@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.15)",
+        "velocity_roc_10": "NORMAL (-7.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 135.85-154.91]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.17%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.046)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.56)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 135.85-163.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.04%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 41.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 136.51,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.83%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.5% | OM: 9.0% | NM: 7.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 2.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 5.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $326.008B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.1%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 12.4%, Next Q Est Growth: 256.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.14, P/S: 1.75)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.24)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.85%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "US Supreme Court rules in favor of Exxon Mobil in Cuba lawsuit. - Supreme Court ruling allows Exxon to seek compensation from Cuba.",
+      "Exxon Mobil announces planned effective date for move to Texas. - Exxon Mobil to move legal domicile from New Jersey to Texas. - Exxon Mobil's redomiciliation from New Jersey to Texas anticipated July 1. - Exxon Mobil's support for Sable Offshore reveals new approach to liabilities.",
+      "Exxon Mobil to develop South Africa's first LNG import terminal."
+    ],
+    "medium_term_50d": [
+      "US Supreme Court rules in favor of Exxon Mobil in Cuba lawsuit. - Supreme Court ruling allows Exxon to seek compensation from Cuba.",
+      "Exxon Mobil announces planned effective date for move to Texas. - Exxon Mobil to move legal domicile from New Jersey to Texas. - Exxon Mobil's redomiciliation from New Jersey to Texas anticipated July 1. - Exxon Mobil's support for Sable Offshore reveals new approach to liabilities.",
+      "Exxon Mobil hits record oil production, plays role in Iran war supply. - CEO Darren Woods ramps up output in Guyana, Texas, Papua New Guinea."
+    ],
+    "long_term_200d": [
+      "US Supreme Court rules in favor of Exxon Mobil in Cuba lawsuit. - Supreme Court ruling allows Exxon to seek compensation from Cuba.",
+      "Exxon Mobil hits record oil production, plays role in Iran war supply. - CEO Darren Woods ramps up output in Guyana, Texas, Papua New Guinea.",
+      "Exxon Mobil weighs early stage bid for Woodside Energy Group. - Exxon Mobil shares slide as oil declines on Iran deal. - Exxon, Chevron lead energy stocks sell-off as crude prices sink."
+    ]
+  }
+}

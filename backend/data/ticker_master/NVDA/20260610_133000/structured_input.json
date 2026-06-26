@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (40.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-3.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 199.34-236.54]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.45%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-2.235)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.07)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.27-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.52%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.15%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 65.67, P/S: 34.17)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 60.53)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.81)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia maintains edge over AMD in AI GPU shipments. - Nebius launches Physical AI Living Lab using NVIDIA technologies. - US lawmakers urge tighter rules on chipmakers supplying Chinese firms. - Nvidia stock tumbles to key support level amid market sell-off. - Scott Galloway warns Tesla, Nvidia, Broadcom could be caught in Space X IPO crossfire. - Nvidia CEO sends strong message to stock market investors.",
+      "Naver partners with Nvidia for AI infrastructure in Korea. - Nvidia CEO sees opportunity in chip selloff. - Google and Nvidia eye Intel as backup chipmaker. - Nvidia partners with SK hynix for AI memory. - Nvidia expands AI infrastructure in the UK. - Nvidia launches robotics and physical AI tools. - Nvidia announces AI data center project in South Korea. - Nvidia and SK Telecom to build AI cloud in South Korea. - Nvidia signs AI chip supply deal with Naver. - Nvidia Blackwell availability points to strong customer demand.",
+      "Nvidia expands South Korea AI push with new deals. - Nvidia partners with SK Hynix for AI memory. - Nvidia and SK Telecom build AI infrastructure in Korea. - Nvidia GPUs to be housed in Space X data centers for Alphabet. - Nvidia AI collaboration with Exl Service Holdings. - Infineon deepens NVIDIA ties for AI security and power. - Nvidia stock price pullback and fair value assessment. - Nvidia among \"Magnificent Seven\" stocks considered underpriced."
+    ],
+    "medium_term_50d": [
+      "Nvidia unveils RTX Spark chip for Windows laptops. - Nvidia enters personal computer processor market with new chip. - Apple's next Siri may run on Nvidia chips via Google Cloud deal. - Cerebras doubles down on Amazon, Open AI, shutting out Nvidia. - D-Wave Quantum stock soars on government funding, Nvidia's AI push. - e Plus partners with NVIDIA for new AI offerings. - Nvidia CEO calls Marvell Technology the next trillion-dollar company.",
+      "Naver partners with Nvidia for AI infrastructure in Korea. - Nvidia CEO sees opportunity in chip selloff. - Google and Nvidia eye Intel as backup chipmaker. - Nvidia partners with SK hynix for AI memory. - Nvidia expands AI infrastructure in the UK. - Nvidia launches robotics and physical AI tools. - Nvidia announces AI data center project in South Korea. - Nvidia and SK Telecom to build AI cloud in South Korea. - Nvidia signs AI chip supply deal with Naver. - Nvidia Blackwell availability points to strong customer demand.",
+      "Nvidia China chip rules face fresh investor scrutiny. - Nvidia stock falls on concerns of backdoor AI chip sales to China. - Nvidia is moving into Intel and Qualcomm's turf. - Nvidia CEO says AI's future isn't just copper. - Nvidia turns matchmaker as AI companies scramble for data center space. - Micron gets memory-chip approval from Nvidia. - Nvidia launches next-generation AI training GPU. - Nvidia expands Taiwan packaging capacity for AI accelerators. - Nvidia signs multibillion AI chip supply deal with cloud provider. - Nvidia partners with Fluence Energy to develop AI data centers."
+    ],
+    "long_term_200d": [
+      "Nvidia unveils RTX Spark chip for Windows laptops. - Nvidia enters personal computer processor market with new chip. - Apple's next Siri may run on Nvidia chips via Google Cloud deal. - Cerebras doubles down on Amazon, Open AI, shutting out Nvidia. - D-Wave Quantum stock soars on government funding, Nvidia's AI push. - e Plus partners with NVIDIA for new AI offerings. - Nvidia CEO calls Marvell Technology the next trillion-dollar company.",
+      "Nvidia enters PC market with new AI chip. - Nvidia releases open-source tools for physical AI. - Nvidia partners with TSMC for AI in manufacturing. - Nvidia AI chip exports face tighter US controls. - ABB collaborates with NVIDIA on AI infrastructure. - Nvidia partners with Siemens for AI factory. - Uber partners with Nvidia for robotaxi platform. - ZPE Systems introduces expansion card with NVIDIA Jetson. - DDN advances AI factories with NVIDIA GTC Taipei. - ASUS unveils Pro Art PCs powered by NVIDIA RTX Spark. - Nvidia CEO dismisses AI disruption fears. - Nvidia announces new Vera chip users.",
+      "Nvidia Q1 earnings exceed estimates; AI infrastructure outlook strong. - Nvidia CFO: H100 GPU rental prices up 20% year-to-date. - Nvidia's Blackwell GPUs used by all major hyperscalers and cloud providers. - Nvidia reports record Q1 fiscal 2027 results, surpassing prior highs. - Oracle to deploy Nvidia's next-generation Vera CPUs at hyperscale. - Nvidia partners with QIAGEN on AI drug discovery. - Alibaba launches new AI chip, potentially competing with Nvidia. - Nvidia's equity investments generated $16 billion gain in Q1. - Nvidia's market cap faces tough test ahead of earnings. - Nvidia stock"
+    ]
+  }
+}

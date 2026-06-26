@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The stock is testing critical support at $209.63, a level that has historically provided a floor. Recent news highlights progress in 737 MAX deliveries and certification, suggesting underlying operational improvements. W: Despite positive delivery numbers, the short-term technicals are bearish, with a strong bearish candle pattern and RSI in the neutral zone. The price is also below the 20-day SMA, indicating near-term weakness. O: Potential for a short-term bounce if support holds, driven by continued positive delivery news and the upcoming assembly line start. T: The immediate downside risk remains due to bearish technical signals and the proximity to the lower bound of the 20-day range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 3.5
+      },
+      "synthesis": "S: The medium-term trend shows consolidation, with price action compressed around moving averages, indicating a potential shift. MACD is recovering from a bearish territory, and while the Z-score for the 50-day SMA is bearish, the price is within the broader monthly range. W: The MACD remains in bearish territory, and the Z-score suggests a trend position below the 50-day average, indicating persistent selling pressure. O: Positive news regarding 777X certification and ongoing 737 MAX production ramp-up could provide a catalyst for a trend reversal. The delivery of 787s to Riyadh Air also signals progress in wide-body programs. T: The primary risk is the continued bearish MACD signal and the potential for the price to remain range-bound if broader market sentiment does not improve, despite operational progress."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: The long-term outlook is cautiously optimistic, with the market regime showing signs of a relief rally. Potential for a pivot is indicated by major crosses nearing completion. The stock is positioned neutrally within its long-term cycle. W: Despite a positive growth profile and strong revenue growth, fundamental weaknesses persist. The company exhibits thin margins, a stressed balance sheet with high debt, and negative free cash flow, raising concerns about long-term financial health. O: The \"hyper-growth\" in revenue and EPS, coupled with attractive \"implied growth\" pricing (PEG ratio), suggests that the market is pricing in significant future expansion. Positive news regarding production rate increases and potential China orders could further support the long-term narrative. T: The significant valuation premium, stressed balance sheet, and negative cash generation present substantial long-term risks. The \"debt-sensitive\" nature of the stock means rising interest rates or a downturn could severely impact its valuation and financial stability."
+    }
+  }
+}

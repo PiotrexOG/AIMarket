@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 3.8
+      },
+      "synthesis": "S: The short-term outlook has weakened. The 'shooting star' pattern has been replaced by a 'strong bullish' candle, but momentum has faded, with RSI dropping to 49.2 and ROC stagnating at 0.4%. The price is now below the 20-day SMA, indicating a loss of short-term upward pressure. W: While the candle pattern is bullish, the declining momentum indicators and stagnant velocity suggest a lack of conviction. Volume dynamics have improved slightly to average (0.67), but the price remains in the middle of its 20-day range, indicating consolidation rather than a clear breakout. O: News regarding satellite test milestones and Air Force repair contracts provides some fundamental support, but the T-7 Red Hawk jet facing more problems introduces a negative element. T: The deterioration in momentum and the price moving below the 20-day SMA suggest a cautious approach is warranted, despite the bullish candle pattern."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The medium-term technical picture has deteriorated significantly. Trend alignment has shifted to a gradual descent (-1.66%), and the MACD is fading (0.263). The Z-score for the 50-day SMA has turned negative (-0.53), indicating a bearish trend position. W: The fading MACD and negative SMA Z-score suggest a loss of upward momentum. While the price remains within the monthly range, the trend alignment indicates a weakening structure. Volume dynamics are average, but the overall trend is now negative. O: Continued news about 737 MAX production increases and the Wichita campus investment offer some underlying support. However, the broader market regime shift and the fading MACD are significant headwinds. T: The shift to a bearish trend alignment and fading MACD are concerning. The fundamental weaknesses in margins and balance sheet, combined with the negative technicals, suggest a higher probability of further downside in the medium term."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The long-term market regime has shifted to a 'bear market relief rally' (-0.8%), which is less supportive than the previous secular bull market. While the golden cross structure remains healthy, the stock's position in the long-term range has moved to a neutral zone (56.4%). W: The change in market regime is a significant negative factor for the long-term outlook. The 'hyper-growth' profile is contrasted by persistent fundamental weaknesses in margins and cash flow, and the valuation remains extremely stretched. The 'debt-sensitive' nature of the stock is a key vulnerability in this environment. O: The continued focus on 737 MAX production increases and potential China orders provide some positive operational narrative. However, the shift in market regime and the persistent fundamental challenges limit the upside potential. T: The shift to a bear market relief rally regime, coupled with the extremely low asset safety and stressed balance sheet, significantly increases long-term risk. The 'safe' score has been reduced due to these structural concerns and the less favorable market environment."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (28.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 144.71-163.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.46%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.132)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.48)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 141.97-176.41]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (14.71%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 61.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 150.25,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.65%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.5% | OM: 9.0% | NM: 7.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 2.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 5.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $326.008B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.1%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 12.4%, Next Q Est Growth: 256.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 25.47, P/S: 1.93)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.47)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -21.85%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil wins EPCIC contract for Coral Norte LNG project. - Exxon Mobil's Guyana profit decreased slightly in 2025.",
+      "Exxon CEO delivers blunt message on oil prices, economy. - Exxon Mobil trades at a premium price.",
+      "Exxon Mobil shareholders approve move to Texas."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobil wins EPCIC contract for Coral Norte LNG project. - Exxon Mobil's Guyana profit decreased slightly in 2025.",
+      "Exxon CEO delivers blunt message on oil prices, economy. - Exxon Mobil trades at a premium price.",
+      "Exxon warns oil inventories near record lows, price spike ahead. - Occidental Petroleum is Making a High Upside Bet With Exxon Mobil. - Why Exxon Mobil's Strong Balance Sheet Matters for Investors. - Oil Prices Slip Amid Trump Demands; Exxon Warns Of Nasty Surprise."
+    ],
+    "long_term_200d": [
+      "Exxon warns oil inventories near record lows, price spike ahead. - Occidental Petroleum is Making a High Upside Bet With Exxon Mobil. - Why Exxon Mobil's Strong Balance Sheet Matters for Investors. - Oil Prices Slip Amid Trump Demands; Exxon Warns Of Nasty Surprise.",
+      "Exxon Mobil awarded subsea EPCI contract for Likembe Redevelopment 2.0 Project offshore Angola. - Exxon Mobil reports Q1 2026 earnings results. - Exxon Mobil Q1 earnings beat estimates on higher upstream production. - Exxon Mobil CEO expects higher oil prices due to Iran war. - Exxon Mobil's Q1 production down nearly 8% due to Strait of Hormuz disruptions. - Exxon Mobil profit sinks on higher costs, Middle East production hit. - Exxon Mobil CEO estimates 1-2 months for normal flows after Strait of Hormuz reopens. - Exxon Mobil CEO says Middle East production can return quickly once strait reopens. - Exxon Mobil beat first-quarter earnings",
+      "Texas jury clears Exxon Mobil in climate disclosure securities fraud case."
+    ]
+  }
+}

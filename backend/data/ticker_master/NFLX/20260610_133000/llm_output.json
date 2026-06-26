@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: Extreme oversold conditions (RSI 18.5) and price at critical support suggest potential for a short-term bounce. Velocity is implosive down, indicating capitulation. W: Indecisive Doji candle pattern and negative ROC suggest continued near-term weakness or consolidation. O: Potential for a relief rally from oversold levels, supported by news of AI integration for content navigation. T: Risk of further downside if support at 81.0 fails, exacerbated by negative momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.0,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: Bearish trend alignment and MACD suggest continued medium-term weakness. Price is below the 50-day SMA, indicating a negative trend position. W: The strengthening monthly support zone around 81.0-108.94 offers some resilience, but the overall trend is deteriorating. O: Positive news regarding ad business growth and FCF guidance provides a potential offset to the bearish technicals. T: The primary risk is the continuation of the bearish trend, potentially breaking through the support zone if broader market weakness persists."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: Despite a secular bear market regime and a death cross structure, the company exhibits strong fundamental characteristics. High business quality, healthy balance sheet, and excellent cash generation provide a solid foundation. W: Premium valuation multiples (P/E, P/S) and low asset safety (P/B) are concerns, although the PEG ratio suggests growth is underrated. O: Long-term growth profile remains strong, and strategic moves into AI and advertising offer future revenue streams. T: The main threat is the prevailing bearish market regime and the high valuation, which could lead to significant drawdowns if growth expectations are not met or market sentiment shifts negatively."
+    }
+  }
+}

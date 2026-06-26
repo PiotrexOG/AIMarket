@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The RSI has improved to 51.4, indicating a shift towards neutral momentum. Price is now closer to the 20-day SMA (-1.5%), suggesting a slight reduction in immediate downside pressure. O: The improved RSI and proximity to the 20-day SMA suggest a neutral short-term outlook, with potential for stabilization. T: News highlights the strength of the membership model and potential for price adjustments, which could be supportive. W: Volume dynamics have improved to average (0.98), but the price remains in the middle of its range, and the ROC has turned negative (-1.8%), capping the score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The MACD has turned bearish (-1.524), indicating a negative shift in medium-term momentum. The trend alignment has deteriorated to a gradual descent (-2.67%), and the price is further below the 50-day SMA (Z:-1.16). O: The bearish MACD cross and worsening trend alignment suggest a cautious to bearish medium-term outlook. T: While news mentions technology upgrades and potential buying opportunities, the overall technical picture is deteriorating. W: Conviction is moderate due to the clear bearish technical signals, and the safe score is reduced due to the weakening trend alignment and increased distance from the 50-day SMA."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The market regime has shifted to a 'Bear Market Relief Rally' (-0.1%), indicating increased short-term volatility within a longer-term bearish context. The golden cross structure remains healthy (4.25%), but the long-term range position has moved lower to 46.1%. O: The shift in market regime introduces uncertainty, tempering the long-term bullish outlook despite the stable golden cross. T: Fundamental strengths like the net cash fortress balance sheet and mega-cap scale remain supportive. W: The safe score is reduced due to the less favorable market regime and the lower position within the long-term range. Valuation remains a significant headwind, with hyper-premium multiples and low asset safety, limiting upside potential and increasing risk."
+    }
+  }
+}

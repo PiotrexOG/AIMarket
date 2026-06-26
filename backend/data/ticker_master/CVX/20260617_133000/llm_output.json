@@ -1,0 +1,29 @@
+{
+  "ticker": "CVX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook has weakened, with the RSI moving to a neutral zone (46.4) and ROC turning negative (-4.0%). The price is now at critical support for the 20-day range (177.8-198.87). W: The neutral candle pattern and price action at support indicate a lack of immediate conviction, despite the previous Doji suggesting indecision. The 20-day SMA is now further away at -3.7%. O: News flow remains mixed, with positive developments on the Argentina project and Greek offshore exploration, but also mentions of stock drops due to oil price slumps. T: Volatility has slightly increased (ATR 2.4%), and volume dynamics are average (0.81), providing a somewhat less stable backdrop than before. The shift to critical support limits upside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend has deteriorated significantly. The MACD has accelerated into bearish territory (-0.619), and the price is now in a bearish trend position relative to the 50-day SMA (Z:-2.09). W: While trend alignment remains consolidated (-0.41%), the price is now strengthening at monthly support (177.74-204.62), indicating a potential floor but also a lack of upward momentum. O: Continued news on the Argentina project and Greek exploration offers some fundamental support, but the overall technical picture is weakening. T: The combination of a bearish MACD and a bearish Z-score suggests increased downside risk. The shift to support levels, while providing a base, does not negate the weakening trend signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The long-term secular bull market regime has weakened (4.9%), and the price position within the long-term range has moved closer to the midpoint (47.3%). W: The golden cross structure remains healthy (9.45%), providing some structural support. Fundamentals remain unchanged, with average business quality and a healthy balance sheet. O: Strategic asset sales and expansion into new exploration areas continue to be the narrative. T: Despite the weakening long-term technicals and continued premium valuation (P/E: 30.87), the underlying business and financial health provide a degree of resilience. However, the shift in long-term range position and reduced market regime strength warrant a slight reduction in score and safety."
+    }
+  }
+}

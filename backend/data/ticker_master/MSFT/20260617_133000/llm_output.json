@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated significantly, with a strong bearish candle pattern and implosive price velocity (-10.7%). The stock is testing critical support at the lower end of its 20-day range, with RSI remaining in the neutral zone (43.1). The price is now 5.6% below the 20-day SMA. W: The sharp price decline and bearish candle pattern indicate immediate downside risk. The increasing polarization in analyst sentiment, coupled with shareholder lawsuits regarding growth disclosures, adds to the uncertainty. O: While news of partnerships and AI framework pitches exists, the overwhelming technical weakness and negative news flow suggest limited immediate upside. T: The short-term safety score has decreased due to increased volatility and the testing of critical support levels. The structural integrity is weakened by the sharp price decline."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The medium-term trend has weakened, shifting from a gradual ascent to consolidation. The MACD has turned more bearish (-4.448), and the stock is now in a bearish trend position relative to the 50-day SMA (Z:-1.38). W: The deterioration in trend alignment and the increasingly bearish MACD signal suggest a loss of upward momentum. Shareholder lawsuits concerning Azure growth and AI costs, along with potential Xbox restructuring, introduce significant medium-term headwinds. O: Despite the negative technicals and news, the company's strong fundamental growth profile and ongoing AI advancements provide some underlying support. Continued positive developments in cloud and AI infrastructure could offer a floor. T: The medium-term safety score has decreased due to the shift to a bearish trend position and the negative news impacting business segments. The structural confidence is reduced by the weakening trend alignment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 3.5
+      },
+      "synthesis": "S: The long-term outlook remains bearish, with the market regime showing further deterioration (-13.0%) and the stock's position in the long-term range declining to 15.8%. The death cross structure persists. W: The increasing bearishness in the long-term regime and the lower position within the range are significant structural headwinds. Shareholder lawsuits and concerns over AI costs and Azure growth disclosures add to the long-term uncertainty, potentially impacting future profitability and valuation. O: MSFT's elite business quality, healthy balance sheet, and strong cash generation continue to provide resilience. Long-term news regarding AI infrastructure and quantum computing developments offer potential future catalysts. T: The long-term safety score has decreased due to the worsening long-term technicals and the introduction of significant fundamental risks from lawsuits and cost concerns. While business quality remains high, the current valuation and market regime present considerable long-term challenges."
+    }
+  }
+}

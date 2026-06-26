@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Momentum has weakened, with RSI falling to 46.1, indicating a shift towards a more neutral or slightly bearish short-term outlook. Price is hugging the 20-day SMA, suggesting consolidation rather than strong directional conviction. W: Velocity has normalized but is not showing strong positive momentum. The stock is still within its short-term range, offering limited immediate upside. O: The shift in momentum and stagnant price action suggest a potential for range-bound trading or a slight downside bias if key support levels are breached. T: Recent news highlights declining DTC sales and pressure on the CEO's turnaround plan, reinforcing the cautious short-term outlook."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The bullish MACD signal is fading, and while the Z-score around the 50-day SMA is positive, the trend alignment remains compressed. This suggests that the medium-term upward momentum is losing steam. W: The stock is still trading within a defined monthly range, and the fading MACD indicates a loss of conviction in the prior bullish signal. O: The current setup suggests a potential for continued consolidation or a retest of lower support levels if the fading momentum persists. The positive Z-score offers some resilience, but the overall trend is not strongly bullish. T: Medium-term news continues to emphasize slower-than-expected recovery and competitive pressures, aligning with the weakening technical signals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term outlook remains challenging, with the stock still in a secular bear market and positioned in the lower quadrant of its long-term range. While major crosses suggest a potential rebound from oversold conditions, the overall structural trend is bearish. W: The fundamental growth profile remains stagnant with significant profit issues, and the current valuation, while fair, does not offer a compelling margin of safety given the declining earnings outlook. O: The potential for a short-term bounce from oversold levels is present, but the underlying structural and fundamental weaknesses limit the long-term upside potential. The 'safe' score has decreased due to the shift to the lower quadrant and persistent fundamental concerns. T: Long-term news continues to highlight significant challenges, including market share losses and margin pressure, overshadowing any potential future drivers like AI or the World Cup."
+    }
+  }
+}

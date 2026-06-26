@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: Bullish RSI in zone and stable trend base support a positive short-term outlook. O: Potential for continued upward momentum if resistance levels are breached, supported by ongoing AI and tokenization news. W: Indecisive DOJI candle pattern suggests caution, and the price is currently in the middle of its 20-day range, limiting immediate upside. T: News flow around AI and tokenized deposits provides a speculative tailwind, but the lack of clear directional conviction in the price action tempers the immediate score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: Accelerating bullish MACD and strong Z-score positioning above the 50-day SMA indicate a healthy medium-term trend. O: Continued consolidation within the monthly range, with potential for an upward breakout given the bullish momentum signals. W: Compressed moving averages suggest a lack of strong directional conviction, and the price remains within a broad range, indicating potential for sideways movement. T: The $50 billion repurchase authorization and ongoing strategic investments in AI and future payments offer fundamental support for the medium-term trend."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The company operates within a bull market correction, with a neutral position in the long-term range. O: Potential for a pivot and upward trend initiation if major crosses turn positive, supported by strong business quality and scale. W: Stressed balance sheet (NetDebt/Eq: 2.53x) and overpriced implied growth (PEG: 5.98) present significant headwinds. The earnings momentum is also showing skepticism for the next quarter. T: Long-term news flow highlights CEO concerns about overearning and market bubbles, alongside potential for significant M&A, creating uncertainty despite the company's strong operational metrics."
+    }
+  }
+}

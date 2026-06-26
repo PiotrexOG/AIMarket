@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The RSI has moved to a neutral 49.0, indicating a loss of previous oversold momentum. Velocity has turned positive (6.5%), and price is now above the 20-day SMA (1.7%), suggesting a shift towards a more neutral to slightly bullish short-term stance. W: A bearish shooting star candle pattern suggests potential near-term resistance. The stock remains in the middle of its 20-day range, lacking strong directional conviction. News is mixed, focusing on store expansion and operational improvements. O: The shift from oversold to neutral momentum, coupled with positive velocity and price action above the 20-day SMA, suggests a potential for a modest upward move, possibly testing the upper end of the current range. T: Elevated volume dynamics from the previous period have normalized, reducing the potential for sharp price swings. The \"Back to Starbucks\" plan and store expansion news provide some fundamental underpinning for a potential rally."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.5,
+        "safe": 4.8
+      },
+      "synthesis": "S: The MACD has accelerated into bullish territory (0.488), and the price is consolidating near the 50-day SMA (Z:-0.02), indicating a stable base. Trend alignment has shifted to consolidation, but the bullish MACD suggests underlying strength. W: The conviction level remains low, and the consensus state is mixed, reflecting ongoing uncertainty. The stock is still within a broad monthly range, limiting significant upside potential without a clear breakout. O: The accelerating bullish MACD and stable positioning near the 50-day SMA, combined with news of store expansion and operational improvements, suggest a potential for a gradual upward trend. The \"Back to Starbucks\" plan continues to be a key driver for medium-term sentiment. T: While the technical picture is improving, the stressed balance sheet (YrsToPay: 12.9x) and hyper-premium valuation (P/E: 83.4) continue to cap the 'safe' metric, indicating structural risks persist despite positive momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market, and the golden cross structure is intact and strengthening (10.01%). The stock's position in the upper quadrant of its long-term range has improved (74.2%). W: Fundamental concerns persist, with a stressed balance sheet (YrsToPay: 12.9x) and stagnant growth (Rev: 4.3%, EPS: -61.0%). Valuation multiples remain extremely high (P/E: 83.4, P/S: 3.06), and implied growth is still negative (-60.97%). O: The improved long-term technical positioning and news of aggressive store expansion plans (5,000 new stores) offer a potential catalyst for long-term recovery. If the company can successfully execute its turnaround and growth strategies, it could begin to justify the current valuation. T: The significant disconnect between the strong long-term technicals and the weak fundamental/valuation profile continues to weigh on the 'safe' score. The high valuation and persistent profit issues create structural fragility, making the long-term outlook sensitive to execution risks and market sentiment shifts."
+    }
+  }
+}

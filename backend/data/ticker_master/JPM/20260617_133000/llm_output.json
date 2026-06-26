@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The strong bullish candle pattern, extremely overbought RSI (79.3), and explosive velocity indicate significant short-term upward momentum. The price has broken out above the 20-day high, confirming the bullish trend. O: Continued upside potential is likely, driven by the strong momentum and breakout. News regarding European expansion and digital banking initiatives provides a positive catalyst. W: The extremely overbought conditions and price being significantly above the 20-day SMA (7.7% overstretch) suggest a high risk of a short-term pullback or consolidation. The 'blow-off top' pattern above the upper Bollinger Band indicates potential exhaustion. T: While momentum is strong, the stretched valuation and overbought indicators temper the conviction and introduce risk to the 'safe' metric."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The accelerating bullish MACD and an extremely high Z-score (3.96) above the 50-day SMA confirm a very strong bullish trend. The price is strengthening at the monthly resistance zone, indicating upward pressure. O: The strong trend alignment and momentum suggest potential for further gains, possibly breaking through the current resistance. The ongoing strategic investments and positive analyst sentiment support this outlook. W: The price is significantly overextended relative to the 50-day SMA, increasing the risk of a reversion to the mean. The 'range' bias in the SR landscape suggests that while the current move is strong, it might be approaching a ceiling. T: The robust trend is undeniable, but the extreme overextension and the 'range' bias in the structural landscape reduce confidence in the durability of the current move and slightly lower the 'safe' score due to potential mean reversion."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The stock is trading at the top of its cycle (97.9% position) within a secular bull market, with potential for major crosses to turn positive. This indicates a strong long-term bullish environment. O: The company's high business quality and scale provide a solid foundation for continued long-term performance. News regarding strategic expansion and potential M&A could drive future growth. W: The balance sheet remains stressed (NetDebt/Eq: 2.53x), and implied growth is still overpriced (PEG: 6.43), posing long-term risks. The earnings momentum shows skepticism for the next quarter, which is a concern despite the current market regime. T: The current market regime is highly favorable, but the underlying fundamental weaknesses and valuation concerns, coupled with CEO commentary on overearning, limit the long-term conviction and safety score, despite the strong price action."
+    }
+  }
+}

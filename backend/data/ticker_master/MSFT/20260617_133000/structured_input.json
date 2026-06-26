@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.19)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-10.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 382.27-466.32]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.06%)",
+        "cycle_macd": "BEARISH_RECOVERING (-4.448)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.38)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 366.57-466.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-13.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.81%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 387.38,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.55%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 46.3% | NM: 35.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.09x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $293.812B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 15.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -8.1%, Next Q Est Growth: 13.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.47, P/S: 9.84)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.97)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.73)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft sued by shareholders over Azure growth and AI costs. - Microsoft Xbox division studios brace for closures and spin-offs. - Wix partners with Microsoft 365 Copilot for website creation. - Microsoft CEO Nadella pitches new AI framework with 'human capital'. - Microsoft's Xbox business faces cost shock due to AI demand. - Microsoft stock rises on tech rally, despite shareholder lawsuit. - Microsoft faces Azure and Copilot lawsuit over growth disclosures. - Microsoft CEO Nadella warns on AI 'token capital' importance.",
+      "Microsoft partners with Dun & Bradstreet for AI platform integration. - Shareholder lawsuits claim Microsoft downplayed Azure momentum and AI spending. - Stelo partners with Microsoft Fabric for real-time data streaming. - Microsoft weighs Deep Seek for Copilot integration. - Microsoft walked away from Oracle cloud capacity lease deal.",
+      "Microsoft CEO warns against AI future dominated by a few models. - Microsoft weighs Xbox restructuring amid focus on cloud and AI. - IREN secures Microsoft-backed GPU financing for AI cloud contract. - Microsoft and Meta partner with Constellation Energy for AI power. - Microsoft is a top AI infrastructure stock pick. - Microsoft is a leading cloud computing stock."
+    ],
+    "medium_term_50d": [
+      "Microsoft sued by shareholders over Azure growth and AI costs. - Microsoft Xbox division studios brace for closures and spin-offs. - Wix partners with Microsoft 365 Copilot for website creation. - Microsoft CEO Nadella pitches new AI framework with 'human capital'. - Microsoft's Xbox business faces cost shock due to AI demand. - Microsoft stock rises on tech rally, despite shareholder lawsuit. - Microsoft faces Azure and Copilot lawsuit over growth disclosures. - Microsoft CEO Nadella warns on AI 'token capital' importance.",
+      "Microsoft CEO warns against AI future dominated by a few models. - Microsoft weighs Xbox restructuring amid focus on cloud and AI. - IREN secures Microsoft-backed GPU financing for AI cloud contract. - Microsoft and Meta partner with Constellation Energy for AI power. - Microsoft is a top AI infrastructure stock pick. - Microsoft is a leading cloud computing stock.",
+      "Microsoft partners with Dun & Bradstreet for AI platform integration. - Shareholder lawsuits claim Microsoft downplayed Azure momentum and AI spending. - Stelo partners with Microsoft Fabric for real-time data streaming. - Microsoft weighs Deep Seek for Copilot integration. - Microsoft walked away from Oracle cloud capacity lease deal."
+    ],
+    "long_term_200d": [
+      "Microsoft sued by shareholders over Azure growth and AI costs. - Microsoft Xbox division studios brace for closures and spin-offs. - Wix partners with Microsoft 365 Copilot for website creation. - Microsoft CEO Nadella pitches new AI framework with 'human capital'. - Microsoft's Xbox business faces cost shock due to AI demand. - Microsoft stock rises on tech rally, despite shareholder lawsuit. - Microsoft faces Azure and Copilot lawsuit over growth disclosures. - Microsoft CEO Nadella warns on AI 'token capital' importance.",
+      "Microsoft CEO warns against AI future dominated by a few models. - Microsoft weighs Xbox restructuring amid focus on cloud and AI. - IREN secures Microsoft-backed GPU financing for AI cloud contract. - Microsoft and Meta partner with Constellation Energy for AI power. - Microsoft is a top AI infrastructure stock pick. - Microsoft is a leading cloud computing stock.",
+      "Microsoft announces Majorana 2 quantum chip. - Reid Hoffman to exit Microsoft's board. - Microsoft accelerates quantum computing ambitions. - Grid Dynamics unveils AI modernization on Microsoft Azure. - Microsoft builds its own AI infrastructure in-house. - Microsoft's Majorana 2 chip validated by industry. - Trump's AI order may involve Microsoft. - Microsoft targets scalable quantum computer by 2029."
+    ]
+  }
+}

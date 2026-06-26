@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (32.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "NORMAL (-7.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 172.23-192.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.49%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.261)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.95)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 172.23-198.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.42%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 171.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.4%))",
+      "volume_dynamics": "AVERAGE (0.77)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.65, P/S: 1.83)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.86)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.12x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron partners with Microsoft on Texas AI data center power. - Chevron signs 20-year power deal with Microsoft for AI hub. - Texas Pacific Land provides land/water solutions for Chevron power project. - Chevron presents at J.P. Morgan Natural Resources Conference.",
+      "Helleni Q Energy grants Chevron 70% interest in Greek offshore concession.",
+      "Chevron acquires 70% stake in Greek offshore exploration block."
+    ],
+    "medium_term_50d": [
+      "Chevron partners with Microsoft on Texas AI data center power. - Chevron signs 20-year power deal with Microsoft for AI hub. - Texas Pacific Land provides land/water solutions for Chevron power project. - Chevron presents at J.P. Morgan Natural Resources Conference.",
+      "Chevron partners with Helleni Q Energy on Greece offshore block. - Chevron takes 70% interest in Greek offshore exploration block. - Chevron secures entry into Greece's offshore Block 10.",
+      "Helleni Q Energy grants Chevron 70% interest in Greek offshore concession."
+    ],
+    "long_term_200d": [
+      "Chevron partners with Microsoft on Texas AI data center power. - Chevron signs 20-year power deal with Microsoft for AI hub. - Texas Pacific Land provides land/water solutions for Chevron power project. - Chevron presents at J.P. Morgan Natural Resources Conference.",
+      "Eneos to buy Chevron's stake in Singapore Refining and other assets for $2.2 billion. - Chevron to sell some Asia-Pacific assets to Japan's Eneos for $2.17 billion. - Chevron pens $2.17 billion downstream asset sale. - ENEOS to buy certain Chevron downstream assets in APAC for $2.2bn. - Chevron considering investment opportunities in Tanzania's oil and gas sector.",
+      "Chevron partners with Helleni Q Energy on Greece offshore block. - Chevron takes 70% interest in Greek offshore exploration block. - Chevron secures entry into Greece's offshore Block 10."
+    ]
+  }
+}

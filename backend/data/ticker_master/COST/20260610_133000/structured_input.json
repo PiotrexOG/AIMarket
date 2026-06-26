@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (16.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "NORMAL (-3.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 936.51-1096.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.29%)",
+        "cycle_macd": "BEARISH_RECOVERING (-5.267)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.13)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 936.51-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.12%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 971.62,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.53%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.93, P/S: 1.54)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 14.25)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.41)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco Wholesale lowers prices on select Kirkland brand items. - Costco Wholesale Corporation reported net sales increase of 14.5%. - Costco Wholesale announces new store opening in Pensacola. - Costco's digital sales jumped 21%, gas volumes hit record.",
+      "Costco cuts prices on Kirkland Signature items. - Costco reports strong digital growth and app traffic. - Costco leans on Kirkland price cuts for growth.",
+      "Costco reports Q3 earnings beat driven by gasoline, membership fees. - Costco to refund tariff payments to customers. - Costco's debt issuance filing may signal a special dividend. - Costco launches exclusive beverage partnership with Keurig Dr Pepper. - Costco sees growth in executive memberships, especially in China. - Costco's e-commerce momentum and sales surge continue. - Costco's international revenue trends are under scrutiny."
+    ],
+    "medium_term_50d": [
+      "Costco reports Q3 earnings beat driven by gasoline, membership fees. - Costco to refund tariff payments to customers. - Costco's debt issuance filing may signal a special dividend. - Costco launches exclusive beverage partnership with Keurig Dr Pepper. - Costco sees growth in executive memberships, especially in China. - Costco's e-commerce momentum and sales surge continue. - Costco's international revenue trends are under scrutiny.",
+      "Costco Wholesale lowers prices on select Kirkland brand items. - Costco Wholesale Corporation reported net sales increase of 14.5%. - Costco Wholesale announces new store opening in Pensacola. - Costco's digital sales jumped 21%, gas volumes hit record.",
+      "Costco reports May net sales increase of 14.5%. - Costco's Q3 earnings beat, comp-sales growth at 9.8%. - Costco Wholesale reports net sales of $24.01B for May. - Costco Wholesale reports 39-week net sales of $221.19B. - Costco fuel strategy delivers retail advantage. - Costco stock valuation stays high despite strong quarter. - Costco adds exclusive Coca-Cola soda rival. - Costco Wholesale Corporation reports May sales results."
+    ],
+    "long_term_200d": [
+      "Costco Q3 revenue tops estimates, driven by gas sales. - Costco reports strong Q3 earnings with significant digital sales growth. - Costco to return U.S. tariff refunds to members. - Costco's net new warehouse openings may miss fiscal 2026 outlook. - Costco Wholesale shares fall despite earnings beat. - Costco sees record fuel sales volumes as consumers seek savings. - Costco's profit margin compressed despite strong revenue. - Costco's membership fees rise, digitally enabled comps surge. - Costco Wholesale's Q3 revenue beat driven by gas business strength. - Costco Wholesale Corp (COST) Q3 2026 earnings call highlights strong sales.",
+      "Costco reports Q3 earnings, revenue beats expectations. - Costco's Q3 results driven by strong sales and membership income. - Costco sees record gas sales amid soaring fuel costs. - Costco applies for IEEPA tariff refunds, expects returns in 2-3 months. - Middle East conflict impacted Costco's Q3 margin due to higher fuel costs. - Costco has low inventory exposure to shipping issues from Middle East conflict. - Costco's Q3 results show strong comparable sales growth. - Costco's Q3 earnings in-line with expectations, revenue beats. - Costco Wholesale Q3 earnings and sales higher, driven by gas, membership, digital. - Costco Wholesale Q3 results mixed",
+      "Costco reports Q3 earnings beat driven by gasoline, membership fees. - Costco to refund tariff payments to customers. - Costco's debt issuance filing may signal a special dividend. - Costco launches exclusive beverage partnership with Keurig Dr Pepper. - Costco sees growth in executive memberships, especially in China. - Costco's e-commerce momentum and sales surge continue. - Costco's international revenue trends are under scrutiny."
+    ]
+  }
+}

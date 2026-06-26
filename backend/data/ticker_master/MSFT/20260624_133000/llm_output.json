@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The short-term outlook shows a significant improvement, with RSI moving to extreme oversold (17.0) and a neutral candle pattern replacing the previous bearish one. The price is now within the middle of the 20-day range, though still overstretched below the SMA20 (-8.4%). W: While oversold conditions suggest potential for a bounce, the price remains significantly below the 20-day SMA, indicating lingering weakness. The ongoing polarization in analyst sentiment and news regarding shareholder lawsuits and AI cost concerns continue to pose risks. O: Positive news flow around data center projects with Chevron and AI run rate potential provides some upside catalysts. Partnerships with Stagwell and ICON also offer constructive developments. T: The short-term safety score has decreased slightly due to the continued overstretched position below the SMA20 and the persistent news risks, despite the oversold technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The medium-term trend shows signs of stabilization, with the stock strengthening at the monthly support zone and the MACD showing a recovering bearish signal. The Z-score relative to the 50-day SMA has improved to -2.11, indicating less extreme bearish positioning. W: Despite the stabilization, the trend alignment remains compressed, and the MACD is still bearish. The ongoing shareholder lawsuits and EU antitrust probes introduce significant medium-term uncertainties that could impede a sustained recovery. O: Strong news regarding data center power supply deals with Chevron and potential AI upside from run rates offer constructive medium-term drivers. The company's fundamental strength provides a solid base for recovery. T: The medium-term safety score has decreased due to the persistent bearish technicals and the introduction of regulatory risks, which offset the positive news flow and fundamental resilience."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The long-term technical picture remains challenging, with the market regime still in a secular bear market (-16.9%) and the stock at multi-month lows (9.4% position). The death cross structure persists. W: The persistent bearish long-term regime and the low range position represent significant structural headwinds. While business quality and financial health remain elite, the premium valuation and ongoing legal/regulatory scrutiny pose long-term risks to growth and profitability. O: News regarding major AI infrastructure investments and partnerships, such as the Chevron deal, highlight the company's strategic positioning for future growth. The strong fundamental profile provides a degree of long-term resilience. T: The long-term safety score has decreased due to the worsening long-term technicals and the persistent premium valuation, which offers limited downside protection in the current market regime despite the strong underlying business fundamentals."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: Momentum is neutral, with RSI in the upper neutral zone (59.9) and price stable near the 20-day SMA. The stock is trading within its normal Bollinger Bands and in the middle of its short-term range. W: Velocity is stagnant, indicating a lack of immediate upward momentum. O: Potential for range-bound trading or a slight upward bias if short-term catalysts emerge. T: News narrative highlights operational resets and brand initiatives, but also mentions fund selling, suggesting mixed sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: A confirmed bullish MACD zero-cross and healthy Z-score positioning around the 50-day SMA suggest underlying medium-term strength. Trend alignment is consolidating but compressed, indicating potential for a breakout. W: The overall trend is still in a consolidation phase, and the stock is trading within a broader monthly range. O: Positive MACD crossover and stable positioning offer a constructive outlook, with potential for upside if consolidation breaks. T: Medium-term news highlights brand resets and marketing campaigns, but also competitive challenges in Asia, indicating a mixed but evolving narrative."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Despite being in a secular bear market, the stock is showing signs of accumulation at multi-month lows, and major crosses suggest a potential rebound from an extreme bearish stretch. W: The long-term growth profile is weak, with declining revenues and EPS, and recent quarterly earnings have deteriorated significantly. O: The current position at multi-month lows, coupled with potential for a rebound from oversold conditions, presents a contrarian opportunity. T: Long-term news indicates significant restructuring and challenges in key markets like China, alongside a history of sharp stock declines, but also mentions AI push and World Cup presence as potential future drivers."
+    }
+  }
+}

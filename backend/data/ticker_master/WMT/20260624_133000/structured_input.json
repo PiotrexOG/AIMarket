@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (69.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.62)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 112.73-122.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.09%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.264)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 112.73-135.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.91%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 56.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 119.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.31%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.7%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.69x, YrsToPay: 4.3x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $685.086B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.2%, EPS: -0.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -15.2%, Next Q Est Growth: 32.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.0, P/S: 1.4)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 11.47)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.26%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart signs agreement to acquire Vibe.co advertising platform. - Walmart signs long-term nuclear power purchase agreement with Constellation. - Walmart deepens healthcare reach with Medicare support push. - Walmart sued over alleged AI gas price-fixing in California. - Walmart's nuclear deal shows demand beyond AI data centers.",
+      "Walmart hit with $23M jury verdict after retaliation trial. - Walmart International's sales gain momentum. - Walmart and Sam\u2019s Club expand Medicare weight management support. - Walmart Expands Medicare Pharmacy Support. - BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost gas prices. - Walmart slashed prices of expensive electronics by up to 88%.",
+      "Walmart's Sam's Club faces China food safety overhaul."
+    ],
+    "medium_term_50d": [
+      "Walmart signs agreement to acquire Vibe.co advertising platform. - Walmart signs long-term nuclear power purchase agreement with Constellation. - Walmart deepens healthcare reach with Medicare support push. - Walmart sued over alleged AI gas price-fixing in California. - Walmart's nuclear deal shows demand beyond AI data centers.",
+      "Walmart hit with $23M jury verdict after retaliation trial. - Walmart International's sales gain momentum. - Walmart and Sam\u2019s Club expand Medicare weight management support. - Walmart Expands Medicare Pharmacy Support. - BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost gas prices. - Walmart slashed prices of expensive electronics by up to 88%.",
+      "Walmart's Sam's Club faces China food safety overhaul."
+    ],
+    "long_term_200d": [
+      "Walmart signs agreement to acquire Vibe.co advertising platform. - Walmart signs long-term nuclear power purchase agreement with Constellation. - Walmart deepens healthcare reach with Medicare support push. - Walmart sued over alleged AI gas price-fixing in California. - Walmart's nuclear deal shows demand beyond AI data centers.",
+      "Walmart reports increased profits, shares fall on forecast disappointment. - Walmart sees consumers struggling with rising costs. - Walmart delivers impressive sales but cautious financial outlook. - Walmart reports revenue growth of 7.3%. - Walmart reports strong Q1 sales, e-commerce and marketplace growth. - Walmart sales rise as higher fuel prices bring more bargain hunters. - Grocers like Walmart expect to cut prices due to soaring gas prices. - Walmart CFO discusses results, gas prices, and financial outlook. - Walmart shares sink 7%, suffer worst day in 13 months. - Walmart Q1 sales gain 7.3 percent, reiterates annual outlook. - Walmart taps into cowboycore trend with new",
+      "Walmart hit with $23M jury verdict after retaliation trial. - Walmart International's sales gain momentum. - Walmart and Sam\u2019s Club expand Medicare weight management support. - Walmart Expands Medicare Pharmacy Support. - BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost gas prices. - Walmart slashed prices of expensive electronics by up to 88%."
+    ]
+  }
+}
