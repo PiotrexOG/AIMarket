@@ -63,6 +63,7 @@ def _prepare_score_history(return_panel):
         "score",
         "score_percentile",
         "score_zscore",
+        "current_price",
     ]
     required = set(columns)
     if return_panel.empty or not required.issubset(return_panel.columns):
@@ -238,9 +239,14 @@ def _summarize_live_progress(entry, path):
     elapsed_days = path["elapsed_days"].to_numpy(dtype=float)
     segment_days = path["segment_days"].to_numpy(dtype=float)
     score_percentiles = path["score_percentile"].to_numpy(dtype=float)
+    price_timestamps = pd.to_datetime(path["start_timestamp"])
+    prices = path["current_price"].to_numpy(dtype=float)
 
     for progress_percent in PROGRESS_PERCENTAGES:
         cutoff_days = horizon_days * progress_percent / 100.0
+        cutoff_timestamp = pd.Timestamp(
+            entry["start_timestamp"]
+        ) + pd.to_timedelta(cutoff_days, unit="D")
         live_segment_days = _overlap_days(
             elapsed_days,
             segment_days,
@@ -263,6 +269,38 @@ def _summarize_live_progress(entry, path):
             and entry_score_percentile > 0
             else None
         )
+        price_mask = (
+            (price_timestamps <= cutoff_timestamp)
+            & np.isfinite(prices)
+            & (prices > 0)
+        )
+        if price_mask.any():
+            price_index = int(np.flatnonzero(price_mask)[-1])
+            price_at_cutoff = float(prices[price_index])
+            price_timestamp = price_timestamps.iloc[price_index]
+            price_elapsed_days = float(elapsed_days[price_index])
+        else:
+            price_at_cutoff = None
+            price_timestamp = pd.NaT
+            price_elapsed_days = None
+
+        remaining_days = horizon_days - cutoff_days
+        remaining_return = (
+            float(entry["future_price"]) / price_at_cutoff - 1.0
+            if price_at_cutoff is not None
+            else None
+        )
+        remaining_annualized_return = (
+            annualize_return(remaining_return, remaining_days)
+            if remaining_return is not None and remaining_days > 0
+            else None
+        )
+        entry_price = float(entry["current_price"])
+        price_change_to_cutoff = (
+            price_at_cutoff / entry_price - 1.0
+            if price_at_cutoff is not None and entry_price > 0
+            else None
+        )
         rows.append({
             "timeframe": entry["timeframe"],
             "horizon_days": horizon_days,
@@ -273,12 +311,27 @@ def _summarize_live_progress(entry, path):
             "progress_percent": progress_percent,
             "progress_share": progress_percent / 100.0,
             "cutoff_days": cutoff_days,
+            "cutoff_timestamp": cutoff_timestamp,
             "entry_score_percentile": entry_score_percentile,
             "mean_score_percentile": mean_score_percentile,
             "score_percentile_change": score_percentile_change,
             "relative_score_percentile_change": (
                 relative_score_percentile_change
             ),
+            "price_at_cutoff": price_at_cutoff,
+            "price_timestamp": price_timestamp,
+            "price_elapsed_days": price_elapsed_days,
+            "price_horizon_share": (
+                price_elapsed_days / horizon_days
+                if price_elapsed_days is not None
+                else None
+            ),
+            "entry_price": entry_price,
+            "price_change_to_cutoff": price_change_to_cutoff,
+            "future_price": float(entry["future_price"]),
+            "remaining_days": remaining_days,
+            "remaining_return": remaining_return,
+            "remaining_annualized_return": remaining_annualized_return,
             "future_return": float(entry["future_return"]),
             "annualized_return": float(entry["annualized_return"]),
         })

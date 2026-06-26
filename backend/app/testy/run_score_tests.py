@@ -79,7 +79,7 @@ ENABLED_TESTS = {
     "A3_weekly_rank_buckets": False,
     "downside_information_ratio": False,
     "post_entry_score_path": True,
-    "ticker_percentile_history": True,
+    "ticker_percentile_history": False,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
 }
