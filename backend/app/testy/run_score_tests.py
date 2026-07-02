@@ -47,7 +47,7 @@ from score_tests.common.data import (
     build_return_panel,
     build_timeframe_score_observations,
 )
-from score_tests.common.io import clean_outputs, save_csv_for_excel
+from score_tests.common.io import save_csv_for_excel
 from score_tests.downside_information_ratio.calculation import (
     calculate as calculate_downside_information_ratio,
 )
@@ -75,13 +75,13 @@ OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": False,
-    "A3_weekly_rank_buckets": False,
-    "downside_information_ratio": False,
+    "A1_A2_weekly_top_n_and_correlation": True,
+    "A3_weekly_rank_buckets": True,
+    "downside_information_ratio": True,
     "post_entry_score_path": True,
-    "ticker_percentile_history": False,
-    "B1_B2_global_top_percent_and_correlation": False,
-    "B3_global_score_buckets": False,
+    "ticker_percentile_history": True,
+    "B1_B2_global_top_percent_and_correlation": True,
+    "B3_global_score_buckets": True,
 }
 
 ENABLED_TIMEFRAMES = {
@@ -290,7 +290,6 @@ def main():
         )
     )
 
-    clean_outputs(OUTPUT_DIR)
     output_files = save_analysis_outputs(results, OUTPUT_DIR)
     plot_analysis_outputs(results, OUTPUT_DIR)
 
