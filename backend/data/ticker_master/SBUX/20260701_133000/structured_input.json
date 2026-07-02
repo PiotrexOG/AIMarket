@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.66)",
+        "velocity_roc_10": "STAGNANT (0.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 93.7-104.96]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.79%)",
+        "cycle_macd": "BULLISH_FADING (0.458)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.06)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 93.7-108.88]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.01%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 101.99,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.33%))",
+      "volume_dynamics": "AVERAGE (0.87)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 20.6% | OM: 9.0% | NM: 3.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 12.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.695B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -61.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -40.9%, Next Q Est Growth: 150.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 84.29, P/S: 3.09)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: -13.88)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -60.97%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.26x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks stock drops despite market gains.",
+      "Starbucks plans to double US stores. - Starbucks EMEA beverage manager discusses protein coffee.",
+      "Starbucks loyalty program changes discussed."
+    ],
+    "medium_term_50d": [
+      "Starbucks plans to double US stores. - Starbucks EMEA beverage manager discusses protein coffee.",
+      "Starbucks explores Japan business sale, potential IPO. - Starbucks completes majority stake sale of China operations.",
+      "Starbucks stock drops despite market gains."
+    ],
+    "long_term_200d": [
+      "Starbucks explores Japan business sale, potential IPO. - Starbucks completes majority stake sale of China operations.",
+      "Starbucks plans to add 100 stores annually in India. - Starbucks believes smaller stores will drive US growth. - Starbucks eyes massive change in key market.",
+      "Starbucks announces corporate restructuring, cutting 300 roles. - Starbucks expects $400 million charge from restructuring. - Starbucks plans $2 billion cost-saving effort. - Starbucks to consolidate US and international support functions. - Starbucks to open new corporate office in Nashville."
+    ]
+  }
+}

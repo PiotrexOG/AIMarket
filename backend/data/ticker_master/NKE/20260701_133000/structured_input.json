@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (34.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.12)",
+        "velocity_roc_10": "NORMAL (-9.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-5.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 40.0-46.31]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.25%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.36)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.07)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 40.0-47.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-28.8%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-23.71%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 6.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 42.28,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.2%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.1)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 41.9% | OM: 7.4% | NM: 6.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.44B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.1%, EPS: -44.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 276.9%, Next Q Est Growth: -8.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.68, P/S: 1.35)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.64)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -44.29%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nike reports Q4 earnings and revenue beat expectations. - Nike CFO expects FY27 revenue to be down. - Nike sees pressure on traffic and discretionary spending. - Nike's Q4 revenue slipped year-over-year. - Nike's international markets drive growth, offsetting North America weakness. - Nike's Q4 earnings lifted by tariff refund. - Nike's direct-to-consumer business remains under pressure. - Nike's Q4 sales in China declined 12%. - Nike's CEO discusses challenging operating environment. - Nike's Q4 earnings call transcript released.",
+      "Nike to report Q4 earnings on Tuesday, June 29. - Nike CFO Matthew Friend stepping down. - Nike Q4 preview: Stock at 11-year lows. - Nike Q4 earnings not just about numbers. - Nike's World Cup business outpaces Adidas. - Nike plans for CFO transition.",
+      "Nike CFO transition may signal conservative guidance. - Key Banc downgrades Nike rating to Sector Weight. - Nike Q4 earnings preview shows pressure from China weakness. - Nike stock languishes, but earnings report fuels optimism. - Options traders bet on strong Nike earnings. - Nike expected to report soft quarterly results. - Nike's outlook clouded by China, EMEA uncertainty. - Nike stock heads for worst week in nearly three months."
+    ],
+    "medium_term_50d": [
+      "Nike reports Q4 earnings and revenue beat expectations. - Nike CFO expects FY27 revenue to be down. - Nike sees pressure on traffic and discretionary spending. - Nike's Q4 revenue slipped year-over-year. - Nike's international markets drive growth, offsetting North America weakness. - Nike's Q4 earnings lifted by tariff refund. - Nike's direct-to-consumer business remains under pressure. - Nike's Q4 sales in China declined 12%. - Nike's CEO discusses challenging operating environment. - Nike's Q4 earnings call transcript released.",
+      "Nike to report Q4 earnings on Tuesday, June 29. - Nike CFO Matthew Friend stepping down. - Nike Q4 preview: Stock at 11-year lows. - Nike Q4 earnings not just about numbers. - Nike's World Cup business outpaces Adidas. - Nike plans for CFO transition.",
+      "Nike CFO transition may signal conservative guidance. - Key Banc downgrades Nike rating to Sector Weight. - Nike Q4 earnings preview shows pressure from China weakness. - Nike stock languishes, but earnings report fuels optimism. - Options traders bet on strong Nike earnings. - Nike expected to report soft quarterly results. - Nike's outlook clouded by China, EMEA uncertainty. - Nike stock heads for worst week in nearly three months."
+    ],
+    "long_term_200d": [
+      "Nike reports Q4 earnings and revenue beat expectations. - Nike CFO expects FY27 revenue to be down. - Nike sees pressure on traffic and discretionary spending. - Nike's Q4 revenue slipped year-over-year. - Nike's international markets drive growth, offsetting North America weakness. - Nike's Q4 earnings lifted by tariff refund. - Nike's direct-to-consumer business remains under pressure. - Nike's Q4 sales in China declined 12%. - Nike's CEO discusses challenging operating environment. - Nike's Q4 earnings call transcript released.",
+      "Nike to report Q4 earnings on Tuesday, June 29. - Nike CFO Matthew Friend stepping down. - Nike Q4 preview: Stock at 11-year lows. - Nike Q4 earnings not just about numbers. - Nike's World Cup business outpaces Adidas. - Nike plans for CFO transition.",
+      "Nike CFO transition may signal conservative guidance. - Key Banc downgrades Nike rating to Sector Weight. - Nike Q4 earnings preview shows pressure from China weakness. - Nike stock languishes, but earnings report fuels optimism. - Options traders bet on strong Nike earnings. - Nike expected to report soft quarterly results. - Nike's outlook clouded by China, EMEA uncertainty. - Nike stock heads for worst week in nearly three months."
+    ]
+  }
+}

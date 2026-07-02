@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (36.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.31)",
+        "velocity_roc_10": "NORMAL (-6.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 349.2-453.5]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-4.25%)",
+        "cycle_macd": "BEARISH_RECOVERING (-2.103)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 349.2-466.32]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-16.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-8.46%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 16.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 382.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.28%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.8% | OM: 46.3% | NM: 35.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.25x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $293.812B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 15.6%, EPS: 15.9%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -8.1%, Next Q Est Growth: 13.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 27.11, P/S: 9.71)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.86)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.71)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Microsoft licenses Sisvel Wi-Fi Multimode patent pool. - Open AI IPO delay could impact Microsoft's investment. - Microsoft ends Project Fantasy deal with IO Interactive. - Microsoft launches new ETFs tracking its stock. - Microsoft stock heads for worst month since 2000. - Microsoft may increase Xbox pricing. - Microsoft stock near 52-week low, analysts suggest buying. - Microsoft expands security offerings with new partnerships. - Microsoft plans significant layoffs across divisions. - Microsoft to cut under 2.5% of workforce in layoffs. - Binance adds Microsoft stock to tokenized securities. - Nokia, SAP, and Microsoft form strategic AI agreement. - Microsoft's",
+      "Microsoft faces pressure as massive AI infrastructure spending weighs on margins. - Microsoft stock is headed for its worst month since December 2000. - Microsoft stock is headed for its worst month since 2000. - Chevron announces 20-year agreement with Microsoft for power supply. - Arrow Electronics earns Frontier Distributor designation in Microsoft's AI program. - Apple and Microsoft can raise prices amid AI memory crunch.",
+      "Microsoft partners with Qualcomm on AI data center push. - Wix integrates AI tools into Microsoft 365 Copilot. - IREN signs AI data center infrastructure deals with Microsoft. - Microsoft's shares down over 20% in June. - Core Weave secures $99 billion backlog with Microsoft."
+    ],
+    "medium_term_50d": [
+      "Microsoft licenses Sisvel Wi-Fi Multimode patent pool. - Open AI IPO delay could impact Microsoft's investment. - Microsoft ends Project Fantasy deal with IO Interactive. - Microsoft launches new ETFs tracking its stock. - Microsoft stock heads for worst month since 2000. - Microsoft may increase Xbox pricing. - Microsoft stock near 52-week low, analysts suggest buying. - Microsoft expands security offerings with new partnerships. - Microsoft plans significant layoffs across divisions. - Microsoft to cut under 2.5% of workforce in layoffs. - Binance adds Microsoft stock to tokenized securities. - Nokia, SAP, and Microsoft form strategic AI agreement. - Microsoft's",
+      "Microsoft faces pressure as massive AI infrastructure spending weighs on margins. - Microsoft stock is headed for its worst month since December 2000. - Microsoft stock is headed for its worst month since 2000. - Chevron announces 20-year agreement with Microsoft for power supply. - Arrow Electronics earns Frontier Distributor designation in Microsoft's AI program. - Apple and Microsoft can raise prices amid AI memory crunch.",
+      "Microsoft stock hits one-year low amid AI spending concerns. - Apple, Microsoft hike prices due to AI boom costs. - European Commission designates Microsoft Azure as gatekeeper. - Win Wire earns Microsoft Frontier Partner status for AI. - Decibel enables onchain trading for Apple, Meta, and Microsoft. - Microsoft stock rally leads software sector gains. - Microsoft among most oversold mega-cap tech stocks. - Microsoft faces AI capex fears, worst June since 2000. - Apple and Microsoft price hikes raise consumer cost concerns. - Microsoft's AI Cloud Partner Program recognizes Win Wire."
+    ],
+    "long_term_200d": [
+      "Chevron and Microsoft partner on a multi-gigawatt natural gas-powered data center project. - Stagwell and Microsoft Advertising integrate Copilot directly into live media campaigns. - Microsoft's CEO Satya Nadella criticizes AI companies for capturing too much value. - Microsoft's AI run rate points to significant upside potential. - Microsoft stock is performing well despite recent market selloffs. - Microsoft gains 1.8% in the latest trading session. - Microsoft and Chevron build a huge power backing for AI data centers. - Microsoft's $7 billion Texas data center gets 20-year power supply deal. - Microsoft's Legit Script Healthcare Merchant Certification recognized by Visa, Mastercard, Google",
+      "Microsoft faces shareholder lawsuit; TD Cowen maintains Buy rating. - Chevron, Microsoft strike 20-year deal to power AI data center. - Microsoft stock is considered a strong buy at valuation lows. - Microsoft falls on the stock market today. - ICON selects Microsoft as preferred technology partner for AI. - Microsoft plans to construct new datacenter campus in Pecos, Texas. - Microsoft CEO questions industry's current AI path. - Microsoft pushes AI beyond model wars, focusing on access, cost, trust. - Vena earns top ranks as a Microsoft-native planning platform. - Chevron and Microsoft strike 20-year gas deal for AI data centers. - Heidrick & Struggles",
+      "Microsoft licenses Sisvel Wi-Fi Multimode patent pool. - Open AI IPO delay could impact Microsoft's investment. - Microsoft ends Project Fantasy deal with IO Interactive. - Microsoft launches new ETFs tracking its stock. - Microsoft stock heads for worst month since 2000. - Microsoft may increase Xbox pricing. - Microsoft stock near 52-week low, analysts suggest buying. - Microsoft expands security offerings with new partnerships. - Microsoft plans significant layoffs across divisions. - Microsoft to cut under 2.5% of workforce in layoffs. - Binance adds Microsoft stock to tokenized securities. - Nokia, SAP, and Microsoft form strategic AI agreement. - Microsoft's"
+    ]
+  }
+}

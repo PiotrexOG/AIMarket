@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term outlook for DIS shows neutral momentum (RSI 42.0) and price testing the lower Bollinger Band, indicating potential for a short-term bounce. Range position is mid-range, with stable trend base support. O: Positive news flow regarding settlements and potential expansion could provide a catalyst. T: The primary risk is the continued testing of the lower band, which could lead to further downside if support fails. The neutral candle pattern suggests indecision. W: The negative velocity (ROC -5.4%) and lack of strong momentum indicate limited immediate upside potential."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend for DIS remains bearish, with price below the 50-day SMA (Z-score -1.88) and accelerating MACD bearish momentum. However, the price is strengthening at a monthly support zone, offering a potential floor. O: The strong positive estimate for next quarter's EPS growth (39.6%) provides a significant tailwind if realized. T: The bearish trend alignment and accelerating MACD are significant headwinds. A failure to hold the support zone could lead to a sharp decline. W: The current price action is still characterized by a gradual descent, suggesting underlying weakness persists despite the support zone."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: Long-term, DIS is entrenched in a secular bear market, evidenced by the death cross structure and positioning in the lower price quadrant. However, the company exhibits a healthy balance sheet (NetDebt/Eq: 0.38x) and a moderate growth profile, with strong historical EPS growth. O: The current valuation presents an opportunity, with moderate discounts across key multiples and an implied growth rate that appears underrated (PEG: 0.12). The large-cap scale and average business quality provide a stable foundation. T: The prevailing secular bear market and the death cross structure pose significant long-term challenges. The debt sensitivity (EV/MC: 1.23x) remains a concern in a higher interest rate environment. W: The recent quarterly earnings stumble (-10.7% surprise) introduces near-term uncertainty, despite the strong longer-term EPS growth trend."
+    }
+  }
+}

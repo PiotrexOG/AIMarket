@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: RSI is in a strong bullish zone (63.3), indicating positive short-term momentum. The price is stable near the 20-day SMA, suggesting some underlying support. W: ROC is stagnant, and the price is in the middle of its 20-day range, lacking strong directional conviction. O: Potential for a short-term bounce if momentum continues to build. T: News narrative is mixed, with some negative price action offset by strategic growth plans and loyalty program discussions."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: MACD shows a fading bullish signal, and the price is at a healthy base relative to the 50-day SMA (Z-score 0.06). W: The overall trend alignment is bearish, with a gradual descent (-1.79%), indicating a lack of sustained upward momentum. The price remains within a broad monthly range. O: A potential reversal could occur if the price breaks decisively above the 50-day SMA and the MACD turns bullish again. T: Medium-term news is dominated by strategic moves like potential business sales and IPOs, alongside ongoing growth initiatives, creating uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The long-term market regime is bullish, and the stock exhibits a healthy golden cross structure, with price positioned in the upper quadrant of its long-term range. W: Fundamental data reveals stagnation in revenue growth and a significant EPS decline (-61.0%), coupled with a hyper-premium valuation (P/E 84.29) and stressed financial health (YrsToPay 12.9x). O: Despite the positive long-term technical structure, the fundamental deterioration and high valuation present significant risks. T: Long-term news highlights strategic restructuring, cost-saving efforts, and expansion plans in specific markets, indicating management's focus on navigating challenges and future growth."
+    }
+  }
+}

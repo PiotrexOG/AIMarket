@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The short-term outlook for NVDA is neutral to slightly bearish, with a score of 4.5. Technical indicators show indecision (DOJI_INDECISION) and neutral momentum (RSI 43.0). The price is trading near its short-term base (-2.9% from SMA20) and within the middle of its recent range. W: The lack of clear directional momentum and the indecisive candle pattern suggest limited upside potential in the immediate term. O: Positive news flow regarding AI infrastructure partnerships and data center products provides some underlying support, but is not yet translating into strong price action. T: Volatility remains at moderate levels (ATR 3.22%), and the price is not exhibiting extreme behavior, contributing to a moderate safety score of 3.5."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The medium-term outlook is bearish, reflected in a score of 3.0. Technicals indicate a gradual descent with bearish MACD and Z-score positioning below the SMA50. W: The current trend alignment is negative, and the price is trading within a defined range, suggesting a lack of strong upward conviction. O: While the analyst consensus is strongly bullish, the technical picture does not yet support this view, leading to a moderate conviction level (4.0). The recent quarterly earnings surprise was negative (-56.5%), although future estimates are strong. T: Valuation remains a concern, with hyper-premium pricing (P/E 62.48, P/S 32.51) and extremely low asset safety (P/B 57.59), which limits the safety score to 3.0 despite a strong balance sheet."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term outlook is cautiously bullish, with a score of 6.5, supported by a secular bull market regime and a healthy golden cross structure. W: Despite the strong long-term technicals, the hyper-growth profile (Rev 86.2%, EPS 81.5%) is priced at a significant premium, creating potential for volatility if growth expectations are not met. The implied growth (PEG 0.77) is attractive, but the high multiples warrant caution. O: The fundamental picture remains exceptionally strong, with ultra-elite business quality (GM 70.1%, OM 58.0%), a net cash fortress balance sheet, and excellent cash generation. This provides a solid foundation for long-term conviction (7.0). T: While the business fundamentals are robust, the extremely high valuation multiples and the 'extremely low asset safety' assessment temper the safety score to 5.0. The company's scale and market position are significant mitigating factors."
+    }
+  }
+}

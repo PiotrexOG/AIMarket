@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.32)",
+        "velocity_roc_10": "NORMAL (-6.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 189.8-232.28]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.05%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.332)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.4)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.02%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 196.2,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.22%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 62.48, P/S: 32.51)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 57.59)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.77)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "NN, Inc. announces new awards for NVIDIA data center products. - Firmus and Nvidia partner to build large AI facility in Indonesia. - Nvidia CEO states national security priority over commercial opportunity. - Bit Origin buys Nvidia Blackwell AI servers, stock sinks. - Palantir teams up with Nvidia for government AI systems. - Palantir and Nvidia bring open AI models inside US government systems. - Nvidia is mentioned as a potential trillion-dollar company by 2028. - Nvidia is discussed as a \"millionaire-maker\" stock.",
+      "NVIDIA stock gains on bullish Semi Analysis data. - Nvidia trades at lower multiple than AMD, Palantir, Arm. - Nvidia: Strong growth story, but risks grow faster.",
+      "Nvidia partners with Firmus Technologies for AI access. - Nvidia signs AI infrastructure deal with Firmus Technologies. - Nvidia plans $20 billion investment-grade bond sale."
+    ],
+    "medium_term_50d": [
+      "NN, Inc. announces new awards for NVIDIA data center products. - Firmus and Nvidia partner to build large AI facility in Indonesia. - Nvidia CEO states national security priority over commercial opportunity. - Bit Origin buys Nvidia Blackwell AI servers, stock sinks. - Palantir teams up with Nvidia for government AI systems. - Palantir and Nvidia bring open AI models inside US government systems. - Nvidia is mentioned as a potential trillion-dollar company by 2028. - Nvidia is discussed as a \"millionaire-maker\" stock.",
+      "NVIDIA stock gains on bullish Semi Analysis data. - Nvidia trades at lower multiple than AMD, Palantir, Arm. - Nvidia: Strong growth story, but risks grow faster.",
+      "Nvidia expands Vera CPU push in China despite export restrictions. - Nvidia stock continues slide amid tech sell-off. - Nvidia, Micron, AMD lead chip selloff on Open AI IPO delay report. - Jensen Huang admitted Nvidia's China revenue has fallen to zero."
+    ],
+    "long_term_200d": [
+      "NN, Inc. announces new awards for NVIDIA data center products. - Firmus and Nvidia partner to build large AI facility in Indonesia. - Nvidia CEO states national security priority over commercial opportunity. - Bit Origin buys Nvidia Blackwell AI servers, stock sinks. - Palantir teams up with Nvidia for government AI systems. - Palantir and Nvidia bring open AI models inside US government systems. - Nvidia is mentioned as a potential trillion-dollar company by 2028. - Nvidia is discussed as a \"millionaire-maker\" stock.",
+      "Nvidia expands Vera CPU push in China despite export restrictions. - Nvidia stock continues slide amid tech sell-off. - Nvidia, Micron, AMD lead chip selloff on Open AI IPO delay report. - Jensen Huang admitted Nvidia's China revenue has fallen to zero.",
+      "Nvidia, Oracle, Space X borrowing billions amid AI boom. - Trump signals major US chip alliance with Apple and Nvidia. - Nvidia CEO Jensen Huang comments on AI and jobs. - Nvidia and Space X forecast $1 trillion in revenue. - Nvidia and Space X are stocks to watch."
+    ]
+  }
+}

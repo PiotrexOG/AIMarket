@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (37.3)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.02)",
+        "velocity_roc_10": "NORMAL (-4.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.9%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 932.41-997.41]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.14%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.758)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.85)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 932.41-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-2.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.9%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 33.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 927.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.98%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 49.56, P/S: 1.47)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 13.6)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.16)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco's executive membership growth fuels fee income and sales. - Costco's China expansion opportunity is highlighted. - Costco's revenue growth driven by membership. - Costco stock looks overvalued at 50x P/E.",
+      "Costco refines product pages for AI search. - Costco uses AI to triple digital traffic and lift conversions. - Costco changes strategy to increase warehouse visits.",
+      "Costco's gas-driven comp growth is losing a key tailwind."
+    ],
+    "medium_term_50d": [
+      "Costco's executive membership growth fuels fee income and sales. - Costco's China expansion opportunity is highlighted. - Costco's revenue growth driven by membership. - Costco stock looks overvalued at 50x P/E.",
+      "Costco refines product pages for AI search. - Costco uses AI to triple digital traffic and lift conversions. - Costco changes strategy to increase warehouse visits.",
+      "Costco opens 2 new locations this week. - Costco reports 12% sales growth and 92% membership renewals. - Costco's resilient membership model and global expansion look promising. - Costco's quarterly sales now more than double Target's. - A slowdown in one metric could challenge Costco's growth."
+    ],
+    "long_term_200d": [
+      "Costco's executive membership growth fuels fee income and sales. - Costco's China expansion opportunity is highlighted. - Costco's revenue growth driven by membership. - Costco stock looks overvalued at 50x P/E.",
+      "Costco Q3 revenue tops estimates, driven by gas sales. - Costco reports strong Q3 earnings with significant digital sales growth. - Costco to return U.S. tariff refunds to members. - Costco's net new warehouse openings may miss fiscal 2026 outlook. - Costco Wholesale shares fall despite earnings beat. - Costco sees record fuel sales volumes as consumers seek savings. - Costco's profit margin compressed despite strong revenue. - Costco's membership fees rise, digitally enabled comps surge. - Costco Wholesale's Q3 revenue beat driven by gas business strength. - Costco Wholesale Corp (COST) Q3 2026 earnings call highlights strong sales.",
+      "Costco reports Q3 earnings, revenue beats expectations. - Costco's Q3 results driven by strong sales and membership income. - Costco sees record gas sales amid soaring fuel costs. - Costco applies for IEEPA tariff refunds, expects returns in 2-3 months. - Middle East conflict impacted Costco's Q3 margin due to higher fuel costs. - Costco has low inventory exposure to shipping issues from Middle East conflict. - Costco's Q3 results show strong comparable sales growth. - Costco's Q3 earnings in-line with expectations, revenue beats. - Costco Wholesale Q3 earnings and sales higher, driven by gas, membership, digital. - Costco Wholesale Q3 results mixed"
+    ]
+  }
+}

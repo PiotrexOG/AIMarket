@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Momentum is weak, with RSI in the bearish zone (34.6) and ROC at -9.3%. The price is stable near the short-term base (SMA20 at -5.5%) and within normal Bollinger Bands. O: Potential for a short-term bounce if price can hold the SMA20. T: The mixed news narrative and low conviction analyst sentiment suggest limited upside potential in the immediate term. W: Bearish RSI and negative ROC indicate downward pressure. The stock is trading in the middle of its 20-day range, offering no clear directional advantage."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend is consolidating, with MACD in a bearish recovery and the price positioned below the 50-day SMA (Z-score: -1.07). This indicates a lack of strong upward momentum. O: The stock is within its monthly range, suggesting potential for range-bound trading. T: Analyst conviction is low, and the consensus is mixed, reflecting uncertainty about the medium-term outlook. W: Negative trend alignment and bearish MACD signal a lack of conviction. The declining earnings momentum (-8.2% for next quarter) is a significant headwind."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook is bearish, characterized by a secular bear market regime and major crosses indicating extreme bearish stretches. The price is at multi-month lows, though showing signs of accumulation. O: The company's fundamental quality is average, with a healthy balance sheet (NetDebt/Eq: 0.34x) and moderate cash generation. T: However, growth is stagnant (Rev: -7.1%) with significant profit issues (EPS: -44.3%), and the implied growth is declining. W: The secular bear market regime and poor growth profile present significant long-term challenges. Valuation is fair, but not compelling given the fundamental deterioration."
+    }
+  }
+}

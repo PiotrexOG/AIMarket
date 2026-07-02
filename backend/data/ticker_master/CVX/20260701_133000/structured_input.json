@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (21.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.05)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-8.1%)",
+        "trend_base_sma20": "EXTENDED_BEARISH_OVERSTRETCHED (-8.0%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 165.2-192.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.45%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.421)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.7)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 165.2-198.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.19%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 28.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 165.61,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.6%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.56)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.4% | OM: 8.4% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -34.1%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 28.6, P/S: 1.77)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.79)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -34.05%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.12x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron expands data center power strategy beyond Project Kilby. - Chevron partners with Microsoft for AI data center power.",
+      "Chevron CFO responds to Trump's price gouging accusations. - Chevron CFO forecasts gradual drop in U.S. gasoline prices. - Chevron CFO explains why gas prices are not falling faster.",
+      "Chevron signs 20-year natural gas power agreement with Microsoft."
+    ],
+    "medium_term_50d": [
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion.",
+      "Chevron CFO responds to Trump's price gouging accusations. - Chevron CFO forecasts gradual drop in U.S. gasoline prices. - Chevron CFO explains why gas prices are not falling faster.",
+      "Chevron expands data center power strategy beyond Project Kilby. - Chevron partners with Microsoft for AI data center power."
+    ],
+    "long_term_200d": [
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion.",
+      "Trump orders DOJ probe into Chevron over gas prices. - Chevron expands Project Kilby with strategic support. - Chevron's Project Kilby could expand for Microsoft. - Chevron has agreement to sell electricity to Microsoft. - Chevron registers a bigger fall than the market.",
+      "Chevron CFO responds to Trump's price gouging accusations. - Chevron CFO forecasts gradual drop in U.S. gasoline prices. - Chevron CFO explains why gas prices are not falling faster."
+    ]
+  }
+}

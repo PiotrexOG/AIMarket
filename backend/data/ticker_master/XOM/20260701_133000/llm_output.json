@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: Extreme oversold RSI (25.3) suggests potential for a short-term bounce. Price is testing critical support at the lower end of the 20-day range (134.95). W: Momentum (ROC -3.2%) is weak, and the price is stable near the base of the 20-day SMA, indicating a lack of immediate upward conviction. O: Potential for a short-term reversal if support holds, driven by oversold conditions and news flow around Cyprus gas fields. T: Volatility is normal, and the price is within BB bands, suggesting limited downside risk from current levels, supporting a moderate safe score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The trend is gradually descending with the 50-day SMA Z-score at -1.94, indicating a bearish position. MACD is recovering from bearish territory but remains negative. W: The price is testing a strengthening monthly support zone (134.95-163.68), but the overall trend alignment is bearish. O: A sustained bounce from the current support zone could initiate a trend reversal, supported by accelerating quarterly earnings estimates. T: The balance sheet remains healthy (NetDebt/Eq: 0.15x), providing some structural support, but the negative trend momentum limits the safe score."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 7.5
+      },
+      "synthesis": "S: The long-term regime is a secular bull market, and the structure shows a healthy golden cross, indicating a fundamentally bullish long-term setup. The price is in a mid-cycle neutral zone (38.6%). W: While the long-term trend is positive, recent TTM revenue growth is negative (-4.1%), and EPS has declined significantly (-21.9%), creating some headwinds. O: The accelerating quarterly earnings momentum (Next Q Est Growth: 256.0%) and strong business quality (GM: 25.5%) are significant tailwinds for the long term. T: Valuation is fair (P/E: 23.03), and the balance sheet is healthy, contributing to a high safe score. The company's scale and cash generation provide resilience."
+    }
+  }
+}

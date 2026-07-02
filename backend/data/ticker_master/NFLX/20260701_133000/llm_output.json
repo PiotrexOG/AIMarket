@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: Extreme oversold RSI (25.1) and negative ROC (-12.6%) suggest potential for a short-term bounce. The stock is stable near its base, indicating some support. O: Positive news regarding Spectrum App Store and advertising platform expansion could catalyze a short-term upward move. T: Potential for a relief rally driven by oversold conditions and strategic partnerships. W: The \"NEUTRAL\" candle pattern and \"IN MIDDLE OF RANGE\" position limit immediate upside conviction. The \"IMPLOSIVE_DOWN\" velocity indicates strong selling pressure that needs to abate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The \"BEARISH_EXPANDING_MOMENTUM\" and \"BEARISH_TREND_POSITION\" (Z:-1.76) indicate a firmly entrenched downtrend. The MACD is recovering but remains bearish. W: The \"INSIDE MONTHLY RANGE\" suggests consolidation, but the prevailing trend is negative. \"LOW CONVICTION\" analyst sentiment further dampens medium-term prospects. O: Continued positive developments in the advertising business and AI strategy could provide a foundation for trend reversal. T: The current structure favors further downside unless key resistance levels are decisively broken. The \"RANGE\" bias in market physics suggests potential for sideways movement before a clear trend emerges."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 4.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: Despite a \"SECULAR_BEAR_MARKET\" regime and a \"DEATH_CROSS_STRUCTURE\", the \"MULTI_MONTH_LOW_ACCUMULATION\" suggests potential for bottoming. \"HIGH EFFICIENCY CASH MACHINE\" fundamentals and \"HEALTHY BALANCE SHEET\" provide structural support. O: The \"GROWTH_UNDERRATED\" PEG ratio (0.51) and \"FAIR_VALUATION\" multiples present a long-term value proposition. \"STRONG STABLE GROWTH\" in revenue and EPS historically supports the business. T: The \"LARGE_CAP_ESTABLISHED\" scale and \"CASH COW EXCELLENT\" free cash flow margin offer resilience. W: \"Q_EARNINGS_DETERIORATION\" and \"LOW ASSET SAFETY\" (P/B: 10.1) are significant headwinds. The \"DEATH_CROSS_STRUCTURE\" indicates persistent long-term selling pressure."
+    }
+  }
+}

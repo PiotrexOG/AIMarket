@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.annualization import (
-    TRADING_DAYS_PER_YEAR,
+    CALENDAR_DAYS_PER_YEAR,
     annualize_return,
 )
 from app.testy.score_tests.common.metrics import round_or_none

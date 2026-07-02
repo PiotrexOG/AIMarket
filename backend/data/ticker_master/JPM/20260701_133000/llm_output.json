@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 7.5
+      },
+      "synthesis": "S: Momentum is strong with RSI in the bullish zone (62.1) and ROC at a normal 2.4%. The price is stable near the short-term base (SMA20 at 1.9%). W: Candle patterns are neutral, and the price is in the middle of its recent range, indicating a lack of clear directional conviction. O: Potential for continued upward movement if momentum sustains and breaks through range resistance. T: News flow is mixed, with some positive developments like buyback announcements but also concerns about stablecoin risks and cyber threats."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 6.0,
+        "safe": 7.2
+      },
+      "synthesis": "S: The trend is in a gradual ascent, supported by bullish positioning relative to the 50-day SMA (Z:1.65). MACD shows a bullish signal, albeit fading. W: The bullish MACD signal is weakening, and the price is still within a broader monthly range, suggesting potential consolidation. O: Positive earnings momentum from previous quarters could continue to support the stock, especially with the recent dividend increase and buyback announcements. T: Leadership changes and succession planning are noted, alongside the positive impact of passing stress tests, which bolsters confidence in financial stability."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 7.8
+      },
+      "synthesis": "S: The long-term outlook is bullish, with the price positioned in the upper quadrant (80.2%) of its long-term range and operating within a secular bull market regime. The company exhibits high business quality with strong margins. W: There is an imminent potential pivot in major crosses, which could signal a shift in long-term trend dynamics. The balance sheet is noted as stressed with a high Net Debt/Equity ratio (2.53x). O: Significant buyback programs and dividend increases, coupled with successful stress tests, indicate strong capital return policies and resilience. T: The company's scale and consistent business quality provide a solid foundation, though the implied growth from current valuation multiples appears overpriced (PEG: 6.33)."
+    }
+  }
+}

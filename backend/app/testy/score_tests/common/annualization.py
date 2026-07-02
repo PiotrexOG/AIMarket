@@ -1,7 +1,7 @@
 import numpy as np
 
 
-TRADING_DAYS_PER_YEAR = 252
+CALENDAR_DAYS_PER_YEAR = 365
 
 
 def annualize_return(
@@ -11,7 +11,7 @@ def annualize_return(
     """Annualize scalar or array-like total returns for a given horizon."""
     try:
         horizon_days = float(horizon_days)
-        annualization_days = float(TRADING_DAYS_PER_YEAR)
+        annualization_days = float(CALENDAR_DAYS_PER_YEAR)
         returns = np.asarray(total_return, dtype=float)
     except (TypeError, ValueError):
         return None

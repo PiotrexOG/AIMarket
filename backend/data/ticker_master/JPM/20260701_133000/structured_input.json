@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.64)",
+        "velocity_roc_10": "NORMAL (2.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 295.27-343.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.95%)",
+        "cycle_macd": "BULLISH_FADING (0.24)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.65)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.67-343.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.2%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.18%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 330.72,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.32%))",
+      "volume_dynamics": "AVERAGE (0.65)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.81, P/S: 3.24)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.54)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.33)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 2.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan warns yield-bearing stablecoins could create 'shadow banking' risks. - JPMorgan's chief economist discusses bank's economy and inflation outlook. - JPMorgan's Jamie Dimon delays departure, impacting CEO talent poaching. - JPMorgan's crypto regulatory clarity stance highlights stablecoin yield risks. - JPMorgan's municipal separately managed accounts reach $1.6 trillion. - JPMorgan's Sable Offshore loan struggles to attract investors. - JPMorgan backs crypto's CLARITY Act with specific conditions.",
+      "Minted exploring sale, JPMorgan running the process. - JPMorgan Chase pushes fraud division layoffs. - JPMorgan leadership changes could shape growth. - JPMorgan warns of AI-enabled cyberattack risks. - JPMorgan unleashes $50 billion buyback after stress test. - JPMorgan supports crypto legislation, warns of 'shadow banking'. - UBS, JPMorgan lower Lennar targets on revised guidance.",
+      "JPMorgan Chase clears Fed stress test, announces dividend hike and buyback. - JPMorgan Chase doubles community bank branches in low-income areas. - JPMorgan Chase stock hits new all-time high, then pauses. - JPMorgan Chase hired by Clear Score as financial adviser for possible listing. - JPMorgan Chase sues former advisor for allegedly using client information. - JPMorgan Chase's holding in Umicore crosses 3% threshold."
+    ],
+    "medium_term_50d": [
+      "JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan raises quarterly dividend from $1.50 to $1.65 per share. - JPMorgan announces $50 billion buyback plan, effective July 1. - JPMorgan shares rise after dividend increase and buyback announcement. - JPMorgan Chase announces 2026 Dodd-Frank Act Stress Test results. - JPMorgan and Goldman raise dividends after Fed stress tests. - JPMorgan Chase regulatory capital update announced. - Big banks pass Fed stress test, paving way for payouts. - JPMorgan Chase announces $50B buyback plan, shares rise. - J.P. Morgan cuts second-half 2026 Brent oil price forecast.",
+      "JPMorgan Chase clears Fed stress test, announces dividend hike and buyback. - JPMorgan Chase doubles community bank branches in low-income areas. - JPMorgan Chase stock hits new all-time high, then pauses. - JPMorgan Chase hired by Clear Score as financial adviser for possible listing. - JPMorgan Chase sues former advisor for allegedly using client information. - JPMorgan Chase's holding in Umicore crosses 3% threshold.",
+      "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents. - Marianne Lake, seen as Dimon successor, retires from JPMorgan. - JPMorgan Chase expands Community Center program in low-income areas. - JPMorgan Chase announces significant expansion of community banking efforts. - JPMorgan Chase promotes Petno, Rohrbaugh to co-presidents, succession planning. - JPMorgan Chase announces dividend increases and new buyback initiatives."
+    ],
+    "long_term_200d": [
+      "JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan raises quarterly dividend from $1.50 to $1.65 per share. - JPMorgan announces $50 billion buyback plan, effective July 1. - JPMorgan shares rise after dividend increase and buyback announcement. - JPMorgan Chase announces 2026 Dodd-Frank Act Stress Test results. - JPMorgan and Goldman raise dividends after Fed stress tests. - JPMorgan Chase regulatory capital update announced. - Big banks pass Fed stress test, paving way for payouts. - JPMorgan Chase announces $50B buyback plan, shares rise. - J.P. Morgan cuts second-half 2026 Brent oil price forecast.",
+      "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents. - Marianne Lake, seen as Dimon successor, retires from JPMorgan. - JPMorgan Chase expands Community Center program in low-income areas. - JPMorgan Chase announces significant expansion of community banking efforts. - JPMorgan Chase promotes Petno, Rohrbaugh to co-presidents, succession planning. - JPMorgan Chase announces dividend increases and new buyback initiatives.",
+      "JPMorgan Chase clears Fed stress test, announces dividend hike and buyback. - JPMorgan Chase doubles community bank branches in low-income areas. - JPMorgan Chase stock hits new all-time high, then pauses. - JPMorgan Chase hired by Clear Score as financial adviser for possible listing. - JPMorgan Chase sues former advisor for allegedly using client information. - JPMorgan Chase's holding in Umicore crosses 3% threshold."
+    ]
+  }
+}

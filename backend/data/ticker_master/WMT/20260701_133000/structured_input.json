@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (31.6)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (0.03)",
+        "velocity_roc_10": "NORMAL (-6.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.0%)",
+        "range_levels_20": "BREAKDOWN_BELOW_20D_LOW [Range: 112.73-122.94]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.68%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.268)",
+        "position_sma50_zscore": "OVEREXTENDED_BEARISH_STAT_OUTLIER (Z:-2.43)",
+        "range_levels_50": "MONTHLY_BREAKDOWN_BELOW_RANGE [Zone: 112.73-135.15]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-3.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.76%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 24.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 107.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.37%))",
+      "volume_dynamics": "AVERAGE (0.88)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @200d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.7%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.69x, YrsToPay: 4.3x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $685.086B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.2%, EPS: -0.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -15.2%, Next Q Est Growth: 32.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 46.01, P/S: 1.27)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.35)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.26%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart secures long-term nuclear power deal with Constellation Energy. - Walmart's Vibe.co deal impacts CTV and retail media convergence. - Amazon and Flipkart intensify competition with Indian quick-commerce leaders.",
+      "Greene Concepts expands distribution to Walmart. - Levanta report shows creators send traffic to Walmart. - Walmart's AI tool Sparky usage doubles. - Walmart stock valuation weighed against investments. - Walmart stock falls amid market uptick.",
+      "Walmart to acquire French ad tech firm Vibe.co for $1.4 billion. - Walmart expands Shapermint shapewear line into 1,600 more stores. - Walmart's $1.4 billion Vibe.co deal targets Amazon's ad business. - Nike hires CFO from outside, following Alphabet and Walmart. - Walmart receives tariff refunds, but impact may be minimal."
+    ],
+    "medium_term_50d": [
+      "Walmart to acquire French ad tech firm Vibe.co for $1.4 billion. - Walmart expands Shapermint shapewear line into 1,600 more stores. - Walmart's $1.4 billion Vibe.co deal targets Amazon's ad business. - Nike hires CFO from outside, following Alphabet and Walmart. - Walmart receives tariff refunds, but impact may be minimal.",
+      "Walmart secures long-term nuclear power deal with Constellation Energy. - Walmart's Vibe.co deal impacts CTV and retail media convergence. - Amazon and Flipkart intensify competition with Indian quick-commerce leaders.",
+      "Greene Concepts expands distribution to Walmart. - Levanta report shows creators send traffic to Walmart. - Walmart's AI tool Sparky usage doubles. - Walmart stock valuation weighed against investments. - Walmart stock falls amid market uptick."
+    ],
+    "long_term_200d": [
+      "Walmart to acquire French ad tech firm Vibe.co for $1.4 billion. - Walmart expands Shapermint shapewear line into 1,600 more stores. - Walmart's $1.4 billion Vibe.co deal targets Amazon's ad business. - Nike hires CFO from outside, following Alphabet and Walmart. - Walmart receives tariff refunds, but impact may be minimal.",
+      "Walmart secures long-term nuclear power deal with Constellation Energy. - Walmart's Vibe.co deal impacts CTV and retail media convergence. - Amazon and Flipkart intensify competition with Indian quick-commerce leaders.",
+      "Walmart signs agreement to acquire Vibe.co advertising platform. - Walmart signs long-term nuclear power purchase agreement with Constellation. - Walmart deepens healthcare reach with Medicare support push. - Walmart sued over alleged AI gas price-fixing in California. - Walmart's nuclear deal shows demand beyond AI data centers."
+    ]
+  }
+}
