@@ -43,11 +43,7 @@ class PortfolioPerformanceBaseDTO(BaseModel):
     short_term_weight: float| str
     medium_term_weight: float| str
     long_term_weight: float| str
-    min_exposure: float| str
-    aggression_slope: float| str
-    exposure_baseline: float| str
-    rebalance_threshold: float| str
-    softmax_temp: float | str
+    top_m_share: float | str = 1.0
     metric_weights: Dict[str, float] | Dict[str, str]
 
     model_config = {"from_attributes": True}

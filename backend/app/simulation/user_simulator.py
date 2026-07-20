@@ -251,13 +251,23 @@ class UserSimulator:
     # Wspomagające funkcje
     # ---------------------------------------------------------
 
-    def _execute_decisions(self, decisions: dict, date_time: datetime):
+    def _execute_decisions(self, decisions, date_time: datetime):
         # Flaga, czy w ogóle coś dodaliśmy do bazy
         any_executed = False
 
-        for ticker, d in decisions.items():
+        decision_items = decisions
+        if isinstance(decisions, dict):
+            decision_items = [
+                {"TICKER": ticker, **decision}
+                for ticker, decision in decisions.items()
+            ]
+
+        for d in decision_items:
+            ticker = d.get("TICKER")
             decision_type = d.get("DECISION")
             quantity = d.get("NUMBER")
+            if not ticker or not decision_type or not quantity:
+                continue
 
             if not market_hours.is_market_open_by_exchange(ticker, date_time):
                 continue
@@ -266,9 +276,10 @@ class UserSimulator:
             if price is None or price <= 0:
                 continue
 
-            # Wykonanie logiczne i dodanie do sesji bazy (bez commit)
-            self.execute_decision(ticker, decision_type, quantity, price, date_time)
-            any_executed = True
+            any_executed = (
+                self.execute_decision(ticker, decision_type, quantity, price, date_time)
+                or any_executed
+            )
 
         # Na samym końcu, po pętli, robimy batch commit
         if any_executed:
@@ -277,9 +288,14 @@ class UserSimulator:
     def execute_decision(self, ticker: str, decision: str, num: float, price: float, date_time: datetime):
         if decision in ["BUY", "SELL"]:
             if decision == "BUY":
-                self.portfolio.buy(ticker, num, price)
+                executed = self.portfolio.buy(ticker, num, price)
             elif decision == "SELL":
-                self.portfolio.sell(ticker, num, price)
+                executed = self.portfolio.sell(ticker, num, price)
+            else:
+                executed = False
+
+            if not executed:
+                return False
 
             self.transaction_service.record_transaction(
                 portfolio_id=self.portfolio.portfolio_id,
@@ -289,6 +305,8 @@ class UserSimulator:
                 price=price,
                 datetime_=date_time,
             )
+            return True
+        return False
 
     def _portfolio_changed(self, pre_cash, pre_shares) -> bool:
         return self.portfolio.cash != pre_cash or self.portfolio.shares != pre_shares

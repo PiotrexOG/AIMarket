@@ -15,11 +15,7 @@ def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
             "long_term_200d": dto.long_term_weight,
         },
 
-        "min_exposure": dto.min_exposure,
-        "aggression_slope": dto.aggression_slope,
-        "exposure_baseline": dto.exposure_baseline,
-        "rebalance_threshold": dto.rebalance_threshold,
-        "softmax_temp": dto.softmax_temp,
+        "top_m_share": dto.top_m_share,
         "metric_weights": dto.metric_weights,
     }
 

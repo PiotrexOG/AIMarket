@@ -327,16 +327,12 @@ class SimulationService:
                 # Tworzymy portfel przekazując wszystkie parametry z konfiguracji
                 self.portfolio_service.create_portfolio(PortfolioCreate(
                     name=name,
-                    archetype_key=config.get("archetype_key", "buy_and_hold"),
+                    archetype_key=config.get("archetype_key", "benchmark"),
                     user_id=user.id,
                     short_term_weight=config.get("time_weights", {}).get("short_term_14d", 0.0),
                     medium_term_weight=config.get("time_weights", {}).get("medium_term_50d", 0.0),
                     long_term_weight=config.get("time_weights", {}).get("long_term_200d", 0.0),
-                    min_exposure=config.get("min_exposure", 0.0),
-                    aggression_slope=config.get("aggression_slope", 0.0),
-                    exposure_baseline=config.get("exposure_baseline", 0.0),
-                    rebalance_threshold=config.get("rebalance_threshold", 0.0),
-                    softmax_temp=config.get("softmax_temp", 0.0),
+                    top_m_share=config.get("top_m_share", 1.0),
                     metric_weights=config.get("metric_weights", {
                                                 "relative_technical_strength": 0.0,
                                                 "relative_fundamental_support": 0.0,

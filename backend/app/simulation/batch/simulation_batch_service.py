@@ -9,18 +9,13 @@ from app.portfolio_generation.archetype_config import get_archetype
 from app.config.config import STARTING_CASH
 from app.portfolio_generation.random_users import generate_users
 from app.portfolio_generation.space_filling_users import generate_space_filling_users
+from app.portfolio_generation.top_m import (
+    FIXED_METRIC_WEIGHTS,
+    TOP_M_MAX_SHARE,
+    TOP_M_MIN_SHARE,
+)
 from app.services.layers.market_data_service import MarketDataService
 from app.simulation.batch.helper import get_available_timestamps, fetch_cross_section
-
-TIME_WEIGHT_KEYS = ("long_term_200d", "medium_term_50d", "short_term_14d")
-METRIC_WEIGHT_KEYS = (
-    "relative_asymmetry_profile",
-    "relative_conviction",
-    "relative_fundamental_support",
-    "relative_structural_safety",
-    "relative_technical_strength",
-    "relative_valuation_sustainability",
-)
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "archetype_results"
@@ -62,14 +57,7 @@ class SimulationBatchService:
         self.user_ids: np.ndarray = np.empty(0, dtype=np.int64)
         self.cash: np.ndarray = np.empty(0, dtype=np.float64)
 
-        self.time_weights: np.ndarray = np.empty((0, len(TIME_WEIGHT_KEYS)), dtype=np.float64)
-        self.metric_weights: np.ndarray = np.empty((0, len(METRIC_WEIGHT_KEYS)), dtype=np.float64)
-        self.min_exposure: np.ndarray = np.empty(0, dtype=np.float64)
-        self.aggression_slope: np.ndarray = np.empty(0, dtype=np.float64)
-        self.exposure_baseline: np.ndarray = np.empty(0, dtype=np.float64)
-        self.rebalance_threshold: np.ndarray = np.empty(0, dtype=np.float64)
-        self.softmax_temp: np.ndarray = np.empty(0, dtype=np.float64)
-        self.is_buy_and_hold: np.ndarray = np.empty(0, dtype=bool)
+        self.top_m_share: np.ndarray = np.empty(0, dtype=np.float64)
 
         self.initialize_users(users_per_archetype)
 
@@ -95,47 +83,11 @@ class SimulationBatchService:
         self.user_ids = np.arange(users_count, dtype=np.int64)
         self.cash = np.full(users_count, STARTING_CASH, dtype=np.float64)
         self.shares = np.zeros((users_count, len(self.tickers)), dtype=np.float64)
-        self.time_weights = np.array(
-            [
-                [profile["time_weights"].get(key, 0.0) for key in TIME_WEIGHT_KEYS]
-                for profile in self.user_profiles
-            ],
+        self.top_m_share = np.array(
+            [profile.get("top_m_share", TOP_M_MAX_SHARE) for profile in self.user_profiles],
             dtype=np.float64,
         )
-        self.metric_weights = np.array(
-            [
-                [profile["metric_weights"].get(key, 0.0) for key in METRIC_WEIGHT_KEYS]
-                for profile in self.user_profiles
-            ],
-            dtype=np.float64,
-        )
-        self.min_exposure = np.array(
-            [profile.get("min_exposure", 0.5) for profile in self.user_profiles],
-            dtype=np.float64,
-        )
-        self.aggression_slope = np.array(
-            [profile.get("aggression_slope", 0.2) for profile in self.user_profiles],
-            dtype=np.float64,
-        )
-        self.exposure_baseline = np.array(
-            [profile.get("exposure_baseline", 5.0) for profile in self.user_profiles],
-            dtype=np.float64,
-        )
-        self.rebalance_threshold = np.array(
-            [profile.get("rebalance_threshold", 0.0) for profile in self.user_profiles],
-            dtype=np.float64,
-        )
-        self.softmax_temp = np.maximum(
-            np.array(
-                [profile.get("softmax_temp", 1.0) for profile in self.user_profiles],
-                dtype=np.float64,
-            ),
-            1e-6,
-        )
-        self.is_buy_and_hold = np.array(
-            [profile.get("name") == "buy_and_hold" for profile in self.user_profiles],
-            dtype=bool,
-        )
+        self.top_m_share = np.clip(self.top_m_share, TOP_M_MIN_SHARE, TOP_M_MAX_SHARE)
 
         print(f"Users initialized: {users_count}")
 
@@ -180,26 +132,9 @@ class SimulationBatchService:
 
         price_vector = self._price_vector(prices)
 
-        if current_time.date() == self.start_time.date() and np.any(self.is_buy_and_hold):
-            self._process_buy_and_hold_buy(ticker_indices, price_vector)
-
-        active_users = ~self.is_buy_and_hold
-        if not np.any(active_users):
-            return
-
         score_matrix = self._calculate_score_matrix(market_scores)
         target_weights = self._calculate_target_weights(score_matrix, ticker_indices)
-        portfolio_values, current_values = self._calculate_portfolio_values(price_vector)
-        trade_quantities = self._calculate_trade_quantities(
-            target_weights=target_weights,
-            portfolio_values=portfolio_values,
-            current_values=current_values,
-            ticker_indices=ticker_indices,
-            price_vector=price_vector,
-        )
-
-        trade_quantities[self.is_buy_and_hold, :] = 0.0
-        self._apply_trades(trade_quantities, price_vector, ticker_indices)
+        self._rebalance_to_target_weights(target_weights, price_vector, ticker_indices)
 
     def _collect_ticker_indices(self, market_scores: dict) -> np.ndarray:
         tickers = sorted(
@@ -221,60 +156,24 @@ class SimulationBatchService:
 
         return portfolio_values, current_values
 
-    def _process_buy_and_hold_buy(self, ticker_indices: np.ndarray, price_vector: np.ndarray) -> None:
-        buy_and_hold_rows = np.flatnonzero(self.is_buy_and_hold)
-        if buy_and_hold_rows.size == 0:
-            return
-
-        n = ticker_indices.size
-        if n == 0:
-            return
-
-        portfolio_values, _ = self._calculate_portfolio_values(price_vector)
-        target_per_ticker = portfolio_values[buy_and_hold_rows] / n
-
-        valid_prices = price_vector[ticker_indices] > 0
-        valid_indices = ticker_indices[valid_prices]
-        if valid_indices.size == 0:
-            return
-
-        prices = price_vector[valid_indices]
-        quantities = smart_round(target_per_ticker[:, None] / prices[None, :])
-
-        for local_idx, ticker_idx in enumerate(valid_indices):
-            quantity = quantities[:, local_idx]
-            costs = money_round(quantity * price_vector[ticker_idx])
-            can_buy = (quantity > 0) & (costs <= self.cash[buy_and_hold_rows])
-            if not np.any(can_buy):
-                continue
-
-            rows = buy_and_hold_rows[can_buy]
-            self.cash[rows] -= costs[can_buy]
-            self.shares[rows, ticker_idx] = np.round(
-                self.shares[rows, ticker_idx] + quantity[can_buy],
-                2,
-            )
-
     def _calculate_score_matrix(self, market_scores: dict) -> np.ndarray:
         scores = np.zeros((len(self.user_profiles), len(self.tickers)), dtype=np.float64)
 
-        for time_idx, timeframe in enumerate(TIME_WEIGHT_KEYS):
-            timeframe_scores = market_scores.get(timeframe)
-            if not timeframe_scores:
+        timeframe_scores = market_scores.get("long_term_200d")
+        if not timeframe_scores:
+            return scores
+
+        for ticker, ticker_data in timeframe_scores.items():
+            ticker_idx = self.ticker_to_idx.get(ticker)
+            if ticker_idx is None:
                 continue
 
-            user_time_weights = self.time_weights[:, time_idx]
-            for ticker, ticker_data in timeframe_scores.items():
-                ticker_idx = self.ticker_to_idx.get(ticker)
-                if ticker_idx is None:
-                    continue
-
-                relative_scores = ticker_data.get("relative_scores", {})
-                metric_scores = np.array(
-                    [relative_scores.get(metric, 0.0) for metric in METRIC_WEIGHT_KEYS],
-                    dtype=np.float64,
-                )
-                scores[:, ticker_idx] += user_time_weights * (self.metric_weights @ metric_scores)
+            relative_scores = ticker_data.get("relative_scores", {})
+            score = sum(
+                relative_scores.get(metric, 0.0) * FIXED_METRIC_WEIGHTS[metric]
+                for metric in FIXED_METRIC_WEIGHTS
+            )
+            scores[:, ticker_idx] = score
 
         return np.round(scores, 10)
 
@@ -283,117 +182,41 @@ class SimulationBatchService:
         if ticker_indices.size == 0:
             return target_weights
 
-        active_rows = ~self.is_buy_and_hold
-        if not np.any(active_rows):
-            return target_weights
-
         universe_scores = score_matrix[:, ticker_indices]
-        top_scores = np.sort(universe_scores, axis=1)[:, ::-1][:, :5]
-        avg_market_score = np.mean(top_scores, axis=1)
-        raw_exposure = self.min_exposure + (
-            avg_market_score - self.exposure_baseline
-        ) * self.aggression_slope
-        total_exposure = 1.0 / (1.0 + np.exp(-raw_exposure))
-        total_exposure = np.where(active_rows, total_exposure, 0.0)
-
-        scaled_scores = universe_scores / self.softmax_temp[:, None]
-        row_max = np.max(scaled_scores, axis=1)
-        exp_scores = np.exp(scaled_scores - row_max[:, None])
-        exp_sums = exp_scores.sum(axis=1)
-
-        valid_rows = (exp_sums > 0) & active_rows
         universe_weights = np.zeros_like(universe_scores)
-        universe_weights[valid_rows] = (
-            exp_scores[valid_rows]
-            / exp_sums[valid_rows, None]
-            * total_exposure[valid_rows, None]
+
+        order = np.argsort(-universe_scores, axis=1, kind="stable")
+        rank_numbers = np.arange(1, ticker_indices.size + 1, dtype=np.float64)[None, :]
+        target_counts = ticker_indices.size * self.top_m_share[:, None]
+        full_counts = np.floor(target_counts)
+        fractional_counts = target_counts - full_counts
+
+        rank_weights = np.where(
+            rank_numbers <= full_counts,
+            1.0,
+            np.where(rank_numbers == full_counts + 1, fractional_counts, 0.0),
         )
+        selected_counts = rank_weights.sum(axis=1)
+        valid_rows = selected_counts > 0.0
+        rank_weights[valid_rows] = (
+            rank_weights[valid_rows] / selected_counts[valid_rows, None]
+        )
+
+        rows = np.arange(len(self.user_profiles))[:, None]
+        universe_weights[rows, order] = rank_weights
         target_weights[:, ticker_indices] = universe_weights
         return target_weights
 
-    def _calculate_trade_quantities(
+    def _rebalance_to_target_weights(
             self,
             target_weights: np.ndarray,
-            portfolio_values: np.ndarray,
-            current_values: np.ndarray,
-            ticker_indices: np.ndarray,
-            price_vector: np.ndarray,
-    ) -> np.ndarray:
-        current_weights = np.divide(
-            current_values,
-            portfolio_values[:, None],
-            out=np.zeros_like(current_values),
-            where=portfolio_values[:, None] > 0,
-        )
-        delta_weights = target_weights - current_weights
-
-        in_universe = np.zeros(len(self.tickers), dtype=bool)
-        in_universe[ticker_indices] = True
-
-        held = self.shares > 0
-        target_zero = target_weights == 0.0
-        close_position = target_zero & held & in_universe[None, :]
-        over_threshold = np.abs(delta_weights) >= self.rebalance_threshold[:, None]
-        must_sell = close_position | (in_universe[None, :] & over_threshold & (delta_weights < 0))
-        must_buy = in_universe[None, :] & over_threshold & (delta_weights > 0) & (target_weights > 0.0)
-
-        expected_sell = np.where(
-            must_sell & held,
-            np.abs(delta_weights) * portfolio_values[:, None],
-            0.0,
-        ).sum(axis=1)
-        expected_buy = np.where(must_buy, delta_weights * portfolio_values[:, None], 0.0).sum(axis=1)
-        cash_gap = expected_buy - (self.cash + expected_sell)
-
-        active = must_sell | must_buy
-        lazy_sell_candidates = (
-            in_universe[None, :]
-            & ~active
-            & (target_weights > 0.0)
-            & (delta_weights < 0)
-        )
-        lazy_order = np.argsort(np.where(lazy_sell_candidates, delta_weights, np.inf), axis=1)
-
-        for rank in range(ticker_indices.size):
-            rows = np.flatnonzero(cash_gap > 0)
-            if rows.size == 0:
-                break
-
-            cols = lazy_order[rows, rank]
-            can_activate = lazy_sell_candidates[rows, cols]
-            if not np.any(can_activate):
-                continue
-
-            active_rows = rows[can_activate]
-            active_cols = cols[can_activate]
-            active[active_rows, active_cols] = True
-            cash_gap[active_rows] -= (
-                np.abs(delta_weights[active_rows, active_cols])
-                * portfolio_values[active_rows]
-            )
-
-        trade_quantities = np.zeros_like(self.shares)
-        valid_price = price_vector > 0
-        diff_values = portfolio_values[:, None] * target_weights - current_values
-        trade_quantities[:, valid_price] = smart_round(
-            diff_values[:, valid_price] / price_vector[valid_price]
-        )
-
-        trade_quantities = np.where(close_position, -self.shares, trade_quantities)
-        trade_quantities = np.where(active & valid_price[None, :], trade_quantities, 0.0)
-
-        sell_quantities = np.minimum(np.maximum(-trade_quantities, 0.0), self.shares)
-        buy_quantities = np.maximum(trade_quantities, 0.0)
-        return np.round(buy_quantities - sell_quantities, 2)
-
-    def _apply_trades(
-            self,
-            trade_quantities: np.ndarray,
             price_vector: np.ndarray,
             ticker_indices: np.ndarray,
     ) -> None:
-        sell_quantities = np.maximum(-trade_quantities, 0.0)
-        for ticker_idx in ticker_indices:
+        valid_price = price_vector > 0
+
+        sell_quantities = np.where(valid_price[None, :], self.shares, 0.0)
+        for ticker_idx in np.flatnonzero(valid_price):
             quantity = sell_quantities[:, ticker_idx]
             if not np.any(quantity > 0):
                 continue
@@ -401,8 +224,15 @@ class SimulationBatchService:
             self.shares[:, ticker_idx] = np.round(self.shares[:, ticker_idx] - quantity, 2)
             self.cash += money_round(quantity * price_vector[ticker_idx])
 
-        buy_quantities = np.maximum(trade_quantities, 0.0)
-        for ticker_idx in ticker_indices:
+        buy_values = self.cash[:, None] * target_weights
+        buy_quantities = np.zeros_like(self.shares)
+        valid_target_prices = valid_price[ticker_indices]
+        valid_indices = ticker_indices[valid_target_prices]
+        buy_quantities[:, valid_indices] = smart_round(
+            buy_values[:, valid_indices] / price_vector[valid_indices]
+        )
+
+        for ticker_idx in valid_indices:
             quantity = buy_quantities[:, ticker_idx]
             if not np.any(quantity > 0):
                 continue
@@ -418,7 +248,6 @@ class SimulationBatchService:
                 2,
             )
 
-
     def calculate_stats(self, prices) -> None:
         end_time = self.end_time.replace(tzinfo=None)
         final_prices = prices[end_time]
@@ -430,24 +259,19 @@ class SimulationBatchService:
             end_val = portfolio_values[row_idx]
             change_ratio = ((end_val - STARTING_CASH) / STARTING_CASH) if STARTING_CASH != 0 else 0.0
 
-            if profile["archetype_key"] != "buy_and_hold":
-                results.append(
-                    {
-                        "id": int(self.user_ids[row_idx]),
-                        "name": f"rand_{int(self.user_ids[row_idx])}",
-                        "archetype_key": profile["archetype_key"],
-                        "short_term_weight": profile["time_weights"]["short_term_14d"],
-                        "medium_term_weight": profile["time_weights"]["medium_term_50d"],
-                        "long_term_weight": profile["time_weights"]["long_term_200d"],
-                        "min_exposure": profile.get("min_exposure", 0.5),
-                        "aggression_slope": profile.get("aggression_slope", 0.2),
-                        "exposure_baseline": profile.get("exposure_baseline", 5.0),
-                        "rebalance_threshold": profile.get("rebalance_threshold", 0.0),
-                        "softmax_temp": profile.get("softmax_temp", 1.0),
-                        "metric_weights": dict(profile["metric_weights"]),
-                        "change_ratio": round(float(change_ratio), 4),
-                    }
-                )
+            results.append(
+                {
+                    "id": int(self.user_ids[row_idx]),
+                    "name": profile.get("name", f"user_{int(self.user_ids[row_idx])}"),
+                    "archetype_key": profile["archetype_key"],
+                    "top_m_share": profile.get("top_m_share", TOP_M_MAX_SHARE),
+                    "short_term_weight": profile["time_weights"]["short_term_14d"],
+                    "medium_term_weight": profile["time_weights"]["medium_term_50d"],
+                    "long_term_weight": profile["time_weights"]["long_term_200d"],
+                    "metric_weights": dict(profile["metric_weights"]),
+                    "change_ratio": round(float(change_ratio), 4),
+                }
+            )
 
         output_path = DATA_DIR / "results.json"
         with output_path.open("w", encoding="utf-8") as f:

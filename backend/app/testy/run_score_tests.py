@@ -79,7 +79,7 @@ ENABLED_TESTS = {
     "A1_A2_weekly_top_n_and_correlation": False,
     "A3_weekly_rank_buckets": False,
     "downside_information_ratio": True,
-    "post_entry_score_path": False,
+    "post_entry_score_path": True,
     "ticker_percentile_history": False,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
@@ -91,7 +91,7 @@ ENABLED_TIMEFRAMES = {
     "long_term_200d": True,
 }
 
-HORIZON_RANGE = (100, 300)
+HORIZON_RANGE = (180, 220)
 
 
 def filter_enabled_timeframes(df):

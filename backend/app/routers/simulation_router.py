@@ -11,7 +11,6 @@ from app.services.archetype_service import ArchetypeService
 from app.services.config_service import ConfigService
 from app.simulation.simulation_runner import (
     get_start_datetime,
-    run_archetype_discovery_pipeline,
     run_simulation,
     run_simulation_batch,
 )
@@ -125,20 +124,3 @@ def reset_db():
 
     return {"status": "reset started"}
 
-
-@router.post("/generate-gmm-archetypes")
-def generate_gmm_archetypes():
-    global simulation_running, reset_running
-
-    with lock:
-        if simulation_running or reset_running:
-            return {"status": "busy"}
-
-    try:
-        result = run_archetype_discovery_pipeline()
-        return {
-            "status": "gmm archetypes generated",
-            **result,
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))

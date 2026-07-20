@@ -50,11 +50,7 @@ class PortfolioBase(BaseModel):
     short_term_weight: float
     medium_term_weight: float
     long_term_weight: float
-    min_exposure: float
-    aggression_slope: float
-    exposure_baseline: float
-    rebalance_threshold: float
-    softmax_temp: float
+    top_m_share: float = 1.0
 
 class PortfolioCreate(PortfolioBase):
     user_id: int

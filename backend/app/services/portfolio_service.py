@@ -4,7 +4,6 @@ from fastapi import HTTPException
 
 from sqlalchemy.orm import Session
 
-from app.portfolio_generation.archetype_config import get_archetype
 from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, PositionDetail, \
     PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
 from app.repositories.portfolio_repository import PortfolioRepository
@@ -53,11 +52,7 @@ def _build_portfolio_base(
         short_term_weight=portfolio.short_term_weight,
         medium_term_weight=portfolio.medium_term_weight,
         long_term_weight=portfolio.long_term_weight,
-        min_exposure=portfolio.min_exposure,
-        aggression_slope=portfolio.aggression_slope,
-        exposure_baseline=portfolio.exposure_baseline,
-        rebalance_threshold=portfolio.rebalance_threshold,
-        softmax_temp=portfolio.softmax_temp,
+        top_m_share=getattr(portfolio, "top_m_share", 1.0),
         metric_weights=mw_dict,
     )
 
@@ -211,11 +206,7 @@ class PortfolioService:
             medium_term_weight=portfolio.medium_term_weight,
             long_term_weight=portfolio.long_term_weight,
 
-            min_exposure=portfolio.min_exposure,
-            aggression_slope=portfolio.aggression_slope,
-            exposure_baseline=portfolio.exposure_baseline,
-            rebalance_threshold=portfolio.rebalance_threshold,
-            softmax_temp=portfolio.softmax_temp,
+            top_m_share=getattr(portfolio, "top_m_share", 1.0),
 
             metric_weights=mw_dict,
             change_ratio=round(change_ratio, 4)
