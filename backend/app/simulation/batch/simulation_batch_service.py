@@ -134,7 +134,7 @@ class SimulationBatchService:
 
         score_matrix = self._calculate_score_matrix(market_scores)
         target_weights = self._calculate_target_weights(score_matrix, ticker_indices)
-        self._rebalance_to_target_weights(target_weights, price_vector, ticker_indices)
+        self._rebalance_to_target_weights(target_weights, price_vector)
 
     def _collect_ticker_indices(self, market_scores: dict) -> np.ndarray:
         tickers = sorted(
@@ -211,42 +211,61 @@ class SimulationBatchService:
             self,
             target_weights: np.ndarray,
             price_vector: np.ndarray,
-            ticker_indices: np.ndarray,
     ) -> None:
         valid_price = price_vector > 0
-
-        sell_quantities = np.where(valid_price[None, :], self.shares, 0.0)
-        for ticker_idx in np.flatnonzero(valid_price):
-            quantity = sell_quantities[:, ticker_idx]
-            if not np.any(quantity > 0):
-                continue
-
-            self.shares[:, ticker_idx] = np.round(self.shares[:, ticker_idx] - quantity, 2)
-            self.cash += money_round(quantity * price_vector[ticker_idx])
-
-        buy_values = self.cash[:, None] * target_weights
-        buy_quantities = np.zeros_like(self.shares)
-        valid_target_prices = valid_price[ticker_indices]
-        valid_indices = ticker_indices[valid_target_prices]
-        buy_quantities[:, valid_indices] = smart_round(
-            buy_values[:, valid_indices] / price_vector[valid_indices]
+        portfolio_values, _ = self._calculate_portfolio_values(price_vector)
+        target_quantities = np.zeros_like(self.shares)
+        target_values = portfolio_values[:, None] * target_weights
+        target_quantities[:, valid_price] = smart_round(
+            target_values[:, valid_price] / price_vector[valid_price]
         )
 
-        for ticker_idx in valid_indices:
-            quantity = buy_quantities[:, ticker_idx]
-            if not np.any(quantity > 0):
+        trade_differences = np.where(
+            valid_price[None, :],
+            target_quantities - self.shares,
+            0.0,
+        )
+        self._apply_trade_differences(trade_differences, price_vector)
+
+    def _apply_trade_differences(
+            self,
+            trade_differences: np.ndarray,
+            price_vector: np.ndarray,
+    ) -> None:
+        rows, cols = np.nonzero(trade_differences)
+        if rows.size == 0:
+            return
+
+        order = np.argsort(trade_differences[rows, cols], kind="stable")
+        for row_idx, ticker_idx in zip(rows[order], cols[order]):
+            difference = round(float(trade_differences[row_idx, ticker_idx]), 2)
+            if difference == 0.0:
                 continue
 
-            costs = money_round(quantity * price_vector[ticker_idx])
-            can_buy = (quantity > 0) & (costs <= self.cash)
-            if not np.any(can_buy):
+            price = price_vector[ticker_idx]
+            if price <= 0:
                 continue
 
-            self.cash[can_buy] -= costs[can_buy]
-            self.shares[can_buy, ticker_idx] = np.round(
-                self.shares[can_buy, ticker_idx] + quantity[can_buy],
-                2,
-            )
+            if difference < 0.0:
+                quantity = min(abs(difference), self.shares[row_idx, ticker_idx])
+                if quantity <= 0:
+                    continue
+
+                self.shares[row_idx, ticker_idx] = round(
+                    self.shares[row_idx, ticker_idx] - quantity,
+                    2,
+                )
+                self.cash[row_idx] += round(quantity * price, 2)
+            else:
+                cost = round(difference * price, 2)
+                if cost > self.cash[row_idx]:
+                    continue
+
+                self.cash[row_idx] -= cost
+                self.shares[row_idx, ticker_idx] = round(
+                    self.shares[row_idx, ticker_idx] + difference,
+                    2,
+                )
 
     def calculate_stats(self, prices) -> None:
         end_time = self.end_time.replace(tzinfo=None)

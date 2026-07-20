@@ -48,39 +48,60 @@ class DeterministicDecisionMaker:
             portfolio.shares,
             date_time,
         )
-        sell_decisions = self._build_sell_all_decisions(valuation.positions)
-        buy_decisions = self._build_buy_decisions(target_weights, valuation.portfolio_value, date_time)
-        return sell_decisions + buy_decisions
+        trade_differences = self._build_trade_differences(
+            target_weights,
+            valuation,
+            date_time,
+        )
+        return self._build_decisions(trade_differences, target_weights)
 
-    def _build_sell_all_decisions(self, positions):
-        decisions = []
-        for position in positions:
-            if position.shares <= 0:
-                continue
+    def _build_trade_differences(self, target_weights, valuation, date_time):
+        current_shares = {
+            position.ticker: position.shares
+            for position in valuation.positions
+            if position.shares > 0
+        }
+        tickers = set(current_shares) | set(target_weights)
+        trade_differences = {}
 
-            decisions.append({
-                "TICKER": position.ticker,
-                "DECISION": "SELL",
-                "NUMBER": position.shares,
-                "TARGET_WEIGHT": 0.0,
-            })
-        return decisions
-
-    def _build_buy_decisions(self, target_weights, total_value, date_time):
-        decisions = []
-        for ticker, target_weight in target_weights.items():
+        for ticker in tickers:
             price = self.valuation_service.market_data_service.get_price(ticker, date_time)
             if not price or price <= 0:
                 continue
 
-            shares = math.floor((total_value * target_weight / price) * 100) / 100
-            if shares <= 0:
+            target_weight = target_weights.get(ticker, 0.0)
+            target_shares = math.floor(
+                (valuation.portfolio_value * target_weight / price) * 100
+            ) / 100
+            difference = round(target_shares - current_shares.get(ticker, 0.0), 2)
+            if difference == 0.0:
                 continue
 
-            decisions.append({
-                "TICKER": ticker,
-                "DECISION": "BUY",
-                "NUMBER": shares,
-                "TARGET_WEIGHT": round(target_weight, 6),
-            })
+            trade_differences[ticker] = difference
+
+        return dict(
+            sorted(
+                trade_differences.items(),
+                key=lambda item: (item[1], item[0]),
+            )
+        )
+
+    def _build_decisions(self, trade_differences, target_weights):
+        decisions = []
+        for ticker, difference in trade_differences.items():
+            if difference < 0.0:
+                decisions.append({
+                    "TICKER": ticker,
+                    "DECISION": "SELL",
+                    "NUMBER": abs(difference),
+                    "TARGET_WEIGHT": round(target_weights.get(ticker, 0.0), 6),
+                })
+            elif difference > 0.0:
+                decisions.append({
+                    "TICKER": ticker,
+                    "DECISION": "BUY",
+                    "NUMBER": difference,
+                    "TARGET_WEIGHT": round(target_weights.get(ticker, 0.0), 6),
+                })
+
         return decisions
