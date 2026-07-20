@@ -9,12 +9,6 @@ def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
         "name": dto.name,
         "archetype_key": dto.archetype_key,
 
-        "time_weights": {
-            "short_term_14d": dto.short_term_weight,
-            "medium_term_50d": dto.medium_term_weight,
-            "long_term_200d": dto.long_term_weight,
-        },
-
         "top_m_share": dto.top_m_share,
         "metric_weights": dto.metric_weights,
     }

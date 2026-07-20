@@ -47,9 +47,6 @@ class PortfolioHistoryRead(PortfolioHistoryBase):
 class PortfolioBase(BaseModel):
     name: str
     archetype_key: str
-    short_term_weight: float
-    medium_term_weight: float
-    long_term_weight: float
     top_m_share: float = 1.0
 
 class PortfolioCreate(PortfolioBase):

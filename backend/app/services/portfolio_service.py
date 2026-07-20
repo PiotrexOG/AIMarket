@@ -49,9 +49,6 @@ def _build_portfolio_base(
         id=portfolio.id,
         name=portfolio.name,
         archetype_key=portfolio.archetype_key,
-        short_term_weight=portfolio.short_term_weight,
-        medium_term_weight=portfolio.medium_term_weight,
-        long_term_weight=portfolio.long_term_weight,
         top_m_share=getattr(portfolio, "top_m_share", 1.0),
         metric_weights=mw_dict,
     )
@@ -201,11 +198,6 @@ class PortfolioService:
             id=portfolio.id,
             name=portfolio.name,
             archetype_key=portfolio.archetype_key,
-
-            short_term_weight=portfolio.short_term_weight,
-            medium_term_weight=portfolio.medium_term_weight,
-            long_term_weight=portfolio.long_term_weight,
-
             top_m_share=getattr(portfolio, "top_m_share", 1.0),
 
             metric_weights=mw_dict,

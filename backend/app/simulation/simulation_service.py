@@ -329,9 +329,6 @@ class SimulationService:
                     name=name,
                     archetype_key=config.get("archetype_key", "benchmark"),
                     user_id=user.id,
-                    short_term_weight=config.get("time_weights", {}).get("short_term_14d", 0.0),
-                    medium_term_weight=config.get("time_weights", {}).get("medium_term_50d", 0.0),
-                    long_term_weight=config.get("time_weights", {}).get("long_term_200d", 0.0),
                     top_m_share=config.get("top_m_share", 1.0),
                     metric_weights=config.get("metric_weights", {
                                                 "relative_technical_strength": 0.0,

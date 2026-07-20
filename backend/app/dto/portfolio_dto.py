@@ -39,10 +39,7 @@ class PortfolioPerformanceBaseDTO(BaseModel):
     name: str
     archetype_key: str
 
-    # Konfiguracja (metryki)
-    short_term_weight: float| str
-    medium_term_weight: float| str
-    long_term_weight: float| str
+    # Konfiguracja strategii
     top_m_share: float | str = 1.0
     metric_weights: Dict[str, float] | Dict[str, str]
 

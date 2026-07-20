@@ -8,12 +8,6 @@ from typing import Iterable
 TOP_M_MIN_SHARE = 1.0 / 18.0
 TOP_M_MAX_SHARE = 1.0
 
-FIXED_TIME_WEIGHTS = {
-    "short_term_14d": 0.0,
-    "medium_term_50d": 0.0,
-    "long_term_200d": 1.0,
-}
-
 FIXED_METRIC_WEIGHTS = {
     "relative_technical_strength": 1.0 / 6.0,
     "relative_fundamental_support": 1.0 / 6.0,
@@ -45,7 +39,6 @@ def build_profile(
         "id": profile_id,
         "archetype_key": archetype_key,
         "top_m_share": round(clamp_top_m_share(top_m_share), 10),
-        "time_weights": dict(FIXED_TIME_WEIGHTS),
         "metric_weights": dict(FIXED_METRIC_WEIGHTS),
     }
 

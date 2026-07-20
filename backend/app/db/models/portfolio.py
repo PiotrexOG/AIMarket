@@ -10,9 +10,6 @@ class Portfolio(Base):
     archetype_key = Column(String, nullable=False)
     name = Column(String, nullable=False)
 
-    short_term_weight = Column(Float)
-    medium_term_weight = Column(Float)
-    long_term_weight = Column(Float)
     metric_weights = relationship(
         "PortfolioMetricWeight",
         back_populates="portfolio",

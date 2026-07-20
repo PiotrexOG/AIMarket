@@ -265,9 +265,6 @@ class SimulationBatchService:
                     "name": profile.get("name", f"user_{int(self.user_ids[row_idx])}"),
                     "archetype_key": profile["archetype_key"],
                     "top_m_share": profile.get("top_m_share", TOP_M_MAX_SHARE),
-                    "short_term_weight": profile["time_weights"]["short_term_14d"],
-                    "medium_term_weight": profile["time_weights"]["medium_term_50d"],
-                    "long_term_weight": profile["time_weights"]["long_term_200d"],
                     "metric_weights": dict(profile["metric_weights"]),
                     "change_ratio": round(float(change_ratio), 4),
                 }
