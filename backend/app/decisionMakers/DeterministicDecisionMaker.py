@@ -1,16 +1,9 @@
 import math
-from datetime import timedelta
-
-import numpy as np
 
 from app.portfolio_generation.top_m import (
     FIXED_METRIC_WEIGHTS,
-    INVESTMENT_TIME_MAX_DAYS,
     RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD,
-    REBALANCE_TIME_MIN_SHARE,
     TOP_M_MAX_SHARE,
-    clamp_investment_time_days,
-    clamp_rebalance_time_share,
     fractional_top_m_weights,
 )
 
@@ -63,23 +56,15 @@ class DeterministicDecisionMaker:
             target_weights = {ticker: 1.0 / len(all_tickers) for ticker in all_tickers}
             return self._build_buy_decisions_from_weights(target_weights, valuation, date_time)
 
-        self._record_score_percentiles(portfolio, score_percentiles, date_time)
+        portfolio.record_score_percentiles(score_percentiles, date_time)
 
-        if not current_shares or portfolio.investment_start_date is None:
+        if not current_shares or not portfolio.has_active_cycle():
             return self._start_new_cycle(portfolio, raw_scores, score_percentiles, valuation, date_time)
 
-        investment_time_days = clamp_investment_time_days(
-            profile.get("investment_time_days", INVESTMENT_TIME_MAX_DAYS)
-        )
-        elapsed_days = self._elapsed_days(portfolio.investment_start_date, date_time)
-        if elapsed_days >= investment_time_days:
+        if portfolio.cycle_has_expired(date_time):
             return self._reset_cycle(portfolio, raw_scores, score_percentiles, valuation, date_time)
 
-        rebalance_time_share = clamp_rebalance_time_share(
-            profile.get("rebalance_time_share", REBALANCE_TIME_MIN_SHARE)
-        )
-        rebalance_after_days = investment_time_days * rebalance_time_share
-        if not portfolio.rebalanced_in_cycle and elapsed_days >= rebalance_after_days:
+        if portfolio.should_rebalance_cycle(date_time):
             return self._rebalance_cycle(
                 portfolio,
                 raw_scores,
@@ -101,9 +86,6 @@ class DeterministicDecisionMaker:
             for rank, ticker in enumerate(sorted_tickers)
         }
 
-    def _elapsed_days(self, start_date, date_time) -> float:
-        return (date_time - start_date).total_seconds() / 86400.0
-
     def _current_shares(self, valuation) -> dict[str, float]:
         return {
             position.ticker: position.shares
@@ -111,54 +93,15 @@ class DeterministicDecisionMaker:
             if position.shares > 0
         }
 
-    def _record_score_percentiles(self, portfolio, score_percentiles, date_time):
-        history = portfolio.entry_score_percentile_history
-        for ticker, percentile in score_percentiles.items():
-            ticker_history = history.setdefault(ticker, [])
-            if ticker_history and ticker_history[-1][0] == date_time:
-                ticker_history[-1] = (date_time, percentile)
-            else:
-                ticker_history.append((date_time, percentile))
-
-    def _reset_score_percentile_history(self, portfolio, score_percentiles, date_time):
-        portfolio.entry_score_percentile_history = {
-            ticker: [(date_time, percentile)]
-            for ticker, percentile in score_percentiles.items()
-        }
-
-    def _set_cycle_state(self, portfolio, target_tickers, score_percentiles, date_time):
-        portfolio.investment_start_date = date_time
-        portfolio.rebalance_date = (
-            date_time
-            + self._investment_rebalance_delta(portfolio.user_profile)
-        )
-        portfolio.rebalanced_in_cycle = False
-        portfolio.entry_score_percentiles = {
-            ticker: score_percentiles[ticker]
-            for ticker in target_tickers
-            if ticker in score_percentiles
-        }
-
-    def _investment_rebalance_delta(self, profile):
-        investment_time_days = clamp_investment_time_days(
-            profile.get("investment_time_days", INVESTMENT_TIME_MAX_DAYS)
-        )
-        rebalance_time_share = clamp_rebalance_time_share(
-            profile.get("rebalance_time_share", REBALANCE_TIME_MIN_SHARE)
-        )
-        return timedelta(days=investment_time_days * rebalance_time_share)
-
     def _start_new_cycle(self, portfolio, raw_scores, score_percentiles, valuation, date_time):
         target_weights = self._build_target_weights(raw_scores, portfolio.user_profile)
-        self._reset_score_percentile_history(portfolio, score_percentiles, date_time)
-        self._set_cycle_state(portfolio, target_weights, score_percentiles, date_time)
+        portfolio.restart_cycle(target_weights, score_percentiles, date_time)
         return self._build_buy_decisions_from_weights(target_weights, valuation, date_time)
 
     def _reset_cycle(self, portfolio, raw_scores, score_percentiles, valuation, date_time):
         target_weights = self._build_target_weights(raw_scores, portfolio.user_profile)
         decisions = self._build_full_reset_decisions(target_weights, valuation, date_time)
-        self._reset_score_percentile_history(portfolio, score_percentiles, date_time)
-        self._set_cycle_state(portfolio, target_weights, score_percentiles, date_time)
+        portfolio.restart_cycle(target_weights, score_percentiles, date_time)
         return decisions
 
     def _rebalance_cycle(
@@ -170,21 +113,14 @@ class DeterministicDecisionMaker:
         date_time,
     ):
         current_shares = self._current_shares(valuation)
-        mean_percentiles = {
-            ticker: self._mean_score_percentile(portfolio, ticker, date_time)
-            for ticker in raw_scores
-        }
+        mean_percentiles = portfolio.mean_entry_score_percentiles(raw_scores, date_time)
         sold_tickers = [
             ticker
             for ticker in current_shares
-            if self._relative_score_percentile_change(
-                portfolio.entry_score_percentiles.get(ticker),
-                mean_percentiles.get(ticker),
-            )
+            if portfolio.relative_entry_score_percentile_change(ticker, mean_percentiles.get(ticker))
             < RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD
         ]
-        portfolio.rebalanced_in_cycle = True
-        portfolio.rebalance_date = date_time
+        portfolio.mark_rebalanced(date_time)
 
         if not sold_tickers:
             return []
@@ -210,45 +146,12 @@ class DeterministicDecisionMaker:
             valuation,
             date_time,
         )
-        for ticker in sold_tickers:
-            portfolio.entry_score_percentiles.pop(ticker, None)
-        for ticker in replacement_tickers:
-            if ticker in score_percentiles:
-                portfolio.entry_score_percentiles[ticker] = score_percentiles[ticker]
+        portfolio.replace_entry_score_percentiles(
+            sold_tickers,
+            replacement_tickers,
+            score_percentiles,
+        )
         return decisions
-
-    def _relative_score_percentile_change(self, entry_percentile, mean_percentile):
-        if entry_percentile is None or mean_percentile is None or entry_percentile <= 0:
-            return 0.0
-        return (mean_percentile - entry_percentile) / entry_percentile
-
-    def _mean_score_percentile(self, portfolio, ticker, date_time):
-        points = portfolio.entry_score_percentile_history.get(ticker, [])
-        points = [
-            point
-            for point in points
-            if point[0] >= portfolio.investment_start_date and point[0] <= date_time
-        ]
-        if not points:
-            return None
-
-        weighted_values = []
-        weights = []
-        for index, (timestamp, percentile) in enumerate(points):
-            next_timestamp = (
-                points[index + 1][0]
-                if index + 1 < len(points)
-                else date_time
-            )
-            segment_days = self._elapsed_days(timestamp, min(next_timestamp, date_time))
-            if segment_days <= 0:
-                continue
-            weighted_values.append(percentile)
-            weights.append(segment_days)
-
-        if not weights:
-            return None
-        return float(np.average(weighted_values, weights=weights))
 
     def _build_buy_decisions_from_weights(self, target_weights, valuation, date_time):
         decisions = []
