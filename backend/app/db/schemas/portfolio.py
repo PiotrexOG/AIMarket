@@ -48,6 +48,8 @@ class PortfolioBase(BaseModel):
     name: str
     archetype_key: str
     top_m_share: float = 1.0
+    investment_time_days: int = 300
+    rebalance_time_share: float = 0.2
 
 class PortfolioCreate(PortfolioBase):
     user_id: int

@@ -50,6 +50,8 @@ def _build_portfolio_base(
         name=portfolio.name,
         archetype_key=portfolio.archetype_key,
         top_m_share=getattr(portfolio, "top_m_share", 1.0),
+        investment_time_days=getattr(portfolio, "investment_time_days", 300),
+        rebalance_time_share=getattr(portfolio, "rebalance_time_share", 0.2),
         metric_weights=mw_dict,
     )
 
@@ -199,6 +201,8 @@ class PortfolioService:
             name=portfolio.name,
             archetype_key=portfolio.archetype_key,
             top_m_share=getattr(portfolio, "top_m_share", 1.0),
+            investment_time_days=getattr(portfolio, "investment_time_days", 300),
+            rebalance_time_share=getattr(portfolio, "rebalance_time_share", 0.2),
 
             metric_weights=mw_dict,
             change_ratio=round(change_ratio, 4)

@@ -330,6 +330,8 @@ class SimulationService:
                     archetype_key=config.get("archetype_key", "benchmark"),
                     user_id=user.id,
                     top_m_share=config.get("top_m_share", 1.0),
+                    investment_time_days=config.get("investment_time_days", 300),
+                    rebalance_time_share=config.get("rebalance_time_share", 0.2),
                     metric_weights=config.get("metric_weights", {
                                                 "relative_technical_strength": 0.0,
                                                 "relative_fundamental_support": 0.0,

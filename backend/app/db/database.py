@@ -1,4 +1,5 @@
 from sqlalchemy import create_engine
+from sqlalchemy import text
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import StaticPool
 
@@ -46,6 +47,18 @@ def reset_database():
         table.drop(engine, checkfirst=True)
 
     Base.metadata.create_all(bind=engine)
+
+
+def migrate_portfolio_strategy_columns():
+    with engine.begin() as connection:
+        connection.execute(text(
+            "ALTER TABLE portfolios "
+            "ADD COLUMN IF NOT EXISTS investment_time_days INTEGER NOT NULL DEFAULT 300"
+        ))
+        connection.execute(text(
+            "ALTER TABLE portfolios "
+            "ADD COLUMN IF NOT EXISTS rebalance_time_share DOUBLE PRECISION NOT NULL DEFAULT 0.2"
+        ))
 
 
 # Dependency do FastAPI

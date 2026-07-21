@@ -41,6 +41,8 @@ class PortfolioPerformanceBaseDTO(BaseModel):
 
     # Konfiguracja strategii
     top_m_share: float | str = 1.0
+    investment_time_days: int | str = 300
+    rebalance_time_share: float | str = 0.2
     metric_weights: Dict[str, float] | Dict[str, str]
 
     model_config = {"from_attributes": True}

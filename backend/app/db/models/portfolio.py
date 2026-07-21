@@ -17,6 +17,8 @@ class Portfolio(Base):
         lazy="joined"  # Automatycznie ładuj wagi przy pobieraniu portfela
     )
     top_m_share = Column(Float, nullable=False, default=1.0)
+    investment_time_days = Column(Integer, nullable=False, default=300)
+    rebalance_time_share = Column(Float, nullable=False, default=0.2)
 
     user = relationship("User", back_populates="portfolios")
     history = relationship("PortfolioHistory", back_populates="portfolio", cascade="all, delete-orphan")

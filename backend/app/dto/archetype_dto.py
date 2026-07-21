@@ -7,3 +7,5 @@ class ArchetypeRead(BaseModel):
     name: str
     summary: str
     top_m_share: Tuple[float, float]
+    investment_time_days: Tuple[int, int]
+    rebalance_time_share: Tuple[float, float]

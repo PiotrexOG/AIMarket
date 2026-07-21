@@ -7,6 +7,11 @@ from typing import Iterable
 
 TOP_M_MIN_SHARE = 1.0 / 18.0
 TOP_M_MAX_SHARE = 1.0
+INVESTMENT_TIME_MIN_DAYS = 100
+INVESTMENT_TIME_MAX_DAYS = 300
+REBALANCE_TIME_MIN_SHARE = 0.20
+REBALANCE_TIME_MAX_SHARE = 0.60
+RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD = -0.15
 
 FIXED_METRIC_WEIGHTS = {
     "relative_technical_strength": 1.0 / 6.0,
@@ -22,15 +27,47 @@ def clamp_top_m_share(value: float) -> float:
     return min(TOP_M_MAX_SHARE, max(TOP_M_MIN_SHARE, float(value)))
 
 
+def clamp_investment_time_days(value: float) -> int:
+    return min(
+        INVESTMENT_TIME_MAX_DAYS,
+        max(INVESTMENT_TIME_MIN_DAYS, int(round(float(value)))),
+    )
+
+
+def clamp_rebalance_time_share(value: float) -> float:
+    return min(
+        REBALANCE_TIME_MAX_SHARE,
+        max(REBALANCE_TIME_MIN_SHARE, float(value)),
+    )
+
+
 def sample_top_m_share(rng: random.Random | None = None) -> float:
     generator = rng or random
     return generator.uniform(TOP_M_MIN_SHARE, TOP_M_MAX_SHARE)
+
+
+def sample_investment_time_days(rng: random.Random | None = None) -> int:
+    generator = rng or random
+    return generator.randint(
+        INVESTMENT_TIME_MIN_DAYS,
+        INVESTMENT_TIME_MAX_DAYS,
+    )
+
+
+def sample_rebalance_time_share(rng: random.Random | None = None) -> float:
+    generator = rng or random
+    return generator.uniform(
+        REBALANCE_TIME_MIN_SHARE,
+        REBALANCE_TIME_MAX_SHARE,
+    )
 
 
 def build_profile(
     archetype_key: str,
     *,
     top_m_share: float,
+    investment_time_days: float = INVESTMENT_TIME_MAX_DAYS,
+    rebalance_time_share: float = REBALANCE_TIME_MIN_SHARE,
     name: str | None = None,
     profile_id: str | None = None,
 ) -> dict:
@@ -39,6 +76,8 @@ def build_profile(
         "id": profile_id,
         "archetype_key": archetype_key,
         "top_m_share": round(clamp_top_m_share(top_m_share), 10),
+        "investment_time_days": clamp_investment_time_days(investment_time_days),
+        "rebalance_time_share": round(clamp_rebalance_time_share(rebalance_time_share), 10),
         "metric_weights": dict(FIXED_METRIC_WEIGHTS),
     }
 

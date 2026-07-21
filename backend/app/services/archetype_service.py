@@ -6,7 +6,7 @@ from app.portfolio_generation.archetype_config import get_archetype
 class ArchetypeService:
     DESCRIPTIONS = {
         "benchmark": "Kupuje 100% dostepnych spolek po rowno.",
-        "random": "Losuje udzial Top M od 1/18 do 100%.",
+        "random": "Losuje udzial Top M, czas inwestycji 100-300 dni i rebalance po 20-60% czasu inwestycji.",
     }
 
     def __init__(self, archetype_config: str):

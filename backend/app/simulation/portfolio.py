@@ -10,6 +10,8 @@ def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
         "archetype_key": dto.archetype_key,
 
         "top_m_share": dto.top_m_share,
+        "investment_time_days": dto.investment_time_days,
+        "rebalance_time_share": dto.rebalance_time_share,
         "metric_weights": dto.metric_weights,
     }
 
@@ -19,6 +21,11 @@ class Portfolio:
         self.cash = starting_cash
         self.shares = defaultdict(float, shares or {})
         self.user_profile = to_profile_dict(user_profile)
+        self.investment_start_date = None
+        self.rebalance_date = None
+        self.rebalanced_in_cycle = False
+        self.entry_score_percentiles = {}
+        self.entry_score_percentile_history = {}
 
     # ---- Operacje na portfelu ----
     def buy(self, ticker: str, amount: float, price: float) -> bool:
