@@ -1,4 +1,5 @@
 from datetime import datetime
+import math
 from typing import List, Optional
 from fastapi import HTTPException
 
@@ -8,8 +9,12 @@ from app.dto.portfolio_dto import PortfolioStateDTO, PortfolioSummaryDTO, Positi
     PortfolioPerformanceSummaryDTO, PortfolioPerformanceBaseDTO
 from app.repositories.portfolio_repository import PortfolioRepository
 from app.services.portfolio_valuation_service import PortfolioValuationService
-from app.db.schemas.portfolio import PortfolioCreate
-from app.db.models.portfolio import PortfolioHistory
+from app.db.schemas.portfolio import (
+    PortfolioCreate,
+    PortfolioCycleEventCreate,
+    TickerScoreSnapshotCreate,
+)
+from app.db.models.portfolio import PortfolioCycleEvent, PortfolioHistory
 from app.shared.types import ValuationInterval, INTERVAL_MAP
 
 
@@ -43,8 +48,6 @@ def _build_portfolio_base(
         portfolio,
 ) -> Optional[PortfolioPerformanceBaseDTO]:
 
-    mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
-
     return PortfolioPerformanceBaseDTO(
         id=portfolio.id,
         name=portfolio.name,
@@ -52,7 +55,6 @@ def _build_portfolio_base(
         top_m_share=getattr(portfolio, "top_m_share", 1.0),
         investment_time_days=getattr(portfolio, "investment_time_days", 300),
         rebalance_time_share=getattr(portfolio, "rebalance_time_share", 0.2),
-        metric_weights=mw_dict,
     )
 
 
@@ -73,6 +75,145 @@ class PortfolioService:
 
     def evaluate(self, portfolio_id: int, history_data):
         return self.repo.add_history(portfolio_id, history_data)
+
+    def record_score_snapshots(
+            self,
+            date_time: datetime,
+            raw_scores: dict[str, float],
+            score_percentiles: dict[str, float],
+            timeframe: str = "long_term_200d",
+    ) -> None:
+        snapshots = [
+            TickerScoreSnapshotCreate(
+                datetime=date_time,
+                ticker=ticker,
+                timeframe=timeframe,
+                score=float(score),
+                score_percentile=float(score_percentiles[ticker]),
+            )
+            for ticker, score in sorted(raw_scores.items())
+            if ticker in score_percentiles
+        ]
+        self.repo.upsert_score_snapshots(snapshots)
+
+    def record_cycle_event(
+            self,
+            portfolio,
+            event_type: str,
+            date_time: datetime,
+            *,
+            selected_tickers: list[str] | None = None,
+            sold_tickers: list[str] | None = None,
+            replacement_tickers: list[str] | None = None,
+    ) -> Optional[PortfolioCycleEvent]:
+        if not portfolio.has_active_cycle():
+            return None
+
+        event_data = PortfolioCycleEventCreate(
+            datetime=date_time,
+            event_type=event_type,
+            investment_start_date=portfolio.investment_start_date,
+            next_rebalance_date=portfolio.next_rebalance_date(),
+            next_cycle_date=portfolio.next_cycle_date(),
+            investment_time_days=portfolio.investment_time_days(),
+            rebalance_time_share=portfolio.rebalance_time_share(),
+            selected_tickers=list(selected_tickers or portfolio.entry_score_percentiles.keys()),
+            sold_tickers=list(sold_tickers or []),
+            replacement_tickers=list(replacement_tickers or []),
+            entry_score_percentiles={
+                ticker: float(percentile)
+                for ticker, percentile in portfolio.entry_score_percentiles.items()
+            },
+        )
+        return self.repo.add_cycle_event(portfolio.portfolio_id, event_data)
+
+    def hydrate_runtime_portfolio_cycle(
+            self,
+            portfolio,
+            as_of_datetime: datetime,
+            timeframe: str = "long_term_200d",
+    ) -> bool:
+        latest_event = self.repo.get_latest_cycle_event(
+            portfolio.portfolio_id,
+            as_of_datetime,
+        )
+        if not latest_event:
+            return False
+
+        score_snapshots = self.repo.get_score_snapshots(
+            latest_event.investment_start_date,
+            as_of_datetime,
+            timeframe=timeframe,
+        )
+        percentile_history: dict[str, list[tuple[datetime, float]]] = {}
+        for snapshot in score_snapshots:
+            percentile_history.setdefault(snapshot.ticker, []).append(
+                (snapshot.datetime, snapshot.score_percentile)
+            )
+
+        rebalanced_in_cycle = latest_event.event_type == "REBALANCE"
+        rebalance_date = (
+            latest_event.datetime
+            if rebalanced_in_cycle
+            else latest_event.next_rebalance_date
+        )
+        portfolio.restore_cycle_state(
+            investment_start_date=latest_event.investment_start_date,
+            rebalance_date=rebalance_date,
+            rebalanced_in_cycle=rebalanced_in_cycle,
+            entry_score_percentiles=latest_event.entry_score_percentiles,
+            entry_score_percentile_history=percentile_history,
+        )
+        return True
+
+    def calculate_time_weighted_score_percentiles(
+            self,
+            start: datetime,
+            end: datetime,
+            timeframe: str = "long_term_200d",
+    ) -> dict[str, float]:
+        score_snapshots = self.repo.get_score_snapshots(start, end, timeframe=timeframe)
+        snapshots_by_ticker: dict[str, list] = {}
+        for snapshot in score_snapshots:
+            snapshots_by_ticker.setdefault(snapshot.ticker, []).append(snapshot)
+
+        means = {}
+        for ticker, snapshots in snapshots_by_ticker.items():
+            weighted_sum = 0.0
+            weights = []
+            values = []
+            for index, snapshot in enumerate(snapshots):
+                next_datetime = (
+                    snapshots[index + 1].datetime
+                    if index + 1 < len(snapshots)
+                    else end
+                )
+                segment_days = (
+                    min(next_datetime, end) - snapshot.datetime
+                ).total_seconds() / 86400.0
+                if segment_days <= 0:
+                    continue
+                values.append(float(snapshot.score_percentile))
+                weights.append(segment_days)
+
+            total_weight = math.fsum(weights)
+            if total_weight <= 0:
+                continue
+
+            weighted_sum = math.fsum(
+                value * weight
+                for value, weight in zip(values, weights)
+            )
+            means[ticker] = weighted_sum / total_weight
+
+        return means
+
+    def get_latest_cycle_event(
+            self,
+            portfolio_id: int,
+            date_time: datetime | None = None,
+    ) -> Optional[PortfolioCycleEvent]:
+        return self.repo.get_latest_cycle_event(portfolio_id, date_time)
 
     def _create_dto_from_history_entry(self, history_entry, date: datetime, detailed: bool = True):
         """Tworzy DTO na podstawie pojedynczego wpisu historii portfela."""
@@ -194,8 +335,6 @@ class PortfolioService:
 
         change_ratio = ((end_val - start_val) / start_val) if start_val != 0 else 0.0
 
-        mw_dict = {mw.metric_name: mw.weight for mw in portfolio.metric_weights}
-
         return PortfolioPerformanceSummaryDTO(
             id=portfolio.id,
             name=portfolio.name,
@@ -203,8 +342,6 @@ class PortfolioService:
             top_m_share=getattr(portfolio, "top_m_share", 1.0),
             investment_time_days=getattr(portfolio, "investment_time_days", 300),
             rebalance_time_share=getattr(portfolio, "rebalance_time_share", 0.2),
-
-            metric_weights=mw_dict,
             change_ratio=round(change_ratio, 4)
         )
 

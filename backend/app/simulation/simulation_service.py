@@ -332,14 +332,6 @@ class SimulationService:
                     top_m_share=config.get("top_m_share", 1.0),
                     investment_time_days=config.get("investment_time_days", 300),
                     rebalance_time_share=config.get("rebalance_time_share", 0.2),
-                    metric_weights=config.get("metric_weights", {
-                                                "relative_technical_strength": 0.0,
-                                                "relative_fundamental_support": 0.0,
-                                                "relative_valuation_sustainability": 0.0,
-                                                "relative_structural_safety": 0.0,
-                                                "relative_conviction": 0.0,
-                                                "relative_asymmetry_profile": 0.0,
-                                            })
                 ))
 
                 users_to_init.append((user, starting_cash, {}))
@@ -363,7 +355,11 @@ class SimulationService:
         gemini_master = GEMINI_MASTER()
         gemini_horizon = GEMINI_HORIZON()
         ticker_serializer = TickerDataSerializer()
-        decision_maker = DeterministicDecisionMaker(self.valuation_service, self.start_time)
+        decision_maker = DeterministicDecisionMaker(
+            self.valuation_service,
+            self.start_time,
+            portfolio_service=self.portfolio_service,
+        )
         news_narrative_service =  NewsNarrativeService(self.company_daily_summary_service)
 
         for user, cash, shares in users_to_init:
@@ -386,6 +382,10 @@ class SimulationService:
                 gemini_horizon = gemini_horizon,
                 ticker_serializer = ticker_serializer
 
+            )
+            self.portfolio_service.hydrate_runtime_portfolio_cycle(
+                self.users[user.id].portfolio,
+                self.start_time,
             )
 
             if not existing_users or not shares:

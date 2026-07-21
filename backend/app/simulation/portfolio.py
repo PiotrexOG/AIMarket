@@ -7,8 +7,6 @@ from app.dto.portfolio_dto import PortfolioPerformanceBaseDTO
 from app.portfolio_generation.top_m import (
     INVESTMENT_TIME_MAX_DAYS,
     REBALANCE_TIME_MIN_SHARE,
-    clamp_investment_time_days,
-    clamp_rebalance_time_share,
 )
 
 def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
@@ -20,7 +18,6 @@ def to_profile_dict(dto: PortfolioPerformanceBaseDTO) -> dict:
         "top_m_share": dto.top_m_share,
         "investment_time_days": dto.investment_time_days,
         "rebalance_time_share": dto.rebalance_time_share,
-        "metric_weights": dto.metric_weights,
     }
 
 
@@ -41,12 +38,12 @@ class Portfolio:
         return self.investment_start_date is not None
 
     def investment_time_days(self) -> int:
-        return clamp_investment_time_days(
-            self.user_profile.get("investment_time_days", INVESTMENT_TIME_MAX_DAYS)
+        return int(
+            round(float(self.user_profile.get("investment_time_days", INVESTMENT_TIME_MAX_DAYS)))
         )
 
     def rebalance_time_share(self) -> float:
-        return clamp_rebalance_time_share(
+        return float(
             self.user_profile.get("rebalance_time_share", REBALANCE_TIME_MIN_SHARE)
         )
 
@@ -170,6 +167,34 @@ class Portfolio:
         for ticker in replacement_tickers:
             if ticker in score_percentiles:
                 self.entry_score_percentiles[ticker] = score_percentiles[ticker]
+
+    def restore_cycle_state(
+        self,
+        *,
+        investment_start_date,
+        rebalance_date,
+        rebalanced_in_cycle: bool,
+        entry_score_percentiles: dict[str, float],
+        entry_score_percentile_history: dict[str, list[tuple]],
+    ) -> None:
+        self.investment_start_date = investment_start_date
+        self.rebalance_date = rebalance_date
+        self.rebalanced_in_cycle = rebalanced_in_cycle
+        self.entry_score_percentiles = dict(entry_score_percentiles or {})
+        self.entry_score_percentile_history = {
+            ticker: list(points)
+            for ticker, points in (entry_score_percentile_history or {}).items()
+        }
+
+    def next_rebalance_date(self):
+        if not self.has_active_cycle() or self.rebalanced_in_cycle:
+            return None
+        return self.investment_start_date + self.investment_rebalance_delta()
+
+    def next_cycle_date(self):
+        if not self.has_active_cycle():
+            return None
+        return self.investment_start_date + timedelta(days=self.investment_time_days())
 
     # ---- Operacje na portfelu ----
     def buy(self, ticker: str, amount: float, price: float) -> bool:

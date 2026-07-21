@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum, JSON
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum, JSON, UniqueConstraint
 from sqlalchemy.orm import relationship
 from .base import Base
+
 
 class Portfolio(Base):
     __tablename__ = "portfolios"
@@ -9,13 +10,6 @@ class Portfolio(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     archetype_key = Column(String, nullable=False)
     name = Column(String, nullable=False)
-
-    metric_weights = relationship(
-        "PortfolioMetricWeight",
-        back_populates="portfolio",
-        cascade="all, delete-orphan",
-        lazy="joined"  # Automatycznie ładuj wagi przy pobieraniu portfela
-    )
     top_m_share = Column(Float, nullable=False, default=1.0)
     investment_time_days = Column(Integer, nullable=False, default=300)
     rebalance_time_share = Column(Float, nullable=False, default=0.2)
@@ -25,18 +19,13 @@ class Portfolio(Base):
     transactions = relationship(
         "PortfolioTransaction",
         back_populates="portfolio",
-        cascade="all, delete-orphan"
+        cascade="all, delete-orphan",
     )
-
-class PortfolioMetricWeight(Base):
-    __tablename__ = "portfolio_metric_weights"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
-    metric_name = Column(String, nullable=False)  # np. "revenue_growth"
-    weight = Column(Float, nullable=False)        # np. 0.5
-
-    portfolio = relationship("Portfolio", back_populates="metric_weights")
+    cycle_events = relationship(
+        "PortfolioCycleEvent",
+        back_populates="portfolio",
+        cascade="all, delete-orphan",
+    )
 
 
 class PortfolioHistory(Base):
@@ -76,3 +65,44 @@ class PortfolioTransaction(Base):
 
     portfolio = relationship("Portfolio", back_populates="transactions")
 
+
+class TickerScoreSnapshot(Base):
+    __tablename__ = "ticker_score_snapshots"
+    __table_args__ = (
+        UniqueConstraint(
+            "datetime",
+            "ticker",
+            "timeframe",
+            name="uq_ticker_score_snapshots_datetime_ticker_timeframe",
+        ),
+    )
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    datetime = Column(DateTime(timezone=True), index=True, nullable=False)
+    ticker = Column(String, index=True, nullable=False)
+    timeframe = Column(String, nullable=False, default="long_term_200d")
+    score = Column(Float, nullable=False)
+    score_percentile = Column(Float, nullable=False)
+
+
+class PortfolioCycleEvent(Base):
+    __tablename__ = "portfolio_cycle_events"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    portfolio_id = Column(Integer, ForeignKey("portfolios.id"), nullable=False)
+    datetime = Column(DateTime(timezone=True), index=True, nullable=False)
+    event_type = Column(
+        Enum("START", "RESET", "REBALANCE", name="portfolio_cycle_event_type"),
+        nullable=False,
+    )
+    investment_start_date = Column(DateTime(timezone=True), index=True, nullable=False)
+    next_rebalance_date = Column(DateTime(timezone=True), nullable=True)
+    next_cycle_date = Column(DateTime(timezone=True), nullable=True)
+    investment_time_days = Column(Integer, nullable=False)
+    rebalance_time_share = Column(Float, nullable=False)
+    selected_tickers = Column(JSON, nullable=False, default=list)
+    sold_tickers = Column(JSON, nullable=False, default=list)
+    replacement_tickers = Column(JSON, nullable=False, default=list)
+    entry_score_percentiles = Column(JSON, nullable=False, default=dict)
+
+    portfolio = relationship("Portfolio", back_populates="cycle_events")

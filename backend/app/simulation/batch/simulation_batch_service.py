@@ -10,14 +10,11 @@ from app.config.config import STARTING_CASH
 from app.portfolio_generation.random_users import generate_users
 from app.portfolio_generation.space_filling_users import generate_space_filling_users
 from app.portfolio_generation.top_m import (
-    FIXED_METRIC_WEIGHTS,
     INVESTMENT_TIME_MAX_DAYS,
-    INVESTMENT_TIME_MIN_DAYS,
-    REBALANCE_TIME_MAX_SHARE,
     REBALANCE_TIME_MIN_SHARE,
     RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD,
     TOP_M_MAX_SHARE,
-    TOP_M_MIN_SHARE,
+    calculate_average_score,
 )
 from app.services.layers.market_data_service import MarketDataService
 from app.simulation.batch.helper import get_available_timestamps, fetch_cross_section
@@ -98,7 +95,6 @@ class SimulationBatchService:
             [profile.get("top_m_share", TOP_M_MAX_SHARE) for profile in self.user_profiles],
             dtype=np.float64,
         )
-        self.top_m_share = np.clip(self.top_m_share, TOP_M_MIN_SHARE, TOP_M_MAX_SHARE)
         self.investment_time_days = np.array(
             [
                 profile.get("investment_time_days", INVESTMENT_TIME_MAX_DAYS)
@@ -106,22 +102,12 @@ class SimulationBatchService:
             ],
             dtype=np.float64,
         )
-        self.investment_time_days = np.clip(
-            self.investment_time_days,
-            INVESTMENT_TIME_MIN_DAYS,
-            INVESTMENT_TIME_MAX_DAYS,
-        )
         self.rebalance_time_share = np.array(
             [
                 profile.get("rebalance_time_share", REBALANCE_TIME_MIN_SHARE)
                 for profile in self.user_profiles
             ],
             dtype=np.float64,
-        )
-        self.rebalance_time_share = np.clip(
-            self.rebalance_time_share,
-            REBALANCE_TIME_MIN_SHARE,
-            REBALANCE_TIME_MAX_SHARE,
         )
         self.investment_start_dates = [None] * users_count
         self.rebalanced_in_cycle = np.zeros(users_count, dtype=bool)
@@ -218,10 +204,7 @@ class SimulationBatchService:
                 continue
 
             relative_scores = ticker_data.get("relative_scores", {})
-            score = sum(
-                relative_scores.get(metric, 0.0) * FIXED_METRIC_WEIGHTS[metric]
-                for metric in FIXED_METRIC_WEIGHTS
-            )
+            score = calculate_average_score(relative_scores)
             scores[:, ticker_idx] = score
 
         return np.round(scores, 10)
@@ -642,7 +625,6 @@ class SimulationBatchService:
                     "top_m_share": profile.get("top_m_share", TOP_M_MAX_SHARE),
                     "investment_time_days": int(self.investment_time_days[row_idx]),
                     "rebalance_time_share": round(float(self.rebalance_time_share[row_idx]), 6),
-                    "metric_weights": dict(profile["metric_weights"]),
                     "change_ratio": round(float(change_ratio), 4),
                 }
             )

@@ -1,26 +1,24 @@
 import math
 
 from app.portfolio_generation.top_m import (
-    FIXED_METRIC_WEIGHTS,
     RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD,
     TOP_M_MAX_SHARE,
+    calculate_average_score,
     fractional_top_m_weights,
 )
 
 
 class DeterministicDecisionMaker:
-    def __init__(self, valuation_service, start_time):
+    def __init__(self, valuation_service, start_time, portfolio_service=None):
         self.valuation_service = valuation_service
         self.start_time = start_time
+        self.portfolio_service = portfolio_service
+        self._recorded_score_snapshot_keys = set()
 
     def calculate_score(self, ticker, market_scores, profile):
         timeframe_data = market_scores.get("long_term_200d", {}).get(ticker, {})
         relative_scores = timeframe_data.get("relative_scores", {})
-        values = [
-            relative_scores.get(metric, 0.0) * FIXED_METRIC_WEIGHTS[metric]
-            for metric in FIXED_METRIC_WEIGHTS
-        ]
-        return round(math.fsum(values), 10)
+        return calculate_average_score(relative_scores)
 
     def _build_target_weights(self, raw_scores: dict[str, float], profile: dict) -> dict[str, float]:
         sorted_tickers = sorted(
@@ -43,6 +41,7 @@ class DeterministicDecisionMaker:
             for ticker in all_tickers
         }
         score_percentiles = self._calculate_score_percentiles(raw_scores)
+        self._record_score_snapshots(raw_scores, score_percentiles, date_time)
         valuation = self.valuation_service.calculate_portfolio_details(
             portfolio.cash,
             portfolio.shares,
@@ -96,12 +95,24 @@ class DeterministicDecisionMaker:
     def _start_new_cycle(self, portfolio, raw_scores, score_percentiles, valuation, date_time):
         target_weights = self._build_target_weights(raw_scores, portfolio.user_profile)
         portfolio.restart_cycle(target_weights, score_percentiles, date_time)
+        self._record_cycle_event(
+            portfolio,
+            "START",
+            date_time,
+            selected_tickers=list(target_weights.keys()),
+        )
         return self._build_buy_decisions_from_weights(target_weights, valuation, date_time)
 
     def _reset_cycle(self, portfolio, raw_scores, score_percentiles, valuation, date_time):
         target_weights = self._build_target_weights(raw_scores, portfolio.user_profile)
         decisions = self._build_full_reset_decisions(target_weights, valuation, date_time)
         portfolio.restart_cycle(target_weights, score_percentiles, date_time)
+        self._record_cycle_event(
+            portfolio,
+            "RESET",
+            date_time,
+            selected_tickers=list(target_weights.keys()),
+        )
         return decisions
 
     def _rebalance_cycle(
@@ -123,6 +134,12 @@ class DeterministicDecisionMaker:
         portfolio.mark_rebalanced(date_time)
 
         if not sold_tickers:
+            self._record_cycle_event(
+                portfolio,
+                "REBALANCE",
+                date_time,
+                selected_tickers=list(current_shares.keys()),
+            )
             return []
 
         kept_tickers = set(current_shares) - set(sold_tickers)
@@ -151,7 +168,52 @@ class DeterministicDecisionMaker:
             replacement_tickers,
             score_percentiles,
         )
+        self._record_cycle_event(
+            portfolio,
+            "REBALANCE",
+            date_time,
+            sold_tickers=sold_tickers,
+            replacement_tickers=replacement_tickers,
+        )
         return decisions
+
+    def _record_score_snapshots(self, raw_scores, score_percentiles, date_time):
+        if self.portfolio_service is None:
+            return
+
+        key = (date_time, "long_term_200d")
+        if key in self._recorded_score_snapshot_keys:
+            return
+
+        self.portfolio_service.record_score_snapshots(
+            date_time,
+            raw_scores,
+            score_percentiles,
+            timeframe="long_term_200d",
+        )
+        self._recorded_score_snapshot_keys.add(key)
+
+    def _record_cycle_event(
+        self,
+        portfolio,
+        event_type,
+        date_time,
+        *,
+        selected_tickers=None,
+        sold_tickers=None,
+        replacement_tickers=None,
+    ):
+        if self.portfolio_service is None:
+            return
+
+        self.portfolio_service.record_cycle_event(
+            portfolio,
+            event_type,
+            date_time,
+            selected_tickers=selected_tickers,
+            sold_tickers=sold_tickers,
+            replacement_tickers=replacement_tickers,
+        )
 
     def _build_buy_decisions_from_weights(self, target_weights, valuation, date_time):
         decisions = []

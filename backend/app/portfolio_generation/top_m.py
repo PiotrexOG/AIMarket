@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import math
-import random
 from typing import Iterable
 
 
@@ -13,53 +12,16 @@ REBALANCE_TIME_MIN_SHARE = 0.20
 REBALANCE_TIME_MAX_SHARE = 0.60
 RELATIVE_SCORE_PERCENTILE_CHANGE_THRESHOLD = -0.15
 
-FIXED_METRIC_WEIGHTS = {
-    "relative_technical_strength": 1.0 / 6.0,
-    "relative_fundamental_support": 1.0 / 6.0,
-    "relative_valuation_sustainability": 1.0 / 6.0,
-    "relative_structural_safety": 1.0 / 6.0,
-    "relative_conviction": 1.0 / 6.0,
-    "relative_asymmetry_profile": 1.0 / 6.0,
-}
-
 
 def clamp_top_m_share(value: float) -> float:
     return min(TOP_M_MAX_SHARE, max(TOP_M_MIN_SHARE, float(value)))
 
 
-def clamp_investment_time_days(value: float) -> int:
-    return min(
-        INVESTMENT_TIME_MAX_DAYS,
-        max(INVESTMENT_TIME_MIN_DAYS, int(round(float(value)))),
-    )
-
-
-def clamp_rebalance_time_share(value: float) -> float:
-    return min(
-        REBALANCE_TIME_MAX_SHARE,
-        max(REBALANCE_TIME_MIN_SHARE, float(value)),
-    )
-
-
-def sample_top_m_share(rng: random.Random | None = None) -> float:
-    generator = rng or random
-    return generator.uniform(TOP_M_MIN_SHARE, TOP_M_MAX_SHARE)
-
-
-def sample_investment_time_days(rng: random.Random | None = None) -> int:
-    generator = rng or random
-    return generator.randint(
-        INVESTMENT_TIME_MIN_DAYS,
-        INVESTMENT_TIME_MAX_DAYS,
-    )
-
-
-def sample_rebalance_time_share(rng: random.Random | None = None) -> float:
-    generator = rng or random
-    return generator.uniform(
-        REBALANCE_TIME_MIN_SHARE,
-        REBALANCE_TIME_MAX_SHARE,
-    )
+def calculate_average_score(relative_scores: dict) -> float:
+    values = [float(value) for value in relative_scores.values()]
+    if not values:
+        return 0.0
+    return round(math.fsum(values) / len(values), 10)
 
 
 def build_profile(
@@ -75,10 +37,9 @@ def build_profile(
         "name": name or archetype_key,
         "id": profile_id,
         "archetype_key": archetype_key,
-        "top_m_share": round(clamp_top_m_share(top_m_share), 10),
-        "investment_time_days": clamp_investment_time_days(investment_time_days),
-        "rebalance_time_share": round(clamp_rebalance_time_share(rebalance_time_share), 10),
-        "metric_weights": dict(FIXED_METRIC_WEIGHTS),
+        "top_m_share": round(float(top_m_share), 2),
+        "investment_time_days": int(round(float(investment_time_days))),
+        "rebalance_time_share": round(float(rebalance_time_share), 2),
     }
 
 

@@ -1,49 +1,42 @@
 from datetime import datetime
-from typing import List, Dict
+from typing import Dict, List
+
 from pydantic import BaseModel, Field
 
-# ---- Portfolio Metric Weights (NOWOŚĆ) ----
-class PortfolioMetricWeightBase(BaseModel):
-    metric_name: str
-    weight: float
 
-class PortfolioMetricWeightCreate(PortfolioMetricWeightBase):
-    pass
-
-class PortfolioMetricWeightRead(PortfolioMetricWeightBase):
-    id: int
-
-    class Config:
-        from_attributes = True
-
-# ---- Portfolio Share ----
 class PortfolioShareBase(BaseModel):
     ticker: str
     amount: float
 
+
 class PortfolioShareCreate(PortfolioShareBase):
     pass
 
+
 class PortfolioShareRead(PortfolioShareBase):
     id: int
+
     class Config:
         from_attributes = True
 
-# ---- Portfolio History ----
+
 class PortfolioHistoryBase(BaseModel):
     datetime: datetime
     cash: float
 
+
 class PortfolioHistoryCreate(PortfolioHistoryBase):
     shares: List[PortfolioShareCreate]
+
 
 class PortfolioHistoryRead(PortfolioHistoryBase):
     id: int
     shares: List[PortfolioShareRead]
+
     class Config:
         from_attributes = True
 
-# ---- Portfolio ----
+
 class PortfolioBase(BaseModel):
     name: str
     archetype_key: str
@@ -51,22 +44,19 @@ class PortfolioBase(BaseModel):
     investment_time_days: int = 300
     rebalance_time_share: float = 0.2
 
+
 class PortfolioCreate(PortfolioBase):
     user_id: int
-    # Przy tworzeniu nadal wygodnie jest przyjąć słownik,
-    # który serwis rozbije na wiersze w bazie danych
-    metric_weights: Dict[str, float] = {}
+
 
 class PortfolioRead(PortfolioBase):
     id: int
-    # Przy odczycie dostajemy listę obiektów z bazy (relacja SQLAlchemy)
-    metric_weights: List[PortfolioMetricWeightRead] = []
     history: List[PortfolioHistoryRead] = []
 
     class Config:
         from_attributes = True
 
-# ---- Pozostałe (bez zmian, ale dla kompletności) ----
+
 class PortfolioTransactionRead(BaseModel):
     datetime: datetime
     decision: str = Field(alias="type")
@@ -80,12 +70,52 @@ class PortfolioTransactionRead(BaseModel):
         "populate_by_name": True,
     }
 
+
 class PortfolioTickerTransactionRead(BaseModel):
     datetime: datetime
     quantity: float
     ratio: float
     price: float
     total_value: float
+
+    model_config = {
+        "from_attributes": True,
+    }
+
+
+class TickerScoreSnapshotCreate(BaseModel):
+    datetime: datetime
+    ticker: str
+    timeframe: str = "long_term_200d"
+    score: float
+    score_percentile: float
+
+
+class TickerScoreSnapshotRead(TickerScoreSnapshotCreate):
+    id: int
+
+    model_config = {
+        "from_attributes": True,
+    }
+
+
+class PortfolioCycleEventCreate(BaseModel):
+    datetime: datetime
+    event_type: str
+    investment_start_date: datetime
+    next_rebalance_date: datetime | None = None
+    next_cycle_date: datetime | None = None
+    investment_time_days: int
+    rebalance_time_share: float
+    selected_tickers: List[str] = []
+    sold_tickers: List[str] = []
+    replacement_tickers: List[str] = []
+    entry_score_percentiles: Dict[str, float] = {}
+
+
+class PortfolioCycleEventRead(PortfolioCycleEventCreate):
+    id: int
+    portfolio_id: int
 
     model_config = {
         "from_attributes": True,

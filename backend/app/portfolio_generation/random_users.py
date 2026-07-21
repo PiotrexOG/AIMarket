@@ -8,9 +8,6 @@ from app.portfolio_generation.top_m import (
     TOP_M_MAX_SHARE,
     TOP_M_MIN_SHARE,
     build_profile,
-    sample_investment_time_days,
-    sample_rebalance_time_share,
-    sample_top_m_share,
 )
 
 
@@ -63,16 +60,10 @@ def generate_users(archetype_key, count, archetypes):
     generated_users = {}
 
     for index in range(1, count + 1):
-        top_m_share = sample_top_m_share()
-        top_m_share = min(high, max(low, top_m_share))
-        investment_days = sample_investment_time_days()
-        investment_days = min(investment_high, max(investment_low, investment_days))
-        rebalance_time_share = sample_rebalance_time_share()
-        rebalance_time_share = min(
-            rebalance_high,
-            max(rebalance_low, rebalance_time_share),
-        )
-        user_id = f"random_{index:06d}"
+        top_m_share = random.uniform(low, high)
+        investment_days = random.randint(investment_low, investment_high)
+        rebalance_time_share = random.uniform(rebalance_low, rebalance_high)
+        user_id = f"random_{index:03d}"
         generated_users[user_id] = build_profile(
             "random",
             top_m_share=top_m_share,

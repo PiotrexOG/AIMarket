@@ -31,6 +31,9 @@ SessionLocal = sessionmaker(
 )
 
 def reset_database():
+    with engine.begin() as connection:
+        connection.execute(text("DROP TABLE IF EXISTS portfolio_metric_weights"))
+
     SKIP_TABLES = {
         "market_data",
         "analyst_grades",
@@ -51,6 +54,7 @@ def reset_database():
 
 def migrate_portfolio_strategy_columns():
     with engine.begin() as connection:
+        connection.execute(text("DROP TABLE IF EXISTS portfolio_metric_weights"))
         connection.execute(text(
             "ALTER TABLE portfolios "
             "ADD COLUMN IF NOT EXISTS investment_time_days INTEGER NOT NULL DEFAULT 300"
@@ -59,6 +63,7 @@ def migrate_portfolio_strategy_columns():
             "ALTER TABLE portfolios "
             "ADD COLUMN IF NOT EXISTS rebalance_time_share DOUBLE PRECISION NOT NULL DEFAULT 0.2"
         ))
+    Base.metadata.create_all(bind=engine)
 
 
 # Dependency do FastAPI
