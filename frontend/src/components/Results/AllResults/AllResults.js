@@ -2,11 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchArchetypes, fetchPerformanceSummary } from "./../utils/fetchUtils";
 import { generateDistinctColors } from "./../../common/utils";
 import "../GlobalResults/GlobalResults.css";
-import ArchetypeCorrelationHeatmap from "./ArchetypeCorrelationHeatmap";
 import ArchetypePerformanceChart from "./ArchetypePerformanceChart";
-import ArchetypeRadarAnalysis from "./ArchetypeRadarAnalysis";
 import CorrelationCharts from "./CorrelationCharts";
-import ResultsTable from "./ResultsTable";
 import ChartRangeButtons from "./../../common/ChartRangeButtons";
 import { useChartRange } from "./../../common/useChartRange";
 
@@ -69,20 +66,6 @@ function AllResults({ totalStart, totalEnd }) {
   }, [start, end]);
 
   const keyMap = {
-    short: "short_term_weight",
-    mid: "medium_term_weight",
-    long: "long_term_weight",
-    min_exposure: "min_exposure",
-    aggression_slope: "aggression_slope",
-    exposure_baseline: "exposure_baseline",
-    rebal: "rebalance_threshold",
-    temp: "softmax_temp",
-    asym: "metric_weights.relative_asymmetry_profile",
-    conv: "metric_weights.relative_conviction",
-    safe: "metric_weights.relative_structural_safety",
-    val: "metric_weights.relative_valuation_sustainability",
-    fund: "metric_weights.relative_fundamental_support",
-    tech: "metric_weights.relative_technical_strength",
     change_ratio: "change_ratio",
     benchmark_diff: "benchmark_diff"
   };
@@ -129,18 +112,6 @@ function AllResults({ totalStart, totalEnd }) {
       </header>
 
 
-
-      {/* <div className="section">
-        <ResultsTable 
-          data={sortedData} 
-          sortConfig={sortConfig} 
-          onSort={handleSort} 
-          archColorMap={archColorMap} 
-          getArchName={getArchName} 
-          keyMap={keyMap}
-        />
-      </div> */}
-
       <div className="section">
         <h2>Ranking Archetypów</h2>
         <ArchetypePerformanceChart data={summaryData} archetypes={archetypes} archColorMap={archColorMap} />
@@ -150,23 +121,7 @@ function AllResults({ totalStart, totalEnd }) {
       {!loading && summaryData.length > 0 && (
         <div className="section">
           <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <ArchetypeCorrelationHeatmap data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
-
-
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <ArchetypeRadarAnalysis data={summaryData} archColorMap={archColorMap} />
-        </div>
-      )}
-
-
-      {!loading && summaryData.length > 0 && (
-        <div className="section">
-          <h2 style={{ padding: '0 20px' }}>Analiza Korelacji Parametrów</h2>
-          <CorrelationCharts data={summaryData} archColorMap={archColorMap} />
+          <CorrelationCharts data={summaryData} archetypes={archetypes} archColorMap={archColorMap} />
         </div>
       )}
     </div>
