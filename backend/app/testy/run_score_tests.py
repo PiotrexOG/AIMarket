@@ -91,7 +91,7 @@ ENABLED_TIMEFRAMES = {
     "long_term_200d": True,
 }
 
-HORIZON_RANGE = (180, 220)
+HORIZON_RANGE = (195, 205)
 
 
 def filter_enabled_timeframes(df):
@@ -125,9 +125,10 @@ def run_configured_score_tests(context):
             "live_progress_observations": pd.DataFrame(),
             "live_progress_correlations_by_horizon": pd.DataFrame(),
             "live_progress_average": pd.DataFrame(),
-            "weekly_start_correlations": pd.DataFrame(),
             "drop_regressions_by_horizon": pd.DataFrame(),
             "drop_regression_average": pd.DataFrame(),
+            "switch_to_benchmark_thresholds_by_horizon": pd.DataFrame(),
+            "switch_to_benchmark_thresholds": pd.DataFrame(),
         },
         "ticker_percentile_history": {
             "metrics": pd.DataFrame(),
@@ -216,14 +217,17 @@ def save_analysis_outputs(results, output_dir):
             "post_entry_score_path_live_progress_average.csv": (
                 path["live_progress_average"]
             ),
-            "post_entry_score_path_weekly_start_correlations.csv": (
-                path["weekly_start_correlations"]
-            ),
             "post_entry_score_path_drop_regressions_by_horizon.csv": (
                 path["drop_regressions_by_horizon"]
             ),
             "post_entry_score_path_drop_regression_average.csv": (
                 path["drop_regression_average"]
+            ),
+            "post_entry_score_path_switch_to_benchmark_thresholds_by_horizon.csv": (
+                path["switch_to_benchmark_thresholds_by_horizon"]
+            ),
+            "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
+                path["switch_to_benchmark_thresholds"]
             ),
         })
 

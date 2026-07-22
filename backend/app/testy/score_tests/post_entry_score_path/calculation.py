@@ -8,8 +8,11 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-ENTRY_MIN_SCORE_PERCENTILE = 0.60
+ENTRY_MIN_SCORE_PERCENTILE = 0.8
 PROGRESS_PERCENTAGES = tuple(range(5, 101, 5))
+SWITCH_SCORE_CHANGE_THRESHOLDS = tuple(
+    round(value, 2) for value in np.arange(-0.80, -0.10, 0.05)
+)
 
 CORRELATION_METRICS = [
     "mean_score_percentile",
@@ -22,17 +25,6 @@ LIVE_CORRELATION_METRICS = [
     "score_percentile_change",
     "relative_score_percentile_change",
 ]
-
-WEEKLY_START_CORRELATION_METRICS = [
-    "relative_score_percentile_change",
-]
-
-WEEKLY_START_RETURN_METRICS = [
-    "annualized_return",
-    "remaining_annualized_return",
-    "annualized_alpha",
-]
-
 
 def _weighted_mean(values, weights):
     values = np.asarray(values, dtype=float)
@@ -151,6 +143,54 @@ def _prepare_top_entry_observations(
     return ranked.reset_index(drop=True)
 
 
+def _prepare_benchmark_observations(
+    return_panel,
+    horizon_start,
+    horizon_end,
+):
+    required = {
+        "timeframe",
+        "horizon_days",
+        "start_timestamp",
+        "future_timestamp",
+        "ticker",
+        "score",
+        "future_return",
+        "current_price",
+        "future_price",
+    }
+    if return_panel.empty or not required.issubset(return_panel.columns):
+        return pd.DataFrame()
+
+    benchmark = (
+        return_panel[
+            return_panel["horizon_days"].between(horizon_start, horizon_end)
+        ]
+        .dropna(
+            subset=[
+                "score",
+                "future_return",
+                "current_price",
+                "future_price",
+            ]
+        )
+        .sort_values(
+            ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
+            ascending=[True, True, True, False, True],
+        )
+        .copy()
+    )
+    if benchmark.empty:
+        return pd.DataFrame()
+
+    benchmark = benchmark[
+        (benchmark["current_price"] > 0)
+        & (benchmark["future_price"] > 0)
+        & (benchmark["future_return"] > -1)
+    ].copy()
+    return benchmark.reset_index(drop=True)
+
+
 def _build_history_lookup(history):
     return {
         key: group.reset_index(drop=True)
@@ -198,6 +238,147 @@ def _build_path_for_entry(entry, history_lookup):
         path["segment_days"] / float(entry["horizon_days"])
     )
     return path
+
+
+def _build_remaining_benchmark_lookup(benchmark_entries, history):
+    key_columns = [
+        "timeframe",
+        "horizon_days",
+        "start_timestamp",
+        "progress_percent",
+    ]
+    output_columns = [
+        *key_columns,
+        "remaining_benchmark_return",
+        "remaining_annualized_benchmark_return",
+        "benchmark_remaining_observation_count",
+    ]
+    if benchmark_entries.empty or history.empty:
+        return {}
+
+    history_prices = (
+        history[
+            ["timeframe", "ticker", "start_timestamp", "current_price"]
+        ]
+        .dropna(subset=["current_price"])
+        .rename(
+            columns={
+                "start_timestamp": "price_timestamp",
+                "current_price": "price_at_cutoff",
+            }
+        )
+        .copy()
+    )
+    history_prices = history_prices[
+        (history_prices["price_at_cutoff"] > 0)
+    ].copy()
+    if history_prices.empty:
+        return {}
+
+    history_prices["price_timestamp"] = pd.to_datetime(
+        history_prices["price_timestamp"]
+    )
+    history_prices = history_prices.sort_values(
+        ["price_timestamp", "timeframe", "ticker"]
+    ).reset_index(drop=True)
+
+    base_entries = benchmark_entries[
+        [
+            "timeframe",
+            "horizon_days",
+            "start_timestamp",
+            "future_timestamp",
+            "ticker",
+            "future_price",
+        ]
+    ].copy()
+    base_entries["start_timestamp"] = pd.to_datetime(
+        base_entries["start_timestamp"]
+    )
+
+    frames = []
+    for progress_percent in PROGRESS_PERCENTAGES:
+        entries = base_entries.copy()
+        entries["progress_percent"] = int(progress_percent)
+        entries["cutoff_days"] = (
+            entries["horizon_days"] * progress_percent / 100.0
+        )
+        entries["remaining_days"] = (
+            entries["horizon_days"] - entries["cutoff_days"]
+        )
+        entries = entries[entries["remaining_days"] > 0].copy()
+        if entries.empty:
+            continue
+
+        entries["cutoff_timestamp"] = (
+            entries["start_timestamp"]
+            + pd.to_timedelta(entries["cutoff_days"], unit="D")
+        )
+        entries = entries.sort_values(
+            ["cutoff_timestamp", "timeframe", "ticker"]
+        ).reset_index(drop=True)
+
+        matched = pd.merge_asof(
+            entries,
+            history_prices,
+            left_on="cutoff_timestamp",
+            right_on="price_timestamp",
+            by=["timeframe", "ticker"],
+            direction="backward",
+        )
+        matched = matched[
+            matched["price_timestamp"].notna()
+            & (matched["price_timestamp"] >= matched["start_timestamp"])
+            & (matched["price_at_cutoff"] > 0)
+            & (matched["future_price"] > 0)
+        ].copy()
+        if matched.empty:
+            continue
+
+        matched["benchmark_constituent_remaining_return"] = (
+            matched["future_price"] / matched["price_at_cutoff"] - 1.0
+        )
+        matched = matched[
+            np.isfinite(matched["benchmark_constituent_remaining_return"])
+            & (matched["benchmark_constituent_remaining_return"] > -1)
+        ]
+        if matched.empty:
+            continue
+
+        frames.append(matched)
+
+    if not frames:
+        return {}
+
+    constituents = pd.concat(frames, ignore_index=True)
+    grouped = (
+        constituents.groupby(key_columns, sort=False)
+        .agg(
+            remaining_benchmark_return=(
+                "benchmark_constituent_remaining_return",
+                "mean",
+            ),
+            remaining_days=("remaining_days", "mean"),
+            benchmark_remaining_observation_count=(
+                "benchmark_constituent_remaining_return",
+                "count",
+            ),
+        )
+        .reset_index()
+    )
+    grouped["remaining_annualized_benchmark_return"] = [
+        annualize_return(total_return, remaining_days)
+        for total_return, remaining_days in zip(
+            grouped["remaining_benchmark_return"],
+            grouped["remaining_days"],
+        )
+    ]
+
+    return (
+        grouped[output_columns]
+        .set_index(key_columns)
+        .to_dict(orient="index")
+    )
 
 
 def _summarize_entry_path(entry, path):
@@ -271,7 +452,7 @@ def _summarize_entry_path(entry, path):
     return row
 
 
-def _summarize_live_progress(entry, path):
+def _summarize_live_progress(entry, path, remaining_benchmark_lookup):
     rows = []
     horizon_days = int(entry["horizon_days"])
     elapsed_days = path["elapsed_days"].to_numpy(dtype=float)
@@ -333,6 +514,40 @@ def _summarize_live_progress(entry, path):
             if remaining_return is not None and remaining_days > 0
             else None
         )
+        benchmark_key = (
+            entry["timeframe"],
+            horizon_days,
+            entry["start_timestamp"],
+            int(progress_percent),
+        )
+        remaining_benchmark = remaining_benchmark_lookup.get(
+            benchmark_key,
+            {},
+        )
+        remaining_benchmark_return = remaining_benchmark.get(
+            "remaining_benchmark_return"
+        )
+        remaining_annualized_benchmark_return = remaining_benchmark.get(
+            "remaining_annualized_benchmark_return"
+        )
+        switch_to_benchmark_return_gain = (
+            remaining_benchmark_return - remaining_return
+            if remaining_benchmark_return is not None
+            and remaining_return is not None
+            else None
+        )
+        switch_to_benchmark_annualized_gain = (
+            remaining_annualized_benchmark_return - remaining_annualized_return
+            if remaining_annualized_benchmark_return is not None
+            and remaining_annualized_return is not None
+            else None
+        )
+        remaining_annualized_alpha = (
+            remaining_annualized_return - remaining_annualized_benchmark_return
+            if remaining_annualized_return is not None
+            and remaining_annualized_benchmark_return is not None
+            else None
+        )
         entry_price = float(entry["current_price"])
         price_change_to_cutoff = (
             price_at_cutoff / entry_price - 1.0
@@ -370,6 +585,25 @@ def _summarize_live_progress(entry, path):
             "remaining_days": remaining_days,
             "remaining_return": remaining_return,
             "remaining_annualized_return": remaining_annualized_return,
+            "remaining_benchmark_return": remaining_benchmark_return,
+            "remaining_annualized_benchmark_return": (
+                remaining_annualized_benchmark_return
+            ),
+            "remaining_annualized_alpha": remaining_annualized_alpha,
+            "switch_to_benchmark_return_gain": (
+                switch_to_benchmark_return_gain
+            ),
+            "switch_to_benchmark_annualized_gain": (
+                switch_to_benchmark_annualized_gain
+            ),
+            "switch_to_benchmark_would_win": (
+                switch_to_benchmark_annualized_gain > 0
+                if switch_to_benchmark_annualized_gain is not None
+                else None
+            ),
+            "benchmark_remaining_observation_count": remaining_benchmark.get(
+                "benchmark_remaining_observation_count"
+            ),
             "future_return": float(entry["future_return"]),
             "annualized_return": float(entry["annualized_return"]),
             "benchmark_return": float(entry["benchmark_return"]),
@@ -388,19 +622,28 @@ def _summarize_live_progress(entry, path):
     return rows
 
 
-def _build_observations_and_paths(entries, history):
+def _build_observations_and_paths(
+    entries,
+    history_lookup,
+    remaining_benchmark_lookup,
+):
     observation_rows = []
     live_progress_rows = []
     path_frames = []
 
-    history_lookup = _build_history_lookup(history)
     for _, entry in entries.iterrows():
         path = _build_path_for_entry(entry, history_lookup)
         if path.empty:
             continue
 
         observation_rows.append(_summarize_entry_path(entry, path))
-        live_progress_rows.extend(_summarize_live_progress(entry, path))
+        live_progress_rows.extend(
+            _summarize_live_progress(
+                entry,
+                path,
+                remaining_benchmark_lookup,
+            )
+        )
         path = path.copy()
         path["timeframe"] = entry["timeframe"]
         path["horizon_days"] = int(entry["horizon_days"])
@@ -429,6 +672,176 @@ def _build_observations_and_paths(entries, history):
         else pd.DataFrame()
     )
     return observations, path_points, pd.DataFrame(live_progress_rows)
+
+
+def _summarize_switch_group(group):
+    annualized_gain = group["switch_to_benchmark_annualized_gain"].to_numpy(
+        dtype=float
+    )
+    return_gain = group["switch_to_benchmark_return_gain"].to_numpy(dtype=float)
+    downside_gain = np.minimum(0.0, annualized_gain)
+    mean_annualized_gain = float(annualized_gain.mean())
+    downside_deviation = float(np.sqrt(np.mean(np.square(downside_gain))))
+
+    if downside_deviation == 0:
+        downside_information_ratio = (
+            0.0
+            if mean_annualized_gain == 0
+            else np.inf * np.sign(mean_annualized_gain)
+        )
+    else:
+        downside_information_ratio = mean_annualized_gain / downside_deviation
+
+    return {
+        "switch_count": int(len(group)),
+        "downside_count": int((annualized_gain < 0).sum()),
+        "downside_frequency": float((annualized_gain < 0).mean()),
+        "benchmark_win_frequency": float((annualized_gain > 0).mean()),
+        "mean_switch_to_benchmark_return_gain": float(return_gain.mean()),
+        "mean_switch_to_benchmark_annualized_gain": mean_annualized_gain,
+        "median_switch_to_benchmark_annualized_gain": float(
+            np.median(annualized_gain)
+        ),
+        "downside_deviation": downside_deviation,
+        "downside_information_ratio": downside_information_ratio,
+        "mean_remaining_return": float(group["remaining_return"].mean()),
+        "mean_remaining_annualized_return": float(
+            group["remaining_annualized_return"].mean()
+        ),
+        "mean_remaining_benchmark_return": float(
+            group["remaining_benchmark_return"].mean()
+        ),
+        "mean_remaining_annualized_benchmark_return": float(
+            group["remaining_annualized_benchmark_return"].mean()
+        ),
+    }
+
+
+def _mark_best_switch_thresholds(result, group_columns):
+    if result.empty:
+        return result
+
+    result = result.copy()
+    result["is_max_downside_information_ratio"] = False
+    result["is_max_mean_switch_gain"] = False
+
+    grouped = result.groupby(list(group_columns), sort=False)
+    for _, group in grouped:
+        finite_ratio = group[
+            np.isfinite(group["downside_information_ratio"].to_numpy(dtype=float))
+        ]
+        if not finite_ratio.empty:
+            max_ratio_index = finite_ratio["downside_information_ratio"].idxmax()
+            result.loc[max_ratio_index, "is_max_downside_information_ratio"] = True
+
+        finite_gain = group[
+            np.isfinite(
+                group["mean_switch_to_benchmark_annualized_gain"].to_numpy(
+                    dtype=float
+                )
+            )
+        ]
+        if not finite_gain.empty:
+            max_gain_index = finite_gain[
+                "mean_switch_to_benchmark_annualized_gain"
+            ].idxmax()
+            result.loc[max_gain_index, "is_max_mean_switch_gain"] = True
+
+    return result
+
+
+def _build_switch_to_benchmark_threshold_analysis(
+    live_progress_observations,
+    thresholds=SWITCH_SCORE_CHANGE_THRESHOLDS,
+    group_columns=("timeframe", "progress_percent"),
+):
+    columns = [
+        *group_columns,
+        "progress_share",
+        "score_change_threshold",
+        "score_change_threshold_percent",
+        "observation_count",
+        "switch_count",
+        "switch_share",
+        "downside_count",
+        "downside_frequency",
+        "benchmark_win_frequency",
+        "mean_switch_to_benchmark_return_gain",
+        "mean_switch_to_benchmark_annualized_gain",
+        "median_switch_to_benchmark_annualized_gain",
+        "downside_deviation",
+        "downside_information_ratio",
+        "mean_remaining_return",
+        "mean_remaining_annualized_return",
+        "mean_remaining_benchmark_return",
+        "mean_remaining_annualized_benchmark_return",
+        "is_max_downside_information_ratio",
+        "is_max_mean_switch_gain",
+    ]
+    required = [
+        "relative_score_percentile_change",
+        "switch_to_benchmark_return_gain",
+        "switch_to_benchmark_annualized_gain",
+        "remaining_return",
+        "remaining_annualized_return",
+        "remaining_benchmark_return",
+        "remaining_annualized_benchmark_return",
+    ]
+    if (
+        live_progress_observations.empty
+        or not set(required).issubset(live_progress_observations.columns)
+    ):
+        return pd.DataFrame(columns=columns)
+
+    data = (
+        live_progress_observations.replace([np.inf, -np.inf], np.nan)
+        .dropna(subset=required)
+        .copy()
+    )
+    if data.empty:
+        return pd.DataFrame(columns=columns)
+
+    rows = []
+    for group_key, group in data.groupby(list(group_columns), sort=False):
+        if not isinstance(group_key, tuple):
+            group_key = (group_key,)
+        group_values = dict(zip(group_columns, group_key))
+        observation_count = int(len(group))
+
+        for threshold in thresholds:
+            selected = group[
+                group["relative_score_percentile_change"] <= threshold
+            ]
+            if selected.empty:
+                continue
+
+            summary = _summarize_switch_group(selected)
+            rows.append({
+                **group_values,
+                "progress_share": (
+                    float(group["progress_share"].iloc[0])
+                    if "progress_share" in group.columns
+                    else group_values.get("progress_percent") / 100.0
+                ),
+                "score_change_threshold": float(threshold),
+                "score_change_threshold_percent": round_or_none(
+                    float(threshold) * 100
+                ),
+                "observation_count": observation_count,
+                "switch_share": len(selected) / observation_count,
+                **summary,
+            })
+
+    if not rows:
+        return pd.DataFrame(columns=columns)
+
+    result = pd.DataFrame(rows)
+    result = _mark_best_switch_thresholds(result, group_columns)
+    return (
+        result[columns]
+        .sort_values([*group_columns, "score_change_threshold"])
+        .reset_index(drop=True)
+    )
 
 
 def _build_correlations_by_horizon(observations):
@@ -590,95 +1003,6 @@ def _build_live_progress_average(correlations_by_horizon):
     ).reset_index(drop=True)
 
 
-def _build_weekly_start_correlations(live_progress_observations):
-    columns = [
-        "timeframe",
-        "start_week",
-        "week_end",
-        "progress_percent",
-        "progress_share",
-        "metric",
-        "return_metric",
-        "observation_count",
-        "pearson",
-        "spearman",
-        "mean_metric_value",
-        "mean_return_value",
-        "mean_annualized_benchmark_return",
-        "below_benchmark_share",
-    ]
-    if live_progress_observations.empty:
-        return pd.DataFrame(columns=columns)
-
-    data = live_progress_observations.copy()
-    data["start_week"] = (
-        pd.to_datetime(data["start_timestamp"])
-        .dt.to_period("W-SUN")
-        .dt.start_time
-    )
-    data["week_end"] = data["start_week"] + pd.Timedelta(days=6)
-    rows = []
-    grouped = data.groupby(
-        ["timeframe", "start_week", "progress_percent"],
-        sort=True,
-    )
-    available_return_metrics = [
-        metric
-        for metric in WEEKLY_START_RETURN_METRICS
-        if metric in data.columns
-    ]
-
-    for (timeframe, start_week, progress_percent), group in grouped:
-        for metric in WEEKLY_START_CORRELATION_METRICS:
-            if metric not in group.columns:
-                continue
-            for return_metric in available_return_metrics:
-                clean = group[[metric, return_metric]].replace(
-                    [np.inf, -np.inf],
-                    np.nan,
-                ).dropna()
-                rows.append({
-                    "timeframe": timeframe,
-                    "start_week": pd.Timestamp(start_week),
-                    "week_end": pd.Timestamp(start_week) + pd.Timedelta(days=6),
-                    "progress_percent": int(progress_percent),
-                    "progress_share": progress_percent / 100.0,
-                    "metric": metric,
-                    "return_metric": return_metric,
-                    "observation_count": int(len(clean)),
-                    "pearson": _safe_corr_pair(
-                        group,
-                        metric,
-                        return_metric,
-                        "pearson",
-                    ),
-                    "spearman": _safe_corr_pair(
-                        group,
-                        metric,
-                        return_metric,
-                        "spearman",
-                    ),
-                    "mean_metric_value": round_or_none(clean[metric].mean()),
-                    "mean_return_value": round_or_none(
-                        clean[return_metric].mean()
-                    ),
-                    "mean_annualized_benchmark_return": round_or_none(
-                        group["annualized_benchmark_return"].mean()
-                    )
-                    if "annualized_benchmark_return" in group.columns
-                    else None,
-                    "below_benchmark_share": round_or_none(
-                        (group["annualized_alpha"] < 0).mean()
-                    )
-                    if "annualized_alpha" in group.columns
-                    else None,
-                })
-
-    return pd.DataFrame(rows, columns=columns).sort_values(
-        ["timeframe", "metric", "return_metric", "progress_percent", "start_week"]
-    ).reset_index(drop=True)
-
-
 def _fit_drop_regression(group):
     columns = [
         "entry_score_percentile",
@@ -810,13 +1134,27 @@ def calculate(
     horizon_end
 ):
     history = _prepare_score_history(context.return_panel)
+    history_lookup = _build_history_lookup(history)
     entries = _prepare_top_entry_observations(
         context.weekly_ranked,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
     )
+    benchmark_entries = _prepare_benchmark_observations(
+        context.weekly_ranked,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+    )
+    remaining_benchmark_lookup = _build_remaining_benchmark_lookup(
+        benchmark_entries,
+        history,
+    )
     observations, path_points, live_progress_observations = (
-        _build_observations_and_paths(entries, history)
+        _build_observations_and_paths(
+            entries,
+            history_lookup,
+            remaining_benchmark_lookup,
+        )
     )
     correlations_by_horizon = _build_correlations_by_horizon(observations)
     horizon_average = _build_horizon_average(correlations_by_horizon)
@@ -826,14 +1164,23 @@ def calculate(
     live_progress_average = _build_live_progress_average(
         live_progress_correlations_by_horizon
     )
-    weekly_start_correlations = _build_weekly_start_correlations(
-        live_progress_observations
-    )
     drop_regressions_by_horizon = _build_drop_regressions_by_horizon(
         observations
     )
     drop_regression_average = _build_drop_regression_average(
         drop_regressions_by_horizon
+    )
+    switch_to_benchmark_thresholds_by_horizon = (
+        _build_switch_to_benchmark_threshold_analysis(
+            live_progress_observations,
+            group_columns=("timeframe", "horizon_days", "progress_percent"),
+        )
+    )
+    switch_to_benchmark_thresholds = (
+        _build_switch_to_benchmark_threshold_analysis(
+            live_progress_observations,
+            group_columns=("timeframe", "progress_percent"),
+        )
     )
 
     return {
@@ -848,13 +1195,16 @@ def calculate(
             live_progress_correlations_by_horizon
         ),
         "live_progress_average": _round_numeric_columns(live_progress_average),
-        "weekly_start_correlations": _round_numeric_columns(
-            weekly_start_correlations
-        ),
         "drop_regressions_by_horizon": _round_numeric_columns(
             drop_regressions_by_horizon
         ),
         "drop_regression_average": _round_numeric_columns(
             drop_regression_average
+        ),
+        "switch_to_benchmark_thresholds_by_horizon": _round_numeric_columns(
+            switch_to_benchmark_thresholds_by_horizon
+        ),
+        "switch_to_benchmark_thresholds": _round_numeric_columns(
+            switch_to_benchmark_thresholds
         ),
     }
