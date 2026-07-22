@@ -1,12 +1,42 @@
 {
     "benchmark": {
-        "top_m_share": [1.0, 1.0],
+        "top_m_share": [1, 1],
         "investment_time_days": [300, 300],
         "rebalance_time_share": [0.2, 0.2]
     },
     "random": {
-        "top_m_share": [0.05555555555555555, 1.0],
-        "investment_time_days": [100, 300],
-        "rebalance_time_share": [0.2, 0.6]
+        "top_m_share": [0.05555555555555555, 1],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_1": {
+        "top_m_share": [0.05555555555555555, 0.1111111111111111],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_2": {
+        "top_m_share": [0.1111111111111111, 0.16666666666666666],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_3": {
+        "top_m_share": [0.16666666666666666, 0.2222222222222222],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_4": {
+        "top_m_share": [0.2222222222222222, 0.2777777777777778],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_5": {
+        "top_m_share": [0.2777777777777778, 0.3333333333333333],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
+    },
+    "random_6": {
+        "top_m_share": [0.3333333333333333, 0.3888888888888889],
+        "investment_time_days": [195, 205],
+        "rebalance_time_share": [0, 1.0]
     }
 }

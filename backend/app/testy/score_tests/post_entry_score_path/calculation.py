@@ -23,6 +23,16 @@ LIVE_CORRELATION_METRICS = [
     "relative_score_percentile_change",
 ]
 
+WEEKLY_START_CORRELATION_METRICS = [
+    "relative_score_percentile_change",
+]
+
+WEEKLY_START_RETURN_METRICS = [
+    "annualized_return",
+    "remaining_annualized_return",
+    "annualized_alpha",
+]
+
 
 def _weighted_mean(values, weights):
     values = np.asarray(values, dtype=float)
@@ -42,17 +52,21 @@ def _overlap_days(segment_starts, segment_days, window_start, window_end):
 
 
 def _safe_corr(group, metric, method):
-    clean = group[[metric, "annualized_return"]].replace(
+    return _safe_corr_pair(group, metric, "annualized_return", method)
+
+
+def _safe_corr_pair(group, metric, return_metric, method):
+    clean = group[[metric, return_metric]].replace(
         [np.inf, -np.inf],
         np.nan,
     ).dropna()
     if (
         len(clean) < 3
         or clean[metric].nunique() < 2
-        or clean["annualized_return"].nunique() < 2
+        or clean[return_metric].nunique() < 2
     ):
         return None
-    return round_or_none(clean[metric].corr(clean["annualized_return"], method=method))
+    return round_or_none(clean[metric].corr(clean[return_metric], method=method))
 
 
 def _prepare_score_history(return_panel):
@@ -107,6 +121,16 @@ def _prepare_top_entry_observations(
     ranked["entry_available_count"] = ranked.groupby(
         ["timeframe", "horizon_days", "start_timestamp"]
     )["ticker"].transform("count")
+    ranked["benchmark_return"] = ranked.groupby(
+        ["timeframe", "horizon_days", "start_timestamp"]
+    )["future_return"].transform("mean")
+    ranked["annualized_benchmark_return"] = [
+        annualize_return(total_return, horizon_days)
+        for total_return, horizon_days in zip(
+            ranked["benchmark_return"],
+            ranked["horizon_days"],
+        )
+    ]
     ranked = ranked[
         ranked["score_percentile"] >= ENTRY_MIN_SCORE_PERCENTILE
     ].copy()
@@ -118,6 +142,9 @@ def _prepare_top_entry_observations(
         )
     ]
     ranked = ranked.dropna(subset=["annualized_return"])
+    ranked["annualized_alpha"] = (
+        ranked["annualized_return"] - ranked["annualized_benchmark_return"]
+    )
     ranked["observation_id"] = (
         ranked.groupby(["timeframe", "horizon_days"]).cumcount() + 1
     )
@@ -220,6 +247,17 @@ def _summarize_entry_path(entry, path):
         "future_price": float(entry["future_price"]),
         "future_return": float(entry["future_return"]),
         "annualized_return": float(entry["annualized_return"]),
+        "benchmark_return": float(entry["benchmark_return"]),
+        "annualized_benchmark_return": (
+            float(entry["annualized_benchmark_return"])
+            if pd.notna(entry["annualized_benchmark_return"])
+            else None
+        ),
+        "annualized_alpha": (
+            float(entry["annualized_alpha"])
+            if pd.notna(entry["annualized_alpha"])
+            else None
+        ),
         "path_point_count": int(len(path)),
         "path_covered_days": covered_days,
         "path_covered_horizon_share": covered_days / horizon_days,
@@ -334,6 +372,17 @@ def _summarize_live_progress(entry, path):
             "remaining_annualized_return": remaining_annualized_return,
             "future_return": float(entry["future_return"]),
             "annualized_return": float(entry["annualized_return"]),
+            "benchmark_return": float(entry["benchmark_return"]),
+            "annualized_benchmark_return": (
+                float(entry["annualized_benchmark_return"])
+                if pd.notna(entry["annualized_benchmark_return"])
+                else None
+            ),
+            "annualized_alpha": (
+                float(entry["annualized_alpha"])
+                if pd.notna(entry["annualized_alpha"])
+                else None
+            ),
         })
 
     return rows
@@ -360,6 +409,17 @@ def _build_observations_and_paths(entries, history):
         path["future_timestamp"] = entry["future_timestamp"]
         path["future_return"] = float(entry["future_return"])
         path["annualized_return"] = float(entry["annualized_return"])
+        path["benchmark_return"] = float(entry["benchmark_return"])
+        path["annualized_benchmark_return"] = (
+            float(entry["annualized_benchmark_return"])
+            if pd.notna(entry["annualized_benchmark_return"])
+            else None
+        )
+        path["annualized_alpha"] = (
+            float(entry["annualized_alpha"])
+            if pd.notna(entry["annualized_alpha"])
+            else None
+        )
         path_frames.append(path)
 
     observations = pd.DataFrame(observation_rows)
@@ -530,6 +590,95 @@ def _build_live_progress_average(correlations_by_horizon):
     ).reset_index(drop=True)
 
 
+def _build_weekly_start_correlations(live_progress_observations):
+    columns = [
+        "timeframe",
+        "start_week",
+        "week_end",
+        "progress_percent",
+        "progress_share",
+        "metric",
+        "return_metric",
+        "observation_count",
+        "pearson",
+        "spearman",
+        "mean_metric_value",
+        "mean_return_value",
+        "mean_annualized_benchmark_return",
+        "below_benchmark_share",
+    ]
+    if live_progress_observations.empty:
+        return pd.DataFrame(columns=columns)
+
+    data = live_progress_observations.copy()
+    data["start_week"] = (
+        pd.to_datetime(data["start_timestamp"])
+        .dt.to_period("W-SUN")
+        .dt.start_time
+    )
+    data["week_end"] = data["start_week"] + pd.Timedelta(days=6)
+    rows = []
+    grouped = data.groupby(
+        ["timeframe", "start_week", "progress_percent"],
+        sort=True,
+    )
+    available_return_metrics = [
+        metric
+        for metric in WEEKLY_START_RETURN_METRICS
+        if metric in data.columns
+    ]
+
+    for (timeframe, start_week, progress_percent), group in grouped:
+        for metric in WEEKLY_START_CORRELATION_METRICS:
+            if metric not in group.columns:
+                continue
+            for return_metric in available_return_metrics:
+                clean = group[[metric, return_metric]].replace(
+                    [np.inf, -np.inf],
+                    np.nan,
+                ).dropna()
+                rows.append({
+                    "timeframe": timeframe,
+                    "start_week": pd.Timestamp(start_week),
+                    "week_end": pd.Timestamp(start_week) + pd.Timedelta(days=6),
+                    "progress_percent": int(progress_percent),
+                    "progress_share": progress_percent / 100.0,
+                    "metric": metric,
+                    "return_metric": return_metric,
+                    "observation_count": int(len(clean)),
+                    "pearson": _safe_corr_pair(
+                        group,
+                        metric,
+                        return_metric,
+                        "pearson",
+                    ),
+                    "spearman": _safe_corr_pair(
+                        group,
+                        metric,
+                        return_metric,
+                        "spearman",
+                    ),
+                    "mean_metric_value": round_or_none(clean[metric].mean()),
+                    "mean_return_value": round_or_none(
+                        clean[return_metric].mean()
+                    ),
+                    "mean_annualized_benchmark_return": round_or_none(
+                        group["annualized_benchmark_return"].mean()
+                    )
+                    if "annualized_benchmark_return" in group.columns
+                    else None,
+                    "below_benchmark_share": round_or_none(
+                        (group["annualized_alpha"] < 0).mean()
+                    )
+                    if "annualized_alpha" in group.columns
+                    else None,
+                })
+
+    return pd.DataFrame(rows, columns=columns).sort_values(
+        ["timeframe", "metric", "return_metric", "progress_percent", "start_week"]
+    ).reset_index(drop=True)
+
+
 def _fit_drop_regression(group):
     columns = [
         "entry_score_percentile",
@@ -677,6 +826,9 @@ def calculate(
     live_progress_average = _build_live_progress_average(
         live_progress_correlations_by_horizon
     )
+    weekly_start_correlations = _build_weekly_start_correlations(
+        live_progress_observations
+    )
     drop_regressions_by_horizon = _build_drop_regressions_by_horizon(
         observations
     )
@@ -696,6 +848,9 @@ def calculate(
             live_progress_correlations_by_horizon
         ),
         "live_progress_average": _round_numeric_columns(live_progress_average),
+        "weekly_start_correlations": _round_numeric_columns(
+            weekly_start_correlations
+        ),
         "drop_regressions_by_horizon": _round_numeric_columns(
             drop_regressions_by_horizon
         ),

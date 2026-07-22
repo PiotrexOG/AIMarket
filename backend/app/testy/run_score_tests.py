@@ -78,7 +78,7 @@ EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 ENABLED_TESTS = {
     "A1_A2_weekly_top_n_and_correlation": False,
     "A3_weekly_rank_buckets": False,
-    "downside_information_ratio": True,
+    "downside_information_ratio": False,
     "post_entry_score_path": True,
     "ticker_percentile_history": False,
     "B1_B2_global_top_percent_and_correlation": False,
@@ -125,6 +125,7 @@ def run_configured_score_tests(context):
             "live_progress_observations": pd.DataFrame(),
             "live_progress_correlations_by_horizon": pd.DataFrame(),
             "live_progress_average": pd.DataFrame(),
+            "weekly_start_correlations": pd.DataFrame(),
             "drop_regressions_by_horizon": pd.DataFrame(),
             "drop_regression_average": pd.DataFrame(),
         },
@@ -214,6 +215,9 @@ def save_analysis_outputs(results, output_dir):
             ),
             "post_entry_score_path_live_progress_average.csv": (
                 path["live_progress_average"]
+            ),
+            "post_entry_score_path_weekly_start_correlations.csv": (
+                path["weekly_start_correlations"]
             ),
             "post_entry_score_path_drop_regressions_by_horizon.csv": (
                 path["drop_regressions_by_horizon"]

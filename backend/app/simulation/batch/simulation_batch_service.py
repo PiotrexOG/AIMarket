@@ -1,14 +1,22 @@
-import json
 import time
 from datetime import datetime
-from pathlib import Path
 import numpy as np
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.portfolio_generation.archetype_config import get_archetype
 from app.config.config import STARTING_CASH
+from app.core import market_hours
+from app.db.models.market_data import MarketData
+from app.db.schemas.portfolio import (
+    PortfolioCreate,
+    PortfolioHistoryCreate,
+    PortfolioShareCreate,
+)
+from app.db.schemas.user import UserCreate
+from app.decisionMakers.DeterministicDecisionMaker import DeterministicDecisionMaker
+from app.dto.portfolio_dto import PortfolioPerformanceBaseDTO
 from app.portfolio_generation.random_users import generate_users
-from app.portfolio_generation.space_filling_users import generate_space_filling_users
 from app.portfolio_generation.top_m import (
     INVESTMENT_TIME_MAX_DAYS,
     REBALANCE_TIME_MIN_SHARE,
@@ -16,12 +24,13 @@ from app.portfolio_generation.top_m import (
     TOP_M_MAX_SHARE,
     calculate_average_score,
 )
+from app.services.portfolio_valuation_service import PortfolioValuationService
 from app.services.layers.market_data_service import MarketDataService
-from app.simulation.batch.helper import get_available_timestamps, fetch_cross_section
-
-BASE_DIR = Path(__file__).resolve().parents[2]
-DATA_DIR = BASE_DIR / "archetype_results"
-
+from app.services.portfolio_service import PortfolioService
+from app.services.portfolio_transaction_service import PortfolioTransactionService
+from app.services.user_service import UserService
+from app.simulation.portfolio import Portfolio
+from app.simulation.batch.helper import fetch_cross_section
 
 def smart_round(values: np.ndarray) -> np.ndarray:
     return np.floor(values * 100) / 100
@@ -29,6 +38,17 @@ def smart_round(values: np.ndarray) -> np.ndarray:
 
 def money_round(values: np.ndarray) -> np.ndarray:
     return np.vectorize(lambda value: round(float(value), 2), otypes=[np.float64])(values)
+
+
+class BatchMarketDataService:
+    def __init__(self):
+        self.current_prices: dict[str, float] = {}
+
+    def set_prices(self, prices: dict[str, float]) -> None:
+        self.current_prices = prices
+
+    def get_price(self, ticker: str, date_time: datetime):
+        return self.current_prices.get(ticker)
 
 
 class SimulationBatchService:
@@ -54,8 +74,25 @@ class SimulationBatchService:
         self.delta_days = delta_days
         self.archetypes_config = archetypes_config
         self.market_data_service = MarketDataService(db)
+        self.portfolio_service = PortfolioService(
+            db,
+            PortfolioValuationService(self.market_data_service),
+        )
+        self.transaction_service = PortfolioTransactionService(
+            db,
+            self.portfolio_service,
+        )
+        self.user_service = UserService(db)
+        self.batch_market_data_service = BatchMarketDataService()
+        self.valuation_service = PortfolioValuationService(self.batch_market_data_service)
+        self.decision_maker = DeterministicDecisionMaker(
+            self.valuation_service,
+            self.start_time,
+            portfolio_service=self.portfolio_service,
+        )
 
         self.user_profiles: list[dict] = []
+        self.portfolios: list[Portfolio] = []
         self.user_ids: np.ndarray = np.empty(0, dtype=np.int64)
         self.cash: np.ndarray = np.empty(0, dtype=np.float64)
 
@@ -74,21 +111,16 @@ class SimulationBatchService:
         archetypes = get_archetype(self.archetypes_config)
 
         for arc_name in archetypes.keys():
-            if arc_name == "random":
-                users_profiles.update(
-                    generate_space_filling_users(
-                        arc_name,
-                        users_per_archetype,
-                        archetypes,
-                    )
-                )
-            else:
-                users_profiles.update(generate_users(arc_name, users_per_archetype, archetypes))
+            users_profiles.update(generate_users(arc_name, users_per_archetype, archetypes))
 
         self.user_profiles = list(users_profiles.values())
         users_count = len(self.user_profiles)
+        db_portfolios = self._initialize_database_portfolios()
 
-        self.user_ids = np.arange(users_count, dtype=np.int64)
+        self.user_ids = np.array(
+            [portfolio.user_id for portfolio in db_portfolios],
+            dtype=np.int64,
+        )
         self.cash = np.full(users_count, STARTING_CASH, dtype=np.float64)
         self.shares = np.zeros((users_count, len(self.tickers)), dtype=np.float64)
         self.top_m_share = np.array(
@@ -117,17 +149,81 @@ class SimulationBatchService:
             np.nan,
             dtype=np.float64,
         )
+        self.portfolios = [
+            Portfolio(
+                portfolio_id=db_portfolios[row_idx].id,
+                starting_cash=STARTING_CASH,
+                user_profile=PortfolioPerformanceBaseDTO(
+                    id=db_portfolios[row_idx].id,
+                    name=profile.get("name", f"user_{int(self.user_ids[row_idx])}"),
+                    archetype_key=profile["archetype_key"],
+                    top_m_share=profile.get("top_m_share", TOP_M_MAX_SHARE),
+                    investment_time_days=profile.get(
+                        "investment_time_days",
+                        INVESTMENT_TIME_MAX_DAYS,
+                    ),
+                    rebalance_time_share=profile.get(
+                        "rebalance_time_share",
+                        REBALANCE_TIME_MIN_SHARE,
+                    ),
+                ),
+                shares={},
+            )
+            for row_idx, profile in enumerate(self.user_profiles)
+        ]
 
         print(f"Users initialized: {users_count}")
 
+    def _initialize_database_portfolios(self):
+        existing_users_by_name = {
+            user.name: user
+            for user in self.user_service.list_users()
+        }
+        db_portfolios = []
+
+        for profile in self.user_profiles:
+            name = profile.get("name", profile["archetype_key"])
+            user = existing_users_by_name.get(name)
+            if user is None:
+                user = self.user_service.create_user(UserCreate(name=name))
+                existing_users_by_name[name] = user
+
+            db_portfolio = self.portfolio_service.get_by_user_id(user.id)
+            if db_portfolio is None:
+                db_portfolio = self.portfolio_service.create_portfolio(
+                    PortfolioCreate(
+                        name=name,
+                        archetype_key=profile.get("archetype_key", "benchmark"),
+                        user_id=user.id,
+                        top_m_share=profile.get("top_m_share", TOP_M_MAX_SHARE),
+                        investment_time_days=profile.get(
+                            "investment_time_days",
+                            INVESTMENT_TIME_MAX_DAYS,
+                        ),
+                        rebalance_time_share=profile.get(
+                            "rebalance_time_share",
+                            REBALANCE_TIME_MIN_SHARE,
+                        ),
+                    )
+                )
+
+            if self.portfolio_service.get_latest_history(db_portfolio.id) is None:
+                self.portfolio_service.evaluate(
+                    db_portfolio.id,
+                    PortfolioHistoryCreate(
+                        datetime=self.zero_time,
+                        cash=STARTING_CASH,
+                        shares=[],
+                    ),
+                )
+
+            db_portfolios.append(db_portfolio)
+
+        return db_portfolios
+
     def run_simulation(self) -> None:
-        start_time = self.start_time.replace(tzinfo=None)
-        end_time = self.end_time.replace(tzinfo=None)
-        timestamps = [
-            timestamp
-            for timestamp in get_available_timestamps()
-            if start_time <= timestamp <= end_time
-        ]
+        timestamps = self._simulation_timestamps()
+        end_time = self.end_time
         new_timestamps = timestamps + [end_time]
         prices = self.market_data_service.get_prices_for_timestamps(new_timestamps)
 
@@ -145,6 +241,24 @@ class SimulationBatchService:
 
         self.calculate_stats(prices)
 
+    def _simulation_timestamps(self) -> list[datetime]:
+        current_time = self.start_time
+        timestamps = []
+
+        while current_time <= self.end_time:
+            timestamp = self._get_earliest_datetime_for_day(current_time.date())
+            if timestamp is not None:
+                timestamps.append(timestamp)
+            current_time += self.delta_days
+
+        return timestamps
+
+    def _get_earliest_datetime_for_day(self, current_date):
+        return (
+            self.db.query(func.min(MarketData.datetime))
+            .filter(func.date(MarketData.datetime) == current_date)
+            .scalar()
+        )
 
     def _price_vector(self, prices: dict[str, float]) -> np.ndarray:
         return np.array([prices.get(ticker, 0.0) or 0.0 for ticker in self.tickers], dtype=np.float64)
@@ -155,21 +269,109 @@ class SimulationBatchService:
         if not market_scores:
             return
 
-        ticker_indices = self._collect_ticker_indices(market_scores)
-        if ticker_indices.size == 0:
-            return
+        self.batch_market_data_service.set_prices(prices)
+        for portfolio in self.portfolios:
+            pre_state = (portfolio.cash, dict(portfolio.shares))
+            decisions = self.decision_maker.make_decision(
+                market_scores,
+                portfolio,
+                current_time,
+            )
+            self._execute_decisions(portfolio, decisions, current_time)
+            if self._portfolio_changed(portfolio, *pre_state):
+                self._save_portfolio_history(portfolio, current_time)
 
-        price_vector = self._price_vector(prices)
+        self._sync_arrays_from_portfolios()
 
-        score_matrix = self._calculate_score_matrix(market_scores)
-        target_weights, active_rows, replacement_trades = self._calculate_cycle_trades(
-            score_matrix,
-            ticker_indices,
-            price_vector,
-            current_time,
+    def _execute_decisions(
+            self,
+            portfolio: Portfolio,
+            decisions,
+            current_time: datetime,
+    ) -> bool:
+        any_executed = False
+        decision_items = decisions
+        if isinstance(decisions, dict):
+            decision_items = [
+                {"TICKER": ticker, **decision}
+                for ticker, decision in decisions.items()
+            ]
+
+        for decision in decision_items:
+            ticker = decision.get("TICKER")
+            decision_type = decision.get("DECISION")
+            quantity = decision.get("NUMBER")
+            if not ticker or not decision_type or not quantity:
+                continue
+
+            if not market_hours.is_market_open_by_exchange(ticker, current_time):
+                continue
+
+            price = self.batch_market_data_service.get_price(ticker, current_time)
+            if price is None or price <= 0:
+                continue
+
+            if decision_type == "BUY":
+                executed = portfolio.buy(ticker, quantity, price)
+            elif decision_type == "SELL":
+                executed = portfolio.sell(ticker, quantity, price)
+            else:
+                executed = False
+
+            if not executed:
+                continue
+
+            self.transaction_service.record_transaction(
+                portfolio_id=portfolio.portfolio_id,
+                ticker=ticker,
+                type_=decision_type,
+                quantity=quantity,
+                price=price,
+                datetime_=current_time,
+            )
+            any_executed = True
+
+        if any_executed:
+            self.transaction_service.commit_transactions()
+
+        return any_executed
+
+    def _portfolio_changed(
+            self,
+            portfolio: Portfolio,
+            pre_cash: float,
+            pre_shares: dict,
+    ) -> bool:
+        return portfolio.cash != pre_cash or dict(portfolio.shares) != pre_shares
+
+    def _save_portfolio_history(
+            self,
+            portfolio: Portfolio,
+            current_time: datetime,
+    ) -> None:
+        self.portfolio_service.evaluate(
+            portfolio.portfolio_id,
+            PortfolioHistoryCreate(
+                datetime=current_time,
+                cash=portfolio.cash,
+                shares=[
+                    PortfolioShareCreate(ticker=ticker, amount=amount)
+                    for ticker, amount in portfolio.shares.items()
+                ],
+            ),
         )
-        self._rebalance_to_target_weights(target_weights, price_vector, active_rows)
-        self._apply_trade_differences(replacement_trades, price_vector)
+
+    def _sync_arrays_from_portfolios(self) -> None:
+        self.cash = np.array(
+            [portfolio.cash for portfolio in self.portfolios],
+            dtype=np.float64,
+        )
+        self.shares = np.zeros((len(self.portfolios), len(self.tickers)), dtype=np.float64)
+        for row_idx, portfolio in enumerate(self.portfolios):
+            for ticker, shares in portfolio.shares.items():
+                ticker_idx = self.ticker_to_idx.get(ticker)
+                if ticker_idx is not None:
+                    self.shares[row_idx, ticker_idx] = shares
 
     def _collect_ticker_indices(self, market_scores: dict) -> np.ndarray:
         tickers = sorted(
@@ -607,14 +809,19 @@ class SimulationBatchService:
                 )
 
     def calculate_stats(self, prices) -> None:
-        end_time = self.end_time.replace(tzinfo=None)
-        final_prices = prices[end_time]
-        price_vector = self._price_vector(final_prices)
-        portfolio_values, _ = self._calculate_portfolio_values(price_vector)
+        end_time = self.end_time
+        self.batch_market_data_service.set_prices(prices[end_time])
 
         results = []
-        for row_idx, profile in enumerate(self.user_profiles):
-            end_val = portfolio_values[row_idx]
+        for row_idx, (profile, portfolio) in enumerate(
+            zip(self.user_profiles, self.portfolios)
+        ):
+            valuation = self.valuation_service.calculate_portfolio_details(
+                portfolio.cash,
+                dict(portfolio.shares),
+                end_time,
+            )
+            end_val = valuation.portfolio_value
             change_ratio = ((end_val - STARTING_CASH) / STARTING_CASH) if STARTING_CASH != 0 else 0.0
 
             results.append(
@@ -629,6 +836,4 @@ class SimulationBatchService:
                 }
             )
 
-        output_path = DATA_DIR / "results.json"
-        with output_path.open("w", encoding="utf-8") as f:
-            json.dump(results, f, indent=4, ensure_ascii=False)
+        print(f"Batch results saved to database for {len(results)} portfolios.")

@@ -7,7 +7,6 @@ TICKERS = [
 ]
 
 STARTING_CASH = 100000.0
-BENCHMARK_CHANGE_RATIO = 0.2445
 
 ZERO_TIME = datetime(2024, 3, 15, 13, 30, tzinfo=timezone.utc)
 

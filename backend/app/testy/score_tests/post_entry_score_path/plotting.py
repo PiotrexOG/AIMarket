@@ -84,6 +84,13 @@ def plot(results, output_dir, horizon_label):
             "relative_score_percentile_change",
             SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
         )
+        _plot_score_change_at_progress_scatter_by_start_week(
+            live_progress_observations,
+            output_dir,
+            horizon_label,
+            "relative_score_percentile_change",
+            SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
+        )
         _plot_remaining_return_at_progress_scatter(
             live_progress_observations,
             output_dir,
@@ -256,6 +263,158 @@ def _plot_score_change_at_progress_scatter(
                 (
                     f"{timeframe}_{metric}_after_"
                     f"{progress_percent}pct_scatter.png"
+                ),
+            ),
+            dpi=180,
+        )
+        plt.close(fig)
+
+
+def _plot_score_change_at_progress_scatter_by_start_week(
+    live_progress_observations,
+    output_dir,
+    horizon_label,
+    metric,
+    progress_percent,
+):
+    plot_directory = (
+        Path("post_entry_score_path")
+        / horizon_label
+        / f"weekly_start_scatter_after_{progress_percent}pct"
+    )
+    progress_data = live_progress_observations[
+        live_progress_observations["progress_percent"] == progress_percent
+    ].copy()
+    if progress_data.empty:
+        return
+
+    progress_data["start_week"] = (
+        pd.to_datetime(progress_data["start_timestamp"])
+        .dt.to_period("W-SUN")
+        .dt.start_time
+    )
+    return_metric = "remaining_annualized_return"
+    required_columns = [metric, return_metric, "start_week"]
+    grouped = progress_data.groupby(
+        ["timeframe", "start_week"],
+        sort=True,
+    )
+
+    for (timeframe, start_week), group in grouped:
+        clean = group.dropna(subset=required_columns).copy()
+        if clean.empty:
+            continue
+
+        fig, ax = plt.subplots(figsize=(12, 7))
+        has_alpha = (
+            "annualized_alpha" in clean.columns
+            and clean["annualized_alpha"].notna().any()
+        )
+        if has_alpha:
+            below_benchmark = clean["annualized_alpha"] < 0
+            for mask, color, label in [
+                (below_benchmark, "#E15759", "Below benchmark"),
+                (~below_benchmark, "#59A14F", "At or above benchmark"),
+            ]:
+                points = clean[mask]
+                if points.empty:
+                    continue
+                ax.scatter(
+                    points[metric],
+                    points[return_metric],
+                    color=color,
+                    alpha=0.18,
+                    s=16,
+                    edgecolors="none",
+                    label=label,
+                )
+        else:
+            ax.scatter(
+                clean[metric],
+                clean[return_metric],
+                color="#4C78A8",
+                alpha=0.16,
+                s=16,
+                edgecolors="none",
+                label="Observations",
+            )
+
+        if clean[metric].nunique() >= 2:
+            slope, intercept = np.polyfit(
+                clean[metric],
+                clean[return_metric],
+                1,
+            )
+            trend_x = np.linspace(
+                clean[metric].quantile(0.01),
+                clean[metric].quantile(0.99),
+                100,
+            )
+            ax.plot(
+                trend_x,
+                slope * trend_x + intercept,
+                color="#1F1F1F",
+                linewidth=2.0,
+                label="Linear trend",
+            )
+
+        pearson = clean[metric].corr(
+            clean[return_metric],
+            method="pearson",
+        )
+        spearman = clean[metric].corr(
+            clean[return_metric],
+            method="spearman",
+        )
+        alpha_text = ""
+        if has_alpha:
+            clean_alpha = clean.dropna(subset=[metric, "annualized_alpha"])
+            if (
+                len(clean_alpha) >= 3
+                and clean_alpha[metric].nunique() >= 2
+                and clean_alpha["annualized_alpha"].nunique() >= 2
+            ):
+                alpha_pearson = clean_alpha[metric].corr(
+                    clean_alpha["annualized_alpha"],
+                    method="pearson",
+                )
+                alpha_text = f", alpha Pearson {alpha_pearson:.2f}"
+
+        start_week = pd.Timestamp(start_week)
+        week_end = start_week + pd.Timedelta(days=6)
+        ax.axvline(0, color="#444444", linewidth=1)
+        ax.axvline(
+            -0.15,
+            color="#F28E2B",
+            linestyle=":",
+            linewidth=1.8,
+            label="-15% score change",
+        )
+        ax.axhline(0, color="#444444", linewidth=1)
+        ax.set_title(
+            f"{timeframe}: start week {start_week:%Y-%m-%d} to "
+            f"{week_end:%Y-%m-%d}, n={len(clean)}"
+            f"\nRemaining return Pearson {pearson:.2f}, Spearman {spearman:.2f}"
+            f"{alpha_text}"
+        )
+        ax.set_xlabel(
+            f"{METRIC_LABELS[metric]} after {progress_percent}% of the horizon"
+        )
+        ax.set_ylabel(
+            f"Annualized return from {progress_percent}% cutoff to horizon end"
+        )
+        ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        ax.grid(True, alpha=0.2)
+        ax.legend(fontsize=8)
+        fig.tight_layout()
+        fig.savefig(
+            plot_path(
+                output_dir,
+                plot_directory,
+                (
+                    f"{start_week:%Y-%m-%d}_{timeframe}_{metric}_after_"
+                    f"{progress_percent}pct_remaining_annualized_return_scatter.png"
                 ),
             ),
             dpi=180,

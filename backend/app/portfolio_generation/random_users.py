@@ -11,9 +11,6 @@ from app.portfolio_generation.top_m import (
 )
 
 
-random.seed(42)
-
-
 def _top_m_range(archetypes: dict, archetype_key: str) -> tuple[float, float]:
     configured = archetypes.get(archetype_key, {}).get(
         "top_m_share",
@@ -38,7 +35,13 @@ def _rebalance_time_share_range(archetypes: dict, archetype_key: str) -> tuple[f
     return float(configured[0]), float(configured[1])
 
 
-def generate_users(archetype_key, count, archetypes):
+def _rng_for_archetype(seed: int | None, archetype_key: str) -> random.Random:
+    if seed is None:
+        return random.Random()
+    return random.Random(f"{seed}:{archetype_key}")
+
+
+def generate_users(archetype_key, count, archetypes, seed: int | None = 42):
     if archetype_key == "benchmark":
         return {
             "benchmark": build_profile(
@@ -51,21 +54,20 @@ def generate_users(archetype_key, count, archetypes):
             )
         }
 
-    if archetype_key != "random":
-        raise ValueError(f"Unsupported archetype: {archetype_key}")
 
     low, high = _top_m_range(archetypes, archetype_key)
     investment_low, investment_high = _investment_time_range(archetypes, archetype_key)
     rebalance_low, rebalance_high = _rebalance_time_share_range(archetypes, archetype_key)
+    rng = _rng_for_archetype(seed, archetype_key)
     generated_users = {}
 
     for index in range(1, count + 1):
-        top_m_share = random.uniform(low, high)
-        investment_days = random.randint(investment_low, investment_high)
-        rebalance_time_share = random.uniform(rebalance_low, rebalance_high)
-        user_id = f"random_{index:03d}"
+        top_m_share = rng.uniform(low, high)
+        investment_days = rng.randint(investment_low, investment_high)
+        rebalance_time_share = rng.uniform(rebalance_low, rebalance_high)
+        user_id = f"{archetype_key}_{index:03d}"
         generated_users[user_id] = build_profile(
-            "random",
+            archetype_key,
             top_m_share=top_m_share,
             investment_time_days=investment_days,
             rebalance_time_share=rebalance_time_share,

@@ -37,9 +37,9 @@ def build_profile(
         "name": name or archetype_key,
         "id": profile_id,
         "archetype_key": archetype_key,
-        "top_m_share": round(float(top_m_share), 2),
+        "top_m_share": round(float(top_m_share), 3),
         "investment_time_days": int(round(float(investment_time_days))),
-        "rebalance_time_share": round(float(rebalance_time_share), 2),
+        "rebalance_time_share": round(float(rebalance_time_share), 4),
     }
 
 
