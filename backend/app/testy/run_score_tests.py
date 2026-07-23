@@ -94,7 +94,8 @@ ENABLED_TIMEFRAMES = {
 HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
     "medium_term_50d": (4, 11),
-    "long_term_200d": (14, 42),
+    # "long_term_200d": (14, 42),
+    "long_term_200d": (26, 30),
 }
 
 
@@ -142,9 +143,9 @@ def run_configured_score_tests(context):
         },
         "post_entry_score_path": {
             "observations": pd.DataFrame(),
-            "horizon_average": pd.DataFrame(),
+            "horizon_alpha_average": pd.DataFrame(),
             "live_progress_observations": pd.DataFrame(),
-            "live_progress_average": pd.DataFrame(),
+            "live_progress_alpha_average": pd.DataFrame(),
             "switch_to_benchmark_thresholds": pd.DataFrame(),
         },
         "ticker_percentile_history": {
@@ -228,12 +229,14 @@ def save_analysis_outputs(results, output_dir):
         path = results["post_entry_score_path"]
         outputs.update({
             "post_entry_score_path_observations.csv": path["observations"],
-            "post_entry_score_path_horizon_average.csv": path["horizon_average"],
+            "post_entry_score_path_horizon_alpha_average.csv": (
+                path["horizon_alpha_average"]
+            ),
             "post_entry_score_path_live_progress_observations.csv": (
                 path["live_progress_observations"]
             ),
-            "post_entry_score_path_live_progress_average.csv": (
-                path["live_progress_average"]
+            "post_entry_score_path_live_progress_alpha_average.csv": (
+                path["live_progress_alpha_average"]
             ),
             "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
                 path["switch_to_benchmark_thresholds"]

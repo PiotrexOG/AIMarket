@@ -101,10 +101,10 @@ def plot(results, output_dir, horizon_label):
     if not results:
         return
 
-    correlations = results.get("horizon_average")
+    alpha_correlations = results.get("horizon_alpha_average")
     observations = results.get("observations")
     live_progress_observations = results.get("live_progress_observations")
-    live_progress_average = results.get("live_progress_average")
+    live_progress_alpha_average = results.get("live_progress_alpha_average")
     switch_to_benchmark_thresholds = results.get(
         "switch_to_benchmark_thresholds"
     )
@@ -112,21 +112,31 @@ def plot(results, output_dir, horizon_label):
     if observations is not None and not observations.empty:
         _plot_best_correlation_overview(
             observations,
-            correlations,
+            alpha_correlations,
             output_dir,
             horizon_label,
+            return_metric="annualized_alpha",
+            return_label="Annualized alpha versus benchmark",
+            filename_prefix="alpha_",
         )
 
-    if live_progress_average is not None and not live_progress_average.empty:
+    if (
+        live_progress_alpha_average is not None
+        and not live_progress_alpha_average.empty
+    ):
         _plot_live_progress_correlations(
-            live_progress_average,
+            live_progress_alpha_average,
             output_dir,
             horizon_label,
+            return_label="final annualized alpha versus benchmark",
+            filename_prefix="alpha_",
         )
         _plot_score_change_progress_correlations(
-            live_progress_average,
+            live_progress_alpha_average,
             output_dir,
             horizon_label,
+            return_label="final annualized alpha versus benchmark",
+            filename_prefix="alpha_",
         )
 
     if observations is not None and not observations.empty:
@@ -135,11 +145,17 @@ def plot(results, output_dir, horizon_label):
             output_dir,
             horizon_label,
             "relative_score_percentile_change",
+            return_metric="annualized_alpha",
+            return_label="Annualized alpha versus benchmark",
+            filename_prefix="alpha_",
         )
         _plot_relative_score_change_heatmap(
             observations,
             output_dir,
             horizon_label,
+            return_metric="annualized_alpha",
+            return_label="annualized alpha versus benchmark",
+            filename_prefix="alpha_",
         )
 
     if (
@@ -152,6 +168,16 @@ def plot(results, output_dir, horizon_label):
             horizon_label,
             "relative_score_percentile_change",
             SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
+        )
+        _plot_remaining_return_at_progress_scatter(
+            live_progress_observations,
+            output_dir,
+            horizon_label,
+            "relative_score_percentile_change",
+            SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
+            metric_max=0.0,
+            filename_suffix="_to_0pct",
+            title_suffix=", score change <= 0%",
         )
         _plot_hold_decision_by_score_drop(
             live_progress_observations,
@@ -182,12 +208,15 @@ def _plot_score_change_scatter(
     output_dir,
     horizon_label,
     metric,
+    return_metric="annualized_return",
+    return_label="Annualized return",
+    filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
 
     for timeframe, timeframe_data in observations.groupby("timeframe"):
         clean = timeframe_data.dropna(
-            subset=[metric, "annualized_return"]
+            subset=[metric, return_metric]
         ).copy()
         if clean.empty:
             continue
@@ -195,7 +224,7 @@ def _plot_score_change_scatter(
         fig, ax = plt.subplots(figsize=(12, 7))
         ax.scatter(
             clean[metric],
-            clean["annualized_return"],
+            clean[return_metric],
             color="#4C78A8",
             alpha=0.10,
             s=14,
@@ -206,7 +235,7 @@ def _plot_score_change_scatter(
         if clean[metric].nunique() >= 2:
             slope, intercept = np.polyfit(
                 clean[metric],
-                clean["annualized_return"],
+                clean[return_metric],
                 1,
             )
             trend_x = np.linspace(
@@ -223,21 +252,21 @@ def _plot_score_change_scatter(
             )
 
         pearson = clean[metric].corr(
-            clean["annualized_return"],
+            clean[return_metric],
             method="pearson",
         )
         spearman = clean[metric].corr(
-            clean["annualized_return"],
+            clean[return_metric],
             method="spearman",
         )
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe}: annualized return versus {METRIC_LABELS[metric]}"
+            f"{timeframe}: {return_label} versus {METRIC_LABELS[metric]}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(METRIC_LABELS[metric])
-        ax.set_ylabel("Annualized return")
+        ax.set_ylabel(return_label)
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
@@ -247,7 +276,7 @@ def _plot_score_change_scatter(
             plot_path(
                 output_dir,
                 plot_directory,
-                f"{timeframe}_{metric}_scatter.png",
+                f"{timeframe}_{filename_prefix}{metric}_scatter.png",
             ),
             dpi=180,
         )
@@ -260,6 +289,9 @@ def _plot_remaining_return_at_progress_scatter(
     horizon_label,
     metric,
     progress_percent,
+    metric_max=None,
+    filename_suffix="",
+    title_suffix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
     progress_data, progress_label, progress_file_label = (
@@ -271,6 +303,8 @@ def _plot_remaining_return_at_progress_scatter(
         clean = timeframe_data.dropna(
             subset=[metric, return_metric]
         ).copy()
+        if metric_max is not None:
+            clean = clean[clean[metric] <= metric_max].copy()
         if clean.empty:
             continue
 
@@ -317,6 +351,7 @@ def _plot_remaining_return_at_progress_scatter(
         ax.set_title(
             f"{timeframe}: hold-vs-benchmark annualized return after "
             f"{progress_label} of the horizon, horizons {horizon_label}"
+            f"{title_suffix}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(
@@ -327,6 +362,8 @@ def _plot_remaining_return_at_progress_scatter(
         )
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        if metric_max is not None:
+            ax.set_xlim(right=metric_max)
         ax.grid(True, alpha=0.2)
         ax.legend(fontsize=9)
         fig.tight_layout()
@@ -336,7 +373,8 @@ def _plot_remaining_return_at_progress_scatter(
                 plot_directory,
                 (
                     f"{timeframe}_{metric}_after_{progress_file_label}_"
-                    f"remaining_annualized_return_scatter.png"
+                    f"remaining_annualized_return_scatter"
+                    f"{filename_suffix}.png"
                 ),
             ),
             dpi=180,
@@ -606,6 +644,10 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
     threshold_analysis,
     output_dir,
     horizon_label,
+    threshold_axis_label=(
+        "Switch when relative score percentile change is at or below threshold"
+    ),
+    filename_suffix="",
 ):
     plot_directory = (
         Path("post_entry_score_path")
@@ -644,6 +686,9 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
             else:
                 progress_labels = [f"{progress}%" for progress in progress_order]
             threshold_order = sorted(clean["score_change_threshold"].unique())
+            threshold_labels = [
+                f"{threshold:.0%}" for threshold in threshold_order
+            ]
             matrix = (
                 clean.pivot_table(
                     index=progress_column,
@@ -693,15 +738,13 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
 
             ax.set_xticks(range(len(threshold_order)))
             ax.set_xticklabels(
-                [f"{threshold:.0%}" for threshold in threshold_order],
+                threshold_labels,
                 rotation=45,
                 ha="right",
             )
             ax.set_yticks(range(len(progress_order)))
             ax.set_yticklabels(progress_labels)
-            ax.set_xlabel(
-                "Switch when relative score percentile change is at or below threshold"
-            )
+            ax.set_xlabel(threshold_axis_label)
             ax.set_ylabel("Observed share of investment horizon")
             ax.set_title(
                 f"{timeframe}: {SWITCH_TO_BENCHMARK_METRIC_LABELS[metric]}, "
@@ -712,7 +755,10 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
                 plot_path(
                     output_dir,
                     plot_directory,
-                    f"{timeframe}_switch_to_benchmark_{metric}_heatmap.png",
+                    (
+                        f"{timeframe}_switch_to_benchmark{filename_suffix}_"
+                        f"{metric}_heatmap.png"
+                    ),
                 ),
                 dpi=180,
             )
@@ -979,6 +1025,9 @@ def _plot_relative_score_change_heatmap(
     observations,
     output_dir,
     horizon_label,
+    return_metric="annualized_return",
+    return_label="annualized return",
+    filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
     entry_bins = [value / 100 for value in range(60, 101, 5)]
@@ -1022,7 +1071,7 @@ def _plot_relative_score_change_heatmap(
             subset=[
                 "entry_score_percentile",
                 "relative_score_percentile_change",
-                "annualized_return",
+                return_metric,
             ]
         ).copy()
         clean["entry_band"] = pd.cut(
@@ -1045,14 +1094,14 @@ def _plot_relative_score_change_heatmap(
         mean_returns = clean.pivot_table(
             index="change_band",
             columns="entry_band",
-            values="annualized_return",
+            values=return_metric,
             aggfunc="mean",
             observed=False,
         ).reindex(index=change_labels, columns=entry_labels)
         counts = clean.pivot_table(
             index="change_band",
             columns="entry_band",
-            values="annualized_return",
+            values=return_metric,
             aggfunc="count",
             observed=False,
         ).reindex(index=change_labels, columns=entry_labels)
@@ -1077,7 +1126,7 @@ def _plot_relative_score_change_heatmap(
             aspect="auto",
         )
         colorbar = fig.colorbar(image, ax=ax)
-        colorbar.set_label("Mean annualized return")
+        colorbar.set_label(f"Mean {return_label}")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         for row_index in range(len(change_labels)):
@@ -1105,7 +1154,7 @@ def _plot_relative_score_change_heatmap(
             "Relative score percentile change: (horizon mean - entry) / entry"
         )
         ax.set_title(
-            f"{timeframe}: mean return by entry percentile and relative "
+            f"{timeframe}: mean {return_label} by entry percentile and relative "
             f"score change, "
             f"horizons {horizon_label}"
         )
@@ -1114,14 +1163,23 @@ def _plot_relative_score_change_heatmap(
             plot_path(
                 output_dir,
                 plot_directory,
-                f"{timeframe}_entry_percentile_by_relative_score_change_heatmap.png",
+                (
+                    f"{timeframe}_{filename_prefix}"
+                    f"entry_percentile_by_relative_score_change_heatmap.png"
+                ),
             ),
             dpi=180,
         )
         plt.close(fig)
 
 
-def _plot_live_progress_correlations(data, output_dir, horizon_label):
+def _plot_live_progress_correlations(
+    data,
+    output_dir,
+    horizon_label,
+    return_label="final annualized return",
+    filename_prefix="",
+):
     plot_directory = Path("post_entry_score_path") / horizon_label
 
     for timeframe, timeframe_data in data.groupby("timeframe"):
@@ -1154,7 +1212,7 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
             f"horizons {horizon_label}"
         )
         ax.set_xlabel("Observed share of investment horizon")
-        ax.set_ylabel("Mean correlation to final annualized return")
+        ax.set_ylabel(f"Mean correlation to {return_label}")
         _set_progress_x_ticks(ax, clean)
         ax.set_ylim(0, 1)
         ax.grid(True, alpha=0.25)
@@ -1164,7 +1222,10 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
             plot_path(
                 output_dir,
                 plot_directory,
-                f"{timeframe}_live_progress_mean_score_percentile_correlations.png",
+                (
+                    f"{timeframe}_{filename_prefix}"
+                    f"live_progress_mean_score_percentile_correlations.png"
+                ),
             ),
             dpi=180,
         )
@@ -1175,6 +1236,8 @@ def _plot_score_change_progress_correlations(
     data,
     output_dir,
     horizon_label,
+    return_label="final annualized return",
+    filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
     metrics = ["relative_score_percentile_change"]
@@ -1210,7 +1273,7 @@ def _plot_score_change_progress_correlations(
             f"horizon, horizons {horizon_label}"
         )
         ax.set_xlabel("Observed share of investment horizon")
-        ax.set_ylabel("Mean correlation to final annualized return")
+        ax.set_ylabel(f"Mean correlation to {return_label}")
         _set_progress_x_ticks(ax, clean)
         ax.set_ylim(-1, 1)
         ax.grid(True, alpha=0.25)
@@ -1220,7 +1283,10 @@ def _plot_score_change_progress_correlations(
             plot_path(
                 output_dir,
                 plot_directory,
-                f"{timeframe}_live_progress_{metric}_correlations.png",
+                (
+                    f"{timeframe}_{filename_prefix}"
+                    f"live_progress_{metric}_correlations.png"
+                ),
             ),
             dpi=180,
         )
@@ -1232,6 +1298,9 @@ def _plot_best_correlation_overview(
     correlations,
     output_dir,
     horizon_label,
+    return_metric="annualized_return",
+    return_label="Annualized return",
+    filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
 
@@ -1246,14 +1315,14 @@ def _plot_best_correlation_overview(
             )
 
         metric = "mean_score_percentile"
-        clean = timeframe_data.dropna(subset=[metric, "annualized_return"]).copy()
+        clean = timeframe_data.dropna(subset=[metric, return_metric]).copy()
         if clean.empty:
             continue
 
         fig, ax = plt.subplots(figsize=(12, 7))
         ax.scatter(
             clean[metric],
-            clean["annualized_return"],
+            clean[return_metric],
             color="#4C78A8",
             alpha=0.12,
             s=14,
@@ -1264,7 +1333,7 @@ def _plot_best_correlation_overview(
         if clean[metric].nunique() >= 2:
             slope, intercept = np.polyfit(
                 clean[metric],
-                clean["annualized_return"],
+                clean[return_metric],
                 1,
             )
             trend_x = np.linspace(clean[metric].min(), clean[metric].max(), 100)
@@ -1288,11 +1357,11 @@ def _plot_best_correlation_overview(
 
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{METRIC_LABELS[metric]}{correlation_text}",
+            f"{METRIC_LABELS[metric]} vs {return_label}{correlation_text}",
             fontsize=12,
         )
         ax.set_xlabel(METRIC_LABELS[metric])
-        ax.set_ylabel("Annualized return")
+        ax.set_ylabel(return_label)
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
@@ -1302,7 +1371,7 @@ def _plot_best_correlation_overview(
             plot_path(
                 output_dir,
                 plot_directory,
-                f"{timeframe}_best_correlation_overview.png",
+                f"{timeframe}_{filename_prefix}best_correlation_overview.png",
             ),
             dpi=180,
         )

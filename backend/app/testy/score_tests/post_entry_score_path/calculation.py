@@ -408,6 +408,81 @@ def _build_remaining_benchmark_lookup(benchmark_entries, market_lookup):
     )
 
 
+def _build_full_horizon_benchmark_lookup(benchmark_entries):
+    key_columns = [
+        "timeframe",
+        "horizon_weeks",
+        "start_timestamp",
+    ]
+    if benchmark_entries.empty:
+        return {}
+
+    grouped = (
+        benchmark_entries.groupby(key_columns, sort=False)
+        .agg(
+            benchmark_return=("future_return", "mean"),
+            horizon_days=("horizon_days", "mean"),
+            benchmark_observation_count=("future_return", "count"),
+        )
+        .reset_index()
+    )
+    grouped["annualized_benchmark_return"] = [
+        annualize_return(total_return, horizon_days)
+        for total_return, horizon_days in zip(
+            grouped["benchmark_return"],
+            grouped["horizon_days"],
+        )
+    ]
+
+    return (
+        grouped[
+            [
+                *key_columns,
+                "benchmark_return",
+                "annualized_benchmark_return",
+                "benchmark_observation_count",
+            ]
+        ]
+        .set_index(key_columns)
+        .to_dict(orient="index")
+    )
+
+
+def _add_full_horizon_benchmark_metrics(entries, benchmark_lookup):
+    if entries.empty:
+        return entries
+
+    result = entries.copy()
+    benchmark_returns = []
+    annualized_benchmark_returns = []
+    benchmark_observation_counts = []
+
+    for _, entry in result.iterrows():
+        benchmark = benchmark_lookup.get(
+            (
+                entry["timeframe"],
+                int(entry["horizon_weeks"]),
+                entry["start_timestamp"],
+            ),
+            {},
+        )
+        benchmark_returns.append(benchmark.get("benchmark_return"))
+        annualized_benchmark_returns.append(
+            benchmark.get("annualized_benchmark_return")
+        )
+        benchmark_observation_counts.append(
+            benchmark.get("benchmark_observation_count")
+        )
+
+    result["benchmark_return"] = benchmark_returns
+    result["annualized_benchmark_return"] = annualized_benchmark_returns
+    result["benchmark_observation_count"] = benchmark_observation_counts
+    result["annualized_alpha"] = (
+        result["annualized_return"] - result["annualized_benchmark_return"]
+    )
+    return result
+
+
 def _summarize_entry_path(entry, path):
     horizon_days = int(entry["horizon_days"])
     horizon_weeks = int(entry["horizon_weeks"])
@@ -457,6 +532,14 @@ def _summarize_entry_path(entry, path):
         "future_price": float(entry["future_price"]),
         "future_return": float(entry["future_return"]),
         "annualized_return": float(entry["annualized_return"]),
+        "benchmark_return": entry.get("benchmark_return"),
+        "annualized_benchmark_return": entry.get(
+            "annualized_benchmark_return"
+        ),
+        "annualized_alpha": entry.get("annualized_alpha"),
+        "benchmark_observation_count": entry.get(
+            "benchmark_observation_count"
+        ),
         "path_point_count": int(len(path)),
         "path_covered_days": covered_days,
         "path_covered_horizon_share": covered_days / horizon_days,
@@ -628,6 +711,14 @@ def _summarize_live_progress(entry, path, market_lookup, remaining_benchmark_loo
                 "benchmark_remaining_observation_count"
             ),
             "annualized_return": float(entry["annualized_return"]),
+            "benchmark_return": entry.get("benchmark_return"),
+            "annualized_benchmark_return": entry.get(
+                "annualized_benchmark_return"
+            ),
+            "annualized_alpha": entry.get("annualized_alpha"),
+            "benchmark_observation_count": entry.get(
+                "benchmark_observation_count"
+            ),
         })
 
     return rows
@@ -864,9 +955,14 @@ def _build_switch_to_benchmark_threshold_analysis(
     )
 
 
-def _build_correlations_by_horizon(observations):
+def _build_correlations_by_horizon(
+    observations,
+    return_metric="annualized_return",
+):
     rows = []
     if observations.empty:
+        return pd.DataFrame()
+    if return_metric not in observations.columns:
         return pd.DataFrame()
 
     for (timeframe, horizon_weeks), group in observations.groupby(
@@ -879,12 +975,24 @@ def _build_correlations_by_horizon(observations):
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": round_or_none(group["horizon_days"].mean()),
                 "metric": metric,
-                "observation_count": int(group[[metric, "annualized_return"]].dropna().shape[0]),
-                "pearson_to_annualized_return": _safe_corr(group, metric, "pearson"),
-                "spearman_to_annualized_return": _safe_corr(group, metric, "spearman"),
+                "observation_count": int(
+                    group[[metric, return_metric]].dropna().shape[0]
+                ),
+                "pearson_to_annualized_return": _safe_corr_pair(
+                    group,
+                    metric,
+                    return_metric,
+                    "pearson",
+                ),
+                "spearman_to_annualized_return": _safe_corr_pair(
+                    group,
+                    metric,
+                    return_metric,
+                    "spearman",
+                ),
                 "mean_metric_value": round_or_none(group[metric].mean()),
                 "mean_annualized_return": round_or_none(
-                    group["annualized_return"].mean()
+                    group[return_metric].mean()
                 ),
             })
 
@@ -940,9 +1048,14 @@ def _build_horizon_average(correlations_by_horizon):
     ).reset_index(drop=True)
 
 
-def _build_live_progress_correlations_by_horizon(live_progress_observations):
+def _build_live_progress_correlations_by_horizon(
+    live_progress_observations,
+    return_metric="annualized_return",
+):
     rows = []
     if live_progress_observations.empty:
+        return pd.DataFrame()
+    if return_metric not in live_progress_observations.columns:
         return pd.DataFrame()
 
     grouped = live_progress_observations.groupby(
@@ -972,16 +1085,18 @@ def _build_live_progress_correlations_by_horizon(live_progress_observations):
                 "cutoff_days": round_or_none(group["cutoff_days"].mean()),
                 "metric": metric,
                 "observation_count": int(
-                    group[[metric, "annualized_return"]].dropna().shape[0]
+                    group[[metric, return_metric]].dropna().shape[0]
                 ),
-                "pearson_to_annualized_return": _safe_corr(
+                "pearson_to_annualized_return": _safe_corr_pair(
                     group,
                     metric,
+                    return_metric,
                     "pearson",
                 ),
-                "spearman_to_annualized_return": _safe_corr(
+                "spearman_to_annualized_return": _safe_corr_pair(
                     group,
                     metric,
+                    return_metric,
                     "spearman",
                 ),
             })
@@ -1095,6 +1210,13 @@ def calculate(
         horizon_end=horizon_end,
         horizon_week_ranges=horizon_week_ranges,
     )
+    full_horizon_benchmark_lookup = _build_full_horizon_benchmark_lookup(
+        benchmark_entries
+    )
+    entries = _add_full_horizon_benchmark_metrics(
+        entries,
+        full_horizon_benchmark_lookup,
+    )
     market_source = (
         context.score_observations
         if context.score_observations is not None
@@ -1121,13 +1243,21 @@ def calculate(
             remaining_benchmark_lookup,
         )
     )
-    correlations_by_horizon = _build_correlations_by_horizon(observations)
-    horizon_average = _build_horizon_average(correlations_by_horizon)
-    live_progress_correlations_by_horizon = (
-        _build_live_progress_correlations_by_horizon(live_progress_observations)
+    alpha_correlations_by_horizon = _build_correlations_by_horizon(
+        observations,
+        return_metric="annualized_alpha",
     )
-    live_progress_average = _build_live_progress_average(
-        live_progress_correlations_by_horizon
+    alpha_horizon_average = _build_horizon_average(
+        alpha_correlations_by_horizon
+    )
+    live_progress_alpha_correlations_by_horizon = (
+        _build_live_progress_correlations_by_horizon(
+            live_progress_observations,
+            return_metric="annualized_alpha",
+        )
+    )
+    live_progress_alpha_average = _build_live_progress_average(
+        live_progress_alpha_correlations_by_horizon
     )
     switch_to_benchmark_thresholds = (
         _build_switch_to_benchmark_threshold_analysis(
@@ -1138,11 +1268,15 @@ def calculate(
 
     return {
         "observations": _round_numeric_columns(observations),
-        "horizon_average": _round_numeric_columns(horizon_average),
+        "horizon_alpha_average": _round_numeric_columns(
+            alpha_horizon_average
+        ),
         "live_progress_observations": _round_numeric_columns(
             live_progress_observations
         ),
-        "live_progress_average": _round_numeric_columns(live_progress_average),
+        "live_progress_alpha_average": _round_numeric_columns(
+            live_progress_alpha_average
+        ),
         "switch_to_benchmark_thresholds": _round_numeric_columns(
             switch_to_benchmark_thresholds
         ),
