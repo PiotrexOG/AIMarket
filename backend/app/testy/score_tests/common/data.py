@@ -2,21 +2,20 @@ import pandas as pd
 
 from app.testy.market_return_lookup import (
     add_current_prices,
-    build_horizon_return_frame,
     load_market_lookup_for_analysis,
+    lookup_asof_close_many,
 )
 
 
-PRICE_WINDOW_SHARE_OF_HORIZON = 0.42
-
-
-def build_horizon_days(df):
+def build_horizon_weeks(df):
     if df.empty:
         return []
     first_date = pd.to_datetime(df["start_timestamp"].min()).normalize()
     last_date = pd.to_datetime(df["start_timestamp"].max()).normalize()
-    max_horizon_days = int((last_date - first_date).days)
-    return [] if max_horizon_days < 1 else list(range(1, max_horizon_days + 1))
+    max_horizon_weeks = int((last_date - first_date).days // 7)
+    if max_horizon_weeks < 1:
+        return []
+    return list(range(1, max_horizon_weeks + 1))
 
 
 def build_timeframe_score_observations(df, score_column):
@@ -37,58 +36,72 @@ def add_weekly_score_metrics(df):
     if df.empty:
         return df
 
-    def add_group_metrics(group):
-        group = group.copy()
-        group["score_percentile"] = group["score"].rank(pct=True, method="average")
-        std = group["score"].std(ddof=0)
-        group["score_zscore"] = (
-            0.0
-            if std == 0 or pd.isna(std)
-            else (group["score"] - group["score"].mean()) / std
-        )
-        return group
-
-    return (
-        df.groupby(["timeframe", "start_timestamp"], group_keys=False)
-        .apply(add_group_metrics)
-        .reset_index(drop=True)
+    result = df.copy()
+    grouped_scores = result.groupby(["timeframe", "start_timestamp"])["score"]
+    result["score_percentile"] = grouped_scores.rank(pct=True, method="average")
+    score_mean = grouped_scores.transform("mean")
+    score_std = grouped_scores.transform(lambda values: values.std(ddof=0))
+    result["score_zscore"] = (
+        (result["score"] - score_mean) / score_std.replace(0, pd.NA)
     )
+    result["score_zscore"] = result["score_zscore"].fillna(0.0)
+    return result.reset_index(drop=True)
 
 
-def build_return_panel(df, horizon_days_values):
+def build_return_panel(df, horizon_weeks_values):
     if df.empty:
         return pd.DataFrame()
 
     score_end_time = pd.to_datetime(df["start_timestamp"].max())
-    market_lookup = load_market_lookup_for_analysis(df, max_timestamp=score_end_time)
+    max_horizon_weeks = max(horizon_weeks_values) if horizon_weeks_values else 0
+    max_price_timestamp = (
+        score_end_time + pd.to_timedelta(max_horizon_weeks * 7, unit="D")
+    )
+    market_lookup = load_market_lookup_for_analysis(
+        df,
+        max_timestamp=max_price_timestamp,
+    )
     if not market_lookup:
         return pd.DataFrame()
 
     priced_df = add_current_prices(df, market_lookup)
     rows = []
     for timeframe, timeframe_group in priced_df.groupby("timeframe"):
-        for horizon_days in horizon_days_values:
-            window_positions = max(
-                1,
-                int(horizon_days * PRICE_WINDOW_SHARE_OF_HORIZON),
+        timeframe_group = timeframe_group.sort_values(
+            ["ticker", "start_timestamp"]
+        ).copy()
+        for horizon_weeks in horizon_weeks_values:
+            horizon_df = timeframe_group[
+                ["ticker", "start_timestamp", "score", "current_price"]
+            ].copy()
+            horizon_df["future_timestamp"] = (
+                horizon_df["start_timestamp"]
+                + pd.to_timedelta(horizon_weeks * 7, unit="D")
             )
-            horizon_df = build_horizon_return_frame(
-                timeframe_group,
-                market_lookup=market_lookup,
-                score_column="score",
-                horizon_days=horizon_days,
-                window_positions=window_positions,
+            horizon_df["future_price"] = lookup_asof_close_many(
+                market_lookup,
+                horizon_df["ticker"],
+                horizon_df["future_timestamp"],
+            )
+            horizon_df = horizon_df.dropna(
+                subset=["current_price", "future_timestamp", "future_price"]
             )
             if horizon_df.empty:
                 continue
 
-            horizon_df = horizon_df[horizon_df["future_timestamp"] <= score_end_time]
+            horizon_df["horizon_days"] = (
+                pd.to_datetime(horizon_df["future_timestamp"])
+                - pd.to_datetime(horizon_df["start_timestamp"])
+            ).dt.total_seconds() / 86400.0
+            horizon_df = horizon_df[horizon_df["horizon_days"] > 0].copy()
             if horizon_df.empty:
                 continue
 
+            horizon_df["future_return"] = (
+                horizon_df["future_price"] - horizon_df["current_price"]
+            ) / horizon_df["current_price"]
             horizon_df["timeframe"] = timeframe
-            horizon_df["horizon_days"] = horizon_days
-            horizon_df["window_positions"] = window_positions
+            horizon_df["horizon_weeks"] = horizon_weeks
             rows.append(horizon_df)
 
     if not rows:

@@ -43,7 +43,7 @@ from score_tests.b3_global_buckets.plotting import plot as plot_b3
 from score_tests.common.context import ScoreTestContext
 from score_tests.common.data import (
     add_weekly_score_metrics,
-    build_horizon_days,
+    build_horizon_weeks,
     build_return_panel,
     build_timeframe_score_observations,
 )
@@ -91,7 +91,7 @@ ENABLED_TIMEFRAMES = {
     "long_term_200d": True,
 }
 
-HORIZON_RANGE = (195, 205)
+HORIZON_WEEK_RANGE = (26, 31)
 
 
 def filter_enabled_timeframes(df):
@@ -119,15 +119,9 @@ def run_configured_score_tests(context):
         },
         "post_entry_score_path": {
             "observations": pd.DataFrame(),
-            "path_points": pd.DataFrame(),
-            "correlations_by_horizon": pd.DataFrame(),
             "horizon_average": pd.DataFrame(),
             "live_progress_observations": pd.DataFrame(),
-            "live_progress_correlations_by_horizon": pd.DataFrame(),
             "live_progress_average": pd.DataFrame(),
-            "drop_regressions_by_horizon": pd.DataFrame(),
-            "drop_regression_average": pd.DataFrame(),
-            "switch_to_benchmark_thresholds_by_horizon": pd.DataFrame(),
             "switch_to_benchmark_thresholds": pd.DataFrame(),
         },
         "ticker_percentile_history": {
@@ -143,7 +137,7 @@ def run_configured_score_tests(context):
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
         results["a3"] = calculate_a3(context)
     if ENABLED_TESTS["downside_information_ratio"]:
-        horizon_start, horizon_end = HORIZON_RANGE
+        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         results["downside_information_ratio"] = (
             calculate_downside_information_ratio(
                 context,
@@ -152,7 +146,7 @@ def run_configured_score_tests(context):
             )
         )
     if ENABLED_TESTS["post_entry_score_path"]:
-        horizon_start, horizon_end = HORIZON_RANGE
+        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         results["post_entry_score_path"] = calculate_post_entry_score_path(
             context,
             horizon_start=horizon_start,
@@ -203,28 +197,12 @@ def save_analysis_outputs(results, output_dir):
         path = results["post_entry_score_path"]
         outputs.update({
             "post_entry_score_path_observations.csv": path["observations"],
-            "post_entry_score_path_points.csv": path["path_points"],
-            "post_entry_score_path_correlations_by_horizon.csv": (
-                path["correlations_by_horizon"]
-            ),
             "post_entry_score_path_horizon_average.csv": path["horizon_average"],
             "post_entry_score_path_live_progress_observations.csv": (
                 path["live_progress_observations"]
             ),
-            "post_entry_score_path_live_progress_correlations_by_horizon.csv": (
-                path["live_progress_correlations_by_horizon"]
-            ),
             "post_entry_score_path_live_progress_average.csv": (
                 path["live_progress_average"]
-            ),
-            "post_entry_score_path_drop_regressions_by_horizon.csv": (
-                path["drop_regressions_by_horizon"]
-            ),
-            "post_entry_score_path_drop_regression_average.csv": (
-                path["drop_regression_average"]
-            ),
-            "post_entry_score_path_switch_to_benchmark_thresholds_by_horizon.csv": (
-                path["switch_to_benchmark_thresholds_by_horizon"]
             ),
             "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
                 path["switch_to_benchmark_thresholds"]
@@ -272,23 +250,23 @@ def plot_analysis_outputs(results, output_dir):
         plot_b3(results["b3"], output_dir)
 
     if ENABLED_TESTS["downside_information_ratio"]:
-        horizon_start, horizon_end = HORIZON_RANGE
+        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         plot_downside_information_ratio(
             results["downside_information_ratio"]["analysis"],
             output_dir,
-            f"{horizon_start}-{horizon_end}",
+            f"{horizon_start}-{horizon_end}w",
         )
         plot_downside_information_ratio_buckets(
             results["downside_information_ratio"]["benchmark_return_buckets"],
             output_dir,
-            f"{horizon_start}-{horizon_end}",
+            f"{horizon_start}-{horizon_end}w",
         )
     if ENABLED_TESTS["post_entry_score_path"]:
-        horizon_start, horizon_end = HORIZON_RANGE
+        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         plot_post_entry_score_path(
             results["post_entry_score_path"],
             output_dir,
-            f"{horizon_start}-{horizon_end}",
+            f"{horizon_start}-{horizon_end}w",
         )
     if ENABLED_TESTS["ticker_percentile_history"]:
         plot_ticker_percentile_history(
@@ -316,12 +294,12 @@ def main():
         print("[EMPTY] No weekly score observations found.")
         return
 
-    horizon_days = build_horizon_days(score_df)
-    if not horizon_days:
+    horizon_weeks = build_horizon_weeks(score_df)
+    if not horizon_weeks:
         print("[EMPTY] score_observations.json must contain at least two score dates.")
         return
 
-    return_panel = build_return_panel(score_df, horizon_days)
+    return_panel = build_return_panel(score_df, horizon_weeks)
     if return_panel.empty:
         print("[EMPTY] No return panel could be built from market data.")
         return

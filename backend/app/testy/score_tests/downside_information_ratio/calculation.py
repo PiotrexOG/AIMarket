@@ -48,7 +48,7 @@ def _build_downside_information_ratio_observation_frame(
 
     ranked = (
         return_panel[
-            return_panel["horizon_days"].between(horizon_start, horizon_end)
+            return_panel["horizon_weeks"].between(horizon_start, horizon_end)
         ]
         .dropna(subset=["score", "future_return"])
     )

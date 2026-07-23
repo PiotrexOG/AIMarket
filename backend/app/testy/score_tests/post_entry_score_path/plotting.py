@@ -8,15 +8,6 @@ import pandas as pd
 from app.testy.score_tests.common.plotting import plot_path
 
 
-BEST_CORRELATION_METRICS = [
-    "mean_score_percentile",
-]
-
-LIVE_CORRELATION_METRICS = [
-    "mean_score_percentile",
-    "relative_score_percentile_change",
-]
-
 SCORE_CHANGE_SCATTER_PROGRESS_PERCENT = 35
 
 
