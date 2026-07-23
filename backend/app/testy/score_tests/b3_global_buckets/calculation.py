@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
+from app.testy.score_tests.common.data import filter_horizon_week_ranges
 from app.testy.score_tests.common.metrics import return_summary, round_or_none
 
 
@@ -12,14 +13,27 @@ DEFAULT_BUCKETS = [
 ]
 
 
-def calculate(context, score_buckets=DEFAULT_BUCKETS):
+def calculate(
+    context,
+    score_buckets=DEFAULT_BUCKETS,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
+):
     if context.return_panel.empty:
         return pd.DataFrame()
     rows = []
-    for (timeframe, horizon_days), ranked in context.global_ranked.groupby(
-        ["timeframe", "horizon_days"],
+    ranked_panel = filter_horizon_week_ranges(
+        context.global_ranked,
+        horizon_week_ranges=horizon_week_ranges,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+    )
+    for (timeframe, horizon_weeks), ranked in ranked_panel.groupby(
+        ["timeframe", "horizon_weeks"],
         sort=False,
     ):
+        horizon_days = ranked["horizon_days"].mean()
         ranked = ranked.dropna(subset=["score"])
         scores = ranked["score"]
         for bucket_start, bucket_end in score_buckets:
@@ -36,10 +50,11 @@ def calculate(context, score_buckets=DEFAULT_BUCKETS):
                     selected = selected[selected["score"] < max_score]
             rows.append({
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
-                "bucket": f"Top {bucket_start}-{bucket_end}%",
-                "bucket_start_percent": int(bucket_start),
-                "bucket_end_percent": int(bucket_end),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
+                "bucket": f"Top {bucket_start:.1f}-{bucket_end:.1f}%",
+                "bucket_start_percent": round(float(bucket_start), 1),
+                "bucket_end_percent": round(float(bucket_end), 1),
                 "min_score": round_or_none(min_score),
                 "max_score": round_or_none(max_score),
                 **return_summary(selected),
@@ -50,6 +65,7 @@ def calculate(context, score_buckets=DEFAULT_BUCKETS):
 def build_output(analysis):
     columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "bucket",
         "bucket_start_percent",
@@ -64,6 +80,6 @@ def build_output(analysis):
         return pd.DataFrame(columns=columns)
     return (
         add_annualized_return_column(analysis)[columns]
-        .sort_values(["timeframe", "horizon_days", "bucket_start_percent"])
+        .sort_values(["timeframe", "horizon_weeks", "bucket_start_percent"])
         .reset_index(drop=True)
     )

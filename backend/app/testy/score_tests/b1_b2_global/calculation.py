@@ -1,25 +1,40 @@
 import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
+from app.testy.score_tests.common.data import filter_horizon_week_ranges
 from app.testy.score_tests.common.metrics import pearson_or_none, return_summary, round_or_none
 
 
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
 
 
-def calculate(context, top_score_shares=TOP_SCORE_SHARES):
+def calculate(
+    context,
+    top_score_shares=TOP_SCORE_SHARES,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
+):
     if context.return_panel.empty:
         return pd.DataFrame()
     rows = []
-    for (timeframe, horizon_days), ranked in context.global_ranked.groupby(
-        ["timeframe", "horizon_days"],
+    ranked_panel = filter_horizon_week_ranges(
+        context.global_ranked,
+        horizon_week_ranges=horizon_week_ranges,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+    )
+    for (timeframe, horizon_weeks), ranked in ranked_panel.groupby(
+        ["timeframe", "horizon_weeks"],
         sort=False,
     ):
+        horizon_days = ranked["horizon_days"].mean()
         rows.append({
             "analysis_group": "B_global",
             "test": "B1_top_percent",
             "timeframe": timeframe,
-            "horizon_days": int(horizon_days),
+            "horizon_weeks": int(horizon_weeks),
+            "horizon_days": horizon_days,
             "metric": "score",
             "bucket": "All",
             "top_percent": 100,
@@ -41,7 +56,8 @@ def calculate(context, top_score_shares=TOP_SCORE_SHARES):
                 "analysis_group": "B_global",
                 "test": "B1_top_percent",
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
                 "metric": "score",
                 "bucket": f"Top {int(top_share * 100)}%",
                 "top_percent": int(top_share * 100),
@@ -70,7 +86,8 @@ def calculate(context, top_score_shares=TOP_SCORE_SHARES):
                 "analysis_group": "B_global",
                 "test": "B2_global_pearson",
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
                 "metric": metric_label,
                 "bucket": "All",
                 "top_percent": None,
@@ -87,6 +104,7 @@ def calculate(context, top_score_shares=TOP_SCORE_SHARES):
 def build_top_percent_output(analysis):
     columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "bucket",
         "top_percent",
@@ -103,7 +121,7 @@ def build_top_percent_output(analysis):
     ]
     return (
         add_annualized_return_column(selection)[columns]
-        .sort_values(["timeframe", "horizon_days", "top_percent"])
+        .sort_values(["timeframe", "horizon_weeks", "top_percent"])
         .reset_index(drop=True)
     )
 
@@ -111,6 +129,7 @@ def build_top_percent_output(analysis):
 def build_correlation_output(analysis):
     columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "metric",
         "observation_count",
@@ -120,6 +139,6 @@ def build_correlation_output(analysis):
         return pd.DataFrame(columns=columns)
     return (
         analysis[analysis["test"] == "B2_global_pearson"][columns]
-        .sort_values(["timeframe", "horizon_days", "metric"])
+        .sort_values(["timeframe", "horizon_weeks", "metric"])
         .reset_index(drop=True)
     )

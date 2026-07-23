@@ -91,7 +91,11 @@ ENABLED_TIMEFRAMES = {
     "long_term_200d": True,
 }
 
-HORIZON_WEEK_RANGE = (26, 31)
+HORIZON_WEEK_RANGES = {
+    "short_term_14d": (1, 3),
+    "medium_term_50d": (4, 11),
+    "long_term_200d": (14, 42),
+}
 
 
 def filter_enabled_timeframes(df):
@@ -104,6 +108,25 @@ def filter_enabled_timeframes(df):
         df[df["timeframe"].isin(enabled)].copy()
         if enabled
         else df.iloc[0:0].copy()
+    )
+
+
+def enabled_horizon_week_ranges():
+    return {
+        timeframe: HORIZON_WEEK_RANGES[timeframe]
+        for timeframe, is_enabled in ENABLED_TIMEFRAMES.items()
+        if is_enabled and timeframe in HORIZON_WEEK_RANGES
+    }
+
+
+def horizon_week_label():
+    ranges = enabled_horizon_week_ranges()
+    if len(ranges) == 1:
+        start_week, end_week = next(iter(ranges.values()))
+        return f"{start_week}-{end_week}w"
+    return "_".join(
+        f"{timeframe}_{start_week}-{end_week}w"
+        for timeframe, (start_week, end_week) in ranges.items()
     )
 
 
@@ -133,33 +156,41 @@ def run_configured_score_tests(context):
     }
 
     if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
-        results["a1_a2"] = calculate_a1_a2(context)
+        results["a1_a2"] = calculate_a1_a2(
+            context,
+            horizon_week_ranges=enabled_horizon_week_ranges(),
+        )
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
-        results["a3"] = calculate_a3(context)
+        results["a3"] = calculate_a3(
+            context,
+            horizon_week_ranges=enabled_horizon_week_ranges(),
+        )
     if ENABLED_TESTS["downside_information_ratio"]:
-        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         results["downside_information_ratio"] = (
             calculate_downside_information_ratio(
                 context,
-                horizon_start=horizon_start,
-                horizon_end=horizon_end,
+                horizon_week_ranges=enabled_horizon_week_ranges(),
             )
         )
     if ENABLED_TESTS["post_entry_score_path"]:
-        horizon_start, horizon_end = HORIZON_WEEK_RANGE
         results["post_entry_score_path"] = calculate_post_entry_score_path(
             context,
-            horizon_start=horizon_start,
-            horizon_end=horizon_end,
+            horizon_week_ranges=enabled_horizon_week_ranges(),
         )
     if ENABLED_TESTS["ticker_percentile_history"]:
         results["ticker_percentile_history"] = (
             calculate_ticker_percentile_history(context)
         )
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
-        results["b1_b2"] = calculate_b1_b2(context)
+        results["b1_b2"] = calculate_b1_b2(
+            context,
+            horizon_week_ranges=enabled_horizon_week_ranges(),
+        )
     if ENABLED_TESTS["B3_global_score_buckets"]:
-        results["b3"] = calculate_b3(context)
+        results["b3"] = calculate_b3(
+            context,
+            horizon_week_ranges=enabled_horizon_week_ranges(),
+        )
 
     return results
 
@@ -250,23 +281,23 @@ def plot_analysis_outputs(results, output_dir):
         plot_b3(results["b3"], output_dir)
 
     if ENABLED_TESTS["downside_information_ratio"]:
-        horizon_start, horizon_end = HORIZON_WEEK_RANGE
+        horizon_label = horizon_week_label()
         plot_downside_information_ratio(
             results["downside_information_ratio"]["analysis"],
             output_dir,
-            f"{horizon_start}-{horizon_end}w",
+            horizon_label,
         )
         plot_downside_information_ratio_buckets(
             results["downside_information_ratio"]["benchmark_return_buckets"],
             output_dir,
-            f"{horizon_start}-{horizon_end}w",
+            horizon_label,
         )
     if ENABLED_TESTS["post_entry_score_path"]:
-        horizon_start, horizon_end = HORIZON_WEEK_RANGE
+        horizon_label = horizon_week_label()
         plot_post_entry_score_path(
             results["post_entry_score_path"],
             output_dir,
-            f"{horizon_start}-{horizon_end}w",
+            horizon_label,
         )
     if ENABLED_TESTS["ticker_percentile_history"]:
         plot_ticker_percentile_history(

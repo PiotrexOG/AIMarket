@@ -28,8 +28,22 @@ def limit_horizon_range(timeframe, df):
     limits = TIMEFRAME_HORIZON_LIMITS.get(timeframe)
     if limits is None:
         return df
+    if "horizon_weeks" in df.columns:
+        return df
     start_day, end_day = limits
     return df[df["horizon_days"].between(start_day, end_day)]
+
+
+def horizon_x_column(df):
+    return "horizon_weeks" if "horizon_weeks" in df.columns else "horizon_days"
+
+
+def horizon_x_label(df):
+    return (
+        "Return horizon in weeks"
+        if horizon_x_column(df) == "horizon_weeks"
+        else "Return horizon in days"
+    )
 
 
 def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order):
@@ -37,12 +51,13 @@ def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order
         return
     fig, ax = plt.subplots(figsize=(12, 7))
     colors = plt.cm.RdYlGn_r(np.linspace(0.05, 0.95, len(bucket_order)))
+    x_column = horizon_x_column(data)
     for color, bucket in zip(colors, bucket_order):
-        group = data[data["bucket"] == bucket].sort_values("horizon_days")
+        group = data[data["bucket"] == bucket].sort_values(x_column)
         if group.empty:
             continue
         ax.plot(
-            group["horizon_days"],
+            group[x_column],
             group["annualized_return"],
             marker="o",
             markevery=max(1, len(group) // 30),
@@ -53,7 +68,7 @@ def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order
         )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
-    ax.set_xlabel("Return horizon in days")
+    ax.set_xlabel(horizon_x_label(data))
     ax.set_ylabel("Annualized return")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)

@@ -8,7 +8,10 @@ import pandas as pd
 from app.testy.score_tests.common.plotting import plot_path
 
 
-SCORE_CHANGE_SCATTER_PROGRESS_PERCENT = 35
+SCORE_CHANGE_SCATTER_PROGRESS_PERCENT = 25
+PROGRESS_BUCKET_PERCENTAGE_POINTS = 5
+MIN_PROGRESS_BUCKET_PERCENT = 10
+MAX_PROGRESS_BUCKET_PERCENT = 80
 
 
 METRIC_LABELS = {
@@ -28,6 +31,70 @@ SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "downside_deviation": "Downside deviation of switch gain",
     "downside_information_ratio": "Downside information ratio",
 }
+
+
+def _target_progress_bucket_start(progress_percent):
+    bucket_start = np.floor(
+        progress_percent / PROGRESS_BUCKET_PERCENTAGE_POINTS
+    ) * PROGRESS_BUCKET_PERCENTAGE_POINTS
+    return max(
+        float(MIN_PROGRESS_BUCKET_PERCENT),
+        min(
+            float(MAX_PROGRESS_BUCKET_PERCENT - PROGRESS_BUCKET_PERCENTAGE_POINTS),
+            float(bucket_start),
+        ),
+    )
+
+
+def _filter_progress_bucket(data, progress_percent):
+    if "progress_bucket_start_percent" not in data.columns:
+        return (
+            data[data["progress_percent"] == progress_percent],
+            f"{progress_percent}%",
+            f"{progress_percent}pct",
+        )
+
+    bucket_start = _target_progress_bucket_start(progress_percent)
+    bucket_end = bucket_start + PROGRESS_BUCKET_PERCENTAGE_POINTS
+    return (
+        data[data["progress_bucket_start_percent"] == bucket_start],
+        f"{bucket_start:.0f}-{bucket_end:.0f}%",
+        f"{bucket_start:.0f}_{bucket_end:.0f}pct",
+    )
+
+
+def _progress_x_column(data):
+    if "progress_bucket_mid_percent" in data.columns:
+        return "progress_bucket_mid_percent"
+    return "progress_percent"
+
+
+def _set_progress_x_ticks(ax, data):
+    if {
+        "progress_bucket_start_percent",
+        "progress_bucket_mid_percent",
+        "progress_bucket_label",
+    }.issubset(data.columns):
+        labels = (
+            data[
+                [
+                    "progress_bucket_start_percent",
+                    "progress_bucket_mid_percent",
+                    "progress_bucket_label",
+                ]
+            ]
+            .drop_duplicates()
+            .sort_values("progress_bucket_start_percent")
+        )
+        ax.set_xticks(labels["progress_bucket_mid_percent"])
+        ax.set_xticklabels(labels["progress_bucket_label"], rotation=45)
+        return
+
+    ax.set_xticks(range(5, 101, 5))
+    ax.set_xticklabels(
+        [f"{value}%" for value in range(5, 101, 5)],
+        rotation=45,
+    )
 
 
 def plot(results, output_dir, horizon_label):
@@ -195,9 +262,9 @@ def _plot_remaining_return_at_progress_scatter(
     progress_percent,
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
-    progress_data = live_progress_observations[
-        live_progress_observations["progress_percent"] == progress_percent
-    ]
+    progress_data, progress_label, progress_file_label = (
+        _filter_progress_bucket(live_progress_observations, progress_percent)
+    )
     return_metric = "remaining_annualized_alpha"
 
     for timeframe, timeframe_data in progress_data.groupby("timeframe"):
@@ -249,11 +316,11 @@ def _plot_remaining_return_at_progress_scatter(
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
             f"{timeframe}: hold-vs-benchmark annualized return after "
-            f"{progress_percent}% of the horizon"
+            f"{progress_label} of the horizon, horizons {horizon_label}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(
-            f"{METRIC_LABELS[metric]} after {progress_percent}% of the horizon"
+            f"{METRIC_LABELS[metric]} after {progress_label} of the horizon"
         )
         ax.set_ylabel(
             "Stock minus benchmark annualized return from cutoff to horizon end"
@@ -268,7 +335,7 @@ def _plot_remaining_return_at_progress_scatter(
                 output_dir,
                 plot_directory,
                 (
-                    f"{timeframe}_{metric}_after_{progress_percent}pct_"
+                    f"{timeframe}_{metric}_after_{progress_file_label}_"
                     f"remaining_annualized_return_scatter.png"
                 ),
             ),
@@ -312,9 +379,9 @@ def _plot_hold_decision_by_score_drop(
     progress_percent,
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
-    progress_data = live_progress_observations[
-        live_progress_observations["progress_percent"] == progress_percent
-    ]
+    progress_data, progress_label, progress_file_label = (
+        _filter_progress_bucket(live_progress_observations, progress_percent)
+    )
     return_metric = "remaining_annualized_alpha"
 
     for timeframe, timeframe_data in progress_data.groupby("timeframe"):
@@ -395,14 +462,14 @@ def _plot_hold_decision_by_score_drop(
         return_ax.set_xticks(x)
         return_ax.set_xticklabels(labels, rotation=45, ha="right")
         return_ax.set_xlabel(
-            f"Relative score percentile change after {progress_percent}% "
+            f"Relative score percentile change after {progress_label} "
             f"of the horizon, 5 percentage-point buckets"
         )
         return_ax.grid(True, axis="y", alpha=0.2)
         return_ax.legend(fontsize=9)
         return_ax.set_title(
             f"{timeframe}: hold-vs-benchmark return by score change after "
-            f"{progress_percent}% of the horizon"
+            f"{progress_label} of the horizon, horizons {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -411,7 +478,7 @@ def _plot_hold_decision_by_score_drop(
                 plot_directory,
                 (
                     f"{timeframe}_hold_decision_by_score_drop_after_"
-                    f"{progress_percent}pct.png"
+                    f"{progress_file_label}.png"
                 ),
             ),
             dpi=180,
@@ -430,9 +497,10 @@ def _plot_switch_to_benchmark_threshold_lines(
         / horizon_label
         / "switch_to_benchmark"
     )
-    progress_data = threshold_analysis[
-        threshold_analysis["progress_percent"] == progress_percent
-    ].replace([np.inf, -np.inf], np.nan)
+    progress_data, progress_label, progress_file_label = (
+        _filter_progress_bucket(threshold_analysis, progress_percent)
+    )
+    progress_data = progress_data.replace([np.inf, -np.inf], np.nan)
 
     required_columns = [
         "score_change_threshold",
@@ -517,7 +585,7 @@ def _plot_switch_to_benchmark_threshold_lines(
         )
         gain_ax.set_title(
             f"{timeframe}: switch-to-benchmark threshold test after "
-            f"{progress_percent}% of horizon"
+            f"{progress_label} of horizon, horizons {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -526,7 +594,7 @@ def _plot_switch_to_benchmark_threshold_lines(
                 plot_directory,
                 (
                     f"{timeframe}_switch_to_benchmark_thresholds_after_"
-                    f"{progress_percent}pct.png"
+                    f"{progress_file_label}.png"
                 ),
             ),
             dpi=180,
@@ -552,17 +620,33 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
 
     for timeframe, timeframe_data in threshold_analysis.groupby("timeframe"):
         for metric in metrics:
+            progress_column = _progress_x_column(timeframe_data)
+            progress_label_column = (
+                "progress_bucket_label"
+                if "progress_bucket_label" in timeframe_data.columns
+                else None
+            )
             clean = timeframe_data.replace([np.inf, -np.inf], np.nan).dropna(
-                subset=["progress_percent", "score_change_threshold", metric]
+                subset=[progress_column, "score_change_threshold", metric]
             )
             if clean.empty:
                 continue
 
-            progress_order = sorted(clean["progress_percent"].unique())
+            progress_order = sorted(clean[progress_column].unique())
+            if progress_label_column:
+                progress_labels = (
+                    clean[[progress_column, progress_label_column]]
+                    .drop_duplicates()
+                    .sort_values(progress_column)[progress_label_column]
+                    .astype(str)
+                    .tolist()
+                )
+            else:
+                progress_labels = [f"{progress}%" for progress in progress_order]
             threshold_order = sorted(clean["score_change_threshold"].unique())
             matrix = (
                 clean.pivot_table(
-                    index="progress_percent",
+                    index=progress_column,
                     columns="score_change_threshold",
                     values=metric,
                     aggfunc="mean",
@@ -614,7 +698,7 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
                 ha="right",
             )
             ax.set_yticks(range(len(progress_order)))
-            ax.set_yticklabels([f"{progress}%" for progress in progress_order])
+            ax.set_yticklabels(progress_labels)
             ax.set_xlabel(
                 "Switch when relative score percentile change is at or below threshold"
             )
@@ -642,9 +726,9 @@ def _plot_hold_decision_heatmap(
     progress_percent,
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
-    progress_data = live_progress_observations[
-        live_progress_observations["progress_percent"] == progress_percent
-    ]
+    progress_data, progress_label, progress_file_label = (
+        _filter_progress_bucket(live_progress_observations, progress_percent)
+    )
     price_bins = [-np.inf, -0.30, -0.15, 0.0, 0.15, np.inf]
     price_labels = [
         "price drop >30%",
@@ -755,13 +839,14 @@ def _plot_hold_decision_heatmap(
         ax.set_yticks(range(len(score_labels)))
         ax.set_yticklabels(score_labels)
         ax.set_xlabel(
-            f"Price change from entry to {progress_percent}% cutoff"
+            f"Price change from entry to {progress_label} cutoff"
         )
         ax.set_ylabel(
-            f"Relative score percentile change by {progress_percent}% cutoff"
+            f"Relative score percentile change by {progress_label} cutoff"
         )
         ax.set_title(
-            f"{timeframe}: remaining return by score and price deterioration"
+            f"{timeframe}: remaining return by score and price deterioration, "
+            f"horizons {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -770,7 +855,7 @@ def _plot_hold_decision_heatmap(
                 plot_directory,
                 (
                     f"{timeframe}_hold_decision_score_drop_by_price_change_"
-                    f"after_{progress_percent}pct_heatmap.png"
+                    f"after_{progress_file_label}_heatmap.png"
                 ),
             ),
             dpi=180,
@@ -1042,13 +1127,14 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
     for timeframe, timeframe_data in data.groupby("timeframe"):
         clean = timeframe_data[
             timeframe_data["metric"] == "mean_score_percentile"
-        ].sort_values("progress_percent")
+        ].sort_values(_progress_x_column(timeframe_data))
         if clean.empty:
             continue
 
+        progress_column = _progress_x_column(clean)
         fig, ax = plt.subplots(figsize=(13, 7))
         ax.plot(
-            clean["progress_percent"],
+            clean[progress_column],
             clean["mean_pearson_to_annualized_return"],
             color="#4C78A8",
             marker="o",
@@ -1056,7 +1142,7 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
             label="Pearson",
         )
         ax.plot(
-            clean["progress_percent"],
+            clean[progress_column],
             clean["mean_spearman_to_annualized_return"],
             color="#F28E2B",
             marker="s",
@@ -1069,11 +1155,7 @@ def _plot_live_progress_correlations(data, output_dir, horizon_label):
         )
         ax.set_xlabel("Observed share of investment horizon")
         ax.set_ylabel("Mean correlation to final annualized return")
-        ax.set_xticks(range(5, 101, 5))
-        ax.set_xticklabels(
-            [f"{value}%" for value in range(5, 101, 5)],
-            rotation=45,
-        )
+        _set_progress_x_ticks(ax, clean)
         ax.set_ylim(0, 1)
         ax.grid(True, alpha=0.25)
         ax.legend()
@@ -1100,13 +1182,14 @@ def _plot_score_change_progress_correlations(
     for (timeframe, metric), clean in data[
         data["metric"].isin(metrics)
     ].groupby(["timeframe", "metric"], sort=False):
-        clean = clean.sort_values("progress_percent")
+        clean = clean.sort_values(_progress_x_column(clean))
         if clean.empty:
             continue
 
+        progress_column = _progress_x_column(clean)
         fig, ax = plt.subplots(figsize=(13, 7))
         ax.plot(
-            clean["progress_percent"],
+            clean[progress_column],
             clean["mean_pearson_to_annualized_return"],
             color="#4C78A8",
             marker="o",
@@ -1114,7 +1197,7 @@ def _plot_score_change_progress_correlations(
             label="Pearson",
         )
         ax.plot(
-            clean["progress_percent"],
+            clean[progress_column],
             clean["mean_spearman_to_annualized_return"],
             color="#F28E2B",
             marker="s",
@@ -1128,11 +1211,7 @@ def _plot_score_change_progress_correlations(
         )
         ax.set_xlabel("Observed share of investment horizon")
         ax.set_ylabel("Mean correlation to final annualized return")
-        ax.set_xticks(range(5, 101, 5))
-        ax.set_xticklabels(
-            [f"{value}%" for value in range(5, 101, 5)],
-            rotation=45,
-        )
+        _set_progress_x_ticks(ax, clean)
         ax.set_ylim(-1, 1)
         ax.grid(True, alpha=0.25)
         ax.legend()

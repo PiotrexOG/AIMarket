@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+from app.testy.score_tests.common.data import filter_horizon_week_ranges
 from app.testy.score_tests.common.annualization import (
     CALENDAR_DAYS_PER_YEAR,
     annualize_return,
@@ -39,23 +40,34 @@ FRACTIONAL_TOP_SHARES = build_fractional_top_shares()
 def _build_downside_information_ratio_observation_frame(
     return_panel,
     top_shares,
-    horizon_start,
-    horizon_end,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
     already_ranked=False,
 ):
     if return_panel.empty:
         return pd.DataFrame()
 
     ranked = (
-        return_panel[
-            return_panel["horizon_weeks"].between(horizon_start, horizon_end)
-        ]
+        filter_horizon_week_ranges(
+            return_panel,
+            horizon_week_ranges=horizon_week_ranges,
+            horizon_start=horizon_start,
+            horizon_end=horizon_end,
+        )
         .dropna(subset=["score", "future_return"])
     )
     if not already_ranked:
         ranked = ranked.sort_values(
-            ["timeframe", "horizon_days", "start_timestamp", "score", "ticker"],
-            ascending=[True, True, True, False, True],
+            [
+                "timeframe",
+                "horizon_weeks",
+                "horizon_days",
+                "start_timestamp",
+                "score",
+                "ticker",
+            ],
+            ascending=[True, True, True, True, False, True],
         )
 
     if ranked.empty:
@@ -63,9 +75,10 @@ def _build_downside_information_ratio_observation_frame(
 
     observation_frames = []
 
-    for (timeframe, horizon_days), horizon_group in ranked.groupby(
-        ["timeframe", "horizon_days"]
+    for (timeframe, horizon_weeks), horizon_group in ranked.groupby(
+        ["timeframe", "horizon_weeks"]
     ):
+        horizon_days = float(horizon_group["horizon_days"].mean())
         start_codes, start_timestamps = pd.factorize(
             horizon_group["start_timestamp"],
             sort=False,
@@ -134,7 +147,8 @@ def _build_downside_information_ratio_observation_frame(
             annualized_alpha = strategy_annualized - benchmark_annualized
             observation_frames.append(pd.DataFrame({
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
                 "start_timestamp": pd.to_datetime(
                     np.asarray(start_timestamps)[valid_returns]
                 ),
@@ -200,7 +214,7 @@ def _annualized_benchmark_column(df):
 
 def _assign_benchmark_return_buckets(observations, bucket_count):
     benchmark_column = _annualized_benchmark_column(observations)
-    key_columns = ["timeframe", "horizon_days", "start_timestamp"]
+    key_columns = ["timeframe", "horizon_weeks", "start_timestamp"]
     bucket_columns = [
         *key_columns,
         "benchmark_return_bucket_id",
@@ -222,7 +236,7 @@ def _assign_benchmark_return_buckets(observations, bucket_count):
     bucket_frames = []
     for timeframe, timeframe_data in base.groupby("timeframe", sort=False):
         clean = timeframe_data.sort_values(
-            [benchmark_column, "horizon_days", "start_timestamp"]
+            [benchmark_column, "horizon_weeks", "start_timestamp"]
         ).copy()
         unique_values = clean[benchmark_column].nunique(dropna=True)
         effective_bucket_count = max(1, min(int(bucket_count), int(unique_values)))
@@ -312,7 +326,7 @@ def build_benchmark_return_bucket_analysis(
 
     grouped_observations = observations.merge(
         bucket_lookup,
-        on=["timeframe", "horizon_days", "start_timestamp"],
+        on=["timeframe", "horizon_weeks", "start_timestamp"],
         how="inner",
         validate="many_to_one",
     )
@@ -340,7 +354,7 @@ def build_benchmark_return_bucket_analysis(
             ),
             "top_share": float(top_share),
             "top_percent": round_or_none(float(top_share) * 100),
-            "horizon_count": int(group["horizon_days"].nunique()),
+            "horizon_count": int(group["horizon_weeks"].nunique()),
             **summary,
         })
 
@@ -366,13 +380,15 @@ def build_benchmark_return_bucket_analysis(
 
 def _build_downside_information_ratio_by_horizon_frame(
     return_panel,
-    horizon_start,
-    horizon_end,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
     top_shares=FRACTIONAL_TOP_SHARES,
     observations=None,
 ):
     output_columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "top_share",
         "top_percent",
@@ -392,21 +408,23 @@ def _build_downside_information_ratio_by_horizon_frame(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end
+            horizon_end=horizon_end,
+            horizon_week_ranges=horizon_week_ranges,
         )
 
     if observations.empty:
         return pd.DataFrame(columns=output_columns)
 
     rows = []
-    for (timeframe, horizon_days, top_share), group in observations.groupby(
-        ["timeframe", "horizon_days", "top_share"],
+    for (timeframe, horizon_weeks, top_share), group in observations.groupby(
+        ["timeframe", "horizon_weeks", "top_share"],
         sort=False,
     ):
         summary = _summarize_downside_information_ratio_group(group)
         rows.append({
             "timeframe": timeframe,
-            "horizon_days": int(horizon_days),
+            "horizon_weeks": int(horizon_weeks),
+            "horizon_days": float(group["horizon_days"].mean()),
             "top_share": float(top_share),
             "top_percent": float(top_share * 100),
             **summary,
@@ -414,15 +432,16 @@ def _build_downside_information_ratio_by_horizon_frame(
 
     return (
         pd.DataFrame(rows, columns=output_columns)
-        .sort_values(["timeframe", "top_share", "horizon_days"])
+        .sort_values(["timeframe", "top_share", "horizon_weeks"])
         .reset_index(drop=True)
     )
 
 
 def build_downside_information_ratio_by_horizon(
     return_panel,
-    horizon_start,
-    horizon_end,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
     top_shares=FRACTIONAL_TOP_SHARES,
     observations=None,
 ):
@@ -431,6 +450,7 @@ def build_downside_information_ratio_by_horizon(
         top_shares=top_shares,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
         observations=observations,
     )
 
@@ -441,6 +461,7 @@ def build_downside_information_ratio_by_horizon(
     for column in rounded.columns:
         if column not in {
             "timeframe",
+            "horizon_weeks",
             "horizon_days",
             "observation_count",
             "downside_count",
@@ -451,16 +472,17 @@ def build_downside_information_ratio_by_horizon(
 
 def build_downside_information_ratio_analysis(
     return_panel,
-    horizon_start,
-    horizon_end,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
     top_shares=FRACTIONAL_TOP_SHARES,
     plateau_tolerance=PLATEAU_TOLERANCE,
     by_horizon=None,
 ):
     output_columns = [
         "timeframe",
-        "horizon_start",
-        "horizon_end",
+        "horizon_week_start",
+        "horizon_week_end",
         "horizon_count",
         "aggregation_method",
         "top_share",
@@ -486,7 +508,8 @@ def build_downside_information_ratio_analysis(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end
+            horizon_end=horizon_end,
+            horizon_week_ranges=horizon_week_ranges,
         )
 
     if by_horizon.empty:
@@ -500,9 +523,9 @@ def build_downside_information_ratio_analysis(
     ):
         rows.append({
             "timeframe": timeframe,
-            "horizon_start": int(horizon_start),
-            "horizon_end": int(horizon_end),
-            "horizon_count": int(group["horizon_days"].nunique()),
+            "horizon_week_start": int(group["horizon_weeks"].min()),
+            "horizon_week_end": int(group["horizon_weeks"].max()),
+            "horizon_count": int(group["horizon_weeks"].nunique()),
             "aggregation_method": "equal_weight_mean_across_horizons",
             "top_share": float(top_share),
             "top_percent": round_or_none(top_share * 100),
@@ -588,8 +611,9 @@ def build_downside_information_ratio_analysis(
 
 def build_downside_information_ratio_observations(
     return_panel,
-    horizon_start,
-    horizon_end,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
     top_shares=(FRACTIONAL_TOP_SHARES),
     observations=None,
     summary=None,
@@ -600,6 +624,7 @@ def build_downside_information_ratio_observations(
         "top_percent",
         "observation_id",
         "start_timestamp",
+        "horizon_weeks",
         "horizon_days",
         "available_count",
         "effective_selected_count",
@@ -624,7 +649,8 @@ def build_downside_information_ratio_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end
+            horizon_end=horizon_end,
+            horizon_week_ranges=horizon_week_ranges,
         )
 
     if observations.empty:
@@ -647,7 +673,8 @@ def build_downside_information_ratio_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
-            horizon_end=horizon_end
+            horizon_end=horizon_end,
+            horizon_week_ranges=horizon_week_ranges,
         )
     summary = summary[summary_columns]
     result = observations.rename(columns={
@@ -660,7 +687,7 @@ def build_downside_information_ratio_observations(
         validate="many_to_one",
     )
     result = result.sort_values(
-        ["timeframe", "top_share", "horizon_days", "start_timestamp"]
+        ["timeframe", "top_share", "horizon_weeks", "start_timestamp"]
     ).reset_index(drop=True)
     result["observation_id"] = (
         result.groupby(["timeframe", "top_share"]).cumcount() + 1
@@ -680,13 +707,19 @@ def build_downside_information_ratio_observations(
     return result[output_columns]
 
 
-def calculate(context, horizon_start, horizon_end):
+def calculate(
+    context,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
+):
     """Calculate all three outputs while building observations only once."""
     raw_observations = _build_downside_information_ratio_observation_frame(
         context.weekly_ranked,
         top_shares=FRACTIONAL_TOP_SHARES,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
         already_ranked=True,
     )
     if raw_observations.empty:
@@ -695,18 +728,21 @@ def calculate(context, horizon_start, horizon_end):
                 context.return_panel,
                 horizon_start=horizon_start,
                 horizon_end=horizon_end,
+                horizon_week_ranges=horizon_week_ranges,
                 by_horizon=pd.DataFrame(),
             ),
             "by_horizon": build_downside_information_ratio_by_horizon(
                 context.return_panel,
                 horizon_start=horizon_start,
                 horizon_end=horizon_end,
+                horizon_week_ranges=horizon_week_ranges,
                 observations=pd.DataFrame(),
             ),
             "observations": build_downside_information_ratio_observations(
                 context.return_panel,
                 horizon_start=horizon_start,
                 horizon_end=horizon_end,
+                horizon_week_ranges=horizon_week_ranges,
                 observations=pd.DataFrame(),
             ),
             "benchmark_return_buckets": build_benchmark_return_bucket_analysis(
@@ -717,12 +753,14 @@ def calculate(context, horizon_start, horizon_end):
         context.return_panel,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
         observations=raw_observations,
     )
     analysis = build_downside_information_ratio_analysis(
         context.return_panel,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
         by_horizon=by_horizon,
     )
 
@@ -737,6 +775,7 @@ def calculate(context, horizon_start, horizon_end):
         context.return_panel,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
         observations=selected_observations,
         summary=selected_summary,
     )
@@ -750,6 +789,7 @@ def calculate(context, horizon_start, horizon_end):
             context.return_panel,
             horizon_start=horizon_start,
             horizon_end=horizon_end,
+            horizon_week_ranges=horizon_week_ranges,
             top_shares=FRACTIONAL_TOP_SHARES,
             observations=raw_observations,
         ),

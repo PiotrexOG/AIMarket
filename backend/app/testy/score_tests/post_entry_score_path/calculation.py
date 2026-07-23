@@ -5,6 +5,7 @@ from app.testy.market_return_lookup import (
     load_market_lookup_for_analysis,
     lookup_asof_close_many,
 )
+from app.testy.score_tests.common.data import filter_horizon_week_ranges
 from app.testy.score_tests.common.annualization import (
     annualize_return,
 )
@@ -12,9 +13,12 @@ from app.testy.score_tests.common.metrics import round_or_none
 
 
 ENTRY_MIN_SCORE_PERCENTILE = 0.6
-PROGRESS_WEEK_STEP = 2
+PROGRESS_WEEK_STEP = 1
+PROGRESS_BUCKET_PERCENTAGE_POINTS = 5
+MIN_PROGRESS_BUCKET_PERCENT = 10
+MAX_PROGRESS_BUCKET_PERCENT = 80
 SWITCH_SCORE_CHANGE_THRESHOLDS = tuple(
-    round(value, 2) for value in np.arange(-0.80, -0.10, 0.05)
+    round(value, 2) for value in np.arange(-0.80, 0.60, 0.05)
 )
 
 CORRELATION_METRICS = [
@@ -45,6 +49,32 @@ def _overlap_days(segment_starts, segment_days, window_start, window_end):
 
 def _progress_weeks_for_horizon(horizon_weeks):
     return tuple(range(PROGRESS_WEEK_STEP, int(horizon_weeks), PROGRESS_WEEK_STEP))
+
+
+def _progress_bucket(progress_percent):
+    if (
+        progress_percent < MIN_PROGRESS_BUCKET_PERCENT
+        or progress_percent >= MAX_PROGRESS_BUCKET_PERCENT
+    ):
+        return None
+
+    bucket_start = np.floor(
+        progress_percent / PROGRESS_BUCKET_PERCENTAGE_POINTS
+    ) * PROGRESS_BUCKET_PERCENTAGE_POINTS
+    bucket_start = max(
+        float(MIN_PROGRESS_BUCKET_PERCENT),
+        min(
+            float(MAX_PROGRESS_BUCKET_PERCENT - PROGRESS_BUCKET_PERCENTAGE_POINTS),
+            float(bucket_start),
+        ),
+    )
+    bucket_end = bucket_start + PROGRESS_BUCKET_PERCENTAGE_POINTS
+    return {
+        "progress_bucket_start_percent": bucket_start,
+        "progress_bucket_end_percent": bucket_end,
+        "progress_bucket_mid_percent": (bucket_start + bucket_end) / 2.0,
+        "progress_bucket_label": f"{bucket_start:.0f}-{bucket_end:.0f}%",
+    }
 
 
 def _safe_corr(group, metric, method):
@@ -91,15 +121,19 @@ def _prepare_score_history(return_panel):
 def _prepare_top_entry_observations(
     return_panel,
     horizon_start,
-    horizon_end
+    horizon_end,
+    horizon_week_ranges=None,
 ):
     if return_panel.empty:
         return pd.DataFrame()
 
     ranked = (
-        return_panel[
-            return_panel["horizon_weeks"].between(horizon_start, horizon_end)
-        ]
+        filter_horizon_week_ranges(
+            return_panel,
+            horizon_week_ranges=horizon_week_ranges,
+            horizon_start=horizon_start,
+            horizon_end=horizon_end,
+        )
         .dropna(subset=["score", "future_return"])
         .sort_values(
             [
@@ -147,6 +181,7 @@ def _prepare_benchmark_observations(
     return_panel,
     horizon_start,
     horizon_end,
+    horizon_week_ranges=None,
 ):
     required = {
         "timeframe",
@@ -164,9 +199,12 @@ def _prepare_benchmark_observations(
         return pd.DataFrame()
 
     benchmark = (
-        return_panel[
-            return_panel["horizon_weeks"].between(horizon_start, horizon_end)
-        ]
+        filter_horizon_week_ranges(
+            return_panel,
+            horizon_week_ranges=horizon_week_ranges,
+            horizon_start=horizon_start,
+            horizon_end=horizon_end,
+        )
         .dropna(
             subset=[
                 "score",
@@ -453,6 +491,10 @@ def _summarize_live_progress(entry, path, market_lookup, remaining_benchmark_loo
         ).total_seconds() / 86400.0
         progress_share = cutoff_weeks / horizon_weeks
         progress_percent = progress_share * 100.0
+        progress_bucket = _progress_bucket(progress_percent)
+        if progress_bucket is None:
+            continue
+
         live_segment_days = _overlap_days(
             elapsed_days,
             segment_days,
@@ -552,6 +594,7 @@ def _summarize_live_progress(entry, path, market_lookup, remaining_benchmark_loo
             "cutoff_weeks": int(cutoff_weeks),
             "progress_percent": progress_percent,
             "progress_share": progress_share,
+            **progress_bucket,
             "cutoff_days": cutoff_days,
             "cutoff_timestamp": cutoff_timestamp,
             "entry_score_percentile": entry_score_percentile,
@@ -699,9 +742,21 @@ def _build_switch_to_benchmark_threshold_analysis(
     thresholds=SWITCH_SCORE_CHANGE_THRESHOLDS,
     group_columns=("timeframe", "progress_percent"),
 ):
+    metadata_columns = [
+        "progress_bucket_end_percent",
+        "progress_bucket_mid_percent",
+        "progress_bucket_label",
+        "progress_percent",
+        "progress_share",
+        "mean_cutoff_weeks",
+    ]
     columns = [
         *group_columns,
-        "progress_share",
+        *[
+            column
+            for column in metadata_columns
+            if column not in group_columns
+        ],
         "score_change_threshold",
         "score_change_threshold_percent",
         "observation_count",
@@ -751,6 +806,31 @@ def _build_switch_to_benchmark_threshold_analysis(
             group_key = (group_key,)
         group_values = dict(zip(group_columns, group_key))
         observation_count = int(len(group))
+        metadata = {}
+        if "progress_bucket_end_percent" in group.columns:
+            metadata["progress_bucket_end_percent"] = float(
+                group["progress_bucket_end_percent"].iloc[0]
+            )
+        if "progress_bucket_mid_percent" in group.columns:
+            metadata["progress_bucket_mid_percent"] = float(
+                group["progress_bucket_mid_percent"].iloc[0]
+            )
+        if "progress_bucket_label" in group.columns:
+            metadata["progress_bucket_label"] = group[
+                "progress_bucket_label"
+            ].iloc[0]
+        if "progress_percent" in group.columns:
+            metadata["progress_percent"] = round_or_none(
+                group["progress_percent"].mean()
+            )
+        if "progress_share" in group.columns:
+            metadata["progress_share"] = round_or_none(
+                group["progress_share"].mean()
+            )
+        if "cutoff_weeks" in group.columns:
+            metadata["mean_cutoff_weeks"] = round_or_none(
+                group["cutoff_weeks"].mean()
+            )
 
         for threshold in thresholds:
             selected = group[
@@ -762,11 +842,7 @@ def _build_switch_to_benchmark_threshold_analysis(
             summary = _summarize_switch_group(selected)
             rows.append({
                 **group_values,
-                "progress_share": (
-                    float(group["progress_share"].iloc[0])
-                    if "progress_share" in group.columns
-                    else group_values.get("progress_percent") / 100.0
-                ),
+                **metadata,
                 "score_change_threshold": float(threshold),
                 "score_change_threshold_percent": round_or_none(
                     float(threshold) * 100
@@ -870,16 +946,25 @@ def _build_live_progress_correlations_by_horizon(live_progress_observations):
         return pd.DataFrame()
 
     grouped = live_progress_observations.groupby(
-        ["timeframe", "horizon_weeks", "cutoff_weeks"],
+        ["timeframe", "horizon_weeks", "progress_bucket_start_percent"],
         sort=False,
     )
-    for (timeframe, horizon_weeks, cutoff_weeks), group in grouped:
+    for (timeframe, horizon_weeks, progress_bucket_start), group in grouped:
+        bucket_row = group.iloc[0]
         for metric in LIVE_CORRELATION_METRICS:
             rows.append({
                 "timeframe": timeframe,
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": round_or_none(group["horizon_days"].mean()),
-                "cutoff_weeks": int(cutoff_weeks),
+                "cutoff_weeks": round_or_none(group["cutoff_weeks"].mean()),
+                "progress_bucket_start_percent": float(progress_bucket_start),
+                "progress_bucket_end_percent": float(
+                    bucket_row["progress_bucket_end_percent"]
+                ),
+                "progress_bucket_mid_percent": float(
+                    bucket_row["progress_bucket_mid_percent"]
+                ),
+                "progress_bucket_label": bucket_row["progress_bucket_label"],
                 "progress_percent": round_or_none(
                     group["progress_percent"].mean()
                 ),
@@ -907,7 +992,11 @@ def _build_live_progress_correlations_by_horizon(live_progress_observations):
 def _build_live_progress_average(correlations_by_horizon):
     columns = [
         "timeframe",
-        "cutoff_weeks",
+        "progress_bucket_start_percent",
+        "progress_bucket_end_percent",
+        "progress_bucket_mid_percent",
+        "progress_bucket_label",
+        "mean_cutoff_weeks",
         "progress_percent",
         "progress_share",
         "metric",
@@ -924,13 +1013,22 @@ def _build_live_progress_average(correlations_by_horizon):
 
     rows = []
     grouped = correlations_by_horizon.groupby(
-        ["timeframe", "cutoff_weeks", "metric"],
+        ["timeframe", "progress_bucket_start_percent", "metric"],
         sort=False,
     )
-    for (timeframe, cutoff_weeks, metric), group in grouped:
+    for (timeframe, progress_bucket_start, metric), group in grouped:
+        bucket_row = group.iloc[0]
         rows.append({
             "timeframe": timeframe,
-            "cutoff_weeks": int(cutoff_weeks),
+            "progress_bucket_start_percent": float(progress_bucket_start),
+            "progress_bucket_end_percent": float(
+                bucket_row["progress_bucket_end_percent"]
+            ),
+            "progress_bucket_mid_percent": float(
+                bucket_row["progress_bucket_mid_percent"]
+            ),
+            "progress_bucket_label": bucket_row["progress_bucket_label"],
+            "mean_cutoff_weeks": round_or_none(group["cutoff_weeks"].mean()),
             "progress_percent": round_or_none(group["progress_percent"].mean()),
             "progress_share": round_or_none(group["progress_share"].mean()),
             "metric": metric,
@@ -950,7 +1048,7 @@ def _build_live_progress_average(correlations_by_horizon):
         })
 
     return pd.DataFrame(rows, columns=columns).sort_values(
-        ["timeframe", "metric", "cutoff_weeks"]
+        ["timeframe", "metric", "progress_bucket_start_percent"]
     ).reset_index(drop=True)
 
 
@@ -963,6 +1061,9 @@ def _round_numeric_columns(df):
             "horizon_days",
             "horizon_weeks",
             "cutoff_weeks",
+            "progress_bucket_start_percent",
+            "progress_bucket_end_percent",
+            "progress_bucket_mid_percent",
             "observation_id",
             "entry_rank_position",
             "entry_available_count",
@@ -976,8 +1077,9 @@ def _round_numeric_columns(df):
 
 def calculate(
     context,
-    horizon_start,
-    horizon_end
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
 ):
     history = _prepare_score_history(context.return_panel)
     history_lookup = _build_history_lookup(history)
@@ -985,11 +1087,13 @@ def calculate(
         context.weekly_ranked,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
     )
     benchmark_entries = _prepare_benchmark_observations(
         context.weekly_ranked,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        horizon_week_ranges=horizon_week_ranges,
     )
     market_source = (
         context.score_observations
@@ -1028,7 +1132,7 @@ def calculate(
     switch_to_benchmark_thresholds = (
         _build_switch_to_benchmark_threshold_analysis(
             live_progress_observations,
-            group_columns=("timeframe", "progress_percent"),
+            group_columns=("timeframe", "progress_bucket_start_percent"),
         )
     )
 

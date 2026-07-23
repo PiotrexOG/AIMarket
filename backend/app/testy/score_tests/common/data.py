@@ -18,6 +18,31 @@ def build_horizon_weeks(df):
     return list(range(1, max_horizon_weeks + 1))
 
 
+def filter_horizon_week_ranges(
+    df,
+    horizon_week_ranges=None,
+    horizon_start=None,
+    horizon_end=None,
+):
+    if df.empty or "horizon_weeks" not in df.columns:
+        return df
+
+    if horizon_week_ranges:
+        mask = pd.Series(False, index=df.index)
+        for timeframe, week_range in horizon_week_ranges.items():
+            start_week, end_week = week_range
+            mask = mask | (
+                (df["timeframe"] == timeframe)
+                & df["horizon_weeks"].between(start_week, end_week)
+            )
+        return df[mask].copy()
+
+    if horizon_start is not None and horizon_end is not None:
+        return df[df["horizon_weeks"].between(horizon_start, horizon_end)].copy()
+
+    return df
+
+
 def build_timeframe_score_observations(df, score_column):
     required = {"timeframe", "ticker", "start_timestamp", score_column}
     if df.empty or not required.issubset(df.columns):

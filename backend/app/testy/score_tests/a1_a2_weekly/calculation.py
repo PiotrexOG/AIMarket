@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+from app.testy.score_tests.common.data import filter_horizon_week_ranges
 from app.testy.score_tests.common.metrics import pearson_or_none, return_summary, round_or_none
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
@@ -8,14 +9,27 @@ from app.testy.score_tests.common.annualization import add_annualized_return_col
 TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 
 
-def calculate(context, top_n_values=TOP_N_VALUES):
+def calculate(
+    context,
+    top_n_values=TOP_N_VALUES,
+    horizon_start=None,
+    horizon_end=None,
+    horizon_week_ranges=None,
+):
     rows = []
     if context.return_panel.empty:
         return pd.DataFrame()
 
-    for (timeframe, horizon_days), group in context.weekly_ranked.groupby(
-        ["timeframe", "horizon_days"]
+    ranked = filter_horizon_week_ranges(
+        context.weekly_ranked,
+        horizon_week_ranges=horizon_week_ranges,
+        horizon_start=horizon_start,
+        horizon_end=horizon_end,
+    )
+    for (timeframe, horizon_weeks), group in ranked.groupby(
+        ["timeframe", "horizon_weeks"]
     ):
+        horizon_days = group["horizon_days"].mean()
         all_weekly = group.groupby("start_timestamp", as_index=False).agg(
             future_return=("future_return", "mean"),
             selected_count=("ticker", "count"),
@@ -24,7 +38,8 @@ def calculate(context, top_n_values=TOP_N_VALUES):
             "analysis_group": "A_weekly",
             "test": "A1_top_n",
             "timeframe": timeframe,
-            "horizon_days": int(horizon_days),
+            "horizon_weeks": int(horizon_weeks),
+            "horizon_days": horizon_days,
             "metric": "score",
             "bucket": "All 18",
             "top_n": 18,
@@ -44,7 +59,8 @@ def calculate(context, top_n_values=TOP_N_VALUES):
                 "analysis_group": "A_weekly",
                 "test": "A1_top_n",
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
                 "metric": "score",
                 "bucket": f"Top {top_n}",
                 "top_n": int(top_n),
@@ -65,7 +81,8 @@ def calculate(context, top_n_values=TOP_N_VALUES):
                 "analysis_group": "A_weekly",
                 "test": "A2_weekly_pearson",
                 "timeframe": timeframe,
-                "horizon_days": int(horizon_days),
+                "horizon_weeks": int(horizon_weeks),
+                "horizon_days": horizon_days,
                 "metric": metric_label,
                 "bucket": "weekly_mean",
                 "top_n": None,
@@ -83,6 +100,7 @@ def calculate(context, top_n_values=TOP_N_VALUES):
 def build_top_n_output(analysis):
     columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "bucket",
         "top_n",
@@ -98,7 +116,7 @@ def build_top_n_output(analysis):
     ]
     return (
         add_annualized_return_column(selection)[columns]
-        .sort_values(["timeframe", "horizon_days", "top_n"])
+        .sort_values(["timeframe", "horizon_weeks", "top_n"])
         .reset_index(drop=True)
     )
 
@@ -106,6 +124,7 @@ def build_top_n_output(analysis):
 def build_correlation_output(analysis):
     columns = [
         "timeframe",
+        "horizon_weeks",
         "horizon_days",
         "metric",
         "observation_count",
@@ -115,6 +134,6 @@ def build_correlation_output(analysis):
         return pd.DataFrame(columns=columns)
     return (
         analysis[analysis["test"] == "A2_weekly_pearson"][columns]
-        .sort_values(["timeframe", "horizon_days", "metric"])
+        .sort_values(["timeframe", "horizon_weeks", "metric"])
         .reset_index(drop=True)
     )
