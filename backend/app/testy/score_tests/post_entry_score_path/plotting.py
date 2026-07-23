@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
@@ -6,6 +6,9 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.post_entry_score_path.calculation import (
+    ENTRY_MIN_SCORE_PERCENTILE,
+)
 
 
 SCORE_CHANGE_SCATTER_PROGRESS_PERCENT = 25
@@ -31,6 +34,22 @@ SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "downside_deviation": "Downside deviation of switch gain",
     "downside_information_ratio": "Downside information ratio",
 }
+
+
+def _entry_percentile_bins_and_labels():
+    start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
+    step_percent = 10
+    boundaries = list(range(start_percent, 101, step_percent))
+    if boundaries[-1] != 100:
+        boundaries.append(100)
+
+    bins = [value / 100 for value in boundaries]
+    bins[-1] = 1.000001
+    labels = [
+        f"{left}-{right}%"
+        for left, right in zip(boundaries[:-1], boundaries[1:])
+    ]
+    return bins, labels
 
 
 def _target_progress_bucket_start(progress_percent):
@@ -934,7 +953,7 @@ def _plot_score_drop_scatter(
             clean["annualized_return"],
             c=clean["entry_score_percentile"],
             cmap="viridis",
-            vmin=0.60,
+            vmin=ENTRY_MIN_SCORE_PERCENTILE,
             vmax=1.0,
             alpha=0.14,
             s=15,
@@ -944,8 +963,7 @@ def _plot_score_drop_scatter(
         colorbar.set_label("Entry score percentile")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
-        bins = [0.60, 0.70, 0.80, 0.90, 1.000001]
-        labels = ["60–70%", "70–80%", "80–90%", "90–100%"]
+        bins, labels = _entry_percentile_bins_and_labels()
         clean["entry_percentile_band"] = pd.cut(
             clean["entry_score_percentile"],
             bins=bins,
@@ -953,7 +971,7 @@ def _plot_score_drop_scatter(
             right=False,
             include_lowest=True,
         )
-        colors = ["#59A14F", "#F28E2B", "#E15759", "#4C78A8"]
+        colors = plt.cm.tab10(np.linspace(0, 1, len(labels)))
         for label, color in zip(labels, colors):
             band = clean[clean["entry_percentile_band"] == label]
             if len(band) < 3 or band["score_percentile_drop"].nunique() < 2:
@@ -1030,12 +1048,7 @@ def _plot_relative_score_change_heatmap(
     filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
-    entry_bins = [value / 100 for value in range(60, 101, 5)]
-    entry_bins[-1] = 1.000001
-    entry_labels = [
-        f"{value}-{value + 5}%"
-        for value in range(60, 100, 5)
-    ]
+    entry_bins, entry_labels = _entry_percentile_bins_and_labels()
     change_bins = [
         -np.inf,
         -0.70,

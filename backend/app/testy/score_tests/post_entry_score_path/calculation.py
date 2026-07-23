@@ -12,13 +12,13 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-ENTRY_MIN_SCORE_PERCENTILE = 0.6
+ENTRY_MIN_SCORE_PERCENTILE = 0.90
 PROGRESS_WEEK_STEP = 1
 PROGRESS_BUCKET_PERCENTAGE_POINTS = 5
-MIN_PROGRESS_BUCKET_PERCENT = 10
+MIN_PROGRESS_BUCKET_PERCENT = 20
 MAX_PROGRESS_BUCKET_PERCENT = 80
 SWITCH_SCORE_CHANGE_THRESHOLDS = tuple(
-    round(value, 2) for value in np.arange(-0.80, 0.60, 0.05)
+    round(value, 2) for value in np.arange(-0.80, 0, 0.05)
 )
 
 CORRELATION_METRICS = [
