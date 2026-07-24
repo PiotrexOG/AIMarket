@@ -8,6 +8,7 @@ import pandas as pd
 from app.testy.score_tests.common.plotting import plot_path
 from app.testy.score_tests.post_entry_score_path.calculation import (
     ENTRY_MIN_SCORE_PERCENTILE,
+    USE_ENTRY_PERCENTILE_BUCKETS,
 )
 
 
@@ -36,9 +37,15 @@ SWITCH_TO_BENCHMARK_METRIC_LABELS = {
 }
 
 
-def _entry_percentile_bins_and_labels():
-    start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
+def _entry_percentile_bins_and_labels(data=None):
+    if USE_ENTRY_PERCENTILE_BUCKETS and data is not None and not data.empty:
+        start_percent = int(
+            np.floor(data["entry_score_percentile"].min() * 10) * 10
+        )
+    else:
+        start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
     step_percent = 10
+    start_percent = max(0, min(90, start_percent))
     boundaries = list(range(start_percent, 101, step_percent))
     if boundaries[-1] != 100:
         boundaries.append(100)
@@ -50,6 +57,21 @@ def _entry_percentile_bins_and_labels():
         for left, right in zip(boundaries[:-1], boundaries[1:])
     ]
     return bins, labels
+
+
+def _filter_results_for_entry_bucket(results, bucket_id):
+    filtered = {}
+    for key, value in results.items():
+        if (
+            isinstance(value, pd.DataFrame)
+            and "entry_percentile_bucket_id" in value.columns
+        ):
+            filtered[key] = value[
+                value["entry_percentile_bucket_id"] == bucket_id
+            ].copy()
+        else:
+            filtered[key] = value
+    return filtered
 
 
 def _target_progress_bucket_start(progress_percent):
@@ -116,7 +138,7 @@ def _set_progress_x_ticks(ax, data):
     )
 
 
-def plot(results, output_dir, horizon_label):
+def plot(results, output_dir, horizon_label, split_entry_buckets=True):
     if not results:
         return
 
@@ -127,6 +149,38 @@ def plot(results, output_dir, horizon_label):
     switch_to_benchmark_thresholds = results.get(
         "switch_to_benchmark_thresholds"
     )
+
+    if (
+        split_entry_buckets
+        and observations is not None
+        and not observations.empty
+        and {
+            "entry_percentile_bucket_id",
+            "entry_percentile_bucket_slug",
+        }.issubset(observations.columns)
+    ):
+        buckets = (
+            observations[
+                [
+                    "entry_percentile_bucket_id",
+                    "entry_percentile_bucket_slug",
+                ]
+            ]
+            .drop_duplicates()
+            .sort_values("entry_percentile_bucket_id")
+        )
+        for _, bucket in buckets.iterrows():
+            bucket_results = _filter_results_for_entry_bucket(
+                results,
+                bucket["entry_percentile_bucket_id"],
+            )
+            plot(
+                bucket_results,
+                output_dir,
+                Path(horizon_label) / bucket["entry_percentile_bucket_slug"],
+                split_entry_buckets=False,
+            )
+        return
 
     if observations is not None and not observations.empty:
         _plot_best_correlation_overview(
@@ -963,7 +1017,7 @@ def _plot_score_drop_scatter(
         colorbar.set_label("Entry score percentile")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
-        bins, labels = _entry_percentile_bins_and_labels()
+        bins, labels = _entry_percentile_bins_and_labels(clean)
         clean["entry_percentile_band"] = pd.cut(
             clean["entry_score_percentile"],
             bins=bins,
@@ -1048,7 +1102,6 @@ def _plot_relative_score_change_heatmap(
     filename_prefix="",
 ):
     plot_directory = Path("post_entry_score_path") / horizon_label
-    entry_bins, entry_labels = _entry_percentile_bins_and_labels()
     change_bins = [
         -np.inf,
         -0.70,
@@ -1087,6 +1140,7 @@ def _plot_relative_score_change_heatmap(
                 return_metric,
             ]
         ).copy()
+        entry_bins, entry_labels = _entry_percentile_bins_and_labels(clean)
         clean["entry_band"] = pd.cut(
             clean["entry_score_percentile"],
             bins=entry_bins,

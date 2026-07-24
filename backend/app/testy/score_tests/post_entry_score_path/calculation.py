@@ -12,13 +12,16 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-ENTRY_MIN_SCORE_PERCENTILE = 0.90
+ENTRY_MIN_SCORE_PERCENTILE = 0.70
+USE_ENTRY_PERCENTILE_BUCKETS = False
+ENTRY_PERCENTILE_BUCKET_SIZE = 2
+ENTRY_PERCENTILE_BUCKET_COUNT = 9
 PROGRESS_WEEK_STEP = 1
 PROGRESS_BUCKET_PERCENTAGE_POINTS = 5
 MIN_PROGRESS_BUCKET_PERCENT = 20
 MAX_PROGRESS_BUCKET_PERCENT = 80
 SWITCH_SCORE_CHANGE_THRESHOLDS = tuple(
-    round(value, 2) for value in np.arange(-0.80, 0, 0.05)
+    round(value, 2) for value in np.arange(-0.80, 0.4, 0.05)
 )
 
 CORRELATION_METRICS = [
@@ -29,6 +32,82 @@ LIVE_CORRELATION_METRICS = [
     "mean_score_percentile",
     "relative_score_percentile_change",
 ]
+
+
+ENTRY_BUCKET_COLUMNS = [
+    "entry_percentile_bucket_id",
+    "entry_percentile_bucket_slug",
+    "entry_percentile_bucket_label",
+    "entry_percentile_bucket_rank_start",
+    "entry_percentile_bucket_rank_end",
+]
+
+
+def _add_entry_percentile_buckets(ranked):
+    result = ranked.copy()
+    if not USE_ENTRY_PERCENTILE_BUCKETS:
+        result = result[
+            result["score_percentile"] >= ENTRY_MIN_SCORE_PERCENTILE
+        ].copy()
+        if result.empty:
+            return result
+
+        start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
+        result["entry_percentile_bucket_id"] = 1
+        result["entry_percentile_bucket_rank_start"] = 1
+        result["entry_percentile_bucket_rank_end"] = result[
+            "entry_available_count"
+        ]
+        result["entry_percentile_bucket_slug"] = (
+            f"entry_min_score_percentile_{start_percent:02d}"
+        )
+        result["entry_percentile_bucket_label"] = (
+            f"Entry score percentile >= {start_percent}%"
+        )
+        return result
+
+    result["entry_percentile_bucket_id"] = (
+        (result["entry_rank_position"] - 1) // ENTRY_PERCENTILE_BUCKET_SIZE
+    ) + 1
+    result = result[
+        result["entry_percentile_bucket_id"] <= ENTRY_PERCENTILE_BUCKET_COUNT
+    ].copy()
+    if result.empty:
+        return result
+
+    result["entry_percentile_bucket_rank_start"] = (
+        (result["entry_percentile_bucket_id"] - 1)
+        * ENTRY_PERCENTILE_BUCKET_SIZE
+        + 1
+    )
+    result["entry_percentile_bucket_rank_end"] = (
+        result["entry_percentile_bucket_rank_start"]
+        + ENTRY_PERCENTILE_BUCKET_SIZE
+        - 1
+    )
+    result["entry_percentile_bucket_slug"] = [
+        f"entry_rank_{int(start):02d}_{int(end):02d}"
+        for start, end in zip(
+            result["entry_percentile_bucket_rank_start"],
+            result["entry_percentile_bucket_rank_end"],
+        )
+    ]
+    result["entry_percentile_bucket_label"] = [
+        f"Entry rank {int(start)}-{int(end)}"
+        for start, end in zip(
+            result["entry_percentile_bucket_rank_start"],
+            result["entry_percentile_bucket_rank_end"],
+        )
+    ]
+    return result
+
+
+def _first_existing_columns(df, columns):
+    return [column for column in columns if column in df.columns]
+
+
+def _first_value_or_none(group, column):
+    return group[column].iloc[0] if column in group.columns else None
 
 def _weighted_mean(values, weights):
     values = np.asarray(values, dtype=float)
@@ -160,9 +239,10 @@ def _prepare_top_entry_observations(
     ranked["entry_available_count"] = ranked.groupby(
         ["timeframe", "horizon_weeks", "start_timestamp"]
     )["ticker"].transform("count")
-    ranked = ranked[
-        ranked["score_percentile"] >= ENTRY_MIN_SCORE_PERCENTILE
-    ].copy()
+    ranked = _add_entry_percentile_buckets(ranked)
+    if ranked.empty:
+        return pd.DataFrame()
+
     ranked["annualized_return"] = [
         annualize_return(total_return, horizon_days)
         for total_return, horizon_days in zip(
@@ -172,7 +252,14 @@ def _prepare_top_entry_observations(
     ]
     ranked = ranked.dropna(subset=["annualized_return"])
     ranked["observation_id"] = (
-        ranked.groupby(["timeframe", "horizon_weeks"]).cumcount() + 1
+        ranked.groupby(
+            [
+                "entry_percentile_bucket_id",
+                "timeframe",
+                "horizon_weeks",
+            ]
+        ).cumcount()
+        + 1
     )
     return ranked.reset_index(drop=True)
 
@@ -517,6 +604,11 @@ def _summarize_entry_path(entry, path):
 
     row = {
         "timeframe": entry["timeframe"],
+        **{
+            column: entry.get(column)
+            for column in ENTRY_BUCKET_COLUMNS
+            if column in entry
+        },
         "horizon_weeks": horizon_weeks,
         "horizon_days": horizon_days,
         "observation_id": int(entry["observation_id"]),
@@ -665,6 +757,11 @@ def _summarize_live_progress(entry, path, market_lookup, remaining_benchmark_loo
         )
         rows.append({
             "timeframe": entry["timeframe"],
+            **{
+                column: entry.get(column)
+                for column in ENTRY_BUCKET_COLUMNS
+                if column in entry
+            },
             "horizon_weeks": horizon_weeks,
             "horizon_days": horizon_days,
             "observation_id": int(entry["observation_id"]),
@@ -834,6 +931,10 @@ def _build_switch_to_benchmark_threshold_analysis(
     group_columns=("timeframe", "progress_percent"),
 ):
     metadata_columns = [
+        "entry_percentile_bucket_slug",
+        "entry_percentile_bucket_label",
+        "entry_percentile_bucket_rank_start",
+        "entry_percentile_bucket_rank_end",
         "progress_bucket_end_percent",
         "progress_bucket_mid_percent",
         "progress_bucket_label",
@@ -922,6 +1023,9 @@ def _build_switch_to_benchmark_threshold_analysis(
             metadata["mean_cutoff_weeks"] = round_or_none(
                 group["cutoff_weeks"].mean()
             )
+        for column in ENTRY_BUCKET_COLUMNS:
+            if column not in group_columns and column in group.columns:
+                metadata[column] = group[column].iloc[0]
 
         for threshold in thresholds:
             selected = group[
@@ -965,14 +1069,22 @@ def _build_correlations_by_horizon(
     if return_metric not in observations.columns:
         return pd.DataFrame()
 
-    for (timeframe, horizon_weeks), group in observations.groupby(
-        ["timeframe", "horizon_weeks"],
+    group_columns = [
+        *_first_existing_columns(observations, ENTRY_BUCKET_COLUMNS),
+        "timeframe",
+        "horizon_weeks",
+    ]
+    for group_key, group in observations.groupby(
+        group_columns,
         sort=False,
     ):
+        if not isinstance(group_key, tuple):
+            group_key = (group_key,)
+        group_values = dict(zip(group_columns, group_key))
         for metric in CORRELATION_METRICS:
             rows.append({
-                "timeframe": timeframe,
-                "horizon_weeks": int(horizon_weeks),
+                **group_values,
+                "horizon_weeks": int(group_values["horizon_weeks"]),
                 "horizon_days": round_or_none(group["horizon_days"].mean()),
                 "metric": metric,
                 "observation_count": int(
@@ -1001,6 +1113,7 @@ def _build_correlations_by_horizon(
 
 def _build_horizon_average(correlations_by_horizon):
     columns = [
+        *ENTRY_BUCKET_COLUMNS,
         "timeframe",
         "horizon_week_start",
         "horizon_week_end",
@@ -1017,17 +1130,24 @@ def _build_horizon_average(correlations_by_horizon):
         return pd.DataFrame(columns=columns)
 
     rows = []
-    for (timeframe, metric), group in correlations_by_horizon.groupby(
-        ["timeframe", "metric"],
+    group_columns = [
+        *_first_existing_columns(correlations_by_horizon, ENTRY_BUCKET_COLUMNS),
+        "timeframe",
+        "metric",
+    ]
+    for group_key, group in correlations_by_horizon.groupby(
+        group_columns,
         sort=False,
     ):
+        if not isinstance(group_key, tuple):
+            group_key = (group_key,)
+        group_values = dict(zip(group_columns, group_key))
         rows.append({
-            "timeframe": timeframe,
+            **group_values,
             "horizon_week_start": int(group["horizon_weeks"].min()),
             "horizon_week_end": int(group["horizon_weeks"].max()),
             "horizon_count": int(group["horizon_weeks"].nunique()),
             "aggregation_method": "equal_weight_mean_across_horizons",
-            "metric": metric,
             "mean_observation_count": round_or_none(
                 group["observation_count"].mean()
             ),
@@ -1043,8 +1163,13 @@ def _build_horizon_average(correlations_by_horizon):
             ),
         })
 
+    sort_columns = [
+        *_first_existing_columns(pd.DataFrame(rows), ["entry_percentile_bucket_id"]),
+        "timeframe",
+        "metric",
+    ]
     return pd.DataFrame(rows, columns=columns).sort_values(
-        ["timeframe", "metric"]
+        sort_columns
     ).reset_index(drop=True)
 
 
@@ -1058,19 +1183,33 @@ def _build_live_progress_correlations_by_horizon(
     if return_metric not in live_progress_observations.columns:
         return pd.DataFrame()
 
+    group_columns = [
+        *_first_existing_columns(
+            live_progress_observations,
+            ENTRY_BUCKET_COLUMNS,
+        ),
+        "timeframe",
+        "horizon_weeks",
+        "progress_bucket_start_percent",
+    ]
     grouped = live_progress_observations.groupby(
-        ["timeframe", "horizon_weeks", "progress_bucket_start_percent"],
+        group_columns,
         sort=False,
     )
-    for (timeframe, horizon_weeks, progress_bucket_start), group in grouped:
+    for group_key, group in grouped:
+        if not isinstance(group_key, tuple):
+            group_key = (group_key,)
+        group_values = dict(zip(group_columns, group_key))
         bucket_row = group.iloc[0]
         for metric in LIVE_CORRELATION_METRICS:
             rows.append({
-                "timeframe": timeframe,
-                "horizon_weeks": int(horizon_weeks),
+                **group_values,
+                "horizon_weeks": int(group_values["horizon_weeks"]),
                 "horizon_days": round_or_none(group["horizon_days"].mean()),
                 "cutoff_weeks": round_or_none(group["cutoff_weeks"].mean()),
-                "progress_bucket_start_percent": float(progress_bucket_start),
+                "progress_bucket_start_percent": float(
+                    group_values["progress_bucket_start_percent"]
+                ),
                 "progress_bucket_end_percent": float(
                     bucket_row["progress_bucket_end_percent"]
                 ),
@@ -1106,6 +1245,7 @@ def _build_live_progress_correlations_by_horizon(
 
 def _build_live_progress_average(correlations_by_horizon):
     columns = [
+        *ENTRY_BUCKET_COLUMNS,
         "timeframe",
         "progress_bucket_start_percent",
         "progress_bucket_end_percent",
@@ -1127,15 +1267,26 @@ def _build_live_progress_average(correlations_by_horizon):
         return pd.DataFrame(columns=columns)
 
     rows = []
+    group_columns = [
+        *_first_existing_columns(correlations_by_horizon, ENTRY_BUCKET_COLUMNS),
+        "timeframe",
+        "progress_bucket_start_percent",
+        "metric",
+    ]
     grouped = correlations_by_horizon.groupby(
-        ["timeframe", "progress_bucket_start_percent", "metric"],
+        group_columns,
         sort=False,
     )
-    for (timeframe, progress_bucket_start, metric), group in grouped:
+    for group_key, group in grouped:
+        if not isinstance(group_key, tuple):
+            group_key = (group_key,)
+        group_values = dict(zip(group_columns, group_key))
         bucket_row = group.iloc[0]
         rows.append({
-            "timeframe": timeframe,
-            "progress_bucket_start_percent": float(progress_bucket_start),
+            **group_values,
+            "progress_bucket_start_percent": float(
+                group_values["progress_bucket_start_percent"]
+            ),
             "progress_bucket_end_percent": float(
                 bucket_row["progress_bucket_end_percent"]
             ),
@@ -1146,7 +1297,6 @@ def _build_live_progress_average(correlations_by_horizon):
             "mean_cutoff_weeks": round_or_none(group["cutoff_weeks"].mean()),
             "progress_percent": round_or_none(group["progress_percent"].mean()),
             "progress_share": round_or_none(group["progress_share"].mean()),
-            "metric": metric,
             "horizon_week_start": int(group["horizon_weeks"].min()),
             "horizon_week_end": int(group["horizon_weeks"].max()),
             "horizon_count": int(group["horizon_weeks"].nunique()),
@@ -1162,8 +1312,14 @@ def _build_live_progress_average(correlations_by_horizon):
             ),
         })
 
+    sort_columns = [
+        *_first_existing_columns(pd.DataFrame(rows), ["entry_percentile_bucket_id"]),
+        "timeframe",
+        "metric",
+        "progress_bucket_start_percent",
+    ]
     return pd.DataFrame(rows, columns=columns).sort_values(
-        ["timeframe", "metric", "progress_bucket_start_percent"]
+        sort_columns
     ).reset_index(drop=True)
 
 
@@ -1176,6 +1332,9 @@ def _round_numeric_columns(df):
             "horizon_days",
             "horizon_weeks",
             "cutoff_weeks",
+            "entry_percentile_bucket_id",
+            "entry_percentile_bucket_rank_start",
+            "entry_percentile_bucket_rank_end",
             "progress_bucket_start_percent",
             "progress_bucket_end_percent",
             "progress_bucket_mid_percent",
@@ -1262,7 +1421,11 @@ def calculate(
     switch_to_benchmark_thresholds = (
         _build_switch_to_benchmark_threshold_analysis(
             live_progress_observations,
-            group_columns=("timeframe", "progress_bucket_start_percent"),
+            group_columns=(
+                "entry_percentile_bucket_id",
+                "timeframe",
+                "progress_bucket_start_percent",
+            ),
         )
     )
 

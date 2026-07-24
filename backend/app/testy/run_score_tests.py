@@ -94,8 +94,8 @@ ENABLED_TIMEFRAMES = {
 HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
     "medium_term_50d": (4, 11),
-    # "long_term_200d": (14, 42),
-    "long_term_200d": (26, 30),
+    "long_term_200d": (14, 42),
+    #"long_term_200d": (26, 30),
 }
 
 
