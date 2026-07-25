@@ -18,6 +18,8 @@ SOURCE_COLUMNS = [
 
 MOVING_AVERAGE_WINDOW = 4
 MOVING_AVERAGE_COLUMN = "moving_average_score_percentile"
+ANTI_MOMENTUM_PRICE_LOOKBACK_WEEKS = 52
+ANTI_MOMENTUM_SKIP_WEEKS = 4
 SCORE_POINT_COLUMNS = [
     "timestamp",
     "current_score_percentile",
@@ -167,17 +169,36 @@ def _build_score_points(panel, moving_average_window):
     )
 
 
-def _build_prices(panel):
+def _max_horizon_lookback_days(horizon_week_ranges):
+    max_lookback_days = (
+        ANTI_MOMENTUM_PRICE_LOOKBACK_WEEKS
+        + ANTI_MOMENTUM_SKIP_WEEKS
+    ) * 7
+    if not horizon_week_ranges:
+        return max_lookback_days
+    horizon_lookback_days = max(
+        (end_week + ANTI_MOMENTUM_SKIP_WEEKS) * 7
+        for _, end_week in horizon_week_ranges.values()
+    )
+    return max(max_lookback_days, horizon_lookback_days)
+
+
+def _build_prices(panel, horizon_week_ranges=None):
     if panel.empty:
         return pd.DataFrame(
             columns=["ticker", "timestamp", "open", "high", "low", "close"]
         )
 
+    lookback_days = _max_horizon_lookback_days(horizon_week_ranges)
+    min_timestamp = pd.Timestamp(panel["start_timestamp"].min())
+    if lookback_days > 0:
+        min_timestamp = min_timestamp - pd.Timedelta(days=lookback_days)
+
     with SessionLocal() as session:
         prices = load_market_data_frame(
             session,
             tickers=set(panel["ticker"].dropna().unique()),
-            min_timestamp=pd.Timestamp(panel["start_timestamp"].min()).to_pydatetime(),
+            min_timestamp=min_timestamp.to_pydatetime(),
             max_timestamp=pd.Timestamp(panel["start_timestamp"].max()).to_pydatetime(),
         )
     if prices.empty:
@@ -329,6 +350,8 @@ def calculate(
         "forward_return_points": _round_numeric_columns(
             _build_forward_return_points(context.return_panel, horizon_week_ranges)
         ),
-        "prices": _round_numeric_columns(_build_prices(panel)),
+        "prices": _round_numeric_columns(
+            _build_prices(panel, horizon_week_ranges)
+        ),
         "moving_average_window": moving_average_window,
     }

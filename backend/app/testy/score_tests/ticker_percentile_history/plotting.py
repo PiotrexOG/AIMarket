@@ -8,10 +8,15 @@ import pandas as pd
 
 from app.testy.score_tests.common.plotting import plot_path
 from app.testy.score_tests.common.io import save_csv_for_excel
+from app.testy.score_tests.common.annualization import annualize_return
 
 
 MOVING_AVERAGE_COLUMN = "moving_average_score_percentile"
 DEFAULT_MOVING_AVERAGE_WINDOW = 4
+ANTI_MOMENTUM_SKIP_WEEKS = 4
+ANTI_MOMENTUM_WINDOWS = [
+    ("jegadeesh_titman", None, None, ANTI_MOMENTUM_SKIP_WEEKS),
+]
 
 
 def _safe_filename(value):
@@ -283,6 +288,752 @@ def _normalized_excess_by_timestamp(data, weight_column, attribution_column):
             continue
         rows[timestamp] = group[attribution_column].sum() / denominator
     return pd.Series(rows, dtype=float)
+
+
+def _zscore_by_group(data, group_column, value_column, output_column):
+    result = data.copy()
+    mean = result.groupby(group_column)[value_column].transform("mean")
+    std = result.groupby(group_column)[value_column].transform(
+        lambda values: values.std(ddof=0)
+    )
+    result[output_column] = (
+        (result[value_column] - mean) / std.replace(0, np.nan)
+    )
+    return result
+
+
+def _rank_percentile_by_group(data, group_column, value_column, output_column):
+    result = data.copy()
+    ranks = result.groupby(group_column)[value_column].rank(
+        method="average",
+        ascending=True,
+    )
+    counts = result.groupby(group_column)[value_column].transform("count")
+    result[output_column] = np.where(
+        counts > 1,
+        (ranks - 1) / (counts - 1),
+        0.5,
+    )
+    return result
+
+
+def _price_lookup_by_ticker(prices):
+    lookups = {}
+    if prices is None or prices.empty:
+        return lookups
+
+    clean_prices = (
+        prices[["ticker", "timestamp", "close"]]
+        .dropna(subset=["ticker", "timestamp", "close"])
+        .copy()
+    )
+    if clean_prices.empty:
+        return lookups
+
+    clean_prices["timestamp"] = pd.to_datetime(clean_prices["timestamp"])
+    clean_prices = clean_prices.sort_values(["ticker", "timestamp"])
+    for ticker, group in clean_prices.groupby("ticker", sort=True):
+        series = group.drop_duplicates("timestamp", keep="last").set_index(
+            "timestamp"
+        )["close"]
+        lookups[ticker] = series.sort_index()
+    return lookups
+
+
+def _lookup_price_at_or_before(price_series, timestamp, tolerance_days=3):
+    if price_series is None or price_series.empty:
+        return np.nan
+    timestamp = pd.Timestamp(timestamp)
+    value = price_series.asof(timestamp)
+    if pd.isna(value):
+        return np.nan
+    matched_index = price_series.index[price_series.index <= timestamp]
+    if matched_index.empty:
+        return np.nan
+    matched_timestamp = matched_index[-1]
+    if timestamp - matched_timestamp > pd.Timedelta(days=tolerance_days):
+        return np.nan
+    return float(value)
+
+
+def _mean_trailing_window_return(
+    row,
+    price_lookup,
+    start_week,
+    end_week,
+    skip_weeks=0,
+):
+    ticker_prices = price_lookup.get(row["ticker"])
+    if ticker_prices is None:
+        return np.nan
+
+    timestamp = pd.Timestamp(row["timestamp"])
+    end_timestamp = timestamp - pd.Timedelta(weeks=skip_weeks)
+    end_price = _lookup_price_at_or_before(ticker_prices, end_timestamp)
+    if pd.isna(end_price) or end_price <= 0:
+        return np.nan
+
+    trailing_returns = []
+    for horizon_week in range(start_week, end_week + 1):
+        past_timestamp = end_timestamp - pd.Timedelta(weeks=horizon_week)
+        past_price = _lookup_price_at_or_before(ticker_prices, past_timestamp)
+        if pd.isna(past_price) or past_price <= 0:
+            continue
+        total_return = end_price / past_price - 1
+        horizon_days = max(1, (end_timestamp - past_timestamp).days)
+        annualized = annualize_return(total_return, horizon_days)
+        if annualized is not None:
+            trailing_returns.append(annualized)
+
+    return float(np.mean(trailing_returns)) if trailing_returns else np.nan
+
+
+def _momentum_windows_for_row(row):
+    windows = []
+    for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
+        if start_week is None or end_week is None:
+            if (
+                pd.isna(row.get("horizon_week_start"))
+                or pd.isna(row.get("horizon_week_end"))
+            ):
+                continue
+            start_week = int(row["horizon_week_start"])
+            end_week = int(row["horizon_week_end"])
+        windows.append((label, int(start_week), int(end_week), int(skip_weeks)))
+    return windows
+
+
+def _build_anti_momentum_points(data, prices):
+    if prices is None or prices.empty:
+        return pd.DataFrame()
+
+    required = {
+        "ticker",
+        "timestamp",
+        "score",
+        "score_percentile",
+        "mean_forward_annualized_return",
+        "forward_return_percentile",
+        "horizon_week_start",
+        "horizon_week_end",
+    }
+    if data.empty or not required.issubset(data.columns):
+        return pd.DataFrame()
+
+    price_lookup = _price_lookup_by_ticker(prices)
+    if not price_lookup:
+        return pd.DataFrame()
+
+    points = data[
+        [
+            "ticker",
+            "timestamp",
+            "score",
+            "score_percentile",
+            "mean_forward_annualized_return",
+            "forward_return_percentile",
+            "horizon_week_start",
+            "horizon_week_end",
+        ]
+    ].dropna(subset=["ticker", "timestamp", "score"]).copy()
+    if points.empty:
+        return pd.DataFrame()
+
+    points["current_close"] = [
+        _lookup_price_at_or_before(
+            price_lookup.get(row["ticker"]),
+            row["timestamp"],
+            tolerance_days=0,
+        )
+        for _, row in points.iterrows()
+    ]
+    points = points.dropna(subset=["current_close"])
+    if points.empty:
+        return pd.DataFrame()
+
+    points["log_current_close"] = np.log(points["current_close"])
+    points = _zscore_by_group(
+        points,
+        group_column="ticker",
+        value_column="log_current_close",
+        output_column="current_price_zscore",
+    )
+    for label, _, _, _ in ANTI_MOMENTUM_WINDOWS:
+        column = f"trailing_{label}_annualized_return"
+        points[column] = [
+            _mean_trailing_window_return(
+                row,
+                price_lookup,
+                start_week,
+                end_week,
+                skip_weeks,
+            )
+            for _, row in points.iterrows()
+            for (
+                window_label,
+                start_week,
+                end_week,
+                skip_weeks,
+            ) in _momentum_windows_for_row(row)
+            if window_label == label
+        ]
+    return points
+
+
+def _ticker_score_correlation_table(points, ticker_order, value_column):
+    rows = []
+    for ticker, group in points.groupby("ticker", sort=True):
+        correlation = _safe_correlation(
+            group,
+            "score",
+            value_column,
+            "pearson",
+        )
+        clean = group[["score", value_column]].dropna()
+        rows.append({
+            "ticker": ticker,
+            "correlation": correlation,
+            "observations": len(clean),
+            "mean_score": clean["score"].mean() if not clean.empty else np.nan,
+            f"mean_{value_column}": (
+                clean[value_column].mean() if not clean.empty else np.nan
+            ),
+        })
+
+    result = pd.DataFrame(rows)
+    if result.empty:
+        return result
+    ordered_tickers = [
+        ticker
+        for ticker in ticker_order
+        if ticker in set(result["ticker"])
+    ]
+    ordered_tickers.extend(
+        ticker
+        for ticker in sorted(result["ticker"])
+        if ticker not in set(ordered_tickers)
+    )
+    return result.set_index("ticker").reindex(ordered_tickers).reset_index()
+
+
+def _save_ticker_correlation_bar_chart(
+    table,
+    output_dir,
+    directory,
+    filename,
+    title,
+    x_label,
+):
+    if table.empty or "correlation" not in table.columns:
+        return
+
+    clean = table.dropna(subset=["correlation"]).copy()
+    if clean.empty:
+        return
+
+    save_csv_for_excel(
+        table,
+        plot_path(output_dir, directory, f"{Path(filename).stem}.csv"),
+    )
+
+    y_positions = np.arange(len(clean))
+    colors = np.where(clean["correlation"] >= 0, "#59A14F", "#E15759")
+    mean_correlation = clean["correlation"].mean()
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.barh(
+        y_positions,
+        clean["correlation"],
+        color=colors,
+        alpha=0.9,
+    )
+    ax.axvline(0, color="#444444", linewidth=1)
+    ax.axvline(
+        mean_correlation,
+        color="#4C78A8",
+        linewidth=1.5,
+        linestyle="--",
+        label=f"Mean {mean_correlation:.3f}",
+    )
+    ax.set_xlim(-1, 1)
+    ax.set_yticks(y_positions)
+    ax.set_yticklabels(clean["ticker"])
+    ax.set_ylim(len(clean) - 0.5, -0.5)
+    ax.set_title(title)
+    ax.set_xlabel(x_label)
+    ax.set_ylabel("Ticker")
+    ax.grid(True, axis="x", alpha=0.25)
+    ax.legend(loc="best")
+    fig.tight_layout()
+    _save_figure(
+        fig,
+        plot_path(output_dir, directory, filename),
+        dpi=180,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+
+
+def _save_anti_momentum_correlation_charts(
+    data,
+    prices,
+    ticker_order,
+    timeframe,
+    directory,
+    output_dir,
+    horizon_label,
+):
+    points = _build_anti_momentum_points(data, prices)
+    if points.empty:
+        return
+
+    anti_momentum_directory = directory / "anti_momentum"
+    save_csv_for_excel(
+        points,
+        plot_path(
+            output_dir,
+            anti_momentum_directory,
+            "anti_momentum_points.csv",
+        ),
+    )
+
+    configs = [
+        {
+            "value_column": "current_price_zscore",
+            "filename": "score_to_current_price_zscore_correlation_by_ticker.png",
+            "title": (
+                f"Score vs current price z-score by ticker "
+                f"({timeframe})"
+            ),
+            "x_label": "Pearson correlation: score vs current price z-score",
+        },
+        {
+            "value_column": "mean_forward_annualized_return",
+            "filename": (
+                "score_to_future_annualized_return_correlation_by_ticker.png"
+            ),
+            "title": (
+                f"Score vs future annualized return by ticker "
+                f"({timeframe}, {horizon_label})"
+            ),
+            "x_label": "Pearson correlation: score vs future annualized return",
+        },
+    ]
+    for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
+        window_label = (
+            horizon_label
+            if start_week is None or end_week is None
+            else f"{start_week}-{end_week}w"
+        )
+        if skip_weeks:
+            window_label = f"{window_label}, skip {skip_weeks}w"
+        column = f"trailing_{label}_annualized_return"
+        configs.insert(
+            -1,
+            {
+                "value_column": column,
+                "filename": (
+                    f"score_to_trailing_{label}_return_correlation_by_ticker.png"
+                ),
+                "title": (
+                    f"Score vs Jegadeesh-Titman momentum by ticker "
+                    f"({timeframe}, {window_label})"
+                ),
+                "x_label": (
+                    "Pearson correlation: score vs trailing "
+                    f"{window_label} annualized return"
+                ),
+            },
+        )
+
+    for config in configs:
+        table = _ticker_score_correlation_table(
+            points,
+            ticker_order,
+            config["value_column"],
+        )
+        _save_ticker_correlation_bar_chart(
+            table,
+            output_dir,
+            anti_momentum_directory,
+            config["filename"],
+            config["title"],
+            config["x_label"],
+        )
+
+
+def _build_model_vs_momentum_comparison(points, momentum_column, window_label):
+    required = {
+        "ticker",
+        "timestamp",
+        "score",
+        momentum_column,
+        "mean_forward_annualized_return",
+    }
+    if points.empty or not required.issubset(points.columns):
+        return pd.DataFrame()
+
+    clean = points.dropna(
+        subset=[
+            "ticker",
+            "timestamp",
+            "score",
+            momentum_column,
+            "mean_forward_annualized_return",
+        ]
+    ).copy()
+    if clean.empty:
+        return pd.DataFrame()
+
+    clean = _zscore_by_group(
+        clean,
+        group_column="timestamp",
+        value_column="score",
+        output_column="model_score_zscore",
+    )
+    clean = _zscore_by_group(
+        clean,
+        group_column="timestamp",
+        value_column=momentum_column,
+        output_column="momentum_zscore",
+    )
+    clean = _zscore_by_group(
+        clean,
+        group_column="timestamp",
+        value_column="mean_forward_annualized_return",
+        output_column="future_return_zscore",
+    )
+    clean = _rank_percentile_by_group(
+        clean,
+        group_column="timestamp",
+        value_column="score",
+        output_column="model_score_percentile",
+    )
+    clean = _rank_percentile_by_group(
+        clean,
+        group_column="timestamp",
+        value_column=momentum_column,
+        output_column="momentum_percentile",
+    )
+    clean = _rank_percentile_by_group(
+        clean,
+        group_column="timestamp",
+        value_column="mean_forward_annualized_return",
+        output_column="future_return_percentile",
+    )
+    clean["benchmark_annualized_return"] = clean.groupby("timestamp")[
+        "mean_forward_annualized_return"
+    ].transform("mean")
+    clean["future_excess_return"] = (
+        clean["mean_forward_annualized_return"]
+        - clean["benchmark_annualized_return"]
+    )
+    clean["model_long_short_weight"] = clean["model_score_percentile"] - 0.5
+    clean["momentum_long_short_weight"] = clean["momentum_percentile"] - 0.5
+    clean["model_long_only_weight"] = clean["model_long_short_weight"].clip(
+        lower=0.0
+    )
+    clean["momentum_long_only_weight"] = clean[
+        "momentum_long_short_weight"
+    ].clip(lower=0.0)
+    clean["model_long_short_attribution"] = (
+        clean["model_long_short_weight"] * clean["future_excess_return"]
+    )
+    clean["momentum_long_short_attribution"] = (
+        clean["momentum_long_short_weight"] * clean["future_excess_return"]
+    )
+    clean["model_long_only_attribution"] = (
+        clean["model_long_only_weight"] * clean["future_excess_return"]
+    )
+    clean["momentum_long_only_attribution"] = (
+        clean["momentum_long_only_weight"] * clean["future_excess_return"]
+    )
+
+    model_long_short = _normalized_excess_by_timestamp(
+        clean,
+        weight_column="model_long_short_weight",
+        attribution_column="model_long_short_attribution",
+    )
+    momentum_long_short = _normalized_excess_by_timestamp(
+        clean,
+        weight_column="momentum_long_short_weight",
+        attribution_column="momentum_long_short_attribution",
+    )
+    model_long_only = _normalized_excess_by_timestamp(
+        clean,
+        weight_column="model_long_only_weight",
+        attribution_column="model_long_only_attribution",
+    )
+    momentum_long_only = _normalized_excess_by_timestamp(
+        clean,
+        weight_column="momentum_long_only_weight",
+        attribution_column="momentum_long_only_attribution",
+    )
+
+    rows = []
+    for timestamp, group in clean.groupby("timestamp", sort=True):
+        rows.append({
+            "timestamp": timestamp,
+            "momentum_window": window_label,
+            "ticker_count": group["ticker"].nunique(),
+            "model_pearson_ic": _safe_correlation(
+                group,
+                "model_score_zscore",
+                "future_return_zscore",
+                "pearson",
+            ),
+            "momentum_pearson_ic": _safe_correlation(
+                group,
+                "momentum_zscore",
+                "future_return_zscore",
+                "pearson",
+            ),
+            "model_spearman_ic": _safe_correlation(
+                group,
+                "model_score_percentile",
+                "future_return_percentile",
+                "spearman",
+            ),
+            "momentum_spearman_ic": _safe_correlation(
+                group,
+                "momentum_percentile",
+                "future_return_percentile",
+                "spearman",
+            ),
+            "model_long_short_normalized_excess": model_long_short.get(
+                timestamp,
+                np.nan,
+            ),
+            "momentum_long_short_normalized_excess": momentum_long_short.get(
+                timestamp,
+                np.nan,
+            ),
+            "model_long_only_normalized_excess": model_long_only.get(
+                timestamp,
+                np.nan,
+            ),
+            "momentum_long_only_normalized_excess": momentum_long_only.get(
+                timestamp,
+                np.nan,
+            ),
+            "benchmark_annualized_return": group[
+                "benchmark_annualized_return"
+            ].mean(),
+        })
+
+    return pd.DataFrame(rows)
+
+
+def _plot_model_vs_momentum_panel(
+    comparison,
+    output_dir,
+    directory,
+    filename,
+    title,
+):
+    if comparison.empty:
+        return
+
+    panels = [
+        (
+            "model_pearson_ic",
+            "momentum_pearson_ic",
+            "Pearson IC",
+            "Correlation",
+            None,
+        ),
+        (
+            "model_spearman_ic",
+            "momentum_spearman_ic",
+            "Spearman IC",
+            "Correlation",
+            None,
+        ),
+        (
+            "model_long_short_normalized_excess",
+            "momentum_long_short_normalized_excess",
+            "Long-short normalized excess",
+            "Excess return",
+            "percent",
+        ),
+        (
+            "model_long_only_normalized_excess",
+            "momentum_long_only_normalized_excess",
+            "Long-only normalized excess",
+            "Excess return",
+            "percent",
+        ),
+    ]
+
+    fig, axes = plt.subplots(2, 2, figsize=(15, 9), sharex=True)
+    for ax, (model_col, momentum_col, panel_title, y_label, fmt) in zip(
+        axes.flatten(),
+        panels,
+    ):
+        panel_data = comparison.dropna(subset=[model_col, momentum_col], how="all")
+        if panel_data.empty:
+            ax.set_visible(False)
+            continue
+
+        model_mean = panel_data[model_col].mean()
+        momentum_mean = panel_data[momentum_col].mean()
+        ax.plot(
+            panel_data["timestamp"],
+            panel_data[model_col],
+            color="#4C78A8",
+            linewidth=2,
+            marker="o",
+            markersize=3,
+            label=f"Model, mean {model_mean:.3f}"
+            if fmt is None
+            else f"Model, mean {model_mean:.1%}",
+        )
+        ax.plot(
+            panel_data["timestamp"],
+            panel_data[momentum_col],
+            color="#F28E2B",
+            linewidth=2,
+            marker="o",
+            markersize=3,
+            label=f"Momentum, mean {momentum_mean:.3f}"
+            if fmt is None
+            else f"Momentum, mean {momentum_mean:.1%}",
+        )
+        ax.axhline(0, color="#444444", linewidth=1)
+        if pd.notna(model_mean):
+            ax.axhline(
+                model_mean,
+                color="#4C78A8",
+                linewidth=1.2,
+                linestyle="--",
+                alpha=0.75,
+            )
+        if pd.notna(momentum_mean):
+            ax.axhline(
+                momentum_mean,
+                color="#F28E2B",
+                linewidth=1.2,
+                linestyle="--",
+                alpha=0.75,
+            )
+        if fmt == "percent":
+            ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        else:
+            ax.set_ylim(-1, 1)
+        ax.set_title(panel_title)
+        ax.set_ylabel(y_label)
+        ax.grid(True, alpha=0.25)
+        ax.legend(loc="best")
+
+    fig.suptitle(title)
+    fig.autofmt_xdate()
+    fig.tight_layout()
+    _save_figure(
+        fig,
+        plot_path(output_dir, directory, filename),
+        dpi=180,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+
+
+def _save_model_vs_momentum_comparison_charts(
+    data,
+    prices,
+    timeframe,
+    directory,
+    output_dir,
+    horizon_label,
+):
+    points = _build_anti_momentum_points(data, prices)
+    if points.empty:
+        return
+
+    comparison_directory = directory / "model_vs_momentum"
+    comparisons = []
+    for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
+        window_label = (
+            horizon_label
+            if start_week is None or end_week is None
+            else f"{start_week}-{end_week}w"
+        )
+        if skip_weeks:
+            window_label = f"{window_label}, skip {skip_weeks}w"
+        column = f"trailing_{label}_annualized_return"
+        comparison = _build_model_vs_momentum_comparison(
+            points,
+            momentum_column=column,
+            window_label=window_label,
+        )
+        if comparison.empty:
+            continue
+        comparisons.append(comparison)
+        safe_label = _safe_filename(label)
+        save_csv_for_excel(
+            comparison,
+            plot_path(
+                output_dir,
+                comparison_directory,
+                f"model_vs_momentum_{safe_label}_by_timestamp.csv",
+            ),
+        )
+        _plot_model_vs_momentum_panel(
+            comparison,
+            output_dir,
+            comparison_directory,
+            f"model_vs_momentum_{safe_label}_comparison.png",
+            (
+                f"Model vs momentum by score date "
+                f"({timeframe}, momentum {window_label})"
+            ),
+        )
+
+    if not comparisons:
+        return
+
+    combined = pd.concat(comparisons, ignore_index=True)
+    save_csv_for_excel(
+        combined,
+        plot_path(
+            output_dir,
+            comparison_directory,
+            "model_vs_momentum_all_windows_by_timestamp.csv",
+        ),
+    )
+    summary = (
+        combined.groupby("momentum_window", as_index=False)
+        .agg(
+            model_pearson_ic_mean=("model_pearson_ic", "mean"),
+            momentum_pearson_ic_mean=("momentum_pearson_ic", "mean"),
+            model_spearman_ic_mean=("model_spearman_ic", "mean"),
+            momentum_spearman_ic_mean=("momentum_spearman_ic", "mean"),
+            model_long_short_excess_mean=(
+                "model_long_short_normalized_excess",
+                "mean",
+            ),
+            momentum_long_short_excess_mean=(
+                "momentum_long_short_normalized_excess",
+                "mean",
+            ),
+            model_long_only_excess_mean=(
+                "model_long_only_normalized_excess",
+                "mean",
+            ),
+            momentum_long_only_excess_mean=(
+                "momentum_long_only_normalized_excess",
+                "mean",
+            ),
+            timestamp_count=("timestamp", "nunique"),
+        )
+    )
+    save_csv_for_excel(
+        summary,
+        plot_path(
+            output_dir,
+            comparison_directory,
+            "model_vs_momentum_summary.csv",
+        ),
+    )
 
 
 def _save_ticker_date_heatmap(
@@ -602,6 +1353,7 @@ def _save_normalized_excess_comparison_plot(
 
 def _save_forward_return_heatmap(
     timeframe_forward_returns,
+    prices,
     timeframe,
     directory,
     output_dir,
@@ -878,6 +1630,23 @@ def _save_forward_return_heatmap(
         timeframe,
         directory,
         output_dir,
+    )
+    _save_anti_momentum_correlation_charts(
+        data,
+        prices,
+        ticker_order,
+        timeframe,
+        directory,
+        output_dir,
+        horizon_label,
+    )
+    _save_model_vs_momentum_comparison_charts(
+        data,
+        prices,
+        timeframe,
+        directory,
+        output_dir,
+        horizon_label,
     )
 
 
@@ -1296,6 +2065,7 @@ def plot(results, output_dir):
             )
             _save_forward_return_heatmap(
                 timeframe_forward_returns.sort_values("timestamp"),
+                prices,
                 timeframe,
                 directory,
                 output_dir,
