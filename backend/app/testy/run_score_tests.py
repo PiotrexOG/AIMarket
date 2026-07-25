@@ -79,8 +79,8 @@ ENABLED_TESTS = {
     "A1_A2_weekly_top_n_and_correlation": False,
     "A3_weekly_rank_buckets": False,
     "downside_information_ratio": False,
-    "post_entry_score_path": True,
-    "ticker_percentile_history": False,
+    "post_entry_score_path": False,
+    "ticker_percentile_history": True,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
 }
@@ -94,8 +94,8 @@ ENABLED_TIMEFRAMES = {
 HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
     "medium_term_50d": (4, 11),
-    "long_term_200d": (14, 42),
-    #"long_term_200d": (26, 30),
+    #"long_term_200d": (14, 42),
+    "long_term_200d": (26, 30),
 }
 
 
@@ -180,7 +180,10 @@ def run_configured_score_tests(context):
         )
     if ENABLED_TESTS["ticker_percentile_history"]:
         results["ticker_percentile_history"] = (
-            calculate_ticker_percentile_history(context)
+            calculate_ticker_percentile_history(
+                context,
+                horizon_week_ranges=enabled_horizon_week_ranges(),
+            )
         )
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
         results["b1_b2"] = calculate_b1_b2(
@@ -247,6 +250,9 @@ def save_analysis_outputs(results, output_dir):
         ticker_history = results["ticker_percentile_history"]
         outputs.update({
             "ticker_percentile_history_metrics.csv": ticker_history["metrics"],
+            "ticker_percentile_history_forward_returns.csv": (
+                ticker_history["forward_return_points"]
+            ),
             "ticker_percentile_history_prices.csv": ticker_history["prices"],
         })
 
