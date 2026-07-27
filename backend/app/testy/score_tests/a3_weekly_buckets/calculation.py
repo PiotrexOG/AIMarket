@@ -37,8 +37,6 @@ def calculate(
     ranked["bucket"] = (
         "Rank "
         + ranked["bucket_start_rank"].astype(str)
-        + "-"
-        + ranked["bucket_end_rank"].astype(str)
     )
 
     rows = []

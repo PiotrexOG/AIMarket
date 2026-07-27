@@ -10,6 +10,13 @@ from app.testy.score_tests.common.plotting import (
 )
 
 
+def _mean_label(label, values, formatter):
+    mean_value = values.dropna().mean()
+    if mean_value != mean_value:
+        return label
+    return f"{label} (mean {formatter(mean_value)})"
+
+
 def plot(analysis, output_dir):
     if analysis.empty:
         return
@@ -29,6 +36,10 @@ def _plot_top_n(analysis, output_dir):
             continue
         fig, ax = plt.subplots(figsize=(12, 7))
         x_column = horizon_x_column(timeframe_data)
+
+        x_values = sorted(timeframe_data[x_column].unique())
+        ax.set_xticks(x_values)
+
         for bucket, group in timeframe_data.groupby("bucket", sort=False):
             group = group.sort_values(x_column)
             ax.plot(
@@ -38,7 +49,11 @@ def _plot_top_n(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=bucket,
+                label=_mean_label(
+                    bucket,
+                    group["annualized_return"],
+                    lambda value: f"{value:.1%}",
+                ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(f"{timeframe}: weekly annualized return by Top N")
@@ -46,7 +61,7 @@ def _plot_top_n(analysis, output_dir):
         ax.set_ylabel("Annualized return")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Weekly selection")
+        ax.legend(title="Mean over shown horizons")
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -69,6 +84,9 @@ def _plot_correlations(analysis, output_dir):
             continue
         fig, ax = plt.subplots(figsize=(12, 7))
         x_column = horizon_x_column(timeframe_data)
+        x_values = sorted(timeframe_data[x_column].unique())
+        ax.set_xticks(x_values)
+
         for metric, group in timeframe_data.groupby("metric", sort=False):
             group = group.sort_values(x_column)
             ax.plot(
@@ -78,14 +96,18 @@ def _plot_correlations(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=metric,
+                label=_mean_label(
+                    metric,
+                    group["pearson"],
+                    lambda value: f"{value:.3f}",
+                ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: mean weekly Pearson correlation")
+        ax.set_title(f"{timeframe}: weekly IC metrics by return horizon")
         ax.set_xlabel(horizon_x_label(timeframe_data))
-        ax.set_ylabel("Mean weekly Pearson correlation")
+        ax.set_ylabel("Mean weekly IC")
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Metric")
+        ax.legend(title="Mean over shown horizons")
         fig.tight_layout()
         fig.savefig(
             plot_path(

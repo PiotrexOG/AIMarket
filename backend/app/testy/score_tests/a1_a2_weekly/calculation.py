@@ -2,7 +2,12 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.data import filter_horizon_week_ranges
-from app.testy.score_tests.common.metrics import pearson_or_none, return_summary, round_or_none
+from app.testy.score_tests.common.metrics import (
+    pearson_or_none,
+    return_summary,
+    round_or_none,
+    spearman_or_none,
+)
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
 
@@ -67,13 +72,13 @@ def calculate(
                 **return_summary(weekly),
             })
 
-        for metric_column, metric_label in [
-            ("score", "score"),
-            ("score_percentile", "percentile"),
-            ("score_zscore", "z_score"),
+        for metric_label, correlation_function, metric_column in [
+            ("Pearson IC", pearson_or_none, "score"),
+            ("Spearman IC", spearman_or_none, "score"),
+            ("Score Percentile Pearson IC", pearson_or_none, "score_percentile"),
         ]:
             correlations = [
-                pearson_or_none(week, metric_column)
+                correlation_function(week, metric_column)
                 for _, week in group.groupby("start_timestamp")
             ]
             correlations = [value for value in correlations if value is not None]

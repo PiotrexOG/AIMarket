@@ -30,6 +30,7 @@ def plot(analysis, output_dir):
             f"{timeframe}_rank_bucket_annualized_return_lines.png",
             f"{timeframe}: weekly rank bucket annualized return",
             bucket_order,
+            show_mean_in_legend=True,
         )
         plot_bucket_average(
             timeframe_data,

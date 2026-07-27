@@ -265,6 +265,290 @@ def _safe_correlation(group, x_column, y_column, method):
     return clean[x_column].corr(clean[y_column], method=method)
 
 
+def _newey_west_mean_stats(values, lags):
+    clean = pd.Series(values, dtype=float).dropna()
+    observation_count = int(len(clean))
+    if observation_count < 2:
+        return {
+            "mean_ic": clean.mean() if observation_count else np.nan,
+            "naive_standard_error": np.nan,
+            "newey_west_standard_error": np.nan,
+            "ci_lower_95": np.nan,
+            "ci_upper_95": np.nan,
+            "effective_observations": np.nan,
+        }
+
+    selected_lags = max(0, min(int(lags), observation_count - 1))
+    residuals = clean.to_numpy(dtype=float) - float(clean.mean())
+    gamma_zero = float(np.dot(residuals, residuals) / observation_count)
+    long_run_variance = gamma_zero
+    for lag in range(1, selected_lags + 1):
+        weight = 1.0 - lag / (selected_lags + 1.0)
+        autocovariance = float(
+            np.dot(residuals[lag:], residuals[:-lag]) / observation_count
+        )
+        long_run_variance += 2.0 * weight * autocovariance
+
+    sample_std = float(clean.std(ddof=1))
+    naive_standard_error = sample_std / np.sqrt(observation_count)
+    long_run_variance = max(long_run_variance, 0.0)
+    newey_west_standard_error = np.sqrt(long_run_variance / observation_count)
+    reported_standard_error = max(
+        naive_standard_error,
+        newey_west_standard_error,
+    )
+    z_critical = 1.959963984540054
+    mean_ic = float(clean.mean())
+    if reported_standard_error > 0:
+        effective_observations = observation_count * (
+            naive_standard_error / reported_standard_error
+        ) ** 2
+    else:
+        effective_observations = np.nan
+
+    return {
+        "mean_ic": mean_ic,
+        "naive_standard_error": naive_standard_error,
+        "newey_west_standard_error": newey_west_standard_error,
+        "reported_standard_error": reported_standard_error,
+        "ci_lower_95": mean_ic - z_critical * reported_standard_error,
+        "ci_upper_95": mean_ic + z_critical * reported_standard_error,
+        "raw_newey_west_ci_lower_95": (
+            mean_ic - z_critical * newey_west_standard_error
+        ),
+        "raw_newey_west_ci_upper_95": (
+            mean_ic + z_critical * newey_west_standard_error
+        ),
+        "effective_observations": effective_observations,
+    }
+
+
+def _autocorrelation_by_lag(values, max_lag):
+    clean = pd.Series(values, dtype=float).dropna().reset_index(drop=True)
+    max_lag = max(0, min(int(max_lag), len(clean) - 2))
+    rows = []
+    for lag in range(1, max_lag + 1):
+        correlation = clean.autocorr(lag=lag)
+        rows.append({
+            "lag": lag,
+            "autocorrelation": correlation,
+        })
+    return pd.DataFrame(rows)
+
+
+def _score_return_horizon_metadata(data, correlations):
+    starts = (
+        data["horizon_week_start"].dropna()
+        if "horizon_week_start" in data.columns
+        else pd.Series(dtype=float)
+    )
+    ends = (
+        data["horizon_week_end"].dropna()
+        if "horizon_week_end" in data.columns
+        else pd.Series(dtype=float)
+    )
+    first_timestamp = correlations["timestamp"].min()
+    last_timestamp = correlations["timestamp"].max()
+    gaps = (
+        correlations["timestamp"]
+        .sort_values()
+        .diff()
+        .dropna()
+        .dt.total_seconds()
+        / 86400.0
+    )
+    horizon_week_start = int(starts.min()) if not starts.empty else np.nan
+    horizon_week_end = int(ends.max()) if not ends.empty else np.nan
+    return {
+        "first_timestamp": first_timestamp,
+        "last_timestamp": last_timestamp,
+        "median_observation_gap_days": float(gaps.median())
+        if not gaps.empty
+        else np.nan,
+        "horizon_week_start": horizon_week_start,
+        "horizon_week_end": horizon_week_end,
+    }
+
+
+def _newey_west_lags_from_horizon(metadata, observation_count):
+    horizon_week_end = metadata["horizon_week_end"]
+    if pd.isna(horizon_week_end):
+        automatic_lags = int(np.floor(4 * (observation_count / 100) ** (2 / 9)))
+        return max(0, min(observation_count - 1, automatic_lags))
+    structural_lags = int(horizon_week_end) - 1
+    return max(0, min(structural_lags, observation_count - 1))
+
+
+def _save_score_return_hac_diagnostics(
+    correlations,
+    data,
+    timeframe,
+    directory,
+    output_dir,
+):
+    if correlations.empty:
+        return pd.DataFrame()
+
+    metadata = _score_return_horizon_metadata(data, correlations)
+    observation_count = int(len(correlations))
+    newey_west_lags = _newey_west_lags_from_horizon(
+        metadata,
+        observation_count,
+    )
+    metrics = [
+        ("pearson", "Pearson IC"),
+        ("spearman", "Spearman IC"),
+        ("score_percentile_pearson_ic", "Score percentile Pearson IC"),
+    ]
+    summary_rows = []
+    autocorrelation_frames = []
+    for column, label in metrics:
+        if column not in correlations.columns:
+            continue
+        stats = _newey_west_mean_stats(correlations[column], newey_west_lags)
+        summary_rows.append({
+            "timeframe": timeframe,
+            "metric": column,
+            "metric_label": label,
+            "mean_ic": stats["mean_ic"],
+            "naive_standard_error": stats["naive_standard_error"],
+            "newey_west_standard_error": stats["newey_west_standard_error"],
+            "reported_standard_error": stats["reported_standard_error"],
+            "ci_lower_95": stats["ci_lower_95"],
+            "ci_upper_95": stats["ci_upper_95"],
+            "raw_newey_west_ci_lower_95": stats[
+                "raw_newey_west_ci_lower_95"
+            ],
+            "raw_newey_west_ci_upper_95": stats[
+                "raw_newey_west_ci_upper_95"
+            ],
+            "observations": observation_count,
+            "effective_observations": stats["effective_observations"],
+            "newey_west_lags": newey_west_lags,
+            "lag_selection": "horizon_end_weeks_minus_1_capped_by_sample",
+            "reported_standard_error_rule": "max_naive_or_newey_west",
+            "first_timestamp": metadata["first_timestamp"],
+            "last_timestamp": metadata["last_timestamp"],
+            "median_observation_gap_days": metadata[
+                "median_observation_gap_days"
+            ],
+            "horizon_week_start": metadata["horizon_week_start"],
+            "horizon_week_end": metadata["horizon_week_end"],
+            "confidence_level": 0.95,
+            "critical_value_type": "normal_approximation",
+        })
+        autocorrelation = _autocorrelation_by_lag(
+            correlations[column],
+            newey_west_lags,
+        )
+        if not autocorrelation.empty:
+            autocorrelation["metric"] = column
+            autocorrelation["metric_label"] = label
+            autocorrelation_frames.append(autocorrelation)
+
+    summary = pd.DataFrame(summary_rows)
+    if summary.empty:
+        return summary
+
+    save_csv_for_excel(
+        summary,
+        plot_path(
+            output_dir,
+            directory,
+            "score_return_correlation_hac_summary.csv",
+        ),
+    )
+    if autocorrelation_frames:
+        autocorrelations = pd.concat(autocorrelation_frames, ignore_index=True)
+        save_csv_for_excel(
+            autocorrelations,
+            plot_path(
+                output_dir,
+                directory,
+                "score_return_correlation_autocorrelation.csv",
+            ),
+        )
+
+    pearson_summary = summary[summary["metric"] == "pearson"]
+    pearson = pearson_summary.iloc[0] if not pearson_summary.empty else None
+    fig, (series_ax, acf_ax) = plt.subplots(
+        2,
+        1,
+        figsize=(13, 9),
+        gridspec_kw={"height_ratios": [2.1, 1]},
+    )
+    series_ax.plot(
+        correlations["timestamp"],
+        correlations["pearson"],
+        color="#4C78A8",
+        linewidth=2,
+        marker="o",
+        markersize=3,
+        label="Pearson IC by score date",
+    )
+    if pearson is not None:
+        series_ax.axhline(
+            pearson["mean_ic"],
+            color="#4C78A8",
+            linewidth=1.5,
+            linestyle="--",
+            label=f"Mean {pearson['mean_ic']:.3f}",
+        )
+        series_ax.axhspan(
+            pearson["ci_lower_95"],
+            pearson["ci_upper_95"],
+            color="#4C78A8",
+            alpha=0.14,
+            label=(
+                "Reported 95% CI for mean "
+                f"[{pearson['ci_lower_95']:.3f}, "
+                f"{pearson['ci_upper_95']:.3f}]"
+            ),
+        )
+    series_ax.axhline(0, color="#444444", linewidth=1)
+    series_ax.set_ylim(-1, 1)
+    series_ax.set_title(
+        f"Pearson IC with HAC-adjusted mean interval ({timeframe})"
+    )
+    series_ax.set_ylabel("Cross-sectional Pearson IC")
+    series_ax.grid(True, alpha=0.25)
+    series_ax.legend(loc="best")
+
+    pearson_acf = (
+        autocorrelations[autocorrelations["metric"] == "pearson"]
+        if autocorrelation_frames
+        else pd.DataFrame()
+    )
+    if not pearson_acf.empty:
+        acf_ax.bar(
+            pearson_acf["lag"],
+            pearson_acf["autocorrelation"],
+            color="#F28E2B",
+            alpha=0.85,
+        )
+    acf_ax.axhline(0, color="#444444", linewidth=1)
+    acf_ax.set_ylim(-1, 1)
+    acf_ax.set_xlabel("Lag in weekly observations")
+    acf_ax.set_ylabel("Autocorrelation")
+    acf_ax.set_title(f"Pearson IC autocorrelation, lags 1-{newey_west_lags}")
+    acf_ax.grid(True, axis="y", alpha=0.25)
+
+    fig.autofmt_xdate()
+    fig.tight_layout()
+    _save_figure(
+        fig,
+        plot_path(
+            output_dir,
+            directory,
+            "score_return_correlation_hac_diagnostics.png",
+        ),
+        dpi=180,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+    return summary
+
+
 def _format_metric_value(value, metric_format):
     if pd.isna(value):
         return ""
@@ -439,25 +723,6 @@ def _build_anti_momentum_points(data, prices):
     if points.empty:
         return pd.DataFrame()
 
-    points["current_close"] = [
-        _lookup_price_at_or_before(
-            price_lookup.get(row["ticker"]),
-            row["timestamp"],
-            tolerance_days=0,
-        )
-        for _, row in points.iterrows()
-    ]
-    points = points.dropna(subset=["current_close"])
-    if points.empty:
-        return pd.DataFrame()
-
-    points["log_current_close"] = np.log(points["current_close"])
-    points = _zscore_by_group(
-        points,
-        group_column="ticker",
-        value_column="log_current_close",
-        output_column="current_price_zscore",
-    )
     for label, _, _, _ in ANTI_MOMENTUM_WINDOWS:
         column = f"trailing_{label}_annualized_return"
         points[column] = [
@@ -599,15 +864,6 @@ def _save_anti_momentum_correlation_charts(
 
     configs = [
         {
-            "value_column": "current_price_zscore",
-            "filename": "score_to_current_price_zscore_correlation_by_ticker.png",
-            "title": (
-                f"Score vs current price z-score by ticker "
-                f"({timeframe})"
-            ),
-            "x_label": "Pearson correlation: score vs current price z-score",
-        },
-        {
             "value_column": "mean_forward_annualized_return",
             "filename": (
                 "score_to_future_annualized_return_correlation_by_ticker.png"
@@ -628,8 +884,7 @@ def _save_anti_momentum_correlation_charts(
         if skip_weeks:
             window_label = f"{window_label}, skip {skip_weeks}w"
         column = f"trailing_{label}_annualized_return"
-        configs.insert(
-            -1,
+        configs.append(
             {
                 "value_column": column,
                 "filename": (
@@ -1722,6 +1977,20 @@ def _save_score_return_correlation_by_timestamp_plot(
             "score_return_correlation_by_timestamp.csv",
         ),
     )
+    hac_summary = _save_score_return_hac_diagnostics(
+        correlations,
+        data,
+        timeframe,
+        directory,
+        output_dir,
+    )
+    pearson_hac = (
+        hac_summary[hac_summary["metric"] == "pearson"].iloc[0]
+        if not hac_summary.empty
+        and "metric" in hac_summary.columns
+        and (hac_summary["metric"] == "pearson").any()
+        else None
+    )
 
     fig, ax = plt.subplots(figsize=(13, 6))
     ax.plot(
@@ -1775,6 +2044,18 @@ def _save_score_return_correlation_by_timestamp_plot(
         linestyle="--",
         alpha=0.8,
     )
+    if pearson_hac is not None:
+        ax.axhspan(
+            pearson_hac["ci_lower_95"],
+            pearson_hac["ci_upper_95"],
+            color="#4C78A8",
+            alpha=0.12,
+            label=(
+                "Pearson mean HAC-adjusted 95% CI "
+                f"[{pearson_hac['ci_lower_95']:.3f}, "
+                f"{pearson_hac['ci_upper_95']:.3f}]"
+            ),
+        )
     ax.axhline(
         spearman_mean,
         color="#59A14F",

@@ -21,6 +21,19 @@ def pearson_or_none(df, metric_column, return_column="future_return"):
     return round_or_none(clean[metric_column].corr(clean[return_column]))
 
 
+def spearman_or_none(df, metric_column, return_column="future_return"):
+    clean = df[[metric_column, return_column]].dropna()
+    if (
+        len(clean) < 3
+        or clean[metric_column].nunique() < 2
+        or clean[return_column].nunique() < 2
+    ):
+        return None
+    return round_or_none(
+        clean[metric_column].corr(clean[return_column], method="spearman")
+    )
+
+
 def return_summary(df):
     returns = df["future_return"].dropna()
     if returns.empty:

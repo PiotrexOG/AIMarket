@@ -46,7 +46,22 @@ def horizon_x_label(df):
     )
 
 
-def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order):
+def _mean_label(label, values, formatter):
+    mean_value = values.dropna().mean()
+    if mean_value != mean_value:
+        return label
+    return f"{label} ({formatter(mean_value)})"
+
+
+def plot_bucket_lines(
+    data,
+    output_dir,
+    plot_type,
+    filename,
+    title,
+    bucket_order,
+    show_mean_in_legend=False,
+):
     if data.empty:
         return
     fig, ax = plt.subplots(figsize=(12, 7))
@@ -64,7 +79,15 @@ def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order
             linewidth=1.8,
             markersize=3,
             color=color,
-            label=bucket,
+            label=(
+                _mean_label(
+                    bucket,
+                    group["annualized_return"],
+                    lambda value: f"{value:.2%}",
+                )
+                if show_mean_in_legend
+                else bucket
+            ),
         )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
@@ -72,7 +95,10 @@ def plot_bucket_lines(data, output_dir, plot_type, filename, title, bucket_order
     ax.set_ylabel("Annualized return")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
-    ax.legend(title="Bucket", ncol=2)
+    ax.legend(
+        title="Mean over shown horizons" if show_mean_in_legend else "Bucket",
+        ncol=2,
+    )
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, plot_type, filename), dpi=160)
     plt.close(fig)
@@ -108,12 +134,13 @@ def plot_bucket_average(
     labels = average["bucket"].astype(str)
     if score_range_columns:
         labels = [
-            f"{row.bucket}\navg score {row.avg_score_min:.1f}-{row.avg_score_max:.1f}"
+            f"{row.bucket}\navg score {row.avg_score_min:.1f}"
             for row in average.itertuples(index=False)
         ]
 
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.bar(labels, average["annualized_return"], color="#4C78A8")
+
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
     ax.set_xlabel("Bucket")

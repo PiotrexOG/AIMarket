@@ -76,26 +76,26 @@ OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": False,
-    "A3_weekly_rank_buckets": False,
+    "A1_A2_weekly_top_n_and_correlation": True,
+    "A3_weekly_rank_buckets": True,
     "downside_information_ratio": False,
     "post_entry_score_path": False,
-    "ticker_percentile_history": True,
+    "ticker_percentile_history": False,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
 }
 
 ENABLED_TIMEFRAMES = {
-    "short_term_14d": False,
-    "medium_term_50d": False,
+    "short_term_14d": True,
+    "medium_term_50d": True,
     "long_term_200d": True,
 }
 
 HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
     "medium_term_50d": (4, 11),
-    #"long_term_200d": (14, 42),
-    "long_term_200d": (26, 30),
+    "long_term_200d": (14, 42),
+    #"long_term_200d": (26, 30),
 }
 
 
