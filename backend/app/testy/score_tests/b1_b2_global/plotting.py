@@ -6,7 +6,9 @@ from app.testy.score_tests.common.plotting import (
     horizon_x_column,
     horizon_x_label,
     limit_horizon_range,
+    mean_label,
     plot_path,
+    set_integer_x_axis,
 )
 
 
@@ -37,20 +39,25 @@ def _plot_top_percent(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=bucket,
+                label=mean_label(
+                    bucket,
+                    group["annualized_return"],
+                    lambda value: f"{value:.1%}",
+                ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(f"{timeframe}: global annualized return by Top X percent")
         ax.set_xlabel(horizon_x_label(timeframe_data))
+        set_integer_x_axis(ax)
         ax.set_ylabel("Annualized return")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Global selection")
+        ax.legend(title="Mean over shown horizons")
         fig.tight_layout()
         fig.savefig(
             plot_path(
                 output_dir,
-                "b1_b2_global",
+                "b_tests",
                 f"{timeframe}_b1_top_percent_annualized_return.png",
             ),
             dpi=160,
@@ -77,19 +84,24 @@ def _plot_correlations(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=metric,
+                label=mean_label(
+                    metric,
+                    group["pearson"],
+                    lambda value: f"{value:.3f}",
+                ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: global Pearson correlation")
+        ax.set_title(f"{timeframe}: global IC metrics by return horizon")
         ax.set_xlabel(horizon_x_label(timeframe_data))
-        ax.set_ylabel("Pearson correlation")
+        set_integer_x_axis(ax)
+        ax.set_ylabel("Correlation")
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Metric")
+        ax.legend(title="Mean over shown horizons")
         fig.tight_layout()
         fig.savefig(
             plot_path(
                 output_dir,
-                "b1_b2_global",
+                "b_tests",
                 f"{timeframe}_b2_global_pearson.png",
             ),
             dpi=160,

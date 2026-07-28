@@ -46,11 +46,15 @@ def horizon_x_label(df):
     )
 
 
-def _mean_label(label, values, formatter):
+def mean_label(label, values, formatter):
     mean_value = values.dropna().mean()
     if mean_value != mean_value:
         return label
     return f"{label} ({formatter(mean_value)})"
+
+
+def set_integer_x_axis(ax):
+    ax.xaxis.set_major_locator(mtick.MaxNLocator(integer=True))
 
 
 def plot_bucket_lines(
@@ -80,7 +84,7 @@ def plot_bucket_lines(
             markersize=3,
             color=color,
             label=(
-                _mean_label(
+                mean_label(
                     bucket,
                     group["annualized_return"],
                     lambda value: f"{value:.2%}",
@@ -92,6 +96,7 @@ def plot_bucket_lines(
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
     ax.set_xlabel(horizon_x_label(data))
+    set_integer_x_axis(ax)
     ax.set_ylabel("Annualized return")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)

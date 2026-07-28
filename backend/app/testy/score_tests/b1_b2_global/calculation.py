@@ -2,7 +2,12 @@ import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
 from app.testy.score_tests.common.data import filter_horizon_week_ranges
-from app.testy.score_tests.common.metrics import pearson_or_none, return_summary, round_or_none
+from app.testy.score_tests.common.metrics import (
+    pearson_or_none,
+    return_summary,
+    round_or_none,
+    spearman_or_none,
+)
 
 
 TOP_SCORE_SHARES = [0.01, 0.02, 0.03, 0.05, 0.10, 0.20, 0.50, 0.75, 1]
@@ -71,16 +76,10 @@ def calculate(
             pct=True,
             method="average",
         )
-        std = metrics["score"].std(ddof=0)
-        metrics["global_score_zscore"] = (
-            0.0
-            if std == 0 or pd.isna(std)
-            else (metrics["score"] - metrics["score"].mean()) / std
-        )
-        for metric_column, metric_label in [
-            ("score", "score"),
-            ("global_score_percentile", "percentile"),
-            ("global_score_zscore", "z_score"),
+        for metric_label, correlation_function, metric_column in [
+            ("Pearson IC", pearson_or_none, "score"),
+            ("Spearman IC", spearman_or_none, "score"),
+            ("Score Percentile Pearson IC", pearson_or_none, "global_score_percentile"),
         ]:
             rows.append({
                 "analysis_group": "B_global",
@@ -96,7 +95,7 @@ def calculate(
                     len(metrics.dropna(subset=[metric_column, "future_return"]))
                 ),
                 "avg_return": None,
-                "pearson": pearson_or_none(metrics, metric_column),
+                "pearson": correlation_function(metrics, metric_column),
             })
     return pd.DataFrame(rows)
 

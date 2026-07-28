@@ -72,22 +72,24 @@ from score_tests.ticker_percentile_history.plotting import (
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
 OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
+A_TESTS_DIR = Path("a_tests")
+B_TESTS_DIR = Path("b_tests")
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
     "A1_A2_weekly_top_n_and_correlation": True,
     "A3_weekly_rank_buckets": True,
-    "downside_information_ratio": False,
-    "post_entry_score_path": False,
-    "ticker_percentile_history": False,
-    "B1_B2_global_top_percent_and_correlation": False,
-    "B3_global_score_buckets": False,
+    "downside_information_ratio": True,
+    "post_entry_score_path": True,
+    "ticker_percentile_history": True,
+    "B1_B2_global_top_percent_and_correlation": True,
+    "B3_global_score_buckets": True,
 }
 
 ENABLED_TIMEFRAMES = {
-    "short_term_14d": True,
-    "medium_term_50d": True,
+    "short_term_14d": False,
+    "medium_term_50d": False,
     "long_term_200d": True,
 }
 
@@ -204,16 +206,16 @@ def save_analysis_outputs(results, output_dir):
 
     if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
         outputs.update({
-            "weekly_correlation_analysis.csv": build_weekly_correlation_output(
-                results["a1_a2"]
+            A_TESTS_DIR / "weekly_correlation_analysis.csv": (
+                build_weekly_correlation_output(results["a1_a2"])
             ),
-            "weekly_top_n_return_analysis.csv": build_top_n_output(
-                results["a1_a2"]
+            A_TESTS_DIR / "weekly_top_n_return_analysis.csv": (
+                build_top_n_output(results["a1_a2"])
             ),
         })
 
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
-        outputs["weekly_rank_bucket_return_analysis.csv"] = (
+        outputs[A_TESTS_DIR / "weekly_rank_bucket_return_analysis.csv"] = (
             build_weekly_bucket_output(results["a3"])
         )
 
@@ -258,16 +260,16 @@ def save_analysis_outputs(results, output_dir):
 
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
         outputs.update({
-            "global_correlation_analysis.csv": build_global_correlation_output(
-                results["b1_b2"]
+            B_TESTS_DIR / "global_correlation_analysis.csv": (
+                build_global_correlation_output(results["b1_b2"])
             ),
-            "global_top_percent_return_analysis.csv": build_top_percent_output(
-                results["b1_b2"]
+            B_TESTS_DIR / "global_top_percent_return_analysis.csv": (
+                build_top_percent_output(results["b1_b2"])
             ),
         })
 
     if ENABLED_TESTS["B3_global_score_buckets"]:
-        outputs["global_score_bucket_return_analysis.csv"] = (
+        outputs[B_TESTS_DIR / "global_score_bucket_return_analysis.csv"] = (
             build_global_bucket_output(results["b3"])
         )
 

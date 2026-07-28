@@ -26,7 +26,7 @@ def plot(analysis, output_dir):
         plot_bucket_lines(
             timeframe_data,
             output_dir,
-            "a3_weekly_buckets",
+            "a_tests",
             f"{timeframe}_rank_bucket_annualized_return_lines.png",
             f"{timeframe}: weekly rank bucket annualized return",
             bucket_order,
@@ -35,7 +35,7 @@ def plot(analysis, output_dir):
         plot_bucket_average(
             timeframe_data,
             output_dir,
-            "a3_weekly_buckets",
+            "a_tests",
             f"{timeframe}_rank_bucket_annualized_return_average.png",
             f"{timeframe}: weekly rank bucket mean annualized return",
             bucket_order,

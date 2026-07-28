@@ -27,15 +27,16 @@ def plot(analysis, output_dir):
         plot_bucket_lines(
             timeframe_data,
             output_dir,
-            "b3_global_buckets",
+            "b_tests",
             f"{timeframe}_score_bucket_annualized_return_lines.png",
             f"{timeframe}: global score bucket annualized return",
             bucket_order,
+            show_mean_in_legend=True,
         )
         plot_bucket_average(
             timeframe_data,
             output_dir,
-            "b3_global_buckets",
+            "b_tests",
             f"{timeframe}_score_bucket_annualized_return_average.png",
             f"{timeframe}: global score bucket mean annualized return",
             bucket_order,
