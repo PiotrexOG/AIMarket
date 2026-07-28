@@ -78,13 +78,13 @@ B_TESTS_DIR = Path("b_tests")
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": True,
-    "A3_weekly_rank_buckets": True,
+    "A1_A2_weekly_top_n_and_correlation": False,
+    "A3_weekly_rank_buckets": False,
     "downside_information_ratio": True,
-    "post_entry_score_path": True,
-    "ticker_percentile_history": True,
-    "B1_B2_global_top_percent_and_correlation": True,
-    "B3_global_score_buckets": True,
+    "post_entry_score_path": False,
+    "ticker_percentile_history": False,
+    "B1_B2_global_top_percent_and_correlation": False,
+    "B3_global_score_buckets": False,
 }
 
 ENABLED_TIMEFRAMES = {
@@ -95,8 +95,8 @@ ENABLED_TIMEFRAMES = {
 
 HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
-    "medium_term_50d": (4, 11),
-    "long_term_200d": (14, 42),
+    "medium_term_50d": (4, 10),
+    "long_term_200d": (21, 35),
     #"long_term_200d": (26, 30),
 }
 

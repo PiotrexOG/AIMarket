@@ -1,0 +1,46 @@
+A1
+Test A1 pokazuje, jak zmieniał się roczny zwrot strategii kupującej co tydzień Top N najwyżej ocenionych spółek. Dla każdego horyzontu inwestycyjnego, np. 14 tygodni, brane są wszystkie dostępne tygodnie startowe. W każdym takim tygodniu spółki są sortowane według score, wybierane jest Top N, liczony jest ich średni przyszły zwrot, a następnie wyniki są uśredniane i annualizowane.
+Top 18 pełni rolę benchmarku, ponieważ oznacza kupno wszystkich 18 spółek po równo. Pozostałe linie pokazują coraz bardziej selektywne strategie: Top 14, Top 9, Top 7, aż do Top 1.
+Eksperyment był liczony dla trzech zakresów zgodnych z założonymi horyzontami modelu:
+short-term: 1-3 tygodnie,
+medium-term: 4-11 tygodni,
+long-term: 14-42 tygodnie.
+Wyniki short-term i medium-term miały bardzo niską siłę zależności między score a przyszłym zwrotem, dlatego sensowny sygnał pojawił się dopiero dla horyzontu około 200 dni, czyli zakresu 14-42 tygodni.
+Dla long-term liczba obserwacji maleje wraz z horyzontem: dla 14 tygodni było 54 tygodniowych próbek, a dla 42 tygodni 26 próbek. Jest to naturalne, bo im dłuższy horyzont przyszłego zwrotu, tym mniej dat startowych ma jeszcze kompletny przyszły okres zwrotu.
+Wyniki dla zakresu 14-42 tygodni:
+Top 1: średnio ok. 61.8% rocznie,
+Top 2: ok. 42.2% rocznie,
+Top 3: ok. 37.8% rocznie,
+Top 5: ok. 33.6% rocznie,
+Top 7: ok. 29.5% rocznie,
+Top 9: ok. 28.5% rocznie,
+Top 14: ok. 22.7% rocznie,
+Top 18: ok. 21.1% rocznie.
+Interpretacja: im bardziej elitarna selekcja, tym wyższy średni zwrot, ale też większa zmienność między horyzontami. Top 1 daje najwyższy wynik, ale jest najbardziej wrażliwy na pojedyncze trafienia. Top 18 jest najstabilniejsze, ale najbliższe benchmarkowi całego koszyka.
+A2
+Test A2 mierzy, czy dla każdego tygodnia score rzeczywiście porządkuje spółki zgodnie z ich późniejszym zwrotem na przestrzeni całego zakresu horyzontów. Dla każdego horyzontu inwestycyjnego osobno liczona jest korelacja przekrojowa w każdym tygodniu, a potem średnia z tych tygodniowych korelacji. Innymi słowy: sprawdzamy, czy w danym tygodniu spółki z wyższym score miały potem wyższy zwrot niż spółki z niższym score.
+Na wykresie są trzy metryki:
+Pearson IC: klasyczna korelacja Pearsona między score a przyszłym zwrotem,
+Spearman IC: korelacja rang, czyli test tego, czy kolejność spółek według score zgadza się z kolejnością późniejszych zwrotów,
+Score Percentile Pearson IC: korelacja Pearsona między tygodniowym percentylem score a przyszłym zwrotem; to wersja stabilniejsza względem skali score, bo patrzy na względną pozycję spółki w danym tygodniu.
+Jako że dla krótszego horyzontu mamy naturalnie więcej obserwacji niż dla dłuższych, to średnia wartość tych korelacji, nie jest rzeczywistą oceną naszego modelu, ale pokazuje jak zmienia się jego skuteczność dla różnych długości trwania horyzontu.
+Dla zakresu long-term 14-42 tygodni średnie wartości wyniosły:
+Pearson IC: ok. 0.181,
+Spearman IC: ok. 0.171,
+Score Percentile Pearson IC: ok. 0.186.
+Dla porównania:
+short-term miał IC bliskie zera, około 0.00-0.01,
+medium-term miał IC tylko około 0.03,
+long-term miał IC około 0.17-0.19.
+Interpretacja: model nie ma użytecznego sygnału dla bardzo krótkiego horyzontu, ma słaby sygnał dla średniego, ale dla long-term pojawia się dodatnia i dość stabilna zależność. W praktyce oznacza to, że score nie przewiduje dokładnie przyszłych zwrotów punkt po punkcie, ale statystycznie pomaga ustawiać spółki w lepszej kolejności dla horyzontu około 200 dni.
+A3
+Test A3 rozbija ranking tygodniowy na 18 osobnych koszyków: Rank 1, Rank 2, ..., Rank 18. Rank 1 oznacza najlepszą spółkę według score w danym tygodniu, Rank 18 najniżej ocenioną. Dla każdego koszyka liczony jest średni przyszły zwrot dla różnych horyzontów, a następnie annualizowany.
+Ten test odpowiada na pytanie: czy zwrot spada wraz z pogarszaniem się pozycji w rankingu? Idealny model dawałby niemal monotoniczną funkcję malejącą: Rank 1 najlepszy, Rank 2 trochę słabszy, itd. Wtedy Spearman między score/rankiem a przyszłym zwrotem byłby bardzo wysoki.
+Wyniki dla zakresu 14-42 tygodni:
+Rank 1: ok. 61.8% rocznie,
+średnia dla Rank 1-6: ok. 30.8% rocznie,
+średnia dla Rank 7-12: ok. 20.6% rocznie,
+średnia dla Rank 13-18: ok. 13.0% rocznie.
+Funkcja nie jest idealnie malejąca. Widać lokalne zaburzenia, np. niektóre dalsze rankingi potrafią wypaść lepiej niż bliższe. Mimo tego ogólny gradient jest wyraźny: górne pozycje rankingu mają przeciętnie wyższy zwrot niż dolne.
+Interpretacja: A3 potwierdza wniosek z A1 i A2. Najwyżej oceniane spółki rzeczywiście mają tendencję do osiągania lepszych wyników, szczególnie Rank 1, ale ranking nie jest idealny na całej szerokości listy. Model wydaje się najmocniejszy w identyfikowaniu najlepszych kandydatów, a słabszy w precyzyjnym uporządkowaniu wszystkich 18 spółek od najlepszej do najgorszej.
+
