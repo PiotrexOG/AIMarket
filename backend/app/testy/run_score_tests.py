@@ -80,8 +80,8 @@ EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 ENABLED_TESTS = {
     "A1_A2_weekly_top_n_and_correlation": False,
     "A3_weekly_rank_buckets": False,
-    "downside_information_ratio": True,
-    "post_entry_score_path": False,
+    "downside_information_ratio": False,
+    "post_entry_score_path": True,
     "ticker_percentile_history": False,
     "B1_B2_global_top_percent_and_correlation": False,
     "B3_global_score_buckets": False,
