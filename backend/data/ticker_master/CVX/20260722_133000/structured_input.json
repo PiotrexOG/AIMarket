@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (88.9)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "EXPLOSIVE_UP (9.9%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (8.4%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 164.78-191.26]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.2%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.499)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.35)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.78-198.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.8%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 192.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.89%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 33.32, P/S: 2.06)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.09)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.1x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron signs Iraq oil field deals, eyes bypass pipeline. - Chevron makes critical move to sidestep Iran oil risk. - Chevron will explore pipeline to bypass Strait of Hormuz. - Chevron, Conoco Phillips look to Iraq for production growth.",
+      "Chevron inks 2.7-gigawatt power deal with Microsoft.",
+      "Chevron poised to beat Q2 earnings estimates."
+    ],
+    "medium_term_50d": [
+      "Chevron signs Iraq oil field deals, eyes bypass pipeline. - Chevron makes critical move to sidestep Iran oil risk. - Chevron will explore pipeline to bypass Strait of Hormuz. - Chevron, Conoco Phillips look to Iraq for production growth.",
+      "Chevron inks 2.7-gigawatt power deal with Microsoft.",
+      "Chevron extends gas supply deal with Alinta Energy through 2032. - Chevron launches AI data center power venture with GE Vernova, Microsoft."
+    ],
+    "long_term_200d": [
+      "Chevron signs Iraq oil field deals, eyes bypass pipeline. - Chevron makes critical move to sidestep Iran oil risk. - Chevron will explore pipeline to bypass Strait of Hormuz. - Chevron, Conoco Phillips look to Iraq for production growth.",
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion.",
+      "Chevron licenses enhanced oil recovery technology to ZL Chemicals. - Chevron faces DOJ probe over Iran tensions and record profit stakes. - Chevron's new technology licensing deal to boost shale oil recovery. - Chevron poised to beat second-quarter profit estimates on crude revenue. - Bank of America favors Chevron over Exxon as Hormuz risks push oil higher."
+    ]
+  }
+}

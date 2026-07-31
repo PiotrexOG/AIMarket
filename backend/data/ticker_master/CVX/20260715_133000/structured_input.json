@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (58.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 164.78-183.36]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.59%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.783)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.32)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.78-198.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (5.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.35%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 179.69,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.1%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.03, P/S: 1.92)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.94)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron partners with Microsoft on AI data center. - Chevron enters gas-to-power business for AI data centers. - Hess, a Chevron subsidiary, contracts Ranger Energy Services.",
+      "Chevron extends gas supply deal with Alinta Energy through 2032. - Chevron launches AI data center power venture with GE Vernova, Microsoft.",
+      "Chevron licenses enhanced oil recovery technology to ZL Chemicals. - Chevron faces DOJ probe over Iran tensions and record profit stakes. - Chevron's new technology licensing deal to boost shale oil recovery. - Chevron poised to beat second-quarter profit estimates on crude revenue. - Bank of America favors Chevron over Exxon as Hormuz risks push oil higher."
+    ],
+    "medium_term_50d": [
+      "Chevron extends gas supply deal with Alinta Energy through 2032. - Chevron launches AI data center power venture with GE Vernova, Microsoft.",
+      "Chevron licenses enhanced oil recovery technology to ZL Chemicals. - Chevron faces DOJ probe over Iran tensions and record profit stakes. - Chevron's new technology licensing deal to boost shale oil recovery. - Chevron poised to beat second-quarter profit estimates on crude revenue. - Bank of America favors Chevron over Exxon as Hormuz risks push oil higher.",
+      "Chevron partners with Microsoft on AI data center. - Chevron enters gas-to-power business for AI data centers. - Hess, a Chevron subsidiary, contracts Ranger Energy Services."
+    ],
+    "long_term_200d": [
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion.",
+      "Chevron licenses enhanced oil recovery technology to ZL Chemicals. - Chevron faces DOJ probe over Iran tensions and record profit stakes. - Chevron's new technology licensing deal to boost shale oil recovery. - Chevron poised to beat second-quarter profit estimates on crude revenue. - Bank of America favors Chevron over Exxon as Hormuz risks push oil higher.",
+      "Trump orders DOJ probe into Chevron over gas prices. - Chevron expands Project Kilby with strategic support. - Chevron's Project Kilby could expand for Microsoft. - Chevron has agreement to sell electricity to Microsoft. - Chevron registers a bigger fall than the market."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.5)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.02)",
+        "velocity_roc_10": "NORMAL (4.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 907.23-987.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.2%)",
+        "cycle_macd": "BULLISH_ACCELERATING (5.162)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 907.23-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.95%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 972.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.04%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.0, P/S: 1.54)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 14.27)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.41)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco partners with Trinity Energy for off-grid Florida distribution center. - Costco distribution center in Florida now runs fully off the grid. - Costco's market share increased while competitors' contracted.",
+      "Costco Wholesale expected to announce Q4 2026 earnings. - Costco's Kirkland Signature brand shows strong growth momentum.",
+      "Costco membership model offers inflation protection."
+    ],
+    "medium_term_50d": [
+      "Costco partners with Trinity Energy for off-grid Florida distribution center. - Costco distribution center in Florida now runs fully off the grid. - Costco's market share increased while competitors' contracted.",
+      "Costco Wholesale expected to announce Q4 2026 earnings. - Costco's Kirkland Signature brand shows strong growth momentum.",
+      "Costco reports strong membership renewal rates."
+    ],
+    "long_term_200d": [
+      "Costco reports June sales results, net sales up 10.6%. - Costco announces quarterly cash dividend. - Costco credit card partnership change detailed. - Costco stock slips despite strong June sales growth.",
+      "Costco expands digital wallet feature for faster checkout. - Costco reports net sales increase of 10.6% for five weeks. - Costco's June comparable sales growth slowed but remained strong. - Costco shares fell after June sales missed high expectations.",
+      "Joe Terranova sells Generac and buys Costco stock. - Costco Wholesale Corporation (COST) is a trending stock. - Costco's $250 Billion Expansion Strategy Keeps Delivering Results. - Costco Wholesale (COST) Posts Strong Results, Is It Fully Priced? - Costco.com Luna Ultra bundle product partnership mentioned."
+    ]
+  }
+}

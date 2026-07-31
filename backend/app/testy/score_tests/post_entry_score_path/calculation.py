@@ -12,7 +12,7 @@ from app.testy.score_tests.common.annualization import (
 from app.testy.score_tests.common.metrics import round_or_none
 
 
-ENTRY_MIN_SCORE_PERCENTILE = 0
+ENTRY_MIN_SCORE_PERCENTILE = 0.7
 USE_ENTRY_PERCENTILE_BUCKETS = False
 ENTRY_PERCENTILE_BUCKET_SIZE = 2
 ENTRY_PERCENTILE_BUCKET_COUNT = 9

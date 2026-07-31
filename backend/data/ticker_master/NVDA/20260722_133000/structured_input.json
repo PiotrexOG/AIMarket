@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (5.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 189.8-213.81]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.86%)",
+        "cycle_macd": "BULLISH_FADING (0.836)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.29)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.9%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 206.8,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.49%))",
+      "volume_dynamics": "AVERAGE (0.84)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 65.86, P/S: 34.27)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 60.7)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.81)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia confirms next-gen \"Vera Rubin\" AI chips are in full production. - AMD launches Helios AI rack server platform, competing with Nvidia. - Nvidia reveals new Vera CPU details as AI CPU race heats up. - Nvidia and Apple vie for position as world's biggest company. - Nvidia stock tests key resistance level. - TSMC to raise chip prices by up to 10% in 2027.",
+      "Google escalates campaign to break Nvidia's AI chip grip. - Nvidia announces Agent Toolkit includes Omniverse libraries. - Jeff Bezos backs AI startup teaming with Nvidia. - Bristol Myers Squibb to build AI factory with NVIDIA. - Meta and Nvidia target AI supply chain. - AMD sets sights on Nvidia with Helios AI racks. - Helios is AMD's AI system to rival Nvidia. - Kimi K3 GPU demand strains capacity, benefiting Nvidia. - Martin Shkreli says Micron is closing in on Nvidia's profits.",
+      "Nvidia stock on edge amid new risks and capex cuts. - AMD passes Nvidia in a semiconductor ETF. - AMD stock trades on same AI story as Nvidia. - Nvidia's chips crush competition, new opportunities heat up. - Nvidia, Meta Platforms, Microsoft trading at cheap valuations."
+    ],
+    "medium_term_50d": [
+      "Nvidia Deepens Japan AI Push With Factory Deal And Robotics Tie Ups. - Nvidia CEO Denies Delay Reports for Vera Rubin AI Systems. - Apple Overtakes Nvidia as World's Most Valuable Company. - Qumulus AI Approved to Join Nvidia Cloud Partner Network. - Nvidia Chip Stocks Sink as China Unveils New AI Model.",
+      "Google escalates campaign to break Nvidia's AI chip grip. - Nvidia announces Agent Toolkit includes Omniverse libraries. - Jeff Bezos backs AI startup teaming with Nvidia. - Bristol Myers Squibb to build AI factory with NVIDIA. - Meta and Nvidia target AI supply chain. - AMD sets sights on Nvidia with Helios AI racks. - Helios is AMD's AI system to rival Nvidia. - Kimi K3 GPU demand strains capacity, benefiting Nvidia. - Martin Shkreli says Micron is closing in on Nvidia's profits.",
+      "Nvidia Deepens Japan Ties With Mitsubishi Heavy And Toyota. - Japan Government, Industrial Leaders and NVIDIA Launch National AI Infrastructure. - Nvidia partners with Japan robotics firms on AI development. - Nvidia-backed Fireworks hits $17.5 billion valuation. - Nvidia and Palantir are partnering up for sovereign AI. - Nvidia's Rubin reassurance protects a much bigger AI bet. - NVIDIA\u2019s 75% Margins vs TSMC\u2019s Foundry Gamble. - Michael Burry Mocks Data Center 'Fantasy\u2019 In ORCL, NVDA, AMZN. - Zacks.com featured highlights include NVIDIA, Neurocrine Biosciences and Ball."
+    ],
+    "long_term_200d": [
+      "Nvidia Deepens Japan AI Push With Factory Deal And Robotics Tie Ups. - Nvidia CEO Denies Delay Reports for Vera Rubin AI Systems. - Apple Overtakes Nvidia as World's Most Valuable Company. - Qumulus AI Approved to Join Nvidia Cloud Partner Network. - Nvidia Chip Stocks Sink as China Unveils New AI Model.",
+      "Nvidia Deepens Japan Ties With Mitsubishi Heavy And Toyota. - Japan Government, Industrial Leaders and NVIDIA Launch National AI Infrastructure. - Nvidia partners with Japan robotics firms on AI development. - Nvidia-backed Fireworks hits $17.5 billion valuation. - Nvidia and Palantir are partnering up for sovereign AI. - Nvidia's Rubin reassurance protects a much bigger AI bet. - NVIDIA\u2019s 75% Margins vs TSMC\u2019s Foundry Gamble. - Michael Burry Mocks Data Center 'Fantasy\u2019 In ORCL, NVDA, AMZN. - Zacks.com featured highlights include NVIDIA, Neurocrine Biosciences and Ball.",
+      "Nvidia appoints former Microsoft executive Nicholas Parker as EVP, Worldwide Field Operations. - Nvidia becomes strategic investor in Verkada, collaborating on AI search and safety. - Nvidia announces Halos for Robotics, a safety system for robotics and physical AI. - Nvidia's Q2 FY2027 revenue guide is $91.0 billion. - Palantir partners with Nvidia for federal agencies' AI needs. - Meta is building its own AI chips, shifting from buying Nvidia GPUs."
+    ]
+  }
+}

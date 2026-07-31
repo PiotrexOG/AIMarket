@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The short-term outlook shows strengthening bullish momentum, with RSI moving higher into the strong zone (64.7) and explosive velocity (ROC 11.8%). The price is now at critical resistance within its 20-day range. W: Analyst sentiment remains deteriorating with low conviction, and volume dynamics are weak (0.57), indicating a lack of broad participation despite the price action. The strong bullish candle pattern is occurring at a resistance level. O: The Broadcom deal extension provides some structural support, and the potential for an AI upgrade cycle could drive demand. T: While short-term momentum is strong, the confluence of resistance, weak volume, and negative analyst sentiment suggests a potential for a pullback or consolidation. Conviction is moderate due to these conflicting signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend is showing signs of overextension, with the price significantly above the 50-day SMA (Z:2.24) and MACD bullish momentum fading. The stock is strengthening at monthly resistance. W: The compressed moving averages (0.23%) suggest consolidation, but the overextended Z-score and fading MACD indicate a potential reversal. Volume is notably dry, suggesting a lack of conviction behind the current move. O: The $30 billion Broadcom deal for US-made chips is a significant positive development for supply chain and domestic manufacturing. T: The medium-term outlook is becoming less constructive due to the overextended technicals and fading momentum, despite the positive news flow. The safe score is reduced due to increased risk of mean reversion from an overbought state. Conviction is moderate."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market, with the price now trading at new all-time highs (101.6% of range). Fundamentals remain robust, characterized by high business quality, excellent cash generation, and strong historical growth. W: Valuation has become hyper-premium (P/E: 41.0, P/S: 11.04), and asset safety is extremely low (P/B: 54.53), increasing sensitivity to any growth deceleration. The implied growth is expensive (PEG: 1.61). O: The integration of Apple Intelligence across its ecosystem and the significant Broadcom deal for US-made chips are key long-term growth drivers and structural positives. T: While the long-term growth narrative and fundamental strength are intact, the extreme valuation and new all-time high price level significantly increase downside risk. The safe score is reduced due to the elevated valuation fragility and potential for a regime shift. Conviction is moderate due to the high risk/reward at these levels."
+    }
+  }
+}

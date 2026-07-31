@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.84)",
+        "velocity_roc_10": "NORMAL (3.5%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 23.62-25.65]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.38%)",
+        "cycle_macd": "BULLISH_FADING (0.152)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.62-26.53]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-3.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.58%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 28.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 25.06,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.01%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.54)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 69.3% | OM: 23.4% | NM: 11.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.7x, YrsToPay: 6.6x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 15.0%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.315B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 1.4%, EPS: -5.7%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -34.7%, Next Q Est Growth: 44.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 19.13, P/S: 2.27)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.59)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -5.67%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.44x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer suspends popular menopause cream distribution in India. - Pfizer faces new international patent lawsuits over COVID-19 vaccine.",
+      "Pfizer wins FDA approval for bladder cancer regimen. - Pfizer's oncology growth focus ahead of Q2 results. - Pfizer's Seagen integration impacts oncology strategy. - Pfizer's Padcev-Keytruda regimen approved for bladder cancer. - Pfizer's drug-pricing deals may reshape big pharma.",
+      "Pfizer announces FDA approval of PADCEV plus Keytruda."
+    ],
+    "medium_term_50d": [
+      "Pfizer wins FDA approval for bladder cancer regimen. - Pfizer's oncology growth focus ahead of Q2 results. - Pfizer's Seagen integration impacts oncology strategy. - Pfizer's Padcev-Keytruda regimen approved for bladder cancer. - Pfizer's drug-pricing deals may reshape big pharma.",
+      "Pfizer announces FDA approval of PADCEV plus Keytruda.",
+      "Pfizer and Astellas win FDA approval for bladder cancer treatment. - FDA approves PADCEV plus Keytruda for bladder cancer. - Pfizer gets opening in ATTR CM after Astra Zeneca trial failure."
+    ],
+    "long_term_200d": [
+      "Pfizer wins FDA approval for bladder cancer regimen. - Pfizer's oncology growth focus ahead of Q2 results. - Pfizer's Seagen integration impacts oncology strategy. - Pfizer's Padcev-Keytruda regimen approved for bladder cancer. - Pfizer's drug-pricing deals may reshape big pharma.",
+      "Pfizer and Astellas win FDA approval for bladder cancer treatment. - FDA approves PADCEV plus Keytruda for bladder cancer. - Pfizer gets opening in ATTR CM after Astra Zeneca trial failure.",
+      "Pfizer announces FDA approval of PADCEV plus Keytruda."
+    ]
+  }
+}

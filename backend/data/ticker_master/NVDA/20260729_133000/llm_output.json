@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: Short-term momentum has significantly weakened, with RSI dropping to 44.1 and velocity turning negative (-7.0%). The stock has formed a strong bearish candle pattern and is now testing critical support at the 20-day range low (191.15), with price below the 20-day SMA (-3.3%). W: The bearish candle pattern, negative momentum, and testing of support indicate a high probability of further downside. The \"range\" bias and \"testing\" barriers suggest immediate resistance. O: Despite the weakness, the stock is within normal Bollinger Bands (0.22), and the news flow includes partnerships that could offer some support. The fundamental strength provides a baseline, but technicals are deteriorating. T: News is mixed, with some positive partnership announcements (SK Hynix, Safe Superintelligence) but also concerns about credit risk and competition, which are weighing on the stock."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: Medium-term trend alignment has deteriorated further into consolidation, with MACD showing accelerating bearish momentum (-0.574). The stock is now in a bearish trend position relative to the 50-day SMA (Z:-1.84), indicating a loss of medium-term strength. W: The accelerating bearish MACD and negative Z-score suggest a continued downtrend. The stock is now at monthly support, but the overall trend is weakening, reducing conviction. O: While the medium-term trend is negative, the stock is still within a broader range, and the strong fundamentals provide a potential floor. The \"range\" bias and \"strengthening at monthly support\" suggest a potential for stabilization if support holds. T: News highlights continued strategic partnerships and investments, but also mentions a stock slide after earnings, indicating that fundamental strength is being tested by market sentiment and technical weakness."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: Long-term structural integrity remains relatively stable, with the secular bull market regime still in place and a healthy golden cross structure. However, the long-term range position has decreased significantly to 37.9%, indicating a substantial pullback from previous highs. W: The significant drop in long-term range position and continued hyper-premium valuation (P/E: 61.03, P/S: 31.76) with extremely low asset safety (P/B: 56.25) remain significant long-term risks. The market regime strength has also decreased. O: The company's elite business quality, fortress balance sheet, and excellent cash generation continue to provide a strong fundamental underpinning, justifying some of the premium. Hyper-growth and attractive implied growth (PEG: 0.75) still offer a rationale for the valuation. T: Long-term news remains focused on strategic expansion and ecosystem dominance, but the shift in market cap relative to Apple and concerns about competition and geopolitical factors persist. The fundamental strength offers resilience, but the sustained high valuation and declining range position warrant caution."
+    }
+  }
+}

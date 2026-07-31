@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (53.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.91)",
+        "velocity_roc_10": "NORMAL (4.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 207.95-237.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.24%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.57)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.28)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 207.95-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (2.43%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 63.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 225.91,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.72%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 93.35, P/S: 2.01)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 30.87)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.2x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing starts fourth 737 MAX assembly line. - Boeing IT outage disrupts commercial and defense production. - Philippine Airlines plans first Boeing aircraft order since 2007. - Boeing lands Denmark P-8 Poseidon aircraft order. - Philippine Airlines eyes 20 widebody jets split between Boeing and Airbus.",
+      "Boeing launches fourth 737 MAX assembly line. - Boeing IT outage disrupts computer systems and applications.",
+      "Boeing IT outage disrupts factory production across the US."
+    ],
+    "medium_term_50d": [
+      "Boeing starts fourth 737 MAX assembly line. - Boeing IT outage disrupts commercial and defense production. - Philippine Airlines plans first Boeing aircraft order since 2007. - Boeing lands Denmark P-8 Poseidon aircraft order. - Philippine Airlines eyes 20 widebody jets split between Boeing and Airbus.",
+      "Boeing stock surges on MQ-28 Ghost Bat integration news. - Boeing Air Force One project faces further delay risk. - Boeing shares jump on 787 sale-leaseback deal. - FAA issues new safety directive for Boeing 737 MAX.",
+      "Boeing launches fourth 737 MAX assembly line. - Boeing IT outage disrupts computer systems and applications."
+    ],
+    "long_term_200d": [
+      "Boeing starts fourth 737 MAX assembly line. - Boeing IT outage disrupts commercial and defense production. - Philippine Airlines plans first Boeing aircraft order since 2007. - Boeing lands Denmark P-8 Poseidon aircraft order. - Philippine Airlines eyes 20 widebody jets split between Boeing and Airbus.",
+      "Boeing stock surges on MQ-28 Ghost Bat integration news. - Boeing Air Force One project faces further delay risk. - Boeing shares jump on 787 sale-leaseback deal. - FAA issues new safety directive for Boeing 737 MAX.",
+      "Boeing secures US$2 billion MUOS defense contract for satellite program. - Boeing wins US$3.62 billion jet deal from China Southern."
+    ]
+  }
+}

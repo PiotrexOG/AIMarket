@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The short-term trend base remains stable, and price action is within normal Bollinger Bands, indicating a lack of extreme deviation. O: Continued stability in the trend base and neutral RSI suggest potential for consolidation or a gradual move, supported by ongoing news flow around GE Aerospace's Q2 earnings. T: The shift from an overbought RSI (70.8) to a neutral zone (47.6) reduces immediate pullback risk but also diminishes short-term bullish momentum. W: The negative ROC (-5.4%) and a slight dip in the trend base SMA20 (-2.5%) introduce minor weakness, capping the score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: Bullish trend alignment persists, supported by a positive Z-score relative to the 50-day SMA, indicating a generally favorable medium-term trend. O: The news narrative continues to highlight strong GE Aerospace earnings expectations, providing a potential tailwind. T: The MACD has significantly accelerated its bearish trend (-3.965), a strong divergence from the bullish trend alignment, which significantly reduces conviction and score. W: The widening gap between the bullish trend alignment and the accelerating bearish MACD presents a significant structural risk, lowering the overall score and confidence."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure remain intact, with the price positioned in the upper quadrant of the long-term range. O: Core fundamentals of solid business quality, strong cash generation, and hyper-growth remain supportive of the long-term outlook. T: While valuation multiples remain elevated (P/E: 43.82, P/S: 7.75, P/B: 20.75), there has been a marginal decrease in some multiples, slightly improving the safety aspect. W: The hyper-premium valuation continues to be the primary risk factor, significantly capping the safety score and making the stock vulnerable to any shifts in growth expectations or market sentiment."
+    }
+  }
+}

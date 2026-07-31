@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 5.5,
+        "safe": 4.2
+      },
+      "synthesis": "S: Short-term momentum has softened, with RSI moving to a neutral zone (56.7) from a strong bullish one. Price is now in the middle of its 20-day range, above the 20-day SMA (2.8%) but testing resistance. Velocity has also decreased to 5.2%. W: The shift from a strong bullish RSI and the move to the middle of the range indicate waning short-term strength. The \"range\" bias and testing of resistance suggest potential for consolidation or a pullback. O: Despite the softening, the stock remains above key short-term moving averages and within normal bands, with positive news on next-gen chips and partnerships. This could provide a base for renewed upward momentum. T: News flow is mixed, with increased competition from AMD and Google, but also positive developments like new chip production announcements and strategic partnerships, offering some support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: Medium-term indicators show a further deterioration in trend alignment (now -3.86%) and fading MACD bullish momentum (0.836). The price is now below the 50-day SMA (Z:-0.29), indicating a less favorable positioning. W: The bearish trend alignment has deepened, and the MACD signal is fading, suggesting a loss of medium-term conviction. The stock is still within a longer-term range, limiting upside potential. O: Despite the weakening momentum, the company's strong fundamentals and continued strategic investments in AI infrastructure, particularly in Japan, provide a floor. The \"healthy base\" Z-score suggests it's not yet in a critical breakdown. T: News highlights continued competition from AMD and Google, and Apple briefly overtaking Nvidia in market cap. However, strategic partnerships and national AI infrastructure initiatives in Japan offer some counterbalancing positive narrative."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safe": 5.8
+      },
+      "synthesis": "S: Long-term structural integrity remains largely intact, supported by the secular bull market regime and a healthy golden cross. The stock's position within the long-term range has slightly decreased to 58.8%, indicating a minor pullback from previous highs. W: Valuation remains extremely stretched (P/E: 65.86, P/S: 34.27) and asset safety is very low (P/B: 60.7), posing a significant long-term risk. The market regime strength has also slightly decreased. O: The company's elite business quality, fortress balance sheet, and excellent cash generation continue to provide a strong fundamental underpinning. Hyper-growth and attractive implied growth (PEG: 0.81) still offer some justification for the premium. T: Long-term news continues to focus on strategic expansion, ecosystem dominance, and new product cycles, though concerns about competition and geopolitical factors persist. The fundamental strength offers resilience against valuation concerns, but the slight decrease in range position warrants monitoring."
+    }
+  }
+}

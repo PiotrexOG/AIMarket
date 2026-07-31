@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term exhibits a strong bullish candle pattern, but RSI has moved lower into the neutral zone (43.3), indicating weakening momentum. Velocity has normalized but remains negative. The stock is trading near the middle of its 20-day range, with elevated volume. W: The decline in RSI and negative velocity suggest a loss of short-term bullish conviction. Elevated volume on a downswing could indicate selling pressure. O: A potential for a short-term bounce exists if the strong bullish candle pattern can find follow-through, but the deteriorating momentum indicators pose a risk. T: News flow is predominantly negative, citing disappointing earnings, softer guidance, and a stock plunge. The acquisition of an AI startup and bond market activity are noted but overshadowed by fundamental concerns."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish, with price below the 50-day SMA and a worsening Z-score. The MACD has turned bearish and is accelerating downwards, signaling a loss of any prior bullish momentum. W: The accelerating bearish MACD and deeper negative Z-score indicate a significant deterioration in the medium-term trend. The stock remains within a wide monthly range, but the technicals are increasingly pointing lower. O: A sustained break above the 50-day SMA and a reversal in the accelerating bearish MACD are required for any medium-term bullish signal. T: Fundamentals show a slight improvement in quarterly earnings surprise, but the overall growth profile remains under pressure, and future estimates are weak. News highlights weaker-than-expected guidance and a reduction in metric reporting, reinforcing the negative medium-term outlook."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 2.8,
+        "conv": 3.2,
+        "safe": 4.2
+      },
+      "synthesis": "S: The long-term outlook remains challenged by a secular bear market regime and a death cross structure, with the price still in multi-month low accumulation. The position within the long-term range has slightly improved. W: The persistent bearish market regime and technical structure continue to present significant long-term headwinds. Despite some fundamental strengths, the overall long-term technical picture remains deeply negative. O: A fundamental shift in the broader market regime and a clear break of long-term resistance levels are necessary for a sustainable long-term bullish thesis. T: The company's business quality and cash generation remain structural positives, and valuation appears fair on a PEG basis. However, the recent news flow is dominated by disappointing earnings, softer guidance, and a stock plunge, which weigh heavily on the long-term view."
+    }
+  }
+}

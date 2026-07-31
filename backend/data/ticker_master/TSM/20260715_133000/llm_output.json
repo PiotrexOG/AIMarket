@@ -1,0 +1,29 @@
+{
+  "ticker": "TSM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The stock has moved to critical support at the 20-day range level, indicating a potential inflection point. RSI has dipped into neutral territory, suggesting waning short-term momentum. W: The price is now testing this support level, increasing the risk of a breakdown if it fails to hold. The MACD's bearish acceleration from the previous period continues to weigh on sentiment. O: Positive news regarding Q2 revenues and AI demand offers a potential catalyst for a bounce from support. T: The short-term outlook is neutral to slightly bearish, with the score reflecting the test of support and continued bearish momentum, offset by recent positive revenue news."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish, though the price has moved closer to the 50-day SMA, indicated by a healthy base Z-score. W: The bearish MACD acceleration has intensified, signaling a significant loss of upward momentum and increasing the risk of a trend reversal. The stock remains within a broad monthly range, offering room for further volatility. O: Strong revenue growth figures and commentary on AI demand provide a fundamental tailwind. The \"Great Depression\" warning adds a geopolitical risk premium narrative. T: The medium-term score has decreased slightly due to the worsening MACD signal, but conviction remains moderate as the underlying trend and fundamental news are still supportive. Safety has also seen a minor reduction due to increased volatility."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 7.5
+      },
+      "synthesis": "S: The long-term secular bull market regime persists, although the stock's position in the upper quadrant has retreated slightly. Business quality, financial health, and cash generation remain exceptionally strong. W: The risk of exhaustion from the bullish stretch remains, and the long-term range position has weakened. The extreme earnings surprise followed by a sharp estimated decline in the next quarter continues to raise questions about future growth sustainability. O: Valuation multiples remain deeply discounted, and implied growth is still underrated, presenting a compelling value proposition. The \"Great Depression\" narrative highlights the company's critical geopolitical importance. T: The long-term score has been adjusted downwards slightly to reflect the reduced range position and ongoing earnings growth concerns. Conviction has also decreased marginally. However, the strong fundamentals and attractive valuation continue to support a fundamentally bullish long-term outlook."
+    }
+  }
+}

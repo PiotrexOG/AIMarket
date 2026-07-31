@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "NORMAL (2.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 203.9-237.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.64%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.033)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.04)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 203.9-237.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.5%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.31%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 212.32,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.84%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.17)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.7% | OM: -5.4% | NM: 2.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.34x, YrsToPay: 157.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 0.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $93.995B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 24.8%, EPS: 116.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -116.1%, Next Q Est Growth: 82.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 79.52, P/S: 1.79)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 27.53)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.68)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing reports wider-than-expected Q2 loss despite revenue beat. - Boeing Q2 revenue tops estimates as jet deliveries climb. - Boeing's Q2 loss exceeds estimates due to Air Force One program. - Boeing takes $280 million charge on Air Force One program. - FAA flags quality issue affecting seats on hundreds of Boeing MAX jets. - Boeing CEO says supply chain will get harder for 737 MAX production. - Boeing CEO says there is work to do in Wichita for higher production rates. - Boeing CEO says 787 deliveries have fallen behind in H1. - Boeing CEO says seat certifications issue will last for the balance of the year. - Boeing resumes deliveries",
+      "Boeing to report Q2 earnings on Tuesday, July 28th. - Boeing's Q2 earnings preview: turnaround gains steam. - Boeing needs to build more planes amid increased orders. - Boeing's Q2 operating profit expected at $460 million. - Boeing CEO to appear on CNBC Tuesday.",
+      "FAA restores Boeing's authority to issue 737 MAX, 787 certificates."
+    ],
+    "medium_term_50d": [
+      "Boeing reports wider-than-expected Q2 loss despite revenue beat. - Boeing Q2 revenue tops estimates as jet deliveries climb. - Boeing's Q2 loss exceeds estimates due to Air Force One program. - Boeing takes $280 million charge on Air Force One program. - FAA flags quality issue affecting seats on hundreds of Boeing MAX jets. - Boeing CEO says supply chain will get harder for 737 MAX production. - Boeing CEO says there is work to do in Wichita for higher production rates. - Boeing CEO says 787 deliveries have fallen behind in H1. - Boeing CEO says seat certifications issue will last for the balance of the year. - Boeing resumes deliveries",
+      "Boeing projects $4.9 trillion aviation services market through 2045. - Aer Cap in talks to buy Boeing 787 Dreamliner jets. - Boeing CEO says company needs years to repair finances. - Boeing CEO: New Air Force One most complex twin-aisle plane. - Boeing wins 100-plane 737 MAX order from SMBC Aviation Capital. - Hexcel expands Boeing supply deals across aerospace programs. - Boeing confirms 2028 delivery for Air Force One, warns of higher costs. - Riyadh Air commits to purchase 28 Boeing 787 Dreamliners. - Boeing scores major airline wins as fleet modernization accelerates. -",
+      "Boeing receives order for four 737-8 and four 787-9 aircraft. - BAE Systems, Boeing, Saab sign agreement for pilot training. - Boeing and MSC Air Cargo announce order for 777-8 Freighters. - Uganda Airlines places first Boeing order for 737 MAX and 787 jets. - Boeing scores major airline wins for fleet modernization. - Luxair converts options to firm orders for Boeing 737-10 jets. - Emirates expects Boeing 777-9 deliveries in second quarter 2027. - Boeing pushes U.S. to investigate EU loan to Airbus. - GE Aerospace engine selected"
+    ],
+    "long_term_200d": [
+      "Boeing reports wider-than-expected Q2 loss despite revenue beat. - Boeing Q2 revenue tops estimates as jet deliveries climb. - Boeing's Q2 loss exceeds estimates due to Air Force One program. - Boeing takes $280 million charge on Air Force One program. - FAA flags quality issue affecting seats on hundreds of Boeing MAX jets. - Boeing CEO says supply chain will get harder for 737 MAX production. - Boeing CEO says there is work to do in Wichita for higher production rates. - Boeing CEO says 787 deliveries have fallen behind in H1. - Boeing CEO says seat certifications issue will last for the balance of the year. - Boeing resumes deliveries",
+      "Boeing projects $4.9 trillion aviation services market through 2045. - Aer Cap in talks to buy Boeing 787 Dreamliner jets. - Boeing CEO says company needs years to repair finances. - Boeing CEO: New Air Force One most complex twin-aisle plane. - Boeing wins 100-plane 737 MAX order from SMBC Aviation Capital. - Hexcel expands Boeing supply deals across aerospace programs. - Boeing confirms 2028 delivery for Air Force One, warns of higher costs. - Riyadh Air commits to purchase 28 Boeing 787 Dreamliners. - Boeing scores major airline wins as fleet modernization accelerates. -",
+      "FAA allows Boeing to resume issuing certificates for new airplanes. - FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates. - Boeing targets 100-jet SMBC deal as Airbus battles for major order. - Boeing forecasts $4.9 trillion commercial aviation support and services market. - Boeing forecasts demand for over 2.4 million new aviation personnel. - Boeing projects global commercial fleet will top 50,000 airplanes in 20 years."
+    ]
+  }
+}

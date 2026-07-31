@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.8,
+        "safe": 6.7
+      },
+      "synthesis": "S: The short-term technicals have improved significantly with a bullish hammer/pinbar candlestick pattern, shifting the RSI to a neutral zone (56.6). The price remains stable near the 20-day SMA (+1.2%), and volume dynamics have normalized to average (1.08). W: While the overall trend is still range-bound, the shift in candlestick pattern and improved volume suggest a potential for upward momentum. The previous bearish candle pattern has been negated. O: Constructive news flow continues, with a focus on AI cybersecurity models and strategic partnerships (Saint-Gobain, Open AI). A significant stake acquisition by Bill Ackman's fund adds positive sentiment. T: The score is increased substantially due to the strong bullish reversal signal and improved volume, indicating a more favorable short-term outlook. Conviction is increased due to the clarity of the technical signal and supportive news. Safe metric is slightly increased due to improved volume and stable price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend alignment shows a less severe gradual descent (-2.4%), and the MACD has accelerated into bullish territory (0.691). The Z-score relative to the 50-day SMA has improved to -0.26, indicating a healthier base for potential mean reversion. W: The persistent bearish trend alignment, though less severe, remains a factor. However, the accelerating bullish MACD and improved Z-score suggest a potential shift in momentum. O: Continued strategic AI partnerships (Mistral, AMD) and the focus on AI infrastructure and cybersecurity remain strong long-term drivers. Fundamental strengths are intact, and the news flow highlights AI's central role. T: The score is increased due to the improving MACD, less severe trend descent, and better Z-score, suggesting a more positive medium-term outlook. Conviction is moderate, reflecting the mixed signals but leaning positive. Safe metric remains stable, supported by fundamentals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.8,
+        "safe": 5.8
+      },
+      "synthesis": "S: The long-term technical regime remains in a secular bear market (-9.5%) with a death cross structure (-8.36%). However, the long-term range position has slightly improved to 21.2%. W: The persistent bearish long-term technicals are a significant headwind. Valuation remains premium (P/E: 27.84, PEG: 1.76), increasing fragility. O: The company's elite business quality, strong balance sheet, and consistent growth profile continue to be major strengths. Strategic AI investments and partnerships provide a strong forward-looking narrative, offsetting some of the long-term technical weakness. T: The score is marginally increased due to the slight improvement in long-term range position and continued strong fundamental narrative, despite the persistent bearish technicals. The safe metric is slightly increased due to the improved range position and continued strong balance sheet, partially offsetting valuation concerns. Conviction remains moderate due to the strong fundamentals counterbalancing the weak long-term technicals."
+    }
+  }
+}

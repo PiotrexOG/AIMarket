@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (72.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.8)",
+        "velocity_roc_10": "NORMAL (4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 322.75-365.02]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.2%)",
+        "cycle_macd": "BULLISH_FADING (0.943)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.15)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 309.0-365.02]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (8.1%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (0.54%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 356.96,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "AVERAGE (0.64)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 33.49, P/S: 16.67)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 17.79)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa partners with ACE Money Transfer for remittances. - Visa launches AI Financial Assistant for banking apps. - Visa selected HY10 for its Infinite Private Program. - Visa joins x402 Foundation with Mastercard and Google. - Visa expands embedded payments with Payfinia partnership.",
+      "Visa faces disruption risks from new payment technologies. - Visa litigation charges impact company's bottom line.",
+      "Circle rival stablecoin backed by Visa looms."
+    ],
+    "medium_term_50d": [
+      "Visa partners with ACE Money Transfer for remittances. - Visa launches AI Financial Assistant for banking apps. - Visa selected HY10 for its Infinite Private Program. - Visa joins x402 Foundation with Mastercard and Google. - Visa expands embedded payments with Payfinia partnership.",
+      "Visa poised to beat earnings estimates again. - Visa turning disruption into opportunity. - Visa Q2 FY26 revenue +17%, EPS +20%.",
+      "Visa to announce fiscal third quarter 2026 financial results on July 28. - Visa shares slip as banks reportedly consider acquiring Fiserv debit network. - Visa is testing AI agents that can complete purchases. - Visa's role in Open USD stablecoin project and AI pilots noted. - Visa upgraded from Hold to Buy, citing valuation and fundamentals. - Visa's Q2 results showed 20% EPS growth and robust revenue. - Visa stock is in a new buy zone. - Visa vs Coinbase: Different economic playbooks, Visa shows revenue jump."
+    ],
+    "long_term_200d": [
+      "Visa poised to beat earnings estimates again. - Visa turning disruption into opportunity. - Visa Q2 FY26 revenue +17%, EPS +20%.",
+      "Visa Infinite relaunched as programmable, adaptive platform. - Thales joins Visa VDRP to scale Click to Pay in Asia Pacific. - Cleverbridge enables Visa's Trusted Agent Protocol for secure AI transactions. - Worldline, ING, and Visa complete live agentic payment transaction in Europe. - Visa announces Visa Threat Intelligence Platform for cyber defence. - Visa stock may be undervalued after AI payments push.",
+      "Visa launches new travel platform, Visa Destinations. - Visa partners with Santander, Global Blue, Star Alliance, Trip.com. - Visa expands into Vietnam via 9Pay partnership. - Visa joins consortium to launch new stablecoin, Open USD. - Visa partners with Stripe, Black Rock on stablecoin venture. - Visa, Mastercard, Coinbase launch stablecoin to rival Tether."
+    ]
+  }
+}

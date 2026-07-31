@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.88)",
+        "velocity_roc_10": "NORMAL (8.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.8%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 189.8-213.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.43%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.692)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 64.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 210.68,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.28%))",
+      "volume_dynamics": "AVERAGE (0.94)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 67.1, P/S: 34.91)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 61.84)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia faces increased competition in AI chips. - Nvidia stock cooling fast with market cap near $5 trillion. - Google aims to compete with Nvidia in AI chip market. - Nvidia's recent underperformance seen as a temporary bump. - Nvidia stock dips below 50-day moving average. - Jensen Huang addresses $2.5 billion chip-smuggling scheme. - Nvidia and Micron seen as winners in generational transfer. - Nvidia recommended as a 'Final Trade' on CNBC. - Chip stocks fall, impacting Korean markets and semiconductors. - Tech stocks fall late afternoon session.",
+      "Nvidia, Mitsubishi Heavy eye cooperation on AI data center cooling. - Nvidia begins shipping H200 AI chips to China. - Nvidia's AI servers leverage SK Hynix memory chips. - Cloudera, VAST Data partner on AI platform leveraging Nvidia. - Evercore sees Nvidia, Alphabet, Netflix, Booking catching a bid. - Nvidia stock could keep soaring through 2026.",
+      "Nvidia partner sued over five critical products. - IREN, BE Networks partner to simulate NVIDIA Blackwell GPU infrastructure. - SK Hynix, key Nvidia AI partner, delivers triple-digit growth. - Nvidia stock P/E multiple lowest in seven years. - Nvidia, Micron, Sandisk near buy points amid market volatility."
+    ],
+    "medium_term_50d": [
+      "Nvidia faces increased competition in AI chips. - Nvidia stock cooling fast with market cap near $5 trillion. - Google aims to compete with Nvidia in AI chip market. - Nvidia's recent underperformance seen as a temporary bump. - Nvidia stock dips below 50-day moving average. - Jensen Huang addresses $2.5 billion chip-smuggling scheme. - Nvidia and Micron seen as winners in generational transfer. - Nvidia recommended as a 'Final Trade' on CNBC. - Chip stocks fall, impacting Korean markets and semiconductors. - Tech stocks fall late afternoon session.",
+      "Nvidia, Mitsubishi Heavy eye cooperation on AI data center cooling. - Nvidia begins shipping H200 AI chips to China. - Nvidia's AI servers leverage SK Hynix memory chips. - Cloudera, VAST Data partner on AI platform leveraging Nvidia. - Evercore sees Nvidia, Alphabet, Netflix, Booking catching a bid. - Nvidia stock could keep soaring through 2026.",
+      "Nvidia stock is cheapest since 2019, investors should load up. - Nvidia, Micron, Sandisk, Robinhood, Space X in focus for earnings. - Microsoft and Nvidia look like incredible deals. - Nvidia is the operating system of the AI buildout. - Nvidia shares fell 0.7% during the session. - Nvidia is using sensors despite China's self-driving car hack risk."
+    ],
+    "long_term_200d": [
+      "Nvidia appoints former Microsoft executive Nicholas Parker as EVP, Worldwide Field Operations. - Nvidia becomes strategic investor in Verkada, collaborating on AI search and safety. - Nvidia announces Halos for Robotics, a safety system for robotics and physical AI. - Nvidia's Q2 FY2027 revenue guide is $91.0 billion. - Palantir partners with Nvidia for federal agencies' AI needs. - Meta is building its own AI chips, shifting from buying Nvidia GPUs.",
+      "Nvidia faces increased competition in AI chips. - Nvidia stock cooling fast with market cap near $5 trillion. - Google aims to compete with Nvidia in AI chip market. - Nvidia's recent underperformance seen as a temporary bump. - Nvidia stock dips below 50-day moving average. - Jensen Huang addresses $2.5 billion chip-smuggling scheme. - Nvidia and Micron seen as winners in generational transfer. - Nvidia recommended as a 'Final Trade' on CNBC. - Chip stocks fall, impacting Korean markets and semiconductors. - Tech stocks fall late afternoon session.",
+      "Nvidia Kyber Rack reportedly delayed to 2028. - Nvidia Kyber NVL144 rack delayed to 2028. - Nvidia says AI roadmap is intact after rack delay report. - Nvidia rivals get a rare break in AI race. - Nvidia CEO highlighted a new AI bottleneck. - Jason Calacanis: Nvidia is 'taking the gloves off' with Nemotron. - SIGGRAPH 2026 keynotes to showcase NVIDIA advancements. - Foxconn sounds caution on geopolitics impacting Nvidia."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (50.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.28)",
+        "velocity_roc_10": "STAGNANT (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 213.95-237.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.33%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.447)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.51)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 207.95-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-0.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.95%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 54.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 219.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.82%))",
+      "volume_dynamics": "AVERAGE (0.69)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "CLEAN",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 90.6, P/S: 1.95)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 29.96)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.8)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.21x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing delivers 171 jets in Q2, 314 year-to-date. - Boeing shares move higher on strong Q2 deliveries. - Boeing announces second quarter deliveries. - Boeing H1 2026 deliveries highest since 2018. - Boeing to debut MQ-28 Ghost Bat at Farnborough Airshow. - Boeing eyes bigger Riyadh Air order at Farnborough Airshow. - Aviation Capital Group leases 13 Boeing 737-10 aircraft to West Jet.",
+      "Boeing to showcase global programs and partnerships at airshow. - Trump's defense spending could benefit Boeing. - BAE Systems to deliver EW systems to Boeing for ROKAF F-15Ks. - Boeing stock's future hinges on a critical production figure.",
+      "Boeing opens fourth 737 MAX assembly line to boost output. - Boeing 737 MAX 7 nears key FAA milestone after delays. - Philippine Air to order 15 Boeing 787-10 aircraft. - Boeing to expand 737 MAX production amid high demand. - Boeing 737 MAX 7 certification could unlock delayed Southwest orders. - FAA expected to certify Boeing 737 MAX 7 this month."
+    ],
+    "medium_term_50d": [
+      "Boeing delivers 171 jets in Q2, 314 year-to-date. - Boeing shares move higher on strong Q2 deliveries. - Boeing announces second quarter deliveries. - Boeing H1 2026 deliveries highest since 2018. - Boeing to debut MQ-28 Ghost Bat at Farnborough Airshow. - Boeing eyes bigger Riyadh Air order at Farnborough Airshow. - Aviation Capital Group leases 13 Boeing 737-10 aircraft to West Jet.",
+      "Boeing opens fourth 737 MAX assembly line to boost output. - Boeing 737 MAX 7 nears key FAA milestone after delays. - Philippine Air to order 15 Boeing 787-10 aircraft. - Boeing to expand 737 MAX production amid high demand. - Boeing 737 MAX 7 certification could unlock delayed Southwest orders. - FAA expected to certify Boeing 737 MAX 7 this month.",
+      "Boeing starts fourth 737 MAX assembly line. - Boeing IT outage disrupts commercial and defense production. - Philippine Airlines plans first Boeing aircraft order since 2007. - Boeing lands Denmark P-8 Poseidon aircraft order. - Philippine Airlines eyes 20 widebody jets split between Boeing and Airbus."
+    ],
+    "long_term_200d": [
+      "Boeing delivers 171 jets in Q2, 314 year-to-date. - Boeing shares move higher on strong Q2 deliveries. - Boeing announces second quarter deliveries. - Boeing H1 2026 deliveries highest since 2018. - Boeing to debut MQ-28 Ghost Bat at Farnborough Airshow. - Boeing eyes bigger Riyadh Air order at Farnborough Airshow. - Aviation Capital Group leases 13 Boeing 737-10 aircraft to West Jet.",
+      "Boeing opens fourth 737 MAX assembly line to boost output. - Boeing 737 MAX 7 nears key FAA milestone after delays. - Philippine Air to order 15 Boeing 787-10 aircraft. - Boeing to expand 737 MAX production amid high demand. - Boeing 737 MAX 7 certification could unlock delayed Southwest orders. - FAA expected to certify Boeing 737 MAX 7 this month.",
+      "Boeing starts fourth 737 MAX assembly line. - Boeing IT outage disrupts commercial and defense production. - Philippine Airlines plans first Boeing aircraft order since 2007. - Boeing lands Denmark P-8 Poseidon aircraft order. - Philippine Airlines eyes 20 widebody jets split between Boeing and Airbus."
+    ]
+  }
+}

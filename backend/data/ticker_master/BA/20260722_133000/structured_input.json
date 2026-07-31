@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.9)",
+        "mean_reversion_bb": "TESTING_LOWER_BAND (-0.01)",
+        "velocity_roc_10": "IMPLOSIVE_DOWN (-11.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.5%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 203.9-237.48]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.14%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.765)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-2.02)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 203.9-244.07]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-6.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.33%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 205.67,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.03%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (2.18)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.8% | OM: -5.9% | NM: 2.5%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.31x, YrsToPay: IMPOSSIBLE (Neg FCF))",
+    "cash_generation_ttm": "CASH_BURNER_NEGATIVE_FCF (FCF Mgn: -1.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $92.184B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 32.7%, EPS: 113.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 83.6%, Next Q Est Growth: -63.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 84.99, P/S: 1.83)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 28.11)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.75)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing receives order for four 737-8 and four 787-9 aircraft. - BAE Systems, Boeing, Saab sign agreement for pilot training. - Boeing and MSC Air Cargo announce order for 777-8 Freighters. - Uganda Airlines places first Boeing order for 737 MAX and 787 jets. - Boeing scores major airline wins for fleet modernization. - Luxair converts options to firm orders for Boeing 737-10 jets. - Emirates expects Boeing 777-9 deliveries in second quarter 2027. - Boeing pushes U.S. to investigate EU loan to Airbus. - GE Aerospace engine selected",
+      "Boeing projects $4.9 trillion aviation services market through 2045. - Aer Cap in talks to buy Boeing 787 Dreamliner jets. - Boeing CEO says company needs years to repair finances. - Boeing CEO: New Air Force One most complex twin-aisle plane. - Boeing wins 100-plane 737 MAX order from SMBC Aviation Capital. - Hexcel expands Boeing supply deals across aerospace programs. - Boeing confirms 2028 delivery for Air Force One, warns of higher costs. - Riyadh Air commits to purchase 28 Boeing 787 Dreamliners. - Boeing scores major airline wins as fleet modernization accelerates. -",
+      "FAA allows Boeing to resume issuing certificates for new airplanes. - FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates. - Boeing targets 100-jet SMBC deal as Airbus battles for major order. - Boeing forecasts $4.9 trillion commercial aviation support and services market. - Boeing forecasts demand for over 2.4 million new aviation personnel. - Boeing projects global commercial fleet will top 50,000 airplanes in 20 years."
+    ],
+    "medium_term_50d": [
+      "Boeing projects $4.9 trillion aviation services market through 2045. - Aer Cap in talks to buy Boeing 787 Dreamliner jets. - Boeing CEO says company needs years to repair finances. - Boeing CEO: New Air Force One most complex twin-aisle plane. - Boeing wins 100-plane 737 MAX order from SMBC Aviation Capital. - Hexcel expands Boeing supply deals across aerospace programs. - Boeing confirms 2028 delivery for Air Force One, warns of higher costs. - Riyadh Air commits to purchase 28 Boeing 787 Dreamliners. - Boeing scores major airline wins as fleet modernization accelerates. -",
+      "Boeing receives order for four 737-8 and four 787-9 aircraft. - BAE Systems, Boeing, Saab sign agreement for pilot training. - Boeing and MSC Air Cargo announce order for 777-8 Freighters. - Uganda Airlines places first Boeing order for 737 MAX and 787 jets. - Boeing scores major airline wins for fleet modernization. - Luxair converts options to firm orders for Boeing 737-10 jets. - Emirates expects Boeing 777-9 deliveries in second quarter 2027. - Boeing pushes U.S. to investigate EU loan to Airbus. - GE Aerospace engine selected",
+      "FAA allows Boeing to resume issuing certificates for new airplanes. - FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates. - Boeing targets 100-jet SMBC deal as Airbus battles for major order. - Boeing forecasts $4.9 trillion commercial aviation support and services market. - Boeing forecasts demand for over 2.4 million new aviation personnel. - Boeing projects global commercial fleet will top 50,000 airplanes in 20 years."
+    ],
+    "long_term_200d": [
+      "Boeing projects $4.9 trillion aviation services market through 2045. - Aer Cap in talks to buy Boeing 787 Dreamliner jets. - Boeing CEO says company needs years to repair finances. - Boeing CEO: New Air Force One most complex twin-aisle plane. - Boeing wins 100-plane 737 MAX order from SMBC Aviation Capital. - Hexcel expands Boeing supply deals across aerospace programs. - Boeing confirms 2028 delivery for Air Force One, warns of higher costs. - Riyadh Air commits to purchase 28 Boeing 787 Dreamliners. - Boeing scores major airline wins as fleet modernization accelerates. -",
+      "FAA allows Boeing to resume issuing certificates for new airplanes. - FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates. - Boeing targets 100-jet SMBC deal as Airbus battles for major order. - Boeing forecasts $4.9 trillion commercial aviation support and services market. - Boeing forecasts demand for over 2.4 million new aviation personnel. - Boeing projects global commercial fleet will top 50,000 airplanes in 20 years.",
+      "Boeing receives order for four 737-8 and four 787-9 aircraft. - BAE Systems, Boeing, Saab sign agreement for pilot training. - Boeing and MSC Air Cargo announce order for 777-8 Freighters. - Uganda Airlines places first Boeing order for 737 MAX and 787 jets. - Boeing scores major airline wins for fleet modernization. - Luxair converts options to firm orders for Boeing 737-10 jets. - Emirates expects Boeing 777-9 deliveries in second quarter 2027. - Boeing pushes U.S. to investigate EU loan to Airbus. - GE Aerospace engine selected"
+    ]
+  }
+}

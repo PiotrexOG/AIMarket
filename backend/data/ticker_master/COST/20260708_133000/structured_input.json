@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.33)",
+        "velocity_roc_10": "STAGNANT (-0.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 920.55-995.38]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.09%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.603)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.73)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 920.55-1096.5]"
+      },
+      "long_term_200d": {
+        "market_regime": "BEAR_MARKET_RELIEF_RALLY (-1.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.42%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 46.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 961.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.02%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 51.38, P/S: 1.52)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 14.1)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.35)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Joe Terranova sells Generac and buys Costco stock. - Costco Wholesale Corporation (COST) is a trending stock. - Costco's $250 Billion Expansion Strategy Keeps Delivering Results. - Costco Wholesale (COST) Posts Strong Results, Is It Fully Priced? - Costco.com Luna Ultra bundle product partnership mentioned.",
+      "Costco scales retail media with Google Commerce Media and You Tube.",
+      "Costco stock outperforms market over past 10 years. - Costco's stock growth driven by valuable shopper group. - History suggests Costco may pay special dividend in 2026."
+    ],
+    "medium_term_50d": [
+      "Joe Terranova sells Generac and buys Costco stock. - Costco Wholesale Corporation (COST) is a trending stock. - Costco's $250 Billion Expansion Strategy Keeps Delivering Results. - Costco Wholesale (COST) Posts Strong Results, Is It Fully Priced? - Costco.com Luna Ultra bundle product partnership mentioned.",
+      "Costco's executive membership growth fuels fee income and sales. - Costco's China expansion opportunity is highlighted. - Costco's revenue growth driven by membership. - Costco stock looks overvalued at 50x P/E.",
+      "Costco refines product pages for AI search. - Costco uses AI to triple digital traffic and lift conversions. - Costco changes strategy to increase warehouse visits."
+    ],
+    "long_term_200d": [
+      "Joe Terranova sells Generac and buys Costco stock. - Costco Wholesale Corporation (COST) is a trending stock. - Costco's $250 Billion Expansion Strategy Keeps Delivering Results. - Costco Wholesale (COST) Posts Strong Results, Is It Fully Priced? - Costco.com Luna Ultra bundle product partnership mentioned.",
+      "Costco's executive membership growth fuels fee income and sales. - Costco's China expansion opportunity is highlighted. - Costco's revenue growth driven by membership. - Costco stock looks overvalued at 50x P/E.",
+      "Costco Q3 revenue tops estimates, driven by gas sales. - Costco reports strong Q3 earnings with significant digital sales growth. - Costco to return U.S. tariff refunds to members. - Costco's net new warehouse openings may miss fiscal 2026 outlook. - Costco Wholesale shares fall despite earnings beat. - Costco sees record fuel sales volumes as consumers seek savings. - Costco's profit margin compressed despite strong revenue. - Costco's membership fees rise, digitally enabled comps surge. - Costco Wholesale's Q3 revenue beat driven by gas business strength. - Costco Wholesale Corp (COST) Q3 2026 earnings call highlights strong sales."
+    ]
+  }
+}

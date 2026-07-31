@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (52.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.37)",
+        "velocity_roc_10": "STAGNANT (-0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 70.86-81.93]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.27%)",
+        "cycle_macd": "BULLISH_FADING (0.42)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.09)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 70.86-94.7]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-22.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-13.58%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 7.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 74.74,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.32%))",
+      "volume_dynamics": "AVERAGE (0.72)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.0% | OM: 29.7% | NM: 28.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.16x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.889992B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 45.6%)",
+    "earnings_momentum_quarterly": "Q_EARNINGS_DETERIORATION (Curr Q Surprise: -5.3%, Next Q Est Growth: -36.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 23.65, P/S: 6.85)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.32)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.52)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix Q2 earnings preview: crucial test for ad business. - Netflix ad revenue expected to double this year. - Netflix seen getting more growth from advertising. - Netflix to benefit from ads, stronger content, margin growth. - Netflix looking to amp up live TV content.",
+      "Netflix secures exclusive MLB Home Run Derby streaming rights. - Netflix considering always-on live channels for programming.",
+      "Netflix stock valuation falls to lowest in four years. - Netflix faces scrutiny ahead of upcoming earnings report. - Netflix viewing potentially impacted by World Cup viewership."
+    ],
+    "medium_term_50d": [
+      "Netflix Q2 earnings preview: crucial test for ad business. - Netflix ad revenue expected to double this year. - Netflix seen getting more growth from advertising. - Netflix to benefit from ads, stronger content, margin growth. - Netflix looking to amp up live TV content.",
+      "Netflix, Disney, You Tube interested in FIFA World Cup U.S. rights. - Netflix's ad-supported tier and live programming are key focuses. - i Heart Media highlights expanding partnership with Netflix. - Netflix may consider acquiring a Comcast asset. - Netflix cash flow guidance was raised.",
+      "Netflix explores live TV and bundles to retain viewers. - Netflix reportedly weighs launching live TV channels. - Netflix may bid for FIFA World Cup broadcast rights. - Netflix stock slides after reports of strategy rethink."
+    ],
+    "long_term_200d": [
+      "Netflix, Disney, You Tube interested in FIFA World Cup U.S. rights. - Netflix's ad-supported tier and live programming are key focuses. - i Heart Media highlights expanding partnership with Netflix. - Netflix may consider acquiring a Comcast asset. - Netflix cash flow guidance was raised.",
+      "Netflix Q2 earnings preview: crucial test for ad business. - Netflix ad revenue expected to double this year. - Netflix seen getting more growth from advertising. - Netflix to benefit from ads, stronger content, margin growth. - Netflix looking to amp up live TV content.",
+      "Netflix loses $22 billion Roku bidding war to Fox. - Netflix reportedly eyeing Lionsgate Studios acquisition. - Netflix denies making acquisition bid for Roku. - Netflix stock slides after losing Roku bidding war. - Netflix stock falls after missing out on media acquisitions. - Lionsgate stock tumbles as Netflix denies takeover plans."
+    ]
+  }
+}

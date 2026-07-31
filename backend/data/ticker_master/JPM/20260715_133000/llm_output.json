@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term outlook shows mixed signals. RSI has moved to a neutral zone (58.8), and the stock is testing the upper Bollinger Band (1.0), indicating potential overextension. However, it remains stable near the 20-day SMA (3.1%) with normal velocity (4.1%). O: The \"NEUTRAL\" candle pattern suggests a pause in momentum. High institutional activity (1.68) could lead to increased volatility near resistance levels. T: The \"AT_CRITICAL_RESISTANCE_20\" zone presents a near-term challenge, and the shift from \"STRONG_BEARISH\" to \"NEUTRAL\" candle patterns indicates a loss of immediate downside conviction, but also a lack of strong upside follow-through."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend remains bullish, with expanding momentum (5.23%) and a strong position relative to the 50-day SMA (Z:2.12). However, the MACD has turned bearishly recovering (-0.122), indicating a potential loss of upward steam. O: The \"STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE\" suggests that while the trend is intact, significant upside may be capped in the near term. High institutional activity (1.68) could amplify price action around this resistance. T: The shift in MACD from bullish to bearish recovering warrants caution, slightly reducing conviction despite the strong trend alignment and SMA positioning."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The long-term picture remains robust, with the stock trading at an all-time high (Pos: 104.6%) within a secular bull market regime (10.9%). The \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" (2.21%) remains intact. Fundamentals show improved growth (Rev: 8.0%, EPS: 19.1%) and business quality (NM: 21.9%), with valuation becoming more attractive (PEG: 0.78). O: The \"UNCONFINED_BULLISH\" bias and \"BLUE_SKY\" resistance level suggest continued upside potential. The improved growth profile and attractive valuation are significant tailwinds. T: Despite the strong bullish technicals and improving fundamentals, the \"BALANCE_SHEET_STRESSED\" (NetDebt/Eq: 2.48x) remains a structural concern, capping the 'safe' score. The \"Q_PEAK_PERFORMANCE_SKEPTIC\" earnings momentum (Next Q Est Growth: -22.3%) also introduces a degree of uncertainty."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (56.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.86)",
+        "velocity_roc_10": "NORMAL (3.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 92.49-99.85]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.89%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.239)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.21)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 92.49-105.42]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.12%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 27.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 98.9,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "ELEVATED (1.13)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.3% | OM: 14.2% | NM: 12.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $95.716B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 120.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.7%, Next Q Est Growth: 38.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.54, P/S: 1.85)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.63)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney turnaround: streaming profitability, strong free cash flow.",
+      "Disney faces EU patent injunctions from Inter Digital. - Disney stock drops amid EU patent injunctions and break-up calls. - Walt Disney stock falls 3.17% in latest trading session. - Disney reportedly lays off hundreds of employees across divisions. - Kraft Heinz enters long-term collaboration with Disney.",
+      "Disney forms multi-year alliance with Kraft Heinz. - Disney plans significant job cuts affecting ESPN, Pixar. - Disney unveils new Infinity Vision theater certification. - Disney releases first trailer for Avengers: Doomsday."
+    ],
+    "medium_term_50d": [
+      "Disney faces EU patent injunctions from Inter Digital. - Disney stock drops amid EU patent injunctions and break-up calls. - Walt Disney stock falls 3.17% in latest trading session. - Disney reportedly lays off hundreds of employees across divisions. - Kraft Heinz enters long-term collaboration with Disney.",
+      "Disney forms multi-year alliance with Kraft Heinz. - Disney plans significant job cuts affecting ESPN, Pixar. - Disney unveils new Infinity Vision theater certification. - Disney releases first trailer for Avengers: Doomsday.",
+      "Disney turnaround: streaming profitability, strong free cash flow."
+    ],
+    "long_term_200d": [
+      "Disney faces EU patent injunctions from Inter Digital. - Disney stock drops amid EU patent injunctions and break-up calls. - Walt Disney stock falls 3.17% in latest trading session. - Disney reportedly lays off hundreds of employees across divisions. - Kraft Heinz enters long-term collaboration with Disney.",
+      "Disney forms multi-year alliance with Kraft Heinz. - Disney plans significant job cuts affecting ESPN, Pixar. - Disney unveils new Infinity Vision theater certification. - Disney releases first trailer for Avengers: Doomsday.",
+      "Disney faces heightened antitrust scrutiny from FCC. - \"Moana\" remake opens below expectations, impacting financial story. - Debate sharpens over Disney exiting streaming business. - Benchmark initiates coverage of Walt Disney with Buy. - Wells Fargo suggests Disney could unlock upside by exiting streaming. - Disney's DEI investigations are under scrutiny."
+    ]
+  }
+}

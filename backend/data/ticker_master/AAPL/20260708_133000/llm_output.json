@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: Bullish momentum is present with RSI in the strong zone (60.0) and stable trend base positioning. The price is within normal Bollinger Bands and the middle of its 20-day range. W: Analyst conviction is low and sentiment is deteriorating, suggesting potential headwinds despite technical strength. The neutral candle pattern indicates a lack of clear directional bias. O: The Broadcom deal extension provides some near-term certainty. Continued positive price action could test upper range levels. T: Potential for short-term volatility exists due to mixed analyst sentiment and the neutral price action, but the underlying momentum offers some support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The medium-term trend shows bullish acceleration with a strong MACD signal and the price positioned favorably above the 50-day SMA (Z:1.07). Consolidation is compressed, indicating potential for a breakout. W: Earnings momentum is a concern, with the next quarter's estimated growth significantly negative (-33.3%), despite a strong current quarter surprise. The stock is trading within its monthly range, suggesting it's not yet in a clear breakout phase. O: Apple's AI ambitions in Europe and potential Mac lineup strength as an AI driver are positive catalysts. The Broadcom partnership extension offers structural support. T: The combination of strong trend alignment and accelerating MACD is bullish, but the negative earnings outlook for the next quarter tempers conviction. The premium valuation also presents a risk if growth falters."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The long-term outlook remains bullish, supported by a secular bull market regime and a healthy golden cross structure. The price is positioned in the upper quadrant of its long-term range (89.4%). Fundamentals are strong, with high business quality, excellent cash generation, and robust revenue/EPS growth. W: Valuation is a significant concern, with premium multiples (P/E: 39.0, P/S: 10.5) and an expensive PEG ratio (1.53). Asset safety is assessed as extremely low due to a very high P/B ratio (51.87). O: Apple's significant AI integration across its ecosystem, driven by new intelligence frameworks and tools, presents a substantial long-term growth opportunity. The Broadcom deal provides long-term supply chain stability. T: While the fundamental strength and long-term trend are supportive, the elevated valuation and low asset safety metrics pose a considerable risk. Any deceleration in growth or a shift in market sentiment could lead to significant downside."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.1)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (1.04)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.3%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 134.95-146.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.06%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.228)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 134.95-163.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (6.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.21%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 50.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 143.88,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.5% | OM: 9.0% | NM: 7.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 2.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 5.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $326.008B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.1%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 12.4%, Next Q Est Growth: 256.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 24.39, P/S: 1.85)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.37)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.85%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil faces fresh oil risk after Strait of Hormuz closure. - Exxon Mobil stock jumps after US launches strikes against Iranian targets.",
+      "XOM's Permian outlook strengthens as WTI tops $80.",
+      "Exxon Mobil earnings jump nearly $4 billion on oil surge. - Exxon Mobil updates Q2 earnings considerations, cites impacts. - Exxon Mobil redomiciliation merger to Texas completed. - Middle East tensions boost Exxon Mobil earnings and cash flow. - Exxon Mobil's rising oil prices boosted upstream earnings expectations."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobil faces fresh oil risk after Strait of Hormuz closure. - Exxon Mobil stock jumps after US launches strikes against Iranian targets.",
+      "Exxon Mobil earnings jump nearly $4 billion on oil surge. - Exxon Mobil updates Q2 earnings considerations, cites impacts. - Exxon Mobil redomiciliation merger to Texas completed. - Middle East tensions boost Exxon Mobil earnings and cash flow. - Exxon Mobil's rising oil prices boosted upstream earnings expectations.",
+      "Exxon Mobil commits $1bn to launch Usan Infill Project. - Exxon Mobil expects strong Q2 earnings lift from higher crude prices. - Exxon Mobil CFO backs semiannual reporting option."
+    ],
+    "long_term_200d": [
+      "Exxon Mobil earnings jump nearly $4 billion on oil surge. - Exxon Mobil updates Q2 earnings considerations, cites impacts. - Exxon Mobil redomiciliation merger to Texas completed. - Middle East tensions boost Exxon Mobil earnings and cash flow. - Exxon Mobil's rising oil prices boosted upstream earnings expectations.",
+      "XOM, Qatar Energy reach milestone in Cyprus offshore gas development. - Exxon Mobil officially moved legal home from New Jersey to Texas. - Exxon Mobil wins major legal battle at the Supreme Court.",
+      "Exxon Mobil faces fresh oil risk after Strait of Hormuz closure. - Exxon Mobil stock jumps after US launches strikes against Iranian targets."
+    ]
+  }
+}

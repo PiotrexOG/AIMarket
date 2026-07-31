@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: A bullish hammer/pinbar pattern suggests potential short-term reversal, supported by a stable price near the 20-day SMA. W: Momentum is bearish (RSI 38.2) and velocity is stagnant, indicating a lack of immediate upward thrust. O: The news narrative highlights positive analyst sentiment and strategic initiatives, potentially driving short-term interest. T: The stock is in the middle of its 20-day range, offering limited immediate upside but also suggesting some support. Overall, a cautious bullish outlook with limited conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: Bullish MACD acceleration offers a positive signal, contrasting with the bearish trend alignment. W: The Z-score relative to the 50-day SMA is negative (-0.73), indicating a trend position below the average. O: Medium-term news focuses on membership growth, China expansion, and AI integration, which are positive structural drivers. T: The stock is trading within its monthly range, suggesting consolidation. The conflicting signals between MACD and trend alignment temper conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: A healthy golden cross structure and a mid-cycle neutral position in the long-term range are supportive. W: The current market regime is a bear market relief rally, introducing some cyclical risk. Fundamentals show strong balance sheet (NetCash/Eq: 0.27x) and moderate growth (Rev: 8.3%, EPS: 9.6%). O: Long-term narratives emphasize expansion strategies and membership growth, aligning with fundamental strengths. T: Despite a premium valuation (P/E: 51.38, PEG: 5.35), the company's scale, financial health, and consistent growth profile provide a solid foundation, suggesting resilience."
+    }
+  }
+}

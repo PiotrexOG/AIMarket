@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook has improved to neutral. The RSI has moved out of the bearish zone to 48.0, and the price is now closer to the 20-day SMA at -1.0%. The Bollinger Bands are widening slightly, indicating increased volatility. W: While momentum has improved, the velocity remains negative at -1.9%. The price is still within the middle of its 20-day range. O: Short-term news highlights plans for new warehouses and increased membership fees, which are positive catalysts. T: The shift in RSI and price position relative to the SMA suggests a more balanced short-term outlook, with improved momentum and stable fundamentals supporting a neutral score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term outlook remains cautiously bearish, but with signs of stabilization. The MACD has turned bullish, albeit fading, indicating a potential shift in momentum. The Z-score relative to the 50-day SMA has slightly improved to -1.09. W: Trend alignment remains bearish and expanding, suggesting underlying weakness. The price is still within the monthly range, closer to the lower bound. O: Medium-term news indicates decelerating comparable sales and weak international results, which are headwinds. However, plans for new warehouses and increased membership fees offer some positive outlook. T: The improvement in MACD is offset by continued bearish trend alignment and mixed news regarding sales performance. This results in a slightly improved but still cautious medium-term score."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The long-term outlook remains stable and fundamentally supported. The golden cross structure is still intact, and the long-term range position has slightly improved to 32.5% in the lower quadrant. W: The market regime remains a bear market relief rally. Fundamentals continue to show strength with a net cash fortress and moderate growth, although the premium valuation persists. O: Long-term narratives continue to focus on expansion strategies and strong past performance, balanced by ongoing concerns about sales growth and valuation. T: The strong financial health and business quality metrics continue to support a robust long-term score. While valuation remains a concern, the structural support from the golden cross and stable fundamentals provide a solid foundation, leading to an unchanged long-term score."
+    }
+  }
+}

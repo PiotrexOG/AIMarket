@@ -121,27 +121,3 @@ def add_current_prices(df, market_lookup):
     )
     return priced_df
 
-
-def build_horizon_return_frame(
-    group,
-    market_lookup,
-    score_column,
-    horizon_days,
-):
-    horizon_df = group[
-        ["ticker", "start_timestamp", score_column, "current_price"]
-    ].copy()
-    horizon_df["future_timestamp"] = (
-        horizon_df["start_timestamp"] + pd.to_timedelta(horizon_days, unit="D")
-    )
-    horizon_df["future_price"] = lookup_asof_close_many(
-        market_lookup,
-        horizon_df["ticker"],
-        horizon_df["future_timestamp"],
-    )
-    horizon_df = horizon_df.dropna(subset=["current_price", "future_price"])
-    horizon_df = horizon_df[horizon_df["current_price"] > 0].copy()
-    horizon_df["future_return"] = (
-        horizon_df["future_price"] - horizon_df["current_price"]
-    ) / horizon_df["current_price"]
-    return horizon_df

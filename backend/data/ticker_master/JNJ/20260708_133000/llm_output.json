@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: The stock exhibits explosive short-term velocity (ROC: 15.6%) despite being overbought on RSI (75.1) and testing the upper Bollinger Band (0.99). The price is extended above the 20-day SMA (9.4%), indicating potential for a near-term pullback. W: Extreme overbought conditions and a strong bearish candle pattern suggest a risk of consolidation or reversal. The price is currently in the middle of its 20-day range, lacking clear directional bias within this shorter timeframe. O: Positive news regarding IMAAVY data and unusual put option activity could influence short-term price action, though the latter might signal hedging rather than bullish conviction. T: The extended bullish overstretch above the 20-day SMA presents a tactical risk, especially with the bearish candle pattern, suggesting caution despite underlying momentum."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 7.5
+      },
+      "synthesis": "S: Medium-term trend alignment is bullish with expanding momentum (4.36%), supported by an accelerating MACD (2.516). The price is overextended above the 50-day SMA (Z-score: 2.78), indicating strong upward pressure. W: The stock is strengthening at a monthly resistance zone (220.37-269.43), which could pose a challenge to further upside. While momentum is strong, the overextended position relative to the 50-day SMA suggests a need for consolidation. O: Positive developments in the Med Tech segment and potential for further gains, as indicated by recent price action and analyst sentiment (STRONGLY_BULLISH), provide a supportive backdrop. The CHMP opinion for Tecvayli is a significant positive catalyst. T: The combination of strong trend alignment and accelerating momentum supports a bullish outlook, but the proximity to resistance and overextended technicals warrant monitoring for potential consolidation before the next leg higher."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 8.0,
+        "safe": 8.5
+      },
+      "synthesis": "S: The long-term outlook remains robust, anchored by a secular bull market regime (21.6%) and a healthy golden cross structure. The company is trading at the top of its long-term range (96.4%), reflecting sustained strength. W: While the company exhibits high efficiency and strong cash generation, its growth profile shows moderate revenue growth (7.9%) but declining EPS (-4.4%), which is a concern. The current valuation is premium (P/E: 30.68, P/S: 6.75) with low asset safety (P/B: 8.01), implying high expectations are priced in. O: Strategic acquisitions like Firefly Bio to expand the oncology pipeline and positive clinical data (IMAAVY, Tecvayli) are significant long-term growth drivers. The company's scale, business quality, and financial health (NetCash/Eq: 0.05x) provide a strong foundation. T: The long-term trend and business quality are highly supportive, but the premium valuation and mixed growth signals (especially declining EPS) introduce a degree of risk that tempers the overall score. The strong balance sheet and cash flow mitigate some of this risk."
+    }
+  }
+}

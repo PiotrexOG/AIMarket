@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.82)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 308.88-343.45]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.27%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.422)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.54)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.67-343.45]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (1.59%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 334.07,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.34%))",
+      "volume_dynamics": "AVERAGE (0.78)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 60.9% | OM: 26.2% | NM: 20.7%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.53x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $285.087B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 4.3%, EPS: 2.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 8.0%, Next Q Est Growth: -9.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.97, P/S: 3.27)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.56)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 6.39)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan, Bank of America explore deal to shake up payments world. - JPMorgan Chase stock is rising ahead of July 14 earnings report. - JPMorgan Chase & Co. reports next week; Wall Street expects earnings growth. - JPMorgan Chase could be 24% undervalued following its 10% dividend increase. - JPMorgan, other big banks likely to beat Q2 earnings estimates. - Major US banks' second-quarter earnings poised for upside. - JPMorgan Chase Bank of America PNC explore deal for Fiserv debit network. - JPMorgan asset manager cuts yuan bets, eyes new currency winners.",
+      "JPMorgan Chase authorized $50 billion buyback and raised dividend.",
+      "JPMorgan strategist says buy the AI chip dip. - JPMorgan's concentrated small-cap fund outpaced Vanguard. - JPMorgan and Baird reaffirmed views after Tesla deliveries."
+    ],
+    "medium_term_50d": [
+      "JPMorgan, Bank of America explore deal to shake up payments world. - JPMorgan Chase stock is rising ahead of July 14 earnings report. - JPMorgan Chase & Co. reports next week; Wall Street expects earnings growth. - JPMorgan Chase could be 24% undervalued following its 10% dividend increase. - JPMorgan, other big banks likely to beat Q2 earnings estimates. - Major US banks' second-quarter earnings poised for upside. - JPMorgan Chase Bank of America PNC explore deal for Fiserv debit network. - JPMorgan asset manager cuts yuan bets, eyes new currency winners.",
+      "JPMorgan Chase authorized $50 billion buyback and raised dividend.",
+      "JPMorgan AI Chief and top trader exits after four decades. - JPMorgan's Teresa Heitsenrether to retire; Scot Baldry to lead CDAO. - JPMorgan backs US crypto rules, warns on shadow banking risks. - JPMorgan CEO Jamie Dimon criticizes emerging tech regulation bill. - Softbank in talks for $10B loan including JPMorgan as lender. - Cboe seeks to list options on JPMorgan's credit-loss provisions."
+    ],
+    "long_term_200d": [
+      "JPMorgan, Bank of America explore deal to shake up payments world. - JPMorgan Chase stock is rising ahead of July 14 earnings report. - JPMorgan Chase & Co. reports next week; Wall Street expects earnings growth. - JPMorgan Chase could be 24% undervalued following its 10% dividend increase. - JPMorgan, other big banks likely to beat Q2 earnings estimates. - Major US banks' second-quarter earnings poised for upside. - JPMorgan Chase Bank of America PNC explore deal for Fiserv debit network. - JPMorgan asset manager cuts yuan bets, eyes new currency winners.",
+      "JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan raises quarterly dividend from $1.50 to $1.65 per share. - JPMorgan announces $50 billion buyback plan, effective July 1. - JPMorgan shares rise after dividend increase and buyback announcement. - JPMorgan Chase announces 2026 Dodd-Frank Act Stress Test results. - JPMorgan and Goldman raise dividends after Fed stress tests. - JPMorgan Chase regulatory capital update announced. - Big banks pass Fed stress test, paving way for payouts. - JPMorgan Chase announces $50B buyback plan, shares rise. - J.P. Morgan cuts second-half 2026 Brent oil price forecast.",
+      "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents. - Marianne Lake, seen as Dimon successor, retires from JPMorgan. - JPMorgan Chase expands Community Center program in low-income areas. - JPMorgan Chase announces significant expansion of community banking efforts. - JPMorgan Chase promotes Petno, Rohrbaugh to co-presidents, succession planning. - JPMorgan Chase announces dividend increases and new buyback initiatives."
+    ]
+  }
+}

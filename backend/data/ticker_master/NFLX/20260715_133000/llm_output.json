@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term exhibits neutral candle patterns and is consolidating near the 20-day SMA. The RSI has moved into the neutral zone (52.0), indicating a balanced momentum. Velocity has stagnated, suggesting a lack of immediate directional pressure. W: Stagnant velocity and mid-range positioning limit immediate upside potential. The prior bearish RSI has neutralized, but no strong bullish signal has emerged. O: A potential for a short-term rally exists if price can break above the current range resistance, supported by improving momentum. T: News flow is mixed, with positive outlooks on ad revenue and content, but also concerns about valuation and potential impact from World Cup viewership. The market bias remains range-bound."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 4.2,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish, with price below the 50-day SMA and a negative Z-score. However, the bullish MACD signal is fading, suggesting a loss of upward momentum. W: The persistent bearish trend position and the fading bullish MACD signal indicate a weakening recovery attempt. The stock remains within a wide monthly range, reflecting ongoing uncertainty. O: A sustained break above the 50-day SMA, coupled with a resurgence in MACD momentum, would be required to signal a medium-term bullish reversal. T: Fundamentals remain structurally sound with high business quality and excellent cash generation. However, the recent quarterly earnings deterioration and negative future estimates continue to be a concern. News highlights strategic initiatives in advertising and content, but also mentions potential strategic shifts and interest in content rights."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.2,
+        "conv": 3.7,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook is still challenged by a secular bear market regime and a death cross structure, with the price near multi-month lows. Valuation remains fair on a PEG basis, but asset safety is low due to a high P/B ratio. W: The prevailing bearish market regime and technical structure continue to present significant long-term risks. Despite strong fundamental metrics, the negative long-term technicals and recent earnings deterioration remain concerning. O: A sustained recovery in the broader market and a clear break of long-term resistance levels are necessary for a bullish long-term thesis to emerge. T: The company's strong business quality, financial health, and cash generation are structural positives. However, the long-term technicals remain deeply bearish, and recent news has been mixed, with some positive strategic developments offset by past failed acquisition attempts and ongoing market regime challenges."
+    }
+  }
+}

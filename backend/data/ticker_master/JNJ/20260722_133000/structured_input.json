@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (46.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.39)",
+        "velocity_roc_10": "NORMAL (-6.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 234.35-269.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.87%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.743)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.11)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-269.43]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.23%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 254.29,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "AVERAGE (0.82)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 70.5% | OM: 26.8% | NM: 21.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.929B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.1%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -20.4%, Next Q Est Growth: 32.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.4, P/S: 6.34)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.3)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.08%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson pruning its portfolio while Abbott expands. - Head and Neck Squamous Cell Carcinoma market growth driven by novel immunotherapies including Amivantamab (Johnson & Johnson).",
+      "JNJ raised its 2026 outlook after strong Q2 results.",
+      "JNJ acquires spine surgery company Expanding Innovations. - JNJ receives FDA approval for heart device platform."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson Q2 earnings and revenue beat estimates. - Johnson & Johnson raises full-year 2026 outlook. - Johnson & Johnson surpasses $100 billion in annual revenue. - Johnson & Johnson declares quarterly dividend of $1.34 per share.",
+      "Johnson & Johnson raises full-year outlook toward $100 billion revenue target. - Johnson & Johnson stock near all-time highs, analyst sees rally. - Johnson & Johnson advances late-stage chronic kidney disease therapeutics. - Johnson & Johnson stock may be reasonable after talc verdict ruling.",
+      "De Puy Synthes acquires Expanding Innovations for spine surgery. - Johnson & Johnson announces Healthcare Champion of the Year award. - Johnson & Johnson raises 2026 outlook after Q2 earnings beat. - Johnson & Johnson's Innovative Medicine segment momentum builds. - Analyst upgrades Johnson & Johnson rating from Sell to Hold."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson Q2 earnings and revenue beat estimates. - Johnson & Johnson raises full-year 2026 outlook. - Johnson & Johnson surpasses $100 billion in annual revenue. - Johnson & Johnson declares quarterly dividend of $1.34 per share.",
+      "Johnson & Johnson raises full-year outlook toward $100 billion revenue target. - Johnson & Johnson stock near all-time highs, analyst sees rally. - Johnson & Johnson advances late-stage chronic kidney disease therapeutics. - Johnson & Johnson stock may be reasonable after talc verdict ruling.",
+      "De Puy Synthes acquires Expanding Innovations for spine surgery. - Johnson & Johnson announces Healthcare Champion of the Year award. - Johnson & Johnson raises 2026 outlook after Q2 earnings beat. - Johnson & Johnson's Innovative Medicine segment momentum builds. - Analyst upgrades Johnson & Johnson rating from Sell to Hold."
+    ]
+  }
+}

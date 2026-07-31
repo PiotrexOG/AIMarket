@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Bullish momentum in RSI (67.3) and stable positioning near the 20-day SMA (3.7%) suggest short-term support. The stock is trading within its normal Bollinger Band range (0.82) and average volume dynamics (0.78) indicate a lack of immediate selling pressure. O: Positive news flow regarding potential payment deals and upcoming earnings reports could provide a catalyst. T: The \"STRONG_BEARISH\" candle pattern is a near-term headwind, but the overall technical setup is not overly concerning given the broader bullish context."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: Strong bullish momentum is evident with expanding trend alignment (4.27%) and accelerating MACD (0.422). The stock's position relative to the 50-day SMA (Z:1.54) confirms a healthy uptrend. O: The \"BULLISH_EXPANDING_MOMENTUM\" and \"BULLISH_ACCELERATING\" MACD signals indicate a durable upward trajectory. The \"POWER_ZONE_CONFLUENCE(2)\" in the SR landscape suggests strong technical support. T: While the analyst conviction is \"LOW\", the technical indicators for the medium term are overwhelmingly positive, suggesting a high degree of confidence in the current trend."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The stock resides in a \"SECULAR_BULL_MARKET\" regime (9.9%) and exhibits a \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" (1.59%). Its position in the upper quadrant of the long-term range (85.4%) confirms bullish long-term positioning. O: Fundamental strength is indicated by \"HIGH_EFFICIENCY_CASH_MACHINE\" business quality, although \"BALANCE_SHEET_STRESSED\" (NetDebt/Eq: 2.53x) and \"MODERATE_GROWTH\" (Rev: 4.3%, EPS: 2.5%) temper the outlook. The \"MODERATE_DISCOUNT\" valuation is attractive. T: The \"STRESSED\" balance sheet and \"MODERATE_GROWTH\" profile are key risks, leading to a lower 'safe' score despite the otherwise bullish long-term technicals and valuation."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (5.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.3%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 135.33-158.71]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.81%)",
+        "cycle_macd": "BULLISH_FADING (1.495)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.58)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 134.95-163.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.88%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 158.34,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.2%))",
+      "volume_dynamics": "ELEVATED (1.17)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.5% | OM: 9.0% | NM: 7.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 2.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 5.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $326.008B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.1%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 12.4%, Next Q Est Growth: 256.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 26.84, P/S: 2.03)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.6)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -21.85%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil's Q2 earnings report approaches with higher estimates. - Exxon Mobil stock offers limited upside potential, Bof A says. - Exxon Mobil's next earnings report on July 31 could send stock soaring.",
+      "Exxon Mobil shares fall as oil prices tumble. - Exxon Mobil is reporting earnings this week.",
+      "Exxon Mobil (XOM) stock up on geopolitical oil spike. - Exxon Mobil stock surges with oil prices topping $100. - Exxon Mobil's cost structure and earnings stability in focus."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobil (XOM) stock up on geopolitical oil spike. - Exxon Mobil stock surges with oil prices topping $100. - Exxon Mobil's cost structure and earnings stability in focus.",
+      "Exxon Mobil's Q2 earnings report approaches with higher estimates. - Exxon Mobil stock offers limited upside potential, Bof A says. - Exxon Mobil's next earnings report on July 31 could send stock soaring.",
+      "Exxon Mobil stock rises premarket ahead of Q2 earnings. - Exxon Mobil gains as oil prices surge on Iran tensions. - Exxon Mobil and oil stocks rise after Rubio comments. - Exxon Mobil expected to announce strong Q2 earnings."
+    ],
+    "long_term_200d": [
+      "Exxon Mobil (XOM) stock up on geopolitical oil spike. - Exxon Mobil stock surges with oil prices topping $100. - Exxon Mobil's cost structure and earnings stability in focus.",
+      "Exxon Mobil stock rises premarket ahead of Q2 earnings. - Exxon Mobil gains as oil prices surge on Iran tensions. - Exxon Mobil and oil stocks rise after Rubio comments. - Exxon Mobil expected to announce strong Q2 earnings.",
+      "Exxon Mobil earnings jump nearly $4 billion on oil surge. - Exxon Mobil updates Q2 earnings considerations, cites impacts. - Exxon Mobil redomiciliation merger to Texas completed. - Middle East tensions boost Exxon Mobil earnings and cash flow. - Exxon Mobil's rising oil prices boosted upstream earnings expectations."
+    ]
+  }
+}

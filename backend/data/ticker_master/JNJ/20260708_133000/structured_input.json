@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (75.1)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.99)",
+        "velocity_roc_10": "EXPLOSIVE_UP (15.6%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (9.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 227.5-269.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.36%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.516)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.78)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 220.37-269.43]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (21.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.53%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 96.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 266.0,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "ELEVATED (1.19)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 73.9% | OM: 26.7% | NM: 21.8%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.05x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 18.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $96.362B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 7.9%, EPS: -4.4%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -5.7%, Next Q Est Growth: 32.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.68, P/S: 6.75)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 8.01)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -4.41%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.99x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson presents new IMAAVY data for generalized myasthenia gravis. - Unusual put option activity in Johnson & Johnson after stock's runup.",
+      "J&J's Med Tech Segment Eyes Another Strong Quarter in Q2. - Johnson & Johnson stock in buy zone heading into earnings.",
+      "Johnson & Johnson presents new IMAAVY data for myasthenia gravis."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson presents new IMAAVY data for generalized myasthenia gravis. - Unusual put option activity in Johnson & Johnson after stock's runup.",
+      "Johnson & Johnson (JNJ) shares surge, potential for further gains. - Johnson & Johnson (JNJ) hits new 52-week high. - J&J receives positive CHMP opinion for multiple myeloma drug Tecvayli. - Johnson & Johnson (JNJ) is a reliable income play.",
+      "J&J's Med Tech Segment Eyes Another Strong Quarter in Q2. - Johnson & Johnson stock in buy zone heading into earnings."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson to acquire Firefly Bio for $1 billion. - J&J acquires Firefly Bio to expand oncology pipeline. - Johnson & Johnson to acquire cancer drug developer Firefly Bio.",
+      "Johnson & Johnson (JNJ) shares surge, potential for further gains. - Johnson & Johnson (JNJ) hits new 52-week high. - J&J receives positive CHMP opinion for multiple myeloma drug Tecvayli. - Johnson & Johnson (JNJ) is a reliable income play.",
+      "JNJ TECVAYLI gets CHMP recommendation for multiple myeloma. - JNJ announces new IMAAVY data at EAN Congress. - JNJ presents IMAAVY data reinforcing disease control. - JNJ unveils IMAAVY data for potential early g MG use. - JNJ CEO sees 'line of sight' to double-digit growth. - Lilly, J&J, and Abb Vie hit new highs. - Johnson & Johnson stock popped on Friday."
+    ]
+  }
+}

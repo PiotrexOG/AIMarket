@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term momentum remains extremely overbought (RSI 72.6), but the candle pattern has neutralized, indicating a pause in the immediate selling pressure. Velocity is explosive (8.0%), and the price is testing critical resistance at the top of the 20-day range. W: Despite the explosive velocity, the RSI remains in overbought territory, and the price is at a significant resistance level. Analyst sentiment is deteriorating with low conviction, and volume dynamics are average (1.03), suggesting a lack of strong conviction behind the current push. O: New leasing programs and the market cap crossing $5 trillion are positive news, but the price is at a critical resistance point. T: The score is slightly reduced due to the extreme overbought condition and the price testing resistance, increasing the risk of a short-term pullback. Safe is reduced as the price is at resistance and overbought, increasing downside risk. Conviction is reduced due to the mixed signals of strong price action against overbought technicals and deteriorating analyst sentiment."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: Medium-term momentum is accelerating (MACD 1.32) with expanding bullish momentum (3.96%), but the price is now an outlier (Z:2.21) at monthly resistance. Trend alignment is strong, and the price is pushing the upper bounds of the 50-day range. W: The extreme bullish Z-score indicates overextension, and the price is facing significant resistance. Analyst sentiment remains deteriorating, and while volume is average, it doesn't show overwhelming conviction for a breakout. O: The news flow around Apple's market cap exceeding $5 trillion and potential Q3 earnings strength provides a bullish backdrop. T: The score is slightly increased due to accelerating momentum, but the safe score is reduced as the price is overextended and testing resistance, increasing the risk of mean reversion. Conviction is increased due to the accelerating momentum, but tempered by the resistance level and overextended technicals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The long-term secular bull market regime remains intact, with the price at the absolute top of the long-term range (98.3%) and a healthy golden cross structure. Fundamentals continue to show high business quality and strong growth profiles. W: Valuation remains extremely stretched (P/E: 43.08, P/S: 11.6) and asset safety is very low (P/B: 57.29), with implied growth being expensive (PEG: 1.69). The price is at an all-time high, increasing sensitivity to any negative news or market regime shift. O: The ongoing narrative of Apple's market cap surpassing $5 trillion and the potential for future growth drivers like AI and new product cycles are supportive. T: The score remains stable as the long-term structural factors are still positive, but the safe score is further reduced due to the price reaching all-time highs and the extreme valuation, which significantly increases downside risk and fragility. Conviction remains high due to the strong long-term fundamentals and market regime, but the extreme valuation poses a significant risk."
+    }
+  }
+}

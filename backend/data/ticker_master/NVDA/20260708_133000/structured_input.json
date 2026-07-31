@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (33.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.3)",
+        "velocity_roc_10": "NORMAL (-5.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 189.8-213.99]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.7%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.552)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.22)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-236.54]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (3.0%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.57%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 197.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.18%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 62.74, P/S: 32.65)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 57.83)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.77)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia Kyber Rack reportedly delayed to 2028. - Nvidia Kyber NVL144 rack delayed to 2028. - Nvidia says AI roadmap is intact after rack delay report. - Nvidia rivals get a rare break in AI race. - Nvidia CEO highlighted a new AI bottleneck. - Jason Calacanis: Nvidia is 'taking the gloves off' with Nemotron. - SIGGRAPH 2026 keynotes to showcase NVIDIA advancements. - Foxconn sounds caution on geopolitics impacting Nvidia.",
+      "Nvidia expands life sciences AI ecosystem with Certara. - Nvidia CPU to be used by AI startup Perplexity. - Nvidia shares fall on report of Chinese AI chip development. - Nvidia remains a buy, diversifying beyond GPUs. - Nvidia bears are wrong, stock is a buy.",
+      "Nvidia appoints former Microsoft executive Nicholas Parker as EVP, Worldwide Field Operations. - Nvidia becomes strategic investor in Verkada, collaborating on AI search and safety. - Nvidia announces Halos for Robotics, a safety system for robotics and physical AI. - Nvidia's Q2 FY2027 revenue guide is $91.0 billion. - Palantir partners with Nvidia for federal agencies' AI needs. - Meta is building its own AI chips, shifting from buying Nvidia GPUs."
+    ],
+    "medium_term_50d": [
+      "Nvidia appoints former Microsoft executive Nicholas Parker as EVP, Worldwide Field Operations. - Nvidia becomes strategic investor in Verkada, collaborating on AI search and safety. - Nvidia announces Halos for Robotics, a safety system for robotics and physical AI. - Nvidia's Q2 FY2027 revenue guide is $91.0 billion. - Palantir partners with Nvidia for federal agencies' AI needs. - Meta is building its own AI chips, shifting from buying Nvidia GPUs.",
+      "Nvidia Kyber Rack reportedly delayed to 2028. - Nvidia Kyber NVL144 rack delayed to 2028. - Nvidia says AI roadmap is intact after rack delay report. - Nvidia rivals get a rare break in AI race. - Nvidia CEO highlighted a new AI bottleneck. - Jason Calacanis: Nvidia is 'taking the gloves off' with Nemotron. - SIGGRAPH 2026 keynotes to showcase NVIDIA advancements. - Foxconn sounds caution on geopolitics impacting Nvidia.",
+      "Nvidia expands life sciences AI ecosystem with Certara. - Nvidia CPU to be used by AI startup Perplexity. - Nvidia shares fall on report of Chinese AI chip development. - Nvidia remains a buy, diversifying beyond GPUs. - Nvidia bears are wrong, stock is a buy."
+    ],
+    "long_term_200d": [
+      "Nvidia appoints former Microsoft executive Nicholas Parker as EVP, Worldwide Field Operations. - Nvidia becomes strategic investor in Verkada, collaborating on AI search and safety. - Nvidia announces Halos for Robotics, a safety system for robotics and physical AI. - Nvidia's Q2 FY2027 revenue guide is $91.0 billion. - Palantir partners with Nvidia for federal agencies' AI needs. - Meta is building its own AI chips, shifting from buying Nvidia GPUs.",
+      "Nvidia Kyber Rack reportedly delayed to 2028. - Nvidia Kyber NVL144 rack delayed to 2028. - Nvidia says AI roadmap is intact after rack delay report. - Nvidia rivals get a rare break in AI race. - Nvidia CEO highlighted a new AI bottleneck. - Jason Calacanis: Nvidia is 'taking the gloves off' with Nemotron. - SIGGRAPH 2026 keynotes to showcase NVIDIA advancements. - Foxconn sounds caution on geopolitics impacting Nvidia.",
+      "NN, Inc. announces new awards for NVIDIA data center products. - Firmus and Nvidia partner to build large AI facility in Indonesia. - Nvidia CEO states national security priority over commercial opportunity. - Bit Origin buys Nvidia Blackwell AI servers, stock sinks. - Palantir teams up with Nvidia for government AI systems. - Palantir and Nvidia bring open AI models inside US government systems. - Nvidia is mentioned as a potential trillion-dollar company by 2028. - Nvidia is discussed as a \"millionaire-maker\" stock."
+    ]
+  }
+}

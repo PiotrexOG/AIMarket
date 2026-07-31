@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (39.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "STAGNANT (-0.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 164.78-192.68]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-3.83%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.159)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.74)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 164.78-198.87]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (0.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.29%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 45.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 177.26,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.99%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 11.1% | OM: 8.2% | NM: 5.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.22x, YrsToPay: 3.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $185.887B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -3.7%, EPS: -33.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 15.5%, Next Q Est Growth: 341.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.61, P/S: 1.89)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.92)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -33.9%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil and Chevron shares surge on oil price jump.",
+      "Iraqi Cabinet backs Chevron-led consortium agreement for Basra-Haditha Project.",
+      "Chevron signs 20-year deal with Microsoft for data center power. - Chevron partners with Microsoft to power Texas data center."
+    ],
+    "medium_term_50d": [
+      "Chevron signs 20-year deal with Microsoft for data center power. - Chevron partners with Microsoft to power Texas data center.",
+      "Iraqi Cabinet backs Chevron-led consortium agreement for Basra-Haditha Project.",
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion."
+    ],
+    "long_term_200d": [
+      "Chevron CFO responds to Trump Big Oil gas price gouging probe. - Chevron operations in Venezuela continue after earthquake. - Chevron launches next-generation Techron fuel. - Chevron and Microsoft deal fuels data center expansion.",
+      "Trump orders DOJ probe into Chevron over gas prices. - Chevron expands Project Kilby with strategic support. - Chevron's Project Kilby could expand for Microsoft. - Chevron has agreement to sell electricity to Microsoft. - Chevron registers a bigger fall than the market.",
+      "Chevron signs 20-year deal with Microsoft for data center power. - Chevron partners with Microsoft to power Texas data center."
+    ]
+  }
+}

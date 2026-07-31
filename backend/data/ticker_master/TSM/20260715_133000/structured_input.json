@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (45.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-7.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.6%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 418.86-479.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.76%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-4.191)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.21)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 385.06-479.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (20.3%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.53%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 72.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 420.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.74%))",
+      "volume_dynamics": "AVERAGE (1.03)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 61.9% | OM: 53.3% | NM: 47.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.34x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4125.510324B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.3%, EPS: 49.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3249.8%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.13, P/S: 0.53)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.37)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.08x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC Q2 revenues near high end of guidance. - TSMC reported 67.9% June sales growth.",
+      "TSMC reports 67.9% Yo Y surge in June revenue.",
+      "Taiwan Semi offers clues on AI demand."
+    ],
+    "medium_term_50d": [
+      "TSMC Q2 revenues near high end of guidance. - TSMC reported 67.9% June sales growth.",
+      "Ken Griffin warns losing TSMC chips could trigger 'Great Depression'.",
+      "TSMC reports 67.9% Yo Y surge in June revenue."
+    ],
+    "long_term_200d": [
+      "Ken Griffin warns losing TSMC chips could trigger 'Great Depression'.",
+      "TSMC Q2 revenues near high end of guidance. - TSMC reported 67.9% June sales growth.",
+      "TSMC reports 67.9% Yo Y surge in June revenue."
+    ]
+  }
+}

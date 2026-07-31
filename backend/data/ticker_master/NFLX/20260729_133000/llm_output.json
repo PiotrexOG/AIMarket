@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 5.2
+      },
+      "synthesis": "S: The short-term exhibits a Doji candle pattern, indicating indecision, with RSI holding in the neutral zone (40.0). Velocity has stagnated, and the price is consolidating near the 20-day SMA. Volume has normalized, and the stock remains in the middle of its 20-day range. W: The Doji pattern and stagnant velocity suggest a lack of clear directional conviction. The price hugging the 20-day SMA indicates a potential for either a breakout or breakdown. O: The shift from a strong bullish candle to a Doji, coupled with improved velocity and consolidation near the SMA, suggests a slight improvement in short-term stability, potentially setting up for a move. T: News flow is mixed, with some positive commentary on margins and undervaluation, but also persistent negative narratives regarding past earnings and guidance. The acquisition of an AI startup and bond market activity are noted but do not strongly influence the immediate price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish, but the momentum is expanding less aggressively. Crucially, the MACD has shifted to a bullish accelerating pattern, indicating a significant positive change. The Z-score relative to the 50-day SMA has improved, though still bearish. W: The accelerating bullish MACD is a strong signal of improving medium-term momentum, contrasting with the previous bearish acceleration. The stock remains within a wide monthly range, but the technicals are now pointing towards a potential trend reversal. O: A sustained move above the 50-day SMA and continued bullish MACD acceleration would solidify a medium-term bullish outlook. The improved Z-score suggests increasing price support. T: Fundamentals show stable quarterly earnings surprise and modest next quarter growth estimates. News highlights include shares climbing after weak Q3 guidance overshadowed solid Q2, and management guiding higher on margins, suggesting a more optimistic outlook than previously indicated."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook is still framed by a secular bear market regime and a death cross structure, but the price has moved higher within the long-term range, indicating some accumulation. The market regime has slightly improved in terms of its negative percentage. W: While the major technical structures remain bearish, the improved position within the long-term range and slightly less negative market regime percentage suggest a potential stabilization. The fundamental strengths of the business quality and cash generation remain robust. O: A sustained break above the death cross structure and a shift in the broader market regime would be necessary for a strong long-term bullish thesis. However, the current valuation and fundamental strengths provide a floor. T: The company's business quality, financial health, and cash generation remain structural positives. Valuation appears fair on a PEG basis, suggesting growth is still priced in. News flow is mixed, with past negative events still present but recent commentary suggesting potential undervaluation and margin improvements."
+    }
+  }
+}

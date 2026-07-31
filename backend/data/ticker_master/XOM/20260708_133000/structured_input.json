@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (51.8)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.53)",
+        "velocity_roc_10": "NORMAL (2.3%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 134.95-153.81]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-4.41%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.337)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.74)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 134.95-163.68]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (4.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.5%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 48.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 142.23,
+      "volatility_context": "VOLATILITY_SQUEEZE_COMPRESSION | MODERATE_VOLATILITY (ATR:  (1.87%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.5% | OM: 9.0% | NM: 7.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 2.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 5.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $326.008B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -4.1%, EPS: -21.9%)",
+    "earnings_momentum_quarterly": "Q_ACCELERATING_GROWTH (Curr Q Surprise: 12.4%, Next Q Est Growth: 256.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 24.11, P/S: 1.82)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.34)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -21.85%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil announces changes in liquids and gas prices. - Exxon Mobil's Q2 upstream income outlook is highest since 2022. - Exxon Mobil expands in Nigeria deepwater oil sector. - Exxon Mobil Holdings completes redomiciliation to Texas.",
+      "Shell and Exxon Mobil deepen Nigeria investments.",
+      "XOM, Qatar Energy reach milestone in Cyprus offshore gas development. - Exxon Mobil officially moved legal home from New Jersey to Texas. - Exxon Mobil wins major legal battle at the Supreme Court."
+    ],
+    "medium_term_50d": [
+      "XOM, Qatar Energy reach milestone in Cyprus offshore gas development. - Exxon Mobil officially moved legal home from New Jersey to Texas. - Exxon Mobil wins major legal battle at the Supreme Court.",
+      "Exxon Mobil announces changes in liquids and gas prices. - Exxon Mobil's Q2 upstream income outlook is highest since 2022. - Exxon Mobil expands in Nigeria deepwater oil sector. - Exxon Mobil Holdings completes redomiciliation to Texas.",
+      "Exxon Mobil partners with Qatar Energy on Cyprus gas fields. - Exxon Mobil plans Cyprus gas exports via Egypt by 2033."
+    ],
+    "long_term_200d": [
+      "XOM, Qatar Energy reach milestone in Cyprus offshore gas development. - Exxon Mobil officially moved legal home from New Jersey to Texas. - Exxon Mobil wins major legal battle at the Supreme Court.",
+      "US Supreme Court rules in favor of Exxon Mobil in Cuba lawsuit. - Supreme Court ruling allows Exxon to seek compensation from Cuba.",
+      "Exxon Mobil hits record oil production, plays role in Iran war supply. - CEO Darren Woods ramps up output in Guyana, Texas, Papua New Guinea."
+    ]
+  }
+}

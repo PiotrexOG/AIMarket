@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.22)",
+        "velocity_roc_10": "NORMAL (-7.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.3%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 191.15-214.39]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-2.01%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.574)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.84)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 189.8-232.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (2.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.66%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 191.63,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.02%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 61.03, P/S: 31.76)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 56.25)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.75)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia-SK Hynix partnership expected to benefit both stocks. - Apple overtakes Nvidia in market capitalization. - Apple and Nvidia market caps are very close. - Nvidia stock valuation compared to S&P 500. - Nvidia's net margin tops 55%, Marvell's growth matches.",
+      "Nvidia partners with Safe Superintelligence Inc., invests in startup. - Nvidia AI Factory validation for LG Electronics' cooling unit. - Nvidia reportedly in talks to finance Open AI data center. - Nvidia forms AI security alliance after Hugging Face incident. - Nvidia's credit risk jumps on AI deal talk reports. - Nvidia stock falls 5% on credit risk sharing concerns. - Nvidia invests $1B in Naver. - Nvidia provides boost to Nebius AI infrastructure stock. - Nvidia signs AI chip deals with SK Hynix, Samsung.",
+      "Nvidia and Micron each have compelling investment cases. - Demis Hassabis backs Jensen Huang's AI vision. - Microsoft or Nvidia: Which is the better value stock? - Oracle, Salesforce, Nvidia announce major AI developments. - Space X vs. Nvidia: Which AI stock is better?"
+    ],
+    "medium_term_50d": [
+      "Nvidia partners with Safe Superintelligence Inc., invests in startup. - Nvidia AI Factory validation for LG Electronics' cooling unit. - Nvidia reportedly in talks to finance Open AI data center. - Nvidia forms AI security alliance after Hugging Face incident. - Nvidia's credit risk jumps on AI deal talk reports. - Nvidia stock falls 5% on credit risk sharing concerns. - Nvidia invests $1B in Naver. - Nvidia provides boost to Nebius AI infrastructure stock. - Nvidia signs AI chip deals with SK Hynix, Samsung.",
+      "Nvidia-SK Hynix partnership expected to benefit both stocks. - Apple overtakes Nvidia in market capitalization. - Apple and Nvidia market caps are very close. - Nvidia stock valuation compared to S&P 500. - Nvidia's net margin tops 55%, Marvell's growth matches.",
+      "Nvidia CEO Jensen Huang posts on X about AI models. - Nvidia, Microsoft, Palantir lead push for open AI models. - Nvidia, Microsoft, Palantir lead big tech revolt against AI restrictions. - Nvidia and 23 other companies sign letter backing open-weight AI models. - Nvidia stock slides below an early entry after earnings."
+    ],
+    "long_term_200d": [
+      "Nvidia Deepens Japan AI Push With Factory Deal And Robotics Tie Ups. - Nvidia CEO Denies Delay Reports for Vera Rubin AI Systems. - Apple Overtakes Nvidia as World's Most Valuable Company. - Qumulus AI Approved to Join Nvidia Cloud Partner Network. - Nvidia Chip Stocks Sink as China Unveils New AI Model.",
+      "Nvidia partners with Safe Superintelligence Inc., invests in startup. - Nvidia AI Factory validation for LG Electronics' cooling unit. - Nvidia reportedly in talks to finance Open AI data center. - Nvidia forms AI security alliance after Hugging Face incident. - Nvidia's credit risk jumps on AI deal talk reports. - Nvidia stock falls 5% on credit risk sharing concerns. - Nvidia invests $1B in Naver. - Nvidia provides boost to Nebius AI infrastructure stock. - Nvidia signs AI chip deals with SK Hynix, Samsung.",
+      "Nvidia Deepens Japan Ties With Mitsubishi Heavy And Toyota. - Japan Government, Industrial Leaders and NVIDIA Launch National AI Infrastructure. - Nvidia partners with Japan robotics firms on AI development. - Nvidia-backed Fireworks hits $17.5 billion valuation. - Nvidia and Palantir are partnering up for sovereign AI. - Nvidia's Rubin reassurance protects a much bigger AI bet. - NVIDIA\u2019s 75% Margins vs TSMC\u2019s Foundry Gamble. - Michael Burry Mocks Data Center 'Fantasy\u2019 In ORCL, NVDA, AMZN. - Zacks.com featured highlights include NVIDIA, Neurocrine Biosciences and Ball."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "DETERIORATING",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.27)",
+        "velocity_roc_10": "NORMAL (-5.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 341.96-382.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (10.0%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.965)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.89)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 279.41-382.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (5.79%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 77.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 357.11,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.8% | OM: 18.5% | NM: 17.9%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 1.2x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 15.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.352B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 21.9%, EPS: 25.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 5.8%, Next Q Est Growth: 1.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 43.82, P/S: 7.75)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 20.75)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.7)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace mentioned as Q2 portfolio contributor. - GEHC stock options market movements noted. - GE Aerospace Q2 earnings print date July 16. - GE Aerospace, TSM, UNH noted for Q2 reports.",
+      "GE Vernova stock fell more than the broader market. - GE Aerospace Q2 earnings expected to be strong. - GE Aerospace rally discussed in relation to XLI ETF. - GE Aerospace stock valuation and Q2 earnings discussed.",
+      "GE earnings report scheduled for this week."
+    ],
+    "medium_term_50d": [
+      "GE Vernova stock fell more than the broader market. - GE Aerospace Q2 earnings expected to be strong. - GE Aerospace rally discussed in relation to XLI ETF. - GE Aerospace stock valuation and Q2 earnings discussed.",
+      "GE Aerospace mentioned as Q2 portfolio contributor. - GEHC stock options market movements noted. - GE Aerospace Q2 earnings print date July 16. - GE Aerospace, TSM, UNH noted for Q2 reports.",
+      "GE Aerospace posts robust margin gains and surging commercial aviation growth."
+    ],
+    "long_term_200d": [
+      "GE Aerospace posts robust margin gains and surging commercial aviation growth.",
+      "GE Vernova is a trending stock. - GE is poised to beat earnings estimates. - GE Aerospace earnings report is July 16.",
+      "GE Vernova stock fell more than the broader market. - GE Aerospace Q2 earnings expected to be strong. - GE Aerospace rally discussed in relation to XLI ETF. - GE Aerospace stock valuation and Q2 earnings discussed."
+    ]
+  }
+}

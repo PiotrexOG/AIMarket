@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook is cautiously bearish. While the price remains near the 20-day SMA, the bullish candle pattern has been replaced by neutral signals. W: Momentum remains weak (RSI 38.2), and velocity has normalized but is still negative. The price is now closer to the lower end of the 20-day range. O: Short-term news highlights a lawsuit and a slight miss on June sales expectations, introducing minor headwinds. T: The confluence of neutral technicals, weak momentum, and negative news suggests a subdued short-term outlook with limited conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend alignment has deteriorated further, with bearish momentum expanding. The MACD has also turned bearish, indicating a shift in sentiment. W: The Z-score relative to the 50-day SMA has worsened, suggesting a weaker trend position. The stock is trading within its monthly range but is closer to the lower bound. O: Medium-term news mentions a dividend announcement and a credit card partnership change, but also highlights a stock slip despite strong sales, indicating market concerns. T: The deterioration in trend alignment and MACD, coupled with mixed news, points to a bearish medium-term outlook with low conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: The long-term golden cross structure remains intact, providing some structural support. However, the long-term range position has shifted to the bearish lower quadrant. W: The market regime remains a bear market relief rally, and the overall trend alignment has weakened. Fundamentals remain strong with a net cash fortress and moderate growth, but the premium valuation persists. O: Long-term narratives are mixed, with some referencing past positive performance and expansion strategies, but also recent sales misses and lawsuits. T: While the underlying business quality and financial health are robust, the shift in range position and persistent premium valuation temper the long-term score. The safe score remains elevated due to strong fundamentals, but conviction is reduced by the changing technical landscape."
+    }
+  }
+}

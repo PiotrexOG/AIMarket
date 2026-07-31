@@ -1,0 +1,29 @@
+{
+  "ticker": "SBUX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.2,
+        "conv": 4.8,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term outlook has slightly deteriorated. The Doji candle pattern indicates indecision, and the RSI has fallen to 47.7, suggesting a loss of bullish momentum. The stock is now trading below the 20-day SMA, and velocity has turned negative (-2.8%), confirming a loss of upward thrust. W: The shift from a bearish shooting star to a Doji, coupled with a declining RSI, signals increased uncertainty and potential for further downside. The stock is now in the middle of its 20-day range, offering limited immediate upside. O: Recent news regarding upcoming Q2 earnings and loyalty program changes are neutral to slightly positive but do not outweigh the negative technical signals. T: The indecisive technical signals suggest a higher probability of consolidation or a short-term pullback. The lack of strong conviction in the current price action warrants caution, leading to a slight decrease in score and conviction."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 4.8
+      },
+      "synthesis": "S: The medium-term trend is showing signs of further weakening. While the stock is still above its 50-day SMA (Z:0.38), the MACD has accelerated its bearish trend (-0.427), confirming a significant loss of upward momentum. The trend alignment remains a gradual ascent, but the underlying momentum is clearly deteriorating. W: The accelerating bearish MACD crossover is a significant concern, suggesting a potential shift in trend towards a more pronounced decline. While the stock remains within the monthly range, the weakening momentum limits upside potential and increases downside risk. O: Positive news regarding the FY2026 guidance and potential sales momentum provide some support, but the strongly bearish technical signal tempers optimism. T: The accelerating bearish MACD crossover suggests a higher probability of a move towards the lower end of the monthly range. Conviction has decreased due to the conflicting signals of fundamental support versus technical deterioration, and the score has been reduced."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.2,
+        "safe": 3.6
+      },
+      "synthesis": "S: Long-term technicals remain structurally sound, with the stock still positioned in the upper quadrant (82.5%) within a secular bull market and maintaining a healthy golden cross structure. However, the long-term range position has slightly decreased. W: Fundamental weaknesses persist, particularly the stressed balance sheet (YrsToPay: 12.9x) and stagnant growth with profit issues (EPS: -61.0%). The valuation remains hyper-premium (P/E: 85.76), and implied growth is extremely risky. The 'safe' score has decreased slightly due to a marginal increase in volatility (ATR: 2.67%) and the continued disconnect between technical strength and fundamental fragility. O: The raised FY2026 guidance and AI-driven cost-cutting initiatives offer some hope for future fundamental improvement, but the core issues of valuation and balance sheet health remain. T: While the long-term technical setup is favorable, the persistent fundamental weaknesses and elevated valuation create a high-risk profile. The slight increase in volatility and the bearish short-term technical signals suggest a higher probability of a near-term correction, which could test the long-term structural integrity, leading to a slight reduction in score and safe metrics."
+    }
+  }
+}

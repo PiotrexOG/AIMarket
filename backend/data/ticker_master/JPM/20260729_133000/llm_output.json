@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.8,
+        "conv": 6.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook has weakened significantly. The RSI has moved into an \"OVERBOUGHT_EXTREME\" (78.7) zone, and the \"STRONG_BEARISH\" candle pattern suggests immediate selling pressure. While the stock is testing the upper Bollinger Band (0.97) and remains near the 20-day SMA (4.6%), the extreme overbought condition indicates a potential for a pullback. O: The \"NEAR @20d\" resistance barrier has now shifted to \"DISTANT @20d\", which is a positive technical development. However, the \"STRONG_BEARISH\" candle pattern and \"OVERBOUGHT_EXTREME\" RSI are strong counter-signals to sustained upside. T: The shift from \"IN_MIDDLE_OF_RANGE\" to testing the upper band, combined with the bearish candle and extreme RSI, suggests a loss of short-term momentum and increased risk of a reversal. The \"RANGE\" bias in the SR landscape also implies potential for consolidation after this move."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.7,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend remains constructive, with \"BULLISH_EXPANDING_MOMENTUM\" (5.24%) and an accelerating bullish MACD (0.911). The Z-score relative to the 50-day SMA has slightly decreased to 1.41, indicating a still strong but less extended bullish position. The stock is now \"INSIDE_MONTHLY_RANGE\" as the upper range has expanded. O: The \"STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE\" has evolved to \"INSIDE_MONTHLY_RANGE\", indicating the stock has moved through previous resistance levels. The \"POWER_ZONE_CONFLUENCE(2)\" structure remains supportive. T: While the short-term has shown weakness, the medium-term trend indicators remain robust. The accelerating MACD and continued bullish momentum provide a solid foundation, though the \"BALANCE_SHEET_STRESSED\" (NetDebt/Eq: 2.48x) remains a structural concern that limits the 'safe' score."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safe": 5.9
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally strong, anchored by a \"SECULAR_BULL_MARKET\" regime (14.8%) and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE\" (4.32%). The stock is positioned in the \"BULLISH_UPPER_QUADRANT\" (Pos: 89.0%) of its long-term range. Business quality and growth profile remain attractive, with valuation metrics like PEG (0.79) suggesting reasonable pricing. O: Positive news flow continues regarding record earnings and capital reallocation, reinforcing the long-term view. The \"POWER_ZONE_CONFLUENCE(2)\" structure and \"DISTANT @20d\" barriers suggest a clear path higher. T: The \"BALANCE_SHEET_STRESSED\" (NetDebt/Eq: 2.48x) remains the primary structural headwind, capping the 'safe' score. The \"Q_PEAK_PERFORMANCE_SKEPTIC\" earnings momentum, with negative next quarter estimates, continues to introduce a degree of uncertainty despite strong recent results. The shift in short-term technicals from bullish to bearish suggests potential for near-term consolidation."
+    }
+  }
+}

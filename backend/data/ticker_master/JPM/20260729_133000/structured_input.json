@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (78.7)",
+        "mean_reversion_bb": "TESTING_UPPER_BAND (0.97)",
+        "velocity_roc_10": "NORMAL (4.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 325.01-359.3]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.24%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.911)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.41)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 293.67-359.3]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.32%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 350.45,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.12%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 62.6% | OM: 28.2% | NM: 21.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.48x)",
+    "cash_generation_ttm": "UNKNOWN",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $297.633B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.0%, EPS: 19.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 30.9%, Next Q Est Growth: -22.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.07, P/S: 3.29)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.61)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.79)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.95x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan CEO Jamie Dimon warns of increased market risks. - JPMorgan Chase posts record $21.2 billion quarter earnings. - JPMorgan CEO Jamie Dimon sounds cautious despite record quarter.",
+      "JPMorgan announces cash distributions for JPMorgan ETFs. - JPMorgan and South Korea's KB Kookmin move payments onchain.",
+      "JPMorgan CEO Jamie Dimon issues warning about market conditions. - JPMorgan warns investors about the end of the easy-money era. - JPMorgan faces new questions regarding Jes Staley and Jeffrey Epstein."
+    ],
+    "medium_term_50d": [
+      "JPMorgan CEO Jamie Dimon warns of increased market risks. - JPMorgan Chase posts record $21.2 billion quarter earnings. - JPMorgan CEO Jamie Dimon sounds cautious despite record quarter.",
+      "JPMorgan Chase posts record quarterly profit of $21.2 billion. - JPMorgan Chase Q2 earnings beat expectations, record revenue reported. - JPMorgan Chase CEO Jamie Dimon warns of potential credit crisis. - JPMorgan Chase CEO Jamie Dimon advises against buying long-term US bonds. - JPMorgan Chase subsidiary secures strategic financing with JPMorgan Chase Bank. - IRS Chief Frank Bisignano denies spying allegations against JPMorgan colleagues.",
+      "JPMorgan Chase reports record Q2 profit and raises guidance. - JPMorgan Chase reallocates capital to infrastructure, AI, and defense. - JPMorgan Chase CEO backs Philadelphia Navy Yard with $24 million. - JPMorgan Chase beats Q2 estimates with record results."
+    ],
+    "long_term_200d": [
+      "JPMorgan Chase posts record quarterly profit of $21.2 billion. - JPMorgan Chase Q2 earnings beat expectations, record revenue reported. - JPMorgan Chase CEO Jamie Dimon warns of potential credit crisis. - JPMorgan Chase CEO Jamie Dimon advises against buying long-term US bonds. - JPMorgan Chase subsidiary secures strategic financing with JPMorgan Chase Bank. - IRS Chief Frank Bisignano denies spying allegations against JPMorgan colleagues.",
+      "JPMorgan Chase Q2 earnings beat estimates, driven by trading and IB. - JPMorgan Chase Q2 revenue and earnings surpassed analyst expectations. - JPMorgan Chase reported record Q2 profit, driven by trading surge. - JPMorgan Chase's Q2 profit rose 41%, exceeding expectations. - JPMorgan Chase's Q2 results exceeded expectations, shares moved lower. - JPMorgan Chase cut earnings forecasts for crypto companies Circle and Coinbase. - JPMorgan Chase CEO discusses AI use cases and job impact. - JPMorgan Chase reported strong Q2 results, shares rose. - JPMorgan Chase's Q2 earnings call presentation was published. - JPMorgan Chase's Q2 net income and revenue increased significantly.",
+      "JPMorgan Chase declares preferred stock dividends. - JPMorgan Chase announces $24 million to strengthen shipbuilding. - JPMorgan Chase to hire 30 senior bankers for EMEA expansion. - JPMorgan Chase clears stress test and lifts payout. - JPMorgan Chase market cap nears $1 trillion after record profit. - JPMorgan Chase Q2 earnings call flags strong markets, higher NII view. - JPMorgan Chase stock trades at a discount to fair value. - JPMorgan Chase launches Chase Sapphire Lounge at Dallas Fort Worth Airport. - JPMorgan, Goldman Sachs, Black Rock, Vanguard tokenize real stocks. - JPMorgan Chase CEO Jamie Dimon discusses defense investment, AI."
+    ]
+  }
+}

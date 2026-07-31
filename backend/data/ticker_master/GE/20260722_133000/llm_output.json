@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 3.0
+      },
+      "synthesis": "S: The short-term trend base remains near its low, with price action within normal Bollinger Bands, indicating a lack of extreme deviation. The RSI has moved into oversold territory (26.9), suggesting potential for a near-term bounce. O: Positive news flow around GE Aerospace's order wins and hybrid-electric technology advancements provides some support. T: The shift to oversold RSI from neutral reduces immediate pullback risk but also signals a loss of short-term bullish momentum, capping the score. W: The continued negative ROC (-7.2%) and further dip in the trend base SMA20 (-5.7%) introduce significant short-term weakness, lowering the score and safety."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safe": 3.5
+      },
+      "synthesis": "S: Bullish trend alignment persists, though at a slightly lower percentage (7.79%), and the Z-score relative to the 50-day SMA has moved closer to the mean (0.28), indicating a less extended trend. O: GE Aerospace's Q2 earnings beat and raised guidance are positive catalysts, but the analyst sentiment has deteriorated, creating mixed signals. T: The MACD has accelerated its bearish trend (-4.809), a significant divergence from the bullish trend alignment, which substantially reduces conviction and score. W: The widening gap between the bullish trend alignment and the accelerating bearish MACD, coupled with a slight deterioration in financial health (YrsToPay increased), presents structural risk, lowering the overall score and confidence."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure remain intact, though the long-term range position has decreased to 65.0%. O: Core fundamentals of solid business quality and strong revenue growth persist, but cash generation has moderated (FCF Mgn: 7.1%), and earnings momentum shows a sharp decline in forward estimates (-12.7%). T: While valuation multiples remain elevated, there has been a slight decrease in P/E and P/S, marginally improving the safety aspect. However, the PEG ratio has increased, indicating growth is becoming more expensive. W: The significant deterioration in forward earnings estimates and moderating cash generation, combined with hyper-premium valuations, continue to be the primary risk factors, capping the safety score and making the stock vulnerable to shifts in growth expectations."
+    }
+  }
+}

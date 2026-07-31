@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (55.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.49)",
+        "velocity_roc_10": "STAGNANT (0.8%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 99.25-109.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.77%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.08)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.52)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 93.7-109.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.24%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 85.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 104.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.84%))",
+      "volume_dynamics": "AVERAGE (1.0)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 20.6% | OM: 9.0% | NM: 3.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 12.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $37.695B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.3%, EPS: -61.0%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -40.9%, Next Q Est Growth: 150.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 86.41, P/S: 3.17)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: -14.23)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -60.97%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.25x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks raises fiscal 2026 outlook.",
+      "Starbucks partners with Coca-Cola for exclusive soda.",
+      "Starbucks wins shareholder lawsuit over sales slump."
+    ],
+    "medium_term_50d": [
+      "Starbucks raises fiscal 2026 outlook.",
+      "Starbucks raises FY2026 guidance. - Starbucks rolls out quarterly bonuses for workers. - Starbucks aims to cut $400 million in software costs.",
+      "Starbucks announces quarterly cash dividend of $0.62 per share. - Starbucks plans to release Q3 fiscal year 2026 financial results. - Starbucks introduces worker bonuses and weekly pay structure. - Starbucks targets $400 million in software cost savings."
+    ],
+    "long_term_200d": [
+      "Starbucks develops AI tools to replace vendor software. - Starbucks targets $400 million software spend with AI shift. - Starbucks AI push aims to cut reliance on Microsoft, IBM.",
+      "Starbucks raises FY2026 guidance. - Starbucks rolls out quarterly bonuses for workers. - Starbucks aims to cut $400 million in software costs.",
+      "Starbucks explores Japan business sale, potential IPO. - Starbucks completes majority stake sale of China operations."
+    ]
+  }
+}

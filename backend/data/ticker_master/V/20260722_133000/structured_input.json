@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "STAGNANT (1.1%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 327.21-365.02]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.39%)",
+        "cycle_macd": "BULLISH_FADING (0.12)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.43)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 309.0-365.02]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (7.9%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.48%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 355.24,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "AVERAGE (0.67)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.1% | OM: 59.2% | NM: 50.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 55.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $41.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 12.5%, EPS: 7.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.3%, Next Q Est Growth: 5.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 33.32, P/S: 16.59)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 17.71)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 4.53)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa launches stablecoin platform for banks and fintechs. - Samsung debuts co-branded credit card with Barclays and Visa. - Samsung Galaxy Card launches with Barclays and Visa.",
+      "Visa refreshes Visa Infinite for Asia Pacific affluent. - Visa launches new Stablecoin Platform for institutions. - Visa expands stablecoin push to 200 million merchants. - Visa launches platform for minting, wallets, and payments. - Visa platform allows stablecoin services to 200 million merchants. - Visa launches stablecoin platform for banks and fintech. - Visa unveils stablecoin platform with OUSD at its core. - Visa bets on stablecoins for AI micropayments. - Clear Street initiates Buy rating on Visa.",
+      "Visa partners with QIIB for payments growth. - Visa network powers new Samsung Galaxy Card."
+    ],
+    "medium_term_50d": [
+      "Visa refreshes Visa Infinite for Asia Pacific affluent. - Visa launches new Stablecoin Platform for institutions. - Visa expands stablecoin push to 200 million merchants. - Visa launches platform for minting, wallets, and payments. - Visa platform allows stablecoin services to 200 million merchants. - Visa launches stablecoin platform for banks and fintech. - Visa unveils stablecoin platform with OUSD at its core. - Visa bets on stablecoins for AI micropayments. - Clear Street initiates Buy rating on Visa.",
+      "Visa launches AI Financial Assistant for banks and cardholders. - Visa joins Agentic Ready Programme with Thredd for European issuers. - Visa expands value-added services with AI Assistant for banks. - Visa partners with Thredd, Zilch on agent-initiated payments in Europe. - Visa's AI assistants and agentic payments impact shareholders. - bp offers new Visa card members a 50\u00a2 per gallon discount. - Visa, Robinhood, Block expand in stablecoin, tokenized finance.",
+      "Visa joins x402 Foundation for open micro-payments standard. - Visa partners with Hong Kong Bank on new credit card. - Visa joins AI protocol project for online payments. - Visa's stablecoin platform aims to accelerate enterprise blockchain use. - Expert names Visa as durable stock amid AI jitters."
+    ],
+    "long_term_200d": [
+      "Visa refreshes Visa Infinite for Asia Pacific affluent. - Visa launches new Stablecoin Platform for institutions. - Visa expands stablecoin push to 200 million merchants. - Visa launches platform for minting, wallets, and payments. - Visa platform allows stablecoin services to 200 million merchants. - Visa launches stablecoin platform for banks and fintech. - Visa unveils stablecoin platform with OUSD at its core. - Visa bets on stablecoins for AI micropayments. - Clear Street initiates Buy rating on Visa.",
+      "Visa poised to beat earnings estimates again. - Visa turning disruption into opportunity. - Visa Q2 FY26 revenue +17%, EPS +20%.",
+      "Visa launches AI Financial Assistant for banks and cardholders. - Visa joins Agentic Ready Programme with Thredd for European issuers. - Visa expands value-added services with AI Assistant for banks. - Visa partners with Thredd, Zilch on agent-initiated payments in Europe. - Visa's AI assistants and agentic payments impact shareholders. - bp offers new Visa card members a 50\u00a2 per gallon discount. - Visa, Robinhood, Block expand in stablecoin, tokenized finance."
+    ]
+  }
+}

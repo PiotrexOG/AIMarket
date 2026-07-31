@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (60.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.92)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 273.75-317.4]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.05%)",
+        "cycle_macd": "BULLISH_ACCELERATING (2.057)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.07)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 265.07-317.4]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.69%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 89.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 308.85,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.86%))",
+      "volume_dynamics": "AVERAGE (0.89)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 39.0, P/S: 10.5)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 51.87)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.53)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Broadcom signs multi-year chip supply deal with Apple until 2031. - Apple nears a peak; accelerating services monetization meets demand destruction risks. - Apple sales seen weathering hardware price increases. - Apple's AI ambitions in Europe could be a new growth angle. - Apple pushing Siri AI into Europe. - JPMorgan: Apple's Mac lineup could be strongest AI growth driver. - Apple extends custom chip partnership with Broadcom through 2031. - Apple supplier Luxshare raises over $3 billion in Hong Kong IPO. - Apple's strong financial position navigates memory cost challenges. - Walmart, Apple, Nike well-positioned for agentic AI, says JPMorgan.",
+      "Broadcom and Apple extend custom chip supply deal through 2031. - Broadcom to supply custom chips for Apple products until 2031. - Apple supplier Luxshare plans HK listing at maximum price. - Apple's rally: pricing power, AI discipline, memory shortage. - Apple and Intel could be going into business together. - Apple's possible new i Phone pricing strategy. - After Apple, Intel raises chip prices by up to $50. - Apple, Space X, Sandisk, Robinhood in focus.",
+      "Apple in talks with Chinese suppliers for memory chips. - Apple stock faces pressure from potential CXMT memory partnership. - Apple stock rallies on potential solution to memory problem. - Apple stock is 4% away from overtaking Nvidia."
+    ],
+    "medium_term_50d": [
+      "Broadcom signs multi-year chip supply deal with Apple until 2031. - Apple nears a peak; accelerating services monetization meets demand destruction risks. - Apple sales seen weathering hardware price increases. - Apple's AI ambitions in Europe could be a new growth angle. - Apple pushing Siri AI into Europe. - JPMorgan: Apple's Mac lineup could be strongest AI growth driver. - Apple extends custom chip partnership with Broadcom through 2031. - Apple supplier Luxshare raises over $3 billion in Hong Kong IPO. - Apple's strong financial position navigates memory cost challenges. - Walmart, Apple, Nike well-positioned for agentic AI, says JPMorgan.",
+      "Broadcom and Apple extend custom chip supply deal through 2031. - Broadcom to supply custom chips for Apple products until 2031. - Apple supplier Luxshare plans HK listing at maximum price. - Apple's rally: pricing power, AI discipline, memory shortage. - Apple and Intel could be going into business together. - Apple's possible new i Phone pricing strategy. - After Apple, Intel raises chip prices by up to $50. - Apple, Space X, Sandisk, Robinhood in focus.",
+      "Apple raises Mac and i Pad prices due to chip shortage. - Apple shares fall after company raises prices on Mac and i Pad lineup. - Apple hikes prices to counter memory shortages for Macs, i Pads, and Vision Pro. - Apple raises prices for Mac Books and i Pads due to AI-driven costs. - Apple stock falls on Mac Book and i Pad price hikes. - Apple stock drops 6% after passing AI-driven chip costs to consumers. - Apple increases prices for Macs and i Pads, blaming memory chip shortage. - Apple confirms Micron's AI prediction with price hikes on Macs and i Pads."
+    ],
+    "long_term_200d": [
+      "Apple introduces new intelligence frameworks and tools for app development. - Apple unveils next generation of Apple Intelligence with new architecture. - Apple announces AI overhaul for i Phone, partnering with Google. - Apple debuts AI-powered Siri assistant at WWDC event. - Apple's WWDC keynote focuses on Apple Intelligence and Siri. - Apple's i OS 27 will extend back to i Phone 11 models. - Apple's new mac OS will be called \"Golden Gate\". - Apple Intelligence features will be integrated across i Phone, i Pad, Mac, Watch, Air Pods, Vision Pro. - Siri improvements will extend to Car Play and Air Pods. - Apple's private cloud compute platform runs its own world knowledge service.",
+      "Apple raises Mac and i Pad prices due to chip shortage. - Apple shares fall after company raises prices on Mac and i Pad lineup. - Apple hikes prices to counter memory shortages for Macs, i Pads, and Vision Pro. - Apple raises prices for Mac Books and i Pads due to AI-driven costs. - Apple stock falls on Mac Book and i Pad price hikes. - Apple stock drops 6% after passing AI-driven chip costs to consumers. - Apple increases prices for Macs and i Pads, blaming memory chip shortage. - Apple confirms Micron's AI prediction with price hikes on Macs and i Pads.",
+      "Apple faces AI-driven memory shortages and rising hardware costs. - Apple may hike i Phone prices to permanently lift ASP. - Apple plans to raise prices for its products due to chip shortage. - Intel shares soared after Trump announced partnership with Apple. - Britain's competition tribunal approves $4 billion lawsuit against Apple. - Apple explains TV library strategy, chose originals over back catalog. - Intel will design and manufacture chips for Apple. - Apple and Intel signed a historic chip partnership."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The short-term technicals have weakened, with a strong bearish candle pattern overriding the bullish RSI (65.8). The price is stable near the 20-day SMA (+3.6%), but the broader range position remains neutral. W: The shift to a bearish candle pattern and slightly lower volume dynamics (0.58) suggest a near-term pullback is possible. The previous bullish momentum appears to be waning. O: Despite the technical shift, news flow remains constructive with new AI partnerships (Mistral, AMD) and a focus on AI sales strategies. T: The score is reduced slightly due to the bearish candle pattern and weakening volume, indicating a less favorable short-term outlook compared to the previous period. Conviction remains moderate."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 5.2,
+        "safe": 6.3
+      },
+      "synthesis": "S: The medium-term trend alignment remains bearish (-4.26%), but the MACD is showing a slight improvement (3.211). The Z-score relative to the 50-day SMA has moved to a slightly more negative base (-0.49), indicating further mean reversion. W: The persistent bearish trend alignment continues to be a primary concern. While the MACD is improving, the overall trend structure is still unfavorable. O: The ongoing strategic AI partnerships (Mistral, AMD) and the focus on AI sales and infrastructure are positive long-term drivers. Fundamental strengths remain intact. T: The score is adjusted slightly downwards due to the worsening Z-score and continued bearish trend alignment, despite some positive MACD signals. Conviction is moderate due to the mixed technical signals and strong underlying fundamentals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.6,
+        "conv": 5.6,
+        "safe": 5.7
+      },
+      "synthesis": "S: The long-term technical regime remains in a secular bear market (-9.2%) with a death cross structure (-8.54%). The long-term range position has slightly deteriorated to 19.8%. W: The persistent bearish long-term technicals and slightly weaker range position are significant headwinds. The valuation remains premium (P/E: 27.64, PEG: 1.74), increasing fragility. O: The company's elite business quality, strong balance sheet, and consistent growth profile are key strengths. Continued strategic AI investments and partnerships provide a forward-looking narrative. T: The score is marginally reduced due to the slight deterioration in long-term technicals and range position. The safe metric is also slightly decreased due to the premium valuation and persistent bearish regime. Conviction remains moderate due to the strong fundamentals offsetting the weak long-term technicals."
+    }
+  }
+}

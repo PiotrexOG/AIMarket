@@ -1,0 +1,29 @@
+{
+  "ticker": "NKE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 6.2
+      },
+      "synthesis": "S: The short-term momentum has improved, with RSI moving into neutral territory (52.3) and velocity showing normal growth (3.4%). The stock remains consolidated around the 20-day SMA, indicating continued range-bound trading. W: Despite the slight momentum improvement, the stock is still in the middle of its range, and volume dynamics remain subdued (0.51), suggesting a lack of strong conviction. O: The shift in strategy away from digital-first and the launch of new collections could provide short-term catalysts if they resonate with consumers. T: Volatility remains stable and moderate (ATR: 3.53%), and the stock's position within the range offers some downside protection, slightly enhancing the 'safe' score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.8,
+        "conv": 4.2,
+        "safe": 5.8
+      },
+      "synthesis": "S: The stock has moved closer to the 50-day SMA (Z:-0.19), indicating a healthier base for potential trend development. While the MACD is fading (0.16), the overall trend alignment is still compressed, suggesting consolidation rather than a clear directional move. W: Analyst conviction remains low, and the news narrative highlights ongoing margin pressures and a tepid revenue outlook, tempering optimism despite the improved SMA position. O: A sustained break above the 50-day SMA, coupled with positive fundamental news, could signal a more robust medium-term trend reversal. T: The healthy balance sheet and fair valuation provide a floor, but the mixed earnings momentum and cautious revenue guidance limit the 'conv' and 'safe' scores. The shift away from digital-first strategy introduces some uncertainty."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safe": 5.2
+      },
+      "synthesis": "S: The stock remains in a secular bear market regime but has shown signs of potential rebound from multi-month lows, with the long-term range position improving slightly (9.1%). Major crosses suggest a potential for a rebound from oversold conditions. W: Fundamental growth remains stagnant with profit issues, and the long-term outlook for revenue is projected to be down. The news narrative continues to emphasize challenges in key markets like China and weakness in direct-to-consumer sales. O: A decisive break above significant long-term resistance levels and a clear improvement in the fundamental growth profile are necessary to signal a sustained long-term trend reversal. T: While business quality and financial health remain solid, the persistent stagnation in growth and the ongoing challenges in key markets temper the 'safe' score. Valuation remains fair, offering some support against further downside."
+    }
+  }
+}

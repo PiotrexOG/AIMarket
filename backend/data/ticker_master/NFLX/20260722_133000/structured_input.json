@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.07)",
+        "velocity_roc_10": "NORMAL (-9.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-6.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 65.1-78.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-8.25%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.252)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.45)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 65.1-91.46]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-26.4%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-14.46%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 8.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 70.25,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.97%))",
+      "volume_dynamics": "ELEVATED (1.13)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.1% | OM: 29.7% | NM: 28.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 22.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.370764B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.0%, EPS: 34.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 2.5%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.75, P/S: 6.19)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 9.93)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.64)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix issues softer revenue guidance, reduces metric reporting. - Netflix stock plunges on disappointing quarterly earnings. - Netflix stock down significantly year-to-date. - Netflix stock faces criticism for growth measurement changes. - Netflix stock valuation remains high despite slowing growth. - Netflix stock shows solid long-term gains despite recent weakness. - Netflix stock could be undervalued based on cash flow. - Netflix stock trading below estimated intrinsic value. - Netflix expansion into advertising and live content to support cash flow. - Netflix stock down 26% in 2026.",
+      "Netflix acquires AI film startup for $587 million. - Netflix returns to the high-grade bond market. - Netflix launches bond sale after 46% stock drop. - Netflix taps debt market after 2 years. - Netflix's weak outlook overshadows Q2 earnings beat. - Netflix quietly reveals AI's impact on 300 programs.",
+      "Netflix stock fell due to concerns over data sharing limits. - Netflix paid $587 million for Ben Affleck's AI startup. - Netflix revenue growth slows, engagement gains only 2%. - Netflix stock dropped after reporting second-quarter results."
+    ],
+    "medium_term_50d": [
+      "Netflix issues softer revenue guidance, reduces metric reporting. - Netflix stock plunges on disappointing quarterly earnings. - Netflix stock down significantly year-to-date. - Netflix stock faces criticism for growth measurement changes. - Netflix stock valuation remains high despite slowing growth. - Netflix stock shows solid long-term gains despite recent weakness. - Netflix stock could be undervalued based on cash flow. - Netflix stock trading below estimated intrinsic value. - Netflix expansion into advertising and live content to support cash flow. - Netflix stock down 26% in 2026.",
+      "Netflix acquires AI film startup for $587 million. - Netflix returns to the high-grade bond market. - Netflix launches bond sale after 46% stock drop. - Netflix taps debt market after 2 years. - Netflix's weak outlook overshadows Q2 earnings beat. - Netflix quietly reveals AI's impact on 300 programs.",
+      "Netflix shares fall after weaker-than-expected third-quarter guidance. - Netflix Q2 earnings beat, but Q3 guidance disappoints investors. - Netflix Q2 revenue and net income reported, Q3 guidance softer. - Netflix to scale back engagement disclosures, focus on financial metrics. - Netflix Q2 results show plans to expand monetization and growth."
+    ],
+    "long_term_200d": [
+      "Netflix issues softer revenue guidance, reduces metric reporting. - Netflix stock plunges on disappointing quarterly earnings. - Netflix stock down significantly year-to-date. - Netflix stock faces criticism for growth measurement changes. - Netflix stock valuation remains high despite slowing growth. - Netflix stock shows solid long-term gains despite recent weakness. - Netflix stock could be undervalued based on cash flow. - Netflix stock trading below estimated intrinsic value. - Netflix expansion into advertising and live content to support cash flow. - Netflix stock down 26% in 2026.",
+      "Netflix shares fall after weaker-than-expected third-quarter guidance. - Netflix Q2 earnings beat, but Q3 guidance disappoints investors. - Netflix Q2 revenue and net income reported, Q3 guidance softer. - Netflix to scale back engagement disclosures, focus on financial metrics. - Netflix Q2 results show plans to expand monetization and growth.",
+      "Netflix acquires AI film startup for $587 million. - Netflix returns to the high-grade bond market. - Netflix launches bond sale after 46% stock drop. - Netflix taps debt market after 2 years. - Netflix's weak outlook overshadows Q2 earnings beat. - Netflix quietly reveals AI's impact on 300 programs."
+    ]
+  }
+}

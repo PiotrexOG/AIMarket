@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 4.0
+      },
+      "synthesis": "S: Positive momentum indicated by stable trend base and within normal Bollinger Bands. O: Potential for continued upward movement driven by strong news narrative around GE Aerospace's margin gains and commercial aviation growth. T: Monitor RSI for potential overbought conditions and any shifts in the DOJI indecision candle pattern. W: Extreme overbought RSI (70.8) suggests a short-term pullback risk, despite overall positive technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: Bullish trend alignment and positive Z-score positioning relative to the 50-day SMA suggest underlying strength. O: Expanding bullish momentum and positive news flow regarding GE Aerospace's growth and earnings potential provide a favorable outlook. T: The bearish MACD zero cross is a point of caution, indicating potential divergence from the broader trend. W: The conflicting signals between bullish trend alignment and the bearish MACD cross introduce uncertainty, limiting conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: A healthy golden cross structure and positioning in the upper quadrant of the long-term range indicate a strong secular bull market regime. O: Robust business quality, strong cash generation, and hyper-growth in revenue and EPS provide a solid fundamental underpinning. T: Elevated valuation multiples (P/E: 44.13, P/S: 7.81) and a high P/B (20.9) present a significant risk, especially given the implied growth cost (PEG: 1.71). W: The hyper-premium valuation significantly detracts from the safety score, creating vulnerability to any fundamental or market regime shifts."
+    }
+  }
+}

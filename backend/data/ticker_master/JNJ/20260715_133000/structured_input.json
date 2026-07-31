@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.59)",
+        "velocity_roc_10": "NORMAL (-1.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 227.5-269.43]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (5.21%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.207)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.16)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.37-269.43]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (14.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.92%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 252.65,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (2.55%))",
+      "volume_dynamics": "AVERAGE (1.08)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 70.5% | OM: 26.8% | NM: 21.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.929B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.1%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -20.4%, Next Q Est Growth: 32.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.21, P/S: 6.3)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.26)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.08%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson raises full-year outlook toward $100 billion revenue target. - Johnson & Johnson stock near all-time highs, analyst sees rally. - Johnson & Johnson advances late-stage chronic kidney disease therapeutics. - Johnson & Johnson stock may be reasonable after talc verdict ruling.",
+      "Johnson & Johnson stock poised for new highs before Q2 results. - Johnson & Johnson Q2 earnings release approaching July 15. - Johnson & Johnson faces autism claims lawsuit revival for Kenvue. - Johnson & Johnson's Tylenol-maker Kenvue must face autism claims. - Johnson & Johnson's Amivantamab mentioned for head and neck cancer. - Johnson & Johnson stock is a buy ahead of Q2 earnings. - Johnson & Johnson stock analysis ahead of July 15 earnings.",
+      "Illinois court affirms $45 million talc verdict against Johnson & Johnson. - Johnson & Johnson faces fresh talc risk after $45 million verdict stands. - Johnson & Johnson to report Q2 earnings amid upbeat expectations."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson raises full-year outlook toward $100 billion revenue target. - Johnson & Johnson stock near all-time highs, analyst sees rally. - Johnson & Johnson advances late-stage chronic kidney disease therapeutics. - Johnson & Johnson stock may be reasonable after talc verdict ruling.",
+      "Johnson & Johnson stock poised for new highs before Q2 results. - Johnson & Johnson Q2 earnings release approaching July 15. - Johnson & Johnson faces autism claims lawsuit revival for Kenvue. - Johnson & Johnson's Tylenol-maker Kenvue must face autism claims. - Johnson & Johnson's Amivantamab mentioned for head and neck cancer. - Johnson & Johnson stock is a buy ahead of Q2 earnings. - Johnson & Johnson stock analysis ahead of July 15 earnings.",
+      "Illinois court affirms $45 million talc verdict against Johnson & Johnson. - Johnson & Johnson faces fresh talc risk after $45 million verdict stands. - Johnson & Johnson to report Q2 earnings amid upbeat expectations."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson raises full-year outlook toward $100 billion revenue target. - Johnson & Johnson stock near all-time highs, analyst sees rally. - Johnson & Johnson advances late-stage chronic kidney disease therapeutics. - Johnson & Johnson stock may be reasonable after talc verdict ruling.",
+      "Johnson & Johnson stock poised for new highs before Q2 results. - Johnson & Johnson Q2 earnings release approaching July 15. - Johnson & Johnson faces autism claims lawsuit revival for Kenvue. - Johnson & Johnson's Tylenol-maker Kenvue must face autism claims. - Johnson & Johnson's Amivantamab mentioned for head and neck cancer. - Johnson & Johnson stock is a buy ahead of Q2 earnings. - Johnson & Johnson stock analysis ahead of July 15 earnings.",
+      "Illinois court affirms $45 million talc verdict against Johnson & Johnson. - Johnson & Johnson faces fresh talc risk after $45 million verdict stands. - Johnson & Johnson to report Q2 earnings amid upbeat expectations."
+    ]
+  }
+}

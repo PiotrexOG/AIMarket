@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: Short-term momentum has moderated, with RSI moving to a bullish zone (62.4) and velocity normalizing (-1.8%). The price is now stable near the 20-day SMA (1.7%), indicating a less overextended state compared to the previous period. W: The neutral candle pattern and lack of strong directional velocity suggest a pause in upward momentum. While not overbought, the current position in the middle of the 20-day range offers limited immediate upside potential. O: Positive news regarding the full-year outlook and advancements in CKD therapeutics provide some tailwinds, but the ongoing talc verdict risk remains a short-term overhang. T: The shift from extreme overbought conditions to a more stable, albeit less explosive, short-term technical profile suggests a reduction in immediate upside potential. The score reflects this moderation, with conviction slightly lower due to the lack of strong directional signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: The medium-term trend alignment remains bullish with expanding momentum (5.21%), but the MACD has crossed bearishly (-0.207), signaling a potential shift. The price is in a bullish trend position relative to the 50-day SMA (Z:1.16) and remains within the monthly range. W: The bearish MACD cross introduces a structural concern for medium-term trend continuation, despite positive trend alignment. The stock is now inside the monthly range, suggesting less immediate upward pressure compared to previously testing resistance. O: The raised full-year outlook and analyst optimism are supportive, but the Kenvue autism claims lawsuit and the talc verdict risk introduce uncertainty. T: The score has been adjusted downwards due to the bearish MACD cross, which tempers the conviction in the medium-term bullish trend. While fundamental news is mixed, the technical signal warrants a more cautious stance, reflected in a lower score and conviction."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.8,
+        "conv": 7.8,
+        "safe": 8.3
+      },
+      "synthesis": "S: The long-term secular bull market regime persists, although the percentage contribution has slightly decreased (14.4%). The golden cross structure remains healthy (6.92%), and the stock is positioned in the upper quadrant of its long-term range (82.1%). W: The fundamental growth profile shows continued moderate revenue growth (8.1%) but a worsening EPS decline (-8.1%), which is a significant structural concern. The valuation remains premium (P/E: 29.21), and while asset safety has improved slightly (P/B: 7.26), implied growth is still considered extremely risky. O: The raised full-year revenue outlook is a positive fundamental development. Strategic advancements in CKD therapeutics and the overall business quality and scale provide a strong foundation. T: The long-term score remains robust due to the strong market regime and business quality, but has been slightly reduced due to the deteriorating EPS growth and continued premium valuation. The safe metric is also slightly reduced as the balance sheet has shifted from net cash to a net debt position, increasing leverage."
+    }
+  }
+}

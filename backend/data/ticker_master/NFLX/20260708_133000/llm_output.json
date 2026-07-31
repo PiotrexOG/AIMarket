@@ -1,0 +1,29 @@
+{
+  "ticker": "NFLX",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The short-term exhibits consolidation around the 20-day SMA, with neutral candle patterns and normal ROC velocity. The RSI is in the bearish zone, indicating potential for a short-term pullback. W: Bearish RSI and mid-range positioning suggest limited upside potential in the immediate term. O: Potential for short-term trading opportunities if price breaks out of the current range or bounces from support. T: The market is currently in a neutral range, with no strong directional bias evident in the short-term technicals. News flow is mixed, with some positive mentions of ad-tier growth and cash flow guidance, but also negative price action."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend alignment is bearish, with price below the 50-day SMA and a negative Z-score. However, the MACD is showing bullish accelerating momentum, suggesting a potential shift. W: The bearish trend position and expanding momentum are significant headwinds, outweighing the bullish MACD signal. The stock is trading within a wide monthly range, indicating uncertainty. O: A sustained break above the 50-day SMA and confirmation from MACD would signal a medium-term bullish reversal. T: Fundamentals remain strong with high business quality and excellent cash generation, but recent quarterly earnings deterioration and negative future estimates are a concern. News highlights potential strategic partnerships and interest in content rights, but also mentions a potential merger."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.0,
+        "conv": 3.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook is challenged by a secular bear market regime and a death cross structure, with the price at multi-month lows. The valuation appears fair to undervalued on a PEG basis, but asset safety is low due to a high P/B ratio. W: The prevailing bearish market regime and technical structure present significant long-term risks. Despite strong fundamental metrics like business quality and financial health, the negative long-term technicals and recent earnings deterioration are concerning. O: A sustained recovery in the broader market and a clear break of long-term resistance levels would be required for a bullish long-term thesis. T: The company's strong business quality, financial health, and cash generation are structural positives. However, the long-term technicals are deeply bearish, and recent news has been mixed, with some positive strategic developments offset by past failed acquisition attempts."
+    }
+  }
+}

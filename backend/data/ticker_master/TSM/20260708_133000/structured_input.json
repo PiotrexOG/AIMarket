@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (48.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (-7.5%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-1.4%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 405.51-479.0]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (4.05%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.878)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.66)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 384.7-479.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (25.1%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (21.97%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 435.78,
+      "volatility_context": "EXPANDING_RANGE | HIGH_VOLATILITY_ASSET (ATR:  (5.38%))",
+      "volume_dynamics": "AVERAGE (1.06)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 61.9% | OM: 53.3% | NM: 47.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.34x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.7%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4125.510324B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 31.3%, EPS: 49.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3249.8%, Next Q Est Growth: -96.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 1.17, P/S: 0.55)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.38)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.11x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Taiwan Semiconductor drops 6% during market tech rotation.",
+      "Bor Zen Tien, VP at Taiwan Semiconductor, acquired $152K in stock.",
+      "Taiwan to remain primary hub of Taiwan Semiconductor."
+    ],
+    "medium_term_50d": [
+      "TSMC is the AI chip supply-chain linchpin.",
+      "Taiwan Semiconductor drops 6% during market tech rotation.",
+      "TSM stock jumps on Micron earnings and AI optimism."
+    ],
+    "long_term_200d": [
+      "TSMC is the AI chip supply-chain linchpin.",
+      "Taiwan Semiconductor May revenue jumps 30.1% year-over-year.",
+      "TSM stock jumps on Micron earnings and AI optimism."
+    ]
+  }
+}

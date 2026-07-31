@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (40.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.25)",
+        "velocity_roc_10": "NORMAL (-4.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.2%)",
+        "range_levels_20": "AT_CRITICAL_SUPPORT_20 [Range: 95.65-104.53]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.11%)",
+        "cycle_macd": "BEARISH_RECOVERING (-0.262)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.75)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_SUPPORT_ZONE [Zone: 95.65-110.48]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-8.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.06%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 18.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 96.75,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.62%))",
+      "volume_dynamics": "AVERAGE (0.99)",
+      "sr_landscape": {
+        "barriers": "F:TESTING @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 37.3% | OM: 14.2% | NM: 12.8%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.8x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.4%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $95.716B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.5%, EPS: 120.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -10.7%, Next Q Est Growth: 38.8%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 14.23, P/S: 1.81)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.6)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.12)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.24x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney faces FCC scrutiny over broadcast license reviews.",
+      "Disney settlement reached for $50 million. - Disney World closing iconic Epcot restaurant.",
+      "Disney+ partners with Anime Ltd. for UK/France streaming. - Disney settles $50 million class action lawsuit over streaming prices. - Disney intellectual property licensing partner Adeia teases breakout."
+    ],
+    "medium_term_50d": [
+      "Disney+ partners with Anime Ltd. for UK/France streaming. - Disney settles $50 million class action lawsuit over streaming prices. - Disney intellectual property licensing partner Adeia teases breakout.",
+      "Disney settles $50 million streaming price class action. - EU patent ban widens on Disney's video streaming technologies.",
+      "Disney's 'Toy Story 5' has biggest opening weekend."
+    ],
+    "long_term_200d": [
+      "Disney's 'Toy Story 5' has biggest opening weekend.",
+      "Disney plans multi-billion dollar Shanghai resort expansion. - Disney's Toy Story 5 breaks franchise opening weekend records. - Walt Disney (DIS) stock drops 1.39%.",
+      "Disney faces pan-EU patent injunction for video encoding. - Toy Story 5 set for massive global opening weekend."
+    ]
+  }
+}

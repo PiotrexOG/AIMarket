@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "DETERIORATING",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (80.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "NORMAL (5.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (6.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 273.75-334.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.37%)",
+        "cycle_macd": "BULLISH_FADING (2.231)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.56)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 273.75-334.98]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (19.2%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.64%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 88.5%]"
+      }
+    },
+    "market_physics": {
+      "price": 324.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.54%))",
+      "volume_dynamics": "AVERAGE (0.7)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.3% | OM: 32.4% | NM: 27.0%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.51x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $435.617B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 10.1%, EPS: 25.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 46.9%, Next Q Est Growth: -33.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 40.97, P/S: 11.03)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 54.49)",
+    "implied_growth": "EXPENSIVE_VS_GROWTH (PEG: 1.61)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple makes i Phones more expensive in one market. - Apple (AAPL) jumped 5% on China AI approvals and Alibaba Qwen integration. - Apple stock dropped, heading for a margins meltdown. - Apple expected to beat Q3 estimates, Bof A sees margin dip as transitory. - Apple faces margin test before earnings; services growth may offset. - Apple urged to buy Disney or exit entertainment. - Alibaba secures key China partnership with Apple. - Apple sidesteps AI spend bubble, investor keeps buying. - Apple stock sends major warning signal as momentum hits peak. - Apple's cost pressure stopped flagging, new one should worry. - Apple briefly overtook Nvidia as world's most valuable company",
+      "Apple launches 'Apple Upgrade' device leasing program on July 28. - Apple partners with Klarna for new device leasing program. - U.S. lawmakers urge action against EU's Digital Markets Act. - Gene Munster predicts AI will trigger massive 2027 upgrade cycle.",
+      "Apple Intelligence gets regulatory approval in China. - Apple partners with Alibaba for AI in China. - Apple Intelligence could be a catalyst for AAPL stock. - Apple lawsuit may impact Open AI's hardware plans. - Apple stock hits all-time high, HSBC sees further gains. - Apple faces legal battles, insider selling, and earnings report. - Apple is exploring ways to reduce AI memory costs."
+    ],
+    "medium_term_50d": [
+      "Apple files trade secrets lawsuit against Open AI. - Apple in early talks with DOJ to settle antitrust lawsuit. - Apple briefly overtakes Nvidia as world's most valuable company. - Apple faces extreme drop in global smartphone sales. - Apple targets dozens of Open AI employees with legal letters. - Apple's core business cash flow to support innovation. - Apple's i Phone sales power stock rally. - Apple's market cap passes Nvidia for world's most valuable company. - Apple's shares offer upside ahead of potential i Phone price increase. - Apple unseats Nvidia to become world's most valuable company.",
+      "Apple Intelligence gets regulatory approval in China. - Apple partners with Alibaba for AI in China. - Apple Intelligence could be a catalyst for AAPL stock. - Apple lawsuit may impact Open AI's hardware plans. - Apple stock hits all-time high, HSBC sees further gains. - Apple faces legal battles, insider selling, and earnings report. - Apple is exploring ways to reduce AI memory costs.",
+      "China approves Apple Intelligence using Alibaba's Qwen model. - Apple Intelligence approval revives China tech rally. - Apple clears China AI hurdle by turning to Alibaba and Baidu. - Apple's China win strengthens the case for a $5 trillion valuation. - Apple Intelligence approval could revive i Phone upgrades in China. - Apple Intelligence integration with Alibaba, Baidu approved in China. - Apple prepares OLED i Pad Mini, with updates coming in 2027. - Apple hits record high."
+    ],
+    "long_term_200d": [
+      "Apple files trade secrets lawsuit against Open AI. - Apple in early talks with DOJ to settle antitrust lawsuit. - Apple briefly overtakes Nvidia as world's most valuable company. - Apple faces extreme drop in global smartphone sales. - Apple targets dozens of Open AI employees with legal letters. - Apple's core business cash flow to support innovation. - Apple's i Phone sales power stock rally. - Apple's market cap passes Nvidia for world's most valuable company. - Apple's shares offer upside ahead of potential i Phone price increase. - Apple unseats Nvidia to become world's most valuable company.",
+      "China approves Apple Intelligence using Alibaba's Qwen model. - Apple Intelligence approval revives China tech rally. - Apple clears China AI hurdle by turning to Alibaba and Baidu. - Apple's China win strengthens the case for a $5 trillion valuation. - Apple Intelligence approval could revive i Phone upgrades in China. - Apple Intelligence integration with Alibaba, Baidu approved in China. - Apple prepares OLED i Pad Mini, with updates coming in 2027. - Apple hits record high.",
+      "Apple Intelligence gets regulatory approval in China. - Apple partners with Alibaba for AI in China. - Apple Intelligence could be a catalyst for AAPL stock. - Apple lawsuit may impact Open AI's hardware plans. - Apple stock hits all-time high, HSBC sees further gains. - Apple faces legal battles, insider selling, and earnings report. - Apple is exploring ways to reduce AI memory costs."
+    ]
+  }
+}

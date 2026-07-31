@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 3.8
+      },
+      "synthesis": "S: The short-term outlook for BA has weakened, with a shift to a strong bullish candle pattern but stagnant price velocity (1.2%) and a neutral RSI (50.4). While near the middle of its 20-day range, the price is now below the 20-day SMA, indicating a loss of immediate upward momentum. W: Conviction has decreased due to the conflicting signals of a bullish candle pattern against weakening momentum and price action below the short-term trend base. The news flow is positive, highlighting strong Q2 deliveries and potential aircraft orders, but this is not yet translating into sustained price strength. O: A potential rebound exists if the strong delivery numbers and positive news flow can overcome the current technical weakness and push the price back towards the upper end of the range. T: The primary risk remains the potential for the price to break below the 20-day SMA, which could signal further downside, especially given the stagnant velocity and neutral RSI."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 3.5
+      },
+      "synthesis": "S: The medium-term technical picture for BA has deteriorated significantly, with the MACD turning bearish (-0.447) and the price now positioned below the 50-day SMA (Z:-0.51). While trend alignment remains consolidated, the accelerating bearish MACD suggests a shift in momentum. W: Conviction is low due to the clear bearish technical signals contradicting the positive analyst sentiment and the ongoing positive news regarding deliveries and production expansion. The fundamental earnings momentum remains a concern with negative next quarter estimates. O: Upside potential is limited in the medium term given the current technical setup. Any positive price action would likely be driven by a strong fundamental catalyst or a significant shift in market regime. T: The key risks include the bearish MACD and the price's position below the 50-day SMA, which could lead to further declines. The negative earnings estimates for the next quarter also pose a significant threat to medium-term performance."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.8,
+        "conv": 3.5,
+        "safe": 2.8
+      },
+      "synthesis": "S: The long-term outlook for BA has weakened, with the market regime shifting to a bear market relief rally (-0.7%). While the long-term technical structure (Golden Cross) remains intact, the price position within the long-term range has slightly decreased. W: Conviction is low due to the deteriorating market regime and the persistent fundamental weaknesses, including thin margins, negative FCF, and a stressed balance sheet, which are not improving. The hyper-premium valuation multiples and extremely low asset safety remain significant concerns. O: The implied growth pricing (PEG 0.8) offers a glimmer of hope if the company can execute on its growth plans and stabilize operations. Positive news on deliveries and production expansion could provide some support. T: The significant risks include the unfavorable market regime, the company's inability to address its fundamental financial weaknesses, and the potential for a valuation reset given the stretched multiples. The debt-sensitive structure remains a critical vulnerability."
+    }
+  }
+}

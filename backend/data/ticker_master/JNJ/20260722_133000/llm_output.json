@@ -1,0 +1,29 @@
+{
+  "ticker": "JNJ",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: Short-term momentum has weakened, with RSI moving to a neutral zone (46.9) and velocity showing a notable decline (-6.2%). The price is now trading below the 20-day SMA (-1.2%), indicating a loss of short-term upward pressure. W: The neutral candle pattern and negative velocity suggest a lack of immediate buying interest. The stock is positioned in the middle of its 20-day range, offering limited upside potential and increased downside risk. O: Recent news highlights portfolio pruning and FDA approvals for new devices, which are positive developments. However, the shift in technical indicators suggests that these catalysts are not currently driving significant short-term price appreciation. T: The score has been reduced due to the deterioration in short-term momentum and the shift from a bullish to a neutral RSI. Conviction is also lower as the technical signals are no longer strongly supportive of upside. Safe has decreased slightly as the price has moved below the 20-day SMA."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: Medium-term trend alignment remains bullish (5.87%), and the price is still in a bullish trend position relative to the 50-day SMA (Z:1.11). However, the MACD has recovered but remains in bearish territory (-1.743), indicating lingering weakness. W: The bearish MACD, despite some recovery, continues to pose a risk to sustained medium-term uptrend. The stock is still within the monthly range, suggesting consolidation rather than strong directional movement. O: Positive Q2 earnings and an raised full-year outlook are significant fundamental tailwinds. Acquisitions in spine surgery and new device approvals are also supportive. T: The score has been slightly reduced due to the persistent bearish MACD signal, which tempers conviction in the medium-term bullish trend. While fundamentals are strong, the technicals suggest a period of consolidation. Safe has decreased slightly as the MACD remains a concern for structural trend integrity."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.5,
+        "safe": 8.0
+      },
+      "synthesis": "S: The long-term secular bull market regime persists, though its contribution has slightly decreased (12.1%). The golden cross structure remains healthy (7.23%), and the stock is positioned in the upper quadrant of its long-term range (82.5%). W: Fundamental growth profile shows continued moderate revenue growth (8.1%) but a persistent EPS decline (-8.1%), which remains a structural concern. Valuation is premium (P/E: 29.4), and implied growth is still considered risky. O: Recent news highlights strong Q2 earnings, a raised full-year outlook, and surpassing $100 billion in annual revenue, all significant positive fundamental developments. Acquisitions and new device approvals further bolster the business. T: The long-term score remains robust due to the strong market regime, business quality, and positive fundamental news regarding earnings and revenue outlook. However, it has been slightly reduced due to the continued EPS decline and premium valuation, which temper conviction and safety. Safe has decreased slightly as the valuation remains stretched despite strong operational performance."
+    }
+  }
+}
