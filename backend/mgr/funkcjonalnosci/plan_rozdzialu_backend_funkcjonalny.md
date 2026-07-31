@@ -118,81 +118,10 @@ Archetypy pozwalają porównywać różne style inwestowania i badać, jak zmian
 - Nie trzeba dokładnie opisywać sposobu losowania parametrów, chyba że chcesz pokazać, że portfele w ramach jednego archetypu mogą się od siebie różnić.
 
 ## 6. Dane wejściowe wykorzystywane przez system
-
-**Co opisać w tym miejscu:**
-
-- Wyjaśnić, że jakość symulacji zależy od danych wejściowych, dlatego backend automatycznie pobiera i aktualizuje różne typy danych.
-- Wymienić główne źródła informacji używane do oceny spółek:
-  - ceny historyczne,
-  - wolumen,
-  - dane fundamentalne,
-  - dane kwartalne i finansowe,
-  - daty publikacji wyników,
-  - oceny analityków,
-  - newsy dotyczące spółek,
-  - streszczenia newsów,
-  - oceny ważności informacji newsowych.
-- Napisać, że system przed symulacją sprawdza, czy ma dane dla wymaganego zakresu.
-- Wyjaśnić, że jeśli brakuje fragmentu danych, backend pobiera tylko brakujący zakres, zamiast powtarzać cały proces od początku.
-- Podkreślić, że jest to istotne przy kontynuowaniu symulacji oraz przy pracy na coraz nowszych danych.
-
-**Najważniejszy przekaz:**
-
-System sam przygotowuje zaplecze informacyjne potrzebne do podejmowania decyzji inwestycyjnych.
-
-**Czego nie rozwijać za bardzo:**
-
-- Nie trzeba szczegółowo opisywać każdego scrapera.
-- Warto skupić się na tym, jakie dane trafiają do systemu i jaką pełnią rolę w decyzji.
-
 ## 7. Przygotowanie oceny pojedynczej spółki
-
-**Co opisać w tym miejscu:**
-
-- Opisać, że dla każdej spółki w danym punkcie czasu system buduje zestaw informacji potrzebnych do jej oceny.
-- Pokazać, że pojedyncza spółka jest analizowana wielowymiarowo:
-  - od strony technicznej,
-  - od strony fundamentalnej,
-  - od strony wyceny,
-  - od strony opinii analityków,
-  - od strony informacji newsowych.
-- Wyjaśnić, że system sprawdza także, czy dla spółki istnieją warunki do wykonania decyzji, np. czy rynek jest otwarty i czy dostępna jest cena.
-- Wspomnieć, że wynik takiej analizy może zostać zapisany, aby przy ponownym uruchomieniu nie generować go jeszcze raz.
-
-**Najważniejszy przekaz:**
-
-Ocena spółki nie jest oparta na jednym wskaźniku, tylko na połączeniu kilku typów informacji.
-
-**Czego nie rozwijać za bardzo:**
-
-- Nie trzeba wypisywać wszystkich wskaźników technicznych ani szczegółowo opisywać sposobu ich liczenia.
-- Wystarczy opisać kategorie danych i ich znaczenie.
-
 ## 8. Porównywanie spółek między sobą
+(TE KROKI SĄ WAŻNE I SZERZEJ OPISANE W PLIKU pipeline_oceny_spolek)
 
-**Co opisać w tym miejscu:**
-
-- Wyjaśnić, że po ocenie pojedynczych spółek system przechodzi do etapu porównania ich ze sobą.
-- Napisać, że jest to ważne, ponieważ decyzja inwestycyjna zależy nie tylko od tego, czy spółka wygląda dobrze sama w sobie, ale także od tego, jak wypada na tle innych dostępnych spółek.
-- Opisać ideę analizy cross-section:
-  - system tworzy ranking spółek,
-  - bierze pod uwagę różne horyzonty czasowe,
-  - porównuje spółki w grupach,
-  - scala wyniki w jeden bardziej ogólny ranking.
-- Wymienić trzy horyzonty oceny:
-  - krótki termin,
-  - średni termin,
-  - długi termin.
-- Wyjaśnić, że decyzje portfeli są oparte głównie na rankingu długoterminowym, ponieważ portfele działają w cyklach inwestycyjnych.
-
-**Najważniejszy przekaz:**
-
-System nie pyta tylko „czy ta spółka jest dobra?”, ale raczej „które spółki są obecnie najlepsze względem pozostałych?”.
-
-**Czego nie rozwijać za bardzo:**
-
-- Nie trzeba szczegółowo opisywać implementacji łączenia grup.
-- Warto wyjaśnić sam sens porównania przekrojowego.
 
 ## 9. Zamiana ocen na decyzje inwestycyjne
 
