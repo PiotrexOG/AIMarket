@@ -10,6 +10,10 @@ from app.testy.score_tests.common.plotting import (
     plot_path,
     set_integer_x_axis,
 )
+from app.testy.score_tests.common.output_paths import (
+    WEEKLY_INFORMATION_COEFFICIENT_DIR,
+    WEEKLY_TOP_N_SELECTION_DIR,
+)
 
 
 def plot(analysis, output_dir):
@@ -59,8 +63,8 @@ def _plot_top_n(analysis, output_dir):
         fig.savefig(
             plot_path(
                 output_dir,
-                "a_tests",
-                f"{timeframe}_a1_top_n_annualized_return.png",
+                WEEKLY_TOP_N_SELECTION_DIR,
+                f"{timeframe}_top_n_annualized_return.png",
             ),
             dpi=160,
         )
@@ -103,8 +107,8 @@ def _plot_correlations(analysis, output_dir):
         fig.savefig(
             plot_path(
                 output_dir,
-                "a_tests",
-                f"{timeframe}_a2_weekly_pearson.png",
+                WEEKLY_INFORMATION_COEFFICIENT_DIR,
+                f"{timeframe}_weekly_information_coefficient.png",
             ),
             dpi=160,
         )

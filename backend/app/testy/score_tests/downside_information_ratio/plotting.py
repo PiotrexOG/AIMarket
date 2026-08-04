@@ -1,11 +1,15 @@
-from pathlib import Path
-
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
 import numpy as np
 
 from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.output_paths import (
+    DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
+    DOWNSIDE_INFORMATION_RATIO_DIR,
+    DOWNSIDE_TOP_M_SELECTION_SECTION,
+    horizon_dir,
+)
 
 
 ALPHA_HEATMAP_LIMIT = 0.20
@@ -26,7 +30,11 @@ def plot(analysis, output_dir, horizon_label):
         if clean.empty:
             continue
 
-        plot_directory = Path("downside_information_ratio") / horizon_label
+        plot_directory = horizon_dir(
+            DOWNSIDE_INFORMATION_RATIO_DIR,
+            horizon_label,
+            DOWNSIDE_TOP_M_SELECTION_SECTION,
+        )
         _plot_returns(clean, timeframe, output_dir, plot_directory, horizon_label)
         _plot_deviation(clean, timeframe, output_dir, plot_directory, horizon_label)
         _plot_ratio(clean, timeframe, output_dir, plot_directory, horizon_label)
@@ -35,10 +43,10 @@ def plot(analysis, output_dir, horizon_label):
 def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
     if analysis.empty:
         return
-    plot_directory = (
-        Path("downside_information_ratio")
-        / horizon_label
-        / "benchmark_return_buckets"
+    plot_directory = horizon_dir(
+        DOWNSIDE_INFORMATION_RATIO_DIR,
+        horizon_label,
+        DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
     )
     for (timeframe, bucket_id), bucket_data in analysis.groupby(
         ["timeframe", "benchmark_return_bucket_id"],

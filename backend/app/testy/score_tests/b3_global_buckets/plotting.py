@@ -4,6 +4,9 @@ from app.testy.score_tests.common.plotting import (
     plot_bucket_average,
     plot_bucket_lines,
 )
+from app.testy.score_tests.common.output_paths import (
+    GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR,
+)
 
 
 def plot(analysis, output_dir):
@@ -27,7 +30,7 @@ def plot(analysis, output_dir):
         plot_bucket_lines(
             timeframe_data,
             output_dir,
-            "b_tests",
+            GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR,
             f"{timeframe}_score_bucket_annualized_return_lines.png",
             f"{timeframe}: global score bucket annualized return",
             bucket_order,
@@ -36,7 +39,7 @@ def plot(analysis, output_dir):
         plot_bucket_average(
             timeframe_data,
             output_dir,
-            "b_tests",
+            GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR,
             f"{timeframe}_score_bucket_annualized_return_average.png",
             f"{timeframe}: global score bucket mean annualized return",
             bucket_order,

@@ -6,6 +6,13 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.output_paths import (
+    POST_ENTRY_LIVE_PROGRESS_SECTION,
+    POST_ENTRY_SCORE_PATH_DIR,
+    POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
+    horizon_dir,
+)
 from app.testy.score_tests.post_entry_score_path.calculation import (
     ENTRY_MIN_SCORE_PERCENTILE,
     USE_ENTRY_PERCENTILE_BUCKETS,
@@ -72,6 +79,10 @@ def _filter_results_for_entry_bucket(results, bucket_id):
         else:
             filtered[key] = value
     return filtered
+
+
+def _post_entry_dir(horizon_label, *sections):
+    return horizon_dir(POST_ENTRY_SCORE_PATH_DIR, horizon_label, *sections)
 
 
 def _target_progress_bucket_start(progress_percent):
@@ -285,7 +296,10 @@ def _plot_score_change_scatter(
     return_label="Annualized return",
     filename_prefix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    )
 
     for timeframe, timeframe_data in observations.groupby("timeframe"):
         clean = timeframe_data.dropna(
@@ -366,7 +380,10 @@ def _plot_remaining_return_at_progress_scatter(
     filename_suffix="",
     title_suffix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_LIVE_PROGRESS_SECTION,
+    )
     progress_data, progress_label, progress_file_label = (
         _filter_progress_bucket(live_progress_observations, progress_percent)
     )
@@ -489,7 +506,10 @@ def _plot_hold_decision_by_score_drop(
     horizon_label,
     progress_percent,
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_LIVE_PROGRESS_SECTION,
+    )
     progress_data, progress_label, progress_file_label = (
         _filter_progress_bucket(live_progress_observations, progress_percent)
     )
@@ -603,10 +623,9 @@ def _plot_switch_to_benchmark_threshold_lines(
     horizon_label,
     progress_percent,
 ):
-    plot_directory = (
-        Path("post_entry_score_path")
-        / horizon_label
-        / "switch_to_benchmark"
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
     )
     progress_data, progress_label, progress_file_label = (
         _filter_progress_bucket(threshold_analysis, progress_percent)
@@ -722,10 +741,9 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
     ),
     filename_suffix="",
 ):
-    plot_directory = (
-        Path("post_entry_score_path")
-        / horizon_label
-        / "switch_to_benchmark"
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
     )
     metrics = [
         "mean_switch_to_benchmark_annualized_gain",
@@ -844,7 +862,10 @@ def _plot_hold_decision_heatmap(
     horizon_label,
     progress_percent,
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_LIVE_PROGRESS_SECTION,
+    )
     progress_data, progress_label, progress_file_label = (
         _filter_progress_bucket(live_progress_observations, progress_percent)
     )
@@ -988,7 +1009,10 @@ def _plot_score_drop_scatter(
     output_dir,
     horizon_label,
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    )
 
     for timeframe, timeframe_data in observations.groupby("timeframe"):
         clean = timeframe_data.dropna(
@@ -1101,7 +1125,10 @@ def _plot_relative_score_change_heatmap(
     return_label="annualized return",
     filename_prefix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    )
     change_bins = [
         -np.inf,
         -0.70,
@@ -1247,7 +1274,10 @@ def _plot_live_progress_correlations(
     return_label="final annualized return",
     filename_prefix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_LIVE_PROGRESS_SECTION,
+    )
 
     for timeframe, timeframe_data in data.groupby("timeframe"):
         clean = timeframe_data[
@@ -1306,7 +1336,10 @@ def _plot_score_change_progress_correlations(
     return_label="final annualized return",
     filename_prefix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_LIVE_PROGRESS_SECTION,
+    )
     metrics = ["relative_score_percentile_change"]
 
     for (timeframe, metric), clean in data[
@@ -1369,7 +1402,10 @@ def _plot_best_correlation_overview(
     return_label="Annualized return",
     filename_prefix="",
 ):
-    plot_directory = Path("post_entry_score_path") / horizon_label
+    plot_directory = _post_entry_dir(
+        horizon_label,
+        POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    )
 
     for timeframe, timeframe_data in observations.groupby("timeframe"):
         correlation_lookup = {}

@@ -9,6 +9,17 @@ import pandas as pd
 from app.testy.score_tests.common.plotting import plot_path
 from app.testy.score_tests.common.io import save_csv_for_excel
 from app.testy.score_tests.common.annualization import annualize_return
+from app.testy.score_tests.common.output_paths import (
+    TICKER_ANTI_MOMENTUM_SECTION,
+    TICKER_FORWARD_RETURN_REFERENCE_SECTION,
+    TICKER_INFORMATION_COEFFICIENT_SECTION,
+    TICKER_MODEL_VS_MOMENTUM_SECTION,
+    TICKER_PEARSON_ZSCORE_SECTION,
+    TICKER_PERCENTILE_HISTORY_DIR,
+    TICKER_RETURN_ATTRIBUTION_SECTION,
+    TICKER_SCORE_PATHS_SECTION,
+    TICKER_SPEARMAN_PERCENTILE_SECTION,
+)
 
 
 MOVING_AVERAGE_COLUMN = "moving_average_score_percentile"
@@ -852,7 +863,7 @@ def _save_anti_momentum_correlation_charts(
     if points.empty:
         return
 
-    anti_momentum_directory = directory / "anti_momentum"
+    anti_momentum_directory = directory / TICKER_ANTI_MOMENTUM_SECTION
     save_csv_for_excel(
         points,
         plot_path(
@@ -1204,7 +1215,7 @@ def _save_model_vs_momentum_comparison_charts(
     if points.empty:
         return
 
-    comparison_directory = directory / "model_vs_momentum"
+    comparison_directory = directory / TICKER_MODEL_VS_MOMENTUM_SECTION
     comparisons = []
     for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
         window_label = (
@@ -1696,9 +1707,19 @@ def _save_forward_return_heatmap(
         if not horizon_start.empty and not horizon_end.empty
         else "configured horizon"
     )
+    forward_return_reference_directory = (
+        directory / TICKER_FORWARD_RETURN_REFERENCE_SECTION
+    )
+    pearson_directory = directory / TICKER_PEARSON_ZSCORE_SECTION
+    spearman_directory = directory / TICKER_SPEARMAN_PERCENTILE_SECTION
+    information_coefficient_directory = (
+        directory / TICKER_INFORMATION_COEFFICIENT_SECTION
+    )
+    return_attribution_directory = directory / TICKER_RETURN_ATTRIBUTION_SECTION
 
     heatmaps = [
         {
+            "directory": pearson_directory,
             "column": "score_zscore",
             "filename": "pearson_01_score_zscore_heatmap.png",
             "title": f"Pearson view: score z-score ({timeframe})",
@@ -1710,6 +1731,7 @@ def _save_forward_return_heatmap(
             "row_metric_label": "ScoreZ",
         },
         {
+            "directory": pearson_directory,
             "column": "forward_return_zscore",
             "filename": "pearson_02_forward_return_zscore_heatmap.png",
             "title": (
@@ -1724,6 +1746,7 @@ def _save_forward_return_heatmap(
             "row_metric_label": "RetZ",
         },
         {
+            "directory": pearson_directory,
             "column": "zscore_error",
             "filename": "pearson_03_score_minus_return_zscore_heatmap.png",
             "title": (
@@ -1738,6 +1761,7 @@ def _save_forward_return_heatmap(
             "row_metric_label": "DiffZ",
         },
         {
+            "directory": spearman_directory,
             "column": "score_percentile",
             "filename": "spearman_01_score_percentile_heatmap.png",
             "title": f"Spearman view: score percentile ({timeframe})",
@@ -1751,6 +1775,7 @@ def _save_forward_return_heatmap(
             "row_metric_format": "percent",
         },
         {
+            "directory": spearman_directory,
             "column": "forward_return_percentile",
             "filename": "spearman_02_forward_return_percentile_heatmap.png",
             "title": (
@@ -1767,6 +1792,7 @@ def _save_forward_return_heatmap(
             "row_metric_format": "percent",
         },
         {
+            "directory": spearman_directory,
             "column": "percentile_error",
             "filename": "spearman_03_score_minus_return_percentile_heatmap.png",
             "title": (
@@ -1783,6 +1809,7 @@ def _save_forward_return_heatmap(
             "row_metric_format": "signed_percent",
         },
         {
+            "directory": forward_return_reference_directory,
             "column": "excess_forward_annualized_return",
             "filename": "excess_forward_annualized_return_heatmap.png",
             "title": (
@@ -1801,6 +1828,7 @@ def _save_forward_return_heatmap(
             "row_metric_format": "signed_percent",
         },
         {
+            "directory": return_attribution_directory,
             "column": "return_attribution",
             "filename": "return_contribution_attribution_heatmap.png",
             "title": (
@@ -1821,6 +1849,7 @@ def _save_forward_return_heatmap(
             "column_metric_format": "signed_percent",
         },
         {
+            "directory": return_attribution_directory,
             "column": "long_only_return_attribution",
             "filename": "long_only_return_contribution_attribution_heatmap.png",
             "title": (
@@ -1851,7 +1880,7 @@ def _save_forward_return_heatmap(
             config["column"],
             timeframe,
             output_dir,
-            directory,
+            config["directory"],
             config["filename"],
             config["title"],
             config["colorbar"],
@@ -1875,7 +1904,7 @@ def _save_forward_return_heatmap(
     _save_normalized_excess_comparison_plot(
         data,
         timeframe,
-        directory,
+        return_attribution_directory,
         output_dir,
         long_short_normalized_excess,
         long_only_normalized_excess,
@@ -1883,7 +1912,7 @@ def _save_forward_return_heatmap(
     _save_score_return_correlation_by_timestamp_plot(
         data,
         timeframe,
-        directory,
+        information_coefficient_directory,
         output_dir,
     )
     _save_anti_momentum_correlation_charts(
@@ -2308,9 +2337,9 @@ def plot(results, output_dir):
     ):
         group = group.sort_values("timestamp")
         directory = (
-            Path("ticker_percentile_history")
+            TICKER_PERCENTILE_HISTORY_DIR
             / _safe_filename(timeframe)
-            / "ticker_plots"
+            / TICKER_SCORE_PATHS_SECTION
         )
 
         if prices is None or prices.empty:
@@ -2340,9 +2369,8 @@ def plot(results, output_dir):
             sort=True,
         ):
             directory = (
-                Path("ticker_percentile_history")
+                TICKER_PERCENTILE_HISTORY_DIR
                 / _safe_filename(timeframe)
-                / "heatmaps"
             )
             _save_forward_return_heatmap(
                 timeframe_forward_returns.sort_values("timestamp"),

@@ -48,6 +48,23 @@ from score_tests.common.data import (
     build_timeframe_score_observations,
 )
 from score_tests.common.io import save_csv_for_excel
+from score_tests.common.output_paths import (
+    DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
+    DOWNSIDE_INFORMATION_RATIO_DIR,
+    DOWNSIDE_TOP_M_SELECTION_SECTION,
+    GLOBAL_INFORMATION_COEFFICIENT_DIR,
+    GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR,
+    GLOBAL_TOP_PERCENT_SELECTION_DIR,
+    POST_ENTRY_LIVE_PROGRESS_SECTION,
+    POST_ENTRY_SCORE_PATH_DIR,
+    POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+    POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
+    TICKER_PERCENTILE_HISTORY_DIR,
+    WEEKLY_INFORMATION_COEFFICIENT_DIR,
+    WEEKLY_RANK_BUCKET_RETURNS_DIR,
+    WEEKLY_TOP_N_SELECTION_DIR,
+    horizon_dir,
+)
 from score_tests.downside_information_ratio.calculation import (
     calculate as calculate_downside_information_ratio,
 )
@@ -71,9 +88,7 @@ from score_tests.ticker_percentile_history.plotting import (
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
-OUTPUT_DIR = CROSS_SECTION_DIR / "score_tests"
-A_TESTS_DIR = Path("a_tests")
-B_TESTS_DIR = Path("b_tests")
+OUTPUT_DIR = ROOT_FOLDER / "data" / "results"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
@@ -120,6 +135,17 @@ def enabled_horizon_week_ranges():
         for timeframe, is_enabled in ENABLED_TIMEFRAMES.items()
         if is_enabled and timeframe in HORIZON_WEEK_RANGES
     }
+
+
+def enabled_timeframe_label():
+    enabled = [
+        timeframe
+        for timeframe, is_enabled in ENABLED_TIMEFRAMES.items()
+        if is_enabled
+    ]
+    if len(enabled) == 1:
+        return enabled[0]
+    return "_".join(enabled) if enabled else "all_timeframes"
 
 
 def horizon_week_label():
@@ -203,73 +229,131 @@ def run_configured_score_tests(context):
 
 def save_analysis_outputs(results, output_dir):
     outputs = {}
+    horizon_label = horizon_week_label()
 
     if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
         outputs.update({
-            A_TESTS_DIR / "weekly_correlation_analysis.csv": (
+            WEEKLY_INFORMATION_COEFFICIENT_DIR
+            / "weekly_information_coefficient_analysis.csv": (
                 build_weekly_correlation_output(results["a1_a2"])
             ),
-            A_TESTS_DIR / "weekly_top_n_return_analysis.csv": (
+            WEEKLY_TOP_N_SELECTION_DIR / "weekly_top_n_return_analysis.csv": (
                 build_top_n_output(results["a1_a2"])
             ),
         })
 
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
-        outputs[A_TESTS_DIR / "weekly_rank_bucket_return_analysis.csv"] = (
+        outputs[
+            WEEKLY_RANK_BUCKET_RETURNS_DIR
+            / "weekly_rank_bucket_return_analysis.csv"
+        ] = (
             build_weekly_bucket_output(results["a3"])
         )
 
     if ENABLED_TESTS["downside_information_ratio"]:
         ratio = results["downside_information_ratio"]
+        ratio_top_m_dir = horizon_dir(
+            DOWNSIDE_INFORMATION_RATIO_DIR,
+            horizon_label,
+            DOWNSIDE_TOP_M_SELECTION_SECTION,
+        )
+        ratio_benchmark_dir = horizon_dir(
+            DOWNSIDE_INFORMATION_RATIO_DIR,
+            horizon_label,
+            DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
+        )
         outputs.update({
-            "downside_information_ratio_analysis.csv": ratio["analysis"],
-            "downside_information_ratio_by_horizon.csv": ratio["by_horizon"],
-            "downside_information_ratio_observations.csv": ratio["observations"],
-            "downside_information_ratio_benchmark_return_buckets.csv": (
+            ratio_top_m_dir / "downside_information_ratio_analysis.csv": (
+                ratio["analysis"]
+            ),
+            ratio_top_m_dir / "downside_information_ratio_by_horizon.csv": (
+                ratio["by_horizon"]
+            ),
+            ratio_top_m_dir / "downside_information_ratio_observations.csv": (
+                ratio["observations"]
+            ),
+            ratio_benchmark_dir
+            / "downside_information_ratio_benchmark_return_buckets.csv": (
                 ratio["benchmark_return_buckets"]
             ),
         })
 
     if ENABLED_TESTS["post_entry_score_path"]:
         path = results["post_entry_score_path"]
+        path_observations_dir = horizon_dir(
+            POST_ENTRY_SCORE_PATH_DIR,
+            horizon_label,
+            POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+        )
+        path_live_progress_dir = horizon_dir(
+            POST_ENTRY_SCORE_PATH_DIR,
+            horizon_label,
+            POST_ENTRY_LIVE_PROGRESS_SECTION,
+        )
+        path_switch_dir = horizon_dir(
+            POST_ENTRY_SCORE_PATH_DIR,
+            horizon_label,
+            POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
+        )
         outputs.update({
-            "post_entry_score_path_observations.csv": path["observations"],
-            "post_entry_score_path_horizon_alpha_average.csv": (
+            path_observations_dir / "post_entry_score_path_observations.csv": (
+                path["observations"]
+            ),
+            path_observations_dir
+            / "post_entry_score_path_horizon_alpha_average.csv": (
                 path["horizon_alpha_average"]
             ),
-            "post_entry_score_path_live_progress_observations.csv": (
+            path_live_progress_dir
+            / "post_entry_score_path_live_progress_observations.csv": (
                 path["live_progress_observations"]
             ),
-            "post_entry_score_path_live_progress_alpha_average.csv": (
+            path_live_progress_dir
+            / "post_entry_score_path_live_progress_alpha_average.csv": (
                 path["live_progress_alpha_average"]
             ),
-            "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
+            path_switch_dir
+            / "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
                 path["switch_to_benchmark_thresholds"]
             ),
         })
 
     if ENABLED_TESTS["ticker_percentile_history"]:
         ticker_history = results["ticker_percentile_history"]
+        ticker_history_raw_data_dir = (
+            TICKER_PERCENTILE_HISTORY_DIR
+            / enabled_timeframe_label()
+            / "raw_data"
+        )
         outputs.update({
-            "ticker_percentile_history_metrics.csv": ticker_history["metrics"],
-            "ticker_percentile_history_forward_returns.csv": (
+            ticker_history_raw_data_dir / "ticker_percentile_history_metrics.csv": (
+                ticker_history["metrics"]
+            ),
+            ticker_history_raw_data_dir
+            / "ticker_percentile_history_forward_returns.csv": (
                 ticker_history["forward_return_points"]
             ),
-            "ticker_percentile_history_prices.csv": ticker_history["prices"],
+            ticker_history_raw_data_dir / "ticker_percentile_history_prices.csv": (
+                ticker_history["prices"]
+            ),
         })
 
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
         outputs.update({
-            B_TESTS_DIR / "global_correlation_analysis.csv": (
+            GLOBAL_INFORMATION_COEFFICIENT_DIR
+            / "global_information_coefficient_analysis.csv": (
                 build_global_correlation_output(results["b1_b2"])
             ),
-            B_TESTS_DIR / "global_top_percent_return_analysis.csv": (
+            GLOBAL_TOP_PERCENT_SELECTION_DIR
+            / "global_top_percent_return_analysis.csv": (
                 build_top_percent_output(results["b1_b2"])
             ),
         })
 
     if ENABLED_TESTS["B3_global_score_buckets"]:
-        outputs[B_TESTS_DIR / "global_score_bucket_return_analysis.csv"] = (
+        outputs[
+            GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR
+            / "global_score_bucket_return_analysis.csv"
+        ] = (
             build_global_bucket_output(results["b3"])
         )
 
