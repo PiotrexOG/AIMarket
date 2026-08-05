@@ -6,25 +6,19 @@ Zachowano zakres dotychczas opisywanych testów. Nie dodawano osobnych opisów d
 
 ## Weekly Cross Section
 
-- `weekly_cross_section/top_n_selection.md`
-- `weekly_cross_section/information_coefficient.md`
-- `weekly_cross_section/rank_bucket_returns.md`
+- `weekly_cross_section/weekly_cross_section.md`
 
 ## Global Score Calibration
 
-- `global_score_calibration/top_percent_selection.md`
-- `global_score_calibration/information_coefficient.md`
-- `global_score_calibration/score_percentile_buckets.md`
+- `global_score_calibration/global_score_calibration.md`
 
 ## Downside Information Ratio
 
-- `downside_information_ratio/top_m_selection.md`
+- `downside_information_ratio/downside_information_ratio.md`
 
 ## Post Entry Score Path
 
-- `post_entry_score_path/score_path_observations.md`
-- `post_entry_score_path/live_progress.md`
-- `post_entry_score_path/switch_to_benchmark.md`
+- `post_entry_score_path/post_entry_score_path.md`
 
 ## Ticker Percentile History
 
@@ -35,4 +29,3 @@ Zachowano zakres dotychczas opisywanych testów. Nie dodawano osobnych opisów d
 - `ticker_percentile_history/return_attribution.md`
 - `ticker_percentile_history/momentum_controls/anti_momentum.md`
 - `ticker_percentile_history/momentum_controls/model_vs_momentum.md`
-- `ticker_percentile_history/ticker_score_paths.md`
