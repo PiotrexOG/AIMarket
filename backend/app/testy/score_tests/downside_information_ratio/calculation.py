@@ -1,7 +1,10 @@
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.data import filter_horizon_week_ranges
+from app.testy.score_tests.common.data import (
+    align_start_dates_to_common_horizon_window,
+    filter_horizon_week_ranges,
+)
 from app.testy.score_tests.common.annualization import (
     CALENDAR_DAYS_PER_YEAR,
     annualize_return,
@@ -288,6 +291,7 @@ def _assign_benchmark_return_buckets(observations, bucket_count):
 def build_benchmark_return_bucket_analysis(
     observations,
     bucket_count=BENCHMARK_RETURN_BUCKET_COUNT,
+    align_to_common_horizon_window=False,
 ):
     output_columns = [
         "timeframe",
@@ -313,6 +317,11 @@ def build_benchmark_return_bucket_analysis(
     ]
     if observations.empty:
         return pd.DataFrame(columns=output_columns)
+
+    if align_to_common_horizon_window:
+        observations = align_start_dates_to_common_horizon_window(observations)
+        if observations.empty:
+            return pd.DataFrame(columns=output_columns)
 
     benchmark_column = _annualized_benchmark_column(observations)
     strategy_column = (
@@ -746,7 +755,8 @@ def calculate(
                 observations=pd.DataFrame(),
             ),
             "benchmark_return_buckets": build_benchmark_return_bucket_analysis(
-                pd.DataFrame()
+                pd.DataFrame(),
+                align_to_common_horizon_window=True,
             ),
         }
     by_horizon = _build_downside_information_ratio_by_horizon_frame(
@@ -782,6 +792,7 @@ def calculate(
     benchmark_return_buckets = build_benchmark_return_bucket_analysis(
         observations,
         bucket_count=BENCHMARK_RETURN_BUCKET_COUNT,
+        align_to_common_horizon_window=True,
     )
     return {
         "analysis": analysis,

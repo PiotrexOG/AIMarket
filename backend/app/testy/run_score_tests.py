@@ -178,6 +178,8 @@ def run_configured_score_tests(context):
         },
         "ticker_percentile_history": {
             "metrics": pd.DataFrame(),
+            "forward_return_points": pd.DataFrame(),
+            "forward_return_horizon_points": pd.DataFrame(),
             "prices": pd.DataFrame(),
         },
         "b1_b2": pd.DataFrame(),
@@ -331,6 +333,10 @@ def save_analysis_outputs(results, output_dir):
             ticker_history_raw_data_dir
             / "ticker_percentile_history_forward_returns.csv": (
                 ticker_history["forward_return_points"]
+            ),
+            ticker_history_raw_data_dir
+            / "ticker_percentile_history_forward_return_horizons.csv": (
+                ticker_history["forward_return_horizon_points"]
             ),
             ticker_history_raw_data_dir / "ticker_percentile_history_prices.csv": (
                 ticker_history["prices"]

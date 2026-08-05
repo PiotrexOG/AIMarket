@@ -28,6 +28,7 @@ def calculate(
         horizon_week_ranges=horizon_week_ranges,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        align_to_common_horizon_window=True,
     )
     for (timeframe, horizon_weeks), ranked in ranked_panel.groupby(
         ["timeframe", "horizon_weeks"],

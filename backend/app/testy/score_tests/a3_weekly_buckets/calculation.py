@@ -24,6 +24,7 @@ def calculate(
         horizon_week_ranges=horizon_week_ranges,
         horizon_start=horizon_start,
         horizon_end=horizon_end,
+        align_to_common_horizon_window=True,
     )
     ranked["rank_position"] = (
         ranked.groupby(["timeframe", "horizon_weeks", "start_timestamp"])

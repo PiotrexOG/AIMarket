@@ -23,10 +23,12 @@ def filter_horizon_week_ranges(
     horizon_week_ranges=None,
     horizon_start=None,
     horizon_end=None,
+    align_to_common_horizon_window=False,
 ):
     if df.empty or "horizon_weeks" not in df.columns:
         return df
 
+    result = df
     if horizon_week_ranges:
         mask = pd.Series(False, index=df.index)
         for timeframe, week_range in horizon_week_ranges.items():
@@ -35,12 +37,53 @@ def filter_horizon_week_ranges(
                 (df["timeframe"] == timeframe)
                 & df["horizon_weeks"].between(start_week, end_week)
             )
-        return df[mask].copy()
+        result = df[mask].copy()
 
-    if horizon_start is not None and horizon_end is not None:
-        return df[df["horizon_weeks"].between(horizon_start, horizon_end)].copy()
+    elif horizon_start is not None and horizon_end is not None:
+        result = df[df["horizon_weeks"].between(horizon_start, horizon_end)].copy()
 
-    return df
+    if align_to_common_horizon_window:
+        return align_start_dates_to_common_horizon_window(result)
+
+    return result
+
+
+def align_start_dates_to_common_horizon_window(df):
+    if (
+        df.empty
+        or not {"timeframe", "horizon_weeks", "start_timestamp"}.issubset(df.columns)
+    ):
+        return df.copy()
+
+    frames = []
+    for _, timeframe_group in df.groupby("timeframe", sort=False):
+        horizon_count = timeframe_group["horizon_weeks"].nunique()
+        if horizon_count <= 1:
+            frames.append(timeframe_group.copy())
+            continue
+
+        date_horizon_counts = (
+            timeframe_group[["horizon_weeks", "start_timestamp"]]
+            .drop_duplicates()
+            .groupby("start_timestamp")["horizon_weeks"]
+            .nunique()
+        )
+        common_dates = date_horizon_counts[
+            date_horizon_counts == horizon_count
+        ].index
+        if len(common_dates) == 0:
+            continue
+
+        frames.append(
+            timeframe_group[
+                timeframe_group["start_timestamp"].isin(common_dates)
+            ].copy()
+        )
+
+    if not frames:
+        return df.iloc[0:0].copy()
+
+    return pd.concat(frames, ignore_index=True)
 
 
 def build_timeframe_score_observations(df, score_column):

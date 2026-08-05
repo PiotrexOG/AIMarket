@@ -41,6 +41,19 @@ FORWARD_RETURN_POINT_COLUMNS = [
     "timeframe",
     "ticker",
 ]
+FORWARD_RETURN_HORIZON_POINT_COLUMNS = [
+    "timestamp",
+    "score",
+    "score_percentile",
+    "forward_annualized_return",
+    "forward_return_percentile",
+    "cross_section_pearson_score_to_forward_percentile",
+    "cross_section_spearman_score_to_forward_percentile",
+    "horizon_weeks",
+    "horizon_days",
+    "timeframe",
+    "ticker",
+]
 
 
 def _build_source(panel):
@@ -321,6 +334,112 @@ def _build_forward_return_points(return_panel, horizon_week_ranges=None):
     return grouped[FORWARD_RETURN_POINT_COLUMNS]
 
 
+def _build_forward_return_horizon_points(return_panel, horizon_week_ranges=None):
+    required = {
+        "timeframe",
+        "ticker",
+        "start_timestamp",
+        "score",
+        "score_percentile",
+        "future_return",
+        "horizon_weeks",
+        "horizon_days",
+    }
+    if return_panel.empty or not required.issubset(return_panel.columns):
+        return pd.DataFrame(columns=FORWARD_RETURN_HORIZON_POINT_COLUMNS)
+
+    panel = filter_horizon_week_ranges(
+        return_panel,
+        horizon_week_ranges=horizon_week_ranges,
+    )
+    if panel.empty:
+        return pd.DataFrame(columns=FORWARD_RETURN_HORIZON_POINT_COLUMNS)
+
+    panel = add_annualized_return_column(
+        panel,
+        return_column="future_return",
+        horizon_column="horizon_days",
+    ).dropna(subset=["annualized_return"])
+    if panel.empty:
+        return pd.DataFrame(columns=FORWARD_RETURN_HORIZON_POINT_COLUMNS)
+
+    grouped = (
+        panel.groupby(
+            ["timeframe", "horizon_weeks", "ticker", "start_timestamp"],
+            as_index=False,
+        )
+        .agg(
+            score=("score", "last"),
+            score_percentile=("score_percentile", "last"),
+            forward_annualized_return=("annualized_return", "mean"),
+            horizon_days=("horizon_days", "mean"),
+        )
+        .rename(columns={"start_timestamp": "timestamp"})
+    )
+    grouped = _add_rank_percentile(
+        grouped,
+        value_column="score",
+        output_column="score_percentile",
+        group_columns=["timeframe", "horizon_weeks", "timestamp"],
+    )
+    grouped["forward_return_rank"] = grouped.groupby(
+        ["timeframe", "horizon_weeks", "timestamp"]
+    )["forward_annualized_return"].rank(method="average", ascending=True)
+    grouped["forward_return_count"] = grouped.groupby(
+        ["timeframe", "horizon_weeks", "timestamp"]
+    )["forward_annualized_return"].transform("count")
+    grouped["forward_return_percentile"] = np.where(
+        grouped["forward_return_count"] > 1,
+        (grouped["forward_return_rank"] - 1)
+        / (grouped["forward_return_count"] - 1),
+        0.5,
+    )
+    grouped["cross_section_pearson_score_to_forward_percentile"] = (
+        grouped.groupby(
+            ["timeframe", "horizon_weeks", "timestamp"],
+            group_keys=False,
+        )
+        .apply(
+            lambda group: group["score_percentile"].corr(
+                group["forward_return_percentile"],
+                method="pearson",
+            )
+            if group["score_percentile"].nunique() > 1
+            and group["forward_return_percentile"].nunique() > 1
+            else np.nan
+        )
+        .reindex(
+            pd.MultiIndex.from_frame(
+                grouped[["timeframe", "horizon_weeks", "timestamp"]]
+            )
+        )
+        .to_numpy()
+    )
+    grouped["cross_section_spearman_score_to_forward_percentile"] = (
+        grouped.groupby(
+            ["timeframe", "horizon_weeks", "timestamp"],
+            group_keys=False,
+        )
+        .apply(
+            lambda group: group["score_percentile"].corr(
+                group["forward_return_percentile"],
+                method="spearman",
+            )
+            if group["score_percentile"].nunique() > 1
+            and group["forward_return_percentile"].nunique() > 1
+            else np.nan
+        )
+        .reindex(
+            pd.MultiIndex.from_frame(
+                grouped[["timeframe", "horizon_weeks", "timestamp"]]
+            )
+        )
+        .to_numpy()
+    )
+
+    return grouped[FORWARD_RETURN_HORIZON_POINT_COLUMNS]
+
+
 def _round_numeric_columns(data):
     if data.empty:
         return data
@@ -349,6 +468,12 @@ def calculate(
         ),
         "forward_return_points": _round_numeric_columns(
             _build_forward_return_points(context.return_panel, horizon_week_ranges)
+        ),
+        "forward_return_horizon_points": _round_numeric_columns(
+            _build_forward_return_horizon_points(
+                context.return_panel,
+                horizon_week_ranges,
+            )
         ),
         "prices": _round_numeric_columns(
             _build_prices(panel, horizon_week_ranges)
