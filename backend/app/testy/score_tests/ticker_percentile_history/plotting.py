@@ -25,6 +25,30 @@ from app.testy.score_tests.common.output_paths import (
 MOVING_AVERAGE_COLUMN = "moving_average_score_percentile"
 DEFAULT_MOVING_AVERAGE_WINDOW = 4
 ANTI_MOMENTUM_SKIP_WEEKS = 4
+Z_CRITICAL_95 = 1.959963984540054
+HAC_DIAGNOSTIC_METRICS = [
+    {
+        "metric": "pearson",
+        "label": "Pearson IC",
+        "short_label": "Pearson",
+        "color": "#4C78A8",
+        "filename_stem": "pearson",
+    },
+    {
+        "metric": "spearman",
+        "label": "Spearman IC",
+        "short_label": "Spearman",
+        "color": "#59A14F",
+        "filename_stem": "spearman",
+    },
+    {
+        "metric": "score_percentile_pearson_ic",
+        "label": "Score percentile Pearson IC",
+        "short_label": "Score pct Pearson",
+        "color": "#F28E2B",
+        "filename_stem": "score_percentile_pearson",
+    },
+]
 ANTI_MOMENTUM_WINDOWS = [
     ("jegadeesh_titman", None, None, ANTI_MOMENTUM_SKIP_WEEKS),
 ]
@@ -308,7 +332,7 @@ def _newey_west_mean_stats(values, lags):
         naive_standard_error,
         newey_west_standard_error,
     )
-    z_critical = 1.959963984540054
+    z_critical = Z_CRITICAL_95
     mean_ic = float(clean.mean())
     if reported_standard_error > 0:
         effective_observations = observation_count * (
@@ -455,7 +479,7 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
     ]
     summary_rows = []
     autocorrelation_frames = []
-    z_critical = 1.959963984540054
+    z_critical = Z_CRITICAL_95
 
     for horizon_weeks, horizon_group in correlations.groupby(
         "horizon_weeks",
@@ -595,6 +619,346 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
     return summary, autocorrelations
 
 
+def _official_result_mask(summary):
+    official_result = summary["official_result"]
+    if pd.api.types.is_bool_dtype(official_result):
+        return official_result.fillna(False)
+    return official_result.astype(str).str.lower().isin({"true", "1", "yes"})
+
+
+def _format_ci_half_width(standard_error):
+    if pd.isna(standard_error):
+        return "n/a"
+    return f"+/-{Z_CRITICAL_95 * float(standard_error):.3f}"
+
+
+def _metric_horizon_summary(summary, metric):
+    official_mask = _official_result_mask(summary)
+    metric_summary = summary[
+        (summary["metric"] == metric)
+        & (~official_mask)
+    ].copy()
+    if metric_summary.empty:
+        return metric_summary
+    return metric_summary.dropna(subset=["horizon_weeks", "mean_ic"]).sort_values(
+        "horizon_weeks"
+    )
+
+
+def _metric_official_summary(summary, metric):
+    official_mask = _official_result_mask(summary)
+    official = summary[
+        (summary["metric"] == metric)
+        & official_mask
+    ]
+    return official.iloc[0] if not official.empty else None
+
+
+def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_dir):
+    horizon_summary = summary[~_official_result_mask(summary)].dropna(
+        subset=["horizon_weeks"]
+    )
+    if horizon_summary.empty:
+        return
+
+    x_values = np.sort(horizon_summary["horizon_weeks"].unique().astype(float))
+    x_min = float(x_values.min())
+    x_max = float(x_values.max())
+
+    fig, ax = plt.subplots(figsize=(13, 6.8))
+    official_annotations = []
+    for config in HAC_DIAGNOSTIC_METRICS:
+        metric_summary = _metric_horizon_summary(summary, config["metric"])
+        if metric_summary.empty:
+            continue
+
+        yerr = [
+            (
+                metric_summary["mean_ic"]
+                - metric_summary["ci_lower_95"]
+            ).clip(lower=0),
+            (
+                metric_summary["ci_upper_95"]
+                - metric_summary["mean_ic"]
+            ).clip(lower=0),
+        ]
+        ax.errorbar(
+            metric_summary["horizon_weeks"],
+            metric_summary["mean_ic"],
+            yerr=yerr,
+            color=config["color"],
+            ecolor=config["color"],
+            elinewidth=1.1,
+            alpha=0.92,
+            linewidth=2,
+            marker="o",
+            markersize=4,
+            capsize=3,
+            label=f"{config['label']} by horizon",
+        )
+
+        official = _metric_official_summary(summary, config["metric"])
+        if official is None:
+            continue
+        ax.axhline(
+            official["mean_ic"],
+            color=config["color"],
+            linewidth=1.5,
+            linestyle="--",
+            alpha=0.85,
+        )
+        if (
+            pd.notna(official["ci_lower_95"])
+            and pd.notna(official["ci_upper_95"])
+        ):
+            ax.fill_between(
+                [x_min, x_max],
+                official["ci_lower_95"],
+                official["ci_upper_95"],
+                color=config["color"],
+                alpha=0.08,
+            )
+            official_annotations.append(
+                f"{config['short_label']}: official mean "
+                f"{official['mean_ic']:.3f}, 95% CI "
+                f"[{official['ci_lower_95']:.3f}, "
+                f"{official['ci_upper_95']:.3f}]"
+            )
+
+    ax.axhline(0, color="#444444", linewidth=1)
+    ax.set_ylim(0, 0.5)
+    ax.set_xticks(x_values)
+    ax.set_xticklabels([str(int(value)) for value in x_values])
+    ax.set_title(
+        f"Score vs forward return IC and HAC intervals by horizon ({timeframe})"
+    )
+    ax.set_xlabel("Forward return horizon (weeks)")
+    ax.set_ylabel("Mean IC")
+    ax.grid(True, alpha=0.25)
+    ax.legend(loc="upper left")
+    if official_annotations:
+        ax.text(
+            0.99,
+            0.98,
+            "\n".join(official_annotations),
+            transform=ax.transAxes,
+            ha="right",
+            va="top",
+            fontsize=9,
+            bbox={
+                "boxstyle": "round,pad=0.35",
+                "facecolor": "white",
+                "edgecolor": "#DDDDDD",
+                "alpha": 0.96,
+            },
+        )
+
+    fig.tight_layout()
+    _save_figure(
+        fig,
+        plot_path(
+            output_dir,
+            directory,
+            "score_return_correlation_hac_diagnostics.png",
+        ),
+        dpi=180,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def _format_ci_half_width_clean(val):
+    """Pomocnicza funkcja formatująca precyzję do 2 miejsc po przecinku bez symboli +/-."""
+    if val is None or np.isnan(val):
+        return "n/a"
+    try:
+        val_float = float(val)
+        return f"{val_float:.2f}"
+    except (ValueError, TypeError):
+        return "n/a"
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def _format_ci_half_width_clean(val):
+    """Pomocnicza funkcja formatująca precyzję do 2 miejsc po przecinku bez symboli +/-."""
+    if val is None or np.isnan(val):
+        return "n/a"
+    try:
+        val_float = float(val * 1.96)
+        return f"{val_float:.3f}"
+    except (ValueError, TypeError):
+        return "n/a"
+
+
+def _save_score_return_autocorrelation_plot(
+    autocorrelations,
+    summary,
+    timeframe,
+    directory,
+    output_dir,
+    config,
+):
+    metric_acf = autocorrelations[
+        autocorrelations["metric"] == config["metric"]
+    ]
+    if metric_acf.empty:
+        return
+
+    heatmap = (
+        metric_acf.pivot_table(
+            index="lag",
+            columns="horizon_weeks",
+            values="autocorrelation",
+            aggfunc="mean",
+        )
+        .sort_index()
+        .sort_index(axis=1)
+    )
+    if heatmap.empty:
+        return
+
+    metric_summary = _metric_horizon_summary(summary, config["metric"])
+    summary_by_horizon = {}
+    if not metric_summary.empty:
+        for row in metric_summary.itertuples(index=False):
+            summary_by_horizon[int(round(float(row.horizon_weeks)))] = row
+
+    horizons = [int(round(float(h))) for h in heatmap.columns]
+
+    se_values = []
+    hac_values = []
+
+    for horizon in horizons:
+        stats = summary_by_horizon.get(horizon)
+        if stats is None:
+            se_values.append("n/a")
+            hac_values.append("n/a")
+        else:
+            se_values.append(
+                _format_ci_half_width_clean(
+                    getattr(stats, "naive_standard_error", None)
+                )
+            )
+            hac_values.append(
+                _format_ci_half_width_clean(
+                    getattr(stats, "newey_west_standard_error", None)
+                )
+            )
+
+    fig_width = max(12, len(horizons) * 0.85)
+    fig_height = max(7, min(10, 5.0 + len(heatmap.index) * 0.08))
+
+    fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+
+    image = ax.imshow(
+        heatmap.to_numpy(dtype=float),
+        aspect="auto",
+        cmap="RdBu_r",
+        vmin=-1,
+        vmax=1,
+        origin="lower",
+    )
+
+    # 1. Przewracamy standardowe podpisanie osi X (horyzonty)
+    ax.set_xticks(np.arange(len(horizons)))
+    ax.set_xticklabels(
+        [f"{h}w" for h in horizons],
+        fontsize=9,
+    )
+    # 2. Standardowy opis osi X
+    ax.set_xlabel("Forward return horizon (weeks)", fontsize=10, labelpad=8)
+
+    # Pozycjonowanie osi Y
+    y_tick_step = max(1, int(np.ceil(len(heatmap.index) / 14)))
+    y_tick_positions = np.arange(0, len(heatmap.index), y_tick_step)
+
+    if y_tick_positions[-1] != len(heatmap.index) - 1:
+        y_tick_positions = np.append(
+            y_tick_positions,
+            len(heatmap.index) - 1,
+        )
+
+    ax.set_yticks(y_tick_positions)
+    ax.set_yticklabels([
+        str(int(heatmap.index[position])) for position in y_tick_positions
+    ])
+
+    # Colorbar
+    colorbar = fig.colorbar(image, ax=ax, pad=0.02)
+    colorbar.set_label("Autocorrelation", fontsize=10)
+
+    # Opisy osi Y i tytuł
+    ax.set_ylabel("Lag", fontsize=10)
+    ax.set_title(
+        f"{config['label']} autocorrelation by horizon and lag ({timeframe})"
+    )
+
+    # 3. Tabela umieszczona pod podpisem osi X – BEZ nagłówków kolumn (colLabels=None)
+    table = ax.table(
+        cellText=[
+            se_values,
+            hac_values,
+        ],
+        rowLabels=[
+            "CI 95% (±)",
+            "HAC CI 95% (±)",
+        ],
+        colLabels=None,  # Brak górnego wiersza z horyzontami
+        cellLoc="center",
+        rowLoc="right",
+        loc="bottom",
+        bbox=[0.0, -0.22, 1.0, 0.10],  # Pozycja poniżej opisu osi X
+    )
+
+    table.auto_set_font_size(False)
+    table.set_fontsize(8)
+
+    # Dopasowanie układu
+    plt.tight_layout()
+
+    _save_figure(
+        fig,
+        plot_path(
+            output_dir,
+            directory,
+            (
+                "score_return_correlation_"
+                f"{config['filename_stem']}_autocorrelation_by_horizon_lag.png"
+            ),
+        ),
+        dpi=180,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+
+
+def _save_score_return_autocorrelation_plots(
+    autocorrelations,
+    summary,
+    timeframe,
+    directory,
+    output_dir,
+):
+    if autocorrelations.empty:
+        return
+    for config in HAC_DIAGNOSTIC_METRICS:
+        _save_score_return_autocorrelation_plot(
+            autocorrelations,
+            summary,
+            timeframe,
+            directory,
+            output_dir,
+            config,
+        )
+
+
 def _save_score_return_hac_diagnostics(
     correlations,
     data,
@@ -642,121 +1006,19 @@ def _save_score_return_hac_diagnostics(
             ),
         )
 
-    pearson_summary = summary[
-        (summary["metric"] == "pearson")
-        & (~summary["official_result"].astype(bool))
-    ].copy()
-    pearson_official = summary[
-        (summary["metric"] == "pearson")
-        & (summary["official_result"].astype(bool))
-    ]
-    pearson = pearson_official.iloc[0] if not pearson_official.empty else None
-    fig, (series_ax, acf_ax) = plt.subplots(
-        2,
-        1,
-        figsize=(13, 9),
-        gridspec_kw={"height_ratios": [2.1, 1]},
+    _save_score_return_hac_summary_plot(
+        summary,
+        timeframe,
+        directory,
+        output_dir,
     )
-    if not pearson_summary.empty:
-        series_ax.errorbar(
-            pearson_summary["horizon_weeks"],
-            pearson_summary["mean_ic"],
-            yerr=[
-                pearson_summary["mean_ic"] - pearson_summary["ci_lower_95"],
-                pearson_summary["ci_upper_95"] - pearson_summary["mean_ic"],
-            ],
-            color="#4C78A8",
-            ecolor="#9ECAE9",
-            linewidth=2,
-            marker="o",
-            markersize=4,
-            capsize=3,
-            label="Pearson IC mean by horizon",
-        )
-    if pearson is not None and not pearson_summary.empty:
-        x_values = pearson_summary["horizon_weeks"].to_numpy(dtype=float)
-        series_ax.axhline(
-            pearson["mean_ic"],
-            color="#4C78A8",
-            linewidth=1.5,
-            linestyle="--",
-            label=f"Official mean {pearson['mean_ic']:.3f}",
-        )
-        series_ax.fill_between(
-            [x_values.min(), x_values.max()],
-            pearson["ci_lower_95"],
-            pearson["ci_upper_95"],
-            color="#4C78A8",
-            alpha=0.10,
-            label=(
-                "Official 95% CI "
-                f"[{pearson['ci_lower_95']:.3f}, "
-                f"{pearson['ci_upper_95']:.3f}]"
-            ),
-        )
-        series_ax.set_xticks(x_values)
-    series_ax.axhline(0, color="#444444", linewidth=1)
-    series_ax.set_ylim(-1, 1)
-    series_ax.set_title(
-        f"Pearson IC and HAC interval by horizon ({timeframe})"
+    _save_score_return_autocorrelation_plots(
+        autocorrelations,
+        summary,
+        timeframe,
+        directory,
+        output_dir,
     )
-    series_ax.set_xlabel("Forward return horizon (weeks)")
-    series_ax.set_ylabel("Mean Pearson IC")
-    series_ax.grid(True, alpha=0.25)
-    series_ax.legend(loc="best")
-
-    pearson_acf = (
-        autocorrelations[autocorrelations["metric"] == "pearson"]
-        if not autocorrelations.empty
-        else pd.DataFrame()
-    )
-    if not pearson_acf.empty:
-        heatmap = pearson_acf.pivot_table(
-            index="lag",
-            columns="horizon_weeks",
-            values="autocorrelation",
-            aggfunc="mean",
-        ).sort_index().sort_index(axis=1)
-        image = acf_ax.imshow(
-            heatmap.to_numpy(dtype=float),
-            aspect="auto",
-            cmap="RdBu_r",
-            vmin=-1,
-            vmax=1,
-            origin="lower",
-        )
-        acf_ax.set_xticks(np.arange(len(heatmap.columns)))
-        acf_ax.set_xticklabels([str(int(value)) for value in heatmap.columns])
-        y_tick_step = max(1, int(np.ceil(len(heatmap.index) / 12)))
-        y_tick_positions = np.arange(0, len(heatmap.index), y_tick_step)
-        if y_tick_positions[-1] != len(heatmap.index) - 1:
-            y_tick_positions = np.append(
-                y_tick_positions,
-                len(heatmap.index) - 1,
-            )
-        acf_ax.set_yticks(y_tick_positions)
-        acf_ax.set_yticklabels([
-            str(int(heatmap.index[position]))
-            for position in y_tick_positions
-        ])
-        colorbar = fig.colorbar(image, ax=acf_ax, pad=0.01)
-        colorbar.set_label("Autocorrelation")
-    acf_ax.set_xlabel("Forward return horizon (weeks)")
-    acf_ax.set_ylabel("Lag")
-    acf_ax.set_title("Pearson IC autocorrelation by horizon and lag")
-
-    fig.tight_layout()
-    _save_figure(
-        fig,
-        plot_path(
-            output_dir,
-            directory,
-            "score_return_correlation_hac_diagnostics.png",
-        ),
-        dpi=180,
-        bbox_inches="tight",
-    )
-    plt.close(fig)
     return summary
 
 
