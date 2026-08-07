@@ -23,6 +23,12 @@ def plot(analysis, output_dir):
     _plot_correlations(analysis, output_dir)
 
 
+def plot_weekly_information_coefficient(analysis, output_dir):
+    if analysis.empty:
+        return
+    _plot_correlations(analysis, output_dir)
+
+
 def _plot_top_n(analysis, output_dir):
     data = analysis[
         (analysis["test"] == "A1_top_n") & (analysis["bucket"] != "All 18")

@@ -23,7 +23,10 @@ from score_tests.a1_a2_weekly.calculation import (
     build_top_n_output,
     calculate as calculate_a1_a2,
 )
-from score_tests.a1_a2_weekly.plotting import plot as plot_a1_a2
+from score_tests.a1_a2_weekly.plotting import (
+    plot as plot_a1_a2,
+    plot_weekly_information_coefficient,
+)
 from score_tests.a3_weekly_buckets.calculation import (
     build_output as build_weekly_bucket_output,
     calculate as calculate_a3,
@@ -93,13 +96,13 @@ OUTPUT_DIR = ROOT_FOLDER / "data" / "results"
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
 ENABLED_TESTS = {
-    "A1_A2_weekly_top_n_and_correlation": False,
-    "A3_weekly_rank_buckets": False,
-    "downside_information_ratio": False,
-    "post_entry_score_path": False,
+    "A1_A2_weekly_top_n_and_correlation": True,
+    "A3_weekly_rank_buckets": True,
+    "downside_information_ratio": True,
+    "post_entry_score_path": True,
     "ticker_percentile_history": True,
-    "B1_B2_global_top_percent_and_correlation": False,
-    "B3_global_score_buckets": False,
+    "B1_B2_global_top_percent_and_correlation": True,
+    "B3_global_score_buckets": True,
 }
 
 ENABLED_TIMEFRAMES = {
@@ -135,6 +138,23 @@ def enabled_horizon_week_ranges():
         for timeframe, is_enabled in ENABLED_TIMEFRAMES.items()
         if is_enabled and timeframe in HORIZON_WEEK_RANGES
     }
+
+
+def all_timeframe_horizon_week_ranges():
+    return {
+        timeframe: HORIZON_WEEK_RANGES[timeframe]
+        for timeframe in ENABLED_TIMEFRAMES
+        if timeframe in HORIZON_WEEK_RANGES
+    }
+
+
+def horizon_weeks_from_ranges(horizon_week_ranges):
+    weeks = {
+        week
+        for start_week, end_week in horizon_week_ranges.values()
+        for week in range(start_week, end_week + 1)
+    }
+    return sorted(weeks)
 
 
 def enabled_timeframe_label():
@@ -407,6 +427,40 @@ def plot_analysis_outputs(results, output_dir):
         )
 
 
+def plot_weekly_information_coefficient_for_all_timeframes(
+    score_observations,
+    output_dir,
+):
+    if not ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
+        return
+
+    all_ranges = all_timeframe_horizon_week_ranges()
+    if not all_ranges:
+        return
+
+    all_timeframes_df = score_observations[
+        score_observations["timeframe"].isin(all_ranges.keys())
+    ].copy()
+    if all_timeframes_df.empty:
+        return
+
+    return_panel = build_return_panel(
+        all_timeframes_df,
+        horizon_weeks_from_ranges(all_ranges),
+    )
+    if return_panel.empty:
+        return
+
+    analysis = calculate_a1_a2(
+        ScoreTestContext(
+            return_panel=return_panel,
+            score_observations=all_timeframes_df,
+        ),
+        horizon_week_ranges=all_ranges,
+    )
+    plot_weekly_information_coefficient(analysis, output_dir)
+
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     raw_df = build_dataframe(
@@ -417,11 +471,12 @@ def main():
         print("[EMPTY] No observations found.")
         return
 
-    score_df = build_timeframe_score_observations(
+    score_df_all_timeframes = build_timeframe_score_observations(
         raw_df,
         EQUAL_WEIGHT_SCORE_COLUMN,
     )
-    score_df = add_weekly_score_metrics(filter_enabled_timeframes(score_df))
+    score_df_all_timeframes = add_weekly_score_metrics(score_df_all_timeframes)
+    score_df = filter_enabled_timeframes(score_df_all_timeframes)
     if score_df.empty:
         print("[EMPTY] No weekly score observations found.")
         return
@@ -446,6 +501,10 @@ def main():
 
     output_files = save_analysis_outputs(results, OUTPUT_DIR)
     plot_analysis_outputs(results, OUTPUT_DIR)
+    plot_weekly_information_coefficient_for_all_timeframes(
+        score_df_all_timeframes,
+        OUTPUT_DIR,
+    )
 
     print("[OK] Saved focused weekly/global analysis:")
     print(
