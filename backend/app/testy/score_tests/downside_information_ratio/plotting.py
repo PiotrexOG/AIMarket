@@ -3,7 +3,11 @@ import matplotlib.ticker as mtick
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
 import numpy as np
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    plot_path,
+    set_percent_x_axis,
+    timeframe_label,
+)
 from app.testy.score_tests.common.output_paths import (
     DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
     DOWNSIDE_INFORMATION_RATIO_DIR,
@@ -120,6 +124,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         f"równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
@@ -147,6 +152,7 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
         f"dla najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Średnie downside deviation")
 
     ax.grid(True, alpha=0.25)
@@ -197,6 +203,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
         f"według najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Wskaźnik DIR")
     ax.grid(True, alpha=0.25)
     ax.legend()
@@ -245,6 +252,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         f"w koszyku benchmarku {bucket_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
@@ -272,6 +280,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
         f"w koszyku benchmarku {bucket_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Downside deviation")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
@@ -299,6 +308,7 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
         f"w koszyku benchmarku {bucket_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
+    set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Wskaźnik DIR")
     ax.grid(True, alpha=0.25)
     fig.tight_layout()

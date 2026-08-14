@@ -136,6 +136,10 @@ def set_integer_x_axis(ax):
     ax.xaxis.set_major_locator(mtick.MaxNLocator(integer=True))
 
 
+def set_percent_x_axis(ax, xmax=1.0):
+    ax.xaxis.set_major_formatter(mtick.PercentFormatter(xmax))
+
+
 def plot_bucket_lines(
     data,
     output_dir,
