@@ -1,4 +1,5 @@
 from pathlib import Path
+import textwrap
 
 import matplotlib
 
@@ -7,6 +8,7 @@ matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
+from matplotlib.figure import Figure
 import numpy as np
 import pandas as pd
 
@@ -85,6 +87,51 @@ def mean_label(label, values, formatter):
     return f"{label} (średnia {formatter(mean_value)})"
 
 
+def wrap_plot_text(text, width=74):
+    if text is None:
+        return text
+    lines = str(text).splitlines() or [""]
+    return "\n".join(
+        textwrap.fill(
+            line,
+            width=width,
+            break_long_words=False,
+            break_on_hyphens=False,
+        )
+        if len(line) > width
+        else line
+        for line in lines
+    )
+
+
+def wrap_figure_text(fig, title_width=78, axis_width=54):
+    if getattr(fig, "_suptitle", None) is not None:
+        fig._suptitle.set_text(
+            wrap_plot_text(fig._suptitle.get_text(), title_width)
+        )
+
+    for ax in fig.axes:
+        ax.set_title(wrap_plot_text(ax.get_title(), title_width))
+        ax.set_xlabel(wrap_plot_text(ax.get_xlabel(), axis_width))
+        ax.set_ylabel(wrap_plot_text(ax.get_ylabel(), axis_width))
+
+
+def _install_wrapped_tight_layout():
+    original_tight_layout = Figure.tight_layout
+    if getattr(original_tight_layout, "_score_tests_wraps_text", False):
+        return
+
+    def tight_layout_with_wrapped_text(self, *args, **kwargs):
+        wrap_figure_text(self)
+        return original_tight_layout(self, *args, **kwargs)
+
+    tight_layout_with_wrapped_text._score_tests_wraps_text = True
+    Figure.tight_layout = tight_layout_with_wrapped_text
+
+
+_install_wrapped_tight_layout()
+
+
 def set_integer_x_axis(ax):
     ax.xaxis.set_major_locator(mtick.MaxNLocator(integer=True))
 
@@ -140,6 +187,7 @@ def plot_bucket_lines(
         ),
         ncol=2,
     )
+    wrap_figure_text(fig)
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, plot_type, filename), dpi=160)
     plt.close(fig)
@@ -189,6 +237,7 @@ def plot_bucket_average(
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, axis="y", alpha=0.25)
     ax.tick_params(axis="x", rotation=45)
+    wrap_figure_text(fig)
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, plot_type, filename), dpi=160)
     plt.close(fig)

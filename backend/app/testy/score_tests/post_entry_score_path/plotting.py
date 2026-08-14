@@ -38,7 +38,7 @@ METRIC_LABELS = {
 
 SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "mean_switch_to_benchmark_annualized_gain": (
-        "Średni zannualizowany zysk z przełączenia na benchmark"
+        "Średni roczny zysk z przełączenia na benchmark"
     ),
     "downside_deviation": "Downside deviation zysku z przełączenia",
     "downside_information_ratio": "Wskaźnik DIR",
@@ -201,7 +201,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_metric="annualized_alpha",
-            return_label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
+            return_label="Roczny nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
 
@@ -214,7 +214,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_label=(
-                "końcowy zannualizowany nadwyżkowy zwrot względem benchmarku"
+                "końcowy roczny nadwyżkowy zwrot względem benchmarku"
             ),
             filename_prefix="alpha_",
         )
@@ -223,7 +223,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_label=(
-                "końcowy zannualizowany nadwyżkowy zwrot względem benchmarku"
+                "końcowy roczny nadwyżkowy zwrot względem benchmarku"
             ),
             filename_prefix="alpha_",
         )
@@ -235,7 +235,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             horizon_label,
             "relative_score_percentile_change",
             return_metric="annualized_alpha",
-            return_label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
+            return_label="Roczny nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
         _plot_relative_score_change_heatmap(
@@ -243,7 +243,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_metric="annualized_alpha",
-            return_label="zannualizowany nadwyżkowy zwrot względem benchmarku",
+            return_label="roczny nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
 
@@ -445,7 +445,7 @@ def _plot_remaining_return_at_progress_scatter(
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: zannualizowany nadwyżkowy zwrot "
+            f"{timeframe_label(timeframe)}: roczny nadwyżkowy zwrot "
             f"z trzymania pozycji po {progress_label} horyzontu, "
             f"horyzonty {horizon_label}"
             f"{title_suffix}"
@@ -455,7 +455,7 @@ def _plot_remaining_return_at_progress_scatter(
             f"{METRIC_LABELS[metric]} po {progress_label} horyzontu"
         )
         ax.set_ylabel(
-            "Zannualizowany nadwyżkowy zwrot akcji względem benchmarku "
+            "Roczny nadwyżkowy zwrot akcji względem benchmarku "
             "od punktu decyzji do końca horyzontu"
         )
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
@@ -561,7 +561,7 @@ def _plot_hold_decision_by_score_drop(
             summary["median"],
             color=colors,
             alpha=0.85,
-            label="Mediana zannualizowanego nadwyżkowego zwrotu względem benchmarku",
+            label="Mediana rocznego nadwyżkowego zwrotu względem benchmarku",
         )
         return_ax.scatter(
             x,
@@ -595,7 +595,7 @@ def _plot_hold_decision_by_score_drop(
                 fontsize=9,
             )
         return_ax.set_ylabel(
-            "Zannualizowany nadwyżkowy zwrot akcji względem benchmarku "
+            "Roczny nadwyżkowy zwrot akcji względem benchmarku "
             "od punktu decyzji do końca horyzontu"
         )
         return_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
@@ -667,7 +667,7 @@ def _plot_switch_to_benchmark_threshold_lines(
             color="#4C78A8",
             marker="o",
             linewidth=2,
-            label="Średni zannualizowany zysk z przełączenia",
+            label="Średni roczny zysk z przełączenia",
         )
         gain_ax.plot(
             clean["score_change_threshold"],
@@ -963,7 +963,7 @@ def _plot_hold_decision_heatmap(
             aspect="auto",
         )
         colorbar = fig.colorbar(image, ax=ax)
-        colorbar.set_label("Mediana pozostałej zannualizowanej stopy zwrotu")
+        colorbar.set_label("Mediana pozostałej rocznej stopy zwrotu")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         for row_index in range(len(score_labels)):

@@ -103,7 +103,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         marker="o",
         linewidth=2,
         color="#4C78A8",
-        label="Strategia najlepszych M spółek",
+        label="Strategia najlepszych M (%) spółek",
     )
     ax.plot(
         data["top_percent"],
@@ -116,7 +116,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: Średnia roczna stopa zwrotu "
-        f"strategii najlepszych M spółek i benchmarku, "
+        f"strategii najlepszych M (%) spółek i benchmarku, "
         f"równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
@@ -144,11 +144,11 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
     )
     ax.set_title(
         f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
-        f"dla najlepszych M, równo ważone horyzonty {horizon_label}"
+        f"dla najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     ax.set_ylabel("Średnie downside deviation")
-    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
     fig.savefig(
@@ -194,7 +194,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
-        f"według najlepszych M, równo ważone horyzonty {horizon_label}"
+        f"według najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     ax.set_ylabel("Wskaźnik DIR")
@@ -221,7 +221,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         marker="o",
         linewidth=2,
         color="#4C78A8",
-        label="Strategia najlepszych M spółek",
+        label="Strategia najlepszych M (%) spółek",
     )
     ax.plot(
         data["top_percent"],
@@ -237,7 +237,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         marker="o",
         linewidth=2,
         color="#59A14F",
-        label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
+        label="Roczny nadwyżkowy zwrot względem benchmarku",
     )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
@@ -314,9 +314,9 @@ def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
     metrics = [
         (
             "mean_annualized_alpha",
-            "Zannualizowany nadwyżkowy zwrot względem benchmarku",
+            "Roczny nadwyżkowy zwrot względem benchmarku",
             (
-                f"{title_timeframe}: zannualizowany nadwyżkowy zwrot "
+                f"{title_timeframe}: roczny nadwyżkowy zwrot "
                 "według koszyka zwrotu benchmarku i najlepszych N spółek"
             ),
             f"{timeframe}_heatmap_annualized_alpha.png",
@@ -373,17 +373,17 @@ def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
 
 
 def _plot_metric_heatmap(
-    data,
-    metric,
-    colorbar_label,
-    title,
-    filename,
-    cmap,
-    is_percent,
-    norm,
-    clip_limits,
-    output_dir,
-    directory,
+        data,
+        metric,
+        colorbar_label,
+        title,
+        filename,
+        cmap,
+        is_percent,
+        norm,
+        clip_limits,
+        output_dir,
+        directory,
 ):
     clean = data.dropna(subset=[metric]).copy()
     if clean.empty:
@@ -392,12 +392,15 @@ def _plot_metric_heatmap(
     clean["top_n_equivalent"] = clean["top_share"] * 18
     bucket_order = sorted(clean["benchmark_return_bucket_id"].unique())
     top_order = sorted(clean["top_share"].unique())
+
+    # Pivot tworzy macierz; brakujące kombinacje będą miały wartość np.nan
     matrix = clean.pivot_table(
         index="benchmark_return_bucket_id",
         columns="top_share",
         values=metric,
         aggfunc="mean",
     ).reindex(index=bucket_order, columns=top_order)
+
     if matrix.empty:
         return
 
@@ -424,15 +427,38 @@ def _plot_metric_heatmap(
     ]
 
     values = matrix.to_numpy(dtype=float)
+
+    # Maska dla wartości nieprawidłowych / niepoliczalnych (NaN lub np. inf)
+    invalid_mask = np.isnan(values) | np.isinf(values)
+
     display_values = (
         np.clip(values, clip_limits[0], clip_limits[1])
         if clip_limits is not None
         else values
     )
+
     fig_width = max(14, len(top_order) * 0.34)
     fig_height = max(7, len(bucket_order) * 0.55 + 2.5)
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+
+    # Rysowanie głównej heatmapy
     image = ax.imshow(display_values, aspect="auto", cmap=cmap, norm=norm)
+
+    # --- DODANY FRAGMENT: NAKŁADANIE SKOŚNYCH SZARYCH KRESEK ---
+    y_indices, x_indices = np.where(invalid_mask)
+    for x, y in zip(x_indices, y_indices):
+        # Rysujemy prostokąt w miejscu nieprawidłowej komórki
+        rect = plt.Rectangle(
+            (x - 0.5, y - 0.5), 1, 1,
+            fill=True,
+            facecolor='#E0E0E0',  # Tło kafelka: jasnoszary
+            hatch='//',  # Skośne kreski
+            edgecolor='#888888',  # Kolor szarych kresek
+            linewidth=0.5
+        )
+        ax.add_patch(rect)
+    # ------------------------------------------------------------
+
     colorbar = fig.colorbar(image, ax=ax)
     colorbar.set_label(colorbar_label)
     if is_percent:
@@ -449,8 +475,8 @@ def _plot_metric_heatmap(
     ax.set_yticks(np.arange(len(bucket_order)))
     ax.set_yticklabels(y_labels)
     ax.set_title(title)
-    ax.set_xlabel("Ekwiwalent liczby najlepszych spółek N")
-    ax.set_ylabel("Koszyk zannualizowanej stopy zwrotu benchmarku")
+    ax.set_xlabel("Ekwiwalent liczby najlepszych N spółek")
+    ax.set_ylabel("Koszyk rocznej stopy zwrotu benchmarku")
     ax.set_xticks(np.arange(-0.5, len(top_order), 1), minor=True)
     ax.set_yticks(np.arange(-0.5, len(bucket_order), 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=0.6)

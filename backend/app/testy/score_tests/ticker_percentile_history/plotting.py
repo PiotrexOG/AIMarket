@@ -1350,13 +1350,13 @@ def _save_anti_momentum_correlation_charts(
                 "score_to_future_annualized_return_correlation_by_ticker.png"
             ),
             "title": (
-                f"Korelacja wyniku modelu z przyszłą zannualizowaną "
+                f"Korelacja wyniku modelu z przyszłą roczną "
                 f"stopą zwrotu według tickerów "
                 f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
             "x_label": (
                 "Korelacja Pearsona: wynik modelu względem przyszłej "
-                "zannualizowanej stopy zwrotu"
+                "rocznej stopy zwrotu"
             ),
         },
     ]
@@ -1382,7 +1382,7 @@ def _save_anti_momentum_correlation_charts(
                 ),
                 "x_label": (
                     "Korelacja Pearsona: wynik modelu względem historycznej "
-                    f"zannualizowanej stopy zwrotu ({window_label})"
+                    f"rocznej stopy zwrotu ({window_label})"
                 ),
             },
         )
@@ -1854,7 +1854,7 @@ def _save_ticker_date_heatmap(
     ax.set_yticks(y_positions)
     ax.set_yticklabels(heatmap_data.index)
     ax.set_ylabel(
-        "Ticker, sortowanie według średniej przyszłej zannualizowanej stopy zwrotu"
+        "Ticker, sortowanie według średniej przyszłej rocznej stopy zwrotu"
     )
     ax.set_xlabel("Data scoringu")
     ax.set_title(title)
@@ -2300,10 +2300,10 @@ def _save_forward_return_heatmap(
             "column": "excess_forward_annualized_return",
             "filename": "excess_forward_annualized_return_heatmap.png",
             "title": (
-                f"Przyszły zannualizowany nadwyżkowy zwrot ponad benchmark "
+                f"Przyszły roczny nadwyżkowy zwrot ponad benchmark "
                 f"z tej samej daty ({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Przyszły zannualizowany nadwyżkowy zwrot",
+            "colorbar": "Przyszły roczny nadwyżkowy zwrot",
             "cmap": "RdYlGn",
             "percent_format": True,
             "robust": True,
@@ -2758,7 +2758,7 @@ def _save_raw_score_forward_return_correlation_plot(
     spearman_ax.tick_params(axis="y", left=False, labelleft=False)
     fig.suptitle(
         f"Korelacja surowego wyniku modelu ze średnią przyszłą "
-        f"zannualizowaną stopą zwrotu ({timeframe_label(timeframe)})"
+        f"roczną stopą zwrotu ({timeframe_label(timeframe)})"
     )
     fig.tight_layout()
     _save_figure(
