@@ -730,7 +730,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_ylim(0, 0.5)
     ax.set_xticks(x_values)
-    ax.set_xticklabels([str(int(value.replace("w", ""))) for value in x_values])
+    ax.set_xticklabels([str(int(value)).replace("w", "") for value in x_values])
     ax.set_title(
         f"IC score względem przyszłej stopy zwrotu oraz "
         f"przedziały HAC według horyzontu ({timeframe_label(timeframe)})"
