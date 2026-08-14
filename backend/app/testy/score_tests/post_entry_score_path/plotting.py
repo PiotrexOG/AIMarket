@@ -5,7 +5,7 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.plotting import plot_path, timeframe_label
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_LIVE_PROGRESS_SECTION,
     POST_ENTRY_SCORE_PATH_DIR,
@@ -26,21 +26,22 @@ MAX_PROGRESS_BUCKET_PERCENT = 80
 
 
 METRIC_LABELS = {
-    "mean_score_percentile": "Mean score percentile",
+    "mean_score_percentile": "Średni percentyl wyniku modelu",
     "score_percentile_change": (
-        "Score percentile change: horizon mean - entry"
+        "Zmiana percentyla wyniku: średnia w horyzoncie - wejście"
     ),
     "relative_score_percentile_change": (
-        "Relative score percentile change: (horizon mean - entry) / entry"
+        "Względna zmiana percentyla wyniku: "
+        "(średnia w horyzoncie - wejście) / wejście"
     ),
 }
 
 SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "mean_switch_to_benchmark_annualized_gain": (
-        "Mean annualized switch gain"
+        "Średni zannualizowany zysk z przełączenia na benchmark"
     ),
-    "downside_deviation": "Downside deviation of switch gain",
-    "downside_information_ratio": "Downside information ratio",
+    "downside_deviation": "Downside deviation zysku z przełączenia",
+    "downside_information_ratio": "Wskaźnik DIR",
 }
 
 
@@ -200,7 +201,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_metric="annualized_alpha",
-            return_label="Annualized alpha versus benchmark",
+            return_label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
 
@@ -212,14 +213,18 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             live_progress_alpha_average,
             output_dir,
             horizon_label,
-            return_label="final annualized alpha versus benchmark",
+            return_label=(
+                "końcowy zannualizowany nadwyżkowy zwrot względem benchmarku"
+            ),
             filename_prefix="alpha_",
         )
         _plot_score_change_progress_correlations(
             live_progress_alpha_average,
             output_dir,
             horizon_label,
-            return_label="final annualized alpha versus benchmark",
+            return_label=(
+                "końcowy zannualizowany nadwyżkowy zwrot względem benchmarku"
+            ),
             filename_prefix="alpha_",
         )
 
@@ -230,7 +235,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             horizon_label,
             "relative_score_percentile_change",
             return_metric="annualized_alpha",
-            return_label="Annualized alpha versus benchmark",
+            return_label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
         _plot_relative_score_change_heatmap(
@@ -238,7 +243,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             output_dir,
             horizon_label,
             return_metric="annualized_alpha",
-            return_label="annualized alpha versus benchmark",
+            return_label="zannualizowany nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
 
@@ -261,7 +266,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
             metric_max=0.0,
             filename_suffix="_to_0pct",
-            title_suffix=", score change <= 0%",
+            title_suffix=", zmiana percentyla wyniku <= 0%",
         )
         _plot_hold_decision_by_score_drop(
             live_progress_observations,
@@ -293,7 +298,7 @@ def _plot_score_change_scatter(
     horizon_label,
     metric,
     return_metric="annualized_return",
-    return_label="Annualized return",
+    return_label="Roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(
@@ -316,7 +321,7 @@ def _plot_score_change_scatter(
             alpha=0.10,
             s=14,
             edgecolors="none",
-            label="Observations",
+            label="Obserwacje",
         )
 
         if clean[metric].nunique() >= 2:
@@ -335,7 +340,7 @@ def _plot_score_change_scatter(
                 slope * trend_x + intercept,
                 color="#E15759",
                 linewidth=2.2,
-                label="Linear trend",
+                label="Trend liniowy",
             )
 
         pearson = clean[metric].corr(
@@ -349,7 +354,8 @@ def _plot_score_change_scatter(
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe}: {return_label} versus {METRIC_LABELS[metric]}"
+            f"{timeframe_label(timeframe)}: {return_label} względem "
+            f"{METRIC_LABELS[metric]}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(METRIC_LABELS[metric])
@@ -406,7 +412,7 @@ def _plot_remaining_return_at_progress_scatter(
             alpha=0.10,
             s=14,
             edgecolors="none",
-            label="Observations",
+            label="Obserwacje",
         )
 
         if clean[metric].nunique() >= 2:
@@ -425,7 +431,7 @@ def _plot_remaining_return_at_progress_scatter(
                 slope * trend_x + intercept,
                 color="#E15759",
                 linewidth=2.2,
-                label="Linear trend",
+                label="Trend liniowy",
             )
 
         pearson = clean[metric].corr(
@@ -439,16 +445,18 @@ def _plot_remaining_return_at_progress_scatter(
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe}: hold-vs-benchmark annualized return after "
-            f"{progress_label} of the horizon, horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: zannualizowany nadwyżkowy zwrot "
+            f"z trzymania pozycji po {progress_label} horyzontu, "
+            f"horyzonty {horizon_label}"
             f"{title_suffix}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(
-            f"{METRIC_LABELS[metric]} after {progress_label} of the horizon"
+            f"{METRIC_LABELS[metric]} po {progress_label} horyzontu"
         )
         ax.set_ylabel(
-            "Stock minus benchmark annualized return from cutoff to horizon end"
+            "Zannualizowany nadwyżkowy zwrot akcji względem benchmarku "
+            "od punktu decyzji do końca horyzontu"
         )
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
@@ -487,7 +495,7 @@ def _add_score_drop_band(data):
     upper = max(step, np.ceil(finite_change.max() / step) * step)
     bins = np.arange(lower, upper + step * 1.01, step)
     labels = [
-        f"{left:.0%} to {right:.0%}"
+        f"{left:.0%} do {right:.0%}"
         for left, right in zip(bins[:-1], bins[1:])
     ]
     result["score_drop_band"] = pd.cut(
@@ -553,7 +561,7 @@ def _plot_hold_decision_by_score_drop(
             summary["median"],
             color=colors,
             alpha=0.85,
-            label="Median stock-minus-benchmark annualized return",
+            label="Mediana zannualizowanego nadwyżkowego zwrotu względem benchmarku",
         )
         return_ax.scatter(
             x,
@@ -562,7 +570,7 @@ def _plot_hold_decision_by_score_drop(
             marker="D",
             s=35,
             zorder=3,
-            label="Mean",
+            label="Średnia",
         )
         return_ax.axhline(0, color="#444444", linewidth=1)
         return_ax.axhline(
@@ -570,7 +578,7 @@ def _plot_hold_decision_by_score_drop(
             color="#4C78A8",
             linestyle="--",
             linewidth=2,
-            label=f"All observations median: {overall_median:.0%}",
+            label=f"Mediana wszystkich obserwacji: {overall_median:.0%}",
         )
         for index, row in summary.iterrows():
             if pd.isna(row["count"]) or row["count"] == 0:
@@ -587,20 +595,22 @@ def _plot_hold_decision_by_score_drop(
                 fontsize=9,
             )
         return_ax.set_ylabel(
-            "Stock minus benchmark annualized return from cutoff to horizon end"
+            "Zannualizowany nadwyżkowy zwrot akcji względem benchmarku "
+            "od punktu decyzji do końca horyzontu"
         )
         return_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         return_ax.set_xticks(x)
         return_ax.set_xticklabels(labels, rotation=45, ha="right")
         return_ax.set_xlabel(
-            f"Relative score percentile change after {progress_label} "
-            f"of the horizon, 5 percentage-point buckets"
+            f"Względna zmiana percentyla wyniku po {progress_label} "
+            "horyzontu, koszyki po 5 p.p."
         )
         return_ax.grid(True, axis="y", alpha=0.2)
         return_ax.legend(fontsize=9)
         return_ax.set_title(
-            f"{timeframe}: hold-vs-benchmark return by score change after "
-            f"{progress_label} of the horizon, horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: nadwyżkowy zwrot z trzymania pozycji "
+            f"według zmiany wyniku po {progress_label} horyzontu, "
+            f"horyzonty {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -657,7 +667,7 @@ def _plot_switch_to_benchmark_threshold_lines(
             color="#4C78A8",
             marker="o",
             linewidth=2,
-            label="Mean annualized switch gain",
+            label="Średni zannualizowany zysk z przełączenia",
         )
         gain_ax.plot(
             clean["score_change_threshold"],
@@ -670,9 +680,12 @@ def _plot_switch_to_benchmark_threshold_lines(
         gain_ax.axhline(0, color="#444444", linewidth=1)
         gain_ax.axvline(0, color="#444444", linewidth=1)
         gain_ax.set_xlabel(
-            "Switch when relative score percentile change is at or below threshold"
+            "Przełącz na benchmark, gdy względna zmiana percentyla wyniku "
+            "jest równa progowi lub niższa"
         )
-        gain_ax.set_ylabel("Annualized return spread versus holding stock")
+        gain_ax.set_ylabel(
+            "Roczna różnica stopy zwrotu względem trzymania akcji"
+        )
         gain_ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         gain_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         gain_ax.grid(True, alpha=0.25)
@@ -686,7 +699,7 @@ def _plot_switch_to_benchmark_threshold_lines(
                 color="#59A14F",
                 marker="D",
                 linewidth=2,
-                label="Downside information ratio",
+                label="Wskaźnik DIR",
             )
             best = ratio_clean.loc[
                 ratio_clean["downside_information_ratio"].idxmax()
@@ -698,12 +711,12 @@ def _plot_switch_to_benchmark_threshold_lines(
                 s=70,
                 zorder=5,
                 label=(
-                    "Best DIR: "
+                    "Najlepszy DIR: "
                     f"{best['score_change_threshold']:.0%}, "
                     f"{best['downside_information_ratio']:.2f}"
                 ),
             )
-        ratio_ax.set_ylabel("Downside information ratio")
+        ratio_ax.set_ylabel("Wskaźnik DIR")
 
         lines, labels = gain_ax.get_legend_handles_labels()
         ratio_lines, ratio_labels = ratio_ax.get_legend_handles_labels()
@@ -714,8 +727,8 @@ def _plot_switch_to_benchmark_threshold_lines(
             loc="best",
         )
         gain_ax.set_title(
-            f"{timeframe}: switch-to-benchmark threshold test after "
-            f"{progress_label} of horizon, horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: test progu przełączenia na benchmark "
+            f"po {progress_label} horyzontu, horyzonty {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -737,7 +750,8 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
     output_dir,
     horizon_label,
     threshold_axis_label=(
-        "Switch when relative score percentile change is at or below threshold"
+        "Przełącz na benchmark, gdy względna zmiana percentyla wyniku "
+        "jest równa progowi lub niższa"
     ),
     filename_suffix="",
 ):
@@ -836,10 +850,11 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
             ax.set_yticks(range(len(progress_order)))
             ax.set_yticklabels(progress_labels)
             ax.set_xlabel(threshold_axis_label)
-            ax.set_ylabel("Observed share of investment horizon")
+            ax.set_ylabel("Zaobserwowana część horyzontu inwestycji")
             ax.set_title(
-                f"{timeframe}: {SWITCH_TO_BENCHMARK_METRIC_LABELS[metric]}, "
-                f"horizons {horizon_label}"
+                f"{timeframe_label(timeframe)}: "
+                f"{SWITCH_TO_BENCHMARK_METRIC_LABELS[metric]}, "
+                f"horyzonty {horizon_label}"
             )
             fig.tight_layout()
             fig.savefig(
@@ -871,11 +886,11 @@ def _plot_hold_decision_heatmap(
     )
     price_bins = [-np.inf, -0.30, -0.15, 0.0, 0.15, np.inf]
     price_labels = [
-        "price drop >30%",
-        "price drop 15-30%",
-        "price drop 0-15%",
-        "price rise 0-15%",
-        "price rise >15%",
+        "spadek ceny >30%",
+        "spadek ceny 15-30%",
+        "spadek ceny 0-15%",
+        "wzrost ceny 0-15%",
+        "wzrost ceny >15%",
     ]
 
     for timeframe, timeframe_data in progress_data.groupby("timeframe"):
@@ -948,7 +963,7 @@ def _plot_hold_decision_heatmap(
             aspect="auto",
         )
         colorbar = fig.colorbar(image, ax=ax)
-        colorbar.set_label("Median remaining annualized return")
+        colorbar.set_label("Mediana pozostałej zannualizowanej stopy zwrotu")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         for row_index in range(len(score_labels)):
@@ -964,8 +979,8 @@ def _plot_hold_decision_heatmap(
                     column_index,
                     row_index,
                     (
-                        f"median {value:.0%}\n"
-                        f"P(>0) {probability:.0%}\n"
+                        f"mediana {value:.0%}\n"
+                        f"udział >0 {probability:.0%}\n"
                         f"n={int(count)}"
                     ),
                     ha="center",
@@ -979,14 +994,14 @@ def _plot_hold_decision_heatmap(
         ax.set_yticks(range(len(score_labels)))
         ax.set_yticklabels(score_labels)
         ax.set_xlabel(
-            f"Price change from entry to {progress_label} cutoff"
+            f"Zmiana ceny od wejścia do punktu decyzji {progress_label}"
         )
         ax.set_ylabel(
-            f"Relative score percentile change by {progress_label} cutoff"
+            f"Względna zmiana percentyla wyniku do punktu decyzji {progress_label}"
         )
         ax.set_title(
-            f"{timeframe}: remaining return by score and price deterioration, "
-            f"horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: pozostała stopa zwrotu według "
+            f"pogorszenia wyniku i zmiany ceny, horyzonty {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -1038,7 +1053,7 @@ def _plot_score_drop_scatter(
             edgecolors="none",
         )
         colorbar = fig.colorbar(points, ax=ax)
-        colorbar.set_label("Entry score percentile")
+        colorbar.set_label("Percentyl wyniku przy wejściu")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         bins, labels = _entry_percentile_bins_and_labels(clean)
@@ -1069,7 +1084,7 @@ def _plot_score_drop_scatter(
                 slope * trend_x + intercept,
                 color=color,
                 linewidth=2.2,
-                label=f"Entry {label}",
+                label=f"Wejście {label}",
             )
 
         regression_text = ""
@@ -1087,20 +1102,21 @@ def _plot_score_drop_scatter(
                 )
                 if pd.notna(coefficient) and pd.notna(negative_share):
                     regression_text = (
-                        f"\nmean drop coefficient {coefficient:.2f}; "
-                        f"negative in {negative_share:.0%} of horizons"
+                        f"\nśredni współczynnik spadku {coefficient:.2f}; "
+                        f"ujemny w {negative_share:.0%} horyzontów"
                     )
 
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe}: return versus post-entry score percentile drop"
+            f"{timeframe_label(timeframe)}: stopa zwrotu względem spadku "
+            "percentyla wyniku po wejściu"
             f"{regression_text}"
         )
         ax.set_xlabel(
-            "Score percentile drop: entry percentile − horizon mean"
+            "Spadek percentyla wyniku: percentyl wejścia - średnia w horyzoncie"
         )
-        ax.set_ylabel("Annualized return")
+        ax.set_ylabel("Roczna stopa zwrotu")
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
@@ -1122,7 +1138,7 @@ def _plot_relative_score_change_heatmap(
     output_dir,
     horizon_label,
     return_metric="annualized_return",
-    return_label="annualized return",
+    return_label="roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(
@@ -1145,18 +1161,18 @@ def _plot_relative_score_change_heatmap(
         np.inf,
     ]
     change_labels = [
-        "decline >70%",
-        "decline 60-70%",
-        "decline 50-60%",
-        "decline 40-50%",
-        "decline 30-40%",
-        "decline 20-30%",
-        "decline 10-20%",
-        "decline 0-10%",
-        "improvement 0-10%",
-        "improvement 10-20%",
-        "improvement 20-30%",
-        "improvement >30%",
+        "spadek >70%",
+        "spadek 60-70%",
+        "spadek 50-60%",
+        "spadek 40-50%",
+        "spadek 30-40%",
+        "spadek 20-30%",
+        "spadek 10-20%",
+        "spadek 0-10%",
+        "poprawa 0-10%",
+        "poprawa 10-20%",
+        "poprawa 20-30%",
+        "poprawa >30%",
     ]
 
     for timeframe, timeframe_data in observations.groupby("timeframe"):
@@ -1220,7 +1236,7 @@ def _plot_relative_score_change_heatmap(
             aspect="auto",
         )
         colorbar = fig.colorbar(image, ax=ax)
-        colorbar.set_label(f"Mean {return_label}")
+        colorbar.set_label(f"Średnia: {return_label}")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         for row_index in range(len(change_labels)):
@@ -1243,14 +1259,15 @@ def _plot_relative_score_change_heatmap(
         ax.set_xticklabels(entry_labels)
         ax.set_yticks(range(len(change_labels)))
         ax.set_yticklabels(change_labels)
-        ax.set_xlabel("Entry score percentile")
+        ax.set_xlabel("Percentyl wyniku przy wejściu")
         ax.set_ylabel(
-            "Relative score percentile change: (horizon mean - entry) / entry"
+            "Względna zmiana percentyla wyniku: "
+            "(średnia w horyzoncie - wejście) / wejście"
         )
         ax.set_title(
-            f"{timeframe}: mean {return_label} by entry percentile and relative "
-            f"score change, "
-            f"horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: średnia wartość metryki "
+            f"'{return_label}' według percentyla wejścia i względnej zmiany "
+            f"wyniku, horyzonty {horizon_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -1271,7 +1288,7 @@ def _plot_live_progress_correlations(
     data,
     output_dir,
     horizon_label,
-    return_label="final annualized return",
+    return_label="końcowa roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(
@@ -1305,11 +1322,11 @@ def _plot_live_progress_correlations(
             label="Spearman",
         )
         ax.set_title(
-            f"{timeframe}: mean score percentile correlation by elapsed horizon, "
-            f"horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: korelacja średniego percentyla "
+            f"wyniku z upływem horyzontu, horyzonty {horizon_label}"
         )
-        ax.set_xlabel("Observed share of investment horizon")
-        ax.set_ylabel(f"Mean correlation to {return_label}")
+        ax.set_xlabel("Zaobserwowana część horyzontu inwestycji")
+        ax.set_ylabel(f"Średnia korelacja z metryką: {return_label}")
         _set_progress_x_ticks(ax, clean)
         ax.set_ylim(0, 1)
         ax.grid(True, alpha=0.25)
@@ -1333,7 +1350,7 @@ def _plot_score_change_progress_correlations(
     data,
     output_dir,
     horizon_label,
-    return_label="final annualized return",
+    return_label="końcowa roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(
@@ -1369,11 +1386,12 @@ def _plot_score_change_progress_correlations(
         )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe}: {METRIC_LABELS[metric]} correlation by elapsed "
-            f"horizon, horizons {horizon_label}"
+            f"{timeframe_label(timeframe)}: korelacja metryki "
+            f"'{METRIC_LABELS[metric]}' z upływem horyzontu, "
+            f"horyzonty {horizon_label}"
         )
-        ax.set_xlabel("Observed share of investment horizon")
-        ax.set_ylabel(f"Mean correlation to {return_label}")
+        ax.set_xlabel("Zaobserwowana część horyzontu inwestycji")
+        ax.set_ylabel(f"Średnia korelacja z metryką: {return_label}")
         _set_progress_x_ticks(ax, clean)
         ax.set_ylim(-1, 1)
         ax.grid(True, alpha=0.25)
@@ -1399,7 +1417,7 @@ def _plot_best_correlation_overview(
     output_dir,
     horizon_label,
     return_metric="annualized_return",
-    return_label="Annualized return",
+    return_label="Roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(
@@ -1430,7 +1448,7 @@ def _plot_best_correlation_overview(
             alpha=0.12,
             s=14,
             edgecolors="none",
-            label="Observations",
+            label="Obserwacje",
         )
 
         if clean[metric].nunique() >= 2:
@@ -1445,7 +1463,7 @@ def _plot_best_correlation_overview(
                 slope * trend_x + intercept,
                 color="#E15759",
                 linewidth=2,
-                label="Linear trend",
+                label="Trend liniowy",
             )
 
         stats = correlation_lookup.get(metric, {})
@@ -1454,13 +1472,14 @@ def _plot_best_correlation_overview(
         correlation_text = ""
         if pearson is not None and spearman is not None:
             correlation_text = (
-                f"\nmean horizon correlation: "
+                f"\nśrednia korelacja horyzontów: "
                 f"Pearson {pearson:.2f}, Spearman {spearman:.2f}"
             )
 
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{METRIC_LABELS[metric]} vs {return_label}{correlation_text}",
+            f"{timeframe_label(timeframe)}: {METRIC_LABELS[metric]} "
+            f"względem metryki '{return_label}'{correlation_text}",
             fontsize=12,
         )
         ax.set_xlabel(METRIC_LABELS[metric])

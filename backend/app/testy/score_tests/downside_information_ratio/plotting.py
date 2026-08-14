@@ -3,7 +3,7 @@ import matplotlib.ticker as mtick
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
 import numpy as np
 
-from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.plotting import plot_path, timeframe_label
 from app.testy.score_tests.common.output_paths import (
     DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
     DOWNSIDE_INFORMATION_RATIO_DIR,
@@ -58,7 +58,12 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
         if clean.empty:
             continue
 
-        bucket_label = clean["benchmark_return_bucket"].iloc[0]
+        bucket_row = clean.iloc[0]
+        bucket_label = (
+            f"B{int(bucket_id):02d}: "
+            f"{bucket_row.benchmark_bucket_min:.2%} do "
+            f"{bucket_row.benchmark_bucket_max:.2%}"
+        )
         bucket_directory = plot_directory / f"bucket_{int(bucket_id):02d}"
         _plot_bucket_returns(
             clean,
@@ -90,6 +95,7 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
 
 
 def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -97,7 +103,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         marker="o",
         linewidth=2,
         color="#4C78A8",
-        label="Top M strategy",
+        label="Strategia najlepszych M spółek",
     )
     ax.plot(
         data["top_percent"],
@@ -105,15 +111,16 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         marker="o",
         linewidth=2,
         color="#9C755F",
-        label="Top 100% benchmark",
+        label="Benchmark wszystkich spółek",
     )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
-        f"{timeframe}: mean annualized return by Top M, "
-        f"equal-weight horizons {horizon_label}"
+        f"{title_timeframe}: Średnia roczna stopa zwrotu "
+        f"strategii najlepszych M spółek i benchmarku, "
+        f"równo ważone horyzonty {horizon_label}"
     )
-    ax.set_xlabel("Top M share (%)")
-    ax.set_ylabel("Mean annualized return")
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
+    ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend()
@@ -126,6 +133,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
 
 
 def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -135,11 +143,11 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
         color="#E15759",
     )
     ax.set_title(
-        f"{timeframe}: mean downside deviation by Top M, "
-        f"equal-weight horizons {horizon_label}"
+        f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
+        f"dla najlepszych M, równo ważone horyzonty {horizon_label}"
     )
-    ax.set_xlabel("Top M share (%)")
-    ax.set_ylabel("Mean downside deviation")
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
+    ax.set_ylabel("Średnie downside deviation")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
@@ -151,6 +159,7 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
 
 
 def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -158,7 +167,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
         marker="o",
         linewidth=2,
         color="#4C78A8",
-        label="Downside information ratio",
+        label="Wskaźnik DIR",
     )
     plateau = data[data["is_stability_plateau"]]
     if not plateau.empty:
@@ -169,7 +178,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
             facecolors="none",
             edgecolors="#F28E2B",
             linewidths=2,
-            label="Stability plateau",
+            label="Stabilny zakres",
         )
     recommendation = data[data["is_stable_recommendation"]]
     if not recommendation.empty:
@@ -180,15 +189,15 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
             marker="*",
             s=220,
             color="#59A14F",
-            label=f"Stable recommendation: {point['top_percent']:.2f}%",
+            label=f"Stabilna rekomendacja: {point['top_percent']:.2f}%",
         )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
-        f"{timeframe}: downside information ratio by Top M, "
-        f"equal-weight horizons {horizon_label}"
+        f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
+        f"według najlepszych M, równo ważone horyzonty {horizon_label}"
     )
-    ax.set_xlabel("Top M share (%)")
-    ax.set_ylabel("Downside information ratio")
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
+    ax.set_ylabel("Wskaźnik DIR")
     ax.grid(True, alpha=0.25)
     ax.legend()
     fig.tight_layout()
@@ -204,6 +213,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
 
 
 def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -211,7 +221,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         marker="o",
         linewidth=2,
         color="#4C78A8",
-        label="Top M strategy",
+        label="Strategia najlepszych M spółek",
     )
     ax.plot(
         data["top_percent"],
@@ -219,7 +229,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         marker="o",
         linewidth=2,
         color="#9C755F",
-        label="Top 100% benchmark",
+        label="Benchmark wszystkich spółek",
     )
     ax.plot(
         data["top_percent"],
@@ -227,12 +237,15 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         marker="o",
         linewidth=2,
         color="#59A14F",
-        label="Annualized alpha",
+        label="Zannualizowany nadwyżkowy zwrot względem benchmarku",
     )
     ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(f"{timeframe}: mean annualized return, {bucket_label}")
-    ax.set_xlabel("Top M share (%)")
-    ax.set_ylabel("Mean annualized return")
+    ax.set_title(
+        f"{title_timeframe}: Średnia roczna stopa zwrotu "
+        f"w koszyku benchmarku {bucket_label}"
+    )
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
+    ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend()
@@ -245,6 +258,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
 
 
 def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -253,8 +267,11 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
         linewidth=2,
         color="#E15759",
     )
-    ax.set_title(f"{timeframe}: downside deviation, {bucket_label}")
-    ax.set_xlabel("Top M share (%)")
+    ax.set_title(
+        f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
+        f"w koszyku benchmarku {bucket_label}"
+    )
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
     ax.set_ylabel("Downside deviation")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
@@ -267,6 +284,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
 
 
 def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
+    title_timeframe = timeframe_label(timeframe)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -276,9 +294,12 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
         color="#4C78A8",
     )
     ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(f"{timeframe}: downside information ratio, {bucket_label}")
-    ax.set_xlabel("Top M share (%)")
-    ax.set_ylabel("Downside information ratio")
+    ax.set_title(
+        f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
+        f"w koszyku benchmarku {bucket_label}"
+    )
+    ax.set_xlabel("Udział najlepszych M (%) spółek")
+    ax.set_ylabel("Wskaźnik DIR")
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
     fig.savefig(
@@ -289,11 +310,15 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
 
 
 def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
+    title_timeframe = timeframe_label(timeframe)
     metrics = [
         (
             "mean_annualized_alpha",
-            "Annualized alpha",
-            f"{timeframe}: annualized alpha by market return bucket and Top N",
+            "Zannualizowany nadwyżkowy zwrot względem benchmarku",
+            (
+                f"{title_timeframe}: zannualizowany nadwyżkowy zwrot "
+                "według koszyka zwrotu benchmarku i najlepszych N spółek"
+            ),
             f"{timeframe}_heatmap_annualized_alpha.png",
             ALPHA_HEATMAP_CMAP,
             True,
@@ -307,7 +332,10 @@ def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
         (
             "downside_deviation",
             "Downside deviation",
-            f"{timeframe}: downside deviation by market return bucket and Top N",
+            (
+                f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
+                "według koszyka zwrotu benchmarku i najlepszych N spółek"
+            ),
             f"{timeframe}_heatmap_downside_deviation.png",
             "YlOrRd",
             True,
@@ -316,8 +344,11 @@ def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
         ),
         (
             "downside_information_ratio",
-            "Downside information ratio",
-            f"{timeframe}: DIR by market return bucket and Top N",
+            "Wskaźnik DIR",
+            (
+                f"{title_timeframe}: wskaźnik DIR według koszyka zwrotu "
+                "benchmarku i najlepszych N spółek"
+            ),
             f"{timeframe}_heatmap_downside_information_ratio.png",
             "YlGn",
             False,
@@ -378,8 +409,8 @@ def _plot_metric_heatmap(
     y_labels = [
         (
             f"B{int(bucket_id):02d} "
-            f"{row.benchmark_bucket_min:.1%} to {row.benchmark_bucket_max:.1%} "
-            f"(avg {row.benchmark_bucket_mean:.1%})"
+            f"{row.benchmark_bucket_min:.1%} do {row.benchmark_bucket_max:.1%} "
+            f"(średnia {row.benchmark_bucket_mean:.1%})"
         )
         for bucket_id, row in bucket_info.iterrows()
     ]
@@ -418,8 +449,8 @@ def _plot_metric_heatmap(
     ax.set_yticks(np.arange(len(bucket_order)))
     ax.set_yticklabels(y_labels)
     ax.set_title(title)
-    ax.set_xlabel("Top N equivalent")
-    ax.set_ylabel("Annualized benchmark return bucket")
+    ax.set_xlabel("Ekwiwalent liczby najlepszych spółek N")
+    ax.set_ylabel("Koszyk zannualizowanej stopy zwrotu benchmarku")
     ax.set_xticks(np.arange(-0.5, len(top_order), 1), minor=True)
     ax.set_yticks(np.arange(-0.5, len(bucket_order), 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=0.6)

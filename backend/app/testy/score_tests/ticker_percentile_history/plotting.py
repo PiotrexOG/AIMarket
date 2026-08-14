@@ -6,7 +6,7 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.plotting import plot_path, timeframe_label
 from app.testy.score_tests.common.io import save_csv_for_excel
 from app.testy.score_tests.common.annualization import annualize_return
 from app.testy.score_tests.common.output_paths import (
@@ -43,8 +43,8 @@ HAC_DIAGNOSTIC_METRICS = [
     },
     {
         "metric": "score_percentile_pearson_ic",
-        "label": "Score percentile Pearson IC",
-        "short_label": "Score pct Pearson",
+        "label": "Pearson IC percentyla wyniku",
+        "short_label": "Pearson percentyla wyniku",
         "color": "#F28E2B",
         "filename_stem": "score_percentile_pearson",
     },
@@ -101,7 +101,7 @@ def _save_combined_plot(
         metric_group["current_score_percentile"],
         color=percentile_color,
         linewidth=2.2,
-        label="Raw score percentile",
+        label="Surowy percentyl wyniku modelu",
     )[0]
     moving_average_line = None
     if MOVING_AVERAGE_COLUMN in metric_group.columns:
@@ -114,8 +114,8 @@ def _save_combined_plot(
                 linewidth=2.4,
                 linestyle="--",
                 label=(
-                    f"{moving_average_window}-point moving average "
-                    "score percentile"
+                    f"{moving_average_window}-punktowa średnia krocząca "
+                    "percentyla wyniku"
                 ),
             )[0]
     price_line = price_ax.plot(
@@ -124,20 +124,21 @@ def _save_combined_plot(
         color=price_color,
         linewidth=2,
         alpha=0.85,
-        label="Close price",
+        label="Cena zamknięcia",
     )[0]
 
     percentile_ax.set_title(
-        f"{ticker}: raw score percentile, moving average and closing price ({timeframe})"
+        f"{ticker}: percentyl wyniku modelu, średnia krocząca i cena "
+        f"zamknięcia ({timeframe_label(timeframe)})"
     )
-    percentile_ax.set_xlabel("Date")
-    percentile_ax.set_ylabel("Score percentile", color=percentile_color)
+    percentile_ax.set_xlabel("Data")
+    percentile_ax.set_ylabel("Percentyl wyniku modelu", color=percentile_color)
     percentile_ax.set_ylim(0, 1)
     percentile_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     percentile_ax.tick_params(axis="y", colors=percentile_color)
     percentile_ax.grid(True, alpha=0.25)
 
-    price_ax.set_ylabel("Close price", color=price_color)
+    price_ax.set_ylabel("Cena zamknięcia", color=price_color)
     price_ax.tick_params(axis="y", colors=price_color)
     legend_handles = [percentile_line, price_line]
     if moving_average_line is not None:
@@ -235,10 +236,11 @@ def _save_all_tickers_moving_average_heatmap(
     y_positions = np.arange(len(heatmap_data.index))
     heatmap_ax.set_yticks(y_positions)
     heatmap_ax.set_yticklabels(heatmap_data.index)
-    heatmap_ax.set_ylabel("Ticker, sorted by full-period return")
-    heatmap_ax.set_xlabel("Score date")
+    heatmap_ax.set_ylabel("Ticker, sortowanie według zwrotu z całego okresu")
+    heatmap_ax.set_xlabel("Data scoringu")
     heatmap_ax.set_title(
-        f"{moving_average_window}-point moving average score percentile ({timeframe})"
+        f"{moving_average_window}-punktowa średnia krocząca percentyla wyniku "
+        f"({timeframe_label(timeframe)})"
     )
 
     date_count = len(heatmap_data.columns)
@@ -263,15 +265,15 @@ def _save_all_tickers_moving_average_heatmap(
     return_colors = np.where(ordered_returns >= 0, "#59A14F", "#E15759")
     return_ax.barh(y_positions, ordered_returns, color=return_colors, alpha=0.9)
     return_ax.axvline(0, color="#444444", linewidth=1)
-    return_ax.set_title("Full return")
-    return_ax.set_xlabel("Return")
+    return_ax.set_title("Zwrot w całym okresie")
+    return_ax.set_xlabel("Stopa zwrotu")
     return_ax.set_ylim(len(heatmap_data.index) - 0.5, -0.5)
     return_ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     return_ax.tick_params(axis="y", left=False, labelleft=False)
     return_ax.grid(True, axis="x", alpha=0.25)
 
     colorbar = fig.colorbar(image, cax=colorbar_ax)
-    colorbar.set_label("Score percentile MA")
+    colorbar.set_label("Średnia krocząca percentyla wyniku")
     colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
     fig.tight_layout()
@@ -475,7 +477,7 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
     metrics = [
         ("pearson", "Pearson IC"),
         ("spearman", "Spearman IC"),
-        ("score_percentile_pearson_ic", "Score percentile Pearson IC"),
+        ("score_percentile_pearson_ic", "Pearson IC percentyla wyniku"),
     ]
     summary_rows = []
     autocorrelation_frames = []
@@ -694,7 +696,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
             marker="o",
             markersize=4,
             capsize=3,
-            label=f"{config['label']} by horizon",
+            label=f"{config['label']} według horyzontu",
         )
 
         official = _metric_official_summary(summary, config["metric"])
@@ -719,8 +721,8 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
                 alpha=0.08,
             )
             official_annotations.append(
-                f"{config['short_label']}: official mean "
-                f"{official['mean_ic']:.3f}, 95% CI "
+                f"{config['short_label']}: średnia oficjalna "
+                f"{official['mean_ic']:.3f}, 95% przedział "
                 f"[{official['ci_lower_95']:.3f}, "
                 f"{official['ci_upper_95']:.3f}]"
             )
@@ -730,10 +732,11 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.set_xticks(x_values)
     ax.set_xticklabels([str(int(value)) for value in x_values])
     ax.set_title(
-        f"Score vs forward return IC and HAC intervals by horizon ({timeframe})"
+        f"IC wyniku modelu względem przyszłej stopy zwrotu oraz "
+        f"przedziały HAC według horyzontu ({timeframe_label(timeframe)})"
     )
-    ax.set_xlabel("Forward return horizon (weeks)")
-    ax.set_ylabel("Mean IC")
+    ax.set_xlabel("Horyzont przyszłej stopy zwrotu (tygodnie)")
+    ax.set_ylabel("Średni IC")
     ax.grid(True, alpha=0.25)
     ax.legend(loc="upper left")
     if official_annotations:
@@ -873,7 +876,11 @@ def _save_score_return_autocorrelation_plot(
         fontsize=9,
     )
     # 2. Standardowy opis osi X
-    ax.set_xlabel("Forward return horizon (weeks)", fontsize=10, labelpad=8)
+    ax.set_xlabel(
+        "Horyzont przyszłej stopy zwrotu (tygodnie)",
+        fontsize=10,
+        labelpad=8,
+    )
 
     # Pozycjonowanie osi Y
     y_tick_step = max(1, int(np.ceil(len(heatmap.index) / 14)))
@@ -892,12 +899,13 @@ def _save_score_return_autocorrelation_plot(
 
     # Colorbar
     colorbar = fig.colorbar(image, ax=ax, pad=0.02)
-    colorbar.set_label("Autocorrelation", fontsize=10)
+    colorbar.set_label("Autokorelacja", fontsize=10)
 
     # Opisy osi Y i tytuł
-    ax.set_ylabel("Lag", fontsize=10)
+    ax.set_ylabel("Opóźnienie", fontsize=10)
     ax.set_title(
-        f"{config['label']} autocorrelation by horizon and lag ({timeframe})"
+        f"Autokorelacja {config['label']} według horyzontu i opóźnienia "
+        f"({timeframe_label(timeframe)})"
     )
 
     # 3. Tabela umieszczona pod podpisem osi X – BEZ nagłówków kolumn (colLabels=None)
@@ -907,8 +915,8 @@ def _save_score_return_autocorrelation_plot(
             hac_values,
         ],
         rowLabels=[
-            "CI 95% (±)",
-            "HAC CI 95% (±)",
+            "Przedział 95% (+/-)",
+            "HAC 95% (+/-)",
         ],
         colLabels=None,  # Brak górnego wiersza z horyzontami
         cellLoc="center",
@@ -1291,7 +1299,7 @@ def _save_ticker_correlation_bar_chart(
         color="#4C78A8",
         linewidth=1.5,
         linestyle="--",
-        label=f"Mean {mean_correlation:.3f}",
+        label=f"Średnia {mean_correlation:.3f}",
     )
     ax.set_xlim(-1, 1)
     ax.set_yticks(y_positions)
@@ -1342,10 +1350,14 @@ def _save_anti_momentum_correlation_charts(
                 "score_to_future_annualized_return_correlation_by_ticker.png"
             ),
             "title": (
-                f"Score vs future annualized return by ticker "
-                f"({timeframe}, {horizon_label})"
+                f"Korelacja wyniku modelu z przyszłą zannualizowaną "
+                f"stopą zwrotu według tickerów "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "x_label": "Pearson correlation: score vs future annualized return",
+            "x_label": (
+                "Korelacja Pearsona: wynik modelu względem przyszłej "
+                "zannualizowanej stopy zwrotu"
+            ),
         },
     ]
     for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
@@ -1355,7 +1367,7 @@ def _save_anti_momentum_correlation_charts(
             else f"{start_week}-{end_week}w"
         )
         if skip_weeks:
-            window_label = f"{window_label}, skip {skip_weeks}w"
+            window_label = f"{window_label}, pomiń {skip_weeks} tyg."
         column = f"trailing_{label}_annualized_return"
         configs.append(
             {
@@ -1364,12 +1376,13 @@ def _save_anti_momentum_correlation_charts(
                     f"score_to_trailing_{label}_return_correlation_by_ticker.png"
                 ),
                 "title": (
-                    f"Score vs Jegadeesh-Titman momentum by ticker "
-                    f"({timeframe}, {window_label})"
+                    f"Korelacja wyniku modelu z momentum Jegadeesha-Titmana "
+                    f"według tickerów ({timeframe_label(timeframe)}, "
+                    f"{window_label})"
                 ),
                 "x_label": (
-                    "Pearson correlation: score vs trailing "
-                    f"{window_label} annualized return"
+                    "Korelacja Pearsona: wynik modelu względem historycznej "
+                    f"zannualizowanej stopy zwrotu ({window_label})"
                 ),
             },
         )
@@ -1567,28 +1580,28 @@ def _plot_model_vs_momentum_panel(
             "model_pearson_ic",
             "momentum_pearson_ic",
             "Pearson IC",
-            "Correlation",
+            "Korelacja",
             None,
         ),
         (
             "model_spearman_ic",
             "momentum_spearman_ic",
             "Spearman IC",
-            "Correlation",
+            "Korelacja",
             None,
         ),
         (
             "model_long_short_normalized_excess",
             "momentum_long_short_normalized_excess",
-            "Long-short normalized excess",
-            "Excess return",
+            "Znormalizowany nadwyżkowy zwrot long-short",
+            "Nadwyżkowy zwrot",
             "percent",
         ),
         (
             "model_long_only_normalized_excess",
             "momentum_long_only_normalized_excess",
-            "Long-only normalized excess",
-            "Excess return",
+            "Znormalizowany nadwyżkowy zwrot long-only",
+            "Nadwyżkowy zwrot",
             "percent",
         ),
     ]
@@ -1612,9 +1625,9 @@ def _plot_model_vs_momentum_panel(
             linewidth=2,
             marker="o",
             markersize=3,
-            label=f"Model, mean {model_mean:.3f}"
+            label=f"Model, średnia {model_mean:.3f}"
             if fmt is None
-            else f"Model, mean {model_mean:.1%}",
+            else f"Model, średnia {model_mean:.1%}",
         )
         ax.plot(
             panel_data["timestamp"],
@@ -1623,9 +1636,9 @@ def _plot_model_vs_momentum_panel(
             linewidth=2,
             marker="o",
             markersize=3,
-            label=f"Momentum, mean {momentum_mean:.3f}"
+            label=f"Momentum, średnia {momentum_mean:.3f}"
             if fmt is None
-            else f"Momentum, mean {momentum_mean:.1%}",
+            else f"Momentum, średnia {momentum_mean:.1%}",
         )
         ax.axhline(0, color="#444444", linewidth=1)
         if pd.notna(model_mean):
@@ -1686,7 +1699,7 @@ def _save_model_vs_momentum_comparison_charts(
             else f"{start_week}-{end_week}w"
         )
         if skip_weeks:
-            window_label = f"{window_label}, skip {skip_weeks}w"
+            window_label = f"{window_label}, pomiń {skip_weeks} tyg."
         column = f"trailing_{label}_annualized_return"
         comparison = _build_model_vs_momentum_comparison(
             points,
@@ -1711,8 +1724,8 @@ def _save_model_vs_momentum_comparison_charts(
             comparison_directory,
             f"model_vs_momentum_{safe_label}_comparison.png",
             (
-                f"Model vs momentum by score date "
-                f"({timeframe}, momentum {window_label})"
+                f"Model względem momentum według daty scoringu "
+                f"({timeframe_label(timeframe)}, momentum {window_label})"
             ),
         )
 
@@ -1840,8 +1853,10 @@ def _save_ticker_date_heatmap(
     y_positions = np.arange(len(heatmap_data.index))
     ax.set_yticks(y_positions)
     ax.set_yticklabels(heatmap_data.index)
-    ax.set_ylabel("Ticker, sorted by mean forward annualized return")
-    ax.set_xlabel("Score date")
+    ax.set_ylabel(
+        "Ticker, sortowanie według średniej przyszłej zannualizowanej stopy zwrotu"
+    )
+    ax.set_xlabel("Data scoringu")
     ax.set_title(title)
 
     date_count = len(heatmap_data.columns)
@@ -1892,7 +1907,7 @@ def _save_ticker_date_heatmap(
     if column_metric is not None and not column_metric.empty:
         ax.set_xlabel("")
         column_metric = column_metric.reindex(heatmap_data.columns)
-        metric_label = column_metric_label or "Metric"
+        metric_label = column_metric_label or "Metryka"
         metric_values = pd.DataFrame({
             "timestamp": heatmap_data.columns,
             metric_label: column_metric.to_numpy(),
@@ -1992,7 +2007,7 @@ def _save_normalized_excess_comparison_plot(
         marker="s",
         markersize=3,
         alpha=0.85,
-        label="Benchmark return z-score",
+        label="Z-score zwrotu benchmarku",
     )
     benchmark_ax.fill_between(
         comparison["timestamp"],
@@ -2008,7 +2023,7 @@ def _save_normalized_excess_comparison_plot(
         linewidth=2.3,
         marker="o",
         markersize=3.5,
-        label="Long-short normalized excess",
+        label="Znormalizowany nadwyżkowy zwrot long-short",
     )
     ax.plot(
         comparison["timestamp"],
@@ -2017,7 +2032,7 @@ def _save_normalized_excess_comparison_plot(
         linewidth=2.3,
         marker="o",
         markersize=3.5,
-        label="Long-only normalized excess",
+        label="Znormalizowany nadwyżkowy zwrot long-only",
     )
 
     long_short_mean = comparison["long_short_normalized_excess"].mean()
@@ -2030,7 +2045,7 @@ def _save_normalized_excess_comparison_plot(
             linewidth=1.5,
             linestyle="--",
             alpha=0.8,
-            label=f"Long-short mean {long_short_mean:.1%}",
+            label=f"Średnia long-short {long_short_mean:.1%}",
         )
     if pd.notna(long_only_mean):
         ax.axhline(
@@ -2039,16 +2054,17 @@ def _save_normalized_excess_comparison_plot(
             linewidth=1.5,
             linestyle="--",
             alpha=0.8,
-            label=f"Long-only mean {long_only_mean:.1%}",
+            label=f"Średnia long-only {long_only_mean:.1%}",
         )
     benchmark_ax.axhline(0, color="#777777", linewidth=0.9, linestyle=":", alpha=0.7)
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.set_title(
-        f"Normalized excess attribution by score date ({timeframe})"
+        f"Atrybucja znormalizowanego nadwyżkowego zwrotu według daty scoringu "
+        f"({timeframe_label(timeframe)})"
     )
-    ax.set_xlabel("Score date")
-    ax.set_ylabel("Normalized excess return")
-    benchmark_ax.set_ylabel("Benchmark return z-score")
+    ax.set_xlabel("Data scoringu")
+    ax.set_ylabel("Znormalizowany nadwyżkowy zwrot")
+    benchmark_ax.set_ylabel("Z-score zwrotu benchmarku")
     benchmark_limit = comparison["benchmark_zscore"].abs().max()
     if pd.notna(benchmark_limit) and benchmark_limit > 0:
         benchmark_ax.set_ylim(
@@ -2168,7 +2184,7 @@ def _save_forward_return_heatmap(
     horizon_label = (
         f"{int(horizon_start.min())}-{int(horizon_end.max())}w"
         if not horizon_start.empty and not horizon_end.empty
-        else "configured horizon"
+        else "skonfigurowany horyzont"
     )
     forward_return_reference_directory = (
         directory / TICKER_FORWARD_RETURN_REFERENCE_SECTION
@@ -2185,56 +2201,63 @@ def _save_forward_return_heatmap(
             "directory": pearson_directory,
             "column": "score_zscore",
             "filename": "pearson_01_score_zscore_heatmap.png",
-            "title": f"Pearson view: score z-score ({timeframe})",
-            "colorbar": "Score z-score",
+            "title": (
+                f"Widok Pearsona: z-score wyniku modelu "
+                f"({timeframe_label(timeframe)})"
+            ),
+            "colorbar": "Z-score wyniku modelu",
             "cmap": "RdYlGn",
             "robust": True,
             "symmetric": True,
             "row_metric": data.groupby("ticker")["score_zscore"].mean(),
-            "row_metric_label": "ScoreZ",
+            "row_metric_label": "ŚrScoreZ",
         },
         {
             "directory": pearson_directory,
             "column": "forward_return_zscore",
             "filename": "pearson_02_forward_return_zscore_heatmap.png",
             "title": (
-                f"Pearson view: forward return z-score "
-                f"({timeframe}, {horizon_label})"
+                f"Widok Pearsona: z-score przyszłej stopy zwrotu "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Forward return z-score",
+            "colorbar": "Z-score przyszłej stopy zwrotu",
             "cmap": "RdYlGn",
             "robust": True,
             "symmetric": True,
             "row_metric": data.groupby("ticker")["forward_return_zscore"].mean(),
-            "row_metric_label": "RetZ",
+            "row_metric_label": "ŚrZwrotZ",
         },
         {
             "directory": pearson_directory,
             "column": "zscore_error",
             "filename": "pearson_03_score_minus_return_zscore_heatmap.png",
             "title": (
-                f"Pearson view: score z-score minus return z-score "
-                f"({timeframe}, {horizon_label})"
+                f"Widok Pearsona: różnica między z-score wyniku modelu "
+                f"a z-score stopy zwrotu ({timeframe_label(timeframe)}, "
+                f"{horizon_label})"
             ),
-            "colorbar": "Score z-score - forward return z-score",
+            "colorbar": "Z-score wyniku - z-score przyszłego zwrotu",
             "cmap": "RdYlGn_r",
             "robust": True,
             "symmetric": True,
             "row_metric": data.groupby("ticker")["zscore_error"].mean(),
-            "row_metric_label": "DiffZ",
+            "row_metric_label": "ŚrRóżnZ",
         },
         {
             "directory": spearman_directory,
             "column": "score_percentile",
             "filename": "spearman_01_score_percentile_heatmap.png",
-            "title": f"Spearman view: score percentile ({timeframe})",
-            "colorbar": "Score percentile",
+            "title": (
+                f"Widok Spearmana: percentyl wyniku modelu "
+                f"({timeframe_label(timeframe)})"
+            ),
+            "colorbar": "Percentyl wyniku modelu",
             "cmap": "RdYlGn",
             "vmin": 0,
             "vmax": 1,
             "percent_format": True,
             "row_metric": data.groupby("ticker")["score_percentile"].mean(),
-            "row_metric_label": "ScorePct",
+            "row_metric_label": "ŚrPctWyn",
             "row_metric_format": "percent",
         },
         {
@@ -2242,16 +2265,16 @@ def _save_forward_return_heatmap(
             "column": "forward_return_percentile",
             "filename": "spearman_02_forward_return_percentile_heatmap.png",
             "title": (
-                f"Spearman view: forward return percentile "
-                f"({timeframe}, {horizon_label})"
+                f"Widok Spearmana: percentyl przyszłej stopy zwrotu "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Forward return percentile",
+            "colorbar": "Percentyl przyszłej stopy zwrotu",
             "cmap": "RdYlGn",
             "vmin": 0,
             "vmax": 1,
             "percent_format": True,
             "row_metric": data.groupby("ticker")["forward_return_percentile"].mean(),
-            "row_metric_label": "RetPct",
+            "row_metric_label": "ŚrPctZw",
             "row_metric_format": "percent",
         },
         {
@@ -2259,16 +2282,17 @@ def _save_forward_return_heatmap(
             "column": "percentile_error",
             "filename": "spearman_03_score_minus_return_percentile_heatmap.png",
             "title": (
-                f"Spearman view: score percentile minus return percentile "
-                f"({timeframe}, {horizon_label})"
+                f"Widok Spearmana: różnica między percentylem wyniku "
+                f"a percentylem przyszłej stopy zwrotu "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Score percentile - forward return percentile",
+            "colorbar": "Percentyl wyniku - percentyl przyszłego zwrotu",
             "cmap": "RdYlGn_r",
             "percent_format": True,
             "robust": True,
             "symmetric": True,
             "row_metric": data.groupby("ticker")["percentile_error"].mean(),
-            "row_metric_label": "DiffPct",
+            "row_metric_label": "ŚrRóżnPct",
             "row_metric_format": "signed_percent",
         },
         {
@@ -2276,10 +2300,10 @@ def _save_forward_return_heatmap(
             "column": "excess_forward_annualized_return",
             "filename": "excess_forward_annualized_return_heatmap.png",
             "title": (
-                f"Forward annualized return above timestamp benchmark "
-                f"({timeframe}, {horizon_label})"
+                f"Przyszły zannualizowany nadwyżkowy zwrot ponad benchmark "
+                f"z tej samej daty ({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Excess forward annualized return",
+            "colorbar": "Przyszły zannualizowany nadwyżkowy zwrot",
             "cmap": "RdYlGn",
             "percent_format": True,
             "robust": True,
@@ -2287,7 +2311,7 @@ def _save_forward_return_heatmap(
             "row_metric": data.groupby("ticker")[
                 "excess_forward_annualized_return"
             ].mean(),
-            "row_metric_label": "AvgExRet",
+            "row_metric_label": "ŚrNadZw",
             "row_metric_format": "signed_percent",
         },
         {
@@ -2295,20 +2319,20 @@ def _save_forward_return_heatmap(
             "column": "return_attribution",
             "filename": "return_contribution_attribution_heatmap.png",
             "title": (
-                f"Long-short return attribution: "
-                f"(score percentile - 0.5) x excess forward return "
-                f"({timeframe}, {horizon_label})"
+                f"Atrybucja zwrotu long-short: (percentyl wyniku - 0.5) "
+                f"x przyszły nadwyżkowy zwrot "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Return contribution",
+            "colorbar": "Kontrybucja zwrotu",
             "cmap": "RdYlGn",
             "percent_format": True,
             "robust": True,
             "symmetric": True,
             "row_metric": data.groupby("ticker")["return_attribution"].mean(),
-            "row_metric_label": "AvgContr",
+            "row_metric_label": "ŚrKontr",
             "row_metric_format": "signed_percent",
             "column_metric": long_short_normalized_excess,
-            "column_metric_label": "Long-short normalized excess",
+            "column_metric_label": "Znormalizowany nadwyżkowy zwrot long-short",
             "column_metric_format": "signed_percent",
         },
         {
@@ -2316,11 +2340,11 @@ def _save_forward_return_heatmap(
             "column": "long_only_return_attribution",
             "filename": "long_only_return_contribution_attribution_heatmap.png",
             "title": (
-                f"Long-only return attribution: "
-                f"max(score percentile - 0.5, 0) x excess forward return "
-                f"({timeframe}, {horizon_label})"
+                f"Atrybucja zwrotu long-only: max(percentyl wyniku - 0.5, 0) "
+                f"x przyszły nadwyżkowy zwrot "
+                f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Long-only return contribution",
+            "colorbar": "Kontrybucja zwrotu long-only",
             "cmap": "RdYlGn",
             "percent_format": True,
             "robust": True,
@@ -2328,10 +2352,10 @@ def _save_forward_return_heatmap(
             "row_metric": data.groupby("ticker")[
                 "long_only_return_attribution"
             ].mean(),
-            "row_metric_label": "AvgContr",
+            "row_metric_label": "ŚrKontr",
             "row_metric_format": "signed_percent",
             "column_metric": long_only_normalized_excess,
-            "column_metric_label": "Long-only normalized excess",
+            "column_metric_label": "Znormalizowany nadwyżkowy zwrot long-only",
             "column_metric_format": "signed_percent",
         },
     ]
@@ -2488,7 +2512,7 @@ def _save_score_return_correlation_by_timestamp_plot(
         linewidth=2,
         marker="o",
         markersize=3,
-        label=f"Pearson, mean {pearson_mean:.3f}",
+        label=f"Pearson, średnia {pearson_mean:.3f}",
     )
     ax.plot(
         correlations["timestamp"],
@@ -2497,7 +2521,7 @@ def _save_score_return_correlation_by_timestamp_plot(
         linewidth=2,
         marker="o",
         markersize=3,
-        label=f"Spearman, mean {spearman_mean:.3f}",
+        label=f"Spearman, średnia {spearman_mean:.3f}",
     )
     ax.plot(
         correlations["timestamp"],
@@ -2507,8 +2531,8 @@ def _save_score_return_correlation_by_timestamp_plot(
         marker="o",
         markersize=2.8,
         label=(
-            f"Score percentile Pearson IC, "
-            f"mean {score_percentile_pearson_mean:.3f}"
+            f"Pearson IC percentyla wyniku, "
+            f"średnia {score_percentile_pearson_mean:.3f}"
         ),
     )
     benchmark_ax = ax.twinx()
@@ -2521,7 +2545,7 @@ def _save_score_return_correlation_by_timestamp_plot(
         marker="s",
         markersize=2.8,
         alpha=0.9,
-        label="Benchmark return z-score",
+        label="Z-score zwrotu benchmarku",
     )
     benchmark_ax.axhline(0, color="#777777", linewidth=0.9, linestyle=":", alpha=0.7)
     ax.axhline(0, color="#444444", linewidth=1)
@@ -2548,14 +2572,15 @@ def _save_score_return_correlation_by_timestamp_plot(
     )
     ax.set_ylim(-1, 1)
     ax.set_title(
-        f"Score vs forward return correlation by score date "
-        f"({timeframe}; Pearson mean {pearson_mean:.3f}, "
-        f"Spearman mean {spearman_mean:.3f}, "
-        f"Score pct Pearson IC mean {score_percentile_pearson_mean:.3f})"
+        f"Korelacja wyniku modelu z przyszłą stopą zwrotu według daty scoringu "
+        f"({timeframe_label(timeframe)}; średnia Pearson {pearson_mean:.3f}, "
+        f"średnia Spearman {spearman_mean:.3f}, "
+        f"średnia Pearson IC percentyla wyniku "
+        f"{score_percentile_pearson_mean:.3f})"
     )
-    ax.set_xlabel("Score date")
-    ax.set_ylabel("Cross-sectional correlation")
-    benchmark_ax.set_ylabel("Benchmark return z-score")
+    ax.set_xlabel("Data scoringu")
+    ax.set_ylabel("Korelacja przekrojowa")
+    benchmark_ax.set_ylabel("Z-score zwrotu benchmarku")
     benchmark_limit = correlations["benchmark_zscore"].abs().max()
     if pd.notna(benchmark_limit) and benchmark_limit > 0:
         benchmark_limit = max(1.0, float(benchmark_limit) * 1.1)
@@ -2633,7 +2658,7 @@ def _save_forward_return_cross_section_correlation_plot(
         linewidth=1.4,
         linestyle="--",
         alpha=0.8,
-        label="Pearson mean",
+        label="Średnia Pearsona",
     )
     ax.axhline(
         correlations[spearman_column].mean(),
@@ -2641,14 +2666,15 @@ def _save_forward_return_cross_section_correlation_plot(
         linewidth=1.4,
         linestyle="--",
         alpha=0.8,
-        label="Spearman mean",
+        label="Średnia Spearmana",
     )
     ax.set_ylim(-1, 1)
     ax.set_title(
-        f"Model score percentile vs forward return percentile correlation ({timeframe})"
+        f"Korelacja percentyla wyniku modelu z percentylem przyszłej stopy "
+        f"zwrotu ({timeframe_label(timeframe)})"
     )
-    ax.set_xlabel("Score date")
-    ax.set_ylabel("Cross-sectional correlation")
+    ax.set_xlabel("Data scoringu")
+    ax.set_ylabel("Korelacja przekrojowa")
     ax.grid(True, alpha=0.25)
     ax.legend(loc="best")
 
@@ -2722,7 +2748,7 @@ def _save_raw_score_forward_return_correlation_plot(
         ax.axvline(0, color="#444444", linewidth=1)
         ax.set_xlim(-1, 1)
         ax.set_title(title)
-        ax.set_xlabel("Correlation")
+        ax.set_xlabel("Korelacja")
         ax.grid(True, axis="x", alpha=0.25)
         ax.set_ylim(len(correlations.index) - 0.5, -0.5)
 
@@ -2731,7 +2757,8 @@ def _save_raw_score_forward_return_correlation_plot(
     pearson_ax.set_ylabel("Ticker")
     spearman_ax.tick_params(axis="y", left=False, labelleft=False)
     fig.suptitle(
-        f"Raw score vs mean forward annualized return correlation ({timeframe})"
+        f"Korelacja surowego wyniku modelu ze średnią przyszłą "
+        f"zannualizowaną stopą zwrotu ({timeframe_label(timeframe)})"
     )
     fig.tight_layout()
     _save_figure(

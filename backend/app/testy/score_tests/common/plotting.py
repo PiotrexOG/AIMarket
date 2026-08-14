@@ -17,6 +17,21 @@ TIMEFRAME_HORIZON_LIMITS = {
     "long_term_200d": (100, 300),
 }
 
+TIMEFRAME_LABELS = {
+    "short_term_14d": "Krótki termin (ok. 14 d.)",
+    "medium_term_50d": "Średni termin (ok. 50 d.)",
+    "long_term_200d": "Długi termin (ok. 200 d.)",
+}
+
+SERIES_LABELS = {
+    "All": "Wszystkie obserwacje",
+    "All 18": "Wszystkie 18 spółek",
+    "Pearson IC": "Pearson IC",
+    "Spearman IC": "Spearman IC",
+    "Score Percentile Pearson IC": "Pearson IC percentyla wyniku",
+    "Score percentile Pearson IC": "Pearson IC percentyla wyniku",
+}
+
 
 def plot_path(output_dir, plot_type, filename):
     directory = output_dir / plot_type
@@ -40,17 +55,34 @@ def horizon_x_column(df):
 
 def horizon_x_label(df):
     return (
-        "Return horizon in weeks"
+        "Horyzont przyszłej stopy zwrotu (tygodnie)"
         if horizon_x_column(df) == "horizon_weeks"
-        else "Return horizon in days"
+        else "Horyzont przyszłej stopy zwrotu (dni)"
     )
+
+
+def timeframe_label(timeframe):
+    text = str(timeframe)
+    return TIMEFRAME_LABELS.get(text, text.replace("_", " "))
+
+
+def plot_label(label):
+    text = str(label)
+    if text in SERIES_LABELS:
+        return SERIES_LABELS[text]
+    if text.startswith("Top "):
+        return f"Top {text[4:]}"
+    if text.startswith("Rank "):
+        return f"Poz. {text[5:]}"
+    return text.replace("_", " ")
 
 
 def mean_label(label, values, formatter):
     mean_value = values.dropna().mean()
+    label = plot_label(label)
     if mean_value != mean_value:
         return label
-    return f"{label} ({formatter(mean_value)})"
+    return f"{label} (średnia {formatter(mean_value)})"
 
 
 def set_integer_x_axis(ax):
@@ -90,18 +122,22 @@ def plot_bucket_lines(
                     lambda value: f"{value:.2%}",
                 )
                 if show_mean_in_legend
-                else bucket
+                else plot_label(bucket)
             ),
         )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
     ax.set_xlabel(horizon_x_label(data))
     set_integer_x_axis(ax)
-    ax.set_ylabel("Annualized return")
+    ax.set_ylabel("Roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend(
-        title="Mean over shown horizons" if show_mean_in_legend else "Bucket",
+        title=(
+            "Średnia z pokazanych horyzontów"
+            if show_mean_in_legend
+            else "Koszyk"
+        ),
         ncol=2,
     )
     fig.tight_layout()
@@ -136,10 +172,10 @@ def plot_bucket_average(
     if average.empty:
         return
 
-    labels = average["bucket"].astype(str)
+    labels = [plot_label(bucket) for bucket in average["bucket"].astype(str)]
     if score_range_columns:
         labels = [
-            f"{row.bucket}\navg score {row.avg_score_min:.1f}"
+            f"{plot_label(row.bucket)}\nśr. wyn. {row.avg_score_min:.1f}"
             for row in average.itertuples(index=False)
         ]
 
@@ -148,8 +184,8 @@ def plot_bucket_average(
 
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(title)
-    ax.set_xlabel("Bucket")
-    ax.set_ylabel("Mean annualized return")
+    ax.set_xlabel("Koszyk")
+    ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, axis="y", alpha=0.25)
     ax.tick_params(axis="x", rotation=45)

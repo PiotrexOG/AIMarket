@@ -265,8 +265,8 @@ def _assign_benchmark_return_buckets(observations, bucket_count):
         ].agg(["min", "max", "mean", "count"])
         clean["benchmark_return_bucket"] = clean["benchmark_return_bucket_id"].map(
             lambda bucket_id: (
-                f"Bucket {int(bucket_id):02d}: "
-                f"{bucket_stats.loc[bucket_id, 'min']:.2%} to "
+                f"Koszyk B{int(bucket_id):02d}: "
+                f"{bucket_stats.loc[bucket_id, 'min']:.2%} do "
                 f"{bucket_stats.loc[bucket_id, 'max']:.2%}"
             )
         )

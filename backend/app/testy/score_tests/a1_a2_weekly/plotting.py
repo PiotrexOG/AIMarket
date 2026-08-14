@@ -9,6 +9,7 @@ from app.testy.score_tests.common.plotting import (
     mean_label,
     plot_path,
     set_integer_x_axis,
+    timeframe_label,
 )
 from app.testy.score_tests.common.output_paths import (
     WEEKLY_INFORMATION_COEFFICIENT_DIR,
@@ -58,13 +59,16 @@ def _plot_top_n(analysis, output_dir):
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: weekly annualized return by Top N")
+        ax.set_title(
+            f"{timeframe_label(timeframe)}: tygodniowy dobór najlepszych N spółek "
+            "i roczna stopa zwrotu"
+        )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)
-        ax.set_ylabel("Annualized return")
+        ax.set_ylabel("Roczna stopa zwrotu")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Mean over shown horizons")
+        ax.legend(title="Średnia z pokazanych horyzontów")
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -103,12 +107,15 @@ def _plot_correlations(analysis, output_dir):
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: weekly IC metrics by return horizon")
+        ax.set_title(
+            f"{timeframe_label(timeframe)}: tygodniowe miary IC "
+            "dla przyszłych stóp zwrotu"
+        )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)
-        ax.set_ylabel("Mean weekly IC")
+        ax.set_ylabel("Średni tygodniowy IC")
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Mean over shown horizons")
+        ax.legend(title="Średnia z pokazanych horyzontów")
         fig.tight_layout()
         fig.savefig(
             plot_path(

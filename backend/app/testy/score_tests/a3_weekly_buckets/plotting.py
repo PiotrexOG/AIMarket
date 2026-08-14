@@ -3,6 +3,7 @@ from app.testy.score_tests.common.plotting import (
     limit_horizon_range,
     plot_bucket_average,
     plot_bucket_lines,
+    timeframe_label,
 )
 from app.testy.score_tests.common.output_paths import (
     WEEKLY_RANK_BUCKET_RETURNS_DIR,
@@ -31,7 +32,10 @@ def plot(analysis, output_dir):
             output_dir,
             WEEKLY_RANK_BUCKET_RETURNS_DIR,
             f"{timeframe}_rank_bucket_annualized_return_lines.png",
-            f"{timeframe}: weekly rank bucket annualized return",
+            (
+                f"{timeframe_label(timeframe)}: roczna stopa zwrotu "
+                "według tygodniowych pozycji w rankingu"
+            ),
             bucket_order,
             show_mean_in_legend=True,
         )
@@ -40,7 +44,10 @@ def plot(analysis, output_dir):
             output_dir,
             WEEKLY_RANK_BUCKET_RETURNS_DIR,
             f"{timeframe}_rank_bucket_annualized_return_average.png",
-            f"{timeframe}: weekly rank bucket mean annualized return",
+            (
+                f"{timeframe_label(timeframe)}: Średnia roczna stopa "
+                "zwrotu według tygodniowych pozycji w rankingu"
+            ),
             bucket_order,
             score_range_columns=("avg_score_min", "avg_score_max"),
         )

@@ -9,6 +9,7 @@ from app.testy.score_tests.common.plotting import (
     mean_label,
     plot_path,
     set_integer_x_axis,
+    timeframe_label,
 )
 from app.testy.score_tests.common.output_paths import (
     GLOBAL_INFORMATION_COEFFICIENT_DIR,
@@ -50,13 +51,16 @@ def _plot_top_percent(analysis, output_dir):
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: global annualized return by Top X percent")
+        ax.set_title(
+            f"{timeframe_label(timeframe)}: globalny dobór najlepszych X% "
+            "i roczna stopa zwrotu"
+        )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)
-        ax.set_ylabel("Annualized return")
+        ax.set_ylabel("Roczna stopa zwrotu")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Mean over shown horizons")
+        ax.legend(title="Średnia z pokazanych horyzontów")
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -95,12 +99,15 @@ def _plot_correlations(analysis, output_dir):
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(f"{timeframe}: global IC metrics by return horizon")
+        ax.set_title(
+            f"{timeframe_label(timeframe)}: globalne miary IC "
+            "dla przyszłych stóp zwrotu"
+        )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)
-        ax.set_ylabel("Correlation")
+        ax.set_ylabel("Korelacja")
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Mean over shown horizons")
+        ax.legend(title="Średnia z pokazanych horyzontów")
         fig.tight_layout()
         fig.savefig(
             plot_path(
