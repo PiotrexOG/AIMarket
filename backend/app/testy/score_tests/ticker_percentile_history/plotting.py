@@ -1364,7 +1364,7 @@ def _save_anti_momentum_correlation_charts(
         window_label = (
             horizon_label
             if start_week is None or end_week is None
-            else f"{start_week}-{end_week}w"
+            else f"{start_week}-{end_week} tygodni"
         )
         if skip_weeks:
             window_label = f"{window_label}, pomiń {skip_weeks} tyg."
@@ -1696,7 +1696,7 @@ def _save_model_vs_momentum_comparison_charts(
         window_label = (
             horizon_label
             if start_week is None or end_week is None
-            else f"{start_week}-{end_week}w"
+            else f"{start_week}-{end_week} tygodni"
         )
         if skip_weeks:
             window_label = f"{window_label}, pomiń {skip_weeks} tyg."
