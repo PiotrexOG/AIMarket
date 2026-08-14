@@ -24,15 +24,25 @@ PROGRESS_BUCKET_PERCENTAGE_POINTS = 5
 MIN_PROGRESS_BUCKET_PERCENT = 10
 MAX_PROGRESS_BUCKET_PERCENT = 80
 
+ALL_SCORES_SLUG = "all_scores"
+ENTRY_MIN_SCORE_PERCENTILE_70_SLUG = "entry_min_score_percentile_70"
+ALL_SCORES_ONLY_TIMEFRAME = "long_term_200d"
+PLOT_MODE_FULL = "full"
+PLOT_MODE_ONLY_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE = (
+    "only_live_progress_mean_score_percentile"
+)
+PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE = (
+    "without_live_progress_mean_score_percentile"
+)
+
 
 METRIC_LABELS = {
-    "mean_score_percentile": "Średni percentyl wyniku modelu",
+    "mean_score_percentile": "Średni percentyl score",
     "score_percentile_change": (
         "Zmiana percentyla wyniku: średnia w horyzoncie - wejście"
     ),
     "relative_score_percentile_change": (
-        "Względna zmiana percentyla wyniku: "
-        "(średnia w horyzoncie - wejście) / wejście"
+        "Względna zmiana percentyla wyniku"
     ),
 }
 
@@ -49,6 +59,14 @@ def _entry_percentile_bins_and_labels(data=None):
     if USE_ENTRY_PERCENTILE_BUCKETS and data is not None and not data.empty:
         start_percent = int(
             np.floor(data["entry_score_percentile"].min() * 10) * 10
+        )
+    elif (
+        data is not None
+        and not data.empty
+        and "entry_min_score_percentile" in data.columns
+    ):
+        start_percent = int(
+            round(float(data["entry_min_score_percentile"].iloc[0]) * 100)
         )
     else:
         start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
@@ -67,6 +85,16 @@ def _entry_percentile_bins_and_labels(data=None):
     return bins, labels
 
 
+def _entry_min_score_percentile(data):
+    if (
+        data is not None
+        and not data.empty
+        and "entry_min_score_percentile" in data.columns
+    ):
+        return float(data["entry_min_score_percentile"].iloc[0])
+    return ENTRY_MIN_SCORE_PERCENTILE
+
+
 def _filter_results_for_entry_bucket(results, bucket_id):
     filtered = {}
     for key, value in results.items():
@@ -80,6 +108,20 @@ def _filter_results_for_entry_bucket(results, bucket_id):
         else:
             filtered[key] = value
     return filtered
+
+
+def _plot_mode_for_entry_bucket_slug(slug):
+    if slug == ALL_SCORES_SLUG:
+        return PLOT_MODE_ONLY_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE
+    if slug == ENTRY_MIN_SCORE_PERCENTILE_70_SLUG:
+        return PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE
+    return PLOT_MODE_FULL
+
+
+def _filter_all_scores_only_plot_data(data):
+    if data is None or data.empty or "timeframe" not in data.columns:
+        return data
+    return data[data["timeframe"] == ALL_SCORES_ONLY_TIMEFRAME]
 
 
 def _post_entry_dir(horizon_label, *sections):
@@ -150,7 +192,13 @@ def _set_progress_x_ticks(ax, data):
     )
 
 
-def plot(results, output_dir, horizon_label, split_entry_buckets=True):
+def plot(
+    results,
+    output_dir,
+    horizon_label,
+    split_entry_buckets=True,
+    plot_mode=PLOT_MODE_FULL,
+):
     if not results:
         return
 
@@ -182,6 +230,7 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             .sort_values("entry_percentile_bucket_id")
         )
         for _, bucket in buckets.iterrows():
+            bucket_slug = bucket["entry_percentile_bucket_slug"]
             bucket_results = _filter_results_for_entry_bucket(
                 results,
                 bucket["entry_percentile_bucket_id"],
@@ -189,8 +238,28 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
             plot(
                 bucket_results,
                 output_dir,
-                Path(horizon_label) / bucket["entry_percentile_bucket_slug"],
+                Path(horizon_label) / bucket_slug,
                 split_entry_buckets=False,
+                plot_mode=_plot_mode_for_entry_bucket_slug(bucket_slug),
+            )
+        return
+
+    if plot_mode == PLOT_MODE_ONLY_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE:
+        live_progress_alpha_average = _filter_all_scores_only_plot_data(
+            live_progress_alpha_average
+        )
+        if (
+            live_progress_alpha_average is not None
+            and not live_progress_alpha_average.empty
+        ):
+            _plot_live_progress_correlations(
+                live_progress_alpha_average,
+                output_dir,
+                horizon_label,
+                return_label=(
+                    "końcowy roczny nadwyżkowy zwrot względem benchmarku"
+                ),
+                filename_prefix="alpha_",
             )
         return
 
@@ -209,15 +278,16 @@ def plot(results, output_dir, horizon_label, split_entry_buckets=True):
         live_progress_alpha_average is not None
         and not live_progress_alpha_average.empty
     ):
-        _plot_live_progress_correlations(
-            live_progress_alpha_average,
-            output_dir,
-            horizon_label,
-            return_label=(
-                "końcowy roczny nadwyżkowy zwrot względem benchmarku"
-            ),
-            filename_prefix="alpha_",
-        )
+        if plot_mode != PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE:
+            _plot_live_progress_correlations(
+                live_progress_alpha_average,
+                output_dir,
+                horizon_label,
+                return_label=(
+                    "końcowy roczny nadwyżkowy zwrot względem benchmarku"
+                ),
+                filename_prefix="alpha_",
+            )
         _plot_score_change_progress_correlations(
             live_progress_alpha_average,
             output_dir,
@@ -1046,7 +1116,7 @@ def _plot_score_drop_scatter(
             clean["annualized_return"],
             c=clean["entry_score_percentile"],
             cmap="viridis",
-            vmin=ENTRY_MIN_SCORE_PERCENTILE,
+            vmin=_entry_min_score_percentile(clean),
             vmax=1.0,
             alpha=0.14,
             s=15,
@@ -1261,8 +1331,7 @@ def _plot_relative_score_change_heatmap(
         ax.set_yticklabels(change_labels)
         ax.set_xlabel("Percentyl wyniku przy wejściu")
         ax.set_ylabel(
-            "Względna zmiana percentyla wyniku: "
-            "(średnia w horyzoncie - wejście) / wejście"
+            "Względna zmiana percentyla wyniku"
         )
         ax.set_title(
             f"{timeframe_label(timeframe)}: średnia wartość metryki "

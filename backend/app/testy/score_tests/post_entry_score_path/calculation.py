@@ -36,6 +36,7 @@ LIVE_CORRELATION_METRICS = [
 
 ENTRY_BUCKET_COLUMNS = [
     "entry_percentile_bucket_id",
+    "entry_min_score_percentile",
     "entry_percentile_bucket_slug",
     "entry_percentile_bucket_label",
     "entry_percentile_bucket_rank_start",
@@ -43,26 +44,49 @@ ENTRY_BUCKET_COLUMNS = [
 ]
 
 
-def _add_entry_percentile_buckets(ranked):
+def _entry_percentile_variant_slug(entry_min_score_percentile):
+    if entry_min_score_percentile <= 0:
+        return "all_scores"
+    start_percent = int(round(entry_min_score_percentile * 100))
+    return f"entry_min_score_percentile_{start_percent:02d}"
+
+
+def _entry_percentile_variant_label(entry_min_score_percentile):
+    if entry_min_score_percentile <= 0:
+        return "Wszystkie percentyle wyniku"
+    start_percent = int(round(entry_min_score_percentile * 100))
+    return f"Percentyl wyniku przy wejściu >= {start_percent}%"
+
+
+def _add_entry_percentile_buckets(
+    ranked,
+    entry_min_score_percentile=ENTRY_MIN_SCORE_PERCENTILE,
+    use_entry_percentile_buckets=USE_ENTRY_PERCENTILE_BUCKETS,
+):
     result = ranked.copy()
-    if not USE_ENTRY_PERCENTILE_BUCKETS:
-        result = result[
-            result["score_percentile"] >= ENTRY_MIN_SCORE_PERCENTILE
-        ].copy()
+    entry_min_score_percentile = max(
+        0.0,
+        min(1.0, float(entry_min_score_percentile)),
+    )
+    if not use_entry_percentile_buckets:
+        if entry_min_score_percentile > 0:
+            result = result[
+                result["score_percentile"] >= entry_min_score_percentile
+            ].copy()
         if result.empty:
             return result
 
-        start_percent = int(round(ENTRY_MIN_SCORE_PERCENTILE * 100))
         result["entry_percentile_bucket_id"] = 1
+        result["entry_min_score_percentile"] = entry_min_score_percentile
         result["entry_percentile_bucket_rank_start"] = 1
         result["entry_percentile_bucket_rank_end"] = result[
             "entry_available_count"
         ]
         result["entry_percentile_bucket_slug"] = (
-            f"entry_min_score_percentile_{start_percent:02d}"
+            _entry_percentile_variant_slug(entry_min_score_percentile)
         )
         result["entry_percentile_bucket_label"] = (
-            f"Entry score percentile >= {start_percent}%"
+            _entry_percentile_variant_label(entry_min_score_percentile)
         )
         return result
 
@@ -202,6 +226,8 @@ def _prepare_top_entry_observations(
     horizon_start,
     horizon_end,
     horizon_week_ranges=None,
+    entry_min_score_percentile=ENTRY_MIN_SCORE_PERCENTILE,
+    use_entry_percentile_buckets=USE_ENTRY_PERCENTILE_BUCKETS,
 ):
     if return_panel.empty:
         return pd.DataFrame()
@@ -239,7 +265,11 @@ def _prepare_top_entry_observations(
     ranked["entry_available_count"] = ranked.groupby(
         ["timeframe", "horizon_weeks", "start_timestamp"]
     )["ticker"].transform("count")
-    ranked = _add_entry_percentile_buckets(ranked)
+    ranked = _add_entry_percentile_buckets(
+        ranked,
+        entry_min_score_percentile=entry_min_score_percentile,
+        use_entry_percentile_buckets=use_entry_percentile_buckets,
+    )
     if ranked.empty:
         return pd.DataFrame()
 
@@ -931,6 +961,7 @@ def _build_switch_to_benchmark_threshold_analysis(
     group_columns=("timeframe", "progress_percent"),
 ):
     metadata_columns = [
+        "entry_min_score_percentile",
         "entry_percentile_bucket_slug",
         "entry_percentile_bucket_label",
         "entry_percentile_bucket_rank_start",
@@ -1354,6 +1385,8 @@ def calculate(
     horizon_start=None,
     horizon_end=None,
     horizon_week_ranges=None,
+    entry_min_score_percentile=ENTRY_MIN_SCORE_PERCENTILE,
+    use_entry_percentile_buckets=USE_ENTRY_PERCENTILE_BUCKETS,
 ):
     history = _prepare_score_history(context.return_panel)
     history_lookup = _build_history_lookup(history)
@@ -1362,6 +1395,8 @@ def calculate(
         horizon_start=horizon_start,
         horizon_end=horizon_end,
         horizon_week_ranges=horizon_week_ranges,
+        entry_min_score_percentile=entry_min_score_percentile,
+        use_entry_percentile_buckets=use_entry_percentile_buckets,
     )
     benchmark_entries = _prepare_benchmark_observations(
         context.weekly_ranked,

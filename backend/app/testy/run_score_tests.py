@@ -118,6 +118,17 @@ HORIZON_WEEK_RANGES = {
     #"long_term_200d": (26, 30),
 }
 
+POST_ENTRY_SCORE_PATH_VARIANTS = (
+    {
+        "slug": "entry_min_score_percentile_70",
+        "entry_min_score_percentile": 0.70,
+    },
+    {
+        "slug": "all_scores",
+        "entry_min_score_percentile": 0.0,
+    },
+)
+
 
 def filter_enabled_timeframes(df):
     enabled = [
@@ -179,6 +190,16 @@ def horizon_week_label():
     )
 
 
+def empty_post_entry_score_path_result():
+    return {
+        "observations": pd.DataFrame(),
+        "horizon_alpha_average": pd.DataFrame(),
+        "live_progress_observations": pd.DataFrame(),
+        "live_progress_alpha_average": pd.DataFrame(),
+        "switch_to_benchmark_thresholds": pd.DataFrame(),
+    }
+
+
 def run_configured_score_tests(context):
     results = {
         "a1_a2": pd.DataFrame(),
@@ -190,11 +211,8 @@ def run_configured_score_tests(context):
             "benchmark_return_buckets": pd.DataFrame(),
         },
         "post_entry_score_path": {
-            "observations": pd.DataFrame(),
-            "horizon_alpha_average": pd.DataFrame(),
-            "live_progress_observations": pd.DataFrame(),
-            "live_progress_alpha_average": pd.DataFrame(),
-            "switch_to_benchmark_thresholds": pd.DataFrame(),
+            variant["slug"]: empty_post_entry_score_path_result()
+            for variant in POST_ENTRY_SCORE_PATH_VARIANTS
         },
         "ticker_percentile_history": {
             "metrics": pd.DataFrame(),
@@ -224,10 +242,16 @@ def run_configured_score_tests(context):
             )
         )
     if ENABLED_TESTS["post_entry_score_path"]:
-        results["post_entry_score_path"] = calculate_post_entry_score_path(
-            context,
-            horizon_week_ranges=enabled_horizon_week_ranges(),
-        )
+        results["post_entry_score_path"] = {
+            variant["slug"]: calculate_post_entry_score_path(
+                context,
+                horizon_week_ranges=enabled_horizon_week_ranges(),
+                entry_min_score_percentile=variant[
+                    "entry_min_score_percentile"
+                ],
+            )
+            for variant in POST_ENTRY_SCORE_PATH_VARIANTS
+        }
     if ENABLED_TESTS["ticker_percentile_history"]:
         results["ticker_percentile_history"] = (
             calculate_ticker_percentile_history(
@@ -301,43 +325,47 @@ def save_analysis_outputs(results, output_dir):
         })
 
     if ENABLED_TESTS["post_entry_score_path"]:
-        path = results["post_entry_score_path"]
-        path_observations_dir = horizon_dir(
-            POST_ENTRY_SCORE_PATH_DIR,
-            horizon_label,
-            POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
-        )
-        path_live_progress_dir = horizon_dir(
-            POST_ENTRY_SCORE_PATH_DIR,
-            horizon_label,
-            POST_ENTRY_LIVE_PROGRESS_SECTION,
-        )
-        path_switch_dir = horizon_dir(
-            POST_ENTRY_SCORE_PATH_DIR,
-            horizon_label,
-            POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
-        )
-        outputs.update({
-            path_observations_dir / "post_entry_score_path_observations.csv": (
-                path["observations"]
-            ),
-            path_observations_dir
-            / "post_entry_score_path_horizon_alpha_average.csv": (
-                path["horizon_alpha_average"]
-            ),
-            path_live_progress_dir
-            / "post_entry_score_path_live_progress_observations.csv": (
-                path["live_progress_observations"]
-            ),
-            path_live_progress_dir
-            / "post_entry_score_path_live_progress_alpha_average.csv": (
-                path["live_progress_alpha_average"]
-            ),
-            path_switch_dir
-            / "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
-                path["switch_to_benchmark_thresholds"]
-            ),
-        })
+        for variant_slug, path in results["post_entry_score_path"].items():
+            path_observations_dir = horizon_dir(
+                POST_ENTRY_SCORE_PATH_DIR,
+                horizon_label,
+                variant_slug,
+                POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
+            )
+            path_live_progress_dir = horizon_dir(
+                POST_ENTRY_SCORE_PATH_DIR,
+                horizon_label,
+                variant_slug,
+                POST_ENTRY_LIVE_PROGRESS_SECTION,
+            )
+            path_switch_dir = horizon_dir(
+                POST_ENTRY_SCORE_PATH_DIR,
+                horizon_label,
+                variant_slug,
+                POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
+            )
+            outputs.update({
+                path_observations_dir
+                / "post_entry_score_path_observations.csv": (
+                    path["observations"]
+                ),
+                path_observations_dir
+                / "post_entry_score_path_horizon_alpha_average.csv": (
+                    path["horizon_alpha_average"]
+                ),
+                path_live_progress_dir
+                / "post_entry_score_path_live_progress_observations.csv": (
+                    path["live_progress_observations"]
+                ),
+                path_live_progress_dir
+                / "post_entry_score_path_live_progress_alpha_average.csv": (
+                    path["live_progress_alpha_average"]
+                ),
+                path_switch_dir
+                / "post_entry_score_path_switch_to_benchmark_thresholds.csv": (
+                    path["switch_to_benchmark_thresholds"]
+                ),
+            })
 
     if ENABLED_TESTS["ticker_percentile_history"]:
         ticker_history = results["ticker_percentile_history"]
@@ -415,11 +443,12 @@ def plot_analysis_outputs(results, output_dir):
         )
     if ENABLED_TESTS["post_entry_score_path"]:
         horizon_label = horizon_week_label()
-        plot_post_entry_score_path(
-            results["post_entry_score_path"],
-            output_dir,
-            horizon_label,
-        )
+        for path in results["post_entry_score_path"].values():
+            plot_post_entry_score_path(
+                path,
+                output_dir,
+                horizon_label,
+            )
     if ENABLED_TESTS["ticker_percentile_history"]:
         plot_ticker_percentile_history(
             results["ticker_percentile_history"],

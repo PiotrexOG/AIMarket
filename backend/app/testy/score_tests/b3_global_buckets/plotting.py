@@ -35,7 +35,7 @@ def plot(analysis, output_dir):
             f"{timeframe}_score_bucket_annualized_return_lines.png",
             (
                 f"{timeframe_label(timeframe)}: roczna stopa zwrotu "
-                "według globalnych koszyków wyniku modelu"
+                "według globalnych koszyków score"
             ),
             bucket_order,
             show_mean_in_legend=True,
@@ -47,7 +47,7 @@ def plot(analysis, output_dir):
             f"{timeframe}_score_bucket_annualized_return_average.png",
             (
                 f"{timeframe_label(timeframe)}: Średnia roczna stopa "
-                "zwrotu według globalnych koszyków wyniku modelu"
+                "zwrotu według globalnych koszyków score"
             ),
             bucket_order,
         )

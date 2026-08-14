@@ -101,7 +101,7 @@ def _save_combined_plot(
         metric_group["current_score_percentile"],
         color=percentile_color,
         linewidth=2.2,
-        label="Surowy percentyl wyniku modelu",
+        label="Surowy percentyl score",
     )[0]
     moving_average_line = None
     if MOVING_AVERAGE_COLUMN in metric_group.columns:
@@ -128,11 +128,11 @@ def _save_combined_plot(
     )[0]
 
     percentile_ax.set_title(
-        f"{ticker}: percentyl wyniku modelu, średnia krocząca i cena "
+        f"{ticker}: percentyl score, średnia krocząca i cena "
         f"zamknięcia ({timeframe_label(timeframe)})"
     )
     percentile_ax.set_xlabel("Data")
-    percentile_ax.set_ylabel("Percentyl wyniku modelu", color=percentile_color)
+    percentile_ax.set_ylabel("Percentyl score", color=percentile_color)
     percentile_ax.set_ylim(0, 1)
     percentile_ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     percentile_ax.tick_params(axis="y", colors=percentile_color)
@@ -732,7 +732,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.set_xticks(x_values)
     ax.set_xticklabels([str(int(value)) for value in x_values])
     ax.set_title(
-        f"IC wyniku modelu względem przyszłej stopy zwrotu oraz "
+        f"IC score względem przyszłej stopy zwrotu oraz "
         f"przedziały HAC według horyzontu ({timeframe_label(timeframe)})"
     )
     ax.set_xlabel("Horyzont przyszłej stopy zwrotu (tygodnie)")
@@ -1350,7 +1350,7 @@ def _save_anti_momentum_correlation_charts(
                 "score_to_future_annualized_return_correlation_by_ticker.png"
             ),
             "title": (
-                f"Korelacja wyniku modelu z przyszłą roczną "
+                f"Korelacja score z przyszłą roczną "
                 f"stopą zwrotu według tickerów "
                 f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
@@ -1376,7 +1376,7 @@ def _save_anti_momentum_correlation_charts(
                     f"score_to_trailing_{label}_return_correlation_by_ticker.png"
                 ),
                 "title": (
-                    f"Korelacja wyniku modelu z momentum Jegadeesha-Titmana "
+                    f"Korelacja score z momentum Jegadeesha-Titmana "
                     f"według tickerów ({timeframe_label(timeframe)}, "
                     f"{window_label})"
                 ),
@@ -2202,10 +2202,10 @@ def _save_forward_return_heatmap(
             "column": "score_zscore",
             "filename": "pearson_01_score_zscore_heatmap.png",
             "title": (
-                f"Widok Pearsona: z-score wyniku modelu "
+                f"Widok Pearsona: z-score score "
                 f"({timeframe_label(timeframe)})"
             ),
-            "colorbar": "Z-score wyniku modelu",
+            "colorbar": "Z-score score",
             "cmap": "RdYlGn",
             "robust": True,
             "symmetric": True,
@@ -2232,7 +2232,7 @@ def _save_forward_return_heatmap(
             "column": "zscore_error",
             "filename": "pearson_03_score_minus_return_zscore_heatmap.png",
             "title": (
-                f"Widok Pearsona: różnica między z-score wyniku modelu "
+                f"Widok Pearsona: różnica między z-score score "
                 f"a z-score stopy zwrotu ({timeframe_label(timeframe)}, "
                 f"{horizon_label})"
             ),
@@ -2248,10 +2248,10 @@ def _save_forward_return_heatmap(
             "column": "score_percentile",
             "filename": "spearman_01_score_percentile_heatmap.png",
             "title": (
-                f"Widok Spearmana: percentyl wyniku modelu "
+                f"Widok Spearmana: percentyl score "
                 f"({timeframe_label(timeframe)})"
             ),
-            "colorbar": "Percentyl wyniku modelu",
+            "colorbar": "Percentyl score",
             "cmap": "RdYlGn",
             "vmin": 0,
             "vmax": 1,
@@ -2572,7 +2572,7 @@ def _save_score_return_correlation_by_timestamp_plot(
     )
     ax.set_ylim(-1, 1)
     ax.set_title(
-        f"Korelacja wyniku modelu z przyszłą stopą zwrotu według daty scoringu "
+        f"Korelacja score z przyszłą stopą zwrotu według daty scoringu "
         f"({timeframe_label(timeframe)}; średnia Pearson {pearson_mean:.3f}, "
         f"średnia Spearman {spearman_mean:.3f}, "
         f"średnia Pearson IC percentyla wyniku "
@@ -2670,7 +2670,7 @@ def _save_forward_return_cross_section_correlation_plot(
     )
     ax.set_ylim(-1, 1)
     ax.set_title(
-        f"Korelacja percentyla wyniku modelu z percentylem przyszłej stopy "
+        f"Korelacja percentyla score z percentylem przyszłej stopy "
         f"zwrotu ({timeframe_label(timeframe)})"
     )
     ax.set_xlabel("Data scoringu")
@@ -2757,7 +2757,7 @@ def _save_raw_score_forward_return_correlation_plot(
     pearson_ax.set_ylabel("Ticker")
     spearman_ax.tick_params(axis="y", left=False, labelleft=False)
     fig.suptitle(
-        f"Korelacja surowego wyniku modelu ze średnią przyszłą "
+        f"Korelacja surowego score ze średnią przyszłą "
         f"roczną stopą zwrotu ({timeframe_label(timeframe)})"
     )
     fig.tight_layout()
