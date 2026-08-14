@@ -30,8 +30,8 @@ SERIES_LABELS = {
     "All 18": "Wszystkie 18 spółek",
     "Pearson IC": "Pearson IC",
     "Spearman IC": "Spearman IC",
-    "Score Percentile Pearson IC": "Pearson IC percentyla wyniku",
-    "Score percentile Pearson IC": "Pearson IC percentyla wyniku",
+    "Score Percentile Pearson IC": "Pearson IC percentyla score",
+    "Score percentile Pearson IC": "Pearson IC percentyla score",
 }
 
 
@@ -57,7 +57,7 @@ def horizon_x_column(df):
 
 def horizon_x_label(df):
     return (
-        "Horyzont przyszłej stopy zwrotu (tygodnie)"
+        "Horyzont przyszłej stopy zwrotu [tygodnie]"
         if horizon_x_column(df) == "horizon_weeks"
         else "Horyzont przyszłej stopy zwrotu (dni)"
     )
@@ -84,7 +84,7 @@ def mean_label(label, values, formatter):
     label = plot_label(label)
     if mean_value != mean_value:
         return label
-    return f"{label} (średnia {formatter(mean_value)})"
+    return f"{label} (śr. {formatter(mean_value)})"
 
 
 def wrap_plot_text(text, width=74):
@@ -227,7 +227,7 @@ def plot_bucket_average(
     labels = [plot_label(bucket) for bucket in average["bucket"].astype(str)]
     if score_range_columns:
         labels = [
-            f"{plot_label(row.bucket)}\nśr. wyn. {row.avg_score_min:.1f}"
+            f"{plot_label(row.bucket)}\nśr. score {row.avg_score_min:.1f}"
             for row in average.itertuples(index=False)
         ]
 

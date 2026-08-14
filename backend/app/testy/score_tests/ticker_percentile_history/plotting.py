@@ -43,8 +43,8 @@ HAC_DIAGNOSTIC_METRICS = [
     },
     {
         "metric": "score_percentile_pearson_ic",
-        "label": "Pearson IC percentyla wyniku",
-        "short_label": "Pearson percentyla wyniku",
+        "label": "Pearson IC percentyla score",
+        "short_label": "Pearson percentyla score",
         "color": "#F28E2B",
         "filename_stem": "score_percentile_pearson",
     },
@@ -115,7 +115,7 @@ def _save_combined_plot(
                 linestyle="--",
                 label=(
                     f"{moving_average_window}-punktowa średnia krocząca "
-                    "percentyla wyniku"
+                    "percentyla score"
                 ),
             )[0]
     price_line = price_ax.plot(
@@ -239,7 +239,7 @@ def _save_all_tickers_moving_average_heatmap(
     heatmap_ax.set_ylabel("Ticker, sortowanie według zwrotu z całego okresu")
     heatmap_ax.set_xlabel("Data scoringu")
     heatmap_ax.set_title(
-        f"{moving_average_window}-punktowa średnia krocząca percentyla wyniku "
+        f"{moving_average_window}-punktowa średnia krocząca percentyla score "
         f"({timeframe_label(timeframe)})"
     )
 
@@ -273,7 +273,7 @@ def _save_all_tickers_moving_average_heatmap(
     return_ax.grid(True, axis="x", alpha=0.25)
 
     colorbar = fig.colorbar(image, cax=colorbar_ax)
-    colorbar.set_label("Średnia krocząca percentyla wyniku")
+    colorbar.set_label("Średnia krocząca percentyla score")
     colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
     fig.tight_layout()
@@ -477,7 +477,7 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
     metrics = [
         ("pearson", "Pearson IC"),
         ("spearman", "Spearman IC"),
-        ("score_percentile_pearson_ic", "Pearson IC percentyla wyniku"),
+        ("score_percentile_pearson_ic", "Pearson IC percentyla score"),
     ]
     summary_rows = []
     autocorrelation_frames = []
@@ -730,12 +730,12 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_ylim(0, 0.5)
     ax.set_xticks(x_values)
-    ax.set_xticklabels([str(int(value)) for value in x_values])
+    ax.set_xticklabels([str(int(value.replace("w", ""))) for value in x_values])
     ax.set_title(
         f"IC score względem przyszłej stopy zwrotu oraz "
         f"przedziały HAC według horyzontu ({timeframe_label(timeframe)})"
     )
-    ax.set_xlabel("Horyzont przyszłej stopy zwrotu (tygodnie)")
+    ax.set_xlabel("Horyzont przyszłej stopy zwrotu [tygodnie]")
     ax.set_ylabel("Średni IC")
     ax.grid(True, alpha=0.25)
     ax.legend(loc="upper left")
@@ -769,9 +769,6 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     )
     plt.close(fig)
 
-
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def _format_ci_half_width_clean(val):
@@ -877,7 +874,7 @@ def _save_score_return_autocorrelation_plot(
     )
     # 2. Standardowy opis osi X
     ax.set_xlabel(
-        "Horyzont przyszłej stopy zwrotu (tygodnie)",
+        "Horyzont przyszłej stopy zwrotu [tygodnie]",
         fontsize=10,
         labelpad=8,
     )
@@ -2202,10 +2199,10 @@ def _save_forward_return_heatmap(
             "column": "score_zscore",
             "filename": "pearson_01_score_zscore_heatmap.png",
             "title": (
-                f"Widok Pearsona: z-score score "
+                f"Widok Pearsona: wynik standaryzowany score "
                 f"({timeframe_label(timeframe)})"
             ),
-            "colorbar": "Z-score score",
+            "colorbar": "Wynik standaryzowany score",
             "cmap": "RdYlGn",
             "robust": True,
             "symmetric": True,
@@ -2232,11 +2229,11 @@ def _save_forward_return_heatmap(
             "column": "zscore_error",
             "filename": "pearson_03_score_minus_return_zscore_heatmap.png",
             "title": (
-                f"Widok Pearsona: różnica między z-score score "
-                f"a z-score stopy zwrotu ({timeframe_label(timeframe)}, "
+                f"Widok Pearsona: różnica między wynikiem standaryzowanym score "
+                f"a wynikiem standaryzowanym stopy zwrotu ({timeframe_label(timeframe)}, "
                 f"{horizon_label})"
             ),
-            "colorbar": "Z-score wyniku - z-score przyszłego zwrotu",
+            "colorbar": "Wynik standaryzowany score - wynik standaryzowany przyszłego zwrotu",
             "cmap": "RdYlGn_r",
             "robust": True,
             "symmetric": True,
@@ -2282,11 +2279,11 @@ def _save_forward_return_heatmap(
             "column": "percentile_error",
             "filename": "spearman_03_score_minus_return_percentile_heatmap.png",
             "title": (
-                f"Widok Spearmana: różnica między percentylem wyniku "
+                f"Widok Spearmana: różnica między percentylem score "
                 f"a percentylem przyszłej stopy zwrotu "
                 f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
-            "colorbar": "Percentyl wyniku - percentyl przyszłego zwrotu",
+            "colorbar": "Percentyl score - percentyl przyszłego zwrotu",
             "cmap": "RdYlGn_r",
             "percent_format": True,
             "robust": True,
@@ -2319,7 +2316,7 @@ def _save_forward_return_heatmap(
             "column": "return_attribution",
             "filename": "return_contribution_attribution_heatmap.png",
             "title": (
-                f"Atrybucja zwrotu long-short: (percentyl wyniku - 0.5) "
+                f"Atrybucja zwrotu long-short: (percentyl score - 0.5) "
                 f"x przyszły nadwyżkowy zwrot "
                 f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
@@ -2340,7 +2337,7 @@ def _save_forward_return_heatmap(
             "column": "long_only_return_attribution",
             "filename": "long_only_return_contribution_attribution_heatmap.png",
             "title": (
-                f"Atrybucja zwrotu long-only: max(percentyl wyniku - 0.5, 0) "
+                f"Atrybucja zwrotu long-only: max(percentyl score - 0.5, 0) "
                 f"x przyszły nadwyżkowy zwrot "
                 f"({timeframe_label(timeframe)}, {horizon_label})"
             ),
@@ -2531,7 +2528,7 @@ def _save_score_return_correlation_by_timestamp_plot(
         marker="o",
         markersize=2.8,
         label=(
-            f"Pearson IC percentyla wyniku, "
+            f"Pearson IC percentyla score, "
             f"średnia {score_percentile_pearson_mean:.3f}"
         ),
     )
@@ -2575,7 +2572,7 @@ def _save_score_return_correlation_by_timestamp_plot(
         f"Korelacja score z przyszłą stopą zwrotu według daty scoringu "
         f"({timeframe_label(timeframe)}; średnia Pearson {pearson_mean:.3f}, "
         f"średnia Spearman {spearman_mean:.3f}, "
-        f"średnia Pearson IC percentyla wyniku "
+        f"średnia Pearson IC percentyla score "
         f"{score_percentile_pearson_mean:.3f})"
     )
     ax.set_xlabel("Data scoringu")

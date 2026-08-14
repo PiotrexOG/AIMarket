@@ -53,9 +53,9 @@ def _entry_percentile_variant_slug(entry_min_score_percentile):
 
 def _entry_percentile_variant_label(entry_min_score_percentile):
     if entry_min_score_percentile <= 0:
-        return "Wszystkie percentyle wyniku"
+        return "Wszystkie percentyle score"
     start_percent = int(round(entry_min_score_percentile * 100))
-    return f"Percentyl wyniku przy wejściu >= {start_percent}%"
+    return f"Percentyl score przy wejściu >= {start_percent}%"
 
 
 def _add_entry_percentile_buckets(

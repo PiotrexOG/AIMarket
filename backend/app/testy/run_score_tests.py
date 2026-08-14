@@ -183,9 +183,9 @@ def horizon_week_label():
     ranges = enabled_horizon_week_ranges()
     if len(ranges) == 1:
         start_week, end_week = next(iter(ranges.values()))
-        return f"{start_week}-{end_week} tygodni"
+        return f"{start_week}-{end_week}w"
     return "_".join(
-        f"{timeframe}_{start_week}-{end_week} tygodni"
+        f"{timeframe}_{start_week}-{end_week}w"
         for timeframe, (start_week, end_week) in ranges.items()
     )
 

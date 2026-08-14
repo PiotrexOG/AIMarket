@@ -39,19 +39,19 @@ PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE = (
 METRIC_LABELS = {
     "mean_score_percentile": "Średni percentyl score",
     "score_percentile_change": (
-        "Zmiana percentyla wyniku: średnia w horyzoncie - wejście"
+        "Zmiana percentyla score: średnia w horyzoncie - wejście"
     ),
     "relative_score_percentile_change": (
-        "Względna zmiana percentyla wyniku"
+        "Względna zmiana percentyla score"
     ),
 }
 
 SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "mean_switch_to_benchmark_annualized_gain": (
-        "Średni roczny zysk z przełączenia na benchmark"
+        "Średni roczny zysk z przełączenia na benchmark gdy względna zmiana percentyla score <= próg"
     ),
-    "downside_deviation": "Downside deviation zysku z przełączenia",
-    "downside_information_ratio": "Wskaźnik DIR",
+    "downside_deviation": "Downside deviation zysku z przełączenia na benchmark gdy względna zmiana percentyla score <= próg",
+    "downside_information_ratio": "Wskaźnik DIR z przełączenia na benchmark gdy względna zmiana percentyla score <= próg"
 }
 
 
@@ -122,6 +122,36 @@ def _filter_all_scores_only_plot_data(data):
     if data is None or data.empty or "timeframe" not in data.columns:
         return data
     return data[data["timeframe"] == ALL_SCORES_ONLY_TIMEFRAME]
+
+
+def _horizon_range_title_label(horizon_label):
+    horizon_part = Path(horizon_label).parts[0]
+    if horizon_part.endswith("w"):
+        horizon_part = horizon_part[:-1]
+        return f"{horizon_part} tygodni"
+    return str(horizon_part).replace("_", " ")
+
+
+def _score_scope_title_label(horizon_label):
+    parts = Path(horizon_label).parts
+    if len(parts) < 2:
+        return None
+
+    score_scope = parts[1]
+    if score_scope == ALL_SCORES_SLUG:
+        return "wszystkie"
+    prefix = "entry_min_score_percentile_"
+    if score_scope.startswith(prefix):
+        return f"top {int(score_scope.removeprefix(prefix))} percentyl"
+    return score_scope.replace("_", " ")
+
+
+def _plot_context_title_label(horizon_label):
+    context = _horizon_range_title_label(horizon_label)
+    score_scope = _score_scope_title_label(horizon_label)
+    if score_scope is not None and score_scope is not "wszystkie":
+        context = f"{context}, {score_scope} scores"
+    return context
 
 
 def _post_entry_dir(horizon_label, *sections):
@@ -336,7 +366,7 @@ def plot(
             SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
             metric_max=0.0,
             filename_suffix="_to_0pct",
-            title_suffix=", zmiana percentyla wyniku <= 0%",
+            title_suffix=", zmiana percentyla score <= 0%",
         )
         _plot_hold_decision_by_score_drop(
             live_progress_observations,
@@ -423,9 +453,10 @@ def _plot_score_change_scatter(
         )
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: {return_label} względem "
-            f"{METRIC_LABELS[metric]}"
+            f"{METRIC_LABELS[metric]}, horyzonty {context_label}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
         ax.set_xlabel(METRIC_LABELS[metric])
@@ -514,10 +545,11 @@ def _plot_remaining_return_at_progress_scatter(
         )
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: roczny nadwyżkowy zwrot "
             f"z trzymania pozycji po {progress_label} horyzontu, "
-            f"horyzonty {horizon_label}"
+            f"horyzonty {context_label}"
             f"{title_suffix}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
@@ -672,15 +704,16 @@ def _plot_hold_decision_by_score_drop(
         return_ax.set_xticks(x)
         return_ax.set_xticklabels(labels, rotation=45, ha="right")
         return_ax.set_xlabel(
-            f"Względna zmiana percentyla wyniku po {progress_label} "
-            "horyzontu, koszyki po 5 p.p."
+            f"Względna zmiana percentyla score po {progress_label} "
+            "horyzontu"
         )
         return_ax.grid(True, axis="y", alpha=0.2)
         return_ax.legend(fontsize=9)
+        context_label = _plot_context_title_label(horizon_label)
         return_ax.set_title(
             f"{timeframe_label(timeframe)}: nadwyżkowy zwrot z trzymania pozycji "
-            f"według zmiany wyniku po {progress_label} horyzontu, "
-            f"horyzonty {horizon_label}"
+            f"według zmiany score po {progress_label} horyzontu, "
+            f"horyzonty {context_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -750,8 +783,7 @@ def _plot_switch_to_benchmark_threshold_lines(
         gain_ax.axhline(0, color="#444444", linewidth=1)
         gain_ax.axvline(0, color="#444444", linewidth=1)
         gain_ax.set_xlabel(
-            "Przełącz na benchmark, gdy względna zmiana percentyla wyniku "
-            "jest równa progowi lub niższa"
+            "Względna zmiana percentyla score"
         )
         gain_ax.set_ylabel(
             "Roczna różnica stopy zwrotu względem trzymania akcji"
@@ -796,9 +828,10 @@ def _plot_switch_to_benchmark_threshold_lines(
             fontsize=9,
             loc="best",
         )
+        context_label = _plot_context_title_label(horizon_label)
         gain_ax.set_title(
-            f"{timeframe_label(timeframe)}: test progu przełączenia na benchmark "
-            f"po {progress_label} horyzontu, horyzonty {horizon_label}"
+            f"{timeframe_label(timeframe)}: przełączenie na benchmark gdy względna zmiana percentyla score <= próg"
+            f"po {progress_label} horyzontu, horyzonty {context_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -820,8 +853,7 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
     output_dir,
     horizon_label,
     threshold_axis_label=(
-        "Przełącz na benchmark, gdy względna zmiana percentyla wyniku "
-        "jest równa progowi lub niższa"
+        "Względna zmiana percentyla score"
     ),
     filename_suffix="",
 ):
@@ -921,10 +953,11 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
             ax.set_yticklabels(progress_labels)
             ax.set_xlabel(threshold_axis_label)
             ax.set_ylabel("Zaobserwowana część horyzontu inwestycji")
+            context_label = _plot_context_title_label(horizon_label)
             ax.set_title(
                 f"{timeframe_label(timeframe)}: "
                 f"{SWITCH_TO_BENCHMARK_METRIC_LABELS[metric]}, "
-                f"horyzonty {horizon_label}"
+                f"horyzonty {context_label}"
             )
             fig.tight_layout()
             fig.savefig(
@@ -1067,11 +1100,12 @@ def _plot_hold_decision_heatmap(
             f"Zmiana ceny od wejścia do punktu decyzji {progress_label}"
         )
         ax.set_ylabel(
-            f"Względna zmiana percentyla wyniku do punktu decyzji {progress_label}"
+            f"Względna zmiana percentyla score do punktu decyzji {progress_label}"
         )
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: pozostała stopa zwrotu według "
-            f"pogorszenia wyniku i zmiany ceny, horyzonty {horizon_label}"
+            f"pogorszenia score i zmiany ceny, horyzonty {context_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -1123,7 +1157,7 @@ def _plot_score_drop_scatter(
             edgecolors="none",
         )
         colorbar = fig.colorbar(points, ax=ax)
-        colorbar.set_label("Percentyl wyniku przy wejściu")
+        colorbar.set_label("Percentyl score przy wejściu")
         colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
         bins, labels = _entry_percentile_bins_and_labels(clean)
@@ -1178,13 +1212,15 @@ def _plot_score_drop_scatter(
 
         ax.axvline(0, color="#444444", linewidth=1)
         ax.axhline(0, color="#444444", linewidth=1)
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: stopa zwrotu względem spadku "
-            "percentyla wyniku po wejściu"
+            "percentyla score po wejściu, "
+            f"horyzonty {context_label}"
             f"{regression_text}"
         )
         ax.set_xlabel(
-            "Spadek percentyla wyniku: percentyl wejścia - średnia w horyzoncie"
+            "Spadek percentyla score: percentyl wejścia - średnia w horyzoncie"
         )
         ax.set_ylabel("Roczna stopa zwrotu")
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
@@ -1329,14 +1365,15 @@ def _plot_relative_score_change_heatmap(
         ax.set_xticklabels(entry_labels)
         ax.set_yticks(range(len(change_labels)))
         ax.set_yticklabels(change_labels)
-        ax.set_xlabel("Percentyl wyniku przy wejściu")
+        ax.set_xlabel("Percentyl score przy wejściu")
         ax.set_ylabel(
-            "Względna zmiana percentyla wyniku"
+            "Względna zmiana percentyla score"
         )
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: średnia wartość metryki "
             f"'{return_label}' według percentyla wejścia i względnej zmiany "
-            f"wyniku, horyzonty {horizon_label}"
+            f"score, horyzonty {context_label}"
         )
         fig.tight_layout()
         fig.savefig(
@@ -1390,9 +1427,10 @@ def _plot_live_progress_correlations(
             linewidth=2,
             label="Spearman",
         )
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: korelacja średniego percentyla "
-            f"wyniku z upływem horyzontu, horyzonty {horizon_label}"
+            f"score z upływem horyzontu, horyzonty {context_label}"
         )
         ax.set_xlabel("Zaobserwowana część horyzontu inwestycji")
         ax.set_ylabel(f"Średnia korelacja z metryką: {return_label}")
@@ -1454,10 +1492,11 @@ def _plot_score_change_progress_correlations(
             label="Spearman",
         )
         ax.axhline(0, color="#444444", linewidth=1)
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: korelacja metryki "
             f"'{METRIC_LABELS[metric]}' z upływem horyzontu, "
-            f"horyzonty {horizon_label}"
+            f"horyzonty {context_label}"
         )
         ax.set_xlabel("Zaobserwowana część horyzontu inwestycji")
         ax.set_ylabel(f"Średnia korelacja z metryką: {return_label}")
@@ -1546,9 +1585,11 @@ def _plot_best_correlation_overview(
             )
 
         ax.axhline(0, color="#444444", linewidth=1)
+        context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             f"{timeframe_label(timeframe)}: {METRIC_LABELS[metric]} "
-            f"względem metryki '{return_label}'{correlation_text}",
+            f"względem metryki '{return_label}', "
+            f"horyzonty {context_label}{correlation_text}",
             fontsize=12,
         )
         ax.set_xlabel(METRIC_LABELS[metric])
