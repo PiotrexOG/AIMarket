@@ -18,31 +18,23 @@ app_module.__path__ = [str(APP_FOLDER)]
 sys.modules["app"] = app_module
 
 from score_observations import build_dataframe, load_json
-from score_tests.a1_a2_weekly.calculation import (
-    build_correlation_output as build_weekly_correlation_output,
-    build_top_n_output,
-    calculate as calculate_a1_a2,
+from score_tests.global_score_calibration.analysis import (
+    calculate as calculate_global_score_calibration,
 )
-from score_tests.a1_a2_weekly.plotting import (
-    plot as plot_a1_a2,
-    plot_weekly_information_coefficient,
-)
-from score_tests.a3_weekly_buckets.calculation import (
-    build_output as build_weekly_bucket_output,
-    calculate as calculate_a3,
-)
-from score_tests.a3_weekly_buckets.plotting import plot as plot_a3
-from score_tests.b1_b2_global.calculation import (
+from score_tests.global_score_calibration.information_coefficient import (
     build_correlation_output as build_global_correlation_output,
-    build_top_percent_output,
-    calculate as calculate_b1_b2,
 )
-from score_tests.b1_b2_global.plotting import plot as plot_b1_b2
-from score_tests.b3_global_buckets.calculation import (
+from score_tests.global_score_calibration.plotting import (
+    plot as plot_global_score_calibration,
+)
+from score_tests.global_score_calibration.score_percentile_buckets import (
     build_output as build_global_bucket_output,
-    calculate as calculate_b3,
+    calculate as calculate_global_score_buckets,
+    plot as plot_global_score_buckets,
 )
-from score_tests.b3_global_buckets.plotting import plot as plot_b3
+from score_tests.global_score_calibration.top_percent_selection import (
+    build_top_percent_output,
+)
 from score_tests.common.context import ScoreTestContext
 from score_tests.common.data import (
     add_weekly_score_metrics,
@@ -87,6 +79,22 @@ from score_tests.ticker_percentile_history.calculation import (
 from score_tests.ticker_percentile_history.plotting import (
     plot as plot_ticker_percentile_history,
 )
+from score_tests.weekly_cross_section.analysis import (
+    calculate as calculate_weekly_cross_section,
+)
+from score_tests.weekly_cross_section.information_coefficient import (
+    build_correlation_output as build_weekly_correlation_output,
+)
+from score_tests.weekly_cross_section.plotting import (
+    plot as plot_weekly_cross_section,
+    plot_weekly_information_coefficient,
+)
+from score_tests.weekly_cross_section.rank_bucket_returns import (
+    build_output as build_weekly_bucket_output,
+    calculate as calculate_weekly_rank_buckets,
+    plot as plot_weekly_rank_buckets,
+)
+from score_tests.weekly_cross_section.top_n_selection import build_top_n_output
 
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
@@ -225,12 +233,12 @@ def run_configured_score_tests(context):
     }
 
     if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
-        results["a1_a2"] = calculate_a1_a2(
+        results["a1_a2"] = calculate_weekly_cross_section(
             context,
             horizon_week_ranges=enabled_horizon_week_ranges(),
         )
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
-        results["a3"] = calculate_a3(
+        results["a3"] = calculate_weekly_rank_buckets(
             context,
             horizon_week_ranges=enabled_horizon_week_ranges(),
         )
@@ -260,12 +268,12 @@ def run_configured_score_tests(context):
             )
         )
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
-        results["b1_b2"] = calculate_b1_b2(
+        results["b1_b2"] = calculate_global_score_calibration(
             context,
             horizon_week_ranges=enabled_horizon_week_ranges(),
         )
     if ENABLED_TESTS["B3_global_score_buckets"]:
-        results["b3"] = calculate_b3(
+        results["b3"] = calculate_global_score_buckets(
             context,
             horizon_week_ranges=enabled_horizon_week_ranges(),
         )
@@ -421,13 +429,13 @@ def save_analysis_outputs(results, output_dir):
 
 def plot_analysis_outputs(results, output_dir):
     if ENABLED_TESTS["A1_A2_weekly_top_n_and_correlation"]:
-        plot_a1_a2(results["a1_a2"], output_dir)
+        plot_weekly_cross_section(results["a1_a2"], output_dir)
     if ENABLED_TESTS["A3_weekly_rank_buckets"]:
-        plot_a3(results["a3"], output_dir)
+        plot_weekly_rank_buckets(results["a3"], output_dir)
     if ENABLED_TESTS["B1_B2_global_top_percent_and_correlation"]:
-        plot_b1_b2(results["b1_b2"], output_dir)
+        plot_global_score_calibration(results["b1_b2"], output_dir)
     if ENABLED_TESTS["B3_global_score_buckets"]:
-        plot_b3(results["b3"], output_dir)
+        plot_global_score_buckets(results["b3"], output_dir)
 
     if ENABLED_TESTS["downside_information_ratio"]:
         horizon_label = horizon_week_label()
@@ -480,7 +488,7 @@ def plot_weekly_information_coefficient_for_all_timeframes(
     if return_panel.empty:
         return
 
-    analysis = calculate_a1_a2(
+    analysis = calculate_weekly_cross_section(
         ScoreTestContext(
             return_panel=return_panel,
             score_observations=all_timeframes_df,

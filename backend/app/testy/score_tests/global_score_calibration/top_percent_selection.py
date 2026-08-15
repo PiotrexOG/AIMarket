@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
+import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
 from app.testy.score_tests.common.plotting import (
@@ -12,19 +13,36 @@ from app.testy.score_tests.common.plotting import (
     timeframe_label,
 )
 from app.testy.score_tests.common.output_paths import (
-    GLOBAL_INFORMATION_COEFFICIENT_DIR,
     GLOBAL_TOP_PERCENT_SELECTION_DIR,
 )
 
 
+def build_top_percent_output(analysis):
+    columns = [
+        "timeframe",
+        "horizon_weeks",
+        "horizon_days",
+        "bucket",
+        "top_percent",
+        "min_score",
+        "observation_count",
+        "avg_return",
+        "annualized_return",
+    ]
+    required = set(columns) - {"annualized_return"}
+    if analysis.empty or not {*required, "test"}.issubset(analysis.columns):
+        return pd.DataFrame(columns=columns)
+    selection = analysis[
+        (analysis["test"] == "B1_top_percent") & (analysis["bucket"] != "All")
+    ]
+    return (
+        add_annualized_return_column(selection)[columns]
+        .sort_values(["timeframe", "horizon_weeks", "top_percent"])
+        .reset_index(drop=True)
+    )
+
+
 def plot(analysis, output_dir):
-    if analysis.empty:
-        return
-    _plot_top_percent(analysis, output_dir)
-    _plot_correlations(analysis, output_dir)
-
-
-def _plot_top_percent(analysis, output_dir):
     data = analysis[
         (analysis["test"] == "B1_top_percent") & (analysis["bucket"] != "All")
     ].dropna(subset=["avg_return"])
@@ -67,53 +85,6 @@ def _plot_top_percent(analysis, output_dir):
                 output_dir,
                 GLOBAL_TOP_PERCENT_SELECTION_DIR,
                 f"{timeframe}_top_percent_annualized_return.png",
-            ),
-            dpi=160,
-        )
-        plt.close(fig)
-
-
-def _plot_correlations(analysis, output_dir):
-    data = analysis[analysis["test"] == "B2_global_pearson"].dropna(
-        subset=["pearson"]
-    )
-    for timeframe, timeframe_data in data.groupby("timeframe"):
-        timeframe_data = limit_horizon_range(timeframe, timeframe_data)
-        if timeframe_data.empty:
-            continue
-        fig, ax = plt.subplots(figsize=(12, 7))
-        x_column = horizon_x_column(timeframe_data)
-        for metric, group in timeframe_data.groupby("metric", sort=False):
-            group = group.sort_values(x_column)
-            ax.plot(
-                group[x_column],
-                group["pearson"],
-                marker="o",
-                markevery=max(1, len(group) // 30),
-                linewidth=1.8,
-                markersize=3,
-                label=mean_label(
-                    metric,
-                    group["pearson"],
-                    lambda value: f"{value:.3f}",
-                ),
-            )
-        ax.axhline(0, color="#444444", linewidth=1)
-        ax.set_title(
-            f"{timeframe_label(timeframe)}: globalne miary IC "
-            "dla przyszłych stóp zwrotu"
-        )
-        ax.set_xlabel(horizon_x_label(timeframe_data))
-        set_integer_x_axis(ax)
-        ax.set_ylabel("Korelacja")
-        ax.grid(True, alpha=0.25)
-        ax.legend(title="Średnia z pokazanych horyzontów")
-        fig.tight_layout()
-        fig.savefig(
-            plot_path(
-                output_dir,
-                GLOBAL_INFORMATION_COEFFICIENT_DIR,
-                f"{timeframe}_global_information_coefficient.png",
             ),
             dpi=160,
         )
