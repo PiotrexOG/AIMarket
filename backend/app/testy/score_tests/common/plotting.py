@@ -129,7 +129,27 @@ def common_horizon_alignment_title_suffix(data):
     if not alignment_values.eq(COMMON_HORIZON_ALIGNMENT_VALUE).any():
         return ""
 
-    return " (wyrównane do wspólnego horyzontu)"
+    starts = _finite_integer_values(data, COMMON_HORIZON_WEEK_START_COLUMN)
+    ends = _finite_integer_values(data, COMMON_HORIZON_WEEK_END_COLUMN)
+    if not starts.empty and not ends.empty:
+        week_range = int(starts.min()), int(ends.max())
+    else:
+        week_range = horizon_week_range(data)
+
+    if (
+        week_range is None
+        and "timeframe" in data.columns
+        and data["timeframe"].dropna().nunique() == 1
+    ):
+        timeframe = str(data["timeframe"].dropna().iloc[0])
+        week_range = DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES.get(timeframe)
+
+    if week_range is None:
+        return " (wyrównane do wspólnego horyzontu)"
+    return (
+        " (wyrównane do wspólnego horyzontu "
+        f"{format_horizon_week_range(*week_range)})"
+    )
 
 
 def _sample_size_range(values):
@@ -443,12 +463,18 @@ def plot_bucket_average(
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, axis="y", alpha=0.25)
     ax.tick_params(axis="x", rotation=45)
-    add_sample_size_note(
-        fig,
-        data,
-        "observation_count",
-        per="koszyk i horyzont; słupki są średnimi równo ważonymi",
-    )
+    if "observation_count" in data.columns:
+        bucket_sample_sizes = (
+            data.groupby("bucket", as_index=False)["observation_count"]
+            .sum()
+            .rename(columns={"observation_count": "bucket_observation_count"})
+        )
+        add_sample_size_note(
+            fig,
+            bucket_sample_sizes,
+            "bucket_observation_count",
+            per="koszyk",
+        )
     wrap_figure_text(fig)
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, plot_type, filename), dpi=160)
