@@ -125,7 +125,7 @@ def plot(analysis, output_dir):
             WEEKLY_RANK_BUCKET_RETURNS_DIR,
             f"{timeframe}_rank_bucket_annualized_return_lines.png",
             (
-                f"{timeframe_label(timeframe)}: roczna stopa zwrotu "
+                f"{timeframe_label(timeframe, timeframe_data)}: roczna stopa zwrotu "
                 "według tygodniowych pozycji w rankingu"
             ),
             bucket_order,
@@ -137,7 +137,7 @@ def plot(analysis, output_dir):
             WEEKLY_RANK_BUCKET_RETURNS_DIR,
             f"{timeframe}_rank_bucket_annualized_return_average.png",
             (
-                f"{timeframe_label(timeframe)}: Średnia roczna stopa "
+                f"{timeframe_label(timeframe, timeframe_data)}: Średnia roczna stopa "
                 "zwrotu według tygodniowych pozycji w rankingu"
             ),
             bucket_order,

@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import add_sample_size_note, plot_path
 
 from .plot_io import _save_figure
 
@@ -49,6 +49,9 @@ def _save_normalized_excess_comparison_plot(
         ).to_numpy(),
         "benchmark_annualized_return": benchmark.to_numpy(),
         "benchmark_zscore": benchmark_zscore.to_numpy(),
+        "observation_count": data.groupby("timestamp").size().reindex(
+            benchmark.index
+        ).to_numpy(),
     })
     comparison = comparison.dropna(
         subset=["long_short_normalized_excess", "long_only_normalized_excess"],
@@ -148,6 +151,13 @@ def _save_normalized_excess_comparison_plot(
         handles + benchmark_handles,
         labels + benchmark_labels,
         loc="best",
+    )
+
+    add_sample_size_note(
+        fig,
+        comparison,
+        "observation_count",
+        per="punkt (data scoringu)",
     )
 
     fig.autofmt_xdate()

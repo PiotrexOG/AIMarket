@@ -120,6 +120,13 @@ def plot(results, output_dir):
         sort=True,
     ):
         group = group.sort_values("timestamp")
+        horizon_data = (
+            forward_return_points[forward_return_points["timeframe"] == timeframe]
+            if forward_return_points is not None
+            and not forward_return_points.empty
+            and "timeframe" in forward_return_points.columns
+            else None
+        )
         directory = (
             TICKER_PERCENTILE_HISTORY_DIR
             / _safe_filename(timeframe)
@@ -145,6 +152,7 @@ def plot(results, output_dir):
                 directory,
                 output_dir,
                 moving_average_window,
+                horizon_data,
             )
 
     if forward_return_points is not None and not forward_return_points.empty:

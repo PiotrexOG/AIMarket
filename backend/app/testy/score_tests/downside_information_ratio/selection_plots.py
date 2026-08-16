@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
 from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    annotate_sample_sizes,
     plot_path,
     set_percent_x_axis,
     timeframe_label,
@@ -34,7 +36,7 @@ def plot(analysis, output_dir, horizon_label):
 
 
 def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -52,11 +54,18 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         color="#9C755F",
         label="Benchmark wszystkich spółek",
     )
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["mean_annualized_strategy_return"],
+            data["observation_count"],
+        )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: Średnia roczna stopa zwrotu "
         f"strategii najlepszych M (%) spółek i benchmarku, "
-        f"równo ważone horyzonty {horizon_label}"
+        "horyzonty ważone jednakowo"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
@@ -64,6 +73,12 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend()
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(output_dir, directory, f"{timeframe}_mean_annualized_return.png"),
@@ -73,7 +88,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
 
 
 def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -84,13 +99,25 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
     )
     ax.set_title(
         f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
-        f"dla najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
+        "dla najlepszych M (%) spółek, horyzonty ważone jednakowo"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Średnie downside deviation")
-
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["downside_deviation"],
+            data["observation_count"],
+        )
     ax.grid(True, alpha=0.25)
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(output_dir, directory, f"{timeframe}_mean_downside_deviation.png"),
@@ -100,7 +127,7 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
 
 
 def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -135,13 +162,26 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
-        f"według najlepszych M (%) spółek, równo ważone horyzonty {horizon_label}"
+        "według najlepszych M (%) spółek, horyzonty ważone jednakowo"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Wskaźnik DIR")
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["downside_information_ratio"],
+            data["observation_count"],
+        )
     ax.grid(True, alpha=0.25)
     ax.legend()
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(

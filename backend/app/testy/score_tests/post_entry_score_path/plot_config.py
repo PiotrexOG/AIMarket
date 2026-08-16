@@ -34,8 +34,8 @@ METRIC_LABELS = {
 
 SWITCH_TO_BENCHMARK_METRIC_LABELS = {
     "mean_switch_to_benchmark_annualized_gain": (
-        "Średni roczny zysk z przełączenia na benchmark gdy względna zmiana percentyla score <= próg"
+        "Średni roczny zysk z przełączenia na benchmark gdy względna zmiana percentyla score \N{LESS-THAN OR EQUAL TO} próg"
     ),
-    "downside_deviation": "Downside deviation zysku z przełączenia na benchmark gdy względna zmiana percentyla score <= próg",
-    "downside_information_ratio": "Wskaźnik DIR z przełączenia na benchmark gdy względna zmiana percentyla score <= próg"
+    "downside_deviation": "Downside deviation zysku z przełączenia na benchmark gdy względna zmiana percentyla score \N{LESS-THAN OR EQUAL TO} próg",
+    "downside_information_ratio": "Wskaźnik DIR z przełączenia na benchmark gdy względna zmiana percentyla score \N{LESS-THAN OR EQUAL TO} próg"
 }

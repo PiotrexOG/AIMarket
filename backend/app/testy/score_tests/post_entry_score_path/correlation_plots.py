@@ -2,7 +2,11 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import numpy as np
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    annotate_sample_sizes,
+    plot_path,
+)
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_LIVE_PROGRESS_SECTION,
     POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
@@ -54,9 +58,16 @@ def _plot_live_progress_correlations(
             linewidth=2,
             label="Spearman",
         )
+        if "mean_observation_count" in clean.columns:
+            annotate_sample_sizes(
+                ax,
+                clean[progress_column],
+                clean["mean_pearson_to_annualized_return"],
+                clean["mean_observation_count"],
+            )
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: korelacja średniego percentyla "
+            "Korelacja średniego percentyla "
             f"score z upływem horyzontu, horyzonty {context_label}"
         )
         ax.set_xlabel("Zaobserwowana część horyzontu inwestycji")
@@ -65,6 +76,12 @@ def _plot_live_progress_correlations(
         ax.set_ylim(0, 1)
         ax.grid(True, alpha=0.25)
         ax.legend()
+        add_sample_size_note(
+            fig,
+            clean,
+            "mean_observation_count",
+            per="punkt postępu (średnia liczba obserwacji na horyzont)",
+        )
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -118,10 +135,17 @@ def _plot_score_change_progress_correlations(
             linewidth=2,
             label="Spearman",
         )
+        if "mean_observation_count" in clean.columns:
+            annotate_sample_sizes(
+                ax,
+                clean[progress_column],
+                clean["mean_pearson_to_annualized_return"],
+                clean["mean_observation_count"],
+            )
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: korelacja metryki "
+            "Korelacja metryki "
             f"'{METRIC_LABELS[metric]}' z upływem horyzontu, "
             f"horyzonty {context_label}"
         )
@@ -131,6 +155,12 @@ def _plot_score_change_progress_correlations(
         ax.set_ylim(-1, 1)
         ax.grid(True, alpha=0.25)
         ax.legend()
+        add_sample_size_note(
+            fig,
+            clean,
+            "mean_observation_count",
+            per="punkt postępu (średnia liczba obserwacji na horyzont)",
+        )
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -214,7 +244,7 @@ def _plot_best_correlation_overview(
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: {METRIC_LABELS[metric]} "
+            f"{METRIC_LABELS[metric]} "
             f"względem metryki '{return_label}', "
             f"horyzonty {context_label}{correlation_text}",
             fontsize=12,
@@ -225,6 +255,7 @@ def _plot_best_correlation_overview(
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
         ax.legend(fontsize=8)
+        add_sample_size_note(fig, clean)
         fig.tight_layout()
         fig.savefig(
             plot_path(

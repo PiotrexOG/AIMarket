@@ -4,10 +4,12 @@ import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
 from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
     horizon_x_column,
     horizon_x_label,
     limit_horizon_range,
     mean_label,
+    label_with_sample_size,
     plot_path,
     set_integer_x_axis,
     timeframe_label,
@@ -62,15 +64,18 @@ def plot(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=mean_label(
-                    bucket,
-                    group["annualized_return"],
-                    lambda value: f"{value:.1%}",
+                label=label_with_sample_size(
+                    mean_label(
+                        bucket,
+                        group["annualized_return"],
+                        lambda value: f"{value:.1%}",
+                    ),
+                    group,
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: globalny dobór najlepszych X% "
+            f"{timeframe_label(timeframe, timeframe_data)}: globalny dobór najlepszych X% "
             "i roczna stopa zwrotu"
         )
         ax.set_xlabel(horizon_x_label(timeframe_data))
@@ -79,6 +84,12 @@ def plot(analysis, output_dir):
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
         ax.legend(title="Średnia z pokazanych horyzontów")
+        add_sample_size_note(
+            fig,
+            timeframe_data,
+            "observation_count",
+            per="punkt (próg X% i horyzont)",
+        )
         fig.tight_layout()
         fig.savefig(
             plot_path(

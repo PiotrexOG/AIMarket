@@ -3,7 +3,11 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    annotate_sample_sizes,
+    plot_path,
+)
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_LIVE_PROGRESS_SECTION,
     POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
@@ -69,6 +73,13 @@ def _plot_switch_to_benchmark_threshold_lines(
             linewidth=2,
             label="Downside deviation",
         )
+        if "switch_count" in clean.columns:
+            annotate_sample_sizes(
+                gain_ax,
+                clean["score_change_threshold"],
+                clean["mean_switch_to_benchmark_annualized_gain"],
+                clean["switch_count"],
+            )
         gain_ax.axhline(0, color="#444444", linewidth=1)
         gain_ax.axvline(0, color="#444444", linewidth=1)
         gain_ax.set_xlabel(
@@ -119,8 +130,15 @@ def _plot_switch_to_benchmark_threshold_lines(
         )
         context_label = _plot_context_title_label(horizon_label)
         gain_ax.set_title(
-            f"{timeframe_label(timeframe)}: przełączenie na benchmark gdy względna zmiana percentyla score <= próg"
+            "Przełączenie na benchmark gdy "
+            "względna zmiana percentyla score \N{LESS-THAN OR EQUAL TO} próg "
             f"po {progress_label} horyzontu, horyzonty {context_label}"
+        )
+        add_sample_size_note(
+            fig,
+            clean,
+            "switch_count",
+            per="punkt progu (obserwacje spełniające warunek przełączenia)",
         )
         fig.tight_layout()
         fig.savefig(
@@ -195,6 +213,18 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
                 )
                 .reindex(index=progress_order, columns=threshold_order)
             )
+            counts = (
+                clean.pivot_table(
+                    index=progress_column,
+                    columns="score_change_threshold",
+                    values="switch_count",
+                    aggfunc="max",
+                    observed=False,
+                )
+                .reindex(index=progress_order, columns=threshold_order)
+                if "switch_count" in clean.columns
+                else None
+            )
             values = matrix.to_numpy(dtype=float)
             finite_values = values[np.isfinite(values)]
             if finite_values.size == 0:
@@ -225,6 +255,27 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
                 vmax=upper,
                 aspect="auto",
             )
+            if counts is not None:
+                for row_index in range(len(progress_order)):
+                    for column_index in range(len(threshold_order)):
+                        value = values[row_index, column_index]
+                        count = counts.iloc[row_index, column_index]
+                        if not np.isfinite(value) or pd.isna(count) or count <= 0:
+                            continue
+                        value_text = (
+                            f"{value:.2f}"
+                            if metric == "downside_information_ratio"
+                            else f"{value:.1%}"
+                        )
+                        ax.text(
+                            column_index,
+                            row_index,
+                            f"{value_text}\nn={int(count)}",
+                            ha="center",
+                            va="center",
+                            fontsize=6,
+                            color="#111111",
+                        )
             colorbar = fig.colorbar(image, ax=ax)
             colorbar.set_label(SWITCH_TO_BENCHMARK_METRIC_LABELS[metric])
             if metric != "downside_information_ratio":
@@ -244,9 +295,17 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
             ax.set_ylabel("Zaobserwowana część horyzontu inwestycji")
             context_label = _plot_context_title_label(horizon_label)
             ax.set_title(
-                f"{timeframe_label(timeframe)}: "
                 f"{SWITCH_TO_BENCHMARK_METRIC_LABELS[metric]}, "
                 f"horyzonty {context_label}"
+            )
+            add_sample_size_note(
+                fig,
+                clean,
+                "switch_count",
+                per=(
+                    "komórkę (punkt postępu i próg; obserwacje spełniające "
+                    "warunek przełączenia)"
+                ),
             )
             fig.tight_layout()
             fig.savefig(
@@ -393,8 +452,16 @@ def _plot_hold_decision_heatmap(
         )
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: pozostała stopa zwrotu według "
+            "Pozostała stopa zwrotu według "
             f"pogorszenia score i zmiany ceny, horyzonty {context_label}"
+        )
+        add_sample_size_note(
+            fig,
+            clean,
+            note=(
+                f"n={len(clean)} obserwacji łącznie; dokładne n podano "
+                "w każdej niepustej komórce"
+            ),
         )
         fig.tight_layout()
         fig.savefig(

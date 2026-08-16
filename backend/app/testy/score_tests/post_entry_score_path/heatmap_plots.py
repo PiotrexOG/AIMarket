@@ -3,7 +3,10 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    plot_path,
+)
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
 )
@@ -108,7 +111,7 @@ def _plot_score_drop_scatter(
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: stopa zwrotu względem spadku "
+            "Stopa zwrotu względem spadku "
             "percentyla score po wejściu, "
             f"horyzonty {context_label}"
             f"{regression_text}"
@@ -121,6 +124,7 @@ def _plot_score_drop_scatter(
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
         ax.legend(fontsize=9)
+        add_sample_size_note(fig, clean)
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -265,9 +269,17 @@ def _plot_relative_score_change_heatmap(
         )
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: średnia wartość metryki "
+            "Średnia wartość metryki "
             f"'{return_label}' według percentyla wejścia i względnej zmiany "
             f"score, horyzonty {context_label}"
+        )
+        add_sample_size_note(
+            fig,
+            clean,
+            note=(
+                f"n={len(clean)} obserwacji łącznie; dokładne n podano "
+                "w każdej niepustej komórce"
+            ),
         )
         fig.tight_layout()
         fig.savefig(

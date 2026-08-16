@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
     horizon_x_column,
     horizon_x_label,
     limit_horizon_range,
     mean_label,
+    label_with_sample_size,
     plot_path,
     set_integer_x_axis,
     timeframe_label,
@@ -52,15 +54,18 @@ def plot(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=mean_label(
-                    metric,
-                    group["pearson"],
-                    lambda value: f"{value:.3f}",
+                label=label_with_sample_size(
+                    mean_label(
+                        metric,
+                        group["pearson"],
+                        lambda value: f"{value:.3f}",
+                    ),
+                    group,
                 ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: tygodniowe miary IC "
+            f"{timeframe_label(timeframe, timeframe_data)}: tygodniowe miary IC "
             "dla przyszłych stóp zwrotu"
         )
         ax.set_xlabel(horizon_x_label(timeframe_data))
@@ -68,6 +73,12 @@ def plot(analysis, output_dir):
         ax.set_ylabel("Średni tygodniowy IC")
         ax.grid(True, alpha=0.25)
         ax.legend(title="Średnia z pokazanych horyzontów")
+        add_sample_size_note(
+            fig,
+            timeframe_data,
+            "observation_count",
+            per="punkt (miara i horyzont)",
+        )
         fig.tight_layout()
         fig.savefig(
             plot_path(

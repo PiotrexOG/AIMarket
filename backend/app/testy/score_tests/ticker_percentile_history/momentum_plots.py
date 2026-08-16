@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import add_sample_size_note, plot_path
 from app.testy.score_tests.common.output_paths import (
     TICKER_ANTI_MOMENTUM_SECTION,
     TICKER_MODEL_VS_MOMENTUM_SECTION,
@@ -67,13 +67,29 @@ def _save_ticker_correlation_bar_chart(
     )
     ax.set_xlim(-1, 1)
     ax.set_yticks(y_positions)
-    ax.set_yticklabels(clean["ticker"])
+    if "observations" in clean.columns:
+        y_labels = [
+            f"{row.ticker} (n={int(row.observations)})"
+            if pd.notna(row.observations)
+            else str(row.ticker)
+            for row in clean.itertuples(index=False)
+        ]
+    else:
+        y_labels = clean["ticker"].astype(str).tolist()
+    ax.set_yticklabels(y_labels)
     ax.set_ylim(len(clean) - 0.5, -0.5)
     ax.set_title(title)
     ax.set_xlabel(x_label)
     ax.set_ylabel("Ticker")
     ax.grid(True, axis="x", alpha=0.25)
     ax.legend(loc="best")
+    if "observations" in clean.columns:
+        add_sample_size_note(
+            fig,
+            clean,
+            "observations",
+            per="ticker (liczba par score\N{EN DASH}porównywana stopa zwrotu)",
+        )
     fig.tight_layout()
     _save_figure(
         fig,
@@ -429,6 +445,12 @@ def _plot_model_vs_momentum_panel(
         ax.legend(loc="best")
 
     fig.suptitle(title)
+    add_sample_size_note(
+        fig,
+        comparison,
+        "ticker_count",
+        per="punkt (data scoringu)",
+    )
     fig.autofmt_xdate()
     fig.tight_layout()
     _save_figure(

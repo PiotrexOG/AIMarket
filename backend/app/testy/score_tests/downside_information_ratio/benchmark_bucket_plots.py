@@ -2,8 +2,11 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
 import numpy as np
+import pandas as pd
 
 from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    annotate_sample_sizes,
     plot_path,
     set_percent_x_axis,
     timeframe_label,
@@ -79,7 +82,7 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
 
 
 def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -105,6 +108,13 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         color="#59A14F",
         label="Roczny nadwyżkowy zwrot względem benchmarku",
     )
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["mean_annualized_strategy_return"],
+            data["observation_count"],
+        )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: Średnia roczna stopa zwrotu "
@@ -116,6 +126,12 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend()
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M w koszyku benchmarku",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(output_dir, directory, f"{timeframe}_bucket_mean_return.png"),
@@ -125,7 +141,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
 
 
 def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -142,7 +158,20 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Downside deviation")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["downside_deviation"],
+            data["observation_count"],
+        )
     ax.grid(True, alpha=0.25)
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M w koszyku benchmarku",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(output_dir, directory, f"{timeframe}_bucket_downside_deviation.png"),
@@ -152,7 +181,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
 
 
 def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -169,7 +198,20 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Wskaźnik DIR")
+    if "observation_count" in data.columns:
+        annotate_sample_sizes(
+            ax,
+            data["top_percent"],
+            data["downside_information_ratio"],
+            data["observation_count"],
+        )
     ax.grid(True, alpha=0.25)
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt M w koszyku benchmarku",
+    )
     fig.tight_layout()
     fig.savefig(
         plot_path(output_dir, directory, f"{timeframe}_bucket_downside_ratio.png"),
@@ -179,7 +221,7 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
 
 
 def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe)
+    title_timeframe = timeframe_label(timeframe, data)
     metrics = [
         (
             "mean_annualized_alpha",
@@ -269,6 +311,12 @@ def _plot_metric_heatmap(
         values=metric,
         aggfunc="mean",
     ).reindex(index=bucket_order, columns=top_order)
+    counts = clean.pivot_table(
+        index="benchmark_return_bucket_id",
+        columns="top_share",
+        values="observation_count",
+        aggfunc="max",
+    ).reindex(index=bucket_order, columns=top_order)
 
     if matrix.empty:
         return
@@ -313,6 +361,21 @@ def _plot_metric_heatmap(
     # Rysowanie głównej heatmapy
     image = ax.imshow(display_values, aspect="auto", cmap=cmap, norm=norm)
 
+    for row_index in range(len(bucket_order)):
+        for column_index in range(len(top_order)):
+            count = counts.iloc[row_index, column_index]
+            if pd.isna(count) or count <= 0 or invalid_mask[row_index, column_index]:
+                continue
+            ax.text(
+                column_index,
+                row_index,
+                f"n={int(count)}",
+                ha="center",
+                va="center",
+                fontsize=5.5,
+                color="#111111",
+            )
+
     # --- DODANY FRAGMENT: NAKŁADANIE SKOŚNYCH SZARYCH KRESEK ---
     y_indices, x_indices = np.where(invalid_mask)
     for x, y in zip(x_indices, y_indices):
@@ -350,6 +413,12 @@ def _plot_metric_heatmap(
     ax.set_yticks(np.arange(-0.5, len(bucket_order), 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=0.6)
     ax.tick_params(which="minor", bottom=False, left=False)
+    add_sample_size_note(
+        fig,
+        clean,
+        "observation_count",
+        per="komórkę (koszyk benchmarku i poziom N)",
+    )
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, directory, filename), dpi=170)
     plt.close(fig)

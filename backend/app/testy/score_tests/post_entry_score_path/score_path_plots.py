@@ -3,7 +3,10 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    plot_path,
+)
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_LIVE_PROGRESS_SECTION,
     POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION,
@@ -80,7 +83,7 @@ def _plot_score_change_scatter(
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: {return_label} względem "
+            f"{return_label} względem "
             f"{METRIC_LABELS[metric]}, horyzonty {context_label}"
             f"\nPearson {pearson:.2f}, Spearman {spearman:.2f}"
         )
@@ -90,6 +93,7 @@ def _plot_score_change_scatter(
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
         ax.legend(fontsize=9)
+        add_sample_size_note(fig, clean)
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -172,7 +176,7 @@ def _plot_remaining_return_at_progress_scatter(
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
-            f"{timeframe_label(timeframe)}: roczny nadwyżkowy zwrot "
+            "Roczny nadwyżkowy zwrot "
             f"z trzymania pozycji po {progress_label} horyzontu, "
             f"horyzonty {context_label}"
             f"{title_suffix}"
@@ -191,6 +195,7 @@ def _plot_remaining_return_at_progress_scatter(
             ax.set_xlim(right=metric_max)
         ax.grid(True, alpha=0.2)
         ax.legend(fontsize=9)
+        add_sample_size_note(fig, clean)
         fig.tight_layout()
         fig.savefig(
             plot_path(
@@ -336,9 +341,17 @@ def _plot_hold_decision_by_score_drop(
         return_ax.legend(fontsize=9)
         context_label = _plot_context_title_label(horizon_label)
         return_ax.set_title(
-            f"{timeframe_label(timeframe)}: nadwyżkowy zwrot z trzymania pozycji "
+            "Nadwyżkowy zwrot z trzymania pozycji "
             f"według zmiany score po {progress_label} horyzontu, "
             f"horyzonty {context_label}"
+        )
+        add_sample_size_note(
+            fig,
+            clean,
+            note=(
+                f"n={len(clean)} obserwacji łącznie; dokładne n podano "
+                "nad każdym słupkiem"
+            ),
         )
         fig.tight_layout()
         fig.savefig(

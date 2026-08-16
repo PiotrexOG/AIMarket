@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import plot_path
+from app.testy.score_tests.common.plotting import add_sample_size_note, plot_path
 
 from .normalization import _format_metric_value
 from .plot_io import _save_figure, _save_heatmap_csv
@@ -171,6 +171,13 @@ def _save_ticker_date_heatmap(
         )
         metric_ax.set_xlabel(metric_label)
         metric_ax.tick_params(axis="x", length=0, pad=2)
+
+    sample_data = data.dropna(subset=["ticker", "timestamp", value_column])
+    add_sample_size_note(
+        fig,
+        sample_data,
+        per="niepustą komórkę ticker\N{MULTIPLICATION SIGN}data",
+    )
 
     fig.tight_layout()
     _save_figure(

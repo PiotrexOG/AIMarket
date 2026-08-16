@@ -19,10 +19,10 @@ TIMEFRAME_HORIZON_LIMITS = {
     "long_term_200d": (100, 300),
 }
 
-TIMEFRAME_LABELS = {
-    "short_term_14d": "Krótki termin (ok. 14 d.)",
-    "medium_term_50d": "Średni termin (ok. 50 d.)",
-    "long_term_200d": "Długi termin (ok. 200 d.)",
+DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES = {
+    "short_term_14d": (1, 3),
+    "medium_term_50d": (4, 10),
+    "long_term_200d": (28, 29),
 }
 
 SERIES_LABELS = {
@@ -63,9 +63,182 @@ def horizon_x_label(df):
     )
 
 
-def timeframe_label(timeframe):
+def _finite_integer_values(data, column):
+    if data is None or not hasattr(data, "columns") or column not in data.columns:
+        return pd.Series(dtype="int64")
+    values = pd.to_numeric(data[column], errors="coerce").replace(
+        [np.inf, -np.inf],
+        np.nan,
+    ).dropna()
+    return values.round().astype(int)
+
+
+def horizon_week_range(data):
+    starts = _finite_integer_values(data, "horizon_week_start")
+    ends = _finite_integer_values(data, "horizon_week_end")
+    if not starts.empty and not ends.empty:
+        return int(starts.min()), int(ends.max())
+
+    weeks = _finite_integer_values(data, "horizon_weeks")
+    if not weeks.empty:
+        return int(weeks.min()), int(weeks.max())
+    return None
+
+
+def format_horizon_week_range(start_week, end_week):
+    start_week = int(start_week)
+    end_week = int(end_week)
+    if start_week == end_week:
+        if end_week == 1:
+            unit = "tydzień"
+        elif end_week % 10 in {2, 3, 4} and end_week % 100 not in {12, 13, 14}:
+            unit = "tygodnie"
+        else:
+            unit = "tygodni"
+        return f"{start_week} {unit}"
+
+    unit = "tygodnie" if end_week <= 4 else "tygodni"
+    return f"{start_week}\N{EN DASH}{end_week} {unit}"
+
+
+def timeframe_label(timeframe, data=None):
     text = str(timeframe)
-    return TIMEFRAME_LABELS.get(text, text.replace("_", " "))
+    week_range = horizon_week_range(data)
+    if week_range is None:
+        week_range = DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES.get(text)
+    if week_range is not None:
+        return format_horizon_week_range(*week_range)
+    return text.replace("_", " ")
+
+
+def _sample_size_range(values):
+    clean = pd.to_numeric(values, errors="coerce").replace(
+        [np.inf, -np.inf],
+        np.nan,
+    ).dropna()
+    clean = clean[clean >= 0]
+    if clean.empty:
+        return None
+    minimum = float(clean.min())
+    maximum = float(clean.max())
+    minimum_text = _format_sample_size(minimum)
+    maximum_text = _format_sample_size(maximum)
+    return (
+        minimum_text
+        if np.isclose(minimum, maximum)
+        else f"{minimum_text}\N{EN DASH}{maximum_text}"
+    )
+
+
+def _format_sample_size(value):
+    value = float(value)
+    return str(int(round(value))) if np.isclose(value, round(value)) else f"{value:.1f}"
+
+
+def label_with_sample_size(label, data, count_column="observation_count"):
+    if data is None or count_column not in data.columns:
+        return label
+    size_range = _sample_size_range(data[count_column])
+    if size_range is None:
+        return label
+    return f"{label}; n={size_range} na punkt"
+
+
+def sample_size_note(
+    data=None,
+    count_column=None,
+    *,
+    per="wykres",
+    note=None,
+):
+    if note:
+        return f"Liczebność próby: {note}"
+    if data is None:
+        return None
+
+    details = []
+    if count_column and hasattr(data, "columns") and count_column in data.columns:
+        size_range = _sample_size_range(data[count_column])
+        if size_range is not None:
+            details.append(f"n={size_range} na {per}")
+    elif hasattr(data, "__len__"):
+        details.append(f"n={len(data)} obserwacji")
+
+    if hasattr(data, "columns"):
+        if "ticker" in data.columns:
+            ticker_count = int(data["ticker"].dropna().nunique())
+            if ticker_count:
+                details.append(f"{ticker_count} spółek")
+        date_column = next(
+            (
+                column
+                for column in ("timestamp", "start_timestamp")
+                if column in data.columns
+            ),
+            None,
+        )
+        if date_column is not None:
+            date_count = int(data[date_column].dropna().nunique())
+            if date_count:
+                details.append(f"{date_count} dat")
+
+    return f"Liczebność próby: {'; '.join(details)}" if details else None
+
+
+def add_sample_size_note(
+    fig,
+    data=None,
+    count_column=None,
+    *,
+    per="punkt",
+    note=None,
+):
+    text = sample_size_note(
+        data,
+        count_column,
+        per=per,
+        note=note,
+    )
+    if not text:
+        return
+    fig._score_tests_sample_note = text
+    fig.text(
+        0.01,
+        0.012,
+        wrap_plot_text(text, width=150),
+        ha="left",
+        va="bottom",
+        fontsize=8,
+        color="#444444",
+    )
+
+
+def annotate_sample_sizes(
+    ax,
+    x_values,
+    y_values,
+    counts,
+    *,
+    max_annotations=30,
+):
+    points = pd.DataFrame({
+        "x": list(x_values),
+        "y": list(y_values),
+        "n": list(counts),
+    }).dropna()
+    if points.empty or len(points) > max_annotations:
+        return
+    for index, row in enumerate(points.itertuples(index=False)):
+        ax.annotate(
+            f"n={_format_sample_size(row.n)}",
+            (row.x, row.y),
+            xytext=(0, 6 if index % 2 == 0 else -10),
+            textcoords="offset points",
+            ha="center",
+            va="bottom" if index % 2 == 0 else "top",
+            fontsize=7,
+            color="#444444",
+        )
 
 
 def plot_label(label):
@@ -123,6 +296,8 @@ def _install_wrapped_tight_layout():
 
     def tight_layout_with_wrapped_text(self, *args, **kwargs):
         wrap_figure_text(self)
+        if getattr(self, "_score_tests_sample_note", None) and "rect" not in kwargs:
+            kwargs["rect"] = (0, 0.055, 1, 1)
         return original_tight_layout(self, *args, **kwargs)
 
     tight_layout_with_wrapped_text._score_tests_wraps_text = True
@@ -167,13 +342,16 @@ def plot_bucket_lines(
             markersize=3,
             color=color,
             label=(
-                mean_label(
-                    bucket,
-                    group["annualized_return"],
-                    lambda value: f"{value:.2%}",
+                label_with_sample_size(
+                    mean_label(
+                        bucket,
+                        group["annualized_return"],
+                        lambda value: f"{value:.2%}",
+                    ),
+                    group,
                 )
                 if show_mean_in_legend
-                else plot_label(bucket)
+                else label_with_sample_size(plot_label(bucket), group)
             ),
         )
     ax.axhline(0, color="#444444", linewidth=1)
@@ -190,6 +368,12 @@ def plot_bucket_lines(
             else "Koszyk"
         ),
         ncol=2,
+    )
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="punkt (koszyk i horyzont)",
     )
     wrap_figure_text(fig)
     fig.tight_layout()
@@ -214,6 +398,11 @@ def plot_bucket_average(
         aggregations["avg_score_min"] = (min_column, "mean")
         aggregations["avg_score_max"] = (max_column, "mean")
 
+    if "observation_count" in data.columns:
+        aggregations["sample_size_min"] = ("observation_count", "min")
+        aggregations["sample_size_max"] = ("observation_count", "max")
+        aggregations["horizon_count"] = ("observation_count", "count")
+
     average = data.groupby("bucket", as_index=False).agg(**aggregations)
     average["bucket"] = pd.Categorical(
         average["bucket"],
@@ -230,6 +419,20 @@ def plot_bucket_average(
             f"{plot_label(row.bucket)}\nśr. score {row.avg_score_min:.1f}"
             for row in average.itertuples(index=False)
         ]
+    if {"sample_size_min", "sample_size_max", "horizon_count"}.issubset(
+        average.columns
+    ):
+        labels = [
+            (
+                f"{label}\nn={int(row.sample_size_min)}"
+                if row.sample_size_min == row.sample_size_max
+                else (
+                    f"{label}\nn={int(row.sample_size_min)}"
+                    f"\N{EN DASH}{int(row.sample_size_max)}/horyzont"
+                )
+            )
+            for label, row in zip(labels, average.itertuples(index=False))
+        ]
 
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.bar(labels, average["annualized_return"], color="#4C78A8")
@@ -241,6 +444,12 @@ def plot_bucket_average(
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, axis="y", alpha=0.25)
     ax.tick_params(axis="x", rotation=45)
+    add_sample_size_note(
+        fig,
+        data,
+        "observation_count",
+        per="koszyk i horyzont; słupki są średnimi równo ważonymi",
+    )
     wrap_figure_text(fig)
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, plot_type, filename), dpi=160)

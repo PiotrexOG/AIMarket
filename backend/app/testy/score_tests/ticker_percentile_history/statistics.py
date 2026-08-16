@@ -83,6 +83,7 @@ def _autocorrelation_by_lag(values, max_lag):
         rows.append({
             "lag": lag,
             "autocorrelation": correlation,
+            "observations": int(len(clean) - lag),
         })
     return pd.DataFrame(rows)
 

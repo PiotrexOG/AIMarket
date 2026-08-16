@@ -3,6 +3,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from app.testy.score_tests.common.plotting import format_horizon_week_range
 from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_SCORE_PATH_DIR,
     horizon_dir,
@@ -96,7 +97,11 @@ def _horizon_range_title_label(horizon_label):
     horizon_part = Path(horizon_label).parts[0]
     if horizon_part.endswith("w"):
         horizon_part = horizon_part[:-1]
-        return f"{horizon_part} tygodni"
+        try:
+            start_week, end_week = map(int, horizon_part.split("-", maxsplit=1))
+        except ValueError:
+            return f"{horizon_part} tygodni"
+        return format_horizon_week_range(start_week, end_week)
     return str(horizon_part).replace("_", " ")
 
 
@@ -110,7 +115,10 @@ def _score_scope_title_label(horizon_label):
         return "wszystkie"
     prefix = "entry_min_score_percentile_"
     if score_scope.startswith(prefix):
-        return f"top {int(score_scope.removeprefix(prefix))} percentyl"
+        return (
+            "percentyl score przy wejściu "
+            f"\N{GREATER-THAN OR EQUAL TO}{int(score_scope.removeprefix(prefix))}%"
+        )
     return score_scope.replace("_", " ")
 
 
@@ -118,7 +126,7 @@ def _plot_context_title_label(horizon_label):
     context = _horizon_range_title_label(horizon_label)
     score_scope = _score_scope_title_label(horizon_label)
     if score_scope is not None and score_scope != "wszystkie":
-        context = f"{context}, {score_scope} scores"
+        context = f"{context}, {score_scope}"
     return context
 
 

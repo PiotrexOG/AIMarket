@@ -3,7 +3,11 @@ import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    plot_path,
+    timeframe_label,
+)
 
 from .plot_config import MOVING_AVERAGE_COLUMN
 from .plot_io import _save_figure, _save_heatmap_csv
@@ -17,6 +21,7 @@ def _save_combined_plot(
     directory,
     output_dir,
     moving_average_window,
+    horizon_data=None,
 ):
     percentile_color = "#4C78A8"
     moving_average_color = "#59A14F"
@@ -58,7 +63,7 @@ def _save_combined_plot(
 
     percentile_ax.set_title(
         f"{ticker}: percentyl score, średnia krocząca i cena "
-        f"zamknięcia ({timeframe_label(timeframe)})"
+        f"zamknięcia ({timeframe_label(timeframe, horizon_data)})"
     )
     percentile_ax.set_xlabel("Data")
     percentile_ax.set_ylabel("Percentyl score", color=percentile_color)
@@ -75,6 +80,16 @@ def _save_combined_plot(
     percentile_ax.legend(
         handles=legend_handles,
         loc="best",
+    )
+
+    metric_count = int(metric_group["current_score_percentile"].notna().sum())
+    price_count = int(price_group["close"].notna().sum())
+    add_sample_size_note(
+        fig,
+        note=(
+            f"n={metric_count} dziennych obserwacji percentyla score; "
+            f"n={price_count} obserwacji ceny zamknięcia"
+        ),
     )
 
     fig.autofmt_xdate()
@@ -111,6 +126,7 @@ def _save_all_tickers_moving_average_heatmap(
     directory,
     output_dir,
     moving_average_window,
+    horizon_data=None,
 ):
     if MOVING_AVERAGE_COLUMN not in timeframe_score_points.columns:
         return
@@ -169,7 +185,7 @@ def _save_all_tickers_moving_average_heatmap(
     heatmap_ax.set_xlabel("Data scoringu")
     heatmap_ax.set_title(
         f"{moving_average_window}-punktowa średnia krocząca percentyla score "
-        f"({timeframe_label(timeframe)})"
+        f"({timeframe_label(timeframe, horizon_data)})"
     )
 
     date_count = len(heatmap_data.columns)
@@ -204,6 +220,15 @@ def _save_all_tickers_moving_average_heatmap(
     colorbar = fig.colorbar(image, cax=colorbar_ax)
     colorbar.set_label("Średnia krocząca percentyla score")
     colorbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+    valid_cells = int(np.isfinite(heatmap_data.to_numpy(dtype=float)).sum())
+    add_sample_size_note(
+        fig,
+        note=(
+            f"n={valid_cells} niepustych obserwacji ticker\N{MULTIPLICATION SIGN}data; "
+            f"{len(heatmap_data.index)} spółek; {len(heatmap_data.columns)} dat"
+        ),
+    )
 
     fig.tight_layout()
     _save_figure(

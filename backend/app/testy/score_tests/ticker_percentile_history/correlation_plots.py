@@ -3,7 +3,11 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    plot_path,
+    timeframe_label,
+)
 
 from .hac_plots import _save_score_return_hac_diagnostics
 from .plot_io import _save_figure
@@ -52,6 +56,17 @@ def _save_score_return_correlation_by_timestamp_plot(
         benchmark_return = group["mean_forward_annualized_return"].mean()
         rows.append({
             "timestamp": timestamp,
+            "observation_count": int(
+                group[
+                    [
+                        "score_zscore",
+                        "forward_return_zscore",
+                        "score_percentile",
+                        "forward_return_percentile",
+                        "excess_forward_annualized_return",
+                    ]
+                ].dropna().shape[0]
+            ),
             "pearson": pearson,
             "spearman": spearman,
             "score_percentile_pearson_ic": score_percentile_pearson,
@@ -161,7 +176,7 @@ def _save_score_return_correlation_by_timestamp_plot(
     ax.set_ylim(-1, 1)
     ax.set_title(
         f"Korelacja score z przyszłą stopą zwrotu według daty scoringu "
-        f"({timeframe_label(timeframe)}; średnia Pearson {pearson_mean:.3f}, "
+        f"({timeframe_label(timeframe, data)}; średnia Pearson {pearson_mean:.3f}, "
         f"średnia Spearman {spearman_mean:.3f}, "
         f"średnia Pearson IC percentyla score "
         f"{score_percentile_pearson_mean:.3f})"
@@ -180,6 +195,12 @@ def _save_score_return_correlation_by_timestamp_plot(
         handles + benchmark_handles,
         labels + benchmark_labels,
         loc="best",
+    )
+    add_sample_size_note(
+        fig,
+        correlations,
+        "observation_count",
+        per="punkt (data scoringu)",
     )
 
     fig.autofmt_xdate()
@@ -219,6 +240,15 @@ def _save_forward_return_cross_section_correlation_plot(
     )
     if correlations.empty:
         return
+    if "ticker" in timeframe_forward_returns.columns:
+        observation_counts = timeframe_forward_returns.groupby("timestamp")[
+            "ticker"
+        ].nunique()
+    else:
+        observation_counts = timeframe_forward_returns.groupby("timestamp").size()
+    correlations["observation_count"] = correlations["timestamp"].map(
+        observation_counts
+    )
 
     fig, ax = plt.subplots(figsize=(13, 6))
     ax.plot(
@@ -259,12 +289,18 @@ def _save_forward_return_cross_section_correlation_plot(
     ax.set_ylim(-1, 1)
     ax.set_title(
         f"Korelacja percentyla score z percentylem przyszłej stopy "
-        f"zwrotu ({timeframe_label(timeframe)})"
+        f"zwrotu ({timeframe_label(timeframe, timeframe_forward_returns)})"
     )
     ax.set_xlabel("Data scoringu")
     ax.set_ylabel("Korelacja przekrojowa")
     ax.grid(True, alpha=0.25)
     ax.legend(loc="best")
+    add_sample_size_note(
+        fig,
+        correlations,
+        "observation_count",
+        per="punkt (data scoringu)",
+    )
 
     fig.autofmt_xdate()
     fig.tight_layout()
@@ -317,6 +353,7 @@ def _save_raw_score_forward_return_correlation_plot(
         return
 
     correlations["sort_value"] = correlations[["pearson", "spearman"]].mean(axis=1)
+    correlations["observation_count"] = data.groupby("ticker").size()
     correlations = correlations.sort_values("sort_value", ascending=False)
 
     y_positions = np.arange(len(correlations.index))
@@ -341,12 +378,21 @@ def _save_raw_score_forward_return_correlation_plot(
         ax.set_ylim(len(correlations.index) - 0.5, -0.5)
 
     pearson_ax.set_yticks(y_positions)
-    pearson_ax.set_yticklabels(correlations.index)
+    pearson_ax.set_yticklabels([
+        f"{ticker} (n={int(row.observation_count)})"
+        for ticker, row in correlations.iterrows()
+    ])
     pearson_ax.set_ylabel("Ticker")
     spearman_ax.tick_params(axis="y", left=False, labelleft=False)
     fig.suptitle(
         f"Korelacja surowego score ze średnią przyszłą "
-        f"roczną stopą zwrotu ({timeframe_label(timeframe)})"
+        f"roczną stopą zwrotu ({timeframe_label(timeframe, timeframe_forward_returns)})"
+    )
+    add_sample_size_note(
+        fig,
+        correlations,
+        "observation_count",
+        per="ticker (liczba par score\N{EN DASH}zwrot)",
     )
     fig.tight_layout()
     _save_figure(

@@ -3,7 +3,12 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import plot_path, timeframe_label
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    label_with_sample_size,
+    plot_path,
+    timeframe_label,
+)
 
 from .plot_config import HAC_DIAGNOSTIC_METRICS
 from .plot_io import _save_figure
@@ -56,7 +61,11 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
             marker="o",
             markersize=4,
             capsize=3,
-            label=f"{config['label']} według horyzontu",
+            label=label_with_sample_size(
+                f"{config['label']} według horyzontu",
+                metric_summary,
+                "observations",
+            ),
         )
 
         official = _metric_official_summary(summary, config["metric"])
@@ -85,6 +94,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
                 f"{official['mean_ic']:.3f}, 95% przedział "
                 f"[{official['ci_lower_95']:.3f}, "
                 f"{official['ci_upper_95']:.3f}]"
+                f", n={int(official['observations'])}"
             )
 
     ax.axhline(0, color="#444444", linewidth=1)
@@ -93,7 +103,8 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.set_xticklabels([str(int(value)).replace("w", "") for value in x_values])
     ax.set_title(
         f"IC score względem przyszłej stopy zwrotu oraz "
-        f"przedziały HAC według horyzontu ({timeframe_label(timeframe)})"
+        f"przedziały HAC według horyzontu "
+        f"({timeframe_label(timeframe, horizon_summary)})"
     )
     ax.set_xlabel("Horyzont przyszłej stopy zwrotu [tygodnie]")
     ax.set_ylabel("Średni IC")
@@ -115,6 +126,13 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
                 "alpha": 0.96,
             },
         )
+
+    add_sample_size_note(
+        fig,
+        horizon_summary,
+        "observations",
+        per="punkt (miara IC i horyzont; liczba dat)",
+    )
 
     fig.tight_layout()
     _save_figure(
@@ -183,6 +201,15 @@ def _save_score_return_autocorrelation_plot(
     )
     if heatmap.empty:
         return
+    count_heatmap = (
+        metric_acf.pivot_table(
+            index="lag",
+            columns="horizon_weeks",
+            values="observations",
+            aggfunc="max",
+        )
+        .reindex(index=heatmap.index, columns=heatmap.columns)
+    )
 
     metric_summary = _metric_horizon_summary(summary, config["metric"])
     summary_by_horizon = {}
@@ -225,6 +252,20 @@ def _save_score_return_autocorrelation_plot(
         vmax=1,
         origin="lower",
     )
+    for row_index in range(len(heatmap.index)):
+        for column_index in range(len(heatmap.columns)):
+            count = count_heatmap.iloc[row_index, column_index]
+            if pd.isna(count):
+                continue
+            ax.text(
+                column_index,
+                row_index,
+                f"n={int(count)}",
+                ha="center",
+                va="center",
+                fontsize=5.5,
+                color="#222222",
+            )
 
     # 1. Przewracamy standardowe podpisanie osi X (horyzonty)
     ax.set_xticks(np.arange(len(horizons)))
@@ -262,7 +303,7 @@ def _save_score_return_autocorrelation_plot(
     ax.set_ylabel("Opóźnienie", fontsize=10)
     ax.set_title(
         f"Autokorelacja {config['label']} według horyzontu i opóźnienia "
-        f"({timeframe_label(timeframe)})"
+        f"({timeframe_label(timeframe, metric_acf)})"
     )
 
     # 3. Tabela umieszczona pod podpisem osi X – BEZ nagłówków kolumn (colLabels=None)
@@ -285,8 +326,15 @@ def _save_score_return_autocorrelation_plot(
     table.auto_set_font_size(False)
     table.set_fontsize(8)
 
+    add_sample_size_note(
+        fig,
+        metric_acf,
+        "observations",
+        per="komórkę (horyzont i opóźnienie; liczba par czasowych)",
+    )
+
     # Dopasowanie układu
-    plt.tight_layout()
+    fig.tight_layout()
 
     _save_figure(
         fig,
