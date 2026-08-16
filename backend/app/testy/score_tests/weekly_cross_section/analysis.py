@@ -1,7 +1,10 @@
 import numpy as np
 import pandas as pd
 
-from app.testy.score_tests.common.data import filter_horizon_week_ranges
+from app.testy.score_tests.common.data import (
+    add_common_horizon_window_metadata,
+    filter_horizon_week_ranges,
+)
 from app.testy.score_tests.common.metrics import (
     pearson_or_none,
     return_summary,
@@ -100,4 +103,4 @@ def calculate(
                     else round_or_none(np.mean(correlations))
                 ),
             })
-    return pd.DataFrame(rows)
+    return add_common_horizon_window_metadata(pd.DataFrame(rows), source=ranked)

@@ -5,6 +5,7 @@ import pandas as pd
 from app.testy.score_tests.common.annualization import add_annualized_return_column
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
+    common_horizon_alignment_title_suffix,
     horizon_x_column,
     horizon_x_label,
     limit_horizon_range,
@@ -77,6 +78,7 @@ def plot(analysis, output_dir):
         ax.set_title(
             f"{timeframe_label(timeframe, timeframe_data)}: globalny dobór najlepszych X% "
             "i roczna stopa zwrotu"
+            f"{common_horizon_alignment_title_suffix(timeframe_data)}"
         )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)

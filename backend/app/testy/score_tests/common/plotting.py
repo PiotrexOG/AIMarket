@@ -3,7 +3,6 @@ import textwrap
 
 import matplotlib
 
-
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
@@ -11,6 +10,13 @@ import matplotlib.ticker as mtick
 from matplotlib.figure import Figure
 import numpy as np
 import pandas as pd
+
+from app.testy.score_tests.common.data import (
+    COMMON_HORIZON_ALIGNMENT_COLUMN,
+    COMMON_HORIZON_ALIGNMENT_VALUE,
+    COMMON_HORIZON_WEEK_END_COLUMN,
+    COMMON_HORIZON_WEEK_START_COLUMN,
+)
 
 
 TIMEFRAME_HORIZON_LIMITS = {
@@ -22,7 +28,7 @@ TIMEFRAME_HORIZON_LIMITS = {
 DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES = {
     "short_term_14d": (1, 3),
     "medium_term_50d": (4, 10),
-    "long_term_200d": (28, 29),
+    "long_term_200d": (21, 35),
 }
 
 SERIES_LABELS = {
@@ -111,6 +117,21 @@ def timeframe_label(timeframe, data=None):
     return text.replace("_", " ")
 
 
+def common_horizon_alignment_title_suffix(data):
+    if (
+        data is None
+        or not hasattr(data, "columns")
+        or COMMON_HORIZON_ALIGNMENT_COLUMN not in data.columns
+    ):
+        return ""
+
+    alignment_values = data[COMMON_HORIZON_ALIGNMENT_COLUMN].dropna().astype(str)
+    if not alignment_values.eq(COMMON_HORIZON_ALIGNMENT_VALUE).any():
+        return ""
+
+    return " (wyrównane do wspólnego horyzontu)"
+
+
 def _sample_size_range(values):
     clean = pd.to_numeric(values, errors="coerce").replace(
         [np.inf, -np.inf],
@@ -165,10 +186,6 @@ def sample_size_note(
         details.append(f"n={len(data)} obserwacji")
 
     if hasattr(data, "columns"):
-        if "ticker" in data.columns:
-            ticker_count = int(data["ticker"].dropna().nunique())
-            if ticker_count:
-                details.append(f"{ticker_count} spółek")
         date_column = next(
             (
                 column
@@ -228,17 +245,6 @@ def annotate_sample_sizes(
     }).dropna()
     if points.empty or len(points) > max_annotations:
         return
-    for index, row in enumerate(points.itertuples(index=False)):
-        ax.annotate(
-            f"n={_format_sample_size(row.n)}",
-            (row.x, row.y),
-            xytext=(0, 6 if index % 2 == 0 else -10),
-            textcoords="offset points",
-            ha="center",
-            va="bottom" if index % 2 == 0 else "top",
-            fontsize=7,
-            color="#444444",
-        )
 
 
 def plot_label(label):
@@ -341,21 +347,14 @@ def plot_bucket_lines(
             linewidth=1.8,
             markersize=3,
             color=color,
-            label=(
-                label_with_sample_size(
-                    mean_label(
+            label=mean_label(
                         bucket,
                         group["annualized_return"],
                         lambda value: f"{value:.2%}",
                     ),
-                    group,
-                )
-                if show_mean_in_legend
-                else label_with_sample_size(plot_label(bucket), group)
-            ),
         )
     ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(title)
+    ax.set_title(f"{title}{common_horizon_alignment_title_suffix(data)}")
     ax.set_xlabel(horizon_x_label(data))
     set_integer_x_axis(ax)
     ax.set_ylabel("Roczna stopa zwrotu")
@@ -438,7 +437,7 @@ def plot_bucket_average(
     ax.bar(labels, average["annualized_return"], color="#4C78A8")
 
     ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(title)
+    ax.set_title(f"{title}{common_horizon_alignment_title_suffix(data)}")
     ax.set_xlabel("Koszyk")
     ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))

@@ -1,7 +1,11 @@
 import pandas as pd
 
 from app.testy.score_tests.common.data import (
+    COMMON_HORIZON_ALIGNMENT_COLUMN,
+    COMMON_HORIZON_WEEK_END_COLUMN,
+    COMMON_HORIZON_WEEK_START_COLUMN,
     align_start_dates_to_common_horizon_window,
+    common_horizon_window_metadata,
 )
 from app.testy.score_tests.common.metrics import round_or_none
 
@@ -107,6 +111,9 @@ def build_benchmark_return_bucket_analysis(
         "top_percent",
         "observation_count",
         "horizon_count",
+        COMMON_HORIZON_ALIGNMENT_COLUMN,
+        COMMON_HORIZON_WEEK_START_COLUMN,
+        COMMON_HORIZON_WEEK_END_COLUMN,
         "downside_count",
         "downside_frequency",
         "mean_strategy_return",
@@ -120,10 +127,12 @@ def build_benchmark_return_bucket_analysis(
     if observations.empty:
         return pd.DataFrame(columns=output_columns)
 
+    alignment_metadata = {}
     if align_to_common_horizon_window:
         observations = align_start_dates_to_common_horizon_window(observations)
         if observations.empty:
             return pd.DataFrame(columns=output_columns)
+        alignment_metadata = common_horizon_window_metadata(observations)
 
     benchmark_column = _annualized_benchmark_column(observations)
     strategy_column = (
@@ -166,6 +175,7 @@ def build_benchmark_return_bucket_analysis(
             "top_share": float(top_share),
             "top_percent": round_or_none(float(top_share) * 100),
             "horizon_count": int(group["horizon_weeks"].nunique()),
+            **alignment_metadata,
             **summary,
         })
 

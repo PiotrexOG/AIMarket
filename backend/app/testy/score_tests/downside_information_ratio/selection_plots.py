@@ -3,7 +3,6 @@ import matplotlib.ticker as mtick
 
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
-    annotate_sample_sizes,
     plot_path,
     set_percent_x_axis,
     timeframe_label,
@@ -54,13 +53,6 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         color="#9C755F",
         label="Benchmark wszystkich spółek",
     )
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["mean_annualized_strategy_return"],
-            data["observation_count"],
-        )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
         f"{title_timeframe}: Średnia roczna stopa zwrotu "
@@ -104,13 +96,6 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Średnie downside deviation")
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["downside_deviation"],
-            data["observation_count"],
-        )
     ax.grid(True, alpha=0.25)
     add_sample_size_note(
         fig,
@@ -167,13 +152,6 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
     ax.set_ylabel("Wskaźnik DIR")
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["downside_information_ratio"],
-            data["observation_count"],
-        )
     ax.grid(True, alpha=0.25)
     ax.legend()
     add_sample_size_note(

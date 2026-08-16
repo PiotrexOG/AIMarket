@@ -7,6 +7,7 @@ import pandas as pd
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
     annotate_sample_sizes,
+    common_horizon_alignment_title_suffix,
     plot_path,
     set_percent_x_axis,
     timeframe_label,
@@ -27,6 +28,7 @@ ALPHA_HEATMAP_CMAP = LinearSegmentedColormap.from_list(
 )
 
 
+
 def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
     if analysis.empty:
         return
@@ -35,44 +37,44 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
         horizon_label,
         DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
     )
-    for (timeframe, bucket_id), bucket_data in analysis.groupby(
-        ["timeframe", "benchmark_return_bucket_id"],
-        sort=False,
-    ):
-        clean = bucket_data.dropna(
-            subset=["top_percent", "downside_information_ratio"]
-        ).sort_values("top_percent")
-        if clean.empty:
-            continue
-
-        bucket_row = clean.iloc[0]
-        bucket_label = (
-            f"B{int(bucket_id):02d}: "
-            f"{bucket_row.benchmark_bucket_min:.2%} do "
-            f"{bucket_row.benchmark_bucket_max:.2%}"
-        )
-        bucket_directory = plot_directory / f"bucket_{int(bucket_id):02d}"
-        _plot_bucket_returns(
-            clean,
-            timeframe,
-            bucket_label,
-            output_dir,
-            bucket_directory,
-        )
-        _plot_bucket_deviation(
-            clean,
-            timeframe,
-            bucket_label,
-            output_dir,
-            bucket_directory,
-        )
-        _plot_bucket_ratio(
-            clean,
-            timeframe,
-            bucket_label,
-            output_dir,
-            bucket_directory,
-        )
+    # for (timeframe, bucket_id), bucket_data in analysis.groupby(
+    #     ["timeframe", "benchmark_return_bucket_id"],
+    #     sort=False,
+    # ):
+    #     clean = bucket_data.dropna(
+    #         subset=["top_percent", "downside_information_ratio"]
+    #     ).sort_values("top_percent")
+    #     if clean.empty:
+    #         continue
+    #
+    #     bucket_row = clean.iloc[0]
+    #     bucket_label = (
+    #         f"B{int(bucket_id):02d}: "
+    #         f"{bucket_row.benchmark_bucket_min:.2%} do "
+    #         f"{bucket_row.benchmark_bucket_max:.2%}"
+    #     )
+    #     bucket_directory = plot_directory / f"bucket_{int(bucket_id):02d}"
+    #     _plot_bucket_returns(
+    #         clean,
+    #         timeframe,
+    #         bucket_label,
+    #         output_dir,
+    #         bucket_directory,
+    #     )
+    #     _plot_bucket_deviation(
+    #         clean,
+    #         timeframe,
+    #         bucket_label,
+    #         output_dir,
+    #         bucket_directory,
+    #     )
+    #     _plot_bucket_ratio(
+    #         clean,
+    #         timeframe,
+    #         bucket_label,
+    #         output_dir,
+    #         bucket_directory,
+    #     )
 
     for timeframe, timeframe_data in analysis.groupby("timeframe", sort=False):
         clean = timeframe_data.dropna(subset=["top_share"])
@@ -83,6 +85,7 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
 
 def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
     title_timeframe = timeframe_label(timeframe, data)
+    title_suffix = common_horizon_alignment_title_suffix(data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -119,6 +122,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
     ax.set_title(
         f"{title_timeframe}: Średnia roczna stopa zwrotu "
         f"w koszyku benchmarku {bucket_label}"
+        f"{title_suffix}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
@@ -142,6 +146,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
 
 def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory):
     title_timeframe = timeframe_label(timeframe, data)
+    title_suffix = common_horizon_alignment_title_suffix(data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -153,6 +158,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
     ax.set_title(
         f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
         f"w koszyku benchmarku {bucket_label}"
+        f"{title_suffix}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
@@ -182,6 +188,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
 
 def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
     title_timeframe = timeframe_label(timeframe, data)
+    title_suffix = common_horizon_alignment_title_suffix(data)
     fig, ax = plt.subplots(figsize=(12, 7))
     ax.plot(
         data["top_percent"],
@@ -194,6 +201,7 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
     ax.set_title(
         f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
         f"w koszyku benchmarku {bucket_label}"
+        f"{title_suffix}"
     )
     ax.set_xlabel("Udział najlepszych M (%) spółek")
     set_percent_x_axis(ax, xmax=100.0)
@@ -366,15 +374,6 @@ def _plot_metric_heatmap(
             count = counts.iloc[row_index, column_index]
             if pd.isna(count) or count <= 0 or invalid_mask[row_index, column_index]:
                 continue
-            ax.text(
-                column_index,
-                row_index,
-                f"n={int(count)}",
-                ha="center",
-                va="center",
-                fontsize=5.5,
-                color="#111111",
-            )
 
     # --- DODANY FRAGMENT: NAKŁADANIE SKOŚNYCH SZARYCH KRESEK ---
     y_indices, x_indices = np.where(invalid_mask)
@@ -406,7 +405,7 @@ def _plot_metric_heatmap(
     )
     ax.set_yticks(np.arange(len(bucket_order)))
     ax.set_yticklabels(y_labels)
-    ax.set_title(title)
+    ax.set_title(f"{title}{common_horizon_alignment_title_suffix(clean)}")
     ax.set_xlabel("Ekwiwalent liczby najlepszych N spółek")
     ax.set_ylabel("Koszyk rocznej stopy zwrotu benchmarku")
     ax.set_xticks(np.arange(-0.5, len(top_order), 1), minor=True)

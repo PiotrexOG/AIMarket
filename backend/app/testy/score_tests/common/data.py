@@ -7,6 +7,52 @@ from app.testy.market_return_lookup import (
 )
 
 
+COMMON_HORIZON_ALIGNMENT_COLUMN = "sample_alignment"
+COMMON_HORIZON_ALIGNMENT_VALUE = "common_horizon_window"
+COMMON_HORIZON_WEEK_START_COLUMN = "common_horizon_week_start"
+COMMON_HORIZON_WEEK_END_COLUMN = "common_horizon_week_end"
+
+
+def _finite_numeric_column(df, column):
+    if df is None or not hasattr(df, "columns") or column not in df.columns:
+        return pd.Series(dtype="float64")
+    return (
+        pd.to_numeric(df[column], errors="coerce")
+        .replace([float("inf"), float("-inf")], pd.NA)
+        .dropna()
+    )
+
+
+def common_horizon_window_metadata(source):
+    metadata = {
+        COMMON_HORIZON_ALIGNMENT_COLUMN: COMMON_HORIZON_ALIGNMENT_VALUE,
+    }
+
+    starts = _finite_numeric_column(source, "horizon_week_start")
+    ends = _finite_numeric_column(source, "horizon_week_end")
+    if starts.empty or ends.empty:
+        weeks = _finite_numeric_column(source, "horizon_weeks")
+        if weeks.empty:
+            return metadata
+        start_week = weeks.min()
+        end_week = weeks.max()
+    else:
+        start_week = starts.min()
+        end_week = ends.max()
+
+    metadata[COMMON_HORIZON_WEEK_START_COLUMN] = int(round(float(start_week)))
+    metadata[COMMON_HORIZON_WEEK_END_COLUMN] = int(round(float(end_week)))
+    return metadata
+
+
+def add_common_horizon_window_metadata(df, source=None):
+    result = df.copy()
+    metadata = common_horizon_window_metadata(result if source is None else source)
+    for column, value in metadata.items():
+        result[column] = value
+    return result
+
+
 def build_horizon_weeks(df):
     if df.empty:
         return []

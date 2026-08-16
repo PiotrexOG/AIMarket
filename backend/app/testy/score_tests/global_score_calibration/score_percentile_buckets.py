@@ -2,7 +2,10 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.annualization import add_annualized_return_column
-from app.testy.score_tests.common.data import filter_horizon_week_ranges
+from app.testy.score_tests.common.data import (
+    add_common_horizon_window_metadata,
+    filter_horizon_week_ranges,
+)
 from app.testy.score_tests.common.metrics import return_summary, round_or_none
 from app.testy.score_tests.common.plotting import (
     limit_horizon_range,
@@ -69,7 +72,7 @@ def calculate(
                 "max_score": round_or_none(max_score),
                 **return_summary(selected),
             })
-    return pd.DataFrame(rows)
+    return add_common_horizon_window_metadata(pd.DataFrame(rows), source=ranked_panel)
 
 
 def build_output(analysis):
