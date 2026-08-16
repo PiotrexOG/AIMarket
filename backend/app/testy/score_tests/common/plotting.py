@@ -423,10 +423,10 @@ def plot_bucket_average(
     ):
         labels = [
             (
-                f"{label}\nn={int(row.sample_size_min)}"
+                f"{label}"
                 if row.sample_size_min == row.sample_size_max
                 else (
-                    f"{label}\nn={int(row.sample_size_min)}"
+                    f"{label}"
                     f"\N{EN DASH}{int(row.sample_size_max)}/horyzont"
                 )
             )
