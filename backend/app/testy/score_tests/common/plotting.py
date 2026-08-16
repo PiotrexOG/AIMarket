@@ -129,27 +129,7 @@ def common_horizon_alignment_title_suffix(data):
     if not alignment_values.eq(COMMON_HORIZON_ALIGNMENT_VALUE).any():
         return ""
 
-    starts = _finite_integer_values(data, COMMON_HORIZON_WEEK_START_COLUMN)
-    ends = _finite_integer_values(data, COMMON_HORIZON_WEEK_END_COLUMN)
-    if not starts.empty and not ends.empty:
-        week_range = int(starts.min()), int(ends.max())
-    else:
-        week_range = horizon_week_range(data)
-
-    if (
-        week_range is None
-        and "timeframe" in data.columns
-        and data["timeframe"].dropna().nunique() == 1
-    ):
-        timeframe = str(data["timeframe"].dropna().iloc[0])
-        week_range = DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES.get(timeframe)
-
-    if week_range is None:
-        return " (wyrównane do wspólnego horyzontu)"
-    return (
-        " (wyrównane do wspólnego horyzontu "
-        f"{format_horizon_week_range(*week_range)})"
-    )
+    return " (wyrównane do wspólnego horyzontu)"
 
 
 def _sample_size_range(values):
