@@ -4,6 +4,11 @@ import pandas as pd
 from app.testy.score_tests.common.annualization import annualize_return
 
 from .plot_config import ANTI_MOMENTUM_WINDOWS
+from .sample_metadata import (
+    BASE_OBSERVATION_COUNT_COLUMN,
+    base_observation_count,
+    horizon_observation_weights,
+)
 from .statistics import _safe_correlation
 
 
@@ -114,20 +119,25 @@ def _build_anti_momentum_points(data, prices):
     if not price_lookup:
         return pd.DataFrame()
 
-    points = data[
-        [
-            "ticker",
-            "timestamp",
-            "score",
-            "score_percentile",
-            "mean_forward_annualized_return",
-            "forward_return_percentile",
-            "horizon_week_start",
-            "horizon_week_end",
-        ]
-    ].dropna(subset=["ticker", "timestamp", "score"]).copy()
+    point_columns = [
+        "ticker",
+        "timestamp",
+        "score",
+        "score_percentile",
+        "mean_forward_annualized_return",
+        "forward_return_percentile",
+        "horizon_week_start",
+        "horizon_week_end",
+    ]
+    if "horizon_count" in data.columns:
+        point_columns.append("horizon_count")
+    points = data[point_columns].dropna(
+        subset=["ticker", "timestamp", "score"]
+    ).copy()
     if points.empty:
         return pd.DataFrame()
+    if "horizon_count" not in points.columns:
+        points["horizon_count"] = horizon_observation_weights(points)
 
     for label, _, _, _ in ANTI_MOMENTUM_WINDOWS:
         column = f"trailing_{label}_annualized_return"
@@ -160,11 +170,15 @@ def _ticker_score_correlation_table(points, ticker_order, value_column):
             value_column,
             "pearson",
         )
-        clean = group[["score", value_column]].dropna()
+        clean = group.dropna(subset=["score", value_column])
         rows.append({
             "ticker": ticker,
             "correlation": correlation,
             "observations": len(clean),
+            BASE_OBSERVATION_COUNT_COLUMN: base_observation_count(
+                clean,
+                required_columns=("score", value_column),
+            ),
             "mean_score": clean["score"].mean() if not clean.empty else np.nan,
             f"mean_{value_column}": (
                 clean[value_column].mean() if not clean.empty else np.nan

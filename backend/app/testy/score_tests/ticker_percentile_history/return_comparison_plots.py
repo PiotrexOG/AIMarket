@@ -4,9 +4,18 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.io import save_csv_for_excel
-from app.testy.score_tests.common.plotting import add_sample_size_note, plot_path
+from app.testy.score_tests.common.plotting import (
+    add_sample_size_note,
+    plot_path,
+    timeframe_label,
+)
 
 from .plot_io import _save_figure
+from .plot_labels import company_horizon_sample_note
+from .sample_metadata import (
+    BASE_OBSERVATION_COUNT_COLUMN,
+    base_observation_counts_by_group,
+)
 
 
 def _save_normalized_excess_comparison_plot(
@@ -25,13 +34,7 @@ def _save_normalized_excess_comparison_plot(
     if benchmark.empty:
         return
 
-    horizon_start = data["horizon_week_start"].dropna()
-    horizon_end = data["horizon_week_end"].dropna()
-    horizon_label = (
-        f"{int(horizon_start.min())}-{int(horizon_end.max())} tygodni"
-        if not horizon_start.empty and not horizon_end.empty
-        else "skonfigurowany horyzont"
-    )
+    horizon_label = timeframe_label(timeframe, data)
 
     benchmark_std = benchmark.std(ddof=0)
     if pd.notna(benchmark_std) and not np.isclose(benchmark_std, 0):
@@ -53,6 +56,16 @@ def _save_normalized_excess_comparison_plot(
             benchmark.index
         ).to_numpy(),
     })
+    base_counts = base_observation_counts_by_group(
+        data,
+        "timestamp",
+        required_columns=(
+            "mean_forward_annualized_return",
+        ),
+    )
+    comparison[BASE_OBSERVATION_COUNT_COLUMN] = (
+        comparison["timestamp"].map(base_counts)
+    )
     comparison = comparison.dropna(
         subset=["long_short_normalized_excess", "long_only_normalized_excess"],
         how="all",
@@ -155,9 +168,11 @@ def _save_normalized_excess_comparison_plot(
 
     add_sample_size_note(
         fig,
-        comparison,
-        "observation_count",
-        per="punkt (data scoringu)",
+        note=company_horizon_sample_note(
+            data[
+                data["timestamp"].isin(comparison["timestamp"])
+            ].dropna(subset=["mean_forward_annualized_return"]),
+        ),
     )
 
     fig.autofmt_xdate()

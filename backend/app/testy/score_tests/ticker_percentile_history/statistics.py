@@ -155,10 +155,16 @@ def _score_return_horizon_correlations(horizon_points):
         ["horizon_weeks", "timestamp"],
         sort=True,
     ):
+        company_count = (
+            int(group["ticker"].nunique())
+            if "ticker" in group.columns and group["ticker"].notna().all()
+            else int(len(group))
+        )
         rows.append({
             "horizon_weeks": int(horizon_weeks),
             "horizon_days": float(group["horizon_days"].mean()),
             "timestamp": timestamp,
+            "company_count": company_count,
             "pearson": _safe_correlation(
                 group,
                 "score",
@@ -202,26 +208,30 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
         "horizon_weeks",
         sort=True,
     ):
-        observation_count = int(len(horizon_group))
-        newey_west_lags = max(
-            0,
-            min(int(horizon_weeks) - 1, observation_count - 1),
-        )
-        first_timestamp = horizon_group["timestamp"].min()
-        last_timestamp = horizon_group["timestamp"].max()
-        gaps = (
-            horizon_group["timestamp"]
-            .sort_values()
-            .diff()
-            .dropna()
-            .dt.total_seconds()
-            / 86400.0
-        )
         for column, label in metrics:
             if column not in horizon_group.columns:
                 continue
+            metric_group = horizon_group.dropna(subset=[column]).copy()
+            if metric_group.empty:
+                continue
+
+            observation_count = int(len(metric_group))
+            newey_west_lags = max(
+                0,
+                min(int(horizon_weeks) - 1, observation_count - 1),
+            )
+            first_timestamp = metric_group["timestamp"].min()
+            last_timestamp = metric_group["timestamp"].max()
+            gaps = (
+                metric_group["timestamp"]
+                .sort_values()
+                .diff()
+                .dropna()
+                .dt.total_seconds()
+                / 86400.0
+            )
             stats = _newey_west_mean_stats(
-                horizon_group[column],
+                metric_group[column],
                 newey_west_lags,
             )
             summary_rows.append({
@@ -229,7 +239,7 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
                 "metric": column,
                 "metric_label": label,
                 "horizon_weeks": int(horizon_weeks),
-                "horizon_days": float(horizon_group["horizon_days"].mean()),
+                "horizon_days": float(metric_group["horizon_days"].mean()),
                 "aggregation_method": "per_horizon_max_available_dates",
                 "official_result": False,
                 "mean_ic": stats["mean_ic"],
@@ -247,6 +257,9 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
                     "raw_newey_west_ci_upper_95"
                 ],
                 "observations": observation_count,
+                "base_observation_count": int(
+                    metric_group["company_count"].sum()
+                ),
                 "horizon_count": 1,
                 "effective_observations": stats["effective_observations"],
                 "newey_west_lags": newey_west_lags,
@@ -261,7 +274,7 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
                 "critical_value_type": "normal_approximation",
             })
             autocorrelation = _autocorrelation_by_lag(
-                horizon_group[column],
+                metric_group[column],
                 newey_west_lags,
             )
             if not autocorrelation.empty:
@@ -308,6 +321,9 @@ def _score_return_horizon_hac_summary(correlations, timeframe):
                 mean_ic + z_critical * newey_west_standard_error
             ),
             "observations": int(group["observations"].sum()),
+            "base_observation_count": int(
+                group["base_observation_count"].sum()
+            ),
             "horizon_count": int(group["horizon_weeks"].nunique()),
             "effective_observations": float(
                 group["effective_observations"].mean()

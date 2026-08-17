@@ -194,6 +194,6 @@ def build_benchmark_return_bucket_analysis(
             "observation_count",
             "horizon_count",
             "downside_count",
-        }:
+        } and pd.api.types.is_numeric_dtype(result[column]):
             result[column] = result[column].round(6)
     return result[output_columns]

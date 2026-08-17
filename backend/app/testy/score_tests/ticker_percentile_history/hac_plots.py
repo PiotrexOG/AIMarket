@@ -5,13 +5,17 @@ import pandas as pd
 from app.testy.score_tests.common.io import save_csv_for_excel
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
-    label_with_sample_size,
     plot_path,
     timeframe_label,
 )
 
 from .plot_config import HAC_DIAGNOSTIC_METRICS
 from .plot_io import _save_figure
+from .plot_labels import (
+    format_count_range,
+    hac_sample_note,
+)
+from .sample_metadata import BASE_OBSERVATION_COUNT_COLUMN
 from .statistics import (
     _metric_horizon_summary,
     _metric_official_summary,
@@ -34,6 +38,8 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
 
     fig, ax = plt.subplots(figsize=(13, 6.8))
     official_annotations = []
+    official_base_counts = []
+    official_time_counts = []
     for config in HAC_DIAGNOSTIC_METRICS:
         metric_summary = _metric_horizon_summary(summary, config["metric"])
         if metric_summary.empty:
@@ -61,11 +67,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
             marker="o",
             markersize=4,
             capsize=3,
-            label=label_with_sample_size(
-                f"{config['label']} według horyzontu",
-                metric_summary,
-                "observations",
-            ),
+            label=f"{config['label']} według horyzontu",
         )
 
         official = _metric_official_summary(summary, config["metric"])
@@ -90,12 +92,14 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
                 alpha=0.08,
             )
             official_annotations.append(
-                f"{config['short_label']}: średnia oficjalna "
-                f"{official['mean_ic']:.3f}, 95% przedział "
+                f"{config['short_label']}: {official['mean_ic']:.3f}, 95% przedział "
                 f"[{official['ci_lower_95']:.3f}, "
                 f"{official['ci_upper_95']:.3f}]"
-                f", n={int(official['observations'])}"
             )
+            official_base_counts.append(
+                official[BASE_OBSERVATION_COUNT_COLUMN]
+            )
+            official_time_counts.append(official["observations"])
 
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_ylim(0, 0.5)
@@ -111,10 +115,15 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.grid(True, alpha=0.25)
     ax.legend(loc="upper left")
     if official_annotations:
+        official_sample_note = (
+            "Oficjalne średnie: "
+            f"n bazowe={format_count_range(official_base_counts)}; "
+            f"T={format_count_range(official_time_counts)}"
+        )
         ax.text(
             0.99,
             0.98,
-            "\n".join(official_annotations),
+            "\n".join([official_sample_note, *official_annotations]),
             transform=ax.transAxes,
             ha="right",
             va="top",
@@ -129,9 +138,7 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
 
     add_sample_size_note(
         fig,
-        horizon_summary,
-        "observations",
-        per="punkt (miara IC i horyzont; liczba dat)",
+        note=hac_sample_note(horizon_summary),
     )
 
     fig.tight_layout()

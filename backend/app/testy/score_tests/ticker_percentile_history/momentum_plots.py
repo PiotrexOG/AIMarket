@@ -23,6 +23,15 @@ from .normalization import (
 )
 from .plot_config import ANTI_MOMENTUM_WINDOWS
 from .plot_io import _safe_filename, _save_figure
+from .plot_labels import (
+    momentum_window_label,
+    point_sample_note,
+    ticker_sample_note,
+)
+from .sample_metadata import (
+    BASE_OBSERVATION_COUNT_COLUMN,
+    base_observation_count,
+)
 from .statistics import _safe_correlation
 
 
@@ -67,7 +76,17 @@ def _save_ticker_correlation_bar_chart(
     )
     ax.set_xlim(-1, 1)
     ax.set_yticks(y_positions)
-    if "observations" in clean.columns:
+    if BASE_OBSERVATION_COUNT_COLUMN in clean.columns:
+        y_labels = [
+            (
+                f"{row.ticker} "
+                f"(n bazowe={int(row.base_observation_count)})"
+            )
+            if pd.notna(row.base_observation_count)
+            else str(row.ticker)
+            for row in clean.itertuples(index=False)
+        ]
+    elif "observations" in clean.columns:
         y_labels = [
             f"{row.ticker} (n={int(row.observations)})"
             if pd.notna(row.observations)
@@ -83,12 +102,13 @@ def _save_ticker_correlation_bar_chart(
     ax.set_ylabel("Ticker")
     ax.grid(True, axis="x", alpha=0.25)
     ax.legend(loc="best")
-    if "observations" in clean.columns:
+    if {
+        "observations",
+        BASE_OBSERVATION_COUNT_COLUMN,
+    }.issubset(clean.columns):
         add_sample_size_note(
             fig,
-            clean,
-            "observations",
-            per="ticker (liczba par score\N{EN DASH}porównywana stopa zwrotu)",
+            note=ticker_sample_note(clean),
         )
     fig.tight_layout()
     _save_figure(
@@ -141,11 +161,12 @@ def _save_anti_momentum_correlation_charts(
         },
     ]
     for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
-        window_label = (
-            f"{start_week}-{end_week} tygodni"
+        window_label = momentum_window_label(
+            points,
+            start_week,
+            end_week,
+            skip_weeks,
         )
-        if skip_weeks:
-            window_label = f"{window_label}, pomiń {skip_weeks} tyg."
         column = f"trailing_{label}_annualized_return"
         configs.append(
             {
@@ -295,6 +316,14 @@ def _build_model_vs_momentum_comparison(points, momentum_column, window_label):
             "timestamp": timestamp,
             "momentum_window": window_label,
             "ticker_count": group["ticker"].nunique(),
+            BASE_OBSERVATION_COUNT_COLUMN: base_observation_count(
+                group,
+                required_columns=(
+                    "score",
+                    momentum_column,
+                    "mean_forward_annualized_return",
+                ),
+            ),
             "model_pearson_ic": _safe_correlation(
                 group,
                 "model_score_zscore",
@@ -447,9 +476,11 @@ def _plot_model_vs_momentum_panel(
     fig.suptitle(title)
     add_sample_size_note(
         fig,
-        comparison,
-        "ticker_count",
-        per="punkt (data scoringu)",
+        note=point_sample_note(
+            comparison,
+            "ticker_count",
+            direct_unit="zagregowanych wartości spółek użytych w porównaniu",
+        ),
     )
     fig.autofmt_xdate()
     fig.tight_layout()
@@ -477,11 +508,12 @@ def _save_model_vs_momentum_comparison_charts(
     comparison_directory = directory / TICKER_MODEL_VS_MOMENTUM_SECTION
     comparisons = []
     for label, start_week, end_week, skip_weeks in ANTI_MOMENTUM_WINDOWS:
-        window_label = (
-            f"{start_week}-{end_week} tygodni"
+        window_label = momentum_window_label(
+            points,
+            start_week,
+            end_week,
+            skip_weeks,
         )
-        if skip_weeks:
-            window_label = f"{window_label}, pomiń {skip_weeks} tyg."
         column = f"trailing_{label}_annualized_return"
         comparison = _build_model_vs_momentum_comparison(
             points,

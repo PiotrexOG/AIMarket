@@ -23,7 +23,10 @@ def _weighted_mean(values, weights):
     valid = np.isfinite(values) & np.isfinite(weights) & (weights > 0)
     if not valid.any():
         return None
-    return float(np.average(values[valid], weights=weights[valid]))
+    valid_values = values[valid]
+    if np.ptp(valid_values) == 0:
+        return float(valid_values[0])
+    return float(np.average(valid_values, weights=weights[valid]))
 
 
 def _overlap_days(segment_starts, segment_days, window_start, window_end):
@@ -73,10 +76,23 @@ def _safe_corr_pair(group, metric, return_metric, method):
         [np.inf, -np.inf],
         np.nan,
     ).dropna()
-    if (
-        len(clean) < 3
-        or clean[metric].nunique() < 2
-        or clean[return_metric].nunique() < 2
-    ):
+    if len(clean) < 3:
+        return None
+
+    metric_values = clean[metric].to_numpy(dtype=float)
+    return_values = clean[return_metric].to_numpy(dtype=float)
+    metric_is_constant = np.isclose(
+        metric_values.min(),
+        metric_values.max(),
+        rtol=1e-12,
+        atol=1e-12,
+    )
+    return_is_constant = np.isclose(
+        return_values.min(),
+        return_values.max(),
+        rtol=1e-12,
+        atol=1e-12,
+    )
+    if metric_is_constant or return_is_constant:
         return None
     return round_or_none(clean[metric].corr(clean[return_metric], method=method))

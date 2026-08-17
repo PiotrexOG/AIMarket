@@ -119,7 +119,7 @@ def _plot_score_drop_scatter(
         ax.set_xlabel(
             "Spadek percentyla score: percentyl wejścia - średnia w horyzoncie"
         )
-        ax.set_ylabel("Roczna stopa zwrotu")
+        ax.set_ylabel("Średnia roczna stopa zwrotu")
         ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.2)
@@ -142,7 +142,7 @@ def _plot_relative_score_change_heatmap(
     output_dir,
     horizon_label,
     return_metric="annualized_return",
-    return_label="roczna stopa zwrotu",
+    return_label="Średnia roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(

@@ -11,6 +11,11 @@ from app.testy.score_tests.common.plotting import (
 
 from .hac_plots import _save_score_return_hac_diagnostics
 from .plot_io import _save_figure
+from .plot_labels import point_sample_note
+from .sample_metadata import (
+    BASE_OBSERVATION_COUNT_COLUMN,
+    base_observation_count,
+)
 from .statistics import _safe_correlation
 
 
@@ -54,18 +59,21 @@ def _save_score_return_correlation_by_timestamp_plot(
             "pearson",
         )
         benchmark_return = group["mean_forward_annualized_return"].mean()
+        correlation_columns = [
+            "score_zscore",
+            "forward_return_zscore",
+            "score_percentile",
+            "forward_return_percentile",
+            "excess_forward_annualized_return",
+        ]
         rows.append({
             "timestamp": timestamp,
             "observation_count": int(
-                group[
-                    [
-                        "score_zscore",
-                        "forward_return_zscore",
-                        "score_percentile",
-                        "forward_return_percentile",
-                        "excess_forward_annualized_return",
-                    ]
-                ].dropna().shape[0]
+                group[correlation_columns].dropna().shape[0]
+            ),
+            BASE_OBSERVATION_COUNT_COLUMN: base_observation_count(
+                group,
+                required_columns=correlation_columns,
             ),
             "pearson": pearson,
             "spearman": spearman,
@@ -176,10 +184,7 @@ def _save_score_return_correlation_by_timestamp_plot(
     ax.set_ylim(-1, 1)
     ax.set_title(
         f"Korelacja score z przyszłą stopą zwrotu według daty scoringu "
-        f"({timeframe_label(timeframe, data)}; średnia Pearson {pearson_mean:.3f}, "
-        f"średnia Spearman {spearman_mean:.3f}, "
-        f"średnia Pearson IC percentyla score "
-        f"{score_percentile_pearson_mean:.3f})"
+        f"({timeframe_label(timeframe, data)})"
     )
     ax.set_xlabel("Data scoringu")
     ax.set_ylabel("Korelacja przekrojowa")
@@ -198,9 +203,11 @@ def _save_score_return_correlation_by_timestamp_plot(
     )
     add_sample_size_note(
         fig,
-        correlations,
-        "observation_count",
-        per="punkt (data scoringu)",
+        note=point_sample_note(
+            correlations,
+            "observation_count",
+            direct_unit="zagregowanych wartości spółek użytych w korelacji",
+        ),
     )
 
     fig.autofmt_xdate()

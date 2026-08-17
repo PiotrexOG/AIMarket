@@ -69,7 +69,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
         fig,
         data,
         "observation_count",
-        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+        per="punkt M(%) spółek (suma obserwacji ze wszystkich horyzontów)",
     )
     fig.tight_layout()
     fig.savefig(
@@ -101,7 +101,7 @@ def _plot_deviation(data, timeframe, output_dir, directory, horizon_label):
         fig,
         data,
         "observation_count",
-        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+        per="punkt M(%) spółek (suma obserwacji ze wszystkich horyzontów)",
     )
     fig.tight_layout()
     fig.savefig(
@@ -158,7 +158,7 @@ def _plot_ratio(data, timeframe, output_dir, directory, horizon_label):
         fig,
         data,
         "observation_count",
-        per="punkt M (suma obserwacji ze wszystkich horyzontów)",
+        per="punkt M(%) spółek (suma obserwacji ze wszystkich horyzontów)",
     )
     fig.tight_layout()
     fig.savefig(

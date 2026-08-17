@@ -103,13 +103,7 @@ def _save_forward_return_heatmap(
         .index
     )
 
-    horizon_start = data["horizon_week_start"].dropna()
-    horizon_end = data["horizon_week_end"].dropna()
-    horizon_label = (
-        f"{int(horizon_start.min())}-{int(horizon_end.max())} tygodni"
-        if not horizon_start.empty and not horizon_end.empty
-        else "skonfigurowany horyzont"
-    )
+    horizon_label = timeframe_label(timeframe, data)
     forward_return_reference_directory = (
         directory / TICKER_FORWARD_RETURN_REFERENCE_SECTION
     )
@@ -157,7 +151,7 @@ def _save_forward_return_heatmap(
             "filename": "pearson_03_score_minus_return_zscore_heatmap.png",
             "title": (
                 f"Widok Pearsona: różnica między wynikiem standaryzowanym score "
-                f"a wynikiem standaryzowanym stopy zwrotu {horizon_label})"
+                f"a wynikiem standaryzowanym stopy zwrotu ({horizon_label})"
             ),
             "colorbar": "Wynik standaryzowany score - wynik standaryzowany przyszłego zwrotu",
             "cmap": "RdYlGn_r",

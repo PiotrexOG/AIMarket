@@ -153,7 +153,9 @@ def _sample_size_range(values):
 
 def _format_sample_size(value):
     value = float(value)
-    return str(int(round(value))) if np.isclose(value, round(value)) else f"{value:.1f}"
+    if np.isclose(value, round(value)):
+        return str(int(round(value)))
+    return f"{value:.1f}".replace(".", ",")
 
 
 def label_with_sample_size(label, data, count_column="observation_count"):
@@ -237,14 +239,31 @@ def annotate_sample_sizes(
     counts,
     *,
     max_annotations=30,
+    label_prefix="n",
 ):
     points = pd.DataFrame({
         "x": list(x_values),
         "y": list(y_values),
         "n": list(counts),
-    }).dropna()
+    })
+    for column in points.columns:
+        points[column] = pd.to_numeric(points[column], errors="coerce")
+    points = points.replace([np.inf, -np.inf], np.nan).dropna()
+    points = points[points["n"] >= 0]
     if points.empty or len(points) > max_annotations:
         return
+
+    for point in points.itertuples(index=False):
+        ax.annotate(
+            f"{label_prefix}={_format_sample_size(point.n)}",
+            xy=(point.x, point.y),
+            xytext=(0, 8),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            fontsize=7,
+            color="#444444",
+        )
 
 
 def plot_label(label):
@@ -357,7 +376,7 @@ def plot_bucket_lines(
     ax.set_title(f"{title}{common_horizon_alignment_title_suffix(data)}")
     ax.set_xlabel(horizon_x_label(data))
     set_integer_x_axis(ax)
-    ax.set_ylabel("Roczna stopa zwrotu")
+    ax.set_ylabel("Średnia roczna stopa zwrotu")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(True, alpha=0.25)
     ax.legend(

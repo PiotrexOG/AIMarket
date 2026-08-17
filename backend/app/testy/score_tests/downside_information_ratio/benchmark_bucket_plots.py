@@ -134,7 +134,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         fig,
         data,
         "observation_count",
-        per="punkt M w koszyku benchmarku",
+        per="punkt M(%) spółek w koszyku benchmarku",
     )
     fig.tight_layout()
     fig.savefig(
@@ -176,7 +176,7 @@ def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory)
         fig,
         data,
         "observation_count",
-        per="punkt M w koszyku benchmarku",
+        per="punkt M(%) spółek w koszyku benchmarku",
     )
     fig.tight_layout()
     fig.savefig(
@@ -218,7 +218,7 @@ def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
         fig,
         data,
         "observation_count",
-        per="punkt M w koszyku benchmarku",
+        per="punkt M(%) spółek w koszyku benchmarku",
     )
     fig.tight_layout()
     fig.savefig(
@@ -416,7 +416,7 @@ def _plot_metric_heatmap(
         fig,
         clean,
         "observation_count",
-        per="komórkę (koszyk benchmarku i poziom N)",
+        per="komórkę (koszyk benchmarku i liczba N spółek)",
     )
     fig.tight_layout()
     fig.savefig(plot_path(output_dir, directory, filename), dpi=170)

@@ -26,7 +26,7 @@ def _plot_score_change_scatter(
     horizon_label,
     metric,
     return_metric="annualized_return",
-    return_label="Roczna stopa zwrotu",
+    return_label="Średnia roczna stopa zwrotu",
     filename_prefix="",
 ):
     plot_directory = _post_entry_dir(

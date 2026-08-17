@@ -10,6 +10,7 @@ from app.testy.score_tests.common.plotting import add_sample_size_note, plot_pat
 
 from .normalization import _format_metric_value
 from .plot_io import _save_figure, _save_heatmap_csv
+from .plot_labels import company_horizon_sample_note
 
 
 def _save_ticker_date_heatmap(
@@ -175,8 +176,7 @@ def _save_ticker_date_heatmap(
     sample_data = data.dropna(subset=["ticker", "timestamp", value_column])
     add_sample_size_note(
         fig,
-        sample_data,
-        per="niepustą komórkę ticker\N{MULTIPLICATION SIGN}data",
+        note=company_horizon_sample_note(sample_data),
     )
 
     fig.tight_layout()

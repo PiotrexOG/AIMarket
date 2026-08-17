@@ -72,12 +72,12 @@ def plot(analysis, output_dir):
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
             f"{timeframe_label(timeframe, timeframe_data)}: tygodniowy dobór najlepszych N spółek "
-            "i roczna stopa zwrotu"
+            "i średnia roczna stopa zwrotu"
             f"{common_horizon_alignment_title_suffix(timeframe_data)}"
         )
         ax.set_xlabel(horizon_x_label(timeframe_data))
         set_integer_x_axis(ax)
-        ax.set_ylabel("Roczna stopa zwrotu")
+        ax.set_ylabel("Średnia roczna stopa zwrotu")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
         ax.legend(title="Średnia z pokazanych horyzontów")
