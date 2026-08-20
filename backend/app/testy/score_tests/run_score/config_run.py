@@ -53,6 +53,12 @@ HORIZON_WEEK_RANGES = {
     "long_term_200d": (21, 35),
 }
 
+WEEKLY_INFORMATION_COEFFICIENT_TIMEFRAMES = (
+    "short_term_14d",
+    "medium_term_50d",
+    "long_term_200d",
+)
+
 CAPM_ANNUAL_RISK_FREE_RATE = 0.04
 
 POST_ENTRY_SCORE_PATH_VARIANTS = (
@@ -87,6 +93,18 @@ def enabled_horizon_week_ranges():
     return {
         timeframe: HORIZON_WEEK_RANGES[timeframe]
         for timeframe in enabled_timeframe_names()
+        if timeframe in HORIZON_WEEK_RANGES
+    }
+
+
+def weekly_information_coefficient_timeframe_names():
+    return WEEKLY_INFORMATION_COEFFICIENT_TIMEFRAMES
+
+
+def weekly_information_coefficient_horizon_week_ranges():
+    return {
+        timeframe: HORIZON_WEEK_RANGES[timeframe]
+        for timeframe in weekly_information_coefficient_timeframe_names()
         if timeframe in HORIZON_WEEK_RANGES
     }
 
@@ -131,9 +149,24 @@ def validate_config():
             f"Missing HORIZON_WEEK_RANGES for enabled timeframes: {joined}"
         )
 
+    missing_weekly_ic_ranges = [
+        timeframe
+        for timeframe in weekly_information_coefficient_timeframe_names()
+        if timeframe not in HORIZON_WEEK_RANGES
+    ]
+    if missing_weekly_ic_ranges:
+        joined = ", ".join(missing_weekly_ic_ranges)
+        raise ValueError(
+            "Missing HORIZON_WEEK_RANGES for weekly IC timeframes: "
+            f"{joined}"
+        )
+
     invalid_ranges = {
         timeframe: week_range
-        for timeframe, week_range in enabled_horizon_week_ranges().items()
+        for timeframe, week_range in {
+            **enabled_horizon_week_ranges(),
+            **weekly_information_coefficient_horizon_week_ranges(),
+        }.items()
         if (
             len(week_range) != 2
             or not all(isinstance(value, int) for value in week_range)
