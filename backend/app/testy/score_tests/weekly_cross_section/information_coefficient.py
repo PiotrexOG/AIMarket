@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.plotting import (
@@ -24,14 +25,38 @@ def build_correlation_output(analysis):
         "horizon_days",
         "metric",
         "observation_count",
+        "start_date_count",
+        "company_count_min",
+        "company_count_max",
+        "company_observation_count",
         "pearson",
     ]
     if analysis.empty:
         return pd.DataFrame(columns=columns)
+    selected = analysis[analysis["test"] == "A2_weekly_pearson"].copy()
+    for column in columns:
+        if column not in selected.columns:
+            selected[column] = np.nan
     return (
-        analysis[analysis["test"] == "A2_weekly_pearson"][columns]
+        selected[columns]
         .sort_values(["timeframe", "horizon_weeks", "metric"])
         .reset_index(drop=True)
+    )
+
+
+def _format_count_range(values):
+    clean = pd.to_numeric(values, errors="coerce").dropna()
+    if clean.empty:
+        return None
+    minimum = int(clean.min())
+    maximum = int(clean.max())
+    return str(minimum) if minimum == maximum else f"{minimum}\N{EN DASH}{maximum}"
+
+
+def _ic_sample_size_note(data):
+    observation_range = _format_count_range(data["company_observation_count"])
+    return (
+        f"n = {observation_range} na punkt (miara i horyzont)"
     )
 
 
@@ -73,9 +98,7 @@ def plot(analysis, output_dir):
         ax.legend(title="Średnia z pokazanych horyzontów")
         add_sample_size_note(
             fig,
-            timeframe_data,
-            "observation_count",
-            per="punkt (miara i horyzont)",
+            note=_ic_sample_size_note(timeframe_data),
         )
         fig.tight_layout()
         fig.savefig(

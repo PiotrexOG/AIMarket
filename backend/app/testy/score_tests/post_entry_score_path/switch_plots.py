@@ -13,7 +13,11 @@ from app.testy.score_tests.common.output_paths import (
     POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION,
 )
 
-from .plot_config import SWITCH_TO_BENCHMARK_METRIC_LABELS
+from .plot_config import (
+    MAX_PROGRESS_BUCKET_PERCENT,
+    MIN_PROGRESS_BUCKET_PERCENT,
+    SWITCH_TO_BENCHMARK_METRIC_LABELS,
+)
 from .plot_helpers import (
     _filter_progress_bucket,
     _plot_context_title_label,
@@ -185,6 +189,10 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
             clean = timeframe_data.replace([np.inf, -np.inf], np.nan).dropna(
                 subset=[progress_column, "score_change_threshold", metric]
             )
+            clean = clean[
+                (clean[progress_column] >= MIN_PROGRESS_BUCKET_PERCENT)
+                & (clean[progress_column] < MAX_PROGRESS_BUCKET_PERCENT)
+            ]
             if clean.empty:
                 continue
 
@@ -270,7 +278,7 @@ def _plot_switch_to_benchmark_threshold_heatmaps(
                         ax.text(
                             column_index,
                             row_index,
-                            f"{value_text}\nn={int(count)}",
+                            f"n={int(count)}",
                             ha="center",
                             va="center",
                             fontsize=6,

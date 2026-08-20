@@ -42,7 +42,11 @@ SERIES_LABELS = {
 
 
 def plot_path(output_dir, plot_type, filename):
-    directory = output_dir / plot_type
+    filename = Path(filename)
+    artifact_output_dir = output_dir
+    if filename.suffix.lower() == ".csv" and output_dir.name == "plots":
+        artifact_output_dir = output_dir.parent / "data"
+    directory = artifact_output_dir / plot_type
     directory.mkdir(parents=True, exist_ok=True)
     return directory / filename
 

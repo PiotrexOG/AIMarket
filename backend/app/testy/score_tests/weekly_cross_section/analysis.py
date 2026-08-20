@@ -81,11 +81,20 @@ def calculate(
             ("Spearman IC", spearman_or_none, "score"),
             ("Score Percentile Pearson IC", pearson_or_none, "score_percentile"),
         ]:
-            correlations = [
-                correlation_function(week, metric_column)
-                for _, week in group.groupby("start_timestamp")
-            ]
-            correlations = [value for value in correlations if value is not None]
+            correlations = []
+            company_counts = []
+            for _, week in group.groupby("start_timestamp"):
+                correlation = correlation_function(week, metric_column)
+                if correlation is None:
+                    continue
+                correlations.append(correlation)
+                company_counts.append(
+                    int(
+                        week[[metric_column, "future_return"]]
+                        .dropna()
+                        .shape[0]
+                    )
+                )
             rows.append({
                 "analysis_group": "A_weekly",
                 "test": "A2_weekly_pearson",
@@ -96,6 +105,14 @@ def calculate(
                 "bucket": "weekly_mean",
                 "top_n": None,
                 "observation_count": len(correlations),
+                "start_date_count": len(correlations),
+                "company_count_min": (
+                    min(company_counts) if company_counts else 0
+                ),
+                "company_count_max": (
+                    max(company_counts) if company_counts else 0
+                ),
+                "company_observation_count": sum(company_counts),
                 "avg_return": None,
                 "pearson": (
                     None

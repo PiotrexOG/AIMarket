@@ -104,9 +104,33 @@ def plot(
         return
 
     if plot_mode == PLOT_MODE_ONLY_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE:
+        observations = _filter_all_scores_only_plot_data(observations)
+        alpha_correlations = _filter_all_scores_only_plot_data(
+            alpha_correlations
+        )
         live_progress_alpha_average = _filter_all_scores_only_plot_data(
             live_progress_alpha_average
         )
+        if observations is not None and not observations.empty:
+            _plot_best_correlation_overview(
+                observations,
+                alpha_correlations,
+                output_dir,
+                horizon_label,
+                return_metric="annualized_alpha",
+                return_label="Roczny nadwyżkowy zwrot względem benchmarku",
+                filename_prefix="alpha_",
+            )
+            _plot_relative_score_change_heatmap(
+                observations,
+                output_dir,
+                horizon_label,
+                return_metric="annualized_alpha",
+                return_label=(
+                    "roczny nadwyżkowy zwrot względem benchmarku"
+                ),
+                filename_prefix="alpha_",
+            )
         if (
             live_progress_alpha_average is not None
             and not live_progress_alpha_average.empty
@@ -122,7 +146,11 @@ def plot(
             )
         return
 
-    if observations is not None and not observations.empty:
+    if (
+        plot_mode != PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE
+        and observations is not None
+        and not observations.empty
+    ):
         _plot_best_correlation_overview(
             observations,
             alpha_correlations,
@@ -167,14 +195,15 @@ def plot(
             return_label="Roczny nadwyżkowy zwrot względem benchmarku",
             filename_prefix="alpha_",
         )
-        _plot_relative_score_change_heatmap(
-            observations,
-            output_dir,
-            horizon_label,
-            return_metric="annualized_alpha",
-            return_label="roczny nadwyżkowy zwrot względem benchmarku",
-            filename_prefix="alpha_",
-        )
+        if plot_mode != PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE:
+            _plot_relative_score_change_heatmap(
+                observations,
+                output_dir,
+                horizon_label,
+                return_metric="annualized_alpha",
+                return_label="roczny nadwyżkowy zwrot względem benchmarku",
+                filename_prefix="alpha_",
+            )
 
     if (
         live_progress_observations is not None

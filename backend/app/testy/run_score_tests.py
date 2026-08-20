@@ -99,7 +99,9 @@ from score_tests.weekly_cross_section.top_n_selection import build_top_n_output
 
 CROSS_SECTION_DIR = ROOT_FOLDER / "data" / "CROSS_SECTION"
 INPUT_FILE = CROSS_SECTION_DIR / "score_observations.json"
-OUTPUT_DIR = ROOT_FOLDER / "data" / "results"
+RESULTS_DIR = ROOT_FOLDER / "data" / "results"
+PLOTS_OUTPUT_DIR = RESULTS_DIR / "plots"
+DATA_OUTPUT_DIR = RESULTS_DIR / "data"
 
 EQUAL_WEIGHT_SCORE_COLUMN = "score_equal_weight"
 
@@ -136,6 +138,19 @@ POST_ENTRY_SCORE_PATH_VARIANTS = (
         "entry_min_score_percentile": 0.0,
     },
 )
+
+
+def migrate_csv_files_from_plots_directory():
+    if not PLOTS_OUTPUT_DIR.exists():
+        return []
+
+    moved_files = []
+    for source in PLOTS_OUTPUT_DIR.rglob("*.csv"):
+        target = DATA_OUTPUT_DIR / source.relative_to(PLOTS_OUTPUT_DIR)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        source.replace(target)
+        moved_files.append(target)
+    return moved_files
 
 
 def filter_enabled_timeframes(df):
@@ -499,7 +514,9 @@ def plot_weekly_information_coefficient_for_all_timeframes(
 
 
 def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PLOTS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    migrate_csv_files_from_plots_directory()
     raw_df = build_dataframe(
         load_json(INPUT_FILE),
         EQUAL_WEIGHT_SCORE_COLUMN,
@@ -536,11 +553,11 @@ def main():
         )
     )
 
-    output_files = save_analysis_outputs(results, OUTPUT_DIR)
-    plot_analysis_outputs(results, OUTPUT_DIR)
+    output_files = save_analysis_outputs(results, DATA_OUTPUT_DIR)
+    plot_analysis_outputs(results, PLOTS_OUTPUT_DIR)
     plot_weekly_information_coefficient_for_all_timeframes(
         score_df_all_timeframes,
-        OUTPUT_DIR,
+        PLOTS_OUTPUT_DIR,
     )
 
     print("[OK] Saved focused weekly/global analysis:")

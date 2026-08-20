@@ -134,7 +134,7 @@ def plot(analysis, output_dir):
             GLOBAL_SCORE_PERCENTILE_BUCKETS_DIR,
             f"{timeframe}_score_bucket_annualized_return_average.png",
             (
-                f"{timeframe_label(timeframe, timeframe_data)}: Średnia roczna stopa "
+                f"{timeframe_label(timeframe, timeframe_data)}: średnia roczna stopa "
                 "zwrotu według globalnych koszyków score"
             ),
             bucket_order,
