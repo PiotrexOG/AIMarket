@@ -18,6 +18,18 @@ from app.testy.score_tests.common.plotting import (
 from app.testy.score_tests.common.output_paths import WEEKLY_TOP_N_SELECTION_DIR
 
 
+COMPANY_OBSERVATION_COUNT_COLUMN = "company_observation_count"
+
+
+def _add_company_observation_count(data):
+    data = data.copy()
+    data[COMPANY_OBSERVATION_COUNT_COLUMN] = (
+        pd.to_numeric(data["observation_count"], errors="coerce")
+        * pd.to_numeric(data["top_n"], errors="coerce")
+    )
+    return data
+
+
 def build_top_n_output(analysis):
     columns = [
         "timeframe",
@@ -47,6 +59,7 @@ def plot(analysis, output_dir):
         (analysis["test"] == "A1_top_n") & (analysis["bucket"] != "All 18")
     ].dropna(subset=["avg_return"])
     data = add_annualized_return_column(data).dropna(subset=["annualized_return"])
+    data = _add_company_observation_count(data)
 
     for timeframe, timeframe_data in data.groupby("timeframe"):
         timeframe_data = limit_horizon_range(timeframe, timeframe_data)
@@ -69,7 +82,11 @@ def plot(analysis, output_dir):
                 markevery=max(1, len(group) // 30),
                 linewidth=1.8,
                 markersize=3,
-                label=label_with_sample_size(series_label, group),
+                label=label_with_sample_size(
+                    series_label,
+                    group,
+                    COMPANY_OBSERVATION_COUNT_COLUMN,
+                ),
             )
         ax.axhline(0, color="#444444", linewidth=1)
         ax.set_title(
@@ -82,12 +99,12 @@ def plot(analysis, output_dir):
         ax.set_ylabel("Średnia roczna stopa zwrotu")
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
         ax.grid(True, alpha=0.25)
-        ax.legend(title="Średnia z horyzontów; n dla jednego punktu")
+        ax.legend(title="Średnia z horyzontów; n = spółki na punkt")
         add_sample_size_note(
             fig,
             timeframe_data,
-            "observation_count",
-            per="punkt (N i horyzont)",
+            COMPANY_OBSERVATION_COUNT_COLUMN,
+            per="punkt (N spółek × liczba dat startu)",
         )
         fig.tight_layout()
         fig.savefig(
