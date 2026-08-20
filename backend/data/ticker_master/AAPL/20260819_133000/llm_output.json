@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook has significantly improved, shifting from bearish to bullish. The candle pattern is now STRONG_BULLISH, and the RSI has moved from the bearish zone to OVERSOLD_EXTREME (28.4), indicating potential for a reversal. Velocity has normalized to STAGNANT (0.3%), and the stock is now in the middle of its 20-day range, moving away from critical support. W: While oversold conditions suggest a potential bounce, the stock is still trading below its 20-day SMA (-2.0%), indicating some lingering weakness. O: The shift to STRONG_BULLISH and oversold RSI suggests a potential short-term rally. The \"POWER_ZONE_CONFLUENCE(2)\" structure and \"RANGE\" bias remain supportive of this view. T: News flow has shifted towards regulatory adjustments in the EU regarding app commissions, which appears to be a positive catalyst, overshadowing previous concerns about security flaws and memory chips."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend alignment has shown some improvement, with the bullish gradual ascent now at 2.41%. The MACD is recovering from its bearish acceleration, moving to -1.65, and the Z-score relative to the 50-day SMA has turned positive (0.44), indicating a healthier base. W: The trend alignment has weakened slightly from the previous period (4.21% to 2.41%), and the MACD, while recovering, is still in bearish territory. The stock remains within a broad monthly range. O: The improving technicals suggest a potential stabilization and a move higher within the existing range. The \"POWER_ZONE_CONFLUENCE(2)\" structure continues to provide a supportive backdrop. T: The news narrative is now dominated by EU regulatory adjustments, which are more constructive than the previous focus on supply chain issues and downgrades. This shift supports the improving medium-term technicals."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 6.9
+      },
+      "synthesis": "S: The long-term outlook remains robust, with the market regime strengthening to 10.5% and the long-term range position moving into the BULLISH_UPPER_QUADRANT (71.8%). The golden cross structure remains healthy. Fundamentals like business quality, cash generation, and growth profile are unchanged and remain strong. W: Valuation multiples have expanded slightly (P/E: 38.12, P/S: 10.34), and asset safety remains extremely low (P/B: 43.82), posing a persistent risk. The implied growth (PEG: 1.32) is also slightly less favorable. O: The strengthening long-term position and stable fundamentals provide a solid foundation, but the elevated valuation continues to cap upside potential. The \"POWER_ZONE_CONFLUENCE(2)\" structure suggests underlying strength. T: Long-term news is a mix of strategic initiatives and persistent supply chain concerns, but the recent focus on EU regulatory changes is a more positive development than previous warnings about chip shortages."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "BA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.46)",
+        "velocity_roc_10": "NORMAL (-6.0%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 204.88-241.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.46%)",
+        "cycle_macd": "BEARISH_ZERO_CROSS_CONFIRMED (-0.466)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.08)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 203.9-241.09]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (1.7%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (1.07%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 58.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 222.3,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.99%))",
+      "volume_dynamics": "AVERAGE (0.74)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 4.7% | OM: -5.4% | NM: 2.6%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 6.34x, YrsToPay: 157.8x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 0.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $93.995B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 24.8%, EPS: 116.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -116.1%, Next Q Est Growth: 79.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 83.26, P/S: 1.87)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 28.83)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.72)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Boeing, Lockheed joint venture appoints new President and CEO. - Rocket Lab joins Boeing, Lockheed Martin in Space Force program.",
+      "Boeing and RTX agree to increase missile component production. - Pentagon missile push gives Boeing SM-3 production boost. - Norse Atlantic in talks to lease Boeing 787s.",
+      "Odysight.ai signs agreement with Boeing to demonstrate AI capabilities. - Boeing's fighter jet business may gain from rising defense spending. - Boeing's decision to unload aerospace businesses seen as sharpening focus. - Archer Aviation to buy Wisk Aero, giving Boeing stake in Archer."
+    ],
+    "medium_term_50d": [
+      "Archer Aviation acquires Boeing's Wisk Aero, Sky Grid, Insitu subsidiaries. - Boeing takes a stake in Archer Aviation as part of the deal. - Boeing sells autonomous aircraft businesses to Archer Aviation. - Boeing and Archer Aviation collaborate on autonomous flight technology.",
+      "FAA certifies Boeing 737 Max 7 after years of delays. - Boeing secures FAA amended type certificate for new 737-7. - Boeing gets FAA green light for 737 Max 7. - Boeing wins certification for long-delayed 737 Max 7 jet. - FAA approves Boeing 737 MAX-7 for production. - Boeing stock jumps after double upgrade, FAA certification. - Boeing stock lifts Dow after double upgrade, FAA certification. - Boeing delivers first 737 MAX jet to Somon Air. - Boeing stock slips after CEO reveals Air Force One disappointment. - IBM acquires HRL Laboratories from Boeing and General Motors.",
+      "FAA orders probe into hundreds of Boeing 737 jets over fuselage cracks. - FAA orders inspections of Boeing 737 MAX jets for potential cracks. - FAA orders inspection of Boeing jets amid production ramp-up monitoring. - Boeing wins 737 Max 7 approval, ending prolonged certification process. - Boeing snags $75M Pentagon contract for long-range bomb kits."
+    ],
+    "long_term_200d": [
+      "FAA certifies Boeing 737 Max 7 after years of delays. - Boeing secures FAA amended type certificate for new 737-7. - Boeing gets FAA green light for 737 Max 7. - Boeing wins certification for long-delayed 737 Max 7 jet. - FAA approves Boeing 737 MAX-7 for production. - Boeing stock jumps after double upgrade, FAA certification. - Boeing stock lifts Dow after double upgrade, FAA certification. - Boeing delivers first 737 MAX jet to Somon Air. - Boeing stock slips after CEO reveals Air Force One disappointment. - IBM acquires HRL Laboratories from Boeing and General Motors.",
+      "Boeing reports wider-than-expected Q2 loss despite revenue beat. - Boeing Q2 revenue tops estimates as jet deliveries climb. - Boeing's Q2 loss exceeds estimates due to Air Force One program. - Boeing takes $280 million charge on Air Force One program. - FAA flags quality issue affecting seats on hundreds of Boeing MAX jets. - Boeing CEO says supply chain will get harder for 737 MAX production. - Boeing CEO says there is work to do in Wichita for higher production rates. - Boeing CEO says 787 deliveries have fallen behind in H1. - Boeing CEO says seat certifications issue will last for the balance of the year. - Boeing resumes deliveries",
+      "Boeing reports narrower Q2 loss, reaffirms cash guidance. - Boeing highlights production ramp, certification progress, backlog. - Boeing to benefit from higher output, certifications, cash flow. - Boeing attributes $280 million Q2 loss to Air Force One program. - Boeing loses over $3 billion on new Air Force One program. - Boeing wins $363 million in Navy contracts for aircraft."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "WMT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "NEUTRAL_ZONE (47.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.42)",
+        "velocity_roc_10": "STAGNANT (1.1%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (-0.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 106.79-118.09]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.51%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.279)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.67)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 106.79-122.94]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-5.5%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-2.55%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 37.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 112.53,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.51%))",
+      "volume_dynamics": "ELEVATED (1.33)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 24.9% | OM: 4.3% | NM: 2.7%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.69x, YrsToPay: 4.3x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 2.0%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $685.086B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: 4.2%, EPS: -0.3%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -15.2%, Next Q Est Growth: 32.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 48.09, P/S: 1.32)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.81)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -0.26%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.06x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Walmart launches drone delivery in Florida with Wing. - Walmart expands into GLP-1 weight loss drug prescriptions.",
+      "Nurture Life launches frozen kids' meals in Walmart stores. - Walmart completes acquisition of TV advertising company Vibe.co. - Laird Superfood expands coffee and creamer products at Walmart.",
+      "Amazon tops Fortune Global 500 list, ending Walmart's reign. - Kate Farms expands distribution to Walmart stores nationwide. - More Americans admit to shoplifting from Walmart as inflation climbs. - Walmart stock could be pricey after salad recall. - Costco, Amazon, Walmart grocery market share increased."
+    ],
+    "medium_term_50d": [
+      "Amazon tops Fortune Global 500 list, ending Walmart's reign. - Kate Farms expands distribution to Walmart stores nationwide. - More Americans admit to shoplifting from Walmart as inflation climbs. - Walmart stock could be pricey after salad recall. - Costco, Amazon, Walmart grocery market share increased.",
+      "Walmart launches drone delivery in Florida with Wing. - Walmart expands into GLP-1 weight loss drug prescriptions.",
+      "Walmart faces increased shoplifting problem. - Fed holds rates steady, impacting Walmart."
+    ],
+    "long_term_200d": [
+      "Amazon tops Fortune Global 500 list, ending Walmart's reign. - Kate Farms expands distribution to Walmart stores nationwide. - More Americans admit to shoplifting from Walmart as inflation climbs. - Walmart stock could be pricey after salad recall. - Costco, Amazon, Walmart grocery market share increased.",
+      "Walmart cuts prices on thousands of items, including beef and soda. - Walmart announces broad price cuts on summer staples. - Walmart drops price of Coca-Cola 24-packs by 33%. - Walmart signs nuclear PPA with Constellation for Illinois. - Texas settles $13M delivery driver pay case with Walmart. - Walmart plans price cuts at namesake stores and Sam's Club. - Walmart's price cuts get presidential assist from Trump. - Walmart cuts summer grocery prices, Trump claims credit. - Walmart, Apple, Nike seen as AI winners by JPMorgan. - Walmart accused of inflating gas prices with other retailers.",
+      "Walmart to acquire French ad tech firm Vibe.co for $1.4 billion. - Walmart expands Shapermint shapewear line into 1,600 more stores. - Walmart's $1.4 billion Vibe.co deal targets Amazon's ad business. - Nike hires CFO from outside, following Alphabet and Walmart. - Walmart receives tariff refunds, but impact may be minimal."
+    ]
+  }
+}

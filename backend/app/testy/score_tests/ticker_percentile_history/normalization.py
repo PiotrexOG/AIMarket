@@ -9,8 +9,6 @@ def _format_metric_value(value, metric_format):
         value = 0.0
     if metric_format == "percent":
         return f"{value:.0%}"
-    if metric_format == "signed_percent":
-        return f"{value:+.0%}"
     if metric_format == "plain":
         return f"{value:.2f}"
     return f"{value:+.2f}"

@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The short-term outlook has weakened further. The 'STRONG_BEARISH' candle pattern persists, and velocity has turned negative (-0.6%). While RSI has slightly improved to 68.0, the price remains in the middle of its range, indicating a loss of upward momentum. High institutional activity (1.64) is noted, but the overall price action suggests caution. W: The bearish candle pattern and negative velocity point to downside risk. The price is not showing strength to break out of its current range. The 'DRY_NO_INTEREST' volume dynamics from the previous period have shifted to 'HIGH_INSTITUTIONAL_ACTIVITY', but this has not translated into upward price movement, suggesting potential distribution or lack of conviction from large players. O: A sustained break below the current range or continued inability to gain upward traction could lead to further declines. T: The short-term score has decreased due to deteriorating technicals, particularly the negative velocity and lack of range breakout, despite a slight RSI improvement. Conviction has also softened as the price action fails to confirm bullish signals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend is showing signs of weakening. While trend alignment remains positive (1.63%), the MACD has crossed into bearish territory (-0.027), indicating a loss of upward momentum. The SMA50 Z-score has shifted from a bullish trend position to a 'MEAN_REVERSION_HEALTHY_BASE' (Z:0.4), suggesting a less robust upward trend. Analyst sentiment remains supportive, but conviction is low. W: The bearish MACD crossover is a significant concern, suggesting a potential trend reversal or consolidation. The shift in SMA positioning indicates less conviction in the upward trend. The price remains within the monthly range, limiting immediate upside potential. O: A sustained bearish MACD signal or a break below the SMA50 could lead to further downside. Positive news from GE Aerospace, particularly defense contracts, could provide some support. T: The medium-term score and conviction have decreased due to the bearish MACD crossover and a less bullish SMA positioning. The safe metric remains stable as fundamental strengths and overall market regime are unchanged, but the technical deterioration warrants a more cautious stance."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook remains cautiously optimistic, anchored by a secular bull market regime and a healthy golden cross structure. The market regime percentage has increased slightly to 17.6%. Business quality, financial health, and growth profile metrics are stable and strong. The price is still in the bullish upper quadrant of its long-term range (79.3%). W: Valuation multiples remain 'HYPER_PREMIUM_PRICED' (P/E: 42.72, P/S: 7.53), and asset safety is 'EXTREMELY_LOW' (P/B: 21.64), posing significant risk. The 'Q_PEAK_PERFORMANCE_SKEPTIC' earnings momentum outlook persists, with negative estimates for the next quarter. The long-term range position has slightly decreased. O: Continued strong execution in GE Aerospace, especially with new defense contracts, could provide some buffer against valuation concerns. Any signs of stabilization or improvement in earnings momentum would be a positive catalyst. T: The long-term score has slightly decreased, primarily driven by a reduction in the 'safe' metric. This is due to the persistent extreme valuations and the continued negative earnings momentum outlook, which outweigh the stable fundamental strengths and positive market regime. Conviction remains stable as the core long-term structural factors are unchanged."
+    }
+  }
+}

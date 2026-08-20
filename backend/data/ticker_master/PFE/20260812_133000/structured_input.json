@@ -1,0 +1,73 @@
+{
+  "ticker": "PFE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (70.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.93)",
+        "velocity_roc_10": "NORMAL (5.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 24.31-27.2]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.97%)",
+        "cycle_macd": "BULLISH_FADING (0.227)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.31)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 23.62-27.2]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (2.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-3.03%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 49.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 26.18,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.18%))",
+      "volume_dynamics": "AVERAGE (0.9)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 71.3% | OM: 25.1% | NM: 6.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.73x, YrsToPay: 5.7x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 17.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $63.696B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -0.2%, EPS: -60.1%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -106.4%, Next Q Est Growth: 1859.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 34.59, P/S: 2.34)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.75)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -60.05%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.42x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Pfizer raises 2026 guidance and targets $9.7B in savings. - Pfizer agrees to $44 million Chantix settlement. - Pfizer's COVID-19 vaccine authorized by European Commission.",
+      "Pfizer beats Q2 earnings and raises 2026 revenue outlook. - Pfizer's Q2 results show progress despite COVID sales decline. - Pfizer's earnings declined 58% this year; dividend cut risk.",
+      "Pfizer reports Q2 earnings beat and raises 2026 revenue guidance. - Pfizer's Q2 results exceed expectations, driven by cancer and heart drugs. - Pfizer's LITFULO shows positive Phase 3 results for vitiligo treatment. - Pfizer's monthly GLP-1 candidate shows weight loss potential. - Pfizer stock rises after beating Q2 estimates and raising guidance. - Pfizer's Q2 earnings lift stock despite Covid pill revenue plunge. - Pfizer raises 2026 sales outlook by $500 million on Q2 beat. - Pfizer's Q2 earnings beat, revenue guidance raised. - Pfizer's Q2 results beat estimates, revenue guidance"
+    ],
+    "medium_term_50d": [
+      "Pfizer reports Q2 earnings beat and raises 2026 revenue guidance. - Pfizer's Q2 results exceed expectations, driven by cancer and heart drugs. - Pfizer's LITFULO shows positive Phase 3 results for vitiligo treatment. - Pfizer's monthly GLP-1 candidate shows weight loss potential. - Pfizer stock rises after beating Q2 estimates and raising guidance. - Pfizer's Q2 earnings lift stock despite Covid pill revenue plunge. - Pfizer raises 2026 sales outlook by $500 million on Q2 beat. - Pfizer's Q2 earnings beat, revenue guidance raised. - Pfizer's Q2 results beat estimates, revenue guidance",
+      "Pfizer beats Q2 earnings and raises 2026 revenue outlook. - Pfizer's Q2 results show progress despite COVID sales decline. - Pfizer's earnings declined 58% this year; dividend cut risk.",
+      "Pfizer raises 2026 guidance and targets $9.7B in savings. - Pfizer agrees to $44 million Chantix settlement. - Pfizer's COVID-19 vaccine authorized by European Commission."
+    ],
+    "long_term_200d": [
+      "Pfizer reports Q2 earnings beat and raises 2026 revenue guidance. - Pfizer's Q2 results exceed expectations, driven by cancer and heart drugs. - Pfizer's LITFULO shows positive Phase 3 results for vitiligo treatment. - Pfizer's monthly GLP-1 candidate shows weight loss potential. - Pfizer stock rises after beating Q2 estimates and raising guidance. - Pfizer's Q2 earnings lift stock despite Covid pill revenue plunge. - Pfizer raises 2026 sales outlook by $500 million on Q2 beat. - Pfizer's Q2 earnings beat, revenue guidance raised. - Pfizer's Q2 results beat estimates, revenue guidance",
+      "Pfizer wins FDA approval for bladder cancer regimen. - Pfizer's oncology growth focus ahead of Q2 results. - Pfizer's Seagen integration impacts oncology strategy. - Pfizer's Padcev-Keytruda regimen approved for bladder cancer. - Pfizer's drug-pricing deals may reshape big pharma.",
+      "Pfizer gets EU approval for updated COVID vaccine. - Pfizer announces positive Phase 3 trial results for LITFULO. - Pfizer prepares global regulatory filings for LITFULO. - EU approves Pfizer's updated COVID-19 vaccine."
+    ]
+  }
+}

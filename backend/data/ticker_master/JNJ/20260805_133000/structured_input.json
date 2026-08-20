@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.41)",
+        "velocity_roc_10": "NORMAL (1.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-0.8%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 245.49-274.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.37%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.122)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.79)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 220.84-274.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (8.41%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 80.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 256.89,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.49%))",
+      "volume_dynamics": "AVERAGE (0.85)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 70.5% | OM: 26.8% | NM: 21.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.929B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.1%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -20.4%, Next Q Est Growth: 6.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 29.7, P/S: 6.4)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.38)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.08%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson OTTAVA robotic surgical system receives FDA authorization. - Johnson & Johnson enters surgical robotics market with OTTAVA system. - J&J's oncology business shows strong Q2 growth.",
+      "JNJ wins FDA approval for new surgical robot Ottava.",
+      "Johnson & Johnson executive vice president Jennifer Taubert to retire. - Tom Cavanaugh appointed EVP, Worldwide Chairman Innovative Medicine."
+    ],
+    "medium_term_50d": [
+      "Johnson & Johnson proposes $5.5 billion settlement for talc lawsuits. - Johnson & Johnson agrees to pay $5.5 billion to resolve talc claims. - Johnson & Johnson offers up to $5.5 billion to settle baby powder lawsuits. - Johnson & Johnson reaches $5.5 billion settlement for ovarian cancer claims. - Johnson & Johnson's oncology engine and guidance raises were on record. - Johnson & Johnson, Abbott, TSMC reported record results and raised guidance.",
+      "Johnson & Johnson proposes $5.5 billion talc lawsuit settlement. - Johnson & Johnson expands biotech pipeline with Firefly Bio acquisition. - Johnson & Johnson partners with Sail Biomedicines. - Johnson & Johnson gets FDA Priority Review for RYBREVANT FASPRO. - Johnson & Johnson receives FDA clearance for surgical robot. - Johnson & Johnson hikes dividend for 64th time.",
+      "Johnson & Johnson OTTAVA robotic surgical system receives FDA authorization. - Johnson & Johnson enters surgical robotics market with OTTAVA system. - J&J's oncology business shows strong Q2 growth."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson proposes $5.5 billion settlement for talc lawsuits. - Johnson & Johnson agrees to pay $5.5 billion to resolve talc claims. - Johnson & Johnson offers up to $5.5 billion to settle baby powder lawsuits. - Johnson & Johnson reaches $5.5 billion settlement for ovarian cancer claims. - Johnson & Johnson's oncology engine and guidance raises were on record. - Johnson & Johnson, Abbott, TSMC reported record results and raised guidance.",
+      "Johnson & Johnson Q2 earnings and revenue beat estimates. - Johnson & Johnson raises full-year 2026 outlook. - Johnson & Johnson surpasses $100 billion in annual revenue. - Johnson & Johnson declares quarterly dividend of $1.34 per share.",
+      "Johnson & Johnson raised its dividend and full-year sales guidance. - Johnson & Johnson received FDA approval for its OTTAVA Robotic Surgical System. - Johnson & Johnson enters the US robotic surgery market with OTTAVA. - Johnson & Johnson's OTTAVA FDA authorization impacts Intuitive Surgical stock."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (71.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "STAGNANT (-0.9%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 372.72-436.04]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-2.79%)",
+        "cycle_macd": "BULLISH_FADING (2.014)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.7)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 372.72-479.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (13.4%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (16.5%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.2%]"
+      }
+    },
+    "market_physics": {
+      "price": 411.53,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.28%))",
+      "volume_dynamics": "AVERAGE (1.05)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 64.2% | OM: 56.0% | NM: 50.4%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.33x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4450.378591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 30.8%, EPS: 57.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3402.6%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.95, P/S: 0.48)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.33)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: -0.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC posts record Q2 results with strong guidance. - David Tepper adds to TSMC stake.",
+      "TSM stock dips in premarket trading amid market pullback.",
+      "TSMC's Arizona operations profit to increase due to AI chip demand."
+    ],
+    "medium_term_50d": [
+      "TSMC posts record Q2 results with strong guidance. - David Tepper adds to TSMC stake.",
+      "TSMC and Sony plan $6.3B image sensor plant in Japan. - Microsoft discusses securing manufacturing capacity for Maia chips with TSMC. - TSMC plans up to $64B in capital expenditures for 2026.",
+      "TSMC's Arizona operations profit to increase due to AI chip demand."
+    ],
+    "long_term_200d": [
+      "TSMC and Sony plan $6.3B image sensor plant in Japan. - Microsoft discusses securing manufacturing capacity for Maia chips with TSMC. - TSMC plans up to $64B in capital expenditures for 2026.",
+      "TSMC posts record Q2 results with strong guidance. - David Tepper adds to TSMC stake.",
+      "TSMC Q3 revenue guidance issued: $44.6B-$45.8B. - TSMC raises capital spending to $60B-$64B for AI. - TSMC announces additional $100 billion investment in Arizona. - TSMC Q2 EPS $4.31, sales $40.200B, beats estimates. - TSMC Q2 results show strong growth and margin gains. - TSMC's 67.7% gross margin highlights Intel's challenge."
+    ]
+  }
+}

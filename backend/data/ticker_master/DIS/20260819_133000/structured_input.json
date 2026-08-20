@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (63.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.72)",
+        "velocity_roc_10": "NORMAL (5.9%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.6%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 92.49-107.11]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.98%)",
+        "cycle_macd": "BULLISH_FADING (0.496)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.19)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 92.49-107.11]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.2%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-4.62%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 57.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.2%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.52)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.2% | OM: 15.5% | NM: 11.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.263B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 27.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -31.4%, Next Q Est Growth: 30.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 17.01, P/S: 1.94)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.74)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.62)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.22x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney's ABC sues FCC over retaliatory campaign claims.",
+      "Disney parks boss outlines investment strategy.",
+      "Disney appoints new head of commerce for Disney+ Asia Pacific. - Disney reports Q3 2026 results: revenue up, net income down. - Disney CEO states no plans to separate ESPN or ABC. - Valueact Holdings dissolves share stake in Disney."
+    ],
+    "medium_term_50d": [
+      "Disney's ABC sues FCC over retaliatory campaign claims.",
+      "Disney appoints new head of commerce for Disney+ Asia Pacific. - Disney reports Q3 2026 results: revenue up, net income down. - Disney CEO states no plans to separate ESPN or ABC. - Valueact Holdings dissolves share stake in Disney.",
+      "Disney plans to turn Disney+ into an integrated fan ecosystem by 2027. - Disney's theme parks delivered a strong quarter, outperforming Universal. - Disney CEO shares specifics on how the company is using AI. - Walt Disney has permission to build a new Florida theme park. - Disney is focusing on theme park expansion and improving streaming."
+    ],
+    "long_term_200d": [
+      "Disney Q3 earnings beat estimates, revenue misses. - Disney's streaming profit doubles, parks see growth. - Disney sells A+E stake to Hearst for $1.2 billion. - Disney explores free streaming tier, sells out Super Bowl ads. - Disney announces global short-form content sharing deal with Tik Tok. - Disney restructures, moves consumer products business to entertainment division. - Disney reports $100 million tariff refund in Q3. - Disney's 'Toy Story 5' contributes to robust performance. - Disney's theme park attendance and guest spending increase. - Disney's experiences revenue reaches record levels.",
+      "Disney plans to turn Disney+ into an integrated fan ecosystem by 2027. - Disney's theme parks delivered a strong quarter, outperforming Universal. - Disney CEO shares specifics on how the company is using AI. - Walt Disney has permission to build a new Florida theme park. - Disney is focusing on theme park expansion and improving streaming.",
+      "Disney partners with Tik Tok for content sharing. - Disney exceeds Q3 operating income guidance. - Disney reaffirms fiscal 2026 guidance. - Disney raises share repurchase plan to $9 billion. - Disney explores free, ad-supported streaming tier. - Disney begins beta testing AI search on ESPN. - Disney tests natural language content discovery on Disney+."
+    ]
+  }
+}

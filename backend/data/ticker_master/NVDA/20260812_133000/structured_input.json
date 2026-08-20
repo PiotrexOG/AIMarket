@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.77)",
+        "velocity_roc_10": "EXPLOSIVE_UP (10.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.7%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 190.02-224.76]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.77%)",
+        "cycle_macd": "BULLISH_FADING (2.016)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.12)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-232.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.12%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 83.3%]"
+      }
+    },
+    "market_physics": {
+      "price": 224.48,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.43%))",
+      "volume_dynamics": "AVERAGE (0.79)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 71.49, P/S: 37.2)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 65.89)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.88)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia launches Nemotron 3.5 Lightning AI model. - Nvidia partners with Wall Street firms for $500B AI financing. - Nvidia CEO calls AI data centers 'investable assets'. - Nvidia's $500B AI financing plan faces risk from China. - Nvidia's $500bn AI spending splurge unnerves investors. - Nvidia's big deal expands AI horizon with $500B financing. - Nvidia is \"banker of choice to the AI ecosystem\". - Nvidia's residual-value guarantees may back $500B AI credit. - Nvidia's AI infrastructure ambitions backed by $500B package. - Nvidia CEO",
+      "Nvidia investing up to $3 billion in Lancium for Stargate. - Nvidia commits $5 billion to AI data center infrastructure. - Nvidia CEO: Chips become an investable asset class. - Cathie Wood buys more Nvidia shares. - Intel falls 5% on proposed $15B share sale.",
+      "Nvidia to invest up to $3 billion in Lancium. - Nvidia invests in power infrastructure developer Lancium. - Space X will exclusively use Nvidia chips moving forward. - Nvidia's $3 billion bet on Lancium signals power layer. - Firebird AI Factory launched in Armenia, backed by Nvidia. - AMD buys Taalas, challenging Nvidia in AI inference."
+    ],
+    "medium_term_50d": [
+      "Nvidia launches Nemotron 3.5 Lightning AI model. - Nvidia partners with Wall Street firms for $500B AI financing. - Nvidia CEO calls AI data centers 'investable assets'. - Nvidia's $500B AI financing plan faces risk from China. - Nvidia's $500bn AI spending splurge unnerves investors. - Nvidia's big deal expands AI horizon with $500B financing. - Nvidia is \"banker of choice to the AI ecosystem\". - Nvidia's residual-value guarantees may back $500B AI credit. - Nvidia's AI infrastructure ambitions backed by $500B package. - Nvidia CEO",
+      "Nvidia investing up to $3 billion in Lancium for Stargate. - Nvidia commits $5 billion to AI data center infrastructure. - Nvidia CEO: Chips become an investable asset class. - Cathie Wood buys more Nvidia shares. - Intel falls 5% on proposed $15B share sale.",
+      "Nvidia to invest up to $3 billion in Lancium. - Nvidia invests in power infrastructure developer Lancium. - Space X will exclusively use Nvidia chips moving forward. - Nvidia's $3 billion bet on Lancium signals power layer. - Firebird AI Factory launched in Armenia, backed by Nvidia. - AMD buys Taalas, challenging Nvidia in AI inference."
+    ],
+    "long_term_200d": [
+      "Nvidia launches Nemotron 3.5 Lightning AI model. - Nvidia partners with Wall Street firms for $500B AI financing. - Nvidia CEO calls AI data centers 'investable assets'. - Nvidia's $500B AI financing plan faces risk from China. - Nvidia's $500bn AI spending splurge unnerves investors. - Nvidia's big deal expands AI horizon with $500B financing. - Nvidia is \"banker of choice to the AI ecosystem\". - Nvidia's residual-value guarantees may back $500B AI credit. - Nvidia's AI infrastructure ambitions backed by $500B package. - Nvidia CEO",
+      "Nvidia shares plunge as AI debt risk grows. - Nvidia and Oracle shares plunge; time to sell? - Jensen Huang: Chip industry boom-bust cycle won't hit. - Nvidia revenue growth accelerated despite stock pullback. - Nvidia vs. Alphabet: Revenue trends reveal AI leaders. - Jeff Bezos backed AI startup partners with Nvidia. - Louis Navellier sends strong message on Nvidia's deals. - Jensen Huang wants open-source AI models; chipmakers paid. - Nobody's talking about the 1 biggest risk facing Nvidia.",
+      "Nvidia to invest up to $3 billion in Lancium. - Nvidia invests in power infrastructure developer Lancium. - Space X will exclusively use Nvidia chips moving forward. - Nvidia's $3 billion bet on Lancium signals power layer. - Firebird AI Factory launched in Armenia, backed by Nvidia. - AMD buys Taalas, challenging Nvidia in AI inference."
+    ]
+  }
+}

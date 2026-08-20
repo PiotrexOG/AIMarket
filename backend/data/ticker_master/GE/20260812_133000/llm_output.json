@@ -1,0 +1,29 @@
+{
+  "ticker": "GE",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 4.5
+      },
+      "synthesis": "S: The short-term outlook has weakened, with a shift to a 'STRONG_BEARISH' candle pattern and stagnant velocity (ROC 1.2%). While RSI remains in a bullish zone (66.4), the price is now in the middle of its range, indicating a loss of upward momentum. Positive news regarding engine demand and services provides some support. W: The bearish candle pattern and lack of velocity suggest a potential downside risk. The price is no longer at resistance but has moved into a neutral range, reducing immediate upside potential. Volume dynamics are 'DRY_NO_INTEREST' (0.48), indicating a lack of conviction. O: A sustained break below the current range or continued lack of volume could lead to further price declines. T: The short-term trend has deteriorated from the previous period, shifting from potential upside to a more neutral to slightly bearish stance due to technical weakness."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The medium-term trend remains constructive, with a bullish gradual ascent (1.49%) and positive SMA positioning (Z:0.61). Analyst sentiment is still improving and polarization decreasing, providing a stable backdrop. The business quality and growth profile remain strong fundamental supports. W: The bullish MACD signal is fading (0.626), indicating a loss of momentum. The price is now inside the monthly range, suggesting less immediate upside pressure compared to the previous period's approach to resistance. The 'LOW' analyst conviction level persists. O: Continued positive news flow from GE Aerospace, particularly regarding engine demand and services, could help sustain the trend. A rebound in MACD momentum would be a positive catalyst. T: The medium-term outlook has slightly softened due to fading momentum indicators and a less challenging price range, but the overall trend remains cautiously bullish, supported by fundamentals and analyst sentiment."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The long-term regime remains a secular bull market, supported by a healthy golden cross structure. Business quality, financial health, and growth profile metrics are unchanged and remain solid. The price is in the bullish upper quadrant of its long-term range (79.8%). W: Valuation multiples remain 'HYPER_PREMIUM_PRICED' (P/E: 42.79, P/S: 7.54) and asset safety is 'EXTREMELY_LOW' (P/B: 21.67), indicating significant risk if growth falters. The 'Q_PEAK_PERFORMANCE_SKEPTIC' earnings momentum outlook persists, with negative estimates for the next quarter. The market regime percentage has slightly decreased. O: Continued execution on long-term growth strategies, especially in aerospace, and potential stabilization or improvement in earnings momentum could support the current valuation. T: The long-term outlook is unchanged, maintaining a cautious optimism. The strong business fundamentals and market regime are offset by persistent high valuations and concerns about near-term earnings growth, leading to a slight decrease in the 'safe' metric due to valuation fragility."
+    }
+  }
+}

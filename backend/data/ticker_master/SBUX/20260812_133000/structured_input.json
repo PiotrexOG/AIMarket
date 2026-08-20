@@ -1,0 +1,73 @@
+{
+  "ticker": "SBUX",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "HAMMER_PINBAR_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (59.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.85)",
+        "velocity_roc_10": "NORMAL (3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.7%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 101.8-109.23]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.08%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.051)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.14)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 93.7-109.23]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (7.43%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 91.9%]"
+      }
+    },
+    "market_physics": {
+      "price": 106.7,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.76%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.52)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 20.4% | OM: 9.3% | NM: 3.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (YrsToPay: 8.4x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $38.4649B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 5.8%, EPS: -52.2%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -30.8%, Next Q Est Growth: 55.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 80.83, P/S: 3.17)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: -14.41)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -52.17%)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.19x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Starbucks reports fiscal third quarter results.",
+      "Starbucks Q3 2026 comparable store sales rose 7.9%.",
+      "Starbucks closes another Seattle store."
+    ],
+    "medium_term_50d": [
+      "Starbucks reports fiscal third quarter results.",
+      "Starbucks reports Q3 earnings beat, raises full-year guidance. - Starbucks Q3 comparable store sales jump 7.9%. - Starbucks sees FY26 consolidated net revenue flat to slightly up. - Starbucks CFO: International Division store count to grow meaningfully. - Starbucks CFO: Pricing contributed less than 1% to ticket growth. - Starbucks Q3 earnings beat estimates, stock pops. - Starbucks stock surges to 52-week high on Q3 results. - Starbucks turnaround plan drives earnings beat and raised guidance. - Starbucks stock gains as sales growth outpaces expectations. - Starbucks raises full-year guidance.",
+      "Starbucks raises full-year profit guidance by 10%. - Starbucks reports 7.9% global comparable sales increase. - Starbucks' 'Back to Starbucks' plan shows results. - Starbucks' free cash flow triples. - Starbucks EVP Sanjay Shah appointed to Matternet board. - Starbucks' afternoon business is picking up. - Starbucks remodels and service tweaks are paying off. - Starbucks' customer service and loyalty program revamped."
+    ],
+    "long_term_200d": [
+      "Starbucks reports Q3 earnings beat, raises full-year guidance. - Starbucks Q3 comparable store sales jump 7.9%. - Starbucks sees FY26 consolidated net revenue flat to slightly up. - Starbucks CFO: International Division store count to grow meaningfully. - Starbucks CFO: Pricing contributed less than 1% to ticket growth. - Starbucks Q3 earnings beat estimates, stock pops. - Starbucks stock surges to 52-week high on Q3 results. - Starbucks turnaround plan drives earnings beat and raised guidance. - Starbucks stock gains as sales growth outpaces expectations. - Starbucks raises full-year guidance.",
+      "Starbucks raises full-year profit guidance by 10%. - Starbucks reports 7.9% global comparable sales increase. - Starbucks' 'Back to Starbucks' plan shows results. - Starbucks' free cash flow triples. - Starbucks EVP Sanjay Shah appointed to Matternet board. - Starbucks' afternoon business is picking up. - Starbucks remodels and service tweaks are paying off. - Starbucks' customer service and loyalty program revamped.",
+      "Starbucks raises full-year guidance. - Starbucks reports Q3 beat with higher EPS. - Starbucks plans measured US growth, rethinking strategy. - Starbucks CEO explains pumpkin spice latte menu decision."
+    ]
+  }
+}

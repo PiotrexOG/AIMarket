@@ -77,13 +77,7 @@ def _save_ticker_correlation_bar_chart(
     ax.set_xlim(-1, 1)
     ax.set_yticks(y_positions)
     if BASE_OBSERVATION_COUNT_COLUMN in clean.columns:
-        y_labels = [
-            (
-                f"{row.ticker} "
-                f"(n bazowe={int(row.base_observation_count)})"
-            )
-            if pd.notna(row.base_observation_count)
-            else str(row.ticker)
+        y_labels = [str(row.ticker)
             for row in clean.itertuples(index=False)
         ]
     elif "observations" in clean.columns:

@@ -1,0 +1,73 @@
+{
+  "ticker": "CVX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (54.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "NORMAL (4.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.2%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 178.57-197.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (3.94%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.009)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.49)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 164.78-197.69]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (3.78%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 73.4%]"
+      }
+    },
+    "market_physics": {
+      "price": 196.56,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.55%))",
+      "volume_dynamics": "AVERAGE (0.73)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:TESTING @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 31.0% | OM: 15.8% | NM: 9.9%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.15x, YrsToPay: 1.1x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 12.1%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $208.711B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 11.2%, EPS: 34.2%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 10.1%, Next Q Est Growth: -24.3%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 18.77, P/S: 1.86)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.04)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.55)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Chevron Q2 earnings beat, record production, Hess synergies boost momentum. - Chevron Hess synergies ahead of plan, boosting cash flow and growth. - Chevron lands 20-year AI data center power deal with Microsoft. - Chevron stock jumps 3.3% as Hormuz doubts lift oil prices.",
+      "Chevron (CVX) Q2 earnings report reviewed against estimates. - Trump accuses Chevron of making \"too much money\". - Chevron executives to speak at 50/50 Women on Boards summit.",
+      "Chevron reports highest quarterly earnings in six years. - Chevron expands North American base oils distribution network. - Chevron turns $3.1 billion loss into a gain. - Chevron and Exxon each made over $130 million per day."
+    ],
+    "medium_term_50d": [
+      "Chevron Q2 earnings beat, record production, Hess synergies boost momentum. - Chevron Hess synergies ahead of plan, boosting cash flow and growth. - Chevron lands 20-year AI data center power deal with Microsoft. - Chevron stock jumps 3.3% as Hormuz doubts lift oil prices.",
+      "Chevron CEO evaluates new pipeline route around Strait of Hormuz. - Trump blasts Exxon, Chevron for making 'too much money'. - Chevron, Exxon Making Too Much From Surging Oil, Trump Says. - Trump demands Exxon, Chevron cut gas prices after Iran war profits. - Should Chevron\u2019s War-Boosted Margins and Cash Flows Prompt a Portfolio Rethink for (CVX) Investors? - Trump says oil companies made 'too much money'.",
+      "Chevron reports highest quarterly earnings in six years. - Chevron expands North American base oils distribution network. - Chevron turns $3.1 billion loss into a gain. - Chevron and Exxon each made over $130 million per day."
+    ],
+    "long_term_200d": [
+      "Chevron reports record Q2 profit, exceeding expectations. - Chevron's Q2 earnings surge due to higher oil prices. - Chevron CEO discusses Q2 profit surge and global assets. - Chevron's Q2 results driven by upstream, refining margins. - Chevron's Q2 earnings beat estimates on strong refining margins. - Chevron's Q2 revenue hits four-year high on energy rally. - Chevron's global production rises 20% in Q2. - Chevron benefits from higher oil prices with limited Middle East exposure. - Chevron Corp (CVX) Q2 earnings call highlights record production. - Chevron Corp (CVX) Q2 earnings call presentation published.",
+      "Chevron CEO evaluates new pipeline route around Strait of Hormuz. - Trump blasts Exxon, Chevron for making 'too much money'. - Chevron, Exxon Making Too Much From Surging Oil, Trump Says. - Trump demands Exxon, Chevron cut gas prices after Iran war profits. - Should Chevron\u2019s War-Boosted Margins and Cash Flows Prompt a Portfolio Rethink for (CVX) Investors? - Trump says oil companies made 'too much money'.",
+      "Chevron reports highest quarterly earnings in six years. - Chevron expands North American base oils distribution network. - Chevron turns $3.1 billion loss into a gain. - Chevron and Exxon each made over $130 million per day."
+    ]
+  }
+}

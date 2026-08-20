@@ -1,0 +1,73 @@
+{
+  "ticker": "NFLX",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.7)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.65)",
+        "velocity_roc_10": "NORMAL (7.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 65.1-76.62]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_EXPANDING_MOMENTUM (-5.82%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.707)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.42)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 65.1-89.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-19.0%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-15.78%)",
+        "long_term_range_pos": "BEARISH_LOWER_QUADRANT [Pos: 15.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 74.1,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.65%))",
+      "volume_dynamics": "AVERAGE (0.8)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 49.1% | OM: 29.7% | NM: 28.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.17x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 22.7%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $48.370764B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.0%, EPS: 34.0%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: 2.5%, Next Q Est Growth: 1.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 22.94, P/S: 6.53)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 10.47)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.67)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Netflix game developer Refactor Games lays off 85% staff. - You Tube Premium bundles Peacock, increasing streaming competition for Netflix.",
+      "Netflix signs $500 million global streaming deal for 'The Walking Dead'. - Netflix Q2 earnings beat guidance, announces $5 billion buyback.",
+      "Netflix secures global streaming rights for The Walking Dead Universe. - Netflix fights French streaming regulations in court. - Over half of new Netflix subscribers watch licensed shows. - Flipkart offers Netflix subscription as a loyalty perk."
+    ],
+    "medium_term_50d": [
+      "Netflix signs $500 million global streaming deal for 'The Walking Dead'. - Netflix Q2 earnings beat guidance, announces $5 billion buyback.",
+      "Netflix pays $200 million for 2027 Women's World Cup rights. - Netflix live content strategy boosts subscriber growth and ads. - Netflix Q2 revenue below Wall Street expectations.",
+      "Netflix secures global streaming rights for The Walking Dead Universe. - Netflix fights French streaming regulations in court. - Over half of new Netflix subscribers watch licensed shows. - Flipkart offers Netflix subscription as a loyalty perk."
+    ],
+    "long_term_200d": [
+      "Netflix issues softer revenue guidance, reduces metric reporting. - Netflix stock plunges on disappointing quarterly earnings. - Netflix stock down significantly year-to-date. - Netflix stock faces criticism for growth measurement changes. - Netflix stock valuation remains high despite slowing growth. - Netflix stock shows solid long-term gains despite recent weakness. - Netflix stock could be undervalued based on cash flow. - Netflix stock trading below estimated intrinsic value. - Netflix expansion into advertising and live content to support cash flow. - Netflix stock down 26% in 2026.",
+      "Netflix signs $500 million global streaming deal for 'The Walking Dead'. - Netflix Q2 earnings beat guidance, announces $5 billion buyback.",
+      "Netflix shares fall after weaker-than-expected third-quarter guidance. - Netflix Q2 earnings beat, but Q3 guidance disappoints investors. - Netflix Q2 revenue and net income reported, Q3 guidance softer. - Netflix to scale back engagement disclosures, focus on financial metrics. - Netflix Q2 results show plans to expand monetization and growth."
+    ]
+  }
+}

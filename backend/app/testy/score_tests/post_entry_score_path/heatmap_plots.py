@@ -252,7 +252,7 @@ def _plot_relative_score_change_heatmap(
                 ax.text(
                     column_index,
                     row_index,
-                    f"{value:.0%}\nn={int(count)}",
+                    f"n={int(count)}",
                     ha="center",
                     va="center",
                     fontsize=7,

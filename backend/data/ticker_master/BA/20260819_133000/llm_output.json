@@ -1,0 +1,29 @@
+{
+  "ticker": "BA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 4.5,
+        "safe": 3.0
+      },
+      "synthesis": "S: Momentum has moderated with RSI in the neutral zone (57.3) and negative velocity. The price is consolidating near the 20-day SMA, indicating a pause in recent action. W: The neutral candle pattern and declining velocity suggest a loss of short-term bullish momentum. Volume has increased to average, but without a clear directional bias. O: The Archer Aviation deal continues to be a positive narrative, but the lack of clear technical direction and the shift from bullish to neutral indicators temper short-term optimism. T: The transition from a bearish candle to neutral, coupled with moderating momentum, points to a period of consolidation or potential drift."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.5,
+        "safe": 2.5
+      },
+      "synthesis": "S: The MACD has confirmed a bearish zero cross, indicating a shift in medium-term momentum. The price is now closer to the 50-day SMA (Z:0.08), suggesting a loss of upward trend strength. W: The confirmed bearish MACD cross and the price moving from a bullish trend position to a mean reversion base signal a deterioration in the medium-term outlook. Structural financial weaknesses remain a significant overhang. O: While the company continues to secure defense contracts and progress on certifications, the technical momentum is turning negative, raising concerns about sustainability. T: The bearish MACD crossover and the price reverting to the mean suggest a potential for a trend change or a deeper correction from recent highs."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 3.0,
+        "safe": 2.0
+      },
+      "synthesis": "S: The secular bull market regime persists, but the price has moved to a more neutral position within the long-term range (58.7%). The proximity of major crosses still suggests potential for significant price action. W: Persistent fundamental weaknesses in margins, balance sheet stress, and weak cash conversion remain critical concerns. The price moving from the upper quadrant to the mid-cycle neutral zone indicates a loss of long-term bullish conviction. O: Continued news regarding production issues and FAA probes, despite progress on certifications, introduces ongoing risks to the long-term outlook. T: The combination of deteriorating medium-term technicals and persistent fundamental frailties, despite a favorable long-term market regime, suggests increased downside risk and reduced structural safety."
+    }
+  }
+}

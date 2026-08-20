@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (43.6)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.73)",
+        "velocity_roc_10": "NORMAL (1.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 916.76-987.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (0.07%)",
+        "cycle_macd": "BULLISH_ACCELERATING (1.704)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.36)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 907.23-995.38]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (0.3%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.94%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 51.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 974.35,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.69%))",
+      "volume_dynamics": "AVERAGE (0.96)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 52.08, P/S: 1.54)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 14.29)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.42)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco launches Medicare plans with SCAN Group.",
+      "Costco reports July net sales up 10.7% year over year. - New brands Physician's Choice and Mighty Spark roll out nationwide.",
+      "Costco reports strong July sales growth of 10.7%. - Costco comparable sales rise 8.9% overall, 10.3% in U.S."
+    ],
+    "medium_term_50d": [
+      "Costco reports strong July sales growth of 10.7%. - Costco comparable sales rise 8.9% overall, 10.3% in U.S.",
+      "Costco reports July net sales up 10.7% year on year. - Costco stock slips despite strong July sales growth.",
+      "Costco reports July net sales up 10.7% year over year. - New brands Physician's Choice and Mighty Spark roll out nationwide."
+    ],
+    "long_term_200d": [
+      "Costco reports July net sales up 10.7% year on year. - Costco stock slips despite strong July sales growth.",
+      "Costco reports strong July sales growth of 10.7%. - Costco comparable sales rise 8.9% overall, 10.3% in U.S.",
+      "Costco reports July net sales increase of 10.7%. - Costco reports 48-week sales increase of 10.1%."
+    ]
+  }
+}

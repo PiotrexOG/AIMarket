@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 2.5,
+        "conv": 3.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term outlook has deteriorated, with a STRONG_BEARISH candle pattern and RSI further weakening to 36.6. Velocity has turned IMPLOSIVE_DOWN (-10.4%), and the stock is now AT_CRITICAL_SUPPORT_20. W: The immediate price action is under pressure, testing key support levels. The \"RANGE\" bias in the SR landscape is being tested by downside momentum. O: A bounce is possible if the critical support holds, but the prevailing technicals suggest further downside risk. T: News flow is dominated by security flaws, downgrades, and concerns over memory chip costs impacting i Phone pricing and yields, reinforcing the bearish short-term technicals."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 5.8
+      },
+      "synthesis": "S: The medium-term trend alignment remains a BULLISH_GRADUAL_ASCENT (4.21%), but the BEARISH_ACCELERATING MACD (-3.285) is a significant headwind. The position relative to the 50-day SMA (Z:-0.45) indicates mean reversion potential but also suggests a weakening trend. W: The accelerating bearish MACD and increased negative Z-score point to a loss of upward momentum. The stock remains within a broad monthly range, indicating potential for continued choppiness. O: While the underlying trend is still positive, the deteriorating momentum signals suggest caution. The \"POWER_ZONE_CONFLUENCE(2)\" structure may offer some resilience. T: News narrative continues to highlight supply chain issues and potential pricing pressures, which are now more prominent in the medium-term outlook, overshadowing previous positive developments."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safe": 6.8
+      },
+      "synthesis": "S: The long-term outlook remains fundamentally sound, supported by a SECULAR_BULL_MARKET regime (9.0%) and a HEALTHY_GOLDEN_CROSS_STRUCTURE (10.59%). Business quality, cash generation, and growth profiles are still strong. W: The PREMIUM_VALUATION (P/E: 36.47, P/S: 9.89) and EXTREMELY_LOW_ASSET_SAFETY (P/B: 41.93) remain significant risks, especially as the market regime shows slight cooling. The long-term range position has also moved slightly lower. O: The company's scale and stable growth provide a defensive moat, but the current valuation and increasing supply chain concerns temper the long-term upside potential. T: Long-term news is a mix of strategic initiatives (AI, security) and persistent supply chain challenges, with recent downgrades and memory chip concerns adding to the cautionary narrative."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "V",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: Bullish momentum (RSI 63.6) and stable trend near base (SMA20 +2.9%) suggest short-term support. News flow is mixed, with a significant acquisition (Bio Catch for $2.4B) potentially boosting fraud detection capabilities, but also some layoff news. W: Bearish candle pattern and range position in the middle of the 20d range indicate potential choppiness. O: Acquisition of Bio Catch could be a positive catalyst for cybersecurity and fraud prevention. T: Volatility is normal (ATR 2.21%), but the mixed news and candle pattern suggest caution. The 'RANGE' bias in the SR landscape implies consolidation is likely."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 5.5
+      },
+      "synthesis": "S: Strong bullish trend alignment (SMA50 Z:1.56) and confirmed MACD bullish crossover indicate a robust medium-term uptrend. Expanding momentum (5.0%) and strengthening at monthly resistance suggest upward pressure. W: The stock is testing a significant resistance zone (309.0-373.97), which could lead to a pause or pullback. The acquisition news, while positive for long-term strategy, adds a layer of complexity. O: Continued strength in the core business and strategic acquisitions like Bio Catch for fraud prevention are positive. T: The 'POWER_ZONE_CONFLUENCE(2)' in the SR landscape suggests strong conviction around current price levels, but the proximity to resistance warrants monitoring. Balance sheet health (NetDebt/Eq: 0.32x) provides some cushion."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 6.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The secular bull market regime and healthy golden cross structure (3.45%) provide a strong long-term foundation. Excellent business quality (GM: 81.3%, OM: 61.1%) and stable growth (Rev: 14.4%, EPS: 15.4%) are supportive. W: Valuation is extremely stretched (P/E: 32.12, P/S: 16.58, P/B: 20.01), with implied growth priced in (PEG: 2.09), creating significant downside risk if growth falters. The ATH position (93.9%) suggests limited upside without further fundamental catalysts. O: The company's dominant market position, strong cash generation (FCF Mgn: 49.2%), and ongoing strategic investments (Bio Catch acquisition) are long-term positives. T: While the long-term trend is bullish, the extreme valuation significantly compromises the 'safe' metric. The recent layoff news, while potentially efficiency-driven, could signal a shift in growth expectations or a response to economic headwinds."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NKE",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (44.3)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.16)",
+        "velocity_roc_10": "NORMAL (-3.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-3.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 40.69-44.98]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-1.55%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-0.053)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-1.05)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 40.0-47.65]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-23.6%)",
+        "major_crosses": "EXTREME_BEARISH_STRETCH_REBOUND_LIKELY (-19.99%)",
+        "long_term_range_pos": "MULTI_MONTH_LOW_ACCUMULATION [Pos: 6.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 41.86,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.21%))",
+      "volume_dynamics": "HIGH_INSTITUTIONAL_ACTIVITY (1.65)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 41.9% | OM: 7.4% | NM: 6.2%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 6.5%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $46.44B)",
+    "growth_profile_ttm": "STAGNATION_WITH_PROFIT_ISSUES (Rev: -7.1%, EPS: -44.3%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 276.9%, Next Q Est Growth: -8.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.47, P/S: 1.33)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 4.6)",
+    "implied_growth": "DECLINING_EARNINGS (Growth: -44.29%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.07x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan downgrades Nike to Underweight, citing EPS concerns. - Nike stock downgraded to Underweight due to 'Win Now' strategy. - Nike faces $1 billion headwind in China, per J.P. Morgan. - Nike shares retreat after JPMorgan downgrade to Underweight. - Nike to cease online sales in China from January 2027. - Nike partnership traction noted in FSN E-Commerce Ventures earnings.",
+      "JD Sports downgraded due to consumer pressure and lack of brand heat.",
+      "Nike launches Studio Fleece to rebuild women's sportswear business."
+    ],
+    "medium_term_50d": [
+      "JPMorgan downgrades Nike to Underweight, citing EPS concerns. - Nike stock downgraded to Underweight due to 'Win Now' strategy. - Nike faces $1 billion headwind in China, per J.P. Morgan. - Nike shares retreat after JPMorgan downgrade to Underweight. - Nike to cease online sales in China from January 2027. - Nike partnership traction noted in FSN E-Commerce Ventures earnings.",
+      "JD Sports downgraded due to consumer pressure and lack of brand heat.",
+      "Nike terminates Topsports online China sales effective January 2027. - Nike takes greater control of China sales, resets digital strategy. - Nike severs Chinese distribution deals in broad strategic shift. - Nike cuts over 1,000 online storefronts in China overhaul. - Nike resets online distribution in fragmented China market. - Nike to cut thousands of China online distributors in 2027. - Nike limits China wholesale online sales from January."
+    ],
+    "long_term_200d": [
+      "JPMorgan downgrades Nike to Underweight, citing EPS concerns. - Nike stock downgraded to Underweight due to 'Win Now' strategy. - Nike faces $1 billion headwind in China, per J.P. Morgan. - Nike shares retreat after JPMorgan downgrade to Underweight. - Nike to cease online sales in China from January 2027. - Nike partnership traction noted in FSN E-Commerce Ventures earnings.",
+      "Nike Q4 earnings beat estimates, but tariff refund boosted results. - Nike warns of continued streetwear weakness and cautious revenue outlook. - Nike CEO admits brand is not living up to full potential. - Nike Q4 results and sales guidance indicate a choppy recovery. - Nike swings to Q4 profit, but China slump deepens. - Nike's turnaround remains a work in progress, projecting revenue declines. - Nike shares fall after warning of another quarter of revenue declines. - Nike's turnaround strategy faces challenges with flat sales. - Nike's weakness is an internal problem, not a consumer problem. - Nike closes stores, studios, and its flagship location.",
+      "Nike reports Q4 earnings and revenue beat expectations. - Nike CFO expects FY27 revenue to be down. - Nike sees pressure on traffic and discretionary spending. - Nike's Q4 revenue slipped year-over-year. - Nike's international markets drive growth, offsetting North America weakness. - Nike's Q4 earnings lifted by tariff refund. - Nike's direct-to-consumer business remains under pressure. - Nike's Q4 sales in China declined 12%. - Nike's CEO discusses challenging operating environment. - Nike's Q4 earnings call transcript released."
+    ]
+  }
+}

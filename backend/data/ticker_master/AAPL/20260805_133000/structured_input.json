@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BEARISH_ZONE_WEAK (38.9)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.17)",
+        "velocity_roc_10": "NORMAL (-5.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-4.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 300.0-344.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (4.63%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-3.525)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.18)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 273.75-344.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (11.1%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.14%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 62.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 306.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.21%))",
+      "volume_dynamics": "AVERAGE (1.09)",
+      "sr_landscape": {
+        "barriers": "F:NEAR @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.9% | OM: 32.6% | NM: 27.2%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.45x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $451.442B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 12.8%, EPS: 28.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 6.9%, Next Q Est Growth: -2.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 37.0, P/S: 10.03)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 42.54)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.28)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple's incoming CEO makes changes hinting at post-Tim Cook era. - Apple shares fall 10% on disappointing revenue guidance. - Apple escalates lawsuit against Open AI. - Apple's India sales exceed $10 billion for the first time. - Apple seeks court order against Open AI in trade secrets dispute. - Apple's Q3 revenue $109.4b, net income $29.8b, dividend $0.27. - Apple beat earnings, but Services performance disappointed investors. - Apple launches legal challenge against UK encrypted data access demand. - Dinari, founded by Stripe and Apple alums, partners with Circle. - Apple scores major",
+      "Apple brings critical technology in-house. - India proposes extending tax breaks for contract manufacturing. - Apple faces advanced-node chip supply constraints. - Apple's latest acquisition signals bigger push into AI. - Apple develops software for plasma-based manufacturing. - Apple's Q3 results aided by tariff refunds; AI strategy lacks monetization. - Apple stock falls again, loss exceeds 10%. - Apple stock faces warning, Key Banc sees downside. - Apple's record quarter ran into memory bill. - Apple stock down 7.35% after earnings beat.",
+      "Apple warns of memory chip shortage for key devices. - Apple stock plunges on weak revenue forecast. - Apple's Services slowdown due to lack of F1 movie. - Apple's new leasing program could spur more upgrades. - Apple's on-device AI strategy discussed by Tim Cook. - Apple Q3 earnings beat, but supply worries persist. - Apple falls post Q3 on supply chain woes. - Apple stock slides on weak sales forecast. - Apple's i Phone sales surge 22%. - Apple forecasts slowing growth due to chip shortages."
+    ],
+    "medium_term_50d": [
+      "Apple's incoming CEO makes changes hinting at post-Tim Cook era. - Apple shares fall 10% on disappointing revenue guidance. - Apple escalates lawsuit against Open AI. - Apple's India sales exceed $10 billion for the first time. - Apple seeks court order against Open AI in trade secrets dispute. - Apple's Q3 revenue $109.4b, net income $29.8b, dividend $0.27. - Apple beat earnings, but Services performance disappointed investors. - Apple launches legal challenge against UK encrypted data access demand. - Dinari, founded by Stripe and Apple alums, partners with Circle. - Apple scores major",
+      "Apple brings critical technology in-house. - India proposes extending tax breaks for contract manufacturing. - Apple faces advanced-node chip supply constraints. - Apple's latest acquisition signals bigger push into AI. - Apple develops software for plasma-based manufacturing. - Apple's Q3 results aided by tariff refunds; AI strategy lacks monetization. - Apple stock falls again, loss exceeds 10%. - Apple stock faces warning, Key Banc sees downside. - Apple's record quarter ran into memory bill. - Apple stock down 7.35% after earnings beat.",
+      "Apple warns of memory chip shortage for key devices. - Apple stock plunges on weak revenue forecast. - Apple's Services slowdown due to lack of F1 movie. - Apple's new leasing program could spur more upgrades. - Apple's on-device AI strategy discussed by Tim Cook. - Apple Q3 earnings beat, but supply worries persist. - Apple falls post Q3 on supply chain woes. - Apple stock slides on weak sales forecast. - Apple's i Phone sales surge 22%. - Apple forecasts slowing growth due to chip shortages."
+    ],
+    "long_term_200d": [
+      "Apple warns of memory chip shortage for key devices. - Apple stock plunges on weak revenue forecast. - Apple's Services slowdown due to lack of F1 movie. - Apple's new leasing program could spur more upgrades. - Apple's on-device AI strategy discussed by Tim Cook. - Apple Q3 earnings beat, but supply worries persist. - Apple falls post Q3 on supply chain woes. - Apple stock slides on weak sales forecast. - Apple's i Phone sales surge 22%. - Apple forecasts slowing growth due to chip shortages.",
+      "Apple CEO says 'thrilled' with early response to Siri AI. - Apple achieved Q3 record revenues in every geographic segment. - Apple achieved record Q3 sales despite supply constraints, FX headwinds. - i Phone sales rise 22%, beating expectations. - Senators warn Apple CEO Tim Cook against buying Chinese memory chips. - TSMC stock gains on report of developing 'EMIB-like' chips. - Apple stock drops 7% after-hours on China sales slowdown. - Apple flags memory supply constraints affecting Q4 revenue. - Tim Cook's final earnings call as Apple CEO. - Apple stock falls nearly 2% before earnings. - Apple's new device-leasing strategy",
+      "Apple files trade secrets lawsuit against Open AI. - Apple in early talks with DOJ to settle antitrust lawsuit. - Apple briefly overtakes Nvidia as world's most valuable company. - Apple faces extreme drop in global smartphone sales. - Apple targets dozens of Open AI employees with legal letters. - Apple's core business cash flow to support innovation. - Apple's i Phone sales power stock rally. - Apple's market cap passes Nvidia for world's most valuable company. - Apple's shares offer upside ahead of potential i Phone price increase. - Apple unseats Nvidia to become world's most valuable company."
+    ]
+  }
+}

@@ -210,7 +210,7 @@ def _save_forward_return_heatmap(
             "symmetric": True,
             "row_metric": data.groupby("ticker")["percentile_error"].mean(),
             "row_metric_label": "ŚrRóżnPct",
-            "row_metric_format": "signed_percent",
+            "row_metric_format": "percent",
         },
         {
             "directory": forward_return_reference_directory,
@@ -229,7 +229,7 @@ def _save_forward_return_heatmap(
                 "excess_forward_annualized_return"
             ].mean(),
             "row_metric_label": "ŚrNadZw",
-            "row_metric_format": "signed_percent",
+            "row_metric_format": "percent",
         },
         {
             "directory": return_attribution_directory,
@@ -247,10 +247,10 @@ def _save_forward_return_heatmap(
             "symmetric": True,
             "row_metric": data.groupby("ticker")["return_attribution"].mean(),
             "row_metric_label": "ŚrAtr",
-            "row_metric_format": "signed_percent",
+            "row_metric_format": "percent",
             "column_metric": long_short_normalized_excess,
             "column_metric_label": "Znormalizowany nadwyżkowy zwrot long-short",
-            "column_metric_format": "signed_percent",
+            "column_metric_format": "percent",
         },
         {
             "directory": return_attribution_directory,
@@ -270,10 +270,10 @@ def _save_forward_return_heatmap(
                 "long_only_return_attribution"
             ].mean(),
             "row_metric_label": "ŚrAtr",
-            "row_metric_format": "signed_percent",
+            "row_metric_format": "percent",
             "column_metric": long_only_normalized_excess,
             "column_metric_label": "Znormalizowany nadwyżkowy zwrot long-only",
-            "column_metric_format": "signed_percent",
+            "column_metric_format": "percent",
         },
     ]
 
@@ -301,7 +301,7 @@ def _save_forward_return_heatmap(
             column_metric_label=config.get("column_metric_label"),
             column_metric_format=config.get(
                 "column_metric_format",
-                "signed_percent",
+                "percent",
             ),
         )
 

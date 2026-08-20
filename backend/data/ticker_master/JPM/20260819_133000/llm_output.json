@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 5.8
+      },
+      "synthesis": "S: The RSI has moved into extreme overbought territory (78.5), indicating strong short-term momentum, and the price is stable near its base (SMA20 +1.8%). W: The price has moved into the middle of the 20-day range, away from critical resistance, but the extreme overbought RSI suggests a potential for a short-term pullback. The mean reversion bands have tightened slightly (0.79). O: News regarding JPMorgan's potential $1 trillion market cap and strategic initiatives like infrastructure and AI investments provide positive catalysts. T: The \"POWER_ZONE_CONFLUENCE(2)\" structure remains, but the \"RANGE\" bias suggests increased choppiness, and the overbought condition warrants caution."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.8,
+        "conv": 7.2,
+        "safe": 6.3
+      },
+      "synthesis": "S: The trend alignment remains bullish with expanding momentum (4.47%), and the price is still positioned favorably relative to the 50-day SMA (Z:1.27). W: The MACD has shifted to a bearish accelerating signal (-0.314), indicating a loss of upward momentum and a potential trend reversal. The price is now inside the monthly range, suggesting consolidation. O: The ongoing large-scale housing commitment and the broader pledges for infrastructure and AI investments continue to provide fundamental support for the medium term. T: The bearish MACD crossover is a key concern, contrasting with the still-positive trend alignment. The \"INSIDE_MONTHLY_RANGE\" suggests a period of consolidation before the next directional move."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.4,
+        "conv": 7.9,
+        "safe": 5.3
+      },
+      "synthesis": "S: The secular bull market regime remains intact (15.2%), and the golden cross structure is healthy (8.23%). The price has moved closer to the top of the long-term cycle (93.4% of range), indicating sustained long-term strength. W: The \"BALANCE_SHEET_STRESSED\" fundamental assessment (NetDebt/Eq: 2.48x, YrsToPay: 10.8x) continues to be a significant structural risk, capping the safety score. The \"Q_PEAK_PERFORMANCE_SKEPTIC\" earnings momentum outlook persists. O: The consistent business quality (HIGH_EFFICIENCY_CASH_MACHINE) and the long-term strategic investments in housing and defense provide structural support. T: Despite the strong long-term technicals and business quality, the persistent balance sheet stress and the forward earnings deceleration concerns continue to weigh on the safety profile."
+    }
+  }
+}

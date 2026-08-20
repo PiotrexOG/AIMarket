@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The short-term momentum has cooled from extreme levels, with RSI now at 78.0 and the stock stabilizing near its 20-day SMA (5.1% above). Mean reversion bands are within normal limits (0.62), indicating less immediate overextension. W: The velocity (ROC -2.2%) has turned negative, and the neutral candle pattern persists, suggesting a lack of strong directional conviction. The previous explosive move has lost steam. O: News regarding AI chip development and data center investments continues to be a positive backdrop, but the immediate price action lacks conviction. T: The 'LOW_ASSET_SAFETY' remains a concern, and the cooling momentum from extreme overbought levels increases the risk of a near-term pullback or consolidation. Volatility remains moderate (ATR 3.49%)."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The trend alignment remains bullish (10.45%), and the stock is positioned well above its 50-day SMA (Z:1.39). The medium-term trend shows expanding momentum. W: The MACD has confirmed a bearish zero cross (-0.602), indicating a shift in momentum and a potential trend reversal or significant consolidation. This is a notable deterioration from the previous bullish signal. O: Despite the bearish MACD, the underlying fundamentals of Azure growth and Copilot monetization remain strong, providing some support. Significant investor interest, such as Bill Ackman's reaffirmation of his Azure bet, offers a counterpoint to the technical signal. T: The confirmed bearish MACD cross significantly reduces conviction and increases the risk of a medium-term correction. While the long-term fundamentals are robust, the current technical picture warrants caution, especially given the 'PREMIUM_VALUATION' multiples."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The long-term bullish position (71.4%) and 'ULTRA_ELITE_MOAT' business quality remain intact. 'STRONG_STABLE_GROWTH' and a 'HEALTHY_BALANCE_SHEET' continue to provide a solid foundation. W: The 'DEATH_CROSS_STRUCTURE' persists, although its impact appears to be diminishing as fundamental strength and market regime support the price. The 'PREMIUM_VALUATION' remains a structural headwind, requiring sustained high performance. O: Strategic AI investments and dominant cloud leadership are key long-term drivers. The news flow regarding AI data center deployments and investor conviction (e.g., Bill Ackman) reinforces the long-term narrative. T: The 'LOW_ASSET_SAFETY' is still a factor due to premium multiples, but the company's scale, market leadership, and strong financial health provide significant resilience. The overall long-term outlook remains constructive, supported by fundamental strength despite some lingering technical concerns."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "COST",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 5.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Short-term momentum is mixed, with a strong RSI (62.5) but a bearish candle pattern. The price is stable near the base SMA20, indicating some support. O: Potential for a short-term bounce if the bearish candle pattern is a false signal, supported by strong RSI. T: News highlights expansion into GLP-1 prescriptions and customer loyalty, which could provide a catalyst. W: The bearish candle pattern and range position in the middle of the 20-day range suggest caution. The settlement news is a minor negative. E: The asset exhibits moderate volatility, providing some downside protection."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend shows a gradual descent, with the MACD fading despite a bullish signal. The price is positioned below the 50-day SMA, indicating a bearish trend. O: The strong earnings growth for the next quarter (45.0%) could drive a recovery if the current stumble is temporary. Expansion into new areas like weight loss drugs and off-grid distribution centers are positive structural developments. T: News around market share gains and off-grid distribution centers are positive long-term structural developments. W: The current bearish trend alignment and fading MACD are headwinds. The company's thin margins (3.8% OM) and weak cash conversion (3.2% FCF Mgn) are structural concerns. E: The company's fortress net cash position (0.27x NetCash/Eq) provides significant balance sheet resilience."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 5.0,
+        "safe": 7.0
+      },
+      "synthesis": "S: Long-term, the market regime is neutral to slightly bearish, with the price in the mid-cycle neutral zone. The company exhibits moderate growth (8.3% Rev, 9.6% EPS) and is a mega-cap titan. O: The company's strong balance sheet (NetCash/Eq: 0.27x) and scale provide significant structural advantages. Recent sales growth (10.6%) and expansion strategies are positive indicators for sustained performance. T: News highlights consistent sales growth and strategic expansion, suggesting a robust business model. W: The current valuation is hyper-premium (P/E: 50.38, PEG: 5.24), posing a significant risk if growth expectations are not met. Thin operating margins (3.8%) and weak FCF conversion (3.2%) are structural vulnerabilities. E: The company's net cash fortress and consistent revenue growth provide strong downside protection and resilience in a potentially challenging market regime."
+    }
+  }
+}

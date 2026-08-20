@@ -1,0 +1,73 @@
+{
+  "ticker": "MSFT",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (81.1)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.1)",
+        "velocity_roc_10": "EXPLOSIVE_UP (23.9%)",
+        "trend_base_sma20": "EXTENDED_BULLISH_OVERSTRETCHED (21.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 373.35-499.44]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (1.26%)",
+        "cycle_macd": "BULLISH_ACCELERATING (12.007)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.86)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 349.2-499.44]"
+      },
+      "long_term_200d": {
+        "market_regime": "BULL_MARKET_CORRECTION (13.7%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-7.2%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 68.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 489.55,
+      "volatility_context": "EXPANDING_RANGE | MODERATE_VOLATILITY (ATR:  (3.63%))",
+      "volume_dynamics": "ELEVATED (1.24)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 68.6% | OM: 46.7% | NM: 39.0%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.25x, YrsToPay: 1.3x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 25.3%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $305.453B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 16.7%, EPS: 28.6%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 22.2%, Next Q Est Growth: -9.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 30.52, P/S: 11.96)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 9.34)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.07)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Darktrace selected by Microsoft to integrate risk signals into Agent 365. - Microsoft and Amazon's AI spending is viewed differently by Wall Street. - Goldman Sachs adds Microsoft to its 'Conviction List'. - Microsoft's voluntary buyout offered employees up to 39 weeks of pay. - Microsoft stock breaks out after earnings-fueled surge. - Microsoft stock gains 25% in 3 days on Xbox games for PC report. - Microsoft's Copilot pricing shift is not yet priced in by market. - Short sellers piled into Microsoft at historic rates before earnings.",
+      "Microsoft Q4 earnings beat: $90B revenue, Azure +43% on AI demand. - Microsoft stock jumps 4.9% as Azure rally hits new gear. - Arcelor Mittal expands Microsoft partnership to accelerate AI transformation. - Microsoft and Alphabet can absorb an AI shock. - Microsoft races ahead of Google in the cloud. - Amazon, Meta, and Microsoft stocks surge on strong AI earnings. - Microsoft just proved that AI spending can pay off. - Microsoft stock breaks out into buy zone. - Microsoft stock is surging due to AI leadership. - Microsoft's sales and profits are expanding rapidly.",
+      "Microsoft's AI strategy paying off, Q4 earnings show. - Microsoft CEO discusses AI model substitutability and Open AI. - Microsoft's Azure growth and Copilot monetization accelerate. - Microsoft gains over $600 billion in market value. - Linked In reports solid Q2 revenue and member growth."
+    ],
+    "medium_term_50d": [
+      "Microsoft reports strong fiscal fourth-quarter results, maintains capex guidance. - Microsoft's Q4 earnings crush expectations, shares spike 15%. - Microsoft's cloud growth forecast exceeds Wall Street expectations. - Microsoft's backlog hits $678 billion, with significant portion from one customer. - Microsoft CEO discusses AI strategy shift and Azure platform. - Microsoft's next AI phase: 'Per Seat Plus Consumption' as Copilot usage grows. - Microsoft stock surges on earnings, strong cloud growth reported. - Microsoft stock jumps 8% on strong fiscal fourth-quarter results. - Microsoft stock surges on earnings, boosting tech stocks. - Microsoft set for record one-day market cap",
+      "Microsoft Q4 earnings beat: $90B revenue, Azure +43% on AI demand. - Microsoft stock jumps 4.9% as Azure rally hits new gear. - Arcelor Mittal expands Microsoft partnership to accelerate AI transformation. - Microsoft and Alphabet can absorb an AI shock. - Microsoft races ahead of Google in the cloud. - Amazon, Meta, and Microsoft stocks surge on strong AI earnings. - Microsoft just proved that AI spending can pay off. - Microsoft stock breaks out into buy zone. - Microsoft stock is surging due to AI leadership. - Microsoft's sales and profits are expanding rapidly.",
+      "Microsoft reports Q4 earnings, revenue top estimates. - Microsoft Azure cloud revenue increased 43%. - Microsoft's cloud backlog jumped 84% to $678 billion. - Microsoft logs $3.2B from Anthropic investment. - Microsoft reports over $130 billion in new data center leases. - Microsoft Q4 earnings: 14th straight double beat, cloud revenue up 27%. - Microsoft's Q4 Capex lower than expected, Azure sales strong. - Microsoft's Q4 Capex outlook unchanged, Azure sales strong. - Microsoft's Q4 earnings call transcript available. - Microsoft's AI flywheel is just getting started."
+    ],
+    "long_term_200d": [
+      "Microsoft reports strong fiscal fourth-quarter results, maintains capex guidance. - Microsoft's Q4 earnings crush expectations, shares spike 15%. - Microsoft's cloud growth forecast exceeds Wall Street expectations. - Microsoft's backlog hits $678 billion, with significant portion from one customer. - Microsoft CEO discusses AI strategy shift and Azure platform. - Microsoft's next AI phase: 'Per Seat Plus Consumption' as Copilot usage grows. - Microsoft stock surges on earnings, strong cloud growth reported. - Microsoft stock jumps 8% on strong fiscal fourth-quarter results. - Microsoft stock surges on earnings, boosting tech stocks. - Microsoft set for record one-day market cap",
+      "Microsoft reports Q4 earnings, revenue top estimates. - Microsoft Azure cloud revenue increased 43%. - Microsoft's cloud backlog jumped 84% to $678 billion. - Microsoft logs $3.2B from Anthropic investment. - Microsoft reports over $130 billion in new data center leases. - Microsoft Q4 earnings: 14th straight double beat, cloud revenue up 27%. - Microsoft's Q4 Capex lower than expected, Azure sales strong. - Microsoft's Q4 Capex outlook unchanged, Azure sales strong. - Microsoft's Q4 earnings call transcript available. - Microsoft's AI flywheel is just getting started.",
+      "Microsoft reports strong Q4 earnings, Azure growth accelerates. - Microsoft's market value surges $450 billion in one day. - Microsoft's cloud growth and AI investments pay off. - Microsoft Xbox aims for higher margins by 2030. - Microsoft's Q4 earnings drive Nasdaq higher."
+    ]
+  }
+}

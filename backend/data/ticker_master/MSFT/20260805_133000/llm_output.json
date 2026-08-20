@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 6.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: Explosive velocity (ROC 23.9%) and extreme RSI (81.1) indicate strong short-term upward momentum, despite a bearish candle pattern. The stock is trading above the 20-day SMA by 21.0%, suggesting an overstretched condition. W: The bearish candle pattern and extreme overbought conditions present a risk of short-term pullback. The stock is currently in the middle of its 20-day range, lacking clear directional bias within that band. O: Potential for continued upside if momentum persists, especially with positive news flow around AI integration and analyst upgrades. T: Elevated volatility (ATR 3.63%) and the potential for mean reversion from extreme levels pose downside risks."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: Bullish MACD acceleration and overextended bullish Z-score (2.86) relative to the 50-day SMA suggest strong medium-term upward trend. The stock is consolidating but showing strength within a monthly resistance zone. W: The consolidation and proximity to resistance could lead to a period of sideways movement or a minor correction. Overextension relative to the 50-day SMA indicates potential for a reversion to the mean. O: Continued strong earnings momentum and positive AI-driven growth narratives from recent news could propel the stock higher. The large backlog ($678B) provides visibility. T: While the trend is bullish, the elevated valuation multiples (P/E 30.52, P/S 11.96) and the 'LOW_ASSET_SAFETY' assessment suggest limited downside protection in a risk-off scenario."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The long-term trend remains bullish, positioned in the upper quadrant (68.6%) despite a recent 'DEATH_CROSS_STRUCTURE'. Strong fundamental metrics, including 'ULTRA_ELITE_MOAT' business quality, a 'HEALTHY_BALANCE_SHEET', and 'STRONG_STABLE_GROWTH' (Rev 16.7%, EPS 28.6%), support the long-term outlook. W: The 'DEATH_CROSS_STRUCTURE' indicates a potential shift in long-term trend dynamics, although it may be a false signal given the strong fundamentals. The 'PREMIUM_VALUATION' multiples present a headwind for further significant upside without continued exceptional growth. O: Continued AI leadership and successful monetization strategies (Copilot) are key catalysts for sustaining long-term growth. The company's scale and market position provide a significant competitive advantage. T: The 'LOW_ASSET_SAFETY' assessment due to high P/B (9.34) and premium pricing multiples warrants caution. However, the strong balance sheet and cash generation offer some resilience."
+    }
+  }
+}

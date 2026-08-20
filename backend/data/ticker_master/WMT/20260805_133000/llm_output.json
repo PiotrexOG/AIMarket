@@ -1,0 +1,29 @@
+{
+  "ticker": "WMT",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 4.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The 14-day horizon shows a neutral momentum (RSI 47.5) and stagnant velocity (ROC 10.1%). The price is consolidating around the 20-day SMA, indicating indecision (DOJI pattern). Elevated volume (1.33x) suggests market participation but lacks directional conviction. W: The lack of clear momentum and the indecisive candle pattern limit upside potential in the short term. O: Potential for a short-term bounce if the price can break above the current consolidation range, supported by elevated volume. T: The immediate downside risk is limited by the price hugging the SMA20, but a break below could signal further weakness."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 4.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend shows a bearish alignment (-2.51%) with the price positioned below the 50-day SMA (Z:-0.67). However, the MACD is showing bullish acceleration (0.279), suggesting a potential shift in momentum. The price remains within the monthly range, indicating a lack of strong directional conviction over this period. W: The prevailing bearish trend and negative Z-score on the 50-day SMA are significant headwinds. The fundamental data also shows weak cash conversion and stagnant revenue growth. O: A potential upside could emerge if the bullish MACD divergence holds and the price can reclaim the 50-day SMA. Positive news regarding drone delivery expansion could provide a catalyst. T: The risk of further downside exists if the bearish trend continues, especially given the premium valuation multiples and weak earnings momentum."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 3.0,
+        "safe": 4.5
+      },
+      "synthesis": "S: The long-term outlook is characterized by a secular bear market regime and a death cross structure, indicating significant structural weakness. The price is in a mid-cycle neutral zone (37.6%), suggesting it is neither oversold nor overbought on a secular basis. Fundamentals reveal thin margins, moderate leverage, and weak cash generation, compounded by hyper-premium valuation multiples. W: The combination of a bearish long-term technical regime, weak fundamental performance (thin margins, poor cash conversion), and extremely high valuation multiples presents a significant risk. The analyst consensus is strongly bullish, but this is not supported by the technical or fundamental data. O: Potential opportunities may arise from Walmart's strategic initiatives like drone delivery and expansion into new product categories, which could eventually improve growth prospects. The sheer scale of the company (Mega Cap Titan) provides some resilience. T: The primary risk is the continued underperformance in a bearish regime, exacerbated by the high valuation, which offers limited downside protection. A sustained decline in earnings and continued weak cash flow could lead to a significant re-rating."
+    }
+  }
+}

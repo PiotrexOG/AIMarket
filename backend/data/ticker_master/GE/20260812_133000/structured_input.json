@@ -1,0 +1,73 @@
+{
+  "ticker": "GE",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "IMPROVING",
+    "polarization": "DECREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (66.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.68)",
+        "velocity_roc_10": "STAGNANT (1.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.5%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 336.53-388.84]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (1.49%)",
+        "cycle_macd": "BULLISH_FADING (0.626)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.61)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 311.0-388.84]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.9%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (11.37%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 79.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 364.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.76%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.48)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 34.2% | OM: 18.4% | NM: 17.8%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.56x, YrsToPay: 2.7x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $50.679B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 21.8%, EPS: 17.8%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 22.6%, Next Q Est Growth: -12.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 42.79, P/S: 7.54)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 21.67)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.4)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.03x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "GE Aerospace in focus as engine demand rises.",
+      "GE Vernova holds $176 billion backlog. - GE Vernova's recent post-earnings dip is a buying opportunity. - General Electric sits 21% above fair value. - GE Vernova reported weaker adjusted EBITDA and EPS.",
+      "GE Aerospace commercial engines unit surges on services. - GE Aerospace growth outlook supported by major orders. - GE Aerospace constraint management supports raised guidance."
+    ],
+    "medium_term_50d": [
+      "GE Aerospace commercial engines unit surges on services. - GE Aerospace growth outlook supported by major orders. - GE Aerospace constraint management supports raised guidance.",
+      "GE Aerospace in focus as engine demand rises.",
+      "GE Vernova holds $176 billion backlog. - GE Vernova's recent post-earnings dip is a buying opportunity. - General Electric sits 21% above fair value. - GE Vernova reported weaker adjusted EBITDA and EPS."
+    ],
+    "long_term_200d": [
+      "GE Aerospace beats Q2 estimates, raises full-year guidance. - GE Aerospace Q2 revenue up 24%, beats expectations. - GE Aerospace raises 2026 operating profit guidance. - GE Aerospace Q2 earnings per share $2.02 vs $1.86 estimate. - GE Aerospace Q2 revenue $12.6 billion vs $11.9 billion estimate. - GE Aerospace Q2 earnings call highlights strong services demand. - GE Aerospace lifts adjusted EPS forecast to $7.65\u2013$7.85. - GE Aerospace Q2 results driven by commercial services demand. - GE Aerospace faces margin compression despite strong Q2 results. - GE",
+      "GE Aerospace raises 2026 guidance on strong demand. - GE Aerospace posts record Q2 results, raises outlook. - GE Aerospace CEO Culp signals execution focus.",
+      "GE Aerospace partners with NASA, BETA Technologies, Boeing on hybrid electric flight. - GE Aerospace CEO discusses Q2 results, hybrid electric engine, demand outlook. - GE Aerospace CEO: $210B backlog, transatlantic flight proves hybrid-electric aviation. - GE Aerospace wins order for 1,000+ LEAP-1A engines from Indi Go. - GE Aerospace secures deal with Philippine Airlines for GEnx-1b engines. - GE Aerospace inks agreement for 10 CF34-10A engines with SPDB Financial Leasing. - BAE Systems batteries power GE Aerospace's hybrid-electric flight demonstrator."
+    ]
+  }
+}

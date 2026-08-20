@@ -140,8 +140,8 @@ def _sample_size_range(values):
     clean = clean[clean >= 0]
     if clean.empty:
         return None
-    minimum = float(clean.min())
-    maximum = float(clean.max())
+    minimum = round(clean.min())
+    maximum = round(clean.max())
     minimum_text = _format_sample_size(minimum)
     maximum_text = _format_sample_size(maximum)
     return (

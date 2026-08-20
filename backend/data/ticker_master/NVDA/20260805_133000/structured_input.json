@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.79)",
+        "velocity_roc_10": "NORMAL (2.2%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.5%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 190.02-214.39]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.51%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.518)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.92)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-232.28]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.33%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 78.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 220.73,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.5%))",
+      "volume_dynamics": "AVERAGE (0.95)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @50d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 70.3, P/S: 36.58)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 64.79)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.86)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Space X partners with NVIDIA for AI satellite compute payload. - Nvidia CEO: Semiconductor industry could grow to $7.9 trillion. - Corvex expands Nvidia Blackwell GPU deal with 'leading AI company'. - Nvidia faces peak-cycle risks, financing exposure, rich valuation. - Nvidia stock clears 50-day moving average amid Big Tech earnings.",
+      "Nvidia shares plunge as AI debt risk grows. - Nvidia and Oracle shares plunge; time to sell? - Jensen Huang: Chip industry boom-bust cycle won't hit. - Nvidia revenue growth accelerated despite stock pullback. - Nvidia vs. Alphabet: Revenue trends reveal AI leaders. - Jeff Bezos backed AI startup partners with Nvidia. - Louis Navellier sends strong message on Nvidia's deals. - Jensen Huang wants open-source AI models; chipmakers paid. - Nobody's talking about the 1 biggest risk facing Nvidia.",
+      "Nvidia's data center revenue reached $75 billion, up 92% year over year. - Valar Atomics raised $1 billion after signing a development deal with Nvidia."
+    ],
+    "medium_term_50d": [
+      "Nvidia shares plunge as AI debt risk grows. - Nvidia and Oracle shares plunge; time to sell? - Jensen Huang: Chip industry boom-bust cycle won't hit. - Nvidia revenue growth accelerated despite stock pullback. - Nvidia vs. Alphabet: Revenue trends reveal AI leaders. - Jeff Bezos backed AI startup partners with Nvidia. - Louis Navellier sends strong message on Nvidia's deals. - Jensen Huang wants open-source AI models; chipmakers paid. - Nobody's talking about the 1 biggest risk facing Nvidia.",
+      "Space X partners with NVIDIA for AI satellite compute payload. - Nvidia CEO: Semiconductor industry could grow to $7.9 trillion. - Corvex expands Nvidia Blackwell GPU deal with 'leading AI company'. - Nvidia faces peak-cycle risks, financing exposure, rich valuation. - Nvidia stock clears 50-day moving average amid Big Tech earnings.",
+      "Nvidia's data center revenue reached $75 billion, up 92% year over year. - Valar Atomics raised $1 billion after signing a development deal with Nvidia."
+    ],
+    "long_term_200d": [
+      "Nvidia shares plunge as AI debt risk grows. - Nvidia and Oracle shares plunge; time to sell? - Jensen Huang: Chip industry boom-bust cycle won't hit. - Nvidia revenue growth accelerated despite stock pullback. - Nvidia vs. Alphabet: Revenue trends reveal AI leaders. - Jeff Bezos backed AI startup partners with Nvidia. - Louis Navellier sends strong message on Nvidia's deals. - Jensen Huang wants open-source AI models; chipmakers paid. - Nobody's talking about the 1 biggest risk facing Nvidia.",
+      "Space X partners with NVIDIA for AI satellite compute payload. - Nvidia CEO: Semiconductor industry could grow to $7.9 trillion. - Corvex expands Nvidia Blackwell GPU deal with 'leading AI company'. - Nvidia faces peak-cycle risks, financing exposure, rich valuation. - Nvidia stock clears 50-day moving average amid Big Tech earnings.",
+      "Jensen Huang: Memory is AI's biggest bottleneck. - Moonshot AI used 20,000 Nvidia chips via Alibaba. - Bloomberg: Moonshot used 20K Nvidia chips via Alibaba. - Nvidia debt market spooked by $250 billion AI risk. - Micron, NVIDIA, TD SYNNEX highlighted by Zacks.com. - Industry comparison evaluating NVIDIA against competitors."
+    ]
+  }
+}

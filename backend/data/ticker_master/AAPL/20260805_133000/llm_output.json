@@ -1,0 +1,29 @@
+{
+  "ticker": "AAPL",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook is challenged by bearish technical signals, including a STRONG_BEARISH candle pattern and RSI in the BEARISH_ZONE_WEAK (38.9). Velocity and trend base are also negative. W: The immediate price action is weak, with the stock trading near its 20-day SMA base. O: Potential for a short-term bounce if the price can hold the current support levels, especially given the \"RANGE\" bias in the SR landscape. T: News flow is mixed, with some negative sentiment around revenue guidance and supply chain concerns, but also positive developments in India sales. The \"POWER_ZONE_CONFLUENCE(2)\" suggests some underlying structural support."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 5.0,
+        "conv": 5.5,
+        "safe": 6.0
+      },
+      "synthesis": "S: The medium-term trend shows a BULLISH_GRADUAL_ASCENT, but this is being counteracted by a BEARISH_ACCELERATING MACD. The position relative to the 50-day SMA is healthy, indicating mean reversion potential. W: The accelerating bearish MACD is a concern for sustained upward momentum. The stock is currently inside a broader monthly range, suggesting potential for choppiness. O: The \"BULLISH_GRADUAL_ASCENT\" in trend alignment provides some foundation for recovery if the MACD signal reverses. The \"MEAN_REVERSION_HEALTHY_BASE\" suggests the current price level is not fundamentally overextended. T: News narrative highlights ongoing supply chain issues and AI strategy monetization questions, but also positive developments like India sales and potential for new leasing programs."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The long-term outlook remains robust, supported by a SECULAR_BULL_MARKET regime and a HEALTHY_GOLDEN_CROSS_STRUCTURE. The company exhibits HIGH_EFFICIENCY business quality, strong cash generation, and robust growth profiles. W: The primary long-term concern is the PREMIUM_VALUATION (P/E: 37.0, P/S: 10.03) and EXTREMELY_LOW_ASSET_SAFETY (P/B: 42.54), which could limit upside in a risk-off environment. The quarterly earnings momentum shows signs of peaking. O: The company's MEGA_CAP_TITAN scale and STRONG_STABLE_GROWTH in revenue and EPS provide a solid foundation. The \"MID_CYCLE_NEUTRAL_ZONE\" position suggests room for further appreciation within the secular bull market. T: Long-term news narrative is dominated by strategic moves in AI, legal battles, and market cap fluctuations, indicating significant strategic focus and investor attention."
+    }
+  }
+}

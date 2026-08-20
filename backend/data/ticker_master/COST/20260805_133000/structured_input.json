@@ -1,0 +1,73 @@
+{
+  "ticker": "COST",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (62.5)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.63)",
+        "velocity_roc_10": "NORMAL (2.0%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (0.9%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 907.23-987.55]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-1.68%)",
+        "cycle_macd": "BULLISH_FADING (3.489)",
+        "position_sma50_zscore": "BEARISH_TREND_POSITION (Z:-0.52)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 907.23-1045.64]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-1.0%)",
+        "major_crosses": "CROSS_IMMINENT_POTENTIAL_PIVOT (-0.27%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 39.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 942.59,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.08%))",
+      "volume_dynamics": "AVERAGE (1.01)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "THIN_MARGIN_COMMODITY (GM: 12.9% | OM: 3.8% | NM: 3.0%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.27x)",
+    "cash_generation_ttm": "WEAK_CASH_CONVERSION (FCF Mgn: 3.2%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $280.391B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.3%, EPS: 9.6%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -9.3%, Next Q Est Growth: 45.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 50.38, P/S: 1.49)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 13.83)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 5.24)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 0.98x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Costco expands into GLP-1 weight loss prescriptions. - Costco's gas prices drive indirect profits.",
+      "Costco renewal rates show strong customer loyalty. - Costco competes to capture weight loss drug customers.",
+      "Costco to pay $14 million settlement over lawsuit. - Costco tests standalone gas plazas, fuel hits 11% revenue. - Costco engineered standalone gas stations as a strategy."
+    ],
+    "medium_term_50d": [
+      "Costco expands into GLP-1 weight loss prescriptions. - Costco's gas prices drive indirect profits.",
+      "Costco partners with Trinity Energy for off-grid Florida distribution center. - Costco distribution center in Florida now runs fully off the grid. - Costco's market share increased while competitors' contracted.",
+      "Costco to pay $14 million settlement over lawsuit. - Costco tests standalone gas plazas, fuel hits 11% revenue. - Costco engineered standalone gas stations as a strategy."
+    ],
+    "long_term_200d": [
+      "Costco reports June sales results, net sales up 10.6%. - Costco announces quarterly cash dividend. - Costco credit card partnership change detailed. - Costco stock slips despite strong June sales growth.",
+      "Costco expands digital wallet feature for faster checkout. - Costco reports net sales increase of 10.6% for five weeks. - Costco's June comparable sales growth slowed but remained strong. - Costco shares fell after June sales missed high expectations.",
+      "Joe Terranova sells Generac and buys Costco stock. - Costco Wholesale Corporation (COST) is a trending stock. - Costco's $250 Billion Expansion Strategy Keeps Delivering Results. - Costco Wholesale (COST) Posts Strong Results, Is It Fully Priced? - Costco.com Luna Ultra bundle product partnership mentioned."
+    ]
+  }
+}

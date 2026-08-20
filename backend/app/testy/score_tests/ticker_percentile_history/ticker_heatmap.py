@@ -34,7 +34,7 @@ def _save_ticker_date_heatmap(
     row_metric_format="signed",
     column_metric=None,
     column_metric_label=None,
-    column_metric_format="signed_percent",
+    column_metric_format="percent",
 ):
     heatmap_data = data.pivot_table(
         index="ticker",

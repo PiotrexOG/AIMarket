@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: Short-term momentum is strong, indicated by a breakout above the 20-day high and a stable position near the 20-day SMA. The candle pattern is strongly bullish, suggesting immediate upward potential. O: Potential for continued upside driven by positive news flow, such as partnerships with SpaceX and AI companies, and the ongoing AI infrastructure build-out. T: Risks include the neutral RSI (49.5) suggesting limited immediate buying pressure and the potential for mean reversion from the recent breakout. W: The stock is trading within normal Bollinger Bands, indicating no immediate overextension, but the neutral RSI could signal a pause."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: Medium-term trend alignment is consolidating but supported by a confirmed bullish MACD zero cross and a strong Z-score above the 50-day SMA. This indicates underlying strength despite recent choppiness. O: Continued growth is supported by strong fundamental drivers like hyper-growth in revenue and EPS, and excellent cash generation. The company's scale and business quality are top-tier. T: The primary risk is the 'temporary stumble' in quarterly earnings surprise (-56.5%), although next quarter's estimate growth (170.1%) is very strong. Valuation remains a concern. W: The consolidation phase, while compressing moving averages, is underpinned by robust technicals and fundamentals, suggesting resilience."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 4.0
+      },
+      "synthesis": "S: The long-term outlook remains bullish within a secular bull market regime, supported by a healthy golden cross structure and a strong position in the upper quadrant of the long-term range. O: The company's hyper-growth profile, ultra-elite business quality, and fortress-like financial health provide a strong foundation for sustained long-term performance. The implied growth from the PEG ratio (0.86) is attractive despite premium multiples. T: The most significant long-term risk is the extremely premium valuation (P/E: 70.3, P/S: 36.58) and the associated asset safety concerns (P/B: 64.79). The market's perception of peak-cycle risks and financing exposure also weighs on the safe score. W: Despite the high valuation, the company's fundamental strength and dominant market position in AI infrastructure provide a degree of structural support."
+    }
+  }
+}

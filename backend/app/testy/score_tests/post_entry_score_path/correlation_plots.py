@@ -4,7 +4,6 @@ import numpy as np
 
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
-    annotate_sample_sizes,
     plot_path,
 )
 from app.testy.score_tests.common.output_paths import (
@@ -19,25 +18,6 @@ from .plot_helpers import (
     _progress_x_column,
     _set_progress_x_ticks,
 )
-
-
-def _annotate_progress_sample_sizes(ax, data, progress_column):
-    correlation_columns = [
-        "mean_pearson_to_annualized_return",
-        "mean_spearman_to_annualized_return",
-    ]
-    required = {progress_column, "mean_observation_count", *correlation_columns}
-    if not required.issubset(data.columns):
-        return
-
-    annotation_y = data[correlation_columns].max(axis=1, skipna=True)
-    annotate_sample_sizes(
-        ax,
-        data[progress_column],
-        annotation_y,
-        data["mean_observation_count"],
-        label_prefix="śr. n",
-    )
 
 
 def _plot_live_progress_correlations(
@@ -77,7 +57,6 @@ def _plot_live_progress_correlations(
             linewidth=2,
             label="Spearman",
         )
-        _annotate_progress_sample_sizes(ax, clean, progress_column)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(
             "Korelacja średniego percentyla "
@@ -148,7 +127,6 @@ def _plot_score_change_progress_correlations(
             linewidth=2,
             label="Spearman",
         )
-        _annotate_progress_sample_sizes(ax, clean, progress_column)
         ax.axhline(0, color="#444444", linewidth=1)
         context_label = _plot_context_title_label(horizon_label)
         ax.set_title(

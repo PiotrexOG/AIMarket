@@ -115,15 +115,10 @@ def _save_score_return_hac_summary_plot(summary, timeframe, directory, output_di
     ax.grid(True, alpha=0.25)
     ax.legend(loc="upper left")
     if official_annotations:
-        official_sample_note = (
-            "Oficjalne średnie: "
-            f"n bazowe={format_count_range(official_base_counts)}; "
-            f"T={format_count_range(official_time_counts)}"
-        )
         ax.text(
             0.99,
             0.98,
-            "\n".join([official_sample_note, *official_annotations]),
+            "\n".join([*official_annotations]),
             transform=ax.transAxes,
             ha="right",
             va="top",
@@ -307,7 +302,7 @@ def _save_score_return_autocorrelation_plot(
     colorbar.set_label("Autokorelacja", fontsize=10)
 
     # Opisy osi Y i tytuł
-    ax.set_ylabel("Opóźnienie", fontsize=10)
+    ax.set_ylabel("Lag", fontsize=10)
     ax.set_title(
         f"Autokorelacja {config['label']} według horyzontu i opóźnienia "
         f"({timeframe_label(timeframe, metric_acf)})"
@@ -320,8 +315,8 @@ def _save_score_return_autocorrelation_plot(
             hac_values,
         ],
         rowLabels=[
-            "Przedział 95% (+/-)",
-            "HAC 95% (+/-)",
+            "SE Przedział 95% (+/-)",
+            "SE HAC 95% (+/-)",
         ],
         colLabels=None,  # Brak górnego wiersza z horyzontami
         cellLoc="center",

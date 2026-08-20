@@ -1,0 +1,73 @@
+{
+  "ticker": "TSM",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "NEUTRAL_ZONE (49.1)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.58)",
+        "velocity_roc_10": "STAGNANT (-1.7%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (1.2%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 372.72-447.69]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BEARISH_GRADUAL_DESCENT (-3.18%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.359)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:-0.41)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 372.72-479.0]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.4%)",
+        "major_crosses": "EXTREME_BULLISH_STRETCH_EXHAUSTION_RISK (18.77%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 417.68,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (4.15%))",
+      "volume_dynamics": "AVERAGE (0.92)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 64.2% | OM: 56.0% | NM: 50.4%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.33x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 26.8%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $4450.378591B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 30.8%, EPS: 57.5%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 3402.6%, Next Q Est Growth: -96.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "DEEP_VALUE_DISCOUNT (P/E: 0.97, P/S: 0.49)",
+    "asset_safety_assessment": "TRADING_BELOW_BOOK_VALUE (P/B: 0.34)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.02)",
+    "structure_sensitivity": "CASH_RICH_DISCOUNT (EV/MC: 0.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "TSMC warns N3 wafer capacity may stay tight for years.",
+      "TSMC developing advanced chip packaging technology.",
+      "TSMC develops AI chip packaging technology."
+    ],
+    "medium_term_50d": [
+      "TSMC warns N3 wafer capacity may stay tight for years.",
+      "TSMC developing advanced chip packaging technology.",
+      "TSMC develops AI chip packaging technology."
+    ],
+    "long_term_200d": [
+      "TSMC Q3 revenue guidance issued: $44.6B-$45.8B. - TSMC raises capital spending to $60B-$64B for AI. - TSMC announces additional $100 billion investment in Arizona. - TSMC Q2 EPS $4.31, sales $40.200B, beats estimates. - TSMC Q2 results show strong growth and margin gains. - TSMC's 67.7% gross margin highlights Intel's challenge.",
+      "TSMC AI demand drives record Q2 results, higher 2026 outlook. - TSMC upgrade to Buy: AI-driven demand, Q2 results, raised 2026 outlook.",
+      "TSMC raises 2026 capital expenditure outlook to $60-64 billion. - TSMC's high-performance computing revenue reaches 66% of total. - ASML and TSMC raise 2026 revenue and capex outlooks. - Trump announces TSMC's $100 billion Arizona investment commitment."
+    ]
+  }
+}

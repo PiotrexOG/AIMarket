@@ -1,0 +1,73 @@
+{
+  "ticker": "XOM",
+  "analyst": {
+    "consensus_state": "MIXED",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.1)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.13)",
+        "velocity_roc_10": "EXPLOSIVE_UP (7.6%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.5%)",
+        "range_levels_20": "BREAKOUT_ABOVE_20D_HIGH [Range: 149.09-165.67]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (6.01%)",
+        "cycle_macd": "BULLISH_ACCELERATING (0.532)",
+        "position_sma50_zscore": "OVEREXTENDED_BULLISH_STAT_OUTLIER (Z:2.32)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 134.95-165.67]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (16.8%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.42%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 86.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 168.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.25%))",
+      "volume_dynamics": "ELEVATED (1.3)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @200d",
+        "structure": "POWER_ZONE_CONFLUENCE(1)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "AVERAGE_INDUSTRIAL_STANDARD (GM: 25.1% | OM: 10.7% | NM: 9.1%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.12x, YrsToPay: 1.0x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 8.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $361.06B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 9.6%, EPS: 9.8%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -4.1%, Next Q Est Growth: 3.2%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "FAIR_VALUATION (P/E: 21.71, P/S: 1.94)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.7)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.22)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.05x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Exxon Mobil stock gains 2% amid market decline.",
+      "Exxon Mobil awards ~$1.1B contracts for Rovuma LNG Phase 1. - Targa Resources executes 20-year agreement with Exxon Mobil.",
+      "Trump accuses Exxon Mobil of making \"too much money\". - Exxon Mobil reported $14.5 billion in profits."
+    ],
+    "medium_term_50d": [
+      "Exxon Mobil reports Q2 profit surge and massive buybacks. - Exxon Mobil's record Permian production benefits from rising crude prices. - Exxon Mobil returned US$9.4 billion to investors in Q2. - Exxon Mobil declares US$1.03 third-quarter dividend. - Exxon Mobil completes US$81.63 billion multi-year share buyback.",
+      "Exxon Mobil awards ~$1.1B contracts for Rovuma LNG Phase 1. - Targa Resources executes 20-year agreement with Exxon Mobil.",
+      "Trump accuses Exxon Mobil of making \"too much money\". - Exxon Mobil reported $14.5 billion in profits."
+    ],
+    "long_term_200d": [
+      "Trump demands Exxon, Chevron cut gas prices after Iran war profits. - Exxon Mobil: Q2 earnings beat shows Guyana growth, downstream rebound. - Exxon Mobil: Making profitability progress as advertised. - Exxon Mobil: Q2 earnings missed estimates, but outlook is strong. - Exxon posts its best profit in four years.",
+      "Exxon Mobil (XOM) stock up on geopolitical oil spike. - Exxon Mobil stock surges with oil prices topping $100. - Exxon Mobil's cost structure and earnings stability in focus.",
+      "Exxon Mobil announces second-quarter 2026 results. - Exxon Mobil Holdings Corporation Q2 2026 Earnings Call Transcript. - Exxon Mobil Q2 revenue tops estimates; EPS misses. - Exxon Mobil's Q2 earnings fell short of expectations. - Exxon Mobil misses profit mark after refinery maintenance. - Exxon Mobil Holdings (XOM) Q2 Earnings Miss Estimates. - Exxon Mobil's Q2 results show record Permian output. - Exxon Mobil is bullish on Mideast despite war hit. - Exxon Mobil earnings soared but fell short. - Exxon Mobil's Q2 earnings missed estimates."
+    ]
+  }
+}

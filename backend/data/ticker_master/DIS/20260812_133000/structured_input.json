@@ -1,0 +1,73 @@
+{
+  "ticker": "DIS",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "DOJI_INDECISION",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (67.0)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.87)",
+        "velocity_roc_10": "NORMAL (4.7%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (5.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 92.49-105.25]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "CONSOLIDATION_COMPRESSED_MAS (-0.4%)",
+        "cycle_macd": "BULLISH_FADING (0.955)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.48)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 92.49-105.25]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BEAR_MARKET (-0.8%)",
+        "major_crosses": "DEATH_CROSS_STRUCTURE (-5.16%)",
+        "long_term_range_pos": "MID_CYCLE_NEUTRAL_ZONE [Pos: 44.0%]"
+      }
+    },
+    "market_physics": {
+      "price": 103.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.43%))",
+      "volume_dynamics": "DRY_NO_INTEREST (0.5)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:NEAR @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(3)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "SOLID_CORE_BUSINESS (GM: 37.2% | OM: 15.5% | NM: 11.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.38x, YrsToPay: 5.9x)",
+    "cash_generation_ttm": "MODERATE_CASH_GEN (FCF Mgn: 7.3%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.263B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 3.4%, EPS: 27.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -31.4%, Next Q Est Growth: 30.7%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 16.48, P/S: 1.88)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 1.68)",
+    "implied_growth": "GROWTH_UNDERRATED (PEG: 0.6)",
+    "structure_sensitivity": "DEBT_SENSITIVE (EV/MC: 1.23x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Disney+ and Hulu announce video podcast deal with i Heart Media. - Disney reports strong Q3 growth in parks and streaming. - Disney announces restructuring of consumer products business. - Disney reveals AI integration into long-term strategy.",
+      "Disney plans to turn Disney+ into an integrated fan ecosystem by 2027. - Disney's theme parks delivered a strong quarter, outperforming Universal. - Disney CEO shares specifics on how the company is using AI. - Walt Disney has permission to build a new Florida theme park. - Disney is focusing on theme park expansion and improving streaming.",
+      "Disney+ and ESPN become Formula E streaming partners."
+    ],
+    "medium_term_50d": [
+      "Disney plans to turn Disney+ into an integrated fan ecosystem by 2027. - Disney's theme parks delivered a strong quarter, outperforming Universal. - Disney CEO shares specifics on how the company is using AI. - Walt Disney has permission to build a new Florida theme park. - Disney is focusing on theme park expansion and improving streaming.",
+      "Disney+ and Hulu announce video podcast deal with i Heart Media. - Disney reports strong Q3 growth in parks and streaming. - Disney announces restructuring of consumer products business. - Disney reveals AI integration into long-term strategy.",
+      "Disney Q3 earnings beat estimates, revenue misses. - Disney's streaming profit doubles, parks see growth. - Disney sells A+E stake to Hearst for $1.2 billion. - Disney explores free streaming tier, sells out Super Bowl ads. - Disney announces global short-form content sharing deal with Tik Tok. - Disney restructures, moves consumer products business to entertainment division. - Disney reports $100 million tariff refund in Q3. - Disney's 'Toy Story 5' contributes to robust performance. - Disney's theme park attendance and guest spending increase. - Disney's experiences revenue reaches record levels."
+    ],
+    "long_term_200d": [
+      "Disney Q3 earnings beat estimates, revenue misses. - Disney's streaming profit doubles, parks see growth. - Disney sells A+E stake to Hearst for $1.2 billion. - Disney explores free streaming tier, sells out Super Bowl ads. - Disney announces global short-form content sharing deal with Tik Tok. - Disney restructures, moves consumer products business to entertainment division. - Disney reports $100 million tariff refund in Q3. - Disney's 'Toy Story 5' contributes to robust performance. - Disney's theme park attendance and guest spending increase. - Disney's experiences revenue reaches record levels.",
+      "Disney plans to turn Disney+ into an integrated fan ecosystem by 2027. - Disney's theme parks delivered a strong quarter, outperforming Universal. - Disney CEO shares specifics on how the company is using AI. - Walt Disney has permission to build a new Florida theme park. - Disney is focusing on theme park expansion and improving streaming.",
+      "Disney partners with Tik Tok for content sharing. - Disney exceeds Q3 operating income guidance. - Disney reaffirms fiscal 2026 guidance. - Disney raises share repurchase plan to $9 billion. - Disney explores free, ad-supported streaming tier. - Disney begins beta testing AI search on ESPN. - Disney tests natural language content discovery on Disney+."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "DIS",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 5.5,
+        "conv": 6.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The short-term exhibits neutral momentum (RSI 52.5) and is testing critical resistance at $99.85. Elevated volume (1.33x) suggests potential for a breakout or reversal. News flow is mixed but includes positive mentions of recent successes. W: The price is currently at a significant resistance level, indicating potential for a stall or pullback. O: A decisive move above $99.85, supported by continued elevated volume, could signal further upside. T: The current range-bound behavior and proximity to resistance present a neutral short-term outlook, with a slight bias towards caution due to the resistance barrier."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 6.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The medium-term trend shows a bullish MACD signal (0.364) and positive Z-score positioning relative to the 50-day SMA (0.68), despite a gradual descent in trend alignment (-2.26%). The price remains within the monthly range. W: The bearish gradual descent in trend alignment suggests underlying weakness that could counteract the positive momentum signals. O: A sustained move above the $105.25 monthly range high, coupled with improving trend alignment, would confirm a stronger bullish medium-term outlook. T: The medium-term presents a mixed picture with conflicting signals between momentum and trend, suggesting a cautious bullish stance. The structural confidence is moderate due to the divergence."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 4.0,
+        "conv": 5.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: The long-term technical regime is bearish, marked by a death cross structure (-5.39%) and the price residing in the lower quadrant of its long-term range (34.6%). Fundamentally, DIS boasts solid core business margins (GM: 37.2%), a healthy balance sheet (NetDebt/Eq: 0.38x), and moderate growth (Rev: 3.4%, EPS: 27.5%). Valuation multiples are at a moderate discount (P/E: 16.1), with implied growth appearing underrated (PEG: 0.59). W: The prevailing secular bear market and death cross structure pose significant headwinds. Despite solid fundamentals and attractive valuation, the technical backdrop is unfavorable. O: Positive developments in the broader market regime or a clear break of long-term technical resistance could unlock value. Continued strong fundamental execution and earnings surprises would be crucial. T: The long-term outlook is characterized by a dichotomy between fundamentally sound metrics and a technically bearish environment. The score reflects this tension, with safety supported by fundamentals but the overall score capped by the technical regime."
+    }
+  }
+}

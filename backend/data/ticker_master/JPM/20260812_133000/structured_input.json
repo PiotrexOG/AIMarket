@@ -1,0 +1,73 @@
+{
+  "ticker": "JPM",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "INCREASING"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (65.2)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.89)",
+        "velocity_roc_10": "NORMAL (1.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (2.9%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 335.05-363.12]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.8%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.035)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.75)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 295.27-363.12]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (15.3%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.89%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 102.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 365.46,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (1.74%))",
+      "volume_dynamics": "AVERAGE (0.6)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 62.6% | OM: 28.2% | NM: 21.9%)",
+    "financial_health_ttm": "BALANCE_SHEET_STRESSED (NetDebt/Eq: 2.48x, YrsToPay: 10.8x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.9%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $297.633B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.0%, EPS: 19.1%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 30.9%, Next Q Est Growth: -22.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "MODERATE_DISCOUNT (P/E: 15.71, P/S: 3.43)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 2.73)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.82)",
+    "structure_sensitivity": "HEAVILY_LEVERAGED_VALUATION (EV/MC: 1.91x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "JPMorgan strategists raise S&P 500 target. - JPMorgan warns of two more years of chip supply crunch. - JPMorgan leads $441 million debt deal for AI infrastructure firm. - JPMorgan Chase wins approved tokenised money market fund mandate. - JPMorgan Chase announces integration with Klarna Group Payments.",
+      "JPMorgan Chase partners with LA 2028, French Alps 2030 Olympics. - Chase Auto earns #1 rankings in JD Power dealer financing study. - JPMorgan revamps S&P 500 target for rest of 2026.",
+      "JPMorgan launches $1.5 trillion initiative for U.S. shipbuilding and defense."
+    ],
+    "medium_term_50d": [
+      "JPMorgan plans to deploy $750B in US housing through 2035. - Granite Point Mortgage Trust extends and upsizes JPMorgan repurchase facility. - JPMorgan Chase doubles down on housing, deploying $750B through 2035. - JPMorgan Chase to invest $750 billion in boosting housing and homebuying. - JPMorgan Chase commits $750 billion to US housing through 2035. - JPMorgan Chase pledges $750 billion for US housing through 2035. - JPMorgan makes massive push into American housing. - JPMorgan stock rises as $750 billion housing plan unfolds.",
+      "JPMorgan Chase commits $750B to US affordable housing push. - JPMorgan Chase to deploy $750B for affordable housing by 2035. - JPMorgan Chase will pour $750 billion into housing over next decade. - JPMorgan Chase is said to near deal for Antin's French cooling network provider. - JPMorgan Chase ranks semiconductors ahead of hyperscalers for AI trade.",
+      "JPMorgan launches $1.5 trillion initiative for U.S. shipbuilding and defense."
+    ],
+    "long_term_200d": [
+      "JPMorgan plans to deploy $750B in US housing through 2035. - Granite Point Mortgage Trust extends and upsizes JPMorgan repurchase facility. - JPMorgan Chase doubles down on housing, deploying $750B through 2035. - JPMorgan Chase to invest $750 billion in boosting housing and homebuying. - JPMorgan Chase commits $750 billion to US housing through 2035. - JPMorgan Chase pledges $750 billion for US housing through 2035. - JPMorgan makes massive push into American housing. - JPMorgan stock rises as $750 billion housing plan unfolds.",
+      "JPMorgan Chase commits $750B to US affordable housing push. - JPMorgan Chase to deploy $750B for affordable housing by 2035. - JPMorgan Chase will pour $750 billion into housing over next decade. - JPMorgan Chase is said to near deal for Antin's French cooling network provider. - JPMorgan Chase ranks semiconductors ahead of hyperscalers for AI trade.",
+      "JPMorgan Chase posts record quarterly profit of $21.2 billion. - JPMorgan Chase Q2 earnings beat expectations, record revenue reported. - JPMorgan Chase CEO Jamie Dimon warns of potential credit crisis. - JPMorgan Chase CEO Jamie Dimon advises against buying long-term US bonds. - JPMorgan Chase subsidiary secures strategic financing with JPMorgan Chase Bank. - IRS Chief Frank Bisignano denies spying allegations against JPMorgan colleagues."
+    ]
+  }
+}

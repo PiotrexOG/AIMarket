@@ -120,7 +120,7 @@ def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
         )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
-        f"{title_timeframe}: Średnia roczna stopa zwrotu "
+        f"{title_timeframe}: średnia roczna stopa zwrotu "
         f"w koszyku benchmarku {bucket_label}"
         f"{title_suffix}"
     )

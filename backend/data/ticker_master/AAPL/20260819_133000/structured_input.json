@@ -1,0 +1,73 @@
+{
+  "ticker": "AAPL",
+  "analyst": {
+    "consensus_state": "BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "STRONG_BULLISH",
+        "momentum_rsi_14": "OVERSOLD_EXTREME (28.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.38)",
+        "velocity_roc_10": "STAGNANT (0.3%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (-2.0%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 300.0-344.57]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.41%)",
+        "cycle_macd": "BEARISH_RECOVERING (-1.65)",
+        "position_sma50_zscore": "MEAN_REVERSION_HEALTHY_BASE (Z:0.44)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 273.75-344.57]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (10.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (10.05%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 71.8%]"
+      }
+    },
+    "market_physics": {
+      "price": 316.01,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.63%))",
+      "volume_dynamics": "AVERAGE (0.98)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 47.9% | OM: 32.6% | NM: 27.2%)",
+    "financial_health_ttm": "MODERATE_LEVERAGE (NetDebt/Eq: 0.45x, YrsToPay: 0.4x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 28.6%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $451.442B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 12.8%, EPS: 28.9%)",
+    "earnings_momentum_quarterly": "Q_PEAK_PERFORMANCE_SKEPTIC (Curr Q Surprise: 6.9%, Next Q Est Growth: -2.0%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 38.12, P/S: 10.34)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 43.82)",
+    "implied_growth": "FAIR_GROWTH_PRICING (PEG: 1.32)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.01x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Apple adjusts EU app commission to 5% for non-App Store transactions. - Apple to charge 26% commission on EU App Store apps using IAP. - Apple to charge 20% commission on EU App Store apps with alternative payments. - Apple to charge 15% commission on EU App Store apps linking out. - Apple expands eligibility for alternative app marketplaces in EU. - Apple adds EU child safety measures for alternative payments.",
+      "US urges Apple not to buy Chinese memory chips. - Apple faces headwinds from rising memory prices. - Apple faces headwinds from supply chain disruptions. - Apple faces headwinds from over-reliance on i Phone sales.",
+      "US urges Apple to avoid Chinese memory chips."
+    ],
+    "medium_term_50d": [
+      "Apple adjusts EU app commission to 5% for non-App Store transactions. - Apple to charge 26% commission on EU App Store apps using IAP. - Apple to charge 20% commission on EU App Store apps with alternative payments. - Apple to charge 15% commission on EU App Store apps linking out. - Apple expands eligibility for alternative app marketplaces in EU. - Apple adds EU child safety measures for alternative payments.",
+      "US urges Apple not to buy Chinese memory chips. - Apple faces headwinds from rising memory prices. - Apple faces headwinds from supply chain disruptions. - Apple faces headwinds from over-reliance on i Phone sales.",
+      "Apple races to fix string of security flaws. - Apple downgraded at Jefferies over i Phone yields and growth concerns. - Apple (AAPL) Downgraded as Soaring Memory Costs Test i Phone Pricing Power. - The Memory Shortage Pushes Apple Toward China's CXMT. - Apple's Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked. - Micron Stock Slips Amid Apple China Chip Threat. - Apple Testing CXMT Memory Chips Amid Global Supply Crunch. - Apple confronts faster security flaw discovery powered by AI. - Apple tests CXMT Chinese memory chips for i Phones, Mac Books. - Apple Investors Get Fresh i Phone Warning. - Micron Stock Gains"
+    ],
+    "long_term_200d": [
+      "Apple warns of memory chip shortage for key devices. - Apple stock plunges on weak revenue forecast. - Apple's Services slowdown due to lack of F1 movie. - Apple's new leasing program could spur more upgrades. - Apple's on-device AI strategy discussed by Tim Cook. - Apple Q3 earnings beat, but supply worries persist. - Apple falls post Q3 on supply chain woes. - Apple stock slides on weak sales forecast. - Apple's i Phone sales surge 22%. - Apple forecasts slowing growth due to chip shortages.",
+      "Apple CEO says 'thrilled' with early response to Siri AI. - Apple achieved Q3 record revenues in every geographic segment. - Apple achieved record Q3 sales despite supply constraints, FX headwinds. - i Phone sales rise 22%, beating expectations. - Senators warn Apple CEO Tim Cook against buying Chinese memory chips. - TSMC stock gains on report of developing 'EMIB-like' chips. - Apple stock drops 7% after-hours on China sales slowdown. - Apple flags memory supply constraints affecting Q4 revenue. - Tim Cook's final earnings call as Apple CEO. - Apple stock falls nearly 2% before earnings. - Apple's new device-leasing strategy",
+      "Apple races to fix string of security flaws. - Apple downgraded at Jefferies over i Phone yields and growth concerns. - Apple (AAPL) Downgraded as Soaring Memory Costs Test i Phone Pricing Power. - The Memory Shortage Pushes Apple Toward China's CXMT. - Apple's Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked. - Micron Stock Slips Amid Apple China Chip Threat. - Apple Testing CXMT Memory Chips Amid Global Supply Crunch. - Apple confronts faster security flaw discovery powered by AI. - Apple tests CXMT Chinese memory chips for i Phones, Mac Books. - Apple Investors Get Fresh i Phone Warning. - Micron Stock Gains"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "V",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "SHOOTING_STAR_BEARISH",
+        "momentum_rsi_14": "BULLISH_ZONE_STRONG (61.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.51)",
+        "velocity_roc_10": "NORMAL (-1.2%)",
+        "trend_base_sma20": "HUGGING_SMA20_CONSOLIDATION (0.1%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 348.5-373.97]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_EXPANDING_MOMENTUM (4.8%)",
+        "cycle_macd": "BEARISH_ACCELERATING (-1.253)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:0.8)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 309.0-373.97]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (9.5%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (4.43%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 82.7%]"
+      }
+    },
+    "market_physics": {
+      "price": 360.08,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.16%))",
+      "volume_dynamics": "AVERAGE (0.63)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 81.3% | OM: 61.1% | NM: 51.7%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.32x, YrsToPay: 0.5x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 49.2%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $43.027B)",
+    "growth_profile_ttm": "STRONG_STABLE_GROWTH (Rev: 14.4%, EPS: 15.4%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -2.5%, Next Q Est Growth: 8.9%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 31.34, P/S: 16.18)",
+    "asset_safety_assessment": "LOW_ASSET_SAFETY (P/B: 19.52)",
+    "implied_growth": "GROWTH_OVERPRICED (PEG: 2.04)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.02x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Visa's stock fell despite beating profit estimates. - Visa's Pismo-DPS strategy could deepen banking role. - Grandstand launches Rollcard Visa debit card.",
+      "Visa buys Bio Catch in major M&A deal.",
+      "Visa reports strong Q3 results, affirms dividend. - Visa to buy fraud intelligence provider Bio Catch for $2.4B. - Bercor Pay launches with global Visa acceptance. - Visa joins Mastercard, Black Rock to validate Circle's Arc Blockchain. - Durbin swipe fee bill supported by Trump, opposed by processors."
+    ],
+    "medium_term_50d": [
+      "Visa to buy Bio Catch for $2.4B to fight AI fraud. - Visa acquires Bio Catch for $2.4 billion to bolster cybersecurity. - Visa to acquire fraud intelligence provider Bio Catch for $2.4 billion. - Visa buys Bio Catch for $2.4B to enhance fraud detection. - Visa's $2.4 billion acquisition of Bio Catch aims to combat AI fraud.",
+      "Visa acquires Bio Catch for $2.4 billion. - Visa adds stablecoin funding and payouts to Visa Direct. - Visa deploys stablecoin capabilities across Visa Direct. - Visa, Mastercard join Circle's stablecoin initiative. - Visa names Circle, Black Rock as Arc partners. - Visa widens stablecoin payouts via Zerohash. - Visa cuts 2,600 jobs, including top executives.",
+      "Visa to acquire fraud intelligence provider Bio Catch for $2.4bn. - Visa's Head of Crypto discusses stablecoin platform strategy. - Visa announces Official Payment Partner for Maroon 5 Asia Tour."
+    ],
+    "long_term_200d": [
+      "Visa to cut 7% of workforce, about 2,600 employees. - Visa reports Q3 earnings, revenue surpasses estimates. - Visa announces $563M in severance expenses for layoffs. - Visa's CEO cites AI in workforce restructuring. - Visa stock rises on layoff news and Q3 results. - Visa launches invite-only X Money with debit card.",
+      "Visa to buy Bio Catch for $2.4B to fight AI fraud. - Visa acquires Bio Catch for $2.4 billion to bolster cybersecurity. - Visa to acquire fraud intelligence provider Bio Catch for $2.4 billion. - Visa buys Bio Catch for $2.4B to enhance fraud detection. - Visa's $2.4 billion acquisition of Bio Catch aims to combat AI fraud.",
+      "Visa reports Q3 earnings exceeding expectations. - Visa announces 2,600 job cuts, impacting tech and product teams. - Visa launches new payments app with X for U.S. subscribers. - Visa's revenue growth momentum slowed in July. - Visa's implied Q4 exit rate suggests positive 2027 guidance. - Visa CEO discloses dynamic investment plan during earnings call. - Visa plans 7% workforce reduction, focusing on AI and efficiency."
+    ]
+  }
+}

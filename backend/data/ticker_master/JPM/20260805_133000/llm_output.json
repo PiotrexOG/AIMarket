@@ -1,0 +1,29 @@
+{
+  "ticker": "JPM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 6.5,
+        "conv": 7.0,
+        "safe": 6.0
+      },
+      "synthesis": "S: RSI is in a strong bullish zone (60.2) and momentum (ROC 3.6%) is normal, indicating positive short-term directional bias. The price is stable near the short-term base (SMA20 +3.4%), suggesting underlying support. W: The price is testing critical resistance at the 20-day range level, posing a near-term hurdle. O: The significant $750B housing commitment news provides a potential catalyst for overcoming resistance. T: The \"POWER_ZONE_CONFLUENCE(2)\" suggests potential for a breakout if resistance is breached, but the \"RANGE\" bias indicates consolidation is also possible."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 7.0,
+        "conv": 7.5,
+        "safe": 6.5
+      },
+      "synthesis": "S: Bullish trend alignment with expanding momentum (4.88%) and a strong bullish position relative to the 50-day SMA (Z:1.76) indicate a healthy medium-term uptrend. W: MACD is showing a bearish recovery (-0.097), suggesting some loss of upward momentum. The price is also strengthening at a monthly resistance zone. O: The substantial housing investment plan and record quarterly earnings reported in the medium-term news narrative provide fundamental tailwinds. T: The \"STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE\" highlights a key area to watch for potential consolidation or a breakout, supported by the \"BULLISH_EXPANDING_MOMENTUM\" technical signal."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 8.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The secular bull market regime (14.5%) and healthy golden cross structure (5.58%) provide a strong long-term bullish backdrop. The price is near all-time highs (98.0% of range), indicating sustained upward trend. W: The \"BALANCE_SHEET_STRESSED\" fundamental assessment (NetDebt/Eq: 2.48x, YrsToPay: 10.8x) introduces significant structural risk and lowers the safety score. The \"Q_PEAK_PERFORMANCE_SKEPTIC\" earnings momentum suggests potential deceleration ahead. O: The long-term housing commitment and consistent business quality (HIGH_EFFICIENCY_CASH_MACHINE) are positive structural factors. T: Despite strong technicals and business quality, the stressed balance sheet and potential earnings deceleration present a significant risk to long-term safety and sustainability."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "LOW",
+    "sentiment": "STABLE",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "OVERBOUGHT_EXTREME (77.4)",
+        "mean_reversion_bb": "WITHIN_NORMAL_BANDS (0.67)",
+        "velocity_roc_10": "NORMAL (3.8%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (3.6%)",
+        "range_levels_20": "IN_MIDDLE_OF_RANGE [Range: 190.02-227.92]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (2.53%)",
+        "cycle_macd": "BULLISH_FADING (1.216)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:1.19)",
+        "range_levels_50": "INSIDE_MONTHLY_RANGE [Zone: 189.8-227.92]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (12.7%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (6.05%)",
+        "long_term_range_pos": "BULLISH_UPPER_QUADRANT [Pos: 74.6%]"
+      }
+    },
+    "market_physics": {
+      "price": 218.15,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (3.01%))",
+      "volume_dynamics": "AVERAGE (0.83)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:DISTANT @20d",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "RANGE"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "ULTRA_ELITE_MOAT (GM: 70.1% | OM: 58.0% | NM: 51.7%)",
+    "financial_health_ttm": "NET_CASH_FORTRESS (NetCash/Eq: 0.06x)",
+    "cash_generation_ttm": "CASH_COW_EXCELLENT (FCF Mgn: 48.5%)",
+    "company_scale_ttm": "MEGA_CAP_TITAN (Rev: $148.515B)",
+    "growth_profile_ttm": "HYPER_GROWTH (Rev: 86.2%, EPS: 81.5%)",
+    "earnings_momentum_quarterly": "Q_TEMPORARY_STUMBLE (Curr Q Surprise: -56.5%, Next Q Est Growth: 170.1%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "HYPER_PREMIUM_PRICED (P/E: 69.47, P/S: 36.15)",
+    "asset_safety_assessment": "EXTREMELY_LOW_ASSET_SAFETY (P/B: 64.04)",
+    "implied_growth": "ATTRACTIVE_GROWTH_PRICING (PEG: 0.85)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.0x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Nvidia financing helps ensure SB Energy's PORTS-Pike project success. - Nvidia's AI data-center deal with Open AI is being digested. - Elon Musk warns Nvidia-backed Open AI Ohio data center may be delayed. - Nvidia's AI moat is shifting from chips to capital. - Nvidia wants customers to buy new AI chips without giving up old ones. - Nvidia, AMD, Broadcom, Meta slide as bond yields surge. - Cathie Wood's ARK is buying Nvidia for AI infrastructure. - Fabrinet's AI boom includes Nvidia as a major customer. - Citadel, Millennium boosted Fabrinet stakes amid AI demand. - Nvidia's Q2 preview focuses on",
+      "Nvidia partners with SB Energy for Ohio AI data center. - Nvidia to provide AI compute infrastructure for Open AI in Ohio. - Nvidia to invest $100B for Open AI data center in Ohio. - Nvidia backs $105 billion for Open AI data center in Ohio. - Nvidia and SB Energy partner on 8 GW AI campus in Ohio. - Nvidia CEO rejects \"circular financing\" for Open AI deal. - Nvidia sees $600B compute opportunity with Open AI deal. - Nvidia downgraded to Hold amid AI securitization fears. - Ark Invest buys $22.8 million of Nvidia stock.",
+      "Nvidia CEO proposes $500 billion AI financing plan. - Nvidia's stake in Space X valued at $21 billion. - Nvidia Corp reports 122.8 million Class A shares in Space X. - Third Point dissolves share stake in NVIDIA. - Goldman Sachs in talks for Nvidia's $500 billion AI financing. - Nvidia champions open-source AI with new models. - Nvidia reportedly downsizes plans for Open AI data center guarantee. - Nvidia partnered with financial institutions for AI financing. - Bill Baruch buys more Nvidia stock. - Nvidia's $500 billion AI financing push called a \"stunt\". - Nvidia, Pelosi, Wood benefit from Databr"
+    ],
+    "medium_term_50d": [
+      "Nvidia partners with SB Energy for Ohio AI data center. - Nvidia to provide AI compute infrastructure for Open AI in Ohio. - Nvidia to invest $100B for Open AI data center in Ohio. - Nvidia backs $105 billion for Open AI data center in Ohio. - Nvidia and SB Energy partner on 8 GW AI campus in Ohio. - Nvidia CEO rejects \"circular financing\" for Open AI deal. - Nvidia sees $600B compute opportunity with Open AI deal. - Nvidia downgraded to Hold amid AI securitization fears. - Ark Invest buys $22.8 million of Nvidia stock.",
+      "Nvidia financing helps ensure SB Energy's PORTS-Pike project success. - Nvidia's AI data-center deal with Open AI is being digested. - Elon Musk warns Nvidia-backed Open AI Ohio data center may be delayed. - Nvidia's AI moat is shifting from chips to capital. - Nvidia wants customers to buy new AI chips without giving up old ones. - Nvidia, AMD, Broadcom, Meta slide as bond yields surge. - Cathie Wood's ARK is buying Nvidia for AI infrastructure. - Fabrinet's AI boom includes Nvidia as a major customer. - Citadel, Millennium boosted Fabrinet stakes amid AI demand. - Nvidia's Q2 preview focuses on",
+      "Nvidia CEO proposes $500 billion AI financing plan. - Nvidia's stake in Space X valued at $21 billion. - Nvidia Corp reports 122.8 million Class A shares in Space X. - Third Point dissolves share stake in NVIDIA. - Goldman Sachs in talks for Nvidia's $500 billion AI financing. - Nvidia champions open-source AI with new models. - Nvidia reportedly downsizes plans for Open AI data center guarantee. - Nvidia partnered with financial institutions for AI financing. - Bill Baruch buys more Nvidia stock. - Nvidia's $500 billion AI financing push called a \"stunt\". - Nvidia, Pelosi, Wood benefit from Databr"
+    ],
+    "long_term_200d": [
+      "Nvidia CEO proposes $500 billion AI financing plan. - Nvidia's stake in Space X valued at $21 billion. - Nvidia Corp reports 122.8 million Class A shares in Space X. - Third Point dissolves share stake in NVIDIA. - Goldman Sachs in talks for Nvidia's $500 billion AI financing. - Nvidia champions open-source AI with new models. - Nvidia reportedly downsizes plans for Open AI data center guarantee. - Nvidia partnered with financial institutions for AI financing. - Bill Baruch buys more Nvidia stock. - Nvidia's $500 billion AI financing push called a \"stunt\". - Nvidia, Pelosi, Wood benefit from Databr",
+      "Nvidia launches Nemotron 3.5 Lightning AI model. - Nvidia partners with Wall Street firms for $500B AI financing. - Nvidia CEO calls AI data centers 'investable assets'. - Nvidia's $500B AI financing plan faces risk from China. - Nvidia's $500bn AI spending splurge unnerves investors. - Nvidia's big deal expands AI horizon with $500B financing. - Nvidia is \"banker of choice to the AI ecosystem\". - Nvidia's residual-value guarantees may back $500B AI credit. - Nvidia's AI infrastructure ambitions backed by $500B package. - Nvidia CEO",
+      "Nvidia partners with SB Energy for Ohio AI data center. - Nvidia to provide AI compute infrastructure for Open AI in Ohio. - Nvidia to invest $100B for Open AI data center in Ohio. - Nvidia backs $105 billion for Open AI data center in Ohio. - Nvidia and SB Energy partner on 8 GW AI campus in Ohio. - Nvidia CEO rejects \"circular financing\" for Open AI deal. - Nvidia sees $600B compute opportunity with Open AI deal. - Nvidia downgraded to Hold amid AI securitization fears. - Ark Invest buys $22.8 million of Nvidia stock."
+    ]
+  }
+}

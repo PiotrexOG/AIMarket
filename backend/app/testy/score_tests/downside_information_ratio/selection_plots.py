@@ -55,7 +55,7 @@ def _plot_returns(data, timeframe, output_dir, directory, horizon_label):
     )
     ax.axhline(0, color="#444444", linewidth=1)
     ax.set_title(
-        f"{title_timeframe}: Średnia roczna stopa zwrotu "
+        f"{title_timeframe}: średnia roczna stopa zwrotu "
         f"strategii najlepszych M (%) spółek i benchmarku, "
         "horyzonty ważone jednakowo"
     )

@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 5.5
+      },
+      "synthesis": "S: The short-term outlook for XOM has significantly improved, transitioning from indecision to a \"STRONG_BULLISH\" candle pattern with a strong RSI (67.1) now in the bullish zone. The price has broken out above the 20-day high, indicating strong upward momentum. W: The \"BLOW_OFF_TOP_ABOVE_UPPER_BAND\" suggests potential for overextension, and the \"EXPLOSIVE_UP\" velocity (7.6%) indicates a rapid move that may not be sustainable in the immediate term. O: The \"BULLISH_EXPANDING_MOMENTUM\" (6.01%) from the medium term is clearly influencing the short term, and the price is now further above the SMA20 (5.5% away), reinforcing the bullish trend. T: The \"BREAKOUT_ABOVE_20D_HIGH\" is a positive sign, but the \"BLOW_OFF_TOP\" and \"OVEREXTENDED_BULLISH_STAT_OUTLIER\" (Z:2.32) in the medium term suggest increased risk of a pullback, thus lowering the safety score."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 8.0,
+        "conv": 7.5,
+        "safe": 5.0
+      },
+      "synthesis": "S: The medium-term trend for XOM exhibits robust \"BULLISH_EXPANDING_MOMENTUM\" (6.01%), with the MACD showing \"BULLISH_ACCELERATING\" behavior (0.532). The price is now an \"OVEREXTENDED_BULLISH_STAT_OUTLIER\" (Z:2.32) relative to the 50-day moving average, indicating significant strength. W: While momentum is accelerating, the \"OVEREXTENDED\" status and the price remaining at the \"MONTHLY_RESISTANCE_ZONE\" [Zone: 134.95-165.67] suggest a potential for consolidation or a short-term reversal. The \"BULLISH_ACCELERATING\" MACD is strong, but the extreme Z-score warrants caution. O: The strong technical signals, coupled with \"ELEVATED\" volume (1.3), suggest a potential for further upside if the resistance zone can be decisively broken. The \"POWER_ZONE_CONFLUENCE(1)\" remains supportive of the trend. T: The \"FAIR_VALUATION\" multiples have expanded (P/E: 21.71), and \"GROWTH_OVERPRICED\" (PEG: 2.22) has slightly worsened, coupled with the \"OVEREXTENDED\" technicals, significantly reducing the safety score due to increased risk of mean reversion."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 8.2,
+        "conv": 7.8,
+        "safe": 6.5
+      },
+      "synthesis": "S: XOM's long-term outlook remains strongly positive, supported by a persistent \"SECULAR_BULL_MARKET\" regime (16.8%) and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE.\" The long-term range position has advanced further into the \"BULLISH_UPPER_QUADRANT\" (86.8%), indicating a very favorable long-term positioning. W: The \"GROWTH_OVERPRICED\" (PEG: 2.22) valuation metric continues to be a slight concern, suggesting that future growth expectations are somewhat stretched relative to current earnings. The \"POWER_ZONE_CONFLUENCE(1)\" remains stable, indicating consistent structural support. O: The \"MEGA_CAP_TITAN\" scale, \"HEALTHY_BALANCE_SHEET,\" and \"MODERATE_GROWTH\" profile provide a solid fundamental foundation. The \"SECULAR_BULL_MARKET\" regime and improved long-term range position offer significant upside potential and resilience. T: While valuation multiples have slightly increased (P/E: 21.71, P/B: 2.7), the \"MODERATE_ASSET_VALUATION\" is still within reasonable bounds for a company of this caliber. The strong technical positioning and fundamental stability contribute to a solid safety score, though the stretched valuation slightly tempers it."
+    }
+  }
+}

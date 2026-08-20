@@ -1,0 +1,73 @@
+{
+  "ticker": "JNJ",
+  "analyst": {
+    "consensus_state": "STRONGLY_BULLISH",
+    "conviction_level": "MODERATE",
+    "sentiment": "MIXED",
+    "polarization": "STABLE"
+  },
+  "technical": {
+    "horizons": {
+      "short_term_14d": {
+        "candle_pattern": "NEUTRAL",
+        "momentum_rsi_14": "NEUTRAL_ZONE (57.4)",
+        "mean_reversion_bb": "BLOW_OFF_TOP_ABOVE_UPPER_BAND (1.09)",
+        "velocity_roc_10": "EXPLOSIVE_UP (6.4%)",
+        "trend_base_sma20": "STABLE_NEAR_BASE (4.1%)",
+        "range_levels_20": "AT_CRITICAL_RESISTANCE_20 [Range: 250.44-274.9]"
+      },
+      "medium_term_50d": {
+        "trend_alignment": "BULLISH_GRADUAL_ASCENT (3.08%)",
+        "cycle_macd": "BULLISH_ZERO_CROSS_CONFIRMED (0.401)",
+        "position_sma50_zscore": "BULLISH_TREND_POSITION (Z:2.03)",
+        "range_levels_50": "STRENGTHENING_AT_MONTHLY_RESISTANCE_ZONE [Zone: 227.5-274.9]"
+      },
+      "long_term_200d": {
+        "market_regime": "SECULAR_BULL_MARKET (17.6%)",
+        "major_crosses": "HEALTHY_GOLDEN_CROSS_STRUCTURE (9.62%)",
+        "long_term_range_pos": "ATH_OR_TOP_OF_CYCLE [Pos: 100.1%]"
+      }
+    },
+    "market_physics": {
+      "price": 275.0,
+      "volatility_context": "STABLE_NORMAL_FLUX | MODERATE_VOLATILITY (ATR:  (2.11%))",
+      "volume_dynamics": "ELEVATED (1.15)",
+      "sr_landscape": {
+        "barriers": "F:DISTANT @20d | C:BLUE_SKY",
+        "structure": "POWER_ZONE_CONFLUENCE(2)",
+        "bias": "UNCONFINED_BULLISH"
+      }
+    }
+  },
+  "fundamentals": {
+    "business_quality_ttm": "HIGH_EFFICIENCY_CASH_MACHINE (GM: 70.5% | OM: 26.8% | NM: 21.5%)",
+    "financial_health_ttm": "HEALTHY_BALANCE_SHEET (NetDebt/Eq: 0.34x, YrsToPay: 1.5x)",
+    "cash_generation_ttm": "STRONG_CASH_GENERATION (FCF Mgn: 19.1%)",
+    "company_scale_ttm": "LARGE_CAP_ESTABLISHED (Rev: $97.929B)",
+    "growth_profile_ttm": "MODERATE_GROWTH (Rev: 8.1%, EPS: -8.1%)",
+    "earnings_momentum_quarterly": "Q_STABLE_EXPECTATIONS (Curr Q Surprise: -20.4%, Next Q Est Growth: 6.6%)"
+  },
+  "current_valuation": {
+    "pricing_multiples": "PREMIUM_VALUATION (P/E: 31.79, P/S: 6.85)",
+    "asset_safety_assessment": "MODERATE_ASSET_VALUATION (P/B: 7.9)",
+    "implied_growth": "EXTREMELY_RISKY_DECLINING_EARNINGS (Growth: -8.08%)",
+    "structure_sensitivity": "NEUTRAL_STRUCTURE (EV/MC: 1.04x)"
+  },
+  "news_narrative": {
+    "short_term_14d": [
+      "Johnson & Johnson increases dividend by 3.1%. - Johnson & Johnson's $5.5B talc settlement discussed. - Meira GTx acquired rights to Johnson & Johnson's botaretigene sparoparvovec.",
+      "JNJ receives FDA De Novo authorization for OTTAVA robotic surgery system. - JNJ advances RYBREVANT oncology franchise with FDA Priority Review. - JNJ announces US$5.50 billion talc settlement framework. - JNJ collaborates with Sail Biomedicines on in vivo CAR-T therapies.",
+      "Johnson & Johnson advances Seltorexant, expands outpatient cardiac care. - Johnson & Johnson partners with ACCESS for cardiac care technologies. - Johnson & Johnson faces competition from Chinese robotic surgery platforms."
+    ],
+    "medium_term_50d": [
+      "JNJ receives FDA De Novo authorization for OTTAVA robotic surgery system. - JNJ advances RYBREVANT oncology franchise with FDA Priority Review. - JNJ announces US$5.50 billion talc settlement framework. - JNJ collaborates with Sail Biomedicines on in vivo CAR-T therapies.",
+      "Johnson & Johnson reaches $5.5 billion talc settlement.",
+      "Johnson & Johnson announces strategic agreement for cardiac technologies. - Johnson & Johnson receives FDA authorization for OTTAVA robotic surgery system. - Johnson & Johnson is restructuring to unlock new growth."
+    ],
+    "long_term_200d": [
+      "Johnson & Johnson proposes $5.5 billion settlement for talc lawsuits. - Johnson & Johnson agrees to pay $5.5 billion to resolve talc claims. - Johnson & Johnson offers up to $5.5 billion to settle baby powder lawsuits. - Johnson & Johnson reaches $5.5 billion settlement for ovarian cancer claims. - Johnson & Johnson's oncology engine and guidance raises were on record. - Johnson & Johnson, Abbott, TSMC reported record results and raised guidance.",
+      "Johnson & Johnson reaches $5.5 billion talc settlement.",
+      "JNJ receives FDA De Novo authorization for OTTAVA robotic surgery system. - JNJ advances RYBREVANT oncology franchise with FDA Priority Review. - JNJ announces US$5.50 billion talc settlement framework. - JNJ collaborates with Sail Biomedicines on in vivo CAR-T therapies."
+    ]
+  }
+}

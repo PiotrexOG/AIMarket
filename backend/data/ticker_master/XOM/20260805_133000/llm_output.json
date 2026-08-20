@@ -1,0 +1,29 @@
+{
+  "ticker": "XOM",
+  "horizons": {
+    "short_term_14d": {
+      "metrics": {
+        "score": 3.5,
+        "conv": 4.0,
+        "safe": 6.5
+      },
+      "synthesis": "S: The short-term outlook for XOM is challenged by bearish candle patterns and extreme RSI overbought conditions, suggesting a potential for mean reversion. W: The \"STRONG_BEARISH\" candle pattern and \"OVERBOUGHT_EXTREME\" RSI (70.4) indicate immediate selling pressure. O: Potential for a short-term pullback towards the SMA20 (2.7% away) as volatility remains in normal flux. T: The \"RANGE\" bias and \"IN_MIDDLE_OF_RANGE\" position suggest limited upside potential in the immediate term, with resistance likely near the upper band of the 20-day range."
+    },
+    "medium_term_50d": {
+      "metrics": {
+        "score": 6.0,
+        "conv": 5.5,
+        "safe": 7.0
+      },
+      "synthesis": "S: The medium-term trend for XOM remains constructive, supported by bullish alignment with the 50-day moving average and a positive MACD signal, albeit fading. W: The \"BULLISH_FADING\" MACD (0.409) indicates a loss of upward momentum, and the \"INSIDE_MONTHLY_RANGE\" suggests consolidation. O: Continued upside is possible if XOM can break above the current monthly range, supported by its \"BULLISH_TREND_POSITION\" (Z:0.87). T: The \"AVERAGE\" volume dynamics and \"STABLE_NORMAL_FLUX\" volatility provide a stable backdrop for the current trend, but conviction is limited by the fading MACD."
+    },
+    "long_term_200d": {
+      "metrics": {
+        "score": 7.5,
+        "conv": 7.0,
+        "safe": 8.0
+      },
+      "synthesis": "S: XOM exhibits strong long-term structural characteristics, benefiting from a \"SECULAR_BULL_MARKET\" regime and a \"HEALTHY_GOLDEN_CROSS_STRUCTURE.\" W: The \"MID_CYCLE_NEUTRAL_ZONE\" (63.6%) position suggests that while the long-term trend is positive, the asset is not in an extreme bullish territory, implying some room for further appreciation. O: The \"MEGA_CAP_TITAN\" scale, \"HEALTHY_BALANCE_SHEET,\" and \"MODERATE_GROWTH\" profile provide significant resilience and fundamental support. T: \"FAIR_VALUATION\" multiples (P/E: 19.69) and \"MODERATE_ASSET_VALUATION\" (P/B: 2.45) suggest that the long-term outlook is supported by reasonable fundamentals, though \"GROWTH_OVERPRICED\" (PEG: 2.01) warrants caution."
+    }
+  }
+}
