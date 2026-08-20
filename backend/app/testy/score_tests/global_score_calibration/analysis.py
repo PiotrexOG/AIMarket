@@ -1,6 +1,5 @@
 import pandas as pd
 
-from app.testy.score_tests.common.annualization import add_annualized_return_column
 from app.testy.score_tests.common.data import (
     add_common_horizon_window_metadata,
     filter_horizon_week_ranges,
@@ -39,8 +38,8 @@ def calculate(
     ):
         horizon_days = ranked["horizon_days"].mean()
         rows.append({
-            "analysis_group": "B_global",
-            "test": "B1_top_percent",
+            "analysis_group": "global_score_calibration",
+            "test": "global_top_percent_selection",
             "timeframe": timeframe,
             "horizon_weeks": int(horizon_weeks),
             "horizon_days": horizon_days,
@@ -62,8 +61,8 @@ def calculate(
                 else ranked[ranked["score"] >= min_score]
             )
             rows.append({
-                "analysis_group": "B_global",
-                "test": "B1_top_percent",
+                "analysis_group": "global_score_calibration",
+                "test": "global_top_percent_selection",
                 "timeframe": timeframe,
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": horizon_days,
@@ -86,8 +85,8 @@ def calculate(
             ("Score Percentile Pearson IC", pearson_or_none, "global_score_percentile"),
         ]:
             rows.append({
-                "analysis_group": "B_global",
-                "test": "B2_global_pearson",
+                "analysis_group": "global_score_calibration",
+                "test": "global_information_coefficient",
                 "timeframe": timeframe,
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": horizon_days,

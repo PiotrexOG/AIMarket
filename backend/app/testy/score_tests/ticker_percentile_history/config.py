@@ -12,13 +12,6 @@ MOVING_AVERAGE_WINDOW = 4
 MOVING_AVERAGE_COLUMN = "moving_average_score_percentile"
 ANTI_MOMENTUM_PRICE_LOOKBACK_WEEKS = 52
 ANTI_MOMENTUM_SKIP_WEEKS = 4
-SCORE_POINT_COLUMNS = [
-    "timestamp",
-    "current_score_percentile",
-    MOVING_AVERAGE_COLUMN,
-    "timeframe",
-    "ticker",
-]
 FORWARD_RETURN_POINT_COLUMNS = [
     "timestamp",
     "score",

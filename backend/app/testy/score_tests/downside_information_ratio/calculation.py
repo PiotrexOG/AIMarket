@@ -18,7 +18,7 @@ from .observations import (
     FRACTIONAL_TOP_SHARE_START,
     FRACTIONAL_TOP_SHARE_STEP,
     PLATEAU_TOLERANCE,
-    _build_downside_information_ratio_observation_frame,
+    build_top_m_return_observations,
     _summarize_downside_information_ratio_group,
     build_fractional_top_shares,
 )
@@ -31,7 +31,7 @@ def calculate(
     horizon_week_ranges=None,
 ):
     """Calculate all three outputs while building observations only once."""
-    raw_observations = _build_downside_information_ratio_observation_frame(
+    raw_observations = build_top_m_return_observations(
         context.weekly_ranked,
         top_shares=FRACTIONAL_TOP_SHARES,
         horizon_start=horizon_start,

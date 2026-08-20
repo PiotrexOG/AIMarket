@@ -23,6 +23,9 @@ DOWNSIDE_INFORMATION_RATIO_DIR = Path("downside_information_ratio")
 DOWNSIDE_TOP_M_SELECTION_SECTION = Path("top_m_selection")
 DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION = Path("benchmark_return_buckets")
 
+CAPM_ALPHA_BETA_DIR = Path("capm_alpha_beta")
+CAPM_TOP_M_SELECTION_SECTION = Path("top_m_selection")
+
 POST_ENTRY_SCORE_PATH_DIR = Path("post_entry_score_path")
 POST_ENTRY_SCORE_PATH_OBSERVATIONS_SECTION = Path("score_path_observations")
 POST_ENTRY_LIVE_PROGRESS_SECTION = Path("live_progress")
@@ -30,7 +33,6 @@ POST_ENTRY_SWITCH_TO_BENCHMARK_SECTION = Path("switch_to_benchmark")
 
 TICKER_PERCENTILE_HISTORY_DIR = Path("ticker_percentile_history")
 TICKER_SCORE_PATHS_SECTION = Path("ticker_score_paths")
-TICKER_SCORE_PATH_OVERVIEW_SECTION = Path("score_path_overview")
 TICKER_FORWARD_RETURN_REFERENCE_SECTION = Path("forward_return_reference")
 TICKER_SCORE_RETURN_ALIGNMENT_SECTION = Path("score_return_alignment")
 TICKER_PEARSON_ZSCORE_SECTION = (

@@ -8,7 +8,6 @@ from .config import (
     ANTI_MOMENTUM_PRICE_LOOKBACK_WEEKS,
     ANTI_MOMENTUM_SKIP_WEEKS,
     MOVING_AVERAGE_COLUMN,
-    SCORE_POINT_COLUMNS,
     SOURCE_COLUMNS,
 )
 
@@ -94,23 +93,6 @@ def _build_ticker_metrics(group, moving_average_window):
     return daily_metrics.reset_index()
 
 
-def _build_ticker_score_points(group, moving_average_window):
-    group = group.sort_values("start_timestamp").copy()
-    group["start_timestamp"] = group["start_timestamp"].dt.normalize()
-    group = group.drop_duplicates("start_timestamp", keep="last")
-    group[MOVING_AVERAGE_COLUMN] = group["score_percentile"].rolling(
-        window=moving_average_window,
-        min_periods=1,
-    ).mean()
-    group = group.rename(
-        columns={
-            "start_timestamp": "timestamp",
-            "score_percentile": "current_score_percentile",
-        }
-    )
-    return group[SCORE_POINT_COLUMNS]
-
-
 def _build_metrics(panel, moving_average_window):
     moving_average_window = max(1, int(moving_average_window))
     source = _build_source(panel)
@@ -122,21 +104,6 @@ def _build_metrics(panel, moving_average_window):
         for _, group in source.groupby(["timeframe", "ticker"], sort=True)
     ]
     return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
-
-
-def _build_score_points(panel, moving_average_window):
-    moving_average_window = max(1, int(moving_average_window))
-    source = _build_source(panel)
-    if source.empty:
-        return pd.DataFrame(columns=SCORE_POINT_COLUMNS)
-
-    frames = [
-        _build_ticker_score_points(group, moving_average_window)
-        for _, group in source.groupby(["timeframe", "ticker"], sort=True)
-    ]
-    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(
-        columns=SCORE_POINT_COLUMNS
-    )
 
 
 def _max_horizon_lookback_days(horizon_week_ranges):

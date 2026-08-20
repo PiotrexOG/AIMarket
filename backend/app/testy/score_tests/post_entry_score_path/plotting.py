@@ -7,45 +7,24 @@ from .correlation_plots import (
 )
 from .heatmap_plots import (
     _plot_relative_score_change_heatmap,
-    _plot_score_drop_scatter,
 )
 from .plot_config import (
-    ALL_SCORES_ONLY_TIMEFRAME,
-    ALL_SCORES_SLUG,
-    ENTRY_MIN_SCORE_PERCENTILE_70_SLUG,
-    MAX_PROGRESS_BUCKET_PERCENT,
-    METRIC_LABELS,
-    MIN_PROGRESS_BUCKET_PERCENT,
     PLOT_MODE_FULL,
     PLOT_MODE_ONLY_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE,
     PLOT_MODE_WITHOUT_LIVE_PROGRESS_MEAN_SCORE_PERCENTILE,
-    PROGRESS_BUCKET_PERCENTAGE_POINTS,
     SCORE_CHANGE_SCATTER_PROGRESS_PERCENT,
-    SWITCH_TO_BENCHMARK_METRIC_LABELS,
 )
 from .plot_helpers import (
-    _entry_min_score_percentile,
-    _entry_percentile_bins_and_labels,
     _filter_all_scores_only_plot_data,
-    _filter_progress_bucket,
     _filter_results_for_entry_bucket,
-    _horizon_range_title_label,
-    _plot_context_title_label,
     _plot_mode_for_entry_bucket_slug,
-    _post_entry_dir,
-    _progress_x_column,
-    _score_scope_title_label,
-    _set_progress_x_ticks,
-    _target_progress_bucket_start,
 )
 from .score_path_plots import (
-    _add_score_drop_band,
     _plot_hold_decision_by_score_drop,
     _plot_remaining_return_at_progress_scatter,
     _plot_score_change_scatter,
 )
 from .switch_plots import (
-    _plot_hold_decision_heatmap,
     _plot_switch_to_benchmark_threshold_heatmaps,
     _plot_switch_to_benchmark_threshold_lines,
 )

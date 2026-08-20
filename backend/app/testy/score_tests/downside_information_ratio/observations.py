@@ -2,11 +2,9 @@ import numpy as np
 import pandas as pd
 
 from app.testy.score_tests.common.data import (
-    align_start_dates_to_common_horizon_window,
     filter_horizon_week_ranges,
 )
 from app.testy.score_tests.common.annualization import (
-    CALENDAR_DAYS_PER_YEAR,
     annualize_return,
 )
 from app.testy.score_tests.common.metrics import round_or_none
@@ -40,7 +38,7 @@ def build_fractional_top_shares(
 FRACTIONAL_TOP_SHARES = build_fractional_top_shares()
 
 
-def _build_downside_information_ratio_observation_frame(
+def build_top_m_return_observations(
     return_panel,
     top_shares,
     horizon_start=None,

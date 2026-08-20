@@ -45,7 +45,8 @@ def build_top_n_output(analysis):
     if analysis.empty or not {*required, "test"}.issubset(analysis.columns):
         return pd.DataFrame(columns=columns)
     selection = analysis[
-        (analysis["test"] == "A1_top_n") & (analysis["bucket"] != "All 18")
+        (analysis["test"] == "weekly_top_n_selection")
+        & (analysis["bucket"] != "All 18")
     ]
     return (
         add_annualized_return_column(selection)[columns]
@@ -56,7 +57,8 @@ def build_top_n_output(analysis):
 
 def plot(analysis, output_dir):
     data = analysis[
-        (analysis["test"] == "A1_top_n") & (analysis["bucket"] != "All 18")
+        (analysis["test"] == "weekly_top_n_selection")
+        & (analysis["bucket"] != "All 18")
     ].dropna(subset=["avg_return"])
     data = add_annualized_return_column(data).dropna(subset=["annualized_return"])
     data = _add_company_observation_count(data)

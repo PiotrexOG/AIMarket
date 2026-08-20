@@ -6,10 +6,8 @@ import pandas as pd
 
 from app.testy.score_tests.common.plotting import (
     add_sample_size_note,
-    annotate_sample_sizes,
     common_horizon_alignment_title_suffix,
     plot_path,
-    set_percent_x_axis,
     timeframe_label,
 )
 from app.testy.score_tests.common.output_paths import (
@@ -37,197 +35,11 @@ def plot_benchmark_return_buckets(analysis, output_dir, horizon_label):
         horizon_label,
         DOWNSIDE_BENCHMARK_RETURN_BUCKETS_SECTION,
     )
-    # for (timeframe, bucket_id), bucket_data in analysis.groupby(
-    #     ["timeframe", "benchmark_return_bucket_id"],
-    #     sort=False,
-    # ):
-    #     clean = bucket_data.dropna(
-    #         subset=["top_percent", "downside_information_ratio"]
-    #     ).sort_values("top_percent")
-    #     if clean.empty:
-    #         continue
-    #
-    #     bucket_row = clean.iloc[0]
-    #     bucket_label = (
-    #         f"B{int(bucket_id):02d}: "
-    #         f"{bucket_row.benchmark_bucket_min:.2%} do "
-    #         f"{bucket_row.benchmark_bucket_max:.2%}"
-    #     )
-    #     bucket_directory = plot_directory / f"bucket_{int(bucket_id):02d}"
-    #     _plot_bucket_returns(
-    #         clean,
-    #         timeframe,
-    #         bucket_label,
-    #         output_dir,
-    #         bucket_directory,
-    #     )
-    #     _plot_bucket_deviation(
-    #         clean,
-    #         timeframe,
-    #         bucket_label,
-    #         output_dir,
-    #         bucket_directory,
-    #     )
-    #     _plot_bucket_ratio(
-    #         clean,
-    #         timeframe,
-    #         bucket_label,
-    #         output_dir,
-    #         bucket_directory,
-    #     )
-
     for timeframe, timeframe_data in analysis.groupby("timeframe", sort=False):
         clean = timeframe_data.dropna(subset=["top_share"])
         if clean.empty:
             continue
         _plot_bucket_heatmaps(clean, timeframe, output_dir, plot_directory)
-
-
-def _plot_bucket_returns(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe, data)
-    title_suffix = common_horizon_alignment_title_suffix(data)
-    fig, ax = plt.subplots(figsize=(12, 7))
-    ax.plot(
-        data["top_percent"],
-        data["mean_annualized_strategy_return"],
-        marker="o",
-        linewidth=2,
-        color="#4C78A8",
-        label="Strategia najlepszych M (%) spółek",
-    )
-    ax.plot(
-        data["top_percent"],
-        data["mean_annualized_benchmark_return"],
-        marker="o",
-        linewidth=2,
-        color="#9C755F",
-        label="Benchmark wszystkich spółek",
-    )
-    ax.plot(
-        data["top_percent"],
-        data["mean_annualized_alpha"],
-        marker="o",
-        linewidth=2,
-        color="#59A14F",
-        label="Roczny nadwyżkowy zwrot względem benchmarku",
-    )
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["mean_annualized_strategy_return"],
-            data["observation_count"],
-        )
-    ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(
-        f"{title_timeframe}: średnia roczna stopa zwrotu "
-        f"w koszyku benchmarku {bucket_label}"
-        f"{title_suffix}"
-    )
-    ax.set_xlabel("Udział najlepszych M (%) spółek")
-    set_percent_x_axis(ax, xmax=100.0)
-    ax.set_ylabel("Średnia roczna stopa zwrotu")
-    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
-    ax.grid(True, alpha=0.25)
-    ax.legend()
-    add_sample_size_note(
-        fig,
-        data,
-        "observation_count",
-        per="punkt M(%) spółek w koszyku benchmarku",
-    )
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(output_dir, directory, f"{timeframe}_bucket_mean_return.png"),
-        dpi=160,
-    )
-    plt.close(fig)
-
-
-def _plot_bucket_deviation(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe, data)
-    title_suffix = common_horizon_alignment_title_suffix(data)
-    fig, ax = plt.subplots(figsize=(12, 7))
-    ax.plot(
-        data["top_percent"],
-        data["downside_deviation"],
-        marker="o",
-        linewidth=2,
-        color="#E15759",
-    )
-    ax.set_title(
-        f"{title_timeframe}: downside deviation nadwyżkowego zwrotu "
-        f"w koszyku benchmarku {bucket_label}"
-        f"{title_suffix}"
-    )
-    ax.set_xlabel("Udział najlepszych M (%) spółek")
-    set_percent_x_axis(ax, xmax=100.0)
-    ax.set_ylabel("Downside deviation")
-    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["downside_deviation"],
-            data["observation_count"],
-        )
-    ax.grid(True, alpha=0.25)
-    add_sample_size_note(
-        fig,
-        data,
-        "observation_count",
-        per="punkt M(%) spółek w koszyku benchmarku",
-    )
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(output_dir, directory, f"{timeframe}_bucket_downside_deviation.png"),
-        dpi=160,
-    )
-    plt.close(fig)
-
-
-def _plot_bucket_ratio(data, timeframe, bucket_label, output_dir, directory):
-    title_timeframe = timeframe_label(timeframe, data)
-    title_suffix = common_horizon_alignment_title_suffix(data)
-    fig, ax = plt.subplots(figsize=(12, 7))
-    ax.plot(
-        data["top_percent"],
-        data["downside_information_ratio"],
-        marker="o",
-        linewidth=2,
-        color="#4C78A8",
-    )
-    ax.axhline(0, color="#444444", linewidth=1)
-    ax.set_title(
-        f"{title_timeframe}: wskaźnik DIR nadwyżkowego zwrotu "
-        f"w koszyku benchmarku {bucket_label}"
-        f"{title_suffix}"
-    )
-    ax.set_xlabel("Udział najlepszych M (%) spółek")
-    set_percent_x_axis(ax, xmax=100.0)
-    ax.set_ylabel("Wskaźnik DIR")
-    if "observation_count" in data.columns:
-        annotate_sample_sizes(
-            ax,
-            data["top_percent"],
-            data["downside_information_ratio"],
-            data["observation_count"],
-        )
-    ax.grid(True, alpha=0.25)
-    add_sample_size_note(
-        fig,
-        data,
-        "observation_count",
-        per="punkt M(%) spółek w koszyku benchmarku",
-    )
-    fig.tight_layout()
-    fig.savefig(
-        plot_path(output_dir, directory, f"{timeframe}_bucket_downside_ratio.png"),
-        dpi=160,
-    )
-    plt.close(fig)
-
-
 def _plot_bucket_heatmaps(data, timeframe, output_dir, directory):
     title_timeframe = timeframe_label(timeframe, data)
     metrics = [

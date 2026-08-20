@@ -36,7 +36,8 @@ def build_top_percent_output(analysis):
     if analysis.empty or not {*required, "test"}.issubset(analysis.columns):
         return pd.DataFrame(columns=columns)
     selection = analysis[
-        (analysis["test"] == "B1_top_percent") & (analysis["bucket"] != "All")
+        (analysis["test"] == "global_top_percent_selection")
+        & (analysis["bucket"] != "All")
     ]
     return (
         add_annualized_return_column(selection)[columns]
@@ -47,7 +48,8 @@ def build_top_percent_output(analysis):
 
 def plot(analysis, output_dir):
     data = analysis[
-        (analysis["test"] == "B1_top_percent") & (analysis["bucket"] != "All")
+        (analysis["test"] == "global_top_percent_selection")
+        & (analysis["bucket"] != "All")
     ].dropna(subset=["avg_return"])
     data = add_annualized_return_column(data).dropna(subset=["annualized_return"])
     for timeframe, timeframe_data in data.groupby("timeframe"):

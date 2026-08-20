@@ -6,7 +6,7 @@ from app.testy.score_tests.common.metrics import round_or_none
 from .observations import (
     FRACTIONAL_TOP_SHARES,
     PLATEAU_TOLERANCE,
-    _build_downside_information_ratio_observation_frame,
+    build_top_m_return_observations,
     _summarize_downside_information_ratio_group,
 )
 
@@ -37,7 +37,7 @@ def _build_downside_information_ratio_by_horizon_frame(
         "downside_information_ratio",
     ]
     if observations is None:
-        observations = _build_downside_information_ratio_observation_frame(
+        observations = build_top_m_return_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,
@@ -278,7 +278,7 @@ def build_downside_information_ratio_observations(
         "downside_deviation",
     ]
     if observations is None:
-        observations = _build_downside_information_ratio_observation_frame(
+        observations = build_top_m_return_observations(
             return_panel,
             top_shares=top_shares,
             horizon_start=horizon_start,

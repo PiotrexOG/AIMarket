@@ -12,8 +12,6 @@ from app.testy.score_tests.common.metrics import (
     spearman_or_none,
 )
 
-from app.testy.score_tests.common.annualization import add_annualized_return_column
-
 TOP_N_VALUES = [1, 2, 3, 5, 7, 9, 14, 18]
 
 
@@ -44,8 +42,8 @@ def calculate(
             selected_count=("ticker", "count"),
         )
         rows.append({
-            "analysis_group": "A_weekly",
-            "test": "A1_top_n",
+            "analysis_group": "weekly_cross_section",
+            "test": "weekly_top_n_selection",
             "timeframe": timeframe,
             "horizon_weeks": int(horizon_weeks),
             "horizon_days": horizon_days,
@@ -65,8 +63,8 @@ def calculate(
                 selected_count=("ticker", "count"),
             )
             rows.append({
-                "analysis_group": "A_weekly",
-                "test": "A1_top_n",
+                "analysis_group": "weekly_cross_section",
+                "test": "weekly_top_n_selection",
                 "timeframe": timeframe,
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": horizon_days,
@@ -96,8 +94,8 @@ def calculate(
                     )
                 )
             rows.append({
-                "analysis_group": "A_weekly",
-                "test": "A2_weekly_pearson",
+                "analysis_group": "weekly_cross_section",
+                "test": "weekly_information_coefficient",
                 "timeframe": timeframe,
                 "horizon_weeks": int(horizon_weeks),
                 "horizon_days": horizon_days,

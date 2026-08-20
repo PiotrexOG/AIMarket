@@ -156,21 +156,6 @@ def _format_ci_half_width_clean(val):
     if val is None or np.isnan(val):
         return "n/a"
     try:
-        val_float = float(val)
-        return f"{val_float:.2f}"
-    except (ValueError, TypeError):
-        return "n/a"
-
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-
-def _format_ci_half_width_clean(val):
-    """Pomocnicza funkcja formatująca precyzję do 2 miejsc po przecinku bez symboli +/-."""
-    if val is None or np.isnan(val):
-        return "n/a"
-    try:
         val_float = float(val * 1.96)
         return f"{val_float:.3f}"
     except (ValueError, TypeError):

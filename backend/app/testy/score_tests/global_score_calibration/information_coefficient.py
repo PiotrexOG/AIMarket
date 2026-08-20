@@ -29,16 +29,16 @@ def build_correlation_output(analysis):
     if analysis.empty:
         return pd.DataFrame(columns=columns)
     return (
-        analysis[analysis["test"] == "B2_global_pearson"][columns]
+        analysis[analysis["test"] == "global_information_coefficient"][columns]
         .sort_values(["timeframe", "horizon_weeks", "metric"])
         .reset_index(drop=True)
     )
 
 
 def plot(analysis, output_dir):
-    data = analysis[analysis["test"] == "B2_global_pearson"].dropna(
-        subset=["pearson"]
-    )
+    data = analysis[
+        analysis["test"] == "global_information_coefficient"
+    ].dropna(subset=["pearson"])
     for timeframe, timeframe_data in data.groupby("timeframe"):
         timeframe_data = limit_horizon_range(timeframe, timeframe_data)
         if timeframe_data.empty:

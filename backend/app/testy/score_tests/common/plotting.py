@@ -3,6 +3,8 @@ import textwrap
 
 import matplotlib
 
+from app.testy.score_tests.run_score.config_run import HORIZON_WEEK_RANGES
+
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
@@ -14,22 +16,8 @@ import pandas as pd
 from app.testy.score_tests.common.data import (
     COMMON_HORIZON_ALIGNMENT_COLUMN,
     COMMON_HORIZON_ALIGNMENT_VALUE,
-    COMMON_HORIZON_WEEK_END_COLUMN,
-    COMMON_HORIZON_WEEK_START_COLUMN,
 )
 
-
-TIMEFRAME_HORIZON_LIMITS = {
-    "short_term_14d": (7, 21),
-    "medium_term_50d": (25, 75),
-    "long_term_200d": (100, 300),
-}
-
-DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES = {
-    "short_term_14d": (1, 3),
-    "medium_term_50d": (4, 10),
-    "long_term_200d": (21, 35),
-}
 
 SERIES_LABELS = {
     "All": "Wszystkie obserwacje",
@@ -52,13 +40,11 @@ def plot_path(output_dir, plot_type, filename):
 
 
 def limit_horizon_range(timeframe, df):
-    limits = TIMEFRAME_HORIZON_LIMITS.get(timeframe)
-    if limits is None:
+    week_range = HORIZON_WEEK_RANGES.get(timeframe)
+    if week_range is None or "horizon_weeks" not in df.columns:
         return df
-    if "horizon_weeks" in df.columns:
-        return df
-    start_day, end_day = limits
-    return df[df["horizon_days"].between(start_day, end_day)]
+    start_week, end_week = week_range
+    return df[df["horizon_weeks"].between(start_week, end_week)]
 
 
 def horizon_x_column(df):
@@ -115,7 +101,7 @@ def timeframe_label(timeframe, data=None):
     text = str(timeframe)
     week_range = horizon_week_range(data)
     if week_range is None:
-        week_range = DEFAULT_TIMEFRAME_HORIZON_WEEK_RANGES.get(text)
+        week_range = HORIZON_WEEK_RANGES.get(text)
     if week_range is not None:
         return format_horizon_week_range(*week_range)
     return text.replace("_", " ")

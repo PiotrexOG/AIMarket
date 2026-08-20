@@ -33,7 +33,9 @@ def build_correlation_output(analysis):
     ]
     if analysis.empty:
         return pd.DataFrame(columns=columns)
-    selected = analysis[analysis["test"] == "A2_weekly_pearson"].copy()
+    selected = analysis[
+        analysis["test"] == "weekly_information_coefficient"
+    ].copy()
     for column in columns:
         if column not in selected.columns:
             selected[column] = np.nan
@@ -61,9 +63,9 @@ def _ic_sample_size_note(data):
 
 
 def plot(analysis, output_dir):
-    data = analysis[analysis["test"] == "A2_weekly_pearson"].dropna(
-        subset=["pearson"]
-    )
+    data = analysis[
+        analysis["test"] == "weekly_information_coefficient"
+    ].dropna(subset=["pearson"])
     for timeframe, timeframe_data in data.groupby("timeframe"):
         timeframe_data = limit_horizon_range(timeframe, timeframe_data)
         if timeframe_data.empty:

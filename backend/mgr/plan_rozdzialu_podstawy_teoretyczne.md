@@ -81,14 +81,14 @@ Ticker jest technicznym identyfikatorem spolki, a akcja jest instrumentem, ktory
 **Co opisac w tym miejscu:**
 
 - Wyjasnic, ze ranking spolek to uporzadkowanie analizowanych firm od najbardziej do najmniej atrakcyjnych wedlug przyjetej metody oceny.
-- Opisac ocene punktowa jako liczbowe podsumowanie atrakcyjnosci spolki w danym momencie.
+- Opisac ocene punktowa jako liczbowe podsumowanie atrakcyjnosci spolki w perspektywie okreslonego horyzontu.
 - Podkreslic, ze taka ocena nie jest gwarancja przyszlego zysku, tylko sygnalem pomocniczym.
 - Wyjasnic, ze ranking jest szczegolnie przydatny wtedy, gdy trzeba wybrac kilka spolek z wiekszego zbioru kandydatow.
 - Zaznaczyc, ze jakosc rankingu mozna pozniej sprawdzac, porownujac wysokie pozycje w rankingu z pozniejszymi wynikami inwestycji.
 
 **Najwazniejszy przekaz:**
 
-Ranking odpowiada na pytanie: ktore spolki wygladaja lepiej od innych dostepnych w tym samym momencie.
+Ranking odpowiada na pytanie: ktore spolki wygladaja na lepsza inwestycje w zadanym horyzoncie od innych dostepnych w tym samym momencie.
 
 **Czego nie rozwijac za bardzo:**
 
@@ -319,19 +319,19 @@ Benchmark pozwala ocenic, czy dana metoda inwestowania dodaje wartosc ponad pros
 
 - Nie trzeba omawiac wielu typow benchmarkow.
 
-## 16. Zwrot, alfa i annualizacja
+## 16. Zwrot, nadwyżkowy zwrot i annualizacja
 
 **Co opisac w tym miejscu:**
 
 - Wyjasnic, ze zwrot inwestycji oznacza procentowa zmiane wartosci kapitalu w danym okresie.
-- Napisac, ze alfa oznacza wynik ponad benchmark, czyli dodatkowy zwrot wzgledem punktu odniesienia.
+- Napisac, ze nadwyzkowy zwrot (ang. excess return) oznacza wynik ponad benchmark, czyli dodatkowy zwrot wzgledem punktu odniesienia.
 - Wyjasnic annualizacje jako przeliczenie wyniku z krotszego lub dluzszego okresu na skale roczna, aby latwiej porownywac rozne horyzonty.
 - Wspomniec, ze annualizacja jest przydatna wtedy, gdy porownuje sie wyniki z okresow o roznej dlugosci.
 - Podkreslic, ze annualizacja ulatwia porownanie, ale nie oznacza, ze strategia co roku na pewno osiagnie taki sam wynik.
 
 **Najwazniejszy przekaz:**
 
-Zwrot pokazuje wynik inwestycji, alfa pokazuje przewage nad benchmarkiem, a annualizacja pomaga porownywac wyniki z roznych okresow.
+Zwrot pokazuje wynik inwestycji, nadwyzkowy zwrot pokazuje przewage nad benchmarkiem, a annualizacja pomaga porownywac wyniki z roznych okresow.
 
 **Czego nie rozwijac za bardzo:**
 
@@ -359,7 +359,26 @@ Nie wystarczy wiedziec, ile strategia zarabia; trzeba tez wiedziec, jakim ryzyki
 - Nie trzeba szczegolowo wyprowadzac wzorow na odchylenie standardowe.
 - Nie trzeba omawiac calej teorii ryzyka portfelowego.
 
-## 18. Horyzont inwestycyjny i rebalancing
+## 18. Alfa, beta i model CAPM
+
+**Co opisac w tym miejscu:**
+
+- Wprowadzic pojecie stopy referencyjnej (stopy wolnej od ryzyka), czyli zysku z bezpiecznych aktywow (np. obligacji skarbowych, bonow skarbowych).
+- Wyjasnic wspolczynnik beta jako miare ryzyka systematycznego (rynkowego) – czy portfel waha sie mocniej (beta > 1), czy slabiej (beta < 1) od szerokiego rynku.
+- Opisac alfe w ujeciu modelu CAPM (Alfa Jensena) jako zysk skorygowany o ryzyko. Zaznaczyc, ze mierzy ona to, czy portfel zarobil wiecej, niz wynikalo to z samego faktu podjecia danego poziomu ryzyka rynkowego (okreslonego przez bete).
+- Podkreslic roznice miedzy zwyklym nadwyzkowym zwrotem a alfa: alfa bierze pod uwage, ze wyzszy wynik mogl wynikac po prostu z wiekszej agresywnosci portfela, a nie rzeczywistych umiejetnosci zarzadzajacego.
+- Zobrazowac, jak alfa i beta daja pelniejszy obraz inwestycji w polaczeniu z rynkiem bazowym i stopa referencyjna.
+
+**Najwazniejszy przekaz:**
+
+Beta mowi, jak bardzo strategia nasladuje wahania rynku, a alfa pokazuje rzeczywista wartosc dodana, oddzielajac wynik zalezny od umiejetnosci zarzadzajacego od zysku wynikajacego z czystego podjecia wiekszego ryzyka.
+
+**Czego nie rozwijac za bardzo:**
+
+- Nie trzeba wchodzic w pelne wzory matematyczne modelu CAPM ani wyjasniac akademickich dylematow zwiazanych z wycena aktywow.
+- Nie trzeba tlumaczyc innych modeli wieloczynnikowych (np. Fama-French).
+
+## 19. Horyzont inwestycyjny i rebalancing
 
 **Co opisac w tym miejscu:**
 
@@ -367,7 +386,6 @@ Nie wystarczy wiedziec, ile strategia zarabia; trzeba tez wiedziec, jakim ryzyki
 - Wspomniec, ze horyzont moze byc krotki, sredni albo dlugi, a jego wybor wplywa na interpretacje danych.
 - Napisac, ze rebalancing oznacza kontrolowana zmiane skladu portfela w trakcie trwania strategii.
 - Wyjasnic, ze rebalancing moze sluzyc do usuniecia pozycji, ktore po wejsciu wyraznie pogorszyly swoja pozycje w rankingu.
-- Wspomniec, ze rebalancing moze tez sluzyc do przywrocenia docelowych udzialow pozycji w portfelu.
 
 **Najwazniejszy przekaz:**
 
@@ -378,7 +396,7 @@ Horyzont inwestycyjny okresla, jak dlugo ocenia sie decyzje, a rebalancing pozwa
 - Nie trzeba opisywac wszystkich mozliwych harmonogramow rebalancingu.
 - Nie trzeba w tym rozdziale szczegolowo omawiac konkretnych parametrow strategii.
 
-## 19. Automatyczna interpretacja danych
+## 20. Automatyczna interpretacja danych
 
 **Co opisac w tym miejscu:**
 
@@ -398,7 +416,7 @@ Automatyczna interpretacja danych moze pomoc uporzadkowac wiele roznych informac
 - Nie trzeba opisywac szczegolow promptowania ani implementacji.
 - Wystarczy pokazac ogolna idee: dane musza zostac zebrane, uporzadkowane i dopiero wtedy moga byc sensownie interpretowane.
 
-## 20. Proponowana kolejnosc w gotowym rozdziale
+## 21. Proponowana kolejnosc w gotowym rozdziale
 
 **Co opisac w tym miejscu:**
 
@@ -439,7 +457,7 @@ Benchmark, alfa i ryzyko downside
 Horyzont inwestycyjny, rebalancing i automatyczna interpretacja danych
 ```
 
-## 21. Podsumowanie rozdzialu
+## 22. Podsumowanie rozdzialu
 
 **Co opisac w tym miejscu:**
 

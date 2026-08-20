@@ -14,9 +14,6 @@ def _first_existing_columns(df, columns):
     return [column for column in columns if column in df.columns]
 
 
-def _first_value_or_none(group, column):
-    return group[column].iloc[0] if column in group.columns else None
-
 def _weighted_mean(values, weights):
     values = np.asarray(values, dtype=float)
     weights = np.asarray(weights, dtype=float)
@@ -65,10 +62,6 @@ def _progress_bucket(progress_percent):
         "progress_bucket_mid_percent": (bucket_start + bucket_end) / 2.0,
         "progress_bucket_label": f"{bucket_start:.0f}-{bucket_end:.0f}%",
     }
-
-
-def _safe_corr(group, metric, method):
-    return _safe_corr_pair(group, metric, "annualized_return", method)
 
 
 def _safe_corr_pair(group, metric, return_metric, method):
